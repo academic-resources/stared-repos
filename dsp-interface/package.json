@@ -1,0 +1,29 @@
+{
+  "name": "dsp-interface",
+  "version": "0.2.6",
+  "description": "generic, socketed HTML5 interface for digital signal processing with sliders and exponents",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NHQ/dsp-interface.git"
+  },
+  "dependencies": {
+    "shoe":"0.0.5",
+    "filed":"0.0.7",
+    "mdns":"0.0.7",
+    "domready":"0.2.11"
+  },
+  "keywords": [
+    "interface",
+    "DSP",
+    "baudio",
+    "HTML5",
+    "touch"
+  ],
+  "author": "Johnny Honestly <mostmodernist@gmail.com> (http://johnnyscript.us/)",
+  "license": "MIT"
+}
