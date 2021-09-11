@@ -1,0 +1,8 @@
+- content_for(:main) do
+  section class="main"
+    - if content_for?(:submenu)
+        nav class="submenu" = yield(:submenu)
+    = yield
+  = render 'layouts/sidebar'
+
+= render 'layouts/contents'

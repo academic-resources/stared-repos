@@ -1,0 +1,8 @@
+@import "configuration";
+section.users {
+  > header {
+    h1 {
+      @include caption;
+    }
+  }
+}

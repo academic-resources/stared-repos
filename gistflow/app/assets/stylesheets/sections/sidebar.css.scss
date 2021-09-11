@@ -1,0 +1,32 @@
+@import "configuration";
+
+section.sidebar {
+  padding-top: 0;
+  
+  section {
+    margin-bottom: 10px;
+  }
+  
+  section.user {
+    .avatar {
+      @include frame;
+      margin-bottom: 10px;
+      img {
+        width: 66px;
+        height: 66px;
+      }
+    }
+    div.user {
+      margin-bottom: 10px;
+    }
+    
+    ul.contacts {
+      margin-left: 80px;
+    }
+  }
+  
+  nav {
+    font-weight: 600;
+    padding-bottom: 2px;
+  }
+}

@@ -1,0 +1,19 @@
+@import "configuration";
+
+.arrow {
+  font-size: 20px;
+  line-height: 20px;
+  color: $charcoal;
+  vertical-align: middle;
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.button {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.twitter-share-button {
+  padding: 4px 0;
+}

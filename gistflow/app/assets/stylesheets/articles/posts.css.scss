@@ -1,0 +1,143 @@
+@import "configuration";
+
+article.post {
+  
+  header h1 {
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 6px;
+    
+    span {
+      display: inline-block;
+      font-size: 14px;
+      color: $layout;
+      
+      a {
+        color: $charcoal;
+        font-weight: 600;
+
+        &:hover {
+          color: $layout;
+        }
+      }
+    }
+  }
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid $gray;
+  
+  &.detail {
+    header h1 {
+      font-size: 20px;
+      line-height: 24px;
+      padding-botton: 12px;
+      
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  &:last-child {
+    border-bottom: 0;
+  }
+  
+  .avatar {
+    float: left;
+    width: 30px;
+    
+    a {
+      @include frame;
+
+      img {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    
+    span.rating {
+      display: inline-block;
+      width: 30px;
+      text-align: center;
+      font-size: 12px;
+      color: $charcoal;
+      &:after {
+        content: "♥";
+        font-size: 9px;
+        margin: 0 0 0 1px;
+      }
+    }
+  }
+  
+  .markdown img {
+    max-width: 580px;
+    margin: 5px 0;
+  }
+  
+  .preview {
+    margin-left: 40px;
+    img {
+      max-width: 540px;
+      margin: 5px 10px 0 0;
+      background: $gray;
+      max-height: 160px;
+    }
+  }
+  
+  footer {
+    margin-top: 5px;  
+
+    .post-info {
+      font-size: 13px;
+      line-height: 25px;
+      position: relative;
+      top: 1px;
+      color: $charcoal;
+      float: left;
+    }
+
+    .page-views {
+      &:before {
+        content: "|";
+        color: $gray;
+        margin: 0 8px;
+      }
+    }
+    
+  }
+  
+  .button {
+    font-size: 13px;
+    min-width: 16px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    
+    span {
+      font-size: 11px;
+      vertical-align: top;
+      font-weight: 600;
+    }
+    
+    &.icon-twitter {
+      font-size: 15px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      
+      span {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}
+
+.private {
+  background: transparent url('private_lock.png') scroll no-repeat left center;
+  padding-left: 20px;
+}
+
+.post-hint {
+  font-style: italic;
+  color: $charcoal;
+}

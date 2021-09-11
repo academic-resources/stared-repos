@@ -1,0 +1,6 @@
+section class="bookmarks"
+  header
+    h1 
+      = link_to_unless_current 'Bookmarks', bookmarks_path
+  - cache "sidebar:bookmarks:#{current_user.id}" do
+    = ul(current_user.bookmarked_posts.map { |p| "#{p.link_name} #{link_to 'show', p}".html_safe }) || 'Nothing bookmarked yet.'

@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+  - 1.9.3
+before_install:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database gistflow_test;' -U postgres
+  - bundle exec rake db:migrate
+services:
+  - elasticsearch
+notifications:
+  webhooks:
+    urls:
+      - https://space-notice.com/travis/e5e1095d31d53657ce93317d65336692
+

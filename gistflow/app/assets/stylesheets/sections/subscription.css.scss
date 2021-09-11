@@ -1,0 +1,11 @@
+@import "configuration";
+
+section.subscriptions {
+  > header h1 {
+    @include caption;
+  }
+  #subscription_search {
+    margin: 0 0 10px;
+    width: 120px;
+  }
+}

@@ -1,0 +1,27 @@
+= form_for @post, html: { class: 'previewable' } do |f|
+  = render_error_messages @post
+  fieldset
+    = f.text_field :title, :placeholder => 'Title'
+  fieldset
+    = f.text_area :content, :size => '40x12', :placeholder => "Preview<cut text=\"More under the cut\">Body", :class => 'hint raw', :id => 'post_content'
+    div class="post-hint" You can add tags (at least one is needed) by mentioning in post's body: #gistflow #code #ruby
+  div class="preview markdown"
+  fieldset
+    = f.check_box :is_private
+    = f.label :is_private, 'Private'
+  div class="actions group"
+    div class="left"
+      | This text will be parsed by&nbsp;
+      = link_to 'Markdown', 'http://daringfireball.net/projects/markdown/syntax', :class => 'highlight'
+      | . See&nbsp;
+      = link_to 'hints', '#', :class => 'hints'
+      |.
+    div class="button-groups"
+      - if @post.persisted?
+        div class="button-group"
+          = link_to 'Destroy', @post, :method => :delete, :class => 'button danger', :confirm => 'Are you sure?'
+      div class="button-group"
+        = link_to 'Edit', '#', class: 'button edit'
+        = link_to 'Preview', '#', class: 'button preview'
+        = f.submit commit_title, class: 'button'
+    = render :partial => 'shared/markdown_hints'

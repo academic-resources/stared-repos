@@ -1,0 +1,68 @@
+@import "configuration";
+
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+
+strong, b {
+  font-weight: 600;
+}
+em, i {
+  font-style: italic;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+body {
+  font: 13px/18px "source-sans-pro", sans-serif;
+  color: $base;
+  background: #fff;
+}
+
+section > header.primary h1, article > header.primary h1 {
+  color: #666 !important;
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+  
+  &:hover, &.active {
+    color: #0E4C89;
+  }
+  
+  &.js {
+    border-bottom: 1px dashed;
+  }
+}
+
+div.content-highlight {
+  background: rgba(227, 101, 91, 0.5);
+  padding: 10px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.green {
+  color: #00B25C;
+}
+
+nav.menu {
+  li {
+    @include li-separator;
+    @include caption;
+    color: #666;
+  }
+}
+nav.submenu {
+  float: right;
+  text-transform: none;
+  position: relative;
+  top: 5px;
+}

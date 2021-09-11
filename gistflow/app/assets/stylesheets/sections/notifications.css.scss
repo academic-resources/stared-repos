@@ -1,0 +1,22 @@
+@import "configuration";
+
+section.notifications {
+  > header h1 {
+    @include caption;
+  }
+  table {
+    
+    td {
+      font-size: 14px;
+      padding: 0 0 5px 0;
+      a {
+        font-weight: 600;
+      }
+      &.time {
+        color: #666;
+        padding-right: 10px;
+        
+      }
+    }
+  }
+}

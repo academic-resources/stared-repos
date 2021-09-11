@@ -1,0 +1,12 @@
+@import "configuration";
+
+section.improvements {
+  > header h1 {
+    @include caption;
+  }
+  
+  p.back {
+    line-height: 20px;
+    font-weight: 600;
+  }
+}

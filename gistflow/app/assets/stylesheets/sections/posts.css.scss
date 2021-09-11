@@ -1,0 +1,25 @@
+@import "configuration";
+section.posts {
+  > header {
+    h1 {
+      @include caption;
+    }
+  }
+  
+  form {
+    textarea {
+      font-family: monospace;
+    }
+    
+    div.preview {
+      background: whiteSmoke;
+      padding: 5px;
+      min-height: 196px;
+      margin-bottom: 10px;
+    }
+    
+    div.preview, a.edit {
+      display: none;
+    }
+  }
+}

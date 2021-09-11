@@ -1,0 +1,12 @@
+doctype
+html
+  head
+  body
+    p New notification
+    p = @notification.message(true)
+    p style="border-left: 3px solid #999; padding-left: 10px;" = @notification.preview
+    p
+      | See all notifications at 
+      = link_to 'your account', 'http://gistflow.com/account/notifications'
+      | .
+    p Sincerely, Gistflow team

@@ -1,0 +1,11 @@
+- window_title "#{@user} following"
+
+= render partial: 'users/sidebar', locals: { user: @user }
+
+section class="users"
+  header class="primary"
+    h1 = "#{@user} following"
+  - if @users.any?
+    = render partial: 'users/users', locals: { users: @users }
+  - else
+    p No followed users yet.

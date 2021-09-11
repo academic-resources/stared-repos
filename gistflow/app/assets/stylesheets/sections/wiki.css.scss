@@ -1,0 +1,7 @@
+@import "configuration";
+
+section.wiki {
+  > header h1 {
+    @include caption;
+  }
+}

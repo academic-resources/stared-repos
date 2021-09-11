@@ -1,0 +1,14 @@
+- window_title 'All'
+section class="posts"
+  header
+    - if user_signed_in?
+      nav class="submenu"
+        = link_to_new_post
+    nav class="menu"
+      ul
+        - if user_signed_in?
+          li = link_to_unless_current 'Flow', flow_url, :class => 'menu flow_posts', :rel => :nofollow
+          li = link_to_unless_current 'All', all_url, :class => 'menu all_posts', :rel => :nofollow
+        - else
+          li Posts
+  = render :partial => 'index', :locals => { :posts => @posts }
