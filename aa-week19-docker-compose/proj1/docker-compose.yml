@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: webapp:tag
+    ports:
+      - 80:80
