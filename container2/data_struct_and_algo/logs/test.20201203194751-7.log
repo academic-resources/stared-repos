@@ -1,0 +1,49 @@
+2020-12-03 19:47:51,737 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-12-03 19:47:51,737 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\OneDrive - Anthem\\Desktop\\GITHUB\\DS_ALGO\\udaexec.ini: Not Found']
+2020-12-03 19:47:51,737 - teradata.udaexec - INFO - Found run number file: "C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\.runNumber"
+2020-12-03 19:47:51,737 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-12-03 19:47:51,737 - teradata.udaexec - INFO - Removed 0 log files.
+2020-12-03 19:47:51,744 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\test.checkpoint
+2020-12-03 19:47:51,744 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-12-03 19:47:51,744 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: test
+ *          Version: 1.0
+ *       Run Number: 20201203194751-7
+ *             Host: LDMG1XT2
+ *         Platform: Windows-10-10.0.18362-SP0
+ *          OS User: AG16000
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: C:/Users/ag16000/OneDrive - Anthem/Desktop/GITHUB/DS_ALGO/teradata_con_usi.py
+ *      Working Dir: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO
+ *          Log Dir: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\logs
+ *         Log File: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\logs\test.20201203194751-7.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\OneDrive - Anthem\\Desktop\\GITHUB\\DS_ALGO\\udaexec.ini: Not Found']
+ *      Query Bands: ApplicationName=test;Version=1.0;JobID=20201203194751-7;ClientUser=AG16000;Production=False;udaAppLogFile=C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\logs\test.20201203194751-7.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-12-03 19:47:51,744 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'DWDEVCOP1.CORP.ANTHEM.COM', 'driver': 'Teradata Database ODBC Driver 16.20', 'username': 'ag16000', 'password': 'XXXXXX'}
+2020-12-03 19:47:51,748 - teradata.tdodbc - INFO - Available drivers: SQL Server, Teradata Database ODBC Driver 16.20
+2020-12-03 19:47:53,543 - teradata.udaexec - ERROR - Unable to create connection: {'method': 'odbc', 'system': 'DWDEVCOP1.CORP.ANTHEM.COM', 'driver': 'Teradata Database ODBC Driver 16.20', 'username': 'ag16000', 'password': 'XXXXXX'}
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\teradata\udaexec.py", line 183, in connect
+    **args))
+  File "C:\Python\lib\site-packages\teradata\tdodbc.py", line 454, in __init__
+    checkStatus(rc, hDbc=self.hDbc, method="SQLDriverConnectW")
+  File "C:\Python\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (210, '[28000] [Teradata][ODBC Teradata Driver][Teradata Database] (210) The UserId, Password or Account is invalid. FailCode = -8017')
+2020-12-03 19:47:53,545 - teradata.udaexec - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:/Users/ag16000/OneDrive - Anthem/Desktop/GITHUB/DS_ALGO/teradata_con_usi.py", line 8, in <module>
+    username='ag16000',password='mr.robot@123');
+  File "C:\Python\lib\site-packages\teradata\udaexec.py", line 183, in connect
+    **args))
+  File "C:\Python\lib\site-packages\teradata\tdodbc.py", line 454, in __init__
+    checkStatus(rc, hDbc=self.hDbc, method="SQLDriverConnectW")
+  File "C:\Python\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (210, '[28000] [Teradata][ODBC Teradata Driver][Teradata Database] (210) The UserId, Password or Account is invalid. FailCode = -8017')
+2020-12-03 19:47:53,550 - teradata.udaexec - INFO - UdaExec exiting.
