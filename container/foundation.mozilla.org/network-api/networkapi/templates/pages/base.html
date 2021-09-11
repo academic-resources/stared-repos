@@ -1,0 +1,103 @@
+{% load wagtailmetadata_tags i18n localization settings_value wagtailuserbar static %}
+
+{% get_current_language as lang_code %}
+
+<!DOCTYPE html>
+<html lang="{{ lang_code }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block page_title %}{% trans "Mozilla Foundation" %} - {% if page.specifics.seo_title %}{{ page.specifics.seo_title }}{% else %}{{ page.title }}{% endif %}{% endblock %}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block social_metadata %}
+      <meta property='og:type' content='website'>
+      <meta property='og:locale' content='{{ lang_code|to_opengraph_locale }}'>
+      <meta property='wagtail:language' content='{{ lang_code }}'>
+    {% endblock %}
+
+    {% block rss_metadata %}{% endblock %}
+
+    {% block wagtail_metadata %}
+      {% meta_tags %}
+    {% endblock %}
+
+    {% block ga_identifier %}
+      <meta name="google-site-verification" content="D7k-r3fHm-XfJ9E7T1uZ5aqHJG2mx-0uUZFeBUDN2lY">
+      <meta name="ga-identifier" content="UA-87658599-6">
+      <meta name="gtm-identifier" content="GTM-MD3XGZ4">
+    {% endblock %}
+
+    {% block commento_meta %}{% endblock %}
+
+    {% block stylesheets %}
+      {% if debug_flag %}<link rel="stylesheet" href="{% static "_css/tailwind.compiled.css" %}">{% endif %}
+      <link rel="stylesheet" href="{% static "_css/main.compiled.css" %}">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,300,700,300i,800,900,400i">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,600,700,300i,400i,600i">
+    {% endblock %}
+
+    {% block extended_head %}{% endblock %}
+
+    {% block icons %}
+      <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{% static "_images/favicons/apple-touch-icon-180x180@2x.png" %}">
+      <link rel="icon" type="image/png" sizes="196x196" href="{% static "_images/favicons/favicon-196x196@2x.png" %}">
+      <link rel="shortcut icon" href="{% static "_images/favicons/favicon.ico" %}">
+    {% endblock %}
+
+    {% block hreflang %}
+      {% include "fragments/canonical_url.html" %}
+    {% endblock %}
+
+    {% block org_schema%}{% endblock %}
+
+    {% block additional_head_elements %}{% endblock %}
+  </head>
+  <body class="{% block bodyclass %}{% endblock %}" id="view-{% block body_id %}{% endblock %}">
+    {% if user.is_authenticated %}
+      {% wagtailuserbar 'bottom-left' %}
+    {% endif %}
+
+    {% if page.live == False %}
+    <div id="wagtail-draft-warning">
+      This is a draft page, and is only visible to users who are logged in to the CMS admin.
+    </div>
+    {% endif %}
+
+    {% block body_wrapped %}
+    <div class="wrapper">
+      <div class="sticky-top d-print-none">
+        {% block primary_nav %}
+          {% include "partials/primary_nav.html" with background="simple-background" %}
+        {% endblock %}
+      </div>
+
+      {% block header_wrapped %}
+        <header role="banner">
+          {% block hero_guts %}{% endblock %}
+        </header>
+      {% endblock header_wrapped %}
+
+      {% block content_wrapped %}
+        <main role="main">
+          {% block content %}{% endblock %}
+        </main>
+      {% endblock content_wrapped %}
+
+      {% block prefooter %}{% endblock %}
+
+      {% block footer_block %}
+      {% include "partials/footer.html" %}
+      {% endblock %}
+    </div>
+    {% endblock %}
+
+    {% block script_bundle %}
+      <script src="{% url "javascript-catalog" %}"></script>
+      <script src="{% static "_js/main.compiled.js" %}"></script>
+    {% endblock %}
+
+    {% block extra_scripts %}{% endblock %}
+  </body>
+</html>

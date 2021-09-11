@@ -1,0 +1,83 @@
+/*
+* SCSS rules here are specifically for YouTube Regrets Page only
+* and should not be re-used elsewhere.
+*/
+
+body.has-regrets-intro {
+  #nav-newsletter-form-wrapper.faded-in {
+    height: 100vh;
+  }
+
+  .font-changa {
+    font-family: "Changa", sans-serif;
+  }
+}
+
+#view-youtube-regrets {
+  .wrapper {
+    background: linear-gradient(
+      $youtube-regrets-light-red 100vh,
+      $white 500vh,
+      $white
+    );
+  }
+
+  main {
+    h2,
+    p {
+      color: $youtube-regrets-red;
+    }
+
+    h2 {
+      font-family: "Changa", sans-serif;
+
+      @include set-text-size(30px, 36px, 38px, 42px);
+    }
+
+    p {
+      font-family: "Zilla Slab";
+      font-weight: 500;
+
+      @include set-text-size(18px, 24px, 22px, 32px);
+    }
+
+    .btn.btn-secondary {
+      border-color: $youtube-regrets-red;
+      color: $youtube-regrets-red;
+
+      @include hover-focus-active {
+        background-color: $youtube-regrets-red;
+        color: $white;
+      }
+    }
+
+    @include style-colored-share-buttons(
+      $youtube-regrets-red,
+      "../_images/youtube-regrets/facebook-share.svg",
+      "../_images/youtube-regrets/twitter-share.svg",
+      "../_images/youtube-regrets/email-share.svg",
+      "../_images/youtube-regrets/link-share.svg",
+      "../_images/youtube-regrets/link-share-copied.svg"
+    );
+  }
+
+  .faq {
+    a {
+      color: $youtube-regrets-red;
+      text-decoration: underline;
+
+      @include hover-focus-active {
+        color: $youtube-regrets-lighter-red;
+      }
+    }
+  }
+
+  .sticky-side {
+    position: sticky;
+    top: 120px;
+  }
+
+  .youtube-regret {
+    margin-bottom: 80px;
+  }
+}

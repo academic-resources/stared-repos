@@ -1,0 +1,64 @@
+{% extends "pages/base.html" %}
+{% load wagtailcore_tags i18n %}
+
+{% block body_id %}article{% endblock %}
+
+{% block primary_nav %}
+  {{ block.super }}
+  {% include "fragments/article_subnav.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+  {% include "./fragments/publication_hero.html" with size="small" download_file=page.article_file is_publication_article=page.is_publication_article %}
+
+  <div class="container {% if not get_titles %} mt-5{% endif %}">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10 col-12">
+        {% if page.show_side_share_buttons %}
+          <div class="article-summary-share-links d-lg-block d-none {% if get_titles %}with-top-offset{% endif %}">
+            <div class="share-button-group-wrapper" data-version="mini" data-layout="stacked" data-share-text="{% blocktrans with title=page.title %}{{ title }} by @mozilla{% endblocktrans %}" data-link="{{ request.scheme }}://{{ request.get_host }}{{ request.get_full_path }}"></div>
+          </div>
+        {% endif %}
+
+        {% if get_titles %}
+          {# If there are h2s in the body of this page, show the article "table of contents" #}
+          <div class="article-summary">
+            <div class="article-summary-title body-small">{% trans "SUMMARY" %}</div>
+            <div class="article-links {% if get_titles|length > 5 %}article-links-two-column{% endif %}">
+              {% for slug, header in get_titles %}
+                <a href="#{{ slug }}" class="article-summary-link {% if get_titles|length > 5 %}article-summary-link-two-column{% endif %}">{{ header }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="cms article-page-content article-blocks">
+    {% for block in page.body %}
+        {% include_block block with parent_page=page page_type="article" %}
+    {% endfor %}
+  </div>
+
+  {% if page.footnotes_list %}
+    {% include "fragments/footnotes.html" %}
+  {% endif %}
+
+  <div class="container my-5">
+    <div class="row pt-5">
+      <div class="col-sm-8 offset-sm-2 pt-4">
+        <div class="pb-4 share-button-group-wrapper">
+          <div class="share-button-group-wrapper d-print-none" data-share-text="{% blocktrans with title=page.title %}{{ title }} by @mozilla{% endblocktrans %}" data-link="{{ request.scheme }}://{{ request.get_host }}{{ request.get_full_path }}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- If this is a child of a publication, we want to render the next buttons -->
+  {% if page.is_publication_article %}
+    {% include "fragments/article_prev_next.html" with prev_page=page.prev_page next_page=page.next_page %}
+  {% endif %}
+{% endblock %}
