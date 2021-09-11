@@ -1,0 +1,24 @@
+name: Theme preview
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    branches:
+      - master
+      - theme-preview-script
+      - "themes/index.js"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Install & Preview
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+      - run: npm run preview-theme
+        env:
+          CI: true
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
