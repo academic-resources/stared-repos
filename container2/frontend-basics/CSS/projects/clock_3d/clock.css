@@ -1,0 +1,236 @@
+body{
+    color: #fff;
+    font-family: Helvetica;
+    background: #292929
+}
+
+#content{
+    text-align: center;
+    width: 100%;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transform: perspective(6000px);
+    transform: perspective(6000px);
+}
+
+/* ARRANGE WHEELS */
+
+.wheel{
+    margin: 250px 50px;
+    height: 150px;
+    width: 150px;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0px;
+}
+
+#hours1{
+    left: 0px;
+}
+#hours2{
+    left: 160px;
+}
+#minutes1{
+    left: 440px;
+}
+#minutes2{
+    left: 600px;
+}
+#seconds1{
+    left: 880px;
+}
+#seconds2{
+    left: 1040px;
+}
+
+.card{
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 5em;
+    font-weight: bolder;
+    line-height: 140px;
+    background: rgba(10,10,10,0.9);
+    position: absolute;
+}
+
+/* 9 cards, each one should rotate 36 degrees */
+
+.wheel div:nth-of-type(1){
+    transform: rotateX(0deg) translateZ(240px);
+    -moz-transform: rotateX(0deg) translateZ(240px);
+}
+.wheel div:nth-of-type(2){
+    transform: rotateX(36deg) translateZ(240px);
+    -moz-transform: rotateX(36deg) translateZ(240px);
+}
+.wheel div:nth-of-type(3){
+    transform: rotateX(72deg) translateZ(240px);
+    -moz-transform: rotateX(72deg) translateZ(240px);
+}
+.wheel div:nth-of-type(4){
+    transform: rotateX(108deg) translateZ(240px);
+    -moz-transform: rotateX(108deg) translateZ(240px);
+}
+.wheel div:nth-of-type(5){
+    transform: rotateX(144deg) translateZ(240px);
+    -moz-transform: rotateX(144deg) translateZ(240px);
+}
+.wheel div:nth-of-type(6){
+    transform: rotateX(180deg) translateZ(240px);
+    -moz-transform: rotateX(180deg) translateZ(240px);
+}
+.wheel div:nth-of-type(7){
+    transform: rotateX(216deg) translateZ(240px);
+    -moz-transform: rotateX(216deg) translateZ(240px);
+}
+.wheel div:nth-of-type(8){
+    transform: rotateX(252deg) translateZ(240px);
+    -moz-transform: rotateX(252deg) translateZ(240px);
+}
+.wheel div:nth-of-type(9){
+    transform: rotateX(288deg) translateZ(240px);
+    -moz-transform: rotateX(288deg) translateZ(240px);
+}
+.wheel div:nth-of-type(10){
+    transform: rotateX(324deg) translateZ(240px);
+    -moz-transform: rotateX(324deg) translateZ(240px);
+}
+
+/* ROTATING WHEEL */
+
+@keyframes rotate_10cards{
+    0%, 8%{
+        transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+    }
+    10%, 18%{
+        transform: rotateX(-36deg);
+        -moz-transform: rotateX(-36deg);
+    }
+    20%, 28%{
+        transform: rotateX(-72deg);
+        -moz-transform: rotateX(-72deg);
+    }
+    30%, 38%{
+        transform: rotateX(-108deg);
+        -moz-transform: rotateX(-108deg);
+    }
+    40%, 48%{
+        transform: rotateX(-144deg);
+        -moz-transform: rotateX(-144deg);
+    }
+    50%, 58%{
+        transform: rotateX(-180deg);
+        -moz-transform: rotateX(-180deg);
+    }
+    60%, 68%{
+        transform: rotateX(-216deg);
+        -moz-transform: rotateX(-216deg);
+    }
+    70%, 78%{
+        transform: rotateX(-252deg);
+        -moz-transform: rotateX(-252deg);
+    }
+    80%, 88%{
+        transform: rotateX(-288deg);
+        -moz-transform: rotateX(-288deg);
+    }
+    90%, 98%{
+        transform: rotateX(-324deg);
+        -moz-transform: rotateX(-324deg);
+    }
+    100%{
+        transform: rotateX(-360deg);
+        -moz-transform: rotateX(-360deg);
+    }
+}
+
+#seconds2{
+    -moz-animation: rotate_10cards 10s ininite linear;
+    animation: rotate_10cards 10s infinite linear;
+    transform-style: preserve-3d;
+}
+
+#minutes2{
+    -moz-animation: rotate_10cards 600 infinite linear;
+    animation: rotate_10cards 600 infinite linear;
+    transform-style: preserve-3d;
+}
+#hours2{
+    -moz-animation: rotate_10cards 36000 infinite linear;
+    animation: rotate_10cards 36000 infinite linear;
+    transform-style: preserve-3d;
+}
+
+
+@keyframes rotate_6cards{
+    0%, 15%{
+        transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+    }
+    16.6%, 32%{
+        transform: rotateX(-36deg);
+        -moz-transform: rotateX(-36deg);
+    }
+    33.3%, 48%{
+        transform: rotateX(-72deg);
+        -moz-transform: rotateX(-72deg);
+    }
+    50%, 65%{
+        transform: rotateX(-108deg);
+        -moz-transform: rotateX(-108deg);
+    }
+    66.6%, 82%{
+        transform: rotateX(-144deg);
+        -moz-transform: rotateX(-144deg);
+    }
+    83.3%, 99%{
+        transform: rotateX(-180deg);
+        -moz-transform: rotateX(-180deg);
+    }
+    100%{
+        transform: rotateX(-360deg);
+        -moz-transform: rotateX(-360deg);
+    }
+}
+
+#seconds1{
+    -moz-animation: rotate_6cards 60s infinite linear;
+    animation: rotate_6cards 60s infinite linear;
+    transform-style: preserve-3d;
+}
+
+#minutes1{
+    -moz-animation: rotate_6cards 3600s infinite linear;
+    animation: rotate_6cards 3600s infinite linear;
+    transform-style: preserve-3d;
+}
+
+@keyframes rotate_hours{
+    0%, 41.5%{
+        transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+    }
+    /* Till first 10 hours */
+    41.6%, 83.2%{
+        transform: rotateX(-36deg);
+        -moz-transform: rotateX(-36deg);
+    }
+    /* from 10hs to 20hs */
+    83.3%, 99.9%{
+        transform: rotateX(-72deg);
+        -moz-transform: rotateX(-72deg);
+    }
+    100%{
+        transform: rotateX(-360deg);
+        -moz-transform: rotateX(-360deg);
+    }
+}
+
+#hours1{
+    -moz-animation: rotate_hours 86400s infinite linear;
+    animation: rotate_hours 86400s infinite linear;
+    transform-style: preserve-3d;
+}

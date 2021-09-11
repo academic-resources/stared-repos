@@ -1,0 +1,42 @@
+
+
+p{
+    position: relative;
+}
+
+p#beforedemo:before{
+    content: "****";
+    top: 50px;
+    /*position: fixed;*/
+}
+
+/* GLOBAL PSEUDOCLASSES */
+/* link, visited, hover, active, focus */
+
+a#link1:link{
+    color: green;
+}
+a#link2:visited{
+    color: red;
+}
+
+.hoverdemo:hover{
+    color: green;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.activedemo:active{
+    color: green;
+}
+
+.focusdemo:focus{
+    border-radius: 5px;
+}
+
+/* ADVANCED PSEUDOCLASSES */
+/*
+:nth-child :nth-last-child(n) :nth-of-type(n) :nth-last-of-type(n)
+:first-of-type :last-of-type :only-of-type :empty :not(Selector) :last-child :only-child
+:root :enable :disable :checked
+*/

@@ -1,0 +1,62 @@
+body{
+  font-size: 16px;
+}
+h2{
+  color: red;
+  text-decoration: underline;
+}
+
+/* RELATIVE SIZES */
+
+/* em works with inherited size */
+p.em{
+  font-size: 2em;
+}
+p.ex{
+  font-size: 1ex;
+}
+
+div p{
+  font-size: 1.5em;
+}
+/* rem ignores inherited size */
+div p.rem{
+  font-size: 1rem;
+}
+
+/* ABSOLUTE SIZES */
+
+p.in{
+  font-size: .2in;
+}
+p.cm{
+  font-size: 1cm;
+}
+p.mm{
+  font-size: 3mm;
+}
+p.pt{
+  font-size: 15pt;
+}
+p.pc{
+  font-size: 2pc;
+}
+
+/* PROPORTIONAL SIZES */
+
+div.red{
+  background: red;
+}
+div.green{
+  background: green;
+}
+
+div.fix{
+  height: 100px;
+  width: 100px;
+}
+div.proportional{
+  height: 100px;
+  width: 50px;
+  margin: 5%;
+}

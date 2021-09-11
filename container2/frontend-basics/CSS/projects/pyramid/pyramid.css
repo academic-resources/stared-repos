@@ -1,0 +1,71 @@
+@keyframes rotate{
+    from{
+        transform:  rotateX(0deg)
+                    rotateY(0deg)
+                    rotateZ(0deg);
+
+
+    }
+    to{
+        transform:  rotateX(360deg)
+                    rotateY(360deg)
+                    rotateZ(360deg);
+
+
+    }
+}
+
+
+/* PYRAMID */
+
+#pyramid{
+    position: relative;
+    margin: 80px auto;
+    height: 500px;
+    width: 100px;
+    transform-style: preserve-3d;
+    transform-origin: 116px 200px 116px;
+    transform: rotateY(30deg);
+
+    animation: 10s rotate infinite linear;
+}
+
+/* Side-triangles */
+
+#pyramid > div{
+    position: absolute;
+    border-style: solid;
+    border-width: 200px 0px 200px 346px;
+    transform-origin: 0 0;
+}
+
+#pyramid > div:nth-child(1){
+    border-color: transparent transparent
+                transparent rgba(0,0,0,0.8);
+    transform:  rotateX(-60deg)
+                rotateY(19.5deg)
+                translateX(-116px)
+                translateY(-200px)
+                translateZ(326px)
+}
+#pyramid > div:nth-child(2){
+    border-color: transparent transparent
+                transparent rgba(255,0,0,0.8);
+    transform:  rotateY(-19.5deg)
+                rotateX(180deg)
+                translateY(-400px);
+}
+#pyramid > div:nth-child(3){
+    border-color: transparent transparent
+                transparent rgba(0,255,0,0.8);
+    transform:  rotateY(90deg)
+                rotateZ(60deg)
+                rotateX(180deg)
+                translateY(-400px);
+}
+#pyramid > div:nth-child(4){
+    border-color: transparent transparent
+                transparent rgba(0,0,255,0.8);
+    transform:  rotateX(60deg)
+                rotateY(19.5deg);
+}

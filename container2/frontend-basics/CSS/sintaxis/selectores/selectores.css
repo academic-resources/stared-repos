@@ -1,0 +1,52 @@
+header h2,
+h3{
+  color: green;
+}
+
+h2{
+  color: red;
+}
+
+h3[title]{
+  font-weight: bolder;
+}
+
+/* may use |= */
+h3[title ~= "another"]{
+  color: green;
+}
+
+p#azul{
+  color: blue;
+}
+
+.orange{
+  color: orange;
+}
+
+p.grande{
+  font-size: 20px;
+}
+
+/* p with, older brother p
+~ to ignore another older brothers */
+p+p{
+  font-weight: bolder;
+}
+
+div > p {
+  color: red;
+}
+
+/* Style colision */
+p#important{
+  color: red !important;
+}
+
+article{
+  color: green;
+}
+
+article h3{
+  font-weight: bold;
+}

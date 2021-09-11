@@ -1,0 +1,33 @@
+/* PSEUDOELEMENTS */
+
+div{
+    border: 3px solid black;
+    width: 50%;
+    position: relative;
+    margin: 25%;
+}
+
+div:before{
+    content: 'hello';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+div:after{
+    content: 'world';
+}
+
+/* PSEUDOCLASSES */
+
+div:hover{
+    background: orange;
+}
+
+a:hover{
+    background: blue;
+}
+
+a:focus{
+    color: red;
+}

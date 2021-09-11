@@ -1,0 +1,461 @@
+div{
+    font-family: 'Arial';
+    background-color: limegreen;
+    margin: 15px 2px;
+    padding: 5px 40px;
+    text-align: center;
+    font-weight: bolder;
+    width: 80px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* FLASH */
+
+@keyframes flash{
+    /* 100% return original state always */
+    50%{
+        opacity: 1;
+    }
+    25%, 75%{
+        opacity: 0;
+    }
+}
+.flash:active{
+    animation: 0.7s flash 1;
+}
+
+/* CLICK */
+
+@keyframes click{
+    25%, 75%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+.click:active{
+    animation: 0.7s click 1;
+}
+
+/* GUM */
+
+@keyframes gum{
+    30%{
+        transform: scaleX(1.25) scaleY(0.75);
+    }
+    50%{
+        transform: scaleX(0.75) scaleY(1.25);
+    }
+    60%{
+        transform: scaleX(1.15) scaleY(0.85)
+    }
+
+}
+
+.gum:active{
+    animation: 1s gum 1;
+}
+
+/* VIBRATOR */
+
+@keyframes vibrator{
+    10%, 30%, 50%, 70%, 90%{
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80%{
+        transform: translateX(10px);
+    }
+    15%, 35%, 55%, 75%, 95%{
+        transform: translateY(-10px);
+    }
+    25%, 45%, 65%, 85%{
+        transform: translateY(10px);
+    }
+}
+
+.vibrator:active{
+    animation: 1s vibrator infinite;
+}
+
+/* SIGNBOARD */
+
+@keyframes signboard{
+    20%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-10deg);
+    }
+    60%{
+        transform: rotate(5deg);
+    }
+    80%{
+        transform: rotate(-3deg);
+    }
+}
+
+.signboard:active{
+    animation: 1s signboard 1;
+    transform-origin: top center;
+}
+
+/* SWINGING */
+
+@keyframes swinging{
+    20%{
+        transform: scale(0.7) rotate(6deg);
+    }
+    30%, 70%{
+        transform: scale(1.1) rotate(6deg);
+    }
+    50%, 90%{
+        transform: scale(1.1) rotate(-6deg);
+    }
+}
+
+.swinging:active{
+    animation: 1s swinging 1;
+}
+
+/* SWAY */
+
+@keyframes sway{
+    15%{
+        transform: rotate(-10deg) translateX(-25%);
+    }
+    30%{
+        transform: rotate(5deg) translateX(20%);
+    }
+    45%{
+        transform: rotate(-3deg) translateX(-10%);
+    }
+    60%{
+        transform: rotate(2deg) translateX(5%);
+    }
+    80%{
+        transform: rotate(-1deg) translateX(-3%);
+    }
+}
+
+.sway:active{
+    animation: 1s sway 1;
+}
+
+/* FALL */
+
+@keyframes fall{
+    20%, 60%{
+        transform: rotate(80deg);
+    }
+    40%, 80%{
+        transform: rotate(60deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(400px);
+        opacity: 0;
+    }
+}
+
+.fall:active{
+    animation: 1s fall 1;
+    transform-origin: top left;
+}
+
+/* ROTATED IN */
+
+@keyframes rotatedIn{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%) rotate(-260deg);
+    }
+}
+
+.rotatedIn:active{
+    animation: 1s rotatedIn 1;
+}
+/* ROTATED OUT */
+
+@keyframes rotatedOut{
+    0%{
+        opacity: 0;
+        transform: translateX(100%) rotate(260deg);
+    }
+}
+
+.rotatedOut:active{
+    animation: 1s rotatedOut 1;
+}
+
+/* REBOUND */
+
+@keyframes rebound{
+    20%, 50%, 80%{
+        transform: translateY(0px);
+    }
+    40%{
+        transform: translateY(-45px);
+    }
+    60%{
+        transform: translateY(-25px);
+    }
+}
+
+.rebound:active{
+    animation: 1s rebound 1;
+}
+
+/* REBOUND IN */
+
+@keyframes reboundIn{
+    0%{
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    70%{
+        transform: scale(0.9);
+    }
+}
+
+.reboundIn:active{
+    animation: 1s reboundIn 1;
+}
+
+/* LEFT REBOUND */
+
+@keyframes leftRebound{
+    0%{
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+    50%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+    70%{
+        transform: translate(-10px);
+    }
+}
+
+.leftRebound:active{
+    animation: 1s leftRebound 1;
+}
+
+/* REBOUND OUT */
+
+@keyframes reboundOut{
+    25%{
+        tansform: scale(0.9);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.reboundOut:active{
+    animation: 1s reboundOut 1;
+}
+
+@keyframes reboundOut2{
+    20%{
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+}
+
+.reboundOut2:active{
+    animation: 1s reboundOut2 1;
+}
+
+/* FADE IN */
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.7;
+    }
+}
+
+.fadeIn:active{
+    animation: 1s fadeIn 1;
+}
+
+/* FADE COVER */
+
+@keyframes fadeCover{
+    0%{
+        left: 0px;
+    }
+}
+
+
+div.fadeCover{
+    overflow: hidden;
+    position: relative;
+}
+
+.cover{
+    all: initial;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 160px;
+    position: absolute;
+    background: white;
+    z-index: 10;
+}
+
+.cover{
+    animation: 2s fadeCover infinite;
+}
+
+/* FAST IN */
+
+@keyframes fastIn{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%) skew(30deg);
+    }
+    60%{
+        opacity: 1;
+        transform: translateX(-20%) skew(-28deg);
+    }
+    80%{
+        transform: translateX(0%) skew(15deg);
+    }
+}
+
+.fastIn:active{
+    animation: 1s fastIn 1;
+}
+
+/* FAST OUT */
+
+@keyframes fastOut{
+    15%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-200%) skewX(-70deg);
+    }
+}
+
+.fastOut:active{
+    animation: 1s fastOut 1;
+}
+
+/* TURN */
+
+@keyframes turn{
+    0%{
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+}
+
+.turn:active{
+    transform-origin: center;
+    animation: 1s turn 1;
+}
+
+/* SHADOW MOVE */
+
+@keyframes move_box{
+    50%{
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes move_shadow{
+    50%{
+        opacity: 1;
+        transform: translateY(3px);
+    }
+}
+
+.shadow_mv{
+    transition-duration: 0.3s;
+}
+
+.shadow_mv:before{
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: radial-gradient(center, ellipse, rgba(0,0,0,0.35) 0%,
+                rgba(0,0,0,0) 80%);
+    background: -moz-radial-gradient(center, ellipse, rgba(0,0,0,0.35) 0%,
+                rgba(0,0,0,0) 80%);
+    -moz-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.shadow_mv:active{
+    transform: translateY(-6px);
+    animation: 1.5s move_box infinite;
+}
+
+.shadow_mv:active:before{
+    opacity: 0.2;
+    transform: translateY(6px);
+    animation: 1.5s move_shadow infinite;
+}
+
+/* ARROW */
+
+div.arrow{
+    position:relative;
+}
+
+.arrow:before{
+    transition-duration: 0.3s;
+    content: '';
+    /* Triangle */
+    border-color: transparent limegreen transparent transparent;
+    border-style: solid;
+    border-width: 15px 15px 15px 0;
+    left: 10%;
+    top: 50%;
+    position: absolute;
+    margin-top: -15px;
+}
+
+@keyframes moveArrow{
+    25%{
+        left: -15px;
+        transform: rotate(0deg);
+    }
+    65%{
+        left: -15px;
+        transform: rotate(180deg);
+    }
+    90%{
+        transform: rotate(180deg);
+    }
+}
+
+.arrow:active:before{
+    animation: 1.5s moveArrow infinite;
+}

@@ -1,0 +1,50 @@
+
+div{
+	width: 50%;
+	height: 100px;
+	border: 1px solid black;
+}
+p{
+	border: 1px solid black;
+	background: white;
+}
+p#padding_demo{
+	border:1px solid black;
+	background: white;
+}
+
+div#demo{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 20px;
+	padding: 10px;
+	background: black;
+}
+
+div.dimension{
+	min-width: 250px;
+	max-width: 400px;
+}
+
+/* Margin and padding:
+	2 numbers: vertical, horizontal
+	margin: 20px 50px;
+	4 numbers: top, right, bottom, left
+	margin: 20px 50px 100px 3px;
+*/
+div.margin{
+	margin-bottom: 60px;
+	margin-left: 15px;
+	margin-right: 20%;
+	margin-top: 0.5%;
+}
+
+div.padding{
+	min-width: 250px;
+	max-width: 400px;
+	margin: 20px 50px 100px 3px;
+	background: red;
+	padding: 10px;
+
+}

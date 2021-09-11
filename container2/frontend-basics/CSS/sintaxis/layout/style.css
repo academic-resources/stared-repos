@@ -1,0 +1,113 @@
+/* DISPLAY: block (default), inline, none */
+
+p{
+    border: 2px solid black;
+    background: orange;
+    display: inline-block;
+
+    margin: 50px 0px;
+}
+
+p#ghost{
+    display: none;
+}
+
+.father{
+    width: 250px;
+    height: 500px;
+    margin: 25px;
+    background: orange;
+}
+
+/*
+.father > div{
+    display: inline-block;
+}
+*/
+
+/* POSITION: static (default), relative, absolute */
+
+.son1{
+    width: 225px;
+    height: 75px;
+    background: green;
+    position: absolute;
+}
+
+.son2{
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: relative;
+    top: -15px;
+    left: 200px;
+}
+
+.fixedson{
+    width: 50px;
+    height: 50px;
+    background: blue;
+    position: fixed;
+    left: 0px;
+}
+
+/* FLOATS */
+
+.floatson1{
+    width: 100px;
+    height: 100px;
+    background: green;
+    float: right;
+}
+
+.floatson2{
+    width: 50px;
+    height: 50px;
+    background: red;
+    display: inline-block;
+    /* If not, goes behind floatson1 */
+}
+
+.floatson3{
+    width: 50px;
+    height: 50px;
+    background: blue;
+    clear: both;
+}
+
+/* Z INDEX */
+/* Always goes with position: relative; */
+
+.zfather{
+    width: 250px;
+    height: 500px;
+    margin: 25px;
+    background: orange;
+    overflow: hidden;
+}
+
+.zson1{
+    width: 100px;
+    height: 100px;
+    background: green;
+    position: absolute;
+}
+
+.zson2{
+    width: 50px;
+    height: 50px;
+    background: red;
+    display: inline-block;
+    z-index: 99;
+    position: relative;
+    top: -25px;
+}
+
+/* Still uses space (unlinke display none) */
+.hidden{
+    visibility: hidden;
+}
+
+.opacity{
+    opacity: 0.5;
+}
