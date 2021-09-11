@@ -1,0 +1,8 @@
+extends layout.pug
+block content
+  h1 login to fakebook
+  form(method='post' action='/users/login')
+    input(type="hidden" name="_csrf" value=csrfToken)
+    input(type='email' name='email' placeholder='enter your email')
+    input(type='password' name='password' placeholder='enter your password')
+    input(type='submit' value='login')

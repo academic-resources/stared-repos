@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    title= title
+  body
+    nav
+      a(href='/') home
+      div(id="session-controls")
+        if user
+          button(type="submit" id="logout-button") logout
+        else
+          a(href='/users/register') signup   
+          a(href='/users/login') login
+    block content
+    
+    block sidebar
+    footer
+      p brought to you by the September a/A cohort
+    script.
+      const handleLogoutClick = async () => {
+      const request = await fetch('http://localhost:5000/api/logout', {
+          method: 'DELETE'
+        } )
+      
+      //- Console log response
+      //- const data = await request.json()
+      //- console.log(data)
+
+      //- redirect to homepage
+      window.location.href = "http://localhost:5000/"
+
+      //- Vanilla DOM Manipulation to remove button and add links
+
+      //- const container = document.getElementById("session-controls")
+      //- const signup = document.createElement('a');
+      //- signup.innerHTML = "signup";
+      //- signup.href = "/users/register"
+
+      //- const login = document.createElement('a');
+      //- login.innerHTML = "login";
+      //- login.href = "/users/login"
+
+      //- //- remove logout
+      //- container.removeChild(logoutButton);
+      //- container.appendChild(signup);
+      //- container.appendChild(login);
+      }
+
+      const logoutButton = document.getElementById("logout-button")
+      if (logoutButton) logoutButton.addEventListener('click', handleLogoutClick)
+      
