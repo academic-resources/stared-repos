@@ -1,0 +1,8 @@
+{
+  "name": "reactify-server-rendering",
+  "version": "0.0.1",
+  "description": "Server side rendering for React apps using Reactify+Browserify",
+  "main": "index",
+  "author": "petehunt",
+  "license": "MIT"
+}
