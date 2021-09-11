@@ -32,4 +32,3 @@ Only show logs containing `/status`:
 ```
 fields @message | filter @message like '/status'
 ```
-

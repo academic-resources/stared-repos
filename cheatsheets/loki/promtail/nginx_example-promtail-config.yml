@@ -24,40 +24,40 @@ scrape_configs:
         environment: production
         host: demo-app-prod
     relabel_configs:
-      - source_labels: ['__journal__systemd_unit']
-        target_label: 'unit'
+      - source_labels: ["__journal__systemd_unit"]
+        target_label: "unit"
 
   - job_name: syslog
     pipeline_stages:
     static_configs:
-    - targets:
-        - localhost
-      labels:
-        job: prod/syslog
-        host: demo-app-prod
-        environment: production
-        __path__: /var/log/syslog
+      - targets:
+          - localhost
+        labels:
+          job: prod/syslog
+          host: demo-app-prod
+          environment: production
+          __path__: /var/log/syslog
 
   - job_name: nginx-info
     static_configs:
-    - targets:
-        - localhost
-      labels:
-        job: prod/nginx
-        environment: production
-        host: demo-app-prod
-        level: info
-        service_name: demo-app-prod
-        __path__: /var/log/nginx/access.log
+      - targets:
+          - localhost
+        labels:
+          job: prod/nginx
+          environment: production
+          host: demo-app-prod
+          level: info
+          service_name: demo-app-prod
+          __path__: /var/log/nginx/access.log
 
   - job_name: nginx-error
     static_configs:
-    - targets:
-        - localhost
-      labels:
-        job: prod/nginx
-        environment: production
-        host: demo-app-prod
-        level: error
-        service_name: demo-app-prod
-        __path__: /var/log/nginx/error.log
+      - targets:
+          - localhost
+        labels:
+          job: prod/nginx
+          environment: production
+          host: demo-app-prod
+          level: error
+          service_name: demo-app-prod
+          __path__: /var/log/nginx/error.log

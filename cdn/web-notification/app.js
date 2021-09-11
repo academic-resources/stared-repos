@@ -40,13 +40,15 @@ const webNotificationApp = (debug = false) => {
                             }
                             alert(`clicked notification`);
                         });
-                    }else {
+                    } else {
                         log(`notification permission is denied!`);
                     }
                 }
-            )
+            );
         } else {
-            console.warn(`your browser is too old, which not support web notification!`);
+            console.warn(
+                `your browser is too old, which not support web notification!`
+            );
         }
     } catch (err) {
         console.error(`error =`, err);

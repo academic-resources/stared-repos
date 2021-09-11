@@ -2,7 +2,7 @@
 
 ### Example 1
 
-Message: 
+Message:
 
 ```
 Endpoints not available for default/team-app-service-foobar
@@ -67,6 +67,6 @@ Result:
 ```
 {
   "date": 1575982567890,
-  "status": "INFO" 
+  "status": "INFO"
 }
 ```

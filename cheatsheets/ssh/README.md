@@ -2,7 +2,6 @@
 
 - https://cheatsheet.dennyzhang.com/cheatsheet-ssh-a4
 
-
 ## Proxy Jump
 
 ### Method 1
@@ -44,7 +43,7 @@ Host *
 Host jump-host
     HostName bastion.domain.com
     IdentityFile ~/.ssh/bastion.pem
-    
+
 Host target-b
     HostName target-b.pvt.domain.com
     IdentityFile /home/ubuntu/.ssh/id_rsa

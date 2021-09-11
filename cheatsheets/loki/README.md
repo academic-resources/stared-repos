@@ -1,16 +1,19 @@
 # Loki
 
 ## Blogposts about Loki
+
 - https://rtfm.co.ua/en/grafana-labs-loki-logs-collector-and-monitoring-system/
 - [Using Fluentd and Loki on Docker](https://dev.to/thakkaryash94/docker-container-logs-using-fluentd-and-grafana-loki-a15)
 - [Log Monitoring and Alerting with Loki](https://www.infracloud.io/blogs/grafana-loki-log-monitoring-alerting/)
 
 ## Dashboards for Grafana
+
 - https://grafana.com/grafana/dashboards/12019
 
 ## Get Started
 
 You can refer to the following to get your loki stack up and running:
+
 - https://blog.ruanbekker.com/blog/2020/08/13/getting-started-on-logging-with-loki-using-docker/
 - https://grafana.com/docs/loki/latest/installation/
 

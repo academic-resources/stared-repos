@@ -14,7 +14,6 @@
 - [using Python](python-elasticsearch.md#python-library)
   - [Ingest](python-elasticsearch.md#ingest-using-python)
 
-
 ## Using Curl
 
 ### Health with Curl
@@ -94,6 +93,7 @@ $ curl -XPOST -H "Content-Type: application/json" "http://localhost:9200/my-foob
 ### Update Index Settings
 
 Documentation:
+
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-update-settings.html
 
 View the index settings:
@@ -141,9 +141,9 @@ $ curl -XPOST -H 'Content-Type: application/json' 'http://127.0.0.1:9200/_reinde
   {
     "source": {
       "index": ["my-metrics-2019.01.03"]
-    }, 
+    },
     "dest": {
-      "index": "archived-metrics-2019.01.03", 
+      "index": "archived-metrics-2019.01.03",
     }
 }'
 ```
@@ -155,9 +155,9 @@ $ curl -XPOST -H 'Content-Type: application/json' 'http://127.0.0.1:9200/_reinde
   {
     "source": {
       "index": ["my-metrics-2019.01.03", "my-metrics-2019.01.04"]
-    }, 
+    },
     "dest": {
-      "index": "archived-metrics-2019.01", 
+      "index": "archived-metrics-2019.01",
     }
 }'
 ```
@@ -167,12 +167,12 @@ Reindex only missing documents from source to target index. You will receive con
 ```
 $ curl -XPOST -H 'Content-Type: application/json' 'http://127.0.0.1:9200/_reindex' -d '
   {
-    "conflicts": "proceed", 
+    "conflicts": "proceed",
     "source": {
       "index": ["my-metrics-2019.01.03"]
-    }, 
+    },
     "dest": {
-      "index": "archived-metrics-2019.01.03", 
+      "index": "archived-metrics-2019.01.03",
       "op_type": "create"
     }
 }'
@@ -203,15 +203,15 @@ Reindex the last 500 documents based on timestamp to a target index:
 ```
 $ curl -XPOST -H 'Content-Type: application/json' 'http://127.0.0.1:9200/_reindex' -d '
   {
-    "size": 500, 
+    "size": 500,
     "source": {
       "index": "my-metrics-2019.01.03",
       "sort": {
         "timestamp": "desc"
       }
-    }, 
+    },
     "dest": {
-      "index": "archived-last500-metrics-2019.01.03", 
+      "index": "archived-last500-metrics-2019.01.03",
       "op_type": "create"
     }
 }'
@@ -229,7 +229,7 @@ $ curl -XPOST -H 'Content-Type: application/json' 'http://127.0.0.1:9200/_reinde
         "request_method",
         "referral"
       ]
-    }, 
+    },
     "dest": {
       "index": "archived-subset-metrics-2019.01.03"
     }
@@ -298,11 +298,12 @@ curl -XPOST -H 'Content-Type: application/json' 'http://127.0.0.1:9200/_snapshot
 {
   "indices": [
     "kibana_sample_data_ecommerce", "kibana_sample_data_logs"
-  ], 
-  "ignore_unavailable": false, 
-  "include_global_state": false 
+  ],
+  "ignore_unavailable": false,
+  "include_global_state": false
 }'
 ```
+
 ```
 curl 'http://127.0.0.1:9200/_cat/indices/kibana_sample*?v'
 health status index
@@ -317,17 +318,18 @@ curl -XPOST -H 'Content-Type: application/json' 'http://127.0.0.1:9200/_snapshot
 {
   "indices": [
     "kibana_sample_data_ecommerce", "kibana_sample_data_logs"
-  ], 
-  "ignore_unavailable": false, 
-  "include_global_state": false, 
-  "rename_pattern": "(.+)", 
-  "rename_replacement": "restored_index_$1" 
+  ],
+  "ignore_unavailable": false,
+  "include_global_state": false,
+  "rename_pattern": "(.+)",
+  "rename_replacement": "restored_index_$1"
 }'
 ```
+
 ```
 curl 'http://127.0.0.1:9200/_cat/indices/*restored*?v'
 health status index
-green  open   restored_index_kibana_sample_data_ecommerce 
+green  open   restored_index_kibana_sample_data_ecommerce
 green  open   restored_index_kibana_sample_data_logs
 ```
 
@@ -335,22 +337,23 @@ Restore and rename with a different name pattern:
 
 ```
 curl -XPOST -H 'Content-Type: application/json' 'http://127.0.0.1:9200/_snapshot/es-index-backups/test-snapshot-latest/_restore' -d '
-{ 
+{
   "indices": [
     "kibana_sample_data_ecommerce", "kibana_sample_data_logs"
-  ], 
-  "ignore_unavailable": false, 
-  "include_global_state": false, 
-  "rename_pattern": 
-  "kibana_sample_data_(.+)", 
-  "rename_replacement": "restored_index_$1" 
+  ],
+  "ignore_unavailable": false,
+  "include_global_state": false,
+  "rename_pattern":
+  "kibana_sample_data_(.+)",
+  "rename_replacement": "restored_index_$1"
 }'
 ```
+
 ```
 curl 'http://127.0.0.1:9200/_cat/indices/*restored*?v'
-health status index                                       
-green  open   restored_index_ecommerce                    
-green  open   restored_index_logs                         
+health status index
+green  open   restored_index_ecommerce
+green  open   restored_index_logs
 ```
 
 ### Tasks
@@ -358,24 +361,24 @@ green  open   restored_index_logs
 View tasks in table format:
 
 ```
-$ curl -s -XGET 'http://127.0.0.1:9200/_cat/tasks?v&detailed' 
+$ curl -s -XGET 'http://127.0.0.1:9200/_cat/tasks?v&detailed'
 action                         task_id                          parent_task_id                   type      start_time    timestamp running_time ip            node    description
-cluster:monitor/nodes/stats    DzSOmlH3RRaLGA33QJl3Bg:137161492 -                                transport 1566542180463 23:36:20  1.1s         x.x.x.x DzSOmlH 
-cluster:monitor/nodes/stats[n] C50akcLqScuJDwLx2nk9UA:95915234  DzSOmlH3RRaLGA33QJl3Bg:137161492 netty     1566542180464 23:36:20  1.1s         x.x.x.x  C50akcL 
+cluster:monitor/nodes/stats    DzSOmlH3RRaLGA33QJl3Bg:137161492 -                                transport 1566542180463 23:36:20  1.1s         x.x.x.x DzSOmlH
+cluster:monitor/nodes/stats[n] C50akcLqScuJDwLx2nk9UA:95915234  DzSOmlH3RRaLGA33QJl3Bg:137161492 netty     1566542180464 23:36:20  1.1s         x.x.x.x  C50akcL
 indices:data/write/bulk        yZXq8fZWRjiurCvtO7tSpQ:92155276  -                                transport 1566542181565 23:36:21  23ms         x.x.x.x yZXq8fZ requests[83], indices[logstash-logs-2019.08]
 ```
 
 View tasks in json format:
 
 ```
-$ curl -s -XGET 'http://127.0.0.1:9200/_tasks?detailed&format=json' 
+$ curl -s -XGET 'http://127.0.0.1:9200/_tasks?detailed&format=json'
 {"nodes":{"xx":{"name":"xx","roles":["data","ingest"],"tasks":{"xx:xx":{"node":"xx","id":xx,"type":"transport","action":"cluster:monitor/nodes/stats"
 ```
 
 View tasks in json format and pretty print:
 
 ```
-$ curl -s -XGET 'http://127.0.0.1:9200/_tasks?detailed&pretty&format=json' 
+$ curl -s -XGET 'http://127.0.0.1:9200/_tasks?detailed&pretty&format=json'
 {
   "nodes" : {
     "xx" : {
@@ -457,4 +460,5 @@ Some of the other actions:
 ```
 
 ### External Resources
+
 - http://elasticsearch-cheatsheet.jolicode.com/

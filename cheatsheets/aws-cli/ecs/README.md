@@ -84,4 +84,3 @@ Update ECS Service to 3 replicas:
 ```
 $ aws --profile default ecs update-service --cluster $cluster_name --service $service_name --desired-count 3
 ```
-

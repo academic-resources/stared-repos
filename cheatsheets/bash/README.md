@@ -2,16 +2,16 @@
 
 My Bash Cheatsheet Index:
 
-* [One Liners](#one-liners)
-  * [Block Bad IPs](#block-bad-ips)
-* [If Statements](#if-statements)
-  * [Check if args are passed](#check-if-args-are-passed)
-  * [Check if required variables exist](#check-if-required-variables-exist)
-  * [Check if environment variables exists](#check-if-environment-variables-exists)
-* [While Loops](#while-loops)
-  * [Run for 5 Seconds](#run-process-for-5-seconds)
-* [Redirecting Outputs](#redirecting-outputs)
-  * [Stdout, Stderr](#stdout-stderr)
+- [One Liners](#one-liners)
+  - [Block Bad IPs](#block-bad-ips)
+- [If Statements](#if-statements)
+  - [Check if args are passed](#check-if-args-are-passed)
+  - [Check if required variables exist](#check-if-required-variables-exist)
+  - [Check if environment variables exists](#check-if-environment-variables-exists)
+- [While Loops](#while-loops)
+  - [Run for 5 Seconds](#run-process-for-5-seconds)
+- [Redirecting Outputs](#redirecting-outputs)
+  - [Stdout, Stderr](#stdout-stderr)
 
 ## Commands
 
@@ -126,7 +126,7 @@ sleep 2
 
 ## Redirecting Outputs
 
-### Stdout, Stderr 
+### Stdout, Stderr
 
 Redirect stderr to /dev/null:
 
@@ -151,4 +151,3 @@ Redirect both to a file:
 ```
 grep -irl faker . &> file.log
 ```
-

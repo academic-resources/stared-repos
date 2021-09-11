@@ -16,7 +16,6 @@
   - [Prometheus Variables](#prometheus-variables)
   - [Prometheus Queries](#prometheus-queries)
 
-
 ## Dashboards
 
 - [Loki](https://grafana.com/grafana/dashboards/12019)
@@ -25,7 +24,7 @@
 
 ### Variables for CloudWatch
 
-Docs: 
+Docs:
 
 - https://grafana.com/docs/grafana/latest/features/datasources/cloudwatch/
 
@@ -57,7 +56,7 @@ Query: dimension_values($region,AWS/EC2,CPUUtilization,AutoScalingGroupName)
 EC2 InstanceId from Tag Name:
 
 ```
-Query: ec2_instance_attribute(eu-west-1, InstanceId, {"tag:ASG":["my-app-asg"]}) 
+Query: ec2_instance_attribute(eu-west-1, InstanceId, {"tag:ASG":["my-app-asg"]})
 ```
 
 EBS VolumeId from InstanceId:
@@ -120,7 +119,7 @@ domain_name:
 
 ## Datasource: MySQL
 
-### Variables for MySQL 
+### Variables for MySQL
 
 Name: `status`
 Label: `Status`
@@ -132,7 +131,7 @@ To use a regex to filter out any NULLs:
 
 ```
 # this will only return results with letters/numbers
-/([a-zA-Z0-9\.]+)/  
+/([a-zA-Z0-9\.]+)/
 ```
 
 ### Queries for MySQL
@@ -140,7 +139,7 @@ To use a regex to filter out any NULLs:
 Gauge:
 
 ```
-SELECT 
+SELECT
 country,
 SUM(cnt) AS total,
 NOW() AS time
@@ -152,9 +151,9 @@ GROUP BY country
 Bar Gauge:
 
 ```
-SELECT NOW() AS time, count(*) as cnt, CONCAT(name,', ',surname,', ',country) AS entity FROM mytable 
+SELECT NOW() AS time, count(*) as cnt, CONCAT(name,', ',surname,', ',country) AS entity FROM mytable
 WHERE status = "PENDING"
-AND name REGEXP '${name:pipe}' 
+AND name REGEXP '${name:pipe}'
 AND surname REGEXP '${surname:pipe}'
 AND country REGEXP '${country:pipe}'
 GROUP BY CONCAT(name,', ',surname,', ',country)
@@ -165,7 +164,7 @@ Table Panel:
 ```
 SELECT name, surname, country, status, pending_time from mytable
 WHERE status = "PENDING"
-AND name REGEXP '${name:pipe}' 
+AND name REGEXP '${name:pipe}'
 AND surname REGEXP '${surname:pipe}'
 AND country REGEXP '${country:pipe}'
 ```
@@ -221,12 +220,13 @@ prod/app-deploy
 
 and you only want to display {env}/app,
 
-The query: 
+The query:
+
 ```
 label_values(labels, job)
 ```
 
-The regex: 
+The regex:
 
 ```
 /^(.*app)/
@@ -249,7 +249,7 @@ which will result in:
 
 ```
 app
-app-syslog 
+app-syslog
 app-deploy
 ```
 

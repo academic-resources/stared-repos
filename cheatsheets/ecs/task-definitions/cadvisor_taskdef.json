@@ -5,11 +5,11 @@
       "name": "cadvisor",
       "image": "google/cadvisor",
       "memoryReservation": 256,
-      "portMappings":[
+      "portMappings": [
         {
-          "protocol":"tcp",
-          "containerPort":8080,
-          "hostPort":8080
+          "protocol": "tcp",
+          "containerPort": 8080,
+          "hostPort": 8080
         }
       ],
       "essential": true,
@@ -50,40 +50,40 @@
   ],
   "volumes": [
     {
-      "host" : {
-        "sourcePath" : "/"
+      "host": {
+        "sourcePath": "/"
       },
-      "name" : "root"
+      "name": "root"
     },
     {
-      "host" : {
-        "sourcePath" : "/var/run"
+      "host": {
+        "sourcePath": "/var/run"
       },
-      "name" : "var_run"
+      "name": "var_run"
     },
     {
-      "host" : {
-        "sourcePath" : "/sys"
+      "host": {
+        "sourcePath": "/sys"
       },
-      "name" : "sys"
+      "name": "sys"
     },
     {
-      "host" : {
-        "sourcePath" : "/var/lib/docker"
+      "host": {
+        "sourcePath": "/var/lib/docker"
       },
-      "name" : "var_lib_docker"
+      "name": "var_lib_docker"
     },
     {
-      "host" : {
-        "sourcePath" : "/dev_disk"
+      "host": {
+        "sourcePath": "/dev_disk"
       },
-      "name" : "dev_disk"
+      "name": "dev_disk"
     },
     {
-      "host" : {
-        "sourcePath" : "/cgroup"
+      "host": {
+        "sourcePath": "/cgroup"
       },
-      "name" : "cgroup"
+      "name": "cgroup"
     }
   ]
 }

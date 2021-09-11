@@ -2,9 +2,7 @@
   "family": "app-with-sidecar-container",
   "taskRoleArn": "arn:aws:iam::000000000000:role/aws-dev-ecs-task-role",
   "executionRoleArn": "arn:aws:iam::000000000000:role/aws-dev-ecs-exec-role",
-  "requiresCompatibilities": [
-    "EC2"
-  ],
+  "requiresCompatibilities": ["EC2"],
   "containerDefinitions": [
     {
       "name": "proxy",
@@ -32,9 +30,7 @@
       "stopTimeout": 30,
       "startTimeout": 30,
       "essential": true,
-      "links": [
-        "app"
-      ]
+      "links": ["app"]
     },
     {
       "name": "app",

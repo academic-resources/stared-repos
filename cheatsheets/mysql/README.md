@@ -1,15 +1,15 @@
 # MySQL Cheatsheet
 
-* [Changing Tables](#changing-tables)
-* [Check and Repair Tables](#check-and-repair-tables)
-* [Create Tables](#create-tables)
-* [Delete](#delete)
-* [Get Size in MB](#get-size-in-mb)
-* [Indexes](#indexes)
-* [Insert Data](#insert-data)
-* [Performance Schema Metrics](#performance-schema-metrics)
-* [Permissions](#permissions)
-* [Repair Table](#repair-table)
+- [Changing Tables](#changing-tables)
+- [Check and Repair Tables](#check-and-repair-tables)
+- [Create Tables](#create-tables)
+- [Delete](#delete)
+- [Get Size in MB](#get-size-in-mb)
+- [Indexes](#indexes)
+- [Insert Data](#insert-data)
+- [Performance Schema Metrics](#performance-schema-metrics)
+- [Permissions](#permissions)
+- [Repair Table](#repair-table)
 
 ## Permissions
 
@@ -45,13 +45,12 @@ mysql> FLUSH PRIVILEGES;
 
 ## Create Tables
 
-
 Create a table:
 
 ```
 mysql> CREATE TABLE domains (
   id INT(10) NOT NULL AUTO_INCREMENT,
-  domain varchar(50) NOT NULL, 
+  domain varchar(50) NOT NULL,
   owner  varchar(50),
   year_registered int(4)
 );
@@ -62,20 +61,20 @@ Create a table with primary key:
 ```
 mysql> CREATE TABLE domains (
   id INT(10) NOT NULL AUTO_INCREMENT,
-  domain varchar(50) NOT NULL, 
+  domain varchar(50) NOT NULL,
   owner  varchar(50),
   year_registered int(4),
-  PRIMARY KEY (domain) 
+  PRIMARY KEY (domain)
 );
 ```
 
 Create a table as a select query:
 
 ```
-mysql> CREATE TABLE purchases_fnb_2016 
-       AS 
-         SELECT * FROM customers where date >= '2016-01-01 00:00:00' 
-         AND date  <= '2016-10-29 00:00:00' 
+mysql> CREATE TABLE purchases_fnb_2016
+       AS
+         SELECT * FROM customers where date >= '2016-01-01 00:00:00'
+         AND date  <= '2016-10-29 00:00:00'
          AND bank = 'fnb'
 ;
 ```
@@ -213,11 +212,11 @@ mysql> optimize table maillog;
 ## Get Size in MB
 
 ```
-SELECT table_schema "Data Base Name", 
-sum( data_length + index_length ) / 1024 / 
-1024 "Data Base Size in MB", 
-sum( data_free )/ 1024 / 1024 "Free Space in MB" 
-FROM information_schema.TABLES 
+SELECT table_schema "Data Base Name",
+sum( data_length + index_length ) / 1024 /
+1024 "Data Base Size in MB",
+sum( data_free )/ 1024 / 1024 "Free Space in MB"
+FROM information_schema.TABLES
 GROUP BY table_schema ;
 ```
 

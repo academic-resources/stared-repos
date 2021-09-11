@@ -3,10 +3,10 @@
 name: alertmanager-deploys
 on:
   push:
-    branches: 
+    branches:
       - master
     paths:
-      - 'alertmanager/*'
+      - "alertmanager/*"
 
 jobs:
   master:
@@ -25,7 +25,7 @@ jobs:
         run: |
           echo "starting"
           echo "finished"
-      
+
       # https://github.com/marketplace/actions/github-action-for-slack
       - name: Slack Notification on Success
         # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#job-status-check-functions
@@ -38,7 +38,7 @@ jobs:
           SLACK_AVATAR: repository # Optional. can be (repository, sender, an URL) (defaults to webhook app avatar)
           SLACK_CUSTOM_PAYLOAD: '{"text":"[*SUCCESS*] Alertmanager from was deployed\n *Repo*: [{{ GITHUB_REPOSITORY }}]({{ GITHUB_REPOSITORY }})\n *User*: `{{ GITHUB_ACTOR }}`","username": "{{ GITHUB_ACTOR }}"}'
         uses: Ilshidur/action-slack@master
-        
+
       - name: Slack Notification on Failure
         if: ${{ failure() }}
         env:

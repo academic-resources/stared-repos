@@ -64,7 +64,7 @@ avg_over_time(node_memory_MemAvailable_bytes[5m])/1024/1024
 CPU Utilization:
 
 ```
-100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle", instance="my-instance"}[5m])) * 100 ) 
+100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle", instance="my-instance"}[5m])) * 100 )
 ```
 
 CPU Utilization offset with 24hours ago:
@@ -143,7 +143,7 @@ count(container_last_seen) BY (container_label_com_docker_swarm_node_id)
 Running Containers per Node, include corresponding hostnames:
 
 ```
-count(container_last_seen) BY (container_label_com_docker_swarm_node_id) * ON (container_label_com_docker_swarm_node_id) GROUP_LEFT(node_name) node_meta 
+count(container_last_seen) BY (container_label_com_docker_swarm_node_id) * ON (container_label_com_docker_swarm_node_id) GROUP_LEFT(node_name) node_meta
 ```
 
 HAProxy Response Codes:
@@ -207,7 +207,7 @@ node_memory_MemAvailable_bytes * on(instance) group_left(nodename) (node_uname_i
 Container CPU Average for 5m:
 
 ```
-(sum by(instance, container_label_com_amazonaws_ecs_container_name, container_label_com_amazonaws_ecs_cluster) (rate(container_cpu_usage_seconds_total[5m])) * 100) 
+(sum by(instance, container_label_com_amazonaws_ecs_container_name, container_label_com_amazonaws_ecs_cluster) (rate(container_cpu_usage_seconds_total[5m])) * 100)
 ```
 
 Container Memory Usage: Total:
@@ -373,7 +373,6 @@ query: `label_values(node_network_up, instance)`
 type: `query`
 query: `label_values(mysql_up, instance)`
 
-
 - Static Values:
 
 type: `custom`
@@ -397,7 +396,8 @@ query: `label_values(container_last_seen,container_label_com_docker_swarm_servic
 
 name: `manager_node_id`
 label: `manager_node_id`
-query: 
+query:
+
 ```
 label_values(container_last_seen{container_label_com_docker_swarm_service_name=~"proxy_traefik", container_label_com_docker_swarm_node_id=~".*"}, container_label_com_docker_swarm_node_id)
 ```
@@ -406,7 +406,8 @@ label_values(container_last_seen{container_label_com_docker_swarm_service_name=~
 
 name: `stack_on_manager`
 label: `stack_on_manager`
-query: 
+query:
+
 ```
 label_values(container_last_seen{container_label_com_docker_swarm_node_id=~"$manager_node_id"},container_label_com_docker_stack_namespace)
 ```
@@ -441,7 +442,7 @@ label_values(container_last_seen{container_label_com_docker_swarm_node_id=~"$man
   - [Prometheus AWS Cross Account ec2_sd_config](https://jarodw.com/posts/prometheus-ec2-sd-multiple-aws-accounts/)
   - [Prometheus AWS ec2_sd_config role](https://medium.com/investing-in-tech/automatic-monitoring-for-all-new-aws-instances-using-prometheus-service-discovery-97d37a5b2ea2)
 - [@metricfire.com: Understanding the Rate Function](https://www.metricfire.com/blog/understanding-the-prometheus-rate-function/)
-Dashboarding:
+  Dashboarding:
 - [Alerting on Missing Labels and Metrics](https://niravshah2705.medium.com/prometheus-alert-for-missing-metrics-and-labels-afd4b8f12b1)
 - [@devconnected Disk IO Dashboarding](https://devconnected.com/monitoring-disk-i-o-on-linux-with-the-node-exporter/)
 

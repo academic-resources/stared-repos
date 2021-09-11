@@ -28,8 +28,8 @@ from requests_aws4auth import AWS4Auth
 
 aws_auth = AWS4Auth(access_key, secret_key, AWS_REGION, 'es', session_token=token)
 es = Elasticsearch(
-    hosts = [{'host': ES_ENDPOINT, 'port': 443}], 
-    http_auth=aws_credentials, use_ssl=True, verify_certs=True, 
+    hosts = [{'host': ES_ENDPOINT, 'port': 443}],
+    http_auth=aws_credentials, use_ssl=True, verify_certs=True,
     connection_class=RequestsHttpConnection
 )
 ```
@@ -40,8 +40,8 @@ es = Elasticsearch(
 from elasticsearch import Elasticsearch, RequestsHttpConnection, helpers
 
 es = Elasticsearch(
-    hosts = [{'host': ES_ENDPOINT, 'port': 443}], 
-    http_auth=('user', 'password'), use_ssl=True, verify_certs=True, 
+    hosts = [{'host': ES_ENDPOINT, 'port': 443}],
+    http_auth=('user', 'password'), use_ssl=True, verify_certs=True,
     connection_class=RequestsHttpConnection
 )
 ```
@@ -99,7 +99,7 @@ for doc in list_of_dicts:
     doc['_type'] = '_doc'
     bulk_docs.append(doc)
     del doc
-    
+
 helpers.bulk(es, bulk_docs)
 ```
 
@@ -126,9 +126,9 @@ Query: `{"query": {"match": {"text": "HI"}}}`
 
 ```
 >>> response = requests.put(
-    'https://es.x.x/xstats', 
-    auth=('username', 'pass'), 
-    headers={'content-type': 'application/json'}, 
+    'https://es.x.x/xstats',
+    auth=('username', 'pass'),
+    headers={'content-type': 'application/json'},
     json={'settings': {'number_of_shards': 2}}
 )
 ```

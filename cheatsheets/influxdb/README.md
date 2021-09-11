@@ -12,7 +12,7 @@ $ influx
 > create database test
 ```
 
-###  List Databases:
+### List Databases:
 
 ```
 > show databases

@@ -7,7 +7,7 @@ $ aws --profile dev elasticache describe-cache-clusters --max-items 5
 {
     "CacheClusters": [
         {
-            "CacheClusterId": "test-cluster-dev-0001-001", 
+            "CacheClusterId": "test-cluster-dev-0001-001",
             ...
         }
     ]
@@ -21,7 +21,7 @@ $ aws --profile eu-dev elasticache describe-cache-clusters --cache-cluster-id "t
 {
     "CacheClusters": [
         {
-            "CacheClusterId": "test-cluster-dev-0001-001", 
+            "CacheClusterId": "test-cluster-dev-0001-001",
             ...
         }
     ]

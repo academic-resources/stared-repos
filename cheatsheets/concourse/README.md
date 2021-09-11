@@ -2,7 +2,6 @@
 
 - https://cheatsheet.dennyzhang.com/cheatsheet-concourse-a4
 
-
 Login to your Team:
 
 ```

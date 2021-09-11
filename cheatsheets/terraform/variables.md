@@ -24,6 +24,7 @@ prod
 ```
 
 Join strings:
+
 - https://www.terraform.io/docs/configuration/functions/format.html
 
 ```

@@ -9,7 +9,7 @@ $ aws --profile dev ssm put-parameter --type 'String' --name "/my-service/dev/DA
 Get SSM Parameters by Path:
 
 ```
-$ aws --profile dev --region eu-west-1 ssm get-parameters-by-path --path '/my-service/dev/' | jq '.Parameters[]' | jq -r '.Name' 
+$ aws --profile dev --region eu-west-1 ssm get-parameters-by-path --path '/my-service/dev/' | jq '.Parameters[]' | jq -r '.Name'
 /my-service/dev/DATABASE_HOST
 /my-service/dev/DATABASE_NAME
 ```

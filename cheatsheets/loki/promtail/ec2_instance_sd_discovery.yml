@@ -30,7 +30,7 @@ scrape_configs:
         target_label: __path__
       - source_labels: [__meta_ec2_private_dns_name]
         regex: "(.*)\\.(.*)\\.compute\\.internal"
-        replacement: '${1}'
+        replacement: "${1}"
         target_label: __host__
 
   - job_name: prod/journal
@@ -42,13 +42,12 @@ scrape_configs:
         job: prod/systemd-journal
         name: my-ec2-instance
     relabel_configs:
-      - source_labels: ['__journal__systemd_unit']
-        target_label: 'unit'
-      - source_labels: ['__journal__hostname']
+      - source_labels: ["__journal__systemd_unit"]
+        target_label: "unit"
+      - source_labels: ["__journal__hostname"]
         target_label: __host__
-      - source_labels: ['__journal_syslog_identifier']
+      - source_labels: ["__journal_syslog_identifier"]
         target_label: syslog_identifier
-
 # prod/ec2-logs produces:
 #  instance="i-00000000000"
 #  name="my-ec2-instance"

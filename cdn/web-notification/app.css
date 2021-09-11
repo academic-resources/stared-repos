@@ -3,8 +3,7 @@
 /* app.css */
 
 :root {
-   --cololr: red;
-   --default-cololr: green;
-   --new-cololr: blue;
+    --cololr: red;
+    --default-cololr: green;
+    --new-cololr: blue;
 }
-

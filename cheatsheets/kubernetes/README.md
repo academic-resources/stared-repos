@@ -1,20 +1,19 @@
 ### Components
 
-|Name|Description|
-|----|-----------|
-|kube-apiserver|	validates and configures data for the api objects which include pods, services, replicationcontrollers, and others|
-|etcd|	distributed k/v store|
-|kube-scheduler|	schedule pods to run on selected nodes|
-|kube-controller-manager|	daemon that embeds the core control loops shipped with kubernetes|
+| Name                    | Description                                                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| kube-apiserver          | validates and configures data for the api objects which include pods, services, replicationcontrollers, and others |
+| etcd                    | distributed k/v store                                                                                              |
+| kube-scheduler          | schedule pods to run on selected nodes                                                                             |
+| kube-controller-manager | daemon that embeds the core control loops shipped with kubernetes                                                  |
 
 Components and Services running on Worker Nodes:
 
-|Name|Description|
-|----|-----------|
-|kubelet|node-agent that runs on each node|
-|kube-proxy	connection| forwarding|
-|container runtime|	container runtimes supported by kubernets: (docker, rkt, runc, etc)|
-
+| Name                  | Description                                                         |
+| --------------------- | ------------------------------------------------------------------- |
+| kubelet               | node-agent that runs on each node                                   |
+| kube-proxy connection | forwarding                                                          |
+| container runtime     | container runtimes supported by kubernets: (docker, rkt, runc, etc) |
 
 ### Nodes
 
@@ -42,31 +41,31 @@ Describe nodes:
 kubectl describe nodes
 ```
 
-Show nodes in yaml format	
+Show nodes in yaml format
 
 ```
 kubectl get nodes -o yaml
 ```
 
-Show node labels	
+Show node labels
 
 ```
 kubectl get node --show-labels
 ```
 
 Show nodes with specific label
-	
+
 ```
 kubectl get node --selector=[label_name]
 ```
 
-Show value from a key	
+Show value from a key
 
 ```
 kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="External IP")].address}'
 ```
 
-Get node resource information	
+Get node resource information
 
 ```
 kubectl top node [node_name]
@@ -96,79 +95,79 @@ Show pods in yaml format:
 kubectl get pods --output yaml
 ```
 
-Show system pods	
+Show system pods
 
 ```
 kubectl get pods --namespace kube-system
 ```
 
-Show pods in yaml format	
+Show pods in yaml format
 
 ```
 kubectl get pods --output yaml
 ```
 
-Dont truncate output	
+Dont truncate output
 
 ```
 kubectl get pods -o wide
 ```
 
-Show pod info	
+Show pod info
 
 ```
 kubectl get pod svclb-traefik --namespace kube-system
 ```
 
-Show pod info from app selector	
+Show pod info from app selector
 
 ```
 kubectl get pods --selector app=svclb-traefik --namespace kube-system
 ```
 
-Show all pods info from all ns	
+Show all pods info from all ns
 
 ```
 kubectl describe pods --all-namespaces
 ```
 
-Show pods with labels	
+Show pods with labels
 
 ```
 kubectl get pods --show-labels
 ```
 
-Dump pod info in yaml	
+Dump pod info in yaml
 
 ```
 kubectl get pod svclb-traefik --namespace kube-system -o yaml --export
 ```
 
-Export pod info to file	
+Export pod info to file
 
 ```
 kubectl get pod svclb-traefik --namespace kube-system -o yaml --export > exported.yml
 ```
 
-Show pods, sort by node	
+Show pods, sort by node
 
 ```
 kubectl get pods -o wide --sort-by="{.spec.nodeName}"
 ```
 
-Show pods, sort by restarts	
+Show pods, sort by restarts
 
 ```
 kubectl get pods --sort-by="{.status.containerStatuses[:1].restartCount}"
 ```
 
-Show pods on a node	
+Show pods on a node
 
 ```
 kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName="ip-10-10-4-20.eu-west-1.compute.internal"
 ```
 
-Show pods from a deployment	
+Show pods from a deployment
 
 ```
 kubectl get pods --output wide --selector app.kubernetes.io/name=my-app
@@ -194,25 +193,25 @@ kubectl run --generator=run-pod/v1 -it --rm load-generator --image=busybox /bin/
 
 ### Deployments
 
-List deployments	
+List deployments
 
 ```
 kubectl get deployment
 ```
 
-List deployments from all namespaces	
+List deployments from all namespaces
 
 ```
 kubectl get deployments --all-namespaces
 ```
 
-Show deployment info 
+Show deployment info
 
 ```
 kubectl get deployment/myapp -o yaml
 ```
 
-Run a Nginx Deployment with 2 Replicas	
+Run a Nginx Deployment with 2 Replicas
 
 ```
 kubectl run nginx01 --image=nginx --replicas=2 --port=80
@@ -271,7 +270,9 @@ kubectl get pods --sort-by="{.status.containerStatuses[:1].restartCount}"
 ### Resources:
 
 Kubectl Output Formatting:
+
 - https://gist.github.com/so0k/42313dbb3b547a0f51a547bb968696ba
 
 Kubernetes Cheatsheet:
+
 - https://kubernetes.io/docs/reference/kubectl/cheatsheet/

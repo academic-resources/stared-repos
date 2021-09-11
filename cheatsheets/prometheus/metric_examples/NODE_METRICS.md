@@ -7,7 +7,7 @@ Examples for Prometheus focused on Node Level Metrics.
 CPU Utilization:
 
 ```
-100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle", instance="my-instance-name"}[5m])) * 100) 
+100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle", instance="my-instance-name"}[5m])) * 100)
 ```
 
 ## Memory
@@ -35,7 +35,7 @@ node_filesystem_avail_bytes{instance=~"my-ec2-instance",job=~"node-exporter",mou
 Disk Space Available in Percentage:
 
 ```
-(node_filesystem_avail_bytes{mountpoint="/", instance=~"my-ec2-instance"}  * 100) / node_filesystem_size_bytes{mountpoint="/", instance=~"my-ec2-instance"} 
+(node_filesystem_avail_bytes{mountpoint="/", instance=~"my-ec2-instance"}  * 100) / node_filesystem_size_bytes{mountpoint="/", instance=~"my-ec2-instance"}
 ```
 
 Disk Latencies:

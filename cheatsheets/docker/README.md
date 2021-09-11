@@ -2,9 +2,9 @@
 
 If you can't find what you are looking for try my other sources:
 
-* [wiki.ruanbekker.com:docker](https://wiki.ruanbekker.com/index.php/Category:Docker)
-* [blog.ruanbekker.com:docker](https://blog.ruanbekker.com/blog/categories/docker/)
-* [sysadmins.co.za:docker](https://sysadmins.co.za/tag/docker/)
+- [wiki.ruanbekker.com:docker](https://wiki.ruanbekker.com/index.php/Category:Docker)
+- [blog.ruanbekker.com:docker](https://blog.ruanbekker.com/blog/categories/docker/)
+- [sysadmins.co.za:docker](https://sysadmins.co.za/tag/docker/)
 
 ## Manipulating Output:
 
@@ -58,12 +58,12 @@ More examples:
 
 ```
 FROM python:2.7
-RUN pip install Flask==0.11.1 
+RUN pip install Flask==0.11.1
 RUN useradd -ms /bin/bash admin
 COPY --chown=admin:admin app /app
 WORKDIR /app
 USER admin
-CMD ["python", "app.py"] 
+CMD ["python", "app.py"]
 ```
 
 ## Template Variables
@@ -92,6 +92,7 @@ $ cat /var/lib/docker/containers/b8e6523c8741d33f778a4f899dc04dab912472cedfba5ab
 - https://docs.docker.com/config/formatting/
 
 For Swarm:
+
 - https://forums.docker.com/t/example-usage-of-docker-swarm-template-placeholders/73859
 
 Get a container to report the host's hostname:
