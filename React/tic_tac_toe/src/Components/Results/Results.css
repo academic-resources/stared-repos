@@ -1,0 +1,8 @@
+.Results{
+    position: absolute;
+    margin-top:450px;
+}
+
+.Results td , th{
+    font-size: 150%;
+}

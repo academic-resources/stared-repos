@@ -1,0 +1,38 @@
+.DropDownMenu {
+  padding: 10px;
+  display: inline-block;
+  width: 120px;
+}
+
+.DropDownMenu button{
+  margin-bottom: 10px;
+  border:none;
+  background: none;
+}
+
+.DropDownMenu ul {
+  /*  הסר בולטים מהרשימה*/
+  list-style-type: none;
+  position: absolute;
+  transition : opacity 2s;
+  margin: 0;
+  padding: 0;
+  width: 120px;
+  background-color: #f1f1f1;
+}
+
+.DropDownMenu li a {
+  /* תתיחס לאלמנטים הנ"ל כמו בלוק על מנת שהצבע יתיחס למלבן - בלוק */
+  display: block;
+  color: black;
+  /* הצגה יותר אסטטית של האלמנטים ברשימה*/
+  padding: 8px 16px;
+  /* הסר עיטור טקסט כך שלא יראה כמו לינק */
+  text-decoration: none;
+}
+
+/* שנה את צבע הלינק במעבר עליו */
+.DropDownMenu li a:hover {
+  background-color: #555555;
+  color: white;
+}
