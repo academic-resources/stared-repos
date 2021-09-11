@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+    div.form-container
+            form.create-comment-form
+                div
+                    textarea(name="message" class="form" placeHolder="Tell us what you think..." required)
+
+                div#button
+                    button(type="submit" class=".user-submit") Comment
+            script(src="/js/create-comment.js")

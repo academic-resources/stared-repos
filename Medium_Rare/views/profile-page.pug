@@ -1,0 +1,32 @@
+extends layout.pug
+
+block content
+  body
+    include includes/navigation
+    include includes/scripts
+    .pPoutermost
+      div.pPbanner
+        .pPbannerContent
+          .pPprofileContainer
+            .pPprofile
+              .pPuserName= user.userName
+              .pPbio= user.bio
+              .pPfollowers #{user.Articles.length*123} Followers •  Following #{user.Articles.length*321} • #{user.Articles.length} Posts
+          .pPpictureContainer
+            img.pPkanye(src="https://picsum.photos/200/300", alt="hopefully a pic")
+            .pPfollowButtonContainer
+              button.followButton(type="button") Follow #{user.userName}
+      .pPsubBanner
+        if user.Articles
+          .pParticlesContainer
+              each article in user.Articles
+                  .pParticleContainer
+                      a.pPlink(href=`/articles/view/${article.id}`)
+                          h1.pPtitle= article.title
+                          .pPdate #{article.createdAt}
+                          .pPclaps #{article.claps} Claps
+                      .pPoverflowDiv
+                          h5.pParticle= article.body
+                          a.pPreadMore(href=`/articles/view/${article.id}`) Read More
+
+  script(src="/js/profile.js")
