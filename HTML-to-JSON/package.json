@@ -1,0 +1,19 @@
+{
+  "name": "express_scrape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "jsdom": "^16.2.2",
+    "query-selector": "^2.0.0"
+  }
+}
