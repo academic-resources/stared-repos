@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Group Chat App</title>
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		var socket = io.connect();
+    		var name = prompt("What is your name?", 'Harry Potter');
+
+    		socket.emit('login', {user: name});
+    		console.log('ready to go');
+    		socket.on('newUser', function(data){
+    			console.log(data.user);
+    			$('#update').html(data.user + " just joined your chat session!");
+    		});
+    		$('#newMessage').submit(function(e){
+    			e.preventDefault();
+    			var message = $('#message').val();
+    			var msg_obj = {
+    				name: name,
+    				message: message
+    			}
+    			socket.emit('newMessage', msg_obj);
+    		});
+    		socket.on('msg', function(data){
+    			console.log(data);
+    			var html = "";
+    			for (var x in data){
+    				console.log(x);
+    				console.log(data[x]);
+    				html += '<p>' + data[x].name + " says " + data[x].message + '</p>'; 
+    			}
+    			$('.container').html(html);
+    		});
+    		socket.on('logout', function(data){
+    			console.log(data);
+    			$('#update').html(data.message);
+    		});
+    	});
+    </script>
+    <style>
+    	.container {
+    		height: 400px;
+    		width: 500px;
+    		border: 1px solid black;
+    	}
+    </style>
+    <!-- When does a user login or logout?-->
+    <!-- Our container will contain all messages -->
+    <!-- We need to be able to create new messages -->
+</head>
+<body>
+	<h3 id ="update"></h3>
+	<div class="container"></div>
+	<form id="newMessage">
+		<textarea id="message"></textarea>
+		<input type="submit" id="new message">
+	</form>
+</body>
+</html>
