@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>UserMedia</title>
+<link rel="icon" type="image/png" href="./assets/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/docs.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/syntax.css">
+
+<script src="/assets/scripts/prefixfree.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+</head>
+<body>
+
+	
+
+	
+
+	<div id="sidebar" >
+
+	<div id="searchbox">
+		<input type="text">
+		<div id="clear"></div>
+	</div>
+
+	<div id="scroller">
+
+		
+
+		
+
+		
+			<div class="group">
+				<h1>component</h1>
+
+				
+
+				
+					<a href="AmplitudeEnvelope"  class="item" >AmplitudeEnvelope</a>
+				
+					<a href="Analyser"  class="item" >Analyser</a>
+				
+					<a href="Compressor"  class="item" >Compressor</a>
+				
+					<a href="CrossFade"  class="item" >CrossFade</a>
+				
+					<a href="EQ3"  class="item" >EQ3</a>
+				
+					<a href="Envelope"  class="item" >Envelope</a>
+				
+					<a href="FFT"  class="item" >FFT</a>
+				
+					<a href="FeedbackCombFilter"  class="item" >FeedbackCombFilter</a>
+				
+					<a href="Filter"  class="item" >Filter</a>
+				
+					<a href="Follower"  class="item" >Follower</a>
+				
+					<a href="FrequencyEnvelope"  class="item" >FrequencyEnvelope</a>
+				
+					<a href="Gate"  class="item" >Gate</a>
+				
+					<a href="LFO"  class="item" >LFO</a>
+				
+					<a href="Limiter"  class="item" >Limiter</a>
+				
+					<a href="LowpassCombFilter"  class="item" >LowpassCombFilter</a>
+				
+					<a href="Merge"  class="item" >Merge</a>
+				
+					<a href="Meter"  class="item" >Meter</a>
+				
+					<a href="MidSideCompressor"  class="item" >MidSideCompressor</a>
+				
+					<a href="MidSideMerge"  class="item" >MidSideMerge</a>
+				
+					<a href="MidSideSplit"  class="item" >MidSideSplit</a>
+				
+					<a href="Mono"  class="item" >Mono</a>
+				
+					<a href="MultibandCompressor"  class="item" >MultibandCompressor</a>
+				
+					<a href="MultibandSplit"  class="item" >MultibandSplit</a>
+				
+					<a href="PanVol"  class="item" >PanVol</a>
+				
+					<a href="Panner"  class="item" >Panner</a>
+				
+					<a href="Panner3D"  class="item" >Panner3D</a>
+				
+					<a href="ScaledEnvelope"  class="item" >ScaledEnvelope</a>
+				
+					<a href="Solo"  class="item" >Solo</a>
+				
+					<a href="Split"  class="item" >Split</a>
+				
+					<a href="Volume"  class="item" >Volume</a>
+				
+					<a href="Waveform"  class="item" >Waveform</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>control</h1>
+
+				
+
+				
+					<a href="CtrlInterpolate"  class="item" >CtrlInterpolate</a>
+				
+					<a href="CtrlMarkov"  class="item" >CtrlMarkov</a>
+				
+					<a href="CtrlPattern"  class="item" >CtrlPattern</a>
+				
+					<a href="CtrlRandom"  class="item" >CtrlRandom</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>core</h1>
+
+				
+
+				
+					<a href="AudioNode"  class="item" >AudioNode</a>
+				
+					<a href="Buffer"  class="item" >Buffer</a>
+				
+					<a href="Buffers"  class="item" >Buffers</a>
+				
+					<a href="Clock"  class="item" >Clock</a>
+				
+					<a href="Context"  class="item" >Context</a>
+				
+					<a href="Delay"  class="item" >Delay</a>
+				
+					<a href="Draw"  class="item" >Draw</a>
+				
+					<a href="Emitter"  class="item" >Emitter</a>
+				
+					<a href="Gain"  class="item" >Gain</a>
+				
+					<a href="IntervalTimeline"  class="item" >IntervalTimeline</a>
+				
+					<a href="Listener"  class="item" >Listener</a>
+				
+					<a href="Master"  class="item" >Master</a>
+				
+					<a href="OfflineContext"  class="item" >OfflineContext</a>
+				
+					<a href="Param"  class="item" >Param</a>
+				
+					<a href="Timeline"  class="item" >Timeline</a>
+				
+					<a href="TimelineState"  class="item" >TimelineState</a>
+				
+					<a href="Tone"  class="item" >Tone</a>
+				
+					<a href="Transport"  class="item" >Transport</a>
+				
+					<a href="TransportEvent"  class="item" >TransportEvent</a>
+				
+					<a href="TransportRepeatEvent"  class="item" >TransportRepeatEvent</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>effect</h1>
+
+				
+
+				
+					<a href="AutoFilter"  class="item" >AutoFilter</a>
+				
+					<a href="AutoPanner"  class="item" >AutoPanner</a>
+				
+					<a href="AutoWah"  class="item" >AutoWah</a>
+				
+					<a href="BitCrusher"  class="item" >BitCrusher</a>
+				
+					<a href="Chebyshev"  class="item" >Chebyshev</a>
+				
+					<a href="Chorus"  class="item" >Chorus</a>
+				
+					<a href="Convolver"  class="item" >Convolver</a>
+				
+					<a href="Distortion"  class="item" >Distortion</a>
+				
+					<a href="Effect"  class="item" >Effect</a>
+				
+					<a href="FeedbackDelay"  class="item" >FeedbackDelay</a>
+				
+					<a href="FeedbackEffect"  class="item" >FeedbackEffect</a>
+				
+					<a href="Freeverb"  class="item" >Freeverb</a>
+				
+					<a href="JCReverb"  class="item" >JCReverb</a>
+				
+					<a href="MidSideEffect"  class="item" >MidSideEffect</a>
+				
+					<a href="Phaser"  class="item" >Phaser</a>
+				
+					<a href="PingPongDelay"  class="item" >PingPongDelay</a>
+				
+					<a href="PitchShift"  class="item" >PitchShift</a>
+				
+					<a href="StereoEffect"  class="item" >StereoEffect</a>
+				
+					<a href="StereoFeedbackEffect"  class="item" >StereoFeedbackEffect</a>
+				
+					<a href="StereoWidener"  class="item" >StereoWidener</a>
+				
+					<a href="StereoXFeedbackEffect"  class="item" >StereoXFeedbackEffect</a>
+				
+					<a href="Tremolo"  class="item" >Tremolo</a>
+				
+					<a href="Vibrato"  class="item" >Vibrato</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>event</h1>
+
+				
+
+				
+					<a href="Event"  class="item" >Event</a>
+				
+					<a href="Loop"  class="item" >Loop</a>
+				
+					<a href="Part"  class="item" >Part</a>
+				
+					<a href="Pattern"  class="item" >Pattern</a>
+				
+					<a href="Sequence"  class="item" >Sequence</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>instrument</h1>
+
+				
+
+				
+					<a href="AMSynth"  class="item" >AMSynth</a>
+				
+					<a href="DuoSynth"  class="item" >DuoSynth</a>
+				
+					<a href="FMSynth"  class="item" >FMSynth</a>
+				
+					<a href="Instrument"  class="item" >Instrument</a>
+				
+					<a href="MembraneSynth"  class="item" >MembraneSynth</a>
+				
+					<a href="MetalSynth"  class="item" >MetalSynth</a>
+				
+					<a href="MonoSynth"  class="item" >MonoSynth</a>
+				
+					<a href="Monophonic"  class="item" >Monophonic</a>
+				
+					<a href="NoiseSynth"  class="item" >NoiseSynth</a>
+				
+					<a href="PluckSynth"  class="item" >PluckSynth</a>
+				
+					<a href="PolySynth"  class="item" >PolySynth</a>
+				
+					<a href="Sampler"  class="item" >Sampler</a>
+				
+					<a href="Synth"  class="item" >Synth</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>signal</h1>
+
+				
+
+				
+					<a href="Abs"  class="item" >Abs</a>
+				
+					<a href="Add"  class="item" >Add</a>
+				
+					<a href="AudioToGain"  class="item" >AudioToGain</a>
+				
+					<a href="EqualPowerGain"  class="item" >EqualPowerGain</a>
+				
+					<a href="Expr"  class="item" >Expr</a>
+				
+					<a href="GainToAudio"  class="item" >GainToAudio</a>
+				
+					<a href="GreaterThan"  class="item" >GreaterThan</a>
+				
+					<a href="GreaterThanZero"  class="item" >GreaterThanZero</a>
+				
+					<a href="Modulo"  class="item" >Modulo</a>
+				
+					<a href="Multiply"  class="item" >Multiply</a>
+				
+					<a href="Negate"  class="item" >Negate</a>
+				
+					<a href="Normalize"  class="item" >Normalize</a>
+				
+					<a href="Pow"  class="item" >Pow</a>
+				
+					<a href="Scale"  class="item" >Scale</a>
+				
+					<a href="ScaleExp"  class="item" >ScaleExp</a>
+				
+					<a href="Signal"  class="item" >Signal</a>
+				
+					<a href="SignalBase"  class="item" >SignalBase</a>
+				
+					<a href="Subtract"  class="item" >Subtract</a>
+				
+					<a href="TickSignal"  class="item" >TickSignal</a>
+				
+					<a href="TimelineSignal"  class="item" >TimelineSignal</a>
+				
+					<a href="TransportTimelineSignal"  class="item" >TransportTimelineSignal</a>
+				
+					<a href="WaveShaper"  class="item" >WaveShaper</a>
+				
+					<a href="Zero"  class="item" >Zero</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>source</h1>
+
+				
+
+				
+					<a href="AMOscillator"  class="item" >AMOscillator</a>
+				
+					<a href="BufferSource"  class="item" >BufferSource</a>
+				
+					<a href="FMOscillator"  class="item" >FMOscillator</a>
+				
+					<a href="FatOscillator"  class="item" >FatOscillator</a>
+				
+					<a href="GrainPlayer"  class="item" >GrainPlayer</a>
+				
+					<a href="MultiPlayer"  class="item" >MultiPlayer</a>
+				
+					<a href="Noise"  class="item" >Noise</a>
+				
+					<a href="OmniOscillator"  class="item" >OmniOscillator</a>
+				
+					<a href="Oscillator"  class="item" >Oscillator</a>
+				
+					<a href="PWMOscillator"  class="item" >PWMOscillator</a>
+				
+					<a href="Player"  class="item" >Player</a>
+				
+					<a href="Players"  class="item" >Players</a>
+				
+					<a href="PulseOscillator"  class="item" >PulseOscillator</a>
+				
+					<a href="Source"  class="item" >Source</a>
+				
+					<a href="UserMedia"  class="active item" >UserMedia</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>type</h1>
+
+				
+
+				
+					<a href="Frequency"  class="item" >Frequency</a>
+				
+					<a href="Time"  class="item" >Time</a>
+				
+					<a href="TimeBase"  class="item" >TimeBase</a>
+				
+					<a href="TransportTime"  class="item" >TransportTime</a>
+				
+			</div>
+		
+	</div>
+	<div id="seperator"></div>
+</div>
+<div id="hamburger">
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+</div>
+
+<script>
+
+	var allListItems = []
+	var items = document.querySelectorAll("#sidebar .item")
+	for (var i = 0; i < items.length; i++){
+		var el = items[i]
+		var name = el.textContent.toLowerCase()
+		allListItems.push({
+			"name" : name,
+			"element" : el
+		})
+	}
+
+	document.querySelector("#searchbox input").addEventListener("input", function(e){
+		var word = e.target.value.toLowerCase()
+		allListItems.forEach(function(item){
+			if (item.name.indexOf(word) === -1){
+				item.element.style.display = "none"
+			} else {
+				item.element.style.display = "inherit"
+			}
+		})
+	})
+
+	document.querySelector("#searchbox #clear").addEventListener("click", function(e){
+		document.querySelector("#searchbox input").value = "";
+		allListItems.forEach(function(item){ item.element.style.display = "inherit" })
+	})
+
+	//the hamburger menu
+	document.querySelector("#hamburger").addEventListener("click", function(){
+		var sidebar = document.querySelector("#sidebar")
+		var currentDisplay = sidebar.classList.contains("visible")
+		if (currentDisplay){
+			sidebar.classList.remove("visible")
+		} else {
+			sidebar.classList.add("visible")
+		}
+	})
+
+	//also offset the sidebar when an item is selected
+	var activeEl = document.querySelector('#sidebar .active.item')
+	if (activeEl){
+		document.querySelector('#sidebar').scrollTop = activeEl.parentElement.offsetTop - 10
+	}
+</script>
+
+
+	
+	
+
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	
+
+	<div id="content">
+		
+
+		
+
+
+
+<div id="constructor">
+
+	<div id="top">
+
+		<h1>Tone.UserMedia</h1>
+
+		
+
+			<span id="extends">
+				&#8627; EXTENDS
+				<a href="./AudioNode">
+					Tone.AudioNode
+				</a>
+			</span>
+		
+
+	</div>
+
+	
+
+	
+
+	<div id="description">
+		<p>Tone.UserMedia uses MediaDevices.getUserMedia to open up and external microphone or audio input. Check <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia">MediaDevices API Support</a> to see which browsers are supported. Access to an external input is limited to secure (HTTPS) connections.</p>
+
+	</div>
+
+	<div id="invocation">
+		
+
+			<h3>CONSTRUCTOR</h3>
+
+			<span class="red">new</span>
+			<span id="class_name">Tone.UserMedia</span>
+
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		<span class="optional">[</span> <div class="param">volume</div> <span class="optional">]</span>
+	<span class="punc">)</span>
+</span>
+
+
+			<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				volume
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The level of the input</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#decibels">
+						Decibels
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+		
+	</div>
+
+	
+
+
+
+
+	<div id="defaults">
+		<h3>DEFAULTS</h3>
+
+		<div id="values">
+
+			<div class="paren"> { </div>
+<div class="break"></div>
+
+
+
+	<div class="block">
+		<span class="key"> volume </span>
+
+		<span class="punc">:</span>
+
+		
+			<span class="value">0</span>
+		
+		
+		
+			<span class="comma">,</span>
+		
+		<div class="break"></div>
+	</div>
+
+
+
+	<div class="block">
+		<span class="key"> mute </span>
+
+		<span class="punc">:</span>
+
+		
+			<span class="value">false</span>
+		
+		
+		
+		<div class="break"></div>
+	</div>
+
+
+
+<div class="paren"> } </div>
+
+
+		</div>
+	</div>
+
+
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//list the inputs and open the third one</span>
+<span class="kd">var</span> <span class="nx">motu</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">UserMedia</span><span class="p">();</span>
+
+<span class="c1">//opening the input asks the user to activate their mic</span>
+<span class="nx">motu</span><span class="p">.</span><span class="nx">open</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+	<span class="c1">//opening is activates the microphone</span>
+	<span class="c1">//starting lets audio through</span>
+	<span class="nx">motu</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="p">});</span></code></pre></figure>
+
+	</div>
+
+
+	<div id="class_index">
+		<ul>
+
+	
+	<div class="group members">
+		<div>MEMBERS</div>
+		
+			<li>
+				<a href="#volume">volume</a>
+			</li>
+		
+			<li>
+				<a href="#deviceid">deviceId</a>
+			</li>
+		
+			<li>
+				<a href="#groupid">groupId</a>
+			</li>
+		
+			<li>
+				<a href="#groupid">groupId</a>
+			</li>
+		
+			<li>
+				<a href="#mute">mute</a>
+			</li>
+		
+			<li>
+				<a href="#state">state</a>
+			</li>
+		
+			<li>
+				<a href="#supported">supported</a>
+			</li>
+		
+			<li>
+				<a href="#context">context</a>
+			</li>
+		
+	</div>
+
+
+
+	
+	<div class="group methods">
+		<div>METHODS</div>
+		
+			<li>
+				<a href="#close">close</a>
+			</li>
+		
+			<li>
+				<a href="#dispose">dispose</a>
+			</li>
+		
+			<li>
+				<a href="#open">open</a>
+			</li>
+		
+			<li>
+				<a href="#connect">connect</a>
+			</li>
+		
+			<li>
+				<a href="#disconnect">disconnect</a>
+			</li>
+		
+			<li>
+				<a href="#tomaster">toMaster</a>
+			</li>
+		
+	</div>
+
+
+
+	
+
+
+	
+	<div class="group static_methods">
+		<div>STATIC METHODS</div>
+		
+			<li>
+				<a href="#enumeratedevices-static">enumerateDevices</a>
+			</li>
+		
+	</div>
+
+
+
+</ul>
+
+	</div>
+
+</div>
+
+
+		
+
+		
+
+			<h2 class='property member'>Members</h2>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+			<a href="https://github.com/Tonejs/Tone.js/wiki/Signals" id="signal">&#8767;</a>
+		
+
+		<h4 id="volume">
+			.volume
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#decibels">
+						Decibels
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#volume">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The volume of the output in decibels.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">input</span><span class="p">.</span><span class="nx">volume</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">6</span><span class="p">;</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L67">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="deviceid">
+			.deviceId
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#deviceid">#</a>
+
+</span>
+
+	<div id="description">
+		<p>Returns an identifier for the represented device that is persisted across sessions. It is un-guessable by other applications and unique to the origin of the calling application. It is reset when the user clears cookies (for Private Browsing, a different identifier is used that is not persisted across sessions). Returns undefined when the device is not open.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L179">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="groupid">
+			.groupId
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#groupid">#</a>
+
+</span>
+
+	<div id="description">
+		<p>Returns a label describing this device (for example “Built-in Microphone”). Returns undefined when the device is not open or label is not available because of permissions.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L216">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="groupid">
+			.groupId
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#groupid">#</a>
+
+</span>
+
+	<div id="description">
+		<p>Returns a group identifier. Two devices have the same group identifier if they belong to the same physical device. Returns undefined when the device is not open.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L199">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="mute">
+			.mute
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#mute">#</a>
+
+</span>
+
+	<div id="description">
+		<p>Mute the output.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//mute the output</span>
+<span class="nx">userMedia</span><span class="p">.</span><span class="nx">mute</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L233">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="state">
+			.state
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="State">Tone.State</a>
+			</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#state">#</a>
+
+</span>
+
+	<div id="description">
+		<p>Returns the playback state of the source, “started” when the microphone is open and “stopped” when the mic is closed.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L165">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="supported">
+			.supported
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						Boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#supported">#</a>
+
+</span>
+
+	<div id="description">
+		<p>If getUserMedia is supported by the browser.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L265">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="context">
+			.context
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Context">Tone.Context</a>
+			</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#context">#</a>
+
+</span>
+
+	<div id="description">
+		<p>Get the audio context belonging to this instance.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/core/AudioNode.js#L27">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+			<h2 class='property method'>Methods</h2>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="close">
+			<span id="main">
+				.close
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#close">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="UserMedia">Tone.UserMedia</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Close the media stream</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L134">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="dispose">
+			<span id="main">
+				.dispose
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#dispose">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="UserMedia">Tone.UserMedia</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Clean up.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L255">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="open">
+			<span id="main">
+				.open
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#open">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				labelOrId
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The label or id of the audio input media device. With no argument, the default stream is opened.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">"default"</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#promise">
+						Promise
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>The promise is resolved when the stream is open.</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Open the media stream. If a string is passed in, it is assumed to be the label or id of the stream, if a number is passed in, it is the input number of the stream.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L92">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="connect">
+			<span id="main">
+				.connect
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#connect">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				unit
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				outputNum
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>optionally which output to connect from</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">0</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				inputNum
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>optionally which input to connect to</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">0</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/core/AudioNode.js#L110">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="disconnect">
+			<span id="main">
+				.disconnect
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#disconnect">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				output
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>Either the output index to disconnect if the output is an array, or the node to disconnect from.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>disconnect the output</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/core/AudioNode.js#L127">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="tomaster">
+			<span id="main">
+				.toMaster
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#tomaster">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Connect ‘this’ to the master output. Shorthand for this.connect(Tone.Master)</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//connect an oscillator to the master output</span>
+<span class="kd">var</span> <span class="nx">osc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">Oscillator</span><span class="p">().</span><span class="nx">toMaster</span><span class="p">();</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/core/Master.js#L129">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+		
+
+		
+
+			<h2 class='property staticMethod'>Static Methods</h2>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="enumeratedevices-static">
+			<span id="main">
+				.enumerateDevices
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#enumeratedevices-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#promise">
+						Promise
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>The promise that is resolved with the devices</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Returns a promise which resolves with the list of audio input devices available.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Tone</span><span class="p">.</span><span class="nx">UserMedia</span><span class="p">.</span><span class="nx">enumerateDevices</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">devices</span><span class="p">){</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">devices</span><span class="p">)</span>
+<span class="p">})</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r11/Tone/source/UserMedia.js#L157">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+
+		
+
+	</div>
+
+	
+	<div id="generated">docs generated Sep 15 2019</div>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89548134-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<script src="//unpkg.com/tone@r11/build/Tone.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,8510 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Tone</title>
+<link rel="icon" type="image/png" href="./assets/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/docs.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/syntax.css">
+
+<script src="/assets/scripts/prefixfree.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+</head>
+<body>
+
+	
+
+	
+
+	<div id="sidebar" >
+
+	<div id="searchbox">
+		<input type="text">
+		<div id="clear"></div>
+	</div>
+
+	<div id="scroller">
+
+		
+
+		
+
+		
+			<div class="group">
+				<h1>component</h1>
+
+				
+
+				
+					<a href="AmplitudeEnvelope"  class="item" >AmplitudeEnvelope</a>
+				
+					<a href="Analyser"  class="item" >Analyser</a>
+				
+					<a href="Compressor"  class="item" >Compressor</a>
+				
+					<a href="CrossFade"  class="item" >CrossFade</a>
+				
+					<a href="EQ3"  class="item" >EQ3</a>
+				
+					<a href="Envelope"  class="item" >Envelope</a>
+				
+					<a href="FeedbackCombFilter"  class="item" >FeedbackCombFilter</a>
+				
+					<a href="Filter"  class="item" >Filter</a>
+				
+					<a href="Follower"  class="item" >Follower</a>
+				
+					<a href="FrequencyEnvelope"  class="item" >FrequencyEnvelope</a>
+				
+					<a href="Gate"  class="item" >Gate</a>
+				
+					<a href="LFO"  class="item" >LFO</a>
+				
+					<a href="Limiter"  class="item" >Limiter</a>
+				
+					<a href="LowpassCombFilter"  class="item" >LowpassCombFilter</a>
+				
+					<a href="Merge"  class="item" >Merge</a>
+				
+					<a href="Meter"  class="item" >Meter</a>
+				
+					<a href="MidSideCompressor"  class="item" >MidSideCompressor</a>
+				
+					<a href="MidSideMerge"  class="item" >MidSideMerge</a>
+				
+					<a href="MidSideSplit"  class="item" >MidSideSplit</a>
+				
+					<a href="Mono"  class="item" >Mono</a>
+				
+					<a href="MultibandCompressor"  class="item" >MultibandCompressor</a>
+				
+					<a href="MultibandSplit"  class="item" >MultibandSplit</a>
+				
+					<a href="PanVol"  class="item" >PanVol</a>
+				
+					<a href="Panner"  class="item" >Panner</a>
+				
+					<a href="ScaledEnvelope"  class="item" >ScaledEnvelope</a>
+				
+					<a href="Split"  class="item" >Split</a>
+				
+					<a href="Volume"  class="item" >Volume</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>control</h1>
+
+				
+
+				
+					<a href="CtrlInterpolate"  class="item" >CtrlInterpolate</a>
+				
+					<a href="CtrlMarkov"  class="item" >CtrlMarkov</a>
+				
+					<a href="CtrlPattern"  class="item" >CtrlPattern</a>
+				
+					<a href="CtrlRandom"  class="item" >CtrlRandom</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>core</h1>
+
+				
+
+				
+					<a href="Buffer"  class="item" >Buffer</a>
+				
+					<a href="Clock"  class="item" >Clock</a>
+				
+					<a href="Delay"  class="item" >Delay</a>
+				
+					<a href="Emitter"  class="item" >Emitter</a>
+				
+					<a href="Gain"  class="item" >Gain</a>
+				
+					<a href="IntervalTimeline"  class="item" >IntervalTimeline</a>
+				
+					<a href="Master"  class="item" >Master</a>
+				
+					<a href="Note"  class="item" >Note</a>
+				
+					<a href="Param"  class="item" >Param</a>
+				
+					<a href="Timeline"  class="item" >Timeline</a>
+				
+					<a href="TimelineState"  class="item" >TimelineState</a>
+				
+					<a href="Tone"  class="active item" >Tone</a>
+				
+					<a href="Transport"  class="item" >Transport</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>effect</h1>
+
+				
+
+				
+					<a href="AutoFilter"  class="item" >AutoFilter</a>
+				
+					<a href="AutoPanner"  class="item" >AutoPanner</a>
+				
+					<a href="AutoWah"  class="item" >AutoWah</a>
+				
+					<a href="BitCrusher"  class="item" >BitCrusher</a>
+				
+					<a href="Chebyshev"  class="item" >Chebyshev</a>
+				
+					<a href="Chorus"  class="item" >Chorus</a>
+				
+					<a href="Convolver"  class="item" >Convolver</a>
+				
+					<a href="Distortion"  class="item" >Distortion</a>
+				
+					<a href="Effect"  class="item" >Effect</a>
+				
+					<a href="FeedbackDelay"  class="item" >FeedbackDelay</a>
+				
+					<a href="FeedbackEffect"  class="item" >FeedbackEffect</a>
+				
+					<a href="Freeverb"  class="item" >Freeverb</a>
+				
+					<a href="JCReverb"  class="item" >JCReverb</a>
+				
+					<a href="MidSideEffect"  class="item" >MidSideEffect</a>
+				
+					<a href="Phaser"  class="item" >Phaser</a>
+				
+					<a href="PingPongDelay"  class="item" >PingPongDelay</a>
+				
+					<a href="PitchShift"  class="item" >PitchShift</a>
+				
+					<a href="StereoEffect"  class="item" >StereoEffect</a>
+				
+					<a href="StereoFeedbackEffect"  class="item" >StereoFeedbackEffect</a>
+				
+					<a href="StereoWidener"  class="item" >StereoWidener</a>
+				
+					<a href="StereoXFeedbackEffect"  class="item" >StereoXFeedbackEffect</a>
+				
+					<a href="Tremolo"  class="item" >Tremolo</a>
+				
+					<a href="Vibrato"  class="item" >Vibrato</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>event</h1>
+
+				
+
+				
+					<a href="Event"  class="item" >Event</a>
+				
+					<a href="Loop"  class="item" >Loop</a>
+				
+					<a href="Part"  class="item" >Part</a>
+				
+					<a href="Pattern"  class="item" >Pattern</a>
+				
+					<a href="Sequence"  class="item" >Sequence</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>instrument</h1>
+
+				
+
+				
+					<a href="AMSynth"  class="item" >AMSynth</a>
+				
+					<a href="DrumSynth"  class="item" >DrumSynth</a>
+				
+					<a href="DuoSynth"  class="item" >DuoSynth</a>
+				
+					<a href="FMSynth"  class="item" >FMSynth</a>
+				
+					<a href="Instrument"  class="item" >Instrument</a>
+				
+					<a href="MonoSynth"  class="item" >MonoSynth</a>
+				
+					<a href="Monophonic"  class="item" >Monophonic</a>
+				
+					<a href="NoiseSynth"  class="item" >NoiseSynth</a>
+				
+					<a href="PluckSynth"  class="item" >PluckSynth</a>
+				
+					<a href="PolySynth"  class="item" >PolySynth</a>
+				
+					<a href="Sampler"  class="item" >Sampler</a>
+				
+					<a href="SimpleAM"  class="item" >SimpleAM</a>
+				
+					<a href="SimpleFM"  class="item" >SimpleFM</a>
+				
+					<a href="SimpleSynth"  class="item" >SimpleSynth</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>signal</h1>
+
+				
+
+				
+					<a href="AND"  class="item" >AND</a>
+				
+					<a href="Abs"  class="item" >Abs</a>
+				
+					<a href="Add"  class="item" >Add</a>
+				
+					<a href="AudioToGain"  class="item" >AudioToGain</a>
+				
+					<a href="Clip"  class="item" >Clip</a>
+				
+					<a href="Equal"  class="item" >Equal</a>
+				
+					<a href="EqualPowerGain"  class="item" >EqualPowerGain</a>
+				
+					<a href="EqualZero"  class="item" >EqualZero</a>
+				
+					<a href="Expr"  class="item" >Expr</a>
+				
+					<a href="GainToAudio"  class="item" >GainToAudio</a>
+				
+					<a href="GreaterThan"  class="item" >GreaterThan</a>
+				
+					<a href="GreaterThanZero"  class="item" >GreaterThanZero</a>
+				
+					<a href="IfThenElse"  class="item" >IfThenElse</a>
+				
+					<a href="LessThan"  class="item" >LessThan</a>
+				
+					<a href="Max"  class="item" >Max</a>
+				
+					<a href="Min"  class="item" >Min</a>
+				
+					<a href="Modulo"  class="item" >Modulo</a>
+				
+					<a href="Multiply"  class="item" >Multiply</a>
+				
+					<a href="NOT"  class="item" >NOT</a>
+				
+					<a href="Negate"  class="item" >Negate</a>
+				
+					<a href="Normalize"  class="item" >Normalize</a>
+				
+					<a href="OR"  class="item" >OR</a>
+				
+					<a href="Pow"  class="item" >Pow</a>
+				
+					<a href="Route"  class="item" >Route</a>
+				
+					<a href="Scale"  class="item" >Scale</a>
+				
+					<a href="ScaleExp"  class="item" >ScaleExp</a>
+				
+					<a href="Select"  class="item" >Select</a>
+				
+					<a href="Signal"  class="item" >Signal</a>
+				
+					<a href="SignalBase"  class="item" >SignalBase</a>
+				
+					<a href="Subtract"  class="item" >Subtract</a>
+				
+					<a href="Switch"  class="item" >Switch</a>
+				
+					<a href="TimelineSignal"  class="item" >TimelineSignal</a>
+				
+					<a href="WaveShaper"  class="item" >WaveShaper</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>source</h1>
+
+				
+
+				
+					<a href="ExternalInput"  class="item" >ExternalInput</a>
+				
+					<a href="Microphone"  class="item" >Microphone</a>
+				
+					<a href="Noise"  class="item" >Noise</a>
+				
+					<a href="OmniOscillator"  class="item" >OmniOscillator</a>
+				
+					<a href="Oscillator"  class="item" >Oscillator</a>
+				
+					<a href="PWMOscillator"  class="item" >PWMOscillator</a>
+				
+					<a href="Player"  class="item" >Player</a>
+				
+					<a href="PulseOscillator"  class="item" >PulseOscillator</a>
+				
+					<a href="Source"  class="item" >Source</a>
+				
+			</div>
+		
+	</div>
+	<div id="seperator"></div>
+</div>
+<div id="hamburger">
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+</div>
+
+<script>
+
+	var allListItems = []
+	var items = document.querySelectorAll("#sidebar .item")
+	for (var i = 0; i < items.length; i++){
+		var el = items[i]
+		var name = el.textContent.toLowerCase()
+		allListItems.push({
+			"name" : name,
+			"element" : el
+		})
+	}
+
+	document.querySelector("#searchbox input").addEventListener("input", function(e){
+		var word = e.target.value.toLowerCase()
+		allListItems.forEach(function(item){
+			if (item.name.indexOf(word) === -1){
+				item.element.style.display = "none"
+			} else {
+				item.element.style.display = "inherit"
+			}
+		})
+	})
+
+	document.querySelector("#searchbox #clear").addEventListener("click", function(e){
+		document.querySelector("#searchbox input").value = "";
+		allListItems.forEach(function(item){ item.element.style.display = "inherit" })
+	})
+
+	//the hamburger menu
+	document.querySelector("#hamburger").addEventListener("click", function(){
+		var sidebar = document.querySelector("#sidebar")
+		var currentDisplay = sidebar.classList.contains("visible")
+		if (currentDisplay){
+			sidebar.classList.remove("visible")
+		} else {
+			sidebar.classList.add("visible")
+		}
+	})
+
+	//also offset the sidebar when an item is selected
+	var activeEl = document.querySelector('#sidebar .active.item')
+	if (activeEl){
+		document.querySelector('#sidebar').scrollTop = activeEl.parentElement.offsetTop - 10
+	}
+</script>
+
+
+	
+	
+
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	
+
+	<div id="content">
+		
+
+		
+
+
+
+<div id="constructor">
+
+	<div id="top">
+
+		<h1>Tone</h1>
+
+		
+
+	</div>
+
+	
+
+	
+
+	<div id="description">
+		<p>Tone is the base class of all other classes. It provides a lot of methods and functionality to all classes that extend it.</p>
+
+	</div>
+
+	<div id="invocation">
+		
+
+			<h3>CONSTRUCTOR</h3>
+
+			<span class="red">new</span>
+			<span id="class_name">Tone</span>
+
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		<span class="optional">[</span> <div class="param">inputs</div> <span id="default"><span class="punc">= </span>1</span> <span class="optional">]</span> <span class="punc">,</span> <span class="optional">[</span> <div class="param">outputs</div> <span id="default"><span class="punc">= </span>1</span> <span class="optional">]</span>
+	<span class="punc">)</span>
+</span>
+
+
+			<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				inputs
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the number of input nodes</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">number</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">1</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				outputs
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the number of output nodes</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">number</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">1</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+		
+	</div>
+
+	
+
+
+
+
+
+
+	
+
+	<div id="class_index">
+		<ul>
+
+	
+	<div class="group members">
+		<div>MEMBERS</div>
+		
+			<li>
+				<a href="#context">context</a>
+			</li>
+		
+	</div>
+
+
+
+	
+	<div class="group methods">
+		<div>METHODS</div>
+		
+			<li>
+				<a href="#transporttimetoseconds">transportTimeToSeconds</a>
+			</li>
+		
+			<li>
+				<a href="#connect">connect</a>
+			</li>
+		
+			<li>
+				<a href="#connectparallel">connectParallel</a>
+			</li>
+		
+			<li>
+				<a href="#connectseries">connectSeries</a>
+			</li>
+		
+			<li>
+				<a href="#dbtogain">dbToGain</a>
+			</li>
+		
+			<li>
+				<a href="#defaultarg">defaultArg</a>
+			</li>
+		
+			<li>
+				<a href="#disconnect">disconnect</a>
+			</li>
+		
+			<li>
+				<a href="#dispose">dispose</a>
+			</li>
+		
+			<li>
+				<a href="#equalpowerscale">equalPowerScale</a>
+			</li>
+		
+			<li>
+				<a href="#fan">fan</a>
+			</li>
+		
+			<li>
+				<a href="#frequencytonote">frequencyToNote</a>
+			</li>
+		
+			<li>
+				<a href="#frequencytoseconds">frequencyToSeconds</a>
+			</li>
+		
+			<li>
+				<a href="#fromunits">fromUnits</a>
+			</li>
+		
+			<li>
+				<a href="#gaintodb">gainToDb</a>
+			</li>
+		
+			<li>
+				<a href="#get">get</a>
+			</li>
+		
+			<li>
+				<a href="#intervaltofrequencyratio">intervalToFrequencyRatio</a>
+			</li>
+		
+			<li>
+				<a href="#isarray">isArray</a>
+			</li>
+		
+			<li>
+				<a href="#isboolean">isBoolean</a>
+			</li>
+		
+			<li>
+				<a href="#isfrequency">isFrequency</a>
+			</li>
+		
+			<li>
+				<a href="#isfunction">isFunction</a>
+			</li>
+		
+			<li>
+				<a href="#isnumber">isNumber</a>
+			</li>
+		
+			<li>
+				<a href="#isobject">isObject</a>
+			</li>
+		
+			<li>
+				<a href="#isstring">isString</a>
+			</li>
+		
+			<li>
+				<a href="#isundef">isUndef</a>
+			</li>
+		
+			<li>
+				<a href="#miditofrequency">midiToFrequency</a>
+			</li>
+		
+			<li>
+				<a href="#miditonote">midiToNote</a>
+			</li>
+		
+			<li>
+				<a href="#nogc">noGC</a>
+			</li>
+		
+			<li>
+				<a href="#notationtoseconds">notationToSeconds</a>
+			</li>
+		
+			<li>
+				<a href="#notetofrequency">noteToFrequency</a>
+			</li>
+		
+			<li>
+				<a href="#notetomidi">noteToMidi</a>
+			</li>
+		
+			<li>
+				<a href="#now">now</a>
+			</li>
+		
+			<li>
+				<a href="#optionsobject">optionsObject</a>
+			</li>
+		
+			<li>
+				<a href="#receive">receive</a>
+			</li>
+		
+			<li>
+				<a href="#samplestoseconds">samplesToSeconds</a>
+			</li>
+		
+			<li>
+				<a href="#secondstofrequency">secondsToFrequency</a>
+			</li>
+		
+			<li>
+				<a href="#secondstosamples">secondsToSamples</a>
+			</li>
+		
+			<li>
+				<a href="#secondstotransporttime">secondsToTransportTime</a>
+			</li>
+		
+			<li>
+				<a href="#send">send</a>
+			</li>
+		
+			<li>
+				<a href="#set">set</a>
+			</li>
+		
+			<li>
+				<a href="#tickstoseconds">ticksToSeconds</a>
+			</li>
+		
+			<li>
+				<a href="#tofrequency">toFrequency</a>
+			</li>
+		
+			<li>
+				<a href="#tomaster">toMaster</a>
+			</li>
+		
+			<li>
+				<a href="#tonotation">toNotation</a>
+			</li>
+		
+			<li>
+				<a href="#tosamples">toSamples</a>
+			</li>
+		
+			<li>
+				<a href="#toseconds">toSeconds</a>
+			</li>
+		
+			<li>
+				<a href="#tostring">toString</a>
+			</li>
+		
+			<li>
+				<a href="#toticks">toTicks</a>
+			</li>
+		
+			<li>
+				<a href="#totransporttime">toTransportTime</a>
+			</li>
+		
+			<li>
+				<a href="#tounits">toUnits</a>
+			</li>
+		
+			<li>
+				<a href="#chain">chain</a>
+			</li>
+		
+	</div>
+
+
+
+	
+
+
+	
+	<div class="group static_methods">
+		<div>STATIC METHODS</div>
+		
+			<li>
+				<a href="#extend-static">extend</a>
+			</li>
+		
+			<li>
+				<a href="#noop-static">noOp</a>
+			</li>
+		
+			<li>
+				<a href="#setcontext-static">setContext</a>
+			</li>
+		
+			<li>
+				<a href="#startmobile-static">startMobile</a>
+			</li>
+		
+	</div>
+
+
+
+</ul>
+
+	</div>
+
+</div>
+
+
+		
+
+		
+
+			<h2 class='property member'>Members</h2>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="context">
+			.context
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">AudioContext</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#context">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The audio context.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L308">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+			<h2 class='property method'>Methods</h2>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="transporttimetoseconds">
+			<span id="main">
+				.transportTimeToSeconds
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#transporttimetoseconds">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				transportTime
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#transporttime">
+						TransportTime
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				bpm
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#bpm">
+						BPM
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				timeSignature
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>seconds</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>convert transportTime into seconds. ie: 4:2:3 == 4 measures + 2 quarters + 3 sixteenths</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L308">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="connect">
+			<span id="main">
+				.connect
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#connect">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				unit
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				outputNum
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>optionally which output to connect from</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">0</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				inputNum
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>optionally which input to connect to</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">0</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>connect the output of a ToneNode to an AudioParam, AudioNode, or ToneNode</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L383">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="connectparallel">
+			<span id="main">
+				.connectParallel
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#connectparallel">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				nodes
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>fan out the connection from the first argument to the rest of the arguments</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L429">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="connectseries">
+			<span id="main">
+				.connectSeries
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#connectseries">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				nodes
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>connect together all of the arguments in series</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L412">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="dbtogain">
+			<span id="main">
+				.dbToGain
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#dbtogain">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				db
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#decibels">
+						Decibels
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert decibels into gain.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L677">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="defaultarg">
+			<span id="main">
+				.defaultArg
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#defaultarg">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				given
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				fallback
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>If the <code class="highlighter-rouge">given</code> parameter is undefined, use the <code class="highlighter-rouge">fallback</code>. If both <code class="highlighter-rouge">given</code> and <code class="highlighter-rouge">fallback</code> are object literals, it will return a deep copy which includes all of the parameters from both objects. If a parameter is undefined in given, it will return the fallback property. <br /><br /> WARNING: if object is self referential, it will go into an an infinite recursive loop.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L496">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="disconnect">
+			<span id="main">
+				.disconnect
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#disconnect">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>disconnect the output</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L397">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="dispose">
+			<span id="main">
+				.dispose
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#dispose">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>disconnect and dispose</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L334">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="equalpowerscale">
+			<span id="main">
+				.equalPowerScale
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#equalpowerscale">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				percent
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>(0-1)</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#normalrange">
+						NormalRange
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>output gain (0-1)</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Equal power gain scale. Good for cross-fading.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L667">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="fan">
+			<span id="main">
+				.fan
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#fan">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				nodes
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>connect the output of this node to the rest of the nodes in parallel.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L465">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="frequencytonote">
+			<span id="main">
+				.frequencyToNote
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#frequencytonote">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				freq
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a frequency to a note name (i.e. A4, C#5).</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L745">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="frequencytoseconds">
+			<span id="main">
+				.frequencyToSeconds
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#frequencytoseconds">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				freq
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#frequency">
+						Frequency
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a frequency into seconds. Accepts numbers and strings: i.e. “10hz” or 10 both return 0.1.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L353">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="fromunits">
+			<span id="main">
+				.fromUnits
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#fromunits">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				val
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the value to convert</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the number which the value should be set to</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert the given value from the type specified by units into a number.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L647">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="gaintodb">
+			<span id="main">
+				.gainToDb
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#gaintodb">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				gain
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>(0-1)</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#decibels">
+						Decibels
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert gain to decibels.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L686">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="get">
+			<span id="main">
+				.get
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#get">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				params
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the parameters to get, otherwise will return all available.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#array">
+						Array
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						string
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#undefined">
+						undefined
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#object">
+						Object
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Get the object’s attributes. Given no arguments get will return all available object properties and their corresponding values. Pass in a single attribute to retrieve or an array of attributes. The attribute strings can also include a “.” to access deeper properties.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">osc</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<span class="c1">//returns {"type" : "sine", "frequency" : 440, ...etc}</span>
+ </code></pre></figure>
+
+	</div>
+
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">osc</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"type"</span><span class="p">);</span>
+<span class="c1">//returns { "type" : "sine"}</span></code></pre></figure>
+
+	</div>
+
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//use dot notation to access deep properties</span>
+<span class="nx">synth</span><span class="p">.</span><span class="nx">get</span><span class="p">([</span><span class="s2">"envelope.attack"</span><span class="p">,</span> <span class="s2">"envelope.release"</span><span class="p">]);</span>
+<span class="c1">//returns {"envelope" : {"attack" : 0.2, "release" : 0.4}}</span>
+ </code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L218">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="intervaltofrequencyratio">
+			<span id="main">
+				.intervalToFrequencyRatio
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#intervaltofrequencyratio">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				interval
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the number of semitones above the base note</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#interval">
+						Interval
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the frequency ratio</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert an interval (in semitones) to a frequency ratio.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">tone</span><span class="p">.</span><span class="nx">intervalToFrequencyRatio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// returns 1</span>
+<span class="nx">tone</span><span class="p">.</span><span class="nx">intervalToFrequencyRatio</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span> <span class="c1">// returns 2</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L765">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isarray">
+			<span id="main">
+				.isArray
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isarray">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is an array</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the argument is an Array</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L594">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isboolean">
+			<span id="main">
+				.isBoolean
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isboolean">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is a boolean</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the argument is a boolean.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L585">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isfrequency">
+			<span id="main">
+				.isFrequency
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isfrequency">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				freq
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the input is in the format of number + hz i.e.: 10hz</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L225">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isfunction">
+			<span id="main">
+				.isFunction
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isfunction">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is a function</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>test if the arg is a function</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L560">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isnumber">
+			<span id="main">
+				.isNumber
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isnumber">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is a number</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the argument is a number.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L567">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isobject">
+			<span id="main">
+				.isObject
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isobject">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is an object literal.</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the given argument is an object literal (i.e. <code class="highlighter-rouge"><span class="p">{}</span></code>);</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L576">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isstring">
+			<span id="main">
+				.isString
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isstring">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is a string</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the argument is a string.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L603">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isundef">
+			<span id="main">
+				.isUndef
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isundef">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is undefined</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>test if the arg is undefined</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L552">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="miditofrequency">
+			<span id="main">
+				.midiToFrequency
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#miditofrequency">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				midi
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The midi number to convert.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#midi">
+						MIDI
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#frequency">
+						Frequency
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the corresponding frequency value</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a MIDI note to frequency value.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">tone</span><span class="p">.</span><span class="nx">midiToFrequency</span><span class="p">(</span><span class="mi">57</span><span class="p">);</span> <span class="c1">// returns 440</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L811">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="miditonote">
+			<span id="main">
+				.midiToNote
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#miditonote">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				midiNumber
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the midi note number</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#midi">
+						MIDI
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the note’s name and octave</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a midi note number into a note name.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">tone</span><span class="p">.</span><span class="nx">midiToNote</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span> <span class="c1">// returns "C3"</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L777">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="nogc">
+			<span id="main">
+				.noGC
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#nogc">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>makes a connection to ensure that the node will not be garbage collected until ‘dispose’ is explicitly called use carefully. circumvents JS and WebAudio’s normal Garbage Collection behavior</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L366">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="notationtoseconds">
+			<span id="main">
+				.notationToSeconds
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#notationtoseconds">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				notation
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				bpm
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#bpm">
+						BPM
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				timeSignature
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>convert notation format strings to seconds</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L272">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="notetofrequency">
+			<span id="main">
+				.noteToFrequency
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#notetofrequency">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				note
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a note name to frequency.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">freq</span> <span class="o">=</span> <span class="nx">tone</span><span class="p">.</span><span class="nx">noteToFrequency</span><span class="p">(</span><span class="s2">"A4"</span><span class="p">);</span> <span class="c1">//returns 440</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L727">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="notetomidi">
+			<span id="main">
+				.noteToMidi
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#notetomidi">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				note
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the note name (i.e. “C3”)</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#midi">
+						MIDI
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the midi value of that note</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a note to it’s midi value.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">tone</span><span class="p">.</span><span class="nx">noteToMidi</span><span class="p">(</span><span class="s2">"C3"</span><span class="p">);</span> <span class="c1">// returns 60</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L791">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="now">
+			<span id="main">
+				.now
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#now">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the currentTime from the AudioContext</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Return the current time of the clock + a single buffer frame. If this value is used to schedule a value to change, the earliest it could be scheduled is the following frame.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L700">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="optionsobject">
+			<span id="main">
+				.optionsObject
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#optionsobject">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				values
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the ‘arguments’ object of the function</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#array">
+						Array
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				keys
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the names of the arguments as they should appear in the options object</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#array">
+						Array
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				defaults
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>optional defaults to mixin to the returned options object</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#object">
+						Object
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#object">
+						Object
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the options object with the names mapped to the arguments</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>returns the args as an options object with given arguments mapped to the names provided. if the args given is an array containing only one object, it is assumed that that’s already the options object and will just return it.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L526">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="receive">
+			<span id="main">
+				.receive
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#receive">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				channelName
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>A named channel to send the signal to.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						string
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				input
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>If no input is selected, the input of the current node is chosen.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Recieve the input from the desired channelName to the input</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">reverbEffect</span><span class="p">.</span><span class="nx">receive</span><span class="p">(</span><span class="s2">"reverb"</span><span class="p">);</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Bus.js#L50">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="samplestoseconds">
+			<span id="main">
+				.samplesToSeconds
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#samplestoseconds">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				samples
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a sample count to seconds.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L362">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="secondstofrequency">
+			<span id="main">
+				.secondsToFrequency
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#secondstofrequency">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				seconds
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a number in seconds to a frequency.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L405">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="secondstosamples">
+			<span id="main">
+				.secondsToSamples
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#secondstosamples">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				seconds
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>The number of samples</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert from seconds to samples.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L371">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="secondstotransporttime">
+			<span id="main">
+				.secondsToTransportTime
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#secondstotransporttime">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				seconds
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				bpm
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#bpm">
+						BPM
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				timeSignature
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#transporttime">
+						TransportTime
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert seconds to transportTime in the form “measures:quarters:sixteenths”</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L388">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="send">
+			<span id="main">
+				.send
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#send">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				channelName
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>A named channel to send the signal to.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						string
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				amount
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The amount of the source to send to the bus.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#decibels">
+						Decibels
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#gainnode">
+						GainNode
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>The gain node which connects this node to the desired channel. Can be used to adjust the levels of the send.</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Send this signal to the channel name.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">source</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">"reverb"</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">);</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Bus.js#L29">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="set">
+			<span id="main">
+				.set
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#set">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				params
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#object">
+						Object
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						string
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				value
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				rampTime
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Set the parameters at once. Either pass in an object mapping parameters to values, or to set a single parameter, by passing in a string and value. The last argument is an optional ramp time which will ramp any signal values to their destination value over the duration of the rampTime.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//set values using an object</span>
+<span class="nx">filter</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span>
+	<span class="s2">"frequency"</span> <span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+	<span class="s2">"type"</span> <span class="p">:</span> <span class="nx">highpass</span>
+<span class="p">});</span>
+ </code></pre></figure>
+
+	</div>
+
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">filter</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">"type"</span><span class="p">,</span> <span class="s2">"highpass"</span><span class="p">);</span>
+ </code></pre></figure>
+
+	</div>
+
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//ramp to the value 220 over 3 seconds. </span>
+<span class="nx">oscillator</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span>
+	<span class="s2">"frequency"</span> <span class="p">:</span> <span class="mi">220</span>
+<span class="p">},</span> <span class="mi">3</span><span class="p">);</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L154">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="tickstoseconds">
+			<span id="main">
+				.ticksToSeconds
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#tickstoseconds">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				ticks
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#ticks">
+						Ticks
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				bpm
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#bpm">
+						BPM
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>seconds</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert ticks into seconds</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L335">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="tofrequency">
+			<span id="main">
+				.toFrequency
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#tofrequency">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				freq
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#frequency">
+						Frequency
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				now
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>if passed in, this number will be used for all ‘now’ relative timings</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the frequency in hertz</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a frequency representation into a number.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L439">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="tomaster">
+			<span id="main">
+				.toMaster
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#tomaster">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Connect ‘this’ to the master output. Shorthand for this.connect(Tone.Master)</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//connect an oscillator to the master output</span>
+<span class="kd">var</span> <span class="nx">osc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">Oscillator</span><span class="p">().</span><span class="nx">toMaster</span><span class="p">();</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Master.js#L146">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="tonotation">
+			<span id="main">
+				.toNotation
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#tonotation">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				bpm
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#bpm">
+						BPM
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				timeSignature
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#notation">
+						Notation
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a Time to Notation. Values will be thresholded to the nearest 128th note.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L590">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="tosamples">
+			<span id="main">
+				.toSamples
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#tosamples">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>convert a time into samples</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L485">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="toseconds">
+			<span id="main">
+				.toSeconds
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#toseconds">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				now
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>if passed in, this number will be used for all ‘now’ relative timings</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<table>
+  <tbody>
+    <tr>
+      <td>Convert Time into seconds. Unlike the method which it overrides, this takes into account transporttime and musical notation. Time : 1.40 Notation: 4n</td>
+      <td>1m</td>
+      <td>2t TransportTime: 2:4:1 (measure:quarters:sixteens) Now Relative: +3n Math: 3n+16n or even complicated expressions ((3n*2)/6 + 1)</td>
+    </tr>
+  </tbody>
+</table>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L508">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="tostring">
+			<span id="main">
+				.toString
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#tostring">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						string
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>returns the name of the class as a string</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L283">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="toticks">
+			<span id="main">
+				.toTicks
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#toticks">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#ticks">
+						Ticks
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert the time representation into ticks. Now-Relative timing will be relative to the current Tone.Transport.ticks.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L458">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="totransporttime">
+			<span id="main">
+				.toTransportTime
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#totransporttime">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L426">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="tounits">
+			<span id="main">
+				.toUnits
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#tounits">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				val
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the value to convert</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a number to the specified units.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Type.js#L675">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="chain">
+			<span id="main">
+				.chain
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#chain">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				nodes
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Connect the output of this node to the rest of the nodes in series.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//connect a node to an effect, panVol and then to the master output</span>
+ <span class="nx">node</span><span class="p">.</span><span class="nx">chain</span><span class="p">(</span><span class="nx">effect</span><span class="p">,</span> <span class="nx">panVol</span><span class="p">,</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">Master</span><span class="p">);</span>
+ </code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L448">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+		
+
+		
+
+			<h2 class='property staticMethod'>Static Methods</h2>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="extend-static">
+			<span id="main">
+				.extend
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#extend-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				child
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#function">
+						function
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				parent
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>(optional) parent to inherit from if no parent is supplied, the child will inherit from Tone</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#function">
+						function
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>have a child inherit all of Tone’s (or a parent’s) prototype to inherit the parent’s properties, make sure to call Parent.call(this) in the child’s constructor based on closure library’s inherit function</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L721">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="noop-static">
+			<span id="main">
+				.noOp
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#noop-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>An empty function.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L611">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="setcontext-static">
+			<span id="main">
+				.setContext
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#setcontext-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				ctx
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The new audio context to set</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audiocontext">
+						AudioContext
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Tone automatically creates a context on init, but if you are working with other libraries which also create an AudioContext, it can be useful to set your own. If you are going to set your own context, be sure to do it at the start of your code, before creating any objects.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L767">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="startmobile-static">
+			<span id="main">
+				.startMobile
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#startmobile-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Bind this to a touchstart event to start the audio on mobile devices. <br /> http://stackoverflow.com/questions/12517000/no-sound-on-ios-6-web-audio-api/12569290#12569290</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/core/Tone.js#L783">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+
+		
+
+	</div>
+
+	
+	<div id="generated">docs generated Sep 15 2019</div>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89548134-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<script src="//unpkg.com/tone@r6/build/Tone.js"></script>
+
+</body>
+</html>

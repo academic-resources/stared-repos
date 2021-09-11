@@ -1,0 +1,199 @@
+@charset "UTF-8";
+#sidebar { height: 100%; position: fixed; top: 0px; overflow-y: scroll; }
+@media (max-width: 700px) { #sidebar { display: none; width: 100% !important; background-color: white; z-index: 1; }
+  #sidebar #seperator { display: none; }
+  #sidebar #searchbox { margin-top: 50px !important; } }
+#sidebar.visible { display: block !important; }
+#sidebar #seperator { border-right: 3px solid black; position: fixed; top: 10px; height: calc(100% - 20px); width: 3px; left: 240px; }
+#sidebar #scroller { width: calc(100% - 20px); margin-left: 10px; height: auto; display: block; margin-bottom: 30px; }
+#sidebar #scroller h1 { width: 90%; font-size: 0.9em; line-height: 1em; border-bottom: 3px solid black; color: black; text-transform: uppercase; margin-top: 10px; margin-bottom: 5px; }
+#sidebar #scroller .item { display: block; }
+#sidebar #scroller div:nth-of-type(1) h1 { color: #f5871f; border-color: #f5871f; }
+#sidebar #scroller div:nth-of-type(1) a:hover { color: #f5871f; }
+#sidebar #scroller div:nth-of-type(1) .active { color: #f5871f; }
+#sidebar #scroller div:nth-of-type(1) .active:before { content: ' '; }
+#sidebar #scroller div:nth-of-type(2) h1 { color: #f5631f; border-color: #f5631f; }
+#sidebar #scroller div:nth-of-type(2) a:hover { color: #f5631f; }
+#sidebar #scroller div:nth-of-type(2) .active { color: #f5631f; }
+#sidebar #scroller div:nth-of-type(2) .active:before { content: ' '; }
+#sidebar #scroller div:nth-of-type(3) h1 { color: #f5401f; border-color: #f5401f; }
+#sidebar #scroller div:nth-of-type(3) a:hover { color: #f5401f; }
+#sidebar #scroller div:nth-of-type(3) .active { color: #f5401f; }
+#sidebar #scroller div:nth-of-type(3) .active:before { content: ' '; }
+#sidebar #scroller div:nth-of-type(4) h1 { color: #f51f22; border-color: #f51f22; }
+#sidebar #scroller div:nth-of-type(4) a:hover { color: #f51f22; }
+#sidebar #scroller div:nth-of-type(4) .active { color: #f51f22; }
+#sidebar #scroller div:nth-of-type(4) .active:before { content: ' '; }
+#sidebar #scroller div:nth-of-type(5) h1 { color: #f51f46; border-color: #f51f46; }
+#sidebar #scroller div:nth-of-type(5) a:hover { color: #f51f46; }
+#sidebar #scroller div:nth-of-type(5) .active { color: #f51f46; }
+#sidebar #scroller div:nth-of-type(5) .active:before { content: ' '; }
+#sidebar #scroller div:nth-of-type(6) h1 { color: #f51f69; border-color: #f51f69; }
+#sidebar #scroller div:nth-of-type(6) a:hover { color: #f51f69; }
+#sidebar #scroller div:nth-of-type(6) .active { color: #f51f69; }
+#sidebar #scroller div:nth-of-type(6) .active:before { content: ' '; }
+#sidebar #scroller div:nth-of-type(7) h1 { color: #f51f8d; border-color: #f51f8d; }
+#sidebar #scroller div:nth-of-type(7) a:hover { color: #f51f8d; }
+#sidebar #scroller div:nth-of-type(7) .active { color: #f51f8d; }
+#sidebar #scroller div:nth-of-type(7) .active:before { content: ' '; }
+#sidebar #scroller div:nth-of-type(8) h1 { color: #f51fb1; border-color: #f51fb1; }
+#sidebar #scroller div:nth-of-type(8) a:hover { color: #f51fb1; }
+#sidebar #scroller div:nth-of-type(8) .active { color: #f51fb1; }
+#sidebar #scroller div:nth-of-type(8) .active:before { content: ' '; }
+#sidebar #scroller div:nth-of-type(9) h1 { color: #f51fd4; border-color: #f51fd4; }
+#sidebar #scroller div:nth-of-type(9) a:hover { color: #f51fd4; }
+#sidebar #scroller div:nth-of-type(9) .active { color: #f51fd4; }
+#sidebar #scroller div:nth-of-type(9) .active:before { content: ' '; }
+#sidebar #scroller div:nth-of-type(10) h1 { color: #f21ff5; border-color: #f21ff5; }
+#sidebar #scroller div:nth-of-type(10) a:hover { color: #f21ff5; }
+#sidebar #scroller div:nth-of-type(10) .active { color: #f21ff5; }
+#sidebar #scroller div:nth-of-type(10) .active:before { content: ' '; }
+#sidebar #searchbox { border: 3px solid #8C8C8C; width: calc(100% - 30px); height: 20px; margin-top: 10px; margin-left: 10px; position: relative; font-family: inherit; line-height: 20px; }
+#sidebar #searchbox input { border: none; height: 20px; line-height: 20px; width: calc(100% - 20px); background-color: transparent; outline: none; line-height: 20px; font-size: 0.9em; font-family: inherit; }
+#sidebar #searchbox #clear { position: absolute; right: 0px; top: 0px; width: 20px; height: 20px; background-color: #8C8C8C; color: white; text-align: center; line-height: 20px; cursor: pointer; }
+#sidebar #searchbox #clear:before { content: "✕"; }
+#sidebar #searchbox #clear:hover { color: #8C8C8C; background-color: white; }
+#sidebar #searchbox #clear:hover:active { color: #ED3333; }
+
+#hamburger { position: absolute; top: 10px; right: 10px; background-color: white; width: 25px; height: 16px; z-index: 10000; cursor: pointer; padding: 4px; border-radius: 2px; }
+@media (min-width: 700px) { #hamburger { display: none; } }
+#hamburger .bar { width: 100%; height: 4px; background-color: #8C8C8C; margin-bottom: 2px; border-radius: 1px; }
+#hamburger:hover { background-color: #8C8C8C; }
+#hamburger:hover .bar { background-color: white; }
+#hamburger:hover:active .bar { background-color: #ECECEC; }
+
+#constructor #top { display: inline-block; }
+#constructor #top h1 { margin-bottom: 5px; }
+#constructor #top #extends { float: right; font-size: 0.8em; margin-left: 30px; margin-bottom: 25px; }
+#constructor #top #extends a { font-size: 1.2em; }
+#constructor #singleton { line-height: 0.8em; color: #1EDF3E; }
+#constructor #deprecated { background-color: #f59191; padding: 10px; font-size: 1.1em; }
+#constructor #deprecated p { display: inline; }
+#constructor #class_index { margin-left: 10px; margin-top: 40px; }
+#constructor #class_index ul { margin: 0px; padding: 0px; list-style: none; }
+#constructor #class_index .group div { margin-top: 10px; margin-bottom: 5px; width: 150px; border-bottom: 3px solid black; font-size: 0.8em; line-height: 1.6em; }
+#constructor #class_index .group a { font-weight: normal; }
+#constructor #class_index .group a:hover { font-weight: bold; }
+#constructor #class_index .group.members div { color: #7f33ed; border-color: #7f33ed; }
+#constructor #class_index .group.members a:hover { color: #7f33ed; }
+#constructor #class_index .group.methods div { color: #3335ed; border-color: #3335ed; }
+#constructor #class_index .group.methods a:hover { color: #3335ed; }
+#constructor #class_index .group.static_members div { color: #3382ed; border-color: #3382ed; }
+#constructor #class_index .group.static_members a:hover { color: #3382ed; }
+#constructor #class_index .group.static_methods div { color: #33d0ed; border-color: #33d0ed; }
+#constructor #class_index .group.static_methods a:hover { color: #33d0ed; }
+#constructor #description { margin-top: 10px; margin-bottom: 30px; background-color: rgba(236, 236, 236, 0.5); border-radius: 2px; padding: 5px; }
+#constructor #description p { margin: 5px; }
+#constructor #description img { display: block; width: 80%; margin: 0 auto 0 auto; max-width: 700px; }
+#constructor #invocation { margin-top: 25px; margin-left: 30px; }
+#constructor #invocation h3 { color: #8C8C8C; border-color: #8C8C8C; }
+#constructor #invocation #function { font-size: 1.2em; margin-bottom: 25px; }
+#constructor #invocation #parameters { margin-left: 30px; margin-top: 10px; }
+#constructor #invocation #class_name { font-weight: bold; }
+#constructor #invocation #description { margin-top: 0px; }
+#constructor #defaults { margin-left: 30px; }
+#constructor #defaults h3 { color: #8C8C8C; border-color: #8C8C8C; }
+#constructor #defaults #values { margin-left: 5px; font-size: 0.9em; line-height: 1em; }
+#constructor #defaults #values .block { margin-left: 20px; }
+#constructor #defaults #values .key, #constructor #defaults #values .value, #constructor #defaults #values .punc, #constructor #defaults #values .paren { display: inline-block; }
+#constructor #defaults #values .key { padding-left: 0px; width: auto; color: #f5871f; margin-right: 10px; }
+#constructor #defaults #values .value { color: #1EDF3E; display: inline; }
+#constructor #defaults #values .punc { width: 10px; text-align: center; color: #7F33ED; }
+#constructor #defaults #values .comma { margin-left: -5px; }
+#constructor #defaults #values .break { display: block; }
+#constructor #defaults #values .paren { color: #616161; }
+
+#inline_parameters .param { display: inline-block; }
+#inline_parameters #default { color: #1EDF3E; }
+#inline_parameters .punc { color: #616161; }
+#inline_parameters .optional { color: #8C8C8C; }
+#inline_parameters div:nth-of-type(1) { color: #7f33ed; }
+#inline_parameters div:nth-of-type(2) { color: #ab33ed; }
+#inline_parameters div:nth-of-type(3) { color: #d833ed; }
+#inline_parameters div:nth-of-type(4) { color: #ed33d6; }
+#inline_parameters div:nth-of-type(5) { color: #ed33aa; }
+#inline_parameters div:nth-of-type(6) { color: #ed337e; }
+#inline_parameters div:nth-of-type(7) { color: #ed3351; }
+
+#parameters { margin-left: 30px; margin-top: 10px; margin-bottom: 20px; }
+#parameters .param, #parameters #returns { margin-bottom: 15px; display: table; }
+#parameters .param #param_name, #parameters .param #param_description, #parameters #returns #param_name, #parameters #returns #param_description { display: table-cell; vertical-align: top; }
+#parameters .param #param_name, #parameters #returns #param_name { padding-right: 15px; width: 90px; }
+#parameters .param #param_description, #parameters #returns #param_description { line-height: 1.1em; }
+#parameters .param #param_description p, #parameters #returns #param_description p { margin: 0px; margin-bottom: 5px; }
+#parameters .param #param_description div, #parameters #returns #param_description div { margin-bottom: 5px; }
+#parameters .param #description, #parameters #returns #description { font-size: 1em; line-height: 1.5em; }
+#parameters .param #description p, #parameters #returns #description p { margin: 0px; }
+#parameters .param #description pre, #parameters #returns #description pre { font-size: 1em; }
+#parameters .param #type_text, #parameters #returns #type_text { color: #f5871f; }
+#parameters .param #optional, #parameters #returns #optional { color: #1EDF3E; }
+#parameters .param #default, #parameters #returns #default { color: #1EDF3E; }
+#parameters .param #default .default_value, #parameters #returns #default .default_value { color: black; margin: 0px; display: inline-block; }
+#parameters .keyword { font-size: 0.8em; text-transform: uppercase; }
+#parameters .param:nth-child(1) #param_name { color: #7f33ed; }
+#parameters .param:nth-child(2) #param_name { color: #ab33ed; }
+#parameters .param:nth-child(3) #param_name { color: #d833ed; }
+#parameters .param:nth-child(4) #param_name { color: #ed33d6; }
+#parameters .param:nth-child(5) #param_name { color: #ed33aa; }
+#parameters .param:nth-child(6) #param_name { color: #ed337e; }
+#parameters .param:nth-child(7) #param_name { color: #ed3351; }
+#parameters #returns #type { white-space: nowrap; width: 90px; padding-right: 20px; display: table-cell; vertical-align: top; }
+#parameters #returns #ret_text { color: #ED3333; margin-right: 5px; }
+#parameters #returns #description { display: table-cell; vertical-align: top; }
+#parameters a:hover { color: #ED33CF; }
+#parameters a:hover:active { color: #22DBC0; }
+
+.type a { font-weight: normal; }
+.type a:hover { color: #f5871f; }
+.type .type_name { text-transform: capitalize; position: relative; }
+.type .punc { font-size: 0.8em; color: #f5871f; text-transform: uppercase; }
+
+div.member, div.method, div.staticMethod, div.staticMember { margin-bottom: 60px; border-left: 3px solid black; padding-left: 10px; }
+div.member h4, div.method h4, div.staticMethod h4, div.staticMember h4 { display: inline-block; margin: 0px; }
+div.member h4:target, div.method h4:target, div.staticMethod h4:target, div.staticMember h4:target { border-bottom: 2px solid #FFFC0C; }
+div.member #attribute, div.method #attribute, div.staticMethod #attribute, div.staticMember #attribute { padding-left: 30px; margin-bottom: 30px; margin-top: 20px; }
+div.member .keyword, div.method .keyword, div.staticMethod .keyword, div.staticMember .keyword { font-size: 0.8em; text-transform: uppercase; }
+div.member #readonly, div.method #readonly, div.staticMethod #readonly, div.staticMember #readonly { margin-left: 10px; color: #ED3333; }
+div.member #inherits, div.method #inherits, div.staticMethod #inherits, div.staticMember #inherits { font-size: 0.9em; position: relative; line-height: 1em; margin-left: 10px; margin-bottom: 5px; color: #8C8C8C; padding-left: 16px; }
+div.member #inherits #flip, div.method #inherits #flip, div.staticMethod #inherits #flip, div.staticMember #inherits #flip { position: absolute; transform: scale(1, -1); left: 0px; }
+div.member #name, div.method #name, div.staticMethod #name, div.staticMember #name { display: inline-block; white-space: nowrap; word-spacing: -2px; }
+div.member #name #name_link, div.method #name #name_link, div.staticMethod #name #name_link, div.staticMember #name #name_link { color: #8C8C8C; margin-left: 10px; text-decoration: none; opacity: 0; transition: opacity 0.1s; }
+div.member #name:hover #name_link, div.method #name:hover #name_link, div.staticMethod #name:hover #name_link, div.staticMember #name:hover #name_link { opacity: 1; }
+div.member #name:hover #name_link:hover, div.method #name:hover #name_link:hover, div.staticMethod #name:hover #name_link:hover, div.staticMember #name:hover #name_link:hover { color: #f5871f; }
+div.member #description, div.method #description, div.staticMethod #description, div.staticMember #description { background-color: rgba(236, 236, 236, 0.5); border-radius: 2px; padding: 5px; margin-top: 20px; }
+div.member #description p, div.method #description p, div.staticMethod #description p, div.staticMember #description p { margin: 5px; margin-bottom: 0px; }
+div.member #line_num, div.method #line_num, div.staticMethod #line_num, div.staticMember #line_num { width: 100%; height: 15px; display: block; text-align: right; font-size: 0.7em; padding-right: 10px; letter-spacing: 0.2em; line-height: 15px; }
+div.member #line_num a, div.method #line_num a, div.staticMethod #line_num a, div.staticMember #line_num a { margin-right: 10px; }
+div.member #line_num a:hover, div.method #line_num a:hover, div.staticMethod #line_num a:hover, div.staticMember #line_num a:hover { color: #1EDF3E; }
+div.member #signal, div.method #signal, div.staticMethod #signal, div.staticMember #signal { color: #f5871f; background-color: #ecfbff; border: 1px solid #f5871f; width: 14px; height: 14px; display: inline-block; line-height: 10px; text-align: center; border-radius: 50%; }
+div.member #signal:hover, div.method #signal:hover, div.staticMethod #signal:hover, div.staticMember #signal:hover { color: #22DBC0; border-color: #22DBC0; }
+
+div.member { border-color: #7f33ed; }
+
+div.method { border-color: #3335ed; }
+
+div.staticMethod { border-color: #33d0ed; }
+
+div.staticMember { border-color: #3382ed; }
+
+h2.property { font-size: 1em; text-transform: uppercase; }
+h2.property.member { border-color: #7f33ed; color: #7f33ed; }
+h2.property.method { border-color: #3335ed; color: #3335ed; }
+h2.property.staticMethod { border-color: #33d0ed; color: #33d0ed; }
+h2.property.staticMember { border-color: #3382ed; color: #3382ed; }
+
+body { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; margin: 0px; font-family: 'Inconsolata', monospace; }
+body h2 { padding-left: 0px; margin: 45px 0 30px 0; border-bottom: 3px solid black; color: black; }
+body h3 { width: 200px; margin-top: 30px; margin-bottom: 10px; border-bottom: 3px solid black; font-size: 0.7em; line-height: 1.2em; color: black; }
+body .notice { color: #ED3333; font-size: 0.8em; text-transform: uppercase; }
+body #sidebar { width: 250px; }
+body #content { width: calc(100% - 250px - 2 * 20px); left: 250px; margin-left: 20px; position: relative; }
+@media (max-width: 700px) { body #content { width: calc(100% - 2 * 20px); left: 0px; } }
+body #generated { margin-top: 30px; margin-right: 3px; float: right; color: #8C8C8C; position: relative; font-size: 0.8em; text-transform: uppercase; }
+body .methodColor { color: #3833ED; border-color: #3833ED; }
+body .methodColor { color: #1EDF3E; border-color: #1EDF3E; }
+body .orange { color: #f5871f; }
+body .red { color: #ED3333; }
+body .example { background-color: #ecfbff; padding: 5px; border-radius: 2px; margin-top: 30px; margin-bottom: 5px; overflow-x: auto; }
+body .example h3 { margin-top: 0px; color: #ED3333; border-color: #ED3333; }
+body .example pre { margin: 0px; padding: 0px; }

@@ -1,0 +1,10 @@
+<div class="method-container">
+	<h3>Methods</h3>
+	{{#with (getMethods this)}}
+		{{#each this}}
+			{{#each signatures}}
+				{{>signature flags=../flags sources=../sources}}
+			{{/each}}
+		{{/each}}
+	{{/with}}
+</div>

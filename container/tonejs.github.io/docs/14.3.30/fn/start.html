@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>start</title>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto&display=swap" rel="stylesheet">
+	<base href="../">
+	<link href="./assets/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="class-page">
+		<div id="sidebar">
+	<div id="topbar">
+		<a href="https://tonejs.github.io">
+			Tone.js
+		</a>
+	</div>
+	<details open>
+		<summary>Classes and Functions</summary>
+		<div id="search">
+			<input type="text" placeholder="Search">
+			<button aria-label="clear">
+				&#215;
+			</button>
+		</div>
+		<div id="inner">
+					<div class="section">
+						<h3>Classes</h3>
+							<div class="category">
+								<h4>Core</h4>
+								<div>
+											<div class="instance">
+													<a href="AbstractParam">
+														AbstractParam
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Clock">
+														Clock
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Context">
+														Context
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Delay">
+														Delay
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Destination">
+														Destination
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Draw">
+														Draw
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Emitter">
+														Emitter
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Gain">
+														Gain
+													</a>
+											</div>
+											<div class="instance">
+													<a href="IntervalTimeline">
+														IntervalTimeline
+													</a>
+											</div>
+											<div class="instance">
+													<a href="OfflineContext">
+														OfflineContext
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Param">
+														Param
+													</a>
+											</div>
+											<div class="instance">
+													<a href="StateTimeline">
+														StateTimeline
+													</a>
+											</div>
+											<div class="instance">
+													<a href="TickSignal">
+														TickSignal
+													</a>
+											</div>
+											<div class="instance">
+													<a href="TickSource">
+														TickSource
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Ticker">
+														Ticker
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Timeline">
+														Timeline
+													</a>
+											</div>
+											<div class="instance">
+													<a href="ToneAudioBuffer">
+														ToneAudioBuffer
+													</a>
+											</div>
+											<div class="instance">
+													<a href="ToneAudioBuffers">
+														ToneAudioBuffers
+													</a>
+											</div>
+											<div class="instance">
+													<a href="ToneAudioNode">
+														ToneAudioNode
+													</a>
+											</div>
+											<div class="instance">
+													<a href="ToneWithContext">
+														ToneWithContext
+													</a>
+											</div>
+											<div class="instance">
+													<a href="Transport">
+														Transport
+													</a>
+											</div>
+								</div>
+							</div>
+							<div class="category">
+								<h4>Component</h4>
+								<div>
+											<div class="instance">
+													<a href="Analyser">
+														Analyser
+													</a>
+											</div>
+								</div>
+							</div>
+							<div class="category">
+								<h4>Unit</h4>
+								<div>
+											<div class="instance">
+													<a href="FrequencyClass">
+														FrequencyClass
+													</a>
+											</div>
+											<div class="instance">
+													<a href="MidiClass">
+														MidiClass
+													</a>
+											</div>
+											<div class="instance">
+													<a href="TicksClass">
+														TicksClass
+													</a>
+											</div>
+											<div class="instance">
+													<a href="TimeBaseClass">
+														TimeBaseClass
+													</a>
+											</div>
+											<div class="instance">
+													<a href="TimeClass">
+														TimeClass
+													</a>
+											</div>
+											<div class="instance">
+													<a href="TransportTimeClass">
+														TransportTimeClass
+													</a>
+											</div>
+								</div>
+							</div>
+					</div>
+					<div class="section">
+						<h3>Functions</h3>
+							<div class="category">
+								<h4>Core</h4>
+								<div>
+											<div class="instance">
+													<a href="fn/Offline">
+														Offline
+													</a>
+											</div>
+								</div>
+							</div>
+							<div class="category">
+								<h4>Unit</h4>
+								<div>
+											<div class="instance">
+													<a href="fn/Frequency">
+														Frequency
+													</a>
+											</div>
+											<div class="instance">
+													<a href="fn/Midi">
+														Midi
+													</a>
+											</div>
+											<div class="instance">
+													<a href="fn/Ticks">
+														Ticks
+													</a>
+											</div>
+											<div class="instance">
+													<a href="fn/Time">
+														Time
+													</a>
+											</div>
+											<div class="instance">
+													<a href="fn/TransportTime">
+														TransportTime
+													</a>
+											</div>
+								</div>
+							</div>
+					</div>
+		</div>
+	</details>
+</div>
+		<div id="content-container" class="function-page">
+				<div class="signature">
+		<h4 class='signature-title'>
+	<a name="start">
+		start
+		<a class="section-link" href="#start">#</a>
+	</a>
+
+</h4>		<div class="description">
+		<p>Most browsers will not play <em>any</em> audio until a user
+clicks something (like a play button). Invoke this method
+on a click or keypress event handler to start the audio context.
+More about the Autoplay policy
+<a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio">here</a></p>
+
+					<div class="example">
+						<pre><code class="language-js hljs">
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#playbutton'</span>).addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+	<span class="hljs-keyword">await</span> Tone.start()
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'audio ready'</span>)
+})
+</code></pre>
+					</div>
+	</div>
+
+	<div class="function">
+
+		<span class="name">start</span>
+		<span class="signature-symbol">(</span>
+		<span class="signature-symbol">)</span>
+		<span class="signature-symbol"> => </span>
+		<span class="type"><span class="signature-type"><span>Promise</span></span><span class="signature-symbol">&lt;</span><span class="type"><span class="signature-type"><span>void</span></span>	</span><span class="signature-symbol">&gt;</span>	</span>	</div>
+
+	<div id="code-links">
+					</div>
+</div>
+		</div>
+	</div>
+	<script src="./assets/build.js"></script>
+</body>
+</html>

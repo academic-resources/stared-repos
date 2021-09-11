@@ -1,0 +1,3447 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>AmplitudeEnvelope</title>
+<link rel="icon" type="image/png" href="./assets/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/docs.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/syntax.css">
+
+<script src="/assets/scripts/prefixfree.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+</head>
+<body>
+
+	
+
+	
+
+	<div id="sidebar" >
+
+	<div id="searchbox">
+		<input type="text">
+		<div id="clear"></div>
+	</div>
+
+	<div id="scroller">
+
+		
+
+		
+
+		
+			<div class="group">
+				<h1>core</h1>
+
+				
+
+				
+					<a href="AudioNode"  class="item" >AudioNode</a>
+				
+					<a href="Buffer"  class="item" >Buffer</a>
+				
+					<a href="Buffers"  class="item" >Buffers</a>
+				
+					<a href="Clock"  class="item" >Clock</a>
+				
+					<a href="Context"  class="item" >Context</a>
+				
+					<a href="Delay"  class="item" >Delay</a>
+				
+					<a href="Draw"  class="item" >Draw</a>
+				
+					<a href="Emitter"  class="item" >Emitter</a>
+				
+					<a href="Gain"  class="item" >Gain</a>
+				
+					<a href="IntervalTimeline"  class="item" >IntervalTimeline</a>
+				
+					<a href="Listener"  class="item" >Listener</a>
+				
+					<a href="Master"  class="item" >Master</a>
+				
+					<a href="OfflineContext"  class="item" >OfflineContext</a>
+				
+					<a href="Param"  class="item" >Param</a>
+				
+					<a href="Timeline"  class="item" >Timeline</a>
+				
+					<a href="TimelineState"  class="item" >TimelineState</a>
+				
+					<a href="Tone"  class="item" >Tone</a>
+				
+					<a href="Transport"  class="item" >Transport</a>
+				
+					<a href="TransportEvent"  class="item" >TransportEvent</a>
+				
+					<a href="TransportRepeatEvent"  class="item" >TransportRepeatEvent</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>instrument</h1>
+
+				
+
+				
+					<a href="AMSynth"  class="item" >AMSynth</a>
+				
+					<a href="DuoSynth"  class="item" >DuoSynth</a>
+				
+					<a href="FMSynth"  class="item" >FMSynth</a>
+				
+					<a href="Instrument"  class="item" >Instrument</a>
+				
+					<a href="MembraneSynth"  class="item" >MembraneSynth</a>
+				
+					<a href="MetalSynth"  class="item" >MetalSynth</a>
+				
+					<a href="MonoSynth"  class="item" >MonoSynth</a>
+				
+					<a href="Monophonic"  class="item" >Monophonic</a>
+				
+					<a href="NoiseSynth"  class="item" >NoiseSynth</a>
+				
+					<a href="PluckSynth"  class="item" >PluckSynth</a>
+				
+					<a href="PolySynth"  class="item" >PolySynth</a>
+				
+					<a href="Sampler"  class="item" >Sampler</a>
+				
+					<a href="Synth"  class="item" >Synth</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>source</h1>
+
+				
+
+				
+					<a href="AMOscillator"  class="item" >AMOscillator</a>
+				
+					<a href="BufferSource"  class="item" >BufferSource</a>
+				
+					<a href="FMOscillator"  class="item" >FMOscillator</a>
+				
+					<a href="FatOscillator"  class="item" >FatOscillator</a>
+				
+					<a href="GrainPlayer"  class="item" >GrainPlayer</a>
+				
+					<a href="Noise"  class="item" >Noise</a>
+				
+					<a href="OmniOscillator"  class="item" >OmniOscillator</a>
+				
+					<a href="Oscillator"  class="item" >Oscillator</a>
+				
+					<a href="OscillatorNode"  class="item" >OscillatorNode</a>
+				
+					<a href="PWMOscillator"  class="item" >PWMOscillator</a>
+				
+					<a href="Player"  class="item" >Player</a>
+				
+					<a href="Players"  class="item" >Players</a>
+				
+					<a href="PulseOscillator"  class="item" >PulseOscillator</a>
+				
+					<a href="Source"  class="item" >Source</a>
+				
+					<a href="TickSource"  class="item" >TickSource</a>
+				
+					<a href="UserMedia"  class="item" >UserMedia</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>effect</h1>
+
+				
+
+				
+					<a href="AutoFilter"  class="item" >AutoFilter</a>
+				
+					<a href="AutoPanner"  class="item" >AutoPanner</a>
+				
+					<a href="AutoWah"  class="item" >AutoWah</a>
+				
+					<a href="BitCrusher"  class="item" >BitCrusher</a>
+				
+					<a href="Chebyshev"  class="item" >Chebyshev</a>
+				
+					<a href="Chorus"  class="item" >Chorus</a>
+				
+					<a href="Convolver"  class="item" >Convolver</a>
+				
+					<a href="Distortion"  class="item" >Distortion</a>
+				
+					<a href="Effect"  class="item" >Effect</a>
+				
+					<a href="FeedbackDelay"  class="item" >FeedbackDelay</a>
+				
+					<a href="FeedbackEffect"  class="item" >FeedbackEffect</a>
+				
+					<a href="Freeverb"  class="item" >Freeverb</a>
+				
+					<a href="JCReverb"  class="item" >JCReverb</a>
+				
+					<a href="MidSideEffect"  class="item" >MidSideEffect</a>
+				
+					<a href="Phaser"  class="item" >Phaser</a>
+				
+					<a href="PingPongDelay"  class="item" >PingPongDelay</a>
+				
+					<a href="PitchShift"  class="item" >PitchShift</a>
+				
+					<a href="Reverb"  class="item" >Reverb</a>
+				
+					<a href="StereoEffect"  class="item" >StereoEffect</a>
+				
+					<a href="StereoFeedbackEffect"  class="item" >StereoFeedbackEffect</a>
+				
+					<a href="StereoWidener"  class="item" >StereoWidener</a>
+				
+					<a href="StereoXFeedbackEffect"  class="item" >StereoXFeedbackEffect</a>
+				
+					<a href="Tremolo"  class="item" >Tremolo</a>
+				
+					<a href="Vibrato"  class="item" >Vibrato</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>component</h1>
+
+				
+
+				
+					<a href="AmplitudeEnvelope"  class="active item" >AmplitudeEnvelope</a>
+				
+					<a href="Analyser"  class="item" >Analyser</a>
+				
+					<a href="Channel"  class="item" >Channel</a>
+				
+					<a href="Compressor"  class="item" >Compressor</a>
+				
+					<a href="CrossFade"  class="item" >CrossFade</a>
+				
+					<a href="EQ3"  class="item" >EQ3</a>
+				
+					<a href="Envelope"  class="item" >Envelope</a>
+				
+					<a href="FFT"  class="item" >FFT</a>
+				
+					<a href="FeedbackCombFilter"  class="item" >FeedbackCombFilter</a>
+				
+					<a href="Filter"  class="item" >Filter</a>
+				
+					<a href="Follower"  class="item" >Follower</a>
+				
+					<a href="FrequencyEnvelope"  class="item" >FrequencyEnvelope</a>
+				
+					<a href="Gate"  class="item" >Gate</a>
+				
+					<a href="LFO"  class="item" >LFO</a>
+				
+					<a href="Limiter"  class="item" >Limiter</a>
+				
+					<a href="LowpassCombFilter"  class="item" >LowpassCombFilter</a>
+				
+					<a href="Merge"  class="item" >Merge</a>
+				
+					<a href="Meter"  class="item" >Meter</a>
+				
+					<a href="MidSideCompressor"  class="item" >MidSideCompressor</a>
+				
+					<a href="MidSideMerge"  class="item" >MidSideMerge</a>
+				
+					<a href="MidSideSplit"  class="item" >MidSideSplit</a>
+				
+					<a href="Mono"  class="item" >Mono</a>
+				
+					<a href="MultibandCompressor"  class="item" >MultibandCompressor</a>
+				
+					<a href="MultibandSplit"  class="item" >MultibandSplit</a>
+				
+					<a href="PanVol"  class="item" >PanVol</a>
+				
+					<a href="Panner"  class="item" >Panner</a>
+				
+					<a href="Panner3D"  class="item" >Panner3D</a>
+				
+					<a href="ScaledEnvelope"  class="item" >ScaledEnvelope</a>
+				
+					<a href="Solo"  class="item" >Solo</a>
+				
+					<a href="Split"  class="item" >Split</a>
+				
+					<a href="Volume"  class="item" >Volume</a>
+				
+					<a href="Waveform"  class="item" >Waveform</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>type</h1>
+
+				
+
+				
+					<a href="Frequency"  class="item" >Frequency</a>
+				
+					<a href="Midi"  class="item" >Midi</a>
+				
+					<a href="Ticks"  class="item" >Ticks</a>
+				
+					<a href="Time"  class="item" >Time</a>
+				
+					<a href="TimeBase"  class="item" >TimeBase</a>
+				
+					<a href="TransportTime"  class="item" >TransportTime</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>event</h1>
+
+				
+
+				
+					<a href="Event"  class="item" >Event</a>
+				
+					<a href="Loop"  class="item" >Loop</a>
+				
+					<a href="Part"  class="item" >Part</a>
+				
+					<a href="Pattern"  class="item" >Pattern</a>
+				
+					<a href="Sequence"  class="item" >Sequence</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>signal</h1>
+
+				
+
+				
+					<a href="Abs"  class="item" >Abs</a>
+				
+					<a href="Add"  class="item" >Add</a>
+				
+					<a href="AudioToGain"  class="item" >AudioToGain</a>
+				
+					<a href="EqualPowerGain"  class="item" >EqualPowerGain</a>
+				
+					<a href="GainToAudio"  class="item" >GainToAudio</a>
+				
+					<a href="GreaterThan"  class="item" >GreaterThan</a>
+				
+					<a href="GreaterThanZero"  class="item" >GreaterThanZero</a>
+				
+					<a href="Modulo"  class="item" >Modulo</a>
+				
+					<a href="Multiply"  class="item" >Multiply</a>
+				
+					<a href="Negate"  class="item" >Negate</a>
+				
+					<a href="Normalize"  class="item" >Normalize</a>
+				
+					<a href="Pow"  class="item" >Pow</a>
+				
+					<a href="Scale"  class="item" >Scale</a>
+				
+					<a href="ScaleExp"  class="item" >ScaleExp</a>
+				
+					<a href="Signal"  class="item" >Signal</a>
+				
+					<a href="SignalBase"  class="item" >SignalBase</a>
+				
+					<a href="Subtract"  class="item" >Subtract</a>
+				
+					<a href="TickSignal"  class="item" >TickSignal</a>
+				
+					<a href="TransportTimelineSignal"  class="item" >TransportTimelineSignal</a>
+				
+					<a href="WaveShaper"  class="item" >WaveShaper</a>
+				
+					<a href="Zero"  class="item" >Zero</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>control</h1>
+
+				
+
+				
+					<a href="CtrlInterpolate"  class="item" >CtrlInterpolate</a>
+				
+					<a href="CtrlMarkov"  class="item" >CtrlMarkov</a>
+				
+					<a href="CtrlPattern"  class="item" >CtrlPattern</a>
+				
+					<a href="CtrlRandom"  class="item" >CtrlRandom</a>
+				
+			</div>
+		
+	</div>
+	<div id="seperator"></div>
+</div>
+<div id="hamburger">
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+</div>
+
+<script>
+
+	var allListItems = []
+	var items = document.querySelectorAll("#sidebar .item")
+	for (var i = 0; i < items.length; i++){
+		var el = items[i]
+		var name = el.textContent.toLowerCase()
+		allListItems.push({
+			"name" : name,
+			"element" : el
+		})
+	}
+
+	document.querySelector("#searchbox input").addEventListener("input", function(e){
+		var word = e.target.value.toLowerCase()
+		allListItems.forEach(function(item){
+			if (item.name.indexOf(word) === -1){
+				item.element.style.display = "none"
+			} else {
+				item.element.style.display = "inherit"
+			}
+		})
+	})
+
+	document.querySelector("#searchbox #clear").addEventListener("click", function(e){
+		document.querySelector("#searchbox input").value = "";
+		allListItems.forEach(function(item){ item.element.style.display = "inherit" })
+	})
+
+	//the hamburger menu
+	document.querySelector("#hamburger").addEventListener("click", function(){
+		var sidebar = document.querySelector("#sidebar")
+		var currentDisplay = sidebar.classList.contains("visible")
+		if (currentDisplay){
+			sidebar.classList.remove("visible")
+		} else {
+			sidebar.classList.add("visible")
+		}
+	})
+
+	//also offset the sidebar when an item is selected
+	var activeEl = document.querySelector('#sidebar .active.item')
+	if (activeEl){
+		document.querySelector('#sidebar').scrollTop = activeEl.parentElement.offsetTop - 10
+	}
+</script>
+
+
+	
+	
+
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	
+
+	<div id="content">
+		
+
+		
+
+
+
+<div id="constructor">
+
+	<div id="top">
+
+		<h1>Tone.AmplitudeEnvelope</h1>
+
+		
+
+			<span id="extends">
+				&#8627; EXTENDS
+				<a href="./Envelope">
+					Tone.Envelope
+				</a>
+			</span>
+		
+
+	</div>
+
+	
+
+	
+
+	<div id="description">
+		<p>Tone.AmplitudeEnvelope is a Tone.Envelope connected to a gain node. Unlike Tone.Envelope, which outputs the envelope’s value, Tone.AmplitudeEnvelope accepts an audio signal as the input and will apply the envelope to the amplitude of the signal. Read more about ADSR Envelopes on <a href="https://en.wikipedia.org/wiki/Synthesizer#ADSR_envelope">Wikipedia</a>.</p>
+
+	</div>
+
+	<div id="invocation">
+		
+
+			<h3>CONSTRUCTOR</h3>
+
+			<span class="red">new</span>
+			<span id="class_name">Tone.AmplitudeEnvelope</span>
+
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		<span class="optional">[</span> <div class="param">attack</div> <span class="optional">]</span> <span class="punc">,</span> <span class="optional">[</span> <div class="param">decay</div> <span class="optional">]</span> <span class="punc">,</span> <span class="optional">[</span> <div class="param">sustain</div> <span class="optional">]</span> <span class="punc">,</span> <span class="optional">[</span> <div class="param">release</div> <span class="optional">]</span>
+	<span class="punc">)</span>
+</span>
+
+
+			<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				attack
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The amount of time it takes for the envelope to go from 0 to it’s maximum value.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#object">
+						Object
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				decay
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The period of time after the attack that it takes for the envelope to fall to the sustain value.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				sustain
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The percent of the maximum value that the envelope rests at until the release is triggered.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#normalrange">
+						NormalRange
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				release
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The amount of time after the release is triggered it takes to reach 0.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+		
+	</div>
+
+	
+
+
+
+
+
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">ampEnv</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">AmplitudeEnvelope</span><span class="p">({</span>
+	<span class="s2">"attack"</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+	<span class="s2">"decay"</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span>
+	<span class="s2">"sustain"</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+	<span class="s2">"release"</span><span class="p">:</span> <span class="mf">0.8</span>
+<span class="p">}).</span><span class="nx">toMaster</span><span class="p">();</span>
+<span class="c1">//create an oscillator and connect it</span>
+<span class="kd">var</span> <span class="nx">osc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">Oscillator</span><span class="p">().</span><span class="nx">connect</span><span class="p">(</span><span class="nx">ampEnv</span><span class="p">).</span><span class="nx">start</span><span class="p">();</span>
+<span class="c1">//trigger the envelopes attack and release "8t" apart</span>
+<span class="nx">ampEnv</span><span class="p">.</span><span class="nx">triggerAttackRelease</span><span class="p">(</span><span class="s2">"8t"</span><span class="p">);</span></code></pre></figure>
+
+	</div>
+
+
+	<div id="class_index">
+		<ul>
+
+	
+	<div class="group members">
+		<div>MEMBERS</div>
+		
+			<li>
+				<a href="#numberofinputs">numberOfInputs</a>
+			</li>
+		
+			<li>
+				<a href="#numberofoutputs">numberOfOutputs</a>
+			</li>
+		
+			<li>
+				<a href="#channelinterpretation">channelInterpretation</a>
+			</li>
+		
+			<li>
+				<a href="#context">context</a>
+			</li>
+		
+			<li>
+				<a href="#channelcount">channelCount</a>
+			</li>
+		
+			<li>
+				<a href="#channelcountmode">channelCountMode</a>
+			</li>
+		
+			<li>
+				<a href="#sustain">sustain</a>
+			</li>
+		
+			<li>
+				<a href="#attack">attack</a>
+			</li>
+		
+			<li>
+				<a href="#value">value</a>
+			</li>
+		
+			<li>
+				<a href="#attackcurve">attackCurve</a>
+			</li>
+		
+			<li>
+				<a href="#decay">decay</a>
+			</li>
+		
+			<li>
+				<a href="#decaycurve">decayCurve</a>
+			</li>
+		
+			<li>
+				<a href="#release">release</a>
+			</li>
+		
+			<li>
+				<a href="#releasecurve">releaseCurve</a>
+			</li>
+		
+	</div>
+
+
+
+	
+	<div class="group methods">
+		<div>METHODS</div>
+		
+			<li>
+				<a href="#dispose">dispose</a>
+			</li>
+		
+			<li>
+				<a href="#chain">chain</a>
+			</li>
+		
+			<li>
+				<a href="#tomaster">toMaster</a>
+			</li>
+		
+			<li>
+				<a href="#disconnect">disconnect</a>
+			</li>
+		
+			<li>
+				<a href="#fan">fan</a>
+			</li>
+		
+			<li>
+				<a href="#triggerrelease">triggerRelease</a>
+			</li>
+		
+			<li>
+				<a href="#getvalueattime">getValueAtTime</a>
+			</li>
+		
+			<li>
+				<a href="#triggerattack">triggerAttack</a>
+			</li>
+		
+			<li>
+				<a href="#triggerattackrelease">triggerAttackRelease</a>
+			</li>
+		
+			<li>
+				<a href="#cancel">cancel</a>
+			</li>
+		
+	</div>
+
+
+
+	
+
+
+	
+
+
+</ul>
+
+	</div>
+
+</div>
+
+
+		
+
+		
+
+			<h2 class='property member'>Members</h2>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="numberofinputs">
+			.numberOfInputs
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#numberofinputs">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The number of inputs feeding into the AudioNode. For source nodes, this will be 0.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/AudioNode.js#L119">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="numberofoutputs">
+			.numberOfOutputs
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#numberofoutputs">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The number of outputs coming out of the AudioNode.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/AudioNode.js#L141">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="channelinterpretation">
+			.channelInterpretation
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#channelinterpretation">#</a>
+
+</span>
+
+	<div id="description">
+		<p>channelInterpretation determines how individual channels will be treated when up-mixing and down-mixing connections to any inputs to the node. The default value is “speakers”.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/AudioNode.js#L101">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="context">
+			.context
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Context">Tone.Context</a>
+			</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#context">#</a>
+
+</span>
+
+	<div id="description">
+		<p>Get the audio context belonging to this instance.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/AudioNode.js#L29">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="channelcount">
+			.channelCount
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#channelcount">#</a>
+
+</span>
+
+	<div id="description">
+		<p>channelCount is the number of channels used when up-mixing and down-mixing connections to any inputs to the node. The default value is 2 except for specific nodes where its value is specially determined.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/AudioNode.js#L64">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="channelcountmode">
+			.channelCountMode
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#channelcountmode">#</a>
+
+</span>
+
+	<div id="description">
+		<p>channelCountMode determines how channels will be counted when up-mixing and down-mixing connections to any inputs to the node. The default value is “max”. This attribute has no effect for nodes with no inputs.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/AudioNode.js#L83">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="sustain">
+			.sustain
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#normalrange">
+						NormalRange
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#sustain">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The sustain value is the value which the envelope rests at after triggerAttack is called, but before triggerRelease is invoked.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L60">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="attack">
+			.attack
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#attack">#</a>
+
+</span>
+
+	<div id="description">
+		<p>When triggerAttack is called, the attack time is the amount of time it takes for the envelope to reach it’s maximum value.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L45">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="value">
+			.value
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#value">#</a>
+
+</span>
+
+	<div id="description">
+		<p>Read the current value of the envelope. Useful for syncronizing visual output to the envelope.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L114">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="attackcurve">
+			.attackCurve
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#array">
+						Array
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#attackcurve">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The shape of the attack. Can be any of these strings: &lt;ul&gt; &lt;li&gt;linear&lt;/li&gt; &lt;li&gt;exponential&lt;/li&gt; &lt;li&gt;sine&lt;/li&gt; &lt;li&gt;cosine&lt;/li&gt; &lt;li&gt;bounce&lt;/li&gt; &lt;li&gt;ripple&lt;/li&gt; &lt;li&gt;step&lt;/li&gt; &lt;/ul&gt; Can also be an array which describes the curve. Values in the array are evenly subdivided and linearly interpolated over the duration of the attack.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">env</span><span class="p">.</span><span class="nx">attackCurve</span> <span class="o">=</span> <span class="s2">"linear"</span><span class="p">;</span></code></pre></figure>
+
+	</div>
+
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//can also be an array</span>
+<span class="nx">env</span><span class="p">.</span><span class="nx">attackCurve</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L171">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="decay">
+			.decay
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#decay">#</a>
+
+</span>
+
+	<div id="description">
+		<p>After the attack portion of the envelope, the value will fall over the duration of the decay time to it’s sustain value.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L52">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="decaycurve">
+			.decayCurve
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#decaycurve">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The shape of the decay either “linear” or “exponential”</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">env</span><span class="p">.</span><span class="nx">decayCurve</span> <span class="o">=</span> <span class="s2">"linear"</span><span class="p">;</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L221">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="release">
+			.release
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#release">#</a>
+
+</span>
+
+	<div id="description">
+		<p>After triggerRelease is called, the envelope’s value will fall to it’s miminum value over the duration of the release time.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L68">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="releasecurve">
+			.releaseCurve
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#array">
+						Array
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#releasecurve">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The shape of the release. See the attack curve types.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">env</span><span class="p">.</span><span class="nx">releaseCurve</span> <span class="o">=</span> <span class="s2">"linear"</span><span class="p">;</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L204">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+			<h2 class='property method'>Methods</h2>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="dispose">
+			<span id="main">
+				.dispose
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#dispose">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AmplitudeEnvelope">Tone.AmplitudeEnvelope</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Clean up</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/AmplitudeEnvelope.js#L52">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="chain">
+			<span id="main">
+				.chain
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#chain">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				nodes
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Connect the output of this node to the rest of the nodes in series.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//connect a node to an effect, panVol and then to the master output</span>
+ <span class="nx">node</span><span class="p">.</span><span class="nx">chain</span><span class="p">(</span><span class="nx">effect</span><span class="p">,</span> <span class="nx">panVol</span><span class="p">,</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">Master</span><span class="p">);</span>
+ </code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/AudioNode.js#L204">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="tomaster">
+			<span id="main">
+				.toMaster
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#tomaster">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Connect ‘this’ to the master output. Shorthand for this.connect(Tone.Master)</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//connect an oscillator to the master output</span>
+<span class="kd">var</span> <span class="nx">osc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">Oscillator</span><span class="p">().</span><span class="nx">toMaster</span><span class="p">();</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Master.js#L141">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="disconnect">
+			<span id="main">
+				.disconnect
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#disconnect">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				output
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>Either the output index to disconnect if the output is an array, or the node to disconnect from.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>disconnect the output</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/AudioNode.js#L186">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="AudioNode">Tone.AudioNode</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="fan">
+			<span id="main">
+				.fan
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#fan">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				nodes
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>connect the output of this node to the rest of the nodes in parallel.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/AudioNode.js#L216">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="triggerrelease">
+			<span id="main">
+				.triggerRelease
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#triggerrelease">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>When the release portion of the envelope should start.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">now</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Envelope">Tone.Envelope</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Triggers the release of the envelope.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//trigger release immediately</span>
+ <span class="nx">env</span><span class="p">.</span><span class="nx">triggerRelease</span><span class="p">();</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L314">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="getvalueattime">
+			<span id="main">
+				.getValueAtTime
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#getvalueattime">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The time in seconds.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>The scheduled value at the given time.</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Get the scheduled value at the given time. This will return the unconverted (raw) value.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L341">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="triggerattack">
+			<span id="main">
+				.triggerAttack
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#triggerattack">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>When the attack should start.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">now</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				velocity
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The velocity of the envelope scales the vales. number between 0-1</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#normalrange">
+						NormalRange
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">1</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Envelope">Tone.Envelope</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Trigger the attack/decay portion of the ADSR envelope.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//trigger the attack 0.5 seconds from now with a velocity of 0.2</span>
+ <span class="nx">env</span><span class="p">.</span><span class="nx">triggerAttack</span><span class="p">(</span><span class="s2">"+0.5"</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L253">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="triggerattackrelease">
+			<span id="main">
+				.triggerAttackRelease
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#triggerattackrelease">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				duration
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The duration of the sustain.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>When the attack should be triggered.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">now</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				velocity
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The velocity of the envelope.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">1</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Envelope">Tone.Envelope</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>triggerAttackRelease is shorthand for triggerAttack, then waiting some duration, then triggerRelease.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//trigger the attack and then the release after 0.6 seconds.</span>
+<span class="nx">env</span><span class="p">.</span><span class="nx">triggerAttackRelease</span><span class="p">(</span><span class="mf">0.6</span><span class="p">);</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L356">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+	<div id="inherits">
+		<span class="keyword"><span id="flip">&#8627;</span> inherited from</span>
+		
+		
+		<a href="Envelope">Tone.Envelope</a>
+	</div>
+
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="cancel">
+			<span id="main">
+				.cancel
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#cancel">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				after
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Envelope">Tone.Envelope</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Cancels all scheduled envelope changes after the given time.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/component/Envelope.js#L368">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+		
+
+		
+
+	</div>
+
+	
+	<div id="generated">docs generated Sep 15 2019</div>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89548134-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<script src="//unpkg.com/tone@13.8.25/build/Tone.js"></script>
+
+</body>
+</html>
