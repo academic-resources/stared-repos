@@ -1,0 +1,12 @@
+<form action="<%= goal_url(@goal)  %>" method="POST">
+ <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+ <input type="hidden" name="_method" value="PATCH">
+
+ <label> Title
+      <input type="text" name="goal[title]"  value="<%= @goal.title  %>">
+ </label>
+ 
+
+ 
+ <input type="submit" value="Save">
+</form>

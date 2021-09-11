@@ -1,0 +1,15 @@
+All Subs:
+
+<br>
+<br>
+<% @subs.each do |sub| %>
+<a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+<br>
+  Moderator: <%= sub.moderator.username %>
+  <br>
+  Description: <%= sub.description %>
+  <br>
+  <br>
+<% end %>
+<br>
+<a href="<%= new_sub_url %>">Create A New Sub</a>

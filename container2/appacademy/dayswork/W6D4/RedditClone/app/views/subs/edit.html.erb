@@ -1,0 +1,12 @@
+Edit Sub
+<form action="<%= sub_url(@sub)  %>" method="POST">
+ <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+ <input type="hidden" name="_method" value="PATCH">
+ <label> Title
+      <input type="text" name="sub[title]"  value="<%= @sub.title  %>">
+ </label>
+ <label> Description
+      <input type="text" name="sub[description]"  value="<%= @sub.description %>">
+ </label>
+ <input type="submit" value="Save">
+</form>

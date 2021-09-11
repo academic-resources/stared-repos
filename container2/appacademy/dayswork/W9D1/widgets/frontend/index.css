@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.clock {
+  font-family: 'Roboto', sans-serif;
+  width: 575px;
+  margin: 0 auto;
+}
+
+.clock-container {
+    background: orange;
+    color: white;
+    padding: 20px;
+    font-size: 1.6rem;
+    border: 1px solid #865600;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.selected {
+  font-weight: bold;
+  color: purple;
+  border-bottom: 2px solid lightblue;
+}
+
+.unselected {
+    border-bottom: 2px solid black;
+}
+
+.tabs-outer {
+  width: 300px;
+  margin: 40px auto;
+  font-family: 'roboto', sans-serif;
+
+}
+
+.tabs-headings {
+    display: flex;
+}
+.tab-title {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: lightblue;
+    flex: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 6px;
+    cursor: pointer;
+    
+}
+
+.tabs-outer article {
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: none;
+  padding: 20px;
+  background: lightblue;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.weather {
+  font-family: 'Roboto', sans-serif;
+  width: 575px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.weather-container {
+    background: lightgreen;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+    border: 1px solid #865600;
+}

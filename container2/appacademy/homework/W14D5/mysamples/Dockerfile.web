@@ -1,0 +1,35 @@
+FROM ruby:2.5.5-alpine3.9
+
+# We tell the image `--no-cache` so we don't clog up our image 
+# with the things we are downloading
+RUN apk add --no-cache --update build-base \
+  linux-headers \
+  git \
+  postgresql-dev \
+  nodejs \
+  tzdata
+
+# environment vars must be included in our dockerfile
+ARG DATABASE_URL="postgres://postgres@db"
+ARG RAILS_ENV=production
+
+# copy over our Gemfile
+WORKDIR /myapp
+COPY Gemfile /myapp/Gemfile
+COPY Gemfile.lock /myapp/Gemfile.lock
+
+# We gem install bundler for a specific issue with bundler 2.0
+# then we can bundle install
+RUN gem install bundler && bundle install
+COPY . /myapp
+
+# Add a script to be executed every time the container starts.
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+
+EXPOSE 3000
+
+# Start the main process.
+CMD ["rails", "server", "-b", "0.0.0.0"]
+
+

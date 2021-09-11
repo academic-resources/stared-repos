@@ -1,0 +1,164 @@
+group :development do
+  # Run 'bundle exec annotate' in Terminal to add helpful comments to models.
+  gem 'annotate'
+
+  # These two give you a great error handling page.
+  # But make sure to never use them in production!
+  gem 'better_errors'
+  gem 'binding_of_caller'
+
+  # Gotta have byebug...
+  gem 'byebug'
+
+  # pry > irb
+  gem 'pry-rails'
+end
+
+
+rails
+    new demo_project -G --database=postgresql
+    generate
+        migration MigrationName
+    console
+        reload!
+    db:
+        drop
+        create
+        migrate
+        rollback
+        schema:load
+    dbconsole
+
+migration_files
+    def change
+        create_table :products do |t|
+            t.string :name
+                null: false
+                default: value
+            t.text :description
+            t.float :price
+            t.boolean
+            t.date
+            t.datetime
+            t.integer
+            t.time
+            t.timestamps
+        end
+        add_column
+        rename_column
+        rename_table
+        add_index
+            unique: true
+    end
+
+    def up
+        change_column
+        remove_column
+    end
+
+    def down
+
+    end
+
+ApplicationRecord
+    .<property>
+    .all
+    .create
+    .count
+    .destroy
+    .errors
+        .full_messages
+    .find
+    .find_by
+    .first
+    .last
+    .load
+    .new
+    .save
+    .save!
+    .to_a
+    .valid?
+    .where
+    .where_values_hash
+    collection
+        .pluck
+    relationships
+        belongs_to 
+            primary_key: 
+            foreign_key: 
+            class_name: 
+            optional: 
+        has_many
+            through: 
+            source: 
+        has_one
+    validation
+        validates
+            presence
+            uniqueness
+            format
+            length
+            numericality
+            inclusion
+            options
+                scope
+                minimum
+                maximum
+                greater_than/greater_than_or_equal_to
+                less_than/less_than_or_equal_to
+                in
+                message
+                allow_nil/:allow_blank
+                if
+                unless
+        validate
+            errors[:discount] << 'can\'t be greater than total value'
+        errors[:base]
+        Custom#validate_each
+
+Active Record Relation
+    joined_includes_values
+    load
+    none?
+    one?
+    reload
+    to_a
+    where_values_hash
+    attributes
+
+ActiveRecord::QueryMethods
+    distinct
+    eager_load
+    group
+    having
+    includes(:associations...)
+    joins(:associations...)
+    left_joins
+    limit
+    offset
+    or
+    order
+    select
+    where
+    scope
+
+ActiveRecord::??
+    first_or_create
+    first_or_initialize
+    find_each
+    find
+    find_by
+    to_sql
+    explain
+    find_by
+    find_by_sql
+    pluck
+    count
+    sum
+    average
+    minimum
+    maximum
+
+
+
+

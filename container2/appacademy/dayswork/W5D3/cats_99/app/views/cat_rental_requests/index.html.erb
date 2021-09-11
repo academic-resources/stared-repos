@@ -1,0 +1,30 @@
+<h1>All Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cat</th>           
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <% @cat_rental_requests.each do |request| %>
+    <tr>
+      <td><a href="<%= cat_rental_requests_url(request)%>">
+        <%= request.cat.name %></a>
+      </td>
+      <td><%= request.start_date %></td>
+      <td><%= request.end_date %></td>
+    </tr>
+  <% end %>
+
+
+    </tbody>
+  </table>
+
+<form action="<%=  new_cat_rental_request_url  %>">
+    <input type="submit" value="Add a new Request">
+</form>
+

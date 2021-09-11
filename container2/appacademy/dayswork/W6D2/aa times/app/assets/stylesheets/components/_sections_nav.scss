@@ -1,0 +1,24 @@
+.sections-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: 5px;
+    font-family: $sans-serif;
+    a {
+        // margin-right: 10px;
+        margin-top: 5px;
+        font-size: 14px;
+        padding: 7px;
+        &:hover {
+            
+            background: $light-gray
+        }
+    }
+}
+
+.sections-nav a:last-of-type {
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 12px;
+}

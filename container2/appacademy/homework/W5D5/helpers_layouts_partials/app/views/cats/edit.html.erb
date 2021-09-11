@@ -1,0 +1,9 @@
+<section class="page"><div class="centered-box">
+  <h1>Edit My Cat</h1>
+  <%= render 'shared/errors' %>
+  <%= render 'form', cat: @cat %>
+</div></section>
+
+<% content_for :footer do %>
+  <p>Edit cat page.</p>
+<% end %>

@@ -1,0 +1,22 @@
+/* PHASE 2: Navigation */
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+}
+
+.header-logo:hover {
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-list > li {
+}
+
+.header-list > li:hover {
+}
