@@ -1,0 +1,85 @@
+/* PHASE 0: Reset */
+
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.clock, .date {
+  font-family: Gugi;
+  font-size: 75px;
+}
+
+.headers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs-group {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: teal;
+  color: white;
+  font-family: Gugi;
+}
+
+.tab {
+  border: 1px solid gray;
+  border-radius: 5px;
+  /* padding: 5px 20px; */
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  border: 1px solid gray;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

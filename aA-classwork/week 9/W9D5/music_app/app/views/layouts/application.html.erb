@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <header>
+    <div>
+      <h2>Music App</h2>
+      <img src="https://cdn3.iconfinder.com/data/icons/glypho-music-and-sound/64/vinyl-music-note-512.png" alt="vinyl" id="logo">
+    </div>
+    
+
+    <% if logged_in? %>
+      <div>
+        <%= current_user.email %>
+        <form action="<%= session_url %>" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <input type="submit" value="logout">
+        </form>
+      </div>
+    <% else %>
+      <div>
+        <a href="<%= new_user_url %>">sign up</a>
+        <a href="<%= new_session_url %>">login</a>
+      </div>
+    <% end %>
+  </header>
+
+  <div class="errors">
+    <% if flash[:errors]  %>
+      <% flash[:errors].each do |error| %>
+      <p><%= error %></p>
+      <% end %>
+    <% end %>
+  </div>
+
+  <body>
+    <%= yield %>
+  </body>
+
+
+  
+</html>

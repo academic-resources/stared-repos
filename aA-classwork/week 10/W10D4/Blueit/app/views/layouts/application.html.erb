@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blueit</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <% if current_user %>
+    Welcome, <%= current_user.username %>
+    <form action="<%= session_url %>" method="POST">
+      <%= auth_token %>
+      <input type="hidden" name="_method" value="DELETE">
+      <button>Log Out</button>
+    </form>
+  <% else %>
+    <a href="<%= new_session_url %>">Log In</a>
+    <a href="<%= new_user_url %>">Sign Up</a>
+  <% end %>
+
+  <% unless current_page?(subs_url) || current_page?(new_session_url) || current_page?(new_user_url)%>
+    <a href="<%= subs_url %>">Back to Subs</a>
+
+  <% end %>
+
+  <% if flash[:errors] %>
+    <%= flash[:errors] %>
+  <% end %>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

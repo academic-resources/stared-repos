@@ -1,0 +1,47 @@
+.hanoi {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+ul:hover {
+    background-color: grey;
+}
+
+.large {
+    width: 150px;
+}
+
+.medium {
+    width: 100px;
+}
+
+.small {
+    width: 50px;
+}
+
+li {
+    background-color: cadetblue;
+    list-style: none;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+ul {
+    width: 162px;
+    height: 126px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+}
