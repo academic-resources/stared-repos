@@ -1,0 +1,3 @@
+function sternBrocot(num) {}
+
+// TODO

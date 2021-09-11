@@ -1,0 +1,3 @@
+function findLongestChain(items) {}
+
+// TODO

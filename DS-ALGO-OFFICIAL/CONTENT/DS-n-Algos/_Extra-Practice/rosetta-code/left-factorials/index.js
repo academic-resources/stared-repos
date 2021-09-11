@@ -1,0 +1,3 @@
+function leftFactorial(n) {}
+
+// TODO

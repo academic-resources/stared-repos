@@ -1,0 +1,3 @@
+function fibWord(n) {}
+
+// TODO

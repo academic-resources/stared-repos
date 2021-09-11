@@ -1,0 +1,3 @@
+function exponentialGenerator(n) {}
+
+// TODO

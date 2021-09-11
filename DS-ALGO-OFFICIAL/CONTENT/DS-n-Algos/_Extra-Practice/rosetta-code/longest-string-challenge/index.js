@@ -1,0 +1,3 @@
+function longestString(strings) {}
+
+// TODO

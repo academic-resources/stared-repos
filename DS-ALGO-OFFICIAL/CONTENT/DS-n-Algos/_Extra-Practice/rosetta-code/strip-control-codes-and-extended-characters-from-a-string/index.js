@@ -1,0 +1,3 @@
+function strip(s) {}
+
+// TODO
