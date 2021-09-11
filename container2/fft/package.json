@@ -1,0 +1,31 @@
+{
+  "name": "fft",
+  "version": "0.0.0",
+  "description": "command line server + browserify",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "node-sass sass/ -o public/style",
+    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
+    "prefix": "postcss --use autoprefixer -o public/style/main.css public/style/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "bundle": "browserify entry.js -o public/scripts/bundle.js -t brfs -d",
+    "watch:js": "watchify entry.js -o public/scripts/bundle.js -t brfs -d",
+    "watch": "npm run watch:js & npm run watch:css",
+    "build": "npm run prefix",
+    "develop": "parallelshell 'npm run start' 'npm run watch'",
+    "dev-start": "nodemon server.js"
+  },
+  "repository": "",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "buffer": "^4.7.1",
+    "minimist": "^1.2.0",
+    "oscillators": "^0.3.0",
+    "pitchfinder": "^2.0.3",
+    "through2": "^2.0.0",
+    "wav": "^1.0.0",
+    "wav-decoder": "^1.0.0"
+  }
+}
