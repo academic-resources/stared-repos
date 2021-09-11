@@ -1,0 +1,46 @@
+name: Publish on npm and brew
+
+on:
+  # Shows the manual trigger in GitHub UI
+  # helpful as a back-up in case the GitHub Actions Workflow fails
+  workflow_dispatch:
+
+  release:
+    types: [published]
+
+jobs:
+  # NOTE: this job requires curl, jq and yarn
+  # All of them are included in ubuntu-latest.
+  npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run ./ci/steps/publish-npm.sh
+        run: ./ci/steps/publish-npm.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  homebrew:
+    # The newest version of code-server needs to be available on npm when this runs
+    # otherwise, it will 404 and won't open a PR to bump version on homebrew/homebrew-core
+    needs: npm
+    runs-on: macos-latest
+    steps:
+      # Ensure things are up to date
+      # Suggested by homebrew maintainers
+      # https://github.com/Homebrew/discussions/discussions/1532#discussioncomment-782633
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - uses: actions/checkout@v2
+      - name: Configure git
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      - name: Bump code-server homebrew version
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{secrets.HOMEBREW_GITHUB_API_TOKEN}}
+        run: ./ci/steps/brew-bump.sh
