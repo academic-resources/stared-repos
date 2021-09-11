@@ -1,0 +1,47 @@
+{
+  "name": "algorithms",
+  "version": "0.8.2",
+  "description": "Traditional computer science algorithms and data structures implemented in JavaScript",
+  "directories": {
+    "test": "test"
+  },
+  "main": "./index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.10.0",
+    "istanbul": "^0.2.10",
+    "jshint": "~2.4.4",
+    "mocha": "^1.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felipernb/algorithms.js"
+  },
+  "keywords": [
+    "computer science",
+    "cs",
+    "algorithms",
+    "data structures"
+  ],
+  "author": "Felipe Ribeiro <felipernb@gmail.com> (http://github.com/felipernb)",
+  "contributors": [
+    "eush77 <eush77@gmail.com>",
+    "tayllan <tayllanburigo@gmail.com>",
+    "anaran <adrian.aichner@gmail.com>",
+    "Joshua Curl <curljosh@msu.edu>",
+    "nitinsaroha <nitinsaroha6@hotmail.com>",
+    "Andre P. Oliveira <aoliveira01.student@manhattan.edu>",
+    "Iain McDonald <iain@lifebeyondfife.com>",
+    "dingshu <ds303077135@gmail.com>",
+    "Liam Griffiths <liamgriffiths@gmail.com>",
+    "BrunoRB <brunorb8@hotmail.com>",
+    "geakstr <geakstr@me.com>",
+    "Matt R. Wilson <matt.wilson@warbyparker.com>",
+    "Gaurav Mittal <gaurav.mittal@students.iiit.ac.in>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felipernb/algorithms.js/issues"
+  },
+  "homepage": "https://github.com/felipernb/algorithms.js/wiki"
+}
