@@ -1,0 +1,124 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: 0;
+  background-color: orangered;
+  color: white;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+}
+
+button[disabled] {
+  background-color: lightgray;
+  color: grey;
+  cursor: not-allowed;
+}
+
+button:active {
+  background-color: darkred;
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1em;
+  margin-bottom: 1em;
+  outline: none;
+  padding: 0.5em;
+}
+
+input:focus {
+  border-bottom: 2px solid orangered;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#board-holder {
+  flex: 0 0 525px;
+}
+
+#board-squares {
+  display: grid;
+  grid-template-columns: repeat(7, 75px);
+  grid-template-rows: repeat(6, 75px);
+}
+
+#click-targets {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+#form-holder {
+  display: flex;
+  flex: 0 0 150px;
+  flex-direction: column;
+  padding: 1em;
+}
+
+#overlay {
+  background-image: url(./images/connect-four.png);
+  background-size: cover;
+  height: 450px;
+  position: absolute;
+  top: 75px;
+  width: 525px;
+}
+
+.click-target {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 65px;
+  height: 65px;
+  margin: 5px;
+  width: 65px;
+  transition: background-color ease-in-out 0.25s;
+}
+
+.is-invisible {
+  visibility: hidden;
+}
+
+.token {
+  box-sizing: border-box;
+  border-radius: 65px;
+  height: 65px;
+  margin: 5px;
+  width: 65px;
+}
+
+.token.red {
+  background-color: red;
+}
+
+.token.black {
+  background-color: black;
+}
+
+.red .click-target:hover {
+  background-color: red;
+}
+
+.black .click-target:hover {
+  background-color: black;
+}
+
+.full.click-target {
+  border: 1px solid white;
+}
+
+.full.click-target:hover {
+  background-color: white;
+  cursor: no-drop;
+}
