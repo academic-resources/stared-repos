@@ -1,0 +1,1 @@
+export default annotations => window.documentViewer.getAnnotationManager().ungroupAnnotations(annotations);

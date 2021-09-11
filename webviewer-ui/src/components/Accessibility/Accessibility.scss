@@ -1,0 +1,34 @@
+@import '../../constants/styles';
+
+.Accessibility {
+  position: fixed;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background: white;
+  color: black;
+  font-size: 1.2em;
+  border: 1px solid var(--border);
+  
+  height: $top-bar-height;
+  padding: 0 10px;
+
+  &.visible {
+    transform: translateY(0%);
+  }
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: black;
+    margin: 0 7px;
+    padding: 2px 6px;
+  }
+}

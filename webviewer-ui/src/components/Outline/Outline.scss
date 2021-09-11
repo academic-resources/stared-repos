@@ -1,0 +1,137 @@
+@import '../../constants/styles';
+
+$arrow-size: 19px;
+
+.Outline {
+  color: var(--outline-color);
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: flex-start;
+
+  .padding {
+    cursor: pointer;
+    flex-shrink: 0;
+    flex-basis: $arrow-size;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    border-radius: 4px;
+    
+    .arrow {
+      transition: transform .1s ease;
+      transform: none;
+      
+      &.expanded {
+        transform: rotate(90deg);
+      }
+
+      .Icon {
+        width: $arrow-size;
+        height: $arrow-size;
+      }
+    }
+
+    &:hover {
+      background: var(--outline-hover);
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    &.editable {
+      flex-grow: 1;
+    }
+    
+    .row {
+      margin: 4px 0;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 4px;
+      padding: 0px 6px;
+
+      .Button {
+        width: auto;
+        height: auto;
+        text-align: left;
+        color: var(--outline-color);
+      }
+
+      .contentButton {
+        flex-grow: 1;
+        justify-content: flex-start;
+        padding: 6px 0px;
+      }
+
+      .editOutlineButton {
+        display: flex;
+        flex-shrink: 0;
+        height: 15px;
+        width: 15px;
+        opacity: 0;
+        margin-left: 10px;
+        transition: opacity .15s ease;
+
+        @include mobile {
+          opacity: 1;
+          width: 20px;
+          height: 20px;
+        }
+
+        .Button {
+          padding: 2px;
+          width: 100%;
+
+          .Icon {
+            display: flex;
+            align-items: center;
+
+            svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          &:hover {
+            background: var(--tools-button-hover);
+
+            @include mobile {
+              background: var(--outline-hover);
+            }
+          }
+        }
+      }
+
+      &.hover {
+        background: var(--outline-hover);
+      }
+
+      &.hover > .editOutlineButton {
+        opacity: 1;
+      }
+
+      &.selected {
+        background: var(--outline-selected);
+      }
+
+      &.selected > .editOutlineButton {
+        opacity: 1;
+      }
+
+      &:not(.selected):hover {
+        background: var(--outline-hover);
+      }
+
+      &:hover > .editOutlineButton {
+        opacity: 1;
+      }
+    }
+  }
+}

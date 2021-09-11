@@ -1,0 +1,91 @@
+@import '../../constants/styles';
+
+.zoom-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--toggle-zoom-overlay-background);
+  border-radius: 4px;
+  height: 28px;
+  margin: 0 2px;
+
+  .Button {
+    margin: 0px 1px;
+    height: 100%;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+
+  .toggle-element-button {
+    height: 100%;
+  }
+}
+
+.ToggleZoomOverlay {
+  height: 100%;
+  color: var(--text-color);
+  margin-right: 1px;
+
+  .textarea{
+    resize: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    background-color: transparent;
+    font-weight: bold;
+    min-width: 28px;
+    text-align: right;
+  }
+
+  .Icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.OverlayContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 68px;
+  height: 100%;
+  border-radius: 4px;
+  position: relative;
+
+  &:hover {
+    background-color: var(--view-header-button-hover);
+  }
+  &.active {
+    background-color: var(--view-header-button-active);
+  }
+
+  // Avoids the child button chevron from overlapping the zoom text
+  .Button.active, .Button:hover {
+    background: none !important;
+  }
+
+  .toggle-element-button {
+    width: 26px;
+    margin-left: 4px;
+    margin-top: -2px;
+    font-size: 16px; // hack for down arrow being dependent on font-size
+    height: 26px;
+  }
+}
+
+.OverlayText {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-right:-8px;
+  font-weight: bold;
+  height: 100%;
+  text-align: center;
+  display: flex;
+}

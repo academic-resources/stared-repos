@@ -1,0 +1,22 @@
+@import '../../constants/styles.scss';
+@import '../../constants/popup';
+
+.RichTextPopup {
+  @extend %popup;
+  padding: 0;
+  overflow: hidden;
+  flex-direction: column;
+  background: var(--component-background);
+  border-radius: 4px;
+  box-shadow: 0 0 3px 0 var(--document-box-shadow);
+
+  .rich-text-format {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .colorPicker{
+    padding: 0px 12px 8px;
+  }
+}

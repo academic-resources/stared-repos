@@ -1,0 +1,57 @@
+@import '../../constants/styles';
+
+.slider {
+  @include mobile {
+    margin-top: 6px;
+  }
+
+  svg {
+    height: 18px;
+    cursor: pointer;
+  }
+
+  .slider-property {
+    &:nth-child(n+2) {
+      margin-top: 8px;
+    }
+    margin-bottom: 4px;
+  }
+
+  .slider-svg-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -5px;
+
+    .slider-value {
+      min-width: 41px;
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    svg {
+      // Actual width of svg
+      // Very important. CSS behaves strangely without it.
+      width: 148px;
+      flex: 7;
+      circle {
+        fill: var(--slider-filled);
+      }
+
+      line:nth-child(1) {
+        stroke: var(--slider-filled);
+      }
+
+      line:nth-child(2) {
+        stroke: var(--slider-background);
+      }
+
+      @include mobile {
+        line {
+          stroke-width: 4;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../constants/styles';
+
+.ListSeparator {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-family: 'Lato';
+  font-weight: 500;
+  color: var(--list-separator-color);
+  user-select: none;
+}

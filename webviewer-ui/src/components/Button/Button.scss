@@ -1,0 +1,49 @@
+@import '../../constants/styles';
+
+.Button {
+  @include button-reset;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: var(--text-color);
+
+  img {
+    height: 24px;
+    width: 24px;
+  }
+
+  // color for svgs
+  &.active {
+    path[fill=default] {
+      fill: var(--selected-icon-color);
+    }
+
+    // hack for pan tool and annot select tool
+    &[data-element="panToolButton"],&[data-element="selectToolButton"] {
+      background: var(--view-header-button-active);
+    }
+  }
+
+  &.active {
+    .Icon {
+      color: var(--selected-icon-color);
+    }
+  }
+
+  &.disabled {
+    background: none!important;
+    .Icon {
+      color: var(--disabled-icon);
+    }
+    span {
+      color: var(--disabled-icon);
+    }
+    cursor: default;
+  }
+}

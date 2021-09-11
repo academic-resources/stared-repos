@@ -1,0 +1,30 @@
+@import '../../constants/styles.scss';
+@import '../../constants/popup';
+
+.AnnotationPopup {
+  @extend %popup;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 0 var(--document-box-shadow);
+  background: var(--component-background);
+}
+
+.shortCuts3D{
+  position:relative;
+  .closeButton{
+    position:absolute;
+    right: 4px;
+    padding: 2px;
+    cursor: pointer;
+    width: 20px;
+    text-align: center;
+  }
+  .row{
+    padding: 4px 0;
+    margin: 8px 26px 8px 16px;
+    span{
+      background: $light-gray;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+}
