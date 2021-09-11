@@ -1,0 +1,76 @@
+{
+  "docs": {
+    "The Basics (Windows)": [
+      "getting-started",
+      "rnw-dependencies",
+      "parity-status",
+      "config",
+      "windowsbrush-and-theme",
+      "releases",
+      "platform"
+    ],
+    "Native Modules (Windows)": [
+      "native-modules",
+      "view-managers",
+      "native-modules-setup",
+      "native-modules-using",
+      "native-modules-autolinking",
+      "native-modules-advanced",
+      "supported-community-modules"
+    ],
+    "Native Development (Windows)": [
+      "native-code",
+      "native-code-language-choice",
+      "native-modules-marshalling-data",
+      "native-modules-async",
+      "native-modules-jsvalue",
+      "native-modules-csharp-codegen",
+      "win10-vm",
+      "customizing-sdk-versions"
+    ],
+    "The Basics (MacOS)": [
+      "rnm-getting-started",
+      "rnm-dependencies"
+    ],
+    "Troubleshooting": [
+      "native-modules-troubleshooting",
+      "metro-config-out-tree-platforms"
+    ],
+    "Experimental" : [
+      "hermes",
+      "NuGet",
+      "nuget-update",
+      "winui3"
+    ]
+  },
+  "apis": {
+    "Components (Windows)": [
+      "flyout-component",
+      "glyph-component",
+      "popup-component"
+    ],
+    "JavaScript API (Windows)": [
+      "apptheme-api",
+      "ikeyboardprops-api",
+      "iviewwindowsprops-api"
+    ],
+    "Native API (Windows)": [
+      "IJSValueReader",
+      "IJSValueWriter",
+      "IReactContext",
+      "IReactDispatcher",
+      "IReactModuleBuilder",
+      "IReactNonAbiValue",
+      "IReactPackageBuilder",
+      "IReactPackageProvider",
+      "IReactPropertyBag",
+      "IRedBoxHandler",
+      "IViewManager",
+      "ReactApplication",
+      "ReactInstanceSettings",
+      "ReactNativeHost",
+      "XamlUIService",
+      "Native-API-Reference"
+    ]
+  }
+}
