@@ -1,0 +1,55 @@
+{
+  "name": "reactronica",
+  "version": "0.5.3",
+  "description": "React components for making music",
+  "author": {
+    "name": "Kaho Cheung",
+    "url": "https://twitter.com/unkleho"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/unkleho/reactronica",
+  "main": "dist/index.js",
+  "module": "dist/reactronica.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "test:watch": "npm run test -- --watch",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
+  },
+  "dependencies": {
+    "fast-deep-equal": "^3.1.3",
+    "startaudiocontext": "^1.2.1",
+    "tone": "^13.8.34"
+  },
+  "peerDependencies": {
+    "prop-types": ">=15.7.0",
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^10.4.9",
+    "@types/jest": "^25.2.3",
+    "@types/react": "^16.14.5",
+    "@types/react-dom": "^16.9.12",
+    "husky": "^4.3.8",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "tsdx": "^0.13.3",
+    "tslib": "^1.14.1",
+    "typescript": "^3.9.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  }
+}
