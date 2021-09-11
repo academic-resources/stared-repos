@@ -1,0 +1,14 @@
+/* PHASE 8: Thumbs */
+.thumb {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+}
+
+.thumb li {
+    width: 28%;
+    height: auto;
+    margin: 4px;
+    border: 1px solid black;
+    border-radius: 5px;
+}

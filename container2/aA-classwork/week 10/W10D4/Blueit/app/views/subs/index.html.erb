@@ -1,0 +1,7 @@
+<h2>Youre in the subs index</h2>
+
+<% @subs.each do |sub| %>
+    <a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+    <br>
+<% end %>
+

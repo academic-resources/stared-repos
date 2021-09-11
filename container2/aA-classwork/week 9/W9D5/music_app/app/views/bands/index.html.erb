@@ -1,0 +1,10 @@
+<h1>Bands</h1>
+
+<section class="bands">
+    <% @bands.each do |band| %>
+        <a href="<%= band_url(band.id) %>"><%= band.name %></a>
+    <% end %>
+<a href="<%= new_band_url %>" id="add_band">Add a Band!</a>
+</section>
+
+

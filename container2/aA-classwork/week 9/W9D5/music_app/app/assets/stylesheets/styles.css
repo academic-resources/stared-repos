@@ -1,0 +1,64 @@
+h1 {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 5px;
+}
+
+form {
+    margin: 0 auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#logo {
+    width: 35px;
+    padding: 10px;
+}
+
+a {
+    color: black;
+    padding: 5px;
+    margin: 5px;
+    background-color: aliceblue;
+    border-radius: 12%;
+}
+
+a:visited {
+    color: black;
+}
+
+#add_band {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bands {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.delete {
+    width: 20%;
+}
+
+.errors {
+   justify-content: center;
+}
+

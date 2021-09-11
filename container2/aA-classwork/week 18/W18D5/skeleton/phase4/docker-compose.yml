@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  drupal:
+    build: .
+    image: customdrupal
+    ports:
+      - 8080:80
+  postgres:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - drupal-data:/var/lib/postgresql/data
+
+volumes:
+  drupal-data:

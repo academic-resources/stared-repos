@@ -1,0 +1,1144 @@
+Started GET "/" for ::1 at 2019-05-15 16:12:35 -0400
+Started GET "/" for 127.0.0.1 at 2019-05-15 16:12:35 -0400
+
+PG::ConnectionBad - FATAL:  database "BenchBnB_development" does not exist
+:
+
+
+PG::ConnectionBad - FATAL:  database "BenchBnB_development" does not exist
+:
+
+Started GET "/" for 127.0.0.1 at 2019-05-15 16:12:35 -0400
+
+PG::ConnectionBad - FATAL:  database "BenchBnB_development" does not exist
+:
+
+Started POST "/__better_errors/53d7a0f202549341/variables" for 127.0.0.1 at 2019-05-15 16:12:36 -0400
+Started POST "/__better_errors/0eacc75b8f9960a5/variables" for ::1 at 2019-05-15 16:12:36 -0400
+  [1m[35m (1649.0ms)[0m  [1m[35mCREATE DATABASE "BenchBnB_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (712.8ms)[0m  [1m[35mCREATE DATABASE "BenchBnB_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-05-15 16:13:24 -0400
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/6f1383e5266d0a75/variables" for 127.0.0.1 at 2019-05-15 16:13:25 -0400
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE DATABASE "BenchBnB_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE DATABASE "BenchBnB_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-05-15 16:15:03 -0400
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/0ac7bf1ca7f676df/variables" for 127.0.0.1 at 2019-05-15 16:15:03 -0400
+Started GET "/" for 127.0.0.1 at 2019-05-15 16:15:32 -0400
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/f9af33e68551bf17/variables" for 127.0.0.1 at 2019-05-15 16:15:32 -0400
+Started GET "/" for ::1 at 2019-05-15 16:15:33 -0400
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/9c3f4c519f341d9c/variables" for ::1 at 2019-05-15 16:15:33 -0400
+Started GET "/" for 127.0.0.1 at 2019-05-15 16:15:36 -0400
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/9a5d974c9c15ca53/variables" for 127.0.0.1 at 2019-05-15 16:15:37 -0400
+Started GET "/" for ::1 at 2019-05-15 16:16:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 4021ms (Views: 4020.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-15 16:16:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 229ms (Views: 228.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (170.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (42.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1532413478262727620)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190515201818)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1532413478262727620)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1532413478262727620)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190515201818)
+  [1m[35m (83.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (115.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190515201818_create_users.rb:3
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/migrate/20190515201818_create_users.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (88.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190515201818"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (3.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-15 20:21:38.629763"], ["updated_at", "2019-05-15 20:21:38.629763"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1532413478262727620)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jmwr/.rbenv/versions/2.5.1/bin/annotate:23
+Started POST "/api/users?username=foo1&password=[FILTERED]" for ::1 at 2019-05-15 17:05:37 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jmwr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+
+LoadError - Unable to autoload constant Api::UsersController, expected /Users/jmwr/Desktop/App Academy/Classwork/week 14/W14D3/BenchBnB/app/controllers/api/users_controller.rb to define it:
+
+Started POST "/api/users?username=foo1&password=[FILTERED]" for ::1 at 2019-05-15 17:07:37 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"foo1", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users?username=foo1&password=[FILTERED]" for ::1 at 2019-05-15 17:09:41 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"foo1", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users?username=foo1&password=[FILTERED]" for ::1 at 2019-05-15 17:14:23 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"foo1", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 10ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users?username=foo1&password=[FILTERED]" for ::1 at 2019-05-15 17:16:02 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"foo1", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 11ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users?username=foo1&password=[FILTERED]" for ::1 at 2019-05-15 17:16:39 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"foo1", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 7ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users?username=foo1&password=[FILTERED]" for ::1 at 2019-05-15 17:17:36 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"username"=>"foo1", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 29ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:16:in `user_params'
+  app/controllers/api/users_controller.rb:4:in `create'
+
+Started POST "/api/users?user[%22username%22]=foo1&user[%22password%22]=[FILTERED]" for ::1 at 2019-05-15 17:20:13 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"\"username\""=>"foo1", "\"password\""=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Unpermitted parameters: :"username", :"password"
+  [1m[35m (42.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (23.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 401 Unauthorized in 420ms (Views: 11.6ms | ActiveRecord: 188.6ms)
+
+
+Started POST "/api/users?user[%22username%22]=foo12&user[%22password%22]=[FILTERED]" for ::1 at 2019-05-15 17:21:08 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"\"username\""=>"foo12", "\"password\""=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Unpermitted parameters: :"username", :"password"
+  [1m[35m (15.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 401 Unauthorized in 40ms (Views: 0.4ms | ActiveRecord: 16.1ms)
+
+
+Started POST "/api/users?user[:username]=foo12&user[:password]=[FILTERED]" for ::1 at 2019-05-15 17:21:55 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{":username"=>"foo12", ":password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Unpermitted parameters: ::username, ::password
+  [1m[35m (5.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 401 Unauthorized in 27ms (Views: 2.7ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/api/users?user[username]=foo12&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:22:21 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo12", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (63.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo12"], ["password_digest", "$2a$10$nQmqRj918cuWXe0VCPmCAugI9hPQxVS6YcbVZgZz1fDVgRLFN6fb."], ["session_token", "FwH57_-yEZvwJbxVk2P6Bg"], ["created_at", "2019-05-15 21:22:21.460846"], ["updated_at", "2019-05-15 21:22:21.460846"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (25.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ImuoJWVQ3S6CDIV2kH-hSQ"], ["updated_at", "2019-05-15 21:22:21.549385"], ["id", 1]]
+  ↳ app/models/user.rb:38
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+Completed 500 Internal Server Error in 412ms (ActiveRecord: 131.3ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/users/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jmwr/Desktop/App Academy/Classwork/week 14/W14D3/BenchBnB/app/views"
+:
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users?user[username]=foo12&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:23:25 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo12", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (59.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo12"], ["password_digest", "$2a$10$Q7V/cumY.pVeNH0WFf5F4.kAcJiAlljYKuQkt3rhF2bcN87AkkYEq"], ["session_token", "KZv__030KA8ZB3A1MRIWaQ"], ["created_at", "2019-05-15 21:23:25.267695"], ["updated_at", "2019-05-15 21:23:25.267695"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 61.9ms)
+
+
+
+PG::UniqueViolation - ERROR:  duplicate key value violates unique constraint "index_users_on_username"
+DETAIL:  Key (username)=(foo12) already exists.
+:
+  app/controllers/api/users_controller.rb:5:in `create'
+
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/api/users?user[username]=foo13&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:24:28 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo13", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo13"], ["password_digest", "$2a$10$LCjumKp/EwSiYqhmygAA/.0mj1i0OmaUIiRR846TraVJ60keJ4nMy"], ["session_token", "iSBXbDkS7go3TzmsJXn52g"], ["created_at", "2019-05-15 21:24:28.687434"], ["updated_at", "2019-05-15 21:24:28.687434"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "DgFMeKcwHZ6LQ_raWGJIUg"], ["updated_at", "2019-05-15 21:24:28.744646"], ["id", 3]]
+  ↳ app/models/user.rb:38
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (28.7ms)
+Completed 500 Internal Server Error in 349ms (ActiveRecord: 82.3ms)
+
+
+
+ActionView::MissingTemplate - Missing partial api/users/__user.json.jbuilder with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:jbuilder]}. Searched in:
+  * "/Users/jmwr/Desktop/App Academy/Classwork/week 14/W14D3/BenchBnB/app/views"
+:
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder__4480581395472345206_70204987449060'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/api/users?user[username]=foo14&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:26:01 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo14", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo14"], ["password_digest", "$2a$10$Z5UneLE0al27zXl6diORF./xL/Egh6ti6CQZzjdO4rSIH.lsWtGEu"], ["session_token", "003nwyuLs2mKFXvhEZdcyg"], ["created_at", "2019-05-15 21:26:01.468508"], ["updated_at", "2019-05-15 21:26:01.468508"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "XN09w84Kur0M7zjm5Pd6sQ"], ["updated_at", "2019-05-15 21:26:01.510372"], ["id", 4]]
+  ↳ app/models/user.rb:38
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (13.6ms)
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 62.2ms)
+
+
+
+ActionView::MissingTemplate - Missing partial api/users/__user.json.jbuilder with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:jbuilder]}. Searched in:
+  * "/Users/jmwr/Desktop/App Academy/Classwork/week 14/W14D3/BenchBnB/app/views"
+:
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder__4480581395472345206_70204973238620'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users?user[username]=foo15&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:26:27 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo15", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo15"], ["password_digest", "$2a$10$xKegfYkCZxzVaH19.XrUUega12KT168VQULHK8MF8kHOh9HVeYqPO"], ["session_token", "3SSY_s3_0Cgq5uICumW0iQ"], ["created_at", "2019-05-15 21:26:27.388640"], ["updated_at", "2019-05-15 21:26:27.388640"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (43.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (6.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "9xbz3lFOcs7BKPTDlSoO_g"], ["updated_at", "2019-05-15 21:26:27.439843"], ["id", 5]]
+  ↳ app/models/user.rb:38
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (11.3ms)
+Completed 500 Internal Server Error in 235ms (ActiveRecord: 92.9ms)
+
+
+
+ActionView::MissingTemplate - Missing partial api/users/__user.json.jbuilder, application/__user.json.jbuilder with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:jbuilder]}. Searched in:
+  * "/Users/jmwr/Desktop/App Academy/Classwork/week 14/W14D3/BenchBnB/app/views"
+:
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder__4480581395472345206_70204987016640'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users?user[username]=foo16&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:27:10 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo16", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo16"], ["password_digest", "$2a$10$KG/iWqvJzciG8NDa7qGU0uqAtc38dnsJ/z2a2RrLW8tXjTOY7Ki.6"], ["session_token", "P5B0Jk4Rwv4M9FvE86SSKg"], ["created_at", "2019-05-15 21:27:10.588256"], ["updated_at", "2019-05-15 21:27:10.588256"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "N25piXjNac5qLFU9YSzlzQ"], ["updated_at", "2019-05-15 21:27:10.650759"], ["id", 6]]
+  ↳ app/models/user.rb:38
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (3.6ms)
+  Rendered api/users/show.json.jbuilder (12.6ms)
+Completed 200 OK in 248ms (Views: 30.8ms | ActiveRecord: 84.6ms)
+
+
+Started POST "/api/users?user[username]=foo16&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:29:23 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo16", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (29.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo16"], ["password_digest", "$2a$10$DEz7YkLdbAhiCvuJfnVC0eO.cAgLHJz0nxPEq4ZgbA7XKYhVWbUcq"], ["session_token", "26oCoUSt9ltWJhntA1JBrw"], ["created_at", "2019-05-15 21:29:23.307780"], ["updated_at", "2019-05-15 21:29:23.307780"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (5.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 35.3ms)
+
+
+
+PG::UniqueViolation - ERROR:  duplicate key value violates unique constraint "index_users_on_username"
+DETAIL:  Key (username)=(foo16) already exists.
+:
+  app/controllers/api/users_controller.rb:5:in `create'
+
+Started POST "/api/users?user[username]=foo17&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:29:30 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo17", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo17"], ["password_digest", "$2a$10$/0KKSOAzeml.7De3GsU2XOK3e8bsxa3/quF9aOcT12V4e.wjQzM6i"], ["session_token", "yPqshqrLRCdNKjsMgIh2mg"], ["created_at", "2019-05-15 21:29:30.616392"], ["updated_at", "2019-05-15 21:29:30.616392"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "v_iPM9UZ-hXw6NdcHQ6CYg"], ["updated_at", "2019-05-15 21:29:30.675842"], ["id", 8]]
+  ↳ app/models/user.rb:38
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (10.7ms)
+Completed 500 Internal Server Error in 298ms (ActiveRecord: 88.1ms)
+
+
+
+SyntaxError - syntax error, unexpected tIVAR, expecting keyword_end
+...ial! 'user.json.jbuilder' @user
+...                          ^~~~~:
+  app/views/api/users/show.json.jbuilder:1:in `'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users?user[username]=foo18&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:30:01 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo18", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo18"], ["password_digest", "$2a$10$cuarrUuWNb65VNTmOdWqE.ZM7pkg9fiYxtb8WXp57ie.dmQCC2LJ."], ["session_token", "CefrXyphFGFiUTop9kOKbg"], ["created_at", "2019-05-15 21:30:01.862271"], ["updated_at", "2019-05-15 21:30:01.862271"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Ql2XQ0nfn7BVgs6H9bR6fA"], ["updated_at", "2019-05-15 21:30:01.917307"], ["id", 9]]
+  ↳ app/models/user.rb:38
+  [1m[35m (33.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (2.5ms)
+  Rendered api/users/show.json.jbuilder (8.0ms)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 75.8ms)
+
+
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+...ew(self); json.extract! @user :username  
+...                              ^:
+  app/views/api/users/_user.json.jbuilder:1:in `'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder__4480581395472345206_70204979547500'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users?user[username]=foo19&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:30:42 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo19", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (59.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo19"], ["password_digest", "$2a$10$0qKe2iZEpTiz0FuF8E1a0uhqPKgZD05aicUEs3LmhkCT718/72I9y"], ["session_token", "0jgIQHUSRrT_hVDul_VEPQ"], ["created_at", "2019-05-15 21:30:42.702418"], ["updated_at", "2019-05-15 21:30:42.702418"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "As1uptEplmlvYr9xw6Uzbg"], ["updated_at", "2019-05-15 21:30:42.825445"], ["id", 10]]
+  ↳ app/models/user.rb:38
+  [1m[35m (26.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (4.9ms)
+  Rendered api/users/show.json.jbuilder (12.3ms)
+Completed 500 Internal Server Error in 357ms (ActiveRecord: 131.3ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...rTemplate.new(self); @user json.extract! :username  
+...                           ^~~~:
+  app/views/api/users/_user.json.jbuilder:1:in `'
+  app/views/api/users/show.json.jbuilder:1:in `_app_views_api_users_show_json_jbuilder__4480581395472345206_70204990200540'
+  app/controllers/api/users_controller.rb:7:in `create'
+
+Started POST "/api/users?user[username]=foo20&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:31:49 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo20", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (4.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo20"], ["password_digest", "$2a$10$zRJrCw/l3e3XrougCXAi7e9ygerxhQJXkNt4eN5DMsiZcScLxttJ6"], ["session_token", "NxRFqBlTyl1hxD1hmucuxw"], ["created_at", "2019-05-15 21:31:49.616287"], ["updated_at", "2019-05-15 21:31:49.616287"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (42.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "0RV3sgM40p-ifPA3hr-wNQ"], ["updated_at", "2019-05-15 21:31:49.687070"], ["id", 11]]
+  ↳ app/models/user.rb:38
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (4.3ms)
+  Rendered api/users/show.json.jbuilder (14.8ms)
+Completed 200 OK in 331ms (Views: 47.1ms | ActiveRecord: 88.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 17:32:24 -0400
+Processing by Api::SessionsController#destroy as JSON
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (28.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 500 Internal Server Error in 958ms (Views: 0.6ms | ActiveRecord: 53.7ms)
+
+
+
+NameError - undefined local variable or method `user' for #<Api::SessionsController:0x00007fb3bda396c0>:
+  app/controllers/application_controller.rb:10:in `logout'
+  app/controllers/api/sessions_controller.rb:19:in `destroy'
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 17:34:02 -0400
+Processing by Api::SessionsController#destroy as JSON
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 500 Internal Server Error in 47ms (Views: 0.3ms | ActiveRecord: 7.0ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/application_controller.rb:10:in `logout'
+  app/controllers/api/sessions_controller.rb:19:in `destroy'
+
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/api/session" for ::1 at 2019-05-15 17:37:17 -0400
+Processing by Api::SessionsController#destroy as JSON
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 500 Internal Server Error in 30698ms (Views: 0.2ms | ActiveRecord: 8.4ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/application_controller.rb:10:in `logout'
+  app/controllers/api/sessions_controller.rb:20:in `destroy'
+
+Started POST "/api/users?user[username]=foo21&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:39:06 -0400
+  [1m[35m (41.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jmwr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo21", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo21"], ["password_digest", "$2a$10$PDIhIYSzTjL6pRRiMQQgsOtT2Y1T9go.0M8hRY0pZcYWHlNU1z9kC"], ["session_token", "vN6EZVOtrJ8AD3iCjZDHLw"], ["created_at", "2019-05-15 21:39:07.000685"], ["updated_at", "2019-05-15 21:39:07.000685"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (44.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:38
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "iPAVyz7xI5u7xjmWhm7jIw"], ["updated_at", "2019-05-15 21:39:07.056915"], ["id", 12]]
+  ↳ app/models/user.rb:38
+  [1m[35m (78.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:38
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered api/users/show.json.jbuilder (7.4ms)
+Completed 200 OK in 392ms (Views: 57.9ms | ActiveRecord: 159.1ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 17:39:30 -0400
+Processing by Api::SessionsController#destroy as JSON
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 500 Internal Server Error in 5278ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/application_controller.rb:10:in `logout'
+  app/controllers/api/sessions_controller.rb:20:in `destroy'
+
+Started POST "/api/session?user[username]=foo21&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:41:11 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo21", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 4.0ms)
+
+
+
+NoMethodError - undefined method `find_by_credentials' for #<Class:0x00007fb2091fd020>
+Did you mean?  find_in_batches:
+  app/controllers/api/sessions_controller.rb:5:in `create'
+
+Started POST "/api/session?user[username]=foo21&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:42:23 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo21", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 422 Unprocessable Entity in 21ms (Views: 0.5ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/api/session?user[username]=foo21&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:42:35 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo21", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session?user[username]=foo1&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:42:58 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo1", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (28.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 422 Unprocessable Entity in 35ms (Views: 0.4ms | ActiveRecord: 28.0ms)
+
+
+Started POST "/api/session?user[username]=foo1&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:44:04 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo1", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 422 Unprocessable Entity in 69ms (Views: 0.9ms | ActiveRecord: 11.4ms)
+
+
+Started POST "/api/session?user[username]=foo1&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:44:58 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo1", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (52.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 422 Unprocessable Entity in 113659ms (Views: 4.9ms | ActiveRecord: 60.1ms)
+
+
+Started POST "/api/session?user[username]=foo1&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:47:17 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jmwr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo1", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 422 Unprocessable Entity in 98ms (Views: 0.6ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/api/session?user[username]=foo1&user[password]=[FILTERED]" for ::1 at 2019-05-15 17:47:26 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo1", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (63.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 422 Unprocessable Entity in 67ms (Views: 0.4ms | ActiveRecord: 63.7ms)
+
+
+Started POST "/api/session?user[username]=foo1&user[password]=[FILTERED]" for ::1 at 2019-05-15 18:02:30 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo1", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 422 Unprocessable Entity in 129ms (Views: 47.2ms | ActiveRecord: 45.0ms)
+
+
+Started POST "/api/session?user[username]=foo1&user[password]=[FILTERED]" for ::1 at 2019-05-15 18:02:36 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo1", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 422 Unprocessable Entity in 17ms (Views: 0.6ms | ActiveRecord: 14.4ms)
+
+
+Started POST "/api/session?user[username]=foo1&user[password]=[FILTERED]" for ::1 at 2019-05-15 18:02:41 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo1", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (22.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 422 Unprocessable Entity in 25ms (Views: 0.4ms | ActiveRecord: 22.8ms)
+
+
+Started POST "/api/session?user[username]=foo1&user[password]=[FILTERED]" for ::1 at 2019-05-15 18:03:03 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo1", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo1"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/models/user.rb:24
+Completed 422 Unprocessable Entity in 90839ms (Views: 0.4ms | ActiveRecord: 15.1ms)
+
+
+Started POST "/api/session?user[username]=foo12&user[password]=[FILTERED]" for ::1 at 2019-05-15 18:05:12 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jmwr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo12", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo12"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+Completed 422 Unprocessable Entity in 152ms (Views: 0.7ms | ActiveRecord: 16.0ms)
+
+
+Started POST "/api/users?user[username]=foo30&user[password]=[FILTERED]" for ::1 at 2019-05-15 18:05:48 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo30", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (51.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo30"], ["password_digest", "$2a$10$yDNb3K/pPcne0w1K0ws2TOtkyBob0fxe4CWrF4cDDspp0YSQsSisS"], ["session_token", "M8yfGU7lXIGbe-rUKRlcMg"], ["created_at", "2019-05-15 22:05:48.854598"], ["updated_at", "2019-05-15 22:05:48.854598"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (56.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (28.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "KcZGotWxpfeP_CVor7l-tg"], ["updated_at", "2019-05-15 22:05:49.016268"], ["id", 13]]
+  ↳ app/models/user.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/users/show.json.jbuilder (5.8ms)
+Completed 200 OK in 574ms (Views: 154.8ms | ActiveRecord: 139.3ms)
+
+
+Started POST "/api/session?user[username]=foo30&user[password]=[FILTERED]" for ::1 at 2019-05-15 18:06:46 -0400
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jmwr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo30", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo30"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "YiQcH3WtEI2Y_SHSYwTviQ"], ["updated_at", "2019-05-15 22:06:47.487715"], ["id", 13]]
+  ↳ app/models/user.rb:39
+  [1m[35m (50.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+Completed 500 Internal Server Error in 300ms (ActiveRecord: 68.6ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/sessions/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jmwr/Desktop/App Academy/Classwork/week 14/W14D3/BenchBnB/app/views"
+:
+  app/controllers/api/sessions_controller.rb:8:in `create'
+
+Started POST "/api/session?user[username]=foo30&user[password]=[FILTERED]" for ::1 at 2019-05-15 18:08:35 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo30", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo30"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (34.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "CdNM5wuopOot-AqIe2xOHg"], ["updated_at", "2019-05-15 22:08:36.085341"], ["id", 13]]
+  ↳ app/models/user.rb:39
+  [1m[35m (42.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/sessions/show.json.jbuilder (9.0ms)
+Completed 200 OK in 363ms (Views: 80.4ms | ActiveRecord: 79.7ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 18:10:02 -0400
+Processing by Api::SessionsController#destroy as JSON
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 500 Internal Server Error in 58ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/application_controller.rb:10:in `logout'
+  app/controllers/api/sessions_controller.rb:19:in `destroy'
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 18:11:02 -0400
+Processing by Api::SessionsController#destroy as JSON
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 500 Internal Server Error in 53ms (Views: 0.5ms | ActiveRecord: 8.7ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/application_controller.rb:10:in `logout'
+  app/controllers/api/sessions_controller.rb:19:in `destroy'
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 18:11:56 -0400
+Processing by Api::SessionsController#destroy as JSON
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 78556ms (Views: 4.4ms | ActiveRecord: 4.4ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/application_controller.rb:10:in `logout'
+  app/controllers/api/sessions_controller.rb:19:in `destroy'
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 18:13:30 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jmwr/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::SessionsController#destroy as JSON
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 69ms (Views: 2.0ms | ActiveRecord: 5.7ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/application_controller.rb:11:in `logout'
+  app/controllers/api/sessions_controller.rb:19:in `destroy'
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 18:14:02 -0400
+Processing by Api::SessionsController#destroy as JSON
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+Completed 500 Internal Server Error in 21ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+
+NoMethodError - undefined method `reset_session_token!' for nil:NilClass:
+  app/controllers/application_controller.rb:11:in `logout'
+  app/controllers/api/sessions_controller.rb:19:in `destroy'
+
+Started POST "/api/session?user[username]=foo30&user[password]=[FILTERED]" for ::1 at 2019-05-15 18:15:02 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo30", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "foo30"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (7.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (69.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "PFrcj6YzTlOeCIJRq55aKA"], ["updated_at", "2019-05-15 22:15:02.531552"], ["id", 13]]
+  ↳ app/models/user.rb:39
+  [1m[35m (47.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (2.6ms)
+  Rendered api/sessions/show.json.jbuilder (21.5ms)
+Completed 200 OK in 63690ms (Views: 224.1ms | ActiveRecord: 172.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 18:31:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (74.7ms)
+Completed 200 OK in 7142ms (Views: 7141.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 18:31:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 1009ms (Views: 1005.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 18:32:30 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"user"=>{"username"=>"f0031", "password"=>"[FILTERED]"}}}
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 401 Unauthorized in 82ms (Views: 0.4ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 18:33:31 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 930ms (Views: 926.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 18:33:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 123ms (Views: 122.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 18:33:42 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"f0031", "password"=>"[FILTERED]"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "f0031"], ["password_digest", "$2a$10$Kg2pBXmf0ORv1tdQS9KhcOD6yAPzloy3Xy1XUZKCkLENhiGWO6dv2"], ["session_token", "z1RUppPRo10nB-I2B25nfw"], ["created_at", "2019-05-15 22:33:42.504630"], ["updated_at", "2019-05-15 22:33:42.504630"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (42.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "V8lV7MuJkk78hTAZHfxFiw"], ["updated_at", "2019-05-15 22:33:42.555747"], ["id", 14]]
+  ↳ app/models/user.rb:39
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (4.3ms)
+Completed 200 OK in 226ms (Views: 18.9ms | ActiveRecord: 89.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 18:36:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 801ms (Views: 798.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 18:36:45 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"f0032", "password"=>"[FILTERED]"}}
+  [1m[35m (19.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (33.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "f0032"], ["password_digest", "$2a$10$CPo/6V.5ortV/riIQPzyYu0oLLawlMcAQPt6M2iZ/1cLRU809tXiG"], ["session_token", "ojThXMW31iHgJgqYgNexvw"], ["created_at", "2019-05-15 22:36:45.840938"], ["updated_at", "2019-05-15 22:36:45.840938"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (4.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "HvJpl-ggIDzEvQ_6972Wjw"], ["updated_at", "2019-05-15 22:36:45.943799"], ["id", 15]]
+  ↳ app/models/user.rb:39
+  [1m[35m (68.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered api/users/show.json.jbuilder (4.2ms)
+Completed 200 OK in 607ms (Views: 17.4ms | ActiveRecord: 167.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 18:37:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 763ms (Views: 762.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 18:37:17 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"f0033", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (5.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "f0033"], ["password_digest", "$2a$10$V9V2MycOJ20ecbVOQpcpt.9DE0YNCMQ5guWIwUMRhhu9QFeiJGUIi"], ["session_token", "gnvI7s4Fg19I9PXRgTgYPg"], ["created_at", "2019-05-15 22:37:18.016083"], ["updated_at", "2019-05-15 22:37:18.016083"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (108.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (2.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "FyyVt0L2uwc2l7ill21eZQ"], ["updated_at", "2019-05-15 22:37:18.140445"], ["id", 16]]
+  ↳ app/models/user.rb:39
+  [1m[35m (71.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (5.6ms)
+Completed 200 OK in 539ms (Views: 19.7ms | ActiveRecord: 188.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 18:38:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1075ms (Views: 1074.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 18:38:18 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"f0033", "password"=>"[FILTERED]"}}
+Started POST "/api/session" for ::1 at 2019-05-15 18:38:19 -0400
+  [1m[35m (19.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"f0033", "password"=>"[FILTERED]"}}
+  [1m[36mUser Create (207.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "f0033"], ["password_digest", "$2a$10$eqDi6pY6Eed/3pVmvMCxQ./U8vv9Ewtuq3Wp95MUuWPJkTl64TPO2"], ["session_token", "561rYTvuogID8HC6ceA20Q"], ["created_at", "2019-05-15 22:38:19.442855"], ["updated_at", "2019-05-15 22:38:19.442855"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (6.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 500 Internal Server Error in 902ms (ActiveRecord: 234.2ms)
+
+
+
+PG::UniqueViolation - ERROR:  duplicate key value violates unique constraint "index_users_on_username"
+DETAIL:  Key (username)=(f0033) already exists.
+:
+  app/controllers/api/users_controller.rb:5:in `create'
+
+  [1m[36mUser Load (87.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "f0033"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "YgJ78YECJV147d4Ne8inqQ"], ["updated_at", "2019-05-15 22:38:20.260782"], ["id", 16]]
+  ↳ app/models/user.rb:39
+  [1m[35m (103.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered api/sessions/show.json.jbuilder (12.5ms)
+Completed 200 OK in 873ms (Views: 66.7ms | ActiveRecord: 271.1ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 18:40:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 1403ms (Views: 1398.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 18:40:24 -0400
+Started POST "/api/session" for ::1 at 2019-05-15 18:40:24 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo34", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"f0034", "password"=>"[FILTERED]"}}
+  [1m[35m (32.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Load (35.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "f0034"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+Completed 422 Unprocessable Entity in 87ms (Views: 0.8ms | ActiveRecord: 63.5ms)
+
+
+  [1m[36mUser Create (173.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo34"], ["password_digest", "$2a$10$8XKutz5QtwaiKcpcQdq4AuY69IE4e3i6oSgm1ciAGSmuNLpXCNPrq"], ["session_token", "R8yAkA9BsBDmBD06A-V2UQ"], ["created_at", "2019-05-15 22:40:24.769990"], ["updated_at", "2019-05-15 22:40:24.769990"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (49.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (38.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "XNTJx4uYwhefM-bD2y1BJA"], ["updated_at", "2019-05-15 22:40:25.095857"], ["id", 18]]
+  ↳ app/models/user.rb:39
+  [1m[35m (63.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered api/users/show.json.jbuilder (24.1ms)
+Completed 200 OK in 1171ms (Views: 104.1ms | ActiveRecord: 359.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 18:42:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 1184ms (Views: 1181.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 18:42:10 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo37", "password"=>"[FILTERED]"}}
+  [1m[35m (135.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (14.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo37"], ["password_digest", "$2a$10$Zb/d1BqoSXr5dB8WAUkuzuqUMv9t7ovEbWiHFkBFWupcu45vgnU2q"], ["session_token", "XNFcLHIgKF_DUyVUdHpN4g"], ["created_at", "2019-05-15 22:42:10.512963"], ["updated_at", "2019-05-15 22:42:10.512963"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (148.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (8.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (3.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "qVI7k5NMYG6VDjDVc6iUNA"], ["updated_at", "2019-05-15 22:42:10.705412"], ["id", 19]]
+  ↳ app/models/user.rb:39
+  [1m[35m (108.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (2.8ms)
+  Rendered api/users/show.json.jbuilder (39.2ms)
+Completed 200 OK in 647ms (Views: 67.7ms | ActiveRecord: 418.1ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 18:42:13 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qVI7k5NMYG6VDjDVc6iUNA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Sho9mylzPUJlG8GgK7iZQQ"], ["updated_at", "2019-05-15 22:42:13.169688"], ["id", 19]]
+  ↳ app/models/user.rb:39
+  [1m[35m (46.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 52.9ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/sessions/destroy, application/destroy with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jmwr/Desktop/App Academy/Classwork/week 14/W14D3/BenchBnB/app/views"
+:
+  app/controllers/api/sessions_controller.rb:20:in `destroy'
+
+Started GET "/" for ::1 at 2019-05-15 18:43:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 836ms (Views: 829.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 18:43:29 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"foo38", "password"=>"[FILTERED]"}}
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (14.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "foo38"], ["password_digest", "$2a$10$i0SgEosPAjsDyOqb1rROf.FIUlVNO25q9RJiRa5vAuweZe0E.e48i"], ["session_token", "wJ_fakmOvJsTaA_UR-gnmg"], ["created_at", "2019-05-15 22:43:29.707698"], ["updated_at", "2019-05-15 22:43:29.707698"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (67.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (131.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "iWWuOq7ezzH1Rvs98WtZ0A"], ["updated_at", "2019-05-15 22:43:29.887811"], ["id", 20]]
+  ↳ app/models/user.rb:39
+  [1m[35m (87.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered api/users/show.json.jbuilder (19.7ms)
+Completed 200 OK in 718ms (Views: 39.6ms | ActiveRecord: 304.8ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 18:43:31 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iWWuOq7ezzH1Rvs98WtZ0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:39
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Qcs4QqCAEAZEKOELyLSrsg"], ["updated_at", "2019-05-15 22:43:31.767973"], ["id", 20]]
+  ↳ app/models/user.rb:39
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:39
+Completed 200 OK in 76ms (Views: 1.5ms | ActiveRecord: 55.7ms)
+
+

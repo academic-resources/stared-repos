@@ -1,0 +1,30 @@
+/* PHASE 2: Notifications */
+
+.badge {
+  font-size: 14px;
+  padding: 1px 6px;
+  background: black;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
+.header-list {
+    position: relative;
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: 40px;
+    display: none;
+}
+
+.header-list:hover .notification-dropdown {
+    display: block;
+}
+
+.notification-dropdown li {
+    color: black;
+    background-color: white;
+    border: 1px solid grey;
+    padding: 10px;
+}
