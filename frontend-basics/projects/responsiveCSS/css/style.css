@@ -1,0 +1,549 @@
+body{
+    font-size: 16px;
+    font-family: 'Aldo', sans-serif;
+    background: #233D58;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 35px;
+    background: #233D58;
+    position: relative;
+    z-index: 999;
+}
+
+header h1{
+    display: none;
+}
+
+header nav .ioMenuMovil{
+    height: 25px;
+    width: 120px;
+    cursor: pointer;
+    line-height: 40px;
+    margin: 0px 0px 0px 10px;
+}
+
+header nav #showMovil{
+    height: 35px;
+    width: 35px;
+}
+header nav #showMovil img{
+    filter: invert(100%);
+}
+
+header nav #hideMovil{
+    height: 51px;
+    width: 51px;
+    margin-left: 22px;
+    margin-top: 4px;
+}
+
+
+header nav .ioMenuMovil img{
+    width: 100%;
+}
+
+header nav #card_menu{
+    display: none;
+    position: relative;
+    width: 230px;
+    background: white;
+    top: -40px;
+    left: -10px;
+    border-right: 2px solid #AFAEAE;
+    z-index: 999;
+    padding-bottom: 50px;
+}
+
+header nav #card_menu #logo_menu{
+    height: 200px;
+    width: 80%;
+    margin: 30px 10%;
+    margin-bottom: 50px;
+}
+
+header nav #card_menu #logo_menu img{
+    width: 100%;
+}
+
+header nav #card_menu ul{
+    margin-top: 0px;
+}
+header nav #card_menu ul li{
+    list-style: none;
+    font-size: 1.5em;
+    line-height: 30px;
+}
+header nav #card_menu ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+header #prev_section,
+header #next_section{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin: 5px;
+    position: absolute;
+    top: 0px;
+    overflow: hidden;
+}
+
+header #prev_section{
+    right: 35px;
+}
+
+header #next_section{
+    right: 5px;
+}
+
+header #prev_section img,
+header #next_section img{
+    width: 200%;
+    top: -13px;
+    left: -10px;
+    position: relative;
+    filter: invert(100%);
+}
+
+div#slider{
+    width: 100%;
+    position: relative;
+    height: 600px;
+}
+
+#slider section.slide{
+    position: absolute;
+    width: 100%;
+    top: -17px;
+    left: 0px;
+}
+
+#slider #inicio{
+    background: #233D58;
+    font-family: 'aller';
+    position: relative;
+    text-align: center;
+    padding-bottom: 70px;
+    margin-top: -70px;
+}
+#slider #inicio .mainanimation{
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    margin-left: 10%;
+    min-height: 300px;
+}
+
+canvas {
+  display: block;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: none;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#slider #inicio .mainlogo{
+    background: none;
+    position: relative;
+    width: 60vw;
+    min-height: 420px;
+    margin-left: 20vw;
+}
+#slider #inicio .mainlogo h2{
+    font-size: 1.2em;
+    padding-top: 80px;
+    color: white;
+    font-weight: lighter;
+}
+#slider #inicio .mainlogo strong{
+    font-size: 2em;
+    font-family: 'aldo';
+    display: block;
+    padding-top: 2px;
+}
+#slider #inicio .mainlogo figure,
+#slider #inicio .mainlogo figure img{
+    width: 100%;
+    margin: 0px;
+}
+#slider #inicio .buttonspage{
+    width: 100%;
+    text-align: center;
+}
+#slider #inicio .buttonspage > *{
+    display: inline-block;
+    width: 40%;
+    margin: 5px 2.5%;
+    padding: 15px 2.5%;
+    color: white;
+    cursor: pointer;
+}
+#slider #inicio #contratame{
+    background: #F8931F;
+}
+#slider #inicio a{
+    text-decoration: none;
+    background: #29abe2;
+}
+
+
+#slider #sobremi{
+    background: yellow;
+}
+#slider #habilidades{
+    background: red;
+}
+#slider #portfolio{
+    background: blue;
+}
+#slider #repositorios{
+    background: purple;
+}
+
+#contact_form{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 35px;
+    background: white;
+    border: 1px solid green;
+    width: 250px;
+    height: 100vh;
+    z-index: 999;
+
+    border-top: 1px solid black;
+    box-shadow: 0px 0px 3px #9F9E9E;
+    font-family: 'aller';
+}
+
+#contact_form #close_form{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 85%;
+    top: 190px;
+    z-index: 999;
+}
+#contact_form #close_form:hover{
+    cursor: pointer;
+}
+#contact_form #close_form:before{
+    font-family: 'icomoon';
+    content: "\ea41";
+    font-size: 25px;
+    right: -5px;
+    position: relative;
+}
+
+#contact_form input,
+#contact_form textarea{
+    display: block;
+    margin: 20px;
+    border: none;
+    border-bottom: 2px solid gray;
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 3px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+#contact_form #button{
+    background: #F8931F;
+    color: white;
+    border: none;
+    padding: 8px 0px;
+    border-radius: 5px;
+}
+
+#contact_form p{
+    margin: 20px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#contact_form figure{
+    height: 180px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background: #29abe2;
+    overflow: hidden;
+}
+
+div#contact_form form #icono_mensaje img{
+    filter: invert(100%);
+    height: 100%;
+    margin: 0px;
+}
+
+#contact_button{
+    width: 60px;
+    height: 60px;
+    background: #F8931F;
+    border-radius: 50%;
+    color: white;
+    z-index: 80;
+    right: 10px;
+    top: 70vh;
+    position: fixed;
+}
+
+#contact_button:hover{
+    cursor: pointer;
+}
+
+#contact_button:before{
+    font-family: 'icomoon';
+    content: "\ea84";
+    position: relative;
+    font-size: 2em;
+    top: 13px;
+    left: 14px;
+
+}
+
+footer{
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    z-index: 90;
+    height: 150px;
+    position: fixed;
+    bottom: -110px;
+    transition-duration: 0.4s;
+}
+footer .rrss{
+    margin-top: 70px;
+    width: 100%;
+    height: 40px;
+}
+footer .rrss a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    font-family: 'icomoon';
+}
+footer .rrss a:nth-child(1):before{
+    content: "\ea91";
+}
+footer .rrss a:nth-child(2):before{
+    content: "\ea92";
+}
+footer .rrss a:nth-child(3):before{
+    content: "\ea93";
+}
+footer .rrss a:nth-child(4):before{
+    content: "\eab0";
+}
+footer p{
+    font-size: 0.8em;
+    font-weight: lighter;
+    font-family: 'aller';
+    color: white;
+    position: relative;
+    display: block;
+    top: 0px;
+}
+
+footer:after{
+    font-family: 'icomoon';
+    content: "\e900";
+    font-size: 4.5em;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 5px;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    margin-top: -40px;
+    border-radius: 50%;
+    background: black;
+    color: black;
+    transition-duration: 0.4s;
+    text-shadow: -10px 0px 0px white;
+}
+footer:hover:after{
+    transform: rotate(-90deg);
+    background: white;
+    color: black;
+}
+footer:hover{
+    bottom: 0px;
+}
+
+@media screen and (min-width: 480px){
+    #slider #inicio{
+        margin-top: -20px;
+    }
+    #slider #inicio .mainlogo {
+        width: 288px;
+        left: 50%;
+        margin-left: -144px;
+        padding-bottom: 50px;
+
+    }
+    #slider #inicio .mainlogo h2{
+        font-size: 1.4em;
+    }
+    #slider #inicio .mainlogo figure{
+        width: 80%;
+        margin-left: 10%;
+    }
+    #slider #inicio .buttonspage > *{
+        width: 200px;
+    }
+
+
+}
+@media screen and (min-width: 600px){
+    #slider #inicio{
+        margin-top: 0px;
+    }
+}
+@media screen and (min-width: 767px){
+
+    header{
+        height: 50px;
+    }
+    header h1{
+        display: inline-block;
+        width: 20%;
+        margin: 0px;
+        height: 50px;
+        margin-left: 50px;
+        line-height: 50px;
+        min-width: 250px;
+    }
+    header h1 > *{
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+        color: white;
+        font-size: 0.8em;
+        margin: 0px 3px;
+    }
+    header h1 #main_logo{
+        position: relative;
+        top: -5px;
+    }
+    header h1 figure{
+        height: 40px;
+        width: 40px;
+        margin: 0px 0px;
+    }
+    header h1 figure img{
+        width: 100%;
+        display: block;
+    }
+
+    header nav{
+        display: inline-block;
+        vertical-align: middle;
+        width: 55%;
+        position: relative;
+        left: 0px;
+    }
+
+    header nav #showMovil,
+    header nav #hideMovil{
+        display: none;
+    }
+
+    header nav #card_menu{
+        display: block;
+        border: none;
+        background: none;
+        position: relative;
+        top: 21px;
+        width: 100%;
+        border-color: transparent;
+        text-align: right;
+        right: -50px;
+
+    }
+
+    header nav #card_menu figure{
+        display: none;
+    }
+
+    header nav #card_menu ul{
+        padding: 0px;
+        margin: 0px;
+        margin-right: -15px;
+        position: relative;
+        text-align: right;
+    }
+    header nav #card_menu ul li{
+        display: inline-block;
+        text-align: center;
+        font-size: 1.2em;
+        margin: 0px 2px;
+    }
+
+    header nav #card_menu ul li a{
+        color: white;
+
+
+    }
+
+    header #prev_section,
+    header #next_section{
+        width: 50px;
+        height: 50px;
+        background: #29abe2;
+        right: 40px;
+        z-index: 999;
+        position: absolute;
+        border-radius: 50%;
+
+    }
+
+    header #prev_section{
+        top: 115px;
+    }
+    header #next_section{
+        top: 190px;
+    }
+
+    header #prev_section img,
+    header #next_section img{
+        width: 100%;
+        top: 0px;
+        left: 0px;
+    }
+    #contact_form{
+        top: 50px;
+        width: 400px;
+    }
+    #contact_button{
+        right: 40px;
+    }
+}
+
+
+@media screen and (min-width: 950px){
+
+}

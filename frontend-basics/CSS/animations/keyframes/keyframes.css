@@ -1,0 +1,35 @@
+/*
+animation-name:
+animation-duration:
+animation-iteration-count:
+animation-delay:
+*/
+
+@-moz-keyframes change_color{
+    50%{
+        background: red;
+    }
+}
+@keyframes change_color{
+    50%{
+        background: red;
+    }
+}
+
+div{
+    font-family: 'Arial';
+    background-color: limegreen;
+    text-align: center;
+    font-weight: bolder;
+    position: relative;
+    width: 120px;
+    height: 50px;
+    margin: 30px 0 0 10px;
+}
+p{
+    padding-top: 15px;
+}
+
+.animation_demo:hover{
+    animation: 5s change_color 1;
+}

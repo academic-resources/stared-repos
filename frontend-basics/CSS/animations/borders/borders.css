@@ -1,0 +1,138 @@
+div{
+    font-family: 'Arial';
+    background-color: transparent;
+    margin: 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 30px;
+    width: 80px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* HIGHLIGHT: border same clarity color as background */
+
+.highlight1{
+box-shadow: inset 0 0 0 4px limegreen;
+transition-duration: 0.5s;
+}
+
+.highlight1:hover{
+    box-shadow: inset 0 0 0 4px black;
+}
+
+/* INSIDE BORDER */
+
+.inside_border{
+    position: relative;
+}
+.inside_border:before{
+    content: '';
+    position: absolute;
+    border: 4px solid limegreen;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    opacity: 0;
+        transition-duration: 0.5s;
+}
+.inside_border:hover:before{
+    opacity: 1;
+}
+
+/* EXPAND BORDER */
+.expand_border{
+    position: relative;
+}
+.expand_border:before{
+    content: '';
+    position: absolute;
+    border: 4px solid limegreen;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    transition-duration: 0.3s;
+}
+
+.expand_border:hover:before{
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
+}
+
+/* IMPLODE BORDER */
+
+.implode_border{
+    position: relative;
+}
+
+.implode_border:before{
+    content: '';
+    position: absolute;
+    border: 4px solid limegreen;
+    top: -16px;
+    bottom: -16px;
+    left: -16px;
+    right: -16px;
+    opacity: 0;
+
+    transition-duration: 0.3s;
+}
+
+.implode_border:hover:before{
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
+    opacity: 1;
+}
+
+/* ROUND CORNER */
+.round_corners{
+    background: limegreen;;
+    transition-duration: 0.3s;
+}
+.round_corners:hover{
+    border-radius: 20px;
+}
+
+/* NAV BAR - UNDERLINE ELEMENTS */
+nav{
+    background: limegreen;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+}
+nav ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+li{
+    display: inline-block;
+    margin: 7px -2px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    border-color: transparent;
+    font-weight: bolder;
+    padding: 5px 10px;
+    transition-duration: 0.5s;
+}
+
+/* First element of list */
+li:nth-of-type(1) a:focus{
+    border-bottom: 3px solid yellow;
+}
+li:nth-of-type(2) a:focus{
+    border-bottom: 3px solid red;
+}
+li:nth-of-type(3) a:focus{
+    border-bottom: 3px solid blue;
+}

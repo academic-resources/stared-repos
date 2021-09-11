@@ -1,0 +1,18 @@
+#buscar {
+    position: relative;
+    
+}
+@media (max-width: 768px) {
+    #buscar,
+    #buscar input {
+        width: 100%;
+    }
+}
+
+#resultado {
+    position: absolute;
+    left:0;
+    top:100%;
+    z-index: 100;
+    width:100%;
+}

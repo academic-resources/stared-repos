@@ -1,0 +1,36 @@
+div{
+    height: 200px;
+    width: 200px;
+    border: 2px solid red;
+    margin: 50px;
+    background: url("sloth.jpg");
+    /* May add another, followed by a comma (remember to do it also in attributes) */
+    background-repeat: no-repeat;
+    /* repeat-y */
+
+    background-position: border-box;
+    /* border-box, padding-box, content-box */
+}
+
+
+div.lineargradient{
+    background: -moz-linear-gradient(
+        left 20deg,
+        blue 0%,
+        red 30%,
+        green 80%,
+        yellow 100%
+        );
+
+}
+
+div.radialgradient{
+    background: -moz-radial-gradient(
+        center,
+        blue 0%,
+        red 30%,
+        green 80%,
+        yellow 100%
+        );
+
+}

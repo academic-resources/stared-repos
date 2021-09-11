@@ -1,0 +1,43 @@
+/* MOBILE FIRST! */
+/* First develop for smaller screens */
+
+body{
+    background:orange;
+}
+
+div{
+    width: 80%;
+    height: 150px;
+    border: 2px solid black;
+    /* If 10% margin, border exceds 100%)*/
+    margin: 8%;
+    display: inline-block;
+}
+
+@media screen and (min-width: 480px){
+    body{
+        background: green;
+        /* Any attribute here, is inherited in bigger screens */
+    }
+}
+
+@media screen and (min-width: 767px){
+    body{
+        background: yellow;
+    }
+    div{
+        width: 40%;
+        margin: 4%;
+    }
+}
+
+@media screen and (min-width: 950px){
+    body{
+        background: red;
+    }
+    div{
+        width: 28%;
+        margin: 2%;
+        /* Each column is width+2*margin */
+    }
+}
