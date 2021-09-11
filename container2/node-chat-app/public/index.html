@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Join | chattrbox Chat App</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body class="centered-form Site">
+    <div class="Site-content">
+        <ul>
+            <li>
+                <a href="/about.html">about</a>
+            </li>
+            <li>
+                <a href="/faqs.html">faqs</a>
+            </li>
+        </ul>
+        <div class="centered-form__form">
+            <h1>chattrbox</h1>
+            <form action="/chat.html">
+                <div class="form-field">
+                    <h3>Join a Chat</h3>
+                </div>
+                <div class="form-field">
+                    <label>Display Name</label>
+                    <input type="text" name="name" id="name" pattern="[a-z]{5,15}" title="User name should only contain lowercase letters. e.g. johnny, at least 5 letters, and should not exceed 15 characters." required="required" />
+                </div>
+                <div class="form-field">
+                    <label>Room Name</label>
+                    <input type="text" name="room" id="room" pattern="[a-z]{5,30}" title="Room name should only contain lowercase letters. e.g. merlin fans, no spaces, at least 5 letters, and should not exceed 30 characters." required="required" />
+                </div>
+                <div class="form-field">
+                    <button>Join</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&dagger; © 2018 maria d. campbell &dagger;</p>
+    </footer>
+
+</body>
+
+</html>

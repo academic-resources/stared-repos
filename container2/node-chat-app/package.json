@@ -1,0 +1,29 @@
+{
+    "name": "chat-app",
+    "version": "0.0.1",
+    "description": "A web chat app using websockets and socket.io library",
+    "main": "index.js",
+    "scripts": {
+        "serve": "nodemon server/server.js",
+        "test": "mocha server/**/*.test.js",
+        "test-watch": "nodemon --exec 'npm test'",
+        "snyk-test": "snyk test"
+    },
+    "engines": {
+        "node": "10.5.0"
+    },
+    "author": "Maria D. Campbell",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.3",
+        "moment": "^2.21.0",
+        "nodemon": "^1.17.5",
+        "socket.io": "^2.1.1"
+    },
+    "devDependencies": {
+        "eslint": "^5.9.0",
+        "expect": "^24.8.0",
+        "mocha": "^5.2.0",
+        "node-static": "^0.7.11"
+    }
+}

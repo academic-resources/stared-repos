@@ -1,0 +1,17 @@
+ul {
+    display: flex;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    li {
+        display: inline-block;
+        font-size: 1.1rem;
+        letter-spacing: 0.1em;
+        padding: 0 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+    a {
+        color: white;
+        font-size: 1.1rem;
+    }
+}

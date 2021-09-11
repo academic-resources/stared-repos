@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chattrbox Chat App</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body class="chat">
+    <div class="chat__sidebar">
+        <h3>People</h3>
+        <div id="users"></div>
+    </div>
+
+    <div class="chat__main">
+        <h1>chattrbox</h1>
+        <ol id="messages" class="chat__messages"></ol>
+        <ol id="typing"></ol>
+        <footer class="chat__footer">
+            <form id="message-form">
+                <input id="message" type="text" name="message" placeholder="Message" autocomplete="off" />
+                <button>Send</button>
+            </form>
+            <button id="send-location">Send Location</button>
+        </footer>
+    </div>
+    <script id="message-template" type="text/template">
+        <li class="message">
+            <div class="message__title">
+                <h4>{{from}}</h4>
+                <span>{{createdAt}}</span>
+            </div>
+            <div class="message-body">
+                <p>{{text}}</p>
+            </div>
+        </li>
+    </script>
+    <script id="location-message-template" type="text/template">
+        <li class="message">
+            <div class="message__title">
+                <h4>{{from}}</h4>
+                <span>{{createdAt}}</span>
+            </div>
+            <div class="message-body">
+                <p>
+                    <a href="{{url}}" target="_blank">my current location</a>
+                </p>
+            </div>
+        </li>
+    </script>
+    <script src=" /socket.io/socket.io.js"></script>
+    <script src="/js/libs/jquery-3.3.1.min.js"></script>
+    <script src="/js/libs/moment.js"></script>
+    <script src="/js/libs/mustache.js"></script>
+    <script src="/js/libs/deparam.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FAQS | chattrbox Chat App</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body class="faqs Site">
+    <div class="Site-content">
+        <div class="faqs-content">
+            <ul>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="/about.html" target="_blank">about</a>
+                </li>
+                <li>
+                    <a href="/index.html" target="_blank">login</a>
+                </li>
+            </ul>
+            <ol>
+                <h2 class="faqs-title">what is chattrbox?</h2>
+                <li class="faqs-list-item">it is a chat application built with websockets using the websocket library
+                    <a href="https://socket.io/" target="_blank"> socket.io</a>.
+                </li>
+                <h2 class="faqs-title">what is it for?</h2>
+                <li class="faqs-list-item">
+                    for friends, family, and/or colleagues to connect in real time and communicate with each other. messages are <code>timestamped</code>. <code>chattrbox</code> also uses the
+                    <code>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation" target="_blank">geolocation API</a>
+</code> and
+                    <code>
+<a href="https://developers.google.com/maps/documentation/urls/guide" target="_blank">Google Maps API Maps Url</a>
+</code>. the
+                    <code>geolocation API</code> allows users to provide their location IF they want to. they can always choose to DENY access to their location. for privacy reasons, the user is asked permission to report location information when clicking
+                    on the
+                    <code>Send Location</code> button.
+                    <code>chattrbox</code> uses the
+                    <code>Google Maps API</code> along with the <code>geolocation API</code> so that a user not only shares his/her latitude and longituda, but an actual
+                    <code>Google Map</code> with his/her exact location and directions how to get there. That is possible because of the implementation of
+                    <code>Google Maps API</code>
+                    <code>dir</code> (directions) mode as opposed to
+                    <code>search</code> mode, which is a bit less accurate.
+                </li>
+                <h2 class="faqs-title">are chats private?</h2>
+                <li class="faqs-list-item">
+                    Chats in each chat room that is created by a user when he/she logs in, are private.
+                </li>
+                <h2 class="faqs-title">if every user can create their own private chat room, how can people chat with each other?</h2>
+                <li class="faqs-list-item">
+                    by sharing the name of the chat room with those they want to communicate with in real time. it is important to note, however, that when filling out the input field for the name of the room, all characters must be lowercase and with no spaces. in addition,
+                    the spelling must be exactly the same, otherwise a new chat room will be created.
+                </li>
+                <h2 class="faqs-title">how can i invite others to chat with me?</h2>
+                <li class="faqs-list-item">by sharing the link to the site.</li>
+                <h2 class="faqs-title">are chats, locations, and timestamps saved anywhere?</h2>
+                <li class="faqs-list-item">
+                    the beauty of native websockets (and socket.io) is that they take place in real time BUT data transmitted via the sockets is NOT persistent by default. only if saved to a database. chattrbox does not save anything to a database. on page refresh, everything
+                    in an individual user's chat disappears. whatever that user transmitted to the room remains as long as other users keep their browser/socket instance open and don't refresh their page. when they close their window/instance, the information
+                    which they transmitted and was transmitted to them, is gone. that does not mean that everything that was transmitted to a room is gone everywhere. everything is gone only when all users who have joined a room have left.
+                </li>
+                <h2 class="faqs-title">are rooms persistent?</h2>
+                <li class="faqs-list-item">no. but you can re-use a room name if you like and share it with others so that they can join you there.</li>
+                <h2 class="faqs-title">will the url always remain the same?</h2>
+                <li class="faqs-list-item">
+                    <code>NO</code>. i will change it
+                    <code>frequently</code> at my
+                    <code>discretion</code> so as to prevent abuse of the site for potentially nefarious reasons or for profit. i will share the url only with those that i would like to share the space with.
+                </li>
+                <h2 class="faqs-title">can i transmit a message by pressing the enter/return key instead of the send button?</h2>
+                <li class="faqs-list-item">
+                    <code>NO</code>. you can only transmit a message by clicking the <code>send</code> button.
+                </li>
+            </ol>
+        </div>
+        <a href="#" id="scroll-btn">
+            <i class="material-icons">
+        keyboard_arrow_up
+            </i>
+        </a>
+    </div>
+    <footer>
+        <p>&dagger; © 2018 maria d. campbell &dagger;</p>
+    </footer>
+</body>
+
+</html>
