@@ -1,0 +1,22 @@
+{
+	"name": "file-utils",
+	"version": "0.1.7",
+	"description": "File and directory utilities.",
+	"keywords": ["file", "directory", "folder", "utilities", "utils", "file utils",
+				"file utilities", "path"],
+	"author": {
+		"name": "Gabriel Llamas"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/Gagle/Node-FileUtils.git"
+	},
+	"engines": {
+		"node": ">=0.1.7"
+	},
+	"licenses": [{
+		"type": "MIT",
+		"url": "http://www.opensource.org/licenses/mit-license.html"
+	}],
+	"main": "file-utils"
+}
