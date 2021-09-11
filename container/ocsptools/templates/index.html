@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OCSP Response Linter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>OCSP Response Linter</h2>
+  <center>
+    <input type="submit" class="btn btn-primary" id="by-file-button" value="Check by Certificate" />
+    <input type="submit" class="btn btn-primary" id="by-url-button" value="Check by URL" />
+  </center>
+  <form id="url-input-form">
+    <div class="form-group">
+      <h4 for="url-field">URL to check OCSP Response</h4>
+      <input type="text" class="form-control" id="url-field" placeholder="Enter URL">
+    </div>
+    <center>
+    <div class="button-container">
+      <input type="submit" class="btn btn-primary" id="ocsp-url-submit-button" value="Check OCSP Response" />
+      <!-- <input type="submit" class="btn btn-primary" id="crl-submit-button" value="Check CRL Response" /> -->
+    </div>
+    </center>
+  </form>
+  <form id="certificate-input-form" method = "POST" enctype = "multipart/form-data"> 
+    <h4 id="file-type-label">Certificate file:</h4>
+    <div class="custom-file" id="file-upload">
+      <input type="file" class="custom-file-input" id="file-input" name="cert-file">
+      <label class="custom-file-label" for="file-input">Choose file</label>
+    </div>
+    <h4 id="file-type-label">Issuer Certificate file:</h4>
+    <div class="custom-file" id="file-upload">
+      <input type="file" class="custom-file-input" id="file-input" name="issuer-file">
+      <label class="custom-file-label" for="file-input">Choose file</label>
+    </div>
+    <center>
+    <div class="button-container">
+      <input type="submit" class="btn btn-primary" id="ocsp-submit-button" value="Check OCSP Response" />
+      <!-- <input type="submit" class="btn btn-primary" id="crl-submit-button" value="Check CRL Response" /> -->
+    </div>
+    </center>
+  </form>
+</div>
+
+<script>
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+
+</body>
+</html>
