@@ -1,0 +1,8 @@
+*{
+			background: rgba(0,0,0,0.7);
+			color: rgba(0,255,0,0.7);
+			box-sizing: border-box;
+			margin: 100px auto;
+			justify-content: center;
+			align-content: center;
+}

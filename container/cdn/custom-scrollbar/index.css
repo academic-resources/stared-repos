@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+/* custom-scrollbar demo */
+
+[data-demo="scrollbar-box"] {
+    width: 400px;
+    height: 300px;
+    overflow: scroll;
+    border: 1px solid red;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+
+::-webkit-scrollbar-corner {
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/corner.png);
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-corner:window-inactive {
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/corner-inactive.png);
+}
+
+::-webkit-resizer {
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/resizer.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+::-webkit-resizer:window-inactive {
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/resizer-inactive.png);
+}
+
+::-webkit-scrollbar-track-piece:disabled {
+    display: none !important;
+}
+
+::-webkit-scrollbar-button:disabled {
+    display: none !important;
+}
+
+::-webkit-scrollbar-track:disabled {
+    margin: 6px;
+}
+
+
+/* Horizontal Scrollbar Styles */
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar:horizontal {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png) 0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png) 0 2 0 2;
+    border-color: transparent;
+    border-width: 0 2px;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background.png);
+    background-repeat: repeat-x;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar:horizontal:corner-present {
+    border-right-width: 0;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-track:horizontal:disabled:corner-present {
+    margin-right: 5px;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar:horizontal:window-inactive {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-inactive.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal {
+    width: 20px;
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png) 0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png) 0 2 0 2;
+    border-color: transparent;
+    border-width: 0 2px;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:decrement {
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background.png);
+    background-repeat: no-repeat, repeat-x;
+    background-position: 2px 3px, 0 0;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:decrement:hover {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png) 0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png) 0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-hover.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:decrement:active {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png) 0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png) 0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-active.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:decrement:window-inactive {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-inactive.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:increment {
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background.png);
+    background-repeat: no-repeat, repeat-x;
+    background-position: 7px 3px, 0 0;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:increment:hover {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png) 0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png) 0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-hover.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:increment:active {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png) 0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png) 0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-active.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:increment:window-inactive {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-inactive.png);
+}
+
+
+/* Vertical Scrollbar Styles */
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar:vertical {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png) 2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png) 2 0 2 0;
+    border-color: transparent;
+    border-width: 2px 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background.png);
+    background-repeat: repeat-y;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar:vertical:corner-present {
+    border-bottom-width: 0;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-track:vertical:disabled:corner-present {
+    margin-bottom: 5px;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar:vertical:window-inactive {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-inactive.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical {
+    height: 20px;
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png) 2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png) 2 0 2 0;
+    border-color: transparent;
+    border-width: 2px 0;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background.png);
+    background-repeat: no-repeat, repeat-y;
+    background-position: 3px 3px, 0 0;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:decrement:hover {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png) 2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png) 2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-hover.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:decrement:active {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png) 2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png) 2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-active.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:decrement:window-inactive {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-inactive.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:increment {
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background.png);
+    background-repeat: no-repeat, repeat-y;
+    background-position: 3px 8px, 0 0;
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:increment:hover {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png) 2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png) 2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-hover.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:increment:active {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png) 2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png) 2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-active.png);
+}
+
+[data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:increment:window-inactive {
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-inactive.png);
+}
+
+
+/* Preload the scrollbar images to prevent flickering when changing states. */
+
+
+/*
+
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/corner-inactive.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/corner.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-active.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-hover.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-inactive.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-thumb-active.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-thumb-hover.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-thumb-inactive.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-thumb.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-track-active.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-track-disabled.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-track-hover.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-track.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/resizer-inactive.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/resizer.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-active.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-hover.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-inactive.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-thumb-active.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-thumb-hover.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-thumb-inactive.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-thumb.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-track-active.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-track-disabled.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-track-hover.png";
+(new Image()).src="https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-track.png";
+
+
+*/

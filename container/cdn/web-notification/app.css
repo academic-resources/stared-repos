@@ -1,0 +1,10 @@
+@charset "UTf-8";
+
+/* app.css */
+
+:root {
+   --cololr: red;
+   --default-cololr: green;
+   --new-cololr: blue;
+}
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="xgqfrms">
+  <meta name="generator" content="VS code">
+  <title>js multi events overwrite bug</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      margin-top: 50px;
+    }
+    button {
+      width: 100px;
+      height: 50px;
+      font-size: 23px;
+    }
+  </style>
+  <!-- <link rel="stylesheet" href="./index.css"> -->
+</head>
+<body>
+  <header>
+    <h1>js multi events overwrite bug</h1>
+  </header>
+  <main>
+    <article>
+      <section>
+        <button data-uid="btn1">abc</button>
+        <button data-uid="btn2">xyz</button>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>copyright&copy; xgqfrms 2020</p>
+  </footer>
+  <!-- js -->
+  <script>
+    const log = console.log;
+    const btn1 = document.querySelector(`[data-uid="btn1"]`);
+    const btn2 = document.querySelector(`[data-uid="btn2"]`);
+    if(btn1) {
+      btn1.addEventListener('click', (e) => {
+        log(`btn1`);
+        // log(`btn1 =`, e);
+        history.pushState({page: 1}, "title 1", "?page=1");
+      });
+    }
+    if(btn1) {
+      btn2.addEventListener('click', (e) => {
+        log(`btn2`);
+        // log(`btn2 =`, e);
+        history.pushState({page: 2}, "title 2", "?page=2");
+    });
+    }
+    window.addEventListener('popstate', function (event) {
+      log(`✅ event.state =`, event, event.state);
+    });
+    window.addEventListener('popstate', function (event) {
+      log(`✅✅ event.state =`, event, event.state);
+    });
+    (function(history){
+      var pushState = history.pushState;
+      history.pushState = function(state) {
+        // YOUR CUSTOM HOOK / FUNCTION
+        log('called from pushStateHook', state, arguments);
+        // func();
+        return pushState.apply(history, arguments);
+      };
+    })(window.history);
+  </script>
+</body>
+</html>

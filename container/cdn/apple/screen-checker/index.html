@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="xgqfrms">
+  <meta name="generator" content="VS code">
+  <title>iPhone 12 Pro Green Screen Checker</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      position: relative;
+      background: #000;
+      color: #fff;
+      width: 100vw;
+      height: calc(100vh - 100px);
+    }
+    header {
+      margin: 10px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    footer {
+      position: fixed;
+      bottom: 50px;
+      width: 200px;
+      left: calc(50vw - 100px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0f0;
+    }
+  </style>
+  <!-- <link rel="stylesheet" href="./index.css"> -->
+</head>
+<body>
+  <header>
+    <h1>iPhone 12 Pro Green Screen Checker</h1>
+  </header>
+  <main>
+  </main>
+  <footer>
+    <p>copyright&copy; xgqfrms 2020</p>
+  </footer>
+  <!-- js -->
+  <script>
+    const log = console.log;
+    const screen = document.querySelector(`body`)
+    screen.addEventListener("click", function(e) {
+      toggleFullScreen();
+    }, false);
+    document.addEventListener("keypress", function(e) {
+      if (e.keyCode === 13) {
+        toggleFullScreen();
+      }
+    }, false);
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen();
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+  </script>
+</body>
+</html>

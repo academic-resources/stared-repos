@@ -1,0 +1,1530 @@
+{
+    "Success": true,
+    "Info": {
+        "schema": {
+            "type": "object",
+            "Properties": {
+                "ApiName": {
+                    "type": "string",
+                    "Required": true,
+                    "Description": "报表名称"
+                },
+                "SecuCode": {
+                    "type": "string",
+                    "Required": true,
+                    "Description": "【必选】证券代码"
+                },
+                "BeginDate": {
+                    "type": "string",
+                    "Description": "【可选】起始日期【默认近五年】",
+                    "Format": "date-time"
+                },
+                "EndDate": {
+                    "type": "string",
+                    "Description": "【可选】截止日期(另FastQuarterReportType必传)",
+                    "Format": "date-time"
+                },
+                "RequestContext": {
+                    "type": "object",
+                    "Properties": {
+                        "RequestJson": {
+                            "type": "string"
+                        },
+                        "Version": {
+                            "type": "integer"
+                        },
+                        "AsyncContext": {
+                            "type": "object",
+                            "Properties": {
+                                "Timeout": {
+                                    "type": "integer"
+                                },
+                                "Request": {
+                                    "type": "object",
+                                    "Properties": {
+                                        "Locale": {
+                                            "type": "string"
+                                        },
+                                        "ContentLength": {
+                                            "type": "integer"
+                                        },
+                                        "ContentLengthLong": {
+                                            "type": "integer"
+                                        },
+                                        "ContentType": {
+                                            "type": "string"
+                                        },
+                                        "ParameterNames": {
+                                            "type": "any"
+                                        },
+                                        "Scheme": {
+                                            "type": "string"
+                                        },
+                                        "InputStream": {
+                                            "type": "any"
+                                        },
+                                        "Protocol": {
+                                            "type": "string"
+                                        },
+                                        "LocalName": {
+                                            "type": "string"
+                                        },
+                                        "AttributeNames": {
+                                            "type": "any"
+                                        },
+                                        "DispatcherType": {
+                                            "type": "string",
+                                            "enum": [
+                                                "FORWARD",
+                                                "INCLUDE",
+                                                "REQUEST",
+                                                "ASYNC",
+                                                "ERROR"
+                                            ]
+                                        },
+                                        "ServletContext": {
+                                            "type": "object",
+                                            "Properties": {
+                                                "ClassLoader": {
+                                                    "type": "object",
+                                                    "Properties": {
+                                                        "Parent": {
+                                                            "type": "object",
+                                                            "$ref": "urn:jsonschema:java:lang:ClassLoader"
+                                                        },
+                                                        "ParallelLockMap": {
+                                                            "type": "object",
+                                                            "AdditionalProperties": {
+                                                                "type": "any"
+                                                            }
+                                                        },
+                                                        "Package2certs": {
+                                                            "type": "object",
+                                                            "AdditionalProperties": {
+                                                                "type": "array",
+                                                                "Items": {
+                                                                    "type": "object",
+                                                                    "Id": "urn:jsonschema:java:security:cert:Certificate",
+                                                                    "Properties": {
+                                                                        "Type": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Hash": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "Encoded": {
+                                                                            "type": "array",
+                                                                            "Items": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        },
+                                                                        "PublicKey": {
+                                                                            "type": "object",
+                                                                            "Id": "urn:jsonschema:java:security:PublicKey",
+                                                                            "Properties": {
+                                                                                "Format": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "Algorithm": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "Encoded": {
+                                                                                    "type": "array",
+                                                                                    "Items": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "Classes": {
+                                                            "type": "array",
+                                                            "Items": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "DefaultDomain": {
+                                                            "type": "object",
+                                                            "Properties": {
+                                                                "Codesource": {
+                                                                    "type": "object",
+                                                                    "Properties": {
+                                                                        "Location": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Certificates": {
+                                                                            "type": "array",
+                                                                            "Items": {
+                                                                                "type": "object",
+                                                                                "$ref": "urn:jsonschema:java:security:cert:Certificate"
+                                                                            }
+                                                                        },
+                                                                        "CodeSigners": {
+                                                                            "type": "array",
+                                                                            "Items": {
+                                                                                "type": "object",
+                                                                                "Properties": {
+                                                                                    "SignerCertPath": {
+                                                                                        "type": "object",
+                                                                                        "Properties": {
+                                                                                            "Type": {
+                                                                                                "type": "string"
+                                                                                            },
+                                                                                            "Encodings": {
+                                                                                                "type": "array",
+                                                                                                "Items": {
+                                                                                                    "type": "string"
+                                                                                                }
+                                                                                            },
+                                                                                            "Certificates": {
+                                                                                                "type": "array",
+                                                                                                "Items": {
+                                                                                                    "type": "object",
+                                                                                                    "$ref": "urn:jsonschema:java:security:cert:Certificate"
+                                                                                                }
+                                                                                            },
+                                                                                            "Encoded": {
+                                                                                                "type": "array",
+                                                                                                "Items": {
+                                                                                                    "type": "string"
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    "Timestamp": {
+                                                                                        "type": "object",
+                                                                                        "Properties": {
+                                                                                            "Timestamp": {
+                                                                                                "type": "string",
+                                                                                                "Format": "date-time"
+                                                                                            },
+                                                                                            "SignerCertPath": {
+                                                                                                "type": "object",
+                                                                                                "$ref": "urn:jsonschema:java:security:cert:CertPath"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "Classloader": {
+                                                                    "type": "object",
+                                                                    "$ref": "urn:jsonschema:java:lang:ClassLoader"
+                                                                },
+                                                                "Principals": {
+                                                                    "type": "array",
+                                                                    "Items": {
+                                                                        "type": "object",
+                                                                        "Properties": {
+                                                                            "Name": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "Permissions": {
+                                                                    "type": "object",
+                                                                    "Properties": {
+                                                                        "ReadOnly": {
+                                                                            "type": "boolean"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "HasAllPerm": {
+                                                                    "type": "boolean"
+                                                                },
+                                                                "StaticPermissions": {
+                                                                    "type": "boolean"
+                                                                },
+                                                                "Key": {
+                                                                    "type": "any"
+                                                                },
+                                                                "ClassLoader": {
+                                                                    "type": "object",
+                                                                    "$ref": "urn:jsonschema:java:lang:ClassLoader"
+                                                                },
+                                                                "CodeSource": {
+                                                                    "type": "object",
+                                                                    "$ref": "urn:jsonschema:java:security:CodeSource"
+                                                                }
+                                                            }
+                                                        },
+                                                        "Domains": {
+                                                            "type": "array",
+                                                            "Items": {
+                                                                "type": "object",
+                                                                "$ref": "urn:jsonschema:java:security:ProtectionDomain"
+                                                            }
+                                                        },
+                                                        "Packages": {
+                                                            "type": "object",
+                                                            "AdditionalProperties": {
+                                                                "type": "object",
+                                                                "Id": "urn:jsonschema:java:lang:Package",
+                                                                "Properties": {
+                                                                    "PkgName": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "SpecTitle": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "SpecVersion": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "SpecVendor": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "ImplTitle": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "ImplVersion": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "ImplVendor": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "SealBase": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "SpecificationTitle": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "SpecificationVersion": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "SpecificationVendor": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "ImplementationTitle": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "ImplementationVersion": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "ImplementationVendor": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "Name": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "Annotations": {
+                                                                        "type": "array",
+                                                                        "Items": {
+                                                                            "type": "any"
+                                                                        }
+                                                                    },
+                                                                    "DeclaredAnnotations": {
+                                                                        "type": "array",
+                                                                        "Items": {
+                                                                            "type": "any"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "NativeLibraries": {
+                                                            "type": "array",
+                                                            "Items": {
+                                                                "type": "object",
+                                                                "Properties": {
+                                                                    "Handle": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "JniVersion": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "FromClass": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "Name": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "IsBuiltin": {
+                                                                        "type": "boolean"
+                                                                    },
+                                                                    "Loaded": {
+                                                                        "type": "boolean"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "AssertionLock": {
+                                                            "type": "any"
+                                                        },
+                                                        "DefaultAssertionStatus": {
+                                                            "type": "boolean"
+                                                        },
+                                                        "PackageAssertionStatus": {
+                                                            "type": "object",
+                                                            "AdditionalProperties": {
+                                                                "type": "boolean"
+                                                            }
+                                                        },
+                                                        "ClassAssertionStatus": {
+                                                            "type": "object",
+                                                            "AdditionalProperties": {
+                                                                "type": "boolean"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "AttributeNames": {
+                                                    "type": "any"
+                                                },
+                                                "ContextPath": {
+                                                    "type": "string"
+                                                },
+                                                "EffectiveMajorVersion": {
+                                                    "type": "integer"
+                                                },
+                                                "ServerInfo": {
+                                                    "type": "string"
+                                                },
+                                                "InitParameterNames": {
+                                                    "type": "any"
+                                                },
+                                                "EffectiveMinorVersion": {
+                                                    "type": "integer"
+                                                },
+                                                "MajorVersion": {
+                                                    "type": "integer"
+                                                },
+                                                "MinorVersion": {
+                                                    "type": "integer"
+                                                },
+                                                "Servlets": {
+                                                    "type": "any"
+                                                },
+                                                "ServletNames": {
+                                                    "type": "any"
+                                                },
+                                                "ServletContextName": {
+                                                    "type": "string"
+                                                },
+                                                "ServletRegistrations": {
+                                                    "type": "object",
+                                                    "AdditionalProperties": {
+                                                        "type": "object",
+                                                        "Id": "urn:jsonschema:javax:servlet:ServletRegistration",
+                                                        "Properties": {
+                                                            "Mappings": {
+                                                                "type": "array",
+                                                                "Items": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "RunAsRole": {
+                                                                "type": "string"
+                                                            },
+                                                            "InitParameters": {
+                                                                "type": "object",
+                                                                "AdditionalProperties": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "Name": {
+                                                                "type": "string"
+                                                            },
+                                                            "ClassName": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "FilterRegistrations": {
+                                                    "type": "object",
+                                                    "AdditionalProperties": {
+                                                        "type": "object",
+                                                        "Id": "urn:jsonschema:javax:servlet:FilterRegistration",
+                                                        "Properties": {
+                                                            "ServletNameMappings": {
+                                                                "type": "array",
+                                                                "Items": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "UrlPatternMappings": {
+                                                                "type": "array",
+                                                                "Items": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "InitParameters": {
+                                                                "type": "object",
+                                                                "AdditionalProperties": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "Name": {
+                                                                "type": "string"
+                                                            },
+                                                            "ClassName": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "SessionCookieConfig": {
+                                                    "type": "object",
+                                                    "Properties": {
+                                                        "MaxAge": {
+                                                            "type": "integer"
+                                                        },
+                                                        "Domain": {
+                                                            "type": "string"
+                                                        },
+                                                        "Name": {
+                                                            "type": "string"
+                                                        },
+                                                        "Path": {
+                                                            "type": "string"
+                                                        },
+                                                        "Comment": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                },
+                                                "DefaultSessionTrackingModes": {
+                                                    "type": "array",
+                                                    "Items": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "COOKIE",
+                                                            "URL",
+                                                            "SSL"
+                                                        ]
+                                                    }
+                                                },
+                                                "EffectiveSessionTrackingModes": {
+                                                    "type": "array",
+                                                    "Items": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "COOKIE",
+                                                            "URL",
+                                                            "SSL"
+                                                        ]
+                                                    }
+                                                },
+                                                "JspConfigDescriptor": {
+                                                    "type": "object",
+                                                    "Properties": {
+                                                        "Taglibs": {
+                                                            "type": "array",
+                                                            "Items": {
+                                                                "type": "object",
+                                                                "Properties": {
+                                                                    "TaglibURI": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "TaglibLocation": {
+                                                                        "type": "string"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "JspPropertyGroups": {
+                                                            "type": "array",
+                                                            "Items": {
+                                                                "type": "object",
+                                                                "Properties": {
+                                                                    "DeferredSyntaxAllowedAsLiteral": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "UrlPatterns": {
+                                                                        "type": "array",
+                                                                        "Items": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "ElIgnored": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "PageEncoding": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "ScriptingInvalid": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "IsXml": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "IncludePreludes": {
+                                                                        "type": "array",
+                                                                        "Items": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "IncludeCodas": {
+                                                                        "type": "array",
+                                                                        "Items": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "TrimDirectiveWhitespaces": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "DefaultContentType": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "ErrorOnUndeclaredNamespace": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "Buffer": {
+                                                                        "type": "string"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "VirtualServerName": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "LocalPort": {
+                                            "type": "integer"
+                                        },
+                                        "CharacterEncoding": {
+                                            "type": "string"
+                                        },
+                                        "ParameterMap": {
+                                            "type": "object",
+                                            "AdditionalProperties": {
+                                                "type": "array",
+                                                "Items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "ServerName": {
+                                            "type": "string"
+                                        },
+                                        "ServerPort": {
+                                            "type": "integer"
+                                        },
+                                        "Reader": {
+                                            "type": "object",
+                                            "Properties": {
+                                                "Lock": {
+                                                    "type": "any"
+                                                },
+                                                "SkipBuffer": {
+                                                    "type": "array",
+                                                    "Items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "In": {
+                                                    "type": "object",
+                                                    "Properties": {
+                                                        "Lock": {
+                                                            "type": "any"
+                                                        },
+                                                        "SkipBuffer": {
+                                                            "type": "array",
+                                                            "Items": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "Cb": {
+                                                    "type": "array",
+                                                    "Items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "NChars": {
+                                                    "type": "integer"
+                                                },
+                                                "NextChar": {
+                                                    "type": "integer"
+                                                },
+                                                "MarkedChar": {
+                                                    "type": "integer"
+                                                },
+                                                "ReadAheadLimit": {
+                                                    "type": "integer"
+                                                },
+                                                "SkipLF": {
+                                                    "type": "boolean"
+                                                },
+                                                "MarkedSkipLF": {
+                                                    "type": "boolean"
+                                                }
+                                            }
+                                        },
+                                        "RemoteAddr": {
+                                            "type": "string"
+                                        },
+                                        "RemoteHost": {
+                                            "type": "string"
+                                        },
+                                        "Locales": {
+                                            "type": "any"
+                                        },
+                                        "RemotePort": {
+                                            "type": "integer"
+                                        },
+                                        "LocalAddr": {
+                                            "type": "string"
+                                        },
+                                        "AsyncContext": {
+                                            "type": "object",
+                                            "$ref": "urn:jsonschema:javax:servlet:AsyncContext"
+                                        }
+                                    }
+                                },
+                                "Response": {
+                                    "type": "object",
+                                    "Properties": {
+                                        "Locale": {
+                                            "type": "string"
+                                        },
+                                        "ContentType": {
+                                            "type": "string"
+                                        },
+                                        "OutputStream": {
+                                            "type": "any"
+                                        },
+                                        "BufferSize": {
+                                            "type": "integer"
+                                        },
+                                        "Writer": {
+                                            "type": "object",
+                                            "Properties": {
+                                                "WriteBuffer": {
+                                                    "type": "array",
+                                                    "Items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "Lock": {
+                                                    "type": "any"
+                                                },
+                                                "Out": {
+                                                    "type": "object",
+                                                    "Properties": {
+                                                        "WriteBuffer": {
+                                                            "type": "array",
+                                                            "Items": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "Lock": {
+                                                            "type": "any"
+                                                        }
+                                                    }
+                                                },
+                                                "AutoFlush": {
+                                                    "type": "boolean"
+                                                },
+                                                "Trouble": {
+                                                    "type": "boolean"
+                                                },
+                                                "Formatter": {
+                                                    "type": "object",
+                                                    "Properties": {
+                                                        "A": {
+                                                            "type": "any"
+                                                        },
+                                                        "L": {
+                                                            "type": "string"
+                                                        },
+                                                        "LastException": {
+                                                            "type": "object",
+                                                            "Properties": {
+                                                                "DetailMessage": {
+                                                                    "type": "string"
+                                                                },
+                                                                "Cause": {
+                                                                    "type": "object",
+                                                                    "Properties": {
+                                                                        "DetailMessage": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Cause": {
+                                                                            "type": "object",
+                                                                            "$ref": "urn:jsonschema:java:lang:Throwable"
+                                                                        },
+                                                                        "StackTrace": {
+                                                                            "type": "array",
+                                                                            "Items": {
+                                                                                "type": "object",
+                                                                                "Properties": {
+                                                                                    "DeclaringClass": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "MethodName": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "FileName": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "LineNumber": {
+                                                                                        "type": "integer"
+                                                                                    },
+                                                                                    "ClassName": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "SuppressedExceptions": {
+                                                                            "type": "array",
+                                                                            "Items": {
+                                                                                "type": "object",
+                                                                                "$ref": "urn:jsonschema:java:lang:Throwable"
+                                                                            }
+                                                                        },
+                                                                        "Message": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "LocalizedMessage": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Suppressed": {
+                                                                            "type": "array",
+                                                                            "Items": {
+                                                                                "type": "object",
+                                                                                "$ref": "urn:jsonschema:java:lang:Throwable"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "StackTrace": {
+                                                                    "type": "array",
+                                                                    "Items": {
+                                                                        "type": "object",
+                                                                        "$ref": "urn:jsonschema:java:lang:StackTraceElement"
+                                                                    }
+                                                                },
+                                                                "SuppressedExceptions": {
+                                                                    "type": "array",
+                                                                    "Items": {
+                                                                        "type": "object",
+                                                                        "$ref": "urn:jsonschema:java:lang:Throwable"
+                                                                    }
+                                                                },
+                                                                "Message": {
+                                                                    "type": "string"
+                                                                },
+                                                                "LocalizedMessage": {
+                                                                    "type": "string"
+                                                                },
+                                                                "Suppressed": {
+                                                                    "type": "array",
+                                                                    "Items": {
+                                                                        "type": "object",
+                                                                        "$ref": "urn:jsonschema:java:lang:Throwable"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "Zero": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                },
+                                                "PsOut": {
+                                                    "type": "object",
+                                                    "Properties": {
+                                                        "Out": {
+                                                            "type": "any"
+                                                        },
+                                                        "AutoFlush": {
+                                                            "type": "boolean"
+                                                        },
+                                                        "Trouble": {
+                                                            "type": "boolean"
+                                                        },
+                                                        "Formatter": {
+                                                            "type": "object",
+                                                            "$ref": "urn:jsonschema:java:util:Formatter"
+                                                        },
+                                                        "TextOut": {
+                                                            "type": "object",
+                                                            "Properties": {
+                                                                "WriteBuffer": {
+                                                                    "type": "array",
+                                                                    "Items": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "Lock": {
+                                                                    "type": "any"
+                                                                },
+                                                                "Out": {
+                                                                    "type": "object",
+                                                                    "$ref": "urn:jsonschema:java:io:Writer"
+                                                                },
+                                                                "Cb": {
+                                                                    "type": "array",
+                                                                    "Items": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "NChars": {
+                                                                    "type": "integer"
+                                                                },
+                                                                "NextChar": {
+                                                                    "type": "integer"
+                                                                },
+                                                                "LineSeparator": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        },
+                                                        "CharOut": {
+                                                            "type": "object",
+                                                            "Properties": {
+                                                                "WriteBuffer": {
+                                                                    "type": "array",
+                                                                    "Items": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "Lock": {
+                                                                    "type": "any"
+                                                                },
+                                                                "Se": {
+                                                                    "type": "object",
+                                                                    "Properties": {
+                                                                        "WriteBuffer": {
+                                                                            "type": "array",
+                                                                            "Items": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        },
+                                                                        "Lock": {
+                                                                            "type": "any"
+                                                                        },
+                                                                        "IsOpen": {
+                                                                            "type": "boolean"
+                                                                        },
+                                                                        "Cs": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Encoder": {
+                                                                            "type": "object",
+                                                                            "Properties": {
+                                                                                "Charset": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "AverageBytesPerChar": {
+                                                                                    "type": "number"
+                                                                                },
+                                                                                "MaxBytesPerChar": {
+                                                                                    "type": "number"
+                                                                                },
+                                                                                "Replacement": {
+                                                                                    "type": "array",
+                                                                                    "Items": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "MalformedInputAction": {
+                                                                                    "type": "object",
+                                                                                    "Properties": {
+                                                                                        "Name": {
+                                                                                            "type": "string"
+                                                                                        }
+                                                                                    }
+                                                                                },
+                                                                                "UnmappableCharacterAction": {
+                                                                                    "type": "object",
+                                                                                    "$ref": "urn:jsonschema:java:nio:charset:CodingErrorAction"
+                                                                                },
+                                                                                "State": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "CachedDecoder": {
+                                                                                    "type": "object",
+                                                                                    "Properties": {
+                                                                                        "Referent": {
+                                                                                            "type": "object",
+                                                                                            "Properties": {
+                                                                                                "Charset": {
+                                                                                                    "type": "string"
+                                                                                                },
+                                                                                                "AverageCharsPerByte": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "MaxCharsPerByte": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "Replacement": {
+                                                                                                    "type": "string"
+                                                                                                },
+                                                                                                "MalformedInputAction": {
+                                                                                                    "type": "object",
+                                                                                                    "$ref": "urn:jsonschema:java:nio:charset:CodingErrorAction"
+                                                                                                },
+                                                                                                "UnmappableCharacterAction": {
+                                                                                                    "type": "object",
+                                                                                                    "$ref": "urn:jsonschema:java:nio:charset:CodingErrorAction"
+                                                                                                },
+                                                                                                "State": {
+                                                                                                    "type": "integer"
+                                                                                                }
+                                                                                            }
+                                                                                        },
+                                                                                        "Queue": {
+                                                                                            "type": "object",
+                                                                                            "Properties": {
+                                                                                                "Lock": {
+                                                                                                    "type": "any"
+                                                                                                },
+                                                                                                "Head": {
+                                                                                                    "type": "object",
+                                                                                                    "Properties": {
+                                                                                                        "Referent": {
+                                                                                                            "type": "any"
+                                                                                                        },
+                                                                                                        "Queue": {
+                                                                                                            "type": "object",
+                                                                                                            "$ref": "urn:jsonschema:java:lang:ref:ReferenceQueue<java:lang:Object>"
+                                                                                                        },
+                                                                                                        "Next": {
+                                                                                                            "type": "object",
+                                                                                                            "Properties": {
+                                                                                                                "Referent": {
+                                                                                                                    "type": "any"
+                                                                                                                },
+                                                                                                                "Queue": {
+                                                                                                                    "type": "object",
+                                                                                                                    "$ref": "urn:jsonschema:java:lang:ref:ReferenceQueue<java:lang:Object>"
+                                                                                                                },
+                                                                                                                "Next": {
+                                                                                                                    "type": "object",
+                                                                                                                    "$ref": "urn:jsonschema:java:lang:ref:Reference"
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                },
+                                                                                                "QueueLength": {
+                                                                                                    "type": "integer"
+                                                                                                }
+                                                                                            }
+                                                                                        },
+                                                                                        "Next": {
+                                                                                            "type": "object",
+                                                                                            "$ref": "urn:jsonschema:java:lang:ref:Reference"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "Bb": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Out": {
+                                                                            "type": "any"
+                                                                        },
+                                                                        "Ch": {
+                                                                            "type": "any"
+                                                                        },
+                                                                        "HaveLeftoverChar": {
+                                                                            "type": "boolean"
+                                                                        },
+                                                                        "LeftoverChar": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Lcb": {
+                                                                            "type": "object",
+                                                                            "Properties": {
+                                                                                "Mark": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "Position": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "Limit": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "Capacity": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "Address": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "Hb": {
+                                                                                    "type": "array",
+                                                                                    "Items": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "Offset": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "IsReadOnly": {
+                                                                                    "type": "boolean"
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                        "Encoding": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "Encoding": {
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        },
+                                                        "Closing": {
+                                                            "type": "boolean"
+                                                        }
+                                                    }
+                                                },
+                                                "LineSeparator": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "CharacterEncoding": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "Request": {
+                            "type": "object",
+                            "Properties": {
+                                "Method": {
+                                    "type": "string"
+                                },
+                                "QueryString": {
+                                    "type": "string"
+                                },
+                                "PathInfo": {
+                                    "type": "string"
+                                },
+                                "ContextPath": {
+                                    "type": "string"
+                                },
+                                "AuthType": {
+                                    "type": "string"
+                                },
+                                "Cookies": {
+                                    "type": "array",
+                                    "Items": {
+                                        "type": "object",
+                                        "Properties": {
+                                            "Name": {
+                                                "type": "string"
+                                            },
+                                            "Value": {
+                                                "type": "string"
+                                            },
+                                            "Comment": {
+                                                "type": "string"
+                                            },
+                                            "Domain": {
+                                                "type": "string"
+                                            },
+                                            "MaxAge": {
+                                                "type": "integer"
+                                            },
+                                            "Path": {
+                                                "type": "string"
+                                            },
+                                            "Secure": {
+                                                "type": "boolean"
+                                            },
+                                            "Version": {
+                                                "type": "integer"
+                                            },
+                                            "IsHttpOnly": {
+                                                "type": "boolean"
+                                            }
+                                        }
+                                    }
+                                },
+                                "PathTranslated": {
+                                    "type": "string"
+                                },
+                                "RemoteUser": {
+                                    "type": "string"
+                                },
+                                "UserPrincipal": {
+                                    "type": "object",
+                                    "$ref": "urn:jsonschema:java:security:Principal"
+                                },
+                                "RequestedSessionId": {
+                                    "type": "string"
+                                },
+                                "RequestURI": {
+                                    "type": "string"
+                                },
+                                "RequestURL": {
+                                    "type": "string"
+                                },
+                                "ServletPath": {
+                                    "type": "string"
+                                },
+                                "Session": {
+                                    "type": "object",
+                                    "Properties": {
+                                        "MaxInactiveInterval": {
+                                            "type": "integer"
+                                        },
+                                        "SessionContext": {
+                                            "type": "object",
+                                            "Properties": {
+                                                "Ids": {
+                                                    "type": "any"
+                                                }
+                                            }
+                                        },
+                                        "ValueNames": {
+                                            "type": "array",
+                                            "Items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "Id": {
+                                            "type": "string"
+                                        },
+                                        "CreationTime": {
+                                            "type": "integer"
+                                        },
+                                        "AttributeNames": {
+                                            "type": "any"
+                                        },
+                                        "ServletContext": {
+                                            "type": "object",
+                                            "$ref": "urn:jsonschema:javax:servlet:ServletContext"
+                                        },
+                                        "LastAccessedTime": {
+                                            "type": "integer"
+                                        }
+                                    }
+                                },
+                                "HeaderNames": {
+                                    "type": "any"
+                                },
+                                "Parts": {
+                                    "type": "array",
+                                    "Items": {
+                                        "type": "object",
+                                        "Properties": {
+                                            "SubmittedFileName": {
+                                                "type": "string"
+                                            },
+                                            "ContentType": {
+                                                "type": "string"
+                                            },
+                                            "Name": {
+                                                "type": "string"
+                                            },
+                                            "Size": {
+                                                "type": "integer"
+                                            },
+                                            "InputStream": {
+                                                "type": "any"
+                                            },
+                                            "HeaderNames": {
+                                                "type": "array",
+                                                "Items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "Locale": {
+                                    "type": "string"
+                                },
+                                "ContentLength": {
+                                    "type": "integer"
+                                },
+                                "ContentLengthLong": {
+                                    "type": "integer"
+                                },
+                                "ContentType": {
+                                    "type": "string"
+                                },
+                                "ParameterNames": {
+                                    "type": "any"
+                                },
+                                "Scheme": {
+                                    "type": "string"
+                                },
+                                "InputStream": {
+                                    "type": "any"
+                                },
+                                "Protocol": {
+                                    "type": "string"
+                                },
+                                "LocalName": {
+                                    "type": "string"
+                                },
+                                "AttributeNames": {
+                                    "type": "any"
+                                },
+                                "DispatcherType": {
+                                    "type": "string",
+                                    "enum": [
+                                        "FORWARD",
+                                        "INCLUDE",
+                                        "REQUEST",
+                                        "ASYNC",
+                                        "ERROR"
+                                    ]
+                                },
+                                "ServletContext": {
+                                    "type": "object",
+                                    "$ref": "urn:jsonschema:javax:servlet:ServletContext"
+                                },
+                                "LocalPort": {
+                                    "type": "integer"
+                                },
+                                "CharacterEncoding": {
+                                    "type": "string"
+                                },
+                                "ParameterMap": {
+                                    "type": "object",
+                                    "AdditionalProperties": {
+                                        "type": "array",
+                                        "Items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "ServerName": {
+                                    "type": "string"
+                                },
+                                "ServerPort": {
+                                    "type": "integer"
+                                },
+                                "Reader": {
+                                    "type": "object",
+                                    "$ref": "urn:jsonschema:java:io:BufferedReader"
+                                },
+                                "RemoteAddr": {
+                                    "type": "string"
+                                },
+                                "RemoteHost": {
+                                    "type": "string"
+                                },
+                                "Locales": {
+                                    "type": "any"
+                                },
+                                "RemotePort": {
+                                    "type": "integer"
+                                },
+                                "LocalAddr": {
+                                    "type": "string"
+                                },
+                                "AsyncContext": {
+                                    "type": "object",
+                                    "$ref": "urn:jsonschema:javax:servlet:AsyncContext"
+                                }
+                            }
+                        },
+                        "Response": {
+                            "type": "object",
+                            "Properties": {
+                                "Status": {
+                                    "type": "integer"
+                                },
+                                "HeaderNames": {
+                                    "type": "array",
+                                    "Items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "Locale": {
+                                    "type": "string"
+                                },
+                                "ContentType": {
+                                    "type": "string"
+                                },
+                                "OutputStream": {
+                                    "type": "any"
+                                },
+                                "BufferSize": {
+                                    "type": "integer"
+                                },
+                                "Writer": {
+                                    "type": "object",
+                                    "$ref": "urn:jsonschema:java:io:PrintWriter"
+                                },
+                                "CharacterEncoding": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "CallPolicy": {
+                            "type": "string",
+                            "enum": [
+                                "INTERNAL",
+                                "EXTERNAL"
+                            ]
+                        },
+                        "SessionId": {
+                            "type": "string"
+                        },
+                        "RequestTime": {
+                            "type": "integer"
+                        },
+                        "RemoteHost": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "ExtParams": {
+                    "type": "object",
+                    "Description": "扩展参数",
+                    "DefaultValue": "null",
+                    "AdditionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "Sorts": {
+                    "type": "array",
+                    "Description": "排序字段，支持排序组合",
+                    "DefaultValue": "null",
+                    "Items": {
+                        "type": "object",
+                        "Properties": {
+                            "Field": {
+                                "type": "string",
+                                "Description": "排序的字段名称，多Table的排序，需要指定Table前缀，如Table1.Field"
+                            },
+                            "Sort": {
+                                "type": "string",
+                                "Description": "排序方式，升序或者降序",
+                                "enum": [
+                                    "asc(升序)",
+                                    "desc(降序)",
+                                    "no(无序)"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "Page": {
+                    "type": "object",
+                    "Description": "分页参数",
+                    "DefaultValue": "null",
+                    "Properties": {
+                        "PageNo": {
+                            "type": "integer",
+                            "Description": "请求的页数"
+                        },
+                        "PageSize": {
+                            "type": "integer",
+                            "Description": "每页大小"
+                        }
+                    }
+                },
+                "Compress": {
+                    "type": "boolean",
+                    "Description": "数据返回是否强制压缩",
+                    "DefaultValue": "true"
+                },
+                "WriteType": {
+                    "type": "string",
+                    "Description": "返回的数据协议格式",
+                    "DefaultValue": "binary",
+                    "enum": [
+                        "json(json文本格式)",
+                        "binary(二维表二进制格式)"
+                    ]
+                },
+                "OutField": {
+                    "type": "array",
+                    "Description": "数据输出的字段，用于输出字段过滤，当输出字段数量小于不输出字段数量时采用",
+                    "DefaultValue": "null",
+                    "Items": {
+                        "type": "string"
+                    }
+                },
+                "IgnoreField": {
+                    "type": "array",
+                    "Description": "数据输出的字段，用于输出字段过滤，当输出字段数量大于不输出字段数量时采用",
+                    "DefaultValue": "null",
+                    "Items": {
+                        "type": "string"
+                    }
+                },
+                "Group": {
+                    "type": "string",
+                    "Description": "分组字段，当选择分组时，pageInfo同样针对组分页",
+                    "DefaultValue": "null"
+                },
+                "Filters": {
+                    "type": "array",
+                    "Description": "数据过滤，支持In、Between、Like、==、quarter(季报) 过滤器，参见具体过滤器的使用",
+                    "DefaultValue": "null",
+                    "Items": {
+                        "type": "object"
+                    }
+                },
+                "FastDateFilterType": {
+                    "type": "string",
+                    "Description": "数据快速过滤类型",
+                    "DefaultValue": "null",
+                    "enum": [
+                        "LatestTime(最新日期)",
+                        "CurrentYear(今年以来)",
+                        "Latest1Month(近一月)",
+                        "Latest3Month(近三月)",
+                        "Latest6Month(近六月)",
+                        "Latest1Year(近一年)",
+                        "Latest2Year(近二年)",
+                        "Latest3Year(近三年)",
+                        "Latest5Year(近五年)",
+                        "AllYear(全部)",
+                        "ListedBefore(上市以前)",
+                        "ListedAfter(上市以后)",
+                        "Customer(自定义)"
+                    ]
+                },
+                "CallBack": {
+                    "type": "string",
+                    "Description": "JSONP",
+                    "DefaultValue": "null"
+                },
+                "FastQuarterReportType": {
+                    "type": "array",
+                    "Description": "快速季报过滤类型",
+                    "DefaultValue": "null",
+                    "Items": {
+                        "type": "string",
+                        "enum": [
+                            "Q1th(一季报)",
+                            "Q2nd(中报)",
+                            "Q3rd(三季报)",
+                            "Q4th(年报)"
+                        ]
+                    }
+                }
+            }
+        },
+        "commandexample": "{\"SecuCode\":\"180001\",\"BeginDate\":\"2015-01-01\",\"EndDate\":\"2016-12-31\",\"FastDateFilterType\":\"Customer\",\"FastQuarterReportType\":[\"Q1th\",\"Q2nd\",\"Q3rd\",\"Q4th\"],\"ApiName\":\"fund.f9.investment_portfolio.stock_investment.InvestIndustry\"}",
+        "name": "fund.f9.investment_portfolio.stock_investment.InvestIndustry",
+        "description": "基金 -> f9 -> 投资组合 -> 股票投资 -> 行业投资（主表）",
+        "developer": "涂慧明",
+        "dependtable": [
+            "MF_InvestIndustry",
+            "MF_QDIIPortfolioIndustry",
+            "MF_FundArchives",
+            "MF_FundArchivesAttach",
+            "CT_SystemConst",
+            "SecuMain"
+        ],
+        "algorithm": ""
+    }
+}

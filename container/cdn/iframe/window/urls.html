@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="xgqfrms">
+    <meta name="generator" content="VS code">
+    <title>links</title>
+</head>
+<body>
+    <section>
+        <h1></h1>
+        <ul>
+            <li>
+                <a href="https://photo.sina.cn/album_1_88610_353390.html" target="_blank">sina news</a>
+            </li>
+            <li>
+                <a href="https://photo.sina.cn/album_1_88610_353390.html" target="_blank">sina news</a>
+            </li>
+            <li>
+                <a href="https://photo.sina.cn/album_1_88610_353390.html" target="_blank">sina news</a>
+            </li>
+            <li>
+                <a href="https://photo.sina.cn/album_1_88610_353390.html" target="_blank">sina news</a>
+            </li>
+            <li>
+                <a href="https://photo.sina.cn/album_1_88610_353390.html" target="_blank">sina news</a>
+            </li>
+            <li>
+                <a href="https://photo.sina.cn/album_1_88610_353390.html" target="_blank">sina news</a>
+            </li>
+            <li>
+                <a href="https://photo.sina.cn/album_1_88610_353390.html" target="_blank">sina news</a>
+            </li>
+        </ul>
+        <iframe name="theFrame"></iframe>
+        <a href="http://www.microsoft.com" target="IFrame">Link Text</a>
+        <textarea data-dom="textarea" width="400" height="300"></textarea>
+    </section>
+    <script>
+        // window.open("https://photo.sina.cn/album_1_88610_353390.html", "theFrame");
+    </script>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            // window.open(URL, name, specs, replace);
+            let myWindow = window.open("", "MsgWindow", "width=600, height=400", false);
+            myWindow.document.write(`<iframe name="theFrame" src="https://photo.sina.cn/album_1_88610_353390.htm"></iframe>`);
+        }
+    </script>
+    <script>
+        let ta = document.querySelector(`[data-dom="textarea"]`);
+        // let arr = ta.value.split(`\n`);
+    </script>
+</body>
+</html>

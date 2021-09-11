@@ -1,0 +1,28 @@
+{
+    "success": true,
+    "status_code": 200,
+    "user": {
+        "username": "xgqfrms",
+        "member_since": "2016-07-02T13:25:23.674Z",
+        "total_score": 120015,
+        "avatar": "http://gravatar.com/avatar/e7b8d8946d71e52d2670e0def364997a.jpg?s=80&r=pg"
+    },
+    "data": {
+        "realm": {
+            "type": "string"
+        },
+        "username": {
+            "type": "string"
+        },
+        "password": {
+            "type": "string",
+            "required": true
+        },
+        "email": {
+            "type": "string",
+            "required": true
+        },
+        "emailVerified": "boolean",
+        "verificationToken": "string"
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="xgqfrms">
+  <meta name="generator" content="VS code">
+  <title>Geolocation API & GPS</title>
+</head>
+<body>
+  <header>
+    <h1>Geolocation API & GPS</h1>
+  </header>
+  <main>
+    <section data-uid="dom">
+      GPS loading...
+    </section>
+  <main>
+  <footer>
+    <p>copyright&copy; xgqfrms 2020</p>
+  </footer>
+  <!-- js -->
+  <script>
+    window.addEventListener(`load`, () => {
+      const dom = document.querySelector(`[data-uid="dom"]`);
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          dom.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        dom.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+      }
+      try {
+        getLocation();
+      } catch (error) {
+        console.log(`geo error`, error);
+      }
+    });
+  </script>
+</body>
+</html>

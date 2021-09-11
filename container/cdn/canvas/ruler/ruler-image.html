@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="xgqfrms">
+    <meta name="generator" content="VS code">
+    <title>ruler iamge</title>
+    <!-- css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .ruler-box {
+            box-sizing: border-box;
+            margin: 100px auto;
+            width: 500px;
+            overflow: hidden;
+            background: #000;
+            height: 27px;
+            border: 1px solid red;
+        }
+        
+        .ruler-png {
+            -webkit-user-drag: none;
+            user-select: none;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>ruler iamge</h1>
+    </section>
+    <section class="ruler-box" data-dom="section">
+        <img src="./ruler.png" alt="ruler.png" class="ruler-png" data-dom="img">
+    </section>
+    <!-- js -->
+    <script>
+        let section = document.querySelector(`[data-dom="section"]`),
+            img = document.querySelector(`[data-dom="img"]`);
+        // setTimeout(() => {
+        //     section.style.width = "700px";
+        // }, 1000);
+        // setTimeout(() => {
+        //     section.style.width = "1200px";
+        // }, 1000 * 3);
+        setInterval(() => {
+            let random = Math.random();
+            section.style.width = (random > 0.5) ? "1200px" : "700px";
+        }, 1000);
+    </script>
+</body>
+
+</html>

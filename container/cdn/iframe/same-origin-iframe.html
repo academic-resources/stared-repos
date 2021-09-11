@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="xgqfrms">
+    <meta name="generator" content="VS code">
+    <title>same-origin-iframe</title>
+</head>
+<body>
+    <section>
+        <h1>iframe single testing</h1>
+        <iframe
+            src ="https://cdn.xgqfrms.xyz/iframe/iframe-single-testing.html"
+            target="_self"
+            about:blank
+            style="border: 1px solid red;"
+            height="500"
+            width="600">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+        <h1>same-origin-iframe</h1>
+        <iframe
+            src ="https://cdn.xgqfrms.xyz/iframe/index.html"
+            target="_self"
+            about:blank
+            style="border: 1px solid red;"
+            height="500"
+            width="600">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+        <script>
+            // iframe onload
+            const getAllIframes = () => {
+                // let iframe = document.querySelector(`iframe`);
+                let iframes = [...document.querySelectorAll(`iframe`)];
+                console.log(`iframes.length =`, iframes.length);
+                iframes.forEach(
+                    (iframe, i) => {
+                        if(i < 10) {
+                            console.log(`iframe =`, iframe);
+                        }
+                        // iframe.contentDocument || iframe.contentWindow.document
+                        if (iframe.contentDocument) {
+                            // old IE
+                            console.log(`iframe.contentDocument =`, iframe.contentDocument);
+                            // get all links
+                        }
+                        if (iframe.contentWindow.document) {
+                            // new Chrome
+                            console.log(`iframe.contentWindow.document =`, iframe.contentWindow.document);
+                            // get all links
+                        }
+                    }
+                );
+            };
+            const removeAllIframesBlankLinks = () => {
+                // iframe & virtualDOM bug
+                let links = [...document.querySelectorAll(`a`)];
+                console.log(`links.length =`, links.length);
+                links.forEach(
+                    (link, i) => {
+                        if(i < 10) {
+                            console.log(`link =`, link);
+                        }
+                        if (link.target) {
+                            console.log(`link.target =`, link.target);
+                            link.target = "_self";
+                        }
+                    }
+                );
+            };
+            setTimeout(() => {
+                getAllIframes();
+            }, 10000);
+            setTimeout(() => {
+                removeAllIframesBlankLinks();
+            }, 10000);
+        </script>
+    </section>
+</body>
+</html>

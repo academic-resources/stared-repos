@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="362px" height="393px" viewBox="0 0 362 393" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch Beta 3.8.3 (29801) - http://www.bohemiancoding.com/sketch -->
+    <title>Browser Blog</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="345" height="377" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="53" y="4" width="284.11254" height="16"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.46 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="0" y="34.684" width="345" height="332.316"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Browser-Blog" transform="translate(8.640625, 6.000000)">
+            <g id="Rectangle-10">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#E4E4E4" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="Rectangle-13">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+            </g>
+            <circle id="Oval-1" fill="#D8D8D8" cx="10" cy="9" r="5"></circle>
+            <circle id="Oval-1-Copy" fill="#D8D8D8" cx="23" cy="9" r="5"></circle>
+            <circle id="Oval-1-Copy-2" fill="#D8D8D8" cx="37" cy="9" r="5"></circle>
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <use id="Mask" fill="#FEFEFE" xlink:href="#path-5"></use>
+            <text id="What-y'all-thought-y" mask="url(#mask-6)" font-family="OpenSans-Light, Open Sans" font-size="8" font-weight="300" fill="#4A4A4A">
+                <tspan x="23" y="165">What y'all thought y'all wasn't gon' see me? I'm the Osirus of </tspan>
+                <tspan x="23" y="176">this shit Wu-Tang is here forever, motherfucker It's like this </tspan>
+                <tspan x="23" y="187">ninety-seven Aight my niggaz and my niggarettes Let's do it </tspan>
+                <tspan x="23" y="198">like this I'ma rub your ass in the moonshine Let's take it </tspan>
+                <tspan x="23" y="209">back to seventy-nine</tspan>
+                <tspan x="23" y="220"></tspan>
+                <tspan x="23" y="231">I bomb atomically, Socrates' philosophies and hypothesis </tspan>
+                <tspan x="23" y="242">can't define how I be droppin these mockeries, lyrically </tspan>
+                <tspan x="23" y="253">perform armed robbery Flee with the lottery, possibly they </tspan>
+                <tspan x="23" y="264">spotted me</tspan>
+                <tspan x="23" y="275"></tspan>
+                <tspan x="23" y="286">Battle-scarred shogun, explosion when my pen hits </tspan>
+                <tspan x="23" y="297">tremendous, ultra-violet shine blind forensics I inspect you, </tspan>
+                <tspan x="23" y="308">through the future see millenium Killa B's sold fifty gold sixty </tspan>
+                <tspan x="23" y="319">platinum Shacklin the masses with drastic rap tactics </tspan>
+                <tspan x="23" y="330">Graphic displays melt the steel like blacksmiths Black Wu </tspan>
+                <tspan x="23" y="341">jackets queen B's ease the guns in Rumble with patrolmen, </tspan>
+                <tspan x="23" y="352">tear gas laced the function Heads by the score take flight </tspan>
+                <tspan x="23" y="363">incite a war Chicks hit the floor, diehard fans demand more </tspan>
+                <tspan x="23" y="374">Behold the bold soldier, control the globe slowly Proceeds </tspan>
+                <tspan x="23" y="385">to blow swingin swords like Shinobi Stomp grounds and </tspan>
+                <tspan x="23" y="396">pound footprints in solid rock Wu got it locked, performin </tspan>
+                <tspan x="23" y="407">live on your hottest block</tspan>
+                <tspan x="23" y="418"></tspan>
+                <tspan x="23" y="429">As the world turns, I spread like germs Bless the globe with </tspan>
+                <tspan x="23" y="440">the pestilence, the hard-headed never learn It's my </tspan>
+                <tspan x="23" y="451">testament to those burned Play my position in the game of </tspan>
+                <tspan x="23" y="462">life, standin firm on foreign land, jump the gun out the fryin </tspan>
+                <tspan x="23" y="473">pan, into the fire Transform into the Ghostrider, a six-pack </tspan>
+                <tspan x="23" y="484">and (A Streetcar Named Desire), who got my back? In the </tspan>
+                <tspan x="23" y="495">line of fire holdin back, what? My peoples if you with me </tspan>
+                <tspan x="23" y="506">where the fuck you at? Niggaz is strapped, and they tryin to </tspan>
+                <tspan x="23" y="517">twist my beer cap It's court adjourned, for the bad seed </tspan>
+                <tspan x="23" y="528">from bad sperm Herb got my wig fried like a bad perm, what </tspan>
+                <tspan x="23" y="539">the blood clot, we smoke pot, and blow spots You wanna </tspan>
+                <tspan x="23" y="550">think twice, I think not The Iron Lung ain't got ta tell you </tspan>
+                <tspan x="23" y="561">where it's coming from Guns of Navarone, tearing up your </tspan>
+                <tspan x="23" y="572">battle zone Rip through your slums</tspan>
+                <tspan x="23" y="583"></tspan>
+                <tspan x="23" y="594">I twist darts from the heart, tried and true Loop my voice on </tspan>
+                <tspan x="23" y="605">the LP, martini on the slang rocks Certified chatterbox, </tspan>
+                <tspan x="23" y="616">vocabulary 'Donna talkin Tell your story walkin Take cover </tspan>
+                <tspan x="23" y="627">kid, what? Run for your brother, kid Run for your team, and </tspan>
+                <tspan x="23" y="638">your six camp rhyme groupies So I can squeeze with the </tspan>
+                <tspan x="23" y="649">advantage, and get wasted My deadly notes reigns supreme </tspan>
+                <tspan x="23" y="660">Your fort is basic compared to mine Domino effect, arts and </tspan>
+                <tspan x="23" y="671">crafts Paragraphs contain cyanide Take a free ride on my </tspan>
+                <tspan x="23" y="682">dart, I got the fashion catalogues for all y'all to all praise to </tspan>
+                <tspan x="23" y="693">the Gods</tspan>
+                <tspan x="23" y="704"></tspan>
+                <tspan x="23" y="715">Olympic torch flaming, we burn so sweet The thrill of victory, </tspan>
+                <tspan x="23" y="726">the agony, defeat We crush slow, flamin deluxe slow For, </tspan>
+                <tspan x="23" y="737">judgment day cometh, conquer, it's war Allow us to escape, </tspan>
+                <tspan x="23" y="748">hell glow spinning bomb Pocket full of shells out the sky, </tspan>
+                <tspan x="23" y="759">Golden Arms Tune spit the shitty Mortal Kombat sound The </tspan>
+                <tspan x="23" y="770">fateful step make, the blood stain the ground A jungle </tspan>
+                <tspan x="23" y="781">junkie, vigilante tantrum A death kiss, catwalk, squeeze </tspan>
+                <tspan x="23" y="792">another anthem Hold it for ransom, tranquilized with </tspan>
+                <tspan x="23" y="803">anesthetics My orchestra, graceful, music ballerinas My </tspan>
+                <tspan x="23" y="814">music Sicily, rich California smell An axekiller adventure, </tspan>
+                <tspan x="23" y="825">paint a picture well I sing a song from Sing-Sing, sippin on </tspan>
+                <tspan x="23" y="836">ginseng Righteous wax chaperone, rotating ring king</tspan>
+                <tspan x="23" y="847"></tspan>
+                <tspan x="23" y="858">Watch for the wooden soldiers, C-Cypher-Punks couldn't </tspan>
+                <tspan x="23" y="869">hold us A thousand men rushing in, not one nigga was </tspan>
+                <tspan x="23" y="880">sober Perpendicular to the square, we stand bold like Flare </tspan>
+                <tspan x="23" y="891">Escape from your Dragon's Lair, in particular My beats travel </tspan>
+                <tspan x="23" y="902">like a vortex, through your spine to the top of your </tspan>
+                <tspan x="23" y="913">cerebrum cortex Make you feel like you bust a nut from raw </tspan>
+                <tspan x="23" y="924">sex Enter through your right ventricle clog up your </tspan>
+                <tspan x="23" y="935">bloodstream now terminal, like Grand Central Station </tspan>
+                <tspan x="23" y="946">Program fat baselines, on Novation Getting drunk like a </tspan>
+                <tspan x="23" y="957">fuck, I'm duckin five-year probation</tspan>
+                <tspan x="23" y="968"></tspan>
+                <tspan x="23" y="979">War of the masses, the outcome, disastrous Many of the </tspan>
+                <tspan x="23" y="990">victim family save they ashes A million names on walls </tspan>
+                <tspan x="23" y="1001">engraved in plaques Those who went back, received </tspan>
+                <tspan x="23" y="1012">penalties for the axe Another heart is torn as close ones </tspan>
+                <tspan x="23" y="1023">mourn Those who stray, niggaz get slayed on the song</tspan>
+                <tspan x="23" y="1034"></tspan>
+                <tspan x="23" y="1045">The track renders helpless and suffers from multiple stab </tspan>
+                <tspan x="23" y="1056">wounds and leaks sounds that's heard ninety-three million </tspan>
+                <tspan x="23" y="1067">miles away from came one to represent the Nation, this is a </tspan>
+                <tspan x="23" y="1078">gathering of the masses that come to pay respects to the </tspan>
+                <tspan x="23" y="1089">Wu-Tang Clan As we engage in battle, the crowd now </tspan>
+                <tspan x="23" y="1100">screams in rage The high chief, Jamel Irief, take da stage </tspan>
+                <tspan x="23" y="1111">Light is provided through sparks of energy from the mind </tspan>
+                <tspan x="23" y="1122">that travels in rhyme form Givin sight to the blind The dumb </tspan>
+                <tspan x="23" y="1133">are mostly intrigued by the drum Death only one can save </tspan>
+                <tspan x="23" y="1144">self from This relentless attack of the track spares none</tspan>
+                <tspan x="23" y="1155"></tspan>
+                <tspan x="23" y="1166">Yo! Yo! Yo, fuck that, look at all these crab niggaz laid </tspan>
+                <tspan x="23" y="1177">backLampin like them gray and black Puma's on my man's </tspan>
+                <tspan x="23" y="1188">rackCodeine was forced in your drinkYou had a Navy Green </tspan>
+                <tspan x="23" y="1199">salamander fiend, bitches never heard you screamYou two-</tspan>
+                <tspan x="23" y="1210">faces, scum of the slum, I got your whole body numbBlowin </tspan>
+                <tspan x="23" y="1221">like Shalamar in eighty-oneSound convincin, thousand dollar </tspan>
+                <tspan x="23" y="1232">court by conventionHands, like Sonny Liston, get fly </tspan>
+                <tspan x="23" y="1243">permission Hold the fuck up, I'll unfasten your wig, bad luckI </tspan>
+                <tspan x="23" y="1254">humiliate, separate the English from the Dutchit's me, black </tspan>
+                <tspan x="23" y="1265">nobled you AliCame in threes we like the Genovese, is that </tspan>
+                <tspan x="23" y="1276">so? Caesar needs the greens, it's EarthNinety-three million </tspan>
+                <tspan x="23" y="1287">miles from the firstRough turbulence, the waveburst, split </tspan>
+                <tspan x="23" y="1298">the megahertz</tspan>
+                <tspan x="23" y="1309"></tspan>
+                <tspan x="23" y="1320">Aiyyo that's amazing, gun in your mouth talk, verbal foul </tspan>
+                <tspan x="23" y="1331">hawk Connect thoughts to make my manchild walk Swift </tspan>
+                <tspan x="23" y="1342">notarizer, Wu-Tang, all up in the high-riser New York Yank' </tspan>
+                <tspan x="23" y="1353">visor world tranquilizer Just a dosage, delegate my Clan with </tspan>
+                <tspan x="23" y="1364">explosives While, my pen blow lines ferocious </tspan>
+                <tspan x="23" y="1375">Mediterranean, see y'all, the number one draft pick Tear </tspan>
+                <tspan x="23" y="1386">down the beat God, then delegate the God to see God The </tspan>
+                <tspan x="23" y="1397">swift chancellor, flex, the white-gold tarantula Track truck </tspan>
+                <tspan x="23" y="1408">diesel, play the weed God, substantiala Max mostly, </tspan>
+                <tspan x="23" y="1419">undivided, then slide in, sickenin Guaranteed, made em </tspan>
+                <tspan x="23" y="1430">jump like Rod Strickland</tspan>
+            </text>
+            <text id="Dope-Blog" mask="url(#mask-6)" font-family="OpenSans-Light, Open Sans" font-size="50" font-weight="300" fill="#4A4A4A">
+                <tspan x="56" y="102">Dope Blog</tspan>
+            </text>
+            <rect id="Rectangle-24" fill="#F2F2F2" mask="url(#mask-6)" x="264" y="240" width="67" height="78"></rect>
+            <rect id="Rectangle-24-Copy" fill="#F2F2F2" mask="url(#mask-6)" x="264" y="329" width="67" height="78"></rect>
+            <rect id="Rectangle-23" fill="#F2F2F2" mask="url(#mask-6)" x="264" y="159" width="67" height="70"></rect>
+            <text id="POST-NUBMER-1" mask="url(#mask-6)" font-family="OpenSans-Bold, Open Sans" font-size="11" font-weight="bold" fill="#ADADAD">
+                <tspan x="23" y="150">POST NUBMER 1</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

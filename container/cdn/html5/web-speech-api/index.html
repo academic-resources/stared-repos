@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="xgqfrms">
+  <meta name="generator" content="VS code">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>speech synthesiser / speech synthesizer/ 网络语音API和语音合成器</title>
+  <link rel="stylesheet" href="./style.css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body data-gr-c-s-loaded="true">
+  <h1>speech synthesiser / speech synthesizer/ 网络语音API和语音合成器</h1>
+  <p>Enter some text in the input below and press return or the "play" button to hear it. change voices using the
+    dropdown menu.</p>
+  <form>
+    <input type="text" class="txt" value="hello world 你好👋">
+    <div>
+      <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+      <div class="rate-value">1</div>
+      <div class="clearfix"></div>
+    </div>
+    <div>
+      <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+      <div class="pitch-value">1</div>
+      <div class="clearfix"></div>
+    </div>
+    <select>
+      <option data-lang="zh-CN" data-name="Google&nbsp;普通话（中国大陆）" selected="selected">Google&nbsp;普通话（中国大陆）(zh-CN) -- DEFAULT</option>
+    </select>
+    <div class="controls">
+      <button id="play" type="submit">Play</button>
+    </div>
+  </form>
+  <script src="./script.js"></script>
+  <footer>
+      <p>copyright&copy; xgqfrms 2020</p>
+  </footer>
+</body>
+</html>

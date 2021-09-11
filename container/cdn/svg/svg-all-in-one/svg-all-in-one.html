@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="xgqfrms">
+    <meta name="generator" content="VS code">
+    <title>svg path convert</title>
+    <style lang="css">
+      .svg{
+        width: 100vw;
+        height: 100px;
+        background: url("./svg-path.svg") no-repeat;
+      }
+    </style>
+</head>
+<body>
+    <div class="svg"></div>
+    <img src="./svg-path.svg" alt="" class="">
+    <object type="image/svg+xml" data="./svg-path.svg" class="logo">
+      <!-- fallback image in CSS -->
+      <img src="./svg-path.svg" alt="" class="">
+    </object>
+    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="50">
+      <text x="10" y="50" font-size="23">Using inline SVG in HTML5</text>
+    </svg>
+    <embed type="image/svg+xml" src="./svg-path.svg" />
+    <iframe src="./svg-path.svg"></iframe>
+    <!-- js -->
+    <script src="./svg-path.js"></script>
+</body>
+</html>

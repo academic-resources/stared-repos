@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="xgqfrms">
+    <meta name="generator" content="VS code">
+    <title>window.open() & iframe</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        [data-dom="alink"]{
+            color: #0f0;
+            cursor: pointer;
+        }
+        [data-dom="ul"]{
+            height: 80vh;
+            overflow: auto;
+        }
+        [data-layout="left"],
+        [data-layout="right"],
+        [data-layout="center"] {
+            float: left;
+        }
+        [data-layout="left"] {
+            width: calc(20vw);
+            border: 1px solid #666;
+        }
+        [data-layout="right"] {
+            margin-right: 10px;
+            width: calc(37vw);
+            /* border: 1px solid #ccc; */
+        }
+        [data-layout="center"] {
+            margin-right: 10px;
+            height: 80vh;
+            width: calc(30vw);
+            /* border: 1px solid #0f0; */
+        }
+        [data-dom="iframe"] {
+            border: 1px solid red;
+        }
+        [data-dom="btn"] {
+            border: 1px solid #39f;
+            color: #666;
+            border-radius: 5px;
+            line-height: 23px;
+            font-size: 14px;
+            padding: 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        [data-dom="btn"]:hover {
+            border: 1px solid #0f0;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div data-layout="header">
+            <button data-dom="btn" onclick="importLinks()">导入测试资讯链接</button>
+            <button data-dom="btn" onclick="showLinks()">一键生成资讯链接</button>
+        </div>
+        <div data-layout="left">
+            <ol data-dom="ul"></ol>
+            <!-- <ul data-dom="ul"></ul> -->
+        </div>
+        <div data-layout="center">
+            <textarea
+                data-dom="textarea"
+                style="font-size: 14px;"
+                cols="75"
+                rows="42"
+                autofocus
+                title="请输入要测试的资讯 URL 列表(注意: URL \n 换行分割)!"
+                placeholder="请输入要测试的资讯 URL 列表(注意: URL \n 换行分割)!">
+            </textarea>
+        </div>
+        <div data-layout="right">
+            <iframe
+                name="iframeWindow"
+                src=""
+                width="600"
+                height="800"
+                data-dom="iframe"
+            >
+            </iframe>
+        </div>
+    </section>
+    <script>
+        const importLinks = () => {
+            let textarea = document.querySelector(`[data-dom="textarea"]`);
+            links = ["https://photo.sina.cn", "https://nba.sina.cn/", "https://tech.sina.cn/"];
+            let alinks = links.join(`\n`) || ``;
+            textarea.value = ``;
+            textarea.value = `${alinks}`;
+            // textarea.insertAdjacentHTML(`beforeend`, alinks);
+        };
+        const getLinks = () => {
+            let textarea = document.querySelector(`[data-dom="textarea"]`);
+            let links =[];
+            if (textarea.value.includes(`\n`)) {
+                links = textarea.value.split(`\n`);
+            } else {
+                // alert(`请先输入要测试的资讯 URL 列表!`);
+            }
+            // console.log(`links =`, links);
+            return links;
+        };
+        const autoOpenIframe = (link = ``) => {
+            // window.open(URL, name, specs, replace);
+            if (link) {
+                let iframe = document.querySelector(`[data-dom="iframe"]`);
+                // console.log(`iframe =`, iframe);
+                // console.log(`link =`, link);
+                iframe.src = `${link}`;
+                // // let iframeWindow = window.open(`${link}`, "iframeWindow", "width=600, height=400", false);
+                // // window.open(`${link}`, "iframe", "width=600, height=400", false);
+                // let iframeWindow = window.open("", "iframeWindow", "width=600, height=400", false);
+                // // iframeWindow.document.write(`<iframe name="${link}" src="${link}"></iframe>`);
+                // // iframeWindow.document.write(``);
+                // iframeWindow.document.write(`
+                //     <iframe
+                //         name="${link}"
+                //         src="${link}"
+                //         width="600"
+                //         height="400"
+                //     >
+                //     </iframe>
+                // `);
+            }
+            // destroy window ???
+        };
+        const showLinks = () => {
+            let links = getLinks();
+            let ul = document.querySelector(`[data-dom="ul"]`);
+            let lis = ``;
+            if (links.length) {
+                links.forEach(
+                    (link, i) => {
+                        lis += `
+                            <li>
+                                <span data-link="${link}" data-dom="alink">${link}</span>
+                            </li>
+                        `;
+                    }
+                );
+                ul.insertAdjacentHTML(`beforeend`, lis);
+                setTimeout(() => {
+                    let alinks = [...document.querySelectorAll(`[data-dom="alink"]`)];
+                    alinks.forEach(
+                        (alink, i) => {
+                            let onceFlag = alink.dataset.onceFlag || false;
+                            if (!onceFlag) {
+                                alink.dataset.onceFlag = true;
+                                alink.addEventListener(`click`, () => {
+                                    let link = alink.dataset.link || ``;
+                                    alink.style.color = "#f00";
+                                    autoOpenIframe(link);
+                                });
+                            }
+                        }
+                    );
+                }, 0);
+            } else {
+                alert(`请先输入要测试的资讯 URL 列表!`);
+            }
+        };
+    </script>
+</body>
+</html>
+
+<!--
+https://photo.sina.cn
+https://nba.sina.cn/
+https://tech.sina.cn/
+-->

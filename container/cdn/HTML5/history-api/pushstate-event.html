@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="xgqfrms">
+    <meta name="generator" content="VS code">
+    <title>pushstate event demo</title>
+</head>
+<body>
+    <header>
+        <h1>pushstate event demo</h1>
+    </header>
+    <main>
+        <section></section>
+        <article></article>
+    <main>
+    <footer>
+        <p>copyriht&copy; xgqfrms 2020</p>
+    </footer>
+    <script>
+        const log = console.log;
+        window.addEventListener('pushstate', (state) => {
+            log('❓单页路由变化 pushstate', state);
+        });
+        window.addEventListener('replacestate', (state) => {
+            log('❓单页路由替换 replacestate', state);
+        });
+        window.addEventListener('popstate', (state) => {
+            log('✅ 单页路由替换 popstate', state);
+        });
+        const getParams = (obj = {}) => {
+            const result = [];
+            for (const key in obj) {
+                if (Object.hasOwnProperty.call(obj, key)) {
+                    result.push(`${key}=${obj[key]}`);
+                }
+            }
+            return `?` + result.join('&');
+        };
+        setTimeout(() => {
+            const state = {
+                'page_id': 1,
+                'user_id': 1,
+            };
+            const title = 'pushState 🚀';
+            // const url = window?.location?.href;
+            const url = window?.location?.origin + window?.location?.pathname + getParams(state);
+            log(title);
+            window.history.pushState(state, title, url);
+        }, 1000);
+        setTimeout(() => {
+            const state = {
+                'page_id': 2,
+                'user_id': 2,
+            };
+            const title = 'replaceState 🔥';
+            // const url = window?.location?.href + getParams(state);
+            const url = window?.location?.origin + window?.location?.pathname + getParams(state);
+            log(title);
+            window.history.pushState(state, title, url);
+        }, 3000);
+    </script>
+</body>
+</html>

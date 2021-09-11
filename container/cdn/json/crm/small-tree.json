@@ -1,0 +1,88 @@
+{
+    "Success": true,
+    "Info": {
+        "apiname": null,
+        "name": "root",
+        "toggled": true,
+        "children": [
+            {
+                "apiname": null,
+                "name": "基金",
+                "toggled": true,
+                "children": [
+                    {
+                        "apiname": null,
+                        "name": "F9",
+                        "toggled": true,
+                        "children": [
+                            {
+                                "apiname": null,
+                                "name": "基金概况",
+                                "toggled": true,
+                                "children": [
+                                    {
+                                        "apiname": null,
+                                        "name": "基金经理",
+                                        "toggled": true,
+                                        "children": [
+                                            {
+                                                "apiname": "fund.f9.fund_profile.FundManager.BasicInformations",
+                                                "name": "基金经理详细信息(基本资料)",
+                                                "toggled": true,
+                                                "children": null,
+                                                "active": false,
+                                                "loading": false
+                                            },
+                                            {
+                                                "apiname": "BasicInformationDeatil",
+                                                "name": "基金经理详细信息(明细)",
+                                                "toggled": false,
+                                                "children": null,
+                                                "active": false,
+                                                "loading": false
+                                            }
+                                        ],
+                                        "active": false,
+                                        "loading": false
+                                    },
+                                    {
+                                        "apiname": "fund.f9.fund_profile.FundIntroduce",
+                                        "name": "基金介绍",
+                                        "toggled": false,
+                                        "children": null,
+                                        "active": false,
+                                        "loading": false
+                                    },
+                                    {
+                                        "apiname": "fund.f9.fund_profile.FundManagerMent",
+                                        "name": "基金管理人(基金公司基本资料,基金公司基本联系方式)",
+                                        "toggled": false,
+                                        "children": null,
+                                        "active": false,
+                                        "loading": false
+                                    },
+                                    {
+                                        "apiname": "fund.f9.fund_profile.FundManager",
+                                        "name": "基金经理(信息显示表格)",
+                                        "toggled": false,
+                                        "children": null,
+                                        "active": false,
+                                        "loading": false
+                                    }
+                                ],
+                                "active": false,
+                                "loading": false
+                            }
+                        ],
+                        "active": false,
+                        "loading": false
+                    }
+                ],
+                "active": false,
+                "loading": false
+            }
+        ],
+        "active": false,
+        "loading": false
+    }
+}

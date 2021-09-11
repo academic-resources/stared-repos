@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="296px" height="296px" viewBox="0 0 296 296" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>卷纸背景</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M245.975587,256 C245.754501,253.750025 244.058913,252 242,252 C239.941087,252 238.245499,253.750025 238.024413,256 L227.975587,256 C227.754501,253.750025 226.058913,252 224,252 C221.941087,252 220.245499,253.750025 220.024413,256 L209.975587,256 C209.754501,253.750025 208.058913,252 206,252 C203.941087,252 202.245499,253.750025 202.024413,256 L191.975587,256 C191.754501,253.750025 190.058913,252 188,252 C185.941087,252 184.245499,253.750025 184.024413,256 L173.975587,256 C173.754501,253.750025 172.058913,252 170,252 C167.941087,252 166.245499,253.750025 166.024413,256 L155.975587,256 C155.754501,253.750025 154.058913,252 152,252 C149.941087,252 148.245499,253.750025 148.024413,256 L137.975587,256 C137.754501,253.750025 136.058913,252 134,252 C131.941087,252 130.245499,253.750025 130.024413,256 L119.975587,256 C119.754501,253.750025 118.058913,252 116,252 C113.941087,252 112.245499,253.750025 112.024413,256 L101.975587,256 C101.754501,253.750025 100.058913,252 98,252 C95.9410873,252 94.2454991,253.750025 94.0244128,256 L83.9755872,256 C83.7545009,253.750025 82.0589127,252 80,252 C77.9410873,252 76.2454991,253.750025 76.0244128,256 L65.9755872,256 C65.7545009,253.750025 64.0589127,252 62,252 C59.9410873,252 58.2454991,253.750025 58.0244128,256 L47.9755872,256 C47.7545009,253.750025 46.0589127,252 44,252 C41.9410873,252 40.2454991,253.750025 40.0244128,256 L29.9755872,256 C29.7545009,253.750025 28.0589127,252 26,252 C23.9410873,252 22.2454991,253.750025 22.0244128,256 L15,256 C12.790861,256 11,254.209139 11,252 L11,9 L257,9 L257,252 C257,254.209139 255.209139,256 253,256 L245.975587,256 Z" id="path-1"></path>
+        <filter x="-17.9%" y="-12.6%" width="135.8%" height="135.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="2.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="13" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.8   0 0 0 0 0.847058824   0 0 0 0 0.956862745  0 0 0 0.49793365 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-11.6%" y="-6.3%" width="123.2%" height="123.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="4" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.438802083   0 0 0 0 0.42232796   0 0 0 0 0.42232796  0 0 0 0.300356658 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="开探2-" transform="translate(-40.000000, -136.000000)" fill-rule="nonzero">
+            <g id="卷纸背景" transform="translate(54.000000, 139.000000)">
+                <g id="分组-5">
+                    <rect id="矩形" fill="#6EA7E6" x="0" y="0" width="268" height="19" rx="9.5"></rect>
+                    <rect id="矩形" fill="#063262" x="9" y="7" width="250" height="6" rx="3"></rect>
+                </g>
+                <g id="合并形状">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,40 @@
+{
+    "Success": true,
+    "Info": {
+        "schema": {
+            "type": "object",
+            "Properties": {
+                "A0": {
+                    "type": "string",
+                    "Description": "基金代码"
+                },
+                "A1": {
+                    "type": "string",
+                    "Description": "基金名称"
+                },
+                "A2": {
+                    "type": "string",
+                    "Description": "成立日期",
+                    "Format": "date-time"
+                },
+                "A3": {
+                    "type": "string",
+                    "Description": "业绩基准"
+                },
+                "A4": {
+                    "type": "number",
+                    "Description": "基金最新单位净值"
+                },
+                "A5": {
+                    "type": "number",
+                    "Description": "年初至今收益"
+                },
+                "A6": {
+                    "type": "number",
+                    "Description": "成立以来收益"
+                }
+            }
+        },
+        "name": "IndexF10IndexFund"
+    }
+}

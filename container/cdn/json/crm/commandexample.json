@@ -1,0 +1,164 @@
+{
+    "Success": true,
+    "Info": {
+        "schema": {
+            "type": "object",
+            "Properties": {
+                "ApiName": {
+                    "type": "string",
+                    "Required": true,
+                    "Description": "报表名称"
+                },
+                "SecuCode": {
+                    "type": "string",
+                    "Required": true,
+                    "Description": "【必须】证券代码"
+                },
+                "ExtParams": {
+                    "type": "object",
+                    "Description": "扩展参数",
+                    "DefaultValue": "null",
+                    "AdditionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "Sorts": {
+                    "type": "array",
+                    "Description": "排序字段，支持排序组合",
+                    "DefaultValue": "null",
+                    "Items": {
+                        "type": "object",
+                        "Properties": {
+                            "Field": {
+                                "type": "string",
+                                "Description": "排序的字段名称，多Table的排序，需要指定Table前缀，如Table1.Field"
+                            },
+                            "Sort": {
+                                "type": "string",
+                                "Description": "排序方式，升序或者降序",
+                                "enum": [
+                                    "asc(升序)",
+                                    "desc(降序)",
+                                    "no(无序)"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "Page": {
+                    "type": "object",
+                    "Description": "分页参数",
+                    "DefaultValue": "null",
+                    "Properties": {
+                        "PageNo": {
+                            "type": "integer",
+                            "Description": "请求的页数"
+                        },
+                        "PageSize": {
+                            "type": "integer",
+                            "Description": "每页大小"
+                        }
+                    }
+                },
+                "Compress": {
+                    "type": "boolean",
+                    "Description": "数据返回是否强制压缩",
+                    "DefaultValue": "true"
+                },
+                "WriteType": {
+                    "type": "string",
+                    "Description": "返回的数据协议格式",
+                    "DefaultValue": "binary",
+                    "enum": [
+                        "json(json文本格式)",
+                        "binary(二维表二进制格式)"
+                    ]
+                },
+                "OutField": {
+                    "type": "array",
+                    "Description": "数据输出的字段，用于输出字段过滤，当输出字段数量小于不输出字段数量时采用",
+                    "DefaultValue": "null",
+                    "Items": {
+                        "type": "string"
+                    }
+                },
+                "IgnoreField": {
+                    "type": "array",
+                    "Description": "数据输出的字段，用于输出字段过滤，当输出字段数量大于不输出字段数量时采用",
+                    "DefaultValue": "null",
+                    "Items": {
+                        "type": "string"
+                    }
+                },
+                "Group": {
+                    "type": "string",
+                    "Description": "分组字段，当选择分组时，pageInfo同样针对组分页",
+                    "DefaultValue": "null"
+                },
+                "Filters": {
+                    "type": "array",
+                    "Description": "数据过滤，支持In、Between、Like、==、quarter(季报) 过滤器，参见具体过滤器的使用",
+                    "DefaultValue": "null",
+                    "Items": {
+                        "type": "object"
+                    }
+                },
+                "FastDateFilterType": {
+                    "type": "string",
+                    "Description": "数据快速过滤类型",
+                    "DefaultValue": "null",
+                    "enum": [
+                        "LatestTime(最新日期)",
+                        "CurrentYear(今年以来)",
+                        "Latest1Month(近一月)",
+                        "Latest3Month(近三月)",
+                        "Latest6Month(近六月)",
+                        "Latest1Year(近一年)",
+                        "Latest2Year(近二年)",
+                        "Latest3Year(近三年)",
+                        "Latest5Year(近五年)",
+                        "AllYear(全部)",
+                        "ListedBefore(上市以前)",
+                        "ListedAfter(上市以后)",
+                        "Customer(自定义)"
+                    ]
+                },
+                "CallBack": {
+                    "type": "string",
+                    "Description": "JSONP",
+                    "DefaultValue": "null"
+                },
+                "FastQuarterReportType": {
+                    "type": "array",
+                    "Description": "快速季报过滤类型",
+                    "DefaultValue": "null",
+                    "Items": {
+                        "type": "string",
+                        "enum": [
+                            "Q1th(一季报)",
+                            "Q2nd(中报)",
+                            "Q3rd(三季报)",
+                            "Q4th(年报)"
+                        ]
+                    }
+                }
+            }
+        },
+        "commandexample": "{            \"SecuCode\": 000011,            \"ApiName\": \"fund.f9.fund_profile.FundIntroduce\" }",
+        "name": "fund.f9.fund_profile.FundIntroduce",
+        "description": "基金->F9-> 基金概况->基金介绍",
+        "developer": "王灿",
+        "dependtable": [
+            "SecuMain",
+            "MF_FundArchives",
+            "CT_SystemConst",
+            "MF_InvestAdvisorOutline",
+            "MF_IssueAndListing",
+            "MF_TrusteeOutline",
+            "MF_FundArchivesAttach",
+            "MF_Awards",
+            "LC_IssueAndListAgent"
+        ],
+        "algorithm": ""
+    }
+}

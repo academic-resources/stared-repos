@@ -1,0 +1,10 @@
+@media all (max-width: 320px){
+    body{
+        overflow-x: hidden;
+        overflow-x: auto;
+        box-sizing: border-content;
+        display: flex;
+        min-width:320px;
+    }
+}
+
