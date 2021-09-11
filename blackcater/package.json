@@ -1,0 +1,25 @@
+{
+  "name": "blackcater",
+  "version": "1.0.2",
+  "description": "blackcater's github profile script",
+  "main": "main.js",
+  "repository": "https://github.com/blackcater/blackcater.git",
+  "author": "Elon Tang <blackcater2015@gmail.com>",
+  "license": "MulanPSL",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,json,md,yml}\"",
+    "generate": "node main.js"
+  },
+  "dependencies": {
+    "axios": "0.21.1",
+    "dotenv": "10.0.0",
+    "lodash": "4.17.21",
+    "signale": "1.4.0",
+    "wakatime-client": "2.7.0",
+    "xml2js": "0.4.23"
+  },
+  "devDependencies": {
+    "prettier": "2.3.1"
+  }
+}
