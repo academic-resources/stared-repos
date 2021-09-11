@@ -1,0 +1,10 @@
+.git
+packages/docsify-server-renderer/build.js
+node_modules
+build
+server.js
+lib
+themes
+build
+docs/
+**/*.md
