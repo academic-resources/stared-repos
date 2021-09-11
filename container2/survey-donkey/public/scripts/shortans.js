@@ -1,1 +1,0 @@
-document.addEventListener('DOMContentLoaded', _ => document.querySelector('.delete').addEventListener('click', e => e.target.parentNode.remove()))

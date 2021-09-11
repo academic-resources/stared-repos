@@ -1,2 +1,0 @@
-# Express Sequelize Starter
-

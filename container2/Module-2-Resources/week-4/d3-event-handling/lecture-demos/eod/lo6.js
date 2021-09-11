@@ -1,2 +1,0 @@
-window.addEventListener('DOMContentLoaded', () => {
-});

@@ -1,9 +1,0 @@
-p {
-    font-family: 'helvetica neue', helvetica, sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    border: 2px solid black;
-    background: lightgrey;
-    border-radius: 10px;
-    cursor: pointer;
-}

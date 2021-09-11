@@ -1,4 +1,0 @@
-splitBST = (root, V)  =>{
-   
-
-};

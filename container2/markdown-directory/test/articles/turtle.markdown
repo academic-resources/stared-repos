@@ -1,3 +1,0 @@
-# turtles
-
-I like turtles.
