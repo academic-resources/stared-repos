@@ -1,0 +1,27 @@
+
+.sort-options-selection {
+  position: absolute;
+  // left: 400;
+  // top: 335;
+  margin-top: 8px;
+  margin-left: 50px;
+  font-family: $sans-serif;
+  font-size: 18px;
+  color: $EvernoteElephantGray;
+  background-color: #fff;
+  box-shadow: 0px 0px 2px 5px rgba(0, 0, 0, .25);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  padding: 8px;
+  z-index: 4;
+
+  li:hover {
+    background-color: #fff;
+  }
+}
+
+.hide-sort {
+  display: none;
+}

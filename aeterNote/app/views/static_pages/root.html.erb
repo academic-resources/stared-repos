@@ -1,0 +1,29 @@
+<script type = 'text/javascript'>
+  <% if !!current_user %>
+     window.currentUser = <%= render(
+     'api/users/user.json.jbuilder',
+     user: current_user
+     ).html_safe %>
+  <% end %>
+  <% if !!current_user %>
+     window.notebooks = <%= render(
+        'api/notebooks/notebooks.json.jbuilder',
+        notebooks: current_user.notebooks
+      ).html_safe %>
+  <% end %>
+  window.staticImages = {
+    logoMain: '<%= asset_url("æterNote_logo_lightbulb.png") %>',
+    notebookIcon: '<%= asset_url("notebookIcon.png") %>',
+    notebookPlus: '<%= asset_url("notebookPlusIcon.png") %>',
+    whiteTrashCan: '<%= asset_url("white_trash_can.png") %>',
+    whitePencil: '<%= asset_url("pencil_white.png") %>',
+    downArrow: '<%= asset_url("down_arrow.png") %>',
+    infoI: '<%= asset_url("info_I.png") %>',
+    grayI: '<%= asset_url("gray_i.png") %>',
+    grayTrashCan: '<%= asset_url("trash_gray.png") %>',
+    greenTrashCan: '<%= asset_url("trash_can_green.png") %>',
+    grayTagPlus: '<%= asset_url("gray_tag_plus.png") %>'
+  }
+</script>
+
+<main id="root"></main>
