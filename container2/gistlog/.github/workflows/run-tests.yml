@@ -1,0 +1,37 @@
+name: Run Tests
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Run PHPUnit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+          php-version: 7.4
+          extensions: posix, dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
+          coverage: none
+
+    - name: Copy Laravel .env Configuration for CI
+      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+    - name: Install dependencies
+      uses: php-actions/composer@v4
+      with:
+        composer_version: 1
+        args: --prefer-source --no-interaction
+
+    - name: Generate key
+      run: php artisan key:generate
+
+    - name: Run PHP Tests
+      run: vendor/bin/phpunit --exclude needsToken
