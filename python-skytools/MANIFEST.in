@@ -1,0 +1,6 @@
+include skytools/py.typed
+include modules/*.[ch]
+include tests/*.py tests/*.ini
+include tox.ini .coveragerc .pylintrc
+include MANIFEST.in
+include README.rst NEWS.rst
