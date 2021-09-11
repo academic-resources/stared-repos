@@ -1,0 +1,9 @@
+code-music-studio
+
+  Run the code-music-studio http server.
+
+  -p PORT      Listen on this port.
+  -d DATADIR   Use this directory to store songs.
+  -i           Read lines of json from stdin to set state variables.
+  --state.VAR  Set initial variables individually.
+

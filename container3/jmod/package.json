@@ -1,0 +1,31 @@
+{
+  "name": "jmod",
+  "version": "0.3.0",
+  "description": "audio / dsp enveloping with some added features",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "nvelope": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NHQ/jmod.git"
+  },
+  "keywords": [
+    "audio",
+    "dsp",
+    "envelopes",
+    "jsynth"
+  ],
+  "author": "Johnny Honestly <mostmodernist@gmail.com> (http://johnnyscript.us/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NHQ/jmod/issues"
+  },
+  "homepage": "https://github.com/NHQ/jmod"
+}

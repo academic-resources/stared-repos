@@ -1,0 +1,30 @@
+!!!
+html
+	head
+		title CHESS
+		link(rel='stylesheet', href='../stylesheets/style.css')
+		link(rel='stylesheet', href='../stylesheets/chess.clock.css')
+		link(rel='stylesheet', href='../stylesheets/sidebar.css')
+		link(rel='stylesheet', href='../stylesheets/pieces.css')
+		script(type="text/javascript", src="../javascripts/prefixfree.min.js")
+		link(rel='icon', type='image/png', href='../favicon.knight.png')
+
+	body
+		div.legs
+			div(id='table', class='default', tabindex='5')
+			div.sidebar
+				h1.title chessfoo
+				include ./board.options.html
+				include ./clock.html
+				div(type='submit', class='captured', id='captured', data-index='x')
+				div.chat
+					div.chatlog
+					div.input
+						p(id='chatkey', contenteditable='true')
+
+		script(type="text/javascript", src="../javascripts/jquery-1.5.1.min.js")
+		script(type="text/javascript", src="../javascripts/underscore-min.js")
+		script(type="text/javascript", src="../javascripts/jquery-ui-1.8.14.custom.min.js")
+		script(type="text/javascript", src="../javascripts/raf.js")
+		script(type="text/javascript", src="http://"+origin+"/socket.io/socket.io.js")
+		script(type="text/javascript", src="../browserify.js")

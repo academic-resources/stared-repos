@@ -1,0 +1,18 @@
+.popup{
+	position:fixed;
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+	background-image: radial-gradient(50% 50%, rgba(248,249,243,.5), rgba(93,93,93,0.60));
+}
+
+.popup > .box {
+	border: 7px solid OrangeRed;
+	border-top: 37px solid OrangeRed;
+	box-shadow: 0 0 3px rgba(93,93,93,0.60) inset;
+	border-radius: 20px;
+	width:67%;
+	height:67%;
+	box-sizing:border-box;
+}

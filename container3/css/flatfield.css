@@ -1,0 +1,97 @@
+.uxer-flat-fieldset {
+        color:OrangeRed;
+	border-radius:5px;
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	border: 1px solid OrangeRed;
+	border-radius: 9px;
+}
+
+.uxer-flatfield-legend {
+        font-weight: 900;
+	padding:0 10px;
+	font-size:16px;
+	line-height:16px;
+	font-style: italic;
+	text-align:center;
+}
+
+.uxer-flatfield-label {
+	display:block;
+	border-bottom: 1px solid rgba(200, 66, 0, .2);
+}
+
+.uxer-flatfield-label:hover, p.uxer-flatfield-radio-name:hover {
+	cursor:pointer;
+}
+
+.uxer-flatfield-input[type=checkbox], .uxer-flatfield-input[type=radio],.uxer-flatfield-input[type=file], .uxer-flatfield-input[type=button]   {
+	display:none;
+}
+
+.uxer-flatfield-input[type=text], .uxer-flatfield-input[type=number], .uxer-flatfield-input[type=url]{
+    width: 100%;
+    color: OrangeRed;
+    font-size:16px;
+    font-weight:500;
+    padding:3px 0;
+    text-decoration:uppercase;
+    line-height:22px;
+    font-style: italic;
+    margin: 5px 0;
+    border:1px solid rgba(210, 66, 0, 0.2);
+    text-indent: 3px;
+}
+
+.uxer-flatfield-input[type=text]:focus, .uxer-flatfield-input[type=number]:focus, .uxer-flatfield-input[type=url]:focus{
+   outline:1px solid rgba(210, 66, 0, 0.2)
+}
+
+::-webkit-input-placeholder{
+    color: OrangeRed;
+    opacity: .38;
+    font-weight:900;
+}
+
+input:focus::-webkit-input-placeholder{
+    color: rgba(0,0,0,0);
+}
+
+.uxer-flat-button{
+  min-width:40%;
+  font-size: 16px;
+  color: inherit;
+  outline:none;
+  border: 1px solid OrangeRed;
+  background: inherit;
+
+  border-radius: 3px;
+}
+.uxer-flat-button:active{
+  background: OrangeRed;
+  color: #eee;
+}
+.uxer-flatfield-radio-value, .uxer-flatfield-file-value {
+	font-size:16px;
+	font-weight:900;
+	line-height:22px;
+}
+
+.uxer-flatfield-input[type=radio]:checked  + .uxer-flatfield-radio, .uxer-flatfield-input[type=radio]:checked ~ label{
+	background:LimeGreen;
+}
+
+.uxer-flatfield-radio {
+	width:16px;
+	height:16px;
+	background:inherit;
+	float:left;
+	border-radius:50%;
+	border:2px solid OrangeRed;
+}
+
+
+
+

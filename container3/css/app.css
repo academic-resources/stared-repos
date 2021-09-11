@@ -1,0 +1,40 @@
+html, body, div, p, pre, img, audio, video, h1, h2, h3, h4, form, fieldset, label, legend, span
+{
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+margin:0;
+padding:0;
+-webkit-margin-start: 2px;
+-webkit-margin-end: 2px;
+-webkit-padding-before: 0.35em;
+-webkit-padding-start: 0.75em;
+-webkit-padding-end: 0.75em;
+-webkit-padding-after: 0.625em;
+font-family:monospace;
+}
+.sourceCapture{
+  width: 85%;
+  height: 85%;
+  border-width: 16px;
+}
+
+.sourceCapOpts{
+  float:left;
+  width: 33%;
+  height: 100%;
+  border-right:16px solid OrangeRed;
+  -webkit-box-sizing: border-box;
+
+}
+
+.sourceCapOptsLabel {
+  height: 25%;
+}
+
+.sourceCapMode{
+  float: right;
+  width:66%;
+  height:100%;
+  -webkit-box-sizing: border-box;
+  overflow:hidden
+}

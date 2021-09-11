@@ -1,0 +1,57 @@
+// colors
+$site-color: #000000;
+$site-background: #ffffff;
+$site-hover: #989c9f;
+$site-highlight: #f7155b;
+$site-gray: #cbcbcb;
+$site-dark-gray:#646b6b;
+
+//font families
+$base-font: 'latoregular';
+$itallic: 'latoitalic';
+$bold: 'latosemibold';
+$bold-italic: 'latosemibold_italic';
+$light: 'latolight';
+$light-italic: 'latolight_italic';
+$extra-light: 'latohairline';
+$extralight-itallic: 'latohairline_italic';
+
+
+// page layout
+$header-height: 77px;
+$footer-height: 230px;
+$border-radius: 5px;
+
+// typography math
+$baseline: 10px;
+$baseline-rem: 1.5rem;
+$baseline-lineheight: 2rem;
+$line-height-factor: 1.7;
+$letter-spacing-factor: 0.0009;
+
+// global spacing
+$spacing: 10px;
+$spacing-double: $spacing * 2;
+$spacing-triple: $spacing * 3;
+$spacing-quad:   $spacing * 4;
+$spacing-quint:  $spacing * 5;
+$spacing-sext:   $spacing * 6;
+$spacing-sept:   $spacing * 7;
+$spacing-oct: 	 $spacing * 8;
+$spacing-half:   $spacing / 2;
+$spacing-third:  $spacing / 3;
+$spacing-fourth: $spacing / 4;
+
+// responsive
+	// global breaks
+	$tiny: 320;
+  $small: 480;
+	$phone-s: 360;
+	$phone: 640;
+	$phone-l: 768;
+	$tablet: 960;
+	$tablet-m: 800;
+	$tablet-l: 1024;
+	$full: 1080; 
+	$full-l: 1120; 
+	$desktop: 1280;

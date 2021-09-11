@@ -1,0 +1,48 @@
+* { 
+    box-sizing: border-box;
+}
+
+html {
+	font-size: $baseline;
+	color: $site-color;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: $site-background;
+
+    text-transform: none;
+    text-decoration: none;
+    text-align: left;
+
+    word-wrap: normal;
+
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+    font-variant: normal;
+    font-style: normal;
+    font-weight: normal;
+    color: $site-color;
+
+    font-family: $base-font;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@include tablet-l() {
+    html { font-size: 9.5px; }
+}
+
+@include tablet() {
+    html { font-size: 9px; }
+}
+
+@include phone() {
+    html { font-size: 8.5px; }
+}

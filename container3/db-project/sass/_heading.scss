@@ -1,0 +1,6 @@
+.list-heading {
+  font-family: $bold;
+  
+  &:after { content: " :"}
+  &.flex-item { margin: 0;}
+}
