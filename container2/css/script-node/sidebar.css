@@ -1,0 +1,69 @@
+.skinnyBar{
+	width: 13%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: rgba(0,0,0,1);
+	height:100%;
+	border-radius:0px;
+	font-family: Courier;
+	
+}
+
+.skinnyBar h1{
+	font-weight:100;
+	padding:0;
+	margin:3px auto 6px;
+	font-size: 16px;
+	color:OrangeRed;
+	text-align:center;
+	width:100%;
+	letter-spacing:4px;
+}
+
+.skinnyBar legend{
+	border:1px solid #ccc;
+	border-radius:3px;
+	margin:0 auto 7px;
+	padding:4px;
+	font-size:12px;
+	text-align:center;
+	background:#333;
+	color:#ddd;
+  width:90%;
+}
+.skinnyBar label{
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	display:block;
+}
+
+.skinnyBar button{
+	min-width:90%;
+  font-size: 14px;
+	color:rgba(10, 169, 40, 1);
+  outline:none;
+  border: 1px solid #777;
+	border-radius:11px;
+	background:#666;
+	box-shadow:0 0 28px #333 inset;
+  font-weight:normal;
+  cursor:pointer;
+}
+
+.skinnyBar button:active{
+	background:rgba(10, 199, 40, 1);
+  color: OrangeRed;
+}
+
+.scriptMenu{
+	width:90%;
+	margin: 0 auto;
+	height:50%;
+}
+
+.greenish{
+	color:rgba(10, 169, 40, 1);
+}
