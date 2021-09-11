@@ -1,0 +1,1723 @@
+{
+  "alternatives": [
+    {
+      "commercial": [
+        {
+          "main": "Airtable",
+          "svg": "https://seeklogo.com/images/A/airtable-logo-216B9AF035-seeklogo.com.png",
+          "website": "https://airtable.com/"
+        }
+      ],
+      "alts": [
+        {
+          "name": "NocoDB",
+          "repo": "nocodb/nocodb",
+          "license": "AGPL-3.0",
+          "site": "https://www.nocodb.com",
+          "svg": "https://pbs.twimg.com/profile_images/1220397429243240449/UxUrX8F3_400x400.jpg",
+          "stars": "4.4K",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/npgia/nocodb-seed-heroku",
+          "language": "JS"
+        },
+        {
+          "name": "Baserow",
+          "repo": "https://gitlab.com/bramw/baserow",
+          "site": "https://baserow.io",
+          "language": "Python",
+          "stars": "656",
+          "svg": "https://assets.gitlab-static.net/uploads/-/system/project/avatar/10858056/logo.jpg?width=64",
+          "deploy": "https://gitlab.com/bramw/baserow#try-out-baserow-on-your-machine"
+        }
+      ],
+      "id": "f7g585m1q",
+      "category": "Visual Database"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Shopify",
+          "svg": "https://cdn.worldvectorlogo.com/logos/shopify.svg",
+          "website": "https://shopify.com"
+        },
+        {
+          "main": "BigCommerce",
+          "svg": "https://cdn.worldvectorlogo.com/logos/bigcommerce-1.svg",
+          "website": "https://bigcommerce.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Reaction Commerce",
+          "repo": "reactioncommerce/reaction",
+          "site": "http://www.reactioncommerce.com/",
+          "license": "GPL V3",
+          "stars": "9.6K",
+          "svg": "https://cdn.jsdelivr.net/gh/reactioncommerce/reaction/public/resources/reaction-logo.svg",
+          "language": "JS",
+          "deploy": "https://docs.reactioncommerce.com/docs/deploying-reaction-using-heroku"
+        },
+        {
+          "name": "Saleor Commerce",
+          "repo": "mirumee/saleor",
+          "site": "https://saleor.io/",
+          "license": "BSD-3",
+          "stars": "6.6K",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/saleor/saleor.png",
+          "language": "Python",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/mirumee/saleor"
+        },
+        {
+          "name": "WooCommerce",
+          "stars": "5.8K",
+          "license": "GPL",
+          "svg": "https://cdn.worldvectorlogo.com/logos/woocommerce.svg",
+          "repo": "woocommerce/woocommerce",
+          "site": "http://www.woocommerce.com/",
+          "language": "PHP",
+          "deploy": "https://marketplace.digitalocean.com/apps/wordpress",
+          "main": ["Shopify", "idgaf"]
+        },
+        {
+          "repo": "Sylius/Sylius",
+          "site": "https://sylius.com/",
+          "language": "PHP",
+          "stars": "5.6K",
+          "license": "MIT",
+          "name": "Sylius",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/stylius/logo.png",
+          "deploy": "https://docs.sylius.com/en/1.6/cookbook/deployment/platform-sh.html"
+        },
+        {
+          "name": "PrestaShop",
+          "repo": "prestashop/prestashop",
+          "site": "https://www.prestashop.com",
+          "license": " OSL-3.0",
+          "stars": "4.5K",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/pretashop/logo.png",
+          "language": "PHP",
+          "deploy": "https://devdocs.prestashop.com/1.7/basics/installation/"
+        },
+        {
+          "name": "Bagisto",
+          "stars": "2.1K",
+          "license": "MIT",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/bagisto/bagisto.png",
+          "site": "https://bagisto.com",
+          "language": "PHP",
+          "repo": "bagisto/bagisto",
+          "deploy": "https://webkul.com/blog/laravel-ecommerce-website"
+        },
+        {
+          "name": "Shopaholic",
+          "stars": "370",
+          "license": "GPL v3",
+          "svg": "https://cdn.jsdelivr.net/gh/oc-shopaholic/oc-shopaholic-plugin/assets/images/icon.svg",
+          "language": "PHP",
+          "site": "https://shopaholic.one",
+          "deploy": "https://www.smashingmagazine.com/2020/03/october-cms-shopaholic",
+          "repo": "oc-shopaholic/oc-shopaholic-plugin"
+        }
+      ],
+      "id": "wejrioewjr",
+      "category": "E-commerce"
+    },
+    {
+      "main": "Slack",
+      "alts": [
+        {
+          "name": "Rocket.Chat",
+          "repo": "RocketChat/Rocket.Chat",
+          "site": "https://rocket.chat/",
+          "language": "JS",
+          "license": "MIT",
+          "stars": "25.5K",
+          "svg": "https://cdn.worldvectorlogo.com/logos/rocket-chat-1.svg",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/RocketChat/Rocket.Chat"
+        },
+        {
+          "name": "Mattermost",
+          "license": "AGPL",
+          "repo": "mattermost/mattermost-server",
+          "site": "https://mattermost.com",
+          "stars": "17.6K",
+          "language": "Go",
+          "svg": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA5FBMVEX///8kiv0dbspQof3MzMwki/7JyclOoP0Ag/0AZsgThv3QzsoAZMeRvPhDnP0dbcfU0MlAm/0Qhf0igu4ecdAjh/fp6enY2Ng1kv0tjv34/P8gfOTw8PD39/c+l/0fd9u61/7m8f8QasmdxPjV1dWozv7W5//x9/9Ypv3Q5P7i7f+axP4+f9C6z+yxyeoAX8Z6sv6Aq+aPseG3w9Olu9pkq/1/uP6lwecAc991puqrvtd4sf4qds1nl9iy0v6du+XE3P5QiNNso+zF1e4xhed1oNtKj+cvgNpKhtKGq99wpOtin+/s/N9cAAAUt0lEQVR4nO1daVviyhImISELGEhEJWEMEJUdR8Fl3HU83jse////ud0JgQDV1R02nfv4fjjLDB3yUnt1dZLJfOMb3/jGN77xjW984xvf+MZfgkan/tjbObu8bLez2Wy7fXl5ttN7rHcan31jK8Nrdeu9u6xtWwTaLOgf2Xb2rvfYbHmffaNLwevWdy41mxLLskGp2trlzmP3L2PZqF+1qdQQbrM8Lat9Vf9rlLZ51LbF2SVY2tle87Nvnguv26P0UrKbsLTsdq/5lfW1dXJpLU0vJmldnnxVde1caQx6muX7lUrFdV2Vgvyb/J/vMz9tXXU+m8wivHrbXrxhQq3iqqYpwTAl1a1ARDW7Xf9ayto6aS/cp0bISSxus6A0F36b9lHrs2lN4J1k5/gRdqoQtynUij93DSv7RTh6J3Pmp/luSnYTlrMkyXWPvoCu1mf5Wb4rpplMUVqzHOufzK9zmeS3vPSScJOS1KzLz/SrraskP6uyBnoRkoLUrKtPM8d6kp+9mnbOwXT9JMf6p/BrnNkJ9UzrOvlIuh377hPSnHoit94Av4jj9CfUHrfMz0tY4Ib4zXIk1rjVwNGZCtDeHL+Qoz0V4xad6slEgNY6wgMO15qI8WRbBK8mvnx98QFDZRKPtqOpjXZMcMMKmkBsjlZ7Cz61kx1rqFZZZwDEYVbiL928MU6i/PYEGCL2qhuP/iexa9uOBSYRW6O9UX/TGxPUtivACOrY/u3e5gn66W/PNB09CWcZIx5rqrUxijvWMhoacqu0z3on9U6z2W10u83n+snOWbvipKY41lRrZ6MEtTRB3tFNe6fO6PN27NQUXW2DFHsRQUvYBE1d0nodZozuZPXUBCfGuAlFHdug8M+uS5foRsSdvmQ4tTdEcRwmBH2Mo2t1vDCvLyPACP5GgkY9BUFTd3d4ydXz8gQnFOvrJNiJMhkRgqbun3Dz42dHWiWiVqLsZo0JXEMTJqj7df71urXq7u7eCiQjitr60vC2KEHdFWk2tIKgSFHeg67hugJxMqLYXhfBqB7kEzQlIQfXug9kWS6WdxkybO4wt3LmKFpX6yF4IkhQvxTSGu8lJLirMgg6O5muQKgM3c16qv6OGEHHfRa73oNBCdaYRmj65EOP/F2riOIavI0XehluoNfvBBsM7xyChCJVhVabK0Y79Dar9zWuKEGL82WmKtrOfCrMEzTn6wz9OfzkCY+hRJVLW9kU65ZAOahbfAtsdV+vh+8PkZNJrr1q1i9nKOpj42r6HE1Vwx+/vhrBKBJyqgn9jnOV5vVDXzYKRhBQgrKcXBtWCWdJLs7ReJnH01R3DVHxTOPXgw7q0FqDB8pNnqK8N1UJPVKynWQINI4mi3c4oZHGDO1sFYJhOoq7UdN8Ri7w+hYUkuwokgQvF5mov56m6x85iuqvmKC2QiPECUrsMSbvqb9AjwbC6eJsZpGhZCYY0gwWBb1Da/n9xSu+EapdNj/ZmKc3R9CPb22GoZNkmGnikVFdyZ+GsR43wgrLzL3rRX40F60mCKqTxbMMj2au1MW3XiurxP1LjRPqE/c4h9d+YY5buVyrkooiyWSq3xjDTBf9jakpapfLEaShkBMJGSrqvSWdJ2FXpbVSiOnacWCPGILRIkYT11Nt2aAYpmuojpoMJ9OUp/yKcm1XUoEsW0/GGJxhpsPT0+WSN1pSoDrqPMMLnwpz9KDF+kw/kMMw84h5VNNfrsgIRYjpqA5f1HswJvyqe6wSSZ+1HB7DTA/NbpYT4pGF6ygjVfP6xoQfu01harOruAwzbUyKRE8taBGKVlZDKwrTApc1irEJIvyIXs394nyGGTQNt8jdpg371AqxWA/HicZ9RLBY28MKQHd+sQBDNGa46S3Ra2uom9HBerAVS5DVghkvXvDBMwylf0BxnGCmaGe1djpLrOMidEAjjFpMtPzDCT4vrJxhqFbvQYptRE/V1DGRiBArKVzo9/L6EcEqniVAPniOYfAHun4Lu6qfsrfYsdFIAUghM24x8TR0LhDCDIvGG/QF2F4HEaKdJju9QkVogmngONBjLkZaCIQMhnLhCfoYpqd+qhKjwQn2kB9t/hQwwWlFyGEo/4QyQsyfkvQ0RT+DhApEhDrU2fbuqQC5BH04ai0ylO8hU8S6Gn6KgOGRsglxpC605o16mTJHRRcDIcRQ2iuTaxnn0J0hF1dTFFFNC4uFYCh8Db0MbzdJZzUEZhmqEr2Y8Qp8EAuKdtYSPRjWsxARhk33BYSBgiNBhgteZCipe+RqQR/6JJIqu+Jb321NYzstvQ6suC7MdmBAIF3HOYaSuktMsXANfPKRLUTTEg2JTRspKkARegE/0MOBkMEw8jYB9FWIECtZW0xNexrSQAQF8WTgey0hQawxvsBQUom3MaCgeIRYoiZYQ7WxUAHla63Qy+Bw4EDIZChRb1OEvgz5Jf2skJo2bMTPOJCqXRtcI1yoCLkMqSkakCVesX2Em7VFgn7dQpRUB67g9WWZo6PstiOToaTW5OAP8NkuqqZ1AYZXGqKkkK69EkcKzhxM4XA8AMRQIiGjAMVEmy1EXyQ39dqIkoKh4i3gFkzPnC8FGRJ/GkA1BtJ4c7MCdXAXU1IJSCtpqED5STrXw4EMqbMJIF+DVBiaxdxHmaBusZUULJsGBY4IHb7mwAyJEAsD4NOXiJoKGOIOMj8KKulDgIvQFPDgDBlKMqymbF/jatzJU1JXsG8W9IiBjIuwwifIqorUqiwDn24g36Zd8gyxpSFlhQYsaBocR8o3DJJGMZzHnmxAy5FGrq/x+qZN5CSoA6Xu1wYaC1mbG7M4YjBUa2DQRwrhCreCekTOajlQq+chwNIZAS+DMtwNHoCPd9gMVa6r6SFKakIq3pex7jZYTC6CXdiCVaKHxAvuaYw7JFbYwOdbaFGx2N2GwfSOag3sDiObGD5v+KSNlIaQI+4aiJKaoqMuzDRF3QVdDZJ9V3jByUbMsA58/rXA/DxZIeJHKepswwJTUywiQpqWQAM5kgaq3LWBiFC4z85ONVXQmTbZDFVOAYUdY9GhBcNfyE9SXwPDX0Pg8x5SQfl4c7+OVE5gcvKOmCGnKEwyZN6xuvsOLcC6NXX8qxBHA+rcG9vmGdvEEJA2qAlu0mQRhvioaw9plIKOEWMoPjTIivhMhmdIKwOv1XbYOgfmbJl/2V8FL0jN8AZawEpkKfDq4oy9EJ4uuUF6x+IPekASTZgh1t3HE0WkuIQ9I8IQjJ8wkKvADJHNUnh3cwJkD1IHvTCSXaRg+IEwBEWCnAzjRGHER8E5JqJfjKEpCP9hfy1szUjIB6vYKSxEhiBDzM8LH2X1/mHfL/w7IU1TsECYAkna4c0/TF0+RBl2scToOS1DvGJDcgWo3U3UBXHb/4jO8LwjDOHsvYFoKd4YwhiCX9VipwjqL6gsAODdI70sF+y7YK39NTNE9FqtgunIIk4L7OSWoXOYp8EZYiMYcL3OjqBqzRBLve+RKSNGdNsMQ7gqYTtTtQq2kRYwKBTZ/UhGyOlg5dPSDOvgCraroU35UwGG99i+B2PXChsAwxlmkRQFKrYJmAvoHmfA72MMDbmMNLPgRddIIovuNmPpkwMV2wR37CWyHMCDlAkMDGzIwWTs/g8RhngYxlJgaEgpgymMWqMUcW9Dt1cRJWXtPJ6nTdWFVjJ+G3Z7NpyKCQIsKg4KnCOzjKThJb0kxkCkL/2XsYatpnRkRA4MhnpnQhskDNmelKWkmf+yb5NlTWNcIG26X4w1bM8dClGWjXton5OkXn94p54ZESqTwRLZC5ThCGPI8otIWlMLKcqF/umCx2m8jw8nIiJkOX40VR+hDA8whrAk8JZCOaIYFO7fXhMkW4OH8ZlgbIucWWGeYgwPcIZYIs1ScA/bQCzHh6CCgtx/G16fnl4P6bnn8bkF1M2orOIE60O7OMN99vaqugvN74RAZs3UWIoRy8AgCBJH29CdK2ZfsI/0of+zjzP8jfh+aPQjAvsuCWoJinPgzPuxvs4LENv9zWH4zg40ewZzNxA9z6JWZQZHfEyF3edpGgjDd5zhj1tkAxmchoyAnmhX92pFgGORMxbO7rc8IRtezu0PlOHhCLnR8gtzHbKzPuY4L8diuco6nDi+VfYe0guWqo8OUYaZHFsaJLix0+grzrl5dW+3Vi5OUKaHS9EFyIxDCxuF9HM4wUyJXV2ou+AMVgSP+zRTIrG93Wq1Vq1G557xT5sVdhtrgHU9PkochgdDxNVgNTvWV0iwnD/RzQI24/CAudIhHg4Jw1s2Q1UOkGoPG8BODaxf3gqQARfzlsdwP4dkNTVETelzAtdHEBt7HxQQM3RzeLAg4SLPbmSo1YDtTTPolkA6zB+EnsVLgPQEsnk8WBDkMUMs/sQqdr63ESSIeBlSk/zECsphnkcwczxC/H4ZqWYJWmuhaDIfJxJiaJTZa53RMZfhQYnd91Zr4BGIKRproMgh6BWxaFgp8RwNcTV5djeK1OzgAM8Uq0vRrODduWsDOdth3uR5jobkbflbxCcyTpRN4WmreVTd4mxY9bGha/02z8nZKBQFU9OigQUMSvFsFYo6b0JlYGAVV0VR+AQzB4iaEm8qc4RIS6llNdXkb4z30dbcTZ5vhsQQFayCKsv8vYhuZTkxOhXuOOppAdsCcG4VvhkSQ8wpSH1RLQZF7iU8XqUB35/Aux3wqtlXcgJmSAwxj3S+JcaxwDk07bRi1H2BeeInA9sCMM/zImZIDFEZIdk3Pdwp8qCURykNR13o0ZItTmdnpIiYIUlNcyVkk21PlsU2PjNHruDD802HM20Xgz5XEvEzHyUxJaVqijX3a0UZLTGm8B5tAbdq6jb/4dEhBgV8C+BCUEmpmuaRiQV6klwWnSPpnJkoSfK3Z6IP7PCK6BaAVMnnxJSUqmke2YOiQgQPXDHwfOY6IEtTd9S7Z/ELvQWoCJ1hXlRJSX2hIHVweAZZaIN+gubjnU1o6o4Zgf6na989pno37im+l0pqX4VfV8TYz2EBI3oyR9rnora6ncfeztXZ3dnVTu+x00374KoGp4NMQgW3vJ/iUFGQvmm42wIeQt4k/gT00SkIRooirKTU15SQ5DTc+IQfA7Qx0AcYYUfizfOSYDCM8COn5JCfK9z4BB9bsSlc8/b7JXLH3A5NEopSwlK36PEqYlFxHRhED4dhg4pQNBhG2Cc/CbZ1GW7QB9t6T3iTbjiij21Qyf2K+5kQioLFxPEGvcDE0zrQDXhbjSQWphRhKESkiJLi3ettvDyzEX4T6kd9JbUIacDIX2APuQuTN97E0zowfhYj+iBGkpGmCRURiBCRfaiJKcqbVtSuzDVCUlSkF2EmtMQc5k6j1GbT7qYZjjXg2+Emsai0VkhBhIg6m3gcKNhk0BgE/IEG6maWESEVopLHN1uiQRJOk3gVXBvRhjh2E6aVX06EkRDR9DSmWBCr+dPjrcAnSBLSZUVIiyiOnk6k+GcTLjUa7OPECbrbpKQom2ZBslPcn5KYEVEM5FT1ohBOo6eCc2ZSzCxJ19JlpEkcUH+K/oKToa7Cw3pfZOtFGsp9mqaaIyJMU1TMIceJ+xTx9GFxnT71dfxEYp4NhrGeN1+CgeZuaH+YIp5bKzys6z32rYfxY92LNQ7B8/wS+doMjmnIQE1xEvrp5KFAN1wAT/Fz+XlP2DI/aKBY1s1EIOmpgm23RRR341Euo7i6xzmdvBiD+6xJN7y71AnpLEI95UTFiUulY7L91cxxMHkxBm+wTwoj4Yo6SnGgCHgbNTFEavSvl3Wr3ml/8mITYoK8wTDqZVbxozGoIvACf6ipU47F4TIZQGN4P+XHe2j2uOpdMl2bBY37SumcSzE5Cxz8fBmkc6ytwcvPQBYXoOTQzswKsT6J/ZDiDXfTU91NjHQHheBBmGRr8CAn3pvEfjViguBNSHBlI4xwQCnm/+VTlGbmnQNDfnl65dmk13x6kWdeS4O+OCIm+JuqqPBODBehU87/5m9dU1VNzgIHhhH0h6esIrk7GPbpRxIrigIKSgiGgXAtRhjhUJgiNO8cGIXC/cv70/XgtdltNBrd5uvg+unt5b4w+z62UH7oizHmCa4YCZMIvY0YRcIRms0PT1oUYsweukjJb6yia/IyMfYjinx3E3KUqmVoOB8FfSuU2PtznZuI4Jq8zCxFftAYcwyVNQVJ+t4kkeFoKQ4Tayc4dqhKCZk+nSMphcP5YtJjvhZqEeYwIrg2NzpPMX8h/CZmOpxfpaJEaJK/K1f5k/uJi17kN0VwQnGUZsAyYlkOX5tXnGFG/79cS8WOvlxhtEGCE4oKp15cZEnMcpcetaiVI9TC1+jtiZ1LSBL8UDZKMKbIr/oZNOeQ+hphRb9RglOKF+q6xvJT8JMuNk8wDhpKPpdSU1eHk82NCa49TIAUSdjgvzl7jTClYWk7BEkCFzEkPlVbZoh0OThW5EMJ1pqqwThUxpqaHwq8x34dMM1hfizAdSbbCMb+ZlvWaH6MLXDDPiaJ2BiV0oW9aVV1/ItSTHDjJjhFbIwkAA83GjhMdajEFrgNE0wg1lTy/ecb86qmdB4rqJJbrbW9BPaViRxzm+Foqje50uRbtqihMQ6PYzEqpdG5u257dNzz0YRf7ng7PnQeCTHmc8PK0kdlFmHqlWEuPzHAbbqYOUyskZK8+FiTsppm9mJKb4sxAsKP4wRHoqy+4AEEjJ5P1DPB73i7LnQR+0pSjsrtzSraajruv7dKUn6f4WEWsJ+bchyTdJbI50zTqdzM0FNyn2iAs0jKkZIsjYZZ10zBknzWzQ6JcibofRH5jXE4y5GSVG6HH77EFyYRneR/DG9zs/Qov8+JEEzMcYxYjm6H/1quEx20mJeaSf68Yv1+vx0pc+y+mPwm+HGQmyNJaRIoo4vh+c2H5vuViiu5lYrvax8358OL0fjv55DLHXy2/2ThcP94kWTMszQLkFtI7/irqecsfhwoIEkxkKVfVnwJLEvyL6EXgahrOpbkw19cOQEc7h8I0aTkDv46djEOf0Q0KRaIhX9IyP34W9klQIjuHxwcH4fM6D+Ojw8O9v8vqH3jG9/4xjf+P/A/y0PhyDol+RsAAAAASUVORK5CYII=",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/mattermost/mattermost-heroku"
+        },
+        {
+          "name": "Zulip",
+          "repo": "zulip/zulip",
+          "stars": "11.2K",
+          "language": "Python",
+          "site": "https://zulip.com/",
+          "svg": "https://cdn.jsdelivr.net/gh/zulip/zulip@master/static/images/logo/zulip-icon-square.svg",
+          "license": "Apache 2.0",
+          "deploy": "https://marketplace.digitalocean.com/apps/zulip"
+        },
+        {
+          "name": "Element",
+          "license": "Apache 2.0",
+          "repo": "vector-im/element-web",
+          "site": "https://element.io/",
+          "language": "JS",
+          "stars": "5.8K",
+          "svg": "https://cdn.jsdelivr.net/gh/vector-im/element-web/res/welcome/images/logo.svg"
+        },
+        {
+          "name": "Twake",
+          "repo": "TwakeApp/Twake",
+          "site": "https://twake.app/",
+          "language": "JS",
+          "license": "AGPL",
+          "stars": "100",
+          "svg": "https://cdn.jsdelivr.net/gh/TwakeApp/Landing/public/medias/logo_big.png",
+          "deploy": "https://doc.twake.app/installation"
+        },
+        {
+          "name": "Wire",
+          "license": "GPL V3",
+          "repo": "wireapp/wire",
+          "site": "https://wire.com/en/",
+          "language": "JS",
+          "stars": "1.8K",
+          "svg": "https://cdn.jsdelivr.net/gh/wireapp/brand/public/Wire%20logo.svg"
+        }
+      ],
+      "id": "0pu87phxq",
+      "svg": "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg",
+      "website": "https://slack.com",
+      "commercial": [
+        {
+          "main": "Slack",
+          "svg": "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg",
+          "website": "https://slack.com"
+        },
+        {
+          "main": "Microsoft Teams",
+          "svg": "https://cdn.worldvectorlogo.com/logos/microsoft-teams-1.svg",
+          "website": "https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software"
+        },
+        {
+          "main": "Discord",
+          "svg": "https://cdn.worldvectorlogo.com/logos/discord.svg",
+          "website": "https://dis.gd"
+        }
+      ],
+      "category": "Communication"
+    },
+    {
+      "main": "Google Analytics",
+      "svg": "https://cdn.worldvectorlogo.com/logos/google-analytics-2.svg",
+      "alts": [
+        {
+          "name": "Matomo",
+          "site": "https://matomo.org",
+          "language": "PHP",
+          "repo": "Matomo-org/matomo",
+          "license": "GPL V3",
+          "stars": "12.8K",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/matomo/matomo.png",
+          "deploy": "https://render.com/deploy?repo=https://github.com/render-examples/matomo"
+        },
+        {
+          "name": "Fathom Analytics",
+          "repo": "usefathom/fathom",
+          "stars": "6.2K",
+          "license": "MIT",
+          "svg": "https://cdn.jsdelivr.net/gh/usefathom/fathom/assets/src/img/favicon.png",
+          "site": "https://usefathom.com/",
+          "language": "Go",
+          "deploy": "https://marketplace.digitalocean.com/apps/fathom-analytics"
+        },
+        {
+          "name": "Countly",
+          "repo": "countly/countly-server",
+          "stars": "4.3K",
+          "license": "AGPL V3-MOD",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/countly/countly.jpg",
+          "site": "https://count.ly",
+          "language": "JS",
+          "deploy": "https://support.count.ly/hc/en-us/articles/360037814151-Deployment-scenarios"
+        },
+        {
+          "name": "Ackee",
+          "repo": "electerious/Ackee",
+          "stars": "1.4K",
+          "license": "MIT",
+          "svg": "https://cdn.jsdelivr.net/gh/electerious/Ackee/src/ui/images/favicon.ico",
+          "site": "https://ackee.electerious.com",
+          "language": "JS",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/electerious/Ackee/tree/master"
+        },
+        {
+          "name": "Open Web Analytics",
+          "repo": "padams/Open-Web-Analytics",
+          "stars": "1.2K",
+          "license": "GPL V2",
+          "svg": "https://cdn.jsdelivr.net/gh/Open-Web-Analytics/Open-Web-Analytics/modules/base/i/owa-logo-100w.png",
+          "site": "http://www.openwebanalytics.com/",
+          "language": "PHP",
+          "deploy": "https://render.com/deploy?repo=https://github.com/render-examples/open-web-analytics"
+        },
+        {
+          "name": "Plausible Analytics",
+          "repo": "plausible/analytics",
+          "stars": "2.3K",
+          "license": "MIT",
+          "svg": "https://cdn.jsdelivr.net/gh/plausible/analytics/assets/static/images/icon/plausible_favicon.png",
+          "site": "https://plausible.io/",
+          "language": "Elixir"
+        },
+        {
+          "name": "Kindmetrics",
+          "repo": "kindmetrics/kindmetrics",
+          "stars": "43",
+          "license": "MIT",
+          "svg": "https://cdn.jsdelivr.net/gh/kindmetrics/kindmetrics/public/apple-icon.png",
+          "site": "https://kindmetrics.io",
+          "language": "Crystal"
+        },
+        {
+          "name": "umami",
+          "repo": "mikecao/umami",
+          "stars": "5.1K",
+          "license": "MIT",
+          "language": "JS",
+          "svg": "https://cdn.jsdelivr.net/gh/mikecao/umami.is/assets/logo.svg",
+          "site": "https://umami.is",
+          "deploy": "https://umami.is/docs/hosting"
+        }
+      ],
+      "website": "https://analytics.google.com/",
+      "id": "io3jr2332",
+      "commercial": [
+        {
+          "main": "Google Analytics",
+          "svg": "https://cdn.worldvectorlogo.com/logos/google-analytics-3.svg",
+          "website": "https://analytics.google.com/"
+        }
+      ],
+      "category": "Analytics"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Heroku",
+          "website": "https://heroku.com",
+          "svg": "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"
+        },
+        {
+          "main": "Render",
+          "website": "https://render.com",
+          "svg": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuNCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMzQuMyAyMzQuMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjM0LjMgMjM0LjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojNDZFM0I3O30KPC9zdHlsZT4KPGcgaWQ9Ikdyb3VwXzI3NjYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNTg1MyAtODUwMykiPgoJPGc+CgkJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxNTk5OCw4NTM0LjcgMTU5OTYsODUzNC43IDE1OTk2LDg1MzYuNyAxNTk5Niw4NTU1LjIgMTU5OTYsODU1Ny4yIDE1OTk4LDg1NTcuMiAxNjAxNi42LDg1NTcuMiAKCQkJMTYwMTguNiw4NTU3LjIgMTYwMTguNiw4NTU1LjIgMTYwMTguNiw4NTM2LjcgMTYwMTguNiw4NTM0LjcgMTYwMTYuNiw4NTM0LjcgCQkiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTU5MzguMiw4NTM0LjdjLTcuMiwwLTE0LjIsMS40LTIwLjgsNC4yYy02LjQsMi43LTEyLjEsNi42LTE3LDExLjVzLTguOCwxMC42LTExLjUsMTcKCQkJYy0yLjgsNi42LTQuMiwxMy42LTQuMiwyMC44djc4LjR2MmgyaDE4LjZoMnYtMnYtNzguN2MwLjQtOC4xLDMuOC0xNS43LDkuNS0yMS4zYzUuOC01LjcsMTMuNC05LDIxLjUtOS4zaDQxLjJoMnYtMnYtMTguNnYtMmgtMgoJCQlIMTU5MzguMnoiLz4KCQk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjE2MDM1LjEsODYwOC45IDE2MDMzLjEsODYwOC45IDE2MDMzLjEsODYxMC45IDE2MDMzLjEsODYyOS41IDE2MDMzLjEsODYzMS41IDE2MDM1LjEsODYzMS41IAoJCQkxNjA1My43LDg2MzEuNSAxNjA1NS43LDg2MzEuNSAxNjA1NS43LDg2MjkuNSAxNjA1NS43LDg2MTAuOSAxNjA1NS43LDg2MDguOSAxNjA1My43LDg2MDguOSAJCSIvPgoJCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTYwMzUuMSw4NTcxLjggMTYwMzMuMSw4NTcxLjggMTYwMzMuMSw4NTczLjggMTYwMzMuMSw4NTkyLjQgMTYwMzMuMSw4NTk0LjQgMTYwMzUuMSw4NTk0LjQgCgkJCTE2MDUzLjcsODU5NC40IDE2MDU1LjcsODU5NC40IDE2MDU1LjcsODU5Mi40IDE2MDU1LjcsODU3My44IDE2MDU1LjcsODU3MS44IDE2MDUzLjcsODU3MS44IAkJIi8+CgkJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxNjA1My43LDg1MzQuNyAxNjAzNS4xLDg1MzQuNyAxNjAzMy4xLDg1MzQuNyAxNjAzMy4xLDg1MzYuNyAxNjAzMy4xLDg1NTUuMiAxNjAzMy4xLDg1NTcuMiAKCQkJMTYwMzUuMSw4NTU3LjIgMTYwNTMuNyw4NTU3LjIgMTYwNTUuNyw4NTU3LjIgMTYwNTUuNyw4NTU1LjIgMTYwNTUuNyw4NTM2LjcgMTYwNTUuNyw4NTM0LjcgCQkiLz4KCQk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjE2MDM1LjEsODY0NiAxNjAzMy4xLDg2NDYgMTYwMzMuMSw4NjQ4IDE2MDMzLjEsODY2Ni42IDE2MDMzLjEsODY2OC42IDE2MDM1LjEsODY2OC42IAoJCQkxNjA1My43LDg2NjguNiAxNjA1NS43LDg2NjguNiAxNjA1NS43LDg2NjYuNiAxNjA1NS43LDg2NDggMTYwNTUuNyw4NjQ2IDE2MDUzLjcsODY0NiAJCSIvPgoJCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTYwMzUuMSw4NjgzLjEgMTYwMzMuMSw4NjgzLjEgMTYwMzMuMSw4Njg1LjEgMTYwMzMuMSw4NzAzLjcgMTYwMzMuMSw4NzA1LjcgMTYwMzUuMSw4NzA1LjcgCgkJCTE2MDUzLjcsODcwNS43IDE2MDU1LjcsODcwNS43IDE2MDU1LjcsODcwMy43IDE2MDU1LjcsODY4NS4xIDE2MDU1LjcsODY4My4xIDE2MDUzLjcsODY4My4xIAkJIi8+CgkJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxNTk5OCw4NjgzLjEgMTU5OTYsODY4My4xIDE1OTk2LDg2ODUuMSAxNTk5Niw4NzAzLjcgMTU5OTYsODcwNS43IDE1OTk4LDg3MDUuNyAxNjAxNi42LDg3MDUuNyAKCQkJMTYwMTguNiw4NzA1LjcgMTYwMTguNiw4NzAzLjcgMTYwMTguNiw4Njg1LjEgMTYwMTguNiw4NjgzLjEgMTYwMTYuNiw4NjgzLjEgCQkiLz4KCQk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjE1OTYwLjksODY4My4xIDE1OTU4LjksODY4My4xIDE1OTU4LjksODY4NS4xIDE1OTU4LjksODcwMy43IDE1OTU4LjksODcwNS43IDE1OTYwLjksODcwNS43IAoJCQkxNTk3OS41LDg3MDUuNyAxNTk4MS41LDg3MDUuNyAxNTk4MS41LDg3MDMuNyAxNTk4MS41LDg2ODUuMSAxNTk4MS41LDg2ODMuMSAxNTk3OS41LDg2ODMuMSAJCSIvPgoJCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTU5MjMuOCw4NjgzLjEgMTU5MjEuOCw4NjgzLjEgMTU5MjEuOCw4Njg1LjEgMTU5MjEuOCw4NzAzLjcgMTU5MjEuOCw4NzA1LjcgMTU5MjMuOCw4NzA1LjcgCgkJCTE1OTQyLjQsODcwNS43IDE1OTQ0LjQsODcwNS43IDE1OTQ0LjQsODcwMy43IDE1OTQ0LjQsODY4NS4xIDE1OTQ0LjQsODY4My4xIDE1OTQyLjQsODY4My4xIAkJIi8+CgkJPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxNTg4Ni43LDg2ODMuMSAxNTg4NC43LDg2ODMuMSAxNTg4NC43LDg2ODUuMSAxNTg4NC43LDg3MDMuNyAxNTg4NC43LDg3MDUuNyAxNTg4Ni43LDg3MDUuNyAKCQkJMTU5MDUuMiw4NzA1LjcgMTU5MDcuMiw4NzA1LjcgMTU5MDcuMiw4NzAzLjcgMTU5MDcuMiw4Njg1LjEgMTU5MDcuMiw4NjgzLjEgMTU5MDUuMiw4NjgzLjEgCQkiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Dokku",
+          "stars": "18.6K",
+          "license": "MIT",
+          "svg": "https://cdn.jsdelivr.net/gh/dokku/dokku@v0.19.13/docs/assets/dokku.png",
+          "repo": "dokku/dokku",
+          "site": "http://dokku.viewdocs.io/dokku/",
+          "language": "Shell",
+          "deploy": "https://marketplace.digitalocean.com/apps/dokku"
+        },
+        {
+          "name": "OpenFaas",
+          "site": "https://www.openfaas.com/",
+          "repo": "openfaas/faas",
+          "language": "Go",
+          "license": "MIT",
+          "stars": "17K",
+          "svg": "https://cdn.jsdelivr.net/gh/openfaas/openfaas.github.io/images/openfaas/whale.png",
+          "deploy": "https://marketplace.digitalocean.com/apps/openfaas"
+        },
+        {
+          "site": "https://flynn.io/",
+          "language": "Go",
+          "stars": "7.5K",
+          "name": "Flynn(UNMAINTAINED)",
+          "license": "BSD-3",
+          "repo": "flynn/flynn",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/flynn/flynn.svg"
+        },
+        {
+          "name": "Caprover",
+          "repo": "CapRover/CapRover",
+          "license": "Apache 2.0",
+          "stars": "4.7K",
+          "svg": "https://cdn.jsdelivr.net/gh/caprover/caprover-website@master/website/static/img/logo.png",
+          "language": "TS",
+          "site": "https://CapRover.com",
+          "deploy": "https://marketplace.digitalocean.com/apps/caprover?action=deploy&refcode=6410aa23d3f3"
+        },
+        {
+          "name": "Tsuru",
+          "repo": "tsuru/tsuru",
+          "license": "BSD-3",
+          "stars": "3.3K",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/tsuru/tsuru.png",
+          "language": "GO",
+          "site": "https://tsuru.io/",
+          "deploy": "https://docs.tsuru.io/stable/installing/index.html"
+        }
+      ],
+      "id": "12uejiood",
+      "category": "Deployment"
+    },
+    {
+      "commercial": [
+        {
+          "main": "GitHub",
+          "svg": "https://cdn.worldvectorlogo.com/logos/github-icon-1.svg",
+          "website": "https://github.com"
+        },
+        {
+          "main": "BitBucket",
+          "website": "http://bitbucket.org",
+          "svg": "https://cdn.worldvectorlogo.com/logos/bitbucket-icon.svg"
+        },
+        {
+          "main": "Upsource",
+          "website": "https://www.jetbrains.com/upsource/",
+          "svg": "https://cdn.jsdelivr.net/gh/detain/svg-logos@master/svg/upsource-icon.svg"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Gogs",
+          "stars": "33.5K",
+          "license": "MIT",
+          "svg": "https://cdn.jsdelivr.net/gh/gogs/gogs@main/public/img/favicon.png",
+          "site": "https://gogs.io/",
+          "language": "GO",
+          "repo": "gogs/gogs",
+          "deploy": "https://gogs.io/docs/installation"
+        },
+        {
+          "name": "GitLab",
+          "stars": "22.2K",
+          "license": "MIT",
+          "repo": "gitlabhq/gitlabhq",
+          "svg": "https://www.vectorlogo.zone/logos/gitlab/gitlab-tile.svg",
+          "deploy": "https://about.gitlab.com/install/",
+          "site": "https://about.gitlab.com/",
+          "language": "Ruby"
+        },
+        {
+          "name": "Gitea",
+          "stars": "18.4K",
+          "repo": "go-gitea/gitea",
+          "svg": "https://www.vectorlogo.zone/logos/giteaio/giteaio-icon.svg",
+          "license": "MIT",
+          "site": "https://gitea.io/en-us/",
+          "language": "Go",
+          "deploy": "https://marketplace.digitalocean.com/apps/gitea"
+        },
+        {
+          "name": "Codeberg",
+          "stars": "22",
+          "repo": "https://codeberg.org/Codeberg/Community",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/codeberg/logo.svg",
+          "license": "AGPL V3",
+          "site": "https://codeberg.org/",
+          "language": "Go",
+          "deploy": "https://codeberg.org/Codeberg/build-deploy-gitea"
+        },
+        {
+          "name": "OneDev",
+          "stars": "2.7K",
+          "license": "MIT",
+          "svg": "https://cdn.jsdelivr.net/gh/theonedev/onedev/server-core/src/main/java/io/onedev/server/web/img/logo.png",
+          "site": "https://code.onedev.io/",
+          "language": "Java",
+          "repo": "theonedev/onedev",
+          "deploy": "https://code.onedev.io/projects/onedev-manual/blob/master/pages/installation-guide.md"
+        },
+        {
+          "name": "Pagure",
+          "stars": "158",
+          "license": "GPL v2+",
+          "svg": "https://cdn.jsdelivr.net/gh/Pagure/pagure@master/tests/pagure.png",
+          "site": "https://pagure.io/pagure",
+          "language": "Python",
+          "repo": "Pagure/pagure",
+          "deploy": "https://docs.pagure.org/pagure/install.html"
+        }
+      ],
+      "id": "8bxlppy5h",
+      "category": "Developer Tools"
+    },
+    {
+      "commercial": [
+        {
+          "main": "1Password",
+          "svg": "https://www.vectorlogo.zone/logos/1password/1password-icon.svg",
+          "website": "https://1password.com/"
+        },
+        {
+          "main": "LastPass",
+          "website": "https://www.lastpass.com/",
+          "svg": "https://www.vectorlogo.zone/logos/lastpass/lastpass-tile.svg"
+        }
+      ],
+      "alts": [
+        {
+          "name": "KeePassXC",
+          "repo": "keepassxreboot/keepassxc",
+          "language": "C++",
+          "site": "https://keepassxc.org/",
+          "license": "GPL V3",
+          "stars": "7.2K",
+          "svg": "https://cdn.jsdelivr.net/gh/keepassxreboot/keepassxc-browser/keepassxc-browser/icons/keepassxc.svg"
+        },
+        {
+          "name": "Bitwarden",
+          "site": "https://bitwarden.com",
+          "repo": "bitwarden/server",
+          "license": "AGPL V3",
+          "language": "C#",
+          "stars": "4.8K",
+          "svg": "https://www.vectorlogo.zone/logos/bitwarden/bitwarden-icon.svg",
+          "deploy": "https://marketplace.digitalocean.com/apps/bitwarden"
+        },
+        {
+          "name": "Buttercup",
+          "repo": "buttercup/buttercup-desktop",
+          "license": "GPL V3",
+          "stars": "3.2K",
+          "site": "https://buttercup.pw",
+          "language": "JS",
+          "svg": "https://cdn.jsdelivr.net/gh/buttercup/buttercup-website/static/img/buttercup.ico"
+        },
+        {
+          "name": "Padloc",
+          "repo": "padloc/padloc",
+          "license": "GPL V3",
+          "stars": "886",
+          "site": "https://padloc.app/",
+          "language": "TS",
+          "svg": "https://cdn.jsdelivr.net/gh/padloc/padloc/packages/app/assets/icons/192.png",
+          "deploy": "https://github.com/padloc/padloc#getting-started"
+        },
+        {
+          "name": "AuthPass",
+          "repo": "authpass/authpass",
+          "license": "GPL V3",
+          "stars": "135",
+          "site": "https://authpass.app/",
+          "language": "Dart",
+          "svg": "https://cdn.jsdelivr.net/gh/authpass/authpass/_docs/authpass-logo.svg",
+          "deploy": "https://github.com/authpass/authpass#authpassapp---open-source-password-manager-for-mobile-and-desktop"
+        },
+        {
+          "name": "Passwordcockpit",
+          "repo": "passwordcockpit/passwordcockpit",
+          "license": "BSD-3",
+          "stars": "18",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/passwordcockpit/image.png",
+          "site": "https://passwordcockpit.com/",
+          "language": "PHP",
+          "deploy": "https://github.com/passwordcockpit/passwordcockpit#usage"
+        }
+      ],
+      "id": "hvf9tctei",
+      "category": "Password Managers"
+    },
+    {
+      "commercial": [
+        {
+          "main": "TeamViewer",
+          "website": "https://www.teamviewer.com/",
+          "svg": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGc+PHBhdGggZD0iTTIxLDIzSDNjLTEuMTA0NTY5NiwwLTItMC44OTU0Mjk2LTItMlYzYzAtMS4xMDQ1Njk2LDAuODk1NDMwNC0yLDItMmgxOGMxLjEwNDU3MDQsMCwyLDAuODk1NDMwNCwyLDJ2MTggICBDMjMsMjIuMTA0NTcwNCwyMi4xMDQ1NzA0LDIzLDIxLDIzeiIgZmlsbD0iIzIxQjNFOCIvPjxwYXRoIGQ9Ik0yMSwxSDNDMS44OTU0NDY4LDEsMSwxLjg5NTM4NTcsMSwzdjAuMjVjMC0xLjEwNDYxNDMsMC44OTU0NDY4LTIsMi0yaDE4ICAgYzEuMTA0NTUzMiwwLDIsMC44OTUzODU3LDIsMlYzQzIzLDEuODk1Mzg1NywyMi4xMDQ1NTMyLDEsMjEsMXoiIGZpbGw9IiNGRkZGRkYiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGQ9Ik0yMSwyMi43NUgzYy0xLjEwNDU1MzIsMC0yLTAuODk1NDQ2OC0yLTJWMjFjMCwxLjEwNDU1MzIsMC44OTU0NDY4LDIsMiwyaDE4ICAgYzEuMTA0NTUzMiwwLDItMC44OTU0NDY4LDItMnYtMC4yNUMyMywyMS44NTQ1NTMyLDIyLjEwNDU1MzIsMjIuNzUsMjEsMjIuNzV6IiBmaWxsPSIjMDEwMTAxIiBvcGFjaXR5PSIwLjEiLz48cGF0aCBkPSJNMTIsM2MtNC45NzA1ODExLDAtOSw0LjAyOTQxODktOSw5YzAsNC45NzA1Miw0LjAyOTQxODksOSw5LDlzOS00LjAyOTQ4LDktOSAgIEMyMSw3LjAyOTQxODksMTYuOTcwNTgxMSwzLDEyLDN6IE0xNC45OTkyNjc2LDE0Ljk5OTI2NzZMMTUuNSwxM2gtN2wwLjQ5OTIwNjUsMi4wMDA3OTM1TDUsMTJsNC4wMDA3MzI0LTIuOTk5MjY3Nkw4LjUsMTFoNyAgIGwtMC41MDA3OTM1LTEuOTk5MjA2NUwxOSwxMkwxNC45OTkyNjc2LDE0Ljk5OTI2NzZ6IiBmaWxsPSIjRkZGRkZGIi8+PHBhdGggZD0iTTEyLDMuMjVjMy45ODI0ODI5LDAsNy4zNTE5NDU5LDIuNTIzMDMwMyw4LjU5NzQyOTMsNi4wODAyODEzICAgQzE5LjQ2OTk4NzksNS42NDY4MDk2LDE2LjA1MjczNDQsMywxMiwzUzQuNTM1NDA4NSw1LjYyOTQ3MzIsMy40MDc5NjcxLDkuMzEyOTQ1NEM0LjY1MzQ1MDUsNS43NTU2OTM5LDguMDE3NTE3MSwzLjI1LDEyLDMuMjV6IiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjIiLz48cGF0aCBkPSJNMTIsMjAuNzVjLTMuNjI0NjgxNSwwLTYuNzQxNTQ3Ni0yLjA5MDAzODMtOC4yMTEzOTUzLTUuMTQ3NjE1NCAgIGMtMC4xNDUwOTItMC4zMDE4MjA4LTAuMjc0MTM1Ni0wLjYxMzA2OTUtMC4zODYwMzQ1LTAuOTMyNjY1OGMwLjE0MDY1NSwwLjQ1OTUzNDYsMC4zMTY5NDg3LDAuOTAyOTM0MSwwLjUyNTY2ODYsMS4zMjcwNzMxICAgQzUuMzkyNTQ3MSwxOC45NzI0MDQ1LDguNDUyODY3NSwyMSwxMiwyMWMzLjYyNzE1MjQsMCw2Ljc0MDk1OTItMi4xMDYyMjIyLDguMTYzMTgxMy01LjE4OTIyMjMgICBjMC4wNzY3NTU1LTAuMTY2Mzg0NywwLjE0ODU4NDQtMC4zMzU2MTMzLDAuMjE1Mjk5Ni0wLjUwNzUwOTJjMC4wNzgzMzEtMC4yMDE4MjMyLDAuMTQ5NjE0My0wLjQwNzMyMzgsMC4yMTM1NTI1LTAuNjE2MjEzOCAgIEMxOS4zNDY1NSwxOC4yNDQzMDY2LDE1Ljk4MjQ4MjksMjAuNzUsMTIsMjAuNzV6IiBmaWxsPSIjMDEwMTAxIiBvcGFjaXR5PSIwLjEiLz48cG9seWdvbiBmaWxsPSIjMDEwMTAxIiBpZD0iWE1MSURfMTU2MF8iIG9wYWNpdHk9IjAuMSIgcG9pbnRzPSIxOSwxMiAxNC45OTkyMDc1LDkuMDAwNzkyNSAxNS41LDExIDguNSwxMSA5LjAwMDcyNTcsOS4wMDA3MjU3ICAgIDUsMTIgOC45OTkxOTEzLDE1LjAwMDgwODcgOC41LDEzIDE1LjUsMTMgMTQuOTk5Mjc0MywxNC45OTkyNzQzICAiLz48bGluZWFyR3JhZGllbnQgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJTVkdJRF8xXyIgeDE9IjExLjkyNDI3MDYiIHgyPSIyMi4zMzg0NzgxIiB5MT0iMTIuMDc1NzI5NCIgeTI9IjIyLjQ4OTkzNjgiPjxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzAxMDEwMTtzdG9wLW9wYWNpdHk6MC4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojMDEwMTAxO3N0b3Atb3BhY2l0eTowIi8+PC9saW5lYXJHcmFkaWVudD48cGF0aCBkPSJNMTkuNTk0Mjk5Myw3LjE1NTg4MzhsLTAuMDExNTk2NywwLjAwOTI3NzNDMjAuNDc1NjQ3LDguNTYyNjIyMSwyMSwxMC4yMTg1NjY5LDIxLDEyICAgYzAsNC45NzA1Mi00LjAyOTQxODksOS05LDljLTIuNDg0OTI0MywwLTQuNzM0NTU4MS0xLjAwNzA4MDEtNi4zNjMxNTkyLTIuNjM1MzE0OWwtMC4wMDc1MDczLDAuMDA1OTgxNEwxMC4yNTg2NjcsMjNIMjEgICBjMS4xMDQ1NTMyLDAsMi0wLjg5NTQ0NjgsMi0yVjEwLjU2MTU4NDVMMTkuNTk0Mjk5Myw3LjE1NTg4Mzh6IiBmaWxsPSJ1cmwoI1NWR0lEXzFfKSIvPjxsaW5lYXJHcmFkaWVudCBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9IlNWR0lEXzJfIiB4MT0iLTAuNjUyNzkyNCIgeDI9IjI0LjY1Mjc5MiIgeTE9IjYuMDk5OTA2IiB5Mj0iMTcuOTAwMDkzMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojRkZGRkZGO3N0b3Atb3BhY2l0eTowLjIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkZGRkY7c3RvcC1vcGFjaXR5OjAiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIGQ9Ik0yMSwyM0gzYy0xLjEwNDU2OTYsMC0yLTAuODk1NDI5Ni0yLTJWM2MwLTEuMTA0NTY5NiwwLjg5NTQzMDQtMiwyLTJoMTggICBjMS4xMDQ1NzA0LDAsMiwwLjg5NTQzMDQsMiwydjE4QzIzLDIyLjEwNDU3MDQsMjIuMTA0NTcwNCwyMywyMSwyM3oiIGZpbGw9InVybCgjU1ZHSURfMl8pIi8+PC9nPjxnLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjwvc3ZnPg=="
+        }
+      ],
+      "alts": [
+        {
+          "name": "Apache Guacamole™",
+          "repo": "apache/guacamole-server",
+          "site": "https://guacamole.apache.org/",
+          "language": "C",
+          "svg": "https://cdn.jsdelivr.net/gh/apache/guacamole-website/images/guacamole-logo-64.png",
+          "stars": "1.2K",
+          "license": "Apache 2.0",
+          "deploy": "https://guacamole.apache.org/doc/gug/installing-guacamole.html"
+        },
+        {
+          "name": "Myrtille",
+          "site": "https://cedrozor.github.io/myrtille/",
+          "repo": "cedrozor/myrtille",
+          "language": "C#",
+          "deploy": "https://github.com/cedrozor/myrtille/blob/master/DOCUMENTATION.md#installation",
+          "svg": "https://cdn.jsdelivr.net/gh/cedrozor/myrtille@gh-pages/images/myrtille.png",
+          "stars": "713",
+          "license": "Apache 2.0"
+        },
+        {
+          "name": "MeshCentral",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/meshcentral/logo.png",
+          "site": "https://www.meshcommander.com/meshcentral2",
+          "language": "JS",
+          "repo": "Ylianst/MeshCentral",
+          "deploy": "https://github.com/Ylianst/MeshCentral#installation",
+          "license": "Apache 2.0",
+          "stars": "247"
+        },
+        {
+          "name": "Remotely",
+          "stars": "233",
+          "svg": "https://cdn.jsdelivr.net/gh/lucent-sea/Remotely@master/Assets/Remotely_Icon.png",
+          "license": "GPL V3",
+          "deploy": "https://github.com/Jay-Rad/Remotely/blob/master/README.md",
+          "language": "JS",
+          "site": "https://remotely.one/",
+          "repo": "Jay-Rad/Remotely"
+        }
+      ],
+      "id": "n1j0lce0m",
+      "category": "Developer Tools"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Google Docs",
+          "svg": "https://cdn.worldvectorlogo.com/logos/google-docs-icon-2.svg",
+          "website": "https://www.google.com/intl/en_US/docs/about/"
+        },
+        {
+          "main": "Office Online",
+          "svg": "https://cdn.jsdelivr.net/gh/jaywcjlove/logo@master/img/office.svg",
+          "website": "https://office.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "CryptPad",
+          "stars": "1.6K",
+          "svg": "https://cdn.jsdelivr.net/gh/xwiki-labs/cryptpad/customize.dist/CryptPad_logo.svg",
+          "license": "AGPL V3",
+          "repo": "xwiki-labs/cryptpad",
+          "site": "https://cryptpad.fr/",
+          "language": "JS",
+          "deploy": "https://github.com/xwiki-labs/cryptpad/wiki/Installation-guide"
+        },
+        {
+          "name": "Colabora Online",
+          "stars": "220",
+          "svg": "https://www.vectorlogo.zone/logos/collabora/collabora-icon.svg",
+          "license": "MPL V2",
+          "repo": "CollaboraOnline/online",
+          "site": "https://www.collabora.com/code",
+          "language": "JS/C++",
+          "deploy": "https://www.collaboraoffice.com/code/"
+        },
+        {
+          "name": "ONLYOFFICE",
+          "stars": "1.4K",
+          "svg": "https://cdn.jsdelivr.net/gh/ONLYOFFICE/desktop-apps/win-linux/extras/projicons/res/desktopeditors.ico",
+          "license": "AGPL V3",
+          "repo": "ONLYOFFICE/DocumentServer",
+          "site": "https://www.onlyoffice.com/",
+          "language": "C#/JS",
+          "deploy": "https://helpcenter.onlyoffice.com/"
+        },
+        {
+          "name": "Graphite Docs(Discontinued)",
+          "stars": "378",
+          "svg": "https://cdn.jsdelivr.net/gh/Graphite-Docs/graphite/public/images/mstile-310x310.png",
+          "license": "GPL V3",
+          "repo": "Graphite-Docs/graphite",
+          "site": "https://www.graphitedocs.com/",
+          "language": "JS",
+          "deploy": "https://github.com/Graphite-Docs/graphite#install"
+        },
+        {
+          "name": "Hedgedoc",
+          "stars": "1.4K",
+          "svg": "https://cdn.jsdelivr.net/gh/hedgedoc/hedgedoc-logo/LOGOTYPE/SVG/HedgeDoc-Logo%201.svg",
+          "license": "AGPL V3",
+          "repo": "hedgedoc/hedgedoc",
+          "site": "https://hedgedoc.org/",
+          "language": "JS",
+          "deploy": "https://github.com/hedgedoc/hedgedoc#installation--upgrading"
+        }
+      ],
+      "id": " pqlrehguie",
+      "category": "Cloud"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Amazon S3",
+          "svg": "https://cdn.jsdelivr.net/gh/gilbarbara/logos/logos/aws-s3.svg",
+          "website": "https://aws.amazon.com/s3/"
+        }
+      ],
+      "alts": [
+        {
+          "name": "minio",
+          "site": "https://min.io",
+          "repo": "minio/minio",
+          "stars": "20.4K",
+          "license": "Apache 2.0",
+          "language": "Go",
+          "svg": "https://cdn.worldvectorlogo.com/logos/minio-1.svg",
+          "deploy": "https://docs.min.io/docs/minio-deployment-quickstart-guide.html"
+        },
+        {
+          "name": "ceph",
+          "language": "C++",
+          "site": "https://ceph.io",
+          "repo": "ceph/ceph",
+          "license": "LGPL V3",
+          "stars": "7.4K",
+          "svg": "https://www.vectorlogo.zone/logos/ceph/ceph-icon.svg",
+          "deploy": "https://docs.ceph.com/docs/master/start/"
+        },
+        {
+          "name": "SwiftStack",
+          "site": "https://www.swiftstack.com/",
+          "stars": "2K",
+          "license": "Apache 2.0",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/swiftstack/swiftstack.png",
+          "language": "Python",
+          "repo": "openstack/swift",
+          "deploy": "https://docs.openstack.org/swift/latest/deployment_guide.html"
+        }
+      ],
+      "id": "mui65dcfl",
+      "category": "Deployment"
+    },
+    {
+      "alts": [
+        {
+          "name": "Odoo",
+          "repo": "odoo/odoo",
+          "site": "https://www.odoo.com/",
+          "license": "GPL V3",
+          "stars": "20.4K",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/odoo/odoo.png",
+          "language": "Python",
+          "deploy": "https://www.odoo.com/documentation/master/setup/install.html"
+        },
+        {
+          "name": "SuiteCRM",
+          "repo": "salesagility/SuiteCRM",
+          "site": "https://www.suitecrm.com/",
+          "license": "AGPL-3.0",
+          "stars": "2.4K",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/suitecrm/suitecrm.png",
+          "language": "PHP",
+          "deploy": "https://docs.suitecrm.com/admin/installation-guide/"
+        },
+        {
+          "name": "Corteza",
+          "repo": "cortezaproject/corteza-server",
+          "site": "https://cortezaproject.org/",
+          "license": "Apache-2.0",
+          "svg": "https://cdn.jsdelivr.net/gh/cortezaproject/corteza-webapp-compose@develop/public/favicon32x32.png",
+          "language": "Go",
+          "deploy": "https://docs.cortezaproject.org/",
+          "stars": "172"
+        },
+        {
+          "name": "Erpnext",
+          "repo": "frappe/erpnext",
+          "site": "https://erpnext.com/",
+          "license": "GPL V3",
+          "svg": "https://cdn.jsdelivr.net/gh/frappe/erpnext@develop/erpnext/public/images/erpnext-logo.png",
+          "language": "Python",
+          "stars": "7.6K"
+        }
+      ],
+      "website": "https://salesforce.com",
+      "id": "kpo1k2e123",
+      "commercial": [
+        {
+          "main": "Salesforce",
+          "svg": "https://cdn.worldvectorlogo.com/logos/salesforce-2.svg",
+          "website": "https://salesforce.com"
+        },
+        {
+          "main": "SAP",
+          "svg": "https://www.vectorlogo.zone/logos/sap/sap-icon.svg",
+          "website": "https://sap.com"
+        }
+      ],
+      "category": "CRM"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Zendesk",
+          "svg": "https://www.vectorlogo.zone/logos/zendesk/zendesk-icon.svg",
+          "website": "https://www.zendesk.com/"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Zammad",
+          "stars": "2k",
+          "license": "GNU AGPLv3",
+          "language": "Ruby",
+          "site": "https://www.zammad.com/",
+          "deploy": "https://docs.zammad.org/en/latest/",
+          "svg": "https://zammad.com/assets/images/icons/logo.svg",
+          "repo": "zammad/zammad"
+        },
+        {
+          "name": "UVDesk",
+          "stars": "252",
+          "license": "MIT",
+          "language": "PHP",
+          "site": "https://www.uvdesk.com/en/",
+          "deploy": "https://www.uvdesk.com/en/blog/open-source-helpdesk-installation-on-ubuntu-uvdesk/",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images/uvdesk/uvdesk.jpg",
+          "repo": "uvdesk/community-skeleton"
+        },
+        {
+          "name": "Helpy",
+          "stars": "1.8K",
+          "license": "MIT",
+          "language": "RUBY",
+          "site": "https://helpy.io/",
+          "deploy": "https://github.com/helpyio/helpy#getting-started",
+          "svg": "https://cdn.jsdelivr.net/gh/helpyio/helpy/app/assets/images/helpy-logo.png",
+          "repo": "helpyio/helpy"
+        }
+      ],
+      "id": "lzgn1ku9q",
+      "category": "Communication"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Google Drive",
+          "svg": "https://cdn.worldvectorlogo.com/logos/google-drive.svg",
+          "website": "https://google.com/drive"
+        }
+      ],
+      "alts": [
+        {
+          "name": "NextCloud",
+          "stars": "9.8K",
+          "svg": "https://www.vectorlogo.zone/logos/nextcloud/nextcloud-icon.svg",
+          "license": "AGPL V3",
+          "repo": "nextcloud/server",
+          "site": "https://nextcloud.com",
+          "language": "PHP",
+          "deploy": "https://docs.nextcloud.com/server/stable/admin_manual/installation/index.html"
+        },
+        {
+          "name": "Seafile",
+          "stars": "7.5K",
+          "svg": "https://wiki.deimos.fr/images/3/39/Seafile_logo.png",
+          "license": "GPL V2",
+          "repo": "haiwen/seafile",
+          "site": "https://www.seafile.com/en/home/",
+          "language": "C",
+          "deploy": "https://download.seafile.com/published/seafile-manual/deploy/README.md"
+        },
+        {
+          "name": "OwnCloud",
+          "stars": "7K",
+          "svg": "https://cdn.jsdelivr.net/gh/owncloud/owncloud.github.io@source/static/logo.png",
+          "license": "AGPL V3",
+          "repo": "owncloud/core",
+          "site": "https://owncloud.org/",
+          "language": "PHP",
+          "deploy": "https://doc.owncloud.org/server/10.2/"
+        }
+      ],
+      "id": "zt5htxj1r",
+      "category": "Cloud"
+    },
+    {
+      "commercial": [
+        {
+          "main": "cPanel",
+          "svg": "https://www.crucialhosting.com/static/images/icons/icon-cpanel.svg",
+          "website": "https://cpanel.net/"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Vesta",
+          "deploy": "https://vestacp.com/install/",
+          "site": "https://vestacp.com/",
+          "language": "PHP",
+          "repo": "serghey-rodin/vesta",
+          "stars": "2.2K",
+          "license": "GPL V3",
+          "svg": "https://pbs.twimg.com/profile_images/1024954605992648704/yrIPRVMG_400x400.jpg"
+        },
+        {
+          "name": "Webmin",
+          "deploy": "https://doxfer.webmin.com/Webmin/Installing_Webmin",
+          "site": "http://www.webmin.com/",
+          "language": "PERL",
+          "repo": "webmin/webmin",
+          "stars": "1.3K",
+          "license": "BSD-3",
+          "svg": "https://avatars2.githubusercontent.com/u/102707"
+        },
+        {
+          "name": "Hestia",
+          "deploy": "https://github.com/hestiacp/hestiacp/#installing-hestia-control-panel",
+          "site": "https://hestiacp.com/",
+          "language": "PHP",
+          "repo": "hestiacp/hestiacp",
+          "stars": "194",
+          "license": "GPL V3",
+          "svg": "https://hestiacp.com/img/logo.png"
+        }
+      ],
+      "id": " ewriieoke",
+      "category": "Developer Tools"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Facebook",
+          "svg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/F_icon.svg",
+          "website": "https://facebook.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Mastodon",
+          "repo": "tootsuite/mastodon",
+          "site": "https://joinmastodon.org",
+          "license": "AGPL V3",
+          "stars": "20.4K",
+          "language": "Ruby",
+          "svg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Mastodon_Logotype_%28Simple%29.svg/1200px-Mastodon_Logotype_%28Simple%29.svg.png",
+          "deploy": "https://marketplace.digitalocean.com/apps/mastodon"
+        },
+        {
+          "name": "Okuna",
+          "repo": "OkunaOrg/okuna-api",
+          "site": "https://okuna.io",
+          "license": "AGPL V3",
+          "stars": "144",
+          "language": "Python",
+          "svg": "data:image/png;base64,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"
+        },
+        {
+          "name": "Convo",
+          "stars": "11",
+          "license": "Custom",
+          "site": "https://convo.events",
+          "language": "Go",
+          "repo": "hiconvo/api",
+          "svg": "https://pbs.twimg.com/profile_images/1183892292387532800/Tu02VSpQ_400x400.png"
+        }
+      ],
+      "id": "mvhgnbgfj",
+      "category": "Social Media"
+    },
+    {
+      "main": "Trello",
+      "alts": [
+        {
+          "name": "Wekan",
+          "deploy": "https://github.com/wekan/wekan/wiki/Platforms",
+          "site": "https://wekan.github.io/",
+          "language": "JS",
+          "repo": "wekan/wekan",
+          "stars": "15.5K",
+          "license": "MIT",
+          "svg": "https://cdn.jsdelivr.net/gh/wekan/wekan@master/meta/icons/wekan-150.svg"
+        },
+        {
+          "name": "Taiga",
+          "deploy": "https://taigaio.github.io/taiga-doc/dist/setup-production.html",
+          "site": "https://taiga.io/",
+          "language": "PYTHON",
+          "repo": "taigaio/taiga-back",
+          "stars": "5.1K",
+          "license": "AGPL V3",
+          "svg": "https://avatars0.githubusercontent.com/u/6905422"
+        },
+        {
+          "name": "Kanboard",
+          "deploy": "https://docs.kanboard.org/en/latest/admin_guide/index.html",
+          "site": "https://kanboard.org/",
+          "language": "PHP",
+          "repo": "kanboard/kanboard",
+          "stars": "4.9K",
+          "license": "MIT",
+          "svg": "https://user-images.githubusercontent.com/40141083/41202259-db1c76a8-6cb5-11e8-8cdc-cf6c3d560b3b.png"
+        }
+      ],
+      "svg": "https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/brand-assets/Logos/0099ec3754bf473d2bbf317204ab6fea/trello-logo-blue.png",
+      "website": "https://trello.com/",
+      "id": " eyyrebbfy",
+      "commercial": [
+        {
+          "main": "Trello",
+          "svg": "https://cdn.worldvectorlogo.com/logos/trello.svg",
+          "website": "https://trello.com/"
+        }
+      ],
+      "category": "Product Management"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Intercom",
+          "svg": "https://cdn.worldvectorlogo.com/logos/intercom-2.svg",
+          "website": "https://intercom.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "chatwoot",
+          "stars": "3.4K",
+          "svg": "https://cdn.jsdelivr.net/gh/chatwoot/chatwoot/public/brand-assets/logo_thumbnail.svg",
+          "repo": "chatwoot/chatwoot",
+          "license": "MIT",
+          "site": "https://www.chatwoot.com/",
+          "language": "Ruby",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/chatwoot/chatwoot/tree/master"
+        },
+        {
+          "name": "chaskiq",
+          "repo": "chaskiq/chaskiq",
+          "stars": "144",
+          "license": "GPL V2",
+          "svg": "https://cdn.jsdelivr.net/gh/chaskiq/chaskiq/app/assets/images/favicon.png",
+          "site": "https://chaskiq.io/",
+          "language": "JS",
+          "deploy": " https://heroku.com/deploy?template=https://github.com/chaskiq/chaskiq"
+        }
+      ],
+      "id": "txmr3k1l9",
+      "category": "Communication"
+    },
+    {
+      "main": "Zapier",
+      "alts": [
+        {
+          "name": "Huginn",
+          "repo": "huginn/huginn",
+          "stars": "27.3K",
+          "license": "MIT",
+          "language": "Ruby",
+          "site": "https://github.com/huginn/huginn",
+          "svg": "https://user-images.githubusercontent.com/34615258/75391724-3e3e9a80-58b0-11ea-9b71-a30d2d5b90f8.png",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/huginn/huginn/tree/master"
+        },
+        {
+          "name": "n8n",
+          "stars": "6.4K",
+          "svg": "https://user-images.githubusercontent.com/34615258/75075867-68fdad00-54c4-11ea-8e73-5930124d61a1.png",
+          "repo": "n8n-io/n8n",
+          "license": "Apache 2.0",
+          "site": "https://n8n.io",
+          "language": "TS"
+        },
+        {
+          "name": "ActiveWorkflow",
+          "repo": "automaticmode/active_workflow",
+          "site": "https://github.com/automaticmode/active_workflow",
+          "svg": "https://cdn.jsdelivr.net/gh/automaticmode/active_workflow/media/ActiveWorkflow-Symbol.svg",
+          "stars": "351",
+          "license": "MIT",
+          "language": "Ruby",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/automaticmode/active_workflow&env[SINGLE_DYNO]=1"
+        }
+      ],
+      "id": "tv9m27gmw",
+      "svg": "https://cdn.zapier.com/zapier/images/logos/zapier-logo.png",
+      "website": "https://zapier.com",
+      "commercial": [
+        {
+          "main": "Zapier",
+          "svg": "https://cdn.worldvectorlogo.com/logos/zapier.svg",
+          "website": "https://zapier.com"
+        }
+      ],
+      "category": "Automation"
+    },
+    {
+      "commercial": [
+        {
+          "main": "YouTube",
+          "svg": "https://cdn.worldvectorlogo.com/logos/youtube-3.svg",
+          "website": "https://youtube.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Peertube",
+          "stars": "6.8K",
+          "license": "AGPL V3",
+          "svg": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg",
+          "repo": "Chocobozzz/PeerTube",
+          "site": "https://joinpeertube.org/",
+          "language": "TS",
+          "deploy": "https://github.com/Chocobozzz/PeerTube/blob/develop/support/doc/production.md"
+        },
+        {
+          "name": "NodeTube",
+          "stars": "1.6K",
+          "license": "MIT",
+          "svg": "https://cdn.jsdelivr.net/gh/mayeaux/nodetube/media/logo.png",
+          "repo": "mayeaux/nodetube",
+          "site": "https://github.com/mayeaux/nodetube",
+          "language": "JS",
+          "deploy": "https://github.com/mayeaux/nodetube/blob/master/README.md"
+        }
+      ],
+      "id": "3kvfwzi1o",
+      "category": "Social Media"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Algolia",
+          "svg": "https://www.vectorlogo.zone/logos/algolia/algolia-icon.svg",
+          "website": "https://algolia.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Elastic Search",
+          "stars": "47.1K",
+          "license": "SSPL v1",
+          "svg": "https://cdn.worldvectorlogo.com/logos/elasticsearch.svg",
+          "repo": "elastic/elasticsearch",
+          "site": "https://www.elastic.co/elasticsearch",
+          "language": "JAVA",
+          "deploy": "https://www.elastic.co/guide/en/cloud/current/ec-create-deployment.html"
+        },
+        {
+          "name": "MeiliSearch",
+          "stars": "3.4K",
+          "license": "MIT",
+          "svg": "https://www.meilisearch.com/_nuxt/img/cf59975.svg",
+          "repo": "meilisearch/meilisearch",
+          "site": "https://www.meilisearch.com/",
+          "language": "RUST",
+          "deploy": "https://docs.meilisearch.com/guides/introduction/quick_start_guide.html"
+        },
+        {
+          "name": "Typesense",
+          "stars": "7.4K",
+          "license": "GPL-3.0",
+          "svg": "https://typesense.org/assets/images/typesense_logo.svg",
+          "repo": "typesense/typesense",
+          "site": "https://typesense.org/",
+          "language": "C++",
+          "deploy": "https://typesense.org/guide"
+        }
+      ],
+      "id": "hfarlvwm9",
+      "category": "Developer Tools"
+    },
+    {
+      "main": "Typeform",
+      "alts": [
+        {
+          "name": "OhMyForm",
+          "stars": "315",
+          "license": "MIT",
+          "language": "JS",
+          "repo": "ohmyform/ohmyform",
+          "site": "https://ohmyform.com/",
+          "svg": "https://user-images.githubusercontent.com/34615258/75390028-2c0f2d00-58ad-11ea-8d03-54469bad4365.png",
+          "deploy": "http://ohmyform.com/docs/install/"
+        },
+        {
+          "name": "Super Easy Forms",
+          "stars": "27",
+          "license": "MIT",
+          "language": "JS",
+          "repo": "gkpty/super-easy-forms",
+          "site": "https://supereasyforms.com/",
+          "svg": "https://supereasyforms.com/img/SEF-LOGO.svg",
+          "deploy": "https://www.npmjs.com/package/super-easy-forms#installation"
+        }
+      ],
+      "id": "tg03f7qhy",
+      "svg": "https://cdn.freebiesupply.com/logos/large/2x/typeform-logo-png-transparent.png",
+      "website": "https://typeform.com",
+      "commercial": [
+        {
+          "main": "Typeform",
+          "svg": "https://cdn.worldvectorlogo.com/logos/typeform-1.svg",
+          "website": "https://typeform.com"
+        }
+      ],
+      "category": "Form Builder"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Canny",
+          "svg": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDQ1LjkgNjM4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0NDUuOSA2MzgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGZpbGw9IiM1RjVERjkiIGQ9Ik0yMjQuNSw2MzhDMTAxLjEsNjM4LDAsNTM3LjgsMCw0MTQuN1YyMjMuM0MwLDEwMC4yLDEwMS4xLDAsMjI0LjUsMGMxMDkuNiwwLDIwMi44LDc4LjMsMjIwLjksMTg2LjENCgkJCWMyLjksMTcuNC04LjYsMzMuOC0yNiwzNi44Yy0xNy40LDIuOS0zMy43LTguOC0zNi43LTI2LjJjLTEzLTc3LTc4LjYtMTMyLjktMTU3LTEzMi45Yy04OC4yLDAtMTU5LjMsNzEuNi0xNTkuMywxNTkuNXYxOTEuNA0KCQkJYzAsODgsNzEuMSwxNTkuNSwxNTkuMywxNTkuNWM3OC4zLDAsMTQ0LjItNTUuOSwxNTcuMS0xMzIuOWMyLjktMTcuNCwxOS4zLTI5LjEsMzYuNi0yNi4yYzE3LjQsMi45LDI4LjYsMTkuNCwyNS43LDM2LjcNCgkJCUM0MjcuMiw1NTkuNywzMzQsNjM4LDIyNC41LDYzOHoiLz4NCgk8L2c+DQoJPGcgb3BhY2l0eT0iMC41Ij4NCgkJPHBhdGggZmlsbD0iIzVGNURGOSIgZD0iTTE1My42LDM0Ny43Yy0xNy42LDAtMzAuNy0xNC4zLTMwLjctMzEuOXYtOTIuM2MwLTU2LjgsNDUuOC0xMDMsMTAyLjgtMTAzYzM4LjksMCw3My45LDIxLjYsOTEuNyw1Ni40DQoJCQljOCwxNS43LDEuNywzNC45LTE0LDQyLjljLTE1LjcsOC0zNSwxLjgtNDMtMTMuOWMtNi44LTEzLjQtMjEtMjEuNy0zNS44LTIxLjdjLTIxLjgsMC00MC4yLDE3LjYtNDAuMiwzOS4ydjkyLjMNCgkJCUMxODQuMywzMzMuNCwxNzEuMiwzNDcuNywxNTMuNiwzNDcuN3oiLz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==",
+          "website": "https://canny.io/"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Fider",
+          "deploy": "https://getfider.com/docs/hosting-instance/",
+          "site": "https://getfider.com/",
+          "language": "GO",
+          "repo": "getfider/fider",
+          "stars": "1K",
+          "license": "GPL V3",
+          "svg": "https://userfiles.uptimerobot.com/img/436354-1543054074.png"
+        },
+        {
+          "name": "Astuto",
+          "deploy": "https://github.com/riggraz/astuto#requirements",
+          "site": "https://github.com/riggraz/astuto",
+          "language": "RUBY",
+          "repo": "riggraz/astuto",
+          "stars": "599",
+          "license": "GPL V3",
+          "svg": "https://ph-files.imgix.net/be9188f7-f8a4-4959-9b3a-e685c5a9f364?auto=format"
+        },
+        {
+          "name": "LogChimp",
+          "deploy": "https://logchimp.codecarrot.net/download",
+          "site": "https://logchimp.codecarrot.net/",
+          "language": "NODE",
+          "repo": "logchimp/logchimp",
+          "stars": "140",
+          "license": "Apache-2.0 License",
+          "svg": "https://cdn.logchimp.codecarrot.net/logchimp_circular_logo.png"
+        }
+      ],
+      "id": "weirgeywu",
+      "category": "Product Management"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Zoom",
+          "website": "https://zoom.com",
+          "svg": "https://www.vumc.org/pmi/sites/default/files/public_files/Images/Zoom%20logo.png"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Jitsi",
+          "repo": "jitsi/jitsi-meet",
+          "site": "https://meet.jit.si/",
+          "license": "Apache 2.0",
+          "stars": "6.9K",
+          "svg": "https://i.pinimg.com/originals/95/01/6d/95016d0e63a555cdd650f3494e552b67.png",
+          "language": "JS",
+          "deploy": "https://github.com/jitsi/jitsi-meet/blob/master/doc/development.md"
+        }
+      ],
+      "id": "cufgpxuvc",
+      "category": "Communication"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Instagram",
+          "svg": "https://cdn.worldvectorlogo.com/logos/instagram-2016.svg",
+          "website": "https://instagram.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Pixelfed",
+          "repo": "pixelfed/pixelfed",
+          "site": "https://pixelfed.org",
+          "stars": "2K",
+          "license": "AGPL V3",
+          "language": "PHP",
+          "deploy": "https://docs.pixelfed.org/installing-pixelfed/",
+          "svg": "https://avatars0.githubusercontent.com/u/38410642?s=200&v=4"
+        }
+      ],
+      "id": "7e22r3p12",
+      "category": "Social Media"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Segment",
+          "svg": "https://www.vectorlogo.zone/logos/segment/segment-icon.svg",
+          "website": "https://segment.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Rudder",
+          "repo": "rudderlabs/rudder-server",
+          "language": "Go",
+          "site": "https://www.rudderstack.com",
+          "stars": "1.4K",
+          "license": "Custom",
+          "svg": "https://www.saashub.com/images/app/service_logos/136/bw97unt81yo/large.png?1582261436"
+        }
+      ],
+      "id": "rsxg8idaz",
+      "category": "Analytics"
+    },
+    {
+      "commercial": [
+        {
+          "main": "npm",
+          "svg": "https://cdn.jsdelivr.net/gh/gilbarbara/logos/logos/npm.svg",
+          "website": "https://www.npmjs.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Verdaccio",
+          "repo": "verdaccio/verdaccio",
+          "stars": "8.9K",
+          "license": "MIT",
+          "svg": "https://verdaccio.org/img/logo/symbol/svg/verdaccio-tiny.svg",
+          "site": "https://www.verdaccio.org/",
+          "language": "TS",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/autotelic/verdaccio-heroku-docker/tree/master"
+        }
+      ],
+      "id": "kwyzeihzt",
+      "category": "Developer Tools"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Auth0",
+          "svg": "https://cdn.jsdelivr.net/gh/gilbarbara/logos/logos/auth0.svg",
+          "website": "https://auth0.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "KeyCloak",
+          "repo": "keycloak/keycloak",
+          "stars": "5.3K",
+          "license": "Apache 2.0",
+          "svg": "https://design.jboss.org/keycloak/logo/images/keycloak_icon_256px.png",
+          "site": "https://www.keycloak.org",
+          "language": "JAVA",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/mieckert/keycloak-heroku/tree/master"
+        },
+        {
+          "name": "Osso",
+          "repo": "enterprise-oss/osso",
+          "stars": "5",
+          "license": "BSL",
+          "svg": "https://cdn.jsdelivr.net/gh/enterprise-oss/osso-docs@main/static/img/logo.svg",
+          "site": "https://ossoapp.com",
+          "language": "Ruby",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/enterprise-oss/osso/tree/main"
+        }
+      ],
+      "id": "n3ogcivro",
+      "category": "Developer Tools"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Asana",
+          "svg": "https://cdn.worldvectorlogo.com/logos/asana-logo.svg",
+          "website": "https://asana.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "LeanTime",
+          "stars": "227",
+          "site": "https://leantime.io/",
+          "repo": "leantime/leantime",
+          "language": "PHP",
+          "license": "GPL V2",
+          "svg": "https://avatars2.githubusercontent.com/u/11252321?s=200&v=4"
+        }
+      ],
+      "id": "o6lgatqba",
+      "category": "Product Management"
+    },
+    {
+      "commercial": [
+        {
+          "main": "HubSpot",
+          "svg": "https://cdn.worldvectorlogo.com/logos/hubspot-1.svg",
+          "website": "https://www.hubspot.com/"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Erxes",
+          "deploy": "https://erxes.io/install",
+          "site": "https://erxes.io/",
+          "language": "JS",
+          "repo": "erxes/erxes",
+          "stars": "715",
+          "license": "GPL V3",
+          "svg": "https://opencollective-production.s3-us-west-1.amazonaws.com/a5ff26c0-b88a-11e8-b4ab-519dd68ec9a0.jpg"
+        }
+      ],
+      "id": "3327yhjhh",
+      "category": "CRM"
+    },
+    {
+      "commercial": [
+        {
+          "main": "LogRocket",
+          "svg": "https://cdn.jsdelivr.net/gh/AliasIO/Wappalyzer/src/drivers/webextension/images/icons/LogRocket.svg",
+          "website": "https://logrocket.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Sentry",
+          "repo": "getsentry/sentry",
+          "stars": "23.9K",
+          "svg": "https://sentry-brand.storage.googleapis.com/sentry-glyph-black.svg",
+          "license": "Custom",
+          "site": "https://sentry.io",
+          "language": "Python",
+          "deploy": "https://docs.sentry.io/server/"
+        },
+        {
+          "name": "GlitchTip",
+          "repo": "https://gitlab.com/glitchtip",
+          "svg": "https://glitchtip.com/assets/logo-again.svg",
+          "language": "Python",
+          "license": "MIT",
+          "stars": "14",
+          "site": "https://glitchtip.com/",
+          "deploy": "https://glitchtip.com/documentation/install"
+        }
+      ],
+      "id": "3dwh5h2gh",
+      "category": "Developer Tools"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Oberlo",
+          "svg": "https://image.flaticon.com/icons/png/512/825/825517.png",
+          "website": "https://oberlo.com"
+        }
+      ],
+      "alts": [],
+      "id": "5uv2jsadu",
+      "category": "E-commerce"
+    },
+    {
+      "commercial": [
+        {
+          "main": "LaunchDarkly",
+          "svg": "https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/q0jz5ctb7ykronw9twux",
+          "website": "https://launchdarkly.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "FlagSmith",
+          "site": "https://www.flagsmith.com/",
+          "repo": "https://github.com/Flagsmith/flagsmith-api",
+          "language": "Python",
+          "stars": "203",
+          "license": "BSD-3",
+          "svg": "https://cdn.jsdelivr.net/gh/Flagsmith/flagsmith-frontend/web/images/favicon.ico",
+          "deploy": "https://heroku.com/deploy?template=https://github.com/Flagsmith/flagsmith-api"
+        },
+        {
+          "name": "Unleash",
+          "site": "https://unleash.github.io/",
+          "repo": "unleash/unleash",
+          "language": "Javascript",
+          "stars": "1901",
+          "license": "APACHE2.0",
+          "svg": "https://cdn.jsdelivr.net/gh/unleash/unleash.github.io/img/logo-inverted.png"
+        }
+      ],
+      "id": "zczpb2ekn",
+      "category": "Product Management"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Netlify",
+          "svg": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='logo' viewBox='0 0 40 40'%3E%3Cpath id='netlifyGem'%0Afill='%2300a6c0' d='M28.58865,14.135028 C28.58395,14.132628 28.57945,14.130928 28.57505,14.129228 C28.56675,14.126028 28.55905,14.123128 28.55185,14.116228 C28.52855,14.094228 28.51935,14.054728 28.52445,14.023128 L29.29675,9.296708 L32.92245,12.922528 L29.15235,14.526628 C29.14195,14.531128 29.13065,14.533428 29.11935,14.533428 C29.11195,14.533428 29.10775,14.533428 29.10405,14.532128 C29.09895,14.530328 29.09475,14.526128 29.08485,14.516428 C28.95165,14.368228 28.78625,14.236028 28.58865,14.135028 Z M33.84685,13.846928 L37.72315,17.723128 C38.52845,18.528528 38.93115,18.931228 39.07845,19.396928 C39.10025,19.465728 39.11815,19.535328 39.13225,19.605628 L29.86905,15.683328 C29.86435,15.681328 29.85945,15.679328 29.85445,15.677328 C29.81695,15.662128 29.77405,15.644828 29.77405,15.606528 C29.77405,15.568928 29.81825,15.550828 29.85505,15.535628 C29.85905,15.534028 29.86295,15.532428 29.86665,15.530928 L33.84685,13.846928 Z M38.97385,20.850028 C38.77395,21.226028 38.38415,21.615828 37.72315,22.276928 L33.35425,26.645728 L27.70205,25.468628 C27.69265,25.466628 27.68245,25.465028 27.67215,25.463328 C27.62275,25.455228 27.56865,25.446328 27.56865,25.400528 C27.51695,24.923528 27.29295,24.497728 26.91385,24.208228 C26.89075,24.185328 26.89725,24.149128 26.90325,24.115828 C26.90405,24.111128 26.90485,24.106528 26.90565,24.102028 L27.96935,17.576028 C27.97045,17.569128 27.97145,17.561828 27.97255,17.554428 C27.97945,17.504628 27.98765,17.446128 28.03385,17.446128 C28.50925,17.379028 28.91765,17.146528 29.19325,16.781228 C29.20155,16.770328 29.20805,16.760028 29.22035,16.754128 C29.25185,16.739228 29.29095,16.754828 29.32305,16.768328 L38.97385,20.850028 Z M32.34875,27.651228 L25.16275,34.837228 L26.39375,27.276728 C26.39425,27.273228 26.39475,27.269728 26.39515,27.266228 C26.39645,27.256728 26.39765,27.247328 26.40115,27.238228 C26.41075,27.213928 26.43715,27.203528 26.46215,27.193628 C26.46615,27.192028 26.47005,27.190528 26.47385,27.188928 C26.74695,27.075328 26.97865,26.895028 27.16905,26.672128 C27.19325,26.643828 27.22225,26.617428 27.25905,26.611128 C27.26725,26.609728 27.27975,26.610628 27.28795,26.612328 L32.34875,27.651228 Z M23.64205,36.358028 L22.83175,37.168328 L13.87735,24.226028 C13.87405,24.221328 13.87055,24.216628 13.86695,24.211928 C13.85285,24.193428 13.83845,24.174328 13.84055,24.151928 C13.84195,24.135728 13.85225,24.122628 13.86255,24.109628 C13.86585,24.105428 13.86925,24.101128 13.87225,24.096828 C13.89965,24.057628 13.92295,24.017628 13.94845,23.973728 C13.95505,23.962428 13.96175,23.950828 13.96875,23.938928 L13.97075,23.935628 C13.98465,23.911928 13.99785,23.889428 14.02215,23.876428 C14.04325,23.865228 14.07175,23.869928 14.09515,23.874828 L24.01635,25.920828 C24.04105,25.925928 24.07445,25.936328 24.09245,25.954028 C24.10525,25.966828 24.10795,25.980728 24.11095,25.996528 C24.11205,26.002828 24.11335,26.009428 24.11525,26.016228 C24.26085,26.528828 24.63425,26.972228 25.13915,27.171928 C25.16715,27.185728 25.15475,27.217328 25.14175,27.250428 C25.13575,27.265628 25.12965,27.281128 25.12725,27.295328 C25.00245,28.055728 23.92985,34.593128 23.64205,36.358028 Z M21.94995,38.049128 C21.35315,38.640128 21.00115,38.952628 20.60305,39.078528 C20.21065,39.202628 19.78935,39.202628 19.39695,39.078528 C18.93115,38.931228 18.52845,38.528528 17.72315,37.723128 L8.73041,28.730428 L11.07885,25.086928 C11.09045,25.068928 11.10095,25.052628 11.11845,25.040228 C11.14395,25.022128 11.18035,25.030828 11.21015,25.040128 C11.45185,25.114728 11.67995,25.145028 11.92335,25.145028 C12.23745,25.145028 12.53565,25.082328 12.84835,24.956928 C12.87475,24.946328 12.90215,24.940028 12.92335,24.958828 C12.93345,24.967828 12.94385,24.980228 12.95145,24.991328 L21.94995,38.049128 Z M7.86325,27.863228 L5.79956,25.799528 L9.8744,24.061628 C9.88486,24.057128 9.89611,24.054828 9.90748,24.054828 C9.94124,24.054828 9.96101,24.088628 9.97946,24.120128 C9.984,24.127928 9.98846,24.135528 9.99303,24.142428 C10.03191,24.201528 10.07078,24.253028 10.10966,24.304328 C10.11272,24.308328 10.11963,24.316028 10.12248,24.320128 C10.13403,24.337128 10.12557,24.353628 10.11446,24.370828 L7.86325,27.863228 Z M4.88716,24.887128 L2.27688,22.276928 C1.83293,21.832928 1.511345,21.511328 1.287443,21.234128 L9.22264,22.879628 C9.23201,22.881528 9.24212,22.883228 9.25244,22.884928 C9.30189,22.892928 9.35601,22.901828 9.35601,22.947628 C9.35601,22.997328 9.2973,23.020628 9.24713,23.040428 C9.23912,23.043628 9.23133,23.046728 9.22403,23.049828 L4.88716,24.887128 Z M0.83135,19.891928 C0.84039822,19.724728 0.8704545,19.558428 0.9215188,19.396928 C1.068812,18.931228 1.471502,18.528528 2.27688,17.723128 L5.61789,14.382128 C6.16841,15.190128 9.80487,20.443328 10.22934,21.051328 C10.23348,21.057228 10.238,21.063328 10.24261,21.069528 C10.26971,21.106128 10.29957,21.146428 10.26932,21.176328 C10.12296,21.337028 9.9766,21.512928 9.8737,21.704128 C9.86155,21.726628 9.84599,21.752228 9.8242,21.765728 C9.81094,21.773928 9.79737,21.771028 9.78225,21.767828 L9.77999,21.767428 L0.83135,19.891928 Z M6.51068,13.489328 L11.00195,8.998018 C11.42405,9.182688 12.96045,9.831958 14.33375,10.412338 C15.37465,10.852228 16.32225,11.252728 16.61955,11.381128 C16.64945,11.394028 16.67675,11.405828 16.68995,11.435628 C16.69785,11.453528 16.69395,11.477128 16.68995,11.496328 C16.65965,11.640028 16.64455,11.783728 16.64455,11.927428 C16.64455,12.455428 16.85135,12.949428 17.21315,13.324128 C17.24295,13.353528 17.21285,13.396628 17.18655,13.434428 C17.18165,13.441528 17.17685,13.448428 17.17265,13.455028 L12.61335,20.518228 C12.60095,20.537428 12.58965,20.555028 12.57045,20.567528 C12.54625,20.583328 12.51235,20.576228 12.48435,20.569128 C12.30665,20.524128 12.11625,20.494928 11.94065,20.494928 C11.77745,20.494928 11.59885,20.525528 11.41935,20.557628 L11.41775,20.557928 C11.39835,20.561428 11.38035,20.564728 11.36425,20.553028 C11.34665,20.540328 11.33135,20.519928 11.31905,20.502028 L6.51068,13.489328 Z M11.90875,8.091218 L17.72315,2.276888 C18.52845,1.471504 18.93115,1.068812 19.39695,0.9215196 C19.78935,0.7973975 20.21065,0.7973975 20.60305,0.9215197 C21.06885,1.068812 21.47155,1.471503 22.27685,2.276888 L23.53685,3.536838 L19.40185,9.941378 C19.38995,9.959798 19.37905,9.976588 19.36095,9.989048 C19.33595,10.006238 19.30055,9.998138 19.27135,9.989838 C19.06205,9.930318 18.85265,9.900558 18.64325,9.900558 C18.17805,9.900558 17.71285,10.070888 17.35105,10.360448 C17.32425,10.386938 17.28415,10.370608 17.24965,10.355608 C16.70965,10.121178 12.50965,8.345268 11.90875,8.091218 Z M24.41455,4.414568 L28.23345,8.233478 L27.31395,13.930628 C27.31325,13.935228 27.31265,13.940528 27.31215,13.946028 C27.31075,13.959128 27.30915,13.973528 27.30455,13.983828 C27.29555,14.003828 27.27585,14.008328 27.25485,14.013128 C27.24775,14.014728 27.24045,14.016428 27.23335,14.018728 C27.03995,14.081928 26.86055,14.170928 26.70645,14.285928 C26.69925,14.291328 26.69325,14.297628 26.68745,14.303728 C26.67585,14.316028 26.66495,14.327428 26.64705,14.328528 C26.63525,14.329228 26.61535,14.326628 26.60445,14.321928 L20.78625,11.849828 C20.78245,11.848228 20.77855,11.846628 20.77455,11.844928 C20.73775,11.829828 20.69365,11.811628 20.69365,11.774028 C20.66225,11.463028 20.55895,11.152128 20.39705,10.880028 C20.39295,10.873228 20.38875,10.866328 20.38435,10.859328 C20.35585,10.813428 20.32545,10.764668 20.34905,10.718018 L24.41455,4.414568 Z M20.48325,13.020928 L25.93675,15.331328 C25.96795,15.344528 25.99985,15.358028 26.01255,15.389428 C26.01925,15.406228 26.01605,15.428128 26.01265,15.445728 C25.99735,15.525228 25.98345,15.617028 25.98345,15.708728 L25.98345,15.862028 C25.98345,15.899528 25.94425,15.915828 25.90845,15.930528 C25.90445,15.932228 25.90045,15.933828 25.89665,15.935428 C25.03295,16.303828 13.76645,21.108128 13.74985,21.108128 C13.73265,21.108128 13.71545,21.108128 13.69815,21.091128 C13.66845,21.061728 13.69845,21.018628 13.72475,20.980728 C13.72965,20.973728 13.73445,20.966828 13.73875,20.960228 L18.22115,14.021128 C18.22375,14.017128 18.22635,14.013028 18.22895,14.008928 C18.25545,13.967028 18.28515,13.920328 18.33315,13.920328 C18.34845,13.922428 18.36355,13.924628 18.37835,13.926728 C18.48005,13.941428 18.57025,13.954428 18.66055,13.954428 C19.34065,13.954428 19.97045,13.622628 20.35125,13.057328 C20.36135,13.042328 20.37045,13.028928 20.38475,13.017728 C20.41195,12.996628 20.45155,13.007428 20.48325,13.020928 Z M14.23735,22.205528 L26.51755,16.969128 C26.51755,16.969128 26.53485,16.969228 26.55205,16.986228 C26.61935,17.052628 26.67605,17.098428 26.73055,17.139628 C26.73865,17.145728 26.74815,17.151228 26.75775,17.156828 C26.78295,17.171428 26.80855,17.186328 26.81025,17.213028 C26.81075,17.222228 26.80975,17.229228 26.80825,17.238328 L25.75565,23.699928 C25.75425,23.708128 25.75315,23.716828 25.75195,23.725628 C25.74525,23.776428 25.73775,23.833328 25.69055,23.833328 C25.11975,23.866528 24.61445,24.190728 24.31795,24.679928 C24.31635,24.682628 24.31475,24.685228 24.31315,24.687828 C24.29945,24.710928 24.28625,24.733028 24.26215,24.745128 C24.24185,24.755228 24.21475,24.750828 24.19265,24.746228 L14.40015,22.726028 C14.39085,22.724128 14.24765,22.207128 14.23735,22.205528 Z'%3E%3C/path%3E%3C/svg%3E",
+          "website": "https://netlify.com"
+        },
+        {
+          "main": "Vercel",
+          "svg": "https://www.svgrepo.com/show/327408/logo-vercel.svg",
+          "website": "https://vercel.com/"
+        }
+      ],
+      "alts": [
+        {
+          "name": "StaticDeploy",
+          "deploy": "https://staticdeploy.io/docs/guides-deploying-staticdeploy-with-docker",
+          "site": "https://staticdeploy.io/",
+          "language": "TS",
+          "repo": "staticdeploy/staticdeploy",
+          "stars": "167",
+          "license": "MIT",
+          "svg": "https://staticdeploy.io/images/logo.svg"
+        }
+      ],
+      "id": "gxfg2143l",
+      "category": "Deployment"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Amplitude",
+          "svg": "https://www.vectorlogo.zone/logos/amplitude/amplitude-icon.svg",
+          "website": "https://amplitude.com/"
+        }
+      ],
+      "alts": [
+        {
+          "name": "PostHog",
+          "deploy": "https://github.com/PostHog/posthog/wiki/Deployment",
+          "site": "https://posthog.com/",
+          "language": "Python",
+          "repo": "PostHog/posthog",
+          "stars": "2k",
+          "license": "MIT",
+          "svg": "https://posthog.com/wp-content/uploads/2020/02/Group-10.png"
+        }
+      ],
+      "id": "jvridinciu",
+      "category": "Product Management"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Medium",
+          "svg": "https://miro.medium.com/max/195/1*emiGsBgJu2KHWyjluhKXQw.png",
+          "website": "https://medium.com/"
+        }
+      ],
+      "alts": [
+        {
+          "name": "WriteFreely",
+          "site": "https://writefreely.org/",
+          "stars": "1.6K",
+          "license": "AGPL V3",
+          "language": "GO",
+          "repo": "writeas/writefreely",
+          "svg": "https://cdn.jsdelivr.net/gh/writeas/writefreely@master/static/img/touch-icon-180.png"
+        },
+        {
+          "name": "Sigle",
+          "site": "https://www.sigle.io/",
+          "stars": "149",
+          "license": "MIT",
+          "svg": "https://app.sigle.io/icon-192x192.png",
+          "language": "JS",
+          "repo": "pradel/sigle"
+        }
+      ],
+      "id": "fvlhaa4dg",
+      "category": "Blogging"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Adobe Illustrator",
+          "svg": "https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg",
+          "website": "https://www.adobe.com/products/illustrator.html"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Inkscape",
+          "site": "https://inkscape.org",
+          "stars": "2064",
+          "license": "GNU GPL V3",
+          "svg": "https://www.vectorlogo.zone/logos/inkscape/inkscape-icon.svg",
+          "language": "C++",
+          "repo": "https://gitlab.com/inkscape/inkscape"
+        }
+      ],
+      "id": "ea1a547be",
+      "category": "Design"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Microsoft Active Directory",
+          "svg": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+          "website": "https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/d2435927-0999-4c62-8c6d-13ba31a52e1a"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Univention Corporate Server",
+          "repo": "univention/univention-corporate-server",
+          "site": "https://www.univention.com/",
+          "license": "AGPL V3",
+          "stars": "71",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images@develop/univention/univention.svg",
+          "language": "Python",
+          "deploy": "https://www.univention.com/downloads/ucs-in-the-cloud/ucs-ec2-image/"
+        }
+      ],
+      "id": "efb17e0ad",
+      "category": "Cloud"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Figma",
+          "svg": "https://www.vectorlogo.zone/logos/figma/figma-icon.svg",
+          "website": "https://figma.com"
+        },
+        {
+          "main": "Framer",
+          "svg": "https://www.vectorlogo.zone/logos/framer/framer-icon.svg",
+          "website": "https://framer.com"
+        },
+        {
+          "main": "Sketch",
+          "svg": "https://www.vectorlogo.zone/logos/sketchapp/sketchapp-icon.svg",
+          "website": "https://sketch.com"
+        },
+        {
+          "main": "Adobe XD",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images@develop/adobe/xd.svg",
+          "website": "https://www.adobe.com/products/xd.html"
+        },
+        {
+          "main": "InVision",
+          "svg": "https://www.vectorlogo.zone/logos/invisionapp/invisionapp-icon.svg",
+          "website": "https://invisionapp.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Penpot",
+          "repo": "penpot/penpot",
+          "site": "https://penpot.app/",
+          "license": "MPL V2",
+          "stars": "3.1K",
+          "svg": "https://cdn.jsdelivr.net/gh/penpot/penpot@develop/frontend/resources/images/favicon.png",
+          "language": "Clojure",
+          "deploy": "https://github.com/penpot/penpot/blob/develop/docs/05-Configuration-Guide.md"
+        },
+        {
+          "name": "Quant UX",
+          "repo": "KlausSchaefers/quant-ux",
+          "site": "https://quant-ux.com/#/",
+          "license": "GPL V3",
+          "stars": "213",
+          "svg": "https://cdn.jsdelivr.net/gh/KlausSchaefers/quant-ux@master/public/icons/favicon.ico",
+          "language": "JS"
+        }
+      ],
+      "id": "gio7ua",
+      "category": "Design"
+    },
+    {
+      "commercial": [
+        {
+          "main": "ClubHouse",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images@develop/clubhouse/clubhouse.svg",
+          "website": "https://joinclubhouse.com"
+        },
+        {
+          "main": "Twitter Spaces",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images@develop/twitter/spaces.png",
+          "website": "https://help.twitter.com/en/using-twitter/spaces"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Jam",
+          "repo": "https://gitlab.com/jam-systems/jam",
+          "site": "https://jam.systems/",
+          "license": "AGPL V3",
+          "stars": "160",
+          "svg": "https://cdn.jsdelivr.net/gh/kogeletey/ossb-images@develop/jam/jam.png",
+          "language": "JS"
+        }
+      ],
+      "id": "gjfifj",
+      "category": "VoiceChat"
+    },
+    {
+      "commercial": [
+        {
+          "main": "Firebase",
+          "svg": "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+          "website": "https://firebase.google.com"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Appwrite",
+          "repo": "appwrite/appwrite",
+          "site": "https://appwrite.io/",
+          "license": "BSD-3",
+          "stars": "6.7K",
+          "svg": "https://appwrite.io/images/appwrite.svg"
+        },
+        {
+          "name": "Supabase",
+          "repo": "supabase/supabase",
+          "site": "https://supabase.io/",
+          "license": "Apache 2.0",
+          "stars": "14K",
+          "svg": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/supabase.svg",
+          "language": "TypeScript",
+          "deploy": "https://supabase.io/docs/guides/self-hosting"
+        }
+      ],
+      "id": "si135ie",
+      "category": "Developer Tools"
+    },
+    {
+      "commercial": [
+        {
+          "main": "IOS",
+          "svg": "https://www.vectorlogo.zone/logos/apple/apple-icon.svg",
+          "website": "https://www.apple.com/ios/ios-14/"
+        }
+      ],
+      "alts": [
+        {
+          "name": "Android",
+          "repo": "https://android.googlesource.com/platform/manifest/",
+          "svg": "https://www.vectorlogo.zone/logos/android/android-icon.svg",
+          "stars": "38K",
+          "license": "Apache 2.0",
+          "site": "https://android.com",
+          "language": "C/Java/Kotlin"
+        },
+        {
+          "name": "Lineage OS",
+          "repo": "LineageOS/android",
+          "site": "https://lineageos.org/",
+          "license": "Apache 2.0",
+          "stars": "2.3K",
+          "svg": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/lineageos.svg",
+          "language": "C/Java/Kotlin"
+        },
+        {
+          "name": "Postmarket OS",
+          "repo": "https://gitlab.com/postmarketOS/linux-postmarketos",
+          "site": "https://postmarketos.org",
+          "license": "GPL v2",
+          "stars": "238",
+          "svg": "https://www.vectorlogo.zone/logos/postmarketos/postmarketos-icon.svg",
+          "language": "C"
+        }
+      ],
+      "id": "xj4jiofj",
+      "category": "OS"
+    }
+  ]
+}
