@@ -1,8 +1,8 @@
-import { rollup } from '../../config/rollup.config';
+import { rollup } from "../../config/rollup.config";
 
 export default rollup({
-  name: 'apollo-client',
+  name: "apollo-client",
   extraGlobals: {
-    'symbol-observable': '$$observable',
+    "symbol-observable": "$$observable",
   },
 });

@@ -1,4 +1,4 @@
-import { stripSymbols } from '../stripSymbols';
+import { stripSymbols } from "../stripSymbols";
 
 interface SymbolConstructor {
   (description?: string | number): symbol;
@@ -6,10 +6,10 @@ interface SymbolConstructor {
 
 declare const Symbol: SymbolConstructor;
 
-describe('stripSymbols', () => {
-  it('should strip symbols (only)', () => {
-    const sym = Symbol('id');
-    const data = { foo: 'bar', [sym]: 'ROOT_QUERY' };
-    expect(stripSymbols(data)).toEqual({ foo: 'bar' });
+describe("stripSymbols", () => {
+  it("should strip symbols (only)", () => {
+    const sym = Symbol("id");
+    const data = { foo: "bar", [sym]: "ROOT_QUERY" };
+    expect(stripSymbols(data)).toEqual({ foo: "bar" });
   });
 });

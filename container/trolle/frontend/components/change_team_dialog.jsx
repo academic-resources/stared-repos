@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default ({
   team_id,
@@ -7,9 +7,9 @@ export default ({
   showTeamDialog,
   handleTeamSelect,
   changeTeam,
-  showCreateTeam
+  showCreateTeam,
 }) => {
-  const title = team_id === -1 ? 'Add to a Team' : 'Change Team'
+  const title = team_id === -1 ? "Add to a Team" : "Change Team";
   return (
     <div className="changing-team">
       <div className="top-row">
@@ -19,7 +19,7 @@ export default ({
       </div>
       <div className="part-of">This board is part of...</div>
       <select value={team_id} onChange={handleTeamSelect}>
-        {teamOptions.map(o => (
+        {teamOptions.map((o) => (
           <option key={o.id} value={o.id}>
             {o.title}
           </option>
@@ -35,5 +35,5 @@ export default ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

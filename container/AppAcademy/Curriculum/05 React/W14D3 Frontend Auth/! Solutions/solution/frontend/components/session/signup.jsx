@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
 class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      email: '',
-      password: '',
+      username: "",
+      email: "",
+      password: "",
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,8 +20,9 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createNewUser(this.state)
-      .then(() => this.props.history.push('/chirps'));
+    this.props
+      .createNewUser(this.state)
+      .then(() => this.props.history.push("/chirps"));
   }
 
   render() {
@@ -30,25 +31,28 @@ class Signup extends React.Component {
       <div className="session-form">
         <h2>Sign Up!</h2>
         <form>
-          <label>Username:
+          <label>
+            Username:
             <input
               type="text"
               value={this.state.username}
-              onChange={this.handleInput('username')}
+              onChange={this.handleInput("username")}
             />
           </label>
-          <label>Email:
-              <input
-                type="text"
-                value={this.state.email}
-                onChange={this.handleInput('email')}
-              />
+          <label>
+            Email:
+            <input
+              type="text"
+              value={this.state.email}
+              onChange={this.handleInput("email")}
+            />
           </label>
-          <label>Password:
+          <label>
+            Password:
             <input
               type="password"
               value={this.state.password}
-              onChange={this.handleInput('password')}
+              onChange={this.handleInput("password")}
             />
             <button onClick={this.handleSubmit}>Sign Up!</button>
           </label>

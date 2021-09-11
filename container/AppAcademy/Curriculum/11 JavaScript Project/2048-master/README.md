@@ -22,16 +22,19 @@ By leveraging React's virtual DOM 'diffing' algorithm, only those `Tiles` whose 
 
 ```javascript
 const Tile = ({ tile }) => {
-  const merged = tile.merged ? 'merged' : '';
+  const merged = tile.merged ? "merged" : "";
   return (
-    <div className={ `tile pos-${tile.row}-${tile.col} value-${tile.value} ${ merged }` }>
-      <span>{ tile.value }</span>
+    <div
+      className={`tile pos-${tile.row}-${tile.col} value-${tile.value} ${merged}`}
+    >
+      <span>{tile.value}</span>
     </div>
   );
-}
+};
 ```
 
 ## User Interface (UI) and User Experience (UX)
+
 Part of what makes 2048 so addicting is it's incredibly interactive UI/UX. In order to slide tiles up, down, left or right, the user simply presses the corresponding arrow key, or swipes in the corresponding direction on mobile.
 
 ![gameplay gif](/docs/gameplay.gif)
@@ -48,15 +51,27 @@ From tiles merging together to new ones appearing, 2048 utilizes CSS transitions
 }
 
 @-webkit-keyframes merge {
-  0%    { transform: scale(1, 1) }
-  50%   { transform: scale(1.2, 1.2) }
-  100%  { transform: scale(1, 1) }
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 @keyframes merge {
-  0%    { transform: scale(1, 1) }
-  50%   { transform: scale(1.2, 1.2) }
-  100%  { transform: scale(1, 1) }
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 ```
 
@@ -102,7 +117,9 @@ bindTouchEvents(game, updateGame) {
 For even more beautiful gameplay, 2048 includes a dark mode that allows users to switch the UI color scheme dynamically during game play using a toggle switch.
 
 #### Normal Mode
+
 ![normal screenshot](docs/normal.png)
 
 #### Dark Mode
+
 ![dark screenshot](docs/dark.png)

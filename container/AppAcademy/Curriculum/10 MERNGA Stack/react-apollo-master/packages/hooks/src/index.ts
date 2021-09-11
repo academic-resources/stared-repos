@@ -2,14 +2,14 @@ export {
   ApolloProvider,
   ApolloConsumer,
   getApolloContext,
-  resetApolloContext
-} from '@apollo/react-common';
+  resetApolloContext,
+} from "@apollo/react-common";
 
-export { useQuery } from './useQuery';
-export { useMutation } from './useMutation';
-export { useSubscription } from './useSubscription';
-export { useApolloClient } from './useApolloClient';
+export { useQuery } from "./useQuery";
+export { useMutation } from "./useMutation";
+export { useSubscription } from "./useSubscription";
+export { useApolloClient } from "./useApolloClient";
 
-export { RenderPromises } from './ssr/RenderPromises';
+export { RenderPromises } from "./ssr/RenderPromises";
 
-export * from './types';
+export * from "./types";

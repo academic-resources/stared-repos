@@ -61,9 +61,9 @@ const treeContentState = contentState.set(
   ]),
 );
 
-const getMetadata = entityKey =>
+const getMetadata = (entityKey) =>
   Immutable.Repeat(CharacterMetadata.create({entity: entityKey}), 5);
-const getLink = entityKey =>
+const getLink = (entityKey) =>
   new DraftEntityInstance({
     type: 'LINK',
     mutabiltity: 'MUTABLE',
@@ -104,7 +104,7 @@ const contentStateWithNonContiguousEntities = ContentState.createFromBlockArray(
   .addEntity(getLink('4'))
   .addEntity(getLink('5'));
 
-const assertConvertFromDraftStateToRaw = content => {
+const assertConvertFromDraftStateToRaw = (content) => {
   expect(convertFromDraftStateToRaw(content)).toMatchSnapshot();
 };
 

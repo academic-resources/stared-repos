@@ -1,8 +1,8 @@
-import { GraphQLError } from 'graphql';
-import { isNonEmptyArray } from '../util/arrays';
+import { GraphQLError } from "graphql";
+import { isNonEmptyArray } from "../util/arrays";
 
 export function isApolloError(err: Error): err is ApolloError {
-  return err.hasOwnProperty('graphQLErrors');
+  return err.hasOwnProperty("graphQLErrors");
 }
 
 // Sets the error message on this error according to the
@@ -10,23 +10,23 @@ export function isApolloError(err: Error): err is ApolloError {
 // If the error message has already been set through the
 // constructor or otherwise, this function is a nop.
 const generateErrorMessage = (err: ApolloError) => {
-  let message = '';
+  let message = "";
   // If we have GraphQL errors present, add that to the error message.
   if (isNonEmptyArray(err.graphQLErrors)) {
     err.graphQLErrors.forEach((graphQLError: GraphQLError) => {
       const errorMessage = graphQLError
         ? graphQLError.message
-        : 'Error message not found.';
+        : "Error message not found.";
       message += `GraphQL error: ${errorMessage}\n`;
     });
   }
 
   if (err.networkError) {
-    message += 'Network error: ' + err.networkError.message + '\n';
+    message += "Network error: " + err.networkError.message + "\n";
   }
 
   // strip newline from the end of the message
-  message = message.replace(/\n$/, '');
+  message = message.replace(/\n$/, "");
   return message;
 };
 

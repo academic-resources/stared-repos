@@ -1,5 +1,5 @@
-import { DocumentNode, FragmentDefinitionNode } from 'graphql';
-import { invariant, InvariantError } from 'ts-invariant';
+import { DocumentNode, FragmentDefinitionNode } from "graphql";
+import { invariant, InvariantError } from "ts-invariant";
 
 /**
  * Returns a query document which adds a single query operation that only
@@ -25,7 +25,7 @@ import { invariant, InvariantError } from 'ts-invariant';
  */
 export function getFragmentQueryDocument(
   document: DocumentNode,
-  fragmentName?: string,
+  fragmentName?: string
 ): DocumentNode {
   let actualFragmentName = fragmentName;
 
@@ -33,32 +33,30 @@ export function getFragmentQueryDocument(
   // validations. We also do some validations on the other definitions in the
   // document while building this list.
   const fragments: Array<FragmentDefinitionNode> = [];
-  document.definitions.forEach(definition => {
+  document.definitions.forEach((definition) => {
     // Throw an error if we encounter an operation definition because we will
     // define our own operation definition later on.
-    if (definition.kind === 'OperationDefinition') {
+    if (definition.kind === "OperationDefinition") {
       throw new InvariantError(
         `Found a ${definition.operation} operation${
-          definition.name ? ` named '${definition.name.value}'` : ''
+          definition.name ? ` named '${definition.name.value}'` : ""
         }. ` +
-          'No operations are allowed when using a fragment as a query. Only fragments are allowed.',
+          "No operations are allowed when using a fragment as a query. Only fragments are allowed."
       );
     }
     // Add our definition to the fragments array if it is a fragment
     // definition.
-    if (definition.kind === 'FragmentDefinition') {
+    if (definition.kind === "FragmentDefinition") {
       fragments.push(definition);
     }
   });
 
   // If the user did not give us a fragment name then let us try to get a
   // name from a single fragment in the definition.
-  if (typeof actualFragmentName === 'undefined') {
+  if (typeof actualFragmentName === "undefined") {
     invariant(
       fragments.length === 1,
-      `Found ${
-        fragments.length
-      } fragments. \`fragmentName\` must be provided when there is not exactly 1 fragment.`,
+      `Found ${fragments.length} fragments. \`fragmentName\` must be provided when there is not exactly 1 fragment.`
     );
     actualFragmentName = fragments[0].name.value;
   }
@@ -69,15 +67,15 @@ export function getFragmentQueryDocument(
     ...document,
     definitions: [
       {
-        kind: 'OperationDefinition',
-        operation: 'query',
+        kind: "OperationDefinition",
+        operation: "query",
         selectionSet: {
-          kind: 'SelectionSet',
+          kind: "SelectionSet",
           selections: [
             {
-              kind: 'FragmentSpread',
+              kind: "FragmentSpread",
               name: {
-                kind: 'Name',
+                kind: "Name",
                 value: actualFragmentName,
               },
             },

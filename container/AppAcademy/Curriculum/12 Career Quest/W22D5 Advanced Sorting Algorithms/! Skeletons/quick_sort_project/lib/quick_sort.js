@@ -1,8 +1,5 @@
-function quickSort(array) {
-
-}
-
+function quickSort(array) {}
 
 module.exports = {
-    quickSort
+  quickSort,
 };

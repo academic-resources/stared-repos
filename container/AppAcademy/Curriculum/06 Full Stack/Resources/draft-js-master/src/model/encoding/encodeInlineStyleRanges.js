@@ -21,7 +21,7 @@ const UnicodeUtils = require('UnicodeUtils');
 const findRangesImmutable = require('findRangesImmutable');
 
 const areEqual = (a, b) => a === b;
-const isTruthy = a => !!a;
+const isTruthy = (a) => !!a;
 const EMPTY_ARRAY = [];
 
 /**
@@ -37,7 +37,7 @@ function getEncodedInlinesForType(
 
   // Obtain an array with ranges for only the specified style.
   const filteredInlines = styleList
-    .map(style => style.has(styleToEncode))
+    .map((style) => style.has(styleToEncode))
     .toList();
 
   findRangesImmutable(
@@ -67,12 +67,12 @@ function encodeInlineStyleRanges(
 ): Array<InlineStyleRange> {
   const styleList = block
     .getCharacterList()
-    .map(c => c.getStyle())
+    .map((c) => c.getStyle())
     .toList();
   const ranges = styleList
     .flatten()
     .toSet()
-    .map(style => getEncodedInlinesForType(block, styleList, style));
+    .map((style) => getEncodedInlinesForType(block, styleList, style));
 
   return Array.prototype.concat.apply(EMPTY_ARRAY, ranges.toJS());
 }

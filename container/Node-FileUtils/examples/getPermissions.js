@@ -1,5 +1,5 @@
-var File = require ("../build/file-utils").File;
+var File = require("../build/file-utils").File;
 
-new File ("getPermissions.js").getPermissions (function (error, permissions){
-	console.log (permissions); //Prints: 666
+new File("getPermissions.js").getPermissions(function (error, permissions) {
+  console.log(permissions); //Prints: 666
 });

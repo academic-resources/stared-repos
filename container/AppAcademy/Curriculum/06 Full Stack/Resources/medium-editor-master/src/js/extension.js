@@ -1,5 +1,5 @@
 (function () {
-    'use strict';
+    "use strict";
 
     var Extension = function (options) {
         MediumEditor.util.extend(this, options);
@@ -37,7 +37,7 @@
         // (the "constructor" property in your `extend` definition), or defaulted
         // by us to simply call the parent's constructor.
 
-        if (protoProps && protoProps.hasOwnProperty('constructor')) {
+        if (protoProps && protoProps.hasOwnProperty("constructor")) {
             child = protoProps.constructor;
         } else {
             child = function () {
@@ -203,7 +203,7 @@
          * passed via the 'contentWindow' option to MediumEditor
          * and is the global 'window' object by default
          */
-        'window': undefined,
+        window: undefined,
 
         /* document: [Document]
          *
@@ -212,7 +212,7 @@
          * passed via the 'ownerDocument' optin to MediumEditor
          * and is the global 'document' object by default
          */
-        'document': undefined,
+        document: undefined,
 
         /* getEditorElements: [function ()]
          *
@@ -240,7 +240,7 @@
          */
         getEditorOption: function (option) {
             return this.base.options[option];
-        }
+        },
     };
 
     /* List of method names to add to the prototype of Extension
@@ -254,14 +254,13 @@
      */
     [
         // general helpers
-        'execAction',
+        "execAction",
 
         // event handling
-        'on',
-        'off',
-        'subscribe',
-        'trigger'
-
+        "on",
+        "off",
+        "subscribe",
+        "trigger",
     ].forEach(function (helper) {
         Extension.prototype[helper] = function () {
             return this.base[helper].apply(this.base, arguments);

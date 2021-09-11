@@ -3,7 +3,7 @@ title: "6. Fetch data with queries"
 description: Learn how to fetch data with the Query component
 ---
 
- Time to accomplish: _15 Minutes_
+Time to accomplish: _15 Minutes_
 
 Apollo Client simplifies fetching data from a graph API because it intelligently caches your data, as well as tracks loading and error state. In the previous section, we learned how to fetch a sample query with Apollo Client without using a view integration. In this section, we'll learn how to use the `Query` component from `react-apollo` to fetch more complex queries and execute features like pagination.
 
@@ -22,11 +22,11 @@ First, we're going to build a GraphQL query that fetches a list of launches. We'
 _src/pages/launches.js_
 
 ```js
-import React, { Fragment } from 'react';
-import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
+import React, { Fragment } from "react";
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
 
-import { LaunchTile, Header, Button, Loading } from '../components';
+import { LaunchTile, Header, Button, Loading } from "../components";
 
 const GET_LAUNCHES = gql`
   query launchList($after: String) {
@@ -69,18 +69,15 @@ export default function Launches() {
             <Header />
             {data.launches &&
               data.launches.launches &&
-              data.launches.launches.map(launch => (
-                <LaunchTile
-                  key={launch.id}
-                  launch={launch}
-                />
+              data.launches.launches.map((launch) => (
+                <LaunchTile key={launch.id} launch={launch} />
               ))}
           </Fragment>
         );
       }}
     </Query>
   );
-};
+}
 ```
 
 To render the list, we pass the `GET_LAUNCHES` query from the previous step into our `Query` component. We then define a render prop function as the child of `Query` that's called with the state of our query (`loading`, `error`, and `data`). Depending on the state, we either render a loading indicator, an error message, or a list of launches.
@@ -99,12 +96,13 @@ _src/pages/launches.js_
 export default function Launches() {
   return (
     <Query query={GET_LAUNCHES}>
-      {({ data, loading, error, fetchMore }) => { // highlight-line
+      {({ data, loading, error, fetchMore }) => {
+        // highlight-line
         // same as above
       }}
     </Query>
   );
-};
+}
 ```
 
 Now that we have `fetchMore`, let's connect it to a Load More button to fetch more items when it's clicked. To do this, we will need to specify an `updateQuery` function on the return object from `fetchMore` that tells the Apollo cache how to update our query with the new items we're fetching.
@@ -114,15 +112,17 @@ Copy the code below and add it above the closing `</Fragment>` tag in the render
 _src/pages/launches.js_
 
 ```jsx
-{data.launches &&
-  data.launches.hasMore && (
+{
+  data.launches && data.launches.hasMore && (
     <Button
       onClick={() =>
-        fetchMore({ // highlight-line
+        fetchMore({
+          // highlight-line
           variables: {
             after: data.launches.cursor,
           },
-          updateQuery: (prev, { fetchMoreResult, ...rest }) => { // highlight-line
+          updateQuery: (prev, { fetchMoreResult, ...rest }) => {
+            // highlight-line
             if (!fetchMoreResult) return prev;
             return {
               ...fetchMoreResult,
@@ -140,7 +140,7 @@ _src/pages/launches.js_
     >
       Load More
     </Button>
-  )
+  );
 }
 ```
 
@@ -157,14 +157,14 @@ Let's navigate to `src/pages/launch.js` to build out our detail page. First, we 
 _src/pages/launch.js_
 
 ```jsx
-import React, { Fragment } from 'react';
-import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
+import React, { Fragment } from "react";
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
 
-import Loading from '../components/loading';
-import Header from '../components/header';
-import ActionButton from '../containers/action-button';
-import LaunchDetail from '../components/launch-detail';
+import Loading from "../components/loading";
+import Header from "../components/header";
+import ActionButton from "../containers/action-button";
+import LaunchDetail from "../components/launch-detail";
 
 export const GET_LAUNCH_DETAILS = gql`
   query LaunchDetails($launchId: ID!) {
@@ -291,12 +291,12 @@ First, let's navigate to `src/pages/profile.js` and write our query:
 _src/pages/profile.js_
 
 ```js
-import React, { Fragment } from 'react';
-import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
+import React, { Fragment } from "react";
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
 
-import { Loading, Header, LaunchTile } from '../components';
-import { LAUNCH_TILE_DATA } from './launches';
+import { Loading, Header, LaunchTile } from "../components";
+import { LAUNCH_TILE_DATA } from "./launches";
 
 const GET_MY_TRIPS = gql`
   query GetMyTrips {
@@ -319,7 +319,9 @@ _src/pages/profile.js_
 ```jsx
 export default function Profile() {
   return (
-    <Query query={GET_MY_TRIPS} fetchPolicy="network-only"> {/* highlight-line */}
+    <Query query={GET_MY_TRIPS} fetchPolicy="network-only">
+      {" "}
+      {/* highlight-line */}
       {({ data, loading, error }) => {
         if (loading) return <Loading />;
         if (error) return <p>ERROR: {error.message}</p>;
@@ -328,7 +330,7 @@ export default function Profile() {
           <Fragment>
             <Header>My Trips</Header>
             {data.me && data.me.trips.length ? (
-              data.me.trips.map(launch => (
+              data.me.trips.map((launch) => (
                 <LaunchTile key={launch.id} launch={launch} />
               ))
             ) : (

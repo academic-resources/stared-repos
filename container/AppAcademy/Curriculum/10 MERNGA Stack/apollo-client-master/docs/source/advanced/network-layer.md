@@ -17,10 +17,10 @@ To create a link to use with Apollo Client, you can install and import one from 
 Here's how you would instantiate a new client with a custom endpoint URL using the HttpLink:
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
+import { ApolloClient } from "apollo-client";
+import { HttpLink } from "apollo-link-http";
 
-const link = new HttpLink({ uri: 'https://example.com/graphql' });
+const link = new HttpLink({ uri: "https://example.com/graphql" });
 
 const client = new ApolloClient({
   link,
@@ -31,13 +31,13 @@ const client = new ApolloClient({
 And if you needed to pass additional options to [`fetch`](https://github.github.io/fetch/):
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
+import { ApolloClient } from "apollo-client";
+import { HttpLink } from "apollo-link-http";
 
 const link = new HttpLink({
-  uri: 'https://example.com/graphql',
+  uri: "https://example.com/graphql",
   // Additional fetch options like `credentials` or `headers`
-  credentials: 'same-origin',
+  credentials: "same-origin",
 });
 
 const client = new ApolloClient({
@@ -53,22 +53,22 @@ Apollo Link is designed from day one to be easy to use middleware on your reques
 The following examples shows how you'd create a middleware. In both examples, we'll show how you would add an authentication token to the HTTP header of the requests being sent by the client.
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
-import { ApolloLink, concat } from 'apollo-link';
+import { ApolloClient } from "apollo-client";
+import { HttpLink } from "apollo-link-http";
+import { ApolloLink, concat } from "apollo-link";
 
-const httpLink = new HttpLink({ uri: '/graphql' });
+const httpLink = new HttpLink({ uri: "/graphql" });
 
 const authMiddleware = new ApolloLink((operation, forward) => {
   // add the authorization to the headers
   operation.setContext({
     headers: {
-      authorization: localStorage.getItem('token') || null,
-    }
+      authorization: localStorage.getItem("token") || null,
+    },
   });
 
   return forward(operation);
-})
+});
 
 const client = new ApolloClient({
   link: concat(authMiddleware, httpLink),
@@ -80,46 +80,42 @@ The above example shows the use of a single middleware joined with the HttpLink.
 The following example shows the use of multiple middlewares passed as an array:
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
-import { ApolloLink, from } from 'apollo-link';
+import { ApolloClient } from "apollo-client";
+import { HttpLink } from "apollo-link-http";
+import { ApolloLink, from } from "apollo-link";
 
-const httpLink = new HttpLink({ uri: '/graphql' });
+const httpLink = new HttpLink({ uri: "/graphql" });
 
 const authMiddleware = new ApolloLink((operation, forward) => {
   // add the authorization to the headers
   operation.setContext(({ headers = {} }) => ({
     headers: {
       ...headers,
-      authorization: localStorage.getItem('token') || null,
-    }
+      authorization: localStorage.getItem("token") || null,
+    },
   }));
 
   return forward(operation);
-})
+});
 
 const otherMiddleware = new ApolloLink((operation, forward) => {
   // add the recent-activity custom header to the headers
   operation.setContext(({ headers = {} }) => ({
     headers: {
       ...headers,
-      'recent-activity': localStorage.getItem('lastOnlineTime') || null,
-    }
+      "recent-activity": localStorage.getItem("lastOnlineTime") || null,
+    },
   }));
 
   return forward(operation);
-})
+});
 
 const client = new ApolloClient({
-  link: from([
-    authMiddleware,
-    otherMiddleware,
-    httpLink
-  ]),
+  link: from([authMiddleware, otherMiddleware, httpLink]),
 });
 ```
 
-Given the code above, the header's `Authorization` value will be that of `token` from `localStorage` by `authMiddleware` and the `recent-activity` value will  be set by `otherMiddleware` to `lastOnlineTime` again from `localStorage`.  This example shows how you can use more than one middleware to make multiple/separate modifications to the request being processed in the form of a chain.  This example doesn't show the use of `localStorage`, but is instead just meant to demonstrate the use of more than one middleware using Apollo Link.
+Given the code above, the header's `Authorization` value will be that of `token` from `localStorage` by `authMiddleware` and the `recent-activity` value will be set by `otherMiddleware` to `lastOnlineTime` again from `localStorage`. This example shows how you can use more than one middleware to make multiple/separate modifications to the request being processed in the form of a chain. This example doesn't show the use of `localStorage`, but is instead just meant to demonstrate the use of more than one middleware using Apollo Link.
 
 ### Afterware
 
@@ -131,17 +127,17 @@ Much like middlewares, Apollo Link was designed to make afterwares easy and powe
 The following example demonstrates how to implement an afterware function.
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
-import { onError } from 'apollo-link-error';
+import { ApolloClient } from "apollo-client";
+import { HttpLink } from "apollo-link-http";
+import { onError } from "apollo-link-error";
 
-import { logout } from './logout';
+import { logout } from "./logout";
 
-const httpLink = new HttpLink({ uri: '/graphql' });
+const httpLink = new HttpLink({ uri: "/graphql" });
 
 const logoutLink = onError(({ networkError }) => {
   if (networkError.statusCode === 401) logout();
-})
+});
 
 const client = new ApolloClient({
   link: logoutLink.concat(httpLink),

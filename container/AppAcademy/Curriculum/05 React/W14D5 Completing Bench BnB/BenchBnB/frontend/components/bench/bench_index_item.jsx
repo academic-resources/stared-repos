@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const BenchIndexItem = ({ bench }) => {
   return (
     <li>
       <h3>Description:</h3>
-      <p>{ bench.description }</p>
+      <p>{bench.description}</p>
     </li>
-  )
-}
+  );
+};
 
-export default BenchIndexItem
+export default BenchIndexItem;

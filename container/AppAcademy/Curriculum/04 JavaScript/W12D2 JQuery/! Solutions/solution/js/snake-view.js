@@ -1,4 +1,4 @@
-const Board = require('./board.js');
+const Board = require("./board.js");
 
 class View {
   constructor($el) {
@@ -32,8 +32,8 @@ class View {
   updateClasses(coords, className) {
     this.$li.filter(`.${className}`).removeClass();
 
-    coords.forEach( coord => {
-      const flatCoord = (coord.i * this.board.dim) + coord.j;
+    coords.forEach((coord) => {
+      const flatCoord = coord.i * this.board.dim + coord.j;
       this.$li.eq(flatCoord).addClass(className);
     });
   }
@@ -62,14 +62,13 @@ class View {
       window.clearInterval(this.intervalId);
     }
   }
-
 }
 
 View.KEYS = {
   38: "N",
   39: "E",
   40: "S",
-  37: "W"
+  37: "W",
 };
 
 View.STEP_MILLIS = 100;

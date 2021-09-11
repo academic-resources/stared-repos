@@ -202,19 +202,19 @@ mutation AddTodo($type: String!) {
 A technique for transforming the response of a query operation before saving it to the store by [Apollo Client's `InMemoryCache`](https://www.apollographql.com/docs/react/advanced/caching/#normalization). The result is split into individual objects, creating a unique identifier for each object, and storing those objects in a flattened data structure.
 
 ```js
-import { InMemoryCache, defaultDataIdFromObject } from 'apollo-cache-inmemory';
+import { InMemoryCache, defaultDataIdFromObject } from "apollo-cache-inmemory";
 
 const cache = new InMemoryCache({
-  dataIdFromObject: object => {
+  dataIdFromObject: (object) => {
     switch (object.__typename) {
-      case 'foo':
+      case "foo":
         return object.key; // use `key` as the primary key
-      case 'bar':
+      case "bar":
         return `bar:${object.blah}`; // use `bar` prefix and `blah` as the primary key
       default:
         return defaultDataIdFromObject(object); // fall back to default handling
     }
-  }
+  },
 });
 ```
 
@@ -224,7 +224,7 @@ A type in a GraphQL schema that has fields.
 
 ```graphql
 type User {
-   name: String!
+  name: String!
 }
 ```
 
@@ -282,7 +282,7 @@ export const queryComponent = ({ breed }) => (
   <Query query={GET_DOG_PHOTO} variables={{ breed }}>
     {({ loading, error, data }) => {
       if (loading) return null;
-      if (error) return 'Error!';
+      if (error) return "Error!";
       return <img src={data.dog.displayImage} />;
     }}
   </Query>
@@ -406,8 +406,8 @@ In `react-apollo` it would be passed like this:
 
 ```jsx
 <Query query={getUserQuery} variables={{ userId: 1 }}>
-  {' '}
-  ...{' '}
+  {" "}
+  ...{" "}
 </Query>
 ```
 

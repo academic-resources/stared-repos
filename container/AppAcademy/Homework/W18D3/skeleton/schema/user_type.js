@@ -15,10 +15,10 @@ const UserType = new GraphQLObjectType({
       resolve(parentValue) {
         return User.findById(parentValue.id)
           .populate("posts")
-          .then(user => user.posts);
-      }
-    }
-  })
+          .then((user) => user.posts);
+      },
+    },
+  }),
 });
 
 module.exports = UserType;

@@ -1,2 +1,2 @@
-export { getMarkupFromTree, getDataFromTree } from './getDataFromTree';
-export { renderToStringWithData } from './renderToStringWithData';
+export { getMarkupFromTree, getDataFromTree } from "./getDataFromTree";
+export { renderToStringWithData } from "./renderToStringWithData";

@@ -1,8 +1,8 @@
-function Dog(name, toy ) {
+function Dog(name, toy) {
   // this.name = name;
   Animal.call(this, name); //basically a super call to parent class
   this.favoriteToy = toy;
-};
+}
 
 // incorrect
 // Dog.prototype = Animal.prototype;
@@ -13,7 +13,7 @@ function Dog(name, toy ) {
 // how about empty constructor class **ES4
 function Surrogate() {
   // this.constructor = Dog;
-};
+}
 Surrogate.prototype = Animal.prototype;
 Dog.prototype = new Surrogate(); // Important to define inheritance right after
 
@@ -26,7 +26,7 @@ Dog.prototype.bark = function () {
 
 function Cat(name) {
   this.name = name;
-};
+}
 
 // incorrect
 // Cat.prototype = Animal.prototype;
@@ -35,7 +35,7 @@ function Cat(name) {
 // };
 // Surrogate.prototype = Animal.prototype;
 // Cat.prototype = new Surrogate();
-Cat.prototype = Object.create(Animal.prototype)
+Cat.prototype = Object.create(Animal.prototype);
 Cat.prototype.constructor = Cat;
 
 Cat.prototype.meow = function () {
@@ -44,7 +44,7 @@ Cat.prototype.meow = function () {
 
 function Animal(name) {
   this.name = name;
-};
+}
 
 Animal.prototype.eat = function () {
   console.log("nom nom nom");
@@ -54,8 +54,6 @@ const lola = new Dog("Lola", "Squeaky Frog");
 const charlie = new Cat("Charlie");
 
 const a = new Animal();
-
-
 
 // ES6
 
@@ -77,4 +75,4 @@ const a = new Animal();
 //   }
 // }
 
-module.export = Proto
+module.export = Proto;

@@ -1,7 +1,7 @@
-import { assign } from '../assign';
+import { assign } from "../assign";
 
-describe('assign', () => {
-  it('will merge many objects together', () => {
+describe("assign", () => {
+  it("will merge many objects together", () => {
     expect(assign({ a: 1 }, { b: 2 })).toEqual({ a: 1, b: 2 });
     expect(assign({ a: 1 }, { b: 2 }, { c: 3 })).toEqual({
       a: 1,
@@ -16,22 +16,17 @@ describe('assign', () => {
     });
   });
 
-  it('will merge many objects together shallowly', () => {
+  it("will merge many objects together shallowly", () => {
     expect(assign({ x: { a: 1 } }, { x: { b: 2 } })).toEqual({ x: { b: 2 } });
     expect(assign({ x: { a: 1 } }, { x: { b: 2 } }, { x: { c: 3 } })).toEqual({
       x: { c: 3 },
     });
     expect(
-      assign(
-        { x: { a: 1 } },
-        { x: { b: 2 } },
-        { x: { c: 3 } },
-        { x: { d: 4 } },
-      ),
+      assign({ x: { a: 1 } }, { x: { b: 2 } }, { x: { c: 3 } }, { x: { d: 4 } })
     ).toEqual({ x: { d: 4 } });
   });
 
-  it('will mutate and return the source objects', () => {
+  it("will mutate and return the source objects", () => {
     const source1 = { a: 1 };
     const source2 = { a: 1 };
     const source3 = { a: 1 };

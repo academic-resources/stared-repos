@@ -23,21 +23,14 @@ module.exports = {
 
   getCacheKey: createCacheKeyFunction([
     __filename,
-    path.join(
-      __dirname,
-      '..',
-      '..',
-      'node_modules',
-      'fbjs',
-      'package.json'
-    ),
+    path.join(__dirname, '..', '..', 'node_modules', 'fbjs', 'package.json'),
     path.join(
       __dirname,
       '..',
       '..',
       'node_modules',
       'fbjs-scripts',
-      'package.json'
+      'package.json',
     ),
     path.join(
       __dirname,
@@ -45,12 +38,8 @@ module.exports = {
       '..',
       'node_modules',
       'babel-preset-fbjs',
-      'package.json'
+      'package.json',
     ),
-    path.join(
-      __dirname,
-      '..',
-      'module-map.js'
-    ),
+    path.join(__dirname, '..', 'module-map.js'),
   ]),
 };

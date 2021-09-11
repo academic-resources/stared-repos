@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       tag_name:
-        description: 'Version'
+        description: "Version"
         required: true
 jobs:
   version-bump:

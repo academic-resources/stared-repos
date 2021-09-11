@@ -1,15 +1,12 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-const PostsController = require('../controllers/posts');
+const PostsController = require("../controllers/posts");
+
+router.route("/").get(PostsController.index).post(PostsController.newPost);
 
 router
-  .route('/')
-  .get(PostsController.index)
-  .post(PostsController.newPost);
-
-router
-  .route('/:id')
+  .route("/:id")
   .get(PostsController.getPost)
   .delete(PostsController.deletePost)
   .put(PostsController.replacePost)

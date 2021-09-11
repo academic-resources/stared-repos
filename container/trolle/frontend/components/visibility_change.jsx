@@ -1,25 +1,25 @@
-import React from 'react'
+import React from "react";
 
 class Dropdown extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      open: false
-    }
+      open: false,
+    };
 
-    this.node = React.createRef()
-    this.toggleOptions = this.toggleOptions.bind(this)
-    this.handleSelect = this.handleSelect.bind(this)
-    this.checkForDialogClose = this.checkForDialogClose.bind(this)
+    this.node = React.createRef();
+    this.toggleOptions = this.toggleOptions.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
+    this.checkForDialogClose = this.checkForDialogClose.bind(this);
   }
 
   componentDidMount() {
-    document.addEventListener('mousedown', this.checkForDialogClose)
+    document.addEventListener("mousedown", this.checkForDialogClose);
   }
 
   componentWillUnMount() {
-    document.removeEventListener('mousedown', this.checkForDialogClose)
+    document.removeEventListener("mousedown", this.checkForDialogClose);
   }
 
   checkForDialogClose(e) {
@@ -30,24 +30,24 @@ class Dropdown extends React.Component {
       this.state.open
     ) {
       this.setState({
-        open: false
-      })
+        open: false,
+      });
     }
   }
 
   toggleOptions() {
     this.setState({
-      open: !this.state.open
-    })
+      open: !this.state.open,
+    });
   }
 
   handleSelect(option) {
     return () => {
       this.setState({
-        open: false
-      })
-      this.props.setSelected(option)
-    }
+        open: false,
+      });
+      this.props.setSelected(option);
+    };
   }
 
   privateOption(selected) {
@@ -60,7 +60,7 @@ class Dropdown extends React.Component {
           Only board members can see and edit this board.
         </div>
       </div>
-    )
+    );
   }
 
   teamOption(selected) {
@@ -73,7 +73,7 @@ class Dropdown extends React.Component {
           All members of the selected team can see and edit this board.
         </div>
       </div>
-    )
+    );
   }
 
   publicOption(selected) {
@@ -87,20 +87,20 @@ class Dropdown extends React.Component {
           board members can edit.
         </div>
       </div>
-    )
+    );
   }
 
   render() {
-    let displayValue, displayIcon
-    if (this.props.selected === 'private') {
-      displayValue = <div>Private</div>
-      displayIcon = <i className="logo lock fas fa-lock" />
-    } else if (this.props.selected === 'team') {
-      displayValue = <div>Team</div>
-      displayIcon = <i className="logo team fas fa-user-friends" />
+    let displayValue, displayIcon;
+    if (this.props.selected === "private") {
+      displayValue = <div>Private</div>;
+      displayIcon = <i className="logo lock fas fa-lock" />;
+    } else if (this.props.selected === "team") {
+      displayValue = <div>Team</div>;
+      displayIcon = <i className="logo team fas fa-user-friends" />;
     } else {
-      displayValue = <div>Public</div>
-      displayIcon = <i className="logo world fas fa-globe" />
+      displayValue = <div>Public</div>;
+      displayIcon = <i className="logo world fas fa-globe" />;
     }
     return (
       <div ref={this.node} className="visibility-dropdown changer">
@@ -116,29 +116,29 @@ class Dropdown extends React.Component {
             </div>
             <div
               className="visibility-dropdown-option"
-              onClick={this.handleSelect('private')}
+              onClick={this.handleSelect("private")}
             >
-              {this.privateOption(this.props.selected === 'private')}
+              {this.privateOption(this.props.selected === "private")}
             </div>
 
             <div
               className="visibility-dropdown-option"
-              onClick={this.handleSelect('team')}
+              onClick={this.handleSelect("team")}
             >
-              {this.teamOption(this.props.selected === 'team')}
+              {this.teamOption(this.props.selected === "team")}
             </div>
 
             <div
               className="visibility-dropdown-option"
-              onClick={this.handleSelect('public')}
+              onClick={this.handleSelect("public")}
             >
-              {this.publicOption(this.props.selected === 'public')}
+              {this.publicOption(this.props.selected === "public")}
             </div>
           </div>
         )}
       </div>
-    )
+    );
   }
 }
 
-export default Dropdown
+export default Dropdown;

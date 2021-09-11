@@ -31,14 +31,15 @@ This might sound confusing at first, but it will start to make more sense once w
 First, let's connect our resolver map to Apollo Server. Right now, it's just an empty object, but we should add it to our `ApolloServer` instance so we don't have to do it later. Navigate to `src/index.js` and add the following code to the file:
 
 _src/index.js_
-```js
-const { ApolloServer } = require('apollo-server');
-const typeDefs = require('./schema');
-const { createStore } = require('./utils');
-const resolvers = require('./resolvers'); // highlight-line
 
-const LaunchAPI = require('./datasources/launch');
-const UserAPI = require('./datasources/user');
+```js
+const { ApolloServer } = require("apollo-server");
+const typeDefs = require("./schema");
+const { createStore } = require("./utils");
+const resolvers = require("./resolvers"); // highlight-line
+
+const LaunchAPI = require("./datasources/launch");
+const UserAPI = require("./datasources/user");
 
 const store = createStore();
 
@@ -47,8 +48,8 @@ const server = new ApolloServer({
   resolvers, // highlight-line
   dataSources: () => ({
     launchAPI: new LaunchAPI(),
-    userAPI: new UserAPI({ store })
-  })
+    userAPI: new UserAPI({ store }),
+  }),
 });
 
 server.listen().then(({ url }) => {
@@ -73,8 +74,8 @@ module.exports = {
       dataSources.launchAPI.getAllLaunches(),
     launch: (_, { id }, { dataSources }) =>
       dataSources.launchAPI.getLaunchById({ launchId: id }),
-    me: (_, __, { dataSources }) => dataSources.userAPI.findOrCreateUser()
-  }
+    me: (_, __, { dataSources }) => dataSources.userAPI.findOrCreateUser(),
+  },
 };
 ```
 
@@ -254,6 +255,7 @@ Mission: {
 ```
 
 _src/schema.js_
+
 ```js
   type Mutation {
     # ... with rest of schema

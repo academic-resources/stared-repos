@@ -12,22 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll("#restaurants li").forEach((li) => {
     li.addEventListener("click", toggleLi);
-    
-    
-  const ul = document.getElementById("restaurants")
-  const newLi = document.createElement("li")
 
+    const ul = document.getElementById("restaurants");
+    const newLi = document.createElement("li");
   });
-    // adding SF places as list items
+  // adding SF places as list items
 
   // --- your code here!
-
-
 
   // adding new photos
 
   // --- your code here!
-
-
-
 });

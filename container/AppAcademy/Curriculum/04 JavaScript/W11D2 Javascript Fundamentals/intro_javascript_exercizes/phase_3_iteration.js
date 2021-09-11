@@ -1,5 +1,5 @@
 Array.prototype.bubbleSort = function () {
-  let dupe = this
+  let dupe = this;
   let sorted = false;
   while (!sorted) {
     sorted = true;
@@ -13,7 +13,7 @@ Array.prototype.bubbleSort = function () {
     }
   }
   return dupe;
-}
+};
 
 String.prototype.substrings = function () {
   const substrings = [];
@@ -23,5 +23,4 @@ String.prototype.substrings = function () {
     }
   }
   return substrings;
-}
-
+};

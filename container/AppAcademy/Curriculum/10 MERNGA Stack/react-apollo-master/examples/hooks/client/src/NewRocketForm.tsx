@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Row,
   Col,
@@ -7,12 +7,12 @@ import {
   Label,
   Input,
   Button,
-  Alert
-} from 'reactstrap';
-import { useMutation } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
+  Alert,
+} from "reactstrap";
+import { useMutation } from "@apollo/react-hooks";
+import gql from "graphql-tag";
 
-import { NewRocketDetails, RocketInventory } from './types';
+import { NewRocketDetails, RocketInventory } from "./types";
 
 const SAVE_ROCKET = gql`
   mutation saveRocket($rocket: RocketInput!) {
@@ -23,7 +23,7 @@ const SAVE_ROCKET = gql`
 `;
 
 export function NewRocketForm() {
-  const [model, setModel] = useState('');
+  const [model, setModel] = useState("");
   const [year, setYear] = useState(0);
   const [stock, setStock] = useState(0);
 
@@ -34,7 +34,7 @@ export function NewRocketForm() {
     { rocket: NewRocketDetails }
   >(SAVE_ROCKET, {
     variables: { rocket: { model: model, year: +year, stock: +stock } },
-    refetchQueries: ['getRocketInventory']
+    refetchQueries: ["getRocketInventory"],
   });
 
   return (
@@ -46,7 +46,7 @@ export function NewRocketForm() {
           Model <strong>{data.saveRocket.model}</strong> added!
         </Alert>
       ) : null}
-      <Form style={{ border: '1px solid #ddd', padding: '15px' }}>
+      <Form style={{ border: "1px solid #ddd", padding: "15px" }}>
         <Row>
           <Col sm="6">
             <FormGroup>
@@ -55,7 +55,7 @@ export function NewRocketForm() {
                 type="text"
                 name="model"
                 id="model"
-                onChange={e => setModel(e.target.value)}
+                onChange={(e) => setModel(e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -66,7 +66,7 @@ export function NewRocketForm() {
                 type="number"
                 name="year"
                 id="year"
-                onChange={e => setYear(+e.target.value)}
+                onChange={(e) => setYear(+e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -77,7 +77,7 @@ export function NewRocketForm() {
                 type="number"
                 name="stock"
                 id="stock"
-                onChange={e => setStock(+e.target.value)}
+                onChange={(e) => setStock(+e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -86,7 +86,7 @@ export function NewRocketForm() {
           <Col
             sm="12"
             className="text-right"
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault();
               if (model && year && stock) {
                 saveRocket();

@@ -1,5 +1,5 @@
 ---
-title: '7. Update data with mutations'
+title: "7. Update data with mutations"
 description: Learn how to update data with the Mutation component
 ---
 
@@ -20,11 +20,11 @@ The first step is defining our GraphQL mutation. To start, navigate to `src/page
 _src/pages/login.js_
 
 ```js
-import React from 'react';
-import { Mutation, ApolloConsumer } from 'react-apollo';
-import gql from 'graphql-tag';
+import React from "react";
+import { Mutation, ApolloConsumer } from "react-apollo";
+import gql from "graphql-tag";
 
-import { LoginForm, Loading } from '../components';
+import { LoginForm, Loading } from "../components";
 
 const LOGIN_USER = gql`
   mutation login($email: String!) {
@@ -98,16 +98,17 @@ _src/index.js_
 const client = new ApolloClient({
   cache,
   link: new HttpLink({
-    uri: 'http://localhost:4000/graphql',
-    headers: { // highlight-line
-      authorization: localStorage.getItem('token'), // highlight-line
+    uri: "http://localhost:4000/graphql",
+    headers: {
+      // highlight-line
+      authorization: localStorage.getItem("token"), // highlight-line
     },
   }),
 });
 
 cache.writeData({
   data: {
-    isLoggedIn: !!localStorage.getItem('token'),
+    isLoggedIn: !!localStorage.getItem("token"),
     cartItems: [],
   },
 });

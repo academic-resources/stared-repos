@@ -6,68 +6,64 @@ const GodSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   type: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   domains: [
     {
-      type: String
-    }
+      type: String,
+    },
   ],
   abode: {
     type: Schema.Types.ObjectId,
-    ref: "abode"
+    ref: "abode",
   },
   emblems: [
     {
       type: Schema.Types.ObjectId,
-      ref: "emblem"
-    }
+      ref: "emblem",
+    },
   ],
   parents: [
     {
       type: Schema.Types.ObjectId,
-      ref: "god"
-    }
+      ref: "god",
+    },
   ],
   children: [
     {
       type: Schema.Types.ObjectId,
-      ref: "god"
-    }
+      ref: "god",
+    },
   ],
   siblings: [
     {
       type: Schema.Types.ObjectId,
-      ref: "god"
-    }
-  ]
+      ref: "god",
+    },
+  ],
 });
 
-GodSchema.statics.findRelatives = function(godId, type) {
+GodSchema.statics.findRelatives = function (godId, type) {
   return this.findById(godId)
     .populate(`${type}`)
-    .then(god => god[type]);
+    .then((god) => god[type]);
 };
 
 GodSchema.statics.addRelative = (godId, relativeId, relationship) => {
   const God = mongoose.model("god");
   return God.find({
     _id: {
-      $in: [
-        godId,
-        relativeId
-      ]
-    }
-  })
-  .then(gods => {
+      $in: [godId, relativeId],
+    },
+  }).then((gods) => {
     const god = godId === gods[0].id ? gods[0] : gods[1];
     const relative = relativeId === gods[0].id ? gods[0] : gods[1];
 
@@ -89,20 +85,16 @@ GodSchema.statics.addRelative = (godId, relativeId, relationship) => {
     return Promise.all([god.save(), relative.save()]).then(
       ([god, relative]) => god
     );
-  })
+  });
 };
 
 GodSchema.statics.removeGodRelative = (godId, relativeId, relationship) => {
   const God = mongoose.model("god");
   return God.find({
     _id: {
-      $in: [
-        godId,
-        relativeId
-      ]
-    }
-  })
-  .then(gods => {
+      $in: [godId, relativeId],
+    },
+  }).then((gods) => {
     const god = godId === gods[0].id ? gods[0] : gods[1];
     const relative = relativeId === gods[0].id ? gods[0] : gods[1];
 
@@ -124,8 +116,7 @@ GodSchema.statics.removeGodRelative = (godId, relativeId, relationship) => {
     return Promise.all([god.save(), relative.save()]).then(
       ([god, relative]) => god
     );
-  })
+  });
 };
-
 
 module.exports = mongoose.model("god", GodSchema);

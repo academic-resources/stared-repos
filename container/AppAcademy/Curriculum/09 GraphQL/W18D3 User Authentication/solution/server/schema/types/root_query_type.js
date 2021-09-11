@@ -30,27 +30,27 @@ const RootQueryType = new GraphQLObjectType({
       type: new GraphQLList(UserType),
       resolve() {
         return User.find({});
-      }
+      },
     },
     user: {
       type: UserType,
       args: { _id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(_, args) {
         return User.findById(args._id);
-      }
+      },
     },
     categories: {
       type: new GraphQLList(CategoryType),
       resolve() {
         return Category.find({});
-      }
+      },
     },
     category: {
       type: CategoryType,
       args: { _id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(_, args) {
         return Category.findById(args._id);
-      }
+      },
     },
     products: {
       type: new GraphQLList(ProductType),
@@ -82,10 +82,10 @@ const RootQueryType = new GraphQLObjectType({
           //     return product;
           //   });
           // });
-        }
-      }
-    }
-  })
+        },
+      },
+    },
+  }),
 });
 
 module.exports = RootQueryType;

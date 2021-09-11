@@ -1,9 +1,9 @@
-const liveServer = require('live-server')
-const isSSR = !!process.env.SSR
-const middleware = []
+const liveServer = require("live-server");
+const isSSR = !!process.env.SSR;
+const middleware = [];
 
 if (isSSR) {
-  const Renderer = require('./packages/docsify-server-renderer/build.js')
+  const Renderer = require("./packages/docsify-server-renderer/build.js");
   const renderer = new Renderer({
     template: `
   <!DOCTYPE html>
@@ -21,35 +21,35 @@ if (isSSR) {
   </body>
   </html>`,
     config: {
-      name: 'docsify',
-      repo: 'docsifyjs/docsify',
-      basePath: 'https://docsify.js.org/',
+      name: "docsify",
+      repo: "docsifyjs/docsify",
+      basePath: "https://docsify.js.org/",
       loadNavbar: true,
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
       alias: {
-        '/de-de/changelog': '/changelog',
-        '/zh-cn/changelog': '/changelog',
-        '/changelog':
-          'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG'
-      }
+        "/de-de/changelog": "/changelog",
+        "/zh-cn/changelog": "/changelog",
+        "/changelog":
+          "https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG",
+      },
     },
-    path: './'
-  })
+    path: "./",
+  });
 
-  middleware.push(function(req, res, next) {
+  middleware.push(function (req, res, next) {
     if (/\.(css|js)$/.test(req.url)) {
-      return next()
+      return next();
     }
-    renderer.renderToString(req.url).then(html => res.end(html))
-  })
+    renderer.renderToString(req.url).then((html) => res.end(html));
+  });
 }
 
 const params = {
   port: 3000,
-  watch: ['lib', 'docs', 'themes'],
-  middleware
-}
+  watch: ["lib", "docs", "themes"],
+  middleware,
+};
 
-liveServer.start(params)
+liveServer.start(params);

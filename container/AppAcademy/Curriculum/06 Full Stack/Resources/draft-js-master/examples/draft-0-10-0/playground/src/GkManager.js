@@ -21,13 +21,14 @@ const GKManager = (window.__DRAFT_GKX = {});
 
 // enable or disable feature flags
 const flagControls = {
-  gk_disable: flags =>
-    flags.forEach(flag => (window.__DRAFT_GKX[flag] = false)),
-  gk_enable: flags => flags.forEach(flag => (window.__DRAFT_GKX[flag] = true)),
+  gk_disable: (flags) =>
+    flags.forEach((flag) => (window.__DRAFT_GKX[flag] = false)),
+  gk_enable: (flags) =>
+    flags.forEach((flag) => (window.__DRAFT_GKX[flag] = true)),
 };
 
 Object.keys(flagControls)
-  .filter(flag => QUERY_STRINGS[flag])
-  .forEach(flag => flagControls[flag](QUERY_STRINGS[flag].split(',')));
+  .filter((flag) => QUERY_STRINGS[flag])
+  .forEach((flag) => flagControls[flag](QUERY_STRINGS[flag].split(',')));
 
 export default GKManager;

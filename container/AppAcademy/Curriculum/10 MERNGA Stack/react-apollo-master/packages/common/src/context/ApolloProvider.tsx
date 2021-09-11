@@ -1,8 +1,8 @@
-import React from 'react';
-import ApolloClient from 'apollo-client';
-import { invariant } from 'ts-invariant';
+import React from "react";
+import ApolloClient from "apollo-client";
+import { invariant } from "ts-invariant";
 
-import { getApolloContext } from './ApolloContext';
+import { getApolloContext } from "./ApolloContext";
 
 export interface ApolloProviderProps<TCache> {
   client: ApolloClient<TCache>;
@@ -11,7 +11,7 @@ export interface ApolloProviderProps<TCache> {
 
 export const ApolloProvider: React.FC<ApolloProviderProps<any>> = ({
   client,
-  children
+  children,
 }) => {
   const ApolloContext = getApolloContext();
   return (
@@ -23,7 +23,7 @@ export const ApolloProvider: React.FC<ApolloProviderProps<any>> = ({
 
         invariant(
           context.client,
-          'ApolloProvider was not passed a client instance. Make ' +
+          "ApolloProvider was not passed a client instance. Make " +
             'sure you pass in your client via the "client" prop.'
         );
 

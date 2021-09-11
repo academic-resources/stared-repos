@@ -1,8 +1,8 @@
-import { rollup } from '../../../config/rollup.config';
+import { rollup } from "../../../config/rollup.config";
 
 export default rollup({
-  name: 'testing',
+  name: "testing",
   extraGlobals: {
-    optimism: 'wrap'
-  }
+    optimism: "wrap",
+  },
 });

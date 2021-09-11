@@ -3,6 +3,6 @@ module.exports = {
   entry: __dirname + "/frontend/app.js",
   output: {
     path: __dirname + "/app/assets/javascripts",
-    filename: "bundle.js"
-  }
-}
+    filename: "bundle.js",
+  },
+};

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SYNTAX</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SYNTAX</title>
 
-  <style>
-  
-  /*
+    <style>
+      /*
   
   SYNTAX - simple declarative syntax
   
@@ -34,53 +33,81 @@
   SPECIFICITY MATTERS
   If all is equal, then last declared rule wins
   */
-  .important {
-    color: gray !important;
-  }
+      .important {
+        color: gray !important;
+      }
 
-  p {
-    color: blue;
-  }
+      p {
+        color: blue;
+      }
 
-  .favorite {
-    color: red;
-  }
+      .favorite {
+        color: red;
+      }
 
-  .special {
-    color: green;
-  }
+      .special {
+        color: green;
+      }
 
-  #cat_one_1 {
-    color: purple
-  }
-  
-  </style>
+      #cat_one_1 {
+        color: purple;
+      }
+    </style>
+  </head>
 
-</head>
+  <body>
+    <h1>My Amazing Document</h1>
 
-<body>
-  <h1>My Amazing Document</h1>
+    <section>
+      <article>
+        <h2>Big Cats</h2>
+        <p id="cat_one_1" class="favorite special">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+          impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi,
+          facere unde, hic quis sint repellendus quas libero. Deserunt, saepe.
+          Velit, officia veritatis.
+        </p>
 
-  <section>
-    <article>
-      <h2>Big Cats</h2>
-      <p id="cat_one_1" class="favorite special">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
-      
-      <h2>Cats</h2>
-      <p class="favorite special">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
-      
-      <h2>Small Cats</h2>
-      <p style="color: orange;" class="favorite special">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
-      
-      <h2>Lasers</h2>
-      <p class="favorite">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
+        <h2>Cats</h2>
+        <p class="favorite special">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+          impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi,
+          facere unde, hic quis sint repellendus quas libero. Deserunt, saepe.
+          Velit, officia veritatis.
+        </p>
 
-      <h2>Clouds</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
+        <h2>Small Cats</h2>
+        <p style="color: orange" class="favorite special">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+          impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi,
+          facere unde, hic quis sint repellendus quas libero. Deserunt, saepe.
+          Velit, officia veritatis.
+        </p>
 
-      <h2>Dark Clouds</h2>
-      <p class="important">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
-    </article>
-  </section>
-</body>
+        <h2>Lasers</h2>
+        <p class="favorite">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+          impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi,
+          facere unde, hic quis sint repellendus quas libero. Deserunt, saepe.
+          Velit, officia veritatis.
+        </p>
+
+        <h2>Clouds</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+          impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi,
+          facere unde, hic quis sint repellendus quas libero. Deserunt, saepe.
+          Velit, officia veritatis.
+        </p>
+
+        <h2>Dark Clouds</h2>
+        <p class="important">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+          impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi,
+          facere unde, hic quis sint repellendus quas libero. Deserunt, saepe.
+          Velit, officia veritatis.
+        </p>
+      </article>
+    </section>
+  </body>
 </html>

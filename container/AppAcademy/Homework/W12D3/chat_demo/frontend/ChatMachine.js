@@ -1,4 +1,4 @@
-var ChatMachine = function($el){
+var ChatMachine = function ($el) {
   this.$messages = $el.find("ul");
   this.$form = $el.find("form");
   this.$form.on("submit", this.submitMessage.bind(this));
@@ -11,10 +11,10 @@ ChatMachine.prototype.submitMessage = function (e) {
     url: "/messages",
     dataType: "json",
     data: this.$form.serialize(),
-    success: function(message){
+    success: function (message) {
       this.addMessage(message);
       this.clearForm();
-    }.bind(this)
+    }.bind(this),
   });
   this.addSpinner();
 };
@@ -32,7 +32,5 @@ ChatMachine.prototype.clearForm = function () {
 ChatMachine.prototype.addSpinner = function () {
   this.$messages.append('<div class="loader">Loading...</div>');
 };
-
-
 
 module.exports = ChatMachine;

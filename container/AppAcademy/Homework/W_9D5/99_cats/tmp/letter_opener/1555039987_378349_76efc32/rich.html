@@ -1,9 +1,8 @@
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-      <title>Welcome to 99 Cats!  SOooo many Cats!</title>
-    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Welcome to 99 Cats! SOooo many Cats!</title>
 
     <style type="text/css">
       #container {
@@ -67,44 +66,27 @@
           <dt>From:</dt>
           <dd>admin@99cats.com</dd>
 
-          
-
-          
-
-          
-            <dt>Subject:</dt>
-            <dd><strong>Welcome to 99 Cats!  SOooo many Cats!</strong></dd>
-          
+          <dt>Subject:</dt>
+          <dd><strong>Welcome to 99 Cats! SOooo many Cats!</strong></dd>
 
           <dt>Date:</dt>
           <dd>Apr 11, 2019 08:33:07 PM PDT</dd>
 
-          
-            <dt>To:</dt>
-            <dd>momo</dd>
-          
-
-          
-
-          
-
-          
+          <dt>To:</dt>
+          <dd>momo</dd>
         </dl>
 
-        
-          <p class="alternate">
-            
-              <a href="plain.html">View plain text version</a>
-            
-          </p>
-        
+        <p class="alternate">
+          <a href="plain.html">View plain text version</a>
+        </p>
       </div>
 
-      
-        <iframe seamless="seamless" srcdoc="<base target='_top'>&lt;!DOCTYPE html&gt;
+      <iframe
+        seamless="seamless"
+        srcdoc='<base target=&apos;_top&apos;>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
-    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
     &lt;style&gt;
       /* Email styles need to be inline */
     &lt;/style&gt;
@@ -112,11 +94,11 @@
 
   &lt;body&gt;
     &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
+&lt;html lang="en"&gt;
 &lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
   &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -130,15 +112,53 @@
 &lt;/html&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-"></iframe>
-      
+'
+      ></iframe>
     </div>
 
     <script type="text/javascript">
       /*! srcdoc-polyfill - v0.1.1 - 2013-03-01
-      * http://github.com/jugglinmike/srcdoc-polyfill/
-      * Copyright (c) 2013 Mike Pennisi; Licensed MIT */
-      (function(t,e){var c,n,o=t.srcDoc,r=!!("srcdoc"in e.createElement("iframe")),i={compliant:function(t,e){e&&t.setAttribute("srcdoc",e)},legacy:function(t,e){var c;t&&t.getAttribute&&(e?t.setAttribute("srcdoc",e):e=t.getAttribute("srcdoc"),e&&(c="javascript: window.frameElement.getAttribute('srcdoc');",t.setAttribute("src",c),t.contentWindow&&(t.contentWindow.location=c)))}},s=t.srcDoc={set:i.compliant,noConflict:function(){return t.srcDoc=o,s}};if(!r)for(s.set=i.legacy,n=e.getElementsByTagName("iframe"),c=n.length;c--;)s.set(n[c])})(this,this.document);
+       * http://github.com/jugglinmike/srcdoc-polyfill/
+       * Copyright (c) 2013 Mike Pennisi; Licensed MIT */
+      (function (t, e) {
+        var c,
+          n,
+          o = t.srcDoc,
+          r = !!("srcdoc" in e.createElement("iframe")),
+          i = {
+            compliant: function (t, e) {
+              e && t.setAttribute("srcdoc", e);
+            },
+            legacy: function (t, e) {
+              var c;
+              t &&
+                t.getAttribute &&
+                (e
+                  ? t.setAttribute("srcdoc", e)
+                  : (e = t.getAttribute("srcdoc")),
+                e &&
+                  ((c =
+                    "javascript: window.frameElement.getAttribute('srcdoc');"),
+                  t.setAttribute("src", c),
+                  t.contentWindow && (t.contentWindow.location = c)));
+            },
+          },
+          s = (t.srcDoc = {
+            set: i.compliant,
+            noConflict: function () {
+              return (t.srcDoc = o), s;
+            },
+          });
+        if (!r)
+          for (
+            s.set = i.legacy,
+              n = e.getElementsByTagName("iframe"),
+              c = n.length;
+            c--;
+
+          )
+            s.set(n[c]);
+      })(this, this.document);
     </script>
   </body>
 </html>

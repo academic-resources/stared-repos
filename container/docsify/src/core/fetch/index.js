@@ -1,90 +1,90 @@
-import {get} from './ajax'
-import {callHook} from '../init/lifecycle'
-import {getParentPath, stringifyQuery} from '../router/util'
-import {noop} from '../util/core'
-import {getAndActive} from '../event/sidebar'
+import { get } from "./ajax";
+import { callHook } from "../init/lifecycle";
+import { getParentPath, stringifyQuery } from "../router/util";
+import { noop } from "../util/core";
+import { getAndActive } from "../event/sidebar";
 
 function loadNested(path, qs, file, next, vm, first) {
-  path = first ? path : path.replace(/\/$/, '')
-  path = getParentPath(path)
+  path = first ? path : path.replace(/\/$/, "");
+  path = getParentPath(path);
 
   if (!path) {
-    return
+    return;
   }
 
   get(
     vm.router.getFile(path + file) + qs,
     false,
     vm.config.requestHeaders
-  ).then(next, _ => loadNested(path, qs, file, next, vm))
+  ).then(next, (_) => loadNested(path, qs, file, next, vm));
 }
 
 export function fetchMixin(proto) {
-  let last
+  let last;
 
-  const abort = () => last && last.abort && last.abort()
+  const abort = () => last && last.abort && last.abort();
   const request = (url, hasbar, requestHeaders) => {
-    abort()
-    last = get(url, true, requestHeaders)
-    return last
-  }
+    abort();
+    last = get(url, true, requestHeaders);
+    return last;
+  };
 
   const get404Path = (path, config) => {
-    const {notFoundPage, ext} = config
-    const defaultPath = '_404' + (ext || '.md')
-    let key
-    let path404
+    const { notFoundPage, ext } = config;
+    const defaultPath = "_404" + (ext || ".md");
+    let key;
+    let path404;
 
     switch (typeof notFoundPage) {
-      case 'boolean':
-        path404 = defaultPath
-        break
-      case 'string':
-        path404 = notFoundPage
-        break
+      case "boolean":
+        path404 = defaultPath;
+        break;
+      case "string":
+        path404 = notFoundPage;
+        break;
 
-      case 'object':
+      case "object":
         key = Object.keys(notFoundPage)
           .sort((a, b) => b.length - a.length)
-          .find(key => path.match(new RegExp('^' + key)))
+          .find((key) => path.match(new RegExp("^" + key)));
 
-        path404 = (key && notFoundPage[key]) || defaultPath
-        break
+        path404 = (key && notFoundPage[key]) || defaultPath;
+        break;
 
       default:
-        break
+        break;
     }
 
-    return path404
-  }
+    return path404;
+  };
 
   proto._loadSideAndNav = function (path, qs, loadSidebar, cb) {
     return () => {
       if (!loadSidebar) {
-        return cb()
+        return cb();
       }
 
-      const fn = result => {
-        this._renderSidebar(result)
-        cb()
-      }
+      const fn = (result) => {
+        this._renderSidebar(result);
+        cb();
+      };
 
       // Load sidebar
-      loadNested(path, qs, loadSidebar, fn, this, true)
-    }
-  }
+      loadNested(path, qs, loadSidebar, fn, this, true);
+    };
+  };
 
   proto._fetch = function (cb = noop) {
-    const {path, query} = this.route
-    const qs = stringifyQuery(query, ['id'])
-    const {loadNavbar, requestHeaders, loadSidebar} = this.config
+    const { path, query } = this.route;
+    const qs = stringifyQuery(query, ["id"]);
+    const { loadNavbar, requestHeaders, loadSidebar } = this.config;
     // Abort last request
 
-    const file = this.router.getFile(path)
-    const req = request(file + qs, true, requestHeaders)
+    const file = this.router.getFile(path);
+    const req = request(file + qs, true, requestHeaders);
 
     // Current page is html
-    this.isHTML = /\.html$/g.test(file)
+    this.isHTML = /\.html$/g.test(file);
 
     // Load main content
     req.then(
@@ -94,10 +94,10 @@ export function fetchMixin(proto) {
           opt,
           this._loadSideAndNav(path, qs, loadSidebar, cb)
         ),
-      _ => {
-        this._fetchFallbackPage(file, qs, cb) || this._fetch404(file, qs, cb)
+      (_) => {
+        this._fetchFallbackPage(file, qs, cb) || this._fetch404(file, qs, cb);
       }
-    )
+    );
 
     // Load nav
     loadNavbar &&
@@ -105,77 +105,77 @@ export function fetchMixin(proto) {
         path,
         qs,
         loadNavbar,
-        text => this._renderNav(text),
+        (text) => this._renderNav(text),
         this,
         true
-      )
-  }
+      );
+  };
 
   proto._fetchCover = function () {
-    const {coverpage, requestHeaders} = this.config
-    const query = this.route.query
-    const root = getParentPath(this.route.path)
+    const { coverpage, requestHeaders } = this.config;
+    const query = this.route.query;
+    const root = getParentPath(this.route.path);
 
     if (coverpage) {
-      let path = null
-      const routePath = this.route.path
-      if (typeof coverpage === 'string') {
-        if (routePath === '/') {
-          path = coverpage
+      let path = null;
+      const routePath = this.route.path;
+      if (typeof coverpage === "string") {
+        if (routePath === "/") {
+          path = coverpage;
         }
       } else if (Array.isArray(coverpage)) {
-        path = coverpage.indexOf(routePath) > -1 && '_coverpage'
+        path = coverpage.indexOf(routePath) > -1 && "_coverpage";
       } else {
-        const cover = coverpage[routePath]
-        path = cover === true ? '_coverpage' : cover
+        const cover = coverpage[routePath];
+        path = cover === true ? "_coverpage" : cover;
       }
 
-      const coverOnly = Boolean(path) && this.config.onlyCover
+      const coverOnly = Boolean(path) && this.config.onlyCover;
       if (path) {
-        path = this.router.getFile(root + path)
-        this.coverIsHTML = /\.html$/g.test(path)
-        get(path + stringifyQuery(query, ['id']), false, requestHeaders).then(
-          text => this._renderCover(text, coverOnly)
-        )
+        path = this.router.getFile(root + path);
+        this.coverIsHTML = /\.html$/g.test(path);
+        get(path + stringifyQuery(query, ["id"]), false, requestHeaders).then(
+          (text) => this._renderCover(text, coverOnly)
+        );
       } else {
-        this._renderCover(null, coverOnly)
+        this._renderCover(null, coverOnly);
       }
-      return coverOnly
+      return coverOnly;
     }
-  }
+  };
 
   proto.$fetch = function (cb = noop) {
     const done = () => {
-      callHook(this, 'doneEach')
-      cb()
-    }
+      callHook(this, "doneEach");
+      cb();
+    };
 
-    const onlyCover = this._fetchCover()
+    const onlyCover = this._fetchCover();
 
     if (onlyCover) {
-      done()
+      done();
     } else {
       this._fetch(() => {
-        this.$resetEvents()
-        done()
-      })
+        this.$resetEvents();
+        done();
+      });
     }
-  }
+  };
 
   proto._fetchFallbackPage = function (path, qs, cb = noop) {
-    const {requestHeaders, fallbackLanguages, loadSidebar} = this.config
+    const { requestHeaders, fallbackLanguages, loadSidebar } = this.config;
 
     if (!fallbackLanguages) {
-      return false
+      return false;
     }
 
-    const local = path.split('/')[1]
+    const local = path.split("/")[1];
 
     if (fallbackLanguages.indexOf(local) === -1) {
-      return false
+      return false;
     }
-    const newPath = path.replace(new RegExp(`^/${local}`), '')
-    const req = request(newPath + qs, true, requestHeaders)
+    const newPath = path.replace(new RegExp(`^/${local}`), "");
+    const req = request(newPath + qs, true, requestHeaders);
 
     req.then(
       (text, opt) =>
@@ -185,10 +185,10 @@ export function fetchMixin(proto) {
           this._loadSideAndNav(path, qs, loadSidebar, cb)
         ),
       () => this._fetch404(path, qs, cb)
-    )
+    );
 
-    return true
-  }
+    return true;
+  };
   /**
    * Load the 404 page
    * @param path
@@ -198,38 +198,38 @@ export function fetchMixin(proto) {
    * @private
    */
   proto._fetch404 = function (path, qs, cb = noop) {
-    const {loadSidebar, requestHeaders, notFoundPage} = this.config
+    const { loadSidebar, requestHeaders, notFoundPage } = this.config;
 
-    const fnLoadSideAndNav = this._loadSideAndNav(path, qs, loadSidebar, cb)
+    const fnLoadSideAndNav = this._loadSideAndNav(path, qs, loadSidebar, cb);
     if (notFoundPage) {
-      const path404 = get404Path(path, this.config)
+      const path404 = get404Path(path, this.config);
 
       request(this.router.getFile(path404), true, requestHeaders).then(
         (text, opt) => this._renderMain(text, opt, fnLoadSideAndNav),
         () => this._renderMain(null, {}, fnLoadSideAndNav)
-      )
-      return true
+      );
+      return true;
     }
 
-    this._renderMain(null, {}, fnLoadSideAndNav)
-    return false
-  }
+    this._renderMain(null, {}, fnLoadSideAndNav);
+    return false;
+  };
 }
 
 export function initFetch(vm) {
-  const {loadSidebar} = vm.config
+  const { loadSidebar } = vm.config;
 
   // Server-Side Rendering
   if (vm.rendered) {
-    const activeEl = getAndActive(vm.router, '.sidebar-nav', true, true)
+    const activeEl = getAndActive(vm.router, ".sidebar-nav", true, true);
     if (loadSidebar && activeEl) {
-      activeEl.parentNode.innerHTML += window.__SUB_SIDEBAR__
+      activeEl.parentNode.innerHTML += window.__SUB_SIDEBAR__;
     }
-    vm._bindEventOnRendered(activeEl)
-    vm.$resetEvents()
-    callHook(vm, 'doneEach')
-    callHook(vm, 'ready')
+    vm._bindEventOnRendered(activeEl);
+    vm.$resetEvents();
+    callHook(vm, "doneEach");
+    callHook(vm, "ready");
   } else {
-    vm.$fetch(_ => callHook(vm, 'ready'))
+    vm.$fetch((_) => callHook(vm, "ready"));
   }
 }

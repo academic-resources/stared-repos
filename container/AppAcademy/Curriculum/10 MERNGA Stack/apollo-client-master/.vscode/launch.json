@@ -5,8 +5,7 @@
       "name": "Test",
       "request": "launch",
       "type": "node",
-      "program":
-        "${workspaceRoot}/packages/apollo-client/node_modules/jest/bin/jest.js",
+      "program": "${workspaceRoot}/packages/apollo-client/node_modules/jest/bin/jest.js",
       "internalConsoleOptions": "openOnSessionStart",
       "stopOnEntry": false,
       "args": ["-i"],

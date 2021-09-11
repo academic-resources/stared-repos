@@ -4,21 +4,21 @@ import {
   SelectionSetNode,
   FieldNode,
   FragmentDefinitionNode,
-} from 'graphql';
+} from "graphql";
 
 export function queryFromPojo(obj: any): DocumentNode {
   const op: OperationDefinitionNode = {
-    kind: 'OperationDefinition',
-    operation: 'query',
+    kind: "OperationDefinition",
+    operation: "query",
     name: {
-      kind: 'Name',
-      value: 'GeneratedClientQuery',
+      kind: "Name",
+      value: "GeneratedClientQuery",
     },
     selectionSet: selectionSetFromObj(obj),
   };
 
   const out: DocumentNode = {
-    kind: 'Document',
+    kind: "Document",
     definitions: [op],
   };
 
@@ -27,23 +27,23 @@ export function queryFromPojo(obj: any): DocumentNode {
 
 export function fragmentFromPojo(obj: any, typename?: string): DocumentNode {
   const frag: FragmentDefinitionNode = {
-    kind: 'FragmentDefinition',
+    kind: "FragmentDefinition",
     typeCondition: {
-      kind: 'NamedType',
+      kind: "NamedType",
       name: {
-        kind: 'Name',
-        value: typename || '__FakeType',
+        kind: "Name",
+        value: typename || "__FakeType",
       },
     },
     name: {
-      kind: 'Name',
-      value: 'GeneratedClientQuery',
+      kind: "Name",
+      value: "GeneratedClientQuery",
     },
     selectionSet: selectionSetFromObj(obj),
   };
 
   const out: DocumentNode = {
-    kind: 'Document',
+    kind: "Document",
     definitions: [frag],
   };
 
@@ -52,10 +52,10 @@ export function fragmentFromPojo(obj: any, typename?: string): DocumentNode {
 
 function selectionSetFromObj(obj: any): SelectionSetNode {
   if (
-    typeof obj === 'number' ||
-    typeof obj === 'boolean' ||
-    typeof obj === 'string' ||
-    typeof obj === 'undefined' ||
+    typeof obj === "number" ||
+    typeof obj === "boolean" ||
+    typeof obj === "string" ||
+    typeof obj === "undefined" ||
     obj === null
   ) {
     // No selection set here
@@ -70,13 +70,13 @@ function selectionSetFromObj(obj: any): SelectionSetNode {
   // Now we know it's an object
   const selections: FieldNode[] = [];
 
-  Object.keys(obj).forEach(key => {
+  Object.keys(obj).forEach((key) => {
     const nestedSelSet: SelectionSetNode = selectionSetFromObj(obj[key]);
 
     const field: FieldNode = {
-      kind: 'Field',
+      kind: "Field",
       name: {
-        kind: 'Name',
+        kind: "Name",
         value: key,
       },
       selectionSet: nestedSelSet || undefined,
@@ -86,7 +86,7 @@ function selectionSetFromObj(obj: any): SelectionSetNode {
   });
 
   const selectionSet: SelectionSetNode = {
-    kind: 'SelectionSet',
+    kind: "SelectionSet",
     selections,
   };
 
@@ -94,23 +94,23 @@ function selectionSetFromObj(obj: any): SelectionSetNode {
 }
 
 export const justTypenameQuery: DocumentNode = {
-  kind: 'Document',
+  kind: "Document",
   definitions: [
     {
-      kind: 'OperationDefinition',
-      operation: 'query',
+      kind: "OperationDefinition",
+      operation: "query",
       name: null,
       variableDefinitions: null,
       directives: [],
       selectionSet: {
-        kind: 'SelectionSet',
+        kind: "SelectionSet",
         selections: [
           {
-            kind: 'Field',
+            kind: "Field",
             alias: null,
             name: {
-              kind: 'Name',
-              value: '__typename',
+              kind: "Name",
+              value: "__typename",
             },
             arguments: [],
             directives: [],

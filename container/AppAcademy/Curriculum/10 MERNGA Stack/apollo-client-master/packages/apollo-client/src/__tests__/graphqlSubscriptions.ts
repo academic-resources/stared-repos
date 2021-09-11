@@ -1,20 +1,20 @@
-import gql from 'graphql-tag';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import gql from "graphql-tag";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
-import { mockObservableLink, MockedSubscription } from '../__mocks__/mockLinks';
+import { mockObservableLink, MockedSubscription } from "../__mocks__/mockLinks";
 
-import ApolloClient from '../';
+import ApolloClient from "../";
 
-import { QueryManager } from '../core/QueryManager';
-import { DataStore } from '../data/store';
+import { QueryManager } from "../core/QueryManager";
+import { DataStore } from "../data/store";
 
-describe('GraphQL Subscriptions', () => {
+describe("GraphQL Subscriptions", () => {
   const results = [
-    'Dahivat Pandya',
-    'Vyacheslav Kim',
-    'Changping Chen',
-    'Amanda Liu',
-  ].map(name => ({ result: { data: { user: { name } } }, delay: 10 }));
+    "Dahivat Pandya",
+    "Vyacheslav Kim",
+    "Changping Chen",
+    "Amanda Liu",
+  ].map((name) => ({ result: { data: { user: { name } } }, delay: 10 }));
 
   let sub1: MockedSubscription;
   let options: any;
@@ -31,7 +31,7 @@ describe('GraphQL Subscriptions', () => {
           }
         `,
         variables: {
-          name: 'Changping Chen',
+          name: "Changping Chen",
         },
       },
     };
@@ -45,7 +45,7 @@ describe('GraphQL Subscriptions', () => {
         }
       `,
       variables: {
-        name: 'Changping Chen',
+        name: "Changping Chen",
       },
     };
 
@@ -59,7 +59,7 @@ describe('GraphQL Subscriptions', () => {
           }
         `,
         variables: {
-          name: 'Changping Chen',
+          name: "Changping Chen",
         },
       },
     };
@@ -75,7 +75,7 @@ describe('GraphQL Subscriptions', () => {
     };
   });
 
-  it('should start a subscription on network interface and unsubscribe', done => {
+  it("should start a subscription on network interface and unsubscribe", (done) => {
     const link = mockObservableLink(defaultSub1);
     // This test calls directly through Apollo Client
     const client = new ApolloClient({
@@ -91,7 +91,7 @@ describe('GraphQL Subscriptions', () => {
 
         // Test unsubscribing
         if (count > 1) {
-          throw new Error('next fired after unsubscribing');
+          throw new Error("next fired after unsubscribing");
         }
         sub.unsubscribe();
         done();
@@ -101,7 +101,7 @@ describe('GraphQL Subscriptions', () => {
     link.simulateResult(results[0]);
   });
 
-  it('should subscribe with default values', done => {
+  it("should subscribe with default values", (done) => {
     const link = mockObservableLink(sub1);
     // This test calls directly through Apollo Client
     const client = new ApolloClient({
@@ -116,7 +116,7 @@ describe('GraphQL Subscriptions', () => {
 
         // Test unsubscribing
         if (count > 1) {
-          throw new Error('next fired after unsubscribing');
+          throw new Error("next fired after unsubscribing");
         }
         sub.unsubscribe();
 
@@ -127,7 +127,7 @@ describe('GraphQL Subscriptions', () => {
     link.simulateResult(results[0]);
   });
 
-  it('should multiplex subscriptions', done => {
+  it("should multiplex subscriptions", (done) => {
     const link = mockObservableLink(sub1);
     const queryManager = new QueryManager({
       link,
@@ -164,7 +164,7 @@ describe('GraphQL Subscriptions', () => {
     link.simulateResult(results[0]);
   });
 
-  it('should receive multiple results for a subscription', done => {
+  it("should receive multiple results for a subscription", (done) => {
     const link = mockObservableLink(sub1);
     let numResults = 0;
     const queryManager = new QueryManager({
@@ -188,7 +188,7 @@ describe('GraphQL Subscriptions', () => {
     }
   });
 
-  it('should not cache subscription data if a `no-cache` fetch policy is used', done => {
+  it("should not cache subscription data if a `no-cache` fetch policy is used", (done) => {
     const link = mockObservableLink(sub1);
     const cache = new InMemoryCache({ addTypename: false });
     const client = new ApolloClient({
@@ -198,7 +198,7 @@ describe('GraphQL Subscriptions', () => {
 
     expect(cache.extract()).toEqual({});
 
-    options.fetchPolicy = 'no-cache';
+    options.fetchPolicy = "no-cache";
     const sub = client.subscribe(options).subscribe({
       next() {
         expect(cache.extract()).toEqual({});
@@ -210,7 +210,7 @@ describe('GraphQL Subscriptions', () => {
     link.simulateResult(results[0]);
   });
 
-  it('should throw an error if the result has errors on it', () => {
+  it("should throw an error if the result has errors on it", () => {
     const link = mockObservableLink(sub1);
     const queryManager = new QueryManager({
       link,
@@ -225,7 +225,7 @@ describe('GraphQL Subscriptions', () => {
         new Promise((resolve, reject) => {
           obs.subscribe({
             next(result) {
-              fail('Should have hit the error block');
+              fail("Should have hit the error block");
               reject();
             },
             error(error) {
@@ -233,7 +233,7 @@ describe('GraphQL Subscriptions', () => {
               resolve();
             },
           });
-        }),
+        })
       );
     }
 
@@ -242,14 +242,14 @@ describe('GraphQL Subscriptions', () => {
         data: null,
         errors: [
           {
-            message: 'This is an error',
+            message: "This is an error",
             locations: [
               {
                 column: 3,
                 line: 2,
               },
             ],
-            path: ['result'],
+            path: ["result"],
           },
         ],
       },
@@ -259,14 +259,14 @@ describe('GraphQL Subscriptions', () => {
     return Promise.all(promises);
   });
 
-  it('should call complete handler when the subscription completes', () => {
+  it("should call complete handler when the subscription completes", () => {
     const link = mockObservableLink();
     const client = new ApolloClient({
       link,
       cache: new InMemoryCache({ addTypename: false }),
     });
 
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       client.subscribe(defaultOptions).subscribe({
         complete() {
           resolve();

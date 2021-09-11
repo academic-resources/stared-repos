@@ -25,6 +25,6 @@ module.exports = function validateInputs(data) {
 
   return {
     message: "",
-    isValid: true
+    isValid: true,
   };
 };

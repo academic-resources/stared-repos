@@ -1,9 +1,9 @@
-import { rollup } from '../../config/rollup.config';
+import { rollup } from "../../config/rollup.config";
 
 export default rollup({
-  name: 'apollo-utilities',
+  name: "apollo-utilities",
   extraGlobals: {
-    'fast-json-stable-stringify': 'stringify',
-    '@wry/equality': 'wryEquality',
+    "fast-json-stable-stringify": "stringify",
+    "@wry/equality": "wryEquality",
   },
 });

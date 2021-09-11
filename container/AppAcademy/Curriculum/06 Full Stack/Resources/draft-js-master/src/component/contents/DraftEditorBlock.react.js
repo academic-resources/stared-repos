@@ -234,7 +234,8 @@ class DraftEditorBlock extends React.Component<Props> {
       <div
         data-offset-key={offsetKey}
         className={className}
-        ref={ref => (this._node = ref)}>
+        ref={(ref) => (this._node = ref)}
+      >
         {this._renderChildren()}
       </div>
     );

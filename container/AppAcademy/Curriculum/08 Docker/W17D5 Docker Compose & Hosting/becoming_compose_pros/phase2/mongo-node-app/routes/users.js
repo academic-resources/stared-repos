@@ -1,34 +1,34 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var mongoose = require('mongoose');
-var User = mongoose.model('User');
+var mongoose = require("mongoose");
+var User = mongoose.model("User");
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get("/", function (req, res, next) {
   User.find().exec(function (err, users) {
-    if(err){
-      res.render('error', { message: err.message, error: err });
+    if (err) {
+      res.render("error", { message: err.message, error: err });
     }
-    res.render('userlist', { users: users });
+    res.render("userlist", { users: users });
   });
 });
 
 /* SHow Create User Form */
-router.get('/create', function(req,res,next){
-  res.render('userform');
+router.get("/create", function (req, res, next) {
+  res.render("userform");
 });
 
 /* Get data from User form */
-router.post('/create', function(req,res,next){
+router.post("/create", function (req, res, next) {
   var user = User({
     firstName: req.body.firstName,
-    lastName: req.body.lastName
+    lastName: req.body.lastName,
   });
-  user.save(function(err){
-    if(err){
-      res.render('error', {message: err.message, error: err});
+  user.save(function (err) {
+    if (err) {
+      res.render("error", { message: err.message, error: err });
     }
-    res.redirect('/users');
+    res.redirect("/users");
   });
 });
 

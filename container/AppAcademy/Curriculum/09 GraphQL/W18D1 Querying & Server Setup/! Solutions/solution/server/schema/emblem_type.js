@@ -12,9 +12,9 @@ const EmblemType = new GraphQLObjectType({
       type: new GraphQLList(require("./god_type")),
       resolve(parentValue) {
         return Emblem.findById(parentValue.id).populate("gods");
-      }
-    }
-  })
+      },
+    },
+  }),
 });
 
 module.exports = EmblemType;

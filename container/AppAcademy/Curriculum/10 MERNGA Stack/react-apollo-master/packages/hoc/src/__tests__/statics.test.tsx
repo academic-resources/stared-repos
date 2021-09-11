@@ -1,6 +1,6 @@
-import React from 'react';
-import gql from 'graphql-tag';
-import { graphql } from '@apollo/react-hoc';
+import React from "react";
+import gql from "graphql-tag";
+import { graphql } from "@apollo/react-hoc";
 
 let sampleOperation = gql`
   {
@@ -10,33 +10,33 @@ let sampleOperation = gql`
   }
 `;
 
-describe('statics', () => {
-  it('should be preserved', () => {
+describe("statics", () => {
+  it("should be preserved", () => {
     const ApolloContainer = graphql(sampleOperation)(
       class extends React.Component<any, any> {
-        static veryStatic = 'such global';
+        static veryStatic = "such global";
       }
     );
 
-    expect((ApolloContainer as any).veryStatic).toBe('such global');
+    expect((ApolloContainer as any).veryStatic).toBe("such global");
   });
 
-  it('exposes a debuggable displayName', () => {
+  it("exposes a debuggable displayName", () => {
     @graphql(sampleOperation)
     class ApolloContainer extends React.Component<any, any> {}
 
     expect((ApolloContainer as any).displayName).toBe(
-      'Apollo(ApolloContainer)'
+      "Apollo(ApolloContainer)"
     );
   });
 
-  it('honors custom display names', () => {
+  it("honors custom display names", () => {
     const ApolloContainer = graphql(sampleOperation)(
       class extends React.Component<any, any> {
-        static displayName = 'Foo';
+        static displayName = "Foo";
       }
     );
 
-    expect((ApolloContainer as any).displayName).toBe('Apollo(Foo)');
+    expect((ApolloContainer as any).displayName).toBe("Apollo(Foo)");
   });
 });

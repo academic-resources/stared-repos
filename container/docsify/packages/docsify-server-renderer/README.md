@@ -26,21 +26,29 @@ renderer.renderToString(url)
   .catch(err => {})
 ```
 
-*index.template.html*
+_index.template.html_
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>docsify</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/buble.css" title="buble" disabled>
-</head>
-<body>
-  <!--inject-app-->
-  <!--inject-config-->
-  <script src="//unpkg.com/docsify/lib/docsify.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>docsify</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="//unpkg.com/docsify/themes/buble.css"
+      title="buble"
+      disabled
+    />
+  </head>
+  <body>
+    <!--inject-app-->
+    <!--inject-config-->
+    <script src="//unpkg.com/docsify/lib/docsify.js"></script>
+  </body>
 </html>
 ```

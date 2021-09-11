@@ -1,7 +1,6 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 const Queries = {
-  
   FETCH_PRODUCTS: gql`
     {
       products {
@@ -33,7 +32,7 @@ const Queries = {
     query FetchCartItems {
       cart @client
     }
-  `
-}
+  `,
+};
 
-export default Queries
+export default Queries;

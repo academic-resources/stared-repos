@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const db = require("../config/keys").MONGO_URI;
 const expressGraphQL = require("express-graphql");
-const models = require('./models'); // must import before schema
+const models = require("./models"); // must import before schema
 const schema = require("./schema/schema");
 
 const app = express();
@@ -17,13 +17,13 @@ mongoose
   // prevents an error being thrown by the latest release of MongoDB's driver
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
 app.use(
   "/graphql",
   expressGraphQL({
     schema,
-    graphiql: true
+    graphiql: true,
   })
 );
 
@@ -32,4 +32,3 @@ app.use(
 app.use(bodyParser.json());
 
 module.exports = app;
-

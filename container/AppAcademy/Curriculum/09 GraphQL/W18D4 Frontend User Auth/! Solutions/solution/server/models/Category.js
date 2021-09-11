@@ -4,20 +4,20 @@ const Schema = mongoose.Schema;
 const CategorySchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   products: [
     {
       type: Schema.Types.ObjectId,
-      ref: "products"
-    }
-  ]
+      ref: "products",
+    },
+  ],
 });
 
-CategorySchema.statics.findProducts = function(categoryId) {
+CategorySchema.statics.findProducts = function (categoryId) {
   return this.findById(categoryId)
     .populate("products")
-    .then(category => category.products);
+    .then((category) => category.products);
 };
 
 module.exports = mongoose.model("categories", CategorySchema);

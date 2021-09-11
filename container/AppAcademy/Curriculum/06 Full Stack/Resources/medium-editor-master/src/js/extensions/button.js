@@ -1,8 +1,7 @@
 (function () {
-    'use strict';
+    "use strict";
 
     var Button = MediumEditor.Extension.extend({
-
         /* Button Options */
 
         /* action: [string]
@@ -101,7 +100,7 @@
             MediumEditor.Extension.prototype.init.apply(this, arguments);
 
             this.button = this.createButton();
-            this.on(this.button, 'click', this.handleClick.bind(this));
+            this.on(this.button, "click", this.handleClick.bind(this));
         },
 
         /* getButton: [function ()]
@@ -116,25 +115,31 @@
         },
 
         getAction: function () {
-            return (typeof this.action === 'function') ? this.action(this.base.options) : this.action;
+            return typeof this.action === "function"
+                ? this.action(this.base.options)
+                : this.action;
         },
 
         getAria: function () {
-            return (typeof this.aria === 'function') ? this.aria(this.base.options) : this.aria;
+            return typeof this.aria === "function"
+                ? this.aria(this.base.options)
+                : this.aria;
         },
 
         getTagNames: function () {
-            return (typeof this.tagNames === 'function') ? this.tagNames(this.base.options) : this.tagNames;
+            return typeof this.tagNames === "function"
+                ? this.tagNames(this.base.options)
+                : this.tagNames;
         },
 
         createButton: function () {
-            var button = this.document.createElement('button'),
+            var button = this.document.createElement("button"),
                 content = this.contentDefault,
                 ariaLabel = this.getAria(),
-                buttonLabels = this.getEditorOption('buttonLabels');
+                buttonLabels = this.getEditorOption("buttonLabels");
             // Add class names
-            button.classList.add('medium-editor-action');
-            button.classList.add('medium-editor-action-' + this.name);
+            button.classList.add("medium-editor-action");
+            button.classList.add("medium-editor-action-" + this.name);
             if (this.classList) {
                 this.classList.forEach(function (className) {
                     button.classList.add(className);
@@ -142,10 +147,10 @@
             }
 
             // Add attributes
-            button.setAttribute('data-action', this.getAction());
+            button.setAttribute("data-action", this.getAction());
             if (ariaLabel) {
-                button.setAttribute('title', ariaLabel);
-                button.setAttribute('aria-label', ariaLabel);
+                button.setAttribute("title", ariaLabel);
+                button.setAttribute("aria-label", ariaLabel);
             }
             if (this.attrs) {
                 Object.keys(this.attrs).forEach(function (attr) {
@@ -153,7 +158,7 @@
                 }, this);
             }
 
-            if (buttonLabels === 'fontawesome' && this.contentFA) {
+            if (buttonLabels === "fontawesome" && this.contentFA) {
                 content = this.contentFA;
             }
             button.innerHTML = content;
@@ -172,16 +177,22 @@
         },
 
         isActive: function () {
-            return this.button.classList.contains(this.getEditorOption('activeButtonClass'));
+            return this.button.classList.contains(
+                this.getEditorOption("activeButtonClass")
+            );
         },
 
         setInactive: function () {
-            this.button.classList.remove(this.getEditorOption('activeButtonClass'));
+            this.button.classList.remove(
+                this.getEditorOption("activeButtonClass")
+            );
             delete this.knownState;
         },
 
         setActive: function () {
-            this.button.classList.add(this.getEditorOption('activeButtonClass'));
+            this.button.classList.add(
+                this.getEditorOption("activeButtonClass")
+            );
             delete this.knownState;
         },
 
@@ -208,15 +219,17 @@
             }
 
             if (!isMatch && this.style) {
-                styleVals = this.style.value.split('|');
-                computedStyle = this.window.getComputedStyle(node, null).getPropertyValue(this.style.prop);
+                styleVals = this.style.value.split("|");
+                computedStyle = this.window
+                    .getComputedStyle(node, null)
+                    .getPropertyValue(this.style.prop);
                 styleVals.forEach(function (val) {
                     if (!this.knownState) {
-                        isMatch = (computedStyle.indexOf(val) !== -1);
+                        isMatch = computedStyle.indexOf(val) !== -1;
                         // text-decoration is not inherited by default
                         // so if the computed style for text-decoration doesn't match
                         // don't write to knownState so we can fallback to other checks
-                        if (isMatch || this.style.prop !== 'text-decoration') {
+                        if (isMatch || this.style.prop !== "text-decoration") {
                             this.knownState = isMatch;
                         }
                     }
@@ -224,12 +237,17 @@
             }
 
             return isMatch;
-        }
+        },
     });
 
     Button.isBuiltInButton = function (name) {
-        return (typeof name === 'string') && MediumEditor.extensions.button.prototype.defaults.hasOwnProperty(name);
+        return (
+            typeof name === "string" &&
+            MediumEditor.extensions.button.prototype.defaults.hasOwnProperty(
+                name
+            )
+        );
     };
 
     MediumEditor.extensions.button = Button;
-}());
+})();

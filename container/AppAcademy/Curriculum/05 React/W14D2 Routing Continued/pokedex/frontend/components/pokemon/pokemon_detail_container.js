@@ -1,16 +1,16 @@
-import { connect } from 'react-redux'
-import PokemonDetail from './pokemon_detail'
+import { connect } from "react-redux";
+import PokemonDetail from "./pokemon_detail";
 
 const msp = (state, ownProps) => {
   return {
-    pokemon: state.entities
-  }
-}
+    pokemon: state.entities,
+  };
+};
 
-const mdp = dispatch => {
+const mdp = (dispatch) => {
   return {
-    requestPokemon: id => dispatch(requestPokemon(id))
-  }
-}
+    requestPokemon: (id) => dispatch(requestPokemon(id)),
+  };
+};
 
-export default connect(msp, mdp)(PokemonDetail)
+export default connect(msp, mdp)(PokemonDetail);

@@ -16,11 +16,11 @@ const mutation = new GraphQLObjectType({
       type: DogType,
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
-        breed: { type: new GraphQLNonNull(GraphQLString) }
+        breed: { type: new GraphQLNonNull(GraphQLString) },
       },
       resolve(parentValue, { name, breed }) {
         return new Dog({ name, breed }).save();
-      }
+      },
     },
     updateDog: {
       // creating a Dog type
@@ -28,7 +28,7 @@ const mutation = new GraphQLObjectType({
       args: {
         _id: { type: new GraphQLNonNull(GraphQLID) },
         name: { type: new GraphQLNonNull(GraphQLString) },
-        breed: { type: new GraphQLNonNull(GraphQLString) }
+        breed: { type: new GraphQLNonNull(GraphQLString) },
       },
       resolve(parentValue, { _id, name, breed }) {
         console.log(_id, name, breed);
@@ -40,14 +40,14 @@ const mutation = new GraphQLObjectType({
             return dog;
           }
         );
-      }
+      },
     },
     updateToy: {
       type: ToyType,
       args: {
         _id: { type: new GraphQLNonNull(GraphQLID) },
         name: { type: new GraphQLNonNull(GraphQLString) },
-        color: { type: new GraphQLNonNull(GraphQLString) }
+        color: { type: new GraphQLNonNull(GraphQLString) },
       },
       resolve(parentValue, { _id, name, color }) {
         console.log(_id, name, color);
@@ -59,32 +59,32 @@ const mutation = new GraphQLObjectType({
             return toy;
           }
         );
-      }
+      },
     },
     newToy: {
       // creating a Toy type
       type: ToyType,
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
-        color: { type: new GraphQLNonNull(GraphQLString) }
+        color: { type: new GraphQLNonNull(GraphQLString) },
       },
       resolve(parentValue, { name, color }) {
         return new Toy({ name, color }).save();
-      }
+      },
     },
     addToytoDog: {
       // creating a Toy type
       type: DogType,
       args: {
         dogId: { type: new GraphQLNonNull(GraphQLID) },
-        toyId: { type: new GraphQLNonNull(GraphQLID) }
+        toyId: { type: new GraphQLNonNull(GraphQLID) },
       },
       resolve(parentValue, { dogId, toyId }) {
         // returns the dog the toy was added to
         return Dog.addnewToy(dogId, toyId);
-      }
-    }
-  }
+      },
+    },
+  },
 });
 
 module.exports = mutation;

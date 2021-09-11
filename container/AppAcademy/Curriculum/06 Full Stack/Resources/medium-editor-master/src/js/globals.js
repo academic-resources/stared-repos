@@ -1,6 +1,6 @@
 /*jshint unused: false */
 function MediumEditor(elements, options) {
-    'use strict';
+    "use strict";
     return this.init(elements, options);
 }
 

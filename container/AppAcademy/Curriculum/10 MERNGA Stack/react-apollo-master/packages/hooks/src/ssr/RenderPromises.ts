@@ -11,7 +11,7 @@ type QueryInfo = {
 function makeDefaultQueryInfo(): QueryInfo {
   return {
     seen: false,
-    observable: null
+    observable: null,
   };
 }
 
@@ -48,7 +48,7 @@ export class RenderPromises {
     if (!info.seen) {
       this.queryPromises.set(
         queryInstance.getOptions(),
-        new Promise(resolve => {
+        new Promise((resolve) => {
           resolve(queryInstance.fetchData());
         })
       );

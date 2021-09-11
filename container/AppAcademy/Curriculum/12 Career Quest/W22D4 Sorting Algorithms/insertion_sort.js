@@ -4,26 +4,26 @@ function insertionSort(arr) {
   // trivially sorted region of only one element
   // insertion sort allows us to insert new elements anywhere within the sorted region
   for (let i = 1; i < arr.length; i++) {
-      // grab the first element of the unsorted region
-      let currElement = arr[i];
+    // grab the first element of the unsorted region
+    let currElement = arr[i];
 
-      // the `j` loop will iterate left through the sorted region,
-      // looking for a legal spot to insert currElement
-      for (var j = i - 1; j >= 0 && currElement < arr[j]; j--) {
-          // keep moving left while currElement is less than the j-th element
+    // the `j` loop will iterate left through the sorted region,
+    // looking for a legal spot to insert currElement
+    for (var j = i - 1; j >= 0 && currElement < arr[j]; j--) {
+      // keep moving left while currElement is less than the j-th element
 
-          arr[j + 1] = arr[j];
-          // the line above will move the j-th element to the right, 
-          // leaving a gap to potentially insert currElement
-      }
-      // insert currElement into that gap
-      arr[j + 1] = currElement;
+      arr[j + 1] = arr[j];
+      // the line above will move the j-th element to the right,
+      // leaving a gap to potentially insert currElement
+    }
+    // insert currElement into that gap
+    arr[j + 1] = currElement;
   }
   return arr;
 }
 
 let arr1 = [2, 8, 5, 2, 6];
-console.log(insertionSort(arr1))
+console.log(insertionSort(arr1));
 
 // Complexity
 // Time: T(n * n/2) = O(n^2)

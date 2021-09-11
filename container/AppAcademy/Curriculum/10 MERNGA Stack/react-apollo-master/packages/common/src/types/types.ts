@@ -9,9 +9,9 @@ import ApolloClient, {
   PureQueryOptions,
   MutationUpdaterFn,
   NetworkStatus,
-  ObservableQuery
-} from 'apollo-client';
-import { DocumentNode, GraphQLError } from 'graphql';
+  ObservableQuery,
+} from "apollo-client";
+import { DocumentNode, GraphQLError } from "graphql";
 
 /* Common types */
 
@@ -52,12 +52,12 @@ export interface QueryFunctionOptions<
 
 export type ObservableQueryFields<TData, TVariables> = Pick<
   ObservableQuery<TData, TVariables>,
-  | 'startPolling'
-  | 'stopPolling'
-  | 'subscribeToMore'
-  | 'updateQuery'
-  | 'refetch'
-  | 'variables'
+  | "startPolling"
+  | "stopPolling"
+  | "subscribeToMore"
+  | "updateQuery"
+  | "refetch"
+  | "variables"
 > & {
   fetchMore: (<K extends keyof TVariables>(
     fetchMoreOptions: FetchMoreQueryOptions<TVariables, K> &

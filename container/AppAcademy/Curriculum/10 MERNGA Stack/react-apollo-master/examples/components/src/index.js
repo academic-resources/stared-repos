@@ -1,12 +1,12 @@
-import React from 'react';
-import { render } from 'react-dom';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from '@apollo/react-components';
+import React from "react";
+import { render } from "react-dom";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "@apollo/react-components";
 
-import App from './App';
+import App from "./App";
 
 const client = new ApolloClient({
-  uri: 'https://ojo6385vn6.sse.codesandbox.io'
+  uri: "https://ojo6385vn6.sse.codesandbox.io",
 });
 
 const WrappedApp = (
@@ -15,4 +15,4 @@ const WrappedApp = (
   </ApolloProvider>
 );
 
-render(WrappedApp, document.getElementById('root'));
+render(WrappedApp, document.getElementById("root"));

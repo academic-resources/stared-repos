@@ -8,10 +8,10 @@ import {
   FragmentDefinitionNode,
   FieldNode,
   ASTNode,
-} from 'graphql';
-import { visit, BREAK } from 'graphql/language/visitor';
+} from "graphql";
+import { visit, BREAK } from "graphql/language/visitor";
 
-import { ApolloCache } from 'apollo-cache';
+import { ApolloCache } from "apollo-cache";
 import {
   getMainDefinition,
   buildQueryFromSelectionSet,
@@ -27,13 +27,13 @@ import {
   shouldInclude,
   isField,
   isInlineFragment,
-} from 'apollo-utilities';
+} from "apollo-utilities";
 
-import { invariant } from 'ts-invariant';
+import { invariant } from "ts-invariant";
 
-import ApolloClient from '../ApolloClient';
-import { Resolvers, OperationVariables } from './types';
-import { capitalizeFirstLetter } from '../util/capitalizeFirstLetter';
+import ApolloClient from "../ApolloClient";
+import { Resolvers, OperationVariables } from "./types";
+import { capitalizeFirstLetter } from "../util/capitalizeFirstLetter";
 
 export type Resolver = (
   fieldName: string,
@@ -42,7 +42,7 @@ export type Resolver = (
   context: any,
   info: {
     field: FieldNode;
-  },
+  }
 ) => any;
 
 export type VariableMap = { [name: string]: any };
@@ -50,7 +50,7 @@ export type VariableMap = { [name: string]: any };
 export type FragmentMatcher = (
   rootValue: any,
   typeCondition: string,
-  context: any,
+  context: any
 ) => boolean;
 
 export type ExecContext = {
@@ -100,7 +100,7 @@ export class LocalState<TCacheShape> {
   public addResolvers(resolvers: Resolvers | Resolvers[]) {
     this.resolvers = this.resolvers || {};
     if (Array.isArray(resolvers)) {
-      resolvers.forEach(resolverGroup => {
+      resolvers.forEach((resolverGroup) => {
         this.resolvers = mergeDeep(this.resolvers, resolverGroup);
       });
     } else {
@@ -141,8 +141,8 @@ export class LocalState<TCacheShape> {
         context,
         variables,
         this.fragmentMatcher,
-        onlyRunForcedResolvers,
-      ).then(localResult => ({
+        onlyRunForcedResolvers
+      ).then((localResult) => ({
         ...remoteResult,
         data: localResult.result,
       }));
@@ -162,15 +162,15 @@ export class LocalState<TCacheShape> {
   // Client queries contain everything in the incoming document (if a @client
   // directive is found).
   public clientQuery(document: DocumentNode) {
-    if (hasDirectives(['client'], document)) {
+    if (hasDirectives(["client"], document)) {
       if (this.resolvers) {
         return document;
       }
       invariant.warn(
-        'Found @client directives in a query but no ApolloClient resolvers ' +
-        'were specified. This means ApolloClient local resolver handling ' +
-        'has been disabled, and @client directives will be passed through ' +
-        'to your link chain.',
+        "Found @client directives in a query but no ApolloClient resolvers " +
+          "were specified. This means ApolloClient local resolver handling " +
+          "has been disabled, and @client directives will be passed through " +
+          "to your link chain."
       );
     }
     return null;
@@ -192,9 +192,10 @@ export class LocalState<TCacheShape> {
         if ((cache as any).config) {
           return (cache as any).config.dataIdFromObject(obj);
         } else {
-          invariant(false,
-            'To use context.getCacheKey, you need to use a cache that has ' +
-              'a configurable dataIdFromObject, like apollo-cache-inmemory.',
+          invariant(
+            false,
+            "To use context.getCacheKey, you need to use a cache that has " +
+              "a configurable dataIdFromObject, like apollo-cache-inmemory."
           );
         }
       },
@@ -209,15 +210,15 @@ export class LocalState<TCacheShape> {
   public async addExportedVariables(
     document: DocumentNode,
     variables: OperationVariables = {},
-    context = {},
+    context = {}
   ) {
     if (document) {
       return this.resolveDocument(
         document,
         this.buildRootValueFromCache(document, variables) || {},
         this.prepareContext(context),
-        variables,
-      ).then(data => ({
+        variables
+      ).then((data) => ({
         ...variables,
         ...data.exportedVariables,
       }));
@@ -233,12 +234,12 @@ export class LocalState<TCacheShape> {
     visit(document, {
       Directive: {
         enter(node) {
-          if (node.name.value === 'client' && node.arguments) {
+          if (node.name.value === "client" && node.arguments) {
             forceResolvers = node.arguments.some(
-              arg =>
-                arg.name.value === 'always' &&
-                arg.value.kind === 'BooleanValue' &&
-                arg.value.value === true,
+              (arg) =>
+                arg.name.value === "always" &&
+                arg.value.kind === "BooleanValue" &&
+                arg.value.value === true
             );
             if (forceResolvers) {
               return BREAK;
@@ -253,7 +254,7 @@ export class LocalState<TCacheShape> {
   // Query the cache and return matching data.
   private buildRootValueFromCache(
     document: DocumentNode,
-    variables?: Record<string, any>,
+    variables?: Record<string, any>
   ) {
     return this.cache.diff({
       query: buildQueryFromSelectionSet(document),
@@ -269,7 +270,7 @@ export class LocalState<TCacheShape> {
     context: any = {},
     variables: VariableMap = {},
     fragmentMatcher: FragmentMatcher = () => true,
-    onlyRunForcedResolvers: boolean = false,
+    onlyRunForcedResolvers: boolean = false
   ) {
     const mainDefinition = getMainDefinition(document);
     const fragments = getFragmentDefinitions(document);
@@ -280,7 +281,7 @@ export class LocalState<TCacheShape> {
 
     const defaultOperationType = definitionOperation
       ? capitalizeFirstLetter(definitionOperation)
-      : 'Query';
+      : "Query";
 
     const { cache, client } = this;
     const execContext: ExecContext = {
@@ -300,8 +301,8 @@ export class LocalState<TCacheShape> {
     return this.resolveSelectionSet(
       mainDefinition.selectionSet,
       rootValue,
-      execContext,
-    ).then(result => ({
+      execContext
+    ).then((result) => ({
       result,
       exportedVariables: execContext.exportedVariables,
     }));
@@ -310,7 +311,7 @@ export class LocalState<TCacheShape> {
   private async resolveSelectionSet<TData>(
     selectionSet: SelectionSetNode,
     rootValue: TData,
-    execContext: ExecContext,
+    execContext: ExecContext
   ) {
     const { fragmentMap, context, variables } = execContext;
     const resultsToMerge: TData[] = [rootValue];
@@ -323,13 +324,13 @@ export class LocalState<TCacheShape> {
 
       if (isField(selection)) {
         return this.resolveField(selection, rootValue, execContext).then(
-          fieldResult => {
-            if (typeof fieldResult !== 'undefined') {
+          (fieldResult) => {
+            if (typeof fieldResult !== "undefined") {
               resultsToMerge.push({
                 [resultKeyNameFromField(selection)]: fieldResult,
               } as TData);
             }
-          },
+          }
         );
       }
 
@@ -349,15 +350,15 @@ export class LocalState<TCacheShape> {
           return this.resolveSelectionSet(
             fragment.selectionSet,
             rootValue,
-            execContext,
-          ).then(fragmentResult => {
+            execContext
+          ).then((fragmentResult) => {
             resultsToMerge.push(fragmentResult);
           });
         }
       }
     };
 
-    return Promise.all(selectionSet.selections.map(execute)).then(function() {
+    return Promise.all(selectionSet.selections.map(execute)).then(function () {
       return mergeDeepArray(resultsToMerge);
     });
   }
@@ -365,7 +366,7 @@ export class LocalState<TCacheShape> {
   private async resolveField(
     field: FieldNode,
     rootValue: any,
-    execContext: ExecContext,
+    execContext: ExecContext
   ): Promise<any> {
     const { variables } = execContext;
     const fieldName = field.name.value;
@@ -388,12 +389,14 @@ export class LocalState<TCacheShape> {
       if (resolverMap) {
         const resolve = resolverMap[aliasUsed ? fieldName : aliasedFieldName];
         if (resolve) {
-          resultPromise = Promise.resolve(resolve(
-            rootValue,
-            argumentsObjectFromField(field, variables),
-            execContext.context,
-            { field },
-          ));
+          resultPromise = Promise.resolve(
+            resolve(
+              rootValue,
+              argumentsObjectFromField(field, variables),
+              execContext.context,
+              { field }
+            )
+          );
         }
       }
     }
@@ -402,10 +405,10 @@ export class LocalState<TCacheShape> {
       // If an @export directive is associated with the current field, store
       // the `as` export variable name and current result for later use.
       if (field.directives) {
-        field.directives.forEach(directive => {
-          if (directive.name.value === 'export' && directive.arguments) {
-            directive.arguments.forEach(arg => {
-              if (arg.name.value === 'as' && arg.value.kind === 'StringValue') {
+        field.directives.forEach((directive) => {
+          if (directive.name.value === "export" && directive.arguments) {
+            directive.arguments.forEach((arg) => {
+              if (arg.name.value === "as" && arg.value.kind === "StringValue") {
                 execContext.exportedVariables[arg.value.value] = result;
               }
             });
@@ -434,7 +437,7 @@ export class LocalState<TCacheShape> {
         return this.resolveSelectionSet(
           field.selectionSet,
           result,
-          execContext,
+          execContext
         );
       }
     });
@@ -443,10 +446,10 @@ export class LocalState<TCacheShape> {
   private resolveSubSelectedArray(
     field: FieldNode,
     result: any[],
-    execContext: ExecContext,
+    execContext: ExecContext
   ): any {
     return Promise.all(
-      result.map(item => {
+      result.map((item) => {
         if (item === null) {
           return null;
         }
@@ -458,9 +461,13 @@ export class LocalState<TCacheShape> {
 
         // This is an object, run the selection set on it.
         if (field.selectionSet) {
-          return this.resolveSelectionSet(field.selectionSet, item, execContext);
+          return this.resolveSelectionSet(
+            field.selectionSet,
+            item,
+            execContext
+          );
         }
-      }),
+      })
     );
   }
 }

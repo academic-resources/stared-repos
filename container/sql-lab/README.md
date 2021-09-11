@@ -12,8 +12,8 @@
 For this lab you will:
 
 - write SQL statements against a pre-populated database using an online tool. Once you have the correct SQL Statement for each query, write it inside the `queries.md` file under the appropriate heading.
-x install [`DB Browser for SQLite`](https://sqlitebrowser.org/) and use it to create a database.
-x using `DB Browser for SQLite` add a table to the database you just created.
+  x install [`DB Browser for SQLite`](https://sqlitebrowser.org/) and use it to create a database.
+  x using `DB Browser for SQLite` add a table to the database you just created.
 
 ### Write Basic Queries
 
@@ -48,7 +48,7 @@ Visit [SQL Try Editor at W3Schools.com](https://www.w3schools.com/Sql/tryit.asp?
 
 9. list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
 
-SELECT *, Count(CustomerID) FROM Orders GROUP BY CustomerID;
+SELECT \*, Count(CustomerID) FROM Orders GROUP BY CustomerID;
 
 10. list customers names and the number of orders per customer. Sort the list by number of orders in descending order. _Ernst Handel_ should be at the top with 10 orders followed by _QUICK-Stop_, _Rattlesnake Canyon Grocery_ and _Wartian Herkku_ with 7 orders each.
 

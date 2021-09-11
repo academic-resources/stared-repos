@@ -5,11 +5,11 @@
 
 /* Attribute selector targeting all elements
 with a class attribute containing 'col-' */
-[class*='col-'] {
+[class*="col-"] {
   padding-right: 20px;
 }
 
-[class*='col-']:last-of-type {
+[class*="col-"]:last-of-type {
   padding-right: 0;
 }
 
@@ -34,7 +34,7 @@ with a class attribute containing 'col-' */
 }
 
 .cf:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -53,7 +53,7 @@ with a class attribute containing 'col-' */
   .hamburger-dropdown {
     display: block;
     position: fixed;
-    right: 15%; 
+    right: 15%;
   }
 
   .hamburger-dropdown > li {
@@ -63,17 +63,14 @@ with a class attribute containing 'col-' */
     width: 50px;
     position: relative;
   }
-  
+
   .hamburger-dropdown-content {
     display: none;
     position: absolute;
     left: -70%;
     top: 40px;
-   
   }
   .hamburger-dropdown:hover .hamburger-dropdown-content {
     display: block;
   }
-
 }
-

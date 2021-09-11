@@ -12,7 +12,11 @@ const Container = styled.div`
 
 const FiveList = ({ recs }) => (
   <Container>
-    {recs.map(({ link, title, type }) => <Item key={title} type={type} url={link}>{title}</Item>)}
+    {recs.map(({ link, title, type }) => (
+      <Item key={title} type={type} url={link}>
+        {title}
+      </Item>
+    ))}
   </Container>
 )
 

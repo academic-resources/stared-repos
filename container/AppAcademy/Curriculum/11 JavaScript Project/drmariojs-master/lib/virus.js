@@ -1,5 +1,5 @@
 class Virus {
-  constructor(ctx, board, coords, color){
+  constructor(ctx, board, coords, color) {
     this.ctx = ctx;
     this.board = board;
     this.coords = coords;

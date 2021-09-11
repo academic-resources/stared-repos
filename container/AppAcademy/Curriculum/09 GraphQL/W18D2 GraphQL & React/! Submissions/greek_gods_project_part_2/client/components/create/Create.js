@@ -1,33 +1,33 @@
-import React, { Component } from 'react'
-import GodCreate from './GodCreate'
-import AbodeCreate from './AbodeCreate'
-import EmblemCreate from './EmblemCreate'
+import React, { Component } from "react";
+import GodCreate from "./GodCreate";
+import AbodeCreate from "./AbodeCreate";
+import EmblemCreate from "./EmblemCreate";
 
 class Create extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      createType: 'god'
-    }
+      createType: "god",
+    };
 
-    this.updateSelection = this.updateSelection.bind(this)
+    this.updateSelection = this.updateSelection.bind(this);
   }
 
   updateSelection(e) {
-    e.preventDefault()
-    this.setState({ createType: e.target.value })
+    e.preventDefault();
+    this.setState({ createType: e.target.value });
   }
 
   render() {
-    let form
+    let form;
 
-    if (this.state.createType === 'god') {
-      form = <GodCreate />
-    } else if (this.state.createType === 'abode') {
-      form = <AbodeCreate />
-    } else if (this.state.createType === 'emblem') {
-      form = <EmblemCreate />
+    if (this.state.createType === "god") {
+      form = <GodCreate />;
+    } else if (this.state.createType === "abode") {
+      form = <AbodeCreate />;
+    } else if (this.state.createType === "emblem") {
+      form = <EmblemCreate />;
     }
 
     return (
@@ -40,8 +40,8 @@ class Create extends Component {
         <h4>Create a new {this.state.createType}</h4>
         {form}
       </div>
-    )
+    );
   }
 }
 
-export default Create
+export default Create;

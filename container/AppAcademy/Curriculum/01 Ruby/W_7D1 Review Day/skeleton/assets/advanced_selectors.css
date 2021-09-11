@@ -3,7 +3,7 @@
 body {
   /* If the user cannot load the Arial font, the sans-serif font is used */
   font-family: Arial, sans-serif;
-  background-color: #FEFFF1;
+  background-color: #fefff1;
 }
 
 h1 {
@@ -29,7 +29,6 @@ header > img {
 
 /* Selects all elements with the class attribute "ingredients-list" */
 .ingredients-list {
-
   /* The list style property is shorthand for multiple list-style properties*/
   list-style: square inside;
 }
@@ -42,5 +41,3 @@ ol {
   font-size: 18px;
   font-weight: bold;
 }
-
-

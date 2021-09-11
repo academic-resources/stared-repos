@@ -2,11 +2,10 @@
 title: Server-side rendering
 ---
 
-
 Apollo provides two techniques to allow your applications to load quickly, avoiding unnecessary delays to users:
 
- - Store rehydration, which allows your initial set of queries to return data immediately without a server roundtrip.
- - Server side rendering, which renders the initial HTML view on the server before sending it to the client.
+- Store rehydration, which allows your initial set of queries to return data immediately without a server roundtrip.
+- Server side rendering, which renders the initial HTML view on the server before sending it to the client.
 
 You can use one or both of these techniques to provide a better user experience.
 
@@ -67,29 +66,28 @@ Once you put that all together, you'll end up with initialization code that look
 // This example uses React Router v4, although it should work
 // equally well with other routers that support SSR
 
-import { ApolloProvider } from 'react-apollo';
-import { ApolloClient } from 'apollo-client';
-import { createHttpLink } from 'apollo-link-http';
-import Express from 'express';
-import { StaticRouter } from 'react-router';
+import { ApolloProvider } from "react-apollo";
+import { ApolloClient } from "apollo-client";
+import { createHttpLink } from "apollo-link-http";
+import Express from "express";
+import { StaticRouter } from "react-router";
 import { InMemoryCache } from "apollo-cache-inmemory";
 
-import Layout from './routes/Layout';
+import Layout from "./routes/Layout";
 
 // Note you don't have to use any particular http server, but
 // we're using Express in this example
 const app = new Express();
 app.use((req, res) => {
-
   const client = new ApolloClient({
     ssrMode: true,
     // Remember that this is the interface the SSR server will use to connect to the
     // API server, so we need to ensure it isn't firewalled, etc
     link: createHttpLink({
-      uri: 'http://localhost:3010',
-      credentials: 'same-origin',
+      uri: "http://localhost:3010",
+      credentials: "same-origin",
       headers: {
-        cookie: req.header('Cookie'),
+        cookie: req.header("Cookie"),
       },
     }),
     cache: new InMemoryCache(),
@@ -109,21 +107,24 @@ app.use((req, res) => {
   // rendering code (see below)
 });
 
-app.listen(basePort, () => console.log( // eslint-disable-line no-console
-  `app Server is now running on http://localhost:${basePort}`
-));
+app.listen(basePort, () =>
+  console.log(
+    // eslint-disable-line no-console
+    `app Server is now running on http://localhost:${basePort}`
+  )
+);
 ```
 
 ```jsx
 // ./routes/Layout.js
-import { Route, Switch } from 'react-router';
-import { Link } from 'react-router-dom';
-import React from 'react';
+import { Route, Switch } from "react-router";
+import { Link } from "react-router-dom";
+import React from "react";
 
 // A Routes file is a good shared entry-point between client and server
-import routes from './routes';
+import routes from "./routes";
 
-const Layout = () =>
+const Layout = () => (
   <div>
     <nav>
       <ul>
@@ -139,28 +140,31 @@ const Layout = () =>
     {/* New <Switch> behavior introduced in React Router v4
        https://reacttraining.com/react-router/web/api/Switch */}
     <Switch>
-      {routes.map(route => <Route key={route.name} {...route} />)}
+      {routes.map((route) => (
+        <Route key={route.name} {...route} />
+      ))}
     </Switch>
-  </div>;
+  </div>
+);
 
 export default Layout;
 ```
 
 ```js
 // ./routes/index.js
-import MainPage from './MainPage';
-import AnotherPage from './AnotherPage';
+import MainPage from "./MainPage";
+import AnotherPage from "./AnotherPage";
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
+    path: "/",
+    name: "home",
     exact: true,
     component: MainPage,
   },
   {
-    path: '/another',
-    name: 'another',
+    path: "/another",
+    name: "another",
     component: AnotherPage,
   },
 ];
@@ -205,9 +209,14 @@ function Html({ content, state }) {
     <html>
       <body>
         <div id="root" dangerouslySetInnerHTML={{ __html: content }} />
-        <script dangerouslySetInnerHTML={{
-          __html: `window.__APOLLO_STATE__=${JSON.stringify(state).replace(/</g, '\\u003c')};`,
-        }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.__APOLLO_STATE__=${JSON.stringify(state).replace(
+              /</g,
+              "\\u003c"
+            )};`,
+          }}
+        />
       </body>
     </html>
   );
@@ -221,8 +230,8 @@ If your GraphQL endpoint is on the same server that you're rendering from, you m
 One solution to this problem is to use an Apollo Link to fetch data using a local graphql schema instead of making a network request. To achieve this, when creating an Apollo Client on the server, you could use [SchemaLink](https://www.apollographql.com/docs/link/links/schema) instead of using `createHttpLink` that uses your schema and context to run the query immediately, without any additional network requests.
 
 ```js
-import { ApolloClient } from 'apollo-client'
-import { SchemaLink } from 'apollo-link-schema';
+import { ApolloClient } from "apollo-client";
+import { SchemaLink } from "apollo-link-schema";
 
 // ...
 
@@ -244,12 +253,11 @@ const withClientOnlyUser = () => (
     {({ data }) => <span>I won't be run on the server</span>}
   </Query>
 );
-
 ```
 
 ### Using `renderToStringWithData`
 
-The `renderToStringWithData` function simplifies the above and simply returns the content string  that you need to render. So it reduces the number of steps slightly:
+The `renderToStringWithData` function simplifies the above and simply returns the content string that you need to render. So it reduces the number of steps slightly:
 
 ```js
 // server application code (integrated usage)

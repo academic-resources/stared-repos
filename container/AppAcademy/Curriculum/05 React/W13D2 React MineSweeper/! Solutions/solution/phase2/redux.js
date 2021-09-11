@@ -1,5 +1,4 @@
 class Store {
-
   constructor(rootReducer) {
     this.rootReducer = rootReducer;
     this.state = {};
@@ -13,12 +12,12 @@ class Store {
 
 const createStore = (...args) => new Store(...args);
 
-const combineReducers = config => {
+const combineReducers = (config) => {
   return (prevState, action) => {
     const nextState = {};
-    Object.keys(config).forEach(k => {
+    Object.keys(config).forEach((k) => {
       nextState[k] = config[k](prevState[k], action);
     });
     return nextState;
-  }
-}
+  };
+};

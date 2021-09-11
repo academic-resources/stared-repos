@@ -3,19 +3,19 @@ import {
   GraphQLRequest,
   ApolloLink,
   FetchResult,
-  Observable
-} from 'apollo-link';
+  Observable,
+} from "apollo-link";
 import {
   addTypenameToDocument,
   removeClientSetsFromDocument,
   removeConnectionDirectiveFromDocument,
   cloneDeep,
-  isEqual
-} from 'apollo-utilities';
-import { print } from 'graphql/language/printer';
-import stringify from 'fast-json-stable-stringify';
+  isEqual,
+} from "apollo-utilities";
+import { print } from "graphql/language/printer";
+import stringify from "fast-json-stable-stringify";
 
-import { MockedResponse, ResultFunction } from './types';
+import { MockedResponse, ResultFunction } from "./types";
 
 function requestToKey(request: GraphQLRequest, addTypename: Boolean): string {
   const queryString =
@@ -36,15 +36,14 @@ export class MockLink extends ApolloLink {
     super();
     this.addTypename = addTypename;
     if (mockedResponses)
-      mockedResponses.forEach(mockedResponse => {
+      mockedResponses.forEach((mockedResponse) => {
         this.addMockedResponse(mockedResponse);
       });
   }
 
   public addMockedResponse(mockedResponse: MockedResponse) {
-    const normalizedMockedResponse = this.normalizeMockedResponse(
-      mockedResponse
-    );
+    const normalizedMockedResponse =
+      this.normalizeMockedResponse(mockedResponse);
     const key = requestToKey(
       normalizedMockedResponse.request,
       this.addTypename
@@ -77,7 +76,7 @@ export class MockLink extends ApolloLink {
       }
     );
 
-    if (!response || typeof responseIndex === 'undefined') {
+    if (!response || typeof responseIndex === "undefined") {
       throw new Error(
         `No more mocked responses for the query: ${print(
           operation.query
@@ -100,7 +99,7 @@ export class MockLink extends ApolloLink {
       );
     }
 
-    return new Observable(observer => {
+    return new Observable((observer) => {
       let timer = setTimeout(
         () => {
           if (error) {
@@ -108,7 +107,7 @@ export class MockLink extends ApolloLink {
           } else {
             if (result) {
               observer.next(
-                typeof result === 'function'
+                typeof result === "function"
                   ? (result as ResultFunction<FetchResult>)()
                   : result
               );
@@ -149,7 +148,7 @@ export function mockSingleLink(...mockedResponses: Array<any>): ApolloLink {
   let maybeTypename = mockedResponses[mockedResponses.length - 1];
   let mocks = mockedResponses.slice(0, mockedResponses.length - 1);
 
-  if (typeof maybeTypename !== 'boolean') {
+  if (typeof maybeTypename !== "boolean") {
     mocks = mockedResponses;
     maybeTypename = true;
   }

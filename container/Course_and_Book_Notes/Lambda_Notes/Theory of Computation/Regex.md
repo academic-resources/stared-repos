@@ -1,15 +1,19 @@
 `myRegex = /Hello/` <- literal string!
 `myString = "Hello, world"`
 `myRegex.test(myString)`
+
 ### test () checks if string contains something matching regex and returns true or false
+
 `|` <--- pipe (can be used for 'or')
 
 ### Flags
+
 Appended to regex to modify rules
 `i` = ignore case/case insensitive
 `g` = global (to search for pattern more than once)
 
 ### Match
+
 Extracts matches found in regex
 
 `myString.match(myRegex)`
@@ -18,12 +22,14 @@ Extracts matches found in regex
 `.` <--- period/dot = matches any one character
 
 ## Character Sets
+
 When you want to have several options for a character (like 'or')
 Example:
 `/b[aiu]g/` would match bag, big, and bug
 Inside character set, you can use a hyphen to define a range
 
 ## Negated Set
+
 Match anything other than defined (use carat ^)
 Example:
 `/[^aeiou]/gi` matches anything not a vowel
@@ -33,27 +39,28 @@ To match a character or group of characters that appear one or more times in a r
 Example:
 `/a+/g` would return 'a' for 'abc', 'aa', for 'aabc', 'a' for 'abab' and no match for 'bed'
 
- ###* (Asterisk)
- To match zero or more occurrences, use *
+###_ (Asterisk)
+To match zero or more occurrences, use _
 
- Note to future self: Regex is character by character.  If you see `/an*/ig`, that's really saying "look for a and it may or may not be followed by an 'n'" - works like a wildcard
- Asterisk can be used on character sets unlike wildcard dot (which only works iwth a single character)
+Note to future self: Regex is character by character. If you see `/an*/ig`, that's really saying "look for a and it may or may not be followed by an 'n'" - works like a wildcard
+Asterisk can be used on character sets unlike wildcard dot (which only works iwth a single character)
 
- ##Greedy match:
- Longest possible match (default for regular expressions)
+##Greedy match:
+Longest possible match (default for regular expressions)
 
- ##Lazy match:
- Smallest possible part that satisfies regex pattern
+##Lazy match:
+Smallest possible part that satisfies regex pattern
 
- Example:
- `myString = "titantic"`
- `myRegex = /t[a-z]*i/` would return "titanti"
- `myRegex = /t[a-z]*?i/` would return "ti"
+Example:
+`myString = "titantic"`
+`myRegex = /t[a-z]*i/` would return "titanti"
+`myRegex = /t[a-z]*?i/` would return "ti"
 
- ##$ (Anchor):
- Anchor character searches for pattern at the end of a string.
+##$ (Anchor):
+Anchor character searches for pattern at the end of a string.
 
 ## Shorthand Character Classes:
+
 `\w` is a shorthand equivalent to `[A-Za-z0-9_]`
 `\W` is shorthand equivalent to `[^A-Za-z0-9_]`
 `\d` is shorthand equivalent to `[0-9]`
@@ -70,7 +77,7 @@ Example:
 To specify only lower limit, {num, }
 To specify the exact number of matches, {num}
 
-###? 
+###?
 To check for zero or more of a character
 
 ##Lookaheads:

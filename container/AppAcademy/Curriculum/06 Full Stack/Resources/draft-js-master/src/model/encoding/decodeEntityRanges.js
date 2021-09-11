@@ -24,7 +24,7 @@ function decodeEntityRanges(
 ): Array<?string> {
   const entities = Array(text.length).fill(null);
   if (ranges) {
-    ranges.forEach(range => {
+    ranges.forEach((range) => {
       // Using Unicode-enabled substrings converted to JavaScript lengths,
       // fill the output array with entity keys.
       const start = substr(text, 0, range.offset).length;

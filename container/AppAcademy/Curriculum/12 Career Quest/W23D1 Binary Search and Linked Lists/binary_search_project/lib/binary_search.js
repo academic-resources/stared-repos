@@ -1,13 +1,8 @@
-function binarySearch(array, target) {
+function binarySearch(array, target) {}
 
-}
-
-function binarySearchIndex(array, target) {
-
-}
-
+function binarySearchIndex(array, target) {}
 
 module.exports = {
-    binarySearch,
-    binarySearchIndex
+  binarySearch,
+  binarySearchIndex,
 };

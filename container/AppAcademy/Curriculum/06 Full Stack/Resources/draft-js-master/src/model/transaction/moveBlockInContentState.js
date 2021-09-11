@@ -68,9 +68,9 @@ const updateBlockMapLinks = (
     ? originalTargetKey
     : originalTargetBlock.getPrevSiblingKey();
 
-  return blockMap.withMutations(blocks => {
+  return blockMap.withMutations((blocks) => {
     // update old parent
-    transformBlock(originalParentKey, blocks, block => {
+    transformBlock(originalParentKey, blocks, (block) => {
       const parentChildrenList = block.getChildKeys();
       return block.merge({
         children: parentChildrenList.delete(
@@ -80,43 +80,43 @@ const updateBlockMapLinks = (
     });
 
     // update old prev
-    transformBlock(originalPrevSiblingKey, blocks, block =>
+    transformBlock(originalPrevSiblingKey, blocks, (block) =>
       block.merge({
         nextSibling: originalNextSiblingKey,
       }),
     );
 
     // update old next
-    transformBlock(originalNextSiblingKey, blocks, block =>
+    transformBlock(originalNextSiblingKey, blocks, (block) =>
       block.merge({
         prevSibling: originalPrevSiblingKey,
       }),
     );
 
     // update new next
-    transformBlock(newNextSiblingKey, blocks, block =>
+    transformBlock(newNextSiblingKey, blocks, (block) =>
       block.merge({
         prevSibling: originalBlockKey,
       }),
     );
 
     // update new prev
-    transformBlock(newPrevSiblingKey, blocks, block =>
+    transformBlock(newPrevSiblingKey, blocks, (block) =>
       block.merge({
         nextSibling: originalBlockKey,
       }),
     );
 
     // update new parent
-    transformBlock(newParentKey, blocks, block => {
+    transformBlock(newParentKey, blocks, (block) => {
       const newParentChildrenList = block.getChildKeys();
       const targetBlockIndex = newParentChildrenList.indexOf(originalTargetKey);
 
       const insertionIndex = isInsertedAfterTarget
         ? targetBlockIndex + 1
         : targetBlockIndex !== 0
-          ? targetBlockIndex - 1
-          : 0;
+        ? targetBlockIndex - 1
+        : 0;
 
       const newChildrenArray = newParentChildrenList.toArray();
       newChildrenArray.splice(insertionIndex, 0, originalBlockKey);
@@ -127,7 +127,7 @@ const updateBlockMapLinks = (
     });
 
     // update block
-    transformBlock(originalBlockKey, blocks, block =>
+    transformBlock(originalBlockKey, blocks, (block) =>
       block.merge({
         nextSibling: newNextSiblingKey,
         prevSibling: newPrevSiblingKey,
@@ -158,7 +158,7 @@ const moveBlockInContentState = (
 
   if (isExperimentalTreeBlock) {
     blocksToBeMoved = [];
-    blockMapWithoutBlocksToBeMoved = blockMap.withMutations(blocks => {
+    blockMapWithoutBlocksToBeMoved = blockMap.withMutations((blocks) => {
       const nextSiblingKey = blockToBeMoved.getNextSiblingKey();
       const nextDelimiterBlockKey = getNextDelimiterBlockKey(
         blockToBeMoved,
@@ -167,8 +167,8 @@ const moveBlockInContentState = (
 
       blocks
         .toSeq()
-        .skipUntil(block => block.getKey() === blockKey)
-        .takeWhile(block => {
+        .skipUntil((block) => block.getKey() === blockKey)
+        .takeWhile((block) => {
           const key = block.getKey();
           const isBlockToBeMoved = key === blockKey;
           const hasNextSiblingAndIsNotNextSibling =
@@ -184,7 +184,7 @@ const moveBlockInContentState = (
             doesNotHaveNextSiblingAndIsNotDelimiter
           );
         })
-        .forEach(block => {
+        .forEach((block) => {
           blocksToBeMoved.push(block);
           blocks.delete(block.getKey());
         });
@@ -193,14 +193,14 @@ const moveBlockInContentState = (
 
   const blocksBefore = blockMapWithoutBlocksToBeMoved
     .toSeq()
-    .takeUntil(v => v === targetBlock);
+    .takeUntil((v) => v === targetBlock);
 
   const blocksAfter = blockMapWithoutBlocksToBeMoved
     .toSeq()
-    .skipUntil(v => v === targetBlock)
+    .skipUntil((v) => v === targetBlock)
     .skip(1);
 
-  const slicedBlocks = blocksToBeMoved.map(block => [block.getKey(), block]);
+  const slicedBlocks = blocksToBeMoved.map((block) => [block.getKey(), block]);
 
   let newBlocks = OrderedMap();
 

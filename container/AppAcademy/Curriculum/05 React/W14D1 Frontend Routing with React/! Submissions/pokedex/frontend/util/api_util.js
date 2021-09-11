@@ -1,13 +1,13 @@
 export const fetchAllPokemon = () => {
   return $.ajax({
-    method: 'GET',
-    url: '/api/pokemon'
-  })
-}
+    method: "GET",
+    url: "/api/pokemon",
+  });
+};
 
 export const fetchPokemon = (pokemonId) => {
   return $.ajax({
-    method: 'GET',
-    url: `/api/pokemon/${pokemonId}`
-  })
-}
+    method: "GET",
+    url: `/api/pokemon/${pokemonId}`,
+  });
+};

@@ -3,15 +3,15 @@ class Grid {
     this.grid = this.emptyGrid();
     this.movePoints = 0;
     this.vectors = {
-      'up': [-1, 0],
-      'down': [1, 0],
-      'left': [0, -1],
-      'right': [0, 1]
-    }
+      up: [-1, 0],
+      down: [1, 0],
+      left: [0, -1],
+      right: [0, 1],
+    };
   }
 
   emptyGrid() {
-    const grid = []
+    const grid = [];
     for (let i = 0; i < 4; i++) {
       const row = [];
       for (let j = 0; j < 4; j++) {
@@ -53,7 +53,6 @@ class Grid {
         callback(tile);
       });
     }
-
   }
 
   // if direction is right, it should iterate rows backwards
@@ -107,19 +106,19 @@ class Grid {
   inBounds(pos) {
     let row = pos[0];
     let col = pos[1];
-    return (row >= 0 && row < 4 && col >= 0 && col < 4);
+    return row >= 0 && row < 4 && col >= 0 && col < 4;
   }
 
   empty(pos) {
     let row = pos[0];
     let col = pos[1];
-    return (this.grid[row][col] === null);
+    return this.grid[row][col] === null;
   }
 
   equalValue(pos, tile) {
     let row = pos[0];
     let col = pos[1];
-    return (this.grid[row][col].value === tile.value);
+    return this.grid[row][col].value === tile.value;
   }
 
   updateTilePositions() {
@@ -131,7 +130,7 @@ class Grid {
   resetMergedTiles() {
     this.eachPos((tile) => {
       if (tile) {
-        tile.merged = false
+        tile.merged = false;
       }
     });
   }
@@ -140,12 +139,12 @@ class Grid {
     this.movePoints = 0;
   }
 
-  determineEnumerator(dir){
+  determineEnumerator(dir) {
     let enumerator;
 
-    if (dir === 'down') {
+    if (dir === "down") {
       enumerator = this.eachPosDown.bind(this);
-    } else if (dir === 'right') {
+    } else if (dir === "right") {
       enumerator = this.eachPosRight.bind(this);
     } else {
       enumerator = this.eachPos.bind(this);
@@ -165,18 +164,16 @@ class Grid {
 
     enumerator((tile) => {
       if (tile) {
-        while(this.inBounds([tile.row + dx, tile.col + dy])) {
-
+        while (this.inBounds([tile.row + dx, tile.col + dy])) {
           if (this.empty([tile.row + dx, tile.col + dy])) {
-
             // move tile into empty space
             this.removeTile(tile);
             tile.updatePos([tile.row + dx, tile.col + dy]);
             this.setTile(tile);
-
-          } else if (this.equalValue([tile.row + dx, tile.col + dy], tile)
-            && !this.grid[tile.row + dx][tile.col + dy].merged) {
-
+          } else if (
+            this.equalValue([tile.row + dx, tile.col + dy], tile) &&
+            !this.grid[tile.row + dx][tile.col + dy].merged
+          ) {
             // merge tiles
             tile.merged = true;
             this.removeTile(tile);
@@ -196,7 +193,7 @@ class Grid {
 
   availableMerges() {
     let availableMerges = false;
-    this.eachPos((tile)=> {
+    this.eachPos((tile) => {
       if (this.neighboringMerge(tile)) {
         availableMerges = true;
       }
@@ -217,7 +214,6 @@ class Grid {
           neighboringMerge = true;
         }
       }
-
     });
 
     return neighboringMerge;

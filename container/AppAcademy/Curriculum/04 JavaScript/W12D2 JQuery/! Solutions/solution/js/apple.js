@@ -18,7 +18,6 @@ class Apple {
 
     this.position = new Coord(x, y);
   }
-
 }
 
 module.exports = Apple;

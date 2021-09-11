@@ -14,11 +14,12 @@ const DogType = new GraphQLObjectType({
     toys: {
       type: new GraphQLList(require("./toy_type")),
       resolve(parentValue) {
-        return Dog.findById(parentValue._id).populate("toys")
-          .then(dog => dog.toys);
-      }
-    }
-  }
+        return Dog.findById(parentValue._id)
+          .populate("toys")
+          .then((dog) => dog.toys);
+      },
+    },
+  },
 });
 
 module.exports = DogType;

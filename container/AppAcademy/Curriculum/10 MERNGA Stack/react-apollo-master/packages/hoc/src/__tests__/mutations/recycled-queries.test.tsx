@@ -1,14 +1,14 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import gql from 'graphql-tag';
-import ApolloClient, { MutationUpdaterFn } from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { mockSingleLink, stripSymbols } from '@apollo/react-testing';
-import { ApolloProvider, MutationFunction } from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import gql from "graphql-tag";
+import ApolloClient, { MutationUpdaterFn } from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { mockSingleLink, stripSymbols } from "@apollo/react-testing";
+import { ApolloProvider, MutationFunction } from "@apollo/react-common";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
-describe('graphql(mutation) update queries', () => {
+describe("graphql(mutation) update queries", () => {
   afterEach(cleanup);
 
   // This is a long test that keeps track of a lot of stuff. It is testing
@@ -30,7 +30,7 @@ describe('graphql(mutation) update queries', () => {
   //
   // There are also a lot more assertions on the way to make sure everything is
   // going as smoothly as planned.
-  it('will run `update` for a previously mounted component', () =>
+  it("will run `update` for a previously mounted component", () =>
     new Promise((resolve, reject) => {
       const query: DocumentNode = gql`
         query todos {
@@ -66,10 +66,10 @@ describe('graphql(mutation) update queries', () => {
 
       const mutationData = {
         createTodo: {
-          id: '99',
-          text: 'This one was created with a mutation.',
-          completed: true
-        }
+          id: "99",
+          text: "This one was created with a mutation.",
+          completed: true,
+        },
       };
       type MutationData = typeof mutationData;
 
@@ -82,26 +82,26 @@ describe('graphql(mutation) update queries', () => {
       };
 
       const expectedData = {
-        todo_list: { id: '123', title: 'how to apollo', tasks: [] }
+        todo_list: { id: "123", title: "how to apollo", tasks: [] },
       };
 
       const link = mockSingleLink(
         {
           request: { query },
-          result: { data: expectedData }
+          result: { data: expectedData },
         },
         { request: { query: mutation }, result: { data: mutationData } },
         { request: { query: mutation }, result: { data: mutationData } }
       );
       const client = new ApolloClient({
         link,
-        cache: new Cache({ addTypename: false })
+        cache: new Cache({ addTypename: false }),
       });
 
       let mutate: MutationFunction<MutationData>;
 
       const MyMutation = graphql<{}, MutationData>(mutation, {
-        options: () => ({ update })
+        options: () => ({ update }),
       })(
         class extends React.Component<ChildProps<{}, MutationData>> {
           componentDidMount() {
@@ -137,51 +137,51 @@ describe('graphql(mutation) update queries', () => {
                   break;
                 case 1:
                   expect(stripSymbols(this.props.data!.todo_list)).toEqual({
-                    id: '123',
-                    title: 'how to apollo',
-                    tasks: []
+                    id: "123",
+                    title: "how to apollo",
+                    tasks: [],
                   });
                   break;
                 case 2:
                   expect(queryMountCount).toBe(1);
                   expect(queryUnmountCount).toBe(1);
                   expect(stripSymbols(this.props.data!.todo_list)).toEqual({
-                    id: '123',
-                    title: 'how to apollo',
+                    id: "123",
+                    title: "how to apollo",
                     tasks: [
                       {
-                        id: '99',
-                        text: 'This one was created with a mutation.',
-                        completed: true
+                        id: "99",
+                        text: "This one was created with a mutation.",
+                        completed: true,
                       },
                       {
-                        id: '99',
-                        text: 'This one was created with a mutation.',
-                        completed: true
-                      }
-                    ]
+                        id: "99",
+                        text: "This one was created with a mutation.",
+                        completed: true,
+                      },
+                    ],
                   });
                   break;
                 case 3:
                   expect(stripSymbols(this.props.data!.todo_list)).toEqual({
-                    id: '123',
-                    title: 'how to apollo',
+                    id: "123",
+                    title: "how to apollo",
                     tasks: [
                       {
-                        id: '99',
-                        text: 'This one was created with a mutation.',
-                        completed: true
+                        id: "99",
+                        text: "This one was created with a mutation.",
+                        completed: true,
                       },
                       {
-                        id: '99',
-                        text: 'This one was created with a mutation.',
-                        completed: true
-                      }
-                    ]
+                        id: "99",
+                        text: "This one was created with a mutation.",
+                        completed: true,
+                      },
+                    ],
                   });
                   break;
                 default:
-                  throw new Error('Rendered too many times');
+                  throw new Error("Rendered too many times");
               }
               queryRenderCount += 1;
             } catch (error) {
@@ -250,7 +250,7 @@ describe('graphql(mutation) update queries', () => {
       }, 5);
     }));
 
-  it('will run `refetchQueries` for a recycled queries', () =>
+  it("will run `refetchQueries` for a recycled queries", () =>
     new Promise((resolve, reject) => {
       const mutation: DocumentNode = gql`
         mutation createTodo {
@@ -264,10 +264,10 @@ describe('graphql(mutation) update queries', () => {
 
       const mutationData = {
         createTodo: {
-          id: '99',
-          text: 'This one was created with a mutation.',
-          completed: true
-        }
+          id: "99",
+          text: "This one was created with a mutation.",
+          completed: true,
+        },
       };
 
       type MutationData = typeof mutationData;
@@ -299,28 +299,28 @@ describe('graphql(mutation) update queries', () => {
       }
 
       const data = {
-        todo_list: { id: '123', title: 'how to apollo', tasks: [] }
+        todo_list: { id: "123", title: "how to apollo", tasks: [] },
       };
 
       const updatedData = {
         todo_list: {
-          id: '123',
-          title: 'how to apollo',
-          tasks: [mutationData.createTodo]
-        }
+          id: "123",
+          title: "how to apollo",
+          tasks: [mutationData.createTodo],
+        },
       };
 
       const link = mockSingleLink(
-        { request: { query, variables: { id: '123' } }, result: { data } },
+        { request: { query, variables: { id: "123" } }, result: { data } },
         { request: { query: mutation }, result: { data: mutationData } },
         {
-          request: { query, variables: { id: '123' } },
-          result: { data: updatedData }
+          request: { query, variables: { id: "123" } },
+          result: { data: updatedData },
         }
       );
       const client = new ApolloClient({
         link,
-        cache: new Cache({ addTypename: false })
+        cache: new Cache({ addTypename: false }),
       });
 
       let mutate: MutationFunction<MutationData>;
@@ -363,9 +363,9 @@ describe('graphql(mutation) update queries', () => {
                 case 1:
                   expect(this.props.data!.loading).toBeFalsy();
                   expect(stripSymbols(this.props.data!.todo_list)).toEqual({
-                    id: '123',
-                    title: 'how to apollo',
-                    tasks: []
+                    id: "123",
+                    title: "how to apollo",
+                    tasks: [],
                   });
                   break;
                 case 2:
@@ -383,7 +383,7 @@ describe('graphql(mutation) update queries', () => {
                   );
                   break;
                 default:
-                  throw new Error('Rendered too many times');
+                  throw new Error("Rendered too many times");
               }
             } catch (error) {
               reject(error);
@@ -406,7 +406,7 @@ describe('graphql(mutation) update queries', () => {
       );
 
       setTimeout(() => {
-        mutate({ refetchQueries: [{ query, variables: { id: '123' } }] })
+        mutate({ refetchQueries: [{ query, variables: { id: "123" } }] })
           .then(() => {
             setTimeout(() => {
               // This re-renders the recycled query that should have been refetched while recycled.

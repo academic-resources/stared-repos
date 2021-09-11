@@ -1,4 +1,4 @@
-const Circle =  function (centerX, centerY, radius, color) {
+const Circle = function (centerX, centerY, radius, color) {
   this.centerX = centerX;
   this.centerY = centerY;
   this.radius = radius;
@@ -19,7 +19,7 @@ const HEX_DIGITS = "0123456789ABCDEF";
 Circle.randomColor = function () {
   let color = "#";
   for (let i = 0; i < 6; i++) {
-    color += HEX_DIGITS[Math.floor((Math.random() * 16))];
+    color += HEX_DIGITS[Math.floor(Math.random() * 16)];
   }
 
   return color;
@@ -32,25 +32,18 @@ Circle.radius = function (maxX, maxY, numCircles) {
 };
 
 Circle.prototype.moveRandom = function (maxX, maxY) {
-  let dx = (Math.random() * 2) - 1;
-  let dy = (Math.random() * 2) - 1;
+  let dx = Math.random() * 2 - 1;
+  let dy = Math.random() * 2 - 1;
 
-  this.centerX = Math.abs((this.centerX + (dx * this.radius * 0.1)) % maxX);
-  this.centerY = Math.abs((this.centerY + (dy * this.radius) * 0.1) % maxY);
+  this.centerX = Math.abs((this.centerX + dx * this.radius * 0.1) % maxX);
+  this.centerY = Math.abs((this.centerY + dy * this.radius * 0.1) % maxY);
 };
 
 Circle.prototype.render = function (ctx) {
   ctx.fillStyle = this.color;
   ctx.beginPath();
 
-  ctx.arc(
-    this.centerX,
-    this.centerY,
-    this.radius,
-    0,
-    2 * Math.PI,
-    false
-  );
+  ctx.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI, false);
 
   ctx.fill();
 };

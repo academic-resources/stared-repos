@@ -1,5 +1,5 @@
-var File = require ("../build/file-utils").File;
+var File = require("../build/file-utils").File;
 
-new File ("canExecute.js").canExecute (function (error, executable){
-	console.log (executable); //Prints: false
+new File("canExecute.js").canExecute(function (error, executable) {
+  console.log(executable); //Prints: false
 });

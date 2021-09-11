@@ -1,21 +1,21 @@
 import {
   RECEIVE_SESSION_ERRORS,
   RECEIVE_CURRENT_USER,
-  CLEAR_SESSION_ERRORS
-} from '../actions/session_actions'
-import { merge } from 'lodash'
+  CLEAR_SESSION_ERRORS,
+} from "../actions/session_actions";
+import { merge } from "lodash";
 
 export default (state = [], action) => {
-  const draft = merge({}, state)
+  const draft = merge({}, state);
 
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
-      return action.errors
+      return action.errors;
     case RECEIVE_CURRENT_USER:
-      return []
+      return [];
     case CLEAR_SESSION_ERRORS:
-      return []
+      return [];
     default:
-      return state
+      return state;
   }
-}
+};

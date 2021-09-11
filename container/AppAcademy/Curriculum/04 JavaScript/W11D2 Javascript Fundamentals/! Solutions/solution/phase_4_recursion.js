@@ -42,7 +42,7 @@ console.log(`sumIter([1, 3, 5]) = ${sumIter([1, 3, 5])}`);
 
 // exp1, exp2
 function exp1(base, exponent) {
-  return exponent === 0 ? 1 : (base * exp1(base, exponent - 1));
+  return exponent === 0 ? 1 : base * exp1(base, exponent - 1);
 }
 
 console.log(`exp1(2, 4) = ${exp1(2, 4)}`);
@@ -56,7 +56,7 @@ function exp2(base, exponent) {
     let subAnswer = exp2(base, exponent / 2);
     return subAnswer * subAnswer;
   } else {
-    let subAnswer = exp2(base, ((exponent - 1) / 2));
+    let subAnswer = exp2(base, (exponent - 1) / 2);
     return subAnswer * subAnswer * base;
   }
 }
@@ -108,14 +108,18 @@ function deepDup(arr) {
   });
 }
 
-const array = [[2],3];
+const array = [[2], 3];
 const dupedArray = deepDup(array);
 console.log(`deepDup original = ${JSON.stringify(array)}`);
 
 dupedArray[0].push(4);
 
-console.log(`deepDup original = ${JSON.stringify(array)} (should not be mutated)`);
-console.log(`deepDup duped = ${JSON.stringify(dupedArray)} (should be mutated)`);
+console.log(
+  `deepDup original = ${JSON.stringify(array)} (should not be mutated)`
+);
+console.log(
+  `deepDup duped = ${JSON.stringify(dupedArray)} (should be mutated)`
+);
 
 // bsearch
 function bsearch(numbers, target) {
@@ -147,7 +151,7 @@ function merge(left, right) {
   const merged = [];
 
   while (left.length > 0 && right.length > 0) {
-    let nextItem = (left[0] < right[0]) ? left.shift() : right.shift();
+    let nextItem = left[0] < right[0] ? left.shift() : right.shift();
     merged.push(nextItem);
   }
 
@@ -179,7 +183,7 @@ function subsets(array) {
   const withoutFirst = subsets(array.slice(1));
   // remember, we don't want to mutate the subsets without the first element
   // hence, the 'concat'
-  const withFirst = withoutFirst.map(sub => [first].concat(sub) );
+  const withFirst = withoutFirst.map((sub) => [first].concat(sub));
 
   return withoutFirst.concat(withFirst);
 }

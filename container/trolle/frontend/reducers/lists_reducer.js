@@ -1,17 +1,17 @@
-import { merge } from 'lodash'
+import { merge } from "lodash";
 
-import { RECEIVE_LISTS } from '../actions/list_actions'
+import { RECEIVE_LISTS } from "../actions/list_actions";
 
 const listsReducer = (state = {}, action) => {
-  const draft = merge({}, state)
+  const draft = merge({}, state);
 
   switch (action.type) {
     case RECEIVE_LISTS:
-      return action.lists || state
+      return action.lists || state;
 
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default listsReducer
+export default listsReducer;

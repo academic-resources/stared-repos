@@ -1,9 +1,9 @@
-import { useContext, useState, useRef, useEffect } from 'react';
-import { getApolloContext, OperationVariables } from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
+import { useContext, useState, useRef, useEffect } from "react";
+import { getApolloContext, OperationVariables } from "@apollo/react-common";
+import { DocumentNode } from "graphql";
 
-import { MutationHookOptions, MutationTuple } from './types';
-import { MutationData } from './data/MutationData';
+import { MutationHookOptions, MutationTuple } from "./types";
+import { MutationData } from "./data/MutationData";
 
 export function useMutation<TData = any, TVariables = OperationVariables>(
   mutation: DocumentNode,
@@ -20,7 +20,7 @@ export function useMutation<TData = any, TVariables = OperationVariables>(
         options: updatedOptions,
         context,
         result,
-        setResult
+        setResult,
       });
     }
     return mutationDataRef.current;

@@ -17,13 +17,13 @@ shared with that user.
 
 ## Learning Goals
 
-* Be able to write Active Record models quickly
-* Know how to write a `user_params` method
-* Be able to write the five API RESTful controller methods
-* Know how to test your API endpoints with Postman
-* Know how to create and destroy join table records via controller
-methods
-* Know how a nested route works
+- Be able to write Active Record models quickly
+- Know how to write a `user_params` method
+- Be able to write the five API RESTful controller methods
+- Know how to test your API endpoints with Postman
+- Know how to create and destroy join table records via controller
+  methods
+- Know how a nested route works
 
 ## Phase I: Data Layer
 
@@ -51,7 +51,7 @@ levels.
 
 After you create each table and model, make sure to test that your
 associations and validations are working before moving on to the next
-step. We want to be ***absolutely sure*** our code is working before we
+step. We want to be **_absolutely sure_** our code is working before we
 move on to the next phase, otherwise building our API endpoints will be
 needlessly complicated.
 
@@ -108,7 +108,7 @@ set of users with whom an artwork has been shared.
 
 Add a `through` association from `shared_artworks` on `User`.
 `User#shared_artworks` will return the set of artworks that have been
-shared with that user (*not* the set of artworks that a user has shared
+shared with that user (_not_ the set of artworks that a user has shared
 with others).
 
 ### Recap
@@ -136,18 +136,18 @@ It will provide you will valuable insight as to what's going wrong.
 First, make sure the `User` controller actions you created in the
 previous project are all working. They should do the following:
 
-* `user_params` helper method
+- `user_params` helper method
 
 This method should be private. It requires the key `:user` in params,
 and permits each of the user attributes as keys in the nested hash.
 
-* `create` (POST `/users`)
+- `create` (POST `/users`)
 
 Remember to use `if user.save` to check if validations passed. On
 error, this action should render validation errors using
 `user.errors.full_messages`. Set the status code to indicate error.
 
-* `destroy` (DELETE `/users/:id`)
+- `destroy` (DELETE `/users/:id`)
 
 Finds the user (we can lookup the id in `params[:id]`) and destroys the
 object (using the [destroy](http://guides.rubyonrails.org/active_record_basics.html#delete) method on the user instance).
@@ -159,19 +159,19 @@ This ensures that the associated records are also destroyed.
 
 **N.B.** There is another ActiveRecord method that removes objects from your database, `delete`; however, this method does not run callbacks such as `dependent: :destroy`, and is therefore not the method we want to use.
 
-* `index` (GET `/users`)
+- `index` (GET `/users`)
 
 Renders all the users in the database.
 
-* `show` (GET `/users/:id`)
+- `show` (GET `/users/:id`)
 
 Renders a single user, using the `:id` in `params[:id]`.
 
-* `update` (PATCH `/users/:id`)
+- `update` (PATCH `/users/:id`)
 
 Finds the requested user. Use `update` with `user_params` to do a
 mass-assignment update and save. Render validation errors using
-`user.errors.full_messages`.  *Don't forget the status code!*
+`user.errors.full_messages`. _Don't forget the status code!_
 
 Now let's move to the `routes.rb` file. You should already have routes
 for the `users` controller from the previous project. Use the `only:`
@@ -219,13 +219,13 @@ works.
 Add a new `resources` routes and controller for `ArtworkShare`.
 Include the following actions and associated routes.
 
-* `create` (POST `/artwork_shares`)
+- `create` (POST `/artwork_shares`)
 
 You'll want to pass the `artwork_id` and the `viewer_id`.
 Also, use strong parameters by writing an `artwork_share_params` helper
 method that will whitelist the `ArtworkShare` attributes.
 
-* `destroy` (DELETE `/artwork_share/:id`)
+- `destroy` (DELETE `/artwork_share/:id`)
 
 This un-shares an `Artwork` with a `User`. To delete a share, the user
 should issue a DELETE to `/artwork_shares/123`, where `123` is the id of
@@ -262,8 +262,8 @@ be able to get user 1's artworks through `GET /users/1/artworks`, user
 The nested resource will still hit `ArtworksController#index`. Rewrite
 the `index` method to return:
 
-*  the `Artwork`s owned by a user ***and***
-*  the `Artwork`s shared with the user.
+- the `Artwork`s owned by a user **_and_**
+- the `Artwork`s shared with the user.
 
 You can access the specified user through `params[:user_id]` because it
 is part of the nested route.
@@ -274,7 +274,7 @@ Use Postman to make sure your modified `index` method in the
 ### Recap
 
 At this point in the project you should be able to create
-`ArtworkShares` with  Postman. Artworks shared with a particular user
+`ArtworkShares` with Postman. Artworks shared with a particular user
 should also be included in data returned by a `GET` request to
 `ArtworksController#index`.
 

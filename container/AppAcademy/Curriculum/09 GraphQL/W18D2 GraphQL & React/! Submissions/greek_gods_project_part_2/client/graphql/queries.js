@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import gql from "graphql-tag";
 
 export default {
   FETCH_GODS: gql`
@@ -95,5 +95,5 @@ export default {
         }
       }
     }
-  `
-}
+  `,
+};

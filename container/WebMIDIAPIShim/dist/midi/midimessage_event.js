@@ -1,10 +1,14 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+    value: true,
 });
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+    }
+}
 
 var MIDIMessageEvent = function MIDIMessageEvent(port, data, receivedTime) {
     _classCallCheck(this, MIDIMessageEvent);
@@ -22,7 +26,7 @@ var MIDIMessageEvent = function MIDIMessageEvent(port, data, receivedTime) {
     this.srcElement = port;
     this.target = port;
     this.timeStamp = Date.now();
-    this.type = 'midimessage';
+    this.type = "midimessage";
 };
 
 exports.default = MIDIMessageEvent;

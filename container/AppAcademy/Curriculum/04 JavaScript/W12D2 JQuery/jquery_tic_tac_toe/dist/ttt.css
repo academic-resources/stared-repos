@@ -1,4 +1,9 @@
-html, body, figure, h1, ul, li {
+html,
+body,
+figure,
+h1,
+ul,
+li {
   text-align: center;
   font-family: sans-serif;
   font-weight: bold;
@@ -45,4 +50,3 @@ li:hover {
 .fig-caption {
   font-size: 48px;
 }
-

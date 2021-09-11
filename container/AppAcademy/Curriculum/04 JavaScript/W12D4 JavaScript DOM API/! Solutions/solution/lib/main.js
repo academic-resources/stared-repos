@@ -28,7 +28,7 @@ $l.extend = (base, ...otherObjs) => {
 $l.ajax = (options) => {
   const request = new XMLHttpRequest();
   const defaults = {
-    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
     method: "GET",
     url: "",
     success: () => {},
@@ -81,7 +81,7 @@ getNodesFromDom = (selector) => {
   return new DomNodeCollection(nodesArray);
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   _docReady = true;
-  _docReadyCallbacks.forEach(func => func());
+  _docReadyCallbacks.forEach((func) => func());
 });

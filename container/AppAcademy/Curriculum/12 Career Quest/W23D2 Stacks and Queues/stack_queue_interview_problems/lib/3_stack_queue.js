@@ -8,8 +8,8 @@
 //
 // Implement your preferred Stack implementation, including the methods:
 //
-//   - Push 
-//   - Pop 
+//   - Push
+//   - Pop
 //   - Size
 //
 // Then, implement a Queue by instantiating two Stack instances for storage.
@@ -25,19 +25,16 @@
 // -----------
 
 class Node {
-    // TODO: Implement the Node class!
-
+  // TODO: Implement the Node class!
 }
 
 class Stack {
-    // TODO: Implement the Stack class!
-
+  // TODO: Implement the Stack class!
 }
 
 class StackQueue {
-    // TODO: Implement the StackQueue class!
-
-};
+  // TODO: Implement the StackQueue class!
+}
 
 exports.Node = Node;
 exports.Stack = Stack;

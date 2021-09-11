@@ -23,16 +23,16 @@ import {
   shouldInclude,
   StoreValue,
   toIdValue,
-} from 'apollo-utilities';
+} from "apollo-utilities";
 
-import { Cache } from 'apollo-cache';
+import { Cache } from "apollo-cache";
 
 import {
   ReadStoreContext,
   DiffQueryAgainstStoreOptions,
   ReadQueryOptions,
   StoreObject,
-} from './types';
+} from "./types";
 
 import {
   DocumentNode,
@@ -40,19 +40,19 @@ import {
   FragmentDefinitionNode,
   InlineFragmentNode,
   SelectionSetNode,
-} from 'graphql';
+} from "graphql";
 
-import { wrap, KeyTrie } from 'optimism';
-import { DepTrackingCache } from './depTrackingCache';
-import { invariant, InvariantError } from 'ts-invariant';
+import { wrap, KeyTrie } from "optimism";
+import { DepTrackingCache } from "./depTrackingCache";
+import { invariant, InvariantError } from "ts-invariant";
 
 export type VariableMap = { [name: string]: any };
 
 export type FragmentMatcher = (
   rootValue: any,
   typeCondition: string,
-  context: ReadStoreContext,
-) => boolean | 'heuristic';
+  context: ReadStoreContext
+) => boolean | "heuristic";
 
 type ExecContext = {
   query: DocumentNode;
@@ -103,7 +103,7 @@ type ExecSubSelectedArrayOptions = {
 export interface StoreReaderConfig {
   cacheKeyRoot?: KeyTrie<object>;
   freezeResults?: boolean;
-};
+}
 
 export class StoreReader {
   private freezeResults: boolean;
@@ -112,73 +112,79 @@ export class StoreReader {
     cacheKeyRoot = new KeyTrie<object>(canUseWeakMap),
     freezeResults = false,
   }: StoreReaderConfig = {}) {
-    const {
-      executeStoreQuery,
-      executeSelectionSet,
-      executeSubSelectedArray,
-    } = this;
+    const { executeStoreQuery, executeSelectionSet, executeSubSelectedArray } =
+      this;
 
     this.freezeResults = freezeResults;
 
-    this.executeStoreQuery = wrap((options: ExecStoreQueryOptions) => {
-      return executeStoreQuery.call(this, options);
-    }, {
-      makeCacheKey({
-        query,
-        rootValue,
-        contextValue,
-        variableValues,
-        fragmentMatcher,
-      }: ExecStoreQueryOptions) {
-        // The result of executeStoreQuery can be safely cached only if the
-        // underlying store is capable of tracking dependencies and invalidating
-        // the cache when relevant data have changed.
-        if (contextValue.store instanceof DepTrackingCache) {
-          return cacheKeyRoot.lookup(
-            contextValue.store,
-            query,
-            fragmentMatcher,
-            JSON.stringify(variableValues),
-            rootValue.id,
-          );
-        }
+    this.executeStoreQuery = wrap(
+      (options: ExecStoreQueryOptions) => {
+        return executeStoreQuery.call(this, options);
+      },
+      {
+        makeCacheKey({
+          query,
+          rootValue,
+          contextValue,
+          variableValues,
+          fragmentMatcher,
+        }: ExecStoreQueryOptions) {
+          // The result of executeStoreQuery can be safely cached only if the
+          // underlying store is capable of tracking dependencies and invalidating
+          // the cache when relevant data have changed.
+          if (contextValue.store instanceof DepTrackingCache) {
+            return cacheKeyRoot.lookup(
+              contextValue.store,
+              query,
+              fragmentMatcher,
+              JSON.stringify(variableValues),
+              rootValue.id
+            );
+          }
+        },
       }
-    });
+    );
 
-    this.executeSelectionSet = wrap((options: ExecSelectionSetOptions) => {
-      return executeSelectionSet.call(this, options);
-    }, {
-      makeCacheKey({
-        selectionSet,
-        rootValue,
-        execContext,
-      }: ExecSelectionSetOptions) {
-        if (execContext.contextValue.store instanceof DepTrackingCache) {
-          return cacheKeyRoot.lookup(
-            execContext.contextValue.store,
-            selectionSet,
-            execContext.fragmentMatcher,
-            JSON.stringify(execContext.variableValues),
-            rootValue.id,
-          );
-        }
+    this.executeSelectionSet = wrap(
+      (options: ExecSelectionSetOptions) => {
+        return executeSelectionSet.call(this, options);
+      },
+      {
+        makeCacheKey({
+          selectionSet,
+          rootValue,
+          execContext,
+        }: ExecSelectionSetOptions) {
+          if (execContext.contextValue.store instanceof DepTrackingCache) {
+            return cacheKeyRoot.lookup(
+              execContext.contextValue.store,
+              selectionSet,
+              execContext.fragmentMatcher,
+              JSON.stringify(execContext.variableValues),
+              rootValue.id
+            );
+          }
+        },
       }
-    });
+    );
 
-    this.executeSubSelectedArray = wrap((options: ExecSubSelectedArrayOptions) => {
-      return executeSubSelectedArray.call(this, options);
-    }, {
-      makeCacheKey({ field, array, execContext }) {
-        if (execContext.contextValue.store instanceof DepTrackingCache) {
-          return cacheKeyRoot.lookup(
-            execContext.contextValue.store,
-            field,
-            array,
-            JSON.stringify(execContext.variableValues),
-          );
-        }
+    this.executeSubSelectedArray = wrap(
+      (options: ExecSubSelectedArrayOptions) => {
+        return executeSubSelectedArray.call(this, options);
+      },
+      {
+        makeCacheKey({ field, array, execContext }) {
+          if (execContext.contextValue.store instanceof DepTrackingCache) {
+            return cacheKeyRoot.lookup(
+              execContext.contextValue.store,
+              field,
+              array,
+              JSON.stringify(execContext.variableValues)
+            );
+          }
+        },
       }
-    });
+    );
   }
 
   /**
@@ -196,9 +202,7 @@ export class StoreReader {
    * If nothing in the store changed since that previous result then values from the previous result
    * will be returned to preserve referential equality.
    */
-  public readQueryFromStore<QueryType>(
-    options: ReadQueryOptions,
-  ): QueryType {
+  public readQueryFromStore<QueryType>(options: ReadQueryOptions): QueryType {
     const optsPatch = { returnPartialData: false };
 
     return this.diffQueryAgainstStore<QueryType>({
@@ -221,7 +225,7 @@ export class StoreReader {
     variables,
     previousResult,
     returnPartialData = true,
-    rootId = 'ROOT_QUERY',
+    rootId = "ROOT_QUERY",
     fragmentMatcherFunction,
     config,
   }: DiffQueryAgainstStoreOptions): Cache.DiffResult<T> {
@@ -240,10 +244,10 @@ export class StoreReader {
     const execResult = this.executeStoreQuery({
       query,
       rootValue: {
-        type: 'id',
+        type: "id",
         id: rootId,
         generated: true,
-        typename: 'Query',
+        typename: "Query",
       },
       contextValue: context,
       variableValues: variables,
@@ -253,15 +257,15 @@ export class StoreReader {
     const hasMissingFields =
       execResult.missing && execResult.missing.length > 0;
 
-    if (hasMissingFields && ! returnPartialData) {
-      execResult.missing.forEach(info => {
+    if (hasMissingFields && !returnPartialData) {
+      execResult.missing.forEach((info) => {
         if (info.tolerable) return;
         throw new InvariantError(
           `Can't find field ${info.fieldName} on object ${JSON.stringify(
             info.object,
             null,
-            2,
-          )}.`,
+            2
+          )}.`
         );
       });
     }
@@ -327,7 +331,11 @@ export class StoreReader {
     rootValue,
     execContext,
   }: ExecSelectionSetOptions): ExecResult {
-    const { fragmentMap, contextValue, variableValues: variables } = execContext;
+    const {
+      fragmentMap,
+      contextValue,
+      variableValues: variables,
+    } = execContext;
     const finalResult: ExecResult = { result: null };
 
     const objectsToMerge: { [key: string]: any }[] = [];
@@ -336,7 +344,7 @@ export class StoreReader {
 
     const typename =
       (object && object.__typename) ||
-      (rootValue.id === 'ROOT_QUERY' && 'Query') ||
+      (rootValue.id === "ROOT_QUERY" && "Query") ||
       void 0;
 
     function handleMissing<T>(result: ExecResult<T>): T {
@@ -347,7 +355,7 @@ export class StoreReader {
       return result.result;
     }
 
-    selectionSet.selections.forEach(selection => {
+    selectionSet.selections.forEach((selection) => {
       if (!shouldInclude(selection, variables)) {
         // Skip this entirely
         return;
@@ -355,15 +363,14 @@ export class StoreReader {
 
       if (isField(selection)) {
         const fieldResult = handleMissing(
-          this.executeField(object, typename, selection, execContext),
+          this.executeField(object, typename, selection, execContext)
         );
 
-        if (typeof fieldResult !== 'undefined') {
+        if (typeof fieldResult !== "undefined") {
           objectsToMerge.push({
             [resultKeyNameFromField(selection)]: fieldResult,
           });
         }
-
       } else {
         let fragment: InlineFragmentNode | FragmentDefinitionNode;
 
@@ -374,13 +381,19 @@ export class StoreReader {
           fragment = fragmentMap[selection.name.value];
 
           if (!fragment) {
-            throw new InvariantError(`No fragment named ${selection.name.value}`);
+            throw new InvariantError(
+              `No fragment named ${selection.name.value}`
+            );
           }
         }
 
         const typeCondition = fragment.typeCondition.name.value;
 
-        const match = execContext.fragmentMatcher(rootValue, typeCondition, contextValue);
+        const match = execContext.fragmentMatcher(
+          rootValue,
+          typeCondition,
+          contextValue
+        );
         if (match) {
           let fragmentExecResult = this.executeSelectionSet({
             selectionSet: fragment.selectionSet,
@@ -388,10 +401,10 @@ export class StoreReader {
             execContext,
           });
 
-          if (match === 'heuristic' && fragmentExecResult.missing) {
+          if (match === "heuristic" && fragmentExecResult.missing) {
             fragmentExecResult = {
               ...fragmentExecResult,
-              missing: fragmentExecResult.missing.map(info => {
+              missing: fragmentExecResult.missing.map((info) => {
                 return { ...info, tolerable: true };
               }),
             };
@@ -406,7 +419,7 @@ export class StoreReader {
     // defensive shallow copies than necessary.
     finalResult.result = mergeDeepArray(objectsToMerge);
 
-    if (this.freezeResults && process.env.NODE_ENV !== 'production') {
+    if (this.freezeResults && process.env.NODE_ENV !== "production") {
       Object.freeze(finalResult.result);
     }
 
@@ -417,7 +430,7 @@ export class StoreReader {
     object: StoreObject,
     typename: string | void,
     field: FieldNode,
-    execContext: ExecContext,
+    execContext: ExecContext
   ): ExecResult {
     const { variableValues: variables, contextValue } = execContext;
     const fieldName = field.name.value;
@@ -434,7 +447,7 @@ export class StoreReader {
       fieldName,
       args,
       contextValue,
-      info,
+      info
     );
 
     if (Array.isArray(readStoreResult.result)) {
@@ -444,14 +457,14 @@ export class StoreReader {
           field,
           array: readStoreResult.result,
           execContext,
-        }),
+        })
       );
     }
 
     // Handle all scalar types here
     if (!field.selectionSet) {
       assertSelectionSetForIdValue(field, readStoreResult.result);
-      if (this.freezeResults && process.env.NODE_ENV !== 'production') {
+      if (this.freezeResults && process.env.NODE_ENV !== "production") {
         maybeDeepFreeze(readStoreResult);
       }
       return readStoreResult;
@@ -471,7 +484,7 @@ export class StoreReader {
         selectionSet: field.selectionSet,
         rootValue: readStoreResult.result,
         execContext,
-      }),
+      })
     );
   }
 
@@ -479,7 +492,7 @@ export class StoreReader {
     ...execResults: ExecResult<T>[]
   ): ExecResult<T> {
     let missing: ExecResultMissingField[] = null;
-    execResults.forEach(execResult => {
+    execResults.forEach((execResult) => {
       if (execResult.missing) {
         missing = missing || [];
         missing.push(...execResult.missing);
@@ -507,7 +520,7 @@ export class StoreReader {
       return childResult.result;
     }
 
-    array = array.map(item => {
+    array = array.map((item) => {
       // null value in array
       if (item === null) {
         return null;
@@ -515,20 +528,24 @@ export class StoreReader {
 
       // This is a nested array, recurse
       if (Array.isArray(item)) {
-        return handleMissing(this.executeSubSelectedArray({
-          field,
-          array: item,
-          execContext,
-        }));
+        return handleMissing(
+          this.executeSubSelectedArray({
+            field,
+            array: item,
+            execContext,
+          })
+        );
       }
 
       // This is an object, run the selection set on it
       if (field.selectionSet) {
-        return handleMissing(this.executeSelectionSet({
-          selectionSet: field.selectionSet,
-          rootValue: item,
-          execContext,
-        }));
+        return handleMissing(
+          this.executeSelectionSet({
+            selectionSet: field.selectionSet,
+            rootValue: item,
+            execContext,
+          })
+        );
       }
 
       assertSelectionSetForIdValue(field, item);
@@ -536,7 +553,7 @@ export class StoreReader {
       return item;
     });
 
-    if (this.freezeResults && process.env.NODE_ENV !== 'production') {
+    if (this.freezeResults && process.env.NODE_ENV !== "production") {
       Object.freeze(array);
     }
 
@@ -544,15 +561,10 @@ export class StoreReader {
   }
 }
 
-function assertSelectionSetForIdValue(
-  field: FieldNode,
-  value: any,
-) {
+function assertSelectionSetForIdValue(field: FieldNode, value: any) {
   if (!field.selectionSet && isIdValue(value)) {
     throw new InvariantError(
-      `Missing selection set for object of type ${
-        value.typename
-      } returned for query field ${field.name.value}`
+      `Missing selection set for object of type ${value.typename} returned for query field ${field.name.value}`
     );
   }
 }
@@ -562,10 +574,13 @@ function defaultFragmentMatcher() {
 }
 
 export function assertIdValue(idValue: IdValue) {
-  invariant(isIdValue(idValue), `\
+  invariant(
+    isIdValue(idValue),
+    `\
 Encountered a sub-selection on the query, but the store doesn't have \
 an object reference. This should never happen during normal use unless you have custom code \
-that is directly manipulating the store; please file an issue.`);
+that is directly manipulating the store; please file an issue.`
+  );
 }
 
 function readStoreResolver(
@@ -574,7 +589,7 @@ function readStoreResolver(
   fieldName: string,
   args: any,
   context: ReadStoreContext,
-  { resultKey, directives }: ExecInfo,
+  { resultKey, directives }: ExecInfo
 ): ExecResult<StoreValue> {
   let storeKeyName = fieldName;
   if (args || directives) {
@@ -591,9 +606,9 @@ function readStoreResolver(
     fieldValue = object[storeKeyName];
 
     if (
-      typeof fieldValue === 'undefined' &&
+      typeof fieldValue === "undefined" &&
       context.cacheRedirects &&
-      typeof typename === 'string'
+      typeof typename === "string"
     ) {
       // Look for the type in the custom resolver map
       const type = context.cacheRedirects[typename];
@@ -614,14 +629,16 @@ function readStoreResolver(
     }
   }
 
-  if (typeof fieldValue === 'undefined') {
+  if (typeof fieldValue === "undefined") {
     return {
       result: fieldValue,
-      missing: [{
-        object,
-        fieldName: storeKeyName,
-        tolerable: false,
-      }],
+      missing: [
+        {
+          object,
+          fieldName: storeKeyName,
+          tolerable: false,
+        },
+      ],
     };
   }
 

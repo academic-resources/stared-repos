@@ -23,7 +23,9 @@ import { createHttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import ApolloClient from "apollo-client";
 
-const link = createPersistedQueryLink().concat(createHttpLink({ uri: "/graphql" }));
+const link = createPersistedQueryLink().concat(
+  createHttpLink({ uri: "/graphql" })
+);
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -36,16 +38,16 @@ const client = new ApolloClient({
 Inside Apollo Server, the query registry is stored in a user-configurable cache. By default, Apollo Server uses a in-memory cache. This can be configured inside of the `ApolloServer` constructor:
 
 ```js
-const { MemcachedCache } = require('apollo-server-memcached');
-const { ApolloServer } = require('apollo-server');
+const { MemcachedCache } = require("apollo-server-memcached");
+const { ApolloServer } = require("apollo-server");
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   persistedQueries: {
     cache: new MemcachedCache(
-      ['memcached-server-1', 'memcached-server-2', 'memcached-server-3'],
-      { retries: 10, retry: 10000 }, // Options
+      ["memcached-server-1", "memcached-server-2", "memcached-server-3"],
+      { retries: 10, retry: 10000 } // Options
     ),
   },
 });
@@ -56,14 +58,13 @@ const server = new ApolloServer({
 Apollo Server's persisted queries configuration can be tested from the command-line. The following examples assume Apollo Server is running at `localhost:4000/`.
 This example persists a dummy query of `{__typename}`, using its sha256 hash: `ecf4edb46db40b5132295c0291d62fb65d6759a9eedfa4d5d612dd5ec54a6b38`.
 
-
 1. Request a persisted query:
 
 ```bash
 curl -g 'http://localhost:4000/?extensions={"persistedQuery":{"version":1,"sha256Hash":"ecf4edb46db40b5132295c0291d62fb65d6759a9eedfa4d5d612dd5ec54a6b38"}}'
 ```
 
-   Expect a response of: `{"errors": [{"message": "PersistedQueryNotFound", "extensions": {...}}]}`.
+Expect a response of: `{"errors": [{"message": "PersistedQueryNotFound", "extensions": {...}}]}`.
 
 2. Store the query to the cache:
 
@@ -71,7 +72,7 @@ curl -g 'http://localhost:4000/?extensions={"persistedQuery":{"version":1,"sha25
 curl -g 'http://localhost:4000/?query={__typename}&extensions={"persistedQuery":{"version":1,"sha256Hash":"ecf4edb46db40b5132295c0291d62fb65d6759a9eedfa4d5d612dd5ec54a6b38"}}'
 ```
 
-   Expect a response of `{"data": {"__typename": "Query"}}"`.
+Expect a response of `{"data": {"__typename": "Query"}}"`.
 
 3. Request the persisted query again:
 
@@ -79,11 +80,11 @@ curl -g 'http://localhost:4000/?query={__typename}&extensions={"persistedQuery":
 curl -g 'http://localhost:4000/?extensions={"persistedQuery":{"version":1,"sha256Hash":"ecf4edb46db40b5132295c0291d62fb65d6759a9eedfa4d5d612dd5ec54a6b38"}}'
 ```
 
-   Expect a response of `{"data": {"__typename": "Query"}}"`, as the query string is loaded from the cache.
+Expect a response of `{"data": {"__typename": "Query"}}"`, as the query string is loaded from the cache.
 
 ### Using GET requests with APQ to enable CDNs
 
-A great application for APQ is running Apollo Server behind a CDN. Many CDNs only cache GET requests, but many GraphQL queries are too long to fit comfortably in a cacheable GET request.  When the APQ link is created with `createPersistedQueryLink({useGETForHashedQueries: true})`, Apollo Client automatically sends the short hashed queries as GET requests allowing a CDN to serve those request. For full-length queries and for all mutations, Apollo Client will continue to use POST requests.
+A great application for APQ is running Apollo Server behind a CDN. Many CDNs only cache GET requests, but many GraphQL queries are too long to fit comfortably in a cacheable GET request. When the APQ link is created with `createPersistedQueryLink({useGETForHashedQueries: true})`, Apollo Client automatically sends the short hashed queries as GET requests allowing a CDN to serve those request. For full-length queries and for all mutations, Apollo Client will continue to use POST requests.
 
 ### How it works
 
@@ -151,12 +152,12 @@ import ApolloClient from "apollo-client";
 
 ApolloLink.from([
   createPersistedQueryLink({ useGETForHashedQueries: true }),
-  createHttpLink({ uri: "/graphql" })
+  createHttpLink({ uri: "/graphql" }),
 ]);
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: link
+  link: link,
 });
 ```
 

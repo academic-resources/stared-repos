@@ -1,10 +1,10 @@
-const DomNodeCollection = require('./dom_node_collection')
+const DomNodeCollection = require("./dom_node_collection");
 
 // function $l (arg) {
 //   let nodes
 //   if (typeof arg === "string") {
 //     nodes = Array.from(document.querySelectorAll(arg))
-//   } 
+//   }
 //   if (arg instanceof HTMLElement) {
 //       nodes = [arg]
 //   }
@@ -12,31 +12,29 @@ const DomNodeCollection = require('./dom_node_collection')
 //   return new DomNodeCollection(nodes)
 // }
 
-const allFuncs = []
+const allFuncs = [];
 
 // $l(() => '2')
 // $l(() => '3')
 // $l(() => alert('1'))
 
-function $l (arg) {
+function $l(arg) {
   if (arg instanceof Function) {
-    allFuncs.push(arg)
+    allFuncs.push(arg);
   } else {
-    let nodes
+    let nodes;
     if (typeof arg === "string") {
-      nodes = Array.from(document.querySelectorAll(arg))
-    } 
-    if (arg instanceof HTMLElement) {
-        nodes = [arg]
+      nodes = Array.from(document.querySelectorAll(arg));
     }
-    return new DomNodeCollection(nodes)
+    if (arg instanceof HTMLElement) {
+      nodes = [arg];
+    }
+    return new DomNodeCollection(nodes);
   }
 }
 
-window.addEventListener('DOMContentLoaded', (event) => {
-    allFuncs.forEach( func => func())
-})
-window.$l = $l
-window.DomNodeCollection = DomNodeCollection
-
-
+window.addEventListener("DOMContentLoaded", (event) => {
+  allFuncs.forEach((func) => func());
+});
+window.$l = $l;
+window.DomNodeCollection = DomNodeCollection;

@@ -38,7 +38,9 @@ function curriedSum(numArgs) {
     if (numbers.length === numArgs) {
       let total = 0;
 
-      numbers.forEach((n) => { total += n; });
+      numbers.forEach((n) => {
+        total += n;
+      });
 
       return total;
     } else {
@@ -85,7 +87,7 @@ Function.prototype.curry1 = function (numArgs) {
 /**
  * With ES6 arrow functions
  * Notice we dont need to keep track of the `this` context (const fn = this).
- * An arrow function does not have its own `this`, 
+ * An arrow function does not have its own `this`,
  * the `this` value of the enclosing execution context is used.
  */
 Function.prototype.curry2 = function (nArg) {
@@ -94,7 +96,7 @@ Function.prototype.curry2 = function (nArg) {
     argArray.push(arg);
     if (argArray.length === nArg) {
       // spreading the array into individual arguments
-      return this(...argArray); 
+      return this(...argArray);
     } else {
       return _curriedFn;
     }

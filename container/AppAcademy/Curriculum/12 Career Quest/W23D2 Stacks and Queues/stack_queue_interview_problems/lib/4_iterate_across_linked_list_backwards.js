@@ -6,11 +6,11 @@
 // Prompt:
 // -------
 //
-// Iterate over a Singly Linked List of primitives backwards. When finished, 
-// return a string representing the original linked list's values backwards 
+// Iterate over a Singly Linked List of primitives backwards. When finished,
+// return a string representing the original linked list's values backwards
 // in the following format:
 //
-//                             'A -> B -> C -> D' 
+//                             'A -> B -> C -> D'
 //
 // ------------
 // Constraints:
@@ -27,8 +27,7 @@
 // -----------
 
 function iterateAcrossLinkedListBackwards(linkedList) {
-    // TODO: Implement the iterateAcrossLinkedListBackwards function here
-
+  // TODO: Implement the iterateAcrossLinkedListBackwards function here
 }
 
 exports.iterateAcrossLinkedListBackwards = iterateAcrossLinkedListBackwards;

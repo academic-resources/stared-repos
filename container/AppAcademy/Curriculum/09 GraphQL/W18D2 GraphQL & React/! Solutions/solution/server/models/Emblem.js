@@ -6,9 +6,9 @@ const EmblemSchema = new Schema({
   gods: [
     {
       type: Schema.Types.ObjectId,
-      ref: "god"
-    }
-  ]
+      ref: "god",
+    },
+  ],
 });
 
 module.exports = mongoose.model("emblem", EmblemSchema);

@@ -17,11 +17,12 @@ const EmblemType = new GraphQLObjectType({
       resolve(parentValue) {
         // we take advantage of parentValue which in this case is the emblem we are
         // preforming this query on
-        return Emblem.findById(parentValue.id).populate("gods")
-          .then(emblem => emblem.gods)
-      }
-    }
-  })
+        return Emblem.findById(parentValue.id)
+          .populate("gods")
+          .then((emblem) => emblem.gods);
+      },
+    },
+  }),
 });
 
 module.exports = EmblemType;

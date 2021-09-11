@@ -1,12 +1,11 @@
-
 // Just for analysis.  Not to be used.
 function minumumValueIndex(arr) {
   let minIndex = 0;
 
   for (let j = 0; j < arr.length; j++) {
-      if (arr[minIndex] > arr[j]) {
-          minIndex = j;
-      }
+    if (arr[minIndex] > arr[j]) {
+      minIndex = j;
+    }
   }
 
   return minIndex;
@@ -24,24 +23,24 @@ function selectionSort(arr) {
   //    this means that the sorted region is everything left of index i
   //    and the unsorted region is everything to the right of index i
   for (let i = 0; i < arr.length; i++) {
-      let minIndex = i;
+    let minIndex = i;
 
-      // the `j` loop will iterate through the unsorted region and find the index of the smallest element
-      for (let j = i + 1; j < arr.length; j++) {
-          if (arr[minIndex] > arr[j]) {
-              minIndex = j;
-          }
+    // the `j` loop will iterate through the unsorted region and find the index of the smallest element
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[minIndex] > arr[j]) {
+        minIndex = j;
       }
+    }
 
-      // after we find the minIndex in the unsorted region,
-      // swap that minIndex with the first index of the unsorted region
-      swap(arr, i, minIndex);
+    // after we find the minIndex in the unsorted region,
+    // swap that minIndex with the first index of the unsorted region
+    swap(arr, i, minIndex);
   }
   return arr;
 }
 
 let arr1 = [2, 8, 5, 2, 6];
-console.log(selectionSort(arr1))
+console.log(selectionSort(arr1));
 
 // Complexity
 // Time: T(n * n/2) = O(n^2)

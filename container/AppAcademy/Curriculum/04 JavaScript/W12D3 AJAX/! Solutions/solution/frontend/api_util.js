@@ -1,43 +1,38 @@
 const APIUtil = {
+  followUser: (id) => APIUtil.changeFollowStatus(id, "POST"),
 
-  followUser: id => APIUtil.changeFollowStatus(id, 'POST'),
+  unfollowUser: (id) => APIUtil.changeFollowStatus(id, "DELETE"),
 
-  unfollowUser: id => APIUtil.changeFollowStatus(id, 'DELETE'),
-
-  changeFollowStatus: (id, method) => (
+  changeFollowStatus: (id, method) =>
     $.ajax({
       url: `/users/${id}/follow`,
-      dataType: 'json',
-      method
-    })
-  ),
+      dataType: "json",
+      method,
+    }),
 
-  searchUsers: query => (
+  searchUsers: (query) =>
     $.ajax({
-      url: '/users/search',
-      dataType: 'json',
-      method: 'GET',
-      data: { query }
-    })
-  ),
+      url: "/users/search",
+      dataType: "json",
+      method: "GET",
+      data: { query },
+    }),
 
-  createTweet: data => (
+  createTweet: (data) =>
     $.ajax({
-      url: '/tweets',
-      method: 'POST',
-      dataType: 'json',
-      data
-    })
-  ),
+      url: "/tweets",
+      method: "POST",
+      dataType: "json",
+      data,
+    }),
 
-  fetchTweets: data => (
+  fetchTweets: (data) =>
     $.ajax({
-      url: '/feed',
-      method: 'GET',
-      dataType: 'json',
-      data
-    })
-  )
+      url: "/feed",
+      method: "GET",
+      dataType: "json",
+      data,
+    }),
 };
 
 module.exports = APIUtil;

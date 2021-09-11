@@ -2,7 +2,7 @@
     // summary: The default options hash used by the Editor
 
     MediumEditor.prototype.defaults = {
-        activeButtonClass: 'medium-editor-button-active',
+        activeButtonClass: "medium-editor-button-active",
         buttonLabels: false,
         delay: 0,
         disableReturn: false,
@@ -15,6 +15,6 @@
         ownerDocument: document,
         targetBlank: false,
         extensions: {},
-        spellcheck: true
+        spellcheck: true,
     };
 })();

@@ -1,6 +1,8 @@
 /* Reset */
 
-h1, h2 ,h3 {
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
@@ -23,7 +25,6 @@ aside,
 section {
   background: rgba(0, 0, 0, 0.3);
 }
-
 
 h1 {
   float: left;

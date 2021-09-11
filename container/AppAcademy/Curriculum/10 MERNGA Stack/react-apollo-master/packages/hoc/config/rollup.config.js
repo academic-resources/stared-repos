@@ -1,8 +1,8 @@
-import { rollup } from '../../../config/rollup.config';
+import { rollup } from "../../../config/rollup.config";
 
 export default rollup({
-  name: 'hoc',
+  name: "hoc",
   extraGlobals: {
-    '@apollo/react-components': 'apolloReactComponents'
-  }
+    "@apollo/react-components": "apolloReactComponents",
+  },
 });

@@ -4,9 +4,9 @@ import {
   FetchResult,
   Observable,
   GraphQLRequest,
-} from 'apollo-link';
+} from "apollo-link";
 
-import { print } from 'graphql/language/printer';
+import { print } from "graphql/language/printer";
 
 interface MockApolloLink extends ApolloLink {
   operation?: Operation;
@@ -47,7 +47,7 @@ export class MockLink extends ApolloLink {
 
   constructor(mockedResponses: MockedResponse[]) {
     super();
-    mockedResponses.forEach(mockedResponse => {
+    mockedResponses.forEach((mockedResponse) => {
       this.addMockedResponse(mockedResponse);
     });
   }
@@ -69,19 +69,19 @@ export class MockLink extends ApolloLink {
     if (!responses || responses.length === 0) {
       throw new Error(
         `No more mocked responses for the query: ${print(
-          operation.query,
-        )}, variables: ${JSON.stringify(operation.variables)}`,
+          operation.query
+        )}, variables: ${JSON.stringify(operation.variables)}`
       );
     }
 
     const { result, error, delay } = responses.shift()!;
     if (!result && !error) {
       throw new Error(
-        `Mocked response should contain either result or error: ${key}`,
+        `Mocked response should contain either result or error: ${key}`
       );
     }
 
-    return new Observable<FetchResult>(observer => {
+    return new Observable<FetchResult>((observer) => {
       let timer = setTimeout(
         () => {
           if (error) {
@@ -91,7 +91,7 @@ export class MockLink extends ApolloLink {
             observer.complete();
           }
         },
-        delay ? delay : 0,
+        delay ? delay : 0
       );
 
       return () => {
@@ -112,12 +112,12 @@ export class MockSubscriptionLink extends ApolloLink {
   }
 
   public request() {
-    return new Observable<FetchResult>(observer => {
-      this.setups.forEach(x => x());
+    return new Observable<FetchResult>((observer) => {
+      this.setups.forEach((x) => x());
       this.observer = observer;
       return {
         unsubscribe: () => {
-          this.unsubscribers.forEach(x => x());
+          this.unsubscribers.forEach((x) => x());
         },
         closed: false,
       };
@@ -127,7 +127,7 @@ export class MockSubscriptionLink extends ApolloLink {
   public simulateResult(result: MockedSubscriptionResult) {
     setTimeout(() => {
       const { observer } = this;
-      if (!observer) throw new Error('subscription torn down');
+      if (!observer) throw new Error("subscription torn down");
       if (result.result && observer.next) observer.next(result.result);
       if (result.error && observer.error) observer.error(result.error);
     }, result.delay || 0);
@@ -135,7 +135,7 @@ export class MockSubscriptionLink extends ApolloLink {
 
   public simulateComplete() {
     const { observer } = this;
-    if (!observer) throw new Error('subscription torn down');
+    if (!observer) throw new Error("subscription torn down");
     if (observer.complete) observer.complete();
   }
 

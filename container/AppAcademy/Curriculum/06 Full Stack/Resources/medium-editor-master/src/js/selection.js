@@ -1,5 +1,5 @@
 (function () {
-    'use strict';
+    "use strict";
 
     function filterOnlyParentElements(node) {
         if (MediumEditor.util.isBlockContainer(node)) {
@@ -10,7 +10,10 @@
     }
 
     var Selection = {
-        findMatchingSelectionParent: function (testElementFunction, contentWindow) {
+        findMatchingSelectionParent: function (
+            testElementFunction,
+            contentWindow
+        ) {
             var selection = contentWindow.getSelection(),
                 range,
                 current;
@@ -47,12 +50,15 @@
                     start;
 
                 preSelectionRange.selectNodeContents(root);
-                preSelectionRange.setEnd(range.startContainer, range.startOffset);
+                preSelectionRange.setEnd(
+                    range.startContainer,
+                    range.startOffset
+                );
                 start = preSelectionRange.toString().length;
 
                 selectionState = {
                     start: start,
-                    end: start + range.toString().length
+                    end: start + range.toString().length,
                 };
 
                 // Check to see if the selection starts with any images
@@ -64,14 +70,25 @@
 
                 // Check to see if the selection has any trailing images
                 // if so, this this means we need to look for them when we import selection
-                var trailingImageCount = this.getTrailingImageCount(root, selectionState, range.endContainer, range.endOffset);
+                var trailingImageCount = this.getTrailingImageCount(
+                    root,
+                    selectionState,
+                    range.endContainer,
+                    range.endOffset
+                );
                 if (trailingImageCount) {
                     selectionState.trailingImageCount = trailingImageCount;
                 }
 
                 // If start = 0 there may still be an empty paragraph before it, but we don't care.
                 if (start !== 0) {
-                    var emptyBlocksIndex = this.getIndexRelativeToAdjacentEmptyBlocks(doc, root, range.startContainer, range.startOffset);
+                    var emptyBlocksIndex =
+                        this.getIndexRelativeToAdjacentEmptyBlocks(
+                            doc,
+                            root,
+                            range.startContainer,
+                            range.startOffset
+                        );
                     if (emptyBlocksIndex !== -1) {
                         selectionState.emptyBlocksIndex = emptyBlocksIndex;
                     }
@@ -91,7 +108,12 @@
         //      subsequent to an anchor tag if it would otherwise be placed right at the trailing edge inside the
         //      anchor. This cursor positioning, even though visually equivalent to the user, can affect behavior
         //      in MS IE.
-        importSelection: function (selectionState, root, doc, favorLaterSelectionAnchor) {
+        importSelection: function (
+            selectionState,
+            root,
+            doc,
+            favorLaterSelectionAnchor
+        ) {
             if (!selectionState || !root) {
                 return;
             }
@@ -124,7 +146,11 @@
             //
             // For these cases, we want the selection to start at a very specific location, so we should NOT
             // automatically move the cursor to the beginning of the first actual chunk of text
-            if (favorLaterSelectionAnchor || selectionState.startsWithImage || typeof selectionState.emptyBlocksIndex !== 'undefined') {
+            if (
+                favorLaterSelectionAnchor ||
+                selectionState.startsWithImage ||
+                typeof selectionState.emptyBlocksIndex !== "undefined"
+            ) {
                 allowRangeToStartAtEndOfNode = true;
             }
 
@@ -139,11 +165,21 @@
                 if (node.nodeType === 3 && !foundEnd) {
                     nextCharIndex = charIndex + node.length;
                     // Check if we're at or beyond the start of the selection we're importing
-                    if (!foundStart && selectionState.start >= charIndex && selectionState.start <= nextCharIndex) {
+                    if (
+                        !foundStart &&
+                        selectionState.start >= charIndex &&
+                        selectionState.start <= nextCharIndex
+                    ) {
                         // NOTE: We only want to allow a selection to start at the END of an element if
                         //  allowRangeToStartAtEndOfNode is true
-                        if (allowRangeToStartAtEndOfNode || selectionState.start < nextCharIndex) {
-                            range.setStart(node, selectionState.start - charIndex);
+                        if (
+                            allowRangeToStartAtEndOfNode ||
+                            selectionState.start < nextCharIndex
+                        ) {
+                            range.setStart(
+                                node,
+                                selectionState.start - charIndex
+                            );
                             foundStart = true;
                         }
                         // We're at the end of a text node where the selection could start but we shouldn't
@@ -155,7 +191,11 @@
                         }
                     }
                     // We've found the start of the selection, check if we're at or beyond the end of the selection we're importing
-                    if (foundStart && selectionState.end >= charIndex && selectionState.end <= nextCharIndex) {
+                    if (
+                        foundStart &&
+                        selectionState.end >= charIndex &&
+                        selectionState.end <= nextCharIndex
+                    ) {
                         if (!selectionState.trailingImageCount) {
                             range.setEnd(node, selectionState.end - charIndex);
                             stop = true;
@@ -166,13 +206,18 @@
                     charIndex = nextCharIndex;
                 } else {
                     if (selectionState.trailingImageCount && foundEnd) {
-                        if (node.nodeName.toLowerCase() === 'img') {
+                        if (node.nodeName.toLowerCase() === "img") {
                             trailingImageCount++;
                         }
-                        if (trailingImageCount === selectionState.trailingImageCount) {
+                        if (
+                            trailingImageCount ===
+                            selectionState.trailingImageCount
+                        ) {
                             // Find which index the image is in its parent's children
                             var endIndex = 0;
-                            while (node.parentNode.childNodes[endIndex] !== node) {
+                            while (
+                                node.parentNode.childNodes[endIndex] !== node
+                            ) {
                                 endIndex++;
                             }
                             range.setEnd(node.parentNode, endIndex + 1);
@@ -204,13 +249,21 @@
                 range.setEnd(lastTextNode, lastTextNode.length);
             }
 
-            if (typeof selectionState.emptyBlocksIndex !== 'undefined') {
-                range = this.importSelectionMoveCursorPastBlocks(doc, root, selectionState.emptyBlocksIndex, range);
+            if (typeof selectionState.emptyBlocksIndex !== "undefined") {
+                range = this.importSelectionMoveCursorPastBlocks(
+                    doc,
+                    root,
+                    selectionState.emptyBlocksIndex,
+                    range
+                );
             }
 
             // If the selection is right at the ending edge of a link, put it outside the anchor tag instead of inside.
             if (favorLaterSelectionAnchor) {
-                range = this.importSelectionMoveCursorPastAnchor(selectionState, range);
+                range = this.importSelectionMoveCursorPastAnchor(
+                    selectionState,
+                    range
+                );
             }
 
             this.selectRange(doc, range);
@@ -219,30 +272,55 @@
         // Utility method called from importSelection only
         importSelectionMoveCursorPastAnchor: function (selectionState, range) {
             var nodeInsideAnchorTagFunction = function (node) {
-                return node.nodeName.toLowerCase() === 'a';
+                return node.nodeName.toLowerCase() === "a";
             };
-            if (selectionState.start === selectionState.end &&
-                    range.startContainer.nodeType === 3 &&
-                    range.startOffset === range.startContainer.nodeValue.length &&
-                    MediumEditor.util.traverseUp(range.startContainer, nodeInsideAnchorTagFunction)) {
+            if (
+                selectionState.start === selectionState.end &&
+                range.startContainer.nodeType === 3 &&
+                range.startOffset === range.startContainer.nodeValue.length &&
+                MediumEditor.util.traverseUp(
+                    range.startContainer,
+                    nodeInsideAnchorTagFunction
+                )
+            ) {
                 var prevNode = range.startContainer,
                     currentNode = range.startContainer.parentNode;
-                while (currentNode !== null && currentNode.nodeName.toLowerCase() !== 'a') {
-                    if (currentNode.childNodes[currentNode.childNodes.length - 1] !== prevNode) {
+                while (
+                    currentNode !== null &&
+                    currentNode.nodeName.toLowerCase() !== "a"
+                ) {
+                    if (
+                        currentNode.childNodes[
+                            currentNode.childNodes.length - 1
+                        ] !== prevNode
+                    ) {
                         currentNode = null;
                     } else {
                         prevNode = currentNode;
                         currentNode = currentNode.parentNode;
                     }
                 }
-                if (currentNode !== null && currentNode.nodeName.toLowerCase() === 'a') {
+                if (
+                    currentNode !== null &&
+                    currentNode.nodeName.toLowerCase() === "a"
+                ) {
                     var currentNodeIndex = null;
-                    for (var i = 0; currentNodeIndex === null && i < currentNode.parentNode.childNodes.length; i++) {
-                        if (currentNode.parentNode.childNodes[i] === currentNode) {
+                    for (
+                        var i = 0;
+                        currentNodeIndex === null &&
+                        i < currentNode.parentNode.childNodes.length;
+                        i++
+                    ) {
+                        if (
+                            currentNode.parentNode.childNodes[i] === currentNode
+                        ) {
                             currentNodeIndex = i;
                         }
                     }
-                    range.setStart(currentNode.parentNode, currentNodeIndex + 1);
+                    range.setStart(
+                        currentNode.parentNode,
+                        currentNodeIndex + 1
+                    );
                     range.collapse(true);
                 }
             }
@@ -251,8 +329,18 @@
 
         // Uses the emptyBlocksIndex calculated by getIndexRelativeToAdjacentEmptyBlocks
         // to move the cursor back to the start of the correct paragraph
-        importSelectionMoveCursorPastBlocks: function (doc, root, index, range) {
-            var treeWalker = doc.createTreeWalker(root, NodeFilter.SHOW_ELEMENT, filterOnlyParentElements, false),
+        importSelectionMoveCursorPastBlocks: function (
+            doc,
+            root,
+            index,
+            range
+        ) {
+            var treeWalker = doc.createTreeWalker(
+                    root,
+                    NodeFilter.SHOW_ELEMENT,
+                    filterOnlyParentElements,
+                    false
+                ),
                 startContainer = range.startContainer,
                 startBlock,
                 targetNode,
@@ -263,10 +351,16 @@
             // If the selection is inside one of these text nodes, and it has a previous sibling
             // which is a block element, we want the treewalker to start at the previous sibling
             // and NOT at the parent of the textnode
-            if (startContainer.nodeType === 3 && MediumEditor.util.isBlockContainer(startContainer.previousSibling)) {
+            if (
+                startContainer.nodeType === 3 &&
+                MediumEditor.util.isBlockContainer(
+                    startContainer.previousSibling
+                )
+            ) {
                 startBlock = startContainer.previousSibling;
             } else {
-                startBlock = MediumEditor.util.getClosestBlockContainer(startContainer);
+                startBlock =
+                    MediumEditor.util.getClosestBlockContainer(startContainer);
             }
 
             // Skip over empty blocks until we hit the block we want the selection to be in
@@ -296,7 +390,10 @@
 
             // We're selecting a high-level block node, so make sure the cursor gets moved into the deepest
             // element at the beginning of the block
-            range.setStart(MediumEditor.util.getFirstSelectableLeafNode(targetNode), 0);
+            range.setStart(
+                MediumEditor.util.getFirstSelectableLeafNode(targetNode),
+                0
+            );
 
             return range;
         },
@@ -306,7 +403,12 @@
         // it will return the number of empty paragraphs before the cursor.
         // Otherwise, it will return 0, which indicates the cursor is at the beginning
         // of a paragraph/block, and not at the end of the paragraph/block before it
-        getIndexRelativeToAdjacentEmptyBlocks: function (doc, root, cursorContainer, cursorOffset) {
+        getIndexRelativeToAdjacentEmptyBlocks: function (
+            doc,
+            root,
+            cursorContainer,
+            cursorOffset
+        ) {
             // If there is text in front of the cursor, that means there isn't only empty blocks before it
             if (cursorContainer.textContent.length > 0 && cursorOffset > 0) {
                 return -1;
@@ -323,7 +425,8 @@
                     return -1;
                 }
 
-                var previousSibling = MediumEditor.util.findPreviousSibling(node);
+                var previousSibling =
+                    MediumEditor.util.findPreviousSibling(node);
                 // If there is no previous sibling, this is the first text element in the editor
                 if (!previousSibling) {
                     return -1;
@@ -336,11 +439,17 @@
 
             // Walk over block elements, counting number of empty blocks between last piece of text
             // and the block the cursor is in
-            var closestBlock = MediumEditor.util.getClosestBlockContainer(cursorContainer),
-                treeWalker = doc.createTreeWalker(root, NodeFilter.SHOW_ELEMENT, filterOnlyParentElements, false),
+            var closestBlock =
+                    MediumEditor.util.getClosestBlockContainer(cursorContainer),
+                treeWalker = doc.createTreeWalker(
+                    root,
+                    NodeFilter.SHOW_ELEMENT,
+                    filterOnlyParentElements,
+                    false
+                ),
                 emptyBlocksCount = 0;
             while (treeWalker.nextNode()) {
-                var blockIsEmpty = treeWalker.currentNode.textContent === '';
+                var blockIsEmpty = treeWalker.currentNode.textContent === "";
                 if (blockIsEmpty || emptyBlocksCount > 0) {
                     emptyBlocksCount += 1;
                 }
@@ -358,20 +467,28 @@
         // Returns true if the selection range begins with an image tag
         // Returns false if the range starts with any non empty text nodes
         doesRangeStartWithImages: function (range, doc) {
-            if (range.startOffset !== 0 || range.startContainer.nodeType !== 1) {
+            if (
+                range.startOffset !== 0 ||
+                range.startContainer.nodeType !== 1
+            ) {
                 return false;
             }
 
-            if (range.startContainer.nodeName.toLowerCase() === 'img') {
+            if (range.startContainer.nodeName.toLowerCase() === "img") {
                 return true;
             }
 
-            var img = range.startContainer.querySelector('img');
+            var img = range.startContainer.querySelector("img");
             if (!img) {
                 return false;
             }
 
-            var treeWalker = doc.createTreeWalker(range.startContainer, NodeFilter.SHOW_ALL, null, false);
+            var treeWalker = doc.createTreeWalker(
+                range.startContainer,
+                NodeFilter.SHOW_ALL,
+                null,
+                false
+            );
             while (treeWalker.nextNode()) {
                 var next = treeWalker.currentNode;
                 // If we hit the image, then there isn't any text before the image so
@@ -389,7 +506,12 @@
             return true;
         },
 
-        getTrailingImageCount: function (root, selectionState, endContainer, endOffset) {
+        getTrailingImageCount: function (
+            root,
+            selectionState,
+            endContainer,
+            endOffset
+        ) {
             // If the endOffset of a range is 0, the endContainer doesn't contain images
             // If the endContainer is a text node, there are no trailing images
             if (endOffset === 0 || endContainer.nodeType !== 1) {
@@ -398,7 +520,10 @@
 
             // If the endContainer isn't an image, and doesn't have an image descendants
             // there are no trailing images
-            if (endContainer.nodeName.toLowerCase() !== 'img' && !endContainer.querySelector('img')) {
+            if (
+                endContainer.nodeName.toLowerCase() !== "img" &&
+                !endContainer.querySelector("img")
+            ) {
                 return 0;
             }
 
@@ -426,15 +551,23 @@
                 if (node.nodeType === 3 && !foundEnd) {
                     trailingImages = 0;
                     nextCharIndex = charIndex + node.length;
-                    if (!foundStart && selectionState.start >= charIndex && selectionState.start <= nextCharIndex) {
+                    if (
+                        !foundStart &&
+                        selectionState.start >= charIndex &&
+                        selectionState.start <= nextCharIndex
+                    ) {
                         foundStart = true;
                     }
-                    if (foundStart && selectionState.end >= charIndex && selectionState.end <= nextCharIndex) {
+                    if (
+                        foundStart &&
+                        selectionState.end >= charIndex &&
+                        selectionState.end <= nextCharIndex
+                    ) {
                         foundEnd = true;
                     }
                     charIndex = nextCharIndex;
                 } else {
-                    if (node.nodeName.toLowerCase() === 'img') {
+                    if (node.nodeName.toLowerCase() === "img") {
                         trailingImages++;
                     }
 
@@ -470,16 +603,21 @@
             }
 
             // if toString() contains any text, the selection contains some content
-            if (sel.toString().trim() !== '') {
+            if (sel.toString().trim() !== "") {
                 return true;
             }
 
             // if selection contains only image(s), it will return empty for toString()
             // so check for an image manually
-            var selectionNode = this.getSelectedParentElement(sel.getRangeAt(0));
+            var selectionNode = this.getSelectedParentElement(
+                sel.getRangeAt(0)
+            );
             if (selectionNode) {
-                if (selectionNode.nodeName.toLowerCase() === 'img' ||
-                    (selectionNode.nodeType === 1 && selectionNode.querySelector('img'))) {
+                if (
+                    selectionNode.nodeName.toLowerCase() === "img" ||
+                    (selectionNode.nodeType === 1 &&
+                        selectionNode.querySelector("img"))
+                ) {
                     return true;
                 }
             }
@@ -493,11 +631,11 @@
             // explicit contenteditable="true" inside a "false" as false.
             var sawtrue,
                 sawfalse = this.findMatchingSelectionParent(function (el) {
-                    var ce = el && el.getAttribute('contenteditable');
-                    if (ce === 'true') {
+                    var ce = el && el.getAttribute("contenteditable");
+                    if (ce === "true") {
                         sawtrue = true;
                     }
-                    return el.nodeName !== '#text' && ce === 'false';
+                    return el.nodeName !== "#text" && ce === "false";
                 }, contentWindow);
 
             return !sawtrue && sawfalse;
@@ -507,12 +645,12 @@
         // by Tim Down
         getSelectionHtml: function getSelectionHtml(doc) {
             var i,
-                html = '',
+                html = "",
                 sel = doc.getSelection(),
                 len,
                 container;
             if (sel.rangeCount) {
-                container = doc.createElement('div');
+                container = doc.createElement("div");
                 for (i = 0, len = sel.rangeCount; i < len; i += 1) {
                     container.appendChild(sel.getRangeAt(i).cloneContents());
                 }
@@ -546,16 +684,18 @@
 
             return {
                 left: preCaretRange.toString().length,
-                right: postCaretRange.toString().length
+                right: postCaretRange.toString().length,
             };
         },
 
         // http://stackoverflow.com/questions/15867542/range-object-get-selection-parent-node-chrome-vs-firefox
         rangeSelectsSingleNode: function (range) {
             var startNode = range.startContainer;
-            return startNode === range.endContainer &&
+            return (
+                startNode === range.endContainer &&
                 startNode.hasChildNodes() &&
-                range.endOffset === range.startOffset + 1;
+                range.endOffset === range.startOffset + 1
+            );
         },
 
         getSelectedParentElement: function (range) {
@@ -564,7 +704,11 @@
             }
 
             // Selection encompasses a single element
-            if (this.rangeSelectsSingleNode(range) && range.startContainer.childNodes[range.startOffset].nodeType !== 3) {
+            if (
+                this.rangeSelectsSingleNode(range) &&
+                range.startContainer.childNodes[range.startOffset].nodeType !==
+                    3
+            ) {
                 return range.startContainer.childNodes[range.startOffset];
             }
 
@@ -583,7 +727,11 @@
                 toRet,
                 currNode;
 
-            if (!selection.rangeCount || selection.isCollapsed || !selection.getRangeAt(0).commonAncestorContainer) {
+            if (
+                !selection.rangeCount ||
+                selection.isCollapsed ||
+                !selection.getRangeAt(0).commonAncestorContainer
+            ) {
                 return [];
             }
 
@@ -592,7 +740,10 @@
             if (range.commonAncestorContainer.nodeType === 3) {
                 toRet = [];
                 currNode = range.commonAncestorContainer;
-                while (currNode.parentNode && currNode.parentNode.childNodes.length === 1) {
+                while (
+                    currNode.parentNode &&
+                    currNode.parentNode.childNodes.length === 1
+                ) {
                     toRet.push(currNode.parentNode);
                     currNode = currNode.parentNode;
                 }
@@ -600,9 +751,14 @@
                 return toRet;
             }
 
-            return [].filter.call(range.commonAncestorContainer.getElementsByTagName('*'), function (el) {
-                return (typeof selection.containsNode === 'function') ? selection.containsNode(el, true) : true;
-            });
+            return [].filter.call(
+                range.commonAncestorContainer.getElementsByTagName("*"),
+                function (el) {
+                    return typeof selection.containsNode === "function"
+                        ? selection.containsNode(el, true)
+                        : true;
+                }
+            );
         },
 
         selectNode: function (node, doc) {
@@ -667,11 +823,12 @@
         // by You
         getSelectionStart: function (ownerDocument) {
             var node = ownerDocument.getSelection().anchorNode,
-                startNode = (node && node.nodeType === 3 ? node.parentNode : node);
+                startNode =
+                    node && node.nodeType === 3 ? node.parentNode : node;
 
             return startNode;
-        }
+        },
     };
 
     MediumEditor.selection = Selection;
-}());
+})();

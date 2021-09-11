@@ -1,9 +1,11 @@
-const bearerToken = require('express-bearer-token');
-const jwt = require('jsonwebtoken');
-const uuid = require('uuid').v4;
+const bearerToken = require("express-bearer-token");
+const jwt = require("jsonwebtoken");
+const uuid = require("uuid").v4;
 
-const { jwtConfig: { secret, expiresIn } } = require('../../config');
-const PlayerRepository = require('../../db/player-repository');
+const {
+  jwtConfig: { secret, expiresIn },
+} = require("../../config");
+const PlayerRepository = require("../../db/player-repository");
 
 function generateToken(player) {
   const data = {
@@ -13,7 +15,10 @@ function generateToken(player) {
 
   return {
     jti: jwtid,
-    token: jwt.sign({ data }, secret, { expiresIn: Number.parseInt(expiresIn), jwtid })
+    token: jwt.sign({ data }, secret, {
+      expiresIn: Number.parseInt(expiresIn),
+      jwtid,
+    }),
   };
 }
 
@@ -21,7 +26,7 @@ function restorePlayer(req, res, next) {
   const { token } = req;
 
   if (!token) {
-    return next({ status: 401, message: 'no token' });
+    return next({ status: 401, message: "no token" });
   }
 
   return jwt.verify(token, secret, null, async (err, payload) => {
@@ -39,7 +44,7 @@ function restorePlayer(req, res, next) {
     }
 
     if (!req.player.isValid()) {
-      return next({ status: 404, message: 'session not found' });
+      return next({ status: 404, message: "session not found" });
     }
 
     next();

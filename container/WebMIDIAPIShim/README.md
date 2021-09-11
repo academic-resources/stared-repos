@@ -73,10 +73,10 @@ Then you can import the module into your code:
 
 ```javascript
 // commonjs
-require('web-midi-api');
+require("web-midi-api");
 
 // es-next
-import 'web-midi-api';
+import "web-midi-api";
 ```
 
 ## Sample usage
@@ -106,16 +106,16 @@ function onSuccessCallback(access) {
     var outputs = m.outputs;
 
     // returns an iterator that loops over all inputs
-    var iteratorInputs = inputs.values()
+    var iteratorInputs = inputs.values();
 
     // get the first input
-    var input = iteratorInputs.next().value
+    var input = iteratorInputs.next().value;
 
     // onmidimessage(event), event.data & event.receivedTime are populated
     input.onmidimessage = myMIDIMessagehandler;
 
     // returns an iterator that loops over all outputs
-    var iteratorOutputs = outputs.values()
+    var iteratorOutputs = outputs.values();
 
     // grab first output device
     var output = iteratorOutputs.next().value;
@@ -125,20 +125,19 @@ function onSuccessCallback(access) {
 
     // full velocity A4 note off in one second.
     output.send([0x80, 0x45, 0x7f], window.performance.now() + 1000);
-};
+}
 
 function onErrorCallback(err) {
-    console.log('uh-oh! Something went wrong! Error code: ' + err.code);
+    console.log("uh-oh! Something went wrong! Error code: " + err.code);
 }
 ```
 
 ## Examples
 
-- [list_devices](http://cwilso.github.com/WebMIDIAPIShim/examples/list_devices) simple listing of all available MIDI devices
-- [routing_1](http://cwilso.github.com/WebMIDIAPIShim/examples/routing_1) example that lets you route MIDI inports to MIDI outports
-- [routing_2](http://cwilso.github.com/WebMIDIAPIShim/examples/routing_2) same routing example with slightly different code
-- [node](http://cwilso.github.com/WebMIDIAPIShim/examples/node) example that tests your MIDI in- and outports in Node.js
-
+-   [list_devices](http://cwilso.github.com/WebMIDIAPIShim/examples/list_devices) simple listing of all available MIDI devices
+-   [routing_1](http://cwilso.github.com/WebMIDIAPIShim/examples/routing_1) example that lets you route MIDI inports to MIDI outports
+-   [routing_2](http://cwilso.github.com/WebMIDIAPIShim/examples/routing_2) same routing example with slightly different code
+-   [node](http://cwilso.github.com/WebMIDIAPIShim/examples/node) example that tests your MIDI in- and outports in Node.js
 
 ## Building the polyfill
 
@@ -172,15 +171,15 @@ This compiles the files in the `src` folder to commonjs files and puts them in t
 
 If you are new to npm and using npm packages in your project please visit the [npm site](https://docs.npmjs.com/). If you are new to bundling npm packages into an es5 web-bundle that can be used in the browser, consult the documentation one of these bundlers:
 
-* [browserify](https://github.com/substack/node-browserify#usage).
-* [webpack](https://webpack.js.org/)
-* [rollup](https://rollupjs.org/)
+-   [browserify](https://github.com/substack/node-browserify#usage).
+-   [webpack](https://webpack.js.org/)
+-   [rollup](https://rollupjs.org/)
 
 ## Folder layout
 
-* `build`: contains the transpiled and bundled version of the Web MIDI API shim, this is the script that you add as a separate script to your HTML page.
-* `dist`: contains the transpiled commonjs code, this code is used if you import the Web MIDI API shim as a module.
-* `examples`: some usage examples for browser and Node.js, written in es5.
-* `gh-pages`: styles and scripts used by the github.io landing page, does not contain any library code.
-* `node`: contains the entry point for Node.js applications; this scripts combines the Web MIDI API shim with the `jazz-midi` npm package. It also contains a Node.js test script that checks your MIDI in- and outports.
-* `src`: contains the actual code of this library, written in es-next, this code is by bundlers that support es-next (rollupjs).
+-   `build`: contains the transpiled and bundled version of the Web MIDI API shim, this is the script that you add as a separate script to your HTML page.
+-   `dist`: contains the transpiled commonjs code, this code is used if you import the Web MIDI API shim as a module.
+-   `examples`: some usage examples for browser and Node.js, written in es5.
+-   `gh-pages`: styles and scripts used by the github.io landing page, does not contain any library code.
+-   `node`: contains the entry point for Node.js applications; this scripts combines the Web MIDI API shim with the `jazz-midi` npm package. It also contains a Node.js test script that checks your MIDI in- and outports.
+-   `src`: contains the actual code of this library, written in es-next, this code is by bundlers that support es-next (rollupjs).

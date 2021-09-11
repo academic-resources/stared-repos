@@ -24,13 +24,13 @@ const GET_DOGS = gql`
 const GoodDogsBrent = () => (
   <Query query={GET_DOGS}>
     {({ loading, error, data }) => {
-      if (error) return <Error />
-      if (loading || !data) return <Fetching />
+      if (error) return <Error />;
+      if (loading || !data) return <Fetching />;
 
-      return <DogList dogs={data.dogs} />
+      return <DogList dogs={data.dogs} />;
     }}
   </Query>
-)
+);
 ```
 
 ### Upgrading from `graphql` to `<Query />`
@@ -49,19 +49,19 @@ const PROFILE_QUERY = gql`
 `;
 
 const Profile = ({ loading, currentUser }) => {
-  if (loading) return <span>loading....</span>
-  return <h1>Welcome back {currentUser.firstName}</h1>
-}
+  if (loading) return <span>loading....</span>;
+  return <h1>Welcome back {currentUser.firstName}</h1>;
+};
 
 export default graphql(PROFILE_QUERY, {
   options: ({ refetch }) => ({
-    fetchPolicy: refetch ? 'cache-and-network' : 'cache-first',
+    fetchPolicy: refetch ? "cache-and-network" : "cache-first",
   }),
   props: ({ data: { loading, currentUser } }) => ({
     loading,
     currentUser,
   }),
-})(Profile)
+})(Profile);
 ```
 
 Writing this with the Query component would look something like this:
@@ -78,11 +78,11 @@ const PROFILE_QUERY = gql`
 const Profile = ({ refetch }) => (
   <Query
     query={PROFILE_QUERY}
-    fetchPolicy={refetch ? 'cache-and-network': 'cache-first'}
+    fetchPolicy={refetch ? "cache-and-network" : "cache-first"}
   >
     {({ loading, data: { currentUser } }) => {
-      if (loading) return <span>loading....</span>
-      return <h1>Welcome back {currentUser.firstName}</h1>
+      if (loading) return <span>loading....</span>;
+      return <h1>Welcome back {currentUser.firstName}</h1>;
     }}
   </Query>
 );
@@ -110,20 +110,24 @@ const QueryTwo = gql`
 const withOne = graphql(QueryOne, {
   props: ({ data }) => ({
     loadingOne: data.loading,
-    one: data.one
+    one: data.one,
   }),
 });
 
 const withTwo = graphql(QueryTwo, {
   props: ({ data }) => ({
     loadingTwo: data.loading,
-    two: data.two
+    two: data.two,
   }),
 });
 
 const Numbers = ({ loadingOne, loadingTwo, one, two }) => {
-  if (loadingOne || loadingTwo) return <span>loading...</span>
-  return <h3>{one} is less than {two}</h3>
+  if (loadingOne || loadingTwo) return <span>loading...</span>;
+  return (
+    <h3>
+      {one} is less than {two}
+    </h3>
+  );
 };
 
 const NumbersWithData = compose(withOne, withTwo)(Numbers);
@@ -148,9 +152,13 @@ const NumbersWithData = () => (
   <Query query={QueryOne}>
     {({ loading: loadingOne, data: { one } }) => (
       <Query query={QueryTwo}>
-        {({ loading: loadingTwo, data: { two }}) => {
-          if (loadingOne || loadingTwo) return <span>loading...</span>
-          return <h3>{one} is less than {two}</h3>
+        {({ loading: loadingTwo, data: { two } }) => {
+          if (loadingOne || loadingTwo) return <span>loading...</span>;
+          return (
+            <h3>
+              {one} is less than {two}
+            </h3>
+          );
         }}
       </Query>
     )}
@@ -180,7 +188,7 @@ const MyClient = () => (
       </div>
     )}
   </ApolloConsumer>
-)
+);
 ```
 
 For more usage tips on the ApolloConsumer component, checkout the guide [here](/essentials/local-state/)

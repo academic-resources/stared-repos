@@ -1,17 +1,17 @@
-import React from 'react';
-import ApolloClient, { ApolloError, NetworkStatus } from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { ApolloProvider } from '@apollo/react-common';
+import React from "react";
+import ApolloClient, { ApolloError, NetworkStatus } from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { ApolloProvider } from "@apollo/react-common";
 import {
   MockedProvider,
   mockSingleLink,
-  stripSymbols
-} from '@apollo/react-testing';
-import { DocumentNode } from 'graphql';
-import gql from 'graphql-tag';
-import { render, cleanup } from '@testing-library/react';
-import { ApolloLink } from 'apollo-link';
-import { Query } from '@apollo/react-components';
+  stripSymbols,
+} from "@apollo/react-testing";
+import { DocumentNode } from "graphql";
+import gql from "graphql-tag";
+import { render, cleanup } from "@testing-library/react";
+import { ApolloLink } from "apollo-link";
+import { Query } from "@apollo/react-components";
 
 const allPeopleQuery: DocumentNode = gql`
   query people {
@@ -30,32 +30,32 @@ interface Data {
 }
 
 const allPeopleData: Data = {
-  allPeople: { people: [{ name: 'Luke Skywalker' }] }
+  allPeople: { people: [{ name: "Luke Skywalker" }] },
 };
 const allPeopleMocks = [
   {
     request: { query: allPeopleQuery },
-    result: { data: allPeopleData }
-  }
+    result: { data: allPeopleData },
+  },
 ];
 
 const AllPeopleQuery = Query;
 
-describe('Query component', () => {
+describe("Query component", () => {
   beforeEach(() => {
     jest.useRealTimers();
   });
 
   afterEach(cleanup);
 
-  it('calls the children prop', done => {
+  it("calls the children prop", (done) => {
     const link = mockSingleLink({
       request: { query: allPeopleQuery },
-      result: { data: allPeopleData }
+      result: { data: allPeopleData },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     const Component = () => (
@@ -66,12 +66,12 @@ describe('Query component', () => {
 
             if (result.loading) {
               expect(rest).toMatchSnapshot(
-                'result in render prop while loading'
+                "result in render prop while loading"
               );
               expect(clientResult).toBe(client);
             } else {
               expect(stripSymbols(rest)).toMatchSnapshot(
-                'result in render prop'
+                "result in render prop"
               );
               done();
             }
@@ -91,7 +91,7 @@ describe('Query component', () => {
     );
   });
 
-  it('renders using the children prop', done => {
+  it("renders using the children prop", (done) => {
     const Component = () => (
       <Query query={allPeopleQuery}>{(_: any) => <div>test</div>}</Query>
     );
@@ -102,15 +102,15 @@ describe('Query component', () => {
       </MockedProvider>
     );
     try {
-      expect(getByText('test')).toBeTruthy();
+      expect(getByText("test")).toBeTruthy();
       done();
     } catch (error) {
       done.fail(error);
     }
   });
 
-  describe('result provides', () => {
-    it('client', done => {
+  describe("result provides", () => {
+    it("client", (done) => {
       const queryWithVariables: DocumentNode = gql`
         query people($first: Int) {
           allPeople(first: $first) {
@@ -126,15 +126,15 @@ describe('Query component', () => {
           request: {
             query: queryWithVariables,
             variables: {
-              first: 1
-            }
+              first: 1,
+            },
           },
-          result: { data: allPeopleData }
-        }
+          result: { data: allPeopleData },
+        },
       ];
 
       const variables = {
-        first: 1
+        first: 1,
       };
 
       const Component = () => (
@@ -159,12 +159,12 @@ describe('Query component', () => {
       );
     });
 
-    it('error', done => {
+    it("error", (done) => {
       const mockError = [
         {
           request: { query: allPeopleQuery },
-          error: new Error('error occurred')
-        }
+          error: new Error("error occurred"),
+        },
       ];
 
       const Component = () => (
@@ -175,7 +175,7 @@ describe('Query component', () => {
             }
             try {
               expect(result.error).toEqual(
-                new Error('Network error: error occurred')
+                new Error("Network error: error occurred")
               );
               done();
             } catch (error) {
@@ -193,7 +193,7 @@ describe('Query component', () => {
       );
     });
 
-    it('refetch', done => {
+    it("refetch", (done) => {
       const queryRefetch: DocumentNode = gql`
         query people($first: Int) {
           allPeople(first: $first) {
@@ -204,27 +204,27 @@ describe('Query component', () => {
         }
       `;
 
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-      const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
-      const data3 = { allPeople: { people: [{ name: 'Darth Vader' }] } };
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+      const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
+      const data3 = { allPeople: { people: [{ name: "Darth Vader" }] } };
 
       const refetchVariables = {
-        first: 1
+        first: 1,
       };
 
       const mocks = [
         {
           request: { query: queryRefetch, variables: refetchVariables },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query: queryRefetch, variables: refetchVariables },
-          result: { data: data2 }
+          result: { data: data2 },
         },
         {
           request: { query: queryRefetch, variables: { first: 2 } },
-          result: { data: data3 }
-        }
+          result: { data: data3 },
+        },
       ];
 
       let count = 0;
@@ -294,23 +294,23 @@ describe('Query component', () => {
       );
     });
 
-    it('fetchMore', done => {
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-      const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
+    it("fetchMore", (done) => {
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+      const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
 
       const variables = {
-        first: 2
+        first: 2,
       };
 
       const mocks = [
         {
           request: { query: allPeopleQuery, variables: { first: 2 } },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query: allPeopleQuery, variables: { first: 1 } },
-          result: { data: data2 }
-        }
+          result: { data: data2 },
+        },
       ];
 
       let count = 0;
@@ -332,11 +332,11 @@ describe('Query component', () => {
                           allPeople: {
                             people: [
                               ...prev.allPeople.people,
-                              ...fetchMoreResult.allPeople.people
-                            ]
-                          }
+                              ...fetchMoreResult.allPeople.people,
+                            ],
+                          },
                         }
-                      : prev
+                      : prev,
                 })
                 .then((result2: any) => {
                   expect(stripSymbols(result2.data)).toEqual(data2);
@@ -348,9 +348,9 @@ describe('Query component', () => {
                   allPeople: {
                     people: [
                       ...data1.allPeople.people,
-                      ...data2.allPeople.people
-                    ]
-                  }
+                      ...data2.allPeople.people,
+                    ],
+                  },
                 });
 
                 done();
@@ -372,26 +372,26 @@ describe('Query component', () => {
       );
     });
 
-    it('startPolling', done => {
+    it("startPolling", (done) => {
       expect.assertions(3);
 
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-      const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
-      const data3 = { allPeople: { people: [{ name: 'Darth Vader' }] } };
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+      const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
+      const data3 = { allPeople: { people: [{ name: "Darth Vader" }] } };
 
       const mocks = [
         {
           request: { query: allPeopleQuery },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query: allPeopleQuery },
-          result: { data: data2 }
+          result: { data: data2 },
         },
         {
           request: { query: allPeopleQuery },
-          result: { data: data3 }
-        }
+          result: { data: data3 },
+        },
       ];
 
       let count = 0;
@@ -437,26 +437,26 @@ describe('Query component', () => {
       );
     });
 
-    it('stopPolling', done => {
+    it("stopPolling", (done) => {
       expect.assertions(3);
 
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-      const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
-      const data3 = { allPeople: { people: [{ name: 'Darth Vader' }] } };
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+      const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
+      const data3 = { allPeople: { people: [{ name: "Darth Vader" }] } };
 
       const mocks = [
         {
           request: { query: allPeopleQuery },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query: allPeopleQuery },
-          result: { data: data2 }
+          result: { data: data2 },
         },
         {
           request: { query: allPeopleQuery },
-          result: { data: data3 }
-        }
+          result: { data: data3 },
+        },
       ];
 
       const POLL_COUNT = 2;
@@ -492,17 +492,17 @@ describe('Query component', () => {
       );
     });
 
-    it('updateQuery', done => {
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-      const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
+    it("updateQuery", (done) => {
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+      const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
       const variables = {
-        first: 2
+        first: 2,
       };
       const mocks = [
         {
           request: { query: allPeopleQuery, variables },
-          result: { data: data1 }
-        }
+          result: { data: data1 },
+        },
       ];
 
       let isUpdated = false;
@@ -554,11 +554,11 @@ describe('Query component', () => {
     });
   });
 
-  describe('props allow', () => {
-    it('custom fetch-policy', done => {
+  describe("props allow", () => {
+    it("custom fetch-policy", (done) => {
       let count = 0;
       const Component = () => (
-        <Query query={allPeopleQuery} fetchPolicy={'cache-only'}>
+        <Query query={allPeopleQuery} fetchPolicy={"cache-only"}>
           {(result: any) => {
             if (count === 0) {
               try {
@@ -582,7 +582,7 @@ describe('Query component', () => {
       );
     });
 
-    it('default fetch-policy', done => {
+    it("default fetch-policy", (done) => {
       let count = 0;
       const Component = () => (
         <Query query={allPeopleQuery}>
@@ -604,7 +604,7 @@ describe('Query component', () => {
 
       render(
         <MockedProvider
-          defaultOptions={{ watchQuery: { fetchPolicy: 'cache-only' } }}
+          defaultOptions={{ watchQuery: { fetchPolicy: "cache-only" } }}
           mocks={allPeopleMocks}
         >
           <Component />
@@ -612,19 +612,19 @@ describe('Query component', () => {
       );
     });
 
-    it('notifyOnNetworkStatusChange', done => {
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-      const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
+    it("notifyOnNetworkStatusChange", (done) => {
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+      const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
 
       const mocks = [
         {
           request: { query: allPeopleQuery },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query: allPeopleQuery },
-          result: { data: data2 }
-        }
+          result: { data: data2 },
+        },
       ];
 
       let count = 0;
@@ -666,26 +666,26 @@ describe('Query component', () => {
       );
     });
 
-    it('pollInterval', done => {
+    it("pollInterval", (done) => {
       expect.assertions(4);
 
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-      const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
-      const data3 = { allPeople: { people: [{ name: 'Darth Vader' }] } };
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+      const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
+      const data3 = { allPeople: { people: [{ name: "Darth Vader" }] } };
 
       const mocks = [
         {
           request: { query: allPeopleQuery },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query: allPeopleQuery },
-          result: { data: data2 }
+          result: { data: data2 },
         },
         {
           request: { query: allPeopleQuery },
-          result: { data: data3 }
-        }
+          result: { data: data3 },
+        },
       ];
 
       let count = 0;
@@ -721,7 +721,7 @@ describe('Query component', () => {
       );
     });
 
-    it('skip', done => {
+    it("skip", (done) => {
       const Component = () => (
         <Query query={allPeopleQuery} skip>
           {(result: any) => {
@@ -745,7 +745,7 @@ describe('Query component', () => {
       );
     });
 
-    it('onCompleted with data', done => {
+    it("onCompleted with data", (done) => {
       const query = gql`
         query people($first: Int) {
           allPeople(first: $first) {
@@ -756,17 +756,17 @@ describe('Query component', () => {
         }
       `;
 
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-      const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+      const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
       const mocks = [
         {
           request: { query, variables: { first: 1 } },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query, variables: { first: 2 } },
-          result: { data: data2 }
-        }
+          result: { data: data2 },
+        },
       ];
 
       let count = 0;
@@ -774,22 +774,22 @@ describe('Query component', () => {
       class Component extends React.Component {
         state = {
           variables: {
-            first: 1
-          }
+            first: 1,
+          },
         };
 
         componentDidMount() {
           setTimeout(() => {
             this.setState({
               variables: {
-                first: 2
-              }
+                first: 2,
+              },
             });
             setTimeout(() => {
               this.setState({
                 variables: {
-                  first: 1
-                }
+                  first: 1,
+                },
               });
             }, 0);
           }, 0);
@@ -834,14 +834,14 @@ describe('Query component', () => {
       );
     });
 
-    it('onError with data', done => {
-      const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    it("onError with data", (done) => {
+      const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
 
       const mocks = [
         {
           request: { query: allPeopleQuery },
-          result: { data: data }
-        }
+          result: { data: data },
+        },
       ];
 
       const onErrorFunc = (queryError: ApolloError) => {
@@ -871,8 +871,8 @@ describe('Query component', () => {
     });
   });
 
-  describe('props disallow', () => {
-    it('Mutation provided as query', () => {
+  describe("props disallow", () => {
+    it("Mutation provided as query", () => {
       const mutation = gql`
         mutation submitRepository {
           submitRepository(repoFullName: "apollographql/apollo-client") {
@@ -891,14 +891,14 @@ describe('Query component', () => {
           </MockedProvider>
         );
       }).toThrowError(
-        'Running a Query requires a graphql Query, but a Mutation was used ' +
-          'instead.'
+        "Running a Query requires a graphql Query, but a Mutation was used " +
+          "instead."
       );
 
       console.error = errorLogger;
     });
 
-    it('Subscription provided as query', () => {
+    it("Subscription provided as query", () => {
       const subscription = gql`
         subscription onCommentAdded($repoFullName: String!) {
           commentAdded(repoFullName: $repoFullName) {
@@ -918,19 +918,19 @@ describe('Query component', () => {
           </MockedProvider>
         );
       }).toThrowError(
-        'Running a Query requires a graphql Query, but a Subscription was ' +
-          'used instead.'
+        "Running a Query requires a graphql Query, but a Subscription was " +
+          "used instead."
       );
 
       console.error = errorLogger;
     });
 
-    it('onCompleted with error', done => {
+    it("onCompleted with error", (done) => {
       const mockError = [
         {
           request: { query: allPeopleQuery },
-          error: new Error('error occurred')
-        }
+          error: new Error("error occurred"),
+        },
       ];
 
       const onCompleted = jest.fn();
@@ -954,13 +954,13 @@ describe('Query component', () => {
       );
     });
 
-    it('onError with error', done => {
-      const error = new Error('error occurred');
+    it("onError with error", (done) => {
+      const error = new Error("error occurred");
       const mockError = [
         {
           request: { query: allPeopleQuery },
-          error: error
-        }
+          error: error,
+        },
       ];
 
       const onErrorFunc = (queryError: ApolloError) => {
@@ -984,8 +984,8 @@ describe('Query component', () => {
     });
   });
 
-  describe('should update', () => {
-    it('if props change', done => {
+  describe("should update", () => {
+    it("if props change", (done) => {
       const query = gql`
         query people($first: Int) {
           allPeople(first: $first) {
@@ -996,17 +996,17 @@ describe('Query component', () => {
         }
       `;
 
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-      const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+      const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
       const mocks = [
         {
           request: { query, variables: { first: 1 } },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query, variables: { first: 2 } },
-          result: { data: data2 }
-        }
+          result: { data: data2 },
+        },
       ];
 
       let count = 0;
@@ -1014,16 +1014,16 @@ describe('Query component', () => {
       class Component extends React.Component {
         state = {
           variables: {
-            first: 1
-          }
+            first: 1,
+          },
         };
 
         componentDidMount() {
           setTimeout(() => {
             this.setState({
               variables: {
-                first: 2
-              }
+                first: 2,
+              },
             });
           }, 50);
         }
@@ -1066,7 +1066,7 @@ describe('Query component', () => {
       );
     });
 
-    it('if the query changes', done => {
+    it("if the query changes", (done) => {
       expect.assertions(2);
       const query1 = allPeopleQuery;
       const query2 = gql`
@@ -1080,24 +1080,24 @@ describe('Query component', () => {
         }
       `;
 
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-      const data2 = { allPeople: { people: [{ name: 'Han Solo', id: '1' }] } };
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+      const data2 = { allPeople: { people: [{ name: "Han Solo", id: "1" }] } };
       const mocks = [
         {
           request: { query: query1 },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query: query2 },
-          result: { data: data2 }
-        }
+          result: { data: data2 },
+        },
       ];
 
       let count = 0;
 
       class Component extends React.Component {
         state = {
-          query: query1
+          query: query1,
         };
 
         render() {
@@ -1137,52 +1137,56 @@ describe('Query component', () => {
       );
     });
 
-    it('use client from props or context', done => {
+    it("use client from props or context", (done) => {
       jest.useFakeTimers();
 
       function newClient(name: string) {
         const link = mockSingleLink({
           request: { query: allPeopleQuery },
-          result: { data: { allPeople: { people: [{ name }] } } }
+          result: { data: { allPeople: { people: [{ name }] } } },
         });
 
         return new ApolloClient({
           link,
           cache: new Cache({ addTypename: false }),
-          name
+          name,
         });
       }
 
-      const skywalker = newClient('Luke Skywalker');
-      const ackbar = newClient('Admiral Ackbar');
-      const solo = newClient('Han Solo');
+      const skywalker = newClient("Luke Skywalker");
+      const ackbar = newClient("Admiral Ackbar");
+      const solo = newClient("Han Solo");
 
       const propsChanges = [
         {
           propsClient: null,
           contextClient: ackbar,
-          renderedName: (name: string) => expect(name).toEqual('Admiral Ackbar')
+          renderedName: (name: string) =>
+            expect(name).toEqual("Admiral Ackbar"),
         },
         {
           propsClient: null,
           contextClient: skywalker,
-          renderedName: (name: string) => expect(name).toEqual('Luke Skywalker')
+          renderedName: (name: string) =>
+            expect(name).toEqual("Luke Skywalker"),
         },
         {
           propsClient: solo,
           contextClient: skywalker,
-          renderedName: (name: string) => expect(name).toEqual('Han Solo')
+          renderedName: (name: string) => expect(name).toEqual("Han Solo"),
         },
         {
           propsClient: null,
           contextClient: ackbar,
-          renderedName: (name: string) => expect(name).toEqual('Admiral Ackbar')
+          renderedName: (name: string) =>
+            expect(name).toEqual("Admiral Ackbar"),
         },
         {
           propsClient: skywalker,
           contextClient: null,
-          renderedName: (name: string) => expect(name).toEqual('Luke Skywalker')
-        }
+          renderedName: (name: string) =>
+            expect(name).toEqual("Luke Skywalker"),
+        },
       ];
 
       class Component extends React.Component<any, any> {
@@ -1217,7 +1221,7 @@ describe('Query component', () => {
 
       const { rerender } = render(<Component />);
 
-      propsChanges.forEach(props => {
+      propsChanges.forEach((props) => {
         rerender(<Component {...props} />);
         jest.runAllTimers();
       });
@@ -1225,7 +1229,7 @@ describe('Query component', () => {
       done();
     });
 
-    it('with data while loading', done => {
+    it("with data while loading", (done) => {
       const query = gql`
         query people($first: Int) {
           allPeople(first: $first) {
@@ -1238,21 +1242,21 @@ describe('Query component', () => {
 
       const data1 = {
         allPeople: {
-          people: [{ name: 'Luke Skywalker' }]
-        }
+          people: [{ name: "Luke Skywalker" }],
+        },
       };
       const data2 = {
-        allPeople: { people: [{ name: 'Han Solo' }] }
+        allPeople: { people: [{ name: "Han Solo" }] },
       };
       const mocks = [
         {
           request: { query, variables: { first: 1 } },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query, variables: { first: 2 } },
-          result: { data: data2 }
-        }
+          result: { data: data2 },
+        },
       ];
 
       let count = 0;
@@ -1260,16 +1264,16 @@ describe('Query component', () => {
       class Component extends React.Component {
         state = {
           variables: {
-            first: 1
-          }
+            first: 1,
+          },
         };
 
         componentDidMount() {
           setTimeout(() => {
             this.setState({
               variables: {
-                first: 2
-              }
+                first: 2,
+              },
             });
           }, 50);
         }
@@ -1300,7 +1304,7 @@ describe('Query component', () => {
       );
     });
 
-    it('should update if a manual `refetch` is triggered after a state change', done => {
+    it("should update if a manual `refetch` is triggered after a state change", (done) => {
       const query: DocumentNode = gql`
         query {
           allPeople {
@@ -1311,26 +1315,26 @@ describe('Query component', () => {
         }
       `;
 
-      const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+      const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
 
       const link = mockSingleLink(
         {
           request: { query },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query },
-          result: { data: data1 }
+          result: { data: data1 },
         },
         {
           request: { query },
-          result: { data: data1 }
+          result: { data: data1 },
         }
       );
 
       const client = new ApolloClient({
         link,
-        cache: new Cache({ addTypename: false })
+        cache: new Cache({ addTypename: false }),
       });
 
       let count = 0;
@@ -1339,14 +1343,14 @@ describe('Query component', () => {
         constructor(props: any) {
           super(props);
           this.state = {
-            open: false
+            open: false,
           };
           this.toggle = this.toggle.bind(this);
         }
 
         toggle() {
           this.setState((prevState: any) => ({
-            open: !prevState.open
+            open: !prevState.open,
           }));
         }
 
@@ -1390,7 +1394,7 @@ describe('Query component', () => {
                       done();
                       break;
                     default:
-                      done.fail('Unknown count');
+                      done.fail("Unknown count");
                   }
                   count += 1;
                 } catch (error) {
@@ -1407,7 +1411,7 @@ describe('Query component', () => {
     });
   });
 
-  it('should error if the query changes type to a subscription', done => {
+  it("should error if the query changes type to a subscription", (done) => {
     const subscription = gql`
       subscription onCommentAdded($repoFullName: String!) {
         commentAdded(repoFullName: $repoFullName) {
@@ -1426,8 +1430,8 @@ describe('Query component', () => {
 
       componentDidCatch(error: any) {
         const expectedError = new Error(
-          'Running a Query requires a graphql Query, but a Subscription was ' +
-            'used instead.'
+          "Running a Query requires a graphql Query, but a Subscription was " +
+            "used instead."
         );
         expect(error).toEqual(expectedError);
         done();
@@ -1436,7 +1440,7 @@ describe('Query component', () => {
       componentDidMount() {
         setTimeout(() => {
           this.setState({
-            query: subscription
+            query: subscription,
           });
         }, 0);
       }
@@ -1454,7 +1458,7 @@ describe('Query component', () => {
     );
   });
 
-  it('should be able to refetch after there was a network error', done => {
+  it("should be able to refetch after there was a network error", (done) => {
     const query: DocumentNode = gql`
       query somethingelse {
         allPeople(first: 1) {
@@ -1465,16 +1469,16 @@ describe('Query component', () => {
       }
     `;
 
-    const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-    const dataTwo = { allPeople: { people: [{ name: 'Princess Leia' }] } };
+    const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+    const dataTwo = { allPeople: { people: [{ name: "Princess Leia" }] } };
     const link = mockSingleLink(
       { request: { query }, result: { data } },
-      { request: { query }, error: new Error('This is an error!') },
+      { request: { query }, error: new Error("This is an error!") },
       { request: { query }, result: { data: dataTwo } }
     );
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let count = 0;
@@ -1495,7 +1499,7 @@ describe('Query component', () => {
                   break;
                 case 1:
                   if (!result.data!.allPeople) {
-                    done.fail('Should have data by this point');
+                    done.fail("Should have data by this point");
                     break;
                   }
                   // First result is loaded, run a refetch to get the second result
@@ -1505,7 +1509,7 @@ describe('Query component', () => {
                   );
                   setTimeout(() => {
                     result.refetch().then(() => {
-                      done.fail('Expected error value on first refetch.');
+                      done.fail("Expected error value on first refetch.");
                     }, noop);
                   }, 0);
                   break;
@@ -1520,7 +1524,7 @@ describe('Query component', () => {
                   expect(result.error).toBeTruthy();
                   setTimeout(() => {
                     result.refetch().catch(() => {
-                      done.fail('Expected good data on second refetch.');
+                      done.fail("Expected good data on second refetch.");
                     });
                   }, 0);
                   break;
@@ -1535,7 +1539,7 @@ describe('Query component', () => {
                   expect(result.loading).toBeFalsy();
                   expect(result.error).toBeFalsy();
                   if (!result.data) {
-                    done.fail('Should have data by this point');
+                    done.fail("Should have data by this point");
                     break;
                   }
                   expect(stripSymbols(result.data.allPeople)).toEqual(
@@ -1544,7 +1548,7 @@ describe('Query component', () => {
                   done();
                   break;
                 default:
-                  throw new Error('Unexpected fall through');
+                  throw new Error("Unexpected fall through");
               }
             } catch (e) {
               done.fail(e);
@@ -1563,9 +1567,9 @@ describe('Query component', () => {
   });
 
   it(
-    'should not persist previous result errors when a subsequent valid ' +
-      'result is received',
-    done => {
+    "should not persist previous result errors when a subsequent valid " +
+      "result is received",
+    (done) => {
       const query: DocumentNode = gql`
         query somethingelse($variable: Boolean) {
           allPeople(first: 1, yetisArePeople: $variable) {
@@ -1576,7 +1580,7 @@ describe('Query component', () => {
         }
       `;
 
-      const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+      const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
       const variableGood = { variable: true };
       const variableBad = { variable: false };
 
@@ -1584,35 +1588,35 @@ describe('Query component', () => {
         {
           request: {
             query,
-            variables: variableGood
+            variables: variableGood,
           },
           result: {
-            data
-          }
+            data,
+          },
         },
         {
           request: {
             query,
-            variables: variableBad
+            variables: variableBad,
           },
           result: {
-            errors: [new Error('This is an error!')]
-          }
+            errors: [new Error("This is an error!")],
+          },
         },
         {
           request: {
             query,
-            variables: variableGood
+            variables: variableGood,
           },
           result: {
-            data
-          }
+            data,
+          },
         }
       );
 
       const client = new ApolloClient({
         link,
-        cache: new Cache({ addTypename: false })
+        cache: new Cache({ addTypename: false }),
       });
 
       let rerender: any;
@@ -1666,7 +1670,7 @@ describe('Query component', () => {
                 done();
                 break;
               default:
-                done.fail('Unknown count');
+                done.fail("Unknown count");
             }
           } catch (error) {
             done.fail(error);
@@ -1685,7 +1689,7 @@ describe('Query component', () => {
     }
   );
 
-  it('should not repeatedly call onCompleted if setState in it', done => {
+  it("should not repeatedly call onCompleted if setState in it", (done) => {
     const query = gql`
       query people($first: Int) {
         allPeople(first: $first) {
@@ -1696,17 +1700,17 @@ describe('Query component', () => {
       }
     `;
 
-    const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-    const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
+    const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+    const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
     const mocks = [
       {
         request: { query, variables: { first: 1 } },
-        result: { data: data1 }
+        result: { data: data1 },
       },
       {
         request: { query, variables: { first: 2 } },
-        result: { data: data2 }
-      }
+        result: { data: data2 },
+      },
     ];
 
     let onCompletedCallCount = 0,
@@ -1714,8 +1718,8 @@ describe('Query component', () => {
     class Component extends React.Component {
       state = {
         variables: {
-          first: 1
-        }
+          first: 1,
+        },
       };
       onCompleted = () => {
         onCompletedCallCount += 1;
@@ -1752,7 +1756,7 @@ describe('Query component', () => {
     );
   });
 
-  it('should not repeatedly call onCompleted when cache exists if setState in it', done => {
+  it("should not repeatedly call onCompleted when cache exists if setState in it", (done) => {
     const query = gql`
       query people($first: Int) {
         allPeople(first: $first) {
@@ -1763,17 +1767,17 @@ describe('Query component', () => {
       }
     `;
 
-    const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-    const data2 = { allPeople: { people: [{ name: 'Han Solo' }] } };
+    const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+    const data2 = { allPeople: { people: [{ name: "Han Solo" }] } };
     const mocks = [
       {
         request: { query, variables: { first: 1 } },
-        result: { data: data1 }
+        result: { data: data1 },
       },
       {
         request: { query, variables: { first: 2 } },
-        result: { data: data2 }
-      }
+        result: { data: data2 },
+      },
     ];
 
     let onCompletedCallCount = 0,
@@ -1783,22 +1787,22 @@ describe('Query component', () => {
     class Component extends React.Component {
       state = {
         variables: {
-          first: 1
-        }
+          first: 1,
+        },
       };
 
       componentDidMount() {
         setTimeout(() => {
           this.setState({
             variables: {
-              first: 2
-            }
+              first: 2,
+            },
           });
           setTimeout(() => {
             this.setState({
               variables: {
-                first: 1
-              }
+                first: 1,
+              },
             });
           }, 50);
         }, 50);
@@ -1841,12 +1845,12 @@ describe('Query component', () => {
     );
   });
 
-  it('should not repeatedly call onError if setState in it', done => {
+  it("should not repeatedly call onError if setState in it", (done) => {
     const mockError = [
       {
         request: { query: allPeopleQuery },
-        error: new Error('error occurred')
-      }
+        error: new Error("error occurred"),
+      },
     ];
 
     let onErrorCallCount = 0,
@@ -1854,8 +1858,8 @@ describe('Query component', () => {
     class Component extends React.Component {
       state = {
         variables: {
-          first: 1
-        }
+          first: 1,
+        },
       };
       onError = () => {
         onErrorCallCount += 1;
@@ -1891,7 +1895,7 @@ describe('Query component', () => {
     );
   });
 
-  describe('Partial refetching', () => {
+  describe("Partial refetching", () => {
     const origConsoleWarn = console.warn;
 
     beforeAll(() => {
@@ -1903,11 +1907,11 @@ describe('Query component', () => {
     });
 
     it(
-      'should attempt a refetch when the query result was marked as being ' +
-        'partial, the returned data was reset to an empty Object by the ' +
-        'Apollo Client QueryManager (due to a cache miss), and the ' +
-        '`partialRefetch` prop is `true`',
-      done => {
+      "should attempt a refetch when the query result was marked as being " +
+        "partial, the returned data was reset to an empty Object by the " +
+        "Apollo Client QueryManager (due to a cache miss), and the " +
+        "`partialRefetch` prop is `true`",
+      (done) => {
         const query = allPeopleQuery;
         const link = mockSingleLink(
           { request: { query }, result: { data: {} } },
@@ -1916,7 +1920,7 @@ describe('Query component', () => {
 
         const client = new ApolloClient({
           link,
-          cache: new Cache({ addTypename: false })
+          cache: new Cache({ addTypename: false }),
         });
 
         let count = 0;
@@ -1942,18 +1946,18 @@ describe('Query component', () => {
     );
 
     it(
-      'should not refetch when an empty partial is returned if the ' +
-        '`partialRefetch` prop is false/not set',
-      done => {
+      "should not refetch when an empty partial is returned if the " +
+        "`partialRefetch` prop is false/not set",
+      (done) => {
         const query = allPeopleQuery;
         const link = mockSingleLink({
           request: { query },
-          result: { data: {} }
+          result: { data: {} },
         });
 
         const client = new ApolloClient({
           link,
-          cache: new Cache({ addTypename: false })
+          cache: new Cache({ addTypename: false }),
         });
 
         const Component = () => (
@@ -1979,7 +1983,7 @@ describe('Query component', () => {
   });
 
   // https://github.com/apollographql/react-apollo/issues/2424
-  it('should be able to access data keys without a type guard', () => {
+  it("should be able to access data keys without a type guard", () => {
     const Component = () => (
       <AllPeopleQuery query={allPeopleQuery}>
         {(result: any) => {
@@ -1999,9 +2003,9 @@ describe('Query component', () => {
   });
 
   it(
-    'should keep data for a `Query` component using `no-cache` when the ' +
-      'tree is re-rendered',
-    done => {
+    "should keep data for a `Query` component using `no-cache` when the " +
+      "tree is re-rendered",
+    (done) => {
       const query1 = allPeopleQuery;
 
       const query2: DocumentNode = gql`
@@ -2022,8 +2026,8 @@ describe('Query component', () => {
 
       const allThingsData: ThingData = {
         allThings: {
-          thing: [{ description: 'Thing 1' }, { description: 'Thing 2' }]
-        }
+          thing: [{ description: "Thing 1" }, { description: "Thing 2" }],
+        },
       };
 
       const link = mockSingleLink(
@@ -2033,7 +2037,7 @@ describe('Query component', () => {
 
       const client = new ApolloClient({
         link,
-        cache: new Cache({ addTypename: false })
+        cache: new Cache({ addTypename: false }),
       });
 
       let expectCount = 0;
@@ -2079,12 +2083,12 @@ describe('Query component', () => {
     }
   );
 
-  describe('Return partial data', () => {
-    it('should not return partial cache data when `returnPartialData` is false', () => {
+  describe("Return partial data", () => {
+    it("should not return partial cache data when `returnPartialData` is false", () => {
       const cache = new Cache();
       const client = new ApolloClient({
         cache,
-        link: ApolloLink.empty()
+        link: ApolloLink.empty(),
       });
 
       const fullQuery = gql`
@@ -2105,20 +2109,20 @@ describe('Query component', () => {
         data: {
           cars: [
             {
-              __typename: 'Car',
-              make: 'Ford',
-              model: 'Mustang',
-              vin: 'PONY123',
+              __typename: "Car",
+              make: "Ford",
+              model: "Mustang",
+              vin: "PONY123",
               repairs: [
                 {
-                  __typename: 'Repair',
-                  date: '2019-05-08',
-                  description: 'Could not get after it.'
-                }
-              ]
-            }
-          ]
-        }
+                  __typename: "Repair",
+                  date: "2019-05-08",
+                  description: "Could not get after it.",
+                },
+              ],
+            },
+          ],
+        },
       });
 
       const partialQuery = gql`
@@ -2146,11 +2150,11 @@ describe('Query component', () => {
       render(<App />);
     });
 
-    it('should return partial cache data when `returnPartialData` is true', () => {
+    it("should return partial cache data when `returnPartialData` is true", () => {
       const cache = new Cache();
       const client = new ApolloClient({
         cache,
-        link: ApolloLink.empty()
+        link: ApolloLink.empty(),
       });
 
       const fullQuery = gql`
@@ -2171,20 +2175,20 @@ describe('Query component', () => {
         data: {
           cars: [
             {
-              __typename: 'Car',
-              make: 'Ford',
-              model: 'Mustang',
-              vin: 'PONY123',
+              __typename: "Car",
+              make: "Ford",
+              model: "Mustang",
+              vin: "PONY123",
               repairs: [
                 {
-                  __typename: 'Repair',
-                  date: '2019-05-08',
-                  description: 'Could not get after it.'
-                }
-              ]
-            }
-          ]
-        }
+                  __typename: "Repair",
+                  date: "2019-05-08",
+                  description: "Could not get after it.",
+                },
+              ],
+            },
+          ],
+        },
       });
 
       const partialQuery = gql`
@@ -2205,15 +2209,15 @@ describe('Query component', () => {
               expect(data).toEqual({
                 cars: [
                   {
-                    __typename: 'Car',
+                    __typename: "Car",
                     repairs: [
                       {
-                        __typename: 'Repair',
-                        date: '2019-05-08'
-                      }
-                    ]
-                  }
-                ]
+                        __typename: "Repair",
+                        date: "2019-05-08",
+                      },
+                    ],
+                  },
+                ],
               });
               return null;
             }}

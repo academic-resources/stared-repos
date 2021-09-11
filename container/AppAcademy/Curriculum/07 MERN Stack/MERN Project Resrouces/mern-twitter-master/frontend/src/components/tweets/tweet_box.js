@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 class TweetBox extends React.Component {
   render() {
     return (
-        <div>
-            <h3>{this.props.text}</h3>
-        </div>
+      <div>
+        <h3>{this.props.text}</h3>
+      </div>
     );
   }
 }

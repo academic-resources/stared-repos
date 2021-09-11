@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
-import filters from './filters_reducer';
+import filters from "./filters_reducer";
 
 export default combineReducers({
-  filters
+  filters,
 });

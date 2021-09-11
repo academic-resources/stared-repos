@@ -119,46 +119,46 @@
   }
 
   .col_1 {
-    background: image_url('board_col_1.jpg');
+    background: image_url("board_col_1.jpg");
   }
   .col_2 {
-    background: image_url('board_col_2.jpg');
+    background: image_url("board_col_2.jpg");
   }
   .col_3 {
-    background: image_url('board_col_3.jpg');
+    background: image_url("board_col_3.jpg");
   }
   .col_4 {
-    background: image_url('board_col_4.jpg');
+    background: image_url("board_col_4.jpg");
   }
   .col_5 {
-    background: image_url('board_col_5.jpg');
+    background: image_url("board_col_5.jpg");
   }
   .col_6 {
-    background: image_url('board_col_6.jpg');
+    background: image_url("board_col_6.jpg");
   }
 
   .img_1 {
-    background: image_url('board_img_1.jpg');
+    background: image_url("board_img_1.jpg");
     background-size: cover;
   }
   .img_2 {
-    background: image_url('board_img_2.jpg');
+    background: image_url("board_img_2.jpg");
     background-size: cover;
   }
   .img_3 {
-    background: image_url('board_img_3.jpg');
+    background: image_url("board_img_3.jpg");
     background-size: cover;
   }
   .img_4 {
-    background: image_url('board_img_4.jpg');
+    background: image_url("board_img_4.jpg");
     background-size: cover;
   }
   .img_5 {
-    background: image_url('board_img_5.jpg');
+    background: image_url("board_img_5.jpg");
     background-size: cover;
   }
   .img_6 {
-    background: image_url('board_img_6.jpg');
+    background: image_url("board_img_6.jpg");
     background-size: cover;
   }
 }
@@ -209,7 +209,7 @@
       }
 
       &:hover:before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -454,7 +454,7 @@
 
           .create-link {
             color: #6b778c;
-            font-family: 'Roboto';
+            font-family: "Roboto";
             font-size: 14px;
             text-decoration: underline;
             cursor: pointer;

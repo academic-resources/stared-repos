@@ -1,7 +1,7 @@
 // This file implements some of the basic benchmarks around
 // Apollo Client.
 
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 import {
   group,
@@ -9,19 +9,19 @@ import {
   afterEach,
   DescriptionObject,
   dataIdFromObject,
-} from './util';
+} from "./util";
 
-import { ApolloClient, ApolloQueryResult } from '../src/index';
+import { ApolloClient, ApolloQueryResult } from "../src/index";
 
-import { times, cloneDeep } from 'lodash';
+import { times, cloneDeep } from "lodash";
 
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { InMemoryCache } from "apollo-cache-inmemory";
 
-import { Operation, ApolloLink, FetchResult, Observable } from 'apollo-link';
+import { Operation, ApolloLink, FetchResult, Observable } from "apollo-link";
 
-import { print } from 'graphql/language/printer';
+import { print } from "graphql/language/printer";
 
-import { collectAndReportBenchmarks } from './github-reporter';
+import { collectAndReportBenchmarks } from "./github-reporter";
 
 interface MockedResponse {
   request: Operation;
@@ -48,7 +48,7 @@ class MockLink extends ApolloLink {
 
   constructor(mockedResponses: MockedResponse[]) {
     super();
-    mockedResponses.forEach(mockedResponse => {
+    mockedResponses.forEach((mockedResponse) => {
       this.addMockedResponse(mockedResponse);
     });
   }
@@ -69,27 +69,30 @@ class MockLink extends ApolloLink {
     if (!responses || responses.length === 0) {
       throw new Error(
         `No more mocked responses for the query: ${print(
-          operation.query,
-        )}, variables: ${JSON.stringify(operation.variables)}`,
+          operation.query
+        )}, variables: ${JSON.stringify(operation.variables)}`
       );
     }
 
     const { result, error, delay } = responses.shift()!;
     if (!result && !error) {
       throw new Error(
-        `Mocked response should contain either result or error: ${key}`,
+        `Mocked response should contain either result or error: ${key}`
       );
     }
 
-    return new Observable<FetchResult>(observer => {
-      let timer = setTimeout(() => {
-        if (error) {
-          observer.error(error);
-        } else {
-          if (result) observer.next(result);
-          observer.complete();
-        }
-      }, delay ? delay : 0);
+    return new Observable<FetchResult>((observer) => {
+      let timer = setTimeout(
+        () => {
+          if (error) {
+            observer.error(error);
+          } else {
+            if (result) observer.next(result);
+            observer.complete();
+          }
+        },
+        delay ? delay : 0
+      );
 
       return () => {
         clearTimeout(timer);
@@ -110,8 +113,8 @@ const simpleQuery = gql`
 const simpleResult = {
   data: {
     author: {
-      firstName: 'John',
-      lastName: 'Smith',
+      firstName: "John",
+      lastName: "Smith",
     },
   },
 };
@@ -133,17 +136,17 @@ const createReservations = (count: number) => {
     name: string;
     id: string;
   }[] = [];
-  times(count, reservationIndex => {
+  times(count, (reservationIndex) => {
     reservations.push({
-      name: 'Fake Reservation',
+      name: "Fake Reservation",
       id: reservationIndex.toString(),
     });
   });
   return reservations;
 };
 
-group(end => {
-  benchmark('baseline', done => {
+group((end) => {
+  benchmark("baseline", (done) => {
     let arr = Array.from({ length: 100 }, () => Math.random());
     arr.sort();
     done();
@@ -151,7 +154,7 @@ group(end => {
   end();
 });
 
-group(end => {
+group((end) => {
   const link = mockSingleLink({
     request: { query: simpleQuery } as Operation,
     result: simpleResult,
@@ -159,17 +162,17 @@ group(end => {
 
   const cache = new InMemoryCache();
 
-  benchmark('constructing an instance', done => {
+  benchmark("constructing an instance", (done) => {
     new ApolloClient({ link, cache });
     done();
   });
   end();
 });
 
-group(end => {
-  benchmark('fetching a query result from mocked server', done => {
+group((end) => {
+  benchmark("fetching a query result from mocked server", (done) => {
     const client = getClientInstance();
-    client.query({ query: simpleQuery }).then(_ => {
+    client.query({ query: simpleQuery }).then((_) => {
       done();
     });
   });
@@ -177,12 +180,12 @@ group(end => {
   end();
 });
 
-group(end => {
-  benchmark('write data and receive update from the cache', done => {
+group((end) => {
+  benchmark("write data and receive update from the cache", (done) => {
     const client = getClientInstance();
     const observable = client.watchQuery({
       query: simpleQuery,
-      fetchPolicy: 'cache-only',
+      fetchPolicy: "cache-only",
     });
     observable.subscribe({
       next(res: ApolloQueryResult<Object>) {
@@ -191,7 +194,7 @@ group(end => {
         }
       },
       error(_: Error) {
-        console.warn('Error occurred in observable.');
+        console.warn("Error occurred in observable.");
       },
     });
     client.query({ query: simpleQuery });
@@ -200,21 +203,21 @@ group(end => {
   end();
 });
 
-group(end => {
+group((end) => {
   // This benchmark is supposed to check whether the time
   // taken to deliver updates is linear in the number of subscribers or not.
   // (Should be linear). When plotting the results from this benchmark,
   // the `meanTimes` structure can be used.
   const meanTimes: { [subscriberCount: string]: number } = {};
 
-  times(4, countR => {
+  times(4, (countR) => {
     const count = 5 * Math.pow(4, countR);
     benchmark(
       {
         name: `write data and deliver update to ${count} subscribers`,
         count,
       },
-      done => {
+      (done) => {
         const promises: Promise<void>[] = [];
         const client = getClientInstance();
 
@@ -224,7 +227,7 @@ group(end => {
               client
                 .watchQuery({
                   query: simpleQuery,
-                  fetchPolicy: 'cache-only',
+                  fetchPolicy: "cache-only",
                 })
                 .subscribe({
                   next(res: ApolloQueryResult<Object>) {
@@ -233,7 +236,7 @@ group(end => {
                     }
                   },
                 });
-            }),
+            })
           );
         });
 
@@ -241,11 +244,11 @@ group(end => {
         Promise.all(promises).then(() => {
           done();
         });
-      },
+      }
     );
 
     afterEach((description: DescriptionObject, event: any) => {
-      const iterCount = description['count'] as number;
+      const iterCount = description["count"] as number;
       meanTimes[iterCount.toString()] = event.target.stats.mean * 1000;
     });
   });
@@ -256,7 +259,7 @@ group(end => {
 times(4, (countR: number) => {
   const count = 5 * Math.pow(4, countR);
   const query = gql`
-    query($id: String) {
+    query ($id: String) {
       author(id: $id) {
         name
         id
@@ -267,14 +270,14 @@ times(4, (countR: number) => {
   const originalResult = {
     data: {
       author: {
-        name: 'John Smith',
+        name: "John Smith",
         id: 1,
-        __typename: 'Author',
+        __typename: "Author",
       },
     },
   };
 
-  group(end => {
+  group((end) => {
     const cache = new InMemoryCache({
       dataIdFromObject: (obj: any) => {
         if (obj.id && obj.__typename) {
@@ -285,7 +288,7 @@ times(4, (countR: number) => {
     });
 
     // insert a bunch of stuff into the cache
-    times(count, index => {
+    times(count, (index) => {
       const result = cloneDeep(originalResult);
       result.data.author.id = index;
 
@@ -301,14 +304,14 @@ times(4, (countR: number) => {
         name: `read single item from cache with ${count} items in cache`,
         count,
       },
-      done => {
+      (done) => {
         const randomIndex = Math.floor(Math.random() * count);
         cache.readQuery({
           query,
           variables: { id: randomIndex },
         });
         done();
-      },
+      }
     );
 
     end();
@@ -317,15 +320,15 @@ times(4, (countR: number) => {
 
 // Measure the amount of time it takes to read a bunch of
 // objects from the cache.
-times(4, index => {
-  group(end => {
+times(4, (index) => {
+  group((end) => {
     const cache = new InMemoryCache({
       dataIdFromObject,
       addTypename: false,
     });
 
     const query = gql`
-      query($id: String) {
+      query ($id: String) {
         house(id: $id) {
           reservations {
             name
@@ -334,7 +337,7 @@ times(4, index => {
         }
       }
     `;
-    const houseId = '12';
+    const houseId = "12";
     const reservationCount = 5 * Math.pow(4, index);
     const reservations = createReservations(reservationCount);
 
@@ -352,13 +355,13 @@ times(4, index => {
 
     benchmark(
       `read result with ${reservationCount} items associated with the result`,
-      done => {
+      (done) => {
         cache.readQuery({
           query,
           variables,
         });
         done();
-      },
+      }
     );
 
     end();
@@ -369,13 +372,13 @@ times(4, index => {
 //
 // This test allows us to differentiate between the fixed cost of .query() and the fixed cost
 // of actually reading from the store.
-times(4, index => {
-  group(end => {
+times(4, (index) => {
+  group((end) => {
     const reservationCount = 5 * Math.pow(4, index);
 
     // Prime the cache.
     const query = gql`
-      query($id: String) {
+      query ($id: String) {
         house(id: $id) {
           reservations {
             name
@@ -384,7 +387,7 @@ times(4, index => {
         }
       }
     `;
-    const variables = { id: '7' };
+    const variables = { id: "7" };
     const reservations = createReservations(reservationCount);
     const result = {
       house: { reservations },
@@ -396,7 +399,7 @@ times(4, index => {
     });
 
     cache.write({
-      dataId: 'ROOT_QUERY',
+      dataId: "ROOT_QUERY",
       query,
       variables,
       result,
@@ -407,14 +410,14 @@ times(4, index => {
     let results: any = null;
     benchmark(
       `diff query against store with ${reservationCount} items`,
-      done => {
+      (done) => {
         results = cache.diff({
           query,
           variables,
           optimistic: false,
         });
         done();
-      },
+      }
     );
 
     end();

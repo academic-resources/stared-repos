@@ -19,9 +19,8 @@ function countingSort(arr, max) {
   return result;
 }
 
-let arr = [1,523,38811,5,2,3,56,1,1,]
-console.log(countingSort(arr, 38811))
-
+let arr = [1, 523, 38811, 5, 2, 3, 56, 1, 1];
+console.log(countingSort(arr, 38811));
 
 // Time and Space Complexity Analysis
 // Time Complexity

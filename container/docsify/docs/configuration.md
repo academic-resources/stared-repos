@@ -5,10 +5,10 @@ You can configure the `window.$docsify`.
 ```html
 <script>
   window.$docsify = {
-    repo: 'docsifyjs/docsify',
+    repo: "docsifyjs/docsify",
     maxLevel: 3,
-    coverpage: true
-  }
+    coverpage: true,
+  };
 </script>
 ```
 
@@ -21,7 +21,7 @@ The DOM element to be mounted on initialization. It can be a CSS selector string
 
 ```js
 window.$docsify = {
-  el: '#app'
+  el: "#app",
 };
 ```
 
@@ -34,9 +34,9 @@ Configure the repository url or a string of `username/repo` can add the [GitHub 
 
 ```js
 window.$docsify = {
-  repo: 'docsifyjs/docsify',
+  repo: "docsifyjs/docsify",
   // or
-  repo: 'https://github.com/docsifyjs/docsify/'
+  repo: "https://github.com/docsifyjs/docsify/",
 };
 ```
 
@@ -49,7 +49,7 @@ Maximum Table of content level.
 
 ```js
 window.$docsify = {
-  maxLevel: 4
+  maxLevel: 4,
 };
 ```
 
@@ -66,7 +66,7 @@ window.$docsify = {
   loadNavbar: true,
 
   // load from nav.md
-  loadNavbar: 'nav.md'
+  loadNavbar: "nav.md",
 };
 ```
 
@@ -83,7 +83,7 @@ window.$docsify = {
   loadSidebar: true,
 
   // load from summary.md
-  loadSidebar: 'summary.md'
+  loadSidebar: "summary.md",
 };
 ```
 
@@ -96,7 +96,7 @@ Add table of contents (TOC) in custom sidebar.
 
 ```js
 window.$docsify = {
-  subMaxLevel: 2
+  subMaxLevel: 2,
 };
 ```
 
@@ -109,7 +109,7 @@ Scrolls to the top of the screen when the route is changed.
 
 ```js
 window.$docsify = {
-  auto2top: true
+  auto2top: true,
 };
 ```
 
@@ -123,11 +123,11 @@ window.$docsify = {
 ```js
 window.$docsify = {
   // Change to /home.md
-  homepage: 'home.md',
+  homepage: "home.md",
 
   // Or use the readme in your repo
   homepage:
-    'https://raw.githubusercontent.com/docsifyjs/docsify/master/README.md'
+    "https://raw.githubusercontent.com/docsifyjs/docsify/master/README.md",
 };
 ```
 
@@ -139,14 +139,14 @@ Base path of the website. You can set it to another directory or another domain 
 
 ```js
 window.$docsify = {
-  basePath: '/path/',
+  basePath: "/path/",
 
   // Load the files from another site
-  basePath: 'https://docsify.js.org/',
+  basePath: "https://docsify.js.org/",
 
   // Even can load files from other repo
   basePath:
-    'https://raw.githubusercontent.com/ryanmcdermott/clean-code-javascript/master/'
+    "https://raw.githubusercontent.com/ryanmcdermott/clean-code-javascript/master/",
 };
 ```
 
@@ -162,16 +162,16 @@ window.$docsify = {
   coverpage: true,
 
   // Custom file name
-  coverpage: 'cover.md',
+  coverpage: "cover.md",
 
   // mutiple covers
-  coverpage: ['/', '/zh-cn/'],
+  coverpage: ["/", "/zh-cn/"],
 
   // mutiple covers and custom file name
   coverpage: {
-    '/': 'cover.md',
-    '/zh-cn/': 'cover.md'
-  }
+    "/": "cover.md",
+    "/zh-cn/": "cover.md",
+  },
 };
 ```
 
@@ -183,7 +183,7 @@ Website logo as it appears in the sidebar, you can resize by CSS.
 
 ```js
 window.$docsify = {
-  logo: '/_media/icon.svg'
+  logo: "/_media/icon.svg",
 };
 ```
 
@@ -195,7 +195,7 @@ Website name as it appears in the sidebar.
 
 ```js
 window.$docsify = {
-  name: 'docsify'
+  name: "docsify",
 };
 ```
 
@@ -208,13 +208,13 @@ The name of the link.
 
 ```js
 window.$docsify = {
-  nameLink: '/',
+  nameLink: "/",
 
   // For each route
   nameLink: {
-    '/zh-cn/': '/zh-cn/',
-    '/': '/'
-  }
+    "/zh-cn/": "/zh-cn/",
+    "/": "/",
+  },
 };
 ```
 
@@ -230,17 +230,17 @@ window.$docsify = {
   markdown: {
     smartypants: true,
     renderer: {
-      link: function() {
+      link: function () {
         // ...
-      }
-    }
+      },
+    },
   },
 
   // function
-  markdown: function(marked, renderer) {
+  markdown: function (marked, renderer) {
     // ...
     return marked;
-  }
+  },
 };
 ```
 
@@ -252,7 +252,7 @@ Customize the theme color. Use [CSS3 variables](https://developer.mozilla.org/en
 
 ```js
 window.$docsify = {
-  themeColor: '#3F51B5'
+  themeColor: "#3F51B5",
 };
 ```
 
@@ -265,12 +265,12 @@ Set the route alias. You can freely manage routing rules. Supports RegExp.
 ```js
 window.$docsify = {
   alias: {
-    '/foo/(+*)': '/bar/$1', // supports regexp
-    '/zh-cn/changelog': '/changelog',
-    '/changelog':
-      'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG',
-    '/.*/_sidebar.md': '/_sidebar.md' // See #301
-  }
+    "/foo/(+*)": "/bar/$1", // supports regexp
+    "/zh-cn/changelog": "/changelog",
+    "/changelog":
+      "https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG",
+    "/.*/_sidebar.md": "/_sidebar.md", // See #301
+  },
 };
 ```
 
@@ -283,7 +283,7 @@ If `loadSidebar` and `autoHeader` are both enabled, for each link in `_sidebar.m
 ```js
 window.$docsify = {
   loadSidebar: true,
-  autoHeader: true
+  autoHeader: true,
 };
 ```
 
@@ -295,7 +295,7 @@ Execute the script on the page. Only parse the first script tag([demo](themes)).
 
 ```js
 window.$docsify = {
-  executeScript: true
+  executeScript: true,
 };
 ```
 
@@ -317,7 +317,7 @@ Disabled emoji parse.
 
 ```js
 window.$docsify = {
-  noEmoji: true
+  noEmoji: true,
 };
 ```
 
@@ -329,7 +329,7 @@ Navbar will be merged with the sidebar on smaller screens.
 
 ```js
 window.$docsify = {
-  mergeNavbar: true
+  mergeNavbar: true,
 };
 ```
 
@@ -342,13 +342,13 @@ See https://github.com/lukeed/tinydate#patterns
 
 ```js
 window.$docsify = {
-  formatUpdated: '{MM}/{DD} {HH}:{mm}',
+  formatUpdated: "{MM}/{DD} {HH}:{mm}",
 
-  formatUpdated: function(time) {
+  formatUpdated: function (time) {
     // ...
 
     return time;
-  }
+  },
 };
 ```
 
@@ -361,7 +361,7 @@ Target to open external links. Default `'_blank'` (new window/tab)
 
 ```js
 window.$docsify = {
-  externalLinkTarget: '_self' // default: '_blank'
+  externalLinkTarget: "_self", // default: '_blank'
 };
 ```
 
@@ -372,7 +372,7 @@ window.$docsify = {
 
 ```js
 window.$docsify = {
-  routerMode: 'history' // default: 'hash'
+  routerMode: "history", // default: 'hash'
 };
 ```
 
@@ -384,7 +384,7 @@ Sometimes we do not want docsify to handle our links. See [#203](https://github.
 
 ```js
 window.$docsify = {
-  noCompileLinks: ['/foo', '/bar/.*']
+  noCompileLinks: ["/foo", "/bar/.*"],
 };
 ```
 
@@ -396,7 +396,7 @@ Only coverpage is loaded when visiting the home page.
 
 ```js
 window.$docsify = {
-  onlyCover: false
+  onlyCover: false,
 };
 ```
 
@@ -409,8 +409,8 @@ Set the request resource headers.
 ```js
 window.$docsify = {
   requestHeaders: {
-    'x-token': 'xxx'
-  }
+    "x-token": "xxx",
+  },
 };
 ```
 
@@ -422,7 +422,7 @@ Request file extension.
 
 ```js
 window.$docsify = {
-  ext: '.md'
+  ext: ".md",
 };
 ```
 
@@ -440,7 +440,7 @@ Example:
 
 ```js
 window.$docsify = {
-  fallbackLanguages: ['fr', 'de']
+  fallbackLanguages: ["fr", "de"],
 };
 ```
 
@@ -452,7 +452,7 @@ Load the `_404.md` file:
 
 ```js
 window.$docsify = {
-  notFoundPage: true
+  notFoundPage: true,
 };
 ```
 
@@ -460,7 +460,7 @@ Load the customised path of the 404 page:
 
 ```js
 window.$docsify = {
-  notFoundPage: 'my404.md'
+  notFoundPage: "my404.md",
 };
 ```
 
@@ -469,9 +469,9 @@ Load the right 404 page according to the localisation:
 ```js
 window.$docsify = {
   notFoundPage: {
-    '/': '_404.md',
-    '/de': 'de/_404.md'
-  }
+    "/": "_404.md",
+    "/de": "de/_404.md",
+  },
 };
 ```
 

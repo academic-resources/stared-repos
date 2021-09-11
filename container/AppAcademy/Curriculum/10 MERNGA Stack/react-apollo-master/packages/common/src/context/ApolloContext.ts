@@ -1,5 +1,5 @@
-import React from 'react';
-import ApolloClient from 'apollo-client';
+import React from "react";
+import ApolloClient from "apollo-client";
 
 export interface ApolloContextValue {
   client?: ApolloClient<object>;

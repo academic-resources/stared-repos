@@ -7,9 +7,9 @@
 // myBind with arguments
 Function.prototype.myBind = function (ctx, ...bindArgs) {
   return (...callArgs) => {
-    return this.apply(ctx, callArgs.concat(bindArgs))
-  }
-}
+    return this.apply(ctx, callArgs.concat(bindArgs));
+  };
+};
 
 // myBind with args ES5
 // Function.prototype.myBind = function(context) {
@@ -27,16 +27,16 @@ class Cat {
   }
 
   meow() {
-    console.log(`${ this.name } says meow!`);
+    console.log(`${this.name} says meow!`);
   }
 
   playWith(person1, person2) {
-    console.log(`${ this.name } plays with ${ person1 } and ${ person2 }`)
+    console.log(`${this.name} plays with ${person1} and ${person2}`);
   }
 }
 
 const curie = new Cat("Curie");
-// setTimeout(curie.meow.myBind(curie), 1000); 
+// setTimeout(curie.meow.myBind(curie), 1000);
 const unboundMeow = Cat.prototype.meow;
 const boundMeow = unboundMeow.myBind(curie);
 setTimeout(boundMeow, 1000);

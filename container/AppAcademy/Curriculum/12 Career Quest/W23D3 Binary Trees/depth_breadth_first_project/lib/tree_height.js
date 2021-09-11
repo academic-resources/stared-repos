@@ -1,8 +1,5 @@
-function treeHeight(root) {
-
-}
-
+function treeHeight(root) {}
 
 module.exports = {
-    treeHeight
+  treeHeight,
 };

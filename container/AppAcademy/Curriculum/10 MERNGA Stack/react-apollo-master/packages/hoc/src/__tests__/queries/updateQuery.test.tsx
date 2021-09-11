@@ -1,18 +1,18 @@
-import React from 'react';
-import gql from 'graphql-tag';
-import ApolloClient from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { render, cleanup } from '@testing-library/react';
-import { mockSingleLink, stripSymbols } from '@apollo/react-testing';
-import { ApolloProvider } from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+import React from "react";
+import gql from "graphql-tag";
+import ApolloClient from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { render, cleanup } from "@testing-library/react";
+import { mockSingleLink, stripSymbols } from "@apollo/react-testing";
+import { ApolloProvider } from "@apollo/react-common";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
-describe('[queries] updateQuery', () => {
+describe("[queries] updateQuery", () => {
   afterEach(cleanup);
 
   // updateQuery
-  it('exposes updateQuery as part of the props api', done => {
+  it("exposes updateQuery as part of the props api", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -24,11 +24,11 @@ describe('[queries] updateQuery', () => {
     `;
     const link = mockSingleLink({
       request: { query },
-      result: { data: { allPeople: { people: [{ name: 'Luke Skywalker' }] } } }
+      result: { data: { allPeople: { people: [{ name: "Luke Skywalker" }] } } },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     const Container = graphql(query)(
@@ -56,7 +56,7 @@ describe('[queries] updateQuery', () => {
     );
   });
 
-  it('exposes updateQuery as part of the props api during componentWillMount', done => {
+  it("exposes updateQuery as part of the props api during componentWillMount", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -68,11 +68,11 @@ describe('[queries] updateQuery', () => {
     `;
     const link = mockSingleLink({
       request: { query },
-      result: { data: { allPeople: { people: [{ name: 'Luke Skywalker' }] } } }
+      result: { data: { allPeople: { people: [{ name: "Luke Skywalker" }] } } },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     const Container = graphql(query)(
@@ -93,7 +93,7 @@ describe('[queries] updateQuery', () => {
     );
   });
 
-  it('updateQuery throws if called before data has returned', done => {
+  it("updateQuery throws if called before data has returned", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -105,11 +105,11 @@ describe('[queries] updateQuery', () => {
     `;
     const link = mockSingleLink({
       request: { query },
-      result: { data: { allPeople: { people: [{ name: 'Luke Skywalker' }] } } }
+      result: { data: { allPeople: { people: [{ name: "Luke Skywalker" }] } } },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     const Container = graphql(query)(
@@ -118,7 +118,7 @@ describe('[queries] updateQuery', () => {
           expect(this.props.data!.updateQuery).toBeTruthy();
           expect(this.props.data!.updateQuery instanceof Function).toBeTruthy();
           try {
-            this.props.data!.updateQuery(p => p);
+            this.props.data!.updateQuery((p) => p);
             done();
           } catch (e) {
             expect(e.toString()).toMatch(
@@ -139,7 +139,7 @@ describe('[queries] updateQuery', () => {
     );
   });
 
-  it('allows updating query results after query has finished (early binding)', done => {
+  it("allows updating query results after query has finished (early binding)", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -149,16 +149,16 @@ describe('[queries] updateQuery', () => {
         }
       }
     `;
-    const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     type Data = typeof data1;
-    const data2 = { allPeople: { people: [{ name: 'Leia Skywalker' }] } };
+    const data2 = { allPeople: { people: [{ name: "Leia Skywalker" }] } };
     const link = mockSingleLink(
       { request: { query }, result: { data: data1 } },
       { request: { query }, result: { data: data2 } }
     );
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let isUpdated = false;
@@ -194,7 +194,7 @@ describe('[queries] updateQuery', () => {
     );
   });
 
-  it('allows updating query results after query has finished', done => {
+  it("allows updating query results after query has finished", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -204,17 +204,17 @@ describe('[queries] updateQuery', () => {
         }
       }
     `;
-    const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     type Data = typeof data1;
 
-    const data2 = { allPeople: { people: [{ name: 'Leia Skywalker' }] } };
+    const data2 = { allPeople: { people: [{ name: "Leia Skywalker" }] } };
     const link = mockSingleLink(
       { request: { query }, result: { data: data1 } },
       { request: { query }, result: { data: data2 } }
     );
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let isUpdated = false;

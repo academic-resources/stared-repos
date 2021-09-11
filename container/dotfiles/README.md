@@ -1,4 +1,5 @@
 # Dotfiles
+
 Colourful & robust configuration files and utilities for Mac, Linux and BSD. Installation is done with a simple command:
 
 ```sh
@@ -10,7 +11,7 @@ The short URL expands to GitHub-hosted `install.sh`, which can be easily audited
 ## Usage
 
 - **MacOS:** Ensure you have XCode or dev tools. It can be downloaded from the app store.
-    - Optionally `sh etc/bootstrap-macos.sh`
+  - Optionally `sh etc/bootstrap-macos.sh`
 - **Linux and BSD:** Ensure you have `git` and `zsh` installed.
 - **MacOS terminal:** `terminal/monokai_pro_spectrum.terminal` (Settings -> Profiles -> Press "gear" -> Import).
 - **Git:** Don't forget to adjust `home/.gitconfig` or you'll have improper commit author
@@ -20,30 +21,30 @@ The short URL expands to GitHub-hosted `install.sh`, which can be easily audited
 ![](https://user-images.githubusercontent.com/574696/61765243-eb19dc00-ade4-11e9-8d16-5a402a0fdfec.png)
 ![](https://user-images.githubusercontent.com/574696/61765242-eb19dc00-ade4-11e9-8db0-ac607e1eed8a.png)
 
-* **No external dependencies!** Great, when compared to oh-my-zsh.
-* Auto-completion
-* Syntax highlighting
-* Useful utilities:
-    * `ff file-name-or-pattern` - fast recursive search for a file name in directories.
-    * `tarbz2`, `untarbz2` - best archive compression. Utilizes parallel `pbzip2` when available.
-    * `extract archive.tar.bz` — unpack any archive (supports many extensions)
-    * `ram safari` — show app RAM usage
-    * `loc py coffee js html css` — count lines of code
-    * `curl http://site/v1/api.json | json` - pretty-print JSON
-* `git-extras` - useful git functions, defined in `home/.gitconfig`:
-    * Opinionated `git log`, `git graph`
-    * `gcp` for fast `git commit -m ... && git push`
-    * `git sign` for PGP-signed git
-    * `git cleanup` — clean up merged git branches. Very useful if
+- **No external dependencies!** Great, when compared to oh-my-zsh.
+- Auto-completion
+- Syntax highlighting
+- Useful utilities:
+  - `ff file-name-or-pattern` - fast recursive search for a file name in directories.
+  - `tarbz2`, `untarbz2` - best archive compression. Utilizes parallel `pbzip2` when available.
+  - `extract archive.tar.bz` — unpack any archive (supports many extensions)
+  - `ram safari` — show app RAM usage
+  - `loc py coffee js html css` — count lines of code
+  - `curl http://site/v1/api.json | json` - pretty-print JSON
+- `git-extras` - useful git functions, defined in `home/.gitconfig`:
+  - Opinionated `git log`, `git graph`
+  - `gcp` for fast `git commit -m ... && git push`
+  - `git sign` for PGP-signed git
+  - `git cleanup` — clean up merged git branches. Very useful if
     you’re doing github pull requests in topic branches.
-    * `git summary` — outputs commit email statistics.
-    * `git release` and `git sign-release` — commit and tag the commit. Publishes to NPM for node projects.
-    * `git url` - opens GitHub repo for current git repo.
-    * `git-changelog`, `git-setup` etc.
-* `etc` — MacOS fine tuning
-* `vscode` — Sublime Text theme & settings
-* Sets terminal tab and window title to current directory
-* [homesick](https://github.com/technicalpickles/homesick) /
+  - `git summary` — outputs commit email statistics.
+  - `git release` and `git sign-release` — commit and tag the commit. Publishes to NPM for node projects.
+  - `git url` - opens GitHub repo for current git repo.
+  - `git-changelog`, `git-setup` etc.
+- `etc` — MacOS fine tuning
+- `vscode` — Sublime Text theme & settings
+- Sets terminal tab and window title to current directory
+- [homesick](https://github.com/technicalpickles/homesick) /
   [homeshick](https://github.com/andsens/homeshick)-compatible
 
 ## Not included

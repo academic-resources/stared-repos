@@ -1,12 +1,13 @@
-import * as APIUtil from '../util/bench_api_util'
+import * as APIUtil from "../util/bench_api_util";
 
-export const RECEIVE_BENCHES = 'RECEIVE_BENCHES'
+export const RECEIVE_BENCHES = "RECEIVE_BENCHES";
 
 const receiveBenches = (benches) => ({
   type: RECEIVE_BENCHES,
-  benches
-})
+  benches,
+});
 
-export const fetchBenches = (filters) => dispatch => (
-  APIUtil.fetchBenches(filters).then(benches => dispatch(receiveBenches(benches)))
-)
+export const fetchBenches = (filters) => (dispatch) =>
+  APIUtil.fetchBenches(filters).then((benches) =>
+    dispatch(receiveBenches(benches))
+  );

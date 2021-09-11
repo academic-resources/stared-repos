@@ -13,21 +13,21 @@ const LANGUAGES = [
   { label: "Simplified Chinese", value: "zh-CN" },
   { label: "Spanish", value: "es" },
   { label: "Swahili", value: "sw" },
-  { label: "Thai", value: "th" }
+  { label: "Thai", value: "th" },
 ];
 
 const Languages = ({ language, onLanguageChange }) => {
   if (language === undefined) {
     language = "es";
   }
-  const languageConfig = LANGUAGES.find(l => l.value === language);
+  const languageConfig = LANGUAGES.find((l) => l.value === language);
   if (!languageConfig) {
     throw new Error(`Unknown language code '${language}'`);
   }
 
   const [open, setOpen] = useState(false);
 
-  const onSelect = language => {
+  const onSelect = (language) => {
     setOpen(false);
     onLanguageChange(language);
   };

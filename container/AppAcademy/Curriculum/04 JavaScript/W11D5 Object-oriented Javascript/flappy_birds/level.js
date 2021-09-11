@@ -14,5 +14,4 @@ class Level {
   }
 }
 
-
-module.exports = Level
+module.exports = Level;

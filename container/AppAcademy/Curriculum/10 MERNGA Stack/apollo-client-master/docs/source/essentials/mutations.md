@@ -36,14 +36,14 @@ const AddTodo = () => {
       {(addTodo, { data }) => (
         <div>
           <form
-            onSubmit={e => {
+            onSubmit={(e) => {
               e.preventDefault();
               addTodo({ variables: { type: input.value } });
               input.value = "";
             }}
           >
             <input
-              ref={node => {
+              ref={(node) => {
                 input = node;
               }}
             />
@@ -96,17 +96,17 @@ const AddTodo = () => {
         });
       }}
     >
-      {addTodo => (
+      {(addTodo) => (
         <div>
           <form
-            onSubmit={e => {
+            onSubmit={(e) => {
               e.preventDefault();
               addTodo({ variables: { type: input.value } });
               input.value = "";
             }}
           >
             <input
-              ref={node => {
+              ref={(node) => {
                 input = node;
               }}
             />
@@ -144,11 +144,11 @@ const Todos = () => (
 
         return (
           <Mutation mutation={UPDATE_TODO} key={id}>
-            {updateTodo => (
+            {(updateTodo) => (
               <div>
                 <p>{type}</p>
                 <form
-                  onSubmit={e => {
+                  onSubmit={(e) => {
                     e.preventDefault();
                     updateTodo({ variables: { id, type: input.value } });
 
@@ -156,7 +156,7 @@ const Todos = () => (
                   }}
                 >
                   <input
-                    ref={node => {
+                    ref={(node) => {
                       input = node;
                     }}
                   />

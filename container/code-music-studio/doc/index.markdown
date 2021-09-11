@@ -5,7 +5,7 @@ Make music with algorithms!
 In code-music-studio, you make music with a language called javascript.
 javascript is a computer programming language that your web browser understands.
 
-Computer programming is 
+Computer programming is
 
 If you press `ctrl+shift+j` in chrome or `ctrl+shift+k` in firefox, you will
 open up a debugger. The debugger is like a calculator: when you type an
@@ -35,11 +35,11 @@ mathematical notation or some calculators.
 The arithmetic operators you might already be familiar with should all mostly
 work:
 
-* `*` - multiply
-* `/` - divide
-* `+` - add
-* `-` - subtract
-* `%` - modulo
+- `*` - multiply
+- `/` - divide
+- `+` - add
+- `-` - subtract
+- `%` - modulo
 
 Unlike mathematical notation, you can't use parenthesis to mean multiplication:
 
@@ -71,10 +71,10 @@ Modulo is very useful for generating procedural music.
 
 These built-ins functions will be useful for making music:
 
-* `Math.sin(x)` - return the sine of `x`, an angle measure in radians. Radians
-are like degrees except instead of going from 0 to 360 they go from 0 to 2 PI,
-or 0 to about 6.28.
-* Math.PI
+- `Math.sin(x)` - return the sine of `x`, an angle measure in radians. Radians
+  are like degrees except instead of going from 0 to 360 they go from 0 to 2 PI,
+  or 0 to about 6.28.
+- Math.PI
 
 ## learn more
 
@@ -136,10 +136,12 @@ return function (t) {
 Sawtooth waves are a jagged-looking wave like the teeth of a saw. Here is a
 function that can generate a sawtooth wave:
 
-``` js
+```js
 return function (t) {
   return saw(440);
-  function saw (x) { return 1-2*(t%(1/x))*x }
+  function saw(x) {
+    return 1 - 2 * (t % (1 / x)) * x;
+  }
 };
 ```
 
@@ -150,11 +152,13 @@ Now that we have some types of waves, we can compose them together with `+`!
 For example to hear a medium and a high sound together, just add the waves
 together in the output:
 
-``` js
+```js
 return function (t) {
-  return (sin(441)+sin(5000))/2;
-  function sin (x) { return Math.sin(2 * Math.PI * t * x) }
-}
+  return (sin(441) + sin(5000)) / 2;
+  function sin(x) {
+    return Math.sin(2 * Math.PI * t * x);
+  }
+};
 ```
 
 You'll want to divide by 2 because otherwise your sine waves will start to clip
@@ -169,13 +173,15 @@ To generate a melody, you can create an array outside of your main program with
 a list of frequencies and then index that array with the floor of the time
 modulo the melody length to create a repeating melody:
 
-``` js
-var melody = [ 200, 240, 360, 340, 180, 190 ];
+```js
+var melody = [200, 240, 360, 340, 180, 190];
 return function (t) {
-  var m = melody[Math.floor(t*2) % melody.length];
-  return sin(m)*2;
-  function sin (x) { return Math.sin(2 * Math.PI * t * x) }
-}
+  var m = melody[Math.floor(t * 2) % melody.length];
+  return sin(m) * 2;
+  function sin(x) {
+    return Math.sin(2 * Math.PI * t * x);
+  }
+};
 ```
 
 Another trick you can do is instead of encoding frequencies manually, you can
@@ -202,11 +208,13 @@ music.
 If you have two sine waves that close together in frequency, they will create a
 beat that repeats at the inverse of their difference. For example:
 
-``` js
+```js
 return function (t) {
   return (sin(800) + sin(801)) / 2;
-  function sin (x) { return Math.sin(2 * Math.PI * t * x) }
-}
+  function sin(x) {
+    return Math.sin(2 * Math.PI * t * x);
+  }
+};
 ```
 
 will repeat every second: `1 / (801 - 800) = 1`
@@ -221,21 +229,25 @@ One trick for a simple frequency is to multiply a sine wave times another sine
 wave with a much lower frequency. For example, this program pulses a sine wave
 at middle A 4 times per second:
 
-``` js
+```js
 return function (t) {
   return sin(441) * sin(4);
-  function sin (x) { return Math.sin(2 * Math.PI * t * x) }
-}
+  function sin(x) {
+    return Math.sin(2 * Math.PI * t * x);
+  }
+};
 ```
 
 or you can create neat patterns by adding sine waves together, creating
 interference patterns:
 
-``` js
+```js
 return function (t) {
-  return sin(441) * (sin(3) + sin(4)) / 2;
-  function sin (x) { return Math.sin(2 * Math.PI * t * x) }
-}
+  return (sin(441) * (sin(3) + sin(4))) / 2;
+  function sin(x) {
+    return Math.sin(2 * Math.PI * t * x);
+  }
+};
 ```
 
 ## noise
@@ -246,19 +258,21 @@ interval.
 You can obtain random values between 0 and -1 with `Math.random()`. Random noise
 sounds like static on a pre-digital radio or old television set:
 
-``` js
+```js
 return function (t) {
-  return 2*Math.random()-1
-}
+  return 2 * Math.random() - 1;
+};
 ```
 
 You can chop up those segments
 
-``` js
+```js
 return function (t) {
   return drums();
-  function drums () { return t % (1/2) < 1/16 ? 2*Math.random()-1 : 0 }
-}
+  function drums() {
+    return t % (1 / 2) < 1 / 16 ? 2 * Math.random() - 1 : 0;
+  }
+};
 ```
 
 # more examples
@@ -267,26 +281,26 @@ return function (t) {
 
 This example is a simple repeating baseline that plucks a string twice a second.
 
-``` js
+```js
 return function (t, i) {
   return pluck(t % 0.5, 100, 10, 10);
-}
+};
 
-function pluck (t, freq, duration, steps) {
-    var n = duration;
-    var scalar = Math.max(0, 0.95 - (t * n) / ((t * n) + 1));
-    var sum = 0;
-    for (var i = 0; i < steps; i++) {
-        sum += Math.sin(2 * Math.PI * t * (freq + i * freq));
-    }
-    return scalar * sum / 6;
+function pluck(t, freq, duration, steps) {
+  var n = duration;
+  var scalar = Math.max(0, 0.95 - (t * n) / (t * n + 1));
+  var sum = 0;
+  for (var i = 0; i < steps; i++) {
+    sum += Math.sin(2 * Math.PI * t * (freq + i * freq));
+  }
+  return (scalar * sum) / 6;
 }
 ```
 
 Here are some more:
 
-* [callaback](http://studio.substack.net/callaback)
-* [clown](http://studio.substack.net/clown)
-* [chirp](http://studio.substack.net/chirp)
-* [ringer](http://studio.substack.net/ringer)
-* [beep-boop](http://studio.substack.net/beep-boop)
+- [callaback](http://studio.substack.net/callaback)
+- [clown](http://studio.substack.net/clown)
+- [chirp](http://studio.substack.net/chirp)
+- [ringer](http://studio.substack.net/ringer)
+- [beep-boop](http://studio.substack.net/beep-boop)

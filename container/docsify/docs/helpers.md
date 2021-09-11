@@ -39,13 +39,13 @@ It will be compiled to `<a href="/#/demo/">link</a>` and will be loaded `/demo/R
 Now you can do that
 
 ```md
-[link](/demo/ ':ignore')
+[link](/demo/ ":ignore")
 ```
 
 You will get `<a href="/demo/">link</a>`html. Do not worry, you can still set title for link.
 
 ```md
-[link](/demo/ ':ignore title')
+[link](/demo/ ":ignore title")
 
 <a href="/demo/" title="title">link</a>
 ```
@@ -53,14 +53,14 @@ You will get `<a href="/demo/">link</a>`html. Do not worry, you can still set ti
 ## Set target attribute for link
 
 ```md
-[link](/demo ':target=_blank')
-[link](/demo2 ':target=_self')
+[link](/demo ":target=_blank")
+[link](/demo2 ":target=_self")
 ```
 
 ## Disable link
 
 ```md
-[link](/demo ':disabled')
+[link](/demo ":disabled")
 ```
 
 ## Github Task Lists
@@ -84,13 +84,14 @@ You will get `<a href="/demo/">link</a>`html. Do not worry, you can still set ti
 ## Image resizing
 
 ```md
-![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
-![logo](https://docsify.js.org/_media/icon.svg ':size=100')
+![logo](https://docsify.js.org/_media/icon.svg ":size=50x100")
+![logo](https://docsify.js.org/_media/icon.svg ":size=100")
 
 <!-- Support percentage -->
-![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
+
+![logo](https://docsify.js.org/_media/icon.svg ":size=10%")
 ```
 
-![logo](https://docsify.js.org/_media/icon.svg ':size=50x100')
-![logo](https://docsify.js.org/_media/icon.svg ':size=100')
-![logo](https://docsify.js.org/_media/icon.svg ':size=10%')
+![logo](https://docsify.js.org/_media/icon.svg ":size=50x100")
+![logo](https://docsify.js.org/_media/icon.svg ":size=100")
+![logo](https://docsify.js.org/_media/icon.svg ":size=10%")

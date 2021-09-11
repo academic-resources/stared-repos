@@ -1,13 +1,8 @@
-function inOrderArray(root) {
+function inOrderArray(root) {}
 
-}
-
-function postOrderArray(root) {
-
-}
-
+function postOrderArray(root) {}
 
 module.exports = {
-    inOrderArray,
-    postOrderArray
+  inOrderArray,
+  postOrderArray,
 };

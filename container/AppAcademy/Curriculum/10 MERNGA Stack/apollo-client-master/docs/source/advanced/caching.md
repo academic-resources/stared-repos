@@ -18,15 +18,15 @@ npm install apollo-cache-inmemory --save
 After installing the package, you'll want to initialize the cache constructor. Then, you can pass in your newly created cache to ApolloClient.
 
 ```js
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { HttpLink } from 'apollo-link-http';
-import { ApolloClient } from 'apollo-client';
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { HttpLink } from "apollo-link-http";
+import { ApolloClient } from "apollo-client";
 
 const cache = new InMemoryCache();
 
 const client = new ApolloClient({
   link: new HttpLink(),
-  cache
+  cache,
 });
 ```
 
@@ -34,7 +34,7 @@ const client = new ApolloClient({
 
 The `InMemoryCache` constructor takes an optional config object with properties to customize your cache:
 
-- `addTypename`: A boolean to determine whether to add __typename to the document (default: `true`)
+- `addTypename`: A boolean to determine whether to add \_\_typename to the document (default: `true`)
 - `dataIdFromObject`: A function that takes a data object and returns a unique identifier to be used when normalizing the data in the store. Learn more about how to customize `dataIdFromObject` in the [Normalization](#normalization) section.
 - `fragmentMatcher`: By default, the `InMemoryCache` uses a heuristic fragment matcher. If you are using fragments on unions and interfaces, you will need to use an `IntrospectionFragmentMatcher`. For more information, please read [our guide to setting up fragment matching for unions & interfaces](/advanced/fragments/#fragments-on-unions-and-interfaces).
 - `cacheRedirects` (previously known as `cacheResolvers` or `customResolvers`): A map of functions to redirect a query to another entry in the cache before a request takes place. This is useful if you have a list of items and want to use the data from the list query on a detail page where you're querying an individual item. More on that [here](#cache-redirects-with-cacheredirects).
@@ -52,25 +52,28 @@ For example, if you wanted to key off of the `key` field for all of your data, y
 
 ```js
 const cache = new InMemoryCache({
-  dataIdFromObject: object => object.key || null
+  dataIdFromObject: (object) => object.key || null,
 });
 ```
 
 Note that Apollo Client doesn't add the type name to the cache key when you specify a custom `dataIdFromObject`, so if your IDs are not unique across all objects, you might want to include the `__typename` in your `dataIdFromObject`.
 
-You can use different unique identifiers for different data types by keying off of the `__typename` property attached to every object typed by GraphQL.  For example:
+You can use different unique identifiers for different data types by keying off of the `__typename` property attached to every object typed by GraphQL. For example:
 
 ```js
-import { InMemoryCache, defaultDataIdFromObject } from 'apollo-cache-inmemory';
+import { InMemoryCache, defaultDataIdFromObject } from "apollo-cache-inmemory";
 
 const cache = new InMemoryCache({
-  dataIdFromObject: object => {
+  dataIdFromObject: (object) => {
     switch (object.__typename) {
-      case 'foo': return object.key; // use `key` as the primary key
-      case 'bar': return `bar:${object.blah}`; // use `bar` prefix and `blah` as the primary key
-      default: return defaultDataIdFromObject(object); // fall back to default handling
+      case "foo":
+        return object.key; // use `key` as the primary key
+      case "bar":
+        return `bar:${object.blah}`; // use `bar` prefix and `blah` as the primary key
+      default:
+        return defaultDataIdFromObject(object); // fall back to default handling
     }
-  }
+  },
 });
 ```
 
@@ -106,7 +109,7 @@ To interact directly with your cache, you can use the Apollo Client class method
 
 **Note**: The `cache` you created with `new InMemoryCache(...)` class is not meant to be used directly, but passed to the `ApolloClient` constructor. The client then accesses the `cache` using methods like `readQuery` and `writeQuery`. The difference between `cache.writeQuery` and `client.writeQuery` is that the client version also performs a broadcast after writing to the cache. This broadcast ensures your data is refreshed in the view layer after the `client.writeQuery` operation. If you only use `cache.writeQuery`, the changes may not be immediately reflected in the view layer. This behavior is sometimes useful in scenarios where you want to perform multiple cache writes without immediately updating the view layer.
 
-Any code demonstration in the following sections will assume that we have already initialized an instance of  `ApolloClient` and that we have imported the `gql` tag from `graphql-tag`.
+Any code demonstration in the following sections will assume that we have already initialized an instance of `ApolloClient` and that we have imported the `gql` tag from `graphql-tag`.
 
 ### readQuery
 
@@ -147,7 +150,7 @@ const { todo } = client.readQuery({
 });
 ```
 
-Note that you should not modify the return value of `readQuery` because the same object may be reused between components.  If you want to update the data in the cache, create a new replacement object and pass it to `writeQuery`.
+Note that you should not modify the return value of `readQuery` because the same object may be reused between components. If you want to update the data in the cache, create a new replacement object and pass it to `writeQuery`.
 
 ### readFragment
 
@@ -182,7 +185,7 @@ const client = new ApolloClient({
 
 ```js
 const todo = client.readFragment({
-  id: '5',
+  id: "5",
   fragment: gql`
     fragment myTodo on Todo {
       id
@@ -201,13 +204,13 @@ The beauty of `readFragment` is that the todo could have come from anywhere! The
 
 ### writeQuery and writeFragment
 
-Not only can you read arbitrary data from the Apollo Client cache, but you can also write any data that you would like to the cache. The methods you use to do this are `writeQuery` and `writeFragment`. They will allow you to change data in your local cache, but it is important to remember that *they will not change any data on your server*. If you reload your environment then changes made with `writeQuery` and `writeFragment` will disappear.
+Not only can you read arbitrary data from the Apollo Client cache, but you can also write any data that you would like to the cache. The methods you use to do this are `writeQuery` and `writeFragment`. They will allow you to change data in your local cache, but it is important to remember that _they will not change any data on your server_. If you reload your environment then changes made with `writeQuery` and `writeFragment` will disappear.
 
 These methods have the same signature as their `readQuery` and `readFragment` counterparts except they also require an additional `data` variable. So for example, if you wanted to update the `completed` flag locally for your todo with id `'5'` you could execute the following:
 
 ```js
 client.writeFragment({
-  id: '5',
+  id: "5",
   fragment: gql`
     fragment myTodo on Todo {
       completed
@@ -221,7 +224,7 @@ client.writeFragment({
 
 Any subscriber to the Apollo Client store will instantly see this update and render new UI accordingly.
 
-> **Note:** Again, remember that using `writeQuery` or `writeFragment` only changes data *locally*. If you reload your environment then changes made with these methods will no longer exist.
+> **Note:** Again, remember that using `writeQuery` or `writeFragment` only changes data _locally_. If you reload your environment then changes made with these methods will no longer exist.
 
 Or if you wanted to add a new todo to a list fetched from the server, you could use `readQuery` and `writeQuery` together.
 
@@ -239,10 +242,10 @@ const query = gql`
 const data = client.readQuery({ query });
 
 const myNewTodo = {
-  id: '6',
-  text: 'Start using Apollo Client.',
+  id: "6",
+  text: "Start using Apollo Client.",
   completed: false,
-  __typename: 'Todo',
+  __typename: "Todo",
 };
 
 client.writeQuery({
@@ -270,25 +273,27 @@ In some cases, just using `dataIdFromObject` is not enough for your application 
 ```javascript
 mutate({
   //... insert comment mutation
-  refetchQueries: [{
-    query: gql`
-      query UpdateCache($repoName: String!) {
-        entry(repoFullName: $repoName) {
-          id
-          comments {
-            postedBy {
-              login
-              html_url
+  refetchQueries: [
+    {
+      query: gql`
+        query UpdateCache($repoName: String!) {
+          entry(repoFullName: $repoName) {
+            id
+            comments {
+              postedBy {
+                login
+                html_url
+              }
+              createdAt
+              content
             }
-            createdAt
-            content
           }
         }
-      }
-    `,
-    variables: { repoName: 'apollographql/apollo-client' },
-  }],
-})
+      `,
+      variables: { repoName: "apollographql/apollo-client" },
+    },
+  ],
+});
 ```
 
 Please note that if you call `refetchQueries` with an array of strings, then Apollo Client will look for any previously called queries that have the same names as the provided strings. It will then refetch those queries with their current variables.
@@ -296,21 +301,23 @@ Please note that if you call `refetchQueries` with an array of strings, then Apo
 A very common way of using `refetchQueries` is to import queries defined for other components to make sure that those components will be updated:
 
 ```javascript
-import RepoCommentsQuery from '../queries/RepoCommentsQuery';
+import RepoCommentsQuery from "../queries/RepoCommentsQuery";
 
 mutate({
   //... insert comment mutation
-  refetchQueries: [{
-    query: RepoCommentsQuery,
-    variables: { repoFullName: 'apollographql/apollo-client' },
-  }],
-})
+  refetchQueries: [
+    {
+      query: RepoCommentsQuery,
+      variables: { repoFullName: "apollographql/apollo-client" },
+    },
+  ],
+});
 ```
 
 Using `update` gives you full control over the cache, allowing you to make changes to your data model in response to a mutation in any way you like. `update` is the recommended way of updating the cache after a query. It is explained in full [here](/api/react-apollo/#mutation).
 
 ```jsx
-import CommentAppQuery from '../queries/CommentAppQuery';
+import CommentAppQuery from "../queries/CommentAppQuery";
 
 const SUBMIT_COMMENT_MUTATION = gql`
   mutation SubmitComment($repoFullName: String!, $commentContent: String!) {
@@ -330,7 +337,7 @@ const SUBMIT_COMMENT_MUTATION = gql`
 
 const CommentsPageWithMutations = () => (
   <Mutation mutation={SUBMIT_COMMENT_MUTATION}>
-    {mutate => {
+    {(mutate) => {
       <AddComment
         submit={({ repoFullName, commentContent }) =>
           mutate({
@@ -342,7 +349,7 @@ const CommentsPageWithMutations = () => (
               data.comments.push(submitComment);
               // Write our data back to the cache.
               store.writeQuery({ query: CommentAppQuery, data });
-            }
+            },
           })
         }
       />;
@@ -378,7 +385,7 @@ const FeedWithData = ({ match }) => (
     variables={{
       type: match.params.type.toUpperCase() || "TOP",
       offset: 0,
-      limit: 10
+      limit: 10,
     }}
     fetchPolicy="cache-and-network"
   >
@@ -388,14 +395,14 @@ const FeedWithData = ({ match }) => (
         onLoadMore={() =>
           fetchMore({
             variables: {
-              offset: data.feed.length
+              offset: data.feed.length,
             },
             updateQuery: (prev, { fetchMoreResult }) => {
               if (!fetchMoreResult) return prev;
               return Object.assign({}, prev, {
-                feed: [...prev.feed, ...fetchMoreResult.feed]
+                feed: [...prev.feed, ...fetchMoreResult.feed],
               });
-            }
+            },
           })
         }
       />
@@ -403,7 +410,6 @@ const FeedWithData = ({ match }) => (
   </Query>
 );
 ```
-
 
 The `fetchMore` method takes a map of `variables` to be sent with the new query. Here, we're setting the offset to `feed.length` so that we fetch items that aren't already displayed on the feed. This variable map is merged with the one that's been specified for the query associated with the component. This means that other variables, e.g. the `limit` variable, will have the same value as they do within the component query.
 
@@ -426,11 +432,12 @@ To use the `@connection` directive, simply add the directive to the segment of t
 ```js
 const query = gql`
   query Feed($type: FeedType!, $offset: Int, $limit: Int) {
-    feed(type: $type, offset: $offset, limit: $limit) @connection(key: "feed", filter: ["type"]) {
+    feed(type: $type, offset: $offset, limit: $limit)
+      @connection(key: "feed", filter: ["type"]) {
       ...FeedEntry
     }
   }
-`
+`;
 ```
 
 With the above query, even with multiple `fetchMore`s, the results of each feed update will always result in the `feed` key in the store being updated with the latest accumulated values. In this example, we also use the `@connection` directive's optional `filter` argument to include the `type` query argument in the store key, which results in multiple store values that accumulate queries from each type of feed.
@@ -488,13 +495,13 @@ query DetailView {
 We know that the data is most likely already in the client cache, but because it's requested with a different query, Apollo Client doesn't know that. In order to tell Apollo Client where to look for the data, we can define custom resolvers:
 
 ```js
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { InMemoryCache } from "apollo-cache-inmemory";
 
 const cache = new InMemoryCache({
   cacheRedirects: {
     Query: {
       book: (_, args, { getCacheKey }) =>
-        getCacheKey({ __typename: 'Book', id: args.id })
+        getCacheKey({ __typename: "Book", id: args.id }),
     },
   },
 });
@@ -530,8 +537,7 @@ It is also possible to return a list of IDs:
 cacheRedirects: {
   Query: {
     books: (_, args, { getCacheKey }) =>
-      args.ids.map(id =>
-        getCacheKey({ __typename: 'Book', id: id }))
+      args.ids.map((id) => getCacheKey({ __typename: "Book", id: id }));
   }
 }
 ```
@@ -541,13 +547,15 @@ cacheRedirects: {
 Sometimes, you may want to reset the store entirely, such as [when a user logs out](/recipes/authentication/#reset-store-on-logout). To accomplish this, use `client.resetStore` to clear out your Apollo cache. Since `client.resetStore` also refetches any of your active queries for you, it is asynchronous.
 
 ```js
-export default withApollo(graphql(PROFILE_QUERY, {
-  props: ({ data: { loading, currentUser }, ownProps: { client }}) => ({
-    loading,
-    currentUser,
-    resetOnLogout: async () => client.resetStore(),
-  }),
-})(Profile));
+export default withApollo(
+  graphql(PROFILE_QUERY, {
+    props: ({ data: { loading, currentUser }, ownProps: { client } }) => ({
+      loading,
+      currentUser,
+      resetOnLogout: async () => client.resetStore(),
+    }),
+  })(Profile)
+);
 ```
 
 To register a callback function to be executed after the store has been reset, call `client.onResetStore` and pass in your callback. If you would like to register multiple callbacks, simply call `client.onResetStore` again. All of your callbacks will be pushed into an array and executed concurrently.
@@ -555,11 +563,11 @@ To register a callback function to be executed after the store has been reset, c
 In this example, we're using `client.onResetStore` to write our default values to the cache for [`apollo-link-state`](https://www.apollographql.com/docs/link/links/state). This is necessary if you're using `apollo-link-state` for local state management and calling `client.resetStore` anywhere in your application.
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { withClientState } from 'apollo-link-state';
+import { ApolloClient } from "apollo-client";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { withClientState } from "apollo-link-state";
 
-import { resolvers, defaults } from './resolvers';
+import { resolvers, defaults } from "./resolvers";
 
 const cache = new InMemoryCache();
 const stateLink = withClientState({ cache, resolvers, defaults });
@@ -582,8 +590,8 @@ import { withApollo } from "react-apollo";
 export class Foo extends Component {
   constructor(props) {
     super(props);
-    this.unsubscribe = props.client.onResetStore(
-      () => this.setState({ reset: false })
+    this.unsubscribe = props.client.onResetStore(() =>
+      this.setState({ reset: false })
     );
     this.state = { reset: false };
   }
@@ -591,7 +599,7 @@ export class Foo extends Component {
     this.unsubscribe();
   }
   render() {
-    return this.state.reset ? <div /> : <span />
+    return this.state.reset ? <div /> : <span />;
   }
 }
 
@@ -607,14 +615,17 @@ First, you will need to initialize an `InMemoryCache` on the server and create a
 
 ```js
 `<script>
-  window.__APOLLO_STATE__=${JSON.stringify(cache.extract()).replace(/</g, '\\u003c')}
-</script>`
+  window.__APOLLO_STATE__=${JSON.stringify(cache.extract()).replace(
+    /</g,
+    "\\u003c"
+  )}
+</script>`;
 ```
 
 On the client, you can rehydrate the cache using the initial data passed from the server:
 
 ```js
-cache: new Cache().restore(window.__APOLLO_STATE__)
+cache: new Cache().restore(window.__APOLLO_STATE__);
 ```
 
 If you would like to learn more about server side rendering, please check our our more in depth guide [here](/features/server-side-rendering/).
@@ -628,9 +639,9 @@ To get started, simply pass your Apollo Cache and a storage provider to `persist
 > Note: The `persistCache` method is async and returns a `Promise`.
 
 ```js
-import { AsyncStorage } from 'react-native';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { persistCache } from 'apollo-cache-persist';
+import { AsyncStorage } from "react-native";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { persistCache } from "apollo-cache-persist";
 
 const cache = new InMemoryCache();
 
@@ -639,7 +650,7 @@ persistCache({
   storage: AsyncStorage,
 }).then(() => {
   // Continue setting up Apollo as usual.
-})
+});
 ```
 
 For more advanced usage, such as persisting the cache when the app is in the background, and additional configuration options, please check the [README of `apollo-cache-persist`](https://github.com/apollographql/apollo-cache-persist).

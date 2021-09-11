@@ -17,12 +17,12 @@ class DogEdit extends React.Component {
     super(props);
     this.state = {
       name: this.props.dog.name,
-      breed: this.props.dog.breed
+      breed: this.props.dog.breed,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   update(field) {
-    return e => this.setState({ [field]: e.target.value });
+    return (e) => this.setState({ [field]: e.target.value });
   }
 
   handleSubmit(e, updateDog) {
@@ -31,8 +31,8 @@ class DogEdit extends React.Component {
       variables: {
         _id: this.props.dog._id,
         name: this.state.name,
-        breed: this.state.breed
-      }
+        breed: this.state.breed,
+      },
     }).then(() => this.props.history.push("/"));
   }
 
@@ -40,9 +40,9 @@ class DogEdit extends React.Component {
     if (this.props.editing) {
       return (
         <Mutation mutation={UPDATE_DOG}>
-          {updateDog => (
+          {(updateDog) => (
             <div>
-              <form onSubmit={e => this.handleSubmit(e, updateDog)}>
+              <form onSubmit={(e) => this.handleSubmit(e, updateDog)}>
                 <input value={this.state.name} onChange={this.update("name")} />
                 <input
                   value={this.state.breed}

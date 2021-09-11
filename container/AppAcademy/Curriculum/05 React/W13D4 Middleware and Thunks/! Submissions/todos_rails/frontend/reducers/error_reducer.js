@@ -1,17 +1,16 @@
-import { RECEIVE_ERRORS, CLEAR_ERRORS } from '../actions/errors_action'
-
+import { RECEIVE_ERRORS, CLEAR_ERRORS } from "../actions/errors_action";
 
 const errorsReducer = (state = [], action) => {
   switch (action.type) {
     case RECEIVE_ERRORS:
-      return action.errors
+      return action.errors;
 
     case CLEAR_ERRORS:
-      return []
+      return [];
 
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default errorsReducer
+export default errorsReducer;

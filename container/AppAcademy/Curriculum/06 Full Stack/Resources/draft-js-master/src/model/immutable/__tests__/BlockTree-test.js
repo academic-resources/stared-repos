@@ -47,7 +47,7 @@ beforeEach(() => {
 });
 
 // empty decorator
-const emptyDecoratorFactory = length => {
+const emptyDecoratorFactory = (length) => {
   Decorator.prototype.getDecorations.mockImplementation(() =>
     Repeat(null, length).toList(),
   );
@@ -55,7 +55,7 @@ const emptyDecoratorFactory = length => {
 };
 
 // single decorator
-const singleDecoratorFactory = length => {
+const singleDecoratorFactory = (length) => {
   const DECORATOR_KEY = 'x';
   const RANGE_LENGTH = 3;
 
@@ -70,7 +70,7 @@ const singleDecoratorFactory = length => {
   return new Decorator();
 };
 
-const multiDecoratorFactory = length => {
+const multiDecoratorFactory = (length) => {
   const DECORATOR_KEY_A = 'y';
   const DECORATOR_KEY_B = 'z';
   const RANGE_LENGTH = 3;

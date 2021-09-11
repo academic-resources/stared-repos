@@ -1,8 +1,5 @@
-function countingSort(arr, max) {
-
-}
-
+function countingSort(arr, max) {}
 
 module.exports = {
-    countingSort
+  countingSort,
 };

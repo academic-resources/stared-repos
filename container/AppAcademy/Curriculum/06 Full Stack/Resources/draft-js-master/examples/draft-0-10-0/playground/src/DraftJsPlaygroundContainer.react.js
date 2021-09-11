@@ -150,7 +150,7 @@ class DraftJsPlaygroundContainer extends Component<Props, State> {
             />
           </div>
           <SomeCodeMirror
-            ref={input => {
+            ref={(input) => {
               this.markupinput = input;
             }}
             lang={lang}

@@ -1,12 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import configureStore from './store/store';
+import React from "react";
+import ReactDOM from "react-dom";
+import configureStore from "./store/store";
 
-import Root from './components/root';
+import Root from "./components/root";
 
-document.addEventListener('DOMContentLoaded', () => {
-  const preloadedState = localStorage.state ?
-    JSON.parse(localStorage.state) : {};
+document.addEventListener("DOMContentLoaded", () => {
+  const preloadedState = localStorage.state
+    ? JSON.parse(localStorage.state)
+    : {};
   let store = configureStore(preloadedState);
 
   // Phase 1: Logging
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Phase 2: Refactoring (without using Redux applyMiddleware)
   // store = applyMiddlewares(store, addLoggingToDispatch);
 
-  const root = document.getElementById('content');
+  const root = document.getElementById("content");
   ReactDOM.render(<Root store={store} />, root);
 });
 

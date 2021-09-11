@@ -19,7 +19,7 @@ Here's what client initialization looks like with Apollo Boost:
 import ApolloClient from "apollo-boost";
 
 const client = new ApolloClient({
-  uri: "https://w5xlvm3vzz.lp.gql.zone/graphql"
+  uri: "https://w5xlvm3vzz.lp.gql.zone/graphql",
 });
 ```
 
@@ -34,11 +34,11 @@ npm install apollo-client apollo-cache-inmemory apollo-link-http apollo-link-err
 To complete the process, you'll need to manually attach your `cache` and `link` to the client:
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { HttpLink } from 'apollo-link-http';
-import { onError } from 'apollo-link-error';
-import { ApolloLink } from 'apollo-link';
+import { ApolloClient } from "apollo-client";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { HttpLink } from "apollo-link-http";
+import { onError } from "apollo-link-error";
+import { ApolloLink } from "apollo-link";
 
 const client = new ApolloClient({
   link: ApolloLink.from([
@@ -46,17 +46,17 @@ const client = new ApolloClient({
       if (graphQLErrors)
         graphQLErrors.map(({ message, locations, path }) =>
           console.log(
-            `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
-          ),
+            `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+          )
         );
       if (networkError) console.log(`[Network error]: ${networkError}`);
     }),
     new HttpLink({
-      uri: 'https://w5xlvm3vzz.lp.gql.zone/graphql',
-      credentials: 'same-origin'
-    })
+      uri: "https://w5xlvm3vzz.lp.gql.zone/graphql",
+      credentials: "same-origin",
+    }),
   ]),
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 ```
 

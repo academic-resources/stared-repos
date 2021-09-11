@@ -1,8 +1,4 @@
 {
-  "presets": [
-    "react"
-  ],
-  "plugins": [
-    "transform-react-require"
-  ]
+  "presets": ["react"],
+  "plugins": ["transform-react-require"]
 }

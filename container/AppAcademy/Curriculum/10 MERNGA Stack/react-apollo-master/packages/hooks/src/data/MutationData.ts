@@ -1,16 +1,16 @@
-import { ApolloError } from 'apollo-client';
-import { isEqual } from 'apollo-utilities';
+import { ApolloError } from "apollo-client";
+import { isEqual } from "apollo-utilities";
 import {
   ApolloContextValue,
   DocumentType,
   OperationVariables,
   ExecutionResult,
   MutationFunctionOptions,
-  MutationResult
-} from '@apollo/react-common';
+  MutationResult,
+} from "@apollo/react-common";
 
-import { MutationOptions, MutationTuple } from '../types';
-import { OperationData } from './OperationData';
+import { MutationOptions, MutationTuple } from "../types";
+import { OperationData } from "./OperationData";
 
 export class MutationData<
   TData = any,
@@ -25,7 +25,7 @@ export class MutationData<
     options,
     context,
     result,
-    setResult
+    setResult,
   }: {
     options: MutationOptions<TData, TVariables>;
     context: ApolloContextValue;
@@ -86,7 +86,7 @@ export class MutationData<
       update,
       context: mutationContext = {},
       awaitRefetchQueries = false,
-      fetchPolicy
+      fetchPolicy,
     } = this.getOptions();
     const mutateOptions = { ...mutationFunctionOptions };
 
@@ -107,7 +107,7 @@ export class MutationData<
       context: mutationContext,
       fetchPolicy,
       variables: mutateVariables,
-      ...mutateOptions
+      ...mutateOptions,
     });
   }
 
@@ -117,7 +117,7 @@ export class MutationData<
         loading: true,
         error: undefined,
         data: undefined,
-        called: true
+        called: true,
       });
     }
   }
@@ -142,7 +142,7 @@ export class MutationData<
         called: true,
         loading: false,
         data,
-        error
+        error,
       });
     }
     callOncomplete();
@@ -156,7 +156,7 @@ export class MutationData<
         loading: false,
         error,
         data: undefined,
-        called: true
+        called: true,
       });
     }
 

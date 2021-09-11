@@ -1,21 +1,21 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import gql from 'graphql-tag';
-import ApolloClient, { MutationUpdaterFn } from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import gql from "graphql-tag";
+import ApolloClient, { MutationUpdaterFn } from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
 import {
   mockSingleLink,
   stripSymbols,
-  createClient
-} from '@apollo/react-testing';
-import { DocumentNode } from 'graphql';
-import { ApolloProvider } from '@apollo/react-common';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+  createClient,
+} from "@apollo/react-testing";
+import { DocumentNode } from "graphql";
+import { ApolloProvider } from "@apollo/react-common";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
-describe('graphql(mutation) query integration', () => {
+describe("graphql(mutation) query integration", () => {
   afterEach(cleanup);
 
-  it('allows for passing optimisticResponse for a mutation', done => {
+  it("allows for passing optimisticResponse for a mutation", (done) => {
     const query: DocumentNode = gql`
       mutation createTodo {
         createTodo {
@@ -29,13 +29,13 @@ describe('graphql(mutation) query integration', () => {
     `;
 
     const data = {
-      __typename: 'Mutation',
+      __typename: "Mutation",
       createTodo: {
-        __typename: 'Todo',
-        id: '99',
-        text: 'This one was created with a mutation.',
-        completed: true
-      }
+        __typename: "Todo",
+        id: "99",
+        text: "This one was created with a mutation.",
+        completed: true,
+      },
     };
 
     type Data = typeof data;
@@ -45,21 +45,21 @@ describe('graphql(mutation) query integration', () => {
       class extends React.Component<ChildProps<{}, Data>> {
         componentDidMount() {
           const optimisticResponse = {
-            __typename: 'Mutation',
+            __typename: "Mutation",
             createTodo: {
-              __typename: 'Todo',
-              id: '99',
-              text: 'Optimistically generated',
-              completed: true
-            }
+              __typename: "Todo",
+              id: "99",
+              text: "Optimistically generated",
+              completed: true,
+            },
           };
-          this.props.mutate!({ optimisticResponse }).then(result => {
+          this.props.mutate!({ optimisticResponse }).then((result) => {
             expect(stripSymbols(result && result.data)).toEqual(data);
             done();
           });
 
           const dataInStore = client.cache.extract(true);
-          expect(stripSymbols(dataInStore['Todo:99'])).toEqual(
+          expect(stripSymbols(dataInStore["Todo:99"])).toEqual(
             optimisticResponse.createTodo
           );
         }
@@ -76,7 +76,7 @@ describe('graphql(mutation) query integration', () => {
     );
   });
 
-  it('allows for updating queries from a mutation', done => {
+  it("allows for updating queries from a mutation", (done) => {
     const query: DocumentNode = gql`
       query todos {
         todo_list {
@@ -103,20 +103,20 @@ describe('graphql(mutation) query integration', () => {
 
     const mutationData = {
       createTodo: {
-        id: '99',
-        text: 'This one was created with a mutation.',
-        completed: true
-      }
+        id: "99",
+        text: "This one was created with a mutation.",
+        completed: true,
+      },
     };
 
     type MutationData = typeof mutationData;
 
     const optimisticResponse = {
       createTodo: {
-        id: '99',
-        text: 'Optimistically generated',
-        completed: true
-      }
+        id: "99",
+        text: "Optimistically generated",
+        completed: true,
+      },
     };
     interface QueryData {
       todo_list: {
@@ -133,13 +133,13 @@ describe('graphql(mutation) query integration', () => {
     };
 
     const expectedData = {
-      todo_list: { id: '123', title: 'how to apollo', tasks: [] }
+      todo_list: { id: "123", title: "how to apollo", tasks: [] },
     };
 
     const link = mockSingleLink(
       {
         request: { query },
-        result: { data: expectedData }
+        result: { data: expectedData },
       },
       { request: { query: mutation }, result: { data: mutationData } }
     );
@@ -150,7 +150,7 @@ describe('graphql(mutation) query integration', () => {
 
     type WithQueryChildProps = ChildProps<{}, QueryData>;
     const withMutation = graphql<WithQueryChildProps, MutationData>(mutation, {
-      options: () => ({ optimisticResponse, update })
+      options: () => ({ optimisticResponse, update }),
     });
 
     let count = 0;
@@ -160,13 +160,13 @@ describe('graphql(mutation) query integration', () => {
       render() {
         if (!this.props.data || !this.props.data.todo_list) return null;
         if (!this.props.data.todo_list.tasks.length) {
-          this.props.mutate!().then(result => {
+          this.props.mutate!().then((result) => {
             expect(stripSymbols(result && result.data)).toEqual(mutationData);
           });
 
           const dataInStore = cache.extract(true);
           expect(
-            stripSymbols(dataInStore['$ROOT_MUTATION.createTodo'])
+            stripSymbols(dataInStore["$ROOT_MUTATION.createTodo"])
           ).toEqual(optimisticResponse.createTodo);
           return null;
         }
@@ -174,11 +174,11 @@ describe('graphql(mutation) query integration', () => {
         if (count === 0) {
           count++;
           expect(stripSymbols(this.props.data.todo_list.tasks)).toEqual([
-            optimisticResponse.createTodo
+            optimisticResponse.createTodo,
           ]);
         } else if (count === 1) {
           expect(stripSymbols(this.props.data.todo_list.tasks)).toEqual([
-            mutationData.createTodo
+            mutationData.createTodo,
           ]);
           done();
         }
@@ -196,7 +196,7 @@ describe('graphql(mutation) query integration', () => {
     );
   });
 
-  it('allows for updating queries from a mutation automatically', done => {
+  it("allows for updating queries from a mutation automatically", (done) => {
     const query: DocumentNode = gql`
       query getMini($id: ID!) {
         mini(id: $id) {
@@ -210,9 +210,9 @@ describe('graphql(mutation) query integration', () => {
     const queryData = {
       mini: {
         id: 1,
-        __typename: 'Mini',
-        cover: 'image1'
-      }
+        __typename: "Mini",
+        cover: "image1",
+      },
     };
 
     type Data = typeof queryData;
@@ -222,7 +222,7 @@ describe('graphql(mutation) query integration', () => {
     type Variables = typeof variables;
 
     const mutation: DocumentNode = gql`
-      mutation($signature: String!) {
+      mutation ($signature: String!) {
         mini: submitMiniCoverS3DirectUpload(signature: $signature) {
           __typename
           id
@@ -234,9 +234,9 @@ describe('graphql(mutation) query integration', () => {
     const mutationData = {
       mini: {
         id: 1,
-        cover: 'image2',
-        __typename: 'Mini'
-      }
+        cover: "image2",
+        __typename: "Mini",
+      },
     };
 
     type MutationData = typeof mutationData;
@@ -248,8 +248,8 @@ describe('graphql(mutation) query integration', () => {
     const link = mockSingleLink(
       { request: { query, variables }, result: { data: queryData } },
       {
-        request: { query: mutation, variables: { signature: '1233' } },
-        result: { data: mutationData }
+        request: { query: mutation, variables: { signature: "1233" } },
+        result: { data: mutationData },
       }
     );
     const cache = new Cache({ addTypename: false });
@@ -274,7 +274,7 @@ describe('graphql(mutation) query integration', () => {
         render() {
           if (count === 1) {
             this.props.mutate!()
-              .then(result => {
+              .then((result) => {
                 expect(stripSymbols(result && result.data)).toEqual(
                   mutationData
                 );

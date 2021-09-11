@@ -1,17 +1,17 @@
 const validateInputs = require("../validation/register");
-const bcrypt = require("bcryptjs")
-const jwt = require("jsonwebtoken")
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
-const secretOrKey = require("../config/keys").SECRET_OR_KEY
+const secretOrKey = require("../config/keys").SECRET_OR_KEY;
 
 const User = mongoose.model("user");
 
-const register = async data => {
+const register = async (data) => {
   try {
     // step 1: Validate Inputs
     const { message, isValid } = validateInputs(data);
     if (!isValid) {
-      console.log(message)
+      console.log(message);
       throw new Error(message);
     }
     // step 2: Hash Password
@@ -23,9 +23,9 @@ const register = async data => {
       {
         name,
         email,
-        password: hashedPassword
+        password: hashedPassword,
       },
-      err => {
+      (err) => {
         if (err) throw err;
       }
     );

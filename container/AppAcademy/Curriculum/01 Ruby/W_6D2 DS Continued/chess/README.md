@@ -1,26 +1,22 @@
-colorize [![Gem Version](https://badge.fury.io/rb/colorize.svg)](http://badge.fury.io/rb/colorize) [![Build Status](https://travis-ci.org/fazibear/colorize.svg?branch=master)](https://travis-ci.org/fazibear/colorize) [![Code Climate](https://codeclimate.com/github/fazibear/colorize/badges/gpa.svg)](https://codeclimate.com/github/fazibear/colorize) [![Test Coverage](https://codeclimate.com/github/fazibear/colorize/badges/coverage.svg)](https://codeclimate.com/github/fazibear/colorize)
-========
+# colorize [![Gem Version](https://badge.fury.io/rb/colorize.svg)](http://badge.fury.io/rb/colorize) [![Build Status](https://travis-ci.org/fazibear/colorize.svg?branch=master)](https://travis-ci.org/fazibear/colorize) [![Code Climate](https://codeclimate.com/github/fazibear/colorize/badges/gpa.svg)](https://codeclimate.com/github/fazibear/colorize) [![Test Coverage](https://codeclimate.com/github/fazibear/colorize/badges/coverage.svg)](https://codeclimate.com/github/fazibear/colorize)
 
 Ruby gem for colorizing text using ANSI escape sequences.
 Extends `String` class or add a `ColorizedString` with methods to set text color, background color and text effects.
 
-modes
------
+## modes
 
-* `require 'colorize'` - Extends String class
-* `require 'colorized_string'` - add ColorizedString class
+- `require 'colorize'` - Extends String class
+- `require 'colorized_string'` - add ColorizedString class
 
-features
---------
+## features
 
-* change string color
-* change string background
-* change string effect
-* display color samples
-* disable colorization
+- change string color
+- change string background
+- change string effect
+- display color samples
+- disable colorization
 
-usage
------
+## usage
 
 ```ruby
 require 'colorize'
@@ -73,25 +69,21 @@ puts ColorizedString.new("This is blue").blue
 puts ColorizedString.new("This is light blue").colorize(:light_blue)
 ```
 
-requirements
-------------
+## requirements
 
-* Win32/Console/ANSI (for Windows)
+- Win32/Console/ANSI (for Windows)
 
-install
--------
+## install
 
-* gem install colorize
+- gem install colorize
 
-*Note:* You may need to use sudo to install gems
+_Note:_ You may need to use sudo to install gems
 
-thank you
----------
+## thank you
 
 [![Become Patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/bePatron?u=6912974)
 
-license
--------
+## license
 
 Copyright (C) 2007-2016 Michał Kalbarczyk
 

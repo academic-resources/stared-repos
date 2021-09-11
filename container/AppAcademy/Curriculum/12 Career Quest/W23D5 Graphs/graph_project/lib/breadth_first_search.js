@@ -1,7 +1,5 @@
-function breadthFirstSearch(startingNode, targetVal) {
-
-}
+function breadthFirstSearch(startingNode, targetVal) {}
 
 module.exports = {
-    breadthFirstSearch
+  breadthFirstSearch,
 };

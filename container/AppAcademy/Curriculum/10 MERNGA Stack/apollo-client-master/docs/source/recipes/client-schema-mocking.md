@@ -24,15 +24,15 @@ const typeDefs = gql`
 
 const resolvers = {
   Rocket: {
-    description: () => "A boilerplate standard space rocket"
-  }
+    description: () => "A boilerplate standard space rocket",
+  },
 };
 
 const client = new ApolloClient({
   cache,
   link,
   typeDefs,
-  resolvers
+  resolvers,
 });
 ```
 
@@ -61,8 +61,8 @@ const oneOrTwoSentences = () =>
 
 const resolvers = {
   Rocket: {
-    description: () => oneOrTwoSentences()
-  }
+    description: () => oneOrTwoSentences(),
+  },
 };
 ```
 

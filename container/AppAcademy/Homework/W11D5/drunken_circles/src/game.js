@@ -7,9 +7,7 @@ window.Game = function (xDim, yDim) {
   this.yDim = yDim;
 
   for (let i = 0; i < Game.NUM_CIRCLES; ++i) {
-    circles.push(
-      Circle.randomCircle(xDim, yDim, Game.NUM_CIRCLES)
-    );
+    circles.push(Circle.randomCircle(xDim, yDim, Game.NUM_CIRCLES));
   }
 };
 
@@ -25,7 +23,7 @@ Game.prototype.render = function (ctx) {
 };
 
 Game.prototype.moveCircles = function () {
-  circles.forEach( circle => {
+  circles.forEach((circle) => {
     circle.moveRandom(this.xDim, this.yDim);
   });
 };

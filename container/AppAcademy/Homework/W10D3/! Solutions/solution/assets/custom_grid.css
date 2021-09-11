@@ -5,11 +5,11 @@
 
 /* Attribute selector targeting all elements
 with a class attribute containing 'col-' */
-[class*='col-'] {
+[class*="col-"] {
   padding-right: 20px;
 }
 
-[class*='col-']:last-of-type {
+[class*="col-"]:last-of-type {
   padding-right: 0;
 }
 
@@ -34,8 +34,7 @@ with a class attribute containing 'col-' */
 }
 
 .cf:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
-

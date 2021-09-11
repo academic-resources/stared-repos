@@ -4,12 +4,12 @@ import {
   RECEIVE_POKEMON_ERRORS,
   CREATE_POKEMON,
   START_LOADING_ALL_POKEMON,
-  START_LOADING_SINGLE_POKEMON
-} from '../actions/pokemon_actions';
+  START_LOADING_SINGLE_POKEMON,
+} from "../actions/pokemon_actions";
 
 const initialState = {
   indexLoading: false,
-  detailLoading: false
+  detailLoading: false,
 };
 
 const loadingReducer = (state = initialState, action) => {

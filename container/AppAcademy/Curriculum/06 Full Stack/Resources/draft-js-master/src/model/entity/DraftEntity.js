@@ -103,7 +103,7 @@ const DraftEntity: DraftEntityMapObject = {
    * We need this to support the new API, as part of transitioning to put Entity
    * storage in contentState.
    */
-  getLastCreatedEntityKey: function(): string {
+  getLastCreatedEntityKey: function (): string {
     logWarning(
       'DraftEntity.getLastCreatedEntityKey',
       'contentState.getLastCreatedEntityKey',
@@ -121,7 +121,7 @@ const DraftEntity: DraftEntityMapObject = {
    * be used to track the entity's usage in a ContentBlock, and for
    * retrieving data about the entity at render time.
    */
-  create: function(
+  create: function (
     type: DraftEntityType,
     mutability: DraftEntityMutability,
     data?: Object,
@@ -137,7 +137,7 @@ const DraftEntity: DraftEntityMapObject = {
    * Add an existing DraftEntityInstance to the DraftEntity map. This is
    * useful when restoring instances from the server.
    */
-  add: function(instance: DraftEntityInstance): string {
+  add: function (instance: DraftEntityInstance): string {
     logWarning('DraftEntity.add', 'contentState.addEntity');
     return DraftEntity.__add(instance);
   },
@@ -148,7 +148,7 @@ const DraftEntity: DraftEntityMapObject = {
    * ---
    * Retrieve the entity corresponding to the supplied key string.
    */
-  get: function(key: string): DraftEntityInstance {
+  get: function (key: string): DraftEntityInstance {
     logWarning('DraftEntity.get', 'contentState.getEntity');
     return DraftEntity.__get(key);
   },
@@ -161,7 +161,7 @@ const DraftEntity: DraftEntityMapObject = {
    * instance, this method will merge your data updates and return a new
    * instance.
    */
-  mergeData: function(
+  mergeData: function (
     key: string,
     toMerge: {[key: string]: any},
   ): DraftEntityInstance {
@@ -175,7 +175,7 @@ const DraftEntity: DraftEntityMapObject = {
    * ---
    * Completely replace the data for a given instance.
    */
-  replaceData: function(
+  replaceData: function (
     key: string,
     newData: {[key: string]: any},
   ): DraftEntityInstance {
@@ -192,7 +192,7 @@ const DraftEntity: DraftEntityMapObject = {
    * We need this to support the new API, as part of transitioning to put Entity
    * storage in contentState.
    */
-  __getLastCreatedEntityKey: function(): string {
+  __getLastCreatedEntityKey: function (): string {
     return '' + instanceKey;
   },
 
@@ -203,7 +203,7 @@ const DraftEntity: DraftEntityMapObject = {
    * be used to track the entity's usage in a ContentBlock, and for
    * retrieving data about the entity at render time.
    */
-  __create: function(
+  __create: function (
     type: DraftEntityType,
     mutability: DraftEntityMutability,
     data?: Object,
@@ -217,7 +217,7 @@ const DraftEntity: DraftEntityMapObject = {
    * Add an existing DraftEntityInstance to the DraftEntity map. This is
    * useful when restoring instances from the server.
    */
-  __add: function(instance: DraftEntityInstance): string {
+  __add: function (instance: DraftEntityInstance): string {
     const key = '' + ++instanceKey;
     instances = instances.set(key, instance);
     return key;
@@ -226,7 +226,7 @@ const DraftEntity: DraftEntityMapObject = {
   /**
    * Retrieve the entity corresponding to the supplied key string.
    */
-  __get: function(key: string): DraftEntityInstance {
+  __get: function (key: string): DraftEntityInstance {
     const instance = instances.get(key);
     invariant(!!instance, 'Unknown DraftEntity key: %s.', key);
     return instance;
@@ -237,7 +237,7 @@ const DraftEntity: DraftEntityMapObject = {
    * instance, this method will merge your data updates and return a new
    * instance.
    */
-  __mergeData: function(
+  __mergeData: function (
     key: string,
     toMerge: {[key: string]: any},
   ): DraftEntityInstance {
@@ -251,7 +251,7 @@ const DraftEntity: DraftEntityMapObject = {
   /**
    * Completely replace the data for a given instance.
    */
-  __replaceData: function(
+  __replaceData: function (
     key: string,
     newData: {[key: string]: any},
   ): DraftEntityInstance {

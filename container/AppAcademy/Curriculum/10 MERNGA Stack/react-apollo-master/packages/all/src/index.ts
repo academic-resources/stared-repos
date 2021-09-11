@@ -21,8 +21,8 @@ export {
   MutationFunction,
   OnSubscriptionDataOptions,
   BaseSubscriptionOptions,
-  SubscriptionResult
-} from '@apollo/react-common';
+  SubscriptionResult,
+} from "@apollo/react-common";
 
 // @apollo/react-components
 export {
@@ -32,8 +32,8 @@ export {
   // types
   QueryComponentOptions,
   MutationComponentOptions,
-  SubscriptionComponentOptions
-} from '@apollo/react-components';
+  SubscriptionComponentOptions,
+} from "@apollo/react-components";
 
 // @apollo/react-hoc
 export {
@@ -49,8 +49,8 @@ export {
   MutateProps,
   ChildProps,
   OptionProps,
-  OperationOption
-} from '@apollo/react-hoc';
+  OperationOption,
+} from "@apollo/react-hoc";
 
 // @apollo/react-hooks
 export {
@@ -69,11 +69,11 @@ export {
   MutationTuple,
   SubscriptionHookOptions,
   SubscriptionOptions,
-  SubscriptionCurrentObservable
-} from '@apollo/react-hooks';
+  SubscriptionCurrentObservable,
+} from "@apollo/react-hooks";
 
 export {
   getMarkupFromTree,
   getDataFromTree,
   renderToStringWithData,
-} from '@apollo/react-ssr';
+} from "@apollo/react-ssr";

@@ -1,3 +1,3 @@
-import React from 'react'
+import React from "react";
 
-export default ({ searchResults }) => <div className="search-results-list" />
+export default ({ searchResults }) => <div className="search-results-list" />;

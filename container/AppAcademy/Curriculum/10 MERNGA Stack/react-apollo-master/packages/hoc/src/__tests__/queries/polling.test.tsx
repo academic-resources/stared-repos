@@ -1,14 +1,14 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import gql from 'graphql-tag';
-import ApolloClient from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { mockSingleLink } from '@apollo/react-testing';
-import { ApolloProvider } from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import gql from "graphql-tag";
+import ApolloClient from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { mockSingleLink } from "@apollo/react-testing";
+import { ApolloProvider } from "@apollo/react-common";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
-describe('[queries] polling', () => {
+describe("[queries] polling", () => {
   let error: typeof console.error;
 
   beforeEach(() => {
@@ -23,7 +23,7 @@ describe('[queries] polling', () => {
   });
 
   // polling
-  it('allows a polling query to be created', done => {
+  it("allows a polling query to be created", (done) => {
     expect.assertions(4);
 
     const POLL_INTERVAL = 5;
@@ -37,8 +37,8 @@ describe('[queries] polling', () => {
         }
       }
     `;
-    const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-    const data2 = { allPeople: { people: [{ name: 'Leia Skywalker' }] } };
+    const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+    const data2 = { allPeople: { people: [{ name: "Leia Skywalker" }] } };
     const link = mockSingleLink(
       { request: { query }, result: { data } },
       { request: { query }, result: { data: data2 } },
@@ -46,15 +46,15 @@ describe('[queries] polling', () => {
     );
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let count = 0;
     const Container = graphql(query, {
       options: () => ({
         pollInterval: POLL_INTERVAL,
-        notifyOnNetworkStatusChange: false
-      })
+        notifyOnNetworkStatusChange: false,
+      }),
     })(() => {
       count++;
       expect(true).toBe(true);
@@ -71,7 +71,7 @@ describe('[queries] polling', () => {
     );
   });
 
-  it('exposes stopPolling as part of the props api', done => {
+  it("exposes stopPolling as part of the props api", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -83,11 +83,11 @@ describe('[queries] polling', () => {
     `;
     const link = mockSingleLink({
       request: { query },
-      result: { data: { allPeople: { people: [{ name: 'Luke Skywalker' }] } } }
+      result: { data: { allPeople: { people: [{ name: "Luke Skywalker" }] } } },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     const Container = graphql(query)(
@@ -111,7 +111,7 @@ describe('[queries] polling', () => {
     );
   });
 
-  it('exposes startPolling as part of the props api', done => {
+  it("exposes startPolling as part of the props api", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -123,11 +123,11 @@ describe('[queries] polling', () => {
     `;
     const link = mockSingleLink({
       request: { query },
-      result: { data: { allPeople: { people: [{ name: 'Luke Skywalker' }] } } }
+      result: { data: { allPeople: { people: [{ name: "Luke Skywalker" }] } } },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
     const Container = graphql(query, { options: { pollInterval: 10 } })(
       class extends React.Component<ChildProps> {

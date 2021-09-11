@@ -1,8 +1,8 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { MockedProvider } from 'react-apollo/test-utils';
+import React from "react";
+import renderer from "react-test-renderer";
+import { MockedProvider } from "react-apollo/test-utils";
 
-import { HERO_QUERY, withCharacter, CharacterWithoutData, App } from '../App';
+import { HERO_QUERY, withCharacter, CharacterWithoutData, App } from "../App";
 
 const query = HERO_QUERY;
 
@@ -12,7 +12,7 @@ import {
   empty_array_friends,
   friend_without_appearsIn,
   full,
-} from '../__mocks__/data';
+} from "../__mocks__/data";
 
 class ErrorBoundary extends React.Component {
   componentDidCatch(e) {
@@ -24,10 +24,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-const variables = { episode: 'NEWHOPE' };
+const variables = { episode: "NEWHOPE" };
 
-describe('withCharacter', () => {
-  it('shapes the props into variables', done => {
+describe("withCharacter", () => {
+  it("shapes the props into variables", (done) => {
     class Container extends React.Component {
       componentWillMount() {
         try {
@@ -43,16 +43,18 @@ describe('withCharacter', () => {
     }
 
     const ContainerWithData = withCharacter(Container);
-    const mocks = [{ request: { query, variables }, result: { data: { hero: empty } } }];
+    const mocks = [
+      { request: { query, variables }, result: { data: { hero: empty } } },
+    ];
     renderer.create(
       <ErrorBoundary>
         <MockedProvider mocks={mocks}>
           <ContainerWithData {...variables} />
         </MockedProvider>
-      </ErrorBoundary>,
+      </ErrorBoundary>
     );
   });
-  it('reshapes the data into the passed props', done => {
+  it("reshapes the data into the passed props", (done) => {
     class Container extends React.Component {
       componentWillReceiveProps(next) {
         try {
@@ -79,10 +81,10 @@ describe('withCharacter', () => {
         <MockedProvider mocks={mocks}>
           <ContainerWithData {...variables} />
         </MockedProvider>
-      </ErrorBoundary>,
+      </ErrorBoundary>
     );
   });
-  it('has a loading state', done => {
+  it("has a loading state", (done) => {
     class Container extends React.Component {
       componentWillMount() {
         expect(this.props.loading).toBe(true);
@@ -108,17 +110,19 @@ describe('withCharacter', () => {
         <MockedProvider mocks={mocks}>
           <ContainerWithData {...variables} />
         </MockedProvider>
-      </ErrorBoundary>,
+      </ErrorBoundary>
     );
   });
-  it('has a potential error state', done => {
+  it("has a potential error state", (done) => {
     class Container extends React.Component {
       componentWillMount() {
         expect(this.props.loading).toBe(true);
       }
       componentWillReceiveProps(next) {
         expect(next.loading).toBe(false);
-        expect(next.error.message).toMatch(/these are not the droids you are looking for/);
+        expect(next.error.message).toMatch(
+          /these are not the droids you are looking for/
+        );
         done();
       }
       render() {
@@ -130,7 +134,7 @@ describe('withCharacter', () => {
     const mocks = [
       {
         request: { query, variables },
-        error: new Error('these are not the droids you are looking for'),
+        error: new Error("these are not the droids you are looking for"),
       },
     ];
 
@@ -139,51 +143,59 @@ describe('withCharacter', () => {
         <MockedProvider mocks={mocks}>
           <ContainerWithData {...variables} />
         </MockedProvider>
-      </ErrorBoundary>,
+      </ErrorBoundary>
     );
   });
 });
 
-describe('CharacterWithoutData', () => {
-  it('handles a loading state', () => {
+describe("CharacterWithoutData", () => {
+  it("handles a loading state", () => {
     const output = renderer.create(<CharacterWithoutData loading />);
     expect(output.toJSON()).toMatchSnapshot();
   });
-  it('handles an error state', () => {
+  it("handles an error state", () => {
     const output = renderer.create(<CharacterWithoutData error />);
     expect(output.toJSON()).toMatchSnapshot();
   });
-  it('returns markup for null response', () => {
+  it("returns markup for null response", () => {
     const output = renderer.create(<CharacterWithoutData hero={empty} />);
     expect(output.toJSON()).toMatchSnapshot();
   });
-  it('returns markup for a hero with no friends', () => {
-    const output = renderer.create(<CharacterWithoutData hero={hero_no_friends} />);
+  it("returns markup for a hero with no friends", () => {
+    const output = renderer.create(
+      <CharacterWithoutData hero={hero_no_friends} />
+    );
     expect(output.toJSON()).toMatchSnapshot();
   });
-  it('returns markup for empty array of friends', () => {
-    const output = renderer.create(<CharacterWithoutData hero={empty_array_friends} />);
+  it("returns markup for empty array of friends", () => {
+    const output = renderer.create(
+      <CharacterWithoutData hero={empty_array_friends} />
+    );
     expect(output.toJSON()).toMatchSnapshot();
   });
-  it('returns markup for a friend without an appearsIn', () => {
-    const output = renderer.create(<CharacterWithoutData hero={friend_without_appearsIn} />);
+  it("returns markup for a friend without an appearsIn", () => {
+    const output = renderer.create(
+      <CharacterWithoutData hero={friend_without_appearsIn} />
+    );
     expect(output.toJSON()).toMatchSnapshot();
   });
-  it('renders a full data result', () => {
+  it("renders a full data result", () => {
     const output = renderer.create(<CharacterWithoutData hero={full} />);
     expect(output.toJSON()).toMatchSnapshot();
   });
 });
 
-describe('App', () => {
-  it('renders the data from NEWHOPE', () => {
-    const mocks = [{ request: { query, variables }, result: { data: { hero: empty } } }];
+describe("App", () => {
+  it("renders the data from NEWHOPE", () => {
+    const mocks = [
+      { request: { query, variables }, result: { data: { hero: empty } } },
+    ];
     const output = renderer.create(
       <ErrorBoundary>
         <MockedProvider mocks={mocks}>
           <App />
         </MockedProvider>
-      </ErrorBoundary>,
+      </ErrorBoundary>
     );
 
     expect(output.toJSON()).toMatchSnapshot();

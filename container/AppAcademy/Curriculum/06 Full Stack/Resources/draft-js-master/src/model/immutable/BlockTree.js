@@ -52,7 +52,7 @@ const BlockTree = {
   /**
    * Generate a block tree for a given ContentBlock/decorator pair.
    */
-  generate: function(
+  generate: function (
     contentState: ContentState,
     block: BlockNodeRecord,
     decorator: ?DraftDecoratorType,
@@ -99,7 +99,7 @@ function generateLeaves(
   offset: number,
 ): List<LeafRange> {
   const leaves = [];
-  const inlineStyles = characters.map(c => c.getStyle()).toList();
+  const inlineStyles = characters.map((c) => c.getStyle()).toList();
   findRangesImmutable(inlineStyles, areEqual, returnTrue, (start, end) => {
     leaves.push(
       new LeafRange({

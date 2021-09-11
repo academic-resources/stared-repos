@@ -1,11 +1,11 @@
-import { createMIDIAccess, closeAllMIDIInputs } from './midi/midi_access';
-import { polyfill, getDevice, getScope } from './util/util';
+import { createMIDIAccess, closeAllMIDIInputs } from "./midi/midi_access";
+import { polyfill, getDevice, getScope } from "./util/util";
 // import MIDIInput from './midi/midi_input';
 // import MIDIOutput from './midi/midi_output';
-import * as Input from './midi/midi_input';
-import * as Output from './midi/midi_output';
-import MIDIMessageEvent from './midi/midimessage_event';
-import MIDIConnectionEvent from './midi/midiconnection_event';
+import * as Input from "./midi/midi_input";
+import * as Output from "./midi/midi_output";
+import MIDIMessageEvent from "./midi/midimessage_event";
+import MIDIConnectionEvent from "./midi/midiconnection_event";
 
 let midiAccess;
 

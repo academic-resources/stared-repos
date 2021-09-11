@@ -1,10 +1,25 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+    value: true,
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /*
+var _createClass = (function () {
+    function defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function (Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+})(); /*
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Creates a MIDIAccess instance:
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        - Creates MIDIInput and MIDIOutput instances for the initially connected MIDI devices.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        - Keeps track of newly connected devices and creates the necessary instances of MIDIInput and MIDIOutput.
@@ -20,29 +35,35 @@ exports.dispatchEvent = dispatchEvent;
 exports.closeAllMIDIInputs = closeAllMIDIInputs;
 exports.getMIDIDeviceId = getMIDIDeviceId;
 
-var _midi_input = require('./midi_input');
+var _midi_input = require("./midi_input");
 
 var _midi_input2 = _interopRequireDefault(_midi_input);
 
-var _midi_output = require('./midi_output');
+var _midi_output = require("./midi_output");
 
 var _midi_output2 = _interopRequireDefault(_midi_output);
 
-var _midiconnection_event = require('./midiconnection_event');
+var _midiconnection_event = require("./midiconnection_event");
 
 var _midiconnection_event2 = _interopRequireDefault(_midiconnection_event);
 
-var _jazz_instance = require('../util/jazz_instance');
+var _jazz_instance = require("../util/jazz_instance");
 
-var _util = require('../util/util');
+var _util = require("../util/util");
 
-var _store = require('../util/store');
+var _store = require("../util/store");
 
 var _store2 = _interopRequireDefault(_store);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+    }
+}
 
 var midiAccess = void 0;
 var jazzInstance = void 0;
@@ -52,7 +73,7 @@ var midiInputIds = new _store2.default();
 var midiOutputIds = new _store2.default();
 var listeners = new _store2.default();
 
-var MIDIAccess = function () {
+var MIDIAccess = (function () {
     function MIDIAccess(midiInputs, midiOutputs) {
         _classCallCheck(this, MIDIAccess);
 
@@ -61,46 +82,55 @@ var MIDIAccess = function () {
         this.outputs = midiOutputs;
     }
 
-    _createClass(MIDIAccess, [{
-        key: 'addEventListener',
-        value: function addEventListener(type, listener) {
-            if (type !== 'statechange') {
-                return;
-            }
-            if (listeners.has(listener) === false) {
-                listeners.add(listener);
-            }
-        }
-    }, {
-        key: 'removeEventListener',
-        value: function removeEventListener(type, listener) {
-            if (type !== 'statechange') {
-                return;
-            }
-            if (listeners.has(listener) === true) {
-                listeners.delete(listener);
-            }
-        }
-    }]);
+    _createClass(MIDIAccess, [
+        {
+            key: "addEventListener",
+            value: function addEventListener(type, listener) {
+                if (type !== "statechange") {
+                    return;
+                }
+                if (listeners.has(listener) === false) {
+                    listeners.add(listener);
+                }
+            },
+        },
+        {
+            key: "removeEventListener",
+            value: function removeEventListener(type, listener) {
+                if (type !== "statechange") {
+                    return;
+                }
+                if (listeners.has(listener) === true) {
+                    listeners.delete(listener);
+                }
+            },
+        },
+    ]);
 
     return MIDIAccess;
-}();
+})();
 
 function createMIDIAccess() {
     return new Promise(function (resolve, reject) {
-        if (typeof midiAccess !== 'undefined') {
+        if (typeof midiAccess !== "undefined") {
             resolve(midiAccess);
             return;
         }
 
-        if ((0, _util.getDevice)().browser === 'ie9') {
-            reject({ message: 'WebMIDIAPIShim supports Internet Explorer 10 and above.' });
+        if ((0, _util.getDevice)().browser === "ie9") {
+            reject({
+                message:
+                    "WebMIDIAPIShim supports Internet Explorer 10 and above.",
+            });
             return;
         }
 
         (0, _jazz_instance.createJazzInstance)(function (instance) {
-            if (typeof instance === 'undefined' || instance === null) {
-                reject({ message: 'No access to MIDI devices: your browser does not support the WebMIDI API and the Jazz plugin is not installed.' });
+            if (typeof instance === "undefined" || instance === null) {
+                reject({
+                    message:
+                        "No access to MIDI devices: your browser does not support the WebMIDI API and the Jazz plugin is not installed.",
+                });
                 return;
             }
 
@@ -122,8 +152,8 @@ function createMIDIPorts(callback) {
     var numInputs = inputs.length;
     var numOutputs = outputs.length;
 
-    loopCreateMIDIPort(0, numInputs, 'input', inputs, function () {
-        loopCreateMIDIPort(0, numOutputs, 'output', outputs, callback);
+    loopCreateMIDIPort(0, numInputs, "input", inputs, function () {
+        loopCreateMIDIPort(0, numOutputs, "output", outputs, callback);
     });
 }
 
@@ -141,15 +171,15 @@ function loopCreateMIDIPort(index, max, type, list, callback) {
 function createMIDIPort(type, name, callback) {
     (0, _jazz_instance.getJazzInstance)(type, function (instance) {
         var port = void 0;
-        var info = [name, '', ''];
-        if (type === 'input') {
-            if (instance.Support('MidiInInfo')) {
+        var info = [name, "", ""];
+        if (type === "input") {
+            if (instance.Support("MidiInInfo")) {
                 info = instance.MidiInInfo(name);
             }
             port = new _midi_input2.default(info, instance);
             midiInputs.set(port.id, port);
-        } else if (type === 'output') {
-            if (instance.Support('MidiOutInfo')) {
+        } else if (type === "output") {
+            if (instance.Support("MidiOutInfo")) {
                 info = instance.MidiOutInfo(name);
             }
             port = new _midi_output2.default(info, instance);
@@ -177,7 +207,7 @@ function setupListeners() {
     jazzInstance.OnDisconnectMidiIn(function (name) {
         var port = getPortByName(midiInputs, name);
         if (port !== undefined) {
-            port.state = 'disconnected';
+            port.state = "disconnected";
             port.close();
             port._jazzInstance.inputInUse = false;
             midiInputs.delete(port.id);
@@ -188,7 +218,7 @@ function setupListeners() {
     jazzInstance.OnDisconnectMidiOut(function (name) {
         var port = getPortByName(midiOutputs, name);
         if (port !== undefined) {
-            port.state = 'disconnected';
+            port.state = "disconnected";
             port.close();
             port._jazzInstance.outputInUse = false;
             midiOutputs.delete(port.id);
@@ -197,13 +227,13 @@ function setupListeners() {
     });
 
     jazzInstance.OnConnectMidiIn(function (name) {
-        createMIDIPort('input', name, function (port) {
+        createMIDIPort("input", name, function (port) {
             dispatchEvent(port);
         });
     });
 
     jazzInstance.OnConnectMidiOut(function (name) {
-        createMIDIPort('output', name, function (port) {
+        createMIDIPort("output", name, function (port) {
             dispatchEvent(port);
         });
     });
@@ -216,7 +246,7 @@ function dispatchEvent(port) {
 
     var evt = new _midiconnection_event2.default(midiAccess, port);
 
-    if (typeof midiAccess.onstatechange === 'function') {
+    if (typeof midiAccess.onstatechange === "function") {
         midiAccess.onstatechange(evt);
     }
     listeners.forEach(function (listener) {
@@ -234,13 +264,13 @@ function closeAllMIDIInputs() {
 // check if we have already created a unique id for this device, if so: reuse it, if not: create a new id and store it
 function getMIDIDeviceId(name, type) {
     var id = void 0;
-    if (type === 'input') {
+    if (type === "input") {
         id = midiInputIds.get(name);
         if (id === undefined) {
             id = (0, _util.generateUUID)();
             midiInputIds.set(name, id);
         }
-    } else if (type === 'output') {
+    } else if (type === "output") {
         id = midiOutputIds.get(name);
         if (id === undefined) {
             id = (0, _util.generateUUID)();

@@ -1,10 +1,10 @@
-import { DocumentNode, ExecutionResult } from 'graphql';
-import { FetchResult } from 'apollo-link';
-import { DataProxy } from 'apollo-cache';
+import { DocumentNode, ExecutionResult } from "graphql";
+import { FetchResult } from "apollo-link";
+import { DataProxy } from "apollo-cache";
 
-import { MutationQueryReducersMap } from './types';
+import { MutationQueryReducersMap } from "./types";
 
-import { PureQueryOptions, OperationVariables } from './types';
+import { PureQueryOptions, OperationVariables } from "./types";
 
 /**
  * fetchPolicy determines where the client may return a result from. The options are:
@@ -16,13 +16,13 @@ import { PureQueryOptions, OperationVariables } from './types';
  * - standby: only for queries that aren't actively watched, but should be available for refetch and updateQueries.
  */
 export type FetchPolicy =
-  | 'cache-first'
-  | 'network-only'
-  | 'cache-only'
-  | 'no-cache'
-  | 'standby';
+  | "cache-first"
+  | "network-only"
+  | "cache-only"
+  | "no-cache"
+  | "standby";
 
-export type WatchQueryFetchPolicy = FetchPolicy | 'cache-and-network';
+export type WatchQueryFetchPolicy = FetchPolicy | "cache-and-network";
 
 /**
  * errorPolicy determines the level of events for errors in the execution result. The options are:
@@ -30,7 +30,7 @@ export type WatchQueryFetchPolicy = FetchPolicy | 'cache-and-network';
  * - ignore: errors from the request do not stop the observable, but also don't call `next`
  * - all: errors are treated like data and will notify observables
  */
-export type ErrorPolicy = 'none' | 'ignore' | 'all';
+export type ErrorPolicy = "none" | "ignore" | "all";
 
 /**
  * Common options shared across all query interfaces.
@@ -132,7 +132,7 @@ export type UpdateQueryFn<
   options: {
     subscriptionData: { data: TSubscriptionData };
     variables?: TSubscriptionVariables;
-  },
+  }
 ) => TData;
 
 export type SubscribeToMoreOptions<
@@ -278,5 +278,5 @@ export interface MutationOptions<
 // Add a level of indirection for `typedoc`.
 export type MutationUpdaterFn<T = { [key: string]: any }> = (
   proxy: DataProxy,
-  mutationResult: FetchResult<T>,
+  mutationResult: FetchResult<T>
 ) => void;

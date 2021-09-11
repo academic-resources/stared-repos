@@ -27,7 +27,7 @@ const UPDATE_COMMENT = gql`
 
 const CommentPageWithData = () => (
   <Mutation mutation={UPDATE_COMMENT}>
-    {mutate => {
+    {(mutate) => {
       <Comment
         updateComment={({ commentId, commentContent }) =>
           mutate({
@@ -37,9 +37,9 @@ const CommentPageWithData = () => (
               updateComment: {
                 id: commentId,
                 __typename: "Comment",
-                content: commentContent
-              }
-            }
+                content: commentContent,
+              },
+            },
           })
         }
       />;
@@ -77,7 +77,7 @@ const SUBMIT_COMMENT_MUTATION = gql`
 
 const CommentsPageWithMutations = ({ currentUser }) => (
   <Mutation mutation={SUBMIT_COMMENT_MUTATION}>
-    {mutate => (
+    {(mutate) => (
       <CommentsPage
         submit={(repoFullName, commentContent) =>
           mutate({
@@ -88,18 +88,21 @@ const CommentsPageWithMutations = ({ currentUser }) => (
                 __typename: "Comment",
                 postedBy: currentUser,
                 createdAt: new Date(),
-                content: commentContent
-              }
+                content: commentContent,
+              },
             },
             update: (proxy, { data: { submitComment } }) => {
               // Read the data from our cache for this query.
               const data = proxy.readQuery({ query: CommentAppQuery });
               // Write our data back to the cache with the new comment in it
-              proxy.writeQuery({ query: CommentAppQuery, data: {
-                ...data,
-                comments: [...data.comments, submitComment]
-              }});
-            }
+              proxy.writeQuery({
+                query: CommentAppQuery,
+                data: {
+                  ...data,
+                  comments: [...data.comments, submitComment],
+                },
+              });
+            },
           })
         }
       />

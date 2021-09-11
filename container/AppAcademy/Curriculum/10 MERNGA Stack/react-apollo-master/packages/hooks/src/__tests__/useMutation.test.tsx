@@ -1,14 +1,14 @@
-import React from 'react';
-import { DocumentNode } from 'graphql';
-import gql from 'graphql-tag';
-import { MockedProvider } from '@apollo/react-testing';
-import { render, cleanup } from '@testing-library/react';
-import { useMutation } from '@apollo/react-hooks';
+import React from "react";
+import { DocumentNode } from "graphql";
+import gql from "graphql-tag";
+import { MockedProvider } from "@apollo/react-testing";
+import { render, cleanup } from "@testing-library/react";
+import { useMutation } from "@apollo/react-hooks";
 
-describe('useMutation Hook', () => {
+describe("useMutation Hook", () => {
   afterEach(cleanup);
 
-  it('should handle a simple mutation properly', done => {
+  it("should handle a simple mutation properly", (done) => {
     const mutation: DocumentNode = gql`
       mutation createTodo($description: String!) {
         createTodo(description: $description) {
@@ -20,26 +20,26 @@ describe('useMutation Hook', () => {
     `;
 
     const variables = {
-      description: 'Get milk!'
+      description: "Get milk!",
     };
 
     const resultData = {
       createTodo: {
         id: 1,
-        description: 'Get milk!',
-        priority: 'High',
-        __typename: 'Todo'
-      }
+        description: "Get milk!",
+        priority: "High",
+        __typename: "Todo",
+      },
     };
 
     const mocks = [
       {
         request: {
           query: mutation,
-          variables
+          variables,
         },
-        result: { data: resultData }
-      }
+        result: { data: resultData },
+      },
     ];
 
     let renderCount = 0;

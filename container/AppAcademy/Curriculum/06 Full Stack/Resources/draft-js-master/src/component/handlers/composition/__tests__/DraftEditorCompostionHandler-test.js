@@ -51,7 +51,7 @@ let compositionHandler = null;
 let editor;
 
 function getEditorState(blocks) {
-  const contentBlocks = Object.keys(blocks).map(blockKey => {
+  const contentBlocks = Object.keys(blocks).map((blockKey) => {
     return new ContentBlock({
       key: blockKey,
       text: blocks[String(blockKey)],
@@ -98,7 +98,7 @@ beforeEach(() => {
     setMode: jest.fn(),
     restoreEditorDOM: jest.fn(),
     exitCurrentMode: jest.fn(),
-    update: jest.fn(state => (editor._latestEditorState = state)),
+    update: jest.fn((state) => (editor._latestEditorState = state)),
   };
 });
 

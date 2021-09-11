@@ -1,5 +1,5 @@
 ---
-title: '1. Build a schema'
+title: "1. Build a schema"
 description: Create a blueprint for your graph's data
 ---
 
@@ -20,8 +20,8 @@ The two packages you need to get started with Apollo Server are `apollo-server` 
 _src/index.js_
 
 ```js
-const { ApolloServer } = require('apollo-server');
-const typeDefs = require('./schema');
+const { ApolloServer } = require("apollo-server");
+const typeDefs = require("./schema");
 
 const server = new ApolloServer({ typeDefs });
 ```
@@ -49,7 +49,7 @@ Our schema will be based on these features. In `src/schema.js`, import `gql` fro
 _src/schema.js_
 
 ```js
-const { gql } = require('apollo-server');
+const { gql } = require("apollo-server");
 
 const typeDefs = gql``;
 
@@ -60,7 +60,7 @@ module.exports = typeDefs;
 
 We'll start with the **Query type**, which is the entry point into our schema that describes what data we can fetch.
 
-The language we use to write our schema is GraphQL's schema definition language (SDL). If you've used TypeScript before, the syntax will look familiar. Copy the following SDL code between the backticks where the `gql` function is invoked in  `src/schema.js`
+The language we use to write our schema is GraphQL's schema definition language (SDL). If you've used TypeScript before, the syntax will look familiar. Copy the following SDL code between the backticks where the `gql` function is invoked in `src/schema.js`
 
 _src/schema.js_
 
@@ -166,8 +166,8 @@ Now that we have scoped out our app's schema, let's run the server by calling `s
 _src/index.js_
 
 ```js
-const { ApolloServer } = require('apollo-server');
-const typeDefs = require('./schema');
+const { ApolloServer } = require("apollo-server");
+const typeDefs = require("./schema");
 
 const server = new ApolloServer({ typeDefs });
 

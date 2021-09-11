@@ -230,7 +230,6 @@ A 9x9 grid is partially filled with single digits (from 1-9) and the player must
 
 44. [0, 8] has to be 5 because that's the only number missing from Col 8
 
-
 <table class="tg">
   <tr>
     <th class="tg-yj5y"></th>

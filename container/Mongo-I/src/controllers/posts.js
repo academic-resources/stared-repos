@@ -1,5 +1,5 @@
-const post = require('../models/users');
-const Post = require('../models/posts');
+const post = require("../models/users");
+const Post = require("../models/posts");
 
 module.exports = {
   // [GET] /posts This route will return an array of all posts.
@@ -69,5 +69,5 @@ module.exports = {
     } catch (err) {
       res.status(500).json(err);
     }
-  }
+  },
 };

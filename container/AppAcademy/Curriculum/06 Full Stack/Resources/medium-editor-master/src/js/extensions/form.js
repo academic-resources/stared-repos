@@ -1,23 +1,25 @@
 (function () {
-    'use strict';
+    "use strict";
 
     /* Base functionality for an extension which will display
      * a 'form' inside the toolbar
      */
     var FormExtension = MediumEditor.extensions.button.extend({
-
         init: function () {
-            MediumEditor.extensions.button.prototype.init.apply(this, arguments);
+            MediumEditor.extensions.button.prototype.init.apply(
+                this,
+                arguments
+            );
         },
 
         // default labels for the form buttons
-        formSaveLabel: '&#10003;',
-        formCloseLabel: '&times;',
+        formSaveLabel: "&#10003;",
+        formCloseLabel: "&times;",
 
         /* activeClass: [string]
          * set class which added to shown form
          */
-        activeClass: 'medium-editor-toolbar-form-active',
+        activeClass: "medium-editor-toolbar-form-active",
 
         /* hasForm: [boolean]
          *
@@ -83,7 +85,7 @@
          * the customized form
          */
         showToolbarDefaultActions: function () {
-            var toolbar = this.base.getExtensionByName('toolbar');
+            var toolbar = this.base.getExtensionByName("toolbar");
             if (toolbar) {
                 toolbar.showToolbarDefaultActions();
             }
@@ -96,7 +98,7 @@
          * to allow a form to display its custom contents inside the toolbar
          */
         hideToolbarDefaultActions: function () {
-            var toolbar = this.base.getExtensionByName('toolbar');
+            var toolbar = this.base.getExtensionByName("toolbar");
             if (toolbar) {
                 toolbar.hideToolbarDefaultActions();
             }
@@ -109,11 +111,11 @@
          * position of the user's selection
          */
         setToolbarPosition: function () {
-            var toolbar = this.base.getExtensionByName('toolbar');
+            var toolbar = this.base.getExtensionByName("toolbar");
             if (toolbar) {
                 toolbar.setToolbarPosition();
             }
-        }
+        },
     });
 
     MediumEditor.extensions.form = FormExtension;

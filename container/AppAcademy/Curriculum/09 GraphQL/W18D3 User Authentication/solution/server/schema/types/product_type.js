@@ -16,14 +16,14 @@ const ProductType = new GraphQLObjectType({
       resolver(parentValue) {
         return Product.findById(parentValue._id)
           .populate("category")
-          .then(product => {
+          .then((product) => {
             return product.category;
           });
-      }
-    }
+      },
+    },
     // Bonus Phase: Adding the Lambda
     // cost: { type: GraphQLInt }
-  })
+  }),
 });
 
 module.exports = ProductType;

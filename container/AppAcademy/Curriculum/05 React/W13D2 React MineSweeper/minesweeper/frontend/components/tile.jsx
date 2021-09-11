@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import * as Minesweeper from "./minesweeper";
 
 class Tile extends Component {
@@ -6,7 +6,7 @@ class Tile extends Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
-  
+
   render() {
     let dispTile;
     let tileClassName = "tile";
@@ -17,7 +17,7 @@ class Tile extends Component {
         tileClassName += " bombed";
       } else {
         dispTile = this.props.tile.adjacentBombCount();
-        dispTile = dispTile === 0 ? "" : dispTile
+        dispTile = dispTile === 0 ? "" : dispTile;
       }
     }
 
@@ -30,7 +30,7 @@ class Tile extends Component {
       <div className={tileClassName} onClick={this.handleClick}>
         {dispTile}
       </div>
-      );
+    );
   }
 
   handleClick(event) {
@@ -38,7 +38,7 @@ class Tile extends Component {
 
     if (!(this.props.tile.flagged || this.props.tile.explored)) {
       switch (altKeyPressed) {
-        case true: 
+        case true:
           this.props.tile.flagged = true;
           break;
         case false:

@@ -3,10 +3,10 @@
 
 // This solution takes less time and memory than rebuilding the string backward and comparing the two.
 
-function isPalindrome (string) {
+function isPalindrome(string) {
   var length = string.length;
 
-  for (var i = 0; i < length/2; i++) {
+  for (var i = 0; i < length / 2; i++) {
     if (string[i] !== string[length - 1 - i]) {
       return false;
     }

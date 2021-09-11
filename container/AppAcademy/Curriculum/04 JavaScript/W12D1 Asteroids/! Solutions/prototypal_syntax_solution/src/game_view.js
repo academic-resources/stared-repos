@@ -14,12 +14,16 @@ GameView.MOVES = {
 GameView.prototype.bindKeyHandlers = function bindKeyHandlers() {
   const ship = this.ship;
 
-  Object.keys(GameView.MOVES).forEach(function(k)  {
+  Object.keys(GameView.MOVES).forEach(function (k) {
     const move = GameView.MOVES[k];
-    key(k, function () { ship.power(move); });
+    key(k, function () {
+      ship.power(move);
+    });
   });
 
-  key("space", function () { ship.fireBullet(); });
+  key("space", function () {
+    ship.fireBullet();
+  });
 };
 
 GameView.prototype.start = function start() {

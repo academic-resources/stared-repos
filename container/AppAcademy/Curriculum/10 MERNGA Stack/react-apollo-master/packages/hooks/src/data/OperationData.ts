@@ -1,21 +1,20 @@
-import { ApolloClient } from 'apollo-client';
-import { isEqual } from 'apollo-utilities';
-import { invariant } from 'ts-invariant';
+import { ApolloClient } from "apollo-client";
+import { isEqual } from "apollo-utilities";
+import { invariant } from "ts-invariant";
 import {
   ApolloContextValue,
   parser,
   DocumentType,
-  operationName
-} from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
+  operationName,
+} from "@apollo/react-common";
+import { DocumentNode } from "graphql";
 
-import { CommonOptions } from '../types';
+import { CommonOptions } from "../types";
 
 export abstract class OperationData<TOptions = any> {
   public isMounted: boolean = true;
-  public previousOptions: CommonOptions<TOptions> = {} as CommonOptions<
-    TOptions
-  >;
+  public previousOptions: CommonOptions<TOptions> =
+    {} as CommonOptions<TOptions>;
   public context: ApolloContextValue = {};
   public client: ApolloClient<object> | undefined;
 
@@ -53,8 +52,8 @@ export abstract class OperationData<TOptions = any> {
     invariant(
       !!client,
       'Could not find "client" in the context or passed in as an option. ' +
-        'Wrap the root component in an <ApolloProvider>, or pass an ' +
-        'ApolloClient instance in via options.'
+        "Wrap the root component in an <ApolloProvider>, or pass an " +
+        "ApolloClient instance in via options."
     );
 
     let isNew = false;
@@ -65,7 +64,7 @@ export abstract class OperationData<TOptions = any> {
     }
     return {
       client: this.client as ApolloClient<object>,
-      isNew
+      isNew,
     };
   }
 

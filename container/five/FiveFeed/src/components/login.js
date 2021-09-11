@@ -10,19 +10,19 @@ export default class Login extends Component {
       return netlifyIdentity
         .currentUser()
         .jwt()
-        .then(token => {
+        .then((token) => {
           return { ...headers, Authorization: `Bearer ${token}` }
         })
     }
     return Promise.resolve(headers)
   }
 
-  clickHandler = e => {
+  clickHandler = (e) => {
     e.preventDefault()
     netlifyIdentity.open()
-    netlifyIdentity.on('login', user => console.log('login', user))
+    netlifyIdentity.on('login', (user) => console.log('login', user))
     // store token in localstorage
-    this.generateHeaders().then(headers => {
+    this.generateHeaders().then((headers) => {
       // GET request
       //
       //   USE IN LAMBDA:
@@ -33,6 +33,10 @@ export default class Login extends Component {
     })
   }
   render() {
-    return <button className="login-button" onClick={this.clickHandler}><User /></button>
+    return (
+      <button className="login-button" onClick={this.clickHandler}>
+        <User />
+      </button>
+    )
   }
 }

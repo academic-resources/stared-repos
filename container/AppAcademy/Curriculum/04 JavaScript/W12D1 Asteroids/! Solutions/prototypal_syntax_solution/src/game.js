@@ -38,7 +38,7 @@ Game.prototype.addAsteroids = function addAsteroids() {
 Game.prototype.addShip = function addShip() {
   const ship = new Ship({
     pos: this.randomPosition(),
-    game: this
+    game: this,
   });
 
   this.add(ship);
@@ -70,27 +70,23 @@ Game.prototype.draw = function draw(ctx) {
   ctx.fillStyle = Game.BG_COLOR;
   ctx.fillRect(0, 0, Game.DIM_X, Game.DIM_Y);
 
-  this.allObjects().forEach(function(object) {
+  this.allObjects().forEach(function (object) {
     object.draw(ctx);
   });
 };
 
 Game.prototype.isOutOfBounds = function isOutOfBounds(pos) {
-  return (pos[0] < 0) || (pos[1] < 0) ||
-    (pos[0] > Game.DIM_X) || (pos[1] > Game.DIM_Y);
+  return pos[0] < 0 || pos[1] < 0 || pos[0] > Game.DIM_X || pos[1] > Game.DIM_Y;
 };
 
 Game.prototype.moveObjects = function moveObjects(delta) {
-  this.allObjects().forEach(function(object) {
+  this.allObjects().forEach(function (object) {
     object.move(delta);
   });
 };
 
 Game.prototype.randomPosition = function randomPosition() {
-  return [
-    Game.DIM_X * Math.random(),
-    Game.DIM_Y * Math.random()
-  ];
+  return [Game.DIM_X * Math.random(), Game.DIM_Y * Math.random()];
 };
 
 Game.prototype.remove = function remove(object) {
@@ -111,9 +107,7 @@ Game.prototype.step = function step(delta) {
 };
 
 Game.prototype.wrap = function wrap(pos) {
-  return [
-    Util.wrap(pos[0], Game.DIM_X), Util.wrap(pos[1], Game.DIM_Y)
-  ];
+  return [Util.wrap(pos[0], Game.DIM_X), Util.wrap(pos[1], Game.DIM_Y)];
 };
 
 module.exports = Game;

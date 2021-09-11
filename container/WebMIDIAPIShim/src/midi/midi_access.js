@@ -9,12 +9,12 @@
 
 */
 
-import MIDIInput from './midi_input';
-import MIDIOutput from './midi_output';
-import MIDIConnectionEvent from './midiconnection_event';
-import { createJazzInstance, getJazzInstance } from '../util/jazz_instance';
-import { getDevice, generateUUID } from '../util/util';
-import Store from '../util/store';
+import MIDIInput from "./midi_input";
+import MIDIOutput from "./midi_output";
+import MIDIConnectionEvent from "./midiconnection_event";
+import { createJazzInstance, getJazzInstance } from "../util/jazz_instance";
+import { getDevice, generateUUID } from "../util/util";
+import Store from "../util/store";
 
 let midiAccess;
 let jazzInstance;
@@ -32,7 +32,7 @@ class MIDIAccess {
     }
 
     addEventListener(type, listener) {
-        if (type !== 'statechange') {
+        if (type !== "statechange") {
             return;
         }
         if (listeners.has(listener) === false) {
@@ -41,7 +41,7 @@ class MIDIAccess {
     }
 
     removeEventListener(type, listener) {
-        if (type !== 'statechange') {
+        if (type !== "statechange") {
             return;
         }
         if (listeners.has(listener) === true) {
@@ -50,22 +50,27 @@ class MIDIAccess {
     }
 }
 
-
 export function createMIDIAccess() {
-    return new Promise(((resolve, reject) => {
-        if (typeof midiAccess !== 'undefined') {
+    return new Promise((resolve, reject) => {
+        if (typeof midiAccess !== "undefined") {
             resolve(midiAccess);
             return;
         }
 
-        if (getDevice().browser === 'ie9') {
-            reject({ message: 'WebMIDIAPIShim supports Internet Explorer 10 and above.' });
+        if (getDevice().browser === "ie9") {
+            reject({
+                message:
+                    "WebMIDIAPIShim supports Internet Explorer 10 and above.",
+            });
             return;
         }
 
         createJazzInstance((instance) => {
-            if (typeof instance === 'undefined' || instance === null) {
-                reject({ message: 'No access to MIDI devices: your browser does not support the WebMIDI API and the Jazz plugin is not installed.' });
+            if (typeof instance === "undefined" || instance === null) {
+                reject({
+                    message:
+                        "No access to MIDI devices: your browser does not support the WebMIDI API and the Jazz plugin is not installed.",
+                });
                 return;
             }
 
@@ -77,9 +82,8 @@ export function createMIDIAccess() {
                 resolve(midiAccess);
             });
         });
-    }));
+    });
 }
-
 
 // create MIDIInput and MIDIOutput instances for all initially connected MIDI devices
 function createMIDIPorts(callback) {
@@ -88,11 +92,10 @@ function createMIDIPorts(callback) {
     const numInputs = inputs.length;
     const numOutputs = outputs.length;
 
-    loopCreateMIDIPort(0, numInputs, 'input', inputs, () => {
-        loopCreateMIDIPort(0, numOutputs, 'output', outputs, callback);
+    loopCreateMIDIPort(0, numInputs, "input", inputs, () => {
+        loopCreateMIDIPort(0, numOutputs, "output", outputs, callback);
     });
 }
-
 
 function loopCreateMIDIPort(index, max, type, list, callback) {
     if (index < max) {
@@ -105,19 +108,18 @@ function loopCreateMIDIPort(index, max, type, list, callback) {
     }
 }
 
-
 function createMIDIPort(type, name, callback) {
     getJazzInstance(type, (instance) => {
         let port;
-        let info = [name, '', ''];
-        if (type === 'input') {
-            if (instance.Support('MidiInInfo')) {
+        let info = [name, "", ""];
+        if (type === "input") {
+            if (instance.Support("MidiInInfo")) {
                 info = instance.MidiInInfo(name);
             }
             port = new MIDIInput(info, instance);
             midiInputs.set(port.id, port);
-        } else if (type === 'output') {
-            if (instance.Support('MidiOutInfo')) {
+        } else if (type === "output") {
+            if (instance.Support("MidiOutInfo")) {
                 info = instance.MidiOutInfo(name);
             }
             port = new MIDIOutput(info, instance);
@@ -126,7 +128,6 @@ function createMIDIPort(type, name, callback) {
         callback(port);
     });
 }
-
 
 // lookup function: Jazz gives us the name of the connected/disconnected MIDI devices but we have stored them by id
 function getPortByName(ports, name) {
@@ -141,13 +142,12 @@ function getPortByName(ports, name) {
     return port;
 }
 
-
 // keep track of connected/disconnected MIDI devices
 function setupListeners() {
     jazzInstance.OnDisconnectMidiIn((name) => {
         const port = getPortByName(midiInputs, name);
         if (port !== undefined) {
-            port.state = 'disconnected';
+            port.state = "disconnected";
             port.close();
             port._jazzInstance.inputInUse = false;
             midiInputs.delete(port.id);
@@ -158,7 +158,7 @@ function setupListeners() {
     jazzInstance.OnDisconnectMidiOut((name) => {
         const port = getPortByName(midiOutputs, name);
         if (port !== undefined) {
-            port.state = 'disconnected';
+            port.state = "disconnected";
             port.close();
             port._jazzInstance.outputInUse = false;
             midiOutputs.delete(port.id);
@@ -167,18 +167,17 @@ function setupListeners() {
     });
 
     jazzInstance.OnConnectMidiIn((name) => {
-        createMIDIPort('input', name, (port) => {
+        createMIDIPort("input", name, (port) => {
             dispatchEvent(port);
         });
     });
 
     jazzInstance.OnConnectMidiOut((name) => {
-        createMIDIPort('output', name, (port) => {
+        createMIDIPort("output", name, (port) => {
             dispatchEvent(port);
         });
     });
 }
-
 
 // when a device gets connected/disconnected both the port and MIDIAccess dispatch a MIDIConnectionEvent
 // therefor we call the ports dispatchEvent function here as well
@@ -187,12 +186,11 @@ export function dispatchEvent(port) {
 
     const evt = new MIDIConnectionEvent(midiAccess, port);
 
-    if (typeof midiAccess.onstatechange === 'function') {
+    if (typeof midiAccess.onstatechange === "function") {
         midiAccess.onstatechange(evt);
     }
-    listeners.forEach(listener => listener(evt));
+    listeners.forEach((listener) => listener(evt));
 }
-
 
 export function closeAllMIDIInputs() {
     midiInputs.forEach((input) => {
@@ -201,17 +199,16 @@ export function closeAllMIDIInputs() {
     });
 }
 
-
 // check if we have already created a unique id for this device, if so: reuse it, if not: create a new id and store it
 export function getMIDIDeviceId(name, type) {
     let id;
-    if (type === 'input') {
+    if (type === "input") {
         id = midiInputIds.get(name);
         if (id === undefined) {
             id = generateUUID();
             midiInputIds.set(name, id);
         }
-    } else if (type === 'output') {
+    } else if (type === "output") {
         id = midiOutputIds.get(name);
         if (id === undefined) {
             id = generateUUID();
@@ -220,4 +217,3 @@ export function getMIDIDeviceId(name, type) {
     }
     return id;
 }
-

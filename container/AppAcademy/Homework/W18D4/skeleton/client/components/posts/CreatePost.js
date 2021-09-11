@@ -21,12 +21,12 @@ class CreatePost extends Component {
     this.state = {
       title: "",
       body: "",
-      message: ""
+      message: "",
     };
   }
 
   update(field) {
-    return e => this.setState({ [field]: e.target.value });
+    return (e) => this.setState({ [field]: e.target.value });
   }
 
   // we need to remember to update our cache directly with our new product
@@ -45,7 +45,7 @@ class CreatePost extends Component {
       let newPost = data.newPost;
       cache.writeQuery({
         query: FETCH_POSTS,
-        data: { products: postArray.concat(newPost) }
+        data: { products: postArray.concat(newPost) },
       });
     }
   }
@@ -56,8 +56,8 @@ class CreatePost extends Component {
     createPost({
       variables: {
         title: this.state.title,
-        body: this.state.body
-      }
+        body: this.state.body,
+      },
     });
   }
 
@@ -66,20 +66,20 @@ class CreatePost extends Component {
       <Mutation
         mutation={CREATE_POST}
         // if we error out we can set the message here
-        onError={err => this.setState({ message: err.message })}
+        onError={(err) => this.setState({ message: err.message })}
         // we need to make sure we update our cache once our new product is created
         update={(cache, data) => this.updateCache(cache, data)}
         // when our query is complete we'll go to the index
-        onCompleted={data => {
+        onCompleted={(data) => {
           const { title } = data.createPost;
           this.setState({
-            message: `New post ${title} created successfully`
+            message: `New post ${title} created successfully`,
           });
         }}
       >
         {(createPost, { data }) => (
           <div>
-            <form onSubmit={e => this.handleSubmit(e, createPost)}>
+            <form onSubmit={(e) => this.handleSubmit(e, createPost)}>
               <input
                 onChange={this.update("title")}
                 value={this.state.title}

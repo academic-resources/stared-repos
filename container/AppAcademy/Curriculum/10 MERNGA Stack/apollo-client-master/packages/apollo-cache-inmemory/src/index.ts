@@ -2,10 +2,10 @@ export {
   InMemoryCache,
   InMemoryCacheConfig,
   defaultDataIdFromObject,
-} from './inMemoryCache';
+} from "./inMemoryCache";
 
-export * from './readFromStore';
-export * from './writeToStore';
-export * from './fragmentMatcher';
-export * from './objectCache';
-export * from './types';
+export * from "./readFromStore";
+export * from "./writeToStore";
+export * from "./fragmentMatcher";
+export * from "./objectCache";
+export * from "./types";

@@ -1,4 +1,4 @@
-function Student (fname, lname) {
+function Student(fname, lname) {
   this.fname = fname;
   this.lname = lname;
   this.courses = [];
@@ -10,7 +10,7 @@ Student.prototype.name = function () {
 
 Student.prototype.enroll = function (course) {
   if (!this.courses.includes(course)) {
-    this.courses.forEach(crs => {
+    this.courses.forEach((crs) => {
       if (crs.conflictsWith(course)) {
         throw "Course conflict";
       }
@@ -24,7 +24,7 @@ Student.prototype.enroll = function (course) {
 Student.prototype.courseLoad = function () {
   const courseLoad = {};
 
-  this.courses.forEach(course => {
+  this.courses.forEach((course) => {
     let dpt = course.department;
     courseLoad[dpt] = courseLoad[dpt] || 0;
     courseLoad[dpt] += course.credits;
@@ -33,7 +33,7 @@ Student.prototype.courseLoad = function () {
   return courseLoad;
 };
 
-function Course (name, department, credits, days, block) {
+function Course(name, department, credits, days, block) {
   this.name = name;
   this.department = department;
   this.credits = credits;
@@ -50,9 +50,11 @@ Course.prototype.addStudent = function (student) {
 };
 
 Course.prototype.conflictsWith = function (other) {
-  if (this.block !== other.block) { return false; }
+  if (this.block !== other.block) {
+    return false;
+  }
 
-  return this.days.some(day => other.days.indexOf(day) !== -1 );
+  return this.days.some((day) => other.days.indexOf(day) !== -1);
 };
 
 //Comment in the code below to run

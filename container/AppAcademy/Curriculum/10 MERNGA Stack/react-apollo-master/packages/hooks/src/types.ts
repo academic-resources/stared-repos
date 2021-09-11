@@ -1,10 +1,10 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 import {
   ApolloClient,
   ApolloQueryResult,
-  ObservableQuery
-} from 'apollo-client';
-import { Observable } from 'apollo-link';
+  ObservableQuery,
+} from "apollo-client";
+import { Observable } from "apollo-link";
 import {
   OperationVariables,
   QueryFunctionOptions,
@@ -14,9 +14,9 @@ import {
   MutationFunctionOptions,
   ExecutionResult,
   BaseSubscriptionOptions,
-  SubscriptionResult
-} from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
+  SubscriptionResult,
+} from "@apollo/react-common";
+import { DocumentNode } from "graphql";
 
 /* Common types */
 

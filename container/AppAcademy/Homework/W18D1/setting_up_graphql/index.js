@@ -1,13 +1,13 @@
 const express = require("express");
-const mongoose = require('mongoose');
-const bodyParser = require("body-parser")
-const expressGraphQL = require('express-graphql')
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const expressGraphQL = require("express-graphql");
 const User = require("./models/user"); // must import model before schema
 const Post = require("./models/post"); // must import model before schema
 const schema = require("./schema/schema");
 
 const app = express();
-const db = require('./config/keys').mongoURI;
+const db = require("./config/keys").mongoURI;
 
 // app.use(bodyParser.json());
 
@@ -47,7 +47,7 @@ const db = require('./config/keys').mongoURI;
 
 app.use(
   bodyParser.urlencoded({
-    extended: true
+    extended: true,
   })
 );
 
@@ -59,31 +59,30 @@ const createNewPost = router.post("/new", (req, res) => {
     title: req.body.title,
     body: req.body.body,
     date: req.body.date,
-    author: req.body.author
+    author: req.body.author,
   });
 
   newPost
     .save()
-    .then(savedPost => res.json(savedPost))
-    .catch(err => console.log(err));
+    .then((savedPost) => res.json(savedPost))
+    .catch((err) => console.log(err));
 });
 
 app.use("/posts", createNewPost);
-
 
 app.use(
   "/graphql",
   expressGraphQL({
     schema,
-    graphiql: true
+    graphiql: true,
   })
 );
 
 // app.get("/", (req, res) => res.send("Updated with Nodemon!"));
 
-app.listen(5000, () => console.log('Server is running on port 5000'));
+app.listen(5000, () => console.log("Server is running on port 5000"));
 
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));

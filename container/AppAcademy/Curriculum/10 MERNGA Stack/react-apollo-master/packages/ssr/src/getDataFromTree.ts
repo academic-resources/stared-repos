@@ -1,6 +1,6 @@
-import React from 'react';
-import { getApolloContext } from '@apollo/react-common';
-import { RenderPromises } from '@apollo/react-hooks';
+import React from "react";
+import { getApolloContext } from "@apollo/react-common";
+import { RenderPromises } from "@apollo/react-hooks";
 
 export function getDataFromTree(
   tree: React.ReactNode,
@@ -11,7 +11,7 @@ export function getDataFromTree(
     context,
     // If you need to configure this renderFunction, call getMarkupFromTree
     // directly instead of getDataFromTree.
-    renderFunction: require('react-dom/server').renderToStaticMarkup
+    renderFunction: require("react-dom/server").renderToStaticMarkup,
   });
 }
 
@@ -27,7 +27,7 @@ export function getMarkupFromTree({
   // The rendering function is configurable! We use renderToStaticMarkup as
   // the default, because it's a little less expensive than renderToString,
   // and legacy usage of getDataFromTree ignores the return value anyway.
-  renderFunction = require('react-dom/server').renderToStaticMarkup
+  renderFunction = require("react-dom/server").renderToStaticMarkup,
 }: GetMarkupFromTreeOptions): Promise<string> {
   const renderPromises = new RenderPromises();
 

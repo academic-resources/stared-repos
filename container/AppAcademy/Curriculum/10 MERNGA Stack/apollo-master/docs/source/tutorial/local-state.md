@@ -1,5 +1,5 @@
 ---
-title: '8. Manage local state'
+title: "8. Manage local state"
 description: How to store and query local data in the Apollo cache
 ---
 
@@ -20,7 +20,7 @@ Navigate to `src/resolvers.js` and copy the following code to create your client
 _src/resolvers.js_
 
 ```js
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 export const typeDefs = gql`
   extend type Query {
@@ -117,12 +117,12 @@ Let's look at another example of a component that queries local state in `src/pa
 _src/pages/cart.js_
 
 ```js
-import React, { Fragment } from 'react';
-import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
+import React, { Fragment } from "react";
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
 
-import { Header, Loading } from '../components';
-import { CartItem, BookTrips } from '../containers';
+import { Header, Loading } from "../components";
+import { CartItem, BookTrips } from "../containers";
 
 export const GET_CART_ITEMS = gql`
   query GetCartItems {
@@ -149,7 +149,7 @@ export default function Cart() {
               <p data-testid="empty-message">No items in your cart</p>
             ) : (
               <Fragment>
-                {data.cartItems.map(launchId => (
+                {data.cartItems.map((launchId) => (
                   <CartItem key={launchId} launchId={launchId} />
                 ))}
                 <BookTrips cartItems={data.cartItems} />
@@ -174,7 +174,7 @@ To add a virtual field, first extend the type of the data you're adding the fiel
 _src/resolvers.js_
 
 ```js
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 export const schema = gql`
   extend type Launch {
@@ -231,17 +231,17 @@ Direct cache writes are convenient when you want to write a simple field, like a
 _src/containers/logout-button.js_
 
 ```jsx
-import React from 'react';
-import styled from 'react-emotion';
-import { ApolloConsumer } from 'react-apollo';
+import React from "react";
+import styled from "react-emotion";
+import { ApolloConsumer } from "react-apollo";
 
-import { menuItemClassName } from '../components/menu-item';
-import { ReactComponent as ExitIcon } from '../assets/icons/exit.svg';
+import { menuItemClassName } from "../components/menu-item";
+import { ReactComponent as ExitIcon } from "../assets/icons/exit.svg";
 
 export default function LogoutButton() {
   return (
     <ApolloConsumer>
-      {client => (
+      {(client) => (
         <StyledButton
           onClick={() => {
             client.writeData({ data: { isLoggedIn: false } }); // highlight-line
@@ -256,9 +256,9 @@ export default function LogoutButton() {
   );
 }
 
-const StyledButton = styled('button')(menuItemClassName, {
-  background: 'none',
-  border: 'none',
+const StyledButton = styled("button")(menuItemClassName, {
+  background: "none",
+  border: "none",
   padding: 0,
 });
 ```
@@ -334,7 +334,7 @@ export const resolvers = {
       const { cartItems } = cache.readQuery({ query: GET_CART_ITEMS });
       const data = {
         cartItems: cartItems.includes(id)
-          ? cartItems.filter(i => i !== id)
+          ? cartItems.filter((i) => i !== id)
           : [...cartItems, id],
       };
       cache.writeQuery({ query: GET_CART_ITEMS, data });
@@ -351,7 +351,7 @@ Let's see how we call the `addOrRemoveFromCart` mutation in a component:
 _src/containers/action-button.js_
 
 ```js
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 const TOGGLE_CART = gql`
   mutation addOrRemoveFromCart($launchId: ID!) {
@@ -367,12 +367,12 @@ Now that our local mutation is complete, let's build out the rest of the `Action
 _src/containers/action-button.js_
 
 ```jsx
-import React from 'react';
-import { Mutation } from 'react-apollo';
-import gql from 'graphql-tag';
+import React from "react";
+import { Mutation } from "react-apollo";
+import gql from "graphql-tag";
 
-import { GET_LAUNCH_DETAILS } from '../pages/launch';
-import Button from '../components/button';
+import { GET_LAUNCH_DETAILS } from "../pages/launch";
+import Button from "../components/button";
 
 const CANCEL_TRIP = gql`
   mutation cancel($launchId: ID!) {
@@ -408,13 +408,13 @@ export default function ActionButton({ isBooked, id, isInCart }) {
             <Button
               onClick={mutate}
               isBooked={isBooked}
-              data-testid={'action-button'}
+              data-testid={"action-button"}
             >
               {isBooked
-                ? 'Cancel This Trip'
+                ? "Cancel This Trip"
                 : isInCart
-                ? 'Remove from Cart'
-                : 'Add to Cart'}
+                ? "Remove from Cart"
+                : "Add to Cart"}
             </Button>
           </div>
         );

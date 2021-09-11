@@ -1,7 +1,5 @@
-function breadthFirstArray(root) {
-
-}
+function breadthFirstArray(root) {}
 
 module.exports = {
-    breadthFirstArray
+  breadthFirstArray,
 };

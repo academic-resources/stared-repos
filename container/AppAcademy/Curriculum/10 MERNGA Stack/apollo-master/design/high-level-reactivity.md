@@ -110,7 +110,7 @@ Note that can’t put the `__deps` field on tasks itself, because JSON doesn’t
 In order to know when a GraphQL query needs to be re-run, we need to know what deps represent different parts of the query. These deps can be recorded manually for complex queries, but simple queries can have their deps identified automatically. For example, here’s a JavaScript SQL query that could be used in a particular part of the GraphQL resolution tree:
 
 ```js
-todoLists.select('*').where('id', 1);
+todoLists.select("*").where("id", 1);
 ```
 
 This will automatically record the following dependency:
@@ -130,7 +130,7 @@ For example, if you have a complex query to count the number of notifications a 
 ```js
 // somewhere, a function that consistently generates a key
 function notificationDepKeyForUser(userId) {
-  return 'notificationCount:' + userId;
+  return "notificationCount:" + userId;
 }
 
 // inside the GraphQL resolver
@@ -192,13 +192,13 @@ The hardest question here is (2) - how does a mutation notify the invalidation s
 Just like for data reading, in simple cases we should be able to emit invalidations from mutations automatically. For example, if you ran the following SQL update query in your mutation resolver:
 
 ```js
-todoLists.update('name', 'The new name for my todo list').where('id', 1);
+todoLists.update("name", "The new name for my todo list").where("id", 1);
 ```
 
 We should invalidate the following dependency key:
 
 ```js
-'todoLists:1'
+"todoLists:1";
 ```
 
 You can see that this matches up with the dependency we automatically recorded when reading that row, so the appropriate queries would rerun.
@@ -240,7 +240,7 @@ A first-class developer friendly backend data driver will need to:
 2. Write objects to the data source and in most cases automatically emit invalidations
 3. Have basic caching for better performance
 
-While the ideal driver would emit exact deps and invalidations automatically for all queries, this is not likely to be practical for an arbitrary datastore. In practice, drivers will likely fall back to broader deps and invalidations, and tooling will help developers identify places where these invalidations can be optimized.  The developer can then rework their query or emit manual invalidations as needed.
+While the ideal driver would emit exact deps and invalidations automatically for all queries, this is not likely to be practical for an arbitrary datastore. In practice, drivers will likely fall back to broader deps and invalidations, and tooling will help developers identify places where these invalidations can be optimized. The developer can then rework their query or emit manual invalidations as needed.
 
 ## Application performance monitoring and optimization
 

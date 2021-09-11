@@ -35,7 +35,7 @@ class Stack {
     }
     this.top = this.top.next;
     this.length--;
-    return temp.value; 
+    return temp.value;
   }
 
   size() {

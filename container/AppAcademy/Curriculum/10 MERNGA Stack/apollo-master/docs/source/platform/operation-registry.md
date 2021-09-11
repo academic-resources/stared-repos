@@ -178,9 +178,9 @@ const server = new ApolloServer({
   // Existing configuration
   plugins: [
     require("apollo-server-plugin-operation-registry")({
-      schemaTag: "overrideTag" // highlight-line
-    })
-  ]
+      schemaTag: "overrideTag", // highlight-line
+    }),
+  ],
 });
 ```
 
@@ -199,7 +199,7 @@ Alternatively, the API key can be specified with the `engine` parameter on the A
 ```js
 const server = new ApolloServer({
   // ...
-  engine: "<ENGINE_API_KEY>" // highlight-line
+  engine: "<ENGINE_API_KEY>", // highlight-line
   // ...
 });
 ```
@@ -399,9 +399,9 @@ const server = new ApolloServer({
 
       // suggested before enforcing the safelist
       debug: true,
-      dryRun: true
-    })
-  ]
+      dryRun: true,
+    }),
+  ],
 });
 ```
 

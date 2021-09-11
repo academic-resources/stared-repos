@@ -77,7 +77,7 @@ test('defaults to "unstyled" block type for unknown block types', () => {
         </div>
       );
     }
-    _handleChange = editorState => {
+    _handleChange = (editorState) => {
       this.setState({editorState});
     };
   }

@@ -38,7 +38,7 @@ function isNewline(node: Element): boolean {
  * See http://jsfiddle.net/9khdavod/ for the failure case, and
  * http://jsfiddle.net/7pg143f7/ for the fixed case.
  */
-const NEWLINE_A = ref =>
+const NEWLINE_A = (ref) =>
   useNewlineChar ? (
     <span key="A" data-text="true" ref={ref}>
       {'\n'}
@@ -47,7 +47,7 @@ const NEWLINE_A = ref =>
     <br key="A" data-text="true" ref={ref} />
   );
 
-const NEWLINE_B = ref =>
+const NEWLINE_B = (ref) =>
   useNewlineChar ? (
     <span key="B" data-text="true" ref={ref}>
       {'\n'}
@@ -99,14 +99,15 @@ class DraftEditorTextNode extends React.Component<Props> {
   render(): React.Node {
     if (this.props.children === '') {
       return this._forceFlag
-        ? NEWLINE_A(ref => (this._node = ref))
-        : NEWLINE_B(ref => (this._node = ref));
+        ? NEWLINE_A((ref) => (this._node = ref))
+        : NEWLINE_B((ref) => (this._node = ref));
     }
     return (
       <span
         key={this._forceFlag ? 'A' : 'B'}
         data-text="true"
-        ref={ref => (this._node = ref)}>
+        ref={(ref) => (this._node = ref)}
+      >
         {this.props.children}
       </span>
     );

@@ -159,6 +159,7 @@ expect(tree.JSON()).toMatchSnapShot();
 
 - skipping tests: 'it.skip()' // if it's the snapshot test you want to skip
   Example:
+
   ```
   it.skip('checks that it is an array', () => {
   const numbers = [1, 2, 3];
@@ -170,6 +171,8 @@ expect(tree.JSON()).toMatchSnapShot();
           })
 
   ![Imgur](https://i.imgur.com/YXyLOQw.png)
+
+  ```
 
 - isolating is used to pick the tests you want to run: `it.only()` // if you're working on a test and you have suite of 400 tests but you're only working to fix one, so you only want to run that one.
   Example:
@@ -293,9 +296,10 @@ You'll find some good stuff in there.
 ##### Is there a name for the chaining names like app.spec.js?
 
 No. I think they use it so they can identify at a quick glance. Like software can look at this and knows that anything that ends with this will be a test. I don't know what the name of that is.
-  
- ### (Amy answer: Maybe they were referring to Binary File Naming?  
- Jest uses textRegex to detect test files:
+
+### (Amy answer: Maybe they were referring to Binary File Naming?
+
+Jest uses textRegex to detect test files:
 ├── **tests**
 │ └── component.spec.js # test
 │ └── anything # test

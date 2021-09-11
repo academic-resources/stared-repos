@@ -49,9 +49,9 @@ First we want an instance of [`ApolloClient`][]. We can import the class from `a
 To get started, create an ApolloClient instance and point it at your GraphQL server:
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloClient } from "apollo-client";
+import { HttpLink } from "apollo-link-http";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
 const client = new ApolloClient({
   // By default, this client will send queries to the
@@ -66,7 +66,7 @@ const client = new ApolloClient({
 If you're using [apollo-boost](https://github.com/apollographql/apollo-client/tree/master/packages/apollo-boost), you can create an `ApolloClient` that uses `HttpLink` and `InMemoryCache` like so:
 
 ```js
-import ApolloClient from 'apollo-boost';
+import ApolloClient from "apollo-boost";
 
 const client = new ApolloClient();
 ```
@@ -76,13 +76,13 @@ const client = new ApolloClient();
 Next you will want to add a [`<ApolloProvider/>`][] component to the root of your React component tree. This component [provides](https://reactjs.org/docs/context.html) the React Apollo functionality to all the other components in the application without passing it explicitly. To use an [`<ApolloProvider/>`][] with your newly constructed client see the following:
 
 ```js
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider } from "react-apollo";
 
 ReactDOM.render(
   <ApolloProvider client={client}>
     <MyRootComponent />
   </ApolloProvider>,
-  document.getElementById('root'),
+  document.getElementById("root")
 );
 ```
 
@@ -97,8 +97,8 @@ npm install graphql-tag --save
 ```
 
 ```js
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import gql from "graphql-tag";
+import { Query } from "react-apollo";
 
 const GET_DOGS = gql`
   {
@@ -112,12 +112,12 @@ const GET_DOGS = gql`
 const Dogs = ({ onDogSelected }) => (
   <Query query={GET_DOGS}>
     {({ loading, error, data }) => {
-      if (loading) return 'Loading...';
+      if (loading) return "Loading...";
       if (error) return `Error! ${error.message}`;
 
       return (
         <select name="dog" onChange={onDogSelected}>
-          {data.dogs.map(dog => (
+          {data.dogs.map((dog) => (
             <option key={dog.id} value={dog.breed}>
               {dog.breed}
             </option>
@@ -144,7 +144,7 @@ To learn more about querying with React Apollo be sure to start reading the [doc
 React Apollo makes use of `Object.assign`, which is not supported in certain browsers (most prominently, IE11). If you wish to support legacy browsers, you will need to import a polyfill. As an example, you could use `core-js`'s polyfill like so:
 
 ```js
-import 'core-js/fn/object/assign';
+import "core-js/fn/object/assign";
 ```
 
 ## Building for production

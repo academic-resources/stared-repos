@@ -39,9 +39,7 @@ const assertRemoveEntitiesAtEdges = (
 ) => {
   setEntityMutability(mutability, content);
   expect(
-    removeEntitiesAtEdges(content, selection)
-      .getBlockMap()
-      .toJS(),
+    removeEntitiesAtEdges(content, selection).getBlockMap().toJS(),
   ).toMatchSnapshot();
 };
 

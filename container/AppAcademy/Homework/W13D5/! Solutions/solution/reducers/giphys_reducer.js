@@ -1,4 +1,4 @@
-import { RECEIVE_SEARCH_GIPHYS } from '../actions/giphy_actions';
+import { RECEIVE_SEARCH_GIPHYS } from "../actions/giphy_actions";
 
 const giphysReducer = (state = [], action) => {
   switch (action.type) {

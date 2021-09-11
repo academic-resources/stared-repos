@@ -1,7 +1,5 @@
-class TreeNode {
-
-}
+class TreeNode {}
 
 module.exports = {
-    TreeNode
+  TreeNode,
 };

@@ -1,4 +1,10 @@
-html, body, figure, figcaption, ul, li, h1 {
+html,
+body,
+figure,
+figcaption,
+ul,
+li,
+h1 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -80,4 +86,3 @@ li.disk-3 {
 .game-over li {
   background: green;
 }
-

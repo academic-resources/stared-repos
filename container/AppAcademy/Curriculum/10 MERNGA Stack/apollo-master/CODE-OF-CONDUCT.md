@@ -20,17 +20,18 @@ If you believe someone is violating the code of conduct, please report it by ema
 
 - **Be open, patient, and welcoming**
 
-    Members of this community are open to collaboration, whether it's on PRs, issues, or problems. We're receptive to constructive comment and criticism, as we value what the experiences and skill sets of contributors bring to the project. We're accepting of all who wish to get involved, and find ways for anyone to participate in a way that best matches their strengths.
+  Members of this community are open to collaboration, whether it's on PRs, issues, or problems. We're receptive to constructive comment and criticism, as we value what the experiences and skill sets of contributors bring to the project. We're accepting of all who wish to get involved, and find ways for anyone to participate in a way that best matches their strengths.
 
 - **Be considerate**
 
-    We are considerate of our peers: other Apollo users and contributors. We’re thoughtful when addressing others’ efforts, keeping in mind that work is often undertaken for the benefit of the community. We also value others’ time and appreciate that not every issue or comment will be responded to immediately. We strive to be mindful in our communications, whether in person or online, and we're tactful when approaching views that are different from our own.
+  We are considerate of our peers: other Apollo users and contributors. We’re thoughtful when addressing others’ efforts, keeping in mind that work is often undertaken for the benefit of the community. We also value others’ time and appreciate that not every issue or comment will be responded to immediately. We strive to be mindful in our communications, whether in person or online, and we're tactful when approaching views that are different from our own.
 
 - **Be respectful**
 
-    As a community of professionals, we are professional in our handling of disagreements, and don’t allow frustration to turn into a personal attack. We work together to resolve conflict, assume good intentions and do our best to act in an empathic fashion.
+  As a community of professionals, we are professional in our handling of disagreements, and don’t allow frustration to turn into a personal attack. We work together to resolve conflict, assume good intentions and do our best to act in an empathic fashion.
 
-    We do not tolerate harassment or exclusionary behavior. This includes, but is not limited to:
+  We do not tolerate harassment or exclusionary behavior. This includes, but is not limited to:
+
   - Violent threats or language directed against another person.
   - Discriminatory jokes and language.
   - Posting sexually explicit or sexualized content.
@@ -43,21 +44,21 @@ If you believe someone is violating the code of conduct, please report it by ema
 
 - **Take responsibility for our words and our actions**
 
-    We can all make mistakes; when we do, we take responsibility for them. If someone has been harmed or offended, we listen carefully and respectfully. We are also considerate of others’ attempts to amend their mistakes.
+  We can all make mistakes; when we do, we take responsibility for them. If someone has been harmed or offended, we listen carefully and respectfully. We are also considerate of others’ attempts to amend their mistakes.
 
 - **Be collaborative**
 
-    The work we produce is (and is part of) an ecosystem containing several parallel efforts working towards a similar goal. Collaboration between teams and individuals that each have their own goal and vision is essential to reduce redundancy and improve the quality of our work.
+  The work we produce is (and is part of) an ecosystem containing several parallel efforts working towards a similar goal. Collaboration between teams and individuals that each have their own goal and vision is essential to reduce redundancy and improve the quality of our work.
 
-    Internally and externally, we celebrate good collaboration. Wherever possible, we work closely with upstream projects and others in the free software community to coordinate our efforts. We prefer to work transparently and involve interested parties as early as possible.
+  Internally and externally, we celebrate good collaboration. Wherever possible, we work closely with upstream projects and others in the free software community to coordinate our efforts. We prefer to work transparently and involve interested parties as early as possible.
 
 - **Ask for help when in doubt**
 
-    Nobody is expected to be perfect in this community. Asking questions early avoids many problems later, so questions are encouraged, though they may be directed to the appropriate forum. Those who are asked should be responsive and helpful.
+  Nobody is expected to be perfect in this community. Asking questions early avoids many problems later, so questions are encouraged, though they may be directed to the appropriate forum. Those who are asked should be responsive and helpful.
 
 - **Take initiative**
 
-    We encourage new participants to feel empowered to lead, to take action, and to experiment when they feel innovation could improve the project. If we have an idea for a new tool, or how an existing tool can be improved, we speak up and take ownership of that work when possible.
+  We encourage new participants to feel empowered to lead, to take action, and to experiment when they feel innovation could improve the project. If we have an idea for a new tool, or how an existing tool can be improved, we speak up and take ownership of that work when possible.
 
 ### Attribution
 
@@ -68,4 +69,4 @@ Sections of this Code of Conduct were inspired in by the following Codes from ot
 - [Ubuntu](http://www.ubuntu.com/about/about-ubuntu/conduct)
 - [Django](https://www.djangoproject.com/conduct/)
 
-*This Apollo Code of Conduct is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license. This Code was last updated on August 28, 2017.*
+_This Apollo Code of Conduct is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license. This Code was last updated on August 28, 2017._

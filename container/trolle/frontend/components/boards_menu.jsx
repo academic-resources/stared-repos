@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default () => (
   <div className="boards-menu">
@@ -14,4 +14,4 @@ export default () => (
     <div>Boards Menu</div>
     <div>Boards Menu</div>
   </div>
-)
+);

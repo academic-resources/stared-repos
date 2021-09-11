@@ -1,12 +1,12 @@
-import { ObservableQuery } from '../core/ObservableQuery';
-import { ApolloQueryResult } from '../core/types';
-import { Subscription } from '../util/Observable';
-import { asyncMap } from './observables';
+import { ObservableQuery } from "../core/ObservableQuery";
+import { ApolloQueryResult } from "../core/types";
+import { Subscription } from "../util/Observable";
+import { asyncMap } from "./observables";
 
 export default function subscribeAndCount(
   done: jest.DoneCallback,
   observable: ObservableQuery<any>,
-  cb: (handleCount: number, result: ApolloQueryResult<any>) => any,
+  cb: (handleCount: number, result: ApolloQueryResult<any>) => any
 ): Subscription {
   let handleCount = 0;
   const subscription = asyncMap(
@@ -23,7 +23,7 @@ export default function subscribeAndCount(
           done.fail(e);
         });
       }
-    },
+    }
   ).subscribe({
     error: done.fail,
   });

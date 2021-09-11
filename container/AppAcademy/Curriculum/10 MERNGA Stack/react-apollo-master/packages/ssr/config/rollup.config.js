@@ -1,5 +1,5 @@
-import { rollup } from '../../../config/rollup.config';
+import { rollup } from "../../../config/rollup.config";
 
 export default rollup({
-  name: 'ssr'
+  name: "ssr",
 });

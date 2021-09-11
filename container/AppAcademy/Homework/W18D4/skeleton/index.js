@@ -16,7 +16,7 @@ const schema = require("./schema/schema");
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
 // using the bodyParser package to parse incoming requests into json
 app.use(bodyParser.json());
@@ -28,7 +28,7 @@ app.use(
   expressGraphQL({
     schema,
     // allowing us to use GraphiQL in a dev environment
-    graphiql: true
+    graphiql: true,
   })
 );
 

@@ -14,18 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
     li.addEventListener("click", toggleLi);
   });
 
-
-
   // adding SF places as list items
 
   // --- your code here!
 
-
-
   // adding new photos
 
   // --- your code here!
-
-
-
 });

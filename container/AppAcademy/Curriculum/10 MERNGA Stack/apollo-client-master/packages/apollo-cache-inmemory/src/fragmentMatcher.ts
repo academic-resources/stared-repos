@@ -1,12 +1,12 @@
-import { isTest, IdValue } from 'apollo-utilities';
-import { invariant } from 'ts-invariant';
+import { isTest, IdValue } from "apollo-utilities";
+import { invariant } from "ts-invariant";
 
 import {
   ReadStoreContext,
   FragmentMatcherInterface,
   PossibleTypesMap,
   IntrospectionResultData,
-} from './types';
+} from "./types";
 
 let haveWarned = false;
 
@@ -38,17 +38,17 @@ export class HeuristicFragmentMatcher implements FragmentMatcherInterface {
   public match(
     idValue: IdValue,
     typeCondition: string,
-    context: ReadStoreContext,
-  ): boolean | 'heuristic' {
+    context: ReadStoreContext
+  ): boolean | "heuristic" {
     const obj = context.store.get(idValue.id);
-    const isRootQuery = idValue.id === 'ROOT_QUERY';
+    const isRootQuery = idValue.id === "ROOT_QUERY";
 
     if (!obj) {
       // https://github.com/apollographql/apollo-client/pull/3507
       return isRootQuery;
     }
 
-    const { __typename = isRootQuery && 'Query' } = obj;
+    const { __typename = isRootQuery && "Query" } = obj;
 
     if (!__typename) {
       if (shouldWarn()) {
@@ -57,17 +57,17 @@ export class HeuristicFragmentMatcher implements FragmentMatcherInterface {
    Please turn on the addTypename option and include __typename when writing fragments so that Apollo Client
    can accurately match fragments.`);
         invariant.warn(
-          'Could not find __typename on Fragment ',
+          "Could not find __typename on Fragment ",
           typeCondition,
-          obj,
+          obj
         );
         invariant.warn(
           `DEPRECATION WARNING: using fragments without __typename is unsupported behavior ` +
-            `and will be removed in future versions of Apollo client. You should fix this and set addTypename to true now.`,
+            `and will be removed in future versions of Apollo client. You should fix this and set addTypename to true now.`
         );
       }
 
-      return 'heuristic';
+      return "heuristic";
     }
 
     if (__typename === typeCondition) {
@@ -90,15 +90,15 @@ export class HeuristicFragmentMatcher implements FragmentMatcherInterface {
 
     if (shouldWarn()) {
       invariant.error(
-        'You are using the simple (heuristic) fragment matcher, but your ' +
-          'queries contain union or interface types. Apollo Client will not be ' +
-          'able to accurately map fragments. To make this error go away, use ' +
-          'the `IntrospectionFragmentMatcher` as described in the docs: ' +
-          'https://www.apollographql.com/docs/react/advanced/fragments.html#fragment-matcher',
+        "You are using the simple (heuristic) fragment matcher, but your " +
+          "queries contain union or interface types. Apollo Client will not be " +
+          "able to accurately map fragments. To make this error go away, use " +
+          "the `IntrospectionFragmentMatcher` as described in the docs: " +
+          "https://www.apollographql.com/docs/react/advanced/fragments.html#fragment-matcher"
       );
     }
 
-    return 'heuristic';
+    return "heuristic";
   }
 }
 
@@ -111,7 +111,7 @@ export class IntrospectionFragmentMatcher implements FragmentMatcherInterface {
   }) {
     if (options && options.introspectionQueryResultData) {
       this.possibleTypesMap = this.parseIntrospectionResult(
-        options.introspectionQueryResultData,
+        options.introspectionQueryResultData
       );
       this.isReady = true;
     } else {
@@ -124,28 +124,28 @@ export class IntrospectionFragmentMatcher implements FragmentMatcherInterface {
   public match(
     idValue: IdValue,
     typeCondition: string,
-    context: ReadStoreContext,
+    context: ReadStoreContext
   ) {
     invariant(
       this.isReady,
-      'FragmentMatcher.match() was called before FragmentMatcher.init()',
+      "FragmentMatcher.match() was called before FragmentMatcher.init()"
     );
 
     const obj = context.store.get(idValue.id);
-    const isRootQuery = idValue.id === 'ROOT_QUERY';
+    const isRootQuery = idValue.id === "ROOT_QUERY";
 
     if (!obj) {
       // https://github.com/apollographql/apollo-client/pull/4620
       return isRootQuery;
     }
 
-    const { __typename = isRootQuery && 'Query' } = obj;
+    const { __typename = isRootQuery && "Query" } = obj;
 
     invariant(
       __typename,
       `Cannot match fragment because __typename property is missing: ${JSON.stringify(
-        obj,
-      )}`,
+        obj
+      )}`
     );
 
     if (__typename === typeCondition) {
@@ -161,13 +161,13 @@ export class IntrospectionFragmentMatcher implements FragmentMatcherInterface {
   }
 
   private parseIntrospectionResult(
-    introspectionResultData: IntrospectionResultData,
+    introspectionResultData: IntrospectionResultData
   ): PossibleTypesMap {
     const typeMap: PossibleTypesMap = {};
-    introspectionResultData.__schema.types.forEach(type => {
-      if (type.kind === 'UNION' || type.kind === 'INTERFACE') {
+    introspectionResultData.__schema.types.forEach((type) => {
+      if (type.kind === "UNION" || type.kind === "INTERFACE") {
         typeMap[type.name] = type.possibleTypes.map(
-          implementingType => implementingType.name,
+          (implementingType) => implementingType.name
         );
       }
     });

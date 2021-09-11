@@ -1,8 +1,5 @@
+const partyHeader = document.getElementById("party");
 
-const partyHeader = document.getElementById('party');
+export const htmlGenerator = (string, htmlElement) => {};
 
-export const htmlGenerator = (string, htmlElement) => {
-
-};
-
-htmlGenerator('Party Time.', partyHeader);
+htmlGenerator("Party Time.", partyHeader);

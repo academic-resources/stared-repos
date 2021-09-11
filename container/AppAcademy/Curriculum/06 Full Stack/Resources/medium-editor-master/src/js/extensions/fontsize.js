@@ -1,12 +1,11 @@
 (function () {
-    'use strict';
+    "use strict";
 
     var FontSizeForm = MediumEditor.extensions.form.extend({
-
-        name: 'fontsize',
-        action: 'fontSize',
-        aria: 'increase/decrease font size',
-        contentDefault: '&#xB1;', // ±
+        name: "fontsize",
+        action: "fontSize",
+        aria: "increase/decrease font size",
+        contentDefault: "&#xB1;", // ±
         contentFA: '<i class="fa fa-text-height"></i>',
 
         init: function () {
@@ -21,7 +20,7 @@
 
             if (!this.isDisplayed()) {
                 // Get fontsize of current selection (convert to string since IE returns this as number)
-                var fontSize = this.document.queryCommandValue('fontSize') + '';
+                var fontSize = this.document.queryCommandValue("fontSize") + "";
                 this.showForm(fontSize);
             }
 
@@ -38,12 +37,12 @@
 
         // Used by medium-editor when the default toolbar is to be displayed
         isDisplayed: function () {
-            return this.getForm().style.display === 'block';
+            return this.getForm().style.display === "block";
         },
 
         hideForm: function () {
-            this.getForm().style.display = 'none';
-            this.getInput().value = '';
+            this.getForm().style.display = "none";
+            this.getInput().value = "";
         },
 
         showForm: function (fontSize) {
@@ -51,10 +50,10 @@
 
             this.base.saveSelection();
             this.hideToolbarDefaultActions();
-            this.getForm().style.display = 'block';
+            this.getForm().style.display = "block";
             this.setToolbarPosition();
 
-            input.value = fontSize || '';
+            input.value = fontSize || "";
             input.focus();
         },
 
@@ -87,71 +86,81 @@
         // form creation and event handling
         createForm: function () {
             var doc = this.document,
-                form = doc.createElement('div'),
-                input = doc.createElement('input'),
-                close = doc.createElement('a'),
-                save = doc.createElement('a');
+                form = doc.createElement("div"),
+                input = doc.createElement("input"),
+                close = doc.createElement("a"),
+                save = doc.createElement("a");
 
             // Font Size Form (div)
-            form.className = 'medium-editor-toolbar-form';
-            form.id = 'medium-editor-toolbar-form-fontsize-' + this.getEditorId();
+            form.className = "medium-editor-toolbar-form";
+            form.id =
+                "medium-editor-toolbar-form-fontsize-" + this.getEditorId();
 
             // Handle clicks on the form itself
-            this.on(form, 'click', this.handleFormClick.bind(this));
+            this.on(form, "click", this.handleFormClick.bind(this));
 
             // Add font size slider
-            input.setAttribute('type', 'range');
-            input.setAttribute('min', '1');
-            input.setAttribute('max', '7');
-            input.className = 'medium-editor-toolbar-input';
+            input.setAttribute("type", "range");
+            input.setAttribute("min", "1");
+            input.setAttribute("max", "7");
+            input.className = "medium-editor-toolbar-input";
             form.appendChild(input);
 
             // Handle typing in the textbox
-            this.on(input, 'change', this.handleSliderChange.bind(this));
+            this.on(input, "change", this.handleSliderChange.bind(this));
 
             // Add save buton
-            save.setAttribute('href', '#');
-            save.className = 'medium-editor-toobar-save';
-            save.innerHTML = this.getEditorOption('buttonLabels') === 'fontawesome' ?
-                             '<i class="fa fa-check"></i>' :
-                             '&#10003;';
+            save.setAttribute("href", "#");
+            save.className = "medium-editor-toobar-save";
+            save.innerHTML =
+                this.getEditorOption("buttonLabels") === "fontawesome"
+                    ? '<i class="fa fa-check"></i>'
+                    : "&#10003;";
             form.appendChild(save);
 
             // Handle save button clicks (capture)
-            this.on(save, 'click', this.handleSaveClick.bind(this), true);
+            this.on(save, "click", this.handleSaveClick.bind(this), true);
 
             // Add close button
-            close.setAttribute('href', '#');
-            close.className = 'medium-editor-toobar-close';
-            close.innerHTML = this.getEditorOption('buttonLabels') === 'fontawesome' ?
-                              '<i class="fa fa-times"></i>' :
-                              '&times;';
+            close.setAttribute("href", "#");
+            close.className = "medium-editor-toobar-close";
+            close.innerHTML =
+                this.getEditorOption("buttonLabels") === "fontawesome"
+                    ? '<i class="fa fa-times"></i>'
+                    : "&times;";
             form.appendChild(close);
 
             // Handle close button clicks
-            this.on(close, 'click', this.handleCloseClick.bind(this));
+            this.on(close, "click", this.handleCloseClick.bind(this));
 
             return form;
         },
 
         getInput: function () {
-            return this.getForm().querySelector('input.medium-editor-toolbar-input');
+            return this.getForm().querySelector(
+                "input.medium-editor-toolbar-input"
+            );
         },
 
         clearFontSize: function () {
-            MediumEditor.selection.getSelectedElements(this.document).forEach(function (el) {
-                if (el.nodeName.toLowerCase() === 'font' && el.hasAttribute('size')) {
-                    el.removeAttribute('size');
-                }
-            });
+            MediumEditor.selection
+                .getSelectedElements(this.document)
+                .forEach(function (el) {
+                    if (
+                        el.nodeName.toLowerCase() === "font" &&
+                        el.hasAttribute("size")
+                    ) {
+                        el.removeAttribute("size");
+                    }
+                });
         },
 
         handleSliderChange: function () {
             var size = this.getInput().value;
-            if (size === '4') {
+            if (size === "4") {
                 this.clearFontSize();
             } else {
-                this.execAction('fontSize', { value: size });
+                this.execAction("fontSize", { value: size });
             }
         },
 
@@ -170,8 +179,8 @@
             // Click Close -> close the form
             event.preventDefault();
             this.doFormCancel();
-        }
+        },
     });
 
     MediumEditor.extensions.fontSize = FontSizeForm;
-}());
+})();

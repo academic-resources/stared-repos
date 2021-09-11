@@ -1,8 +1,8 @@
-import { OperationVariables } from '@apollo/react-common';
-import { useMutation } from '@apollo/react-hooks';
-import PropTypes from 'prop-types';
+import { OperationVariables } from "@apollo/react-common";
+import { useMutation } from "@apollo/react-hooks";
+import PropTypes from "prop-types";
 
-import { MutationComponentOptions } from './types';
+import { MutationComponentOptions } from "./types";
 
 export function Mutation<TData = any, TVariables = OperationVariables>(
   props: MutationComponentOptions<TData, TVariables>
@@ -20,7 +20,7 @@ export namespace Mutation {
       PropTypes.arrayOf(
         PropTypes.oneOfType([PropTypes.string, PropTypes.object])
       ),
-      PropTypes.func
+      PropTypes.func,
     ]),
     awaitRefetchQueries: PropTypes.bool,
     update: PropTypes.func,

@@ -1,34 +1,36 @@
-const pokemonAPI = 'https://pokeapi.co/api/v2/pokemon/?offset=150&limit=150'
+const pokemonAPI = "https://pokeapi.co/api/v2/pokemon/?offset=150&limit=150";
 
 const pokemon = [];
 fetch(pokemonAPI)
-  .then(response => response.json())
-  .then(data => pokemon.push(...data.results));
+  .then((response) => response.json())
+  .then((data) => pokemon.push(...data.results));
 
-const findMatches = function(wordToMatch, pokemon) {
-  return pokemon.filter(poke => {
-    // here we need to figure out if the poke matches 
+const findMatches = function (wordToMatch, pokemon) {
+  return pokemon.filter((poke) => {
+    // here we need to figure out if the poke matches
     // what we are searching for
     // g = global, i = insensitive to case
-    const regex = new RegExp(wordToMatch, 'gi');
+    const regex = new RegExp(wordToMatch, "gi");
     return poke.name.match(regex);
   });
 };
 
-const displayMatches = function(){
+const displayMatches = function () {
   const matchArray = findMatches(this.value, pokemon);
-  const html = matchArray.map(poke => {
-    return `
+  const html = matchArray
+    .map((poke) => {
+      return `
       <li>
         <span class="name">${poke.name}</span>
       </li>
     `;
-  }).join('');
+    })
+    .join("");
   suggestions.innerHTML = html;
 };
 
-const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
+const searchInput = document.querySelector(".search");
+const suggestions = document.querySelector(".suggestions");
 
-searchInput.addEventListener('change', displayMatches);
-searchInput.addEventListener('keyup', displayMatches);
+searchInput.addEventListener("change", displayMatches);
+searchInput.addEventListener("keyup", displayMatches);

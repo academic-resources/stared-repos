@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
-import Mutations from '../graphql/mutations';
+import Mutations from "../graphql/mutations";
 const { REGISTER_USER } = Mutations;
 
 class Register extends Component {
@@ -10,44 +10,44 @@ class Register extends Component {
     this.state = {
       name: "",
       email: "",
-      password: ""
+      password: "",
     };
   }
 
   update(field) {
-    return e => this.setState({ [field]: e.target.value });
+    return (e) => this.setState({ [field]: e.target.value });
   }
 
-  updateCache(client, {data}) {
+  updateCache(client, { data }) {
     console.log(data);
     // here we can write directly to our cache with our returned mutation data
     client.writeData({
-      data: { isLoggedIn: data.register.loggedIn }
+      data: { isLoggedIn: data.register.loggedIn },
     });
   }
 
   render() {
     return (
       <Mutation
-        mutation={ REGISTER_USER }
-        onCompleted={data => {
+        mutation={REGISTER_USER}
+        onCompleted={(data) => {
           const { token } = data.register;
           localStorage.setItem("auth-token", token);
           this.props.history.push("/");
         }}
         update={(client, data) => this.updateCache(client, data)}
       >
-        {registerUser => (
+        {(registerUser) => (
           <div>
             <form
-              onSubmit={e => {
+              onSubmit={(e) => {
                 e.preventDefault();
                 registerUser({
                   variables: {
                     name: this.state.name,
                     email: this.state.email,
-                    password: this.state.password
-                  }
+                    password: this.state.password,
+                  },
                 });
               }}
             >

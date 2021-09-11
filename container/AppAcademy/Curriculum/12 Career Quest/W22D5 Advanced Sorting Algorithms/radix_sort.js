@@ -1,24 +1,26 @@
 function myGetDigitFrom(num, place) {
-  order = 10 ** (place)
-  result = (num % (order * 10) - num % (order)) / order
-  return result < 0 ? -result : result
+  order = 10 ** place;
+  result = ((num % (order * 10)) - (num % order)) / order;
+  return result < 0 ? -result : result;
 }
 
-const getDigitFrom = (num, place) => Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;;
+const getDigitFrom = (num, place) =>
+  Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
 
-console.log(myGetDigitFrom(1234, 2))
-console.log(myGetDigitFrom(-1234, 2))
+console.log(myGetDigitFrom(1234, 2));
+console.log(myGetDigitFrom(-1234, 2));
 
 function myGetIntLength(num) {
-  return String(num).length
+  return String(num).length;
 }
 
-const getIntLength = (num) => (num === 0) ? 1 : Math.floor(Math.log10(Math.abs(num))) + 1;
+const getIntLength = (num) =>
+  num === 0 ? 1 : Math.floor(Math.log10(Math.abs(num))) + 1;
 
-console.log(myGetIntLength(1234))
+console.log(myGetIntLength(1234));
 
 function myGetMaxDigits(nums) {
-  return myGetIntLength(Math.max(...nums))
+  return myGetIntLength(Math.max(...nums));
 }
 
 function getMaxDigits(nums) {
@@ -29,7 +31,7 @@ function getMaxDigits(nums) {
   return maxDigits;
 }
 
-console.log(myGetMaxDigits([1,123,423,4321]))
+console.log(myGetMaxDigits([1, 123, 423, 4321]));
 
 // Only positive values in arr
 function radixSort(arr) {
@@ -39,8 +41,8 @@ function radixSort(arr) {
 
   let maxDigits = getMaxDigits(arr);
   for (let k = 0; k < maxDigits; k++) {
-    let buckets = Array.from({length: 10}, () => []); // Array of empty arrays
-    
+    let buckets = Array.from({ length: 10 }, () => []); // Array of empty arrays
+
     for (let i = 0; i < arr.length; i++) {
       let digit = getDigitFrom(arr[i], k);
       buckets[digit].push(arr[i]);
@@ -51,30 +53,29 @@ function radixSort(arr) {
   return arr;
 }
 
-
 //Hacky Solution to allow for both positive and negative
 function radixSortWithNegatives(arr) {
   if (!Array.isArray(arr)) {
     return null;
   }
 
-  var negatives = arr.filter(item => item < 0);
+  var negatives = arr.filter((item) => item < 0);
   var negativesSorted = [];
   if (negatives.length > 0) {
-    negativesSorted = radixSort(negatives.map(item => Math.abs(item)))
-                        .reverse()
-                        .map(item => -item);
+    negativesSorted = radixSort(negatives.map((item) => Math.abs(item)))
+      .reverse()
+      .map((item) => -item);
   }
 
-  var positives = arr.filter(item => item >= 0);
+  var positives = arr.filter((item) => item >= 0);
   let maxDigits = getMaxDigits(positives);
 
-  for(let k = 0; k < maxDigits; k++){
-    let buckets = Array.from({length: 10}, () => []);
+  for (let k = 0; k < maxDigits; k++) {
+    let buckets = Array.from({ length: 10 }, () => []);
 
     for (let i = 0; i < positives.length; i++) {
-        let digit = getDigitFrom(positives[i], k);
-        buckets[digit].push(positives[i]);
+      let digit = getDigitFrom(positives[i], k);
+      buckets[digit].push(positives[i]);
     }
     positives = [].concat(...buckets);
   }

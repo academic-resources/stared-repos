@@ -1,4 +1,7 @@
-html, body, h1, p {
+html,
+body,
+h1,
+p {
   margin: 0;
   border: 0;
   padding: 0;
@@ -9,18 +12,18 @@ html, body, h1, p {
   background: transparent;
 }
 
-body{
+body {
   font-family: Open Sans;
   line-height: 1.2;
 }
 
-h1{
+h1 {
   font-size: 28px;
   font-weight: 700;
   margin: 20px 10px 10px 20px;
 }
 
-.interactive{
+.interactive {
   display: flex;
   justify-content: flex-start;
 }

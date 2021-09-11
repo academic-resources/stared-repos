@@ -16,7 +16,7 @@ const schema = require("./schema/schema");
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
 // using the bodyParser package to parse incoming requests into json
 app.use(bodyParser.json());
@@ -25,15 +25,15 @@ app.use(bodyParser.json());
 // in the object passed to the expressGraphQL function
 app.use(
   "/graphql",
-  expressGraphQL(req => {
+  expressGraphQL((req) => {
     return {
       schema,
       // we are receiving the request and can check for our
       // auth token under headers
       context: {
-        token: req.headers.authorization
+        token: req.headers.authorization,
       },
-      graphiql: true
+      graphiql: true,
     };
   })
 );

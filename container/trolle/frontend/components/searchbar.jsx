@@ -1,27 +1,27 @@
-import React from 'react'
-import SearchResultsList from './search_results_list'
-import { connect } from 'react-redux'
+import React from "react";
+import SearchResultsList from "./search_results_list";
+import { connect } from "react-redux";
 
-const mstp = state => ({
-  searchResults: [] // temp
-})
+const mstp = (state) => ({
+  searchResults: [], // temp
+});
 
-const mdtp = dispatch => ({})
+const mdtp = (dispatch) => ({});
 
 class SearchResultsListButton extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      searchString: '',
-      open: false
-    }
-    this.toggleSearchResultsList = this.toggleSearchResultsList.bind(this)
+      searchString: "",
+      open: false,
+    };
+    this.toggleSearchResultsList = this.toggleSearchResultsList.bind(this);
   }
 
   toggleSearchResultsList() {
     this.setState({
-      open: !this.state.open
-    })
+      open: !this.state.open,
+    });
   }
 
   handleInputChange(e) {
@@ -31,8 +31,8 @@ class SearchResultsListButton extends React.Component {
   }
 
   render() {
-    const { searchResults } = this.props
-    const { open, searchString } = this.state
+    const { searchResults } = this.props;
+    const { open, searchString } = this.state;
 
     return (
       <div className="searchbar-container">
@@ -40,10 +40,10 @@ class SearchResultsListButton extends React.Component {
           <input
             value={searchString}
             onFocus={() => {
-              if (!open) this.toggleSearchResultsList()
+              if (!open) this.toggleSearchResultsList();
             }}
             onBlur={() => {
-              if (open) this.toggleSearchResultsList()
+              if (open) this.toggleSearchResultsList();
             }}
             onChange={this.handleInputChange.bind(this)}
           />
@@ -52,11 +52,8 @@ class SearchResultsListButton extends React.Component {
 
         {open && <SearchResultsList searchResults={searchResults} />}
       </div>
-    )
+    );
   }
 }
 
-export default connect(
-  mstp,
-  mdtp
-)(SearchResultsListButton)
+export default connect(mstp, mdtp)(SearchResultsListButton);

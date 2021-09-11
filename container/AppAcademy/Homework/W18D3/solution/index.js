@@ -5,8 +5,8 @@ const app = express();
 // configure MongoDB, mongoose and the things required
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const db = require("../../../notes/scripts/d2/FinishedGraphQLExample/config/keys")
-  .mongoURI;
+const db =
+  require("../../../notes/scripts/d2/FinishedGraphQLExample/config/keys").mongoURI;
 const Post = require("./models/Post");
 const User = require("./models/User");
 
@@ -17,7 +17,7 @@ const schema = require("./schema/schema");
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
 // using the bodyParser package to parse incoming requests into json
 app.use(bodyParser.json());
@@ -29,7 +29,7 @@ app.use(
   expressGraphQL({
     schema,
     // allowing us to use GraphiQL in a dev environment
-    graphiql: true
+    graphiql: true,
   })
 );
 

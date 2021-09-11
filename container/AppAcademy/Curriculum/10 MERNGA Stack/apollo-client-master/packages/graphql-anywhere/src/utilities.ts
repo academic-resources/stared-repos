@@ -1,30 +1,32 @@
-import { DocumentNode, DirectiveNode } from 'graphql';
+import { DocumentNode, DirectiveNode } from "graphql";
 
-import { getInclusionDirectives } from 'apollo-utilities';
+import { getInclusionDirectives } from "apollo-utilities";
 
-import { graphql, VariableMap, ExecInfo, ExecContext } from './graphql';
+import { graphql, VariableMap, ExecInfo, ExecContext } from "./graphql";
 
-import { invariant } from 'ts-invariant';
+import { invariant } from "ts-invariant";
 
 const { hasOwnProperty } = Object.prototype;
 
 export function filter<FD = any, D extends FD = any>(
   doc: DocumentNode,
   data: D,
-  variableValues: VariableMap = {},
+  variableValues: VariableMap = {}
 ): FD {
   const resolver = (
     fieldName: string,
     root: any,
     args: Object,
     context: ExecContext,
-    info: ExecInfo,
+    info: ExecInfo
   ) => {
     return root[info.resultKey];
   };
 
   return Array.isArray(data)
-    ? data.map(dataObj => graphql(resolver, doc, dataObj, null, variableValues))
+    ? data.map((dataObj) =>
+        graphql(resolver, doc, dataObj, null, variableValues)
+      )
     : graphql(resolver, doc, data, null, variableValues);
 }
 
@@ -35,21 +37,21 @@ export function filter<FD = any, D extends FD = any>(
 export function check(
   doc: DocumentNode,
   data: any,
-  variables: VariableMap = {},
+  variables: VariableMap = {}
 ): void {
   const resolver = (
     fieldName: string,
     root: any,
     args: any,
     context: any,
-    info: any,
+    info: any
   ) => {
     // When variables is null, fields with @include/skip directives that
     // reference variables are considered optional.
     invariant(
       hasOwnProperty.call(root, info.resultKey) ||
         (!variables && hasVariableInclusions(info.field.directives)),
-      `${info.resultKey} missing on ${JSON.stringify(root)}`,
+      `${info.resultKey} missing on ${JSON.stringify(root)}`
     );
     return root[info.resultKey];
   };
@@ -60,27 +62,27 @@ export function check(
 }
 
 function hasVariableInclusions(
-  directives: ReadonlyArray<DirectiveNode>,
+  directives: ReadonlyArray<DirectiveNode>
 ): boolean {
   return getInclusionDirectives(directives).some(
-    ({ ifArgument }) => ifArgument.value && ifArgument.value.kind === 'Variable',
+    ({ ifArgument }) => ifArgument.value && ifArgument.value.kind === "Variable"
   );
 }
 
 // Lifted/adapted from
 //   https://github.com/facebook/react/blob/master/src/isomorphic/classic/types/ReactPropTypes.js
-const ANONYMOUS = '<<anonymous>>';
+const ANONYMOUS = "<<anonymous>>";
 function PropTypeError(message) {
   this.message = message;
-  this.stack = '';
+  this.stack = "";
 }
 // Make `instanceof Error` still work for returned errors.
 PropTypeError.prototype = Error.prototype;
 
 const reactPropTypeLocationNames = {
-  prop: 'prop',
-  context: 'context',
-  childContext: 'child context',
+  prop: "prop",
+  context: "context",
+  childContext: "child context",
 };
 
 function createChainableTypeChecker(validate) {
@@ -90,7 +92,7 @@ function createChainableTypeChecker(validate) {
     propName,
     componentName,
     location,
-    propFullName,
+    propFullName
   ) {
     componentName = componentName || ANONYMOUS;
     propFullName = propFullName || propName;
@@ -100,12 +102,12 @@ function createChainableTypeChecker(validate) {
         if (props[propName] === null) {
           return new PropTypeError(
             `The ${locationName} \`${propFullName}\` is marked as required ` +
-              `in \`${componentName}\`, but its value is \`null\`.`,
+              `in \`${componentName}\`, but its value is \`null\`.`
           );
         }
         return new PropTypeError(
           `The ${locationName} \`${propFullName}\` is marked as required in ` +
-            `\`${componentName}\`, but its value is \`undefined\`.`,
+            `\`${componentName}\`, but its value is \`undefined\`.`
         );
       }
       return null;
@@ -122,7 +124,7 @@ function createChainableTypeChecker(validate) {
 
 export function propType(
   doc: DocumentNode,
-  mapPropsToVariables = props => null,
+  mapPropsToVariables = (props) => null
 ) {
   return createChainableTypeChecker((props, propName) => {
     const prop = props[propName];

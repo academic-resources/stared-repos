@@ -1,9 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Article, Audio, Book, Code, Event, Instagram, JS, ReactIcon, Tech, Video } from '../icons'
+import {
+  Article,
+  Audio,
+  Book,
+  Code,
+  Event,
+  Instagram,
+  JS,
+  ReactIcon,
+  Tech,
+  Video,
+} from '../icons'
 
-const IconPicker = type => {
+const IconPicker = (type) => {
   switch (type) {
     case 'audio':
       return <Audio />
@@ -19,7 +30,7 @@ const IconPicker = type => {
       return <JS />
     case 'react':
       return <ReactIcon />
-      case 'tech':
+    case 'tech':
       return <Tech />
     case 'video':
       return <Video />

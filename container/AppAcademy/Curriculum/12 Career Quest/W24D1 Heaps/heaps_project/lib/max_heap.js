@@ -1,7 +1,5 @@
-class MaxHeap {
-    
-}
+class MaxHeap {}
 
 module.exports = {
-    MaxHeap
+  MaxHeap,
 };

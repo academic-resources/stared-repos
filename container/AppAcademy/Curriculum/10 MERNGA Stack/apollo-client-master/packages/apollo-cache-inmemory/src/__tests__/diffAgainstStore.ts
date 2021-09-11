@@ -1,12 +1,12 @@
-import gql, { disableFragmentWarnings } from 'graphql-tag';
-import { toIdValue } from 'apollo-utilities';
+import gql, { disableFragmentWarnings } from "graphql-tag";
+import { toIdValue } from "apollo-utilities";
 
-import { defaultNormalizedCacheFactory } from '../objectCache';
-import { StoreReader } from '../readFromStore';
-import { StoreWriter } from '../writeToStore';
-import { HeuristicFragmentMatcher } from '../fragmentMatcher';
-import { defaultDataIdFromObject } from '../inMemoryCache';
-import { NormalizedCache } from '../types';
+import { defaultNormalizedCacheFactory } from "../objectCache";
+import { StoreReader } from "../readFromStore";
+import { StoreWriter } from "../writeToStore";
+import { HeuristicFragmentMatcher } from "../fragmentMatcher";
+import { defaultDataIdFromObject } from "../inMemoryCache";
+import { NormalizedCache } from "../types";
 
 const fragmentMatcherFunction = new HeuristicFragmentMatcher().match;
 
@@ -27,13 +27,13 @@ export function withError(func: Function, regex: RegExp) {
   }
 }
 
-describe('diffing queries against the store', () => {
+describe("diffing queries against the store", () => {
   const reader = new StoreReader();
   const writer = new StoreWriter();
 
   it(
-    'expects named fragments to return complete as true when diffd against ' +
-      'the store',
+    "expects named fragments to return complete as true when diffd against " +
+      "the store",
     () => {
       const store = defaultNormalizedCacheFactory({});
 
@@ -60,12 +60,12 @@ describe('diffing queries against the store', () => {
       });
 
       expect(queryResult.complete).toEqual(false);
-    },
+    }
   );
 
   it(
-    'expects inline fragments to return complete as true when diffd against ' +
-      'the store',
+    "expects inline fragments to return complete as true when diffd against " +
+      "the store",
     () => {
       const store = defaultNormalizedCacheFactory();
 
@@ -106,10 +106,10 @@ describe('diffing queries against the store', () => {
       });
 
       expect(queryResult.complete).toEqual(false);
-    },
+    }
   );
 
-  it('returns nothing when the store is enough', () => {
+  it("returns nothing when the store is enough", () => {
     const query = gql`
       {
         people_one(id: "1") {
@@ -120,7 +120,7 @@ describe('diffing queries against the store', () => {
 
     const result = {
       people_one: {
-        name: 'Luke Skywalker',
+        name: "Luke Skywalker",
       },
     };
 
@@ -133,11 +133,11 @@ describe('diffing queries against the store', () => {
       reader.diffQueryAgainstStore({
         store,
         query,
-      }).complete,
+      }).complete
     ).toBeTruthy();
   });
 
-  it('caches root queries both under the ID of the node and the query name', () => {
+  it("caches root queries both under the ID of the node and the query name", () => {
     const firstQuery = gql`
       {
         people_one(id: "1") {
@@ -150,9 +150,9 @@ describe('diffing queries against the store', () => {
 
     const result = {
       people_one: {
-        __typename: 'Person',
-        id: '1',
-        name: 'Luke Skywalker',
+        __typename: "Person",
+        id: "1",
+        name: "Luke Skywalker",
       },
     };
 
@@ -180,10 +180,10 @@ describe('diffing queries against the store', () => {
     });
 
     expect(complete).toBeTruthy();
-    expect(store.get('1')).toEqual(result.people_one);
+    expect(store.get("1")).toEqual(result.people_one);
   });
 
-  it('does not swallow errors other than field errors', () => {
+  it("does not swallow errors other than field errors", () => {
     const firstQuery = gql`
       query {
         person {
@@ -193,7 +193,7 @@ describe('diffing queries against the store', () => {
     `;
     const firstResult = {
       person: {
-        powers: 'the force',
+        powers: "the force",
       },
     };
     const store = writer.writeQueryToStore({
@@ -213,7 +213,7 @@ describe('diffing queries against the store', () => {
     }).toThrowError(/No fragment/);
   });
 
-  it('does not error on a correct query with union typed fragments', () => {
+  it("does not error on a correct query with union typed fragments", () => {
     return withError(() => {
       const firstQuery = gql`
         query {
@@ -226,9 +226,9 @@ describe('diffing queries against the store', () => {
       `;
       const firstResult = {
         person: {
-          __typename: 'Author',
-          firstName: 'John',
-          lastName: 'Smith',
+          __typename: "Author",
+          firstName: "John",
+          lastName: "Smith",
         },
       };
       const store = writer.writeQueryToStore({
@@ -260,7 +260,7 @@ describe('diffing queries against the store', () => {
     }, /IntrospectionFragmentMatcher/);
   });
 
-  it('does not error on a query with fields missing from all but one named fragment', () => {
+  it("does not error on a query with fields missing from all but one named fragment", () => {
     const firstQuery = gql`
       query {
         person {
@@ -272,9 +272,9 @@ describe('diffing queries against the store', () => {
     `;
     const firstResult = {
       person: {
-        __typename: 'Author',
-        firstName: 'John',
-        lastName: 'Smith',
+        __typename: "Author",
+        firstName: "John",
+        lastName: "Smith",
       },
     };
     const store = writer.writeQueryToStore({
@@ -307,7 +307,7 @@ describe('diffing queries against the store', () => {
     expect(complete).toBe(false);
   });
 
-  it('throws an error on a query with fields missing from matching named fragments', () => {
+  it("throws an error on a query with fields missing from matching named fragments", () => {
     const firstQuery = gql`
       query {
         person {
@@ -319,9 +319,9 @@ describe('diffing queries against the store', () => {
     `;
     const firstResult = {
       person: {
-        __typename: 'Author',
-        firstName: 'John',
-        lastName: 'Smith',
+        __typename: "Author",
+        firstName: "John",
+        lastName: "Smith",
       },
     };
     const store = writer.writeQueryToStore({
@@ -355,7 +355,7 @@ describe('diffing queries against the store', () => {
     }).toThrow();
   });
 
-  it('returns available fields if returnPartialData is true', () => {
+  it("returns available fields if returnPartialData is true", () => {
     const firstQuery = gql`
       {
         people_one(id: "1") {
@@ -368,9 +368,9 @@ describe('diffing queries against the store', () => {
 
     const firstResult = {
       people_one: {
-        __typename: 'Person',
-        id: 'lukeId',
-        name: 'Luke Skywalker',
+        __typename: "Person",
+        id: "lukeId",
+        name: "Luke Skywalker",
       },
     };
 
@@ -421,7 +421,7 @@ describe('diffing queries against the store', () => {
 
     expect(simpleDiff.result).toEqual({
       people_one: {
-        name: 'Luke Skywalker',
+        name: "Luke Skywalker",
       },
     });
 
@@ -432,7 +432,7 @@ describe('diffing queries against the store', () => {
 
     expect(inlineDiff.result).toEqual({
       people_one: {
-        name: 'Luke Skywalker',
+        name: "Luke Skywalker",
       },
     });
 
@@ -443,11 +443,11 @@ describe('diffing queries against the store', () => {
 
     expect(namedDiff.result).toEqual({
       people_one: {
-        name: 'Luke Skywalker',
+        name: "Luke Skywalker",
       },
     });
 
-    expect(function() {
+    expect(function () {
       reader.diffQueryAgainstStore({
         store,
         query: simpleQuery,
@@ -456,7 +456,7 @@ describe('diffing queries against the store', () => {
     }).toThrow();
   });
 
-  it('will add a private id property', () => {
+  it("will add a private id property", () => {
     const query = gql`
       query {
         a {
@@ -477,15 +477,19 @@ describe('diffing queries against the store', () => {
     `;
 
     const queryResult = {
-      a: [{ id: 'a:1', b: 1.1 }, { id: 'a:2', b: 1.2 }, { id: 'a:3', b: 1.3 }],
+      a: [
+        { id: "a:1", b: 1.1 },
+        { id: "a:2", b: 1.2 },
+        { id: "a:3", b: 1.3 },
+      ],
       c: {
         d: 2,
         e: [
-          { id: 'e:1', f: 3.1 },
-          { id: 'e:2', f: 3.2 },
-          { id: 'e:3', f: 3.3 },
-          { id: 'e:4', f: 3.4 },
-          { id: 'e:5', f: 3.5 },
+          { id: "e:1", f: 3.1 },
+          { id: "e:2", f: 3.2 },
+          { id: "e:3", f: 3.3 },
+          { id: "e:4", f: 3.4 },
+          { id: "e:5", f: 3.5 },
         ],
         g: { h: 4 },
       },
@@ -507,18 +511,18 @@ describe('diffing queries against the store', () => {
     });
 
     expect(result).toEqual(queryResult);
-    expect(dataIdFromObject(result.a[0])).toBe('a:1');
-    expect(dataIdFromObject(result.a[1])).toBe('a:2');
-    expect(dataIdFromObject(result.a[2])).toBe('a:3');
-    expect(dataIdFromObject(result.c.e[0])).toBe('e:1');
-    expect(dataIdFromObject(result.c.e[1])).toBe('e:2');
-    expect(dataIdFromObject(result.c.e[2])).toBe('e:3');
-    expect(dataIdFromObject(result.c.e[3])).toBe('e:4');
-    expect(dataIdFromObject(result.c.e[4])).toBe('e:5');
+    expect(dataIdFromObject(result.a[0])).toBe("a:1");
+    expect(dataIdFromObject(result.a[1])).toBe("a:2");
+    expect(dataIdFromObject(result.a[2])).toBe("a:3");
+    expect(dataIdFromObject(result.c.e[0])).toBe("e:1");
+    expect(dataIdFromObject(result.c.e[1])).toBe("e:2");
+    expect(dataIdFromObject(result.c.e[2])).toBe("e:3");
+    expect(dataIdFromObject(result.c.e[3])).toBe("e:4");
+    expect(dataIdFromObject(result.c.e[4])).toBe("e:5");
   });
 
-  describe('referential equality preservation', () => {
-    it('will return the previous result if there are no changes', () => {
+  describe("referential equality preservation", () => {
+    it("will return the previous result if there are no changes", () => {
       const query = gql`
         query {
           a {
@@ -558,7 +562,7 @@ describe('diffing queries against the store', () => {
       expect(result).toEqual(previousResult);
     });
 
-    it('will return parts of the previous result that changed', () => {
+    it("will return parts of the previous result that changed", () => {
       const query = gql`
         query {
           a {
@@ -601,7 +605,7 @@ describe('diffing queries against the store', () => {
       expect(result.c.e).toEqual(previousResult.c.e);
     });
 
-    it('will return the previous result if there are no changes in child arrays', () => {
+    it("will return the previous result if there are no changes in child arrays", () => {
       const query = gql`
         query {
           a {
@@ -647,7 +651,7 @@ describe('diffing queries against the store', () => {
       expect(result).toEqual(previousResult);
     });
 
-    it('will not add zombie items when previousResult starts with the same items', () => {
+    it("will not add zombie items when previousResult starts with the same items", () => {
       const query = gql`
         query {
           a {
@@ -680,7 +684,7 @@ describe('diffing queries against the store', () => {
       expect(result.a[1]).toEqual(previousResult.a[1]);
     });
 
-    it('will return the previous result if there are no changes in nested child arrays', () => {
+    it("will return the previous result if there are no changes in nested child arrays", () => {
       const query = gql`
         query {
           a {
@@ -699,7 +703,10 @@ describe('diffing queries against the store', () => {
         a: [[[[[{ b: 1.1 }, { b: 1.2 }, { b: 1.3 }]]]]],
         c: {
           d: 2,
-          e: [[{ f: 3.1 }, { f: 3.2 }, { f: 3.3 }], [{ f: 3.4 }, { f: 3.5 }]],
+          e: [
+            [{ f: 3.1 }, { f: 3.2 }, { f: 3.3 }],
+            [{ f: 3.4 }, { f: 3.5 }],
+          ],
         },
       };
 
@@ -712,7 +719,10 @@ describe('diffing queries against the store', () => {
         a: [[[[[{ b: 1.1 }, { b: 1.2 }, { b: 1.3 }]]]]],
         c: {
           d: 2,
-          e: [[{ f: 3.1 }, { f: 3.2 }, { f: 3.3 }], [{ f: 3.4 }, { f: 3.5 }]],
+          e: [
+            [{ f: 3.1 }, { f: 3.2 }, { f: 3.3 }],
+            [{ f: 3.4 }, { f: 3.5 }],
+          ],
         },
       };
 
@@ -726,7 +736,7 @@ describe('diffing queries against the store', () => {
       expect(result).toEqual(previousResult);
     });
 
-    it('will return parts of the previous result if there are changes in child arrays', () => {
+    it("will return parts of the previous result if there are changes in child arrays", () => {
       const query = gql`
         query {
           a {
@@ -783,7 +793,7 @@ describe('diffing queries against the store', () => {
       expect(result.c.e[4]).toEqual(previousResult.c.e[4]);
     });
 
-    it('will return the same items in a different order with `dataIdFromObject`', () => {
+    it("will return the same items in a different order with `dataIdFromObject`", () => {
       const query = gql`
         query {
           a {
@@ -805,18 +815,18 @@ describe('diffing queries against the store', () => {
 
       const queryResult = {
         a: [
-          { id: 'a:1', b: 1.1 },
-          { id: 'a:2', b: 1.2 },
-          { id: 'a:3', b: 1.3 },
+          { id: "a:1", b: 1.1 },
+          { id: "a:2", b: 1.2 },
+          { id: "a:3", b: 1.3 },
         ],
         c: {
           d: 2,
           e: [
-            { id: 'e:1', f: 3.1 },
-            { id: 'e:2', f: 3.2 },
-            { id: 'e:3', f: 3.3 },
-            { id: 'e:4', f: 3.4 },
-            { id: 'e:5', f: 3.5 },
+            { id: "e:1", f: 3.1 },
+            { id: "e:2", f: 3.2 },
+            { id: "e:3", f: 3.3 },
+            { id: "e:4", f: 3.4 },
+            { id: "e:5", f: 3.5 },
           ],
           g: { h: 4 },
         },
@@ -830,18 +840,18 @@ describe('diffing queries against the store', () => {
 
       const previousResult = {
         a: [
-          { id: 'a:3', b: 1.3 },
-          { id: 'a:2', b: 1.2 },
-          { id: 'a:1', b: 1.1 },
+          { id: "a:3", b: 1.3 },
+          { id: "a:2", b: 1.2 },
+          { id: "a:1", b: 1.1 },
         ],
         c: {
           d: 2,
           e: [
-            { id: 'e:4', f: 3.4 },
-            { id: 'e:2', f: 3.2 },
-            { id: 'e:5', f: 3.5 },
-            { id: 'e:3', f: 3.3 },
-            { id: 'e:1', f: 3.1 },
+            { id: "e:4", f: 3.4 },
+            { id: "e:2", f: 3.2 },
+            { id: "e:5", f: 3.5 },
+            { id: "e:3", f: 3.3 },
+            { id: "e:1", f: 3.1 },
           ],
           g: { h: 4 },
         },
@@ -869,7 +879,7 @@ describe('diffing queries against the store', () => {
       expect(result.c.g).toEqual(previousResult.c.g);
     });
 
-    it('will return the same JSON scalar field object', () => {
+    it("will return the same JSON scalar field object", () => {
       const query = gql`
         {
           a {
@@ -910,7 +920,7 @@ describe('diffing queries against the store', () => {
       expect(result.d).not.toEqual(previousResult.d);
       expect(result.d.f).toEqual(previousResult.d.f);
     });
-    it('will preserve equality with custom resolvers', () => {
+    it("will preserve equality with custom resolvers", () => {
       const listQuery = gql`
         {
           people {
@@ -924,9 +934,9 @@ describe('diffing queries against the store', () => {
       const listResult = {
         people: [
           {
-            id: '4',
-            name: 'Luke Skywalker',
-            __typename: 'Person',
+            id: "4",
+            name: "Luke Skywalker",
+            __typename: "Person",
           },
         ],
       };
@@ -956,7 +966,7 @@ describe('diffing queries against the store', () => {
       const cacheRedirects = {
         Query: {
           person: (_: any, args: any) =>
-            toIdValue({ id: args['id'], typename: 'Person' }),
+            toIdValue({ id: args["id"], typename: "Person" }),
         },
       };
 
@@ -973,8 +983,8 @@ describe('diffing queries against the store', () => {
     });
   });
 
-  describe('malformed queries', () => {
-    it('throws for non-scalar query fields without selection sets', () => {
+  describe("malformed queries", () => {
+    it("throws for non-scalar query fields without selection sets", () => {
       // Issue #4025, fixed by PR #4038.
 
       const validQuery = gql`
@@ -1001,18 +1011,18 @@ describe('diffing queries against the store', () => {
           messageList: [
             {
               id: 1,
-              __typename: 'Message',
-              message: 'hi',
+              __typename: "Message",
+              message: "hi",
             },
             {
               id: 2,
-              __typename: 'Message',
-              message: 'hello',
+              __typename: "Message",
+              message: "hello",
             },
             {
               id: 3,
-              __typename: 'Message',
-              message: 'hey',
+              __typename: "Message",
+              message: "hey",
             },
           ],
         },
@@ -1023,37 +1033,37 @@ describe('diffing queries against the store', () => {
           store,
           query: invalidQuery,
         });
-        throw new Error('should have thrown');
+        throw new Error("should have thrown");
       } catch (e) {
         expect(e.message).toEqual(
-          'Missing selection set for object of type Message returned for query field messageList',
+          "Missing selection set for object of type Message returned for query field messageList"
         );
       }
     });
   });
 
-  describe('issue #4081', () => {
-    it('should not return results containing cycles', () => {
+  describe("issue #4081", () => {
+    it("should not return results containing cycles", () => {
       const company = {
-        __typename: 'Company',
+        __typename: "Company",
         id: 1,
-        name: 'Apollo',
+        name: "Apollo",
         users: [],
       } as any;
 
       company.users.push(
         {
-          __typename: 'User',
+          __typename: "User",
           id: 1,
-          name: 'Ben',
+          name: "Ben",
           company,
         },
         {
-          __typename: 'User',
+          __typename: "User",
           id: 2,
-          name: 'James',
+          name: "James",
           company,
-        },
+        }
       );
 
       const query = gql`
@@ -1092,25 +1102,25 @@ describe('diffing queries against the store', () => {
         expect(result).toEqual({
           user: {
             id: 1,
-            name: 'Ben',
+            name: "Ben",
             company: {
               id: 1,
-              name: 'Apollo',
+              name: "Apollo",
               users: [
                 {
                   id: 1,
-                  name: 'Ben',
+                  name: "Ben",
                   company: {
                     id: 1,
-                    name: 'Apollo',
+                    name: "Apollo",
                   },
                 },
                 {
                   id: 2,
-                  name: 'James',
+                  name: "James",
                   company: {
                     id: 1,
-                    name: 'Apollo',
+                    name: "Apollo",
                   },
                 },
               ],
@@ -1126,7 +1136,7 @@ describe('diffing queries against the store', () => {
           result: {
             user: company.users[0],
           },
-        }),
+        })
       );
 
       // Now check with __typename-specific IDs.
@@ -1137,7 +1147,7 @@ describe('diffing queries against the store', () => {
           result: {
             user: company.users[0],
           },
-        }),
+        })
       );
     });
   });

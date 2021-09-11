@@ -1,15 +1,15 @@
-import mediumZoom from 'medium-zoom'
+import mediumZoom from "medium-zoom";
 
 function install(hook) {
-  let zoom
+  let zoom;
 
-  hook.doneEach(_ => {
+  hook.doneEach((_) => {
     if (zoom) {
-      zoom.detach()
+      zoom.detach();
     }
 
-    zoom = mediumZoom('img:not(.emoji):not([data-no-zoom])')
-  })
+    zoom = mediumZoom("img:not(.emoji):not([data-no-zoom])");
+  });
 }
 
-$docsify.plugins = [].concat(install, $docsify.plugins)
+$docsify.plugins = [].concat(install, $docsify.plugins);

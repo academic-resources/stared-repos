@@ -50,7 +50,7 @@ const getEditorState = (text: string = 'Arsenal') => {
   );
 };
 
-const getInputEvent = data => ({
+const getInputEvent = (data) => ({
   data,
   preventDefault: jest.fn(),
 });

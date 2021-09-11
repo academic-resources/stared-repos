@@ -6,15 +6,15 @@
 // Prompt:
 // -------
 //
-// Modify the definition of the Stack class provided to create an enhanced 
+// Modify the definition of the Stack class provided to create an enhanced
 // version of a Stack data structure called MinMaxStack.
 //
 // A MinMaxStack has all of the same behavior as a Stack, but can also return
 // the node with the minimum or maximum value in constant time.
 //
-// You may alter any of the original Stack's methods, including the 
+// You may alter any of the original Stack's methods, including the
 // constructor.
-//  
+//
 // Values of nodes of the MinMaxStack are always guaranteed to be numbers.
 //
 //
@@ -65,67 +65,67 @@
 // Let's code!
 // -----------
 class Node {
-    constructor(val) {
-        this.value = val;
-        this.next = null;
-    }
+  constructor(val) {
+    this.value = val;
+    this.next = null;
+  }
 }
 
 // Refactor the regular Stack below into a MinMaxStack!
 class MinMaxStack {
-    constructor() {
-        this.top = null;
-        this.bottom = null;
-        this.length = 0;
-        this.minimum = [new Node(Infinity)]
-        this.maximum = [new Node(-Infinity)]
-    }
+  constructor() {
+    this.top = null;
+    this.bottom = null;
+    this.length = 0;
+    this.minimum = [new Node(Infinity)];
+    this.maximum = [new Node(-Infinity)];
+  }
 
-    push(val) {
-        const newNode = new Node(val);
-        if (!this.top) {
-            this.top = newNode;
-            this.bottom = newNode;
-        } else {
-            const temp = this.top;
-            this.top = newNode;
-            this.top.next = temp;
-        }
-        if (this.maximum.length === 1 || val >= this.maximum[0].value)
-            this.maximum.unshift(newNode)
-        if (this.minimum.length === 1 || val <= this.minimum[0].value)
-            this.minimum.unshift(newNode)
-        return ++this.length;
+  push(val) {
+    const newNode = new Node(val);
+    if (!this.top) {
+      this.top = newNode;
+      this.bottom = newNode;
+    } else {
+      const temp = this.top;
+      this.top = newNode;
+      this.top.next = temp;
     }
+    if (this.maximum.length === 1 || val >= this.maximum[0].value)
+      this.maximum.unshift(newNode);
+    if (this.minimum.length === 1 || val <= this.minimum[0].value)
+      this.minimum.unshift(newNode);
+    return ++this.length;
+  }
 
-    pop() {
-        if (!this.top) {
-            return null;
-        }
-        const temp = this.top;
-        if (this.top === this.bottom) {
-            this.bottom = null;
-        }
-        this.top = this.top.next;
-        this.length--;
-        if (temp.value === this.maximum[0].value) this.maximum.shift()
-        if (temp.value === this.minimum[0].value) this.minimum.shift()
-        return temp;
+  pop() {
+    if (!this.top) {
+      return null;
     }
+    const temp = this.top;
+    if (this.top === this.bottom) {
+      this.bottom = null;
+    }
+    this.top = this.top.next;
+    this.length--;
+    if (temp.value === this.maximum[0].value) this.maximum.shift();
+    if (temp.value === this.minimum[0].value) this.minimum.shift();
+    return temp;
+  }
 
-    size() {
-        return this.length;
-    }
+  size() {
+    return this.length;
+  }
 
-    min() {
-        return this.length ? this.minimum[0] : null
-    }
+  min() {
+    return this.length ? this.minimum[0] : null;
+  }
 
-    max() {
-        return this.length ? this.maximum[0] : null
-    }
+  max() {
+    return this.length ? this.maximum[0] : null;
+  }
 }
 
-// Forgetting something down here? 
+// Forgetting something down here?
 exports.Node = Node;
 exports.MinMaxStack = MinMaxStack;

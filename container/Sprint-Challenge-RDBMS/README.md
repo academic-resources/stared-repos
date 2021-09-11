@@ -44,8 +44,7 @@ Foreign Key
 
 A many to many relationship is created when the parent table’s data can have multiple associated data entries in the corresponding children table, for example, actors to movies.
 
-In order to bridge the two tables, there needs to be a third "bridge" table created that references both the parent and child tables over shared data points. 
-
+In order to bridge the two tables, there needs to be a third "bridge" table created that references both the parent and child tables over shared data points.
 
 ## Minimum Viable Product
 

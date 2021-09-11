@@ -11,10 +11,10 @@ function findCommonAncestor(root, nodeA, nodeB) {
     }
 
     // is one of the nodes on the left, and the other on the right?
-    var bothOnRight = ((currentNode.value < nodeA.value) &&
-      (currentNode.value < nodeB.value));
-    var bothOnLeft = ((currentNode.value > nodeA.value) &&
-      (currentNode.value > nodeB.value));
+    var bothOnRight =
+      currentNode.value < nodeA.value && currentNode.value < nodeB.value;
+    var bothOnLeft =
+      currentNode.value > nodeA.value && currentNode.value > nodeB.value;
     var onSameSide = bothOnRight || bothOnLeft;
 
     if (!onSameSide) {

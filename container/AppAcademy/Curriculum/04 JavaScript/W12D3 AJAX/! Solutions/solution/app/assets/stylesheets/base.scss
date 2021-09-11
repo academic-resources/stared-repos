@@ -1,5 +1,5 @@
 body {
-  background-color: #E6ECF0;
+  background-color: #e6ecf0;
   color: #657786;
 }
 
@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -19,7 +19,7 @@ form {
 }
 
 .page-header {
-  font-family: 'Fredoka One', cursive;
+  font-family: "Fredoka One", cursive;
   font-size: 35px;
   color: #1da1f2;
   padding-top: 25px;
@@ -36,7 +36,8 @@ form {
   }
 }
 
-input[type='submit'], button {
+input[type="submit"],
+button {
   font-size: 16px;
   padding: 10px 20px;
   border: none;

@@ -1,12 +1,12 @@
-import Grid from './grid';
-import Tile from './tile';
+import Grid from "./grid";
+import Tile from "./tile";
 
 class Game {
   constructor(bestScore) {
     this.score = 0;
     this.bestScore = bestScore;
-    this.movePoints= 0
-    this.grid = new Grid;
+    this.movePoints = 0;
+    this.grid = new Grid();
     this.newGame();
   }
 
@@ -26,7 +26,7 @@ class Game {
   }
 
   randomValue() {
-    return [2, 2, 2, 2, 4][Math.floor(Math.random() * 5)]
+    return [2, 2, 2, 2, 4][Math.floor(Math.random() * 5)];
   }
 
   move(dir) {
@@ -36,7 +36,7 @@ class Game {
   }
 
   updateScore() {
-    this.movePoints = this.grid.movePoints
+    this.movePoints = this.grid.movePoints;
     this.score += this.movePoints;
     if (this.score > this.bestScore) {
       this.bestScore = this.score;
@@ -48,7 +48,7 @@ class Game {
   }
 
   availableMove() {
-    return (this.emptyPositions().length || this.availableMerges());
+    return this.emptyPositions().length || this.availableMerges();
   }
 
   emptyPositions() {

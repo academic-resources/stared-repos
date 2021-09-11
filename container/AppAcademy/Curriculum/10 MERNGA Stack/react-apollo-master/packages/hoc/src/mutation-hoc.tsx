@@ -1,21 +1,21 @@
-import React from 'react';
-import { DocumentNode } from 'graphql';
-import hoistNonReactStatics from 'hoist-non-react-statics';
+import React from "react";
+import { DocumentNode } from "graphql";
+import hoistNonReactStatics from "hoist-non-react-statics";
 import {
   parser,
   BaseMutationOptions,
   MutationFunction,
-  MutationResult
-} from '@apollo/react-common';
-import { Mutation } from '@apollo/react-components';
+  MutationResult,
+} from "@apollo/react-common";
+import { Mutation } from "@apollo/react-components";
 
 import {
   defaultMapPropsToOptions,
   getDisplayName,
   calculateVariablesFromProps,
-  GraphQLBase
-} from './hoc-utils';
-import { OperationOption, OptionProps, MutateProps } from './types';
+  GraphQLBase,
+} from "./hoc-utils";
+import { OperationOption, OptionProps, MutateProps } from "./types";
 
 export function withMutation<
   TProps extends TGraphQLVariables | {} = {},
@@ -35,13 +35,11 @@ export function withMutation<
   const operation = parser(document);
   // extract options
 
-  const {
-    options = defaultMapPropsToOptions,
-    alias = 'Apollo'
-  } = operationOptions;
+  const { options = defaultMapPropsToOptions, alias = "Apollo" } =
+    operationOptions;
 
   let mapPropsToOptions = options as (props: any) => BaseMutationOptions;
-  if (typeof mapPropsToOptions !== 'function')
+  if (typeof mapPropsToOptions !== "function")
     mapPropsToOptions = () => options as BaseMutationOptions;
 
   return (
@@ -58,7 +56,7 @@ export function withMutation<
         if (operationOptions.withRef) {
           this.withRef = true;
           props = Object.assign({}, props, {
-            ref: this.setWrappedInstance
+            ref: this.setWrappedInstance,
           });
         }
         if (!opts.variables && operation.variables.length > 0) {
@@ -76,30 +74,25 @@ export function withMutation<
               // we massage the Mutation component's shape here to replicate that
               // this matches the query HoC
               const result = Object.assign(r, data || {});
-              const name = operationOptions.name || 'mutate';
+              const name = operationOptions.name || "mutate";
               const resultName = operationOptions.name
                 ? `${name}Result`
-                : 'result';
+                : "result";
               let childProps = {
                 [name]: mutate,
-                [resultName]: result
+                [resultName]: result,
               } as any as TChildProps;
               if (operationOptions.props) {
-                const newResult: OptionProps<
-                  TProps,
-                  TData,
-                  TGraphQLVariables
-                > = {
-                  [name]: mutate,
-                  [resultName]: result,
-                  ownProps: props
-                };
+                const newResult: OptionProps<TProps, TData, TGraphQLVariables> =
+                  {
+                    [name]: mutate,
+                    [resultName]: result,
+                    ownProps: props,
+                  };
                 childProps = operationOptions.props(newResult) as any;
               }
 
-              return (
-                <WrappedComponent {...props} {...childProps} />
-              );
+              return <WrappedComponent {...props} {...childProps} />;
             }}
           </Mutation>
         );

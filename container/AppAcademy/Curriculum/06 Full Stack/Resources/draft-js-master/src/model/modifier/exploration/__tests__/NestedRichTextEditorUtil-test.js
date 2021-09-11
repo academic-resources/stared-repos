@@ -91,13 +91,13 @@ const contentBlockNodes = [
   }),
 ];
 
-const toggleExperimentalTreeDataSupport = enabled => {
-  jest.doMock('gkx', () => name => {
+const toggleExperimentalTreeDataSupport = (enabled) => {
+  jest.doMock('gkx', () => (name) => {
     return name === 'draft_tree_data_support' ? enabled : false;
   });
 };
 
-const insertAtomicBlock = targetEditorState => {
+const insertAtomicBlock = (targetEditorState) => {
   const entityKey = targetEditorState
     .getCurrentContent()
     .createEntity('TEST', 'IMMUTABLE', null)
@@ -127,10 +127,7 @@ const assertNestedUtilOperation = (
 
   const expected =
     result instanceof EditorState
-      ? result
-          .getCurrentContent()
-          .getBlockMap()
-          .toJS()
+      ? result.getCurrentContent().getBlockMap().toJS()
       : result;
 
   expect(expected).toMatchSnapshot();
@@ -139,14 +136,14 @@ const assertNestedUtilOperation = (
 toggleExperimentalTreeDataSupport(true);
 
 test(`toggleBlockType does not handle nesting when selection is collapsed`, () => {
-  assertNestedUtilOperation(editorState =>
+  assertNestedUtilOperation((editorState) =>
     NestedRichTextEditorUtil.toggleBlockType(editorState, 'header-one'),
   );
 });
 
 test(`toggleBlockType does not handle nesting for multi block selection`, () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       NestedRichTextEditorUtil.toggleBlockType(editorState, 'header-one'),
     {
       anchorKey: 'D',
@@ -158,7 +155,7 @@ test(`toggleBlockType does not handle nesting for multi block selection`, () => 
 
 test(`toggleBlockType does not allow block type change for multi block selection to unsupported type`, () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       NestedRichTextEditorUtil.toggleBlockType(editorState, 'code-block'),
     {
       anchorKey: 'D',
@@ -170,7 +167,7 @@ test(`toggleBlockType does not allow block type change for multi block selection
 
 test(`toggleBlockType does not handle nesting for blockType: "atomic"`, () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       NestedRichTextEditorUtil.toggleBlockType(editorState, 'header-one'),
     {
       anchorKey: 'H',
@@ -182,7 +179,7 @@ test(`toggleBlockType does not handle nesting for blockType: "atomic"`, () => {
 
 test(`toggleBlockType does not handle nesting for blockType: "code-block"`, () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       NestedRichTextEditorUtil.toggleBlockType(editorState, 'header-two'),
     {
       anchorKey: 'F',
@@ -194,7 +191,7 @@ test(`toggleBlockType does not handle nesting for blockType: "code-block"`, () =
 
 test(`toggleBlockType does not handle nesting for block that has children`, () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       NestedRichTextEditorUtil.toggleBlockType(editorState, 'header-one'),
     {
       anchorKey: 'C',
@@ -206,7 +203,7 @@ test(`toggleBlockType does not handle nesting for block that has children`, () =
 
 test(`toggleBlockType does not allow block type change for block that has children to unsupported type`, () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       NestedRichTextEditorUtil.toggleBlockType(editorState, 'code-block'),
     {
       anchorKey: 'C',
@@ -228,7 +225,7 @@ test(`toggleBlockType does not allow block type change for block that has childr
  */
 test('toggleBlockType does not handle nesting enabled blocks with same blockType', () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       NestedRichTextEditorUtil.toggleBlockType(editorState, 'blockquote'),
     {
       anchorKey: 'A',
@@ -269,7 +266,7 @@ test('toggleBlockType with ranged selection should retain parent type and create
 });
 
 test('onBackspace does not handle non-zero-offset selections', () => {
-  assertNestedUtilOperation(editorState => onBackspace(editorState), {
+  assertNestedUtilOperation((editorState) => onBackspace(editorState), {
     anchorKey: 'F',
     focusKey: 'F',
     anchorOffset: 2,
@@ -278,7 +275,7 @@ test('onBackspace does not handle non-zero-offset selections', () => {
 });
 
 test('onBackspace does not handle non-collapsed selections', () => {
-  assertNestedUtilOperation(editorState => onBackspace(editorState), {
+  assertNestedUtilOperation((editorState) => onBackspace(editorState), {
     anchorKey: 'F',
     focusKey: 'F',
     focusOffset: 2,
@@ -286,14 +283,14 @@ test('onBackspace does not handle non-collapsed selections', () => {
 });
 
 test('onBackspace resets the current block type if empty', () => {
-  assertNestedUtilOperation(editorState => onBackspace(editorState), {
+  assertNestedUtilOperation((editorState) => onBackspace(editorState), {
     anchorKey: 'F',
     focusKey: 'F',
   });
 });
 
 test('onBackspace removes a preceding atomic block', () => {
-  assertNestedUtilOperation(editorState => onBackspace(editorState), {
+  assertNestedUtilOperation((editorState) => onBackspace(editorState), {
     focusKey: 'I',
     anchorKey: 'I',
   });
@@ -308,7 +305,7 @@ test('onDelete is a no-op if its at the end of the blockMap', () => {
   const lastContentBlock = contentBlockNodes[contentBlockNodes.length - 1];
   const lastContentBlockKey = lastContentBlock.getKey();
   const endOfLastContentBlock = lastContentBlock.getLength();
-  assertNestedUtilOperation(editorState => onDelete(editorState), {
+  assertNestedUtilOperation((editorState) => onDelete(editorState), {
     anchorKey: lastContentBlockKey,
     anchorOffset: endOfLastContentBlock,
     focusKey: lastContentBlockKey,
@@ -321,7 +318,7 @@ test('onDelete is a no-op the end of a leaf', () => {
   const someLeafBlock = contentBlockNodes[3];
   const someLeafBlockKey = someLeafBlock.getKey();
   const endOfSomeLeafBlock = someLeafBlock.getLength();
-  assertNestedUtilOperation(editorState => onDelete(editorState), {
+  assertNestedUtilOperation((editorState) => onDelete(editorState), {
     anchorKey: someLeafBlockKey,
     anchorOffset: endOfSomeLeafBlock,
     focusKey: someLeafBlockKey,
@@ -422,7 +419,7 @@ const contentBlockNodes2 = [
 
 test('onTab with leaf as previous block & non-leaf as next block merges to the next block', () => {
   assertNestedUtilOperation(
-    editorState => onTab({preventDefault: () => {}}, editorState, 2),
+    (editorState) => onTab({preventDefault: () => {}}, editorState, 2),
     {
       anchorKey: 'E',
       focusKey: 'E',
@@ -433,7 +430,7 @@ test('onTab with leaf as previous block & non-leaf as next block merges to the n
 
 test('onTab with non-leaf as previous block merges to the previous block', () => {
   assertNestedUtilOperation(
-    editorState => onTab({preventDefault: () => {}}, editorState, 2),
+    (editorState) => onTab({preventDefault: () => {}}, editorState, 2),
     {
       anchorKey: 'I',
       focusKey: 'I',
@@ -444,7 +441,7 @@ test('onTab with non-leaf as previous block merges to the previous block', () =>
 
 test('onTab with no previous block does nothing', () => {
   assertNestedUtilOperation(
-    editorState => onTab({preventDefault: () => {}}, editorState, 1),
+    (editorState) => onTab({preventDefault: () => {}}, editorState, 1),
     {
       anchorKey: 'A',
       focusKey: 'A',
@@ -455,7 +452,7 @@ test('onTab with no previous block does nothing', () => {
 
 test('onTab when siblings are at the same depth creates a new parent', () => {
   assertNestedUtilOperation(
-    editorState => onTab({preventDefault: () => {}}, editorState, 1),
+    (editorState) => onTab({preventDefault: () => {}}, editorState, 1),
     {
       anchorKey: 'H',
       focusKey: 'H',
@@ -532,7 +529,7 @@ const contentBlockNodes3 = [
 
 test('onTab when both siblings are non-leaf merges blocks 1', () => {
   assertNestedUtilOperation(
-    editorState => onTab({preventDefault: () => {}}, editorState, 1),
+    (editorState) => onTab({preventDefault: () => {}}, editorState, 1),
     {
       anchorKey: 'C',
       focusKey: 'C',
@@ -618,7 +615,7 @@ const contentBlockNodes4 = [
 
 test('onTab when both siblings are non-leaf merges blocks 2', () => {
   assertNestedUtilOperation(
-    editorState => onTab({preventDefault: () => {}}, editorState, 1),
+    (editorState) => onTab({preventDefault: () => {}}, editorState, 1),
     {
       anchorKey: 'D',
       focusKey: 'D',
@@ -629,7 +626,7 @@ test('onTab when both siblings are non-leaf merges blocks 2', () => {
 
 test('onTab (untab) on a block with no parent does nothing', () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       onTab({preventDefault: () => {}, shiftKey: true}, editorState, 1),
     {
       anchorKey: 'B',
@@ -641,7 +638,7 @@ test('onTab (untab) on a block with no parent does nothing', () => {
 
 test('onTab (untab) on a first child moves block as previous sibling of parent', () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       onTab({preventDefault: () => {}, shiftKey: true}, editorState, 2),
     {
       anchorKey: 'D',
@@ -653,7 +650,7 @@ test('onTab (untab) on a first child moves block as previous sibling of parent',
 
 test('onTab (untab) on a last child moves block as next sibling of parent', () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       onTab({preventDefault: () => {}, shiftKey: true}, editorState, 2),
     {
       anchorKey: 'H',
@@ -736,7 +733,7 @@ const contentBlockNodes5 = [
 
 test('onTab (untab) on a middle child splits the block at that child', () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       onTab({preventDefault: () => {}, shiftKey: true}, editorState, 2),
     {
       anchorKey: 'E',
@@ -796,7 +793,7 @@ const contentBlockNodes6 = [
 
 test('onTab (untab) unnests non-leaf next sibling', () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       onTab({preventDefault: () => {}, shiftKey: true}, editorState, 2),
     {
       anchorKey: 'B',
@@ -874,7 +871,7 @@ const contentBlockNodes7 = [
 
 test('onTab (untab) merges adjacent non-leaf blocks', () => {
   assertNestedUtilOperation(
-    editorState =>
+    (editorState) =>
       onTab({preventDefault: () => {}, shiftKey: true}, editorState, 2),
     {
       anchorKey: 'B',
@@ -930,7 +927,7 @@ const contentBlockNodes8 = [
 
 test('onBackspace at start of nested block unnests it 1', () => {
   assertNestedUtilOperation(
-    editorState => onBackspace(editorState),
+    (editorState) => onBackspace(editorState),
     {
       anchorKey: 'C',
       focusKey: 'C',
@@ -1006,7 +1003,7 @@ const contentBlockNodes9 = [
 
 test('onBackspace at start of nested block unnests it 2', () => {
   assertNestedUtilOperation(
-    editorState => onBackspace(editorState),
+    (editorState) => onBackspace(editorState),
     {
       anchorKey: 'D',
       focusKey: 'D',
@@ -1041,13 +1038,14 @@ test('onDelete does not handle non-block-end or non-collapsed selections', () =>
 });
 
 test('onDelete removes a following atomic block', () => {
-  const blockSizeBeforeRemove = editorState.getCurrentContent().getBlockMap()
-    .size;
+  const blockSizeBeforeRemove = editorState
+    .getCurrentContent()
+    .getBlockMap().size;
   const withAtomicBlock = insertAtomicBlock(editorState);
   const content = withAtomicBlock.getCurrentContent();
   const atomicKey = content
     .getBlockMap()
-    .find(block => block.getType() === 'atomic')
+    .find((block) => block.getType() === 'atomic')
     .getKey();
 
   const blockBefore = content.getBlockBefore(atomicKey);
@@ -1068,7 +1066,7 @@ test('onDelete removes a following atomic block', () => {
   const blockMapAfterDelete = afterDelete.getCurrentContent().getBlockMap();
 
   expect(
-    blockMapAfterDelete.some(block => block.getType() === 'atomic'),
+    blockMapAfterDelete.some((block) => block.getType() === 'atomic'),
   ).toMatchSnapshot();
 
   expect(

@@ -5,26 +5,26 @@
 // binarySearch([5, 10, 12, 15, 20, 30, 70], 12);  // => true
 // binarySearch([5, 10, 12, 15, 20, 30, 70], 24);  // => false
 
-function binarySearch (array, target) {
+function binarySearch(array, target) {
   //if target not found, return false
-  if (array.length === 0) return false
+  if (array.length === 0) return false;
 
-  let midIdx = Math.floor(array.length / 2)
-  let leftSide = array.slice(0, midIdx)
-  let rightSide = array.slice(midIdx + 1)
+  let midIdx = Math.floor(array.length / 2);
+  let leftSide = array.slice(0, midIdx);
+  let rightSide = array.slice(midIdx + 1);
 
   if (target < array[midIdx]) {
-    return binarySearch(leftSide, target)
+    return binarySearch(leftSide, target);
   } else if (target > array[midIdx]) {
-    return binarySearch(rightSide, target)
+    return binarySearch(rightSide, target);
   } else {
     // if target is neither less than or great than, then must be target
-    return true
+    return true;
   }
 }
 
-console.log(binarySearch([5, 10, 12, 15, 20, 30, 70], 12))  // => true
-console.log(binarySearch([5, 10, 12, 15, 20, 30, 70], 24))  // => false
+console.log(binarySearch([5, 10, 12, 15, 20, 30, 70], 12)); // => true
+console.log(binarySearch([5, 10, 12, 15, 20, 30, 70], 24)); // => false
 
 // Time Complexity: O(log(n))
 // n is the length of the input array

@@ -1,6 +1,6 @@
-import Pill from './pill';
-import Virus from './virus';
-import Audio from './audio';
+import Pill from "./pill";
+import Virus from "./virus";
+import Audio from "./audio";
 
 class Game {
   constructor(ctx) {
@@ -16,7 +16,7 @@ class Game {
     this.currentPill = null;
     this.virusCount = 0;
     this.board = this.newBoard(ctx);
-    this.audio = new Audio;
+    this.audio = new Audio();
   }
 
   newBoard(ctx) {
@@ -36,7 +36,9 @@ class Game {
         randomX = Math.floor(Math.random() * 8);
         randomY = Math.floor(Math.random() * 12) + 4;
       }
-      const virusColor = ["yellow", "blue", "red"][Math.floor(Math.random() * 3)];
+      const virusColor = ["yellow", "blue", "red"][
+        Math.floor(Math.random() * 3)
+      ];
       const virus = new Virus(ctx, board, [randomY, randomX], virusColor);
       board[randomY][randomX] = virus;
     }
@@ -64,7 +66,9 @@ class Game {
           object.draw();
         }
       });
-      document.getElementById("virus").innerHTML = `Viruses Left: ${this.virusCount}`;
+      document.getElementById(
+        "virus"
+      ).innerHTML = `Viruses Left: ${this.virusCount}`;
       document.getElementById("score").innerHTML = `Score: ${this.score}`;
       document.getElementById("level").innerHTML = `Level: ${this.level}`;
     }
@@ -81,7 +85,9 @@ class Game {
         this.draw(this.ctx);
       });
     });
-    key("space", () => { this.space(); });
+    key("space", () => {
+      this.space();
+    });
   }
 
   space() {
@@ -100,10 +106,10 @@ class Game {
       }
       this.ctx.font = "60px Arial";
       this.ctx.fillStyle = "red";
-      this.ctx.fillText("PAUSED",25,300);
+      this.ctx.fillText("PAUSED", 25, 300);
       this.ctx.strokeStyle = "white";
       this.ctx.lineWidth = 2;
-      this.ctx.strokeText("PAUSED",25,300);
+      this.ctx.strokeText("PAUSED", 25, 300);
       this.draw(this.ctx);
     } else {
       this.level = 1;
@@ -125,7 +131,9 @@ class Game {
 
   animate() {
     if (this.newGame) {
-      document.getElementById("virus").innerHTML = `Viruses Left: ${this.virusCount}`;
+      document.getElementById(
+        "virus"
+      ).innerHTML = `Viruses Left: ${this.virusCount}`;
       document.getElementById("score").innerHTML = `Score: ${this.score}`;
       document.getElementById("level").innerHTML = `Level: ${this.level}`;
       document.getElementById("mute").addEventListener("click", () => {
@@ -134,20 +142,24 @@ class Game {
       });
       this.ctx.font = "50px Arial";
       this.ctx.fillStyle = "red";
-      this.ctx.fillText("Dr Mario JS",15,250);
+      this.ctx.fillText("Dr Mario JS", 15, 250);
       this.ctx.strokeStyle = "white";
       this.ctx.lineWidth = 2;
-      this.ctx.strokeText("Dr Mario JS",15,250);
+      this.ctx.strokeText("Dr Mario JS", 15, 250);
       this.ctx.font = "25px Arial";
       this.ctx.fillStyle = "red";
-      this.ctx.fillText("Hit Space to Start",45,300);
+      this.ctx.fillText("Hit Space to Start", 45, 300);
       this.ctx.strokeStyle = "white";
       this.ctx.lineWidth = 1;
-      this.ctx.strokeText("Hit Space to Start",45,300);
+      this.ctx.strokeText("Hit Space to Start", 45, 300);
     } else if (this.paused) {
-      setTimeout(() => {requestAnimationFrame(this.animate.bind(this));}, this.speed);
-    } else if (this.checking){
-      setTimeout(() => {requestAnimationFrame(this.animate.bind(this));}, this.speed);
+      setTimeout(() => {
+        requestAnimationFrame(this.animate.bind(this));
+      }, this.speed);
+    } else if (this.checking) {
+      setTimeout(() => {
+        requestAnimationFrame(this.animate.bind(this));
+      }, this.speed);
     } else if (this.virusCount === 0) {
       this.audio.levelClear();
       if (this.level < 10) {
@@ -162,16 +174,16 @@ class Game {
       this.audio.gameOver();
       this.ctx.font = "50px Arial";
       this.ctx.fillStyle = "red";
-      this.ctx.fillText("Game Over",15,250);
+      this.ctx.fillText("Game Over", 15, 250);
       this.ctx.strokeStyle = "white";
       this.ctx.lineWidth = 2;
-      this.ctx.strokeText("Game Over",15,250);
+      this.ctx.strokeText("Game Over", 15, 250);
       this.ctx.font = "25px Arial";
       this.ctx.fillStyle = "red";
-      this.ctx.fillText("Hit Space to Restart",30,300);
+      this.ctx.fillText("Hit Space to Restart", 30, 300);
       this.ctx.strokeStyle = "white";
       this.ctx.lineWidth = 1;
-      this.ctx.strokeText("Hit Space to Restart",30,300);
+      this.ctx.strokeText("Hit Space to Restart", 30, 300);
     } else {
       if (!this.currentPill || !this.currentPill.active) {
         this.newPill(this.ctx, this.board);
@@ -184,7 +196,9 @@ class Game {
 
       this.draw(this.ctx);
 
-      setTimeout(() => {requestAnimationFrame(this.animate.bind(this));}, this.speed);
+      setTimeout(() => {
+        requestAnimationFrame(this.animate.bind(this));
+      }, this.speed);
     }
   }
 
@@ -195,7 +209,9 @@ class Game {
     if (this.changed) {
       this.changed = false;
       this.dropPills();
-      setTimeout(() => {this.checkBoard();}, 500);
+      setTimeout(() => {
+        this.checkBoard();
+      }, 500);
     } else {
       this.checking = false;
     }
@@ -213,22 +229,30 @@ class Game {
 
     for (i = 0; i < transposedBoard.length; i++) {
       for (j = 1; j < transposedBoard[i].length; j++) {
-        if (transposedBoard[i][j] !== undefined &&
+        if (
+          transposedBoard[i][j] !== undefined &&
           transposedBoard[i][j].type === "pill" &&
-          transposedBoard[i][j -1 ] === undefined) {
-            if (transposedBoard[i][j].pair === null) {
-              transposedBoard[i][j].drop();
-              transposedBoard[i][j] = undefined;
-              this.draw(this.ctx);
-              this.changed = true;
-            } else if (transposedBoard[i][j].coords[1] === transposedBoard[i][j].pair.coords[1] ||
-                transposedBoard[i][j].coords[0] !== transposedBoard[i][j].pair.coords[0] ||
-                this.board[transposedBoard[i][j].pair.coords[0] + 1][transposedBoard[i][j].pair.coords[1]] === undefined) {
-                  transposedBoard[i][j].drop();
-                  transposedBoard[i][j] = undefined;
-                  this.draw(this.ctx);
-                  this.changed = true;
-            }
+          transposedBoard[i][j - 1] === undefined
+        ) {
+          if (transposedBoard[i][j].pair === null) {
+            transposedBoard[i][j].drop();
+            transposedBoard[i][j] = undefined;
+            this.draw(this.ctx);
+            this.changed = true;
+          } else if (
+            transposedBoard[i][j].coords[1] ===
+              transposedBoard[i][j].pair.coords[1] ||
+            transposedBoard[i][j].coords[0] !==
+              transposedBoard[i][j].pair.coords[0] ||
+            this.board[transposedBoard[i][j].pair.coords[0] + 1][
+              transposedBoard[i][j].pair.coords[1]
+            ] === undefined
+          ) {
+            transposedBoard[i][j].drop();
+            transposedBoard[i][j] = undefined;
+            this.draw(this.ctx);
+            this.changed = true;
+          }
         }
       }
     }
@@ -352,9 +376,6 @@ class Game {
       }
     }
   }
-
-
-
 }
 
 Game.DIM_X = 288;
@@ -366,6 +387,5 @@ Game.MOVES = {
   z: "z",
   x: "x",
 };
-
 
 export default Game;

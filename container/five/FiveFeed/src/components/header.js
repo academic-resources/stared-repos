@@ -11,7 +11,7 @@ const Container = styled.div`
   margin: 0 1rem 0 1rem;
   max-width: 768px;
   padding: 0.75rem 0 1rem 0;
-  border-bottom: 1px solid #32374C;
+  border-bottom: 1px solid #32374c;
 
   @media (min-width: 768px) {
     & {
@@ -32,9 +32,7 @@ const StyledLink = styled(Link)`
 const Header = ({ siteTitle }) => (
   <Container>
     <Title>
-      <StyledLink to="/">
-        {siteTitle}
-      </StyledLink>
+      <StyledLink to="/">{siteTitle}</StyledLink>
     </Title>
     <LoginButton />
   </Container>

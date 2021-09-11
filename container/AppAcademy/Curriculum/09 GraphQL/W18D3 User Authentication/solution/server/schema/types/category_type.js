@@ -13,9 +13,9 @@ const CategoryType = new GraphQLObjectType({
       type: new GraphQLList(require("./product_type")),
       resolve(parentValue) {
         return Category.findProducts(parentValue._id);
-      }
-    }
-  })
+      },
+    },
+  }),
 });
 
 module.exports = CategoryType;

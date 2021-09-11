@@ -9,10 +9,10 @@ class View {
 
   bindEvents() {
     // install a handler on the `li` elements inside the board.
-    this.$el.on("click", "li", ( event => {
+    this.$el.on("click", "li", (event) => {
       const $square = $(event.currentTarget);
       this.makeMove($square);
-    }));
+    });
   }
 
   makeMove($square) {

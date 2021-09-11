@@ -6,7 +6,7 @@ const Bullet = require("./bullet");
 const DEFAULTS = {
   COLOR: "#505050",
   RADIUS: 25,
-  SPEED: 4
+  SPEED: 4,
 };
 
 function Asteroid(options) {
@@ -33,6 +33,5 @@ Asteroid.prototype.collideWith = function collideWith(otherObject) {
   }
   return false;
 };
-
 
 module.exports = Asteroid;

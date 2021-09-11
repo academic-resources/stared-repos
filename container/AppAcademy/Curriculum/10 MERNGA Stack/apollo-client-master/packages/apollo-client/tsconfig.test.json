@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig",
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "commonjs"
   },
   "exclude": [
     "src/__tests__/ApolloClient.ts",
@@ -18,6 +18,6 @@
     "src/core/__tests__/QueryManager/recycler.ts",
     "src/core/__tests__/fetchPolicies.ts",
     "src/data/__tests__/queries.ts",
-    "src/errors/__tests__/ApolloError.ts",
+    "src/errors/__tests__/ApolloError.ts"
   ]
 }

@@ -1,5 +1,4 @@
 class Audio {
-
   toggleMute() {
     const sounds = document.getElementsByTagName("audio");
     for (let i = 0; i < sounds.length; i++) {
@@ -73,7 +72,6 @@ class Audio {
     const sound = document.getElementById("gameover");
     sound.play();
   }
-
 }
 
 export default Audio;

@@ -1,14 +1,10 @@
-import React from 'react';
-import {
-  Route,
-  Link,
-  NavLink
-} from 'react-router-dom';
+import React from "react";
+import { Route, Link, NavLink } from "react-router-dom";
 
-import Red from './red';
-import Green from './green';
-import Blue from './blue';
-import Violet from './violet';
+import Red from "./red";
+import Green from "./green";
+import Blue from "./blue";
+import Violet from "./violet";
 
 class Rainbow extends React.Component {
   render() {
@@ -16,10 +12,10 @@ class Rainbow extends React.Component {
       <div>
         <h1>Rainbow Router!</h1>
 
-        <NavLink to='/red' >Red</NavLink>
-        <NavLink to='/green' >Green</NavLink>
-        <NavLink to='/blue' >Blue</NavLink>
-        <NavLink to='/violet' >Violet</NavLink>
+        <NavLink to="/red">Red</NavLink>
+        <NavLink to="/green">Green</NavLink>
+        <NavLink to="/blue">Blue</NavLink>
+        <NavLink to="/violet">Violet</NavLink>
 
         <div id="rainbow">
           <Route path="/red" component={Red} />
@@ -30,6 +26,6 @@ class Rainbow extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default Rainbow;

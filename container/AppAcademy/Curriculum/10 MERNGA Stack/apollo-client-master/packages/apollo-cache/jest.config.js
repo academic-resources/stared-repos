@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('../../config/jest.config.settings'),
+  ...require("../../config/jest.config.settings"),
 };

@@ -5,10 +5,10 @@ import {
   BaseMutationOptions,
   MutationFunction,
   MutationResult,
-  SubscriptionResult
-} from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
-import { BaseSubscriptionOptions } from '@apollo/react-common';
+  SubscriptionResult,
+} from "@apollo/react-common";
+import { DocumentNode } from "graphql";
+import { BaseSubscriptionOptions } from "@apollo/react-common";
 
 export interface QueryComponentOptions<
   TData = any,

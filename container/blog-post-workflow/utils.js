@@ -1,5 +1,5 @@
-const {spawn} = require('child_process');
-const core = require('@actions/core');
+const { spawn } = require("child_process");
+const core = require("@actions/core");
 
 /**
  * Executes a command and returns its result as promise
@@ -8,30 +8,31 @@ const core = require('@actions/core');
  * @param options {Object} extra options
  * @return {Promise<Object>}
  */
-const exec = (cmd, args = [], options = {}) => new Promise((resolve, reject) => {
-  let outputData = '';
-  const optionsToCLI = {
-    ...options
-  };
-  if (!optionsToCLI.stdio) {
-    Object.assign(optionsToCLI, {stdio: ['inherit', 'inherit', 'inherit']});
-  }
-  const app = spawn(cmd, args, optionsToCLI);
-  if (app.stdout) {
-    // Only needed for pipes
-    app.stdout.on('data', function (data) {
-      outputData += data.toString();
-    });
-  }
-
-  app.on('close', (code) => {
-    if (code !== 0) {
-      return reject({code, outputData});
+const exec = (cmd, args = [], options = {}) =>
+  new Promise((resolve, reject) => {
+    let outputData = "";
+    const optionsToCLI = {
+      ...options,
+    };
+    if (!optionsToCLI.stdio) {
+      Object.assign(optionsToCLI, { stdio: ["inherit", "inherit", "inherit"] });
     }
-    return resolve({code, outputData});
+    const app = spawn(cmd, args, optionsToCLI);
+    if (app.stdout) {
+      // Only needed for pipes
+      app.stdout.on("data", function (data) {
+        outputData += data.toString();
+      });
+    }
+
+    app.on("close", (code) => {
+      if (code !== 0) {
+        return reject({ code, outputData });
+      }
+      return resolve({ code, outputData });
+    });
+    app.on("error", () => reject({ code: 1, outputData }));
   });
-  app.on('error', () => reject({code: 1, outputData}));
-});
 
 /**
  * Builds the new readme by replacing the readme's <!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END --> tags
@@ -40,39 +41,25 @@ const exec = (cmd, args = [], options = {}) => new Promise((resolve, reject) => 
  * @return {string}: content after combining previousContent and newContent
  */
 const buildReadme = (previousContent, newContent) => {
-  const tagNameInput = core.getInput('comment_tag_name');
+  const tagNameInput = core.getInput("comment_tag_name");
   const tagToLookFor = tagNameInput ? `<!-- ${tagNameInput}:` : `<!-- BLOG-POST-LIST:`;
-  const closingTag = '-->';
-  const tagNewlineFlag = core.getInput('tag_post_pre_newline') === 'true';
-  const startOfOpeningTagIndex = previousContent.indexOf(
-    `${tagToLookFor}START`,
-  );
-  const endOfOpeningTagIndex = previousContent.indexOf(
-    closingTag,
-    startOfOpeningTagIndex,
-  );
-  const startOfClosingTagIndex = previousContent.indexOf(
-    `${tagToLookFor}END`,
-    endOfOpeningTagIndex,
-  );
-  if (
-    startOfOpeningTagIndex === -1 ||
-    endOfOpeningTagIndex === -1 ||
-    startOfClosingTagIndex === -1
-  ) {
+  const closingTag = "-->";
+  const tagNewlineFlag = core.getInput("tag_post_pre_newline") === "true";
+  const startOfOpeningTagIndex = previousContent.indexOf(`${tagToLookFor}START`);
+  const endOfOpeningTagIndex = previousContent.indexOf(closingTag, startOfOpeningTagIndex);
+  const startOfClosingTagIndex = previousContent.indexOf(`${tagToLookFor}END`, endOfOpeningTagIndex);
+  if (startOfOpeningTagIndex === -1 || endOfOpeningTagIndex === -1 || startOfClosingTagIndex === -1) {
     // Exit with error if comment is not found on the readme
-    core.error(
-      `Cannot find the comment tag on the readme:\n${tagToLookFor}START -->\n${tagToLookFor}END -->`
-    );
+    core.error(`Cannot find the comment tag on the readme:\n${tagToLookFor}START -->\n${tagToLookFor}END -->`);
     process.exit(1);
   }
   return [
     previousContent.slice(0, endOfOpeningTagIndex + closingTag.length),
-    tagNewlineFlag ? '\n' : '',
+    tagNewlineFlag ? "\n" : "",
     newContent,
-    tagNewlineFlag ? '\n' : '',
+    tagNewlineFlag ? "\n" : "",
     previousContent.slice(startOfClosingTagIndex),
-  ].join('');
+  ].join("");
 };
 
 /**
@@ -83,9 +70,8 @@ const buildReadme = (previousContent, newContent) => {
  */
 const truncateString = (str, length) => {
   const trimmedString = str.trim();
-  const truncatedString = [...trimmedString].slice(0, length).join('');
-  return truncatedString === trimmedString ?
-    trimmedString : truncatedString.trim() + '...';
+  const truncatedString = [...trimmedString].slice(0, length).join("");
+  return truncatedString === trimmedString ? trimmedString : truncatedString.trim() + "...";
 };
 
 /**
@@ -97,31 +83,34 @@ const truncateString = (str, length) => {
  */
 const commitReadme = async (githubToken, readmeFilePath, emptyCommit = false) => {
   // Getting config
-  const committerUsername = core.getInput('committer_username');
-  const committerEmail = core.getInput('committer_email');
-  const commitMessage = core.getInput('commit_message');
+  const committerUsername = core.getInput("committer_username");
+  const committerEmail = core.getInput("committer_email");
+  const commitMessage = core.getInput("commit_message");
   // Doing commit and push
-  await exec('git', [
-    'config',
-    '--global',
-    'user.email',
-    committerEmail,
-  ]);
+  await exec("git", ["config", "--global", "user.email", committerEmail]);
   if (githubToken) {
     // git remote set-url origin
-    await exec('git', ['remote', 'set-url', 'origin',
-      `https://${githubToken}@github.com/${process.env.GITHUB_REPOSITORY}.git`]);
+    await exec("git", [
+      "remote",
+      "set-url",
+      "origin",
+      `https://${githubToken}@github.com/${process.env.GITHUB_REPOSITORY}.git`,
+    ]);
   }
-  await exec('git', ['config', '--global', 'user.name', committerUsername]);
+  await exec("git", ["config", "--global", "user.name", committerUsername]);
   if (emptyCommit) {
-    await exec('git', ['commit', '--allow-empty', '-m', '"dummy commit to keep the repository ' +
-    'active, see https://git.io/Jtm4V"']);
+    await exec("git", [
+      "commit",
+      "--allow-empty",
+      "-m",
+      '"dummy commit to keep the repository ' + 'active, see https://git.io/Jtm4V"',
+    ]);
   } else {
-    await exec('git', ['add', readmeFilePath]);
-    await exec('git', ['commit', '-m', commitMessage]);
+    await exec("git", ["add", readmeFilePath]);
+    await exec("git", ["commit", "-m", commitMessage]);
   }
-  await exec('git', ['push']);
-  core.info('Readme updated successfully in the upstream repository');
+  await exec("git", ["push"]);
+  core.info("Readme updated successfully in the upstream repository");
 };
 
 /**
@@ -131,10 +120,10 @@ const commitReadme = async (githubToken, readmeFilePath, emptyCommit = false) =>
  * @return {string} actual source name eg: stackoverflow
  */
 const updateAndParseCompoundParams = (sourceWithParam, obj) => {
-  const param = sourceWithParam.split('/'); // Reading params ['stackoverflow','Comment by $author', '']
+  const param = sourceWithParam.split("/"); // Reading params ['stackoverflow','Comment by $author', '']
   if (param.length === 3) {
-    Object.assign(obj, {[param[0]]: param[1]});
-    return param[0];// Returning source name
+    Object.assign(obj, { [param[0]]: param[1] });
+    return param[0]; // Returning source name
   } else {
     return sourceWithParam;
   }
@@ -147,14 +136,17 @@ const updateAndParseCompoundParams = (sourceWithParam, obj) => {
  * @return {null|string[]}
  */
 const getParameterisedTemplate = (template, keyName) => {
-  const key = '$' + keyName + '(';
+  const key = "$" + keyName + "(";
   if (template.indexOf(key) > -1) {
     const startIndex = template.indexOf(key) + key.length;
-    const endIndex = template.indexOf(')', startIndex);
+    const endIndex = template.indexOf(")", startIndex);
     if (endIndex === -1) {
       return null;
     }
-    return template.slice(startIndex, endIndex).split(',').map(item => item.trim());
+    return template
+      .slice(startIndex, endIndex)
+      .split(",")
+      .map((item) => item.trim());
   } else {
     return null;
   }
@@ -166,5 +158,5 @@ module.exports = {
   truncateString,
   buildReadme,
   exec,
-  getParameterisedTemplate
+  getParameterisedTemplate,
 };

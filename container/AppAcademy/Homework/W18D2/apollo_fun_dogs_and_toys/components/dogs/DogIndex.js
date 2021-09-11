@@ -2,7 +2,7 @@
 import gql from "graphql-tag";
 import React from "react";
 import { Query } from "react-apollo";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 // we use gql with a template literal to construct graphql queries
 const FETCH_DOGS = gql`
@@ -24,7 +24,7 @@ const DogIndex = () => (
         <div>
           <h1>DogIndex</h1>
           <ul>
-            {data.dogs.map(dog => (
+            {data.dogs.map((dog) => (
               <li key={dog._id}>
                 <Link to={`/dogs/${dog._id}`}>{dog.name}</Link>
               </li>

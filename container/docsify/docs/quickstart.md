@@ -18,9 +18,9 @@ docsify init ./docs
 
 After the `init` is complete, you can see the file list in the `./docs` subdirectory.
 
-* `index.html` as the entry file
-* `README.md` as the home page
-* `.nojekyll` prevents GitHub Pages from ignoring files that begin with an underscore
+- `index.html` as the entry file
+- `README.md` as the home page
+- `.nojekyll` prevents GitHub Pages from ignoring files that begin with an underscore
 
 You can easily update the documentation in `./docs/README.md`, of course you can add [more pages](more-pages.md).
 
@@ -43,21 +43,21 @@ If you don't like `npm` or have trouble installing the tool, you can manually cr
 
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
-</head>
-<body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      //...
-    }
-  </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-</body>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      window.$docsify = {
+        //...
+      };
+    </script>
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  </body>
 </html>
 ```
 
@@ -72,23 +72,23 @@ cd docs && python -m SimpleHTTPServer 3000
 If you want, you can show a loading dialog before docsify starts to render your documentation:
 
 ```html
-  <!-- index.html -->
+<!-- index.html -->
 
-  <div id="app">Please wait...</div>
+<div id="app">Please wait...</div>
 ```
 
 You should set the `data-app` attribute if you changed `el`:
 
 ```html
-  <!-- index.html -->
+<!-- index.html -->
 
-  <div data-app id="main">Please wait...</div>
+<div data-app id="main">Please wait...</div>
 
-  <script>
-    window.$docsify = {
-      el: '#main'
-    }
-  </script>
+<script>
+  window.$docsify = {
+    el: "#main",
+  };
+</script>
 ```
 
 Compare [el configuration](configuration.md#el).

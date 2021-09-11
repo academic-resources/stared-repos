@@ -1,13 +1,13 @@
-import { FetchResult } from 'apollo-link';
-import { DocumentNode, GraphQLError } from 'graphql';
+import { FetchResult } from "apollo-link";
+import { DocumentNode, GraphQLError } from "graphql";
 
-import { QueryStoreValue } from '../data/queries';
-import { NetworkStatus } from './networkStatus';
+import { QueryStoreValue } from "../data/queries";
+import { NetworkStatus } from "./networkStatus";
 
 export type QueryListener = (
   queryStoreValue: QueryStoreValue,
   newData?: any,
-  forceResolvers?: boolean,
+  forceResolvers?: boolean
 ) => void;
 
 export type OperationVariables = { [key: string]: any };
@@ -39,7 +39,7 @@ export type MutationQueryReducer<T> = (
     mutationResult: FetchResult<T>;
     queryName: string | undefined;
     queryVariables: Record<string, any>;
-  },
+  }
 ) => Record<string, any>;
 
 export type MutationQueryReducersMap<T = { [key: string]: any }> = {
@@ -52,7 +52,7 @@ export interface Resolvers {
       rootValue?: any,
       args?: any,
       context?: any,
-      info?: any,
+      info?: any
     ) => any;
   };
 }

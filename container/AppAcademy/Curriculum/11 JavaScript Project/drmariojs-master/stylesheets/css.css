@@ -1,8 +1,8 @@
-body{
+body {
   background-image: url("../images/virus.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -15,13 +15,12 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
 canvas {
   background: #000000;
   background: linear-gradient(#252525, #252525);
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   border-radius: 20px;
 }
 
@@ -64,7 +63,7 @@ button {
   width: 30px;
   height: 30px;
 }
-button:hover{
+button:hover {
   cursor: pointer;
   outline: none;
 }
@@ -80,11 +79,21 @@ button:hover{
 }
 
 a {
-  color: #FFFFFF;
+  color: #ffffff;
 }
-a:visited { text-decoration: none; color:#FFFFFF; }
-a:hover { text-decoration: none; color:#0074BB; }
-a:hover, a:active { text-decoration: none; color:#0074BB }
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:hover {
+  text-decoration: none;
+  color: #0074bb;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #0074bb;
+}
 
 #mute {
   border-radius: 5px;

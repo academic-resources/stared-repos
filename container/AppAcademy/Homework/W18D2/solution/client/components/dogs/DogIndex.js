@@ -25,7 +25,7 @@ const DogIndex = () => {
           <div>
             <h1>DogIndex</h1>
             <ul>
-              {data.dogs.map(dog => {
+              {data.dogs.map((dog) => {
                 return (
                   <li key={dog._id}>
                     <Link to={`/dogs/${dog._id}`}>{dog.name}</Link>

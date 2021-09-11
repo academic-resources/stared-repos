@@ -44,7 +44,8 @@ p {
   border-style: inset;
 }
 
-.flagged, .bombed {
+.flagged,
+.bombed {
   color: red;
 }
 
@@ -55,7 +56,7 @@ p {
   bottom: 0%;
   left: 0%;
   right: 0%;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .modal-content {

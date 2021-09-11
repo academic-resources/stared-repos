@@ -1,8 +1,6 @@
 export const uiReducer = (state, action) => {
-  switch(action.type) {
-
-
-    default: 
-      return state
+  switch (action.type) {
+    default:
+      return state;
   }
-}
+};

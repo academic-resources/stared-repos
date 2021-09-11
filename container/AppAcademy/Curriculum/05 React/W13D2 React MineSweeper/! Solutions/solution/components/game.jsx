@@ -1,8 +1,8 @@
-import Board from './board';
-import React from 'react';
-import * as Minesweeper from '../minesweeper';
+import Board from "./board";
+import React from "react";
+import * as Minesweeper from "../minesweeper";
 
-class Game extends React.Component{
+class Game extends React.Component {
   constructor(props) {
     super(props);
     const board = new Minesweeper.Board(9, 10);
@@ -30,13 +30,14 @@ class Game extends React.Component{
     let modal;
     if (this.state.board.lost() || this.state.board.won()) {
       const text = this.state.board.won() ? "You won!" : "You lost!";
-      modal =
-        <div className='modal-screen'>
-          <div className='modal-content'>
+      modal = (
+        <div className="modal-screen">
+          <div className="modal-content">
             <p>{text}</p>
             <button onClick={this.restartGame}>Play Again</button>
           </div>
-        </div>;
+        </div>
+      );
     }
 
     return (

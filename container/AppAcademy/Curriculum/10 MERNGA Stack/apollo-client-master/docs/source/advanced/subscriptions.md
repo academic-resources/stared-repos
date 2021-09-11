@@ -71,33 +71,33 @@ npm install --save apollo-link-ws subscriptions-transport-ws
 Then, initialize a GraphQL subscriptions transport link:
 
 ```js
-import { WebSocketLink } from 'apollo-link-ws';
+import { WebSocketLink } from "apollo-link-ws";
 
 const wsLink = new WebSocketLink({
   uri: `ws://localhost:5000/`,
   options: {
-    reconnect: true
-  }
+    reconnect: true,
+  },
 });
 ```
 
 ```js
-import { split } from 'apollo-link';
-import { HttpLink } from 'apollo-link-http';
-import { WebSocketLink } from 'apollo-link-ws';
-import { getMainDefinition } from 'apollo-utilities';
+import { split } from "apollo-link";
+import { HttpLink } from "apollo-link-http";
+import { WebSocketLink } from "apollo-link-ws";
+import { getMainDefinition } from "apollo-utilities";
 
 // Create an http link:
 const httpLink = new HttpLink({
-  uri: 'http://localhost:3000/graphql'
+  uri: "http://localhost:3000/graphql",
 });
 
 // Create a WebSocket link:
 const wsLink = new WebSocketLink({
   uri: `ws://localhost:5000/`,
   options: {
-    reconnect: true
-  }
+    reconnect: true,
+  },
 });
 
 // using the ability to split links, you can send data to each link
@@ -107,12 +107,12 @@ const link = split(
   ({ query }) => {
     const definition = getMainDefinition(query);
     return (
-      definition.kind === 'OperationDefinition' &&
-      definition.operation === 'subscription'
+      definition.kind === "OperationDefinition" &&
+      definition.operation === "subscription"
     );
   },
   wsLink,
-  httpLink,
+  httpLink
 );
 ```
 
@@ -184,8 +184,8 @@ The render prop function that you pass to the `children` prop of `Subscription` 
 
 With GraphQL subscriptions your client will be alerted on push from the server and you should choose the pattern that fits your application the most:
 
-* Use it as a notification and run any logic you want when it fires, for example alerting the user or refetching data
-* Use the data sent along with the notification and merge it directly into the store (existing queries are automatically notified)
+- Use it as a notification and run any logic you want when it fires, for example alerting the user or refetching data
+- Use the data sent along with the notification and merge it directly into the store (existing queries are automatically notified)
 
 With `subscribeToMore`, you can easily do the latter.
 
@@ -210,7 +210,7 @@ const CommentsPageWithData = ({ params }) => (
     query={COMMENT_QUERY}
     variables={{ repoName: `${params.org}/${params.repoName}` }}
   >
-    {result => <CommentsPage {...result} />}
+    {(result) => <CommentsPage {...result} />}
   </Query>
 );
 ```
@@ -260,10 +260,10 @@ const CommentsPageWithData = ({ params }) => (
 
               return Object.assign({}, prev, {
                 entry: {
-                  comments: [newFeedItem, ...prev.entry.comments]
-                }
+                  comments: [newFeedItem, ...prev.entry.comments],
+                },
               });
-            }
+            },
           })
         }
       />

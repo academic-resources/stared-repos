@@ -39,7 +39,7 @@ const FeedData = ({ match }) => (
     variables={{
       type: match.params.type.toUpperCase() || "TOP",
       offset: 0,
-      limit: 10
+      limit: 10,
     }}
     fetchPolicy="cache-and-network"
   >
@@ -49,14 +49,14 @@ const FeedData = ({ match }) => (
         onLoadMore={() =>
           fetchMore({
             variables: {
-              offset: data.feed.length
+              offset: data.feed.length,
             },
             updateQuery: (prev, { fetchMoreResult }) => {
               if (!fetchMoreResult) return prev;
               return Object.assign({}, prev, {
-                feed: [...prev.feed, ...fetchMoreResult.feed]
+                feed: [...prev.feed, ...fetchMoreResult.feed],
               });
-            }
+            },
           })
         }
       />
@@ -116,29 +116,28 @@ const CommentsWithData = () => (
                 cursor: newCursor,
                 entry: {
                   // Put the new comments in the front of the list
-                  comments: [...newComments, ...previousEntry.comments]
+                  comments: [...newComments, ...previousEntry.comments],
                 },
-                __typename: previousEntry.__typename
+                __typename: previousEntry.__typename,
               };
-            }
+            },
           })
         }
       />
     )}
   </Query>
 );
-
 ```
 
 ## Relay-style cursor pagination
 
 Relay, another popular GraphQL client, is opinionated about the input and output of paginated queries, so people sometimes build their server's pagination model around Relay's needs. If you have a server that is designed to work with the [Relay Cursor Connections](https://facebook.github.io/relay/graphql/connections.htm) spec, you can also call that server from Apollo Client with no problems.
 
-Using Relay-style cursors is very similar to basic cursor-based pagination.  The main difference is in the format of the query response which affects where you get the cursor.
+Using Relay-style cursors is very similar to basic cursor-based pagination. The main difference is in the format of the query response which affects where you get the cursor.
 
-Relay provides a `pageInfo` object on the returned cursor connection which contains the cursor of the first and last items returned as the properties `startCursor` and `endCursor` respectively.  This object also contains a boolean property `hasNextPage` which can be used to determine if there are more results available.
+Relay provides a `pageInfo` object on the returned cursor connection which contains the cursor of the first and last items returned as the properties `startCursor` and `endCursor` respectively. This object also contains a boolean property `hasNextPage` which can be used to determine if there are more results available.
 
-The following example specifies a request of 10 items at a time and that results should start after the provided `cursor`.  If `null` is passed for the cursor relay will ignore it and provide results starting from the beginning of the data set which allows the use of the same query for both initial and subsequent requests.
+The following example specifies a request of 10 items at a time and that results should start after the provided `cursor`. If `null` is passed for the cursor relay will ignore it and provide results starting from the beginning of the data set which allows the use of the same query for both initial and subsequent requests.
 
 ```jsx
 const CommentsQuery = gql`
@@ -166,7 +165,7 @@ const CommentsWithData = () => (
         onLoadMore={() =>
           fetchMore({
             variables: {
-              cursor: comments.pageInfo.endCursor
+              cursor: comments.pageInfo.endCursor,
             },
             updateQuery: (previousResult, { fetchMoreResult }) => {
               const newEdges = fetchMoreResult.comments.edges;
@@ -179,11 +178,11 @@ const CommentsWithData = () => (
                     comments: {
                       __typename: previousResult.comments.__typename,
                       edges: [...previousResult.comments.edges, ...newEdges],
-                      pageInfo
-                    }
+                      pageInfo,
+                    },
                   }
                 : previousResult;
-            }
+            },
           })
         }
       />
@@ -202,7 +201,8 @@ const FEED_QUERY = gql`
     currentUser {
       login
     }
-    feed(type: $type, offset: $offset, limit: $limit) @connection(key: "feed", filter: ["type"]) {
+    feed(type: $type, offset: $offset, limit: $limit)
+      @connection(key: "feed", filter: ["type"]) {
       id
       # ...
     }

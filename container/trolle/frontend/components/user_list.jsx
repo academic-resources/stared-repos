@@ -1,9 +1,9 @@
-import React from 'react'
-import MemberIcon from './member_icon'
+import React from "react";
+import MemberIcon from "./member_icon";
 
 export default ({ users, select }) => (
   <ul className="users-list">
-    {users.map(u => (
+    {users.map((u) => (
       <li key={u.id} onClick={() => select(u)}>
         <div className="profile-btn-bg">
           <MemberIcon user={u} />
@@ -12,4 +12,4 @@ export default ({ users, select }) => (
       </li>
     ))}
   </ul>
-)
+);

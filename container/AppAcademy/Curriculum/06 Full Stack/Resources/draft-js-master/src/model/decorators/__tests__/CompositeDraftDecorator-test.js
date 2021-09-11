@@ -23,7 +23,7 @@ class ContentBlock {
   }
 }
 
-const searchWith = regex => (block, callback, contentState) => {
+const searchWith = (regex) => (block, callback, contentState) => {
   block.getText().replace(regex, (match, offset) => {
     callback(offset, offset + match.length);
   });

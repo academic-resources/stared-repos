@@ -1,20 +1,20 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import HomePage from './home_page'
-import SplashPage from './splash_page'
-import Navbar from './navbar'
+import React from "react";
+import { connect } from "react-redux";
+import HomePage from "./home_page";
+import SplashPage from "./splash_page";
+import Navbar from "./navbar";
 
-const mstp = state => ({
-  isLoggedIn: !!state.session.id
-})
+const mstp = (state) => ({
+  isLoggedIn: !!state.session.id,
+});
 
-const hs = props => (
+const hs = (props) => (
   <div>
     <Navbar isLoggedIn={props.isLoggedIn} />
     <div className="main">
       {props.isLoggedIn ? <HomePage {...props} /> : <SplashPage />}
     </div>
   </div>
-)
+);
 
-export default connect(mstp)(hs)
+export default connect(mstp)(hs);

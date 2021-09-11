@@ -16,13 +16,13 @@ const mutation = new GraphQLObjectType({
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
         email: { type: new GraphQLNonNull(GraphQLString) },
-        password: { type: new GraphQLNonNull(GraphQLString) }
+        password: { type: new GraphQLNonNull(GraphQLString) },
       },
       resolve(parentValue, data) {
         return AuthService.register(data);
-      }
-    }
-  }
+      },
+    },
+  },
 });
 
 module.exports = mutation;

@@ -103,10 +103,10 @@ const assertMoveBlockInContentState = (
       .getBlockMap()
       .toSetSeq()
       .toArray()
-      .map(filter => filter.toJS())
-      .map(block =>
+      .map((filter) => filter.toJS())
+      .map((block) =>
         Object.keys(block)
-          .filter(prop => BLOCK_PROPS_BLACKLIST.indexOf(prop) === -1)
+          .filter((prop) => BLOCK_PROPS_BLACKLIST.indexOf(prop) === -1)
           .reduce((acc, prop) => {
             acc[prop] = block[prop];
             return acc;

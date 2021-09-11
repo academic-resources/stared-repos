@@ -10,7 +10,7 @@ const client = new faunadb.Client({
   secret: process.env.GATSBY_FAUNA_KEY,
 })
 
-exports.handler = async function(event, context, callback) {
+exports.handler = async function (event, context, callback) {
   // const data = await client.query(
   //   q.Get(q.Ref(q.Class('user'), '215067775483249154'))
   // )

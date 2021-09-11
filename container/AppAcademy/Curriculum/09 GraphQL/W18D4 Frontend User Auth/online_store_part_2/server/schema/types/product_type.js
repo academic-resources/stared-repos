@@ -1,8 +1,14 @@
 const mongoose = require("mongoose");
 const graphql = require("graphql");
-const { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLFloat, GraphQLInt } = graphql;
-const CategoryType = require("./category_type")
-const Category = mongoose.model('categories')
+const {
+  GraphQLObjectType,
+  GraphQLString,
+  GraphQLID,
+  GraphQLFloat,
+  GraphQLInt,
+} = graphql;
+const CategoryType = require("./category_type");
+const Category = mongoose.model("categories");
 
 const ProductType = new GraphQLObjectType({
   name: "ProductType",
@@ -13,15 +19,15 @@ const ProductType = new GraphQLObjectType({
     description: { type: GraphQLString },
     weight: { type: GraphQLFloat },
     cost: { type: GraphQLInt },
-    category: { 
+    category: {
       type: CategoryType,
       resolve(parentValue) {
         return Category.findById(parentValue.category)
-          .then(category => category)
-          .catch(err => null)
-      }
-    }
-  })
+          .then((category) => category)
+          .catch((err) => null);
+      },
+    },
+  }),
 });
 
 module.exports = ProductType;

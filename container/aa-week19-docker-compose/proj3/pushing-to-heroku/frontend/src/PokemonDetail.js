@@ -1,7 +1,7 @@
-import React, { useEffect, useContext } from 'react';
-import { useParams } from 'react-router-dom';
-import { imageUrl } from './config';
-import { PokemonContext } from './PokemonContext';
+import React, { useEffect, useContext } from "react";
+import { useParams } from "react-router-dom";
+import { imageUrl } from "./config";
+import { PokemonContext } from "./PokemonContext";
 
 const PokemonDetail = () => {
   const { id } = useParams();
@@ -14,7 +14,6 @@ const PokemonDetail = () => {
     } else if (pokemon.id !== parseInt(id, 10)) {
       getOnePokemon(id);
     }
-
   }, [getOnePokemon, pokemon, id]);
 
   if (!pokemon) return null;

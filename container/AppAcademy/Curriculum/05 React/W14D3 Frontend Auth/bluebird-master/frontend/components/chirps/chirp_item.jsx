@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default ({ chirp, likeChirp, unLikeChirp }) => {
   let likeButtonText = "You don't like this.";
@@ -10,8 +10,10 @@ export default ({ chirp, likeChirp, unLikeChirp }) => {
   return (
     <li>
       <h3>{chirp.body}</h3>
-      <p><strong>Likes: {chirp.likes}</strong></p>
+      <p>
+        <strong>Likes: {chirp.likes}</strong>
+      </p>
       <button onClick={likeButtonAction}>{likeButtonText}</button>
     </li>
   );
-}
+};

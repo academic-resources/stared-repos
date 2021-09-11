@@ -1,18 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import BenchDetail from './bench_detail';
-import BenchMap from '../bench_map/bench_map';
-import ReviewFormContainer from './review_form_container';
-import { ProtectedRoute } from '../../util/route_util';
-import { ReviewLink } from '../../util/link_util';
+import BenchDetail from "./bench_detail";
+import BenchMap from "../bench_map/bench_map";
+import ReviewFormContainer from "./review_form_container";
+import { ProtectedRoute } from "../../util/route_util";
+import { ReviewLink } from "../../util/link_util";
 
 const BenchShow = ({ bench, benchId, fetchBench }) => {
   const benches = {
-    [benchId]: bench
+    [benchId]: bench,
   };
 
-  return(
+  return (
     <div className="single-bench-show">
       <div className="single-bench-map">
         <Link to="/">Back to Benches Index</Link>

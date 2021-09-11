@@ -1,6 +1,5 @@
-
-
 1. Create 3 new wizards and make sure you can view their name, house, and patronus information:
+
 ```js
 mutation {
   addWizard(name: "Harry Trotter", houseId:1, patronusId: 2) {
@@ -44,7 +43,6 @@ mutation {
 }
 ```
 
-
 2. Edit the name of a wizard and verify that no other value has changed on that wizard.
 
 ```js
@@ -81,7 +79,6 @@ mutation {
 ```
 
 4. Delete two wizards (just make sure you are deleting wizards who exist! You can query the `wizards` root type for a list of all wizards.)
-
 
 ```js
 // wizard 1

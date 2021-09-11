@@ -128,7 +128,7 @@ const getBlockMapSupportedTags = (
 
   blockRenderMap.forEach((draftBlock: DraftBlockRenderConfig) => {
     if (draftBlock.aliasedElements) {
-      draftBlock.aliasedElements.forEach(tag => {
+      draftBlock.aliasedElements.forEach((tag) => {
         tags = tags.add(tag);
       });
     }
@@ -137,7 +137,7 @@ const getBlockMapSupportedTags = (
   });
 
   return tags
-    .filter(tag => tag && tag !== unstyledElement)
+    .filter((tag) => tag && tag !== unstyledElement)
     .toArray()
     .sort();
 };
@@ -168,7 +168,7 @@ const getBlockTypeForTag = (
         draftBlock.element === tag ||
         draftBlock.wrapper === tag ||
         (draftBlock.aliasedElements &&
-          draftBlock.aliasedElements.some(alias => alias === tag)),
+          draftBlock.aliasedElements.some((alias) => alias === tag)),
     )
     .keySeq()
     .toSet()
@@ -201,7 +201,7 @@ const processInlineTag = (
   } else if (node instanceof HTMLElement) {
     const htmlElement = node;
     currentStyle = currentStyle
-      .withMutations(style => {
+      .withMutations((style) => {
         const fontWeight = htmlElement.style.fontWeight;
         const fontStyle = htmlElement.style.fontStyle;
         const textDecoration = htmlElement.style.textDecoration;
@@ -279,7 +279,7 @@ const containsSemanticBlockMarkup = (
   html: string,
   blockTags: Array<string>,
 ): boolean => {
-  return blockTags.some(tag => html.indexOf('<' + tag) !== -1);
+  return blockTags.some((tag) => html.indexOf('<' + tag) !== -1);
 };
 
 const hasValidLinkText = (link: Node): boolean => {
@@ -347,7 +347,7 @@ const getBlockDividerChunk = (
  *  existing list item depth classes are being used and preserve this style
  */
 const getListItemDepth = (node: HTMLElement, depth: number = 0): number => {
-  Object.keys(knownListItemDepthClasses).some(depthClass => {
+  Object.keys(knownListItemDepthClasses).some((depthClass) => {
     if (node.classList.contains(depthClass)) {
       depth = knownListItemDepthClasses[depthClass];
     }
@@ -441,7 +441,7 @@ const genFragment = (
     const image: HTMLImageElement = node;
     const entityConfig = {};
 
-    imgAttr.forEach(attr => {
+    imgAttr.forEach((attr) => {
       const imageAttribute = image.getAttribute(attr);
       if (imageAttribute) {
         entityConfig[attr] = imageAttribute;
@@ -520,7 +520,7 @@ const genFragment = (
       const anchor: HTMLAnchorElement = child;
       const entityConfig = {};
 
-      anchorAttr.forEach(attr => {
+      anchorAttr.forEach((attr) => {
         const anchorAttribute = anchor.getAttribute(attr);
         if (anchorAttribute) {
           entityConfig[attr] = anchorAttribute;
@@ -534,21 +534,19 @@ const genFragment = (
       entityId = undefined;
     }
 
-    const {
-      chunk: generatedChunk,
-      entityMap: maybeUpdatedEntityMap,
-    } = genFragment(
-      newEntityMap,
-      child,
-      inlineStyle,
-      lastList,
-      inBlock,
-      blockTags,
-      depth,
-      blockRenderMap,
-      entityId || inEntity,
-      experimentalTreeDataSupport ? blockKey : null,
-    );
+    const {chunk: generatedChunk, entityMap: maybeUpdatedEntityMap} =
+      genFragment(
+        newEntityMap,
+        child,
+        inlineStyle,
+        lastList,
+        inBlock,
+        blockTags,
+        depth,
+        blockRenderMap,
+        entityId || inEntity,
+        experimentalTreeDataSupport ? blockKey : null,
+      );
 
     newChunk = generatedChunk;
     newEntityMap = maybeUpdatedEntityMap;
@@ -720,7 +718,7 @@ const convertChunkToContentBlocks = (chunk: Chunk): ?Array<BlockNodeRecord> => {
 
         acc.contentBlocks.push(textNode);
 
-        parentRecord = parentRecord.withMutations(block => {
+        parentRecord = parentRecord.withMutations((block) => {
           block
             .set('characterList', List())
             .set('text', '')

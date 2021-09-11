@@ -12,18 +12,18 @@ export function assign<A, B, C, D, E>(
   b: B,
   c: C,
   d: D,
-  e: E,
+  e: E
 ): A & B & C & D & E;
 export function assign(target: any, ...sources: Array<any>): any;
 export function assign(
   target: { [key: string]: any },
   ...sources: Array<{ [key: string]: any }>
 ): { [key: string]: any } {
-  sources.forEach(source => {
-    if (typeof source === 'undefined' || source === null) {
+  sources.forEach((source) => {
+    if (typeof source === "undefined" || source === null) {
       return;
     }
-    Object.keys(source).forEach(key => {
+    Object.keys(source).forEach((key) => {
       target[key] = source[key];
     });
   });

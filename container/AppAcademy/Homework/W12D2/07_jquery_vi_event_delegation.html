@@ -58,9 +58,10 @@ mouseoverCallback = event => {
 }
 </script> -->
 
-
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-2.1.1.js"
+></script>
 
 <ul class="cool-things">
   <li>Racecars</li>
@@ -73,10 +74,10 @@ mouseoverCallback = event => {
 <form id="cool-thing-form">
   <label>
     Cool Thing
-    <input type="text" id="cool_thing">
+    <input type="text" id="cool_thing" />
   </label>
 
-  <input type="submit" value="Create Cool Thing">
+  <input type="submit" value="Create Cool Thing" />
 </form>
 
 <script>
@@ -103,10 +104,8 @@ mouseoverCallback = event => {
   //   };
   // });
 
-
-
   const $form = $("#cool-thing-form");
-  $form.on("submit", event => {
+  $form.on("submit", (event) => {
     event.preventDefault();
 
     const $input = $("#cool_thing");
@@ -119,11 +118,10 @@ mouseoverCallback = event => {
 
   // the handler will be called whenever we mouseover any `li` in
   // `ul.cool-things`.
-  $("ul.cool-things").on("mouseover", "li", event => {
+  $("ul.cool-things").on("mouseover", "li", (event) => {
     alert($(event.currentTarget).text());
   });
 </script>
-
 
 <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
 

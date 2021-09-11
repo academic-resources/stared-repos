@@ -25,7 +25,6 @@ An **instance** is a specific use case for a problem with a specific input in or
 
 #### Nearest Neighbor Psuedocode
 
-
 NearestNeighbor(_P_)
 
 &nbsp; &nbsp; &nbsp; &nbsp;Pick and visit an initial point _p₀_ from _P_
@@ -64,7 +63,6 @@ ClosestPair(_P_)
 
 &nbsp; &nbsp; &nbsp; &nbsp;Connect the two endpoints by an edge
 
-
 &nbsp; &nbsp; &nbsp; &nbsp;**This doesn't work if the data points are two rows of equally spaced points where the two rows are slightly closer than the dots in each row to each other**
 
 ![ClosestPairCounterExample](ClosestPairCounterExample.png)
@@ -80,7 +78,6 @@ OptimalTSP(_P_)
 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;If (cost(_Pᵢ_) ≤ _d_) then _d_ = cost(_Pᵢ_) and _P<sub>min</sub> = Pᵢ_
 
 &nbsp; &nbsp; &nbsp; &nbsp;Return _P<sub>min</sub>_
-
 
 &nbsp; &nbsp; &nbsp; &nbsp;**This is accurate but very slow**
 
@@ -122,7 +119,7 @@ ExhaustiveScheduling(_I_)
 
 &nbsp; &nbsp; &nbsp; &nbsp;_S<sub>max</max> = ∅_
 
-&nbsp; &nbsp; &nbsp; &nbsp;For each of the 2<sup>*n*</sup> subsets, _Sᵢ_ of intervals _I_
+&nbsp; &nbsp; &nbsp; &nbsp;For each of the 2<sup>_n_</sup> subsets, _Sᵢ_ of intervals _I_
 
 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;If (_Sᵢ_ is mutually non-overlapping) and _(size (Sᵢ) > j_)
 
@@ -141,7 +138,6 @@ OptimalScheduling(_I_)
 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Accept the job _j_ from _I_ with the earliest completion date
 
 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Delete _j_ and any interval which intersects _j_ from _I_
-
 
 **NOTE**: ∅ is a symbol for "empty set"
 

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import Layout from '../components/layout'
 
-
 const Title = styled.div`
   margin: auto;
   display: flex;
@@ -49,8 +48,8 @@ const Input = styled.input`
   border-radius: 5px;
   line-height: 22px;
   background-color: transparent;
-  border: 2px solid #ADDB67;
-  color: #9CA2AB;
+  border: 2px solid #addb67;
+  color: #9ca2ab;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
@@ -65,8 +64,8 @@ const Textarea = styled.textarea`
   resize: vertical;
   width: 100%;
   background-color: transparent;
-  border: 2px solid #ADDB67;
-  color: #9CA2AB;
+  border: 2px solid #addb67;
+  color: #9ca2ab;
   border-radius: 5px;
   margin-bottom: 15px;
   padding: 13px;
@@ -74,7 +73,7 @@ const Textarea = styled.textarea`
 
 const Submit = styled.button`
   width: 100%;
-  background: #ADDB67;
+  background: #addb67;
   border-radius: 5px;
   border: 0;
   cursor: pointer;
@@ -86,7 +85,7 @@ const Submit = styled.button`
   margin-top: -4px;
   font-weight: 700;
   &:hover {
-    background: #CC6666;
+    background: #cc6666;
   }
 `
 export default () => (

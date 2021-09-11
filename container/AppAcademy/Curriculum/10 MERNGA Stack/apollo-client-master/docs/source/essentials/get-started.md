@@ -31,7 +31,7 @@ In our `index.js` file, let's import `ApolloClient` from `apollo-boost` and add 
 import ApolloClient from "apollo-boost";
 
 const client = new ApolloClient({
-  uri: "https://48p1r2roz4.sse.codesandbox.io"
+  uri: "https://48p1r2roz4.sse.codesandbox.io",
 });
 ```
 
@@ -110,7 +110,9 @@ const ExchangeRates = () => (
 
       return data.rates.map(({ currency, rate }) => (
         <div key={currency}>
-          <p>{currency}: {rate}</p>
+          <p>
+            {currency}: {rate}
+          </p>
         </div>
       ));
     }}

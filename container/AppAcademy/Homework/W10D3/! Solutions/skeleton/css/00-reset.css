@@ -1,8 +1,19 @@
 /* PHASE 0: Reset */
 
-html, head, body, header,
-nav, h1, a, ul, li, main,
-section, p, footer, small {
+html,
+head,
+body,
+header,
+nav,
+h1,
+a,
+ul,
+li,
+main,
+section,
+p,
+footer,
+small {
   margin: 0;
   padding: 0;
   border: 0;
@@ -16,8 +27,12 @@ section, p, footer, small {
   background: transparent;
 }
 
-header, nav, main, section,
-footer, small {
+header,
+nav,
+main,
+section,
+footer,
+small {
   display: block;
 }
 

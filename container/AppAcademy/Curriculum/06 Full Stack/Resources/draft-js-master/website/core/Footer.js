@@ -16,18 +16,10 @@ class Footer extends React.Component {
         <section className="sitemap">
           <div>
             <h5>Docs</h5>
-            <a
-              href={
-                config.baseUrl +
-                'docs/getting-started.html'
-              }>
+            <a href={config.baseUrl + 'docs/getting-started.html'}>
               Getting Started
             </a>
-            <a
-              href={
-                config.baseUrl +
-                'docs/api-reference-editor.html'
-              }>
+            <a href={config.baseUrl + 'docs/api-reference-editor.html'}>
               API Reference
             </a>
           </div>
@@ -35,7 +27,8 @@ class Footer extends React.Component {
             <h5>Community</h5>
             <a
               href="http://stackoverflow.com/questions/tagged/draftjs"
-              target="_blank">
+              target="_blank"
+            >
               Stack Overflow
             </a>
             <a href="https://twitter.com/draft_js" target="_blank">
@@ -52,7 +45,8 @@ class Footer extends React.Component {
               data-count-href={`/${config.organizationName}/${config.projectName}/stargazers`}
               data-show-count={true}
               data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
+              aria-label="Star this project on GitHub"
+            >
               Star
             </a>
           </div>
@@ -61,7 +55,8 @@ class Footer extends React.Component {
         <a
           href="https://code.facebook.com/projects/"
           target="_blank"
-          className="fbOpenSource">
+          className="fbOpenSource"
+        >
           <img
             src={this.props.config.baseUrl + 'img/oss_logo.png'}
             alt="Facebook Open Source"

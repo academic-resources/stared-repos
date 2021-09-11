@@ -21,14 +21,14 @@ function isSelectionAtLeafStart(editorState: EditorState): boolean {
 
   let isAtStart = false;
 
-  blockTree.some(leafSet => {
+  blockTree.some((leafSet) => {
     if (offset === leafSet.get('start')) {
       isAtStart = true;
       return true;
     }
 
     if (offset < leafSet.get('end')) {
-      return leafSet.get('leaves').some(leaf => {
+      return leafSet.get('leaves').some((leaf) => {
         const leafStart = leaf.get('start');
         if (offset === leafStart) {
           isAtStart = true;

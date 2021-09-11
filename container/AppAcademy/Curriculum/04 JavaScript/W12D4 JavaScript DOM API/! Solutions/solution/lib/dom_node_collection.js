@@ -48,14 +48,16 @@ class DomNodeCollection {
   }
 
   empty() {
-    this.html('');
+    this.html("");
   }
 
   append(children) {
     if (this.nodes.length === 0) return;
 
-    if (typeof children === 'object' &&
-        !(children instanceof DomNodeCollection)) {
+    if (
+      typeof children === "object" &&
+      !(children instanceof DomNodeCollection)
+    ) {
       // ensure argument is coerced into DomNodeCollection
       children = $l(children);
     }
@@ -78,27 +80,27 @@ class DomNodeCollection {
   }
 
   remove() {
-    this.each(node => node.parentNode.removeChild(node));
+    this.each((node) => node.parentNode.removeChild(node));
   }
 
   attr(key, val) {
     if (typeof val === "string") {
-      this.each(node => node.setAttribute(key, val));
+      this.each((node) => node.setAttribute(key, val));
     } else {
       return this.nodes[0].getAttribute(key);
     }
   }
 
   addClass(newClass) {
-    this.each(node => node.classList.add(newClass));
+    this.each((node) => node.classList.add(newClass));
   }
 
   removeClass(oldClass) {
-    this.each(node => node.classList.remove(oldClass));
+    this.each((node) => node.classList.remove(oldClass));
   }
 
   toggleClass(toggleClass) {
-    this.each(node => node.classList.toggle(toggleClass));
+    this.each((node) => node.classList.toggle(toggleClass));
   }
 
   find(selector) {

@@ -24,14 +24,16 @@
   }
 </script> -->
 
-
 <style>
   li.green {
     background-color: green;
   }
 </style>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-2.1.1.js"
+></script>
 
 <ul>
   <li>Racecars</li>
@@ -44,14 +46,13 @@
 
   // you can iterate with the each method
   $listItems.each(function (index) {
-  // The function is called for each `HTMLElement` in `$listItems`;
-  // each time it sets `this` to the next `HTMLElement` in the set.
+    // The function is called for each `HTMLElement` in `$listItems`;
+    // each time it sets `this` to the next `HTMLElement` in the set.
     console.log([index, this.textContent].join(" "));
   });
 
-
   // after one second, make the list green
-  window.setTimeout( () => {
+  window.setTimeout(() => {
     // $listItems.each( (_, obj) => {
     //   // in the low-level DOM API, `element.classList` returns a
     //   // `ClassList` object; calling `ClassList#add` adds the class to
@@ -64,8 +65,10 @@
   }, 1000);
 </script>
 
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-2.1.1.js"
+></script>
 
 <div>
   <ul>
@@ -84,22 +87,20 @@
   $ul.siblings().attr("style", "color: blue");
 </script>
 
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-2.1.1.js"
+></script>
 
 <div>
   <ul></ul>
 </div>
 
 <script>
-  const coolThings = [
-    "racecars",
-    "lasers",
-    "aeroplanes"
-  ];
+  const coolThings = ["racecars", "lasers", "aeroplanes"];
 
   let i = 0;
-  window.setInterval( () => {
+  window.setInterval(() => {
     const $ul = $("ul");
     if ($ul.children().length == 10) {
       // $ul.children() returns a jQuery object containing all the
@@ -117,13 +118,15 @@
   }, 1000);
 </script>
 
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-2.1.1.js"
+></script>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
-
-<input type="text" id="cool-input">
+<input type="text" id="cool-input" />
 
 <script>
-  window.setInterval( () => {
+  window.setInterval(() => {
     const $coolInput = $("#cool-input");
 
     if ($coolInput.val() == "racecars") {
@@ -133,27 +136,28 @@
   }, 100);
 </script>
 
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-2.1.1.js"
+></script>
 
 <label>
-  <input type="radio" name="duck[favorite_toy]" value="racecars">
+  <input type="radio" name="duck[favorite_toy]" value="racecars" />
   Racecars
 </label>
 
 <label>
-  <input type="radio" name="duck[favorite_toy]" value="lasers">
+  <input type="radio" name="duck[favorite_toy]" value="lasers" />
   Lasers
 </label>
 
 <label>
-  <input type="radio" name="duck[favorite_toy]" value="aeroplanes">
+  <input type="radio" name="duck[favorite_toy]" value="aeroplanes" />
   Aeroplanes
 </label>
 
-
 <script>
-  window.setInterval( () => {
+  window.setInterval(() => {
     const $coolInputs = $("input");
 
     // unselect any item.

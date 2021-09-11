@@ -4,38 +4,38 @@ const Schema = mongoose.Schema;
 const ProductSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: "users"
+    ref: "users",
   },
   category: {
     type: Schema.Types.ObjectId,
-    ref: "categories"
+    ref: "categories",
   },
   name: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   weight: {
     type: Number,
-    required: false
-  }
+    required: false,
+  },
 });
 
 ProductSchema.statics.updateProductCategory = (productId, categoryId) => {
   const Product = mongoose.model("products");
   const Category = mongoose.model("categories");
 
-  return Product.findById(productId).then(product => {
+  return Product.findById(productId).then((product) => {
     if (product.category) {
-      Category.findById(product.category).then(oldcategory => {
+      Category.findById(product.category).then((oldcategory) => {
         oldcategory.products.pull(product);
         return oldcategory.save();
       });
     }
-    return Category.findById(categoryId).then(newCategory => {
+    return Category.findById(categoryId).then((newCategory) => {
       product.category = newCategory;
       newCategory.products.push(product);
 

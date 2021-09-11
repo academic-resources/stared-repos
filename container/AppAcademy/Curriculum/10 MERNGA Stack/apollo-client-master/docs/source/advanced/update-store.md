@@ -32,12 +32,12 @@ By default, Apollo identifies objects based on two properties: The `__typename` 
 You can also specify a custom function to generate IDs from each object, and supply it as the `dataIdFromObject` in the [`InMemoryCache` constructor](/advanced/caching/#configuration), if you want to specify how Apollo will identify and de-duplicate the objects returned from the server.
 
 ```js
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { InMemoryCache } from "apollo-cache-inmemory";
 
 // If your database has unique IDs across all types of objects, you can use
 // a very simple function!
 const cache = new InMemoryCache({
-  dataIdFromObject: o => o.id
+  dataIdFromObject: (o) => o.id,
 });
 ```
 
@@ -46,10 +46,10 @@ These IDs allow Apollo Client to reactively tell all queries that fetched a part
 If you want to get the dataIdFromObjectFunction (for instance when using the [`readFragment` function](LINK PLZ)), you can import it from the InMemoryCache package;
 
 ```js
-import { defaultDataIdFromObject } from 'apollo-cache-inmemory';
+import { defaultDataIdFromObject } from "apollo-cache-inmemory";
 const person = {
-  __typename: 'Person',
-  id: '1234',
+  __typename: "Person",
+  id: "1234",
 };
 
 defaultDataIdFromObject(person); // 'Person:1234'
@@ -92,39 +92,43 @@ In some cases, just using `dataIdFromObject` is not enough for your application 
 ```javascript
 mutate({
   //... insert comment mutation
-  refetchQueries: [{
-    query: gql`
-      query UpdateCache($repoName: String!) {
-        entry(repoFullName: $repoName) {
-          id
-          comments {
-            postedBy {
-              login
-              html_url
+  refetchQueries: [
+    {
+      query: gql`
+        query UpdateCache($repoName: String!) {
+          entry(repoFullName: $repoName) {
+            id
+            comments {
+              postedBy {
+                login
+                html_url
+              }
+              createdAt
+              content
             }
-            createdAt
-            content
           }
         }
-      }
-    `,
-    variables: { repoName: 'apollographql/apollo-client' },
-  }],
-})
+      `,
+      variables: { repoName: "apollographql/apollo-client" },
+    },
+  ],
+});
 ```
 
 A very common way of using `refetchQueries` is to import queries defined for other components to make sure that those components will be updated:
 
 ```javascript
-import RepoCommentsQuery from '../queries/RepoCommentsQuery';
+import RepoCommentsQuery from "../queries/RepoCommentsQuery";
 
 mutate({
   //... insert comment mutation
-  refetchQueries: [{
-    query: RepoCommentsQuery,
-    variables: { repoFullName: 'apollographql/apollo-client' },
-  }],
-})
+  refetchQueries: [
+    {
+      query: RepoCommentsQuery,
+      variables: { repoFullName: "apollographql/apollo-client" },
+    },
+  ],
+});
 ```
 
 ### `update`
@@ -132,11 +136,14 @@ mutate({
 Using `update` gives you full control over the cache, allowing you to make changes to your data model in response to a mutation in any way you like. `update` is the recommended way of updating the cache after a query. It is explained in full [here](/api/react-apollo/#optionsupdate).
 
 ```javascript
-import CommentAppQuery from '../queries/CommentAppQuery';
+import CommentAppQuery from "../queries/CommentAppQuery";
 
 const SUBMIT_COMMENT_MUTATION = gql`
   mutation SubmitComment($repoFullName: String!, $commentContent: String!) {
-    submitComment(repoFullName: $repoFullName, commentContent: $commentContent) {
+    submitComment(
+      repoFullName: $repoFullName
+      commentContent: $commentContent
+    ) {
       postedBy {
         login
         html_url
@@ -186,11 +193,14 @@ If you're familiar with Redux, think of the `updateQueries` option as a reducer,
 We expose this mutation through a function prop that the `CommentsPage` component can call. This is what the code looks like:
 
 ```javascript
-import update from 'immutability-helper';
+import update from "immutability-helper";
 
 const SUBMIT_COMMENT_MUTATION = gql`
   mutation SubmitComment($repoFullName: String!, $commentContent: String!) {
-    submitComment(repoFullName: $repoFullName, commentContent: $commentContent) {
+    submitComment(
+      repoFullName: $repoFullName
+      commentContent: $commentContent
+    ) {
       postedBy {
         login
         html_url
@@ -263,7 +273,8 @@ const COMMENT_QUERY = gql`
         stargazers_count
       }
     }
-  }`;
+  }
+`;
 ```
 
 Now, we have to incorporate the newly added comment returned by the mutation into the information that was already returned by the `COMMENT_QUERY` that was fired when the page was loaded. We accomplish this through `updateQueries`. Zooming in on that portion of the code:
@@ -283,7 +294,7 @@ mutate({
       });
     },
   },
-})
+});
 ```
 
 Fundamentally, `updateQueries` is a map going from the name of a query (in our case, `Comment`) to a function that receives the previous result that this query received as well as the result returned by the mutation. In our case, the mutation returns information about the new comment. This function should then incorporate the mutation result into a new object containing the result previously received by the query (`prev`) and return that new object.
@@ -321,7 +332,9 @@ const FeedWithData = graphql(FeedQuery, {
           },
 
           updateQuery: (previousResult, { fetchMoreResult }) => {
-            if (!fetchMoreResult) { return previousResult; }
+            if (!fetchMoreResult) {
+              return previousResult;
+            }
 
             return Object.assign({}, previousResult, {
               feed: [...previousResult.feed, ...fetchMoreResult.feed],
@@ -342,7 +355,9 @@ return fetchMore({
     offset: feed.length,
   },
   updateQuery: (prev, { fetchMoreResult }) => {
-    if (!fetchMoreResult.data) { return prev; }
+    if (!fetchMoreResult.data) {
+      return prev;
+    }
     return Object.assign({}, prev, {
       feed: [...prev.feed, ...fetchMoreResult.feed],
     });
@@ -369,11 +384,14 @@ To solve this Apollo Client 1.6 introduced the `@connection` directive to specif
 To have a stable cache location for query results, Apollo Client 1.6 introduced the `@connection` directive, which can be used to specify a custom store key for results. To use the `@connection` directive, simply add the directive to the segment of the query you want a custom store key for and provide the `key` parameter to specify the store key. In addition to the `key` parameter, you can also include the optional `filter` parameter, which takes an array of query argument names to include in the generated custom store key.
 
 ```js
-const query = gql`query Feed($type: FeedType!, $offset: Int, $limit: Int) {
-  feed(type: $type, offset: $offset, limit: $limit) @connection(key: "feed", filter: ["type"]) {
-    ...FeedEntry
+const query = gql`
+  query Feed($type: FeedType!, $offset: Int, $limit: Int) {
+    feed(type: $type, offset: $offset, limit: $limit)
+      @connection(key: "feed", filter: ["type"]) {
+      ...FeedEntry
+    }
   }
-}`
+`;
 ```
 
 With the above query, even with multiple `fetchMore`s, the results of each feed update will always result in the `feed` key in the store being updated with the latest accumulated values. In this example, we also use the `@connection` directive's optional `filter` argument to include the `type` query argument in the store key, which results in multiple store values that accumulate queries from each type of feed.
@@ -431,13 +449,16 @@ query DetailView {
 We know that the data is most likely already in the client cache, but because it's requested with a different query, Apollo Client doesn't know that. In order to tell Apollo Client where to look for the data, we can define custom resolvers:
 
 ```js
-import { toIdValue } from 'apollo-utilities';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { toIdValue } from "apollo-utilities";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
 const cache = new InMemoryCache({
   cacheResolvers: {
     Query: {
-      book: (_, args) => toIdValue(cache.config.dataIdFromObject({ __typename: 'Book', id: args.id })),
+      book: (_, args) =>
+        toIdValue(
+          cache.config.dataIdFromObject({ __typename: "Book", id: args.id })
+        ),
     },
   },
 });
@@ -483,13 +504,15 @@ cacheResolvers: {
 Sometimes, you may want to reset the store entirely, such as [when a user logs out](/recipes/authentication/#reset-store-on-logout). To accomplish this, use `client.resetStore` to clear out your Apollo cache. Since `client.resetStore` also refetches any of your active queries for you, it is asynchronous.
 
 ```js
-export default withApollo(graphql(PROFILE_QUERY, {
-  props: ({ data: { loading, currentUser }, client }) => ({
-    loading,
-    currentUser,
-    resetOnLogout: async () => client.resetStore(),
-  }),
-})(Profile));
+export default withApollo(
+  graphql(PROFILE_QUERY, {
+    props: ({ data: { loading, currentUser }, client }) => ({
+      loading,
+      currentUser,
+      resetOnLogout: async () => client.resetStore(),
+    }),
+  })(Profile)
+);
 ```
 
 To register a callback function to be executed after the store has been reset, call `client.onResetStore` and pass in your callback. If you would like to register multiple callbacks, simply call `client.onResetStore` again. All of your callbacks will be pushed into an array and executed concurrently.
@@ -497,11 +520,11 @@ To register a callback function to be executed after the store has been reset, c
 In this example, we're using `client.onResetStore` to write our default values to the cache for [`apollo-link-state`](https://www.apollographql.com/docs/link/links/state). This is necessary if you're using `apollo-link-state` for local state management and calling `client.resetStore` anywhere in your application.
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { withClientState } from 'apollo-link-state';
+import { ApolloClient } from "apollo-client";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { withClientState } from "apollo-link-state";
 
-import { resolvers, defaults } from './resolvers';
+import { resolvers, defaults } from "./resolvers";
 
 const cache = new InMemoryCache();
 const stateLink = withClientState({ cache, resolvers, defaults });
@@ -524,8 +547,8 @@ import { withApollo } from "react-apollo";
 export class Foo extends Component {
   constructor(props) {
     super(props);
-    this.unsubscribe = props.client.onResetStore(
-      () => this.setState({ reset: false })
+    this.unsubscribe = props.client.onResetStore(() =>
+      this.setState({ reset: false })
     );
     this.state = { reset: false };
   }
@@ -533,7 +556,7 @@ export class Foo extends Component {
     this.unsubscribe();
   }
   render() {
-    return this.state.reset ? <div /> : <span />
+    return this.state.reset ? <div /> : <span />;
   }
 }
 

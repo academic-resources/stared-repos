@@ -1,39 +1,39 @@
 // externals
-import Rx from 'rxjs';
-import { assign } from 'lodash';
-import gql from 'graphql-tag';
-import { DocumentNode, ExecutionResult } from 'graphql';
-import { ApolloLink, Operation, Observable } from 'apollo-link';
-import { InMemoryCache, ApolloReducerConfig } from 'apollo-cache-inmemory';
-import { stripSymbols } from 'apollo-utilities';
+import Rx from "rxjs";
+import { assign } from "lodash";
+import gql from "graphql-tag";
+import { DocumentNode, ExecutionResult } from "graphql";
+import { ApolloLink, Operation, Observable } from "apollo-link";
+import { InMemoryCache, ApolloReducerConfig } from "apollo-cache-inmemory";
+import { stripSymbols } from "apollo-utilities";
 
 // mocks
-import mockQueryManager from '../../../__mocks__/mockQueryManager';
-import mockWatchQuery from '../../../__mocks__/mockWatchQuery';
+import mockQueryManager from "../../../__mocks__/mockQueryManager";
+import mockWatchQuery from "../../../__mocks__/mockWatchQuery";
 import {
   mockSingleLink,
   MockSubscriptionLink,
-} from '../../../__mocks__/mockLinks';
+} from "../../../__mocks__/mockLinks";
 
 // core
-import { ApolloQueryResult } from '../../types';
-import { NetworkStatus } from '../../networkStatus';
-import { ObservableQuery } from '../../ObservableQuery';
-import { WatchQueryOptions } from '../../watchQueryOptions';
-import { QueryManager } from '../../QueryManager';
+import { ApolloQueryResult } from "../../types";
+import { NetworkStatus } from "../../networkStatus";
+import { ObservableQuery } from "../../ObservableQuery";
+import { WatchQueryOptions } from "../../watchQueryOptions";
+import { QueryManager } from "../../QueryManager";
 
-import { ApolloError } from '../../../errors/ApolloError';
-import { DataStore } from '../../../data/store';
-import { Observer } from '../../../util/Observable';
+import { ApolloError } from "../../../errors/ApolloError";
+import { DataStore } from "../../../data/store";
+import { Observer } from "../../../util/Observable";
 
 // testing utils
-import wrap from '../../../util/wrap';
+import wrap from "../../../util/wrap";
 import observableToPromise, {
   observableToPromiseAndSubscription,
-} from '../../../util/observableToPromise';
+} from "../../../util/observableToPromise";
 
-describe('Link interactions', () => {
-  it('includes the cache on the context for eviction links', done => {
+describe("Link interactions", () => {
+  it("includes the cache on the context for eviction links", (done) => {
     const query = gql`
       query CachedLuke {
         people_one(id: 1) {
@@ -47,15 +47,15 @@ describe('Link interactions', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
 
     const evictionLink = (operation, forward) => {
       const { cache } = operation.getContext();
       expect(cache).toBeDefined();
-      return forward(operation).map(result => {
+      return forward(operation).map((result) => {
         setTimeout(() => {
           const cacheResult = stripSymbols(cache.read({ query }));
           expect(cacheResult).toEqual(initialData);
@@ -82,10 +82,10 @@ describe('Link interactions', () => {
 
     let count = 0;
     observable.subscribe({
-      next: result => {
+      next: (result) => {
         count++;
       },
-      error: e => {
+      error: (e) => {
         console.error(e);
       },
     });
@@ -93,7 +93,7 @@ describe('Link interactions', () => {
     // fire off first result
     mockLink.simulateResult({ result: { data: initialData } });
   });
-  it('cleans up all links on the final unsubscribe from watchQuery', done => {
+  it("cleans up all links on the final unsubscribe from watchQuery", (done) => {
     const query = gql`
       query WatchedLuke {
         people_one(id: 1) {
@@ -107,8 +107,8 @@ describe('Link interactions', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
 
@@ -126,15 +126,15 @@ describe('Link interactions', () => {
     let count = 0;
     let four;
     // first watch
-    const one = observable.subscribe(result => count++);
+    const one = observable.subscribe((result) => count++);
     // second watch
-    const two = observable.subscribe(result => count++);
+    const two = observable.subscribe((result) => count++);
     // third watch (to be unsubscribed)
-    const three = observable.subscribe(result => {
+    const three = observable.subscribe((result) => {
       count++;
       three.unsubscribe();
       // fourth watch
-      four = observable.subscribe(x => count++);
+      four = observable.subscribe((x) => count++);
     });
 
     // fire off first result
@@ -146,8 +146,8 @@ describe('Link interactions', () => {
         result: {
           data: {
             people_one: {
-              name: 'Luke Skywalker',
-              friends: [{ name: 'R2D2' }],
+              name: "Luke Skywalker",
+              friends: [{ name: "R2D2" }],
             },
           },
         },
@@ -164,7 +164,7 @@ describe('Link interactions', () => {
       done();
     });
   });
-  it('cleans up all links on the final unsubscribe from watchQuery [error]', done => {
+  it("cleans up all links on the final unsubscribe from watchQuery [error]", (done) => {
     const query = gql`
       query WatchedLuke {
         people_one(id: 1) {
@@ -178,8 +178,8 @@ describe('Link interactions', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
 
@@ -198,20 +198,20 @@ describe('Link interactions', () => {
     let four;
     let finished = false;
     // first watch
-    const one = observable.subscribe(result => count++);
+    const one = observable.subscribe((result) => count++);
     // second watch
     const two = observable.subscribe({
-      next: result => count++,
-      error: e => {
+      next: (result) => count++,
+      error: (e) => {
         count = 0;
       },
     });
     // third watch (to be unsubscribed)
-    const three = observable.subscribe(result => {
+    const three = observable.subscribe((result) => {
       count++;
       three.unsubscribe();
       // fourth watch
-      four = observable.subscribe(x => count++);
+      four = observable.subscribe((x) => count++);
     });
 
     // fire off first result
@@ -222,7 +222,7 @@ describe('Link interactions', () => {
 
       // final unsubscribe should be called now
       // since errors clean up subscriptions
-      link.simulateResult({ error: new Error('dang') });
+      link.simulateResult({ error: new Error("dang") });
 
       setTimeout(() => {
         expect(count).toEqual(0);
@@ -235,7 +235,7 @@ describe('Link interactions', () => {
       finished = true;
     });
   });
-  it('includes the cache on the context for mutations', done => {
+  it("includes the cache on the context for mutations", (done) => {
     const mutation = gql`
       mutation UpdateLuke {
         people_one(id: 1) {
@@ -249,8 +249,8 @@ describe('Link interactions', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
 
@@ -273,7 +273,7 @@ describe('Link interactions', () => {
     // fire off first result
     mockLink.simulateResult({ result: { data: initialData } });
   });
-  it('includes passed context in the context for mutations', done => {
+  it("includes passed context in the context for mutations", (done) => {
     const mutation = gql`
       mutation UpdateLuke {
         people_one(id: 1) {
@@ -287,14 +287,14 @@ describe('Link interactions', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
 
     const evictionLink = (operation, forward) => {
       const { planet } = operation.getContext();
-      expect(planet).toBe('Tatooine');
+      expect(planet).toBe("Tatooine");
       done();
       return forward(operation);
     };
@@ -306,12 +306,12 @@ describe('Link interactions', () => {
       link,
     });
 
-    queryManager.mutate({ mutation, context: { planet: 'Tatooine' } });
+    queryManager.mutate({ mutation, context: { planet: "Tatooine" } });
 
     // fire off first result
     mockLink.simulateResult({ result: { data: initialData } });
   });
-  it('includes getCacheKey function on the context for cache resolvers', async () => {
+  it("includes getCacheKey function on the context for cache resolvers", async () => {
     const query = gql`
       {
         books {
@@ -331,15 +331,15 @@ describe('Link interactions', () => {
 
     const bookData = {
       books: [
-        { id: 1, title: 'Woo', __typename: 'Book' },
-        { id: 2, title: 'Foo', __typename: 'Book' },
+        { id: 1, title: "Woo", __typename: "Book" },
+        { id: 2, title: "Foo", __typename: "Book" },
       ],
     };
 
     const link = new ApolloLink((operation, forward) => {
       const { getCacheKey } = operation.getContext();
       expect(getCacheKey).toBeDefined();
-      expect(getCacheKey({ id: 1, __typename: 'Book' })).toEqual('Book:1');
+      expect(getCacheKey({ id: 1, __typename: "Book" })).toEqual("Book:1");
       return Observable.of({ data: bookData });
     });
 
@@ -353,14 +353,14 @@ describe('Link interactions', () => {
                 expect(context.getCacheKey).toBeDefined();
                 const cacheKey = context.getCacheKey({
                   id,
-                  __typename: 'Book',
+                  __typename: "Book",
                 });
                 expect(cacheKey.id).toEqual(`Book:${id}`);
                 return cacheKey;
               },
             },
           },
-        }),
+        })
       ),
     });
 
@@ -372,7 +372,7 @@ describe('Link interactions', () => {
         expect({
           ...data,
         }).toMatchObject({
-          book: { title: 'Woo', __typename: 'Book' },
+          book: { title: "Woo", __typename: "Book" },
         });
       });
   });

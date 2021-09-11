@@ -4,43 +4,44 @@ const CONSTANTS = {
   PIPE_WIDTH: 50,
   EDGE_BUFFER: 50,
   PIPE_SPACING: 220,
-  WARM_UP_SECONDS: 1
+  WARM_UP_SECONDS: 1,
 };
 
 export default class Level {
   constructor(dimensions) {
     this.dimensions = dimensions;
-    
-    const firstPipeDistance = 
-      this.dimensions.width + 
-      (CONSTANTS.WARM_UP_SECONDS * 60 * CONSTANTS.PIPE_SPEED);
+
+    const firstPipeDistance =
+      this.dimensions.width +
+      CONSTANTS.WARM_UP_SECONDS * 60 * CONSTANTS.PIPE_SPEED;
 
     this.pipes = [
       this.randomPipe(firstPipeDistance),
       this.randomPipe(firstPipeDistance + CONSTANTS.PIPE_SPACING),
-      this.randomPipe(firstPipeDistance + (CONSTANTS.PIPE_SPACING * 2)),
+      this.randomPipe(firstPipeDistance + CONSTANTS.PIPE_SPACING * 2),
     ];
   }
 
   randomPipe(x) {
-    const heightRange = this.dimensions.height - (2 * CONSTANTS.EDGE_BUFFER) - CONSTANTS.GAP_HEIGHT;
-    const gapTop = (Math.random() * heightRange) + CONSTANTS.EDGE_BUFFER;
+    const heightRange =
+      this.dimensions.height - 2 * CONSTANTS.EDGE_BUFFER - CONSTANTS.GAP_HEIGHT;
+    const gapTop = Math.random() * heightRange + CONSTANTS.EDGE_BUFFER;
     const pipe = {
       topPipe: {
-        left: x, 
-        right: CONSTANTS.PIPE_WIDTH + x, 
-        top: 0, 
-        bottom: gapTop
+        left: x,
+        right: CONSTANTS.PIPE_WIDTH + x,
+        top: 0,
+        bottom: gapTop,
       },
       bottomPipe: {
-        left: x, 
-        right: CONSTANTS.PIPE_WIDTH + x, 
-        top: gapTop + CONSTANTS.GAP_HEIGHT, 
-        bottom: this.dimensions.height
+        left: x,
+        right: CONSTANTS.PIPE_WIDTH + x,
+        top: gapTop + CONSTANTS.GAP_HEIGHT,
+        bottom: this.dimensions.height,
       },
-      passed: false
+      passed: false,
     };
-    return pipe
+    return pipe;
   }
 
   animate(ctx) {
@@ -66,7 +67,7 @@ export default class Level {
   }
 
   movePipes() {
-    this.eachPipe(function(pipe) {
+    this.eachPipe(function (pipe) {
       pipe.topPipe.left -= CONSTANTS.PIPE_SPEED;
       pipe.topPipe.right -= CONSTANTS.PIPE_SPEED;
       pipe.bottomPipe.left -= CONSTANTS.PIPE_SPEED;
@@ -82,21 +83,21 @@ export default class Level {
   }
 
   drawPipes(ctx) {
-    this.eachPipe(function(pipe) {
+    this.eachPipe(function (pipe) {
       ctx.fillStyle = "green";
 
       //draw top pipe
       ctx.fillRect(
-        pipe.topPipe.left, 
-        pipe.topPipe.top, 
-        CONSTANTS.PIPE_WIDTH, 
+        pipe.topPipe.left,
+        pipe.topPipe.top,
+        CONSTANTS.PIPE_WIDTH,
         pipe.topPipe.bottom - pipe.topPipe.top
       );
       //draw bottom pipe
       ctx.fillRect(
-        pipe.bottomPipe.left, 
-        pipe.bottomPipe.top, 
-        CONSTANTS.PIPE_WIDTH, 
+        pipe.bottomPipe.left,
+        pipe.bottomPipe.top,
+        CONSTANTS.PIPE_WIDTH,
         pipe.bottomPipe.bottom - pipe.bottomPipe.top
       );
     });
@@ -108,7 +109,7 @@ export default class Level {
   //This method shall return true if the bird passed in is currently
   //colliding with any pipe.
   collidesWith(bird) {
-      //this function returns true if the the rectangles overlap
+    //this function returns true if the the rectangles overlap
     const _overlap = (rect1, rect2) => {
       //check that they don't overlap in the x axis
       if (rect1.left > rect2.right || rect1.right < rect2.left) {
@@ -122,11 +123,13 @@ export default class Level {
     };
     let collision = false;
     this.eachPipe((pipe) => {
-      if ( 
+      if (
         //check if the bird is overlapping (colliding) with either pipe
-        _overlap(pipe.topPipe, bird) || 
+        _overlap(pipe.topPipe, bird) ||
         _overlap(pipe.bottomPipe, bird)
-      ) { collision = true; }
+      ) {
+        collision = true;
+      }
     });
     return collision;
   }

@@ -6,13 +6,13 @@
 
 ##### W3D3
 
-+ Added bare bones migration files for Users, Chirps, and Likes
-+ Added basic model validations, associations and custom validations for the above tables
+- Added bare bones migration files for Users, Chirps, and Likes
+- Added basic model validations, associations and custom validations for the above tables
 
 ##### W4D1
 
-+ Added routes and controllers for Users, Chirps, and Likes
+- Added routes and controllers for Users, Chirps, and Likes
 
 ##### W4D2
 
-+ Added views for Users and Chirps (delaying likes until auth)
+- Added views for Users and Chirps (delaying likes until auth)

@@ -1,30 +1,30 @@
-import React from 'react'
+import React from "react";
 
 class CreateTeamDialog extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      title: '',
-      description: ''
-    }
-    this.setTitle = this.setTitle.bind(this)
-    this.setDescription = this.setDescription.bind(this)
+      title: "",
+      description: "",
+    };
+    this.setTitle = this.setTitle.bind(this);
+    this.setDescription = this.setDescription.bind(this);
   }
 
   setTitle(e) {
     this.setState({
-      title: e.target.value
-    })
+      title: e.target.value,
+    });
   }
 
   setDescription(e) {
     this.setState({
-      description: e.target.value
-    })
+      description: e.target.value,
+    });
   }
 
   render() {
-    const { close, showChangeTeamDialog, createTeam } = this.props
+    const { close, showChangeTeamDialog, createTeam } = this.props;
 
     return (
       <div className="creating-team">
@@ -60,7 +60,7 @@ class CreateTeamDialog extends React.Component {
 
           <input
             className={`create-team-form-btn ${
-              !!this.state.title ? 'enabled' : 'disabled'
+              !!this.state.title ? "enabled" : "disabled"
             }`}
             type="submit"
             value="Create"
@@ -71,8 +71,8 @@ class CreateTeamDialog extends React.Component {
           company, side hustle, family, or friends.
         </p>
       </div>
-    )
+    );
   }
 }
 
-export default CreateTeamDialog
+export default CreateTeamDialog;

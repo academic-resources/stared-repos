@@ -1,8 +1,8 @@
-import { isEqual } from 'apollo-utilities';
-import { ApolloContextValue, SubscriptionResult } from '@apollo/react-common';
+import { isEqual } from "apollo-utilities";
+import { ApolloContextValue, SubscriptionResult } from "@apollo/react-common";
 
-import { OperationData } from './OperationData';
-import { SubscriptionCurrentObservable, SubscriptionOptions } from '../types';
+import { OperationData } from "./OperationData";
+import { SubscriptionCurrentObservable, SubscriptionOptions } from "../types";
 
 export class SubscriptionData<
   TData = any,
@@ -14,7 +14,7 @@ export class SubscriptionData<
   constructor({
     options,
     context,
-    setResult
+    setResult,
   }: {
     options: SubscriptionOptions<TData, TVariables>;
     context: ApolloContextValue;
@@ -33,7 +33,7 @@ export class SubscriptionData<
     }
 
     let { shouldResubscribe } = this.getOptions();
-    if (typeof shouldResubscribe === 'function') {
+    if (typeof shouldResubscribe === "function") {
       shouldResubscribe = !!shouldResubscribe(this.getOptions());
     }
 
@@ -70,26 +70,25 @@ export class SubscriptionData<
     this.currentObservable.query = this.refreshClient().client.subscribe({
       query: options.subscription,
       variables: options.variables,
-      fetchPolicy: options.fetchPolicy
+      fetchPolicy: options.fetchPolicy,
     });
   }
 
   private startSubscription() {
     if (this.currentObservable.subscription) return;
-    this.currentObservable.subscription = this.currentObservable.query!.subscribe(
-      {
+    this.currentObservable.subscription =
+      this.currentObservable.query!.subscribe({
         next: this.updateCurrentData.bind(this),
         error: this.updateError.bind(this),
-        complete: this.completeSubscription.bind(this)
-      }
-    );
+        complete: this.completeSubscription.bind(this),
+      });
   }
 
   private getLoadingResult() {
     return {
       loading: true,
       error: undefined,
-      data: undefined
+      data: undefined,
     };
   }
 
@@ -105,13 +104,13 @@ export class SubscriptionData<
     this.updateResult({
       data: result.data,
       loading: false,
-      error: undefined
+      error: undefined,
     });
 
     if (onSubscriptionData) {
       onSubscriptionData({
         client: this.refreshClient().client,
-        subscriptionData: result
+        subscriptionData: result,
       });
     }
   }
@@ -119,7 +118,7 @@ export class SubscriptionData<
   private updateError(error: any) {
     this.updateResult({
       error,
-      loading: false
+      loading: false,
     });
   }
 

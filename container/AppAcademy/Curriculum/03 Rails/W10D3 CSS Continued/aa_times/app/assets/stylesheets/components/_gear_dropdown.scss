@@ -19,7 +19,6 @@
   margin: 5px 0;
   font-size: 14px;
   padding: 5px;
-
 }
 
 .gear-dropdown {
@@ -32,14 +31,14 @@
 }
 
 .gear-dropdown-btn {
-  padding: 8px; 
+  padding: 8px;
   border-radius: 3px;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 .gear-dropdown {
   .editions {
-     border-bottom: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
   }
 }
 
@@ -47,16 +46,15 @@
   .editions a {
     text-transform: uppercase;
     color: $dark-gray;
-    
   }
 }
 
 .gear-dropdown {
-  .editions li:hover, .editions a:hover {
+  .editions li:hover,
+  .editions a:hover {
     text-decoration: none;
-    background-color: $light-gray;    
+    background-color: $light-gray;
     border-radius: 3px;
-
   }
 }
 

@@ -1,11 +1,11 @@
-const initialState = {city: "Please Select", jobs: []};
+const initialState = { city: "Please Select", jobs: [] };
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case "SWITCH_LOCATION":
       return {
         city: action.city,
-        jobs: action.jobs
+        jobs: action.jobs,
       };
     default:
       return state;

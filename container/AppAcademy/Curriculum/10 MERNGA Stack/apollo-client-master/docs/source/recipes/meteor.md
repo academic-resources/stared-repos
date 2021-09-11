@@ -11,11 +11,11 @@ There are two main ways to use Apollo in your Meteor app:
 
 ## Compatibility
 
-meteor/apollo | apollo client | apollo server
---- | --- | ---
-3.* | 2.* | 2.*
-2.* | 2.* | 1.*
-1.* | 1.* | 1.*
+| meteor/apollo | apollo client | apollo server |
+| ------------- | ------------- | ------------- |
+| 3.\*          | 2.\*          | 2.\*          |
+| 2.\*          | 2.\*          | 1.\*          |
+| 1.\*          | 1.\*          | 1.\*          |
 
 ## Usage
 
@@ -29,44 +29,44 @@ meteor npm install graphql apollo-server-express apollo-boost
 Create your [ApolloClient](https://www.apollographql.com/docs/react/) instance:
 
 ```js
-import { Accounts } from 'meteor/accounts-base'
-import ApolloClient from 'apollo-boost'
+import { Accounts } from "meteor/accounts-base";
+import ApolloClient from "apollo-boost";
 
 const client = new ApolloClient({
-  uri: '/graphql',
-  request: operation =>
+  uri: "/graphql",
+  request: (operation) =>
     operation.setContext(() => ({
       headers: {
-        authorization: Accounts._storedLoginToken()
-      }
-    }))
-})
+        authorization: Accounts._storedLoginToken(),
+      },
+    })),
+});
 ```
 
 Or if you're using `apollo-client` instead of `apollo-boost`, use `MeteorAccountsLink()`:
 
 ```js
-import { ApolloClient } from 'apollo-client'
-import { InMemoryCache } from 'apollo-cache-inmemory'
-import { ApolloLink } from 'apollo-link'
-import { HttpLink } from 'apollo-link-http'
-import { MeteorAccountsLink } from 'meteor/apollo'
+import { ApolloClient } from "apollo-client";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { ApolloLink } from "apollo-link";
+import { HttpLink } from "apollo-link-http";
+import { MeteorAccountsLink } from "meteor/apollo";
 
 const client = new ApolloClient({
   link: ApolloLink.from([
     new MeteorAccountsLink(),
     new HttpLink({
-      uri: '/graphql'
-    })
+      uri: "/graphql",
+    }),
   ]),
-  cache: new InMemoryCache()
-})
+  cache: new InMemoryCache(),
+});
 ```
 
 If you want to change which header the token is stored in:
 
 ```js
-MeteorAccountsLink({ headerName: 'meteor-login-token' })
+MeteorAccountsLink({ headerName: "meteor-login-token" });
 ```
 
 (The default is `authorization`.)
@@ -76,31 +76,31 @@ MeteorAccountsLink({ headerName: 'meteor-login-token' })
 Set up the [Apollo server](https://www.apollographql.com/docs/apollo-server/):
 
 ```js
-import { ApolloServer, gql } from 'apollo-server-express'
-import { WebApp } from 'meteor/webapp'
-import { getUser } from 'meteor/apollo'
+import { ApolloServer, gql } from "apollo-server-express";
+import { WebApp } from "meteor/webapp";
+import { getUser } from "meteor/apollo";
 
-import typeDefs from './schema'
-import resolvers from './resolvers'
+import typeDefs from "./schema";
+import resolvers from "./resolvers";
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: async ({ req }) => ({
-    user: await getUser(req.headers.authorization)
-  })
-})
+    user: await getUser(req.headers.authorization),
+  }),
+});
 
 server.applyMiddleware({
   app: WebApp.connectHandlers,
-  path: '/graphql'
-})
+  path: "/graphql",
+});
 
-WebApp.connectHandlers.use('/graphql', (req, res) => {
-  if (req.method === 'GET') {
-    res.end()
+WebApp.connectHandlers.use("/graphql", (req, res) => {
+  if (req.method === "GET") {
+    res.end();
   }
-})
+});
 ```
 
 Now when the client is logged in (ie has an unexpired Meteor login token in localStorage), your resolvers will have a `context.user` property with the user doc.
@@ -125,7 +125,6 @@ There are two options for using an IDE that will make authenticated GraphQL requ
 
 Your Meteor apps may rely on static typings with TypeScript. If so, it is recommended to use the [ambient TypeScript definition for this Atmosphere package](https://github.com/KeithGillette/Apollo-GraphQL-Meteor-Integration-Typings).
 
-
 ## Accounts
 
 The above solutions assume you're using Meteor's client-side accounts functions like `Accounts.createUser` and `Accounts.loginWith*`, which use Meteor DDP messages.
@@ -145,6 +144,7 @@ Meteor.logout(function() {
 ```
 
 ## SSR
+
 There are two additional configurations that you need to keep in mind when using [React Server Side Rendering](/features/server-side-rendering/) with Meteor.
 
 1. Use `isomorphic-fetch` to polyfill `fetch` server-side (used by Apollo Client's network interface).
@@ -161,87 +161,94 @@ meteor npm install --save react react-dom apollo-client redux react-apollo react
 ```
 
 ```js
-import { Meteor } from 'meteor/meteor';
-import { WebApp } from 'meteor/webapp';
-import { meteorClientConfig, createMeteorNetworkInterface } from 'meteor/apollo';
-import React from 'react';
-import ReactDOM from 'react-dom/server';
-import ApolloClient from 'apollo-client';
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import { ApolloProvider, renderToStringWithData } from 'react-apollo';
-import { match, RouterContext } from 'react-router';
-import Express from 'express';
+import { Meteor } from "meteor/meteor";
+import { WebApp } from "meteor/webapp";
+import {
+  meteorClientConfig,
+  createMeteorNetworkInterface,
+} from "meteor/apollo";
+import React from "react";
+import ReactDOM from "react-dom/server";
+import ApolloClient from "apollo-client";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import { ApolloProvider, renderToStringWithData } from "react-apollo";
+import { match, RouterContext } from "react-router";
+import Express from "express";
 // #1 import isomorphic-fetch so the network interface can be created
-import 'isomorphic-fetch';
-import Helmet from 'react-helmet';
+import "isomorphic-fetch";
+import Helmet from "react-helmet";
 
-import routes from '../both/routes';
-import rootReducer from '../../ui/reducers';
-import Body from '../both/routes/body';
+import routes from "../both/routes";
+import rootReducer from "../../ui/reducers";
+import Body from "../both/routes/body";
 
 // 1# do not use new
 const app = Express(); // eslint-disable-line new-cap
 
 app.use((req, res, next) => {
-  match({ routes, location: req.originalUrl }, (error, redirectLocation, renderProps) => {
-    if (redirectLocation) {
-      res.redirect(redirectLocation.pathname + redirectLocation.search);
-    } else if (error) {
-      console.error('ROUTER ERROR:', error); // eslint-disable-line no-console
-      res.status(500);
-    } else if (renderProps) {
-      // use createMeteorNetworkInterface to get a preconfigured network interface
-      // #1 network interface can be used server-side thanks to polyfilled `fetch`
-      const networkInterface = createMeteorNetworkInterface({
-        opts: {
-          credentials: 'same-origin',
-          headers: req.headers,
-        },
-        // possible current user login token stored in the cookies thanks to
-        // a third-party package like meteorhacks:fast-render
-        loginToken: req.cookies['meteor-login-token'],
-      });
+  match(
+    { routes, location: req.originalUrl },
+    (error, redirectLocation, renderProps) => {
+      if (redirectLocation) {
+        res.redirect(redirectLocation.pathname + redirectLocation.search);
+      } else if (error) {
+        console.error("ROUTER ERROR:", error); // eslint-disable-line no-console
+        res.status(500);
+      } else if (renderProps) {
+        // use createMeteorNetworkInterface to get a preconfigured network interface
+        // #1 network interface can be used server-side thanks to polyfilled `fetch`
+        const networkInterface = createMeteorNetworkInterface({
+          opts: {
+            credentials: "same-origin",
+            headers: req.headers,
+          },
+          // possible current user login token stored in the cookies thanks to
+          // a third-party package like meteorhacks:fast-render
+          loginToken: req.cookies["meteor-login-token"],
+        });
 
-      // use meteorClientConfig to get a preconfigured Apollo Client options object
-      const client = new ApolloClient(meteorClientConfig({ networkInterface }));
+        // use meteorClientConfig to get a preconfigured Apollo Client options object
+        const client = new ApolloClient(
+          meteorClientConfig({ networkInterface })
+        );
 
-      const store = createStore(
-        combineReducers({
-          ...rootReducer,
-          apollo: client.reducer(),
-        }),
-        {}, // initial state
-        compose(
-          applyMiddleware(client.middleware()),
-        ),
-      );
+        const store = createStore(
+          combineReducers({
+            ...rootReducer,
+            apollo: client.reducer(),
+          }),
+          {}, // initial state
+          compose(applyMiddleware(client.middleware()))
+        );
 
-      const component = (
-        <ApolloProvider store={store} client={client}>
-          <RouterContext {...renderProps} />
-        </ApolloProvider>
-      );
+        const component = (
+          <ApolloProvider store={store} client={client}>
+            <RouterContext {...renderProps} />
+          </ApolloProvider>
+        );
 
-      renderToStringWithData(component).then((content) => {
-        const initialState = client.store.getState()[client.reduxRootKey].data;
-        // the body content we want to append
-        const body = <Body content={content} state={initialState} />;
-        // #3 `req.dynamicBody` will hold that body and meteor will take care of
-        // actually appending it to the end result
-        req.dynamicBody = ReactDOM.renderToStaticMarkup(body);
-        const head = Helmet.rewind();
-        // #3 `req.dynamicHead` in this case we use `react-helmet` to add seo tags
-        req.dynamicHead = `  ${head.title.toString()}
+        renderToStringWithData(component).then((content) => {
+          const initialState =
+            client.store.getState()[client.reduxRootKey].data;
+          // the body content we want to append
+          const body = <Body content={content} state={initialState} />;
+          // #3 `req.dynamicBody` will hold that body and meteor will take care of
+          // actually appending it to the end result
+          req.dynamicBody = ReactDOM.renderToStaticMarkup(body);
+          const head = Helmet.rewind();
+          // #3 `req.dynamicHead` in this case we use `react-helmet` to add seo tags
+          req.dynamicHead = `  ${head.title.toString()}
   ${head.meta.toString()}
   ${head.link.toString()}
 `;
-        // #3 Important we do not want to return this, we just let meteor handle it
-        next();
-      });
-    } else {
-      console.log('not found'); // eslint-disable-line no-console
+          // #3 Important we do not want to return this, we just let meteor handle it
+          next();
+        });
+      } else {
+        console.log("not found"); // eslint-disable-line no-console
+      }
     }
-  });
+  );
 });
 // #2 connect your express server with meteor's
 WebApp.connectHandlers.use(Meteor.bindEnvironment(app));
@@ -268,7 +275,7 @@ One of the benefits you'll get right away is good highlighting by GitHub and you
 Now we can import the schema:
 
 ```js
-import typeDefs from '/imports/api/schema.graphql';
+import typeDefs from "/imports/api/schema.graphql";
 ```
 
 Use `typeDefs` as before in the above examples. You can [pass it directly to `makeExecutableSchema`](https://github.com/apollographql/graphql-tools/pull/300) like before.
@@ -282,7 +289,7 @@ For more benefits, see the [GrahpQL build plugin README](https://github.com/Swyd
 If you are looking to integrate Apollo with [Blaze](http://blazejs.org/), you can use the [swydo:blaze-apollo](https://github.com/Swydo/blaze-apollo) package:
 
 ```js
-import { setup } from 'meteor/swydo:blaze-apollo';
+import { setup } from "meteor/swydo:blaze-apollo";
 
 const client = new ApolloClient(meteorClientConfig());
 
@@ -294,31 +301,39 @@ This gives you reactive GraphQL queries in your templates!
 ```js
 Template.hello.helpers({
   hello() {
-    return Template.instance().gqlQuery({
-      query: HELLO_QUERY
-    }).get();
-  }
+    return Template.instance()
+      .gqlQuery({
+        query: HELLO_QUERY,
+      })
+      .get();
+  },
 });
 ```
 
 ## Subscriptions
 
-*This section uses the outdated `apollo@2.*` API.*
+_This section uses the outdated `apollo@2._` API.\*
 
 You can also use GraphQL subscriptions with your Meteor app if you need to. The following code gives an example of a complete configuration that enables all the features of subscriptions in addition to base GraphQL.
 
 ### Client
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { SubscriptionClient, addGraphQLSubscriptions } from 'subscriptions-transport-ws';
-import { getMeteorLoginToken, createMeteorNetworkInterface } from 'meteor/apollo';
+import { ApolloClient } from "apollo-client";
+import {
+  SubscriptionClient,
+  addGraphQLSubscriptions,
+} from "subscriptions-transport-ws";
+import {
+  getMeteorLoginToken,
+  createMeteorNetworkInterface,
+} from "meteor/apollo";
 
 // "basic" Meteor network interface
 const networkInterface = createMeteorNetworkInterface();
 
 // create a websocket uri based on your app absolute url (ROOT_URL), ex: ws://localhost:3000
-const websocketUri = Meteor.absoluteUrl('subscriptions').replace(/^http/, 'ws');
+const websocketUri = Meteor.absoluteUrl("subscriptions").replace(/^http/, "ws");
 
 // create a websocket client
 const wsClient = new SubscriptionClient(websocketUri, {
@@ -331,10 +346,15 @@ const wsClient = new SubscriptionClient(websocketUri, {
 });
 
 // enhance the interface with graphql subscriptions
-const networkInterfaceWithSubscriptions = addGraphQLSubscriptions(networkInterface, wsClient);
+const networkInterfaceWithSubscriptions = addGraphQLSubscriptions(
+  networkInterface,
+  wsClient
+);
 
 // enjoy graphql subscriptions with Apollo Client
-const client = new ApolloClient({ networkInterface: networkInterfaceWithSubscriptions });
+const client = new ApolloClient({
+  networkInterface: networkInterfaceWithSubscriptions,
+});
 ```
 
 ### Server

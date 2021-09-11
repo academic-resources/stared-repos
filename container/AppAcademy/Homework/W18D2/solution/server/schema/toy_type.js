@@ -15,10 +15,10 @@ const ToyType = new GraphQLObjectType({
       resolve(parentValue) {
         return Toy.findById(parentValue._id)
           .populate("dogs")
-          .then(toy => toy.dogs);
-      }
-    }
-  })
+          .then((toy) => toy.dogs);
+      },
+    },
+  }),
 });
 
 module.exports = ToyType;

@@ -1,12 +1,8 @@
-class Node {
+class Node {}
 
-}
-
-class Trie {
-   
-}
+class Trie {}
 
 module.exports = {
-    Node,
-    Trie
+  Node,
+  Trie,
 };

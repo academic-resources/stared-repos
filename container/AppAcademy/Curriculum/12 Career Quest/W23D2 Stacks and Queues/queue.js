@@ -14,7 +14,7 @@ class Queue {
 
   enqueue(val) {
     const newNode = new Node(val);
-    if(!this.front) {
+    if (!this.front) {
       this.front = newNode;
       this.back = newNode;
     } else {
@@ -34,7 +34,7 @@ class Queue {
     }
     this.front = this.front.next;
     this.length--;
-    return temp.value; 
+    return temp.value;
   }
 
   size() {

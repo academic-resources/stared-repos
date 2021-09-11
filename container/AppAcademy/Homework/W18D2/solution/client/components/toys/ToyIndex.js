@@ -21,7 +21,7 @@ const ToyIndex = () => (
         <div>
           <h1>ToyIndex</h1>
           <ul>
-            {data.toys.map(toy => (
+            {data.toys.map((toy) => (
               <li key={toy._id}>
                 <Link to={`/toys/${toy._id}`}>{toy.name}</Link>
               </li>

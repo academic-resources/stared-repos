@@ -257,7 +257,7 @@ function addFocusToSelection(
       selection.extend(node, offset);
     } catch (e) {
       DraftJsDebugLogging.logSelectionStateFailure({
-        anonymizedDom: getAnonymizedEditorDOM(node, function(n) {
+        anonymizedDom: getAnonymizedEditorDOM(node, function (n) {
           const labels = [];
           if (n === activeElement) {
             labels.push('active element');

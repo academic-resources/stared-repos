@@ -153,7 +153,7 @@ const updateBlockMapLinks = (
   targetBlock: ContentBlockNode,
   fragmentHeadBlock: ContentBlockNode,
 ): BlockMap => {
-  return blockMap.withMutations(blockMapState => {
+  return blockMap.withMutations((blockMapState) => {
     const targetKey = targetBlock.getKey();
     const headKey = fragmentHeadBlock.getKey();
     const targetNextKey = targetBlock.getNextSiblingKey();
@@ -193,7 +193,7 @@ const updateBlockMapLinks = (
     }
 
     // update fragment parent links
-    fragmentRootBlocks.forEach(blockKey =>
+    fragmentRootBlocks.forEach((blockKey) =>
       blockMapState.setIn([blockKey, 'parent'], targetParentKey),
     );
 
@@ -256,7 +256,7 @@ const insertFragment = (
       // head since its contents have already been merged with the target block otherwise we include
       // the whole fragment
       .slice(shouldNotUpdateFromFragmentBlock ? 0 : 1, fragmentSize - 1)
-      .forEach(fragmentBlock => newBlockArr.push(fragmentBlock));
+      .forEach((fragmentBlock) => newBlockArr.push(fragmentBlock));
 
     // update tail
     newBlockArr.push(updateTail(block, targetOffset, fragment));

@@ -1,23 +1,23 @@
 module.exports = {
-  entry: './js/main.jsx',
+  entry: "./js/main.jsx",
   output: {
-    path: './js',
-    filename: 'bundle.js',
+    path: "./js",
+    filename: "bundle.js",
   },
   module: {
     loaders: [
       {
         test: [/\.jsx?$/],
         exclude: /(node_modules)/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         query: {
-          presets: ['es2015', 'react']
-        }
-      }
-    ]
+          presets: ["es2015", "react"],
+        },
+      },
+    ],
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   resolve: {
-    extensions: ['.js', '.jsx', '*']
-  }
+    extensions: [".js", ".jsx", "*"],
+  },
 };

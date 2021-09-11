@@ -1,4 +1,4 @@
-import { DocumentNode } from 'graphql';
+import { DocumentNode } from "graphql";
 
 export class MutationStore {
   private store: { [mutationId: string]: MutationStoreValue } = {};
@@ -14,7 +14,7 @@ export class MutationStore {
   public initMutation(
     mutationId: string,
     mutation: DocumentNode,
-    variables: Object | undefined,
+    variables: Object | undefined
   ) {
     this.store[mutationId] = {
       mutation,

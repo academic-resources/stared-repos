@@ -1,6 +1,6 @@
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8" />
     <style>
       body {
         margin: 0px;
@@ -41,7 +41,7 @@
         height: 50%;
       }
       textarea {
-        background-color: rgb(40,40,40);
+        background-color: rgb(40, 40, 40);
         color: white;
         border-width: 0px;
         padding: 4px;
@@ -52,15 +52,16 @@
         right: 0px;
         left: 50%;
         height: 33px;
-        background-color: rgb(63,63,63);
+        background-color: rgb(63, 63, 63);
         padding-left: 5px;
         padding-top: 2px;
       }
       #tabs form {
         display: inline-block;
       }
-      #tabs button, #tabs input[type="submit"] {
-        background-color: rgb(192,128,0);
+      #tabs button,
+      #tabs input[type="submit"] {
+        background-color: rgb(192, 128, 0);
         color: white;
         border-color: white;
         border-width: 0px;
@@ -68,8 +69,9 @@
         min-width: 60px;
         cursor: pointer;
       }
-      #tabs button:hover, #tabs input[type="submit"] {
-        background-color: rgb(230,160,0);
+      #tabs button:hover,
+      #tabs input[type="submit"] {
+        background-color: rgb(230, 160, 0);
       }
       #tabs #play {
         float: right;
@@ -85,20 +87,22 @@
   <body>
     <div id="ascope"></div>
     <div id="fscope"></div>
-    <textarea id="code">return function (t) {
+    <textarea id="code">
+return function (t) {
   return sin(441);
   function sin (x) { return Math.sin(2 * Math.PI * t * x) }
 }
-</textarea>
+</textarea
+    >
     <div id="tabs">
       <form id="save">
-        <input name="title" type="text" placeholder="title">
-        <input type="submit" value="save">
+        <input name="title" type="text" placeholder="title" />
+        <input type="submit" value="save" />
       </form>
       <a class="history-link"><button>history</button></a>
       <a href="/-/recent"><button>recent</button></a>
       <a href="/-/help"><button>help</button></a>
-      
+
       <button id="play">pause</button>
     </div>
     <script src="/-/bundle.js"></script>

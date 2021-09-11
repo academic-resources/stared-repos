@@ -1,6 +1,6 @@
-const APIUtil = require('./api_util');
+const APIUtil = require("./api_util");
 
-const FollowToggle = require('./follow_toggle');
+const FollowToggle = require("./follow_toggle");
 
 class UsersSearch {
   constructor(el) {
@@ -10,7 +10,6 @@ class UsersSearch {
     this.input = this.el.querySelector("input[name=username]");
     this.ul = this.el.querySelector(".users");
 
-
     this.input.addEventListener("input", this.handleInput.bind(this));
   }
 
@@ -19,28 +18,29 @@ class UsersSearch {
       this.renderResults([]);
       return;
     }
-    APIUtil.searchUsers(this.input.value)
-      .then(users => this.renderResults(users));
+    APIUtil.searchUsers(this.input.value).then((users) =>
+      this.renderResults(users)
+    );
   }
 
   renderResults(users) {
     // setting the innerHTML to '' is equivalent to
     // removing all the child elements
-    this.ul.innerHTML = '';
+    this.ul.innerHTML = "";
 
     for (let i = 0; i < users.length; i++) {
       const user = users[i];
 
       // makes a new <a>, which is not yet attached to the DOM
-      const a = document.createElement('a');
+      const a = document.createElement("a");
       a.textContent = user.username;
       a.setAttribute("href", `/users/${user.id}`);
 
       // makes a new <button>, which is not yet attached to the DOM
-      const followToggle = document.createElement('button');
+      const followToggle = document.createElement("button");
       new FollowToggle(followToggle, {
         userId: user.id,
-        followState: user.followed ? "followed" : "unfollowed"
+        followState: user.followed ? "followed" : "unfollowed",
       });
 
       const li = document.createElement("li");

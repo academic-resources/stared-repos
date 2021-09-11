@@ -1,10 +1,10 @@
-import { DocumentNode } from 'graphql';
-import { parser, DocumentType } from '@apollo/react-common';
+import { DocumentNode } from "graphql";
+import { parser, DocumentType } from "@apollo/react-common";
 
-import { withQuery } from './query-hoc';
-import { withMutation } from './mutation-hoc';
-import { withSubscription } from './subscription-hoc';
-import { OperationOption, DataProps, MutateProps } from './types';
+import { withQuery } from "./query-hoc";
+import { withMutation } from "./mutation-hoc";
+import { withSubscription } from "./subscription-hoc";
+import { OperationOption, DataProps, MutateProps } from "./types";
 
 export function graphql<
   TProps extends TGraphQLVariables | {} = {},

@@ -1,15 +1,15 @@
-import React from 'react'
-import Logo from './svg_images/logo.jsx'
-import { Link, withRouter } from 'react-router-dom'
-import HomeButton from './home_button'
-import BoardsMenuButton from './boards_menu_button'
-import SearchBar from './searchbar'
-import ProfileMenuButton from './profile_menu_button'
+import React from "react";
+import Logo from "./svg_images/logo.jsx";
+import { Link, withRouter } from "react-router-dom";
+import HomeButton from "./home_button";
+import BoardsMenuButton from "./boards_menu_button";
+import SearchBar from "./searchbar";
+import ProfileMenuButton from "./profile_menu_button";
 
 const Nav = ({ isLoggedIn, location }) => {
   const style = location.pathname.match(/\/boards\/\d+/)
-    ? { background: 'rgba(0,0,0,.35)' }
-    : {}
+    ? { background: "rgba(0,0,0,.35)" }
+    : {};
 
   if (isLoggedIn)
     return (
@@ -22,7 +22,7 @@ const Nav = ({ isLoggedIn, location }) => {
         </Link>
         <ProfileMenuButton />
       </div>
-    )
+    );
 
   return (
     <div className="navbar">
@@ -36,8 +36,8 @@ const Nav = ({ isLoggedIn, location }) => {
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
 // @ts-ignore
-export default withRouter(Nav)
+export default withRouter(Nav);

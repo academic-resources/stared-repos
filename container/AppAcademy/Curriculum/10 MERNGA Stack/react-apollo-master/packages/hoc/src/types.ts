@@ -4,15 +4,15 @@ import {
   FetchMoreOptions,
   UpdateQueryOptions,
   FetchMoreQueryOptions,
-  SubscribeToMoreOptions
-} from 'apollo-client';
+  SubscribeToMoreOptions,
+} from "apollo-client";
 import {
   OperationVariables,
   MutationFunction,
   BaseQueryOptions,
   BaseMutationOptions,
-  MutationResult
-} from '@apollo/react-common';
+  MutationResult,
+} from "@apollo/react-common";
 
 export interface QueryControls<
   TData = any,
@@ -66,8 +66,7 @@ export interface OptionProps<
   TProps = any,
   TData = any,
   TGraphQLVariables = OperationVariables
->
-  extends Partial<DataProps<TData, TGraphQLVariables>>,
+> extends Partial<DataProps<TData, TGraphQLVariables>>,
     Partial<MutateProps<TData, TGraphQLVariables>> {
   ownProps: TProps;
 }
@@ -85,8 +84,7 @@ export interface OperationOption<
         props: TProps
       ) =>
         | BaseQueryOptions<TGraphQLVariables>
-        | BaseMutationOptions<TData, TGraphQLVariables>
-      );
+        | BaseMutationOptions<TData, TGraphQLVariables>);
   props?: (
     props: OptionProps<TProps, TData, TGraphQLVariables>,
     lastProps?: TChildProps | void

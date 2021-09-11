@@ -1,39 +1,39 @@
 // externals
-import Rx from 'rxjs';
-import { assign } from 'lodash';
-import gql from 'graphql-tag';
-import { DocumentNode, ExecutionResult } from 'graphql';
-import { ApolloLink, Operation, Observable } from 'apollo-link';
-import { InMemoryCache, ApolloReducerConfig } from 'apollo-cache-inmemory';
-import { stripSymbols } from 'apollo-utilities';
+import Rx from "rxjs";
+import { assign } from "lodash";
+import gql from "graphql-tag";
+import { DocumentNode, ExecutionResult } from "graphql";
+import { ApolloLink, Operation, Observable } from "apollo-link";
+import { InMemoryCache, ApolloReducerConfig } from "apollo-cache-inmemory";
+import { stripSymbols } from "apollo-utilities";
 
 // mocks
-import mockQueryManager from '../../../__mocks__/mockQueryManager';
-import mockWatchQuery from '../../../__mocks__/mockWatchQuery';
+import mockQueryManager from "../../../__mocks__/mockQueryManager";
+import mockWatchQuery from "../../../__mocks__/mockWatchQuery";
 import {
   mockSingleLink,
   MockSubscriptionLink,
-} from '../../../__mocks__/mockLinks';
+} from "../../../__mocks__/mockLinks";
 
 // core
-import { ApolloQueryResult } from '../../types';
-import { NetworkStatus } from '../../networkStatus';
-import { ObservableQuery } from '../../ObservableQuery';
-import { WatchQueryOptions } from '../../watchQueryOptions';
-import { QueryManager } from '../../QueryManager';
+import { ApolloQueryResult } from "../../types";
+import { NetworkStatus } from "../../networkStatus";
+import { ObservableQuery } from "../../ObservableQuery";
+import { WatchQueryOptions } from "../../watchQueryOptions";
+import { QueryManager } from "../../QueryManager";
 
-import { ApolloError } from '../../../errors/ApolloError';
-import { DataStore } from '../../../data/store';
-import { Observer } from '../../../util/Observable';
+import { ApolloError } from "../../../errors/ApolloError";
+import { DataStore } from "../../../data/store";
+import { Observer } from "../../../util/Observable";
 
 // testing utils
-import wrap from '../../../util/wrap';
+import wrap from "../../../util/wrap";
 import observableToPromise, {
   observableToPromiseAndSubscription,
-} from '../../../util/observableToPromise';
+} from "../../../util/observableToPromise";
 
-describe('mutiple results', () => {
-  it('allows multiple query results from link', done => {
+describe("mutiple results", () => {
+  it("allows multiple query results from link", (done) => {
     const query = gql`
       query LazyLoadLuke {
         people_one(id: 1) {
@@ -47,7 +47,7 @@ describe('mutiple results', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
+        name: "Luke Skywalker",
         friends: null,
       },
     };
@@ -55,8 +55,8 @@ describe('mutiple results', () => {
     const laterData = {
       people_one: {
         // XXX true defer's wouldn't send this
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
     const link = new MockSubscriptionLink();
@@ -72,7 +72,7 @@ describe('mutiple results', () => {
 
     let count = 0;
     observable.subscribe({
-      next: result => {
+      next: (result) => {
         count++;
         if (count === 1) {
           link.simulateResult({ result: { data: laterData } });
@@ -81,7 +81,7 @@ describe('mutiple results', () => {
           done();
         }
       },
-      error: e => {
+      error: (e) => {
         console.error(e);
       },
     });
@@ -90,7 +90,7 @@ describe('mutiple results', () => {
     link.simulateResult({ result: { data: initialData } });
   });
 
-  it('allows multiple query results from link with ignored errors', done => {
+  it("allows multiple query results from link with ignored errors", (done) => {
     const query = gql`
       query LazyLoadLuke {
         people_one(id: 1) {
@@ -104,7 +104,7 @@ describe('mutiple results', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
+        name: "Luke Skywalker",
         friends: null,
       },
     };
@@ -112,8 +112,8 @@ describe('mutiple results', () => {
     const laterData = {
       people_one: {
         // XXX true defer's wouldn't send this
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
     const link = new MockSubscriptionLink();
@@ -125,19 +125,19 @@ describe('mutiple results', () => {
     const observable = queryManager.watchQuery<any>({
       query,
       variables: {},
-      errorPolicy: 'ignore',
+      errorPolicy: "ignore",
     });
 
     let count = 0;
     observable.subscribe({
-      next: result => {
+      next: (result) => {
         // errors should never be passed since they are ignored
         expect(result.errors).toBeUndefined();
         count++;
         if (count === 1) {
           // this shouldn't fire the next event again
           link.simulateResult({
-            result: { errors: [new Error('defer failed')] },
+            result: { errors: [new Error("defer failed")] },
           });
           setTimeout(() => {
             link.simulateResult({ result: { data: laterData } });
@@ -146,12 +146,12 @@ describe('mutiple results', () => {
         if (count === 2) {
           // make sure the count doesn't go up by accident
           setTimeout(() => {
-            if (count === 3) throw new Error('error was not ignored');
+            if (count === 3) throw new Error("error was not ignored");
             done();
           });
         }
       },
-      error: e => {
+      error: (e) => {
         console.error(e);
       },
     });
@@ -159,7 +159,7 @@ describe('mutiple results', () => {
     // fire off first result
     link.simulateResult({ result: { data: initialData } });
   });
-  it('strips errors from a result if ignored', done => {
+  it("strips errors from a result if ignored", (done) => {
     const query = gql`
       query LazyLoadLuke {
         people_one(id: 1) {
@@ -173,7 +173,7 @@ describe('mutiple results', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
+        name: "Luke Skywalker",
         friends: null,
       },
     };
@@ -181,8 +181,8 @@ describe('mutiple results', () => {
     const laterData = {
       people_one: {
         // XXX true defer's wouldn't send this
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
     const link = new MockSubscriptionLink();
@@ -194,12 +194,12 @@ describe('mutiple results', () => {
     const observable = queryManager.watchQuery<any>({
       query,
       variables: {},
-      errorPolicy: 'ignore',
+      errorPolicy: "ignore",
     });
 
     let count = 0;
     observable.subscribe({
-      next: result => {
+      next: (result) => {
         // errors should never be passed since they are ignored
         expect(result.errors).toBeUndefined();
         count++;
@@ -208,7 +208,7 @@ describe('mutiple results', () => {
           expect(stripSymbols(result.data)).toEqual(initialData);
           // this should fire the `next` event without this error
           link.simulateResult({
-            result: { errors: [new Error('defer failed')], data: laterData },
+            result: { errors: [new Error("defer failed")], data: laterData },
           });
         }
         if (count === 2) {
@@ -216,12 +216,12 @@ describe('mutiple results', () => {
           expect(result.errors).toBeUndefined();
           // make sure the count doesn't go up by accident
           setTimeout(() => {
-            if (count === 3) done.fail(new Error('error was not ignored'));
+            if (count === 3) done.fail(new Error("error was not ignored"));
             done();
           }, 10);
         }
       },
-      error: e => {
+      error: (e) => {
         console.error(e);
       },
     });
@@ -230,7 +230,7 @@ describe('mutiple results', () => {
     link.simulateResult({ result: { data: initialData } });
   });
 
-  xit('allows multiple query results from link with all errors', done => {
+  xit("allows multiple query results from link with all errors", (done) => {
     const query = gql`
       query LazyLoadLuke {
         people_one(id: 1) {
@@ -244,7 +244,7 @@ describe('mutiple results', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
+        name: "Luke Skywalker",
         friends: null,
       },
     };
@@ -252,8 +252,8 @@ describe('mutiple results', () => {
     const laterData = {
       people_one: {
         // XXX true defer's wouldn't send this
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
     const link = new MockSubscriptionLink();
@@ -265,12 +265,12 @@ describe('mutiple results', () => {
     const observable = queryManager.watchQuery<any>({
       query,
       variables: {},
-      errorPolicy: 'all',
+      errorPolicy: "all",
     });
 
     let count = 0;
     observable.subscribe({
-      next: result => {
+      next: (result) => {
         try {
           // errors should never be passed since they are ignored
           count++;
@@ -278,7 +278,7 @@ describe('mutiple results', () => {
             expect(result.errors).toBeUndefined();
             // this should fire the next event again
             link.simulateResult({
-              result: { errors: [new Error('defer failed')] },
+              result: { errors: [new Error("defer failed")] },
             });
           }
           if (count === 2) {
@@ -289,7 +289,7 @@ describe('mutiple results', () => {
             expect(result.errors).toBeUndefined();
             // make sure the count doesn't go up by accident
             setTimeout(() => {
-              if (count === 4) done.fail(new Error('error was not ignored'));
+              if (count === 4) done.fail(new Error("error was not ignored"));
               done();
             });
           }
@@ -297,7 +297,7 @@ describe('mutiple results', () => {
           done.fail(e);
         }
       },
-      error: e => {
+      error: (e) => {
         done.fail(e);
       },
     });
@@ -305,7 +305,7 @@ describe('mutiple results', () => {
     // fire off first result
     link.simulateResult({ result: { data: initialData } });
   });
-  it('closes the observable if an error is set with the none policy', done => {
+  it("closes the observable if an error is set with the none policy", (done) => {
     const query = gql`
       query LazyLoadLuke {
         people_one(id: 1) {
@@ -319,7 +319,7 @@ describe('mutiple results', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
+        name: "Luke Skywalker",
         friends: null,
       },
     };
@@ -327,8 +327,8 @@ describe('mutiple results', () => {
     const laterData = {
       people_one: {
         // XXX true defer's wouldn't send this
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
     const link = new MockSubscriptionLink();
@@ -345,21 +345,21 @@ describe('mutiple results', () => {
 
     let count = 0;
     observable.subscribe({
-      next: result => {
+      next: (result) => {
         // errors should never be passed since they are ignored
         count++;
         if (count === 1) {
           expect(result.errors).toBeUndefined();
           // this should fire the next event again
           link.simulateResult({
-            result: { errors: [new Error('defer failed')] },
+            result: { errors: [new Error("defer failed")] },
           });
         }
         if (count === 2) {
-          console.log(new Error('result came after an error'));
+          console.log(new Error("result came after an error"));
         }
       },
-      error: e => {
+      error: (e) => {
         expect(e).toBeDefined();
         expect(e.graphQLErrors).toBeDefined();
         done();

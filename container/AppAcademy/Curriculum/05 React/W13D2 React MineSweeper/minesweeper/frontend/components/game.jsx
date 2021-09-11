@@ -8,7 +8,7 @@ class Game extends React.Component {
     super(props);
 
     this.board = new Minesweeper.Board(10, 1);
-    this.state = { board: this.board }
+    this.state = { board: this.board };
     this.updateGame = this.updateGame.bind(this);
     this.restartGame = this.restartGame.bind(this);
   }
@@ -20,23 +20,23 @@ class Game extends React.Component {
 
     return (
       <div>
-        <Board 
-        board={this.state.board}
-        game={this.updateGame}
-        />
+        <Board board={this.state.board} game={this.updateGame} />
         <p>{gameState}</p>
-        <button className="restart" onClick={this.restartGame}>Restart Game</button>
+        <button className="restart" onClick={this.restartGame}>
+          Restart Game
+        </button>
       </div>
-    )
+    );
   }
 
   restartGame(e) {
     e.preventDefault();
-    this.setState({ board: new Minesweeper.Board(10, 1) })
+    this.setState({ board: new Minesweeper.Board(10, 1) });
   }
 
-  updateGame(tileObj) { this.setState({ board: tileObj.board }) }
-
+  updateGame(tileObj) {
+    this.setState({ board: tileObj.board });
+  }
 }
 
 export default Game;

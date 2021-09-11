@@ -14,18 +14,27 @@
  *= require_self
  */
 
- html, body, section, article, h1, h2, p, nav, main, figure {
-   margin: 0;
-   border: 0;
-   padding: 0;
-   font: inherit;
-   text-align: inherit;
-   text-decoration: inherit;
-   color: inherit;
-   background: transparent;
-   font-family: 'Amatic SC', cursive;
-   font-size: 30px;
- }
+html,
+body,
+section,
+article,
+h1,
+h2,
+p,
+nav,
+main,
+figure {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+}
 
 nav {
   width: 100%;
@@ -48,7 +57,6 @@ a {
   color: yellow;
 }
 
-
 nav a {
   padding: 0px 10px;
 }
@@ -64,8 +72,10 @@ th {
   padding: 10px 20px;
 }
 
-textarea, select, input {
-  font-family: 'Amatic SC', cursive;
+textarea,
+select,
+input {
+  font-family: "Amatic SC", cursive;
   background-color: inherit;
   border: 0px;
   border-bottom: 5px solid yellow;
@@ -81,7 +91,9 @@ input[type="submit"] {
   font-weight: bold;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
 }
 
@@ -113,7 +125,6 @@ nav input {
 .button_to div {
   display: inline;
 }
-
 
 .jumbotron {
   height: 500px;

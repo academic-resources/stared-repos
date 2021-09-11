@@ -17,7 +17,7 @@ Load the Vue in `./index.html`.
 
 Then you can immediately write Vue code at Markdown file. `new Vue({ el: '#main' })` script is executed by default to create instance.
 
-*README.md*
+_README.md_
 
 ````markdown
 # Vue guide
@@ -37,7 +37,7 @@ Then you can immediately write Vue code at Markdown file. `new Vue({ el: '#main'
 
 You can manually initialize a Vue instance.
 
-*README.md*
+_README.md_
 
 ```markdown
 # Vue demo
@@ -58,11 +58,11 @@ You can manually initialize a Vue instance.
 
 [Vuep](https://github.com/QingWei-Li/vuep) is a component for rendering Vue components with live editor and preview. Supports Vue component spec and JSX.
 
-*index.html*
+_index.html_
 
 ```html
 <!-- Inject CSS file -->
-<link rel="stylesheet" href="//unpkg.com/vuep/dist/vuep.css">
+<link rel="stylesheet" href="//unpkg.com/vuep/dist/vuep.css" />
 
 <!-- Inject JavaScript file -->
 <script src="//unpkg.com/vue"></script>
@@ -75,7 +75,8 @@ You can manually initialize a Vue instance.
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 ```
 
-*README.md*
+_README.md_
+
 ```markdown
 # Vuep
 

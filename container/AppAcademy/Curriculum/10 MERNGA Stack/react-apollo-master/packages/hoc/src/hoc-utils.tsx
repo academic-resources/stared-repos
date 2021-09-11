@@ -1,13 +1,13 @@
-import React from 'react';
-import { invariant } from 'ts-invariant';
-import { IDocumentDefinition, OperationVariables } from '@apollo/react-common';
+import React from "react";
+import { invariant } from "ts-invariant";
+import { IDocumentDefinition, OperationVariables } from "@apollo/react-common";
 
 export const defaultMapPropsToOptions = () => ({});
-export const defaultMapResultToProps: <P>(props: P) => P = props => props;
+export const defaultMapResultToProps: <P>(props: P) => P = (props) => props;
 export const defaultMapPropsToSkip = () => false;
 
 export function getDisplayName<P>(WrappedComponent: React.ComponentType<P>) {
-  return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+  return WrappedComponent.displayName || WrappedComponent.name || "Component";
 }
 
 export function calculateVariablesFromProps<TProps>(
@@ -21,13 +21,13 @@ export function calculateVariablesFromProps<TProps>(
     const variableName = variable.name.value;
     const variableProp = (props as any)[variableName];
 
-    if (typeof variableProp !== 'undefined') {
+    if (typeof variableProp !== "undefined") {
       variables[variableName] = variableProp;
       continue;
     }
 
     // Allow optional props
-    if (type.kind !== 'NonNullType') {
+    if (type.kind !== "NonNullType") {
       variables[variableName] = undefined;
     }
   }
@@ -43,7 +43,7 @@ export class GraphQLBase<
   TProps,
   TChildProps,
   TState = any
-  > extends React.Component<TProps, TState> {
+> extends React.Component<TProps, TState> {
   public withRef: boolean = false;
   // wrapped instance
   private wrappedInstance?: React.ComponentClass<TChildProps>;
@@ -57,7 +57,7 @@ export class GraphQLBase<
     invariant(
       this.withRef,
       `To access the wrapped instance, you need to specify ` +
-      `{ withRef: true } in the options`
+        `{ withRef: true } in the options`
     );
 
     return this.wrappedInstance;

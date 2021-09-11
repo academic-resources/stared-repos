@@ -1,15 +1,15 @@
 export class Tile {
   constructor(board, pos) {
-      this.board = board;
-      this.pos = pos;
-      this.bombed = false;
-      this.explored = false;
-      this.flagged = false;
+    this.board = board;
+    this.pos = pos;
+    this.bombed = false;
+    this.explored = false;
+    this.flagged = false;
   }
 
   adjacentBombCount() {
     let bombCount = 0;
-    this.neighbors().forEach(neighbor => {
+    this.neighbors().forEach((neighbor) => {
       if (neighbor.bombed) {
         bombCount++;
       }
@@ -24,23 +24,22 @@ export class Tile {
 
     this.explored = true;
     if (!this.bombed && this.adjacentBombCount() === 0) {
-      this.neighbors().forEach(tile => {
+      this.neighbors().forEach((tile) => {
         tile.explore();
       });
     }
-
   }
 
   neighbors() {
     const adjacentCoords = [];
-    Tile.DELTAS.forEach(delta => {
+    Tile.DELTAS.forEach((delta) => {
       const newPos = [delta[0] + this.pos[0], delta[1] + this.pos[1]];
       if (this.board.onBoard(newPos)) {
         adjacentCoords.push(newPos);
       }
     });
 
-    return adjacentCoords.map(coord => this.board.grid[coord[0]][coord[1]]);
+    return adjacentCoords.map((coord) => this.board.grid[coord[0]][coord[1]]);
   }
 
   plantBomb() {
@@ -57,8 +56,16 @@ export class Tile {
   }
 }
 
-Tile.DELTAS = [[-1, -1], [-1,  0], [-1,  1], [ 0, -1],
-             [ 0,  1], [ 1, -1], [ 1,  0], [ 1,  1]];
+Tile.DELTAS = [
+  [-1, -1],
+  [-1, 0],
+  [-1, 1],
+  [0, -1],
+  [0, 1],
+  [1, -1],
+  [1, 0],
+  [1, 1],
+];
 
 export class Board {
   constructor(gridSize, numBombs) {
@@ -81,8 +88,10 @@ export class Board {
 
   onBoard(pos) {
     return (
-      pos[0] >= 0 && pos[0] < this.gridSize &&
-        pos[1] >= 0 && pos[1] < this.gridSize
+      pos[0] >= 0 &&
+      pos[0] < this.gridSize &&
+      pos[1] >= 0 &&
+      pos[1] < this.gridSize
     );
   }
 
@@ -102,8 +111,8 @@ export class Board {
 
   lost() {
     let lost = false;
-    this.grid.forEach(row => {
-      row.forEach(tile => {
+    this.grid.forEach((row) => {
+      row.forEach((tile) => {
         if (tile.bombed && tile.explored) {
           lost = true;
         }
@@ -114,8 +123,8 @@ export class Board {
 
   won() {
     let won = true;
-    this.grid.forEach(row => {
-      row.forEach(tile => {
+    this.grid.forEach((row) => {
+      row.forEach((tile) => {
         if (tile.flagged === tile.revealed || tile.flagged !== tile.bombed) {
           won = false;
         }

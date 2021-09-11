@@ -1,6 +1,6 @@
-import React from 'react'
-import BoardThumb from './board_thumb'
-import { Link } from 'react-router-dom'
+import React from "react";
+import BoardThumb from "./board_thumb";
+import { Link } from "react-router-dom";
 
 export default ({ team, boards, history }) => (
   <div className="team-panels">
@@ -17,9 +17,9 @@ export default ({ team, boards, history }) => (
       </Link>
     </div>
     <div className="boards-holder">
-      {boards.map(b => (
+      {boards.map((b) => (
         <BoardThumb key={b.id} board={b} history={history} />
       ))}
     </div>
   </div>
-)
+);

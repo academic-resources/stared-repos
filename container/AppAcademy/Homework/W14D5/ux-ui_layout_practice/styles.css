@@ -1,8 +1,8 @@
 .nav-bar {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   padding: 40px;
-  align-items:center;
+  align-items: center;
   margin: 20px 5%;
   border: 2px solid green;
   border-radius: 5px;
@@ -25,8 +25,8 @@
   border: 2px solid green;
   padding: 5px;
   margin-left: 5px;
-  color: green; 
-  transition: .1s
+  color: green;
+  transition: 0.1s;
 }
 
 .nav-head a:hover {
@@ -50,12 +50,11 @@
 
 .nav-list a {
   padding: 5px;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 .nav-list a:hover {
   background: green;
   color: white;
   border-radius: 3px;
-
 }

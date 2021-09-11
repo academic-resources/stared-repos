@@ -1,15 +1,15 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import gql from 'graphql-tag';
-import { ApolloClient } from 'apollo-client';
-import { ApolloLink } from 'apollo-link';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { MockSubscriptionLink, stripSymbols } from '@apollo/react-testing';
-import { ApolloProvider } from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import gql from "graphql-tag";
+import { ApolloClient } from "apollo-client";
+import { ApolloLink } from "apollo-link";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { MockSubscriptionLink, stripSymbols } from "@apollo/react-testing";
+import { ApolloProvider } from "@apollo/react-common";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
-describe('subscriptions', () => {
+describe("subscriptions", () => {
   let error: typeof console.error;
 
   beforeEach(() => {
@@ -24,16 +24,16 @@ describe('subscriptions', () => {
   });
 
   const results = [
-    'James Baxley',
-    'John Pinkerton',
-    'Sam Claridge',
-    'Ben Coleman'
-  ].map(name => ({
+    "James Baxley",
+    "John Pinkerton",
+    "Sam Claridge",
+    "Ben Coleman",
+  ].map((name) => ({
     result: { data: { user: { name } } },
-    delay: 10
+    delay: 10,
   }));
 
-  it('binds a subscription to props', () => {
+  it("binds a subscription to props", () => {
     const query: DocumentNode = gql`
       subscription UserInfo {
         user {
@@ -44,7 +44,7 @@ describe('subscriptions', () => {
     const link = new MockSubscriptionLink();
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     interface Props {}
@@ -68,7 +68,7 @@ describe('subscriptions', () => {
     );
   });
 
-  it('includes the variables in the props', () => {
+  it("includes the variables in the props", () => {
     const query: DocumentNode = gql`
       subscription UserInfo($name: String) {
         user(name: $name) {
@@ -76,11 +76,11 @@ describe('subscriptions', () => {
         }
       }
     `;
-    const variables = { name: 'James Baxley' };
+    const variables = { name: "James Baxley" };
     const link = new MockSubscriptionLink();
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     interface Variables {
@@ -101,12 +101,12 @@ describe('subscriptions', () => {
 
     render(
       <ApolloProvider client={client}>
-        <ContainerWithData name={'James Baxley'} />
+        <ContainerWithData name={"James Baxley"} />
       </ApolloProvider>
     );
   });
 
-  it('does not swallow children errors', done => {
+  it("does not swallow children errors", (done) => {
     const query: DocumentNode = gql`
       subscription UserInfo {
         user {
@@ -117,7 +117,7 @@ describe('subscriptions', () => {
     const link = new MockSubscriptionLink();
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let bar: any;
@@ -147,7 +147,7 @@ describe('subscriptions', () => {
     );
   });
 
-  it('executes a subscription', done => {
+  it("executes a subscription", (done) => {
     jest.useFakeTimers();
 
     const query: DocumentNode = gql`
@@ -164,7 +164,7 @@ describe('subscriptions', () => {
     const link = new MockSubscriptionLink();
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let count = 0;
@@ -215,31 +215,31 @@ describe('subscriptions', () => {
     jest.runTimersToTime(230);
   });
 
-  it('resubscribes to a subscription', done => {
+  it("resubscribes to a subscription", (done) => {
     //we make an extra Hoc which will trigger the inner HoC to resubscribe
     //these are the results for the outer subscription
     const triggerResults = [
-      '0',
-      'trigger resubscribe',
-      '3',
-      '4',
-      '5',
-      '6',
-      '7'
-    ].map(trigger => ({
+      "0",
+      "trigger resubscribe",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+    ].map((trigger) => ({
       result: { data: { trigger } },
-      delay: 10
+      delay: 10,
     }));
 
     //These are the results from the resubscription
     const results3 = [
-      'NewUser: 1',
-      'NewUser: 2',
-      'NewUser: 3',
-      'NewUser: 4'
-    ].map(name => ({
+      "NewUser: 1",
+      "NewUser: 2",
+      "NewUser: 3",
+      "NewUser: 4",
+    ].map((name) => ({
       result: { data: { user: { name } } },
-      delay: 10
+      delay: 10,
     }));
 
     const query: DocumentNode = gql`
@@ -265,14 +265,14 @@ describe('subscriptions', () => {
     const userLink = new MockSubscriptionLink();
     const triggerLink = new MockSubscriptionLink();
     const link = new ApolloLink((o, f) => (f ? f(o) : null)).split(
-      ({ operationName }) => operationName === 'UserInfo',
+      ({ operationName }) => operationName === "UserInfo",
       userLink,
       triggerLink
     );
 
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let count = 0;
@@ -282,9 +282,9 @@ describe('subscriptions', () => {
 
     const Container = graphql<{}, TriggerData>(triggerQuery)(
       graphql<TriggerQueryChildProps, QueryData>(query, {
-        shouldResubscribe: nextProps => {
-          return nextProps.data!.trigger === 'trigger resubscribe';
-        }
+        shouldResubscribe: (nextProps) => {
+          return nextProps.data!.trigger === "trigger resubscribe";
+        },
       })(
         class Query extends React.Component<ComposedProps> {
           componentDidUpdate() {

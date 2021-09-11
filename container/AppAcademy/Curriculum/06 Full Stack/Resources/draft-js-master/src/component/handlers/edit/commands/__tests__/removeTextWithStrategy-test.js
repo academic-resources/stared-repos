@@ -15,8 +15,8 @@ jest.disableAutomock();
 
 jest.mock('generateRandomKey');
 
-const toggleExperimentalTreeDataSupport = enabled => {
-  jest.doMock('gkx', () => name => {
+const toggleExperimentalTreeDataSupport = (enabled) => {
+  jest.doMock('gkx', () => (name) => {
     return name === 'draft_tree_data_support' ? enabled : false;
   });
 };
@@ -123,10 +123,10 @@ const assertRemoveTextOperation = (
 
 test(`at end of a leaf block and sibling is another leaf block forward delete concatenates`, () => {
   assertRemoveTextOperation(
-    editorState =>
+    (editorState) =>
       removeTextWithStrategy(
         editorState,
-        strategyState => {
+        (strategyState) => {
           const selection = strategyState.getSelection();
           const content = strategyState.getCurrentContent();
           const key = selection.getAnchorKey();
@@ -151,10 +151,10 @@ test(`at end of a leaf block and sibling is another leaf block forward delete co
 test(`at end of a leaf block and sibling is not another leaf block forward delete is no-op`, () => {
   // no next sibling
   assertRemoveTextOperation(
-    editorState =>
+    (editorState) =>
       removeTextWithStrategy(
         editorState,
-        strategyState => {
+        (strategyState) => {
           const selection = strategyState.getSelection();
           const content = strategyState.getCurrentContent();
           const key = selection.getAnchorKey();
@@ -176,10 +176,10 @@ test(`at end of a leaf block and sibling is not another leaf block forward delet
   );
   // next sibling is not a leaf
   assertRemoveTextOperation(
-    editorState =>
+    (editorState) =>
       removeTextWithStrategy(
         editorState,
-        strategyState => {
+        (strategyState) => {
           const selection = strategyState.getSelection();
           const content = strategyState.getCurrentContent();
           const key = selection.getAnchorKey();
@@ -203,10 +203,10 @@ test(`at end of a leaf block and sibling is not another leaf block forward delet
 
 test(`across blocks with forward delete is a no-op`, () => {
   assertRemoveTextOperation(
-    editorState =>
+    (editorState) =>
       removeTextWithStrategy(
         editorState,
-        strategyState => {
+        (strategyState) => {
           const selection = strategyState.getSelection();
           const content = strategyState.getCurrentContent();
           const key = selection.getAnchorKey();

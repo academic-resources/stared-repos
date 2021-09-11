@@ -57,7 +57,8 @@ class DraftEditorPlaceholder extends React.Component<Props> {
         <div
           className={cx('public/DraftEditorPlaceholder/inner')}
           id={this.props.accessibilityID}
-          style={contentStyle}>
+          style={contentStyle}
+        >
           {this.props.text}
         </div>
       </div>

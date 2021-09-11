@@ -32,16 +32,18 @@ const MY_QUERY = gql`
 const ShowingSomeErrors = () => (
   <Query query={MY_QUERY} errorPolicy="all">
     {({ error, data, loading }) => {
-      if (loading) return <span>loading...</span>
+      if (loading) return <span>loading...</span>;
       return (
         <div>
           <h2>Good: {data.goodField}</h2>
-          <pre>Bad: {error.graphQLErrors.map(({ message }, i) => (
-            <span key={i}>{message}</span>
-          ))}
+          <pre>
+            Bad:{" "}
+            {error.graphQLErrors.map(({ message }, i) => (
+              <span key={i}>{message}</span>
+            ))}
           </pre>
         </div>
-      )
+      );
     }}
   </Query>
 );
@@ -62,8 +64,8 @@ const link = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors)
     graphQLErrors.map(({ message, locations, path }) =>
       console.log(
-        `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
-      ),
+        `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+      )
     );
 
   if (networkError) console.log(`[Network error]: ${networkError}`);
@@ -88,5 +90,5 @@ onError(({ response, operation }) => {
   if (operation.operationName === "IgnoreErrorsQuery") {
     response.errors = null;
   }
-})
+});
 ```

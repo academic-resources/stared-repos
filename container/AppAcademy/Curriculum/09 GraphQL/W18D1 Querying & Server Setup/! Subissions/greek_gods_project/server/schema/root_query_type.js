@@ -22,7 +22,7 @@ const RootQuery = new GraphQLObjectType({
       resolve() {
         // this is just the mongoose method to return all gods
         return God.find({});
-      }
+      },
     },
     god: {
       // we are only returning a single god here so we don't need a GraphQLList
@@ -31,7 +31,7 @@ const RootQuery = new GraphQLObjectType({
       args: { id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(parentValue, { id }) {
         return God.findById(id);
-      }
+      },
     },
 
     emblems: {
@@ -39,7 +39,7 @@ const RootQuery = new GraphQLObjectType({
       resolve() {
         // this is just the mongoose method to return all emblems
         return Emblem.find({});
-      }
+      },
     },
     emblem: {
       // we are only returning a single emblem here so we don't need a GraphQLList
@@ -48,16 +48,15 @@ const RootQuery = new GraphQLObjectType({
       args: { id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(parentValue, { id }) {
         return Emblem.findById(id);
-      }
+      },
     },
-
 
     abodes: {
       type: new GraphQLList(AbodeType),
       resolve() {
         // this is just the mongoose method to return all abodes
         return Abode.find({});
-      }
+      },
     },
     abode: {
       // we are only returning a single abode here so we don't need a GraphQLList
@@ -66,12 +65,9 @@ const RootQuery = new GraphQLObjectType({
       args: { id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(parentValue, { id }) {
         return Abode.findById(id);
-      }
-    }
-
-
-
-  })
+      },
+    },
+  }),
 });
 
 module.exports = RootQuery;

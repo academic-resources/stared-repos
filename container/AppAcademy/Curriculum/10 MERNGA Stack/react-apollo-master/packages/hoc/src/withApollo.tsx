@@ -1,13 +1,13 @@
-import React from 'react';
-import { ApolloConsumer } from '@apollo/react-common';
-import { ApolloClient } from 'apollo-client';
-import hoistNonReactStatics from 'hoist-non-react-statics';
-import { invariant } from 'ts-invariant';
+import React from "react";
+import { ApolloConsumer } from "@apollo/react-common";
+import { ApolloClient } from "apollo-client";
+import hoistNonReactStatics from "hoist-non-react-statics";
+import { invariant } from "ts-invariant";
 
-import { OperationOption } from './types';
+import { OperationOption } from "./types";
 
 function getDisplayName<P>(WrappedComponent: React.ComponentType<P>) {
-  return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+  return WrappedComponent.displayName || WrappedComponent.name || "Component";
 }
 
 export type WithApolloClient<P> = P & { client: ApolloClient<any> };
@@ -47,12 +47,12 @@ export function withApollo<TProps, TResult = any>(
     render() {
       return (
         <ApolloConsumer>
-          {client => {
+          {(client) => {
             const props = Object.assign({}, this.props, {
               client,
               ref: operationOptions.withRef
                 ? this.setWrappedInstance
-                : undefined
+                : undefined,
             });
             return <WrappedComponent {...props} />;
           }}

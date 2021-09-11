@@ -8,8 +8,8 @@ const Container = styled.div`
   margin: 0 1rem 0 1rem;
   max-width: 768px;
   padding: 0.75rem 0 1rem 0;
-  color: #9CA2AB;
-  border-top: 1px solid #32374C;
+  color: #9ca2ab;
+  border-top: 1px solid #32374c;
 
   @media (min-width: 768px) {
     & {
@@ -29,9 +29,21 @@ const Span = styled.span`
 
 export default () => (
   <Container>
-    <Span>© Five <span role="img" aria-label="five">🖐</span> 2018</Span>
     <Span>
-      <Link to="/about/">Meet the team! <span role="img" aria-label="bolt">⚡</span>️</Link>
+      © Five{' '}
+      <span role="img" aria-label="five">
+        🖐
+      </span>{' '}
+      2018
+    </Span>
+    <Span>
+      <Link to="/about/">
+        Meet the team!{' '}
+        <span role="img" aria-label="bolt">
+          ⚡
+        </span>
+        ️
+      </Link>
     </Span>
   </Container>
 )

@@ -34,10 +34,10 @@ Apollo DevTools is a Chrome extension that allows you to inspect your Apollo Cli
 If you've worked with REST and a state management library like Redux, you're probably used to writing action creators, reducers, normalizing your data, and integrating middleware to make a single network request. With Apollo Client, you no longer have to worry about any of these concerns! Apollo Client sets up everything you need for a production-ready app so you can focus on writing queries instead of thousands of lines of state management code.
 
 ```js
-import ApolloClient from 'apollo-boost';
+import ApolloClient from "apollo-boost";
 
 const client = new ApolloClient({
-  uri: 'https://dog-graphql-api.glitch.me/graphql'
+  uri: "https://dog-graphql-api.glitch.me/graphql",
 });
 ```
 

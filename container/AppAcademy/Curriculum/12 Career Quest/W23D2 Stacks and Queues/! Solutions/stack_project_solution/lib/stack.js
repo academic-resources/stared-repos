@@ -12,7 +12,7 @@
 // Constraints:
 // ------------
 //
-// Make sure the time and space complexity of each is equivalent to those 
+// Make sure the time and space complexity of each is equivalent to those
 // in the table provided in the Time and Space Complexity Analysis section
 // of your Stack reading!
 //
@@ -57,7 +57,7 @@ class Stack {
     }
     this.top = this.top.next;
     this.length--;
-    return temp.value; 
+    return temp.value;
   }
 
   size() {

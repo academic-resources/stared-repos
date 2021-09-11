@@ -1,7 +1,5 @@
-function numRegions(graph) {
-
-}
+function numRegions(graph) {}
 
 module.exports = {
-    numRegions
+  numRegions,
 };

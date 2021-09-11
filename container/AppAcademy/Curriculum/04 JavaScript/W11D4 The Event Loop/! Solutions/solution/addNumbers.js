@@ -2,7 +2,7 @@ const readline = require("readline");
 
 const reader = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
 function addNumbers(sum, numsLeft, completionCallback) {

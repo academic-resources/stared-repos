@@ -221,7 +221,7 @@ In some cases you may have a locally generated file with your schema that you wa
 ```js
 module.exports = {
   service: {
-    localSchemaFile: './path/to/schema.graphql'
-  }
+    localSchemaFile: "./path/to/schema.graphql",
+  },
 };
 ```

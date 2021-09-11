@@ -77,9 +77,21 @@
     padding: 20px;
     max-height: 400px;
     background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(315deg, $red, yellow); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(315deg, $red, yellow); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(315deg, $red, yellow); /* For Firefox 3.6 to 15 */
+    background: -webkit-linear-gradient(
+      315deg,
+      $red,
+      yellow
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+      315deg,
+      $red,
+      yellow
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+      315deg,
+      $red,
+      yellow
+    ); /* For Firefox 3.6 to 15 */
     background: linear-gradient(315deg, $red, yellow); /* Standard syntax */
 
     img {
@@ -114,7 +126,9 @@
   border-radius: 10px;
   overflow: scroll;
 
-  input, select, button {
+  input,
+  select,
+  button {
     margin: 20px 0;
     background: none;
     border: 0;
@@ -144,14 +158,86 @@
   padding: 10px;
   border: 4px solid black;
   border-radius: 8px;
-  background-color:#F6F6F6;
-  background-image:
-    radial-gradient(circle at 100% 150%, #F6F6F6 24%, white 25%, white 28%, #F6F6F6 29%, #F6F6F6 36%, white 36%, white 40%, transparent 40%, transparent),
-    radial-gradient(circle at 0    150%, #F6F6F6 24%, white 25%, white 28%, #F6F6F6 29%, #F6F6F6 36%, white 36%, white 40%, transparent 40%, transparent),
-    radial-gradient(circle at 50%  100%, white 10%, #F6F6F6 11%, #F6F6F6 23%, white 24%, white 30%, #F6F6F6 31%, #F6F6F6 43%, white 44%, white 50%, #F6F6F6 51%, #F6F6F6 63%, white 64%, white 71%, transparent 71%, transparent),
-    radial-gradient(circle at 100% 50%, white 5%, #F6F6F6 6%, #F6F6F6 15%, white 16%, white 20%, #F6F6F6 21%, #F6F6F6 30%, white 31%, white 35%, #F6F6F6 36%, #F6F6F6 45%, white 46%, white 49%, transparent 50%, transparent),
-    radial-gradient(circle at 0    50%, white 5%, #F6F6F6 6%, #F6F6F6 15%, white 16%, white 20%, #F6F6F6 21%, #F6F6F6 30%, white 31%, white 35%, #F6F6F6 36%, #F6F6F6 45%, white 46%, white 49%, transparent 50%, transparent);
-  background-size:100px 50px;
+  background-color: #f6f6f6;
+  background-image: radial-gradient(
+      circle at 100% 150%,
+      #f6f6f6 24%,
+      white 25%,
+      white 28%,
+      #f6f6f6 29%,
+      #f6f6f6 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 150%,
+      #f6f6f6 24%,
+      white 25%,
+      white 28%,
+      #f6f6f6 29%,
+      #f6f6f6 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      white 10%,
+      #f6f6f6 11%,
+      #f6f6f6 23%,
+      white 24%,
+      white 30%,
+      #f6f6f6 31%,
+      #f6f6f6 43%,
+      white 44%,
+      white 50%,
+      #f6f6f6 51%,
+      #f6f6f6 63%,
+      white 64%,
+      white 71%,
+      transparent 71%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      white 5%,
+      #f6f6f6 6%,
+      #f6f6f6 15%,
+      white 16%,
+      white 20%,
+      #f6f6f6 21%,
+      #f6f6f6 30%,
+      white 31%,
+      white 35%,
+      #f6f6f6 36%,
+      #f6f6f6 45%,
+      white 46%,
+      white 49%,
+      transparent 50%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 50%,
+      white 5%,
+      #f6f6f6 6%,
+      #f6f6f6 15%,
+      white 16%,
+      white 20%,
+      #f6f6f6 21%,
+      #f6f6f6 30%,
+      white 31%,
+      white 35%,
+      #f6f6f6 36%,
+      #f6f6f6 45%,
+      white 46%,
+      white 49%,
+      transparent 50%,
+      transparent
+    );
+  background-size: 100px 50px;
 }
 
 .toy-list {

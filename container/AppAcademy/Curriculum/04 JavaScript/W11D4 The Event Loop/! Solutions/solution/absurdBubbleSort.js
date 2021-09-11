@@ -2,7 +2,7 @@ const readline = require("readline");
 
 const reader = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
 function askIfGreaterThan(el1, el2, callback) {
@@ -29,7 +29,7 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
   //    continue the inner loop. You'll want to increment i for the
   //    next call, and possibly switch madeAnySwaps if you did swap.
 
-  if (i == (arr.length - 1)) {
+  if (i == arr.length - 1) {
     // End of array reached.
     outerBubbleSortLoop(madeAnySwaps);
     return;
@@ -44,9 +44,7 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
       madeAnySwaps = true;
     }
 
-    innerBubbleSortLoop(
-      arr, i + 1, madeAnySwaps, outerBubbleSortLoop
-    );
+    innerBubbleSortLoop(arr, i + 1, madeAnySwaps, outerBubbleSortLoop);
   });
 }
 

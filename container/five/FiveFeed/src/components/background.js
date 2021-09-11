@@ -15,14 +15,19 @@ const Canvas = styled.canvas`
   z-index: -1;
 `
 
-const ConfettiGenerator = function(params) {
+const ConfettiGenerator = function (params) {
   const appstate = {
     target: 'confetti-holder',
     max: 80,
     size: 1,
     animate: true,
     props: [], // 'circle', 'square', 'triangle', 'line'
-    colors: [[165, 104, 246], [230, 61, 135], [0, 199, 228], [253, 214, 126]],
+    colors: [
+      [165, 104, 246],
+      [230, 61, 135],
+      [0, 199, 228],
+      [253, 214, 126],
+    ],
     clock: 25,
     interval: null,
     rotate: false,
@@ -55,7 +60,7 @@ const ConfettiGenerator = function(params) {
     return !floor ? rand : Math.floor(rand)
   }
 
-  const totalWeight = appstate.props.reduce(function(weight, prop) {
+  const totalWeight = appstate.props.reduce(function (weight, prop) {
     return weight + (prop.weight || 1)
   }, 0)
 
@@ -163,11 +168,11 @@ const ConfettiGenerator = function(params) {
     }
   }
 
-  const _clear = function() {
+  const _clear = function () {
     appstate.animate = false
     clearInterval(appstate.interval)
 
-    requestAnimationFrame(function() {
+    requestAnimationFrame(function () {
       ctx.clearRect(0, 0, cv.width, cv.height)
       const w = cv.width
       cv.width = 1
@@ -175,7 +180,7 @@ const ConfettiGenerator = function(params) {
     })
   }
 
-  const _render = function() {
+  const _render = function () {
     cv.width = appstate.width
     cv.height = appstate.height
     particles = []
@@ -191,7 +196,7 @@ const ConfettiGenerator = function(params) {
       const delta = current - start
       ctx.clearRect(0, 0, appstate.width, appstate.height)
 
-      particles.forEach(i => particleDraw(i))
+      particles.forEach((i) => particleDraw(i))
 
       if (delta >= 20) {
         update()
@@ -235,7 +240,11 @@ export default class Background extends PureComponent {
     const settings = {
       target: 'canvas',
       clock: 10,
-      colors: [[68, 73, 92], [24, 43, 58], [50, 55, 76]],
+      colors: [
+        [68, 73, 92],
+        [24, 43, 58],
+        [50, 55, 76],
+      ],
       props: [
         'circle',
         'square',

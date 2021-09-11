@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import GiphysIndex from './giphys_index';
+import GiphysIndex from "./giphys_index";
 
 class GiphysSearch extends React.Component {
   constructor() {
     super();
-    this.state = { searchTerm: 'golden retriever' };
+    this.state = { searchTerm: "golden retriever" };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
-    this.props.fetchSearchGiphys('golden+retriever');
+    this.props.fetchSearchGiphys("golden+retriever");
   }
 
   handleChange(e) {
@@ -20,7 +20,7 @@ class GiphysSearch extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let searchTerm = this.state.searchTerm.split(' ').join('+');
+    let searchTerm = this.state.searchTerm.split(" ").join("+");
     this.props.fetchSearchGiphys(searchTerm);
   }
 
@@ -31,7 +31,9 @@ class GiphysSearch extends React.Component {
       <div>
         <form className="search-bar">
           <input value={this.state.searchTerm} onChange={this.handleChange} />
-          <button type="submit" onClick={this.handleSubmit}>Search Giphy</button>
+          <button type="submit" onClick={this.handleSubmit}>
+            Search Giphy
+          </button>
         </form>
         <GiphysIndex giphys={giphys} />
       </div>

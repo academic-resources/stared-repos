@@ -12,6 +12,6 @@ export default class MIDIConnectionEvent {
         this.srcElement = midiAccess;
         this.target = midiAccess;
         this.timeStamp = Date.now();
-        this.type = 'statechange';
+        this.type = "statechange";
     }
 }

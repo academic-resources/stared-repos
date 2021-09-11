@@ -174,7 +174,7 @@ import { ApolloProvider } from "react-apollo";
 import Character from "./Character";
 
 export const link = createHttpLink({
-  uri: "https://mpjk0plp9.lp.gql.zone/graphql"
+  uri: "https://mpjk0plp9.lp.gql.zone/graphql",
 });
 
 export const client = new ApolloClient({
@@ -182,11 +182,13 @@ export const client = new ApolloClient({
   link,
 });
 
-export default () =>
+export default () => (
   <ApolloProvider client={client}>
-    // $ExpectError property `episode`. Property not found in. See: src/Character.js:43
+    // $ExpectError property `episode`. Property not found in. See:
+    src/Character.js:43
     <Character />
-  </ApolloProvider>;
+  </ApolloProvider>
+);
 ```
 
 ### Props
@@ -252,18 +254,21 @@ export default withCharacter(({ loading, hero, error }) => {
 Since we have typed the response shape, the props shape, and the shape of what will be passed to the client, we can prevent errors in multiple places. Our options and props function within the `graphql` wrapper are now type safe, our rendered component is protected, and our tree of components have their required props enforced.
 
 ```ts
-export const withCharacter = graphql<InputProps, Response, Variables, Props>(HERO_QUERY, {
-  options: ({ episode }) => ({
-    variables: { episode }
-  }),
-  props: ({ data, ownProps }) => ({
-    ...data,
-    // $ExpectError [string] This type cannot be compared to number
-    episode: ownProps.episode > 1,
-    // $ExpectError property `isHero`. Property not found on object type
-    isHero: data && data.hero && data.hero.isHero
-  })
-});
+export const withCharacter = graphql<InputProps, Response, Variables, Props>(
+  HERO_QUERY,
+  {
+    options: ({ episode }) => ({
+      variables: { episode },
+    }),
+    props: ({ data, ownProps }) => ({
+      ...data,
+      // $ExpectError [string] This type cannot be compared to number
+      episode: ownProps.episode > 1,
+      // $ExpectError property `isHero`. Property not found on object type
+      isHero: data && data.hero && data.hero.isHero,
+    }),
+  }
+);
 ```
 
 With this addition, the entirety of the integration between Apollo and React can be statically typed. When combined with the strong tooling each system provides, it can make for a much improved application and developer experience.

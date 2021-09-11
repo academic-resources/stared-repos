@@ -169,9 +169,9 @@ const createNewParent = (blockMap: BlockMap, key: string): BlockMap => {
   });
   // add the parent just before the child in the block map
   let newBlockMap = blockMap
-    .takeUntil(block => block.getKey() === key)
+    .takeUntil((block) => block.getKey() === key)
     .concat(Immutable.OrderedMap([[newParent.getKey(), newParent]]))
-    .concat(blockMap.skipUntil(block => block.getKey() === key));
+    .concat(blockMap.skipUntil((block) => block.getKey() === key));
   // set parent <-> child connection
   newBlockMap = updateParentChild(newBlockMap, newParent.getKey(), key, 0);
   // set siblings & parent for the new parent key to child's siblings & parent
@@ -239,7 +239,7 @@ const updateAsSiblingsChild = (
       // we also need to flip the order of the sibling & block in the ordered map
       // for this case
       newBlockMap = newBlockMap
-        .takeUntil(block => block.getKey() === key)
+        .takeUntil((block) => block.getKey() === key)
         .concat(
           Immutable.OrderedMap([
             [newParentKey, newBlockMap.get(newParentKey)],
@@ -248,7 +248,7 @@ const updateAsSiblingsChild = (
         )
         .concat(
           newBlockMap
-            .skipUntil(block => block.getKey() === newParentKey)
+            .skipUntil((block) => block.getKey() === newParentKey)
             .slice(1),
         );
       break;
@@ -345,14 +345,16 @@ const moveChildUp = (blockMap: BlockMap, key: string): BlockMap => {
     }
     // add the node just before its former parent in the block map
     newBlockMap = newBlockMap
-      .takeUntil(block => block.getKey() === parentKey)
+      .takeUntil((block) => block.getKey() === parentKey)
       .concat(
         Immutable.OrderedMap([
           [key, newBlockMap.get(key)],
           [parentKey, newBlockMap.get(parentKey)],
         ]),
       )
-      .concat(newBlockMap.skipUntil(block => block.getKey() === key).slice(1));
+      .concat(
+        newBlockMap.skipUntil((block) => block.getKey() === key).slice(1),
+      );
 
     // If it's the last child, move as next sibling of parent
   } else if (childIndex === parent.getChildKeys().count() - 1) {
@@ -388,7 +390,7 @@ const moveChildUp = (blockMap: BlockMap, key: string): BlockMap => {
     const grandparentInsertPosition = newBlockMap
       .get(grandparentKey)
       .getChildKeys()
-      .findIndex(n => n === parentKey);
+      .findIndex((n) => n === parentKey);
     newBlockMap = updateParentChild(
       newBlockMap,
       grandparentKey,

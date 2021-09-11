@@ -36,51 +36,51 @@ Install the [Apollo Client Developer tools for Chrome](https://chrome.google.com
 You get started by constructing an instance of the core class [`ApolloClient`][]. If you load `ApolloClient` from the [`apollo-boost`][] package, it will be configured with a few reasonable defaults such as our standard in-memory cache and a link to a GraphQL API at `/graphql`.
 
 ```js
-import ApolloClient from 'apollo-boost';
+import ApolloClient from "apollo-boost";
 
 const client = new ApolloClient();
 ```
 
-
 To point `ApolloClient` at a different URL, add your GraphQL API's URL to the `uri` config property:
 
 ```js
-import ApolloClient from 'apollo-boost';
+import ApolloClient from "apollo-boost";
 
 const client = new ApolloClient({
-  uri: 'https://graphql.example.com'
+  uri: "https://graphql.example.com",
 });
 ```
 
 Most of the time you'll hook up your client to a frontend integration. But if you'd like to directly execute a query with your client, you may now call the `client.query` method like this:
 
 ```js
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
-client.query({
-  query: gql`
-    query TodoApp {
-      todos {
-        id
-        text
-        completed
+client
+  .query({
+    query: gql`
+      query TodoApp {
+        todos {
+          id
+          text
+          completed
+        }
       }
-    }
-  `,
-})
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
+    `,
+  })
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error));
 ```
 
 Now your client will be primed with some data in its cache. You can continue to make queries, or you can get your `client` instance to perform all sorts of advanced tasks on your GraphQL data. Such as [reactively watching queries with `watchQuery`][], [changing data on your server with `mutate`][], or [reading a fragment from your local cache with `readFragment`][].
 
 To learn more about all of the features available to you through the `apollo-client` package, be sure to read through the [**`apollo-client` API reference**](https://www.apollographql.com/docs/react/api/apollo-client.html).
 
-[`ApolloClient`]: https://www.apollographql.com/docs/react/api/apollo-client.html
+[`apolloclient`]: https://www.apollographql.com/docs/react/api/apollo-client.html
 [`apollo-boost`]: https://www.apollographql.com/docs/react/essentials/get-started.html#apollo-boost
-[reactively watching queries with `watchQuery`]: https://www.apollographql.com/docs/react/api/apollo-client.html#ApolloClient.watchQuery
+[reactively watching queries with `watchquery`]: https://www.apollographql.com/docs/react/api/apollo-client.html#ApolloClient.watchQuery
 [changing data on your server with `mutate`]: https://www.apollographql.com/docs/react/essentials/mutations.html
-[reading a fragment from your local cache with `readFragment`]: https://www.apollographql.com/docs/react/advanced/caching.html#direct
+[reading a fragment from your local cache with `readfragment`]: https://www.apollographql.com/docs/react/advanced/caching.html#direct
 
 ## Learn how to use Apollo Client with your favorite framework
 

@@ -1,9 +1,9 @@
-import React from 'react';
-import { useQuery } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
-import { Row, Col } from 'reactstrap';
+import React from "react";
+import { useQuery } from "@apollo/react-hooks";
+import gql from "graphql-tag";
+import { Row, Col } from "reactstrap";
 
-import { RocketInventory } from './types';
+import { RocketInventory } from "./types";
 
 const GET_ROCKET_INVENTORY = gql`
   query getRocketInventory {
@@ -36,9 +36,7 @@ export function RocketInventoryList() {
             <tbody>
               {data.rocketInventory.map((inventory: RocketInventory) => (
                 <tr
-                  key={`${inventory.model}-${inventory.year}-${
-                    inventory.stock
-                  }`}
+                  key={`${inventory.model}-${inventory.year}-${inventory.stock}`}
                 >
                   <td>{inventory.model}</td>
                   <td>{inventory.year}</td>

@@ -1,12 +1,8 @@
-function swap(arr, index1, index2) {
+function swap(arr, index1, index2) {}
 
-}
-
-function selectionSort(arr) {
-
-}
+function selectionSort(arr) {}
 
 module.exports = {
-    selectionSort,
-    swap
+  selectionSort,
+  swap,
 };

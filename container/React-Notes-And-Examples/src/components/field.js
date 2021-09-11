@@ -7,7 +7,7 @@ export default ({ label, value, onChange }) => {
       <input
         className="input"
         value={value}
-        onChange={e => onChange(e.target.value)}
+        onChange={(e) => onChange(e.target.value)}
       />
     </div>
   );

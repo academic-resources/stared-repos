@@ -38,9 +38,9 @@ class Game {
 
   promptMove(reader, callback) {
     this.print();
-    reader.question('Enter a starting tower: ', start => {
+    reader.question("Enter a starting tower: ", (start) => {
       const startTowerIdx = parseInt(start);
-      reader.question('Enter an ending tower: ', end => {
+      reader.question("Enter an ending tower: ", (end) => {
         const endTowerIdx = parseInt(end);
         callback(startTowerIdx, endTowerIdx);
       });
@@ -50,7 +50,7 @@ class Game {
   run(reader, gameCompletionCallback) {
     this.promptMove(reader, (startTowerIdx, endTowerIdx) => {
       if (!this.move(startTowerIdx, endTowerIdx)) {
-        console.log('Invalid move!');
+        console.log("Invalid move!");
       }
 
       if (!this.isWon()) {
@@ -58,7 +58,7 @@ class Game {
         this.run(reader, gameCompletionCallback);
       } else {
         this.print();
-        console.log('You win!');
+        console.log("You win!");
         gameCompletionCallback();
       }
     });

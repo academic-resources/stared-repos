@@ -92,9 +92,9 @@ Then import the `ApolloEngine` constructor and create a new Engine instance. You
 
 ```js
 // Import ApolloEngine
-const { ApolloEngine } = require('apollo-engine');
-const { ApolloServer } = require('apollo-server-express');
-const express = require('express');
+const { ApolloEngine } = require("apollo-engine");
+const { ApolloServer } = require("apollo-server-express");
+const express = require("express");
 
 // Initialize Apollo Server
 const server = new ApolloServer({
@@ -108,7 +108,7 @@ const server = new ApolloServer({
   // By setting this to "false", we avoid using Apollo Server 2's
   // integrated metric reporting and fall-back to using the Apollo
   // Engine Proxy (running separately) for metric collection.
-  engine: false
+  engine: false,
 });
 
 // Initialize your Express app like usual
@@ -121,13 +121,13 @@ server.applyMiddleware({ app });
 // set the ENGINE_API_KEY environment variable when you
 // run your program.
 const engine = new ApolloEngine({
-  apiKey: 'API_KEY_HERE'
+  apiKey: "API_KEY_HERE",
 });
 
 // Call engine.listen(...) instead of app.listen(port) as you usually would
 engine.listen({
   port: 4000,
-  expressApp: app
+  expressApp: app,
 });
 ```
 
@@ -148,35 +148,36 @@ npm install --save apollo-engine
 Then write a small Node program that uses it, like so:
 
 ```js
-const { ApolloEngineLauncher } = require('apollo-engine');
+const { ApolloEngineLauncher } = require("apollo-engine");
 
 // Define the Engine configuration.
 const launcher = new ApolloEngineLauncher({
   // Note: you can also provide this in the ENGINE_API_KEY environment variable.
-  apiKey: 'API_KEY_HERE',
+  apiKey: "API_KEY_HERE",
   origins: [
     {
       http: {
         // The URL that the proxy should use to connect to your GraphQL server.
-        url: 'http://localhost:4000/api/graphql'
-      }
-    }
+        url: "http://localhost:4000/api/graphql",
+      },
+    },
   ],
   // Tell the proxy which ports to listen to and which paths should
   // be treated as GraphQL instead of transparently proxied as raw HTTP.
   frontends: [
     {
       port: 3000, // default if left out: process.env.PORT
-      endpoints: ['/api/graphql'] // default if left out: /['/graphql]
-    }
-  ]
+      endpoints: ["/api/graphql"], // default if left out: /['/graphql]
+    },
+  ],
 });
 
 // Start the Proxy; crash on errors.
-launcher.start().catch(err => {
+launcher.start().catch((err) => {
   throw err;
 });
 ```
+
 > **Note:** Every deployment has its unique needs and we provide a variety of configuration options to fulfill them. For more configuration options, please see the [proxy config docs](/references/proxy-config/).
 
 > **Note:** The argument to `new ApolloEngineLauncher()` is generally the same as the argument Node GraphQL users pass to `new ApolloEngine()`. The main differences are that you need to specify the origin's HTTP URL yourself with `new ApolloEngineLauncher()`, and the frontend `port` and `endpoints` are specified inside the constructor instead of as options to `listen()`.
@@ -282,9 +283,9 @@ The main difference between setting up the proxy to work with cloud functions ve
   "origins": [
     {
       "lambda": {
-          "functionArn":"arn:aws:lambda:xxxxxxxxxxx:xxxxxxxxxxxx:function:xxxxxxxxxxxxxxxxxxx",
-          "awsAccessKeyId":"xxxxxxxxxxxxxxxxxxxx",
-          "awsSecretAccessKey":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        "functionArn": "arn:aws:lambda:xxxxxxxxxxx:xxxxxxxxxxxx:function:xxxxxxxxxxxxxxxxxxx",
+        "awsAccessKeyId": "xxxxxxxxxxxxxxxxxxxx",
+        "awsSecretAccessKey": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       }
     }
   ],
@@ -335,10 +336,10 @@ frontends: [{
   },
 }],
 ```
-  
-* Configure your client to use APQs. If you're using Apollo Client, you can easily use [`apollo-link-persisted-queries`](https://github.com/apollographql/apollo-link-persisted-queries#automatic-persisted-queries) to set this up.
-<!-- * Verify APQ is working properly using the [verification procedure] (// TODO(dman): get link to new article). -->
-<!-- * Read [how it works] (// TODO(dman): get link to new article) for additional details. -->
+
+- Configure your client to use APQs. If you're using Apollo Client, you can easily use [`apollo-link-persisted-queries`](https://github.com/apollographql/apollo-link-persisted-queries#automatic-persisted-queries) to set this up.
+  <!-- * Verify APQ is working properly using the [verification procedure] (// TODO(dman): get link to new article). -->
+  <!-- * Read [how it works] (// TODO(dman): get link to new article) for additional details. -->
 
 If everything is set up correctly, you should see your client sending hashes insteady of query strings over the network, but receiving data as if it had sent a normal query.
 
@@ -367,17 +368,17 @@ If you're using Apollo Server for your Node GraphQL server, the only server code
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  cacheControl: true // highlight-line
+  cacheControl: true, // highlight-line
 });
 
 // Apollo Server 1.2 and onwards:
 app.use(
-  '/graphql',
+  "/graphql",
   bodyParser.json(),
   graphqlExpress({
     schema,
     context: {},
-    cacheControl: true // highlight-line
+    cacheControl: true, // highlight-line
   })
 );
 ```
@@ -521,9 +522,9 @@ const resolvers = {
     post: (_, { id }, _, { cacheControl }) => {
       cacheControl.setCacheHint({ maxAge: 60 });
       return find(posts, { id });
-    }
-  }
-}
+    },
+  },
+};
 ```
 
 **Setting a default `maxAge` for your whole schema:**
@@ -536,15 +537,15 @@ For example, for Express:
 
 ```javascript
 app.use(
-  '/graphql',
+  "/graphql",
   bodyParser.json(),
   graphqlExpress({
     schema,
     context: {},
     tracing: true,
     cacheControl: {
-      defaultMaxAge: 5
-    }
+      defaultMaxAge: 5,
+    },
   })
 );
 ```
@@ -563,10 +564,10 @@ const engine = new ApolloEngine({
   stores: [
     {
       memcache: {
-        url: ['localhost:4567']
-      }
-    }
-  ]
+        url: ["localhost:4567"],
+      },
+    },
+  ],
   // ...
 });
 ```
@@ -578,21 +579,21 @@ By using a private response cache, we guarantee that a response affecting multip
 const engine = new ApolloEngine({
   stores: [
     {
-      name: 'privateResponseMemcache',
+      name: "privateResponseMemcache",
       memcache: {
-        url: ['localhost:4567']
-      }
-    }
+        url: ["localhost:4567"],
+      },
+    },
   ],
   sessionAuth: {
-    header: 'Authorization',
-    tokenAuthUrl: 'https://auth.mycompany.com/engine-auth-check'
+    header: "Authorization",
+    tokenAuthUrl: "https://auth.mycompany.com/engine-auth-check",
   },
   queryCache: {
-    privateFullQueryStore: 'privateResponseMemcache'
+    privateFullQueryStore: "privateResponseMemcache",
     // By not mentioning publicFullQueryStore, we keep it enabled with
     // the default empty-string-named in-memory store.
-  }
+  },
   // ...
 });
 ```
@@ -727,38 +728,38 @@ If a batch of queries is sent, the batches are fractured by the Engine proxy and
       feed: [
         {
           postedBy: {
-            login: 'AleksandraKaminska'
+            login: "AleksandraKaminska",
           },
           repository: {
-            name: 'GitHubApp',
+            name: "GitHubApp",
             owner: {
-              login: 'AleksandraKaminska'
-            }
-          }
+              login: "AleksandraKaminska",
+            },
+          },
         },
         {
           postedBy: {
-            login: 'ashokhein'
+            login: "ashokhein",
           },
           repository: {
-            name: 'memeryde',
+            name: "memeryde",
             owner: {
-              login: 'ashokhein'
-            }
-          }
-        }
-      ]
-    }
+              login: "ashokhein",
+            },
+          },
+        },
+      ],
+    },
   },
   {
     data: {
       currentUser: {
-        __typename: 'User',
-        avatar_url: 'https://avatars2.githubusercontent.com/u/11861843?v=4',
-        login: 'johannakate'
-      }
-    }
-  }
+        __typename: "User",
+        avatar_url: "https://avatars2.githubusercontent.com/u/11861843?v=4",
+        login: "johannakate",
+      },
+    },
+  },
 ];
 ```
 
@@ -766,12 +767,12 @@ If your origin supports batching and you'd like to pass entire batches through i
 
 ```js
 const engine = new ApolloEngine({
-  apiKey: 'ENGINE_API_KEY',
+  apiKey: "ENGINE_API_KEY",
   origins: [
     {
-      supportsBatch: true
-    }
-  ]
+      supportsBatch: true,
+    },
+  ],
 });
 ```
 
@@ -810,8 +811,8 @@ Support may request that you set the Engine Proxy logging level to DEBUG or high
 ```js
 const engine = new ApolloEngine({
   logging: {
-    level: 'DEBUG' // Engine Proxy logging level. DEBUG, INFO, WARN or ERROR
-  }
+    level: "DEBUG", // Engine Proxy logging level. DEBUG, INFO, WARN or ERROR
+  },
 });
 ```
 
@@ -847,8 +848,8 @@ These lines say what port Engine is listening on and the internal version number
 ```js
 const engine = new ApolloEngine({
   logging: {
-    level: 'WARN'
-  }
+    level: "WARN",
+  },
 });
 ```
 

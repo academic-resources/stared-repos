@@ -5,26 +5,29 @@ import FiveList from '../components/five-list'
 import PeopleList from '../components/people-list'
 
 import data from '../shared/dummyData'
-import { DanAbramov, KevinRose, QuincyLarson, TimFerris, VeniKunche } from '../images'
+import {
+  DanAbramov,
+  KevinRose,
+  QuincyLarson,
+  TimFerris,
+  VeniKunche,
+} from '../images'
 
 export default class IndexPage extends Component {
   constructor() {
     super()
     this.state = {
       selectedIndex: 2,
-      items: [
-        TimFerris,
-        QuincyLarson,
-        KevinRose,
-        VeniKunche,
-        DanAbramov,
-      ],
-      curators: []
+      items: [TimFerris, QuincyLarson, KevinRose, VeniKunche, DanAbramov],
+      curators: [],
     }
   }
 
   componentDidMount() {
-    const curators = Object.keys(data).reduce((arr, curator) => arr.push(data[curator]) && arr, [])
+    const curators = Object.keys(data).reduce(
+      (arr, curator) => arr.push(data[curator]) && arr,
+      []
+    )
     this.setState({ curators })
   }
 
@@ -47,7 +50,11 @@ export default class IndexPage extends Component {
     const { items, selectedIndex } = this.state
     return (
       <Layout>
-        <PeopleList items={items} selectedIndex={selectedIndex} clickHandler={this.clickHandler} />
+        <PeopleList
+          items={items}
+          selectedIndex={selectedIndex}
+          clickHandler={this.clickHandler}
+        />
         {this.currentCurator()}
       </Layout>
     )

@@ -14,16 +14,19 @@ about: Open a new issue here if something isn't working as expected.
 -->
 
 **Intended outcome:**
+
 <!--
 What you were trying to accomplish when the bug occurred, and as much code as possible related to the source of the problem.
 -->
 
 **Actual outcome:**
+
 <!--
 A description of what actually happened, including a screenshot or copy-paste of any related error messages, logs, or other output that might be related. Places to look for information include your browser console, server console, and network logs. Please avoid non-specific phrases like “didn’t work” or “broke”.
 -->
 
 **How to reproduce the issue:**
+
 <!--
 If possible, please create a reproduction using https://github.com/apollographql/react-apollo-error-template and link to it here. If you prefer an in-browser way to create reproduction, try: https://codesandbox.io/s/github/apollographql/react-apollo-error-template
 
@@ -31,6 +34,7 @@ Instructions for how the issue can be reproduced by a maintainer or contributor.
 -->
 
 **Versions**
+
 <!--
 Run the following command in your project directory, and paste its (automatically copied to clipboard) results here:
 

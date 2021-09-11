@@ -1,5 +1,5 @@
-const User = require('../models/users');
-const Post = require('../models/posts');
+const User = require("../models/users");
+const Post = require("../models/posts");
 
 module.exports = {
   // [GET] /users This route will return an array of all users.
@@ -75,7 +75,7 @@ module.exports = {
   getUserPosts: async (req, res) => {
     try {
       const { id } = req.params;
-      const user = await User.findById(id).populate('posts');
+      const user = await User.findById(id).populate("posts");
       res.status(200).json(user.posts);
     } catch (err) {
       res.status(500).json(err);
@@ -96,5 +96,5 @@ module.exports = {
     } catch (err) {
       res.status(500).json(err);
     }
-  }
+  },
 };

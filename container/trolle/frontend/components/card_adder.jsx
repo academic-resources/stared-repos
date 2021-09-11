@@ -1,53 +1,53 @@
-import React from 'react'
+import React from "react";
 
 class CardAdder extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       open: false,
-      title: ''
-    }
-    this.openDialog = this.openDialog.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-    this.checkForDialogClose = this.checkForDialogClose.bind(this)
-    this.handleCreate = this.handleCreate.bind(this)
-    this.checkKeyPressForEnter = this.checkKeyPressForEnter.bind(this)
-    this.input_node = React.createRef()
+      title: "",
+    };
+    this.openDialog = this.openDialog.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.checkForDialogClose = this.checkForDialogClose.bind(this);
+    this.handleCreate = this.handleCreate.bind(this);
+    this.checkKeyPressForEnter = this.checkKeyPressForEnter.bind(this);
+    this.input_node = React.createRef();
   }
 
   openDialog() {
-    this.setState({ open: true })
+    this.setState({ open: true });
   }
 
   handleChange(e) {
     this.setState({
-      title: e.target.value
-    })
+      title: e.target.value,
+    });
   }
 
   checkKeyPressForEnter(e) {
-    if (e.charCode === 13) this.handleCreate(e)
+    if (e.charCode === 13) this.handleCreate(e);
   }
 
   handleCreate(e) {
-    e.stopPropagation()
-    const { title } = this.state
-    const { list } = this.props
-    if (!title) return
-    const newCard = { title }
+    e.stopPropagation();
+    const { title } = this.state;
+    const { list } = this.props;
+    if (!title) return;
+    const newCard = { title };
     this.setState({
       open: false,
-      title: ''
-    })
-    this.props.createCard(newCard, list)
+      title: "",
+    });
+    this.props.createCard(newCard, list);
   }
 
   componentDidMount() {
-    document.addEventListener('mousedown', this.checkForDialogClose)
+    document.addEventListener("mousedown", this.checkForDialogClose);
   }
 
   componentWillUnMount() {
-    document.removeEventListener('mousedown', this.checkForDialogClose)
+    document.removeEventListener("mousedown", this.checkForDialogClose);
   }
 
   checkForDialogClose(e) {
@@ -55,18 +55,18 @@ class CardAdder extends React.Component {
       this.input_node &&
       this.input_node.current &&
       !this.input_node.current.contains(e.target) &&
-      e.target.type !== 'submit' &&
+      e.target.type !== "submit" &&
       this.state.open
     ) {
       this.setState({
-        open: false
-      })
+        open: false,
+      });
     }
   }
 
   render() {
-    const { open } = this.state
-    const { first } = this.props
+    const { open } = this.state;
+    const { first } = this.props;
 
     return open ? (
       <div
@@ -89,10 +89,10 @@ class CardAdder extends React.Component {
     ) : (
       <div className="add-card-btn add-btn" onClick={this.openDialog}>
         <i className="fas fa-plus" />
-        {`Add ${first ? 'another' : 'a'} card`}
+        {`Add ${first ? "another" : "a"} card`}
       </div>
-    )
+    );
   }
 }
 
-export default CardAdder
+export default CardAdder;

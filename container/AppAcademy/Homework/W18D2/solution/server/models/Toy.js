@@ -4,18 +4,18 @@ const Schema = mongoose.Schema;
 const ToySchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   color: {
     type: String,
-    required: true
+    required: true,
   },
   dogs: [
     {
       type: Schema.Types.ObjectId,
-      ref: "dog"
-    }
-  ]
+      ref: "dog",
+    },
+  ],
 });
 
 const toy = mongoose.model("toy", ToySchema);

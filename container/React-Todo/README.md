@@ -7,7 +7,8 @@
 x `Fork and clone` this project and cd into your cloned version.
 x `yarn install` will pull in all the node_modules you need.
 x `yarn start` will start a development server on your `http://localhost:3000`.
-  - If yarn asks you to select different port with some error message, just select `Y` and it will pull it up on port 3001. This simply means you have a development server up and running on that port already.
+
+- If yarn asks you to select different port with some error message, just select `Y` and it will pull it up on port 3001. This simply means you have a development server up and running on that port already.
 
 ## Instructions
 
@@ -21,15 +22,15 @@ x `yarn start` will start a development server on your `http://localhost:3000`.
 ```js
 [
   {
-    task: 'Organize Garage',
+    task: "Organize Garage",
     id: 1528817077286,
-    completed: false
+    completed: false,
   },
   {
-    task: 'Bake Cookies',
+    task: "Bake Cookies",
     id: 1528817084358,
-    completed: false
-  }
+    completed: false,
+  },
 ];
 ```
 
@@ -48,19 +49,19 @@ x `yarn start` will start a development server on your `http://localhost:3000`.
 - `<TodoList />` receives your Todos array and iterates over the list generating a new `<Todo />` for each element in the array.
 - `<Todo />` is a component that takes in the `todo` data and displays the task to the screen.
 - `<TodoForm>` will hold your input field and your `Add Todo` and `Clear Completed` buttons.
+
   - Your input field should take in user input, and allow a user to press `Enter` or click on the `Submit Button` to add a todo to your list.
   - Once a todo is submitted, the Todo List should re-render and show the added todo.
 
-  1. input field will push a new item to the array with contents from 
-event.target.value as the div contents on click on Todo button
-map with create new div with it for the list
+  1. input field will push a new item to the array with contents from
+     event.target.value as the div contents on click on Todo button
+     map with create new div with it for the list
 
 2. on click of the div with to do info, it will trigger method to
-strikethrough test and toggle "false" to "true"
+   strikethrough test and toggle "false" to "true"
 
 3. on click of the clear completed button, use filter to clear divs with
-"true" toggled on using function Clear Completed
-
+   "true" toggled on using function Clear Completed
 
 #### Day 2 Challenges
 

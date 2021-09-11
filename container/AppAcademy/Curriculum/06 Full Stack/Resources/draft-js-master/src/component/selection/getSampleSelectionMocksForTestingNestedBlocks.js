@@ -53,14 +53,14 @@ const getSampleSelectionMocksForTestingNestedBlocks = (): Object => {
   const contentState = ContentState.createFromBlockArray(contentBlocks);
   const editorState = EditorState.createWithContent(contentState);
 
-  const textNodes = text.map(text => {
+  const textNodes = text.map((text) => {
     if (!text) {
       return null;
     }
     return document.createTextNode(text);
   });
 
-  const leafChildren = textNodes.map(textNode => {
+  const leafChildren = textNodes.map((textNode) => {
     if (!textNode) {
       return null;
     }

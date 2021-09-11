@@ -7,22 +7,22 @@
 // -------
 //
 // You are building a linter for your company's new custom text editor to keep
-// the code smells out of your (anticipated) massive codebase! Part of your 
-// technical design includes writing a function that checks that all of the 
+// the code smells out of your (anticipated) massive codebase! Part of your
+// technical design includes writing a function that checks that all of the
 // parentheses in your engineers' code are balanced.
 //
-// Given a string of text, write a function that returns true if the 
+// Given a string of text, write a function that returns true if the
 // parentheses are balanced, and false if they are not.
 //
-// Note: Your code should ignore all non-bracket characters in the input 
+// Note: Your code should ignore all non-bracket characters in the input
 //       string.
 //
 // ------
-// Bonus: 
+// Bonus:
 // ------
-//  
+//
 // Though you may want to start by writing a function that simply handles
-// parentheses as an MVP, to build a truly impactful product you must handle 
+// parentheses as an MVP, to build a truly impactful product you must handle
 // ALL bracket types, including:
 //
 //         - Parentheses:     ()
@@ -33,7 +33,7 @@
 //
 // ------------
 // Constraints:
-// ------------ 
+// ------------
 //
 // (1) Your function must run in linear time, O(n).
 // (2) Your function must consume (at maximum) linear space, O(n).
@@ -69,86 +69,86 @@
 // ------------------------------
 //
 // balancedParens('const roundDown = function(num) { return Math.floor(num) };');      => true
-// balancedParens('{ array: [1, 2, [3, 4], 5], timesTwoMethod: (num) => num * 2; }');  => true 
-// balancedParens('function printThirdElement(array) { console.log(array[3]]] }');     => false 
+// balancedParens('{ array: [1, 2, [3, 4], 5], timesTwoMethod: (num) => num * 2; }');  => true
+// balancedParens('function printThirdElement(array) { console.log(array[3]]] }');     => false
 //
 // -----------
 // Let's code!
 // -----------
 function firstApproachbalancedParens(str) {
-  const opens = { '(': 1, '[': 1, '{': 1 }
-  const closes = { ')': -1, ']': -1, '}': -1 }
+  const opens = { "(": 1, "[": 1, "{": 1 };
+  const closes = { ")": -1, "]": -1, "}": -1 };
 
-  let balance = 0
+  let balance = 0;
   for (let charIdx = 0; charIdx < str.length; charIdx++) {
-    if (balance < 0) return false
-    let char = str[charIdx]
-    if (opens[char]) balance += opens[char]
-    if (closes[char]) balance += closes[char]
+    if (balance < 0) return false;
+    let char = str[charIdx];
+    if (opens[char]) balance += opens[char];
+    if (closes[char]) balance += closes[char];
   }
-  return !balance
+  return !balance;
 }
 
 function balancedParens(str) {
-  let nest = new Stack
-  const opens = { '(': 'p', '[': 'b', '{': 'c', }
-  const closes = { ')': 'p', ']': 'b', '}': 'c', }
+  let nest = new Stack();
+  const opens = { "(": "p", "[": "b", "{": "c" };
+  const closes = { ")": "p", "]": "b", "}": "c" };
   for (let charIdx = 0; charIdx < str.length; charIdx++) {
-    let char = str[charIdx]
-    if (opens[char]) nest.push(opens[char])
+    let char = str[charIdx];
+    if (opens[char]) nest.push(opens[char]);
     if (closes[char]) {
       if (!nest.top) {
-        return false
+        return false;
       } else {
-        if (closes[char] !== nest.top.value) return false
-        if (closes[char]) nest.pop(closes[char])
+        if (closes[char] !== nest.top.value) return false;
+        if (closes[char]) nest.pop(closes[char]);
       }
     }
   }
-  return nest.length ? false : true
+  return nest.length ? false : true;
 }
 
 class Node {
   constructor(val) {
-    this.value = val
-    this.next = null
+    this.value = val;
+    this.next = null;
   }
 }
 
 class Stack {
   constructor() {
-    this.top = null
-    this.bottom = null
-    this.length = 0
+    this.top = null;
+    this.bottom = null;
+    this.length = 0;
   }
 
   push(val) {
-    const newNode = new Node(val)
+    const newNode = new Node(val);
     if (!this.top) {
-      this.top = newNode
-      this.bottom = newNode
+      this.top = newNode;
+      this.bottom = newNode;
     } else {
-      let oldTop = this.top
-      this.top = newNode
-      newNode.next = oldTop
+      let oldTop = this.top;
+      this.top = newNode;
+      newNode.next = oldTop;
     }
-    return ++this.length
+    return ++this.length;
   }
 
   pop() {
-    const popped = this.top
-    if (!popped) return null
-    if (this.length === 1) this.bottom = null
-    this.top = this.top.next
-    this.length--
-    return popped.value
+    const popped = this.top;
+    if (!popped) return null;
+    if (this.length === 1) this.bottom = null;
+    this.top = this.top.next;
+    this.length--;
+    return popped.value;
   }
 
   size() {
-    return this.length
+    return this.length;
   }
 }
 
-console.log(balancedParens("(())"))
+console.log(balancedParens("(())"));
 
 exports.balancedParens = balancedParens;

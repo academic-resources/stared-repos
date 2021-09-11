@@ -1,7 +1,6 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 const Mutations = {
-  
   LOGIN_USER: gql`
     mutation LoginUser($email: String!, $password: String!) {
       login(email: $email, password: $password) {
@@ -34,7 +33,7 @@ const Mutations = {
         weight
       }
     }
-  `
-}
+  `,
+};
 
-export default Mutations
+export default Mutations;

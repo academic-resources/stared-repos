@@ -5,24 +5,24 @@
  */
 
 // externals
-import gql from 'graphql-tag';
-import { DocumentNode, ExecutionResult } from 'graphql';
-import { ApolloLink, Operation, Observable } from 'apollo-link';
-import { InMemoryCache, ApolloReducerConfig } from 'apollo-cache-inmemory';
-import { stripSymbols } from 'apollo-utilities';
+import gql from "graphql-tag";
+import { DocumentNode, ExecutionResult } from "graphql";
+import { ApolloLink, Operation, Observable } from "apollo-link";
+import { InMemoryCache, ApolloReducerConfig } from "apollo-cache-inmemory";
+import { stripSymbols } from "apollo-utilities";
 
-import { MockSubscriptionLink } from '../../../__mocks__/mockLinks';
+import { MockSubscriptionLink } from "../../../__mocks__/mockLinks";
 
 // core
-import { ApolloQueryResult } from '../../types';
-import { NetworkStatus } from '../../networkStatus';
-import { ObservableQuery } from '../../ObservableQuery';
-import { WatchQueryOptions } from '../../watchQueryOptions';
-import { QueryManager } from '../../QueryManager';
-import { DataStore } from '../../../data/store';
+import { ApolloQueryResult } from "../../types";
+import { NetworkStatus } from "../../networkStatus";
+import { ObservableQuery } from "../../ObservableQuery";
+import { WatchQueryOptions } from "../../watchQueryOptions";
+import { QueryManager } from "../../QueryManager";
+import { DataStore } from "../../../data/store";
 
-describe('Live queries', () => {
-  it('handles mutliple results for live queries', done => {
+describe("Live queries", () => {
+  it("handles mutliple results for live queries", (done) => {
     const query = gql`
       query LazyLoadLuke {
         people_one(id: 1) {
@@ -36,15 +36,15 @@ describe('Live queries', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
 
     const laterData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }, { name: 'R2D2' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }, { name: "R2D2" }],
       },
     };
     const link = new MockSubscriptionLink();
@@ -60,7 +60,7 @@ describe('Live queries', () => {
 
     let count = 0;
     observable.subscribe({
-      next: result => {
+      next: (result) => {
         count++;
         if (count === 1) {
           expect(stripSymbols(result.data)).toEqual(initialData);
@@ -73,7 +73,7 @@ describe('Live queries', () => {
           done();
         }
       },
-      error: e => {
+      error: (e) => {
         console.error(e);
       },
     });
@@ -86,7 +86,7 @@ describe('Live queries', () => {
 
   // watchQuery => Observable => subscribe => data1 => unsubscribe =>
   //    watchQuery => Observable => subscribe => data2
-  it('handles unsubscribing and resubscribing with live queries', done => {
+  it("handles unsubscribing and resubscribing with live queries", (done) => {
     const query = gql`
       query LazyLoadLuke {
         people_one(id: 1) {
@@ -100,15 +100,15 @@ describe('Live queries', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
 
     const laterData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }, { name: 'R2D2' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }, { name: "R2D2" }],
       },
     };
 
@@ -127,7 +127,7 @@ describe('Live queries', () => {
       });
 
       // Observable => subscribe
-      const sub = observable.subscribe(result => {
+      const sub = observable.subscribe((result) => {
         count++;
         if (count === 2) {
           expect(stripSymbols(result.data)).toEqual(laterData);
@@ -146,7 +146,7 @@ describe('Live queries', () => {
     });
 
     // Observable => subscribe
-    const sub = observable.subscribe(result => {
+    const sub = observable.subscribe((result) => {
       count++;
       if (count === 1) {
         expect(stripSymbols(result.data)).toEqual(initialData);
@@ -165,7 +165,7 @@ describe('Live queries', () => {
   // watchQuery => Observable => subscribe => setupNetwork => data1 =>
   //    unsubscribe => cleanup => watchQuery => Observable => subscribe =>
   //      setupNetwork => data2 => cleanup
-  it('calls the correct cleanup for links with live queries', done => {
+  it("calls the correct cleanup for links with live queries", (done) => {
     const query = gql`
       query LazyLoadLuke {
         people_one(id: 1) {
@@ -179,15 +179,15 @@ describe('Live queries', () => {
 
     const initialData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }],
       },
     };
 
     const laterData = {
       people_one: {
-        name: 'Luke Skywalker',
-        friends: [{ name: 'Leia Skywalker' }, { name: 'R2D2' }],
+        name: "Luke Skywalker",
+        friends: [{ name: "Leia Skywalker" }, { name: "R2D2" }],
       },
     };
 
@@ -211,7 +211,7 @@ describe('Live queries', () => {
       });
 
       // Observable => subscribe
-      const sub = observable.subscribe(result => {
+      const sub = observable.subscribe((result) => {
         count++;
         if (count === 2) {
           expect(stripSymbols(result.data)).toEqual(laterData);
@@ -233,7 +233,7 @@ describe('Live queries', () => {
     });
 
     // Observable => subscribe
-    const sub = observable.subscribe(result => {
+    const sub = observable.subscribe((result) => {
       count++;
       if (count === 1) {
         expect(stripSymbols(result.data)).toEqual(initialData);

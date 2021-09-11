@@ -1,5 +1,5 @@
-import { uniqueId } from '../../utils/idGenerator'
-import React from 'react';
+import { uniqueId } from "../../utils/idGenerator";
+import React from "react";
 
 class StepForm extends React.Component {
   constructor(props) {
@@ -8,14 +8,14 @@ class StepForm extends React.Component {
       title: "",
       body: "",
       done: false,
-      todo_id: this.props.todo_id
+      todo_id: this.props.todo_id,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(property) {
-    return e => this.setState({[property]: e.target.value});
+    return (e) => this.setState({ [property]: e.target.value });
   }
 
   handleSubmit(e) {
@@ -24,30 +24,34 @@ class StepForm extends React.Component {
     this.props.receiveStep(step);
     this.setState({
       title: "",
-      body: ""
+      body: "",
     }); // reset form
   }
 
   render() {
     return (
-      <form className="step-form" onSubmit={ this.handleSubmit }>
-        <label>Title:
+      <form className="step-form" onSubmit={this.handleSubmit}>
+        <label>
+          Title:
           <input
             className="input"
             ref="title"
-            value={ this.state.title }
+            value={this.state.title}
             placeholder="walk to store"
-            onChange={ this.update('title') }
-            required />
+            onChange={this.update("title")}
+            required
+          />
         </label>
-        <label>Description:
+        <label>
+          Description:
           <input
             className="input"
             ref="body"
-            value={ this.state.body }
+            value={this.state.body}
             placeholder="google store directions"
-            onChange={ this.update('body') }
-            required />
+            onChange={this.update("body")}
+            required
+          />
         </label>
         <button className="create-button">Create Step!</button>
       </form>

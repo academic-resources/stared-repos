@@ -10,7 +10,7 @@
 }
 
 .profile-nav a {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 .icon-comment:hover {
@@ -34,23 +34,23 @@
 }
 
 [class*="icon-small-"] {
-    width: 25px;
-    /* height: 0px; */
-    padding-top: 20px;
-    vertical-align: baseline;
-    bottom: 0px;
-    padding-bottom: 0px;
+  width: 25px;
+  /* height: 0px; */
+  padding-top: 20px;
+  vertical-align: baseline;
+  bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .icon-small-wall {
-    background-position: 0px -225px;
+  background-position: 0px -225px;
 }
 .icon-small-about {
-    background-position: 0px -175px;
+  background-position: 0px -175px;
 }
 .icon-small-friends {
-    background-position: 0px -150px;
+  background-position: 0px -150px;
 }
 .icon-small-photos {
-    background-position: 0px -200px;
+  background-position: 0px -200px;
 }

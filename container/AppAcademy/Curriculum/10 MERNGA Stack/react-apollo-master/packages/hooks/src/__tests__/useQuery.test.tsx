@@ -1,14 +1,14 @@
-import React from 'react';
-import { DocumentNode } from 'graphql';
-import gql from 'graphql-tag';
-import { MockedProvider } from '@apollo/react-testing';
-import { render, cleanup } from '@testing-library/react';
-import { useQuery } from '@apollo/react-hooks';
+import React from "react";
+import { DocumentNode } from "graphql";
+import gql from "graphql-tag";
+import { MockedProvider } from "@apollo/react-testing";
+import { render, cleanup } from "@testing-library/react";
+import { useQuery } from "@apollo/react-hooks";
 
-describe('useQuery Hook', () => {
+describe("useQuery Hook", () => {
   afterEach(cleanup);
 
-  it('should handle a simple query properly', done => {
+  it("should handle a simple query properly", (done) => {
     const query: DocumentNode = gql`
       query {
         cars {
@@ -22,21 +22,21 @@ describe('useQuery Hook', () => {
     const resultData = {
       cars: [
         {
-          make: 'Audi',
-          model: 'RS8',
-          vin: 'DOLLADOLLABILL',
-          __typename: 'Car'
-        }
-      ]
+          make: "Audi",
+          model: "RS8",
+          vin: "DOLLADOLLABILL",
+          __typename: "Car",
+        },
+      ],
     };
 
     const mocks = [
       {
         request: {
-          query
+          query,
         },
-        result: { data: resultData }
-      }
+        result: { data: resultData },
+      },
     ];
 
     const Component = () => {

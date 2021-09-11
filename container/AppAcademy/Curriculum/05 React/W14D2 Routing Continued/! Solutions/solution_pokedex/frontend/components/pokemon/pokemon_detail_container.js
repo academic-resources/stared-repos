@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import PokemonDetail from './pokemon_detail';
-import { requestSinglePokemon } from '../../actions/pokemon_actions';
-import { selectPokeItems } from '../../reducers/selectors';
+import PokemonDetail from "./pokemon_detail";
+import { requestSinglePokemon } from "../../actions/pokemon_actions";
+import { selectPokeItems } from "../../reducers/selectors";
 
 const mapStateToProps = (state, ownProps) => {
   const pokemon = state.entities.pokemon[ownProps.match.params.pokemonId];
@@ -10,15 +10,12 @@ const mapStateToProps = (state, ownProps) => {
   return {
     pokemon,
     items: selectPokeItems(state, pokemon),
-    loading: state.ui.loading.detailLoading
+    loading: state.ui.loading.detailLoading,
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  requestSinglePokemon: id => dispatch(requestSinglePokemon(id))
+const mapDispatchToProps = (dispatch) => ({
+  requestSinglePokemon: (id) => dispatch(requestSinglePokemon(id)),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PokemonDetail);
+export default connect(mapStateToProps, mapDispatchToProps)(PokemonDetail);

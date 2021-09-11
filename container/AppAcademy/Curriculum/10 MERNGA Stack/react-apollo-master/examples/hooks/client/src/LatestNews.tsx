@@ -1,9 +1,9 @@
-import React from 'react';
-import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
-import { useSubscription } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
+import React from "react";
+import { Card, CardText, CardBody, CardTitle } from "reactstrap";
+import { useSubscription } from "@apollo/react-hooks";
+import gql from "graphql-tag";
 
-import { News } from './types';
+import { News } from "./types";
 
 const LATEST_NEWS = gql`
   subscription getLatestNews {
@@ -21,7 +21,7 @@ export function LatestNews() {
         <CardTitle>
           <h5>Latest News</h5>
         </CardTitle>
-        <CardText>{loading ? 'Loading...' : data!.latestNews.content}</CardText>
+        <CardText>{loading ? "Loading..." : data!.latestNews.content}</CardText>
       </CardBody>
     </Card>
   );

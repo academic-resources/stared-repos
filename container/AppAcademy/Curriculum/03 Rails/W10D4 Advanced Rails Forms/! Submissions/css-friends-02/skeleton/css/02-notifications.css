@@ -13,12 +13,12 @@
 }
 
 .dropdown {
-  display:none;
+  display: none;
   position: absolute;
   background-color: white;
   width: 226px;
   color: black;
-  left: 0px
+  left: 0px;
 }
 
 .dropdown li {
@@ -52,4 +52,3 @@
 .header-list > li:hover .dropdown {
   display: block;
 }
-

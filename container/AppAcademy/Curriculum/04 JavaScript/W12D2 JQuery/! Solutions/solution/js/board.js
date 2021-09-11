@@ -1,5 +1,5 @@
-const Snake = require('./snake');
-const Apple = require('./apple');
+const Snake = require("./snake");
+const Apple = require("./apple");
 
 class Board {
   constructor(dim) {
@@ -26,7 +26,7 @@ class Board {
   render() {
     const grid = Board.blankGrid(this.dim);
 
-    this.snake.segments.forEach( segment => {
+    this.snake.segments.forEach((segment) => {
       grid[segment.i][segment.j] = Snake.SYMBOL;
     });
 
@@ -34,12 +34,13 @@ class Board {
 
     // join it up
     const rowStrs = [];
-    grid.map( row => row.join("") ).join("\n");
+    grid.map((row) => row.join("")).join("\n");
   }
 
   validPosition(coord) {
-    return (coord.i >= 0) && (coord.i < this.dim) &&
-      (coord.j >= 0) && (coord.j < this.dim);
+    return (
+      coord.i >= 0 && coord.i < this.dim && coord.j >= 0 && coord.j < this.dim
+    );
   }
 }
 

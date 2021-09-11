@@ -6,11 +6,11 @@
 // Prompt:
 // -------
 //
-// Iterate over a Singly Linked List of primitives backwards. When finished, 
-// return a string representing the original linked list's values backwards 
+// Iterate over a Singly Linked List of primitives backwards. When finished,
+// return a string representing the original linked list's values backwards
 // in the following format:
 //
-//                             'A -> B -> C -> D' 
+//                             'A -> B -> C -> D'
 //
 // ------------
 // Constraints:
@@ -27,70 +27,70 @@
 // -----------
 
 function iterateAcrossLinkedListBackwards(linkedList) {
-    // TODO: Implement the iterateAcrossLinkedListBackwards function here
-    // let stack = []
-    // let currentNode = linkedList.head
-    // for (let i = 0; i < linkedList.length; i++) {
-    //     stack.unshift(String(currentNode.value))
-    //     currentNode = currentNode.next
-    // }
-    // let result = stack.join(' -> ')
-    // return result
-    if (!linkedList.length) return ''
+  // TODO: Implement the iterateAcrossLinkedListBackwards function here
+  // let stack = []
+  // let currentNode = linkedList.head
+  // for (let i = 0; i < linkedList.length; i++) {
+  //     stack.unshift(String(currentNode.value))
+  //     currentNode = currentNode.next
+  // }
+  // let result = stack.join(' -> ')
+  // return result
+  if (!linkedList.length) return "";
 
-    const stack = new Stack
-    let currentNode = linkedList.head
-    for (let i = 0; i < linkedList.length; i++) {
-        stack.push(currentNode.value)
-        currentNode = currentNode.next
-    }
-    
-    let result = String(stack.top.value)
-    let currentStackNode = stack.top.next
-    for (let i = 0; i < stack.length - 1; i++) {
-        result += ' -> ' + String(currentStackNode.value)
-        currentStackNode = currentStackNode.next
-    }
-    return result
+  const stack = new Stack();
+  let currentNode = linkedList.head;
+  for (let i = 0; i < linkedList.length; i++) {
+    stack.push(currentNode.value);
+    currentNode = currentNode.next;
+  }
+
+  let result = String(stack.top.value);
+  let currentStackNode = stack.top.next;
+  for (let i = 0; i < stack.length - 1; i++) {
+    result += " -> " + String(currentStackNode.value);
+    currentStackNode = currentStackNode.next;
+  }
+  return result;
 }
 
 class Node {
-    constructor(val) {
-        this.value = val
-        this.next = null
-    }
+  constructor(val) {
+    this.value = val;
+    this.next = null;
+  }
 }
 
 class Stack {
-    constructor() {
-        this.top = null
-        this.bottom = null
-        this.length = 0
-    }
+  constructor() {
+    this.top = null;
+    this.bottom = null;
+    this.length = 0;
+  }
 
-    push(val) {
-        let pushed = new Node(val)
-        if (this.length) {
-            pushed.next = this.top
-        } else {
-            this.bottom = pushed
-        }
-        this.top = pushed
-        return ++this.length
+  push(val) {
+    let pushed = new Node(val);
+    if (this.length) {
+      pushed.next = this.top;
+    } else {
+      this.bottom = pushed;
     }
+    this.top = pushed;
+    return ++this.length;
+  }
 
-    pop() {
-        let popped = this.top
-        if (!popped) return null
-        if (this.length === 1) this.bottom = null
-        this.top = this.top.next
-        length--
-        return popped.value
-    }
-    
-    size() {
-        return this.length
-    }
+  pop() {
+    let popped = this.top;
+    if (!popped) return null;
+    if (this.length === 1) this.bottom = null;
+    this.top = this.top.next;
+    length--;
+    return popped.value;
+  }
+
+  size() {
+    return this.length;
+  }
 }
 
 exports.iterateAcrossLinkedListBackwards = iterateAcrossLinkedListBackwards;

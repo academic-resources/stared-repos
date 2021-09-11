@@ -1,6 +1,6 @@
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import HomeOrSplash from './home_or_splash_page'
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import HomeOrSplash from "./home_or_splash_page";
 
 export default () => (
   <div>
@@ -8,4 +8,4 @@ export default () => (
       <Route path="/" component={HomeOrSplash} />
     </Switch>
   </div>
-)
+);

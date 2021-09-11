@@ -11,10 +11,10 @@ This is the backend for the Pokedex exercises.
 4. Create a database user with the same name and password as found in your
    **.env** file with CREATEDB privileges
 5. Run
-   * `npm run db:create`
-   * `npm run db:migrate`
-   * `npm run db:seed:all`
-   * `npm start`
+   - `npm run db:create`
+   - `npm run db:migrate`
+   - `npm run db:seed:all`
+   - `npm start`
 
 ## The security API
 
@@ -27,7 +27,7 @@ There are three existing players in the database after seeding, all with the
 password "password":
 
 | Email              | Name        |
-|--------------------|-------------|
+| ------------------ | ----------- |
 | demo@example.com   | Demo-lition |
 | yusuke@example.com | Yusuke      |
 | petra@example.com  | Peta        |
@@ -51,7 +51,7 @@ Successful response:
     "email": "yusuke@example.com",
     "id": 2,
     "name": "Yusuke",
-    "updatedAt": "2019-05-01T08:33:40.799Z",
+    "updatedAt": "2019-05-01T08:33:40.799Z"
   }
 }
 ```
@@ -78,7 +78,7 @@ Successful response:
     "email": "marco@example.com",
     "id": 4,
     "name": "Marco",
-    "updatedAt": "2019-05-01T08:33:40.799Z",
+    "updatedAt": "2019-05-01T08:33:40.799Z"
   }
 }
 ```
@@ -91,7 +91,7 @@ header of the `fetch` call for this endpoint.
 
 ```js
 // Example code snippet
-fetch(url, { headers: { Authorization: `Bearer ${token}` }})
+fetch(url, { headers: { Authorization: `Bearer ${token}` } });
 ```
 
 Successful response:
@@ -122,7 +122,7 @@ header of the `fetch` call for this endpoint.
 
 ```js
 // Example code snippet
-fetch(url, { headers: { Authorization: `Bearer ${token}` }})
+fetch(url, { headers: { Authorization: `Bearer ${token}` } });
 ```
 
 Successful response:
@@ -156,7 +156,7 @@ header of the `fetch` call for this endpoint.
 
 ```js
 // Example code snippet
-fetch(url, { headers: { Authorization: `Bearer ${token}` }})
+fetch(url, { headers: { Authorization: `Bearer ${token}` } });
 ```
 
 Successful response looks like this with more entries:
@@ -179,7 +179,7 @@ header of the `fetch` call for this endpoint.
 
 ```js
 // Example code snippet
-fetch(url, { headers: { Authorization: `Bearer ${token}` }})
+fetch(url, { headers: { Authorization: `Bearer ${token}` } });
 ```
 
 Successful response looks like this for the given id:
@@ -191,10 +191,7 @@ Successful response looks like this for the given id:
   "imageUrl": "/images/pokemon_snaps/26.svg",
   "name": "Raichu5",
   "type": "electric",
-  "moves": [
-    "thundershock",
-    "thunderbolt"
-  ],
+  "moves": ["thundershock", "thunderbolt"],
   "items": [],
   "owner": {
     "id": 2,
@@ -211,7 +208,7 @@ header of the `fetch` call for this endpoint.
 
 ```js
 // Example code snippet
-fetch(url, { headers: { Authorization: `Bearer ${token}` }})
+fetch(url, { headers: { Authorization: `Bearer ${token}` } });
 ```
 
 The payload that you must send looks like this.
@@ -223,10 +220,7 @@ The payload that you must send looks like this.
   "imageUrl": "/images/pokemon_snaps/26.svg",
   "name": "Billy goat gruff",
   "type": "food",
-  "moves": [
-    "eating trash",
-    "eating anything"
-  ]
+  "moves": ["eating trash", "eating anything"]
 }
 ```
 
@@ -239,10 +233,7 @@ Successful response looks like this:
   "imageUrl": "/images/pokemon_snaps/26.svg",
   "name": "Billy goat gruff",
   "type": "food",
-  "moves": [
-    "eating trash",
-    "eating anything"
-  ],
+  "moves": ["eating trash", "eating anything"],
   "items": [
     {
       "name": "Ergonomic Cotton Keyboard",

@@ -1,9 +1,9 @@
-import { useContext, useState, useRef, useEffect } from 'react';
-import { DocumentNode } from 'graphql';
-import { getApolloContext, OperationVariables } from '@apollo/react-common';
+import { useContext, useState, useRef, useEffect } from "react";
+import { DocumentNode } from "graphql";
+import { getApolloContext, OperationVariables } from "@apollo/react-common";
 
-import { SubscriptionHookOptions } from './types';
-import { SubscriptionData } from './data/SubscriptionData';
+import { SubscriptionHookOptions } from "./types";
+import { SubscriptionData } from "./data/SubscriptionData";
 
 export function useSubscription<TData = any, TVariables = OperationVariables>(
   subscription: DocumentNode,
@@ -13,7 +13,7 @@ export function useSubscription<TData = any, TVariables = OperationVariables>(
   const [result, setResult] = useState({
     loading: true,
     error: undefined,
-    data: undefined
+    data: undefined,
   });
   const updatedOptions = options
     ? { ...options, subscription }
@@ -25,7 +25,7 @@ export function useSubscription<TData = any, TVariables = OperationVariables>(
       subscriptionDataRef.current = new SubscriptionData<TData, TVariables>({
         options: updatedOptions,
         context,
-        setResult
+        setResult,
       });
     }
     return subscriptionDataRef.current;

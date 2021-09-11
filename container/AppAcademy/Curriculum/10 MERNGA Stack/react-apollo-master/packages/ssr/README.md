@@ -21,18 +21,19 @@ npm install @apollo/react-ssr
 ### Overview
 
 <a name="getDataFromTree"></a>
+
 #### a) [`getDataFromTree`](https://github.com/apollographql/react-apollo/blob/release-3.0.0/packages/ssr/src/getDataFromTree.ts)
 
 **Function:**
 
 ```ts
-TODO
+TODO;
 ```
 
 **Options:**
 
 ```ts
-TODO
+TODO;
 ```
 
 **Result:**

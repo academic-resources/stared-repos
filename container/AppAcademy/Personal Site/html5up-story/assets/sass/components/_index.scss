@@ -6,61 +6,61 @@
 
 /* Index */
 
-	.index {
-		> * {
-			@include padding(3rem, 0);
-			@include vendor('display', 'flex');
-			border-top: solid 1px;
+.index {
+  > * {
+    @include padding(3rem, 0);
+    @include vendor("display", "flex");
+    border-top: solid 1px;
 
-			> header {
-				@include vendor('flex-grow', '0');
-				@include vendor('flex-shrink', '0');
-				width: 15rem;
-			}
+    > header {
+      @include vendor("flex-grow", "0");
+      @include vendor("flex-shrink", "0");
+      width: 15rem;
+    }
 
-			> .content {
-				@include vendor('flex-grow', '1');
-				@include vendor('flex-shrink', '1');
-			}
-		}
+    > .content {
+      @include vendor("flex-grow", "1");
+      @include vendor("flex-shrink", "1");
+    }
+  }
 
-		> :first-child {
-			border-top: 0;
-		}
+  > :first-child {
+    border-top: 0;
+  }
 
-		@include breakpoint('<=medium') {
-			> * {
-				> header {
-					width: 11rem;
-				}
-			}
-		}
+  @include breakpoint("<=medium") {
+    > * {
+      > header {
+        width: 11rem;
+      }
+    }
+  }
 
-		@include breakpoint('<=small') {
-			> * {
-				> header {
-					width: 10rem;
-				}
-			}
-		}
+  @include breakpoint("<=small") {
+    > * {
+      > header {
+        width: 10rem;
+      }
+    }
+  }
 
-		@include breakpoint('<=xsmall') {
-			> * {
-				@include vendor('flex-direction', 'column');
+  @include breakpoint("<=xsmall") {
+    > * {
+      @include vendor("flex-direction", "column");
 
-				> header {
-					width: 100%;
-				}
-			}
-		}
-	}
+      > header {
+        width: 100%;
+      }
+    }
+  }
+}
 
-	@mixin color-index($p: null) {
-		.index {
-			> * {
- 				border-top-color: _palette($p, border);
- 			}
- 		}
-	}
+@mixin color-index($p: null) {
+  .index {
+    > * {
+      border-top-color: _palette($p, border);
+    }
+  }
+}
 
-	@include color-index;
+@include color-index;

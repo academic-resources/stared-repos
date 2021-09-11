@@ -1,6 +1,6 @@
-import { ObservableQuery } from '../core/ObservableQuery';
-import { ApolloQueryResult } from '../core/types';
-import { Subscription } from '../util/Observable';
+import { ObservableQuery } from "../core/ObservableQuery";
+import { ApolloQueryResult } from "../core/types";
+import { Subscription } from "../util/Observable";
 
 /**
  *
@@ -18,7 +18,7 @@ export type Options = {
   errorCallbacks?: ((error: Error) => any)[];
 };
 
-export type ResultCallback = ((result: ApolloQueryResult<any>) => any);
+export type ResultCallback = (result: ApolloQueryResult<any>) => any;
 
 // Take an observable and N callbacks, and observe the observable,
 // ensuring it is called exactly N times, resolving once it has done so.
@@ -91,7 +91,7 @@ export function observableToPromiseAndSubscription(
   };
 }
 
-export default function(
+export default function (
   options: Options,
   ...cbs: ResultCallback[]
 ): Promise<any[]> {

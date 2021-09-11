@@ -1,10 +1,10 @@
-import React from 'react'
-import { logout } from '../actions/session_actions'
-import { connect } from 'react-redux'
+import React from "react";
+import { logout } from "../actions/session_actions";
+import { connect } from "react-redux";
 
-const mdtp = dispatch => ({
-  logout: () => dispatch(logout())
-})
+const mdtp = (dispatch) => ({
+  logout: () => dispatch(logout()),
+});
 
 const ProfileMenu = ({ logout, currentUser, toggleProfileMenu }) => (
   <div className="profile-menu">
@@ -24,16 +24,13 @@ const ProfileMenu = ({ logout, currentUser, toggleProfileMenu }) => (
     <div
       className="profile-menu-item profile-menu-item-last "
       onClick={() => {
-        logout()
-        toggleProfileMenu()
+        logout();
+        toggleProfileMenu();
       }}
     >
       Log Out
     </div>
   </div>
-)
+);
 
-export default connect(
-  null,
-  mdtp
-)(ProfileMenu)
+export default connect(null, mdtp)(ProfileMenu);

@@ -1,27 +1,26 @@
 function numRegions(graph) {
-    let visited = new Set();
-    let regions = 0;
+  let visited = new Set();
+  let regions = 0;
 
-    for (let node in graph) {
-        if (isNewRegion(node, graph, visited)) regions++;
-    }
+  for (let node in graph) {
+    if (isNewRegion(node, graph, visited)) regions++;
+  }
 
-    return regions;
+  return regions;
 }
 
 function isNewRegion(node, graph, visited) {
-    if (visited.has(node)) return false;
+  if (visited.has(node)) return false;
 
-    visited.add(node);
+  visited.add(node);
 
-    graph[node].forEach((neighbor) => {
-        isNewRegion(neighbor, graph, visited);
-    });
+  graph[node].forEach((neighbor) => {
+    isNewRegion(neighbor, graph, visited);
+  });
 
-    return true;
+  return true;
 }
 
-
 module.exports = {
-    numRegions
+  numRegions,
 };

@@ -1,28 +1,28 @@
-import React from 'react';
-import ApolloClient from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { ApolloLink } from 'apollo-link';
-import { render, cleanup } from '@testing-library/react';
+import React from "react";
+import ApolloClient from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { ApolloLink } from "apollo-link";
+import { render, cleanup } from "@testing-library/react";
 
 import {
   ApolloProvider,
   ApolloConsumer,
-  getApolloContext
-} from '@apollo/react-common';
+  getApolloContext,
+} from "@apollo/react-common";
 
 const client = new ApolloClient({
   cache: new Cache(),
-  link: new ApolloLink((o, f) => (f ? f(o) : null))
+  link: new ApolloLink((o, f) => (f ? f(o) : null)),
 });
 
-describe('<ApolloConsumer /> component', () => {
+describe("<ApolloConsumer /> component", () => {
   afterEach(cleanup);
 
-  it('has a render prop', done => {
+  it("has a render prop", (done) => {
     render(
       <ApolloProvider client={client}>
         <ApolloConsumer>
-          {clientRender => {
+          {(clientRender) => {
             try {
               expect(clientRender).toBe(client);
               done();
@@ -36,17 +36,17 @@ describe('<ApolloConsumer /> component', () => {
     );
   });
 
-  it('renders the content in the children prop', () => {
+  it("renders the content in the children prop", () => {
     const { getByText } = render(
       <ApolloProvider client={client}>
         <ApolloConsumer>{() => <div>Test</div>}</ApolloConsumer>
       </ApolloProvider>
     );
 
-    expect(getByText('Test')).toBeTruthy();
+    expect(getByText("Test")).toBeTruthy();
   });
 
-  it('errors if there is no client in the context', () => {
+  it("errors if there is no client in the context", () => {
     // Prevent Error about missing context type from appearing in the console.
     const errorLogger = console.error;
     console.error = () => {};

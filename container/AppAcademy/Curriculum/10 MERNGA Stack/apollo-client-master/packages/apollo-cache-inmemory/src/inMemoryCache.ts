@@ -1,28 +1,28 @@
 // Make builtins like Map and Set safe to use with non-extensible objects.
-import './fixPolyfills';
+import "./fixPolyfills";
 
-import { DocumentNode } from 'graphql';
+import { DocumentNode } from "graphql";
 
-import { Cache, ApolloCache, Transaction } from 'apollo-cache';
+import { Cache, ApolloCache, Transaction } from "apollo-cache";
 
-import { addTypenameToDocument, canUseWeakMap } from 'apollo-utilities';
+import { addTypenameToDocument, canUseWeakMap } from "apollo-utilities";
 
-import { wrap } from 'optimism';
+import { wrap } from "optimism";
 
-import { invariant, InvariantError } from 'ts-invariant';
+import { invariant, InvariantError } from "ts-invariant";
 
-import { HeuristicFragmentMatcher } from './fragmentMatcher';
+import { HeuristicFragmentMatcher } from "./fragmentMatcher";
 import {
   ApolloReducerConfig,
   NormalizedCache,
   NormalizedCacheObject,
-} from './types';
+} from "./types";
 
-import { StoreReader } from './readFromStore';
-import { StoreWriter } from './writeToStore';
-import { DepTrackingCache } from './depTrackingCache';
-import { KeyTrie } from 'optimism';
-import { ObjectCache } from './objectCache';
+import { StoreReader } from "./readFromStore";
+import { StoreWriter } from "./writeToStore";
+import { DepTrackingCache } from "./depTrackingCache";
+import { KeyTrie } from "optimism";
+import { ObjectCache } from "./objectCache";
 
 export interface InMemoryCacheConfig extends ApolloReducerConfig {
   resultCaching?: boolean;
@@ -57,7 +57,7 @@ export class OptimisticCacheLayer extends ObjectCache {
     // OptimisticCacheLayer objects always wrap some other parent cache, so
     // this.parent should never be null.
     public readonly parent: NormalizedCache,
-    public readonly transaction: Transaction<NormalizedCacheObject>,
+    public readonly transaction: Transaction<NormalizedCacheObject>
   ) {
     super(Object.create(null));
   }
@@ -102,14 +102,14 @@ export class InMemoryCache extends ApolloCache<NormalizedCacheObject> {
     // backwards compat
     if ((this.config as any).customResolvers) {
       invariant.warn(
-        'customResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating customResolvers in the next major version.',
+        "customResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating customResolvers in the next major version."
       );
       this.config.cacheRedirects = (this.config as any).customResolvers;
     }
 
     if ((this.config as any).cacheResolvers) {
       invariant.warn(
-        'cacheResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating cacheResolvers in the next major version.',
+        "cacheResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating cacheResolvers in the next major version."
       );
       this.config.cacheRedirects = (this.config as any).cacheResolvers;
     }
@@ -138,34 +138,37 @@ export class InMemoryCache extends ApolloCache<NormalizedCacheObject> {
 
     const cache = this;
     const { maybeBroadcastWatch } = cache;
-    this.maybeBroadcastWatch = wrap((c: Cache.WatchOptions) => {
-      return maybeBroadcastWatch.call(this, c);
-    }, {
-      makeCacheKey(c: Cache.WatchOptions) {
-        if (c.optimistic) {
-          // If we're reading optimistic data, it doesn't matter if this.data
-          // is a DepTrackingCache, since it will be ignored.
-          return;
-        }
+    this.maybeBroadcastWatch = wrap(
+      (c: Cache.WatchOptions) => {
+        return maybeBroadcastWatch.call(this, c);
+      },
+      {
+        makeCacheKey(c: Cache.WatchOptions) {
+          if (c.optimistic) {
+            // If we're reading optimistic data, it doesn't matter if this.data
+            // is a DepTrackingCache, since it will be ignored.
+            return;
+          }
 
-        if (c.previousResult) {
-          // If a previousResult was provided, assume the caller would prefer
-          // to compare the previous data to the new data to determine whether
-          // to broadcast, so we should disable caching by returning here, to
-          // give maybeBroadcastWatch a chance to do that comparison.
-          return;
-        }
+          if (c.previousResult) {
+            // If a previousResult was provided, assume the caller would prefer
+            // to compare the previous data to the new data to determine whether
+            // to broadcast, so we should disable caching by returning here, to
+            // give maybeBroadcastWatch a chance to do that comparison.
+            return;
+          }
 
-        if (cache.data instanceof DepTrackingCache) {
-          // Return a cache key (thus enabling caching) only if we're currently
-          // using a data store that can track cache dependencies.
-          return cache.cacheKeyRoot.lookup(
-            c.query,
-            JSON.stringify(c.variables),
-          );
-        }
+          if (cache.data instanceof DepTrackingCache) {
+            // Return a cache key (thus enabling caching) only if we're currently
+            // using a data store that can track cache dependencies.
+            return cache.cacheKeyRoot.lookup(
+              c.query,
+              JSON.stringify(c.variables)
+            );
+          }
+        },
       }
-    });
+    );
   }
 
   public restore(data: NormalizedCacheObject): this {
@@ -178,8 +181,10 @@ export class InMemoryCache extends ApolloCache<NormalizedCacheObject> {
   }
 
   public read<T>(options: Cache.ReadOptions): T | null {
-    if (typeof options.rootId === 'string' &&
-        typeof this.data.get(options.rootId) === 'undefined') {
+    if (
+      typeof options.rootId === "string" &&
+      typeof this.data.get(options.rootId) === "undefined"
+    ) {
       return null;
     }
 
@@ -273,12 +278,12 @@ export class InMemoryCache extends ApolloCache<NormalizedCacheObject> {
     // This parameter is not part of the performTransaction signature inherited
     // from the ApolloCache abstract class, but it's useful because it saves us
     // from duplicating this implementation in recordOptimisticTransaction.
-    optimisticId?: string,
+    optimisticId?: string
   ) {
     const { data, silenceBroadcast } = this;
     this.silenceBroadcast = true;
 
-    if (typeof optimisticId === 'string') {
+    if (typeof optimisticId === "string") {
       // Add a new optimistic layer and temporarily make this.data refer to
       // that layer for the duration of the transaction.
       this.data = this.optimisticData = new OptimisticCacheLayer(
@@ -287,7 +292,7 @@ export class InMemoryCache extends ApolloCache<NormalizedCacheObject> {
         // will be removed, and the remaining layers will be reapplied.
         optimisticId,
         this.optimisticData,
-        transaction,
+        transaction
       );
     }
 
@@ -304,7 +309,7 @@ export class InMemoryCache extends ApolloCache<NormalizedCacheObject> {
 
   public recordOptimisticTransaction(
     transaction: Transaction<NormalizedCacheObject>,
-    id: string,
+    id: string
   ) {
     return this.performTransaction(transaction, id);
   }
@@ -327,7 +332,7 @@ export class InMemoryCache extends ApolloCache<NormalizedCacheObject> {
 
   protected broadcastWatches() {
     if (!this.silenceBroadcast) {
-      this.watches.forEach(c => this.maybeBroadcastWatch(c));
+      this.watches.forEach((c) => this.maybeBroadcastWatch(c));
     }
   }
 
@@ -340,7 +345,7 @@ export class InMemoryCache extends ApolloCache<NormalizedCacheObject> {
         variables: c.variables,
         previousResult: c.previousResult && c.previousResult(),
         optimistic: c.optimistic,
-      }),
+      })
     );
   }
 }

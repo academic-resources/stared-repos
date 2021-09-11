@@ -20,11 +20,11 @@ const defaultGlobals = {
   'apollo-cache': 'apolloCache',
   'apollo-cache-inmemory': 'apolloCacheInMemory',
   'apollo-link': 'apolloLink',
-  'graphql': 'graphql',
+  graphql: 'graphql',
   'react-apollo': 'reactApollo',
-  'react': 'React',
+  react: 'React',
   'ts-invariant': 'invariant',
-  'tslib': 'tslib',
+  tslib: 'tslib',
   'fast-json-stable-stringify': 'stringify',
   'zen-observable': 'zenObservable',
   'hoist-non-react-statics': 'hoistNonReactStatics',
@@ -54,7 +54,7 @@ export function rollup({
 
   function onwarn(message) {
     const suppressed = ['UNRESOLVED_IMPORT', 'THIS_IS_UNDEFINED'];
-    if (!suppressed.find(code => message.code === code)) {
+    if (!suppressed.find((code) => message.code === code)) {
       return console.warn(message.message);
     }
   }

@@ -43,7 +43,7 @@
       transition: background 85ms, color 85ms;
 
       &.magnify {
-        background-image: image_url('search.png');
+        background-image: image_url("search.png");
         background-size: cover;
       }
     }

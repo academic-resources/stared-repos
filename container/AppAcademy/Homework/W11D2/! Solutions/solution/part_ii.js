@@ -4,13 +4,13 @@
 
 // defining the function
 function titleize(names, callback) {
-  let titleized = names.map(name => `Mx. ${name} Jingleheimer Schmidt`);
+  let titleized = names.map((name) => `Mx. ${name} Jingleheimer Schmidt`);
   callback(titleized);
-};
+}
 
 // invoking the function
 titleize(["Mary", "Brian", "Leo"], (names) => {
-  names.forEach(name => console.log(name));
+  names.forEach((name) => console.log(name));
 });
 
 // Phase II - Constructors, Prototypes, and `this`
@@ -44,8 +44,6 @@ Elephant.paradeHelper = function (elephant) {
   console.log(`${elephant.name} is trotting by!`);
 };
 
-
-
 // Phase IV - Closures
 
 function dinerBreakfast() {
@@ -56,4 +54,4 @@ function dinerBreakfast() {
     order = `${order.slice(0, order.length - 8)} and ${food} please.`;
     console.log(order);
   };
-};
+}

@@ -1,13 +1,12 @@
 const CONSTANTS = {
-  GRAVITY:  0.4,
-  FLAP_SPEED:  8,
-  TERMINAL_VEL:  12,
-  BIRD_WIDTH:  40,
-  BIRD_HEIGHT:  30
+  GRAVITY: 0.4,
+  FLAP_SPEED: 8,
+  TERMINAL_VEL: 12,
+  BIRD_WIDTH: 40,
+  BIRD_HEIGHT: 30,
 };
 
 export default class Bird {
-
   constructor(dimensions) {
     this.dimensions = dimensions;
     this.x = this.dimensions.width / 3;
@@ -46,7 +45,7 @@ export default class Bird {
     this.drawBird(ctx);
   }
 
-  drawBird(ctx){
+  drawBird(ctx) {
     ctx.fillStyle = "yellow";
     ctx.fillRect(this.x, this.y, CONSTANTS.BIRD_WIDTH, CONSTANTS.BIRD_HEIGHT);
   }
@@ -56,13 +55,14 @@ export default class Bird {
       left: this.x,
       right: this.x + CONSTANTS.BIRD_WIDTH,
       top: this.y,
-      bottom: this.y + CONSTANTS.BIRD_HEIGHT
+      bottom: this.y + CONSTANTS.BIRD_HEIGHT,
     };
   }
 
   outOfBounds() {
     const aboveTheTop = this.y < 0;
-    const belowTheBottom = this.y + CONSTANTS.BIRD_HEIGHT > this.dimensions.height;
+    const belowTheBottom =
+      this.y + CONSTANTS.BIRD_HEIGHT > this.dimensions.height;
     return aboveTheTop || belowTheBottom;
   }
 }

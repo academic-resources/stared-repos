@@ -20,13 +20,15 @@ npm i apollo-boost graphql react-apollo -S
 Next, create your client. Once you create your client, hook it up to your app by passing it to the `ApolloProvider` exported from `react-apollo`.
 
 ```jsx
-import React from 'react';
-import { render } from 'react-dom';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import React from "react";
+import { render } from "react-dom";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
 
 // Pass your GraphQL endpoint to uri
-const client = new ApolloClient({ uri: 'https://nx9zvp49q7.lp.gql.zone/graphql' });
+const client = new ApolloClient({
+  uri: "https://nx9zvp49q7.lp.gql.zone/graphql",
+});
 
 const ApolloApp = () => (
   <ApolloProvider client={client}>
@@ -34,15 +36,15 @@ const ApolloApp = () => (
   </ApolloProvider>
 );
 
-render(ApolloApp, document.getElementById('root'));
+render(ApolloApp, document.getElementById("root"));
 ```
 
 Awesome! Your ApolloClient is now connected to your app. Let's create our `<App />` component and make our first query:
 
 ```jsx
-import React from 'react';
-import { gql } from 'apollo-boost';
-import { Query } from 'react-apollo';
+import React from "react";
+import { gql } from "apollo-boost";
+import { Query } from "react-apollo";
 
 const GET_DOG = gql`
   query {
@@ -52,7 +54,7 @@ const GET_DOG = gql`
       displayImage
     }
   }
-`
+`;
 
 const App = () => (
   <Query query={GET_DOG}>
@@ -60,12 +62,10 @@ const App = () => (
       if (loading) return <div>Loading...</div>;
       if (error) return <div>Error :(</div>;
 
-      return (
-        <Dog url={data.dog.displayImage} breed={data.dog.breed} />
-      )
+      return <Dog url={data.dog.displayImage} breed={data.dog.breed} />;
     }}
   </Query>
-)
+);
 ```
 
 Time to celebrate! 🎉 You just made your first Query component. The Query component binds your GraphQL query to your UI so Apollo Client can take care of fetching your data, tracking loading & error states, and updating your UI via the `data` prop. Why don't you try experimenting with creating more Query components by forking our example app, [Pupstagram](https://codesandbox.io/s/r5qp83z0yq)?
@@ -88,15 +88,20 @@ Fortunately, the app is set up for us to make our first code change. Hopefully, 
 
 ```graphql
 {
-  feed (type: TOP, limit: 10) {
+  feed(type: TOP, limit: 10) {
     repository {
-      name, owner { login }
+      name
+      owner {
+        login
+      }
 
       # Uncomment the line below to get number of stars!
       stargazers_count
     }
 
-    postedBy { login }
+    postedBy {
+      login
+    }
   }
 }
 ```
@@ -116,18 +121,28 @@ Before you go off and build your own awesome GraphQL app with Apollo, let's take
 This bit of code uses the `graphql` higher-order component from `react-apollo` to attach a GraphQL query result to the `Feed` component:
 
 ```js
-const FeedWithData = graphql(gql`{
-  feed (type: TOP, limit: 10) {
-    repository {
-      name, owner { login }
+const FeedWithData = graphql(
+  gql`
+    {
+      feed(type: TOP, limit: 10) {
+        repository {
+          name
+          owner {
+            login
+          }
 
-      # Uncomment the line below to get number of stars!
-      # stargazers_count
+          # Uncomment the line below to get number of stars!
+          # stargazers_count
+        }
+
+        postedBy {
+          login
+        }
+      }
     }
-
-    postedBy { login }
-  }
-}`, { options: { notifyOnNetworkStatusChange: true } })(Feed);
+  `,
+  { options: { notifyOnNetworkStatusChange: true } }
+)(Feed);
 ```
 
 This is the main `App` component that React Native is rendering. It creates an Apollo Link with the server URL, initializes an instance of `ApolloClient`, and attaches that to our React component tree with `ApolloProvider`. If you've used Redux, this should be familiar, since it's similar to how the Redux provider works.
@@ -138,9 +153,9 @@ export default class App {
     // Initialize Apollo Client with URL to our server
     return new ApolloClient({
       link: createHttpLink({
-        uri: 'http://api.githunt.com/graphql',
+        uri: "http://api.githunt.com/graphql",
       }),
-      cache: new InMemoryCache()
+      cache: new InMemoryCache(),
     });
   }
 
@@ -162,20 +177,23 @@ Next, we get to a component that is actually dealing with some data loading conc
 // we asked for, and also useful methods like refetch().
 function Feed({ data }) {
   return (
-    <ScrollView style={styles.container} refreshControl={
-      // This enables the pull-to-refresh functionality
-      <RefreshControl
-        refreshing={data.networkStatus === 4}
-        onRefresh={data.refetch}
-      />
-    }>
+    <ScrollView
+      style={styles.container}
+      refreshControl={
+        // This enables the pull-to-refresh functionality
+        <RefreshControl
+          refreshing={data.networkStatus === 4}
+          onRefresh={data.refetch}
+        />
+      }
+    >
       <Text style={styles.title}>GitHunt</Text>
       <FeedList data={data} />
       <Text style={styles.fullApp}>See the full app at www.githunt.com</Text>
       <Button
         buttonStyle={styles.learnMore}
         onPress={goToApolloWebsite}
-        icon={{name: 'code'}}
+        icon={{ name: "code" }}
         raised
         backgroundColor="#22A699"
         title="Learn more about Apollo"
@@ -199,23 +217,24 @@ function FeedList({ data }) {
 
   return (
     <List containerStyle={styles.list}>
-      { data.feed.map((item) => {
-          const badge = item.repository.stargazers_count && {
-            value: `☆ ${item.repository.stargazers_count}`,
-            badgeContainerStyle: { right: 10, backgroundColor: '#56579B' },
-            badgeTextStyle: { fontSize: 12 },
-          };
+      {data.feed.map((item) => {
+        const badge = item.repository.stargazers_count && {
+          value: `☆ ${item.repository.stargazers_count}`,
+          badgeContainerStyle: { right: 10, backgroundColor: "#56579B" },
+          badgeTextStyle: { fontSize: 12 },
+        };
 
-          return <ListItem
+        return (
+          <ListItem
             hideChevron
             title={`${item.repository.owner.login}/${item.repository.name}`}
             subtitle={`Posted by ${item.postedBy.login}`}
             badge={badge}
-          />;
-        }
-      ) }
+          />
+        );
+      })}
     </List>
-  )
+  );
 }
 ```
 

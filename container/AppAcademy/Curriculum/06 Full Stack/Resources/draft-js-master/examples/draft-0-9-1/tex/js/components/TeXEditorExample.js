@@ -57,7 +57,7 @@ export default class TeXEditorExample extends React.Component {
     this._focus = () => this.editor.focus();
     this._onChange = (editorState) => this.setState({editorState});
 
-    this._handleKeyCommand = command => {
+    this._handleKeyCommand = (command) => {
       var {editorState} = this.state;
       var newState = RichUtils.handleKeyCommand(editorState, command);
       if (newState) {
@@ -99,7 +99,7 @@ export default class TeXEditorExample extends React.Component {
               onChange={this._onChange}
               placeholder="Start a document..."
               readOnly={this.state.liveTeXEdits.count()}
-              ref={(ref) => this.editor = ref}
+              ref={(ref) => (this.editor = ref)}
               spellCheck={true}
             />
           </div>

@@ -1,34 +1,32 @@
-const sumNoSpread = function(args) {
+const sumNoSpread = function (args) {
   let result = 0;
   let argList = [].slice.call(arguments);
-  argList.forEach((el) => result += el );
+  argList.forEach((el) => (result += el));
   return result;
 };
-console.log(sumNoSpread(1,2,3,4));
+console.log(sumNoSpread(1, 2, 3, 4));
 
-
-const sumWithSpread = function(...args) {
+const sumWithSpread = function (...args) {
   let result = 0;
-  args.forEach((el) => result += el );
+  args.forEach((el) => (result += el));
   return result;
 };
-console.log(sumWithSpread(1,2,3,4));
+console.log(sumWithSpread(1, 2, 3, 4));
 
-
-Function.prototype.myBind = function(context) {
+Function.prototype.myBind = function (context) {
   let that = this;
   var bindArgsList = [].slice.call(arguments, 1);
-  return function() {
+  return function () {
     var callArgsList = [].slice.call(arguments);
-    return that.apply(context, bindArgsList.concat(callArgsList))
-  }
-}
+    return that.apply(context, bindArgsList.concat(callArgsList));
+  };
+};
 
-Function.prototype.myBind = function(context, ...args) {
+Function.prototype.myBind = function (context, ...args) {
   return (...callArgs) => {
     this.apply(context, args.concat(callArgs));
-  }
-}
+  };
+};
 
 class Cat {
   constructor(name) {
@@ -75,26 +73,24 @@ notMarkovSays("meow", "me");
 // Pavlov says meow to me!
 // true
 
-
 function curriedSum(numArgs) {
   const numbers = [];
   return function _curriedSum(num) {
     numbers.push(num);
     if (numbers.length === numArgs) {
       let result = 0;
-      numbers.forEach((el) => result += el)
+      numbers.forEach((el) => (result += el));
       return result;
     } else {
       return _curriedSum;
     }
-  }
+  };
 }
 
 const sum = curriedSum(4);
 console.log(sum(5)(30)(20)(1)); // => 56
 
-
-Function.prototype.curryNormal = function(numArgs) {
+Function.prototype.curryNormal = function (numArgs) {
   const func = this;
   const argsList = [];
   return function currying(arg) {
@@ -104,11 +100,10 @@ Function.prototype.curryNormal = function(numArgs) {
     } else {
       return func(...argsList);
     }
-  }
+  };
 };
 
-
-Function.prototype.curryApply = function(context, numArgs) {
+Function.prototype.curryApply = function (context, numArgs) {
   const func = this;
   const argsList = [];
   return function currying(arg) {
@@ -118,21 +113,18 @@ Function.prototype.curryApply = function(context, numArgs) {
     } else {
       return func.apply(context, argsList);
     }
-  }
-}
+  };
+};
 
-
-
-const arraySum = function(...numsArray) {
+const arraySum = function (...numsArray) {
   let result = 0;
   // console.log(numsArray)
-  numsArray.forEach((el) => result += el)
+  numsArray.forEach((el) => (result += el));
   return result;
-}
+};
 
 const currySum = arraySum.curryNormal(4);
 console.log(currySum(5)(10)(20)(1)); // => 36
 
 const currySum2 = arraySum.curryApply(null, 4);
 console.log(currySum2(5)(10)(20)(1)); // => 36
-

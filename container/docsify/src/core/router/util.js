@@ -1,62 +1,64 @@
-import {cached} from '../util/core'
+import { cached } from "../util/core";
 
-const decode = decodeURIComponent
-const encode = encodeURIComponent
+const decode = decodeURIComponent;
+const encode = encodeURIComponent;
 
 export function parseQuery(query) {
-  const res = {}
+  const res = {};
 
-  query = query.trim().replace(/^(\?|#|&)/, '')
+  query = query.trim().replace(/^(\?|#|&)/, "");
 
   if (!query) {
-    return res
+    return res;
   }
 
   // Simple parse
-  query.split('&').forEach(function (param) {
-    const parts = param.replace(/\+/g, ' ').split('=')
+  query.split("&").forEach(function (param) {
+    const parts = param.replace(/\+/g, " ").split("=");
 
-    res[parts[0]] = parts[1] && decode(parts[1])
-  })
+    res[parts[0]] = parts[1] && decode(parts[1]);
+  });
 
-  return res
+  return res;
 }
 
 export function stringifyQuery(obj, ignores = []) {
-  const qs = []
+  const qs = [];
 
   for (const key in obj) {
     if (ignores.indexOf(key) > -1) {
-      continue
+      continue;
     }
     qs.push(
-      obj[key] ?
-        `${encode(key)}=${encode(obj[key])}`.toLowerCase() :
-        encode(key)
-    )
+      obj[key]
+        ? `${encode(key)}=${encode(obj[key])}`.toLowerCase()
+        : encode(key)
+    );
   }
 
-  return qs.length ? `?${qs.join('&')}` : ''
+  return qs.length ? `?${qs.join("&")}` : "";
 }
 
-export const isAbsolutePath = cached(path => {
-  return /(:|(\/{2}))/g.test(path)
-})
+export const isAbsolutePath = cached((path) => {
+  return /(:|(\/{2}))/g.test(path);
+});
 
-export const getParentPath = cached(path => {
-  return /\/$/g.test(path) ?
-    path :
-    (path = path.match(/(\S*\/)[^/]+$/)) ? path[1] : ''
-})
+export const getParentPath = cached((path) => {
+  return /\/$/g.test(path)
+    ? path
+    : (path = path.match(/(\S*\/)[^/]+$/))
+    ? path[1]
+    : "";
+});
 
-export const cleanPath = cached(path => {
-  return path.replace(/^\/+/, '/').replace(/([^:])\/{2,}/g, '$1/')
-})
+export const cleanPath = cached((path) => {
+  return path.replace(/^\/+/, "/").replace(/([^:])\/{2,}/g, "$1/");
+});
 
 export function getPath(...args) {
-  return cleanPath(args.join('/'))
+  return cleanPath(args.join("/"));
 }
 
-export const replaceSlug = cached(path => {
-  return path.replace('#', '?id=')
-})
+export const replaceSlug = cached((path) => {
+  return path.replace("#", "?id=");
+});

@@ -6,7 +6,7 @@
 // Prompt:
 // -------
 //
-// Given the implementation of a Doubly Linked List, design and implement 
+// Given the implementation of a Doubly Linked List, design and implement
 // an LRU, or Least Recently Used, cache.
 //
 // ------------
@@ -58,69 +58,68 @@
 // TODO: Implement the LRUCacheItem class here
 class LRUCacheItem {
   constructor(val = null, key = null) {
-    this.val = val
-    this.key = key
-    this.node = null
+    this.val = val;
+    this.key = key;
+    this.node = null;
   }
 }
 
 // TODO: Implement the LRUCacheItem class here
 class LRUCache {
   constructor(limit) {
-    this.limit = limit
-    this.items = {}
-    this.length = 0
-    this.ordering = new List()
+    this.limit = limit;
+    this.items = {};
+    this.length = 0;
+    this.ordering = new List();
   }
 
   // TODO: Implement the size method here
   size() {
-    return this.length
+    return this.length;
   }
 
   // TODO: Implement the get method here
   get(key) {
-    if (!this.items[key]) return null
+    if (!this.items[key]) return null;
 
-    const item = this.items[key]
-    this.promote(item)
+    const item = this.items[key];
+    this.promote(item);
 
-    return item.val
+    return item.val;
   }
 
   // TODO: Implement the set method here
   set(key, val) {
-    let item
+    let item;
 
     if (this.items[key]) {
-      item = this.items[key]
-      item.val = val
-      this.promote(item)
+      item = this.items[key];
+      item.val = val;
+      this.promote(item);
     } else {
-      if (this.isFull()) this.prune()
+      if (this.isFull()) this.prune();
 
-      item = new LRUCacheItem(val, key)
-      item.node = this.ordering.unshift(item)
-      this.items[key] = item
-      this.length++
+      item = new LRUCacheItem(val, key);
+      item.node = this.ordering.unshift(item);
+      this.items[key] = item;
+      this.length++;
     }
   }
 
   isFull() {
-    return this.length >= this.limit
+    return this.length >= this.limit;
   }
 
   prune() {
-    const oldest = this.ordering.pop()
-    delete this.items[oldest.key]
-    this.length = Math.max(0, this.length - 1)
+    const oldest = this.ordering.pop();
+    delete this.items[oldest.key];
+    this.length = Math.max(0, this.length - 1);
   }
 
   promote(item) {
-    this.ordering.moveToFront(item.node)
+    this.ordering.moveToFront(item.node);
   }
 }
-
 
 // ----------------------------------------
 // Given: Doubly Linked List - Do Not Edit!
@@ -131,7 +130,6 @@ class ListNode {
     this.val = val;
     this.next = next;
   }
-
 
   delete() {
     if (this.prev) this.prev.next = this.next;

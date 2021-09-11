@@ -1,7 +1,5 @@
-function radixSort(arr) {
-
-}
+function radixSort(arr) {}
 
 module.exports = {
-    radixSort
+  radixSort,
 };

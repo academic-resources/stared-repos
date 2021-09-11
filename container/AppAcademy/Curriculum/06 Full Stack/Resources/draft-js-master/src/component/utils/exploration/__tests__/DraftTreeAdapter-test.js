@@ -16,13 +16,13 @@ jest.mock('generateRandomKey');
 
 const DraftTreeAdapter = require('DraftTreeAdapter');
 
-const assertFromRawTreeStateToRawState = rawState => {
+const assertFromRawTreeStateToRawState = (rawState) => {
   expect(
     DraftTreeAdapter.fromRawTreeStateToRawState(rawState),
   ).toMatchSnapshot();
 };
 
-const assertFromRawStateToRawTreeState = rawState => {
+const assertFromRawStateToRawTreeState = (rawState) => {
   expect(
     DraftTreeAdapter.fromRawStateToRawTreeState(rawState),
   ).toMatchSnapshot();

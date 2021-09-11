@@ -1,7 +1,5 @@
-function insertionSort(arr) {
-
-}
+function insertionSort(arr) {}
 
 module.exports = {
-    insertionSort
+  insertionSort,
 };

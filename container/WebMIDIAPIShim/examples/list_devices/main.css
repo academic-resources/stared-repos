@@ -1,31 +1,32 @@
-html, body{
+html,
+body {
     background-color: #fff;
     font-family: monospace;
     font-size: 14px;
     line-height: 18px;
     padding: 10px;
 }
-h4{
-  font-weight: bolder;
-  margin-bottom: 7px;
+h4 {
+    font-weight: bolder;
+    margin-bottom: 7px;
 }
-#container{
-  width: 90%;
+#container {
+    width: 90%;
 }
-#container > div{
-  float: left;
-  margin-right: 40px;
-  margin-bottom: 25px;
+#container > div {
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 25px;
 }
-.small{
-  font-size: 0.9em;
+.small {
+    font-size: 0.9em;
 }
 /*clearfix*/
 .cf:before,
 .cf:after {
-  content: " ";
-  display: table;
+    content: " ";
+    display: table;
 }
 .cf:after {
-  clear: both;
+    clear: both;
 }

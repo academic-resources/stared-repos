@@ -1,17 +1,17 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import gql from 'graphql-tag';
-import ApolloClient from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { mockSingleLink, stripSymbols } from '@apollo/react-testing';
-import { ApolloProvider } from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import gql from "graphql-tag";
+import ApolloClient from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { mockSingleLink, stripSymbols } from "@apollo/react-testing";
+import { ApolloProvider } from "@apollo/react-common";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
-describe('client option', () => {
+describe("client option", () => {
   afterEach(cleanup);
 
-  it('renders with client from options', () => {
+  it("renders with client from options", () => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -21,22 +21,22 @@ describe('client option', () => {
         }
       }
     `;
-    const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
 
     type Data = typeof data;
 
     const link = mockSingleLink({
       request: { query },
-      result: { data }
+      result: { data },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
     const config = {
       options: {
-        client
-      }
+        client,
+      },
     };
     const ContainerWithData = graphql<{}, Data>(query, config)(() => null);
     render(
@@ -44,7 +44,7 @@ describe('client option', () => {
         client={
           new ApolloClient({
             link,
-            cache: new Cache({ addTypename: false })
+            cache: new Cache({ addTypename: false }),
           })
         }
       >
@@ -53,7 +53,7 @@ describe('client option', () => {
     );
   });
 
-  it('doesnt require a recycler', () => {
+  it("doesnt require a recycler", () => {
     const query = gql`
       query people {
         allPeople(first: 1) {
@@ -63,27 +63,27 @@ describe('client option', () => {
         }
       }
     `;
-    const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     type Data = typeof data;
 
     const link = mockSingleLink({
       request: { query },
-      result: { data }
+      result: { data },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
     const config = {
       options: {
-        client
-      }
+        client,
+      },
     };
     const ContainerWithData = graphql<{}, Data>(query, config)(() => null);
     render(<ContainerWithData />);
   });
 
-  it('ignores client from context if client from options is present', done => {
+  it("ignores client from context if client from options is present", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -94,32 +94,32 @@ describe('client option', () => {
       }
     `;
     const dataProvider = {
-      allPeople: { people: [{ name: 'Leia Organa Solo' }] }
+      allPeople: { people: [{ name: "Leia Organa Solo" }] },
     };
 
     type Data = typeof dataProvider;
     const linkProvider = mockSingleLink({
       request: { query },
-      result: { data: dataProvider }
+      result: { data: dataProvider },
     });
     const clientProvider = new ApolloClient({
       link: linkProvider,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
-    const dataOptions = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const dataOptions = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     const linkOptions = mockSingleLink({
       request: { query },
-      result: { data: dataOptions }
+      result: { data: dataOptions },
     });
     const clientOptions = new ApolloClient({
       link: linkOptions,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     const config = {
       options: {
-        client: clientOptions
-      }
+        client: clientOptions,
+      },
     };
 
     class Container extends React.Component<ChildProps<{}, Data>> {
@@ -127,7 +127,7 @@ describe('client option', () => {
         const { data } = this.props;
         expect(data!.loading).toBeFalsy(); // first data
         expect(stripSymbols(data!.allPeople)).toEqual({
-          people: [{ name: 'Luke Skywalker' }]
+          people: [{ name: "Luke Skywalker" }],
         });
         done();
       }
@@ -143,7 +143,7 @@ describe('client option', () => {
     );
   });
 
-  it('exposes refetch as part of the props api', done => {
+  it("exposes refetch as part of the props api", (done) => {
     const query: DocumentNode = gql`
       query people($first: Int) {
         allPeople(first: $first) {
@@ -156,16 +156,16 @@ describe('client option', () => {
     const variables = { first: 1 };
     type Variables = typeof variables;
 
-    const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     type Data = typeof data1;
 
     const link = mockSingleLink({
       request: { query, variables },
-      result: { data: data1 }
+      result: { data: data1 },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     const Container = graphql<Variables, Data, Variables>(query)(

@@ -4,7 +4,7 @@ const {
   GraphQLID,
   GraphQLString,
   GraphQLList,
-  GraphQLBoolean
+  GraphQLBoolean,
 } = graphql;
 
 const mongoose = require("mongoose");
@@ -23,10 +23,10 @@ const UserType = new GraphQLObjectType({
       resolve(parentValue) {
         return User.findById(parentValue.id)
           .populate("posts")
-          .then(user => user.posts);
-      }
-    }
-  })
-}); 
+          .then((user) => user.posts);
+      },
+    },
+  }),
+});
 
 module.exports = UserType;

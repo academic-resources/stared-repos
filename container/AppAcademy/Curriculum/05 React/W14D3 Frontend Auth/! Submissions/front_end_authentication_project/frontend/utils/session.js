@@ -1,24 +1,19 @@
-
-export const postUser = (user) => (
+export const postUser = (user) =>
   $.ajax({
-    method: 'POST',
-    url: 'api/users',
-    data: {user}
-  })
-)
+    method: "POST",
+    url: "api/users",
+    data: { user },
+  });
 
-export const postSession = (user) => (
+export const postSession = (user) =>
   $.ajax({
-    method: 'POST',
-    url: 'api/session',
-    data: { user }
-  })
-)
+    method: "POST",
+    url: "api/session",
+    data: { user },
+  });
 
-export const deleteSession = () => (
+export const deleteSession = () =>
   $.ajax({
-    method: 'DELETE',
-    url: 'api/session',
-  })
-)
-
+    method: "DELETE",
+    url: "api/session",
+  });

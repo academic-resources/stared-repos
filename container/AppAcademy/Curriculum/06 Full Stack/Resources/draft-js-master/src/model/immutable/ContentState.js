@@ -72,7 +72,7 @@ class ContentState extends ContentStateRecord {
     return this.getBlockMap()
       .reverse()
       .keySeq()
-      .skipUntil(v => v === key)
+      .skipUntil((v) => v === key)
       .skip(1)
       .first();
   }
@@ -80,7 +80,7 @@ class ContentState extends ContentStateRecord {
   getKeyAfter(key: string): ?string {
     return this.getBlockMap()
       .keySeq()
-      .skipUntil(v => v === key)
+      .skipUntil((v) => v === key)
       .skip(1)
       .first();
   }
@@ -114,7 +114,7 @@ class ContentState extends ContentStateRecord {
 
   getPlainText(delimiter?: string): string {
     return this.getBlockMap()
-      .map(block => {
+      .map((block) => {
         return block ? block.getText() : '';
       })
       .join(delimiter || '\n');
@@ -187,7 +187,7 @@ class ContentState extends ContentStateRecord {
     delimiter: string | RegExp = /\r\n?|\n/g,
   ): ContentState {
     const strings = text.split(delimiter);
-    const blocks = strings.map(block => {
+    const blocks = strings.map((block) => {
       block = sanitizeDraftText(block);
       const ContentBlockNodeRecord = gkx('draft_tree_data_support')
         ? ContentBlockNode

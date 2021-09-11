@@ -4,9 +4,9 @@
 // mystery scoping
 
 function mysteryScoping1() {
-  var x = 'out of block';
+  var x = "out of block";
   if (true) {
-    var x = 'in block';
+    var x = "in block";
     console.log(x);
   }
   console.log(x);
@@ -15,9 +15,9 @@ function mysteryScoping1() {
 mysteryScoping1(); // in block, in block
 
 function mysteryScoping2() {
-  const x = 'out of block';
+  const x = "out of block";
   if (true) {
-    const x = 'in block';
+    const x = "in block";
     console.log(x);
   }
   console.log(x);
@@ -26,9 +26,9 @@ function mysteryScoping2() {
 mysteryScoping2(); // in block, out of block
 
 function mysteryScoping3() {
-  const x = 'out of block';
+  const x = "out of block";
   if (true) {
-    var x = 'in block';
+    var x = "in block";
     console.log(x);
   }
   console.log(x);
@@ -37,9 +37,9 @@ function mysteryScoping3() {
 mysteryScoping3(); // SyntaxError
 
 function mysteryScoping4() {
-  let x = 'out of block';
+  let x = "out of block";
   if (true) {
-    let x = 'in block';
+    let x = "in block";
     console.log(x);
   }
   console.log(x);
@@ -48,12 +48,12 @@ function mysteryScoping4() {
 mysteryScoping4(); // in block, out of block
 
 function mysteryScoping5() {
-  let x = 'out of block';
+  let x = "out of block";
   if (true) {
-    let x = 'in block';
+    let x = "in block";
     console.log(x);
   }
-  let x = 'out of block again';
+  let x = "out of block again";
   console.log(x);
 }
 
@@ -62,7 +62,7 @@ mysteryScoping5(); // SyntaxError
 // madLib
 
 function madLib(verb, adj, noun) {
-  return `We shall ${verb.toUpperCase()} the ${adj.toUpperCase()} ${noun.toUpperCase()}.`
+  return `We shall ${verb.toUpperCase()} the ${adj.toUpperCase()} ${noun.toUpperCase()}.`;
 }
 
 // isSubstring
@@ -75,10 +75,10 @@ function isSubstring(phrase, subphrase) {
 
 // fizzBuzz
 
-function fizzBuzz (array) {
+function fizzBuzz(array) {
   const fizzBuzzArr = [];
 
-  array.forEach(el => {
+  array.forEach((el) => {
     if ((el % 3 === 0) ^ (el % 5 === 0)) {
       fizzBuzzArr.push(el);
     }
@@ -89,8 +89,10 @@ function fizzBuzz (array) {
 
 // isPrime
 
-function isPrime (n) {
-  if (n < 2) { return false; }
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
 
   for (let i = 2; i < n; i++) {
     if (n % i === 0) {
@@ -103,7 +105,7 @@ function isPrime (n) {
 
 // sumOfNPrimes
 
-function sumOfNPrimes (n) {
+function sumOfNPrimes(n) {
   let sum = 0;
   let countPrimes = 0;
   let i = 2;

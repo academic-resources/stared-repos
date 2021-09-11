@@ -23,7 +23,7 @@ const ToyIndex = () => (
         <div>
           <h1>ToyIndex</h1>
           <ul>
-            {data.toys.map(toy => (
+            {data.toys.map((toy) => (
               <li key={toy._id}>
                 <p>{toy.name}</p>
               </li>

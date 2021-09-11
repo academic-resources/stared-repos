@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default ({ team, close, showChangeDialog }) => {
   return (
@@ -13,5 +13,5 @@ export default ({ team, close, showChangeDialog }) => {
       </div>
       <Link to={`/teams/${team.id}`}>View Team Page</Link>
     </div>
-  )
-}
+  );
+};

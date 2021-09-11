@@ -116,7 +116,7 @@ const getProps = (block, decorator) => {
 };
 
 const arePropsEqual = (renderedChild, leafPropSet) => {
-  Object.keys(leafPropSet).forEach(key => {
+  Object.keys(leafPropSet).forEach((key) => {
     expect(
       Immutable.is(leafPropSet[key], renderedChild.props[key]),
     ).toMatchSnapshot();
@@ -161,7 +161,7 @@ test('must render multiple leaf nodes', () => {
   let characters = helloBlock.getCharacterList();
   characters = characters
     .slice(0, boldLength)
-    .map(c => CharacterMetadata.applyStyle(c, 'BOLD'))
+    .map((c) => CharacterMetadata.applyStyle(c, 'BOLD'))
     .concat(characters.slice(boldLength));
 
   helloBlock = helloBlock.set('characterList', characters.toList());
@@ -382,7 +382,7 @@ test('must split apart styled spans', () => {
   const characters = helloBlock.getCharacterList();
   const newChars = characters
     .slice(0, 2)
-    .map(ch => {
+    .map((ch) => {
       return CharacterMetadata.applyStyle(ch, 'BOLD');
     })
     .concat(characters.slice(2));

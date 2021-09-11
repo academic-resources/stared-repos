@@ -25,7 +25,7 @@ const removeTextWithStrategy = require('removeTextWithStrategy');
 function keyCommandPlainDelete(editorState: EditorState): EditorState {
   const afterRemoval = removeTextWithStrategy(
     editorState,
-    strategyState => {
+    (strategyState) => {
       const selection = strategyState.getSelection();
       const content = strategyState.getCurrentContent();
       const key = selection.getAnchorKey();

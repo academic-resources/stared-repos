@@ -14,18 +14,19 @@ const PeopleList = ({ items, clickHandler, selectedIndex }) => (
       enter={[{ opacity: 1 }]}
       leave={[{ opacity: 0.5 }]}
     >
-      {item => props => (
-        <animated.div
-          key={item}
-          style={props}
-          className={`person${
-            items.indexOf(item) === selectedIndex ? ' person__selected' : ''
-          }`}
-          onClick={() => clickHandler(item)}
-        >
-          <img alt="curator" src={item} />
-        </animated.div>
-      )}
+      {(item) => (props) =>
+        (
+          <animated.div
+            key={item}
+            style={props}
+            className={`person${
+              items.indexOf(item) === selectedIndex ? ' person__selected' : ''
+            }`}
+            onClick={() => clickHandler(item)}
+          >
+            <img alt="curator" src={item} />
+          </animated.div>
+        )}
     </Transition>
   </div>
 )

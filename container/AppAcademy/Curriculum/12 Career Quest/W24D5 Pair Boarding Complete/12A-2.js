@@ -5,7 +5,7 @@
 // In our brute-force solution, we traverse our tree, finding the depth at each node using a helper getDepth function, which travels all the way to the leaf nodes of the tree and returns a depth. We then make recursive calls to make sure that both the left and right sides of the tree are also balanced. getDepth takes O(n) time, where n is the number of nodes, and isBalanced takes O(n) time, since we must call it once for each node. This leads to a total time complexity of O(n**2).
 
 // Take in the root node
-function isBalanced (node) {
+function isBalanced(node) {
   // Base case: the tree is empty.  Return true.
   if (!node) {
     return true;
@@ -18,10 +18,10 @@ function isBalanced (node) {
 
   // The tree is balanced if both subtrees are balanced AND
   // the difference in depths of those subtrees is between -1 and 1
-  return (isBalanced(node.left) && isBalanced(node.right)) && depthDiff < 2;
+  return isBalanced(node.left) && isBalanced(node.right) && depthDiff < 2;
 }
 
-function getDepth (node) {
+function getDepth(node) {
   // Base case: empty tree.  Depth is 0.
   if (!node) {
     return 0;
@@ -33,23 +33,26 @@ function getDepth (node) {
 
 // We can do better by avoiding repetitive calls to isBalanced. Rather than checking all the way to the leaf nodes at each point in our tree, we can simply make it to the leaf nodes first and return a depth as we traverse back up.
 
-function isBalanced (node) {
+function isBalanced(node) {
   return isBalancedNode(node).isBalanced;
 }
 
-function isBalancedNode (node) {
+function isBalancedNode(node) {
   if (!node) {
-    return {isBalanced: true, depth: -1};
+    return { isBalanced: true, depth: -1 };
   }
 
   let left = isBalancedNode(node.left);
   let right = isBalancedNode(node.right);
 
-  if (left.isBalanced && right.isBalanced &&
-        Math.abs(left.depth - right.depth) <= 1) {
-    return {isBalanced: true, depth: Math.max(right.depth, left.depth) + 1};
+  if (
+    left.isBalanced &&
+    right.isBalanced &&
+    Math.abs(left.depth - right.depth) <= 1
+  ) {
+    return { isBalanced: true, depth: Math.max(right.depth, left.depth) + 1 };
   } else {
-    return {isBalanced: false, depth: 0};
+    return { isBalanced: false, depth: 0 };
   }
 }
 

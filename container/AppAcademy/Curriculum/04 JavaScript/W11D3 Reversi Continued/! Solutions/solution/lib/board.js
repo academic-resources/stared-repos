@@ -24,14 +24,19 @@ function _makeGrid() {
 /**
  * Constructs a Board with a starting grid set up.
  */
-function Board () {
+function Board() {
   this.grid = _makeGrid();
 }
 
 Board.DIRS = [
-  [ 0,  1], [ 1,  1], [ 1,  0],
-  [ 1, -1], [ 0, -1], [-1, -1],
-  [-1,  0], [-1,  1]
+  [0, 1],
+  [1, 1],
+  [1, 0],
+  [1, -1],
+  [0, -1],
+  [-1, -1],
+  [-1, 0],
+  [-1, 1],
 ];
 
 /**
@@ -81,7 +86,7 @@ Board.prototype.isOver = function () {
  * Checks if a given position is on the Board.
  */
 Board.prototype.isValidPos = function (pos) {
-  return (pos[0] >= 0 && pos[0] < 8) && (pos[1] >= 0 && pos[1] < 8);
+  return pos[0] >= 0 && pos[0] < 8 && pos[1] >= 0 && pos[1] < 8;
 };
 
 /**
@@ -125,12 +130,11 @@ function _positionsToFlip(board, pos, color, dir, piecesToFlip) {
  */
 Board.prototype.placePiece = function (pos, color) {
   if (!this.validMove(pos, color)) {
-    throw new Error('Invalid move!');
+    throw new Error("Invalid move!");
   }
 
   let positionsToFlip = [];
   for (let dirIdx = 0; dirIdx < Board.DIRS.length; dirIdx++) {
-
     positionsToFlip = positionsToFlip.concat(
       _positionsToFlip(this, pos, color, Board.DIRS[dirIdx]) || []
     );
@@ -152,8 +156,7 @@ Board.prototype.print = function () {
 
     for (let j = 0; j < 8; j++) {
       let pos = [i, j];
-      rowString +=
-        (this.getPiece(pos) ? this.getPiece(pos).toString() : ".");
+      rowString += this.getPiece(pos) ? this.getPiece(pos).toString() : ".";
     }
 
     console.log(rowString);
@@ -171,8 +174,7 @@ Board.prototype.validMove = function (pos, color) {
   }
 
   for (let i = 0; i < Board.DIRS.length; i++) {
-    const piecesToFlip =
-      _positionsToFlip(this, pos, color, Board.DIRS[i]);
+    const piecesToFlip = _positionsToFlip(this, pos, color, Board.DIRS[i]);
     if (piecesToFlip) {
       return true;
     }

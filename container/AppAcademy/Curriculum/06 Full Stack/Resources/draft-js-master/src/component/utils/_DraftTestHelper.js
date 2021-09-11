@@ -21,7 +21,7 @@ const transformSnapshotProps = (
       if (node.props.className) {
         node.props.className = node.props.className.replace(/-/g, '__');
       }
-      BLACK_LIST_PROPS.forEach(prop => delete node.props[prop]);
+      BLACK_LIST_PROPS.forEach((prop) => delete node.props[prop]);
     }
     if (Array.isArray(node.children)) {
       stack.push(...node.children);

@@ -47,12 +47,12 @@ const updateBlockMapLinks = (
   originalBlock: ContentBlockNode,
   belowBlock: ContentBlockNode,
 ): BlockMap => {
-  return blockMap.withMutations(blocks => {
+  return blockMap.withMutations((blocks) => {
     const originalBlockKey = originalBlock.getKey();
     const belowBlockKey = belowBlock.getKey();
 
     // update block parent
-    transformBlock(originalBlock.getParentKey(), blocks, block => {
+    transformBlock(originalBlock.getParentKey(), blocks, (block) => {
       const parentChildrenList = block.getChildKeys();
       const insertionIndex = parentChildrenList.indexOf(originalBlockKey) + 1;
       const newChildrenArray = parentChildrenList.toArray();
@@ -65,21 +65,21 @@ const updateBlockMapLinks = (
     });
 
     // update original next block
-    transformBlock(originalBlock.getNextSiblingKey(), blocks, block =>
+    transformBlock(originalBlock.getNextSiblingKey(), blocks, (block) =>
       block.merge({
         prevSibling: belowBlockKey,
       }),
     );
 
     // update original block
-    transformBlock(originalBlockKey, blocks, block =>
+    transformBlock(originalBlockKey, blocks, (block) =>
       block.merge({
         nextSibling: belowBlockKey,
       }),
     );
 
     // update below block
-    transformBlock(belowBlockKey, blocks, block =>
+    transformBlock(belowBlockKey, blocks, (block) =>
       block.merge({
         prevSibling: originalBlockKey,
       }),
@@ -104,7 +104,7 @@ const splitBlockInContentState = (
       blockType === 'unordered-list-item' ||
       blockType === 'ordered-list-item'
     ) {
-      return modifyBlockForContentState(contentState, selectionState, block =>
+      return modifyBlockForContentState(contentState, selectionState, (block) =>
         block.merge({type: 'unstyled', depth: 0}),
       );
     }
@@ -126,13 +126,19 @@ const splitBlockInContentState = (
     data: Map(),
   });
 
-  const blocksBefore = blockMap.toSeq().takeUntil(v => v === blockToSplit);
+  const blocksBefore = blockMap.toSeq().takeUntil((v) => v === blockToSplit);
   const blocksAfter = blockMap
     .toSeq()
-    .skipUntil(v => v === blockToSplit)
+    .skipUntil((v) => v === blockToSplit)
     .rest();
   let newBlocks = blocksBefore
-    .concat([[key, blockAbove], [keyBelow, blockBelow]], blocksAfter)
+    .concat(
+      [
+        [key, blockAbove],
+        [keyBelow, blockBelow],
+      ],
+      blocksAfter,
+    )
     .toOrderedMap();
 
   if (isExperimentalTreeBlock) {

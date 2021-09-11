@@ -5,7 +5,7 @@ const keys = require("../config/keys");
 const validateInputs = require("../validation/register");
 
 // here we'll be taking in the `data` from our mutation
-const register = async data => {
+const register = async (data) => {
   try {
     const { message, isValid } = validateInputs(data);
     if (!isValid) {
@@ -19,9 +19,9 @@ const register = async data => {
       {
         name,
         email,
-        password: hashedPassword
+        password: hashedPassword,
       },
-      err => {
+      (err) => {
         if (err) throw err;
       }
     );

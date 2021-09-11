@@ -24,7 +24,7 @@ const DEFAULT_CONFIG = {
   hasFocus: true,
 };
 
-const flip = selectionState => {
+const flip = (selectionState) => {
   return selectionState.merge({
     anchorKey: selectionState.getFocusKey(),
     anchorOffset: selectionState.getFocusOffset(),

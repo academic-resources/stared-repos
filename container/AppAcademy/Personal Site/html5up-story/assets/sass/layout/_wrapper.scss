@@ -6,44 +6,44 @@
 
 /* Wrapper */
 
-	@mixin wrapper-color($n) {
-		> .color#{$n} {
-			background-color: _palette(color#{$n});
-		}
-	}
+@mixin wrapper-color($n) {
+  > .color#{$n} {
+    background-color: _palette(color#{$n});
+  }
+}
 
-	#wrapper {
-		background-color: inherit;
-		width: 100%;
-		overflow-x: hidden;
+#wrapper {
+  background-color: inherit;
+  width: 100%;
+  overflow-x: hidden;
 
-		> .invert {
-			@include color(invert);
-		}
+  > .invert {
+    @include color(invert);
+  }
 
-		@include wrapper-color(1);
-		@include wrapper-color(2);
-		@include wrapper-color(3);
-		@include wrapper-color(4);
-		@include wrapper-color(5);
-		@include wrapper-color(6);
-		@include wrapper-color(7);
+  @include wrapper-color(1);
+  @include wrapper-color(2);
+  @include wrapper-color(3);
+  @include wrapper-color(4);
+  @include wrapper-color(5);
+  @include wrapper-color(6);
+  @include wrapper-color(7);
 
-		&.divided {
-			> * {
-				box-shadow: inset 0 1px 0 0 _palette(border-alt);
+  &.divided {
+    > * {
+      box-shadow: inset 0 1px 0 0 _palette(border-alt);
 
-				&:first-child {
-					box-shadow: none !important;
-				}
-			}
+      &:first-child {
+        box-shadow: none !important;
+      }
+    }
 
-			> .invert {
-				box-shadow: inset 0 1px 0 0 _palette(invert, border-alt);
+    > .invert {
+      box-shadow: inset 0 1px 0 0 _palette(invert, border-alt);
 
-				&:first-child {
-					box-shadow: none !important;
-				}
-			}
-		}
-	}
+      &:first-child {
+        box-shadow: none !important;
+      }
+    }
+  }
+}

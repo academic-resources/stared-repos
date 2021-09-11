@@ -1,4 +1,25 @@
-html, body, div, span, h1, h2, h3, h4, a, p, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav {
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+ol,
+ul,
+li,
+form,
+label,
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+nav {
   margin: 0;
   padding: 0;
   border: 0;
@@ -9,10 +30,11 @@ html, body, div, span, h1, h2, h3, h4, a, p, ol, ul, li, form, label, article, a
   box-sizing: content-box;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
 img {
-  width: 100%
+  width: 100%;
 }

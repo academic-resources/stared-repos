@@ -1,16 +1,16 @@
-import React from 'react';
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { ApolloProvider } from '@apollo/react-common';
-import { MockSubscriptionLink } from '@apollo/react-testing';
-import { render, cleanup } from '@testing-library/react';
-import gql from 'graphql-tag';
-import { useSubscription } from '@apollo/react-hooks';
+import React from "react";
+import { ApolloClient } from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { ApolloProvider } from "@apollo/react-common";
+import { MockSubscriptionLink } from "@apollo/react-testing";
+import { render, cleanup } from "@testing-library/react";
+import gql from "graphql-tag";
+import { useSubscription } from "@apollo/react-hooks";
 
-describe('useSubscription Hook', () => {
+describe("useSubscription Hook", () => {
   afterEach(cleanup);
 
-  it('should handle a simple subscription properly', done => {
+  it("should handle a simple subscription properly", (done) => {
     const subscription = gql`
       subscription {
         car {
@@ -19,14 +19,14 @@ describe('useSubscription Hook', () => {
       }
     `;
 
-    const results = ['Audi', 'BMW', 'Mercedes', 'Hyundai'].map(make => ({
-      result: { data: { car: { make } } }
+    const results = ["Audi", "BMW", "Mercedes", "Hyundai"].map((make) => ({
+      result: { data: { car: { make } } },
     }));
 
     const link = new MockSubscriptionLink();
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let renderCount = 0;
@@ -72,7 +72,7 @@ describe('useSubscription Hook', () => {
     );
   });
 
-  it('should cleanup after the subscription component has been unmounted', done => {
+  it("should cleanup after the subscription component has been unmounted", (done) => {
     const subscription = gql`
       subscription {
         car {
@@ -83,14 +83,14 @@ describe('useSubscription Hook', () => {
 
     const results = [
       {
-        result: { data: { car: { make: 'Pagani' } } }
-      }
+        result: { data: { car: { make: "Pagani" } } },
+      },
     ];
 
     const link = new MockSubscriptionLink();
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let renderCount = 0;
@@ -101,7 +101,7 @@ describe('useSubscription Hook', () => {
       const { loading, data, error } = useSubscription(subscription, {
         onSubscriptionData() {
           onSubscriptionDataCount += 1;
-        }
+        },
       });
       switch (renderCount) {
         case 0:

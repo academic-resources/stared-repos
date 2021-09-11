@@ -19,13 +19,13 @@ services:
     image: postgres:9.4
     volumes:
       - "postgres:/var/lib/postgresql/data"
-    networks: 
+    networks:
       - backend
   result:
     image: dockersamples/examplevotingapp_result:before
     ports:
       - "5001:80"
-    networks: 
+    networks:
       - backend
 
 volumes:

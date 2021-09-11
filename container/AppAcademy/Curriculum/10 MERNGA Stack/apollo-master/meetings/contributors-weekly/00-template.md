@@ -1,7 +1,8 @@
-*<date> at <time> Pacific Time*
+_<date> at <time> Pacific Time_
 
 ### Attendees
-*Added during the meeting*
+
+_Added during the meeting_
 
 ### Agenda
 
@@ -20,4 +21,5 @@ Please feel free to add your own sections.
 **Opportunities to Collaborate**
 
 ### Notes
-*Added after the meeting*
+
+_Added after the meeting_

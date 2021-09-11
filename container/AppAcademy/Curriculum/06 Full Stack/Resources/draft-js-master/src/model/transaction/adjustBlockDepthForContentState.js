@@ -28,7 +28,7 @@ function adjustBlockDepthForContentState(
     .skipUntil((_, k) => k === startKey)
     .takeUntil((_, k) => k === endKey)
     .concat([[endKey, blockMap.get(endKey)]])
-    .map(block => {
+    .map((block) => {
       let depth = block.getDepth() + adjustment;
       depth = Math.max(0, Math.min(depth, maxDepth));
       return block.set('depth', depth);

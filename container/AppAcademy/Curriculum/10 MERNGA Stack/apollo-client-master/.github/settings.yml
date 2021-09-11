@@ -57,7 +57,7 @@ labels:
     color: ededed
   - name: no-recent-activity
     color: ededed
-  
+
   # priority
   - name: high-priority
     color: b60205
@@ -67,9 +67,7 @@ labels:
     color: fef2c0
   - name: pull-requests-encouraged
     color: 0e8a16
-  
+
   # tech specific
   - name: typescript
     color: 1d76db
-
-  

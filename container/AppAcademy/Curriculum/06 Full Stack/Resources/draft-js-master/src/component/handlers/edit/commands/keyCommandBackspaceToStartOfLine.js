@@ -23,7 +23,7 @@ function keyCommandBackspaceToStartOfLine(
 ): EditorState {
   const afterRemoval = removeTextWithStrategy(
     editorState,
-    strategyState => {
+    (strategyState) => {
       const selection = strategyState.getSelection();
       if (selection.isCollapsed() && selection.getAnchorOffset() === 0) {
         return moveSelectionBackward(strategyState, 1);

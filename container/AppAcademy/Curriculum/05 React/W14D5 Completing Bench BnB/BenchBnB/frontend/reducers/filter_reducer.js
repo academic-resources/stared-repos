@@ -1,13 +1,13 @@
-import { UPDATE_BOUNDS } from '../actions/filter_actions'
+import { UPDATE_BOUNDS } from "../actions/filter_actions";
 
 const filterReducer = (state = {}, action) => {
-  switch (action.type){
+  switch (action.type) {
     case UPDATE_BOUNDS:
-      return action.bounds
+      return action.bounds;
 
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default filterReducer
+export default filterReducer;

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Mutation } from '@apollo/react-components';
-import gql from 'graphql-tag';
+import React from "react";
+import { Mutation } from "@apollo/react-components";
+import gql from "graphql-tag";
 
 export const ADD_USER = gql`
   mutation create($username: String!) {
@@ -13,7 +13,7 @@ export const ADD_USER = gql`
 
 export default class AddUser extends React.Component {
   state = {
-    username: ''
+    username: "",
   };
   render() {
     const { username } = this.state;
@@ -29,7 +29,7 @@ export default class AddUser extends React.Component {
                 <input
                   placeholder="Username"
                   value={username}
-                  onChange={e => this.setState({ username: e.target.value })}
+                  onChange={(e) => this.setState({ username: e.target.value })}
                 />
                 <button data-testid="add-user-button" onClick={addUser}>
                   Create new user

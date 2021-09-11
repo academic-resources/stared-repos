@@ -1,3 +1,3 @@
-import React from 'react'
+import React from "react";
 
-export default () => <div>LIU Menu Button</div>
+export default () => <div>LIU Menu Button</div>;

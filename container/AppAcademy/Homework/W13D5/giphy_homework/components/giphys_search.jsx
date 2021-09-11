@@ -1,45 +1,44 @@
-import React from 'react';
+import React from "react";
 
-import GiphysIndex from './giphys_index';
-
+import GiphysIndex from "./giphys_index";
 
 class GiphysSearch extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      searchTerm: ''
-    }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+      searchTerm: "",
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange (field) {
-    return e => {
-      this.setState({ 
-        [field]: e.target.value
-      })
-    }
+  handleChange(field) {
+    return (e) => {
+      this.setState({
+        [field]: e.target.value,
+      });
+    };
   }
 
-  handleSubmit (e) {
-    e.preventDefault()
-    const searchTerm = this.state
+  handleSubmit(e) {
+    e.preventDefault();
+    const searchTerm = this.state;
     // this.props.fetchSearchGiphys({ searchTerm })
-      // .then(result => {debugger})
+    // .then(result => {debugger})
   }
 
-  render () {
+  render() {
     return (
       <form action="">
         <h1>Giphy Search</h1>
-        <label>Search:
-          <input type="text" onChange={this.handleChange}/>
+        <label>
+          Search:
+          <input type="text" onChange={this.handleChange} />
         </label>
-        <input type="submit" value="Search" onClick={this.handleSubmit}/>
+        <input type="submit" value="Search" onClick={this.handleSubmit} />
       </form>
-    )
+    );
   }
-  
 }
 
-export default GiphysSearch
+export default GiphysSearch;

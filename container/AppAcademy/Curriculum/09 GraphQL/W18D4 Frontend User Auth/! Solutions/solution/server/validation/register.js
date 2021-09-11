@@ -10,7 +10,7 @@ module.exports = function validateRegisterInput(data) {
   if (!Validator.isLength(data.name, { min: 2, max: 30 })) {
     return {
       message: "Name must be between 2 and 30 characters",
-      isValid: false
+      isValid: false,
     };
   }
 
@@ -33,12 +33,12 @@ module.exports = function validateRegisterInput(data) {
   if (!Validator.isLength(data.password, { min: 6, max: 30 })) {
     return {
       message: "Password must be at least 6 characters",
-      isValid: false
+      isValid: false,
     };
   }
 
   return {
     message: "",
-    isValid: true
+    isValid: true,
   };
 };

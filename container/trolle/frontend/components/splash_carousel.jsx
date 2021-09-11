@@ -1,32 +1,32 @@
-import React from 'react'
+import React from "react";
 
 class Carousel extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.picsArray = [
       window.splash_image_4,
       window.splash_image_5,
       window.splash_image_6,
       window.splash_image_7,
-      window.splash_image_8
-    ]
+      window.splash_image_8,
+    ];
 
     this.state = {
-      pic_num: 0
-    }
+      pic_num: 0,
+    };
   }
 
   moveLeft() {
     this.setState({
-      pic_num: (this.state.pic_num - 1 + 5) % 5
-    })
+      pic_num: (this.state.pic_num - 1 + 5) % 5,
+    });
   }
 
   moveRight() {
     this.setState({
-      pic_num: (this.state.pic_num + 1) % 5
-    })
+      pic_num: (this.state.pic_num + 1) % 5,
+    });
   }
 
   render() {
@@ -59,8 +59,8 @@ class Carousel extends React.Component {
           </svg>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Carousel
+export default Carousel;

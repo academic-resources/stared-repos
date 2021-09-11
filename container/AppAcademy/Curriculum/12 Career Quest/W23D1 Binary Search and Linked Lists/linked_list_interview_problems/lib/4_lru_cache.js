@@ -6,7 +6,7 @@
 // Prompt:
 // -------
 //
-// Given the implementation of a Doubly Linked List, design and implement 
+// Given the implementation of a Doubly Linked List, design and implement
 // an LRU, or Least Recently Used, cache.
 //
 // ------------
@@ -57,45 +57,28 @@
 // -----------
 // TODO: Implement the LRUCacheItem class here
 class LRUCacheItem {
-  constructor(val = null, key = null) {
-
-  }
+  constructor(val = null, key = null) {}
 }
 
 // TODO: Implement the LRUCacheItem class here
 class LRUCache {
-  constructor(limit) {
-
-  }
+  constructor(limit) {}
 
   // TODO: Implement the size method here
-  size() {
-
-  }
+  size() {}
 
   // TODO: Implement the get method here
-  get(key) {
-
-  }
+  get(key) {}
 
   // TODO: Implement the set method here
-  set(key, val) {
+  set(key, val) {}
 
-  }
+  isFull() {}
 
-  isFull() {
-    
-  }
+  prune() {}
 
-  prune() {
-
-  }
-
-  promote(item) {
-
-  }
+  promote(item) {}
 }
-
 
 // ----------------------------------------
 // Given: Doubly Linked List - Do Not Edit!
@@ -106,7 +89,6 @@ class ListNode {
     this.val = val;
     this.next = next;
   }
-
 
   delete() {
     if (this.prev) this.prev.next = this.next;

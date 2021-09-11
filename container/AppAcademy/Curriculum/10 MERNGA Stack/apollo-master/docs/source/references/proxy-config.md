@@ -10,17 +10,11 @@ The `ApolloEngine` class in the `apollo-engine` npm package takes care of fillin
 
 All Durations are represented as strings consisting of a number of seconds followed by the letter `s`, such as `"30s"` or `".5s"`.
 
-
-
-
-
-
-
 <a name="mdg.engine.config.proto.Config"/>
 
 ## Top level options
-These are the top-level options for the `new ApolloEngine()` or `new ApolloEngineLauncher()` constructors or for the `engine-config.json` file.
 
+These are the top-level options for the `new ApolloEngine()` or `new ApolloEngineLauncher()` constructors or for the `engine-config.json` file.
 
 <dl>
 <dt>apiKey (string)</dt>
@@ -46,13 +40,11 @@ These are the top-level options for the `new ApolloEngine()` or `new ApolloEngin
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.DebugServer"/>
 
 ## DebugServer
-DebugServer configures an HTTP server which can be used to debug the Proxy. If you enable the debug server in production, you should ensure that its port is not publicly accessible, as it provides internal information about the Proxy. The server includes the [Go pprof profiler](https://golang.org/pkg/net/http/pprof/). Apollo support may direct you to enable this server, and send them the files created by commands such as `wget http://127.0.0.1:4444/debug/pprof/profile`.
 
+DebugServer configures an HTTP server which can be used to debug the Proxy. If you enable the debug server in production, you should ensure that its port is not publicly accessible, as it provides internal information about the Proxy. The server includes the [Go pprof profiler](https://golang.org/pkg/net/http/pprof/). Apollo support may direct you to enable this server, and send them the files created by commands such as `wget http://127.0.0.1:4444/debug/pprof/profile`.
 
 <dl>
 <dt>host (string)</dt>
@@ -62,13 +54,11 @@ DebugServer configures an HTTP server which can be used to debug the Proxy. If y
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Frontend"/>
 
 ## Frontend
-Frontend defines a web server run by the Proxy. The Proxy will listen on each frontend for incoming GraphQL requests.
 
+Frontend defines a web server run by the Proxy. The Proxy will listen on each frontend for incoming GraphQL requests.
 
 <dl>
 <dt>host (string)</dt>
@@ -96,13 +86,11 @@ Frontend defines a web server run by the Proxy. The Proxy will listen on each fr
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Frontend.Extensions"/>
 
 ## Frontend.Extensions
-Configuration for GraphQL response extensions.
 
+Configuration for GraphQL response extensions.
 
 <dl>
 <dt>strip (array of string)</dt>
@@ -112,13 +100,11 @@ Configuration for GraphQL response extensions.
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Frontend.ResponseCompression"/>
 
 ## Frontend.ResponseCompression
-Configuration of GraphQL response compression.
 
+Configuration of GraphQL response compression.
 
 <dl>
 <dt>disabled (bool)</dt>
@@ -130,13 +116,11 @@ Configuration of GraphQL response compression.
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Frontend.TLS"/>
 
 ## Frontend.TLS
-Configuration for TLS/HTTPS connections. TLS configuration can not be changed at runtime.
 
+Configuration for TLS/HTTPS connections. TLS configuration can not be changed at runtime.
 
 <dl>
 <dt>certificateFile (string)</dt>
@@ -148,13 +132,11 @@ Configuration for TLS/HTTPS connections. TLS configuration can not be changed at
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Logging"/>
 
 ## Logging
-The logging configuration.
 
+The logging configuration.
 
 <dl>
 <dt>level (string)</dt>
@@ -170,13 +152,11 @@ The logging configuration.
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Logging.AccessLogging"/>
 
 ## Logging.AccessLogging
-Configuration for access logging.
 
+Configuration for access logging.
 
 <dl>
 <dt>destination (string)</dt>
@@ -188,17 +168,15 @@ Configuration for access logging.
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Origin"/>
 
 ## Origin
+
 An Origin is a backend that the Proxy can send GraphQL requests to. Can use one of:
 
 1. HTTP / HTTPS
 
 1. AWS Lambda
-
 
 <dl>
 <dt>requestTimeout (Duration, a string like "4.5s")</dt>
@@ -218,13 +196,11 @@ An Origin is a backend that the Proxy can send GraphQL requests to. Can use one 
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Origin.HTTP"/>
 
 ## Origin.HTTP
-Configuration for forwarding GraphQL queries to an HTTP endpoint.
 
+Configuration for forwarding GraphQL queries to an HTTP endpoint.
 
 <dl>
 <dt>url (string)</dt>
@@ -244,13 +220,11 @@ Configuration for forwarding GraphQL queries to an HTTP endpoint.
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Origin.Lambda"/>
 
 ## Origin.Lambda
-Configuration for proccessing GraphQL queries in an AWS Lambda function.
 
+Configuration for proccessing GraphQL queries in an AWS Lambda function.
 
 <dl>
 <dt>functionArn (string)</dt>
@@ -262,13 +236,11 @@ Configuration for proccessing GraphQL queries in an AWS Lambda function.
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.PersistedQueries"/>
 
 ## PersistedQueries
-PersistedQueries defines behaviour of the persistent query cache.
 
+PersistedQueries defines behaviour of the persistent query cache.
 
 <dl>
 <dt>store (string)</dt>
@@ -278,13 +250,11 @@ PersistedQueries defines behaviour of the persistent query cache.
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.QueryResponseCache"/>
 
 ## QueryResponseCache
-QueryResponseCache defines the behaviour of the query response cache.
 
+QueryResponseCache defines the behaviour of the query response cache.
 
 <dl>
 <dt>publicFullQueryStore (string)</dt>
@@ -294,13 +264,11 @@ QueryResponseCache defines the behaviour of the query response cache.
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Reporting"/>
 
 ## Reporting
-The reporting configuration to use. Reports about the GraphQL queries and responses will be sent approximately every 5 seconds to the `endpointUrl`.
 
+The reporting configuration to use. Reports about the GraphQL queries and responses will be sent approximately every 5 seconds to the `endpointUrl`.
 
 <dl>
 <dt>endpointUrl (string)</dt>
@@ -330,13 +298,11 @@ The reporting configuration to use. Reports about the GraphQL queries and respon
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.SessionAuth"/>
 
 ## SessionAuth
-SessionAuth describes how the Proxy identifies clients for `private` cache responses. Optionally, it can tell the Proxy how to authenticate sessions.
 
+SessionAuth describes how the Proxy identifies clients for `private` cache responses. Optionally, it can tell the Proxy how to authenticate sessions.
 
 <dl>
 <dt>header (string)</dt>
@@ -350,11 +316,10 @@ SessionAuth describes how the Proxy identifies clients for `private` cache respo
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Store"/>
 
 ## Store
+
 Configures a cache for GraphQL and authentication responses. Can use one of:
 
 1. memcached
@@ -362,7 +327,6 @@ Configures a cache for GraphQL and authentication responses. Can use one of:
 1. in-memory cache
 
 By default, there exist an in-memory store with the default size and the empty string as a name, which is used by all features that use a store unless they specify a different store name or "disabled".
-
 
 <dl>
 <dt>name (string)</dt>
@@ -374,13 +338,11 @@ By default, there exist an in-memory store with the default size and the empty s
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Store.InMemory"/>
 
 ## Store.InMemory
-Configures in-memory store.
 
+Configures in-memory store.
 
 <dl>
 <dt>cacheSize (int64)</dt>
@@ -388,13 +350,11 @@ Configures in-memory store.
 
 </dl>
 
-
-
 <a name="mdg.engine.config.proto.Config.Store.Memcache"/>
 
 ## Store.Memcache
-Configures memcached store
 
+Configures memcached store
 
 <dl>
 <dt>url (array of string)</dt>
@@ -405,10 +365,3 @@ Configures memcached store
 <dd><p>A prefix added to every memcached key. This allows you to share a single memcached cluster between multiple unrelated Apollo Engine Proxy configurations, or with other data.</p></dd>
 
 </dl>
-
-
-
-
-
-
-

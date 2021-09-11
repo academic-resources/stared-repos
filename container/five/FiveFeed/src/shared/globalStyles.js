@@ -25,8 +25,8 @@ export default createGlobalStyle`
   }
 
   body {
-    color: ${props => (props.dark ? second : first)};
-    background-color: ${props => (props.dark ? first : second)};
+    color: ${(props) => (props.dark ? second : first)};
+    background-color: ${(props) => (props.dark ? first : second)};
   }
 
   p, h1 {

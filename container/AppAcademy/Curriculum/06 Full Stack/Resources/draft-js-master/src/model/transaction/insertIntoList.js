@@ -22,11 +22,11 @@ function insertIntoList<T>(
   offset: number,
 ): List<T> {
   if (offset === targetList.count()) {
-    toInsert.forEach(c => {
+    toInsert.forEach((c) => {
       targetList = targetList.push(c);
     });
   } else if (offset === 0) {
-    toInsert.reverse().forEach(c => {
+    toInsert.reverse().forEach((c) => {
       targetList = targetList.unshift(c);
     });
   } else {

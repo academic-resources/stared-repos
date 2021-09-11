@@ -75,10 +75,7 @@ class EditorState {
     contentState: ContentState,
     decorator?: ?DraftDecoratorType,
   ): EditorState {
-    const firstKey = contentState
-      .getBlockMap()
-      .first()
-      .getKey();
+    const firstKey = contentState.getBlockMap().first().getKey();
     return EditorState.create({
       currentContent: contentState,
       undoStack: Stack(),
@@ -99,7 +96,7 @@ class EditorState {
   }
 
   static set(editorState: EditorState, put: Object): EditorState {
-    const map = editorState.getImmutable().withMutations(state => {
+    const map = editorState.getImmutable().withMutations((state) => {
       const existingDecorator = state.get('decorator');
       let decorator = existingDecorator;
       if (put.decorator === null) {
@@ -241,10 +238,7 @@ class EditorState {
   }
 
   isSelectionAtStartOfContent(): boolean {
-    const firstKey = this.getCurrentContent()
-      .getBlockMap()
-      .first()
-      .getKey();
+    const firstKey = this.getCurrentContent().getBlockMap().first().getKey();
     return this.getSelection().hasEdgeWithin(firstKey, 0, 0);
   }
 
@@ -522,7 +516,7 @@ function generateNewTreeMap(
 ): OrderedMap<string, List<any>> {
   return contentState
     .getBlockMap()
-    .map(block => BlockTree.generate(contentState, block, decorator))
+    .map((block) => BlockTree.generate(contentState, block, decorator))
     .toOrderedMap();
 }
 
@@ -546,7 +540,7 @@ function regenerateTreeForNewBlocks(
     newBlockMap
       .toSeq()
       .filter((block, key) => block !== prevBlockMap.get(key))
-      .map(block => BlockTree.generate(contentState, block, decorator)),
+      .map((block) => BlockTree.generate(contentState, block, decorator)),
   );
 }
 
@@ -568,13 +562,13 @@ function regenerateTreeForNewDecorator(
   return previousTreeMap.merge(
     blockMap
       .toSeq()
-      .filter(block => {
+      .filter((block) => {
         return (
           decorator.getDecorations(block, content) !==
           existingDecorator.getDecorations(block, content)
         );
       })
-      .map(block => BlockTree.generate(content, block, decorator)),
+      .map((block) => BlockTree.generate(content, block, decorator)),
   );
 }
 

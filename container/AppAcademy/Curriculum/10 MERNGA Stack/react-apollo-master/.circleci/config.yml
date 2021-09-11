@@ -2,7 +2,7 @@ version: 2
 
 jobs:
   Tests - ESM:
-    docker: [{ image: 'circleci/node:10' }]
+    docker: [{ image: "circleci/node:10" }]
     steps:
       - checkout
       - run: npm i
@@ -10,14 +10,14 @@ jobs:
           name: Tests - ESM
           command: npm run test:ci
           environment:
-            JEST_JUNIT_OUTPUT: 'reports/junit/js-test-results.xml'
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
       - store_test_results:
           path: reports/junit
       - store_artifacts:
           path: reports/junit
 
   Tests - CJS:
-    docker: [{ image: 'circleci/node:10' }]
+    docker: [{ image: "circleci/node:10" }]
     steps:
       - checkout
       - run: npm i
@@ -25,14 +25,14 @@ jobs:
           name: Tests - CJS
           command: npm run test:cjs:ci
           environment:
-            JEST_JUNIT_OUTPUT: 'reports/junit/js-test-results.xml'
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
       - store_test_results:
           path: reports/junit
       - store_artifacts:
           path: reports/junit
 
   Tests - UMD:
-    docker: [{ image: 'circleci/node:10' }]
+    docker: [{ image: "circleci/node:10" }]
     steps:
       - checkout
       - run: npm i
@@ -40,14 +40,14 @@ jobs:
           name: Tests - CJS
           command: npm run test:umd:ci
           environment:
-            JEST_JUNIT_OUTPUT: 'reports/junit/js-test-results.xml'
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
       - store_test_results:
           path: reports/junit
       - store_artifacts:
           path: reports/junit
 
   Bundlesize:
-    docker: [{ image: 'circleci/node:8' }]
+    docker: [{ image: "circleci/node:8" }]
     steps:
       - checkout
       - run: npm i

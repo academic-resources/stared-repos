@@ -1,33 +1,33 @@
-import React from 'react'
-import { Mutation } from 'react-apollo'
-import { IconContext } from 'react-icons'
-import { FaPencilAlt } from 'react-icons/fa'
-import Mutations from '../../graphql/mutations'
+import React from "react";
+import { Mutation } from "react-apollo";
+import { IconContext } from "react-icons";
+import { FaPencilAlt } from "react-icons/fa";
+import Mutations from "../../graphql/mutations";
 
-const { UPDATE_GOD_TYPE } = Mutations
+const { UPDATE_GOD_TYPE } = Mutations;
 
 class TypeDetail extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     // since we know we'll be receiving the god's type through props
     // we can set it in our state
     this.state = {
       editing: false,
-      type: this.props.god.type || ''
-    }
+      type: this.props.god.type || "",
+    };
 
-    this.handleEdit = this.handleEdit.bind(this)
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   // this is the function that will trigger "editing" mode
   handleEdit(e) {
-    e.preventDefault()
-    this.setState({ editing: true })
+    e.preventDefault();
+    this.setState({ editing: true });
   }
 
   fieldUpdate(field) {
-    return e => this.setState({ [field]: e.target.value })
+    return (e) => this.setState({ [field]: e.target.value });
   }
 
   render() {
@@ -38,16 +38,16 @@ class TypeDetail extends React.Component {
           {(updateGodType, data) => (
             <div>
               <form
-                onSubmit={e => {
-                  e.preventDefault()
+                onSubmit={(e) => {
+                  e.preventDefault();
                   updateGodType({
-                    variables: { id: this.props.god.id, type: this.state.type }
-                  }).then(() => this.setState({ editing: false }))
+                    variables: { id: this.props.god.id, type: this.state.type },
+                  }).then(() => this.setState({ editing: false }));
                 }}
               >
                 <select
                   value={this.state.type}
-                  onChange={this.fieldUpdate('type')}
+                  onChange={this.fieldUpdate("type")}
                 >
                   <option value="god">God</option>
                   <option value="goddess">Goddess</option>
@@ -57,23 +57,23 @@ class TypeDetail extends React.Component {
             </div>
           )}
         </Mutation>
-      )
+      );
     } else {
       return (
         <div>
           <div
             onClick={this.handleEdit}
-            style={{ fontSize: '10px', cursor: 'pointer', display: 'inline' }}
+            style={{ fontSize: "10px", cursor: "pointer", display: "inline" }}
           >
-            <IconContext.Provider value={{ className: 'custom-icon' }}>
+            <IconContext.Provider value={{ className: "custom-icon" }}>
               <FaPencilAlt />
             </IconContext.Provider>
           </div>
           <h2>Type: {this.state.type}</h2>
         </div>
-      )
+      );
     }
   }
 }
 
-export default TypeDetail
+export default TypeDetail;

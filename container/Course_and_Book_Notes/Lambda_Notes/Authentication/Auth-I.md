@@ -10,14 +10,14 @@ yarn add /npm install express mongoose
 change main from index.js to server.js
 
 ```
-{ 
+{
     "scripts": {
         "start": "nodemon server.js"
     }
 }
 ```
 
-* yarn add nodemon --dev / npm install nodemon --save-dev
+- yarn add nodemon --dev / npm install nodemon --save-dev
 
 ```
 const express = require('express')
@@ -39,6 +39,7 @@ server.listen(8000, () => console.log('\n=== api running on 8k ===\jn'));
 ```
 
 # Topics for week:
+
 - express middleware review (global and local)
 - mongoose middleware (lifecycle hooks)
 - extending mongoose models with custom 'methods'
@@ -62,6 +63,7 @@ function greet(req, res, next) {
     next();
 }
 ```
+
 #### Global:
 
 ```
@@ -77,7 +79,8 @@ server.get('/hello', (req, res) => {
 ```
 
 #### Local:
-``` // server.use(greet);
+
+```// server.use(greet);
 server.get('/', (req, res) => {
     res.send({ route: '/', message: req.message })
 }) <--- no longer using greet
@@ -85,6 +88,7 @@ server.get('/hello', greet, (req, res) => {
     res.send({ route: 'hello', message: req.message })
 }); <-- uses greet
 ```
+
 - After url and before route handler.
 
 What if instead of greet this had been authenticate?
@@ -104,26 +108,29 @@ server.post('/login', authenticate, (req, res) => {
     res.send('Welcome to the Mines of Moria');
 });
 ```
+
 So if you get to the route, it means you passed the authentication
 
 ##### Why nodemon is important:
+
 If you don't use nodemon, it runs with node but when you make a change, the server doesn't restart
 
 - If you add nodemon as a dependency instead of a devDependency, it will still work, but you should add it as a devDependency because you won't use it in production
 
 ##### Steps to debug:
+
 Do we have an error on the server?
 Is the server running?
 Is the server running using yarn start with nodemon?
 
 ####Lifecycle Hooks:
 client -> request -> [ (middleware) api ({middleware queue} mongoose) ]-> database
+
 - When request comes in, inside the api we have middleware
 - All requests go to middleware queue in the order middleware is added to the queue
 - api uses mongoose which uses mongoDB driver to communicate to the database
 - They're called lifecycle hooks because they behave the same as the lifecycle hooks from React
-    - Some event happens (like )
-
+  - Some event happens (like )
 
 ```
 const mongoose = require('mongoose')
@@ -154,12 +161,14 @@ server.post('/register', (req, res) => {
     .catch(err => res.status(500).send(err))
 });
 ```
+
 The problem with this code ^ is that password is plaintext
 
 Before we do the save to the database, we want to change the password
 
 With mongoose, we can write a lifecycle hook
 Lifecycle methods have both a pre- and a -post
+
 - Can execute a function before save and after save
 
 ```
@@ -183,37 +192,43 @@ userSchema.pre('save', function (next) {
 userSchema.post('save', function (next) {
     console.log('post save hook') // can't use arrow function here
     next()
-}) // example that we can execute code after and before save 
+}) // example that we can execute code after and before save
 ```
 
 #### Proper AuthN (authentication) vs AuthZ (authorization)
+
 ##### We will concentrate on AuthN
+
 - password storage
 - brute-force attack mitigation
 - password strength
 
 ##### Hashing vs Encryption
+
 - Encryption is a two-way process
-    - plain text password + private key => encrypted password
-    - encrypted password + private key => original password
+
+  - plain text password + private key => encrypted password
+  - encrypted password + private key => original password
 
 - Hashing is a one-way process
-    - behaves like a pure function
-    - parameters + content (like password) => hash
-    - given the same parameters and the same content, you always get the same hash
-        - can try to figure out original content through use of rainbow table
-    - were not originally made for security, were made for speed
-        - need to slow down production of hashes to increase security
-            - adding cost/time (rounds)
-            - takes a number and does 2 to the nth of that number rounds
+  - behaves like a pure function
+  - parameters + content (like password) => hash
+  - given the same parameters and the same content, you always get the same hash
+    - can try to figure out original content through use of rainbow table
+  - were not originally made for security, were made for speed
+    - need to slow down production of hashes to increase security
+      - adding cost/time (rounds)
+      - takes a number and does 2 to the nth of that number rounds
 
 Key derivation algorithm:
+
 - Have a hashing algorithm
 - Add time to it
-    - That's called a key derivation function
-    - We use bcrypt (one of the most widely used packages)
+  - That's called a key derivation function
+  - We use bcrypt (one of the most widely used packages)
 
 Go to website: https://www.grc.com/haystack.htm
+
 - Gives you an idea how costly it is to generate a password
 - It's about complexity and length
 - Somewhere around 12 characters, even if they have a massive operation it will be difficult to find your password
@@ -235,13 +250,12 @@ userSchema.pre('save', function (next) { // can't use arrow function here becaus
 ```
 
 npmjs.org
+
 - Can check how often something is downloaded, how many open issues there are, pull requests, and documentation
 
 If you want to authenticate, can use a function similar to middlware earlier
 Would then find the matching username in the database, find the stored password, hash the password provided, and compare
 
-Go with software that is widely used - sometimes there is malicious code on npm 
+Go with software that is widely used - sometimes there is malicious code on npm
+
 - People go through and check/flag things, but it's happened in the past (people downloading malicious code)
-
-
-

@@ -1,16 +1,15 @@
-const { MaxHeap } = require('./heaps')
-
+const { MaxHeap } = require("./heaps");
 
 // HEAP SORT
 function heapSort(array) {
   // Step 1: build the heap
   let heap = new MaxHeap();
-  array.forEach(num => heap.insert(num));
+  array.forEach((num) => heap.insert(num));
 
   // Step 2: constructed the sorted array
   let sorted = [];
   while (heap.array.length > 1) {
-      sorted.push(heap.deleteMax());
+    sorted.push(heap.deleteMax());
   }
 
   return sorted;
@@ -23,12 +22,10 @@ function heapSort(array) {
 // Space Complexity Analysis:
 // So heapSort performs as fast as our other efficient sorting algorithms, but how does it fair in space complexity? Our implementation above requires an extra O(n) amount of space because the heap is maintained separately from the input array. If we can figure out a way to do all of these heap operations in-place we can get constant O(1) space! Let's work on this now.
 
-
-
 // IN-PLACE HEAP SORT
 // swap the elements at indices i and j of array
 function swap(array, i, j) {
-  [ array[i], array[j] ] = [ array[j], array[i] ];
+  [array[i], array[j]] = [array[j], array[i]];
 }
 
 // sift-down the node at index i until max heap property is restored
@@ -47,15 +44,15 @@ function heapify(array, n, i) {
 
   let swapIdx;
   if (leftVal < rightVal) {
-      swapIdx = rightIdx;
+    swapIdx = rightIdx;
   } else {
-      swapIdx = leftIdx;
+    swapIdx = leftIdx;
   }
   swap(array, i, swapIdx);
   heapify(array, n, swapIdx);
 }
 
-console.log('===========================')
+console.log("===========================");
 
 // Given a node at index i, it's left index is 2 * i + 1 and it's right index is 2 * i + 2
 // Using these as our child index formulas will allow us to avoid using a placeholder element at index 0. The root of the heap will be at index 0.
@@ -66,14 +63,14 @@ console.log('===========================')
 // To correctly convert the input array into a heap, we'll need to call heapify on children nodes before their parents. This is easy to do, just call heapify on each element right-to-left in the array:
 
 function inHeapSort(array) {
-  console.log(array)
+  console.log(array);
   // heapify the tree from the bottom up
   for (let i = array.length - 1; i >= 0; i--) {
-      heapify(array, array.length, i);
+    heapify(array, array.length, i);
   }
-  console.log('Heapified')
-  console.log(array)
-  console.log('Sorting')
+  console.log("Heapified");
+  console.log(array);
+  console.log("Sorting");
   // the entire array is now a heap
   // until the heap is empty, continue to "delete max"
   for (let endOfHeap = array.length - 1; endOfHeap >= 0; endOfHeap--) {
@@ -83,9 +80,9 @@ function inHeapSort(array) {
 
     // sift down the new root, but not past the end of the heap
     heapify(array, endOfHeap, 0);
-    console.log(array)
-}
-return array;
+    console.log(array);
+  }
+  return array;
 }
 
-console.log(inHeapSort([1,5,2,4,3,8,7,6]))
+console.log(inHeapSort([1, 5, 2, 4, 3, 8, 7, 6]));

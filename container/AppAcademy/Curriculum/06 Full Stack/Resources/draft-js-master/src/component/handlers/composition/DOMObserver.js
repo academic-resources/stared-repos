@@ -46,11 +46,11 @@ class DOMObserver {
     this.container = container;
     this.mutations = Map();
     if (window.MutationObserver && !USE_CHAR_DATA) {
-      this.observer = new window.MutationObserver(mutations =>
+      this.observer = new window.MutationObserver((mutations) =>
         this.registerMutations(mutations),
       );
     } else {
-      this.onCharData = e => {
+      this.onCharData = (e) => {
         invariant(
           e.target instanceof Node,
           'Expected target to be an instance of Node',

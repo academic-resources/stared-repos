@@ -22,20 +22,20 @@ tinysearch is a Rust/WASM port of the Python code from the article ["Writing a f
 search engine using Bloom filters"](https://www.stavros.io/posts/bloom-filter-search-engine/).
 It can be seen as an alternative to [lunr.js](https://lunrjs.com/) and
 [elasticlunr](http://elasticlunr.com/), which are too heavy for smaller websites and
-load a lot of JavaScript.  
+load a lot of JavaScript.
 
 Under the hood it uses a [Xor Filter](https://arxiv.org/abs/1912.08258) &mdash; a
 datastructure for fast approximation of set membership that is smaller than
-bloom and cuckoo filters.  Each blog post gets converted into a filter that will
+bloom and cuckoo filters. Each blog post gets converted into a filter that will
 then be serialized to a binary blob using
-[bincode](https://github.com/bincode-org/bincode).  Please note that the
+[bincode](https://github.com/bincode-org/bincode). Please note that the
 underlying technologies are subject to change.
 
 ## Limitations
 
 - Only finds entire words. As a consequence there are no search
-  suggestions (yet).  This is a necessary tradeoff for reducing memory usage. A
-  trie datastructure was about 10x bigger than the xor filters.  New research on
+  suggestions (yet). This is a necessary tradeoff for reducing memory usage. A
+  trie datastructure was about 10x bigger than the xor filters. New research on
   compact datastructures for prefix searches might lift this limitation in the
   future.
 - Since we bundle all search indices for all articles into one static binary, we
@@ -97,7 +97,7 @@ result.
 For example, Python has a built-in webserver that can be used for a quick test:
 
 ```
-python3 -m http.server 
+python3 -m http.server
 ```
 
 then browse to http://0.0.0.0:8000/demo.html to run the demo.
@@ -133,36 +133,34 @@ docker build --build-arg RUST_IMAGE=rustlang/rust:nightly-alpine -t tinysearch/c
 
 ### Advanced Docker Build Args
 
- - `WASM_REPO`: Overwrite the wasm-pack repository
- - `WASM_BRANCH`: Overwrite the repository branch to use
- - `TINY_REPO`: Overwrite repository of tinysearch
- - `TINY_BRANCH`: Overwrite tinysearch branch
-
+- `WASM_REPO`: Overwrite the wasm-pack repository
+- `WASM_BRANCH`: Overwrite the repository branch to use
+- `TINY_REPO`: Overwrite repository of tinysearch
+- `TINY_BRANCH`: Overwrite tinysearch branch
 
 ## Users
 
 The following websites use tinysearch:
 
-* [Matthias Endler's blog](https://endler.dev/2019/tinysearch/)
-* [OutOfCheeseError](https://out-of-cheese-error.netlify.app/)
+- [Matthias Endler's blog](https://endler.dev/2019/tinysearch/)
+- [OutOfCheeseError](https://out-of-cheese-error.netlify.app/)
 
 Are you using tinysearch, too? Add your site here!
 
 ## Maintainers
 
-* Matthias Endler (@mre)
-* Jorge-Luis Betancourt (@jorgelbg)
-* Mad Mike (@fluential)
+- Matthias Endler (@mre)
+- Jorge-Luis Betancourt (@jorgelbg)
+- Mad Mike (@fluential)
 
 ## License
 
 tinysearch is licensed under either of
 
-* Apache License, Version 2.0, (LICENSE-APACHE or
+- Apache License, Version 2.0, (LICENSE-APACHE or
   http://www.apache.org/licenses/LICENSE-2.0)
-* MIT license (LICENSE-MIT or http://opensource.org/licenses/MIT)
+- MIT license (LICENSE-MIT or http://opensource.org/licenses/MIT)
 
 at your option.
-
 
 [wasm-pack]: https://github.com/rustwasm/wasm-pack

@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>GRID</title>
-  <style>
+  <head>
+    <meta charset="utf-8" />
+    <title>GRID</title>
+    <style>
+      html,
+      body,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        border: 0;
 
-  html, body, ul, li {
-    margin: 0;
-    padding: 0;
-    border: 0;
+        background: transparent;
+      }
 
-    background: transparent;
-  }
+      ul {
+        list-style: none;
+      }
 
-  ul {
-    list-style: none;
-  }
+      ul {
+        border: 5px solid black;
+        background: orange;
+        width: 300px;
+        margin: 50px auto;
+      }
 
+      li {
+        border: 5px solid black;
+        background: yellow;
 
-  ul {
-    border: 5px solid black;
-    background: orange;
-    width: 300px;
-    margin: 50px auto;
-  }
+        width: 90px;
+        height: 90px;
 
-  li {
-    border: 5px solid black;
-    background: yellow;
+        float: left;
+      }
 
-    width: 90px;
-    height: 90px;
+      .group:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="group">
+      <li></li>
+      <li></li>
+      <li></li>
 
-    float: left;
-  }
+      <li></li>
+      <li></li>
+      <li></li>
 
-  .group:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
+      <li></li>
+      <li></li>
+      <li></li>
 
-
-  </style>
-</head>
-<body>
-
-  <ul class="group">
-    <li></li>
-    <li></li>
-    <li></li>
-
-    <li></li>
-    <li></li>
-    <li></li>
-
-    <li></li>
-    <li></li>
-    <li></li>
-
-    <!-- inject clearfix here -->
-  </ul>
-
-
-</body>
+      <!-- inject clearfix here -->
+    </ul>
+  </body>
 </html>

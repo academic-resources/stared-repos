@@ -106,7 +106,7 @@ class DraftJsPlaygroundContainer extends Component {
     this.setContent();
   }
 
-  onChange = editorState => {
+  onChange = (editorState) => {
     this.setState({editorState});
   };
 
@@ -175,13 +175,13 @@ class DraftJsPlaygroundContainer extends Component {
     });
   };
 
-  updateCodeMirror = codeMirrorValue => {
+  updateCodeMirror = (codeMirrorValue) => {
     this.setState({codeMirrorValue});
   };
 
   shouldExpandNode = (keyName, data, level) => {
     return ['blockMap', 'root'].some(
-      defaultVisibleNode => keyName[0] === defaultVisibleNode,
+      (defaultVisibleNode) => keyName[0] === defaultVisibleNode,
     );
   };
 
@@ -202,7 +202,8 @@ class DraftJsPlaygroundContainer extends Component {
               className="nav-home"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://draftjs.org/">
+              href="https://draftjs.org/"
+            >
               Draft.js
             </a>
             <ul className="nav-site">
@@ -210,7 +211,8 @@ class DraftJsPlaygroundContainer extends Component {
                 <select
                   className="nav-experiment-selector"
                   name="experiment"
-                  onChange={this.onExperimentChange}>
+                  onChange={this.onExperimentChange}
+                >
                   <option value="">Try an experiment..</option>
                   <option value="draft_refactored_html_importer">
                     Modern HTML importer
@@ -224,7 +226,8 @@ class DraftJsPlaygroundContainer extends Component {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://draftjs.org/docs/overview.html#content">
+                  href="https://draftjs.org/docs/overview.html#content"
+                >
                   Docs
                 </a>
               </li>
@@ -232,7 +235,8 @@ class DraftJsPlaygroundContainer extends Component {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://github.com/facebook/draft-js">
+                  href="https://github.com/facebook/draft-js"
+                >
                   GitHub
                 </a>
               </li>
@@ -256,7 +260,8 @@ class DraftJsPlaygroundContainer extends Component {
                     <select
                       title="Draft.js content type switch"
                       onChange={this.onSelectChange}
-                      value={mode}>
+                      value={mode}
+                    >
                       <option value="rawContent">Raw</option>
                       <option value="html">HTML</option>
                     </select>
@@ -264,12 +269,14 @@ class DraftJsPlaygroundContainer extends Component {
                   <section className="contentControls">
                     <button
                       title="Import content type from the editor"
-                      onClick={this.importEditorState}>
+                      onClick={this.importEditorState}
+                    >
                       Import
                     </button>
                     <button
                       title="Update the editor with content type"
-                      onClick={this.setContent}>
+                      onClick={this.setContent}
+                    >
                       Update
                     </button>
                   </section>
@@ -278,7 +285,7 @@ class DraftJsPlaygroundContainer extends Component {
                   onBeforeChange={(editor, data, codeMirrorValue) =>
                     this.updateCodeMirror(codeMirrorValue)
                   }
-                  ref={input => {
+                  ref={(input) => {
                     this.markupinput = input;
                   }}
                   options={{

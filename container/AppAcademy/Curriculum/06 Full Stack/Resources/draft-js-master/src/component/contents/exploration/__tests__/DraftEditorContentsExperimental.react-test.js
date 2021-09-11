@@ -46,8 +46,8 @@ const contentState = ContentState.createFromBlockArray([
 
 const PROPS = {
   blockRenderMap: DefaultDraftBlockRenderMap,
-  blockRendererFn: block => null,
-  blockStyleFn: block => '',
+  blockRendererFn: (block) => null,
+  blockStyleFn: (block) => '',
   contentState,
   customStyleFn: (style, block) => null,
   editorKey: 'editor',
@@ -55,7 +55,7 @@ const PROPS = {
   selection: selectionState,
 };
 
-const assertDraftEditorContentsRendering = props => {
+const assertDraftEditorContentsRendering = (props) => {
   const childProps = {
     ...props,
     editorState: EditorState.createWithContent(props.contentState),

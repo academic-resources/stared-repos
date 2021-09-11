@@ -45,7 +45,7 @@ const SUPPORTED_TAGS = [
   'pre',
 ];
 
-const normalizeBlock = block => {
+const normalizeBlock = (block) => {
   const {type, depth, text, characterList} = block;
 
   return {
@@ -56,8 +56,8 @@ const normalizeBlock = block => {
   };
 };
 
-const toggleExperimentalTreeDataSupport = enabled => {
-  jest.doMock('gkx', () => name => {
+const toggleExperimentalTreeDataSupport = (enabled) => {
+  jest.doMock('gkx', () => (name) => {
     if (name === 'draft_tree_data_support') {
       return enabled;
     }
@@ -93,19 +93,19 @@ const AreTreeBlockNodesEquivalent = (html_string, config = {}) => {
   const treeEnabled = convertFromHTML(html_string, {
     ...config,
     experimentalTreeDataSupport: true,
-  }).contentBlocks.map(block => normalizeBlock(block.toJS()));
+  }).contentBlocks.map((block) => normalizeBlock(block.toJS()));
 
   const treeDisabled = convertFromHTML(html_string, {
     ...config,
     experimentalTreeDataSupport: false,
-  }).contentBlocks.map(block => normalizeBlock(block.toJS()));
+  }).contentBlocks.map((block) => normalizeBlock(block.toJS()));
 
   return JSON.stringify(treeEnabled) === JSON.stringify(treeDisabled);
 };
 
 const assertConvertFromHTMLToContentBlocks = (html_string, config = {}) => {
   expect(
-    convertFromHTML(html_string, config).contentBlocks.map(block =>
+    convertFromHTML(html_string, config).contentBlocks.map((block) =>
       block.toJS(),
     ),
   ).toMatchSnapshot();
@@ -138,7 +138,7 @@ const testConvertingHtmlElementsToContentBlocksAndRootContentBlockNodesMatch = (
   });
 };
 
-SUPPORTED_TAGS.forEach(tag =>
+SUPPORTED_TAGS.forEach((tag) =>
   testConvertingAdjacentHtmlElementsToContentBlocks(tag),
 );
 
@@ -254,12 +254,12 @@ test('does not convert deeply nested html blocks when experimentalTreeDataSuppor
   });
 });
 
-SUPPORTED_TAGS.forEach(tag =>
+SUPPORTED_TAGS.forEach((tag) =>
   testConvertingAdjacentHtmlElementsToContentBlocks(tag, true),
 );
 
 // assert that using tree blocks and root content block nodes are equivalent
-SUPPORTED_TAGS.forEach(tag =>
+SUPPORTED_TAGS.forEach((tag) =>
   testConvertingHtmlElementsToContentBlocksAndRootContentBlockNodesMatch(tag),
 );
 

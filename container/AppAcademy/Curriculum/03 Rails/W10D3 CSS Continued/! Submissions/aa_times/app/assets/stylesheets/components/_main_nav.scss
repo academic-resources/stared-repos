@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  border-bottom: 1px solid $light-gray; 
+  border-bottom: 1px solid $light-gray;
 }
 
 .left-nav > ul,
@@ -18,7 +18,7 @@
   padding: 8px;
   font-weight: bolder;
   border-radius: 3px;
-  transition: .1s;
+  transition: 0.1s;
   margin-left: 15px;
 }
 
@@ -30,9 +30,9 @@
 }
 
 .right-nav > ul > li:last-of-type {
-  padding: 8px; 
+  padding: 8px;
   border-radius: 3px;
-  transition: .1s;
+  transition: 0.1s;
   position: relative;
   right: 0px;
 }
@@ -43,7 +43,7 @@
 
 .left-nav > ul > li:hover,
 .right-nav > ul > li:last-of-type:hover {
-  background-color:$lightest-gray; 
+  background-color: $lightest-gray;
 }
 
 .left-nav span {

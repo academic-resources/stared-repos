@@ -1,4 +1,4 @@
-import React from 'react';
-import { Provider } from 'react-redux';
+import React from "react";
+import { Provider } from "react-redux";
 
-import GiphysSearchContainer from './giphys_search_container';
+import GiphysSearchContainer from "./giphys_search_container";

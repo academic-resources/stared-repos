@@ -1,4 +1,4 @@
-export { filter, check, propType } from './utilities';
+export { filter, check, propType } from "./utilities";
 
 export {
   Resolver,
@@ -8,7 +8,7 @@ export {
   ExecContext,
   ExecInfo,
   ExecOptions,
-} from './graphql';
+} from "./graphql";
 
-import { graphql } from './graphql';
+import { graphql } from "./graphql";
 export default graphql;

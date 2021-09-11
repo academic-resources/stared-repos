@@ -34,8 +34,8 @@ First, you need to set `loadSidebar` to **true**. Details are available in the [
 
 <script>
   window.$docsify = {
-    loadSidebar: true
-  }
+    loadSidebar: true,
+  };
 </script>
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 ```
@@ -45,8 +45,8 @@ Create the `_sidebar.md`:
 ```markdown
 <!-- docs/_sidebar.md -->
 
-* [Home](/)
-* [Guide](guide.md)
+- [Home](/)
+- [Guide](guide.md)
 ```
 
 You need to create a `.nojekyll` in `./docs` to prevent GitHub Pages from ignoring files that begin with an underscore.
@@ -64,9 +64,9 @@ You can specify `alias` to avoid unnecessary fallback.
   window.$docsify = {
     loadSidebar: true,
     alias: {
-      '/.*/_sidebar.md': '/_sidebar.md'
-    }
-  }
+      "/.*/_sidebar.md": "/_sidebar.md",
+    },
+  };
 </script>
 ```
 
@@ -84,8 +84,8 @@ A custom sidebar can also automatically generate a table of contents by setting 
 <script>
   window.$docsify = {
     loadSidebar: true,
-    subMaxLevel: 2
-  }
+    subMaxLevel: 2,
+  };
 </script>
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 ```

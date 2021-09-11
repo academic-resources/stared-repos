@@ -102,46 +102,46 @@
 /* VALUES */
 
 .value-2 {
-  background-color: #EEE4DA;
+  background-color: #eee4da;
 }
 
 .value-4 {
-  background-color: #EDE0C8;
+  background-color: #ede0c8;
 }
 
 .value-8 {
-  color: #FFF;
-  background-color: #F2B179;
+  color: #fff;
+  background-color: #f2b179;
 }
 
 .value-16 {
-  color: #FFF;
-  background-color: #F59563;
+  color: #fff;
+  background-color: #f59563;
 }
 
 .value-32 {
-  color: #FFF;
-  background-color: #F67C5F;
+  color: #fff;
+  background-color: #f67c5f;
 }
 
 .value-64 {
-  color: #FFF;
-  background-color: #F65E3B;
+  color: #fff;
+  background-color: #f65e3b;
 }
 
 .value-128 {
-  color: #FFF;
-  background-color: #EDCF72;
+  color: #fff;
+  background-color: #edcf72;
 }
 
 .value-256 {
-  color: #FFF;
-  background-color: #EDCC61;
+  color: #fff;
+  background-color: #edcc61;
 }
 
 .value-512 {
-  color: #FFF;
-  background-color: #EDC850;
+  color: #fff;
+  background-color: #edc850;
 }
 
 .value-1024,
@@ -151,13 +151,13 @@
 }
 
 .value-1024 {
-  color: #FFF;
-  background-color: #EDC53F;
+  color: #fff;
+  background-color: #edc53f;
 }
 
 .value-2048 {
-  color: #FFF;
-  background-color: #EDC22E;
+  color: #fff;
+  background-color: #edc22e;
 }
 
 /* TRANSITIONS */
@@ -186,29 +186,41 @@
 }
 
 @-webkit-keyframes merge {
-  0%    { transform: scale(1, 1) }
-  50%   { transform: scale(1.2, 1.2) }
-  100%  { transform: scale(1, 1) }
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 @keyframes merge {
-  0%    { transform: scale(1, 1) }
-  50%   { transform: scale(1.2, 1.2) }
-  100%  { transform: scale(1, 1) }
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 /* DARK MODE */
 
 .dark .value-2 {
-  background-color: #F4BF75;
+  background-color: #f4bf75;
 }
 
 .dark .value-4 {
-  background-color: #E06C6E;
+  background-color: #e06c6e;
 }
 
 .dark .value-8 {
-  background-color: #3E8CCA;
+  background-color: #3e8cca;
 }
 
 .dark .value-16 {
@@ -227,7 +239,7 @@
   background-color: #f77046;
 }
 
-.dark .value-256{
+.dark .value-256 {
   background-color: #b33c66;
 }
 
@@ -236,7 +248,7 @@
 }
 
 .dark .value-1024 {
-  background-color: #00B16A;
+  background-color: #00b16a;
 }
 
 .dark .value-2048 {

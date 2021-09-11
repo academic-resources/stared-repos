@@ -1,16 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const TodoList = (props) => {
   // <h3>Todo List goes here!</h3>
-  const { todos = [], receiveTodo } = props
+  const { todos = [], receiveTodo } = props;
   return (
-  <div>
-    <h3>My Todos</h3>
-    <ul>
+    <div>
+      <h3>My Todos</h3>
+      <ul></ul>
+    </div>
+  );
+};
 
-    </ul>
-  </div>
-  )
-}
-
-export default TodoList
+export default TodoList;

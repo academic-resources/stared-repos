@@ -1,12 +1,7 @@
 const mongoose = require("mongoose");
 const graphql = require("graphql");
-const { 
-  GraphQLObjectType, 
-  GraphQLString, 
-  GraphQLID,
-  GraphQLList
-} = graphql;
-const Category = mongoose.model("categories")
+const { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLList } = graphql;
+const Category = mongoose.model("categories");
 
 const CategoryType = new GraphQLObjectType({
   name: "CategoryType",
@@ -19,12 +14,10 @@ const CategoryType = new GraphQLObjectType({
       resolve(parentValue) {
         return Category.findById(parentValue.id)
           .populate("products")
-          .then(category => category.products)
-      }
-    }
-  })
+          .then((category) => category.products);
+      },
+    },
+  }),
 });
-
-
 
 module.exports = CategoryType;

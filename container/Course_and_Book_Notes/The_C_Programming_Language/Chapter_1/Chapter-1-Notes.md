@@ -72,7 +72,6 @@ is equivalent to
 
 You can have a for loop with a body that's empty (if the work is done in the test and re-inilitialization bits), but the grammatical rules of C require that a for statement have a body, so an isolated semicolon can be used to indicate a `null statement`.
 
-`\n` is the newline character.  Any single character can be written between single quotes to produce a value equal to the numerical value of the character (character constant).  `'A'` is a character constant that in ASCII has the value of 65.  
+`\n` is the newline character. Any single character can be written between single quotes to produce a value equal to the numerical value of the character (character constant). `'A'` is a character constant that in ASCII has the value of 65.
 
 It should be noted that `'\n'` is a single character equivalent to a single integer, but `"\n"` is a character string that happens to contain one character.
-

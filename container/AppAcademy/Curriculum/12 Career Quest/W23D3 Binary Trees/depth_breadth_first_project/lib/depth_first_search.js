@@ -1,8 +1,5 @@
-function depthFirstSearch(root, targetVal) {
-
-}
-
+function depthFirstSearch(root, targetVal) {}
 
 module.exports = {
-    depthFirstSearch
+  depthFirstSearch,
 };

@@ -74,8 +74,8 @@ const decodeCharacterList = (
     decodeEntityRanges(
       text,
       entityRanges
-        .filter(range => entityMap.hasOwnProperty(range.key))
-        .map(range => ({...range, key: entityMap[range.key]})),
+        .filter((range) => entityMap.hasOwnProperty(range.key))
+        .map((range) => ({...range, key: entityMap[range.key]})),
     ),
   );
 };
@@ -97,7 +97,7 @@ const updateNodeStack = (
   nodes: Array<*>,
   parentRef: ContentBlockNode,
 ): Array<*> => {
-  const nodesWithParentRef = nodes.map(block => {
+  const nodesWithParentRef = nodes.map((block) => {
     return {
       ...block,
       parentRef,
@@ -214,7 +214,7 @@ const decodeRawBlocks = (
   entityMap: *,
 ): BlockMap => {
   const isTreeRawBlock = rawState.blocks.find(
-    block => Array.isArray(block.children) && block.children.length > 0,
+    (block) => Array.isArray(block.children) && block.children.length > 0,
   );
   const rawBlocks =
     experimentalTreeDataSupport && !isTreeRawBlock
@@ -246,7 +246,7 @@ const decodeRawEntityMap = (rawState: RawDraftContentState): * => {
   const entityMap = {};
 
   // TODO: Update this once we completely remove DraftEntity
-  Object.keys(rawEntityMap).forEach(rawEntityKey => {
+  Object.keys(rawEntityMap).forEach((rawEntityKey) => {
     const {type, mutability, data} = rawEntityMap[rawEntityKey];
 
     // get the key reference to created entity

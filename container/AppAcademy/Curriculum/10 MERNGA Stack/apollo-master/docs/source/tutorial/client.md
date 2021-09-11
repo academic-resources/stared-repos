@@ -46,8 +46,8 @@ Next, create an Apollo config file called `apollo.config.js`. This config file i
 ```js
 module.exports = {
   client: {
-    name: 'Space Explorer [web]',
-    service: 'space-explorer',
+    name: "Space Explorer [web]",
+    service: "space-explorer",
   },
 };
 ```
@@ -65,19 +65,19 @@ If you didn't complete the server portion, you can use the `uri` from the code b
 _src/index.js_
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { HttpLink } from 'apollo-link-http';
+import { ApolloClient } from "apollo-client";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { HttpLink } from "apollo-link-http";
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
-  uri: 'http://localhost:4000/'
-})
+  uri: "http://localhost:4000/",
+});
 
 const client = new ApolloClient({
   cache,
-  link
-})
+  link,
+});
 ```
 
 In just a few lines of code, our client is ready to fetch data! Let's try making a query in the next section.
@@ -111,9 +111,9 @@ client
           }
         }
       }
-    `
+    `,
   })
-  .then(result => console.log(result));
+  .then((result) => console.log(result));
 ```
 
 Open up your console and run `npm start`. This will compile your client app. Once it is finished, your browser should open to `http://localhost:3000/` automatically. When the index page opens, open up your [Developer Tools console](https://developers.google.com/web/tools/chrome-devtools/console/) and you should see an object with a `data` property containing the result of our query. You'll also see some other properties, like `loading` and `networkStatus`. This is because Apollo Client tracks the loading state of your query for you.

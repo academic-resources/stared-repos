@@ -1,11 +1,11 @@
-import React from 'react';
-import { Route, Link, NavLink } from 'react-router-dom';
-import Orange from './orange';
-import Yellow from './yellow';
+import React from "react";
+import { Route, Link, NavLink } from "react-router-dom";
+import Orange from "./orange";
+import Yellow from "./yellow";
 
 class Red extends React.Component {
   render() {
-    return(
+    return (
       <div>
         <h2 className="red"></h2>
         {/* Links here */}
@@ -14,6 +14,6 @@ class Red extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default Red;

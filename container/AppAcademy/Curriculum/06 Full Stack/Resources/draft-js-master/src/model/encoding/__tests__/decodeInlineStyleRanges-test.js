@@ -18,7 +18,7 @@ const decodeInlineStyleRanges = require('decodeInlineStyleRanges');
 test('must decode for an unstyled block', () => {
   const block = {text: 'Hello', inlineStyleRanges: []};
   expect(
-    decodeInlineStyleRanges(block.text, block.inlineStyleRanges).map(r =>
+    decodeInlineStyleRanges(block.text, block.inlineStyleRanges).map((r) =>
       r.toJS(),
     ),
   ).toMatchSnapshot();
@@ -30,7 +30,7 @@ test('must decode for a flat styled block', () => {
     inlineStyleRanges: [{style: 'BOLD', offset: 0, length: 5}],
   };
   expect(
-    decodeInlineStyleRanges(block.text, block.inlineStyleRanges).map(r =>
+    decodeInlineStyleRanges(block.text, block.inlineStyleRanges).map((r) =>
       r.toJS(),
     ),
   ).toMatchSnapshot();
@@ -47,7 +47,7 @@ test('must decode for a mixed-style block', () => {
     ],
   };
   expect(
-    decodeInlineStyleRanges(block.text, block.inlineStyleRanges).map(r =>
+    decodeInlineStyleRanges(block.text, block.inlineStyleRanges).map((r) =>
       r.toJS(),
     ),
   ).toMatchSnapshot();
@@ -63,7 +63,7 @@ test('must decode for strings that contain surrogate pairs in UTF-16', () => {
   };
 
   expect(
-    decodeInlineStyleRanges(block.text, block.inlineStyleRanges).map(r =>
+    decodeInlineStyleRanges(block.text, block.inlineStyleRanges).map((r) =>
       r.toJS(),
     ),
   ).toMatchSnapshot();

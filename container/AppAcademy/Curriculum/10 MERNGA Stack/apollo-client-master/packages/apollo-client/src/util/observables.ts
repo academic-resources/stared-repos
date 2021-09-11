@@ -1,23 +1,25 @@
-import { Observable, Observer, Subscription } from './Observable';
+import { Observable, Observer, Subscription } from "./Observable";
 
 // Returns a normal Observable that can have any number of subscribers,
 // while ensuring the original Observable gets subscribed to at most once.
 export function multiplex<T>(inner: Observable<T>): Observable<T> {
   const observers = new Set<Observer<T>>();
   let sub: Subscription | null = null;
-  return new Observable<T>(observer => {
+  return new Observable<T>((observer) => {
     observers.add(observer);
-    sub = sub || inner.subscribe({
-      next(value) {
-        observers.forEach(obs => obs.next && obs.next(value));
-      },
-      error(error) {
-        observers.forEach(obs => obs.error && obs.error(error));
-      },
-      complete() {
-        observers.forEach(obs => obs.complete && obs.complete());
-      },
-    });
+    sub =
+      sub ||
+      inner.subscribe({
+        next(value) {
+          observers.forEach((obs) => obs.next && obs.next(value));
+        },
+        error(error) {
+          observers.forEach((obs) => obs.error && obs.error(error));
+        },
+        complete() {
+          observers.forEach((obs) => obs.complete && obs.complete());
+        },
+      });
     return () => {
       if (observers.delete(observer) && !observers.size && sub) {
         sub.unsubscribe();
@@ -31,9 +33,9 @@ export function multiplex<T>(inner: Observable<T>): Observable<T> {
 // optionally return a Promise (or be async).
 export function asyncMap<V, R>(
   observable: Observable<V>,
-  mapFn: (value: V) => R | Promise<R>,
+  mapFn: (value: V) => R | Promise<R>
 ): Observable<R> {
-  return new Observable<R>(observer => {
+  return new Observable<R>((observer) => {
     const { next, error, complete } = observer;
     let activeNextCount = 0;
     let completed = false;
@@ -41,18 +43,18 @@ export function asyncMap<V, R>(
     const handler: Observer<V> = {
       next(value) {
         ++activeNextCount;
-        new Promise(resolve => {
+        new Promise((resolve) => {
           resolve(mapFn(value));
         }).then(
-          result => {
+          (result) => {
             --activeNextCount;
             next && next.call(observer, result);
             completed && handler.complete!();
           },
-          e => {
+          (e) => {
             --activeNextCount;
             error && error.call(observer, e);
-          },
+          }
         );
       },
       error(e) {

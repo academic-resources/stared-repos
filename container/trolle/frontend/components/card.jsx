@@ -1,34 +1,34 @@
-import React from 'react'
-import { Draggable } from 'react-beautiful-dnd'
-import EditCardDialog from './edit_card_dialog'
+import React from "react";
+import { Draggable } from "react-beautiful-dnd";
+import EditCardDialog from "./edit_card_dialog";
 
 class Card extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      editing: false
-    }
-    this.startEdit = this.startEdit.bind(this)
-    this.close = this.close.bind(this)
+      editing: false,
+    };
+    this.startEdit = this.startEdit.bind(this);
+    this.close = this.close.bind(this);
   }
 
   startEdit() {
     this.setState({
-      editing: true
-    })
+      editing: true,
+    });
   }
 
   close() {
     this.setState({
-      editing: false
-    })
+      editing: false,
+    });
   }
 
   render() {
-    const { card, index } = this.props
-    const { editing } = this.state
+    const { card, index } = this.props;
+    const { editing } = this.state;
 
-    if (!card) return null
+    if (!card) return null;
 
     if (!editing)
       return (
@@ -45,7 +45,7 @@ class Card extends React.Component {
                 >
                   {card.title}
                 </div>
-              )
+              );
             }
             return (
               <div
@@ -57,12 +57,12 @@ class Card extends React.Component {
                 {card.title}
                 <i className="fas fa-pencil-alt" onClick={this.startEdit} />
               </div>
-            )
+            );
           }}
         </Draggable>
-      )
-    return <EditCardDialog card={card} close={this.close} />
+      );
+    return <EditCardDialog card={card} close={this.close} />;
   }
 }
 
-export default Card
+export default Card;

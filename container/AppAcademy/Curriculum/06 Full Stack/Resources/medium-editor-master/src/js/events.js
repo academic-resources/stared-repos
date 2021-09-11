@@ -1,5 +1,5 @@
 (function () {
-    'use strict';
+    "use strict";
 
     function isElementDescendantOfExtension(extensions, element) {
         if (!extensions) {
@@ -7,7 +7,7 @@
         }
 
         return extensions.some(function (extension) {
-            if (typeof extension.getInteractionElements !== 'function') {
+            if (typeof extension.getInteractionElements !== "function") {
                 return false;
             }
 
@@ -35,7 +35,8 @@
     };
 
     Events.prototype = {
-        InputEventOnContenteditableSupported: !MediumEditor.util.isIE && !MediumEditor.util.isEdge,
+        InputEventOnContenteditableSupported:
+            !MediumEditor.util.isIE && !MediumEditor.util.isEdge,
 
         // Helpers for event handling
 
@@ -43,29 +44,49 @@
             var win = this.base.options.contentWindow,
                 doc = this.base.options.ownerDocument;
 
-            targets = MediumEditor.util.isElement(targets) || [win, doc].indexOf(targets) > -1 ? [targets] : targets;
+            targets =
+                MediumEditor.util.isElement(targets) ||
+                [win, doc].indexOf(targets) > -1
+                    ? [targets]
+                    : targets;
 
-            Array.prototype.forEach.call(targets, function (target) {
-                target.addEventListener(event, listener, useCapture);
-                this.events.push([target, event, listener, useCapture]);
-            }.bind(this));
+            Array.prototype.forEach.call(
+                targets,
+                function (target) {
+                    target.addEventListener(event, listener, useCapture);
+                    this.events.push([target, event, listener, useCapture]);
+                }.bind(this)
+            );
         },
 
         detachDOMEvent: function (targets, event, listener, useCapture) {
-            var index, e,
+            var index,
+                e,
                 win = this.base.options.contentWindow,
                 doc = this.base.options.ownerDocument;
 
             if (targets) {
-                targets = MediumEditor.util.isElement(targets) || [win, doc].indexOf(targets) > -1 ? [targets] : targets;
+                targets =
+                    MediumEditor.util.isElement(targets) ||
+                    [win, doc].indexOf(targets) > -1
+                        ? [targets]
+                        : targets;
 
-                Array.prototype.forEach.call(targets, function (target) {
-                    index = this.indexOfListener(target, event, listener, useCapture);
-                    if (index !== -1) {
-                        e = this.events.splice(index, 1)[0];
-                        e[0].removeEventListener(e[1], e[2], e[3]);
-                    }
-                }.bind(this));
+                Array.prototype.forEach.call(
+                    targets,
+                    function (target) {
+                        index = this.indexOfListener(
+                            target,
+                            event,
+                            listener,
+                            useCapture
+                        );
+                        if (index !== -1) {
+                            e = this.events.splice(index, 1)[0];
+                            e[0].removeEventListener(e[1], e[2], e[3]);
+                        }
+                    }.bind(this)
+                );
             }
         },
 
@@ -73,7 +94,12 @@
             var i, n, item;
             for (i = 0, n = this.events.length; i < n; i = i + 1) {
                 item = this.events[i];
-                if (item[0] === target && item[1] === event && item[2] === listener && item[3] === useCapture) {
+                if (
+                    item[0] === target &&
+                    item[1] === event &&
+                    item[2] === listener &&
+                    item[3] === useCapture
+                ) {
                     return i;
                 }
             }
@@ -90,7 +116,12 @@
 
         detachAllEventsFromElement: function (element) {
             var filtered = this.events.filter(function (e) {
-                return e && e[0].getAttribute && e[0].getAttribute('medium-editor-index') === element.getAttribute('medium-editor-index');
+                return (
+                    e &&
+                    e[0].getAttribute &&
+                    e[0].getAttribute("medium-editor-index") ===
+                        element.getAttribute("medium-editor-index")
+                );
             });
 
             for (var i = 0, len = filtered.length; i < len; i++) {
@@ -101,13 +132,18 @@
 
         // Attach all existing handlers to a new element
         attachAllEventsToElement: function (element) {
-            if (this.listeners['editableInput']) {
-                this.contentCache[element.getAttribute('medium-editor-index')] = element.innerHTML;
+            if (this.listeners["editableInput"]) {
+                this.contentCache[element.getAttribute("medium-editor-index")] =
+                    element.innerHTML;
             }
 
             if (this.eventsCache) {
                 this.eventsCache.forEach(function (e) {
-                    this.attachDOMEvent(element, e['name'], e['handler'].bind(this));
+                    this.attachDOMEvent(
+                        element,
+                        e["name"],
+                        e["handler"].bind(this)
+                    );
                 }, this);
             }
         },
@@ -169,7 +205,7 @@
 
             if (this.base.elements) {
                 this.base.elements.forEach(function (element) {
-                    element.removeAttribute('data-medium-focused');
+                    element.removeAttribute("data-medium-focused");
                 });
             }
         },
@@ -193,7 +229,9 @@
             this.wrapExecCommand();
 
             // Add listener to list of execCommand listeners
-            this.options.ownerDocument.execCommand.listeners.push(this.execCommandListener);
+            this.options.ownerDocument.execCommand.listeners.push(
+                this.execCommandListener
+            );
         },
 
         // Remove our listener for calls to document.execCommand
@@ -204,7 +242,9 @@
             }
 
             // Find the index of this listener in the array of listeners so it can be removed
-            var index = doc.execCommand.listeners.indexOf(this.execCommandListener);
+            var index = doc.execCommand.listeners.indexOf(
+                this.execCommandListener
+            );
             if (index !== -1) {
                 doc.execCommand.listeners.splice(index, 1);
             }
@@ -226,18 +266,17 @@
 
             // Helper method to call all listeners to execCommand
             var callListeners = function (args, result) {
-                if (doc.execCommand.listeners) {
-                    doc.execCommand.listeners.forEach(function (listener) {
-                        listener({
-                            command: args[0],
-                            value: args[2],
-                            args: args,
-                            result: result
+                    if (doc.execCommand.listeners) {
+                        doc.execCommand.listeners.forEach(function (listener) {
+                            listener({
+                                command: args[0],
+                                value: args[2],
+                                args: args,
+                                result: result,
+                            });
                         });
-                    });
-                }
-            },
-
+                    }
+                },
                 // Create a wrapper method for execCommand which will:
                 // 1) Call document.execCommand with the correct arguments
                 // 2) Loop through any listeners and notify them that execCommand was called
@@ -287,96 +326,117 @@
             }
 
             switch (name) {
-                case 'externalInteraction':
+                case "externalInteraction":
                     // Detecting when user has interacted with elements outside of MediumEditor
-                    this.attachDOMEvent(this.options.ownerDocument.body, 'mousedown', this.handleBodyMousedown.bind(this), true);
-                    this.attachDOMEvent(this.options.ownerDocument.body, 'click', this.handleBodyClick.bind(this), true);
-                    this.attachDOMEvent(this.options.ownerDocument.body, 'focus', this.handleBodyFocus.bind(this), true);
+                    this.attachDOMEvent(
+                        this.options.ownerDocument.body,
+                        "mousedown",
+                        this.handleBodyMousedown.bind(this),
+                        true
+                    );
+                    this.attachDOMEvent(
+                        this.options.ownerDocument.body,
+                        "click",
+                        this.handleBodyClick.bind(this),
+                        true
+                    );
+                    this.attachDOMEvent(
+                        this.options.ownerDocument.body,
+                        "focus",
+                        this.handleBodyFocus.bind(this),
+                        true
+                    );
                     break;
-                case 'blur':
+                case "blur":
                     // Detecting when focus is lost
-                    this.setupListener('externalInteraction');
+                    this.setupListener("externalInteraction");
                     break;
-                case 'focus':
+                case "focus":
                     // Detecting when focus moves into some part of MediumEditor
-                    this.setupListener('externalInteraction');
+                    this.setupListener("externalInteraction");
                     break;
-                case 'editableInput':
+                case "editableInput":
                     // setup cache for knowing when the content has changed
                     this.contentCache = {};
                     this.base.elements.forEach(function (element) {
-                        this.contentCache[element.getAttribute('medium-editor-index')] = element.innerHTML;
+                        this.contentCache[
+                            element.getAttribute("medium-editor-index")
+                        ] = element.innerHTML;
                     }, this);
 
                     // Attach to the 'oninput' event, handled correctly by most browsers
                     if (this.InputEventOnContenteditableSupported) {
-                        this.attachToEachElement('input', this.handleInput);
+                        this.attachToEachElement("input", this.handleInput);
                     }
 
                     // For browsers which don't support the input event on contenteditable (IE)
                     // we'll attach to 'selectionchange' on the document and 'keypress' on the editables
                     if (!this.InputEventOnContenteditableSupported) {
-                        this.setupListener('editableKeypress');
+                        this.setupListener("editableKeypress");
                         this.keypressUpdateInput = true;
-                        this.attachDOMEvent(document, 'selectionchange', this.handleDocumentSelectionChange.bind(this));
+                        this.attachDOMEvent(
+                            document,
+                            "selectionchange",
+                            this.handleDocumentSelectionChange.bind(this)
+                        );
                         // Listen to calls to execCommand
                         this.attachToExecCommand();
                     }
                     break;
-                case 'editableClick':
+                case "editableClick":
                     // Detecting click in the contenteditables
-                    this.attachToEachElement('click', this.handleClick);
+                    this.attachToEachElement("click", this.handleClick);
                     break;
-                case 'editableBlur':
+                case "editableBlur":
                     // Detecting blur in the contenteditables
-                    this.attachToEachElement('blur', this.handleBlur);
+                    this.attachToEachElement("blur", this.handleBlur);
                     break;
-                case 'editableKeypress':
+                case "editableKeypress":
                     // Detecting keypress in the contenteditables
-                    this.attachToEachElement('keypress', this.handleKeypress);
+                    this.attachToEachElement("keypress", this.handleKeypress);
                     break;
-                case 'editableKeyup':
+                case "editableKeyup":
                     // Detecting keyup in the contenteditables
-                    this.attachToEachElement('keyup', this.handleKeyup);
+                    this.attachToEachElement("keyup", this.handleKeyup);
                     break;
-                case 'editableKeydown':
+                case "editableKeydown":
                     // Detecting keydown on the contenteditables
-                    this.attachToEachElement('keydown', this.handleKeydown);
+                    this.attachToEachElement("keydown", this.handleKeydown);
                     break;
-                case 'editableKeydownSpace':
+                case "editableKeydownSpace":
                     // Detecting keydown for SPACE on the contenteditables
-                    this.setupListener('editableKeydown');
+                    this.setupListener("editableKeydown");
                     break;
-                case 'editableKeydownEnter':
+                case "editableKeydownEnter":
                     // Detecting keydown for ENTER on the contenteditables
-                    this.setupListener('editableKeydown');
+                    this.setupListener("editableKeydown");
                     break;
-                case 'editableKeydownTab':
+                case "editableKeydownTab":
                     // Detecting keydown for TAB on the contenteditable
-                    this.setupListener('editableKeydown');
+                    this.setupListener("editableKeydown");
                     break;
-                case 'editableKeydownDelete':
+                case "editableKeydownDelete":
                     // Detecting keydown for DELETE/BACKSPACE on the contenteditables
-                    this.setupListener('editableKeydown');
+                    this.setupListener("editableKeydown");
                     break;
-                case 'editableMouseover':
+                case "editableMouseover":
                     // Detecting mouseover on the contenteditables
-                    this.attachToEachElement('mouseover', this.handleMouseover);
+                    this.attachToEachElement("mouseover", this.handleMouseover);
                     break;
-                case 'editableDrag':
+                case "editableDrag":
                     // Detecting dragover and dragleave on the contenteditables
-                    this.attachToEachElement('dragover', this.handleDragging);
-                    this.attachToEachElement('dragleave', this.handleDragging);
+                    this.attachToEachElement("dragover", this.handleDragging);
+                    this.attachToEachElement("dragleave", this.handleDragging);
                     break;
-                case 'editableDrop':
+                case "editableDrop":
                     // Detecting drop on the contenteditables
-                    this.attachToEachElement('drop', this.handleDrop);
+                    this.attachToEachElement("drop", this.handleDrop);
                     break;
                 // TODO: We need to have a custom 'paste' event separate from 'editablePaste'
                 // Need to think about the way to introduce this without breaking folks
-                case 'editablePaste':
+                case "editablePaste":
                     // Detecting paste on the contenteditables
-                    this.attachToEachElement('paste', this.handlePaste);
+                    this.attachToEachElement("paste", this.handlePaste);
                     break;
             }
             this.listeners[name] = true;
@@ -392,11 +452,11 @@
                 this.attachDOMEvent(element, name, handler.bind(this));
             }, this);
 
-            this.eventsCache.push({ 'name': name, 'handler': handler });
+            this.eventsCache.push({ name: name, handler: handler });
         },
 
         cleanupElement: function (element) {
-            var index = element.getAttribute('medium-editor-index');
+            var index = element.getAttribute("medium-editor-index");
             if (index) {
                 this.detachAllEventsFromElement(element);
                 if (this.contentCache) {
@@ -407,7 +467,7 @@
 
         focusElement: function (element) {
             element.focus();
-            this.updateFocus(element, { target: element, type: 'focus' });
+            this.updateFocus(element, { target: element, type: "focus" });
         },
 
         updateFocus: function (target, eventObj) {
@@ -416,18 +476,30 @@
 
             // For clicks, we need to know if the mousedown that caused the click happened inside the existing focused element
             // or one of the extension elements.  If so, we don't want to focus another element
-            if (hadFocus &&
-                eventObj.type === 'click' &&
+            if (
+                hadFocus &&
+                eventObj.type === "click" &&
                 this.lastMousedownTarget &&
-                (MediumEditor.util.isDescendant(hadFocus, this.lastMousedownTarget, true) ||
-                    isElementDescendantOfExtension(this.base.extensions, this.lastMousedownTarget))) {
+                (MediumEditor.util.isDescendant(
+                    hadFocus,
+                    this.lastMousedownTarget,
+                    true
+                ) ||
+                    isElementDescendantOfExtension(
+                        this.base.extensions,
+                        this.lastMousedownTarget
+                    ))
+            ) {
                 toFocus = hadFocus;
             }
 
             if (!toFocus) {
                 this.base.elements.some(function (element) {
                     // If the target is part of an editor element, this is the element getting focus
-                    if (!toFocus && (MediumEditor.util.isDescendant(element, target, true))) {
+                    if (
+                        !toFocus &&
+                        MediumEditor.util.isDescendant(element, target, true)
+                    ) {
                         toFocus = element;
                     }
 
@@ -437,7 +509,8 @@
             }
 
             // Check if the target is external (not part of the editor, toolbar, or any other extension)
-            var externalEvent = !MediumEditor.util.isDescendant(hadFocus, target, true) &&
+            var externalEvent =
+                !MediumEditor.util.isDescendant(hadFocus, target, true) &&
                 !isElementDescendantOfExtension(this.base.extensions, target);
 
             if (toFocus !== hadFocus) {
@@ -445,20 +518,20 @@
                 // Don't blur focused element if clicking on editor, toolbar, or anchorpreview
                 if (hadFocus && externalEvent) {
                     // Trigger blur on the editable that has lost focus
-                    hadFocus.removeAttribute('data-medium-focused');
-                    this.triggerCustomEvent('blur', eventObj, hadFocus);
+                    hadFocus.removeAttribute("data-medium-focused");
+                    this.triggerCustomEvent("blur", eventObj, hadFocus);
                 }
 
                 // If focus is going into an editor element
                 if (toFocus) {
                     // Trigger focus on the editable that now has focus
-                    toFocus.setAttribute('data-medium-focused', true);
-                    this.triggerCustomEvent('focus', eventObj, toFocus);
+                    toFocus.setAttribute("data-medium-focused", true);
+                    this.triggerCustomEvent("focus", eventObj, toFocus);
                 }
             }
 
             if (externalEvent) {
-                this.triggerCustomEvent('externalInteraction', eventObj);
+                this.triggerCustomEvent("externalInteraction", eventObj);
             }
         },
 
@@ -468,12 +541,12 @@
             }
             // An event triggered which signifies that the user may have changed someting
             // Look in our cache of input for the contenteditables to see if something changed
-            var index = target.getAttribute('medium-editor-index'),
+            var index = target.getAttribute("medium-editor-index"),
                 html = target.innerHTML;
 
             if (html !== this.contentCache[index]) {
                 // The content has changed since the last time we checked, fire the event
-                this.triggerCustomEvent('editableInput', eventObj, target);
+                this.triggerCustomEvent("editableInput", eventObj, target);
             }
             this.contentCache[index] = html;
         },
@@ -489,7 +562,13 @@
                 // We can look at the 'activeElement' to determine if the selectionchange has
                 // happened within a contenteditable owned by this instance of MediumEditor
                 this.base.elements.some(function (element) {
-                    if (MediumEditor.util.isDescendant(element, activeElement, true)) {
+                    if (
+                        MediumEditor.util.isDescendant(
+                            element,
+                            activeElement,
+                            true
+                        )
+                    ) {
                         currentTarget = element;
                         return true;
                     }
@@ -498,7 +577,10 @@
 
                 // We know selectionchange fired within one of our contenteditables
                 if (currentTarget) {
-                    this.updateInput(currentTarget, { target: activeElement, currentTarget: currentTarget });
+                    this.updateInput(currentTarget, {
+                        target: activeElement,
+                        currentTarget: currentTarget,
+                    });
                 }
             }
         },
@@ -509,7 +591,10 @@
             // attempt to trigger the 'editableInput' event
             var target = this.base.getFocusedElement();
             if (target) {
-                this.updateInput(target, { target: target, currentTarget: target });
+                this.updateInput(target, {
+                    target: target,
+                    currentTarget: target,
+                });
             }
         },
 
@@ -530,70 +615,129 @@
         },
 
         handleClick: function (event) {
-            this.triggerCustomEvent('editableClick', event, event.currentTarget);
+            this.triggerCustomEvent(
+                "editableClick",
+                event,
+                event.currentTarget
+            );
         },
 
         handleBlur: function (event) {
-            this.triggerCustomEvent('editableBlur', event, event.currentTarget);
+            this.triggerCustomEvent("editableBlur", event, event.currentTarget);
         },
 
         handleKeypress: function (event) {
-            this.triggerCustomEvent('editableKeypress', event, event.currentTarget);
+            this.triggerCustomEvent(
+                "editableKeypress",
+                event,
+                event.currentTarget
+            );
 
             // If we're doing manual detection of the editableInput event we need
             // to check for input changes during 'keypress'
             if (this.keypressUpdateInput) {
-                var eventObj = { target: event.target, currentTarget: event.currentTarget };
+                var eventObj = {
+                    target: event.target,
+                    currentTarget: event.currentTarget,
+                };
 
                 // In IE, we need to let the rest of the event stack complete before we detect
                 // changes to input, so using setTimeout here
-                setTimeout(function () {
-                    this.updateInput(eventObj.currentTarget, eventObj);
-                }.bind(this), 0);
+                setTimeout(
+                    function () {
+                        this.updateInput(eventObj.currentTarget, eventObj);
+                    }.bind(this),
+                    0
+                );
             }
         },
 
         handleKeyup: function (event) {
-            this.triggerCustomEvent('editableKeyup', event, event.currentTarget);
+            this.triggerCustomEvent(
+                "editableKeyup",
+                event,
+                event.currentTarget
+            );
         },
 
         handleMouseover: function (event) {
-            this.triggerCustomEvent('editableMouseover', event, event.currentTarget);
+            this.triggerCustomEvent(
+                "editableMouseover",
+                event,
+                event.currentTarget
+            );
         },
 
         handleDragging: function (event) {
-            this.triggerCustomEvent('editableDrag', event, event.currentTarget);
+            this.triggerCustomEvent("editableDrag", event, event.currentTarget);
         },
 
         handleDrop: function (event) {
-            this.triggerCustomEvent('editableDrop', event, event.currentTarget);
+            this.triggerCustomEvent("editableDrop", event, event.currentTarget);
         },
 
         handlePaste: function (event) {
-            this.triggerCustomEvent('editablePaste', event, event.currentTarget);
+            this.triggerCustomEvent(
+                "editablePaste",
+                event,
+                event.currentTarget
+            );
         },
 
         handleKeydown: function (event) {
+            this.triggerCustomEvent(
+                "editableKeydown",
+                event,
+                event.currentTarget
+            );
 
-            this.triggerCustomEvent('editableKeydown', event, event.currentTarget);
-
-            if (MediumEditor.util.isKey(event, MediumEditor.util.keyCode.SPACE)) {
-                return this.triggerCustomEvent('editableKeydownSpace', event, event.currentTarget);
+            if (
+                MediumEditor.util.isKey(event, MediumEditor.util.keyCode.SPACE)
+            ) {
+                return this.triggerCustomEvent(
+                    "editableKeydownSpace",
+                    event,
+                    event.currentTarget
+                );
             }
 
-            if (MediumEditor.util.isKey(event, MediumEditor.util.keyCode.ENTER) || (event.ctrlKey && MediumEditor.util.isKey(event, MediumEditor.util.keyCode.M))) {
-                return this.triggerCustomEvent('editableKeydownEnter', event, event.currentTarget);
+            if (
+                MediumEditor.util.isKey(
+                    event,
+                    MediumEditor.util.keyCode.ENTER
+                ) ||
+                (event.ctrlKey &&
+                    MediumEditor.util.isKey(event, MediumEditor.util.keyCode.M))
+            ) {
+                return this.triggerCustomEvent(
+                    "editableKeydownEnter",
+                    event,
+                    event.currentTarget
+                );
             }
 
             if (MediumEditor.util.isKey(event, MediumEditor.util.keyCode.TAB)) {
-                return this.triggerCustomEvent('editableKeydownTab', event, event.currentTarget);
+                return this.triggerCustomEvent(
+                    "editableKeydownTab",
+                    event,
+                    event.currentTarget
+                );
             }
 
-            if (MediumEditor.util.isKey(event, [MediumEditor.util.keyCode.DELETE, MediumEditor.util.keyCode.BACKSPACE])) {
-                return this.triggerCustomEvent('editableKeydownDelete', event, event.currentTarget);
+            if (
+                MediumEditor.util.isKey(event, [
+                    MediumEditor.util.keyCode.DELETE,
+                    MediumEditor.util.keyCode.BACKSPACE,
+                ])
+            ) {
+                return this.triggerCustomEvent(
+                    "editableKeydownDelete",
+                    event,
+                    event.currentTarget
+                );
             }
-        }
+        },
     };
 
     MediumEditor.Events = Events;
-}());
+})();

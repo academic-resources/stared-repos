@@ -6,41 +6,41 @@ A plugin is simply a function that takes `hook` as an argument. The hook support
 
 ```js
 window.$docsify = {
- plugins: [
-  function (hook, vm) {
-    hook.init(function() {
-      // Called when the script starts running, only trigger once, no arguments,
-    })
+  plugins: [
+    function (hook, vm) {
+      hook.init(function () {
+        // Called when the script starts running, only trigger once, no arguments,
+      });
 
-    hook.beforeEach(function(content) {
-      // Invoked each time before parsing the Markdown file.
-      // ...
-      return content
-    })
+      hook.beforeEach(function (content) {
+        // Invoked each time before parsing the Markdown file.
+        // ...
+        return content;
+      });
 
-    hook.afterEach(function(html, next) {
-      // Invoked each time after the Markdown file is parsed.
-      // beforeEach and afterEach support asynchronous。
-      // ...
-      // call `next(html)` when task is done.
-      next(html)
-    })
+      hook.afterEach(function (html, next) {
+        // Invoked each time after the Markdown file is parsed.
+        // beforeEach and afterEach support asynchronous。
+        // ...
+        // call `next(html)` when task is done.
+        next(html);
+      });
 
-    hook.doneEach(function() {
-      // Invoked each time after the data is fully loaded, no arguments,
-      // ...
-    })
+      hook.doneEach(function () {
+        // Invoked each time after the data is fully loaded, no arguments,
+        // ...
+      });
 
-    hook.mounted(function() {
-      // Called after initial completion. Only trigger once, no arguments.
-    })
+      hook.mounted(function () {
+        // Called after initial completion. Only trigger once, no arguments.
+      });
 
-    hook.ready(function() {
-      // Called after initial completion, no arguments.
-    })
-  }
- ]
-}
+      hook.ready(function () {
+        // Called after initial completion, no arguments.
+      });
+    },
+  ],
+};
 ```
 
 !> You can get internal methods through `window.Docsify`. Get the current instance through the second argument.
@@ -56,19 +56,19 @@ window.$docsify = {
   plugins: [
     function (hook) {
       var footer = [
-        '<hr/>',
-        '<footer>',
+        "<hr/>",
+        "<footer>",
         '<span><a href="https://github.com/QingWei-Li">cinwell</a> &copy;2017.</span>',
         '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
-        '</footer>'
-      ].join('')
+        "</footer>",
+      ].join("");
 
       hook.afterEach(function (html) {
-        return html + footer
-      })
-    }
-  ]
-}
+        return html + footer;
+      });
+    },
+  ],
+};
 ```
 
 ### Edit Button
@@ -76,18 +76,22 @@ window.$docsify = {
 ```js
 window.$docsify = {
   plugins: [
-    function(hook, vm) {
+    function (hook, vm) {
       hook.beforeEach(function (html) {
-        var url = 'https://github.com/docsifyjs/docsify/blob/master/docs' + vm.route.file
-        var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n'
+        var url =
+          "https://github.com/docsifyjs/docsify/blob/master/docs" +
+          vm.route.file;
+        var editHtml = "[📝 EDIT DOCUMENT](" + url + ")\n";
 
-        return editHtml
-          + html
-          + '\n----\n'
-          + 'Last modified {docsify-updated} '
-          + editHtml
-      })
-    }
-  ]
-}
+        return (
+          editHtml +
+          html +
+          "\n----\n" +
+          "Last modified {docsify-updated} " +
+          editHtml
+        );
+      });
+    },
+  ],
+};
 ```

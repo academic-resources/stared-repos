@@ -1,18 +1,18 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import gql from 'graphql-tag';
-import ApolloClient from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { mockSingleLink, stripSymbols } from '@apollo/react-testing';
-import { ApolloProvider } from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import gql from "graphql-tag";
+import ApolloClient from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { mockSingleLink, stripSymbols } from "@apollo/react-testing";
+import { ApolloProvider } from "@apollo/react-common";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
-describe('fragments', () => {
+describe("fragments", () => {
   afterEach(cleanup);
 
   // XXX in a later version, we should support this for composition
-  it('throws if you only pass a fragment', () => {
+  it("throws if you only pass a fragment", () => {
     const query: DocumentNode = gql`
       fragment Failure on PeopleConnection {
         people {
@@ -21,17 +21,17 @@ describe('fragments', () => {
       }
     `;
     const expectedData = {
-      allPeople: { people: [{ name: 'Luke Skywalker' }] }
+      allPeople: { people: [{ name: "Luke Skywalker" }] },
     };
     type Data = typeof expectedData;
 
     const link = mockSingleLink({
       request: { query },
-      result: { data: expectedData }
+      result: { data: expectedData },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     try {
@@ -61,7 +61,7 @@ describe('fragments', () => {
     }
   });
 
-  it('correctly fetches a query with inline fragments', done => {
+  it("correctly fetches a query with inline fragments", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -78,20 +78,20 @@ describe('fragments', () => {
     `;
     const data = {
       allPeople: {
-        __typename: 'PeopleConnection',
-        people: [{ name: 'Luke Skywalker' }]
-      }
+        __typename: "PeopleConnection",
+        people: [{ name: "Luke Skywalker" }],
+      },
     };
 
     type Data = typeof data;
 
     const link = mockSingleLink({
       request: { query },
-      result: { data }
+      result: { data },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     const Container = graphql<{}, Data>(query)(

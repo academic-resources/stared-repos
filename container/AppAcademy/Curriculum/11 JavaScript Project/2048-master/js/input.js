@@ -7,24 +7,24 @@ class InputHandler {
   }
 
   bindKeyEvents() {
-    document.addEventListener('keydown', event => {
+    document.addEventListener("keydown", (event) => {
       switch (event.key) {
-        case 'ArrowUp': {
+        case "ArrowUp": {
           event.preventDefault();
           this.up();
           break;
         }
-        case 'ArrowDown': {
+        case "ArrowDown": {
           event.preventDefault();
           this.down();
           break;
         }
-        case 'ArrowLeft': {
+        case "ArrowLeft": {
           event.preventDefault();
           this.left();
           break;
         }
-        case 'ArrowRight': {
+        case "ArrowRight": {
           event.preventDefault();
           this.right();
           break;
@@ -39,18 +39,22 @@ class InputHandler {
     let endX;
     let endY;
 
-    document.addEventListener('touchstart', event => {
+    document.addEventListener("touchstart", (event) => {
       let touchObj = event.changedTouches[0];
       startX = touchObj.pageX;
       startY = touchObj.pageY;
     });
 
-    document.addEventListener('touchmove', event => {
-      event.preventDefault();
-      event.stopPropagation();
-    }, { passive: false });
+    document.addEventListener(
+      "touchmove",
+      (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+      },
+      { passive: false }
+    );
 
-    document.addEventListener('touchend', event => {
+    document.addEventListener("touchend", (event) => {
       let touchObj = event.changedTouches[0];
       endX = touchObj.pageX;
       endY = touchObj.pageY;
@@ -89,22 +93,22 @@ class InputHandler {
   }
 
   up() {
-    this.game.move('up');
+    this.game.move("up");
     this.updateGame();
   }
 
   down() {
-    this.game.move('down');
+    this.game.move("down");
     this.updateGame();
   }
 
   left() {
-    this.game.move('left');
+    this.game.move("left");
     this.updateGame();
   }
 
   right() {
-    this.game.move('right');
+    this.game.move("right");
     this.updateGame();
   }
 

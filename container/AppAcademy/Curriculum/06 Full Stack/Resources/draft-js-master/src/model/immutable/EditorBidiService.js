@@ -23,7 +23,7 @@ const {OrderedMap} = Immutable;
 let bidiService;
 
 const EditorBidiService = {
-  getDirectionMap: function(
+  getDirectionMap: function (
     content: ContentState,
     prevBidiMap: ?OrderedMap<any, any>,
   ): OrderedMap<any, any> {
@@ -36,7 +36,7 @@ const EditorBidiService = {
     const blockMap = content.getBlockMap();
     const nextBidi = blockMap
       .valueSeq()
-      .map(block => nullthrows(bidiService).getDirection(block.getText()));
+      .map((block) => nullthrows(bidiService).getDirection(block.getText()));
     const bidiMap = OrderedMap(blockMap.keySeq().zip(nextBidi));
 
     if (prevBidiMap != null && Immutable.is(prevBidiMap, bidiMap)) {

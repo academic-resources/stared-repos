@@ -1,3 +1,3 @@
-import React from 'react';
+import React from "react";
 
-import GiphysIndexItem from './giphys_index_item';
+import GiphysIndexItem from "./giphys_index_item";

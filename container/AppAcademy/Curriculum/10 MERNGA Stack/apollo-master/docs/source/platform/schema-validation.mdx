@@ -37,22 +37,28 @@ Each of these change types removes a schema element. If an element of your graph
     <code>FIELD_REMOVED</code>: Field used by at least one operation was removed
   </li>
   <li id="TYPE_REMOVED">
-    <code>TYPE_REMOVED</code>: Type(scalar, object) used by at least one operation was removed
+    <code>TYPE_REMOVED</code>: Type(scalar, object) used by at least one
+    operation was removed
   </li>
   <li id="ARG_REMOVED">
-    <code>ARG_REMOVED</code>: Argument was removed from a field used by at least one operation
+    <code>ARG_REMOVED</code>: Argument was removed from a field used by at least
+    one operation
   </li>
   <li id="TYPE_REMOVED_FROM_UNION">
-    <code>TYPE_REMOVED_FROM_UNION</code>: Type was removed from a union used by at least one operation
+    <code>TYPE_REMOVED_FROM_UNION</code>: Type was removed from a union used by
+    at least one operation
   </li>
   <li id="INPUT_FIELD_REMOVED">
-    <code>INPUT_FIELD_REMOVED</code>: Field removed from an input type referenced by an argument on a field used by at least one operation
+    <code>INPUT_FIELD_REMOVED</code>: Field removed from an input type
+    referenced by an argument on a field used by at least one operation
   </li>
   <li id="VALUE_REMOVED_FROM_ENUM">
-    <code>VALUE_REMOVED_FROM_ENUM</code>: A value removed from an enum used by at least one operation
+    <code>VALUE_REMOVED_FROM_ENUM</code>: A value removed from an enum used by
+    at least one operation
   </li>
   <li id="TYPE_REMOVED_FROM_INTERFACE">
-    <code>TYPE_REMOVED_FROM_INTERFACE</code>: An object removed from an interface used by at least one operation
+    <code>TYPE_REMOVED_FROM_INTERFACE</code>: An object removed from an
+    interface used by at least one operation
   </li>
 </ul>
 
@@ -62,10 +68,12 @@ Each of these changes adds a required input to a schema element. If an operation
 
 <ul>
   <li id="REQUIRED_ARG_ADDED">
-    <code>REQUIRED_ARG_ADDED</code>: Non-nullable argument added to field used by at least one operation
+    <code>REQUIRED_ARG_ADDED</code>: Non-nullable argument added to field used
+    by at least one operation
   </li>
   <li id="NON_NULL_INPUT_FIELD_ADDED">
-    <code>NON_NULL_INPUT_FIELD_ADDED</code>: Non-null field added to an input object used by at least one operation
+    <code>NON_NULL_INPUT_FIELD_ADDED</code>: Non-null field added to an input
+    object used by at least one operation
   </li>
 </ul>
 
@@ -77,16 +85,20 @@ Each of these changes updates an existing schema element. If an operation is act
 
 <ul>
   <li id="FIELD_CHANGED_TYPE">
-    <code>FIELD_CHANGED_TYPE</code>: Field used by at least one operation changed return type
+    <code>FIELD_CHANGED_TYPE</code>: Field used by at least one operation
+    changed return type
   </li>
   <li id="INPUT_FIELD_CHANGED_TYPE">
-    <code>INPUT_FIELD_CHANGED_TYPE</code>: Field in input object changed type and is referenced by argument on field used by at least one operation
+    <code>INPUT_FIELD_CHANGED_TYPE</code>: Field in input object changed type
+    and is referenced by argument on field used by at least one operation
   </li>
   <li id="TYPE_CHANGED_KIND">
-    <code>TYPE_CHANGED_KIND</code>: Type used by at least one operation changed, ex: scalar to object or enum to union
+    <code>TYPE_CHANGED_KIND</code>: Type used by at least one operation changed,
+    ex: scalar to object or enum to union
   </li>
   <li id="ARG_CHANGED_TYPE">
-    <code>ARG_CHANGED_TYPE</code>: Argument changed type on field used by at least one operation
+    <code>ARG_CHANGED_TYPE</code>: Argument changed type on field used by at
+    least one operation
   </li>
 </ul>
 
@@ -96,10 +108,12 @@ These changes add a type to an existing union or interface in your graph. If an 
 
 <ul>
   <li id="TYPE_ADDED_TO_UNION">
-    <code>TYPE_ADDED_TO_UNION</code>: Type added to a union used by at least one operation
+    <code>TYPE_ADDED_TO_UNION</code>: Type added to a union used by at least one
+    operation
   </li>
   <li id="TYPE_ADDED_TO_INTERFACE">
-    <code>TYPE_ADDED_TO_INTERFACE</code>: Interface added to an object used by at least one operation
+    <code>TYPE_ADDED_TO_INTERFACE</code>: Interface added to an object used by
+    at least one operation
   </li>
 </ul>
 
@@ -109,7 +123,8 @@ These changes update the default value for an argument. If an operation is using
 
 <ul>
   <li id="ARG_DEFAULT_VALUE_CHANGE">
-    <code>ARG_DEFAULT_VALUE_CHANGE</code>: Default value added or changed for argument on a field used by at least one operation
+    <code>ARG_DEFAULT_VALUE_CHANGE</code>: Default value added or changed for
+    argument on a field used by at least one operation
   </li>
 </ul>
 
@@ -120,23 +135,49 @@ These are change types detected ny the `apollo service:check` command, but they 
 <ul>
   <li>Optional arguments</li>
   <ul>
-    <li id="OPTIONAL_ARG_ADDED"><code>OPTIONAL_ARG_ADDED</code> Nullable argument added to a field</li>
-    <li id="NULLABLE_FIELD_ADDED_TO_INPUT_OBJECT"><code>NULLABLE_FIELD_ADDED_TO_INPUT_OBJECT</code> Nullable field added to an input object</li>
+    <li id="OPTIONAL_ARG_ADDED">
+      <code>OPTIONAL_ARG_ADDED</code> Nullable argument added to a field
+    </li>
+    <li id="NULLABLE_FIELD_ADDED_TO_INPUT_OBJECT">
+      <code>NULLABLE_FIELD_ADDED_TO_INPUT_OBJECT</code> Nullable field added to
+      an input object
+    </li>
   </ul>
   <li>Additions</li>
   <ul>
-    <li id="FIELD_ADDED"><code>FIELD_ADDED</code> Field added to a type</li>
-    <li id="TYPE_ADDED"><code>TYPE_ADDED</code> Type added to the schema</li>
-    <li id="VALUE_ADDED_TO_ENUM"><code>VALUE_ADDED_TO_ENUM</code> Value added to an enum. If clients contain a switch case on the enum and do not include the `default`, this change could cause unexpected behavior</li>
+    <li id="FIELD_ADDED">
+      <code>FIELD_ADDED</code> Field added to a type
+    </li>
+    <li id="TYPE_ADDED">
+      <code>TYPE_ADDED</code> Type added to the schema
+    </li>
+    <li id="VALUE_ADDED_TO_ENUM">
+      <code>VALUE_ADDED_TO_ENUM</code> Value added to an enum. If clients
+      contain a switch case on the enum and do not include the `default`, this
+      change could cause unexpected behavior
+    </li>
   </ul>
   <li>Deprecations</li>
   <ul>
-    <li id="FIELD_DEPRECATED"><code>FIELD_DEPRECATED</code> Field deprecated</li>
-    <li id="FIELD_DEPRECATION_REMOVED"><code>FIELD_DEPRECATION_REMOVED</code> Field no longer deprecated</li>
-    <li id="FIELD_DEPRECATED_REASON_CHANGE"><code>FIELD_DEPRECATED_REASON_CHANGE</code> Reason for deprecation changed</li>
-    <li id="ENUM_DEPRECATED"><code>ENUM_DEPRECATED</code> Enum deprecated</li>
-    <li id="ENUM_DEPRECATION_REMOVED"><code>ENUM_DEPRECATION_REMOVED</code> Enum no longer deprecated</li>
-    <li id="ENUM_DEPRECATED_REASON_CHANGE"><code>ENUM_DEPRECATED_REASON_CHANGE</code> Reason for enum deprecation changed</li>
+    <li id="FIELD_DEPRECATED">
+      <code>FIELD_DEPRECATED</code> Field deprecated
+    </li>
+    <li id="FIELD_DEPRECATION_REMOVED">
+      <code>FIELD_DEPRECATION_REMOVED</code> Field no longer deprecated
+    </li>
+    <li id="FIELD_DEPRECATED_REASON_CHANGE">
+      <code>FIELD_DEPRECATED_REASON_CHANGE</code> Reason for deprecation changed
+    </li>
+    <li id="ENUM_DEPRECATED">
+      <code>ENUM_DEPRECATED</code> Enum deprecated
+    </li>
+    <li id="ENUM_DEPRECATION_REMOVED">
+      <code>ENUM_DEPRECATION_REMOVED</code> Enum no longer deprecated
+    </li>
+    <li id="ENUM_DEPRECATED_REASON_CHANGE">
+      <code>ENUM_DEPRECATED_REASON_CHANGE</code> Reason for enum deprecation
+      changed
+    </li>
   </ul>
 </ul>
 
@@ -186,7 +227,7 @@ To set up schema validation, you wlil need to be both actively sending traces an
 
 Then, you will need to configure your project for the `apollo service:check` command:
 
-import ProjectConfigPanel from 'gatsby-theme-apollo-docs/mdx/project-config-panel.mdx';
+import ProjectConfigPanel from "gatsby-theme-apollo-docs/mdx/project-config-panel.mdx";
 
 <ProjectConfigPanel />
 

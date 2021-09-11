@@ -1,14 +1,14 @@
-const APIUtil = require('./api_util');
+const APIUtil = require("./api_util");
 
-const _ = require('lodash');
+const _ = require("lodash");
 
 class InfiniteTweets {
   constructor(el) {
     this.$el = $(el);
     this.lastCreatedAt = null;
 
-    this.$el.on('click', '.fetch-more', this.fetchTweets.bind(this));
-    this.$el.on('insert-tweet', this.insertTweet.bind(this));
+    this.$el.on("click", ".fetch-more", this.fetchTweets.bind(this));
+    this.$el.on("insert-tweet", this.insertTweet.bind(this));
   }
 
   fetchTweets(event) {
@@ -23,8 +23,8 @@ class InfiniteTweets {
 
       if (data.length < 20) {
         infiniteTweets.$el
-          .find('.fetch-more')
-          .replaceWith('<b>No more tweets!</b>');
+          .find(".fetch-more")
+          .replaceWith("<b>No more tweets!</b>");
       }
 
       if (data.length > 0) {
@@ -34,7 +34,7 @@ class InfiniteTweets {
   }
 
   insertTweet(event, data) {
-    this.$el.find('ul.tweets').prepend(this.tweetElement(data));
+    this.$el.find("ul.tweets").prepend(this.tweetElement(data));
 
     if (!this.lastCreatedAt) {
       this.lastCreatedAt = data.created_at;
@@ -42,15 +42,18 @@ class InfiniteTweets {
   }
 
   insertTweets(data) {
-    this.$el.find('ul.tweets').append(data.map(this.tweetElement));
+    this.$el.find("ul.tweets").append(data.map(this.tweetElement));
   }
 
   tweetElement(tweet) {
-    const mentions = tweet.mentions.map(mention =>
-      `<li class='tweetee'>
+    const mentions = tweet.mentions
+      .map(
+        (mention) =>
+          `<li class='tweetee'>
         <a href='/users/${mention.user.id}'>@${mention.user.username}</a>
-      </li>`)
-      .join('');
+      </li>`
+      )
+      .join("");
 
     const elementString = `
     <div class='tweet'>
@@ -65,11 +68,10 @@ class InfiniteTweets {
       <ul>Mentions
         ${mentions}
       </ul>
-    </div>`
+    </div>`;
 
     return $(elementString);
   }
-
 }
 
 module.exports = InfiniteTweets;

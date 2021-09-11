@@ -10,12 +10,13 @@ button {
   border: none;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  background-color: #B2EBF2;
+  background-color: #b2ebf2;
 }
 
 li {
@@ -33,12 +34,21 @@ li {
   margin-bottom: 40px;
 }
 
-.flex-col, .todo-list, .todo-form, .step-form, .todo-form label, .step-form label, .step-list {
+.flex-col,
+.todo-list,
+.todo-form,
+.step-form,
+.todo-form label,
+.step-form label,
+.step-list {
   display: flex;
   flex-direction: column;
 }
 
-.flex-row, .todo-list .todo-list-item .todo-header, .step-list .step-header, .step-list .step-header .step-buttons {
+.flex-row,
+.todo-list .todo-list-item .todo-header,
+.step-list .step-header,
+.step-list .step-header .step-buttons {
   display: flex;
   flex-direction: row;
 }
@@ -46,14 +56,18 @@ li {
 h1 {
   margin-top: 40px;
   text-align: center;
-  color: #0097A7;
+  color: #0097a7;
 }
 
 h3 {
   margin-bottom: 5px;
 }
 
-.button, .done, .undone, .delete-button, .create-button {
+.button,
+.done,
+.undone,
+.delete-button,
+.create-button {
   height: 30px;
   font-size: 14px;
   font-weight: bold;
@@ -64,12 +78,21 @@ h3 {
   margin: 10px;
 }
 
-.button:focus, .done:focus, .undone:focus, .delete-button:focus, .create-button:focus, a:focus {
+.button:focus,
+.done:focus,
+.undone:focus,
+.delete-button:focus,
+.create-button:focus,
+a:focus {
   outline: none;
 }
 
-.button:hover, .done:hover, .undone:hover, .delete-button:hover, .create-button:hover {
-  background-color: #0097A7;
+.button:hover,
+.done:hover,
+.undone:hover,
+.delete-button:hover,
+.create-button:hover {
+  background-color: #0097a7;
 }
 
 .done {
@@ -77,11 +100,11 @@ h3 {
 }
 
 .undone {
-  background-color: #00BCD4;
+  background-color: #00bcd4;
 }
 
 .delete-button {
-  background-color: #FF4081;
+  background-color: #ff4081;
 }
 .delete-button:hover {
   background-color: #757575;
@@ -90,7 +113,7 @@ h3 {
 .create-button {
   width: 50%;
   margin: 10px auto;
-  background-color: #00BCD4;
+  background-color: #00bcd4;
 }
 
 .input {
@@ -101,7 +124,7 @@ h3 {
   background-color: #ffffff;
   padding: 20px;
   margin: 10px 0;
-  border: 1px solid #00BCD4;
+  border: 1px solid #00bcd4;
   border-radius: 5px;
 }
 .todo-list .todo-list-item .todo-header {
@@ -115,12 +138,16 @@ h3 {
   margin: 10px;
 }
 
-.todo-form label, .step-form label {
+.todo-form label,
+.step-form label {
   margin: 10px 20px;
 }
-.todo-form input, .step-form input, .todo-form textarea, .step-form textarea {
+.todo-form input,
+.step-form input,
+.todo-form textarea,
+.step-form textarea {
   margin: 10px 10px;
-  border: 1px solid #00BCD4;
+  border: 1px solid #00bcd4;
   border-radius: 3px;
 }
 
@@ -140,7 +167,7 @@ a {
 }
 
 .step-form {
-  background-color: #B2EBF2;
+  background-color: #b2ebf2;
   border-radius: 5px;
   padding: 20px;
   margin: 20px 0;

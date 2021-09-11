@@ -4,8 +4,6 @@
 
 ![](.gitbook/assets/image%20%2822%29.png)
 
-
-
 ![](.gitbook/assets/image%20%2814%29.png)
 
 ![](.gitbook/assets/image%20%2824%29.png)
@@ -91,21 +89,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ![](.gitbook/assets/image%20%2818%29.png)
 
-
-
 ![](.gitbook/assets/image%20%2821%29.png)
-
-
-
-
 
 ![](.gitbook/assets/image%20%2816%29.png)
 
 ![](.gitbook/assets/image%20%2812%29.png)
-
-
-
-
 
 ```text
 tree
@@ -133,96 +121,37 @@ tree
 2 directories, 17 files
 ```
 
-
-
 ![](.gitbook/assets/image%20%2811%29.png)
 
 ![](.gitbook/assets/image%20%2826%29.png)
 
-
-
-
-
 ```javascript
 //! 1.)     import the react and reactDOM libraries
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 //==> React uses a bundler package called webpack
 //===> the coe we write in index.js is not automatically available throughout the project
 //=====> The same is true of any js file and that is why we need to import them.
 
-
-
-
-
-
-
 //! 2.)     Create React Component
 
-
-
-
-
-
-
-
-
-
-
 //! 3.)       Take the react component and render it on the screen
-
-
-
-
-
-
-
 ```
-
-
 
 ![](.gitbook/assets/image%20%2820%29.png)
 
-
-
 ```javascript
 //! 1.)     import the react and reactDOM libraries
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 //==> React uses a bundler package called webpack
 //===> the coe we write in index.js is not automatically available throughout the project
 //=====> The same is true of any js file and that is why we need to import them.
 
-
-
-
-
-
-
 //! 2.)     Create React Component
 
-
-
-
-
-
-
-
-
-
-
 //! 3.)       Take the react component and render it on the screen
-
-
-
-
-
-
 ```
-
-
-
-
 
 ```javascript
 //! 1.)     import the react and reactDOM libraries
@@ -233,16 +162,12 @@ import ReactDOM from 'react-dom';
 import MyReact from 'react'; //and it would work all the same.
 ```
 
-
-
 npm checks the node modules folder for a folder called react and because we have one in our node mudules it imports the code from there.....
-
-
 
 ![](.gitbook/assets/image%20%2823%29.png)
 
 ```javascript
-const React =require ('react');
+const React = require("react");
 ```
 
 Require VS Import Statement:
@@ -255,8 +180,6 @@ Import: ES2015 Import statement: es2015 module system... uses import syntax
 
 ## Create React Component:
 
-
-
 Important Note about Live Reloading
 
 There appears to be an issue in CRA in regards to fast refresh when code changes are made to the index.js file:
@@ -268,7 +191,9 @@ Manually refreshing will show the changes, also, any changes to components deepe
 _One workaround noted suggests putting the following in the index.js which enables reloading:_
 
 ```javascript
-if (module.hot) {  module.hot.accept();}
+if (module.hot) {
+  module.hot.accept();
+}
 ```
 
 _Note - If you have spaces in your project directory name, reloading throughout the whole application can also fail._
@@ -281,203 +206,16 @@ _Note - If you have spaces in your project directory name, reloading throughout 
 
 ### Displaying Content with Functional Components:
 
-* **WHAT A REACT COMPONENT IS:**
+- **WHAT A REACT COMPONENT IS:**
 
 ![](.gitbook/assets/image%20%2813%29.png)
 
 A component is function or a class... on codepen I deployed a class but either way's purpose is to produce html to show the user and deal with their feedback.
 
-
-
 To handle user input we employ event Handlers.
-
-
 
 ![Function based component](.gitbook/assets/image%20%288%29.png)
 
-
-
- ES6 arrow function equiv:
+ES6 arrow function equiv:
 
 ![](.gitbook/assets/image%20%2825%29.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

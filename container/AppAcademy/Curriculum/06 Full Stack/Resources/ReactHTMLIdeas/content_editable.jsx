@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 var { render } = ReactDOM;
 
@@ -12,16 +12,17 @@ class ContentEditable extends React.Component {
     var { tagName, html, onChange, ...props } = this.props;
 
     return React.createElement(
-      tagName || 'div',
+      tagName || "div",
       {
         ...props,
-        ref: (e) => this.htmlEl = e,
+        ref: (e) => (this.htmlEl = e),
         onInput: this.emitChange,
         onBlur: this.props.onBlur || this.emitChange,
         contentEditable: !this.props.disabled,
-        dangerouslySetInnerHTML: {__html: html}
+        dangerouslySetInnerHTML: { __html: html },
       },
-      this.props.children);
+      this.props.children
+    );
   }
 
   shouldComponentUpdate(nextProps) {
@@ -29,17 +30,17 @@ class ContentEditable extends React.Component {
     // edits. Rerendering in this case would make the cursor/caret jump.
     return (
       // Rerender if there is no element yet... (somehow?)
-      !this.htmlEl
+      !this.htmlEl ||
       // ...or if html really changed... (programmatically, not by user edit)
-      || ( nextProps.html !== this.htmlEl.innerHTML
-        && nextProps.html !== this.props.html )
+      (nextProps.html !== this.htmlEl.innerHTML &&
+        nextProps.html !== this.props.html) ||
       // ...or if editing is enabled or disabled.
-      || this.props.disabled !== nextProps.disabled
+      this.props.disabled !== nextProps.disabled
     );
   }
 
   componentDidUpdate() {
-    if ( this.htmlEl && this.props.html !== this.htmlEl.innerHTML ) {
+    if (this.htmlEl && this.props.html !== this.htmlEl.innerHTML) {
       // Perhaps React (whose VDOM gets outdated because we often prevent
       // rerendering) did not update the DOM. So we update it manually now.
       this.htmlEl.innerHTML = this.props.html;
@@ -57,25 +58,24 @@ class ContentEditable extends React.Component {
   }
 }
 
-  var MyComponent = React.createClass({
-    getInitialState: function(){
-      return {html: "<b>Hello <i>World</i></b>"};
-    },
+var MyComponent = React.createClass({
+  getInitialState: function () {
+    return { html: "<b>Hello <i>World</i></b>" };
+  },
 
-    handleChange: function(evt){
-      this.setState({html: evt.target.value});
-    },
+  handleChange: function (evt) {
+    this.setState({ html: evt.target.value });
+  },
 
-    render: function(){
-      return <ContentEditable
-                html={this.state.html} // innerHTML of the editable div
-                disabled={false}       // use true to disable edition
-                onChange={this.handleChange} // handle innerHTML change
-              />
-    }
-  });
+  render: function () {
+    return (
+      <ContentEditable
+        html={this.state.html} // innerHTML of the editable div
+        disabled={false} // use true to disable edition
+        onChange={this.handleChange} // handle innerHTML change
+      />
+    );
+  },
+});
 
-render(
-  <MyComponent/>,
-  document.getElementById('react_example')
-);
+render(<MyComponent />, document.getElementById("react_example"));

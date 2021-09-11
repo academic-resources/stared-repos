@@ -16,11 +16,11 @@
 one:
   band_id: 1
   title: MyString
-  year: 
+  year:
   performed: MyString
 
 two:
   band_id: 1
   title: MyString
-  year: 
+  year:
   performed: MyString

@@ -16,9 +16,9 @@ This guide will explain step-by-step how to test `react-apollo` code. The follow
 Consider the component below, which makes a basic query, and displays its results:
 
 ```js
-import React from 'react';
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import React from "react";
+import gql from "graphql-tag";
+import { Query } from "react-apollo";
 
 // Make sure the query is also exported -- not just the component
 export const GET_DOG_QUERY = gql`
@@ -51,7 +51,7 @@ Given this component, let's try to render it inside a test, just to make sure th
 
 ```js
 // Broken because it's missing Apollo Client in the context
-it('should render without error', () => {
+it("should render without error", () => {
   renderer.create(<Dog name="Buck" />);
 });
 ```
@@ -66,18 +66,18 @@ In order to fix this we could wrap the component in an `ApolloProvider` and pass
 
 ```js
 // Not predictable
-it('renders without error', () => {
+it("renders without error", () => {
   renderer.create(
     <ApolloProvider client={client}>
       <Dog name="Buck" />
-    </ApolloProvider>,
+    </ApolloProvider>
   );
 });
 ```
 
 ## `MockedProvider`
 
-The `react-apollo/test-utils` module exports a `MockedProvider` component which simplifies the testing of React components by mocking calls to the GraphQL endpoint.  This allows the tests to be run in isolation and provides consistent results on every run by removing the dependence on remote data.
+The `react-apollo/test-utils` module exports a `MockedProvider` component which simplifies the testing of React components by mocking calls to the GraphQL endpoint. This allows the tests to be run in isolation and provides consistent results on every run by removing the dependence on remote data.
 
 By using this `MockedProvider` component, it's possible to specify the exact results that should be returned for a certain query using the `mocks` prop.
 
@@ -86,37 +86,37 @@ Here's an example of a test for the above `Dog` component using `MockedProvider`
 ```js
 // dog.test.js
 
-import { MockedProvider } from 'react-apollo/test-utils';
+import { MockedProvider } from "react-apollo/test-utils";
 
 // The component AND the query need to be exported
-import { GET_DOG_QUERY, Dog } from './dog';
+import { GET_DOG_QUERY, Dog } from "./dog";
 
 const mocks = [
   {
     request: {
       query: GET_DOG_QUERY,
       variables: {
-        name: 'Buck',
+        name: "Buck",
       },
     },
     result: {
       data: {
-        dog: { id: '1', name: 'Buck', breed: 'bulldog' },
+        dog: { id: "1", name: "Buck", breed: "bulldog" },
       },
     },
   },
 ];
 
-it('renders without error', () => {
+it("renders without error", () => {
   renderer.create(
     <MockedProvider mocks={mocks} addTypename={false}>
       <Dog name="Buck" />
-    </MockedProvider>,
+    </MockedProvider>
   );
 });
 ```
 
-The `mocks` array takes objects with specific `request`s and their associated `result`s.  When the provider receives a `GET_DOG_QUERY` with matching `variables`, it returns the corresponding object from the `result` key.
+The `mocks` array takes objects with specific `request`s and their associated `result`s. When the provider receives a `GET_DOG_QUERY` with matching `variables`, it returns the corresponding object from the `result` key.
 
 ### `addTypename`
 
@@ -128,18 +128,18 @@ If we don't disable the adding of typenames to queries, the imported query won't
 
 ## Testing loading states
 
-In this example, the `Dog` component will render, but it will render in a loading state, not the final response state. This is because `MockedProvider` doesn't just return the data but instead returns a `Promise` that will resolve to that data.  By using a `Promise` it enables testing of the loading state in addition to the final state:
+In this example, the `Dog` component will render, but it will render in a loading state, not the final response state. This is because `MockedProvider` doesn't just return the data but instead returns a `Promise` that will resolve to that data. By using a `Promise` it enables testing of the loading state in addition to the final state:
 
 ```js
-it('should render loading state initially', () => {
+it("should render loading state initially", () => {
   const component = renderer.create(
     <MockedProvider mocks={[]}>
       <Dog />
-    </MockedProvider>,
+    </MockedProvider>
   );
 
   const tree = component.toJSON();
-  expect(tree.children).toContain('Loading...');
+  expect(tree.children).toContain("Loading...");
 });
 ```
 
@@ -150,29 +150,29 @@ This shows a basic example test that tests the loading state of a component by c
 Loading state, while important, isn't the only thing to test. To test the final state of the component after receiving data, we can just wait for it to update and test the final state.
 
 ```js
-const wait = require('waait');
+const wait = require("waait");
 
-it('should render dog', async () => {
+it("should render dog", async () => {
   const dogMock = {
     request: {
       query: GET_DOG_QUERY,
-      variables: { name: 'Buck' },
+      variables: { name: "Buck" },
     },
     result: {
-      data: { dog: { id: 1, name: 'Buck', breed: 'poodle' } },
+      data: { dog: { id: 1, name: "Buck", breed: "poodle" } },
     },
   };
 
   const component = renderer.create(
     <MockedProvider mocks={[dogMock]} addTypename={false}>
       <Dog name="Buck" />
-    </MockedProvider>,
+    </MockedProvider>
   );
 
   await wait(0); // wait for response
 
-  const p = component.root.findByType('p');
-  expect(p.children).toContain('Buck is a poodle');
+  const p = component.root.findByType("p");
+  expect(p.children).toContain("Buck is a poodle");
 });
 ```
 
@@ -189,25 +189,25 @@ Since most developers would follow the "happy path" and not encounter these stat
 To simulate a network error, an `error` property can be included on the mock, in place of or in addition to the `result`.
 
 ```js
-it('should show error UI', async () => {
+it("should show error UI", async () => {
   const dogMock = {
     request: {
       query: GET_DOG_QUERY,
-      variables: { name: 'Buck' },
+      variables: { name: "Buck" },
     },
-    error: new Error('aw shucks'),
+    error: new Error("aw shucks"),
   };
 
   const component = renderer.create(
     <MockedProvider mocks={[dogMock]} addTypename={false}>
       <Dog name="Buck" />
-    </MockedProvider>,
+    </MockedProvider>
   );
 
   await wait(0); // wait for response
 
   const tree = component.toJSON();
-  expect(tree.children).toContain('Error!');
+  expect(tree.children).toContain("Error!");
 });
 ```
 
@@ -219,7 +219,7 @@ To simulate GraphQL errors, define `errors` with an instantiated `GraphQLError` 
 const dogMock = {
   // ...
   result: {
-    errors: [new GraphQLError('Error!')],
+    errors: [new GraphQLError("Error!")],
   },
 };
 ```
@@ -249,7 +249,7 @@ export const DeleteButton = () => (
       if (data) return <p>Deleted!</p>;
 
       return (
-        <button onClick={() => mutate({ variables: { name: 'Buck' } })}>
+        <button onClick={() => mutate({ variables: { name: "Buck" } })}>
           Click me to Delete Buck!
         </button>
       );
@@ -261,13 +261,13 @@ export const DeleteButton = () => (
 Testing an initial render for this component looks identical to testing our `Query` component.
 
 ```js
-import DeleteButton, { DELETE_DOG_MUTATION } from './delete-dog';
+import DeleteButton, { DELETE_DOG_MUTATION } from "./delete-dog";
 
-it('should render without error', () => {
+it("should render without error", () => {
   renderer.create(
     <MockedProvider mocks={[]}>
       <DeleteButton />
-    </MockedProvider>,
+    </MockedProvider>
   );
 });
 ```
@@ -275,13 +275,13 @@ it('should render without error', () => {
 Calling the mutation is where things get interesting:
 
 ```js
-it('should render loading state initially', () => {
-  const deleteDog = { name: 'Buck', breed: 'Poodle', id: 1 };
+it("should render loading state initially", () => {
+  const deleteDog = { name: "Buck", breed: "Poodle", id: 1 };
   const mocks = [
     {
       request: {
         query: DELETE_DOG_MUTATION,
-        variables: { name: 'Buck' },
+        variables: { name: "Buck" },
       },
       result: { data: { deleteDog } },
     },
@@ -290,15 +290,15 @@ it('should render loading state initially', () => {
   const component = renderer.create(
     <MockedProvider mocks={mocks} addTypename={false}>
       <DeleteButton />
-    </MockedProvider>,
+    </MockedProvider>
   );
 
   // find the button and simulate a click
-  const button = component.root.findByType('button');
+  const button = component.root.findByType("button");
   button.props.onClick(); // fires the mutation
 
   const tree = component.toJSON();
-  expect(tree.children).toContain('Loading...');
+  expect(tree.children).toContain("Loading...");
 });
 ```
 
@@ -311,13 +311,13 @@ After a reference to the button has been obtained, a "click" on the button can b
 To test for a successful mutation after simulating the click, the fulfilled `Promise` from `MockedProvider` can be checked for the appropriate confirmation message, just like the `Query` component:
 
 ```js
-it('should delete and give visual feedback', async () => {
-  const deleteDog = { name: 'Buck', breed: 'Poodle', id: 1 };
+it("should delete and give visual feedback", async () => {
+  const deleteDog = { name: "Buck", breed: "Poodle", id: 1 };
   const mocks = [
     {
       request: {
         query: DELETE_DOG_MUTATION,
-        variables: { name: 'Buck' },
+        variables: { name: "Buck" },
       },
       result: { data: { deleteDog } },
     },
@@ -326,17 +326,17 @@ it('should delete and give visual feedback', async () => {
   const component = renderer.create(
     <MockedProvider mocks={mocks} addTypename={false}>
       <DeleteButton />
-    </MockedProvider>,
+    </MockedProvider>
   );
 
   // find the button and simulate a click
-  const button = component.root.findByType('button');
+  const button = component.root.findByType("button");
   button.props.onClick(); // fires the mutation
 
   await wait(0);
 
   const tree = component.toJSON();
-  expect(tree.children).toContain('Deleted!');
+  expect(tree.children).toContain("Deleted!");
 });
 ```
 

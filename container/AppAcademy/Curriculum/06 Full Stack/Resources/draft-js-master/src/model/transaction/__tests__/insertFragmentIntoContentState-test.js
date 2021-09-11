@@ -37,7 +37,7 @@ const DEFAULT_BLOCK_CONFIG = {
 
 const initialBlock = contentState.getBlockMap().first();
 
-const getInvariantViolation = msg => {
+const getInvariantViolation = (msg) => {
   try {
     /* eslint-disable fb-www/sprintf-like-args */
     invariant(false, msg);
@@ -55,7 +55,7 @@ const createFragment = (fragment = {}, experimentalTreeDataSupport = false) => {
 
   return BlockMapBuilder.createFromArray(
     newFragment.map(
-      config =>
+      (config) =>
         new ContentBlockNodeRecord({
           ...DEFAULT_BLOCK_CONFIG,
           ...config,
@@ -64,7 +64,7 @@ const createFragment = (fragment = {}, experimentalTreeDataSupport = false) => {
   );
 };
 
-const createContentBlockNodeFragment = fragment => {
+const createContentBlockNodeFragment = (fragment) => {
   return createFragment(fragment, true);
 };
 

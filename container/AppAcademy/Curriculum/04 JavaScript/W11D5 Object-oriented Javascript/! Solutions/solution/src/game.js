@@ -31,13 +31,14 @@ export default class FlappyBird {
   click(e) {
     if (!this.running) {
       this.play();
-    } 
+    }
     this.bird.flap();
   }
 
   gameOver() {
     return (
-      this.level.collidesWith(this.bird.bounds()) || this.bird.outOfBounds(this.height)
+      this.level.collidesWith(this.bird.bounds()) ||
+      this.bird.outOfBounds(this.height)
     );
   }
 
@@ -73,8 +74,8 @@ export default class FlappyBird {
   }
 
   drawScore() {
-    //loc will be the location 
-    const loc = {x: this.dimensions.width / 2, y: this.dimensions.height / 4}
+    //loc will be the location
+    const loc = { x: this.dimensions.width / 2, y: this.dimensions.height / 4 };
     this.ctx.font = "bold 50pt serif";
     this.ctx.fillStyle = "white";
     this.ctx.fillText(this.score, loc.x, loc.y);

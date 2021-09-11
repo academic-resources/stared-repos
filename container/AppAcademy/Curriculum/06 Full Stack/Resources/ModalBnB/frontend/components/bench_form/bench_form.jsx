@@ -1,14 +1,14 @@
-import React from 'react';
-import { withRouter } from 'react-router';
+import React from "react";
+import { withRouter } from "react-router";
 
-class BenchForm extends React.Component{
+class BenchForm extends React.Component {
   constructor(props) {
     super(props);
-    this.coords = {lat: props.lat, lng: props.lng};
+    this.coords = { lat: props.lat, lng: props.lng };
     this.state = {
-      description: '',
-      picture_url: '',
-      seating: 2
+      description: "",
+      picture_url: "",
+      seating: 2,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToSearch = this.navigateToSearch.bind(this);
@@ -16,22 +16,21 @@ class BenchForm extends React.Component{
   }
 
   navigateToSearch() {
-    this.props.history.push('/');
+    this.props.history.push("/");
   }
 
   update(property) {
-    return e => this.setState({
-      [property]: e.target.value
-    });
+    return (e) =>
+      this.setState({
+        [property]: e.target.value,
+      });
   }
 
   handleCloudinary(e) {
     e.preventDefault();
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, (error, results) => {
-      if(error)
-        console.log(error);
-      else
-        this.setState({ picture_url: results[0].secure_url });
+      if (error) console.log(error);
+      else this.setState({ picture_url: results[0].secure_url });
     });
   }
 
@@ -56,7 +55,7 @@ class BenchForm extends React.Component{
             <input
               type="text"
               value={description}
-              onChange={this.update('description')}
+              onChange={this.update("description")}
               className="bench-field"
             />
 
@@ -65,25 +64,15 @@ class BenchForm extends React.Component{
               min="0"
               type="number"
               value={seating}
-              onChange={this.update('seating')}
+              onChange={this.update("seating")}
               className="bench-field"
             />
 
             <label className="bench-field">Latitude</label>
-            <input
-              type="text"
-              disabled
-              value={lat}
-              className="bench-field"
-            />
+            <input type="text" disabled value={lat} className="bench-field" />
 
             <label className="bench-field">Longitude</label>
-            <input
-              type="text"
-              disabled
-              value={lng}
-              className="bench-field"
-            />
+            <input type="text" disabled value={lng} className="bench-field" />
 
             <div className="button-holder">
               <button

@@ -1,7 +1,6 @@
+import { htmlGenerator } from "./warmup";
 
-import {htmlGenerator} from "./warmup";
-
-let clockElement = document.getElementById('clock');
+let clockElement = document.getElementById("clock");
 
 class Clock {
   constructor() {
@@ -23,7 +22,7 @@ class Clock {
   printTime() {
     // Format the time in HH:MM:SS
     const timeString = [this.hours, this.minutes, this.seconds].join(":");
-    
+
     htmlGenerator(timeString, clockElement);
   }
 

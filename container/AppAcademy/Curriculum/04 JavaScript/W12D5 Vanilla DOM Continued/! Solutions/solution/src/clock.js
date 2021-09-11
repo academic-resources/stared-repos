@@ -1,4 +1,4 @@
-import {htmlGenerator} from "./warmup";
+import { htmlGenerator } from "./warmup";
 
 class Clock {
   constructor() {
@@ -7,7 +7,7 @@ class Clock {
     this.hours = currentTime.getHours();
     this.minutes = currentTime.getMinutes();
     this.seconds = currentTime.getSeconds();
-    // ensure our clock is always on the page and doesn't have to wait for 
+    // ensure our clock is always on the page and doesn't have to wait for
     // the first tick
     htmlGenerator(this.printTime(), clockElement);
     // Schedule the tick at 1 second intervals.
@@ -42,7 +42,7 @@ class Clock {
     if (this.minutes === 60) {
       this.minutes = 0;
       this._incrementHours();
-    } 
+    }
   }
 
   _incrementHours() {
@@ -51,5 +51,5 @@ class Clock {
 }
 
 // Grab onto the Element we want to use for the Clock.
-const clockElement = document.getElementById('clock');
+const clockElement = document.getElementById("clock");
 const clock = new Clock();

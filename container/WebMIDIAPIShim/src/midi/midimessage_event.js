@@ -13,6 +13,6 @@ export default class MIDIMessageEvent {
         this.srcElement = port;
         this.target = port;
         this.timeStamp = Date.now();
-        this.type = 'midimessage';
+        this.type = "midimessage";
     }
 }

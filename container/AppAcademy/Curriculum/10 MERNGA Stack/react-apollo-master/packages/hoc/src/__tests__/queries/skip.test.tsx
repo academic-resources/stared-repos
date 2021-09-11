@@ -1,18 +1,18 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import gql from 'graphql-tag';
-import ApolloClient from 'apollo-client';
-import { ApolloLink } from 'apollo-link';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { mockSingleLink, stripSymbols } from '@apollo/react-testing';
-import { ApolloProvider } from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import gql from "graphql-tag";
+import ApolloClient from "apollo-client";
+import { ApolloLink } from "apollo-link";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { mockSingleLink, stripSymbols } from "@apollo/react-testing";
+import { ApolloProvider } from "@apollo/react-common";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
-describe('[queries] skip', () => {
+describe("[queries] skip", () => {
   afterEach(cleanup);
 
-  it('allows you to skip a query without running it', done => {
+  it("allows you to skip a query without running it", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -22,14 +22,14 @@ describe('[queries] skip', () => {
         }
       }
     `;
-    const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     const link = mockSingleLink({
       request: { query },
-      result: { data }
+      result: { data },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
     interface Props {
       skip: boolean;
@@ -37,7 +37,7 @@ describe('[queries] skip', () => {
 
     let queryExecuted = false;
     const Container = graphql<Props>(query, {
-      skip: ({ skip }) => skip
+      skip: ({ skip }) => skip,
     })(
       class extends React.Component<ChildProps<Props>> {
         componentDidUpdate() {
@@ -61,11 +61,11 @@ describe('[queries] skip', () => {
         done();
         return;
       }
-      fail(new Error('query ran even though skip present'));
+      fail(new Error("query ran even though skip present"));
     }, 25);
   });
 
-  it('continues to not subscribe to a skipped query when props change', done => {
+  it("continues to not subscribe to a skipped query when props change", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -77,13 +77,13 @@ describe('[queries] skip', () => {
     `;
 
     const link = new ApolloLink((o, f) => {
-      done.fail(new Error('query ran even though skip present'));
+      done.fail(new Error("query ran even though skip present"));
       return f ? f(o) : null;
     }).concat(mockSingleLink());
     // const oldQuery = link.query;
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     interface Props {
@@ -119,7 +119,7 @@ describe('[queries] skip', () => {
     );
   });
 
-  it('supports using props for skipping which are used in options', done => {
+  it("supports using props for skipping which are used in options", (done) => {
     const query: DocumentNode = gql`
       query people($id: ID!) {
         allPeople(first: $id) {
@@ -131,7 +131,7 @@ describe('[queries] skip', () => {
     `;
 
     const data = {
-      allPeople: { people: { id: 1 } }
+      allPeople: { people: { id: 1 } },
     };
 
     type Data = typeof data;
@@ -141,12 +141,12 @@ describe('[queries] skip', () => {
 
     const link = mockSingleLink({
       request: { query, variables },
-      result: { data }
+      result: { data },
     });
 
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let count = 0;
@@ -159,9 +159,9 @@ describe('[queries] skip', () => {
       skip: ({ person }) => !person,
       options: ({ person }) => ({
         variables: {
-          id: person!.id
-        }
-      })
+          id: person!.id,
+        },
+      }),
     })(
       class extends React.Component<ChildProps<Props, Data, Vars>> {
         componentDidUpdate() {
@@ -203,7 +203,7 @@ describe('[queries] skip', () => {
     );
   });
 
-  it("doesn't run options or props when skipped, including option.client", done => {
+  it("doesn't run options or props when skipped, including option.client", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -213,14 +213,14 @@ describe('[queries] skip', () => {
         }
       }
     `;
-    const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     const link = mockSingleLink({
       request: { query },
-      result: { data }
+      result: { data },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let queryExecuted = false;
@@ -238,16 +238,16 @@ describe('[queries] skip', () => {
 
     const Container = graphql<Props, {}, {}, FinalProps>(query, {
       skip: ({ skip }) => skip,
-      options: props => {
+      options: (props) => {
         optionsCalled = true;
         return {
-          pollInterval: props.pollInterval
+          pollInterval: props.pollInterval,
         };
       },
-      props: props => ({
+      props: (props) => ({
         // intentionally incorrect
-        pollInterval: (props as any).willThrowIfAccesed.pollInterval
-      })
+        pollInterval: (props as any).willThrowIfAccesed.pollInterval,
+      }),
     })(
       class extends React.Component<FinalProps & Props> {
         componentDidUpdate() {
@@ -272,14 +272,14 @@ describe('[queries] skip', () => {
         return;
       }
       if (optionsCalled) {
-        fail(new Error('options ran even though skip present'));
+        fail(new Error("options ran even though skip present"));
         return;
       }
-      fail(new Error('query ran even though skip present'));
+      fail(new Error("query ran even though skip present"));
     }, 25);
   });
 
-  it("doesn't run options or props when skipped even if the component updates", done => {
+  it("doesn't run options or props when skipped even if the component updates", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -292,12 +292,12 @@ describe('[queries] skip', () => {
 
     const link = mockSingleLink({
       request: { query },
-      result: {}
+      result: {},
     });
 
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let queryWasSkipped = true;
@@ -314,7 +314,7 @@ describe('[queries] skip', () => {
       props: () => {
         queryWasSkipped = false;
         return {};
-      }
+      },
     })(
       class extends React.Component<ChildProps<Props>> {
         componentDidUpdate() {
@@ -328,9 +328,9 @@ describe('[queries] skip', () => {
     );
 
     class Parent extends React.Component<{}, { foo: string }> {
-      state = { foo: 'bar' };
+      state = { foo: "bar" };
       componentDidMount() {
-        this.setState({ foo: 'baz' });
+        this.setState({ foo: "baz" });
       }
       render() {
         return <Container foo={this.state.foo} />;
@@ -344,7 +344,7 @@ describe('[queries] skip', () => {
     );
   });
 
-  it('allows you to skip a query without running it (alternate syntax)', done => {
+  it("allows you to skip a query without running it (alternate syntax)", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -354,14 +354,14 @@ describe('[queries] skip', () => {
         }
       }
     `;
-    const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     const link = mockSingleLink({
       request: { query },
-      result: { data }
+      result: { data },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let queryExecuted = false;
@@ -388,13 +388,13 @@ describe('[queries] skip', () => {
         done();
         return;
       }
-      fail(new Error('query ran even though skip present'));
+      fail(new Error("query ran even though skip present"));
     }, 25);
   });
 
   // test the case of skip:false -> skip:true -> skip:false to make sure things
   // are cleaned up properly
-  it('allows you to skip then unskip a query with top-level syntax', done => {
+  it("allows you to skip then unskip a query with top-level syntax", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -404,14 +404,14 @@ describe('[queries] skip', () => {
         }
       }
     `;
-    const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     const link = mockSingleLink({
       request: { query },
-      result: { data }
+      result: { data },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let hasSkipped = false;
@@ -447,7 +447,7 @@ describe('[queries] skip', () => {
         return (
           <Container
             skip={this.state.skip}
-            setSkip={skip => this.setState({ skip })}
+            setSkip={(skip) => this.setState({ skip })}
           />
         );
       }
@@ -460,7 +460,7 @@ describe('[queries] skip', () => {
     );
   });
 
-  it('allows you to skip then unskip a query with new options (top-level syntax)', done => {
+  it("allows you to skip then unskip a query with new options (top-level syntax)", (done) => {
     const query: DocumentNode = gql`
       query people($first: Int) {
         allPeople(first: $first) {
@@ -470,8 +470,8 @@ describe('[queries] skip', () => {
         }
       }
     `;
-    const dataOne = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-    const dataTwo = { allPeople: { people: [{ name: 'Leia Skywalker' }] } };
+    const dataOne = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+    const dataTwo = { allPeople: { people: [{ name: "Leia Skywalker" }] } };
 
     type Data = typeof dataOne;
     type Vars = { first: number };
@@ -479,20 +479,20 @@ describe('[queries] skip', () => {
     const link = mockSingleLink(
       {
         request: { query, variables: { first: 1 } },
-        result: { data: dataOne }
+        result: { data: dataOne },
       },
       {
         request: { query, variables: { first: 2 } },
-        result: { data: dataTwo }
+        result: { data: dataTwo },
       },
       {
         request: { query, variables: { first: 2 } },
-        result: { data: dataTwo }
+        result: { data: dataTwo },
       }
     );
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let hasSkipped = false;
@@ -500,12 +500,12 @@ describe('[queries] skip', () => {
     interface Props {
       skip: boolean;
       first: number;
-      setState: <K extends 'skip' | 'first'>(
+      setState: <K extends "skip" | "first">(
         state: Pick<{ skip: boolean; first: number }, K>
       ) => void;
     }
     const Container = graphql<Props, Data, Vars>(query, {
-      skip: ({ skip }) => skip
+      skip: ({ skip }) => skip,
     })(
       class extends React.Component<ChildProps<Props, Data, Vars>> {
         componentDidUpdate(prevProps: ChildProps<Props, Data, Vars>) {
@@ -542,7 +542,7 @@ describe('[queries] skip', () => {
           <Container
             skip={this.state.skip}
             first={this.state.first}
-            setState={state => this.setState(state)}
+            setState={(state) => this.setState(state)}
           />
         );
       }
@@ -555,7 +555,7 @@ describe('[queries] skip', () => {
     );
   });
 
-  it('allows you to skip then unskip a query with opts syntax', done => {
+  it("allows you to skip then unskip a query with opts syntax", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -566,8 +566,8 @@ describe('[queries] skip', () => {
       }
     `;
 
-    const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
-    const nextData = { allPeople: { people: [{ name: 'Anakin Skywalker' }] } };
+    const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
+    const nextData = { allPeople: { people: [{ name: "Anakin Skywalker" }] } };
 
     let ranQuery = 0;
 
@@ -578,14 +578,14 @@ describe('[queries] skip', () => {
       mockSingleLink({
         request: { query },
         result: { data },
-        newData: () => ({ data: nextData })
+        newData: () => ({ data: nextData }),
       })
     );
 
     const client = new ApolloClient({
       link,
       cache: new Cache({ addTypename: false }),
-      queryDeduplication: false
+      queryDeduplication: false,
     });
 
     interface Props {
@@ -595,10 +595,10 @@ describe('[queries] skip', () => {
     let count = 0;
     const Container = graphql<Props>(query, {
       options: {
-        fetchPolicy: 'network-only',
-        notifyOnNetworkStatusChange: true
+        fetchPolicy: "network-only",
+        notifyOnNetworkStatusChange: true,
       },
-      skip: ({ skip }) => skip
+      skip: ({ skip }) => skip,
     })(
       class extends React.Component<any> {
         render() {
@@ -643,7 +643,7 @@ describe('[queries] skip', () => {
         return (
           <Container
             skip={this.state.skip}
-            setSkip={skip => this.setState({ skip })}
+            setSkip={(skip) => this.setState({ skip })}
           />
         );
       }
@@ -656,7 +656,7 @@ describe('[queries] skip', () => {
     );
   });
 
-  it('removes the injected props if skip becomes true', done => {
+  it("removes the injected props if skip becomes true", (done) => {
     let count = 0;
     const query: DocumentNode = gql`
       query people($first: Int) {
@@ -668,13 +668,13 @@ describe('[queries] skip', () => {
       }
     `;
 
-    const data1 = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data1 = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     const variables1 = { first: 1 };
 
-    const data2 = { allPeople: { people: [{ name: 'Leia Skywalker' }] } };
+    const data2 = { allPeople: { people: [{ name: "Leia Skywalker" }] } };
     const variables2 = { first: 2 };
 
-    const data3 = { allPeople: { people: [{ name: 'Anakin Skywalker' }] } };
+    const data3 = { allPeople: { people: [{ name: "Anakin Skywalker" }] } };
     const variables3 = { first: 3 };
 
     type Data = typeof data1;
@@ -688,11 +688,11 @@ describe('[queries] skip', () => {
 
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     const Container = graphql<Vars, Data>(query, {
-      skip: () => count === 1
+      skip: () => count === 1,
     })(
       class extends React.Component<ChildProps<Vars, Data>> {
         componentDidUpdate() {
@@ -742,7 +742,7 @@ describe('[queries] skip', () => {
     );
   });
 
-  it('allows you to unmount a skipped query', done => {
+  it("allows you to unmount a skipped query", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -755,7 +755,7 @@ describe('[queries] skip', () => {
     const link = mockSingleLink();
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     interface Props {
@@ -763,7 +763,7 @@ describe('[queries] skip', () => {
     }
 
     const Container = graphql<Props>(query, {
-      skip: true
+      skip: true,
     })(
       class extends React.Component<ChildProps<Props>> {
         componentDidMount() {

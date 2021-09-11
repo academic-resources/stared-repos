@@ -1,8 +1,8 @@
-import { OperationVariables } from '@apollo/react-common';
-import { useSubscription } from '@apollo/react-hooks';
-import PropTypes from 'prop-types';
+import { OperationVariables } from "@apollo/react-common";
+import { useSubscription } from "@apollo/react-hooks";
+import PropTypes from "prop-types";
 
-import { SubscriptionComponentOptions } from './types';
+import { SubscriptionComponentOptions } from "./types";
 
 export function Subscription<TData = any, TVariables = OperationVariables>(
   props: SubscriptionComponentOptions<TData, TVariables>

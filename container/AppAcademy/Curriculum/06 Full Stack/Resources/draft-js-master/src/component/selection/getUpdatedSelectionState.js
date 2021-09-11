@@ -77,7 +77,7 @@ function getUpdatedSelectionState(
       .getCurrentContent()
       .getBlockMap()
       .keySeq()
-      .skipUntil(v => v === anchorBlockKey || v === focusBlockKey)
+      .skipUntil((v) => v === anchorBlockKey || v === focusBlockKey)
       .first();
     isBackward = startKey === focusBlockKey;
   }

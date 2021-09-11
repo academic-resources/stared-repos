@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default ({ errors }) => (
   <ul className="error-block">
@@ -6,4 +6,4 @@ export default ({ errors }) => (
       <li key={i}>{err}</li>
     ))}
   </ul>
-)
+);

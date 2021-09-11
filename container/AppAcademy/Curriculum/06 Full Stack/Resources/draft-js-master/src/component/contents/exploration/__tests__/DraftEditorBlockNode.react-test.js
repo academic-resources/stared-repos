@@ -86,8 +86,8 @@ const selectionState = new SelectionState({
 const PROPS = {
   block: rootBlock,
   blockRenderMap: DefaultDraftBlockRenderMap,
-  blockRendererFn: block => null,
-  blockStyleFn: block => '',
+  blockRendererFn: (block) => null,
+  blockStyleFn: (block) => '',
   contentState,
   customStyleFn: (style, block) => null,
   customStyleMap: {},
@@ -114,7 +114,7 @@ const setupDomMocks = () => {
   getViewportDimensions.mockReturnValue({width: 1200, height: 800});
 };
 
-const assertDraftEditorBlockRendering = props => {
+const assertDraftEditorBlockRendering = (props) => {
   const childProps = {
     ...props,
     editorState: EditorState.createWithContent(
@@ -341,7 +341,7 @@ test('renders block with nested children with decorator', () => {
     }),
   ]);
 
-  const DecoratedComponent = props => {
+  const DecoratedComponent = (props) => {
     return <span className={'custom-decorated-text'}>{props.children}</span>;
   };
 
@@ -424,14 +424,14 @@ test('renders block with nested children with custom component', () => {
     }),
   ]);
 
-  const CustomBlock = props => {
+  const CustomBlock = (props) => {
     return <div className={'custom-header-one'}>Custom Component</div>;
   };
 
   assertDraftEditorBlockRendering({
     ...PROPS,
     block: rootBlock,
-    blockRendererFn: block => {
+    blockRendererFn: (block) => {
       if (block.getType() === 'header-one') {
         return {
           component: CustomBlock,
@@ -469,7 +469,7 @@ test('renders block with nested children with custom component and editable prop
     }),
   ]);
 
-  const CustomBlock = props => {
+  const CustomBlock = (props) => {
     return (
       <div className={'custom-header-one'}>
         Custom Component {props.blockProps.foo}
@@ -480,7 +480,7 @@ test('renders block with nested children with custom component and editable prop
   assertDraftEditorBlockRendering({
     ...PROPS,
     block: rootBlock,
-    blockRendererFn: block => {
+    blockRendererFn: (block) => {
       if (block.getType() === 'header-one') {
         return {
           component: CustomBlock,
@@ -525,7 +525,7 @@ test('renders block with nested children with blockStyleFn', () => {
   assertDraftEditorBlockRendering({
     ...PROPS,
     block: rootBlock,
-    blockStyleFn: block => {
+    blockStyleFn: (block) => {
       if (block.getType() === 'header-one') {
         return 'My-fancy-custom-class';
       }

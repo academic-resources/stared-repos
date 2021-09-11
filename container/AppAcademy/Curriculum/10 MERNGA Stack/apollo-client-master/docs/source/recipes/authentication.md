@@ -8,12 +8,12 @@ Apollo Client uses the ultra flexible [Apollo Link](https://www.apollographql.co
 
 ## Cookie
 
-If your app is browser based and you are using cookies for login and session management with a backend, it's very easy to tell your network interface to send the cookie along with every request. You just need to pass the credentials option. e.g.  `credentials: 'same-origin'` as shown below, if your backend server is the same domain or else `credentials: 'include'` if your backend is a different domain.
+If your app is browser based and you are using cookies for login and session management with a backend, it's very easy to tell your network interface to send the cookie along with every request. You just need to pass the credentials option. e.g. `credentials: 'same-origin'` as shown below, if your backend server is the same domain or else `credentials: 'include'` if your backend is a different domain.
 
 ```js
 const link = createHttpLink({
-  uri: '/graphql',
-  credentials: 'same-origin'
+  uri: "/graphql",
+  credentials: "same-origin",
 });
 
 const client = new ApolloClient({
@@ -29,8 +29,8 @@ Note: the backend must also allow credentials from the requested origin. e.g. if
 ```js
 // enable cors
 var corsOptions = {
-  origin: '<insert uri of front-end domain>',
-  credentials: true // <-- REQUIRED backend setting
+  origin: "<insert uri of front-end domain>",
+  credentials: true, // <-- REQUIRED backend setting
 };
 app.use(cors(corsOptions));
 ```
@@ -40,30 +40,30 @@ app.use(cors(corsOptions));
 Another common way to identify yourself when using HTTP is to send along an authorization header. It's easy to add an `authorization` header to every HTTP request by chaining together Apollo Links. In this example, we'll pull the login token from `localStorage` every time a request is sent:
 
 ```js
-import { ApolloClient } from 'apollo-client';
-import { createHttpLink } from 'apollo-link-http';
-import { setContext } from 'apollo-link-context';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloClient } from "apollo-client";
+import { createHttpLink } from "apollo-link-http";
+import { setContext } from "apollo-link-context";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem("token");
   // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
       authorization: token ? `Bearer ${token}` : "",
-    }
-  }
+    },
+  };
 });
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 ```
 

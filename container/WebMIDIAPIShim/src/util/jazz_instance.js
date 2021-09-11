@@ -12,14 +12,13 @@
   will be reused if a new device gets connected.
 */
 
-import Store from './store';
-import { getDevice } from './util';
+import Store from "./store";
+import { getDevice } from "./util";
 
-const jazzPluginInitTime = getDevice().browser === 'firefox' ? 200 : 100; // 200 ms timeout for Firefox v.55
+const jazzPluginInitTime = getDevice().browser === "firefox" ? 200 : 100; // 200 ms timeout for Firefox v.55
 
 let jazzInstanceNumber = 0;
 const jazzInstances = new Store();
-
 
 export function createJazzInstance(callback) {
     const id = `jazz_${jazzInstanceNumber}_${Date.now()}`;
@@ -41,42 +40,41 @@ export function createJazzInstance(callback) {
             </object>
         */
 
-        activeX = document.createElement('object');
+        activeX = document.createElement("object");
         activeX.id = `${id}ie`;
-        activeX.classid = 'CLSID:1ACE1618-1C7D-4561-AEE1-34842AA85E90';
+        activeX.classid = "CLSID:1ACE1618-1C7D-4561-AEE1-34842AA85E90";
 
-        objRef = document.createElement('object');
+        objRef = document.createElement("object");
         objRef.id = id;
-        objRef.type = 'audio/x-jazz';
+        objRef.type = "audio/x-jazz";
 
         activeX.appendChild(objRef);
 
-        const p = document.createElement('p');
-        p.appendChild(document.createTextNode('This page requires the '));
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode("This page requires the "));
 
-        const a = document.createElement('a');
-        a.appendChild(document.createTextNode('Jazz plugin'));
-        a.href = 'http://jazz-soft.net/';
+        const a = document.createElement("a");
+        a.appendChild(document.createTextNode("Jazz plugin"));
+        a.href = "http://jazz-soft.net/";
 
         p.appendChild(a);
-        p.appendChild(document.createTextNode('.'));
+        p.appendChild(document.createTextNode("."));
 
         objRef.appendChild(p);
 
-        let insertionPoint = document.getElementById('MIDIPlugin');
+        let insertionPoint = document.getElementById("MIDIPlugin");
         if (!insertionPoint) {
             // Create hidden element
-            insertionPoint = document.createElement('div');
-            insertionPoint.id = 'MIDIPlugin';
-            insertionPoint.style.position = 'absolute';
-            insertionPoint.style.visibility = 'hidden';
-            insertionPoint.style.left = '-9999px';
-            insertionPoint.style.top = '-9999px';
+            insertionPoint = document.createElement("div");
+            insertionPoint.id = "MIDIPlugin";
+            insertionPoint.style.position = "absolute";
+            insertionPoint.style.visibility = "hidden";
+            insertionPoint.style.left = "-9999px";
+            insertionPoint.style.top = "-9999px";
             document.body.appendChild(insertionPoint);
         }
         insertionPoint.appendChild(activeX);
     }
-
 
     setTimeout(() => {
         let instance = null;
@@ -93,9 +91,8 @@ export function createJazzInstance(callback) {
     }, jazzPluginInitTime);
 }
 
-
 export function getJazzInstance(type, callback) {
-    const key = type === 'input' ? 'inputInUse' : 'outputInUse';
+    const key = type === "input" ? "inputInUse" : "outputInUse";
     let instance = null;
 
     const values = jazzInstances.values();

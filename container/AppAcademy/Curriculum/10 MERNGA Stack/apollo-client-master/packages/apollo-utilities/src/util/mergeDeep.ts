@@ -14,13 +14,19 @@ const { hasOwnProperty } = Object.prototype;
 // inference, but that approach has several fatal flaws (boolean becomes
 // true & false, and the inferred type ends up as unknown in many cases),
 // in addition to being nearly impossible to explain/understand.
-export type TupleToIntersection<T extends any[]> =
-  T extends [infer A] ? A :
-  T extends [infer A, infer B] ? A & B :
-  T extends [infer A, infer B, infer C] ? A & B & C :
-  T extends [infer A, infer B, infer C, infer D] ? A & B & C & D :
-  T extends [infer A, infer B, infer C, infer D, infer E] ? A & B & C & D & E :
-  T extends (infer U)[] ? U : any;
+export type TupleToIntersection<T extends any[]> = T extends [infer A]
+  ? A
+  : T extends [infer A, infer B]
+  ? A & B
+  : T extends [infer A, infer B, infer C]
+  ? A & B & C
+  : T extends [infer A, infer B, infer C, infer D]
+  ? A & B & C & D
+  : T extends [infer A, infer B, infer C, infer D, infer E]
+  ? A & B & C & D & E
+  : T extends (infer U)[]
+  ? U
+  : any;
 
 export function mergeDeep<T extends any[]>(
   ...sources: T
@@ -35,7 +41,7 @@ export function mergeDeep<T extends any[]>(
 // element type, which works perfectly when the sources array has a
 // consistent element type.
 export function mergeDeepArray<T>(sources: T[]): T {
-  let target = sources[0] || {} as T;
+  let target = sources[0] || ({} as T);
   const count = sources.length;
   if (count > 1) {
     const pastCopies: any[] = [];
@@ -48,14 +54,10 @@ export function mergeDeepArray<T>(sources: T[]): T {
 }
 
 function isObject(obj: any): obj is Record<string | number, any> {
-  return obj !== null && typeof obj === 'object';
+  return obj !== null && typeof obj === "object";
 }
 
-function mergeHelper(
-  target: any,
-  source: any,
-  pastCopies: any[],
-) {
+function mergeHelper(target: any, source: any, pastCopies: any[]) {
   if (isObject(source) && isObject(target)) {
     // In case the target has been frozen, make an extensible copy so that
     // we can merge properties into the copy.
@@ -63,7 +65,7 @@ function mergeHelper(
       target = shallowCopyForMerge(target, pastCopies);
     }
 
-    Object.keys(source).forEach(sourceKey => {
+    Object.keys(source).forEach((sourceKey) => {
       const sourceValue = source[sourceKey];
       if (hasOwnProperty.call(target, sourceKey)) {
         const targetValue = target[sourceKey];
@@ -78,7 +80,7 @@ function mergeHelper(
           target[sourceKey] = mergeHelper(
             shallowCopyForMerge(targetValue, pastCopies),
             sourceValue,
-            pastCopies,
+            pastCopies
           );
         }
       } else {
@@ -98,7 +100,7 @@ function mergeHelper(
 function shallowCopyForMerge<T>(value: T, pastCopies: any[]): T {
   if (
     value !== null &&
-    typeof value === 'object' &&
+    typeof value === "object" &&
     pastCopies.indexOf(value) < 0
   ) {
     if (Array.isArray(value)) {

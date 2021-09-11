@@ -33,8 +33,8 @@ const DraftTreeInvariants = {
     }
 
     // is its children's parent
-    const children = block.getChildKeys().map(k => blockMap.get(k));
-    if (!children.every(c => c.getParentKey() === key)) {
+    const children = block.getChildKeys().map((k) => blockMap.get(k));
+    if (!children.every((c) => c.getParentKey() === key)) {
       warning(true, 'Tree is missing child -> parent pointer on %s', key);
       return false;
     }
@@ -96,7 +96,7 @@ const DraftTreeInvariants = {
     const eligibleFirstNodes = blockMap
       .toArray()
       .filter(
-        block =>
+        (block) =>
           block.getParentKey() == null && block.getPrevSiblingKey() == null,
       );
     if (eligibleFirstNodes.length !== 1) {
@@ -116,9 +116,9 @@ const DraftTreeInvariants = {
         if (nextSiblingKey != null) {
           visitedStack.unshift(nextSiblingKey);
         }
-        const children = childKeys.map(k => blockMap.get(k));
+        const children = childKeys.map((k) => blockMap.get(k));
         const firstNode = children.find(
-          block => block.getPrevSiblingKey() == null,
+          (block) => block.getPrevSiblingKey() == null,
         );
         if (firstNode == null) {
           warning(true, '%s has no first child', currentKey);
@@ -154,7 +154,7 @@ const DraftTreeInvariants = {
    */
   isValidTree(blockMap: BlockMap): boolean {
     const blocks = blockMap.toArray();
-    if (!blocks.every(block => this.isValidBlock(block, blockMap))) {
+    if (!blocks.every((block) => this.isValidBlock(block, blockMap))) {
       return false;
     }
     return this.isConnectedTree(blockMap);

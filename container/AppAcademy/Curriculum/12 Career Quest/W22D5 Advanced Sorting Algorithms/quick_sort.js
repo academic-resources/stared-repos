@@ -1,29 +1,27 @@
-
 function partition(array, pivot) {
-  let left = array.filter(el => el < pivot);
-  let right = array.filter(el => el >= pivot);
-  return [ left, right ];
+  let left = array.filter((el) => el < pivot);
+  let right = array.filter((el) => el >= pivot);
+  return [left, right];
 }
 
 let arr = [7, 3, 8, 9, 2];
-console.log(partition(arr, 5));  // => [[3, 2], [7,8,9]]
+console.log(partition(arr, 5)); // => [[3, 2], [7,8,9]]
 
+function quickSort(array) {
+  if (array.length <= 1) return array;
 
-function quickSort (array) {
-  if (array.length <= 1) return array
+  let pivot = array.shift(); //arbitrary - could be array[array.length - 1]
+  let leftSide = array.filter((el) => el < pivot);
+  let rightSide = array.filter((el) => el >= pivot);
 
-  let pivot = array.shift() //arbitrary - could be array[array.length - 1]
-  let leftSide = array.filter(el => el < pivot);
-  let rightSide = array.filter(el => el >= pivot);
-
-  let leftSorted = quickSort(leftSide)
-  let rightSorted = quickSort(rightSide)
+  let leftSorted = quickSort(leftSide);
+  let rightSorted = quickSort(rightSide);
 
   // return leftSorted.concat([pivot]).concat(rightSorted)
-  return [...leftSorted, pivot, ...rightSorted]
+  return [...leftSorted, pivot, ...rightSorted];
 }
 
-console.log(quickSort(arr))
+console.log(quickSort(arr));
 
 // Time and Space Complexity Analysis
 // The complexity analysis of this algorithm is easier to explain through visuals, so we highly encourage you to watch the lecture that accompanies this reading. In any case, here is a summary of the complexity.

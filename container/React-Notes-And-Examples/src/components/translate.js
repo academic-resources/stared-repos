@@ -7,7 +7,7 @@ const doTranslation = async (input, languageCode, cancelToken) => {
       "https://translation.googleapis.com/language/translate/v2?key=AIzaSyCf0Xy0OnhxlduyEt3K8zP-sOuu-l_u6uA",
       {
         q: input,
-        target: languageCode
+        target: languageCode,
       },
       { cancelToken: cancelToken.token }
     );

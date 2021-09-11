@@ -19,5 +19,5 @@ export {
   JS,
   ReactIcon,
   Tech,
-  Video
+  Video,
 }

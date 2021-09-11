@@ -1,28 +1,24 @@
-Thanks for filing an issue! 
+Thanks for filing an issue!
 
 If at all possible, please provide a Codepen to demonstrate the problem you're having with React Quill. Here's a [template] to get you started.
 
-[template]: 
-https://codepen.io/pen?template=xgyOXQ
+[template]: https://codepen.io/pen?template=xgyOXQ
 
 ### FAQ
 
 **How do I access the wrapped Quill instance?**
 See the [instance methods] and [API] documentation.
 
-[instance methods]:
-https://github.com/zenoamaro/react-quill#methods
-
-[API]:
-https://github.com/zenoamaro/react-quill#api-reference
+[instance methods]: https://github.com/zenoamaro/react-quill#methods
+[api]: https://github.com/zenoamaro/react-quill#api-reference
 
 **Is there a bug in Quill?**
 Please refer to the [Quill issues page].
 
-[Quill issues page]: 
-https://github.com/quilljs/quill/issues
+[quill issues page]: https://github.com/quilljs/quill/issues
 
-#### React-Quill version 
+#### React-Quill version
+
 - [ ] master
 - [ ] 0.4.1
 - [ ] 1.0.0-beta-1

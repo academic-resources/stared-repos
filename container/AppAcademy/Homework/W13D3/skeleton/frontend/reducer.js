@@ -1,6 +1,6 @@
 const initialState = {
-  city: "Please Select", 
-  jobs: []
+  city: "Please Select",
+  jobs: [],
 };
 
 const reducer = (state = initialState, action) => {

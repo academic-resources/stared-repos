@@ -30,7 +30,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Helmet
           title={data.site.siteMetadata.title}
@@ -42,9 +42,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Container>
-          {children}
-        </Container>
+        <Container>{children}</Container>
         <Footer />
         <Background />
         <GlobalStyle />

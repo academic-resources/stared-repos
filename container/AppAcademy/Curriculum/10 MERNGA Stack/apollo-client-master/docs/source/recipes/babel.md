@@ -46,7 +46,7 @@ Why would you prefer this approach? Mainly because it requires less configuratio
 To use it, provided that you [already have babel-macros installed](https://github.com/kentcdodds/babel-macros#installation) and [configured](https://github.com/kentcdodds/babel-macros/blob/master/other/docs/user.md), you just need to change this:
 
 ```js
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 const query = gql`
   query {
@@ -60,7 +60,7 @@ const query = gql`
 to this:
 
 ```js
-import gql from 'graphql-tag.macro'; // <-- Use the macro
+import gql from "graphql-tag.macro"; // <-- Use the macro
 
 const query = gql`
   query {
@@ -96,9 +96,9 @@ Then add the plugin in your `.babelrc` configuration file:
 Now any `import` statements importing from a GraphQL file type will return a ready-to-use GraphQL DocumentNode object.
 
 ```jsx
-import React, { Component } from 'react';
-import { graphql } from 'react-apollo';
-import myImportedQuery from './productsQuery.graphql';
+import React, { Component } from "react";
+import { graphql } from "react-apollo";
+import myImportedQuery from "./productsQuery.graphql";
 // or for files with multiple operations:
 // import { query1, query2 } from './queries.graphql';
 
@@ -119,7 +119,7 @@ All of these approaches support the use of fragments.
 For the first two approaches, you can have fragments defined in a different call to `gql` (either in the same file or in a different one). You can then include them into the main query using interpolation, like this:
 
 ```js
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 // or import gql from 'graphql-tag.macro';
 
 const fragments = {
@@ -128,7 +128,7 @@ const fragments = {
       universe
       galaxy
     }
-  `
+  `,
 };
 
 const query = gql`

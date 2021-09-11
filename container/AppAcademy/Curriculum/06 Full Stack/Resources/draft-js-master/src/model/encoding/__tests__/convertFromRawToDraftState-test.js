@@ -16,17 +16,15 @@ jest.mock('generateRandomKey');
 
 const convertFromRawToDraftState = require('convertFromRawToDraftState');
 
-const toggleExperimentalTreeDataSupport = enabled => {
-  jest.doMock('gkx', () => name => {
+const toggleExperimentalTreeDataSupport = (enabled) => {
+  jest.doMock('gkx', () => (name) => {
     return name === 'draft_tree_data_support' ? enabled : false;
   });
 };
 
-const assertDraftState = rawState => {
+const assertDraftState = (rawState) => {
   expect(
-    convertFromRawToDraftState(rawState)
-      .getBlockMap()
-      .toJS(),
+    convertFromRawToDraftState(rawState).getBlockMap().toJS(),
   ).toMatchSnapshot();
 };
 

@@ -42,11 +42,13 @@ to start the server on PORT.
 
 Songs look like:
 
-``` js
+```js
 return function (t) {
-  return sin(440)
-  function sin (x) { return Math.sin(2 * Math.PI * t * x) }
-}
+  return sin(440);
+  function sin(x) {
+    return Math.sin(2 * Math.PI * t * x);
+  }
+};
 ```
 
 The returned function gets run 44000 times per second and returns a

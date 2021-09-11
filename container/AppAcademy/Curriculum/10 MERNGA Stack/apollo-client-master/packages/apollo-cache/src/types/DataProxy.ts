@@ -1,4 +1,4 @@
-import { DocumentNode } from 'graphql'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved
+import { DocumentNode } from "graphql"; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved
 
 export namespace DataProxy {
   export interface Query<TVariables> {
@@ -88,7 +88,7 @@ export interface DataProxy {
    */
   readQuery<QueryType, TVariables = any>(
     options: DataProxy.Query<TVariables>,
-    optimistic?: boolean,
+    optimistic?: boolean
   ): QueryType | null;
 
   /**
@@ -98,14 +98,14 @@ export interface DataProxy {
    */
   readFragment<FragmentType, TVariables = any>(
     options: DataProxy.Fragment<TVariables>,
-    optimistic?: boolean,
+    optimistic?: boolean
   ): FragmentType | null;
 
   /**
    * Writes a GraphQL query to the root query id.
    */
   writeQuery<TData = any, TVariables = any>(
-    options: DataProxy.WriteQueryOptions<TData, TVariables>,
+    options: DataProxy.WriteQueryOptions<TData, TVariables>
   ): void;
 
   /**
@@ -114,7 +114,7 @@ export interface DataProxy {
    * provided to select the correct fragment.
    */
   writeFragment<TData = any, TVariables = any>(
-    options: DataProxy.WriteFragmentOptions<TData, TVariables>,
+    options: DataProxy.WriteFragmentOptions<TData, TVariables>
   ): void;
 
   /**

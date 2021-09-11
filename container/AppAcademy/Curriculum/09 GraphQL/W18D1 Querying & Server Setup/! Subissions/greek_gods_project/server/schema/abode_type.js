@@ -18,11 +18,12 @@ const AbodeType = new GraphQLObjectType({
       resolve(parentValue) {
         // we take advantage of parentValue which in this case is the abode we are
         // preforming this query on
-        return Abode.findById(parentValue.id).populate("gods")
-          .then(abode => abode.gods)
-      }
-    }
-  })
+        return Abode.findById(parentValue.id)
+          .populate("gods")
+          .then((abode) => abode.gods);
+      },
+    },
+  }),
 });
 
 module.exports = AbodeType;

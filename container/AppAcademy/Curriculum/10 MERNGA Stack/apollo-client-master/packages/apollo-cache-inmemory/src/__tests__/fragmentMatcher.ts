@@ -1,11 +1,11 @@
-import { IntrospectionFragmentMatcher } from '../fragmentMatcher';
-import { defaultNormalizedCacheFactory } from '../objectCache';
-import { ReadStoreContext } from '../types';
-import { InMemoryCache } from '../inMemoryCache';
-import gql from 'graphql-tag';
+import { IntrospectionFragmentMatcher } from "../fragmentMatcher";
+import { defaultNormalizedCacheFactory } from "../objectCache";
+import { ReadStoreContext } from "../types";
+import { InMemoryCache } from "../inMemoryCache";
+import gql from "graphql-tag";
 
-describe('FragmentMatcher', () => {
-  it('can match against the root Query', () => {
+describe("FragmentMatcher", () => {
+  it("can match against the root Query", () => {
     const cache = new InMemoryCache({
       addTypename: true,
     });
@@ -29,15 +29,15 @@ describe('FragmentMatcher', () => {
     const data = {
       people: [
         {
-          __typename: 'Person',
+          __typename: "Person",
           id: 123,
-          name: 'Ben',
+          name: "Ben",
         },
       ],
       __type: {
-        __typename: '__Type',
-        name: 'Person',
-        kind: 'OBJECT',
+        __typename: "__Type",
+        name: "Person",
+        kind: "OBJECT",
       },
     };
 
@@ -46,26 +46,26 @@ describe('FragmentMatcher', () => {
   });
 });
 
-describe('IntrospectionFragmentMatcher', () => {
-  it('will throw an error if match is called if it is not ready', () => {
+describe("IntrospectionFragmentMatcher", () => {
+  it("will throw an error if match is called if it is not ready", () => {
     const ifm = new IntrospectionFragmentMatcher();
     expect(() => (ifm.match as any)()).toThrowError(/called before/);
   });
 
-  it('can be seeded with an introspection query result', () => {
+  it("can be seeded with an introspection query result", () => {
     const ifm = new IntrospectionFragmentMatcher({
       introspectionQueryResultData: {
         __schema: {
           types: [
             {
-              kind: 'UNION',
-              name: 'Item',
+              kind: "UNION",
+              name: "Item",
               possibleTypes: [
                 {
-                  name: 'ItemA',
+                  name: "ItemA",
                 },
                 {
-                  name: 'ItemB',
+                  name: "ItemB",
                 },
               ],
             },
@@ -76,13 +76,13 @@ describe('IntrospectionFragmentMatcher', () => {
 
     const store = defaultNormalizedCacheFactory({
       a: {
-        __typename: 'ItemB',
+        __typename: "ItemB",
       },
     });
 
     const idValue = {
-      type: 'id',
-      id: 'a',
+      type: "id",
+      id: "a",
       generated: false,
     };
 
@@ -93,9 +93,9 @@ describe('IntrospectionFragmentMatcher', () => {
       cacheRedirects: {},
     } as ReadStoreContext;
 
-    expect(ifm.match(idValue as any, 'Item', readStoreContext)).toBe(true);
-    expect(ifm.match(idValue as any, 'NotAnItem', readStoreContext)).toBe(
-      false,
+    expect(ifm.match(idValue as any, "Item", readStoreContext)).toBe(true);
+    expect(ifm.match(idValue as any, "NotAnItem", readStoreContext)).toBe(
+      false
     );
   });
 });

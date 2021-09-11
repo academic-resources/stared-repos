@@ -1,20 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Modal from 'react-modal';
-import GameOverModal from './components/modal';
-import Header from './components/header';
-import Tiles from './components/tiles';
-import Game from './game';
-import InputHandler from './input';
+import React from "react";
+import ReactDOM from "react-dom";
+import Modal from "react-modal";
+import GameOverModal from "./components/modal";
+import Header from "./components/header";
+import Tiles from "./components/tiles";
+import Game from "./game";
+import InputHandler from "./input";
 
-document.addEventListener('DOMContentLoaded', () => {
-  const game = document.getElementById('game');
-  ReactDOM.render(<GameContainer/>, game);
+document.addEventListener("DOMContentLoaded", () => {
+  const game = document.getElementById("game");
+  ReactDOM.render(<GameContainer />, game);
 
-  const toggle = document.getElementById('toggle');
-  toggle.addEventListener('click', () => {
-    const html = document.getElementsByTagName('html')[0];
-    html.classList.toggle('dark');
+  const toggle = document.getElementById("toggle");
+  toggle.addEventListener("click", () => {
+    const html = document.getElementsByTagName("html")[0];
+    html.classList.toggle("dark");
   });
 });
 
@@ -23,18 +23,18 @@ class GameContainer extends React.Component {
     super(props);
     this.state = {
       game: new Game(0),
-      modalIsOpen: false
-    }
+      modalIsOpen: false,
+    };
   }
 
   componentWillMount() {
-    Modal.setAppElement(document.getElementById('game'));
+    Modal.setAppElement(document.getElementById("game"));
   }
 
   componentDidMount() {
     this.inputHandler = new InputHandler({
       game: this.state.game,
-      updateGame: () => this.updateGame(this.state.game)
+      updateGame: () => this.updateGame(this.state.game),
     });
   }
 
@@ -60,20 +60,20 @@ class GameContainer extends React.Component {
     this.inputHandler.update(game);
   }
 
-  getParent () {
-    return document.querySelector('.tiles');
+  getParent() {
+    return document.querySelector(".tiles");
   }
 
-  render () {
+  render() {
     return (
       <div className="game-container">
         <GameOverModal
-        isOpen={ this.state.modalIsOpen }
-        parentSelector={ this.getParent }
-        resetGame={ this.resetGame.bind(this) }
+          isOpen={this.state.modalIsOpen}
+          parentSelector={this.getParent}
+          resetGame={this.resetGame.bind(this)}
         />
-        <Header game={ this.state.game } resetGame={ this.resetGame.bind(this) } />
-        <Tiles game={ this.state.game } />
+        <Header game={this.state.game} resetGame={this.resetGame.bind(this)} />
+        <Tiles game={this.state.game} />
       </div>
     );
   }

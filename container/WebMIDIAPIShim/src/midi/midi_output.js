@@ -1,19 +1,19 @@
 /*
   MIDIOutput is a wrapper around an output of a Jazz instance
 */
-import { getDevice } from '../util/util';
-import Store from '../util/store';
-import { dispatchEvent, getMIDIDeviceId } from './midi_access';
+import { getDevice } from "../util/util";
+import Store from "../util/store";
+import { dispatchEvent, getMIDIDeviceId } from "./midi_access";
 
 export default class MIDIOutput {
     constructor(info, instance) {
-        this.id = getMIDIDeviceId(info[0], 'output');
+        this.id = getMIDIDeviceId(info[0], "output");
         this.name = info[0];
         this.manufacturer = info[1];
         this.version = info[2];
-        this.type = 'output';
-        this.state = 'connected';
-        this.connection = 'pending';
+        this.type = "output";
+        this.state = "connected";
+        this.connection = "pending";
         this.onmidimessage = null;
         this.onstatechange = null;
 
@@ -23,30 +23,30 @@ export default class MIDIOutput {
 
         this._jazzInstance = instance;
         this._jazzInstance.outputInUse = true;
-        if (getDevice().platform === 'linux') {
+        if (getDevice().platform === "linux") {
             this._jazzInstance.MidiOutOpen(this.name);
         }
     }
 
     open() {
-        if (this.connection === 'open') {
+        if (this.connection === "open") {
             return;
         }
-        if (getDevice().platform !== 'linux') {
+        if (getDevice().platform !== "linux") {
             this._jazzInstance.MidiOutOpen(this.name);
         }
-        this.connection = 'open';
+        this.connection = "open";
         dispatchEvent(this); // dispatch MIDIConnectionEvent via MIDIAccess
     }
 
     close() {
-        if (this.connection === 'closed') {
+        if (this.connection === "closed") {
             return;
         }
-        if (getDevice().platform !== 'linux') {
+        if (getDevice().platform !== "linux") {
             this._jazzInstance.MidiOutClose();
         }
-        this.connection = 'closed';
+        this.connection = "closed";
         dispatchEvent(this); // dispatch MIDIConnectionEvent via MIDIAccess
         this.onstatechange = null;
         this._listeners.clear();
@@ -63,7 +63,7 @@ export default class MIDIOutput {
             delayBeforeSend = Math.floor(timestamp - performance.now());
         }
 
-        if (timestamp && (delayBeforeSend > 1)) {
+        if (timestamp && delayBeforeSend > 1) {
             setTimeout(() => {
                 this._jazzInstance.MidiOutLong(data);
             }, delayBeforeSend);
@@ -78,7 +78,7 @@ export default class MIDIOutput {
     }
 
     addEventListener(type, listener) {
-        if (type !== 'statechange') {
+        if (type !== "statechange") {
             return;
         }
 
@@ -88,7 +88,7 @@ export default class MIDIOutput {
     }
 
     removeEventListener(type, listener) {
-        if (type !== 'statechange') {
+        if (type !== "statechange") {
             return;
         }
 

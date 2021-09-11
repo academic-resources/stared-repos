@@ -52,8 +52,8 @@ const CUSTOM_BLOCK_MAP = Map({
 
 const EMPTY_CHAR_METADATA = OrderedSet();
 
-const toggleExperimentalTreeDataSupport = enabled => {
-  jest.doMock('gkx', () => name => {
+const toggleExperimentalTreeDataSupport = (enabled) => {
+  jest.doMock('gkx', () => (name) => {
     return name === 'draft_tree_data_support' ? enabled : false;
   });
 };
@@ -68,7 +68,7 @@ const assertDraftPasteProcessorProcessText = (
     EMPTY_CHAR_METADATA,
     'unstyled',
   );
-  expect(contentBlocks.map(block => block.toJS())).toMatchSnapshot();
+  expect(contentBlocks.map((block) => block.toJS())).toMatchSnapshot();
 };
 
 const assertDraftPasteProcessorProcessHTML = (
@@ -78,7 +78,7 @@ const assertDraftPasteProcessorProcessHTML = (
 ) => {
   toggleExperimentalTreeDataSupport(experimentalTreeDataSupport);
   const {contentBlocks} = DraftPasteProcessor.processHTML(html, blockMap);
-  expect(contentBlocks.map(block => block.toJS())).toMatchSnapshot();
+  expect(contentBlocks.map((block) => block.toJS())).toMatchSnapshot();
 };
 
 beforeEach(() => {

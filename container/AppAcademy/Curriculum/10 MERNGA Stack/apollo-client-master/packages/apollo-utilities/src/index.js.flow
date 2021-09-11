@@ -15,19 +15,19 @@ import type {
   DefinitionNode,
   ValueNode,
   NameNode,
-} from 'graphql';
+} from "graphql";
 
-declare module 'apollo-utilities' {
+declare module "apollo-utilities" {
   // storeUtils
   declare export interface IdValue {
-    type: 'id';
+    type: "id";
     id: string;
     generated: boolean;
     typename: string | void;
   }
 
   declare export interface JsonValue {
-    type: 'json';
+    type: "json";
     json: any;
   }
 
@@ -68,12 +68,12 @@ declare module 'apollo-utilities' {
     argObj: any,
     name: NameNode,
     value: ValueNode,
-    variables?: Object,
+    variables?: Object
   ): any;
 
   declare export function storeKeyNameFromField(
     field: FieldNode,
-    variables?: Object,
+    variables?: Object
   ): string;
 
   declare export type Directives = {
@@ -85,12 +85,12 @@ declare module 'apollo-utilities' {
   declare export function getStoreKeyName(
     fieldName: string,
     args?: Object,
-    directives?: Directives,
+    directives?: Directives
   ): string;
 
   declare export function argumentsObjectFromField(
     field: FieldNode | DirectiveNode,
-    variables: Object,
+    variables: Object
   ): ?Object;
 
   declare export function resultKeyNameFromField(field: FieldNode): string;
@@ -108,7 +108,7 @@ declare module 'apollo-utilities' {
 
   declare export function toIdValue(
     id: string | IdConfig,
-    generated?: boolean,
+    generated?: boolean
   ): IdValue;
 
   declare export function isJsonValue(jsonObject: StoreValue): boolean;
@@ -117,40 +117,40 @@ declare module 'apollo-utilities' {
 
   declare export function valueFromNode(
     node: ValueNode,
-    onVariable: VariableValue,
+    onVariable: VariableValue
   ): any;
 
   // getFromAST
   declare export function getMutationDefinition(
-    doc: DocumentNode,
+    doc: DocumentNode
   ): OperationDefinitionNode;
 
   declare export function checkDocument(doc: DocumentNode): void;
 
   declare export function getOperationDefinition(
-    doc: DocumentNode,
+    doc: DocumentNode
   ): ?OperationDefinitionNode;
 
   declare export function getOperationDefinitionOrDie(
-    document: DocumentNode,
+    document: DocumentNode
   ): OperationDefinitionNode;
 
   declare export function getOperationName(doc: DocumentNode): ?string;
 
   declare export function getFragmentDefinitions(
-    doc: DocumentNode,
+    doc: DocumentNode
   ): Array<FragmentDefinitionNode>;
 
   declare export function getQueryDefinition(
-    doc: DocumentNode,
+    doc: DocumentNode
   ): OperationDefinitionNode;
 
   declare export function getFragmentDefinition(
-    doc: DocumentNode,
+    doc: DocumentNode
   ): FragmentDefinitionNode;
 
   declare export function getMainDefinition(
-    queryDoc: DocumentNode,
+    queryDoc: DocumentNode
   ): OperationDefinitionNode | FragmentDefinitionNode;
 
   declare export interface FragmentMap {
@@ -158,21 +158,21 @@ declare module 'apollo-utilities' {
   }
 
   declare export function createFragmentMap(
-    fragments: Array<FragmentDefinitionNode>,
+    fragments: Array<FragmentDefinitionNode>
   ): FragmentMap;
 
   declare export function getDefaultValues(
-    definition: ?OperationDefinitionNode,
+    definition: ?OperationDefinitionNode
   ): { [key: string]: JsonValue };
 
   // fragments
   declare export function getFragmentQueryDocument(
     document: DocumentNode,
-    fragmentName?: string,
+    fragmentName?: string
   ): DocumentNode;
 
   declare export function variablesInOperation(
-    operation: OperationDefinitionNode,
+    operation: OperationDefinitionNode
   ): Set<string>;
 
   // directives
@@ -182,23 +182,23 @@ declare module 'apollo-utilities' {
 
   declare export function getDirectiveInfoFromField(
     field: FieldNode,
-    object: Object,
+    object: Object
   ): ?DirectiveInfo;
 
   declare export function shouldInclude(
     selection: SelectionNode,
-    variables: { [name: string]: any },
+    variables: { [name: string]: any }
   ): boolean;
 
   declare export function flattenSelections(
-    selection: SelectionNode,
+    selection: SelectionNode
   ): Array<SelectionNode>;
 
   declare export function getDirectiveNames(doc: DocumentNode): Array<string>;
 
   declare export function hasDirectives(
     names: Array<string>,
-    doc: DocumentNode,
+    doc: DocumentNode
   ): boolean;
 
   // transform
@@ -209,12 +209,12 @@ declare module 'apollo-utilities' {
 
   declare export function removeDirectivesFromDocument(
     directives: Array<RemoveDirectiveConfig>,
-    doc: DocumentNode,
+    doc: DocumentNode
   ): DocumentNode;
 
   declare export function addTypenameToDocument(doc: DocumentNode): void;
 
   declare export function removeConnectionDirectiveFromDocument(
-    doc: DocumentNode,
+    doc: DocumentNode
   ): DocumentNode;
 }

@@ -27,13 +27,13 @@
           flex: 1 1 auto;
           margin: 0;
           padding: 8px 0;
-          font-family: 'Arial';
+          font-family: "Arial";
           margin-top: 17px;
         }
         a {
           display: block;
           color: rgb(23, 43, 77);
-          font-family: 'Roboto';
+          font-family: "Roboto";
           font-size: 14px;
           font-weight: bold;
           line-height: 20px;
@@ -47,11 +47,11 @@
           transition-property: background-color, border-color, box-shadow;
           transition-duration: 85ms;
           transition-timing-function: ease;
-          font-family: 'Arial';
+          font-family: "Arial";
 
           &#boards {
             padding-left: 31px;
-            background-image: image_url('logo-sm.png');
+            background-image: image_url("logo-sm.png");
             background-size: 14px;
             background-position: 3% 50%;
             background-repeat: no-repeat;
@@ -79,7 +79,7 @@
           &.sec-link {
             font-size: 12px;
             font-weight: 400;
-            font-family: 'Roboto';
+            font-family: "Roboto";
             display: flex;
             align-items: center;
             padding-left: 35px;

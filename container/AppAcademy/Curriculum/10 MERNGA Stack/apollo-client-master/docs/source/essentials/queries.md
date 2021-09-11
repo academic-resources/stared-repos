@@ -40,7 +40,7 @@ const Dogs = ({ onDogSelected }) => (
 
       return (
         <select name="dog" onChange={onDogSelected}>
-          {data.dogs.map(dog => (
+          {data.dogs.map((dog) => (
             <option key={dog.id} value={dog.breed}>
               {dog.breed}
             </option>
@@ -128,11 +128,7 @@ What if you want to reload the query in response to a user action instead of an 
 
 ```jsx
 const DogPhoto = ({ breed }) => (
-  <Query
-    query={GET_DOG_PHOTO}
-    variables={{ breed }}
-    skip={!breed}
-  >
+  <Query query={GET_DOG_PHOTO} variables={{ breed }} skip={!breed}>
     {({ loading, error, data, refetch }) => {
       if (loading) return null;
       if (error) return `Error! ${error}`;
@@ -197,25 +193,25 @@ While not as complex as loading state, responding to errors in your component is
 When React mounts a `Query` component, Apollo Client automatically fires off your query. What if you wanted to delay firing your query until the user performs an action, such as clicking on a button? For this scenario, we want to use an `ApolloConsumer` component and directly call `client.query()` instead.
 
 ```jsx
-import React, { Component } from 'react';
-import { ApolloConsumer } from 'react-apollo';
+import React, { Component } from "react";
+import { ApolloConsumer } from "react-apollo";
 
 class DelayedQuery extends Component {
   state = { dog: null };
 
-  onDogFetched = dog => this.setState(() => ({ dog }));
+  onDogFetched = (dog) => this.setState(() => ({ dog }));
 
   render() {
     return (
       <ApolloConsumer>
-        {client => (
+        {(client) => (
           <div>
             {this.state.dog && <img src={this.state.dog.displayImage} />}
             <button
               onClick={async () => {
                 const { data } = await client.query({
                   query: GET_DOG_PHOTO,
-                  variables: { breed: "bulldog" }
+                  variables: { breed: "bulldog" },
                 });
                 this.onDogFetched(data.dog);
               }}

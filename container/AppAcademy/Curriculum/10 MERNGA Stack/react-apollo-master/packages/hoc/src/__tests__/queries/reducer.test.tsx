@@ -1,18 +1,18 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import gql from 'graphql-tag';
-import ApolloClient from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { mockSingleLink, stripSymbols } from '@apollo/react-testing';
-import { ApolloProvider } from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps, DataValue } from '@apollo/react-hoc';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import gql from "graphql-tag";
+import ApolloClient from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { mockSingleLink, stripSymbols } from "@apollo/react-testing";
+import { ApolloProvider } from "@apollo/react-common";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps, DataValue } from "@apollo/react-hoc";
 
-describe('[queries] reducer', () => {
+describe("[queries] reducer", () => {
   afterEach(cleanup);
 
   // props reducer
-  it('allows custom mapping of a result to props', done => {
+  it("allows custom mapping of a result to props", (done) => {
     const query: DocumentNode = gql`
       query thing {
         getThing {
@@ -23,11 +23,11 @@ describe('[queries] reducer', () => {
     const result = { getThing: { thing: true } };
     const link = mockSingleLink({
       request: { query },
-      result: { data: result }
+      result: { data: result },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     type Data = typeof result;
@@ -36,7 +36,7 @@ describe('[queries] reducer', () => {
 
     let count = 0;
     const ContainerWithData = graphql<{}, Data, {}, ChildProps>(query, {
-      props: ({ data }) => ({ ...data! })
+      props: ({ data }) => ({ ...data! }),
     })(({ getThing, loading }) => {
       count++;
       if (count === 1) expect(loading).toBe(true);
@@ -54,7 +54,7 @@ describe('[queries] reducer', () => {
     );
   });
 
-  it('allows custom mapping of a result to props that includes the passed props', () => {
+  it("allows custom mapping of a result to props that includes the passed props", () => {
     const query: DocumentNode = gql`
       query thing {
         getThing {
@@ -64,11 +64,11 @@ describe('[queries] reducer', () => {
     `;
     const link = mockSingleLink({
       request: { query },
-      result: { data: { getThing: { thing: true } } }
+      result: { data: { getThing: { thing: true } } },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     interface Data {
@@ -86,7 +86,7 @@ describe('[queries] reducer', () => {
       props: ({ data, ownProps }) => {
         expect(ownProps.sample).toBe(1);
         return { showSpinner: data!.loading };
-      }
+      },
     })(({ showSpinner }: FinalProps) => {
       expect(showSpinner).toBeTruthy();
       return null;
@@ -99,7 +99,7 @@ describe('[queries] reducer', () => {
     );
   });
 
-  it('allows custom mapping of a result to props 2', done => {
+  it("allows custom mapping of a result to props 2", (done) => {
     const query: DocumentNode = gql`
       query thing {
         getThing {
@@ -110,11 +110,11 @@ describe('[queries] reducer', () => {
     const expectedData = { getThing: { thing: true } };
     const link = mockSingleLink({
       request: { query },
-      result: { data: expectedData }
+      result: { data: expectedData },
     });
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     interface Data {
@@ -126,7 +126,7 @@ describe('[queries] reducer', () => {
     }
 
     const withData = graphql<{}, Data, {}, FinalProps>(query, {
-      props: ({ data }) => ({ thingy: data!.getThing! })
+      props: ({ data }) => ({ thingy: data!.getThing! }),
     });
 
     class Container extends React.Component<FinalProps> {
@@ -148,7 +148,7 @@ describe('[queries] reducer', () => {
     );
   });
 
-  it('passes the prior props to the result-props mapper', done => {
+  it("passes the prior props to the result-props mapper", (done) => {
     const query: DocumentNode = gql`
       query thing {
         getThing {
@@ -162,16 +162,16 @@ describe('[queries] reducer', () => {
     const link = mockSingleLink(
       {
         request: { query },
-        result: { data: expectedData }
+        result: { data: expectedData },
       },
       {
         request: { query },
-        result: { data: expectedDataAfterRefetch }
+        result: { data: expectedDataAfterRefetch },
       }
     );
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     type Data = typeof expectedData;
@@ -192,7 +192,7 @@ describe('[queries] reducer', () => {
         }
 
         return { wrapper, refetch };
-      }
+      },
     });
 
     let counter = 0;

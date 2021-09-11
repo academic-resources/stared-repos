@@ -5,7 +5,7 @@ Array.prototype.bubbleSort = function () {
   while (!isSorted) {
     isSorted = true;
 
-    for (let i = 0; i < (this.length - 1); i++) {
+    for (let i = 0; i < this.length - 1; i++) {
       if (this[i] > this[i + 1]) {
         // a crafty bit of array destructuring to avoid a temp variable
         [this[i], this[i + 1]] = [this[i + 1], this[i]];

@@ -69,7 +69,7 @@ var COPYRIGHT_HEADER = `/**
  */
 `;
 
-var buildDist = function(opts) {
+var buildDist = function (opts) {
   var webpackOpts = {
     externals: {
       immutable: {
@@ -113,7 +113,7 @@ var buildDist = function(opts) {
   if (!opts.debug) {
     webpackOpts.plugins.push(new UglifyJsPlugin());
   }
-  return webpackStream(webpackOpts, null, function(err, stats) {
+  return webpackStream(webpackOpts, null, function (err, stats) {
     if (err) {
       throw new gulpUtil.PluginError('webpack', err);
     }
@@ -125,14 +125,14 @@ var buildDist = function(opts) {
 
 gulp.task(
   'clean',
-  gulp.series(function() {
+  gulp.series(function () {
     return del([paths.dist, paths.lib]);
   }),
 );
 
 gulp.task(
   'modules',
-  gulp.series(function() {
+  gulp.series(function () {
     return gulp
       .src(paths.src)
       .pipe(babel(babelOptsJS))
@@ -143,7 +143,7 @@ gulp.task(
 
 gulp.task(
   'flow',
-  gulp.series(function() {
+  gulp.series(function () {
     return gulp
       .src(paths.src)
       .pipe(babel(babelOptsFlow))
@@ -155,18 +155,18 @@ gulp.task(
 
 gulp.task(
   'css',
-  gulp.series(function() {
+  gulp.series(function () {
     return (
       gulp
         .src(paths.css)
         .pipe(
-          through.obj(function(file, encoding, callback) {
+          through.obj(function (file, encoding, callback) {
             var contents = file.contents.toString();
             var replaced = contents.replace(
               // Regex based on MakeHasteCssModuleTransform: ignores comments,
               // strings, and URLs
               /\/\*.*?\*\/|'(?:\\.|[^'])*'|"(?:\\.|[^"])*"|url\([^)]*\)|(\.(?:public\/)?[\w-]*\/{1,2}[\w-]+)/g,
-              function(match, cls) {
+              function (match, cls) {
                 if (cls) {
                   return cls.replace(/\//g, '-');
                 } else {
@@ -177,7 +177,7 @@ gulp.task(
             replaced = replaced.replace(
               // MakeHasteCssVariablesTransform
               /\bvar\(([\w-]+)\)/g,
-              function(match, name) {
+              function (match, name) {
                 var vars = {
                   'fig-secondary-text': '#9197a3',
                   'fig-light-20': '#bdc1c9',
@@ -204,7 +204,7 @@ gulp.task(
 
 gulp.task(
   'dist',
-  gulp.series('modules', 'css', function() {
+  gulp.series('modules', 'css', function () {
     var opts = {
       debug: true,
       output: 'Draft.js',
@@ -225,7 +225,7 @@ gulp.task(
 
 gulp.task(
   'dist:min',
-  gulp.series('modules', function() {
+  gulp.series('modules', function () {
     var opts = {
       debug: false,
       output: 'Draft.min.js',
@@ -248,12 +248,12 @@ gulp.task(
   gulp.series(
     'dist:min',
     'css',
-    gulp.parallel(function() {
+    gulp.parallel(function () {
       return gulp
         .src(paths.dist + '/Draft.min.js')
         .pipe(gulp.dest(paths.static + '/lib'));
     }),
-    gulp.parallel(function() {
+    gulp.parallel(function () {
       return gulp
         .src(paths.dist + '/Draft.css')
         .pipe(gulp.dest(paths.static + '/css'));
@@ -263,21 +263,21 @@ gulp.task(
 
 gulp.task(
   'check-dependencies',
-  gulp.series(function() {
+  gulp.series(function () {
     return gulp.src('package.json').pipe(gulpCheckDependencies());
   }),
 );
 
 gulp.task(
   'watch',
-  gulp.series(function() {
+  gulp.series(function () {
     gulp.watch(paths.src, gulp.parallel('modules'));
   }),
 );
 
 gulp.task(
   'dev',
-  gulp.series(function() {
+  gulp.series(function () {
     gulp.watch(paths.src, gulp.parallel('dist'));
   }),
 );

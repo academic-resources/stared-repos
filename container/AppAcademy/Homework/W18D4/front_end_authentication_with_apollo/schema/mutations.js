@@ -2,7 +2,7 @@ const graphql = require("graphql");
 const { GraphQLObjectType, GraphQLString, GraphQLNonNull } = graphql;
 const mongoose = require("mongoose");
 const UserType = require("./user_type");
-const PostType = require("./post_type")
+const PostType = require("./post_type");
 
 const AuthService = require("../services/auth");
 
@@ -16,36 +16,36 @@ const mutation = new GraphQLObjectType({
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
         email: { type: new GraphQLNonNull(GraphQLString) },
-        password: { type: new GraphQLNonNull(GraphQLString) }
+        password: { type: new GraphQLNonNull(GraphQLString) },
       },
       resolve(parentValue, data) {
         return AuthService.register(data);
-      }
+      },
     },
     login: {
       type: UserType,
       args: {
         email: { type: GraphQLString },
-        password: { type: GraphQLString }
+        password: { type: GraphQLString },
       },
       resolve(_, args) {
         return AuthService.login(args);
-      }
+      },
     },
     verifyUser: {
       type: UserType,
       args: {
-        token: { type: GraphQLString }
+        token: { type: GraphQLString },
       },
       resolve(_, args) {
         return AuthService.verifyUser(args);
-      }
+      },
     },
     createPost: {
       type: PostType,
       args: {
         title: { type: GraphQLString },
-        body: { type: GraphQLString }
+        body: { type: GraphQLString },
       },
       async resolve(_, { title, body }, ctx) {
         const validUser = await AuthService.verifyUser({ token: ctx.token });
@@ -55,9 +55,9 @@ const mutation = new GraphQLObjectType({
         } else {
           throw new Error("Sorry, you need to be logged in to create a post.");
         }
-      }
-    }
-  }
+      },
+    },
+  },
 });
 
 module.exports = mutation;

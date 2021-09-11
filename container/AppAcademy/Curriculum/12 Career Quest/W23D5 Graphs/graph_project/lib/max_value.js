@@ -1,7 +1,5 @@
-function maxValue(node, visited=new Set()) {
-
-}
+function maxValue(node, visited = new Set()) {}
 
 module.exports = {
-    maxValue
+  maxValue,
 };

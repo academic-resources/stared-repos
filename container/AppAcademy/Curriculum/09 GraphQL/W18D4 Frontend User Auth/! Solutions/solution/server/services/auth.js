@@ -7,7 +7,7 @@ const keys = require("../../config/keys").secretOrkey;
 const validateRegisterInput = require("../validation/register");
 const validateLoginInput = require("../validation/login");
 
-const register = async data => {
+const register = async (data) => {
   try {
     const { message, isValid } = validateRegisterInput(data);
 
@@ -29,9 +29,9 @@ const register = async data => {
       {
         name,
         email,
-        password: hashedPassword
+        password: hashedPassword,
       },
-      err => {
+      (err) => {
         if (err) throw err;
       }
     );
@@ -46,7 +46,7 @@ const register = async data => {
   }
 };
 
-const logout = async data => {
+const logout = async (data) => {
   try {
     const { _id } = data;
 
@@ -61,7 +61,7 @@ const logout = async data => {
   }
 };
 
-const login = async data => {
+const login = async (data) => {
   try {
     const { message, isValid } = validateLoginInput(data);
 
@@ -85,13 +85,13 @@ const login = async data => {
   }
 };
 
-const verifyUser = async data => {
+const verifyUser = async (data) => {
   try {
     const { token } = data;
     const decoded = jwt.verify(token, keys);
     const { id } = decoded;
 
-    const loggedIn = await User.findById(id).then(user => {
+    const loggedIn = await User.findById(id).then((user) => {
       return user ? true : false;
     });
 

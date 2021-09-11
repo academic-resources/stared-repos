@@ -1,28 +1,49 @@
 (function () {
-    'use strict';
+    "use strict";
 
     // Event handlers that shouldn't be exposed externally
 
     function handleDisableExtraSpaces(event) {
-        var node = MediumEditor.selection.getSelectionStart(this.options.ownerDocument),
+        var node = MediumEditor.selection.getSelectionStart(
+                this.options.ownerDocument
+            ),
             textContent = node.textContent,
             caretPositions = MediumEditor.selection.getCaretOffsets(node);
 
-        if ((textContent[caretPositions.left - 1] === undefined) || (textContent[caretPositions.left - 1].trim() === '') || (textContent[caretPositions.left] !== undefined && textContent[caretPositions.left].trim() === '')) {
+        if (
+            textContent[caretPositions.left - 1] === undefined ||
+            textContent[caretPositions.left - 1].trim() === "" ||
+            (textContent[caretPositions.left] !== undefined &&
+                textContent[caretPositions.left].trim() === "")
+        ) {
             event.preventDefault();
         }
     }
 
     function handleDisabledEnterKeydown(event, element) {
-        if (this.options.disableReturn || element.getAttribute('data-disable-return')) {
+        if (
+            this.options.disableReturn ||
+            element.getAttribute("data-disable-return")
+        ) {
             event.preventDefault();
-        } else if (this.options.disableDoubleReturn || element.getAttribute('data-disable-double-return')) {
-            var node = MediumEditor.selection.getSelectionStart(this.options.ownerDocument);
+        } else if (
+            this.options.disableDoubleReturn ||
+            element.getAttribute("data-disable-double-return")
+        ) {
+            var node = MediumEditor.selection.getSelectionStart(
+                this.options.ownerDocument
+            );
 
             // if current text selection is empty OR previous sibling text is empty OR it is not a list
-            if ((node && node.textContent.trim() === '' && node.nodeName.toLowerCase() !== 'li') ||
-                (node.previousElementSibling && node.previousElementSibling.nodeName.toLowerCase() !== 'br' &&
-                 node.previousElementSibling.textContent.trim() === '')) {
+            if (
+                (node &&
+                    node.textContent.trim() === "" &&
+                    node.nodeName.toLowerCase() !== "li") ||
+                (node.previousElementSibling &&
+                    node.previousElementSibling.nodeName.toLowerCase() !==
+                        "br" &&
+                    node.previousElementSibling.textContent.trim() === "")
+            ) {
                 event.preventDefault();
             }
         }
@@ -30,12 +51,17 @@
 
     function handleTabKeydown(event) {
         // Override tab only for pre nodes
-        var node = MediumEditor.selection.getSelectionStart(this.options.ownerDocument),
+        var node = MediumEditor.selection.getSelectionStart(
+                this.options.ownerDocument
+            ),
             tag = node && node.nodeName.toLowerCase();
 
-        if (tag === 'pre') {
+        if (tag === "pre") {
             event.preventDefault();
-            MediumEditor.util.insertHTMLCommand(this.options.ownerDocument, '    ');
+            MediumEditor.util.insertHTMLCommand(
+                this.options.ownerDocument,
+                "    "
+            );
         }
 
         // Tab to indent list structures!
@@ -44,72 +70,101 @@
 
             // If Shift is down, outdent, otherwise indent
             if (event.shiftKey) {
-                this.options.ownerDocument.execCommand('outdent', false, null);
+                this.options.ownerDocument.execCommand("outdent", false, null);
             } else {
-                this.options.ownerDocument.execCommand('indent', false, null);
+                this.options.ownerDocument.execCommand("indent", false, null);
             }
         }
     }
 
     function handleBlockDeleteKeydowns(event) {
-        var p, node = MediumEditor.selection.getSelectionStart(this.options.ownerDocument),
+        var p,
+            node = MediumEditor.selection.getSelectionStart(
+                this.options.ownerDocument
+            ),
             tagName = node.nodeName.toLowerCase(),
             isEmpty = /^(\s+|<br\/?>)?$/i,
             isHeader = /h\d/i;
 
-        if (MediumEditor.util.isKey(event, [MediumEditor.util.keyCode.BACKSPACE, MediumEditor.util.keyCode.ENTER]) &&
-                // has a preceeding sibling
-                node.previousElementSibling &&
-                // in a header
-                isHeader.test(tagName) &&
-                // at the very end of the block
-                MediumEditor.selection.getCaretOffsets(node).left === 0) {
-            if (MediumEditor.util.isKey(event, MediumEditor.util.keyCode.BACKSPACE) && isEmpty.test(node.previousElementSibling.innerHTML)) {
+        if (
+            MediumEditor.util.isKey(event, [
+                MediumEditor.util.keyCode.BACKSPACE,
+                MediumEditor.util.keyCode.ENTER,
+            ]) &&
+            // has a preceeding sibling
+            node.previousElementSibling &&
+            // in a header
+            isHeader.test(tagName) &&
+            // at the very end of the block
+            MediumEditor.selection.getCaretOffsets(node).left === 0
+        ) {
+            if (
+                MediumEditor.util.isKey(
+                    event,
+                    MediumEditor.util.keyCode.BACKSPACE
+                ) &&
+                isEmpty.test(node.previousElementSibling.innerHTML)
+            ) {
                 // backspacing the begining of a header into an empty previous element will
                 // change the tagName of the current node to prevent one
                 // instead delete previous node and cancel the event.
-                node.previousElementSibling.parentNode.removeChild(node.previousElementSibling);
+                node.previousElementSibling.parentNode.removeChild(
+                    node.previousElementSibling
+                );
                 event.preventDefault();
-            } else if (!this.options.disableDoubleReturn && MediumEditor.util.isKey(event, MediumEditor.util.keyCode.ENTER)) {
+            } else if (
+                !this.options.disableDoubleReturn &&
+                MediumEditor.util.isKey(event, MediumEditor.util.keyCode.ENTER)
+            ) {
                 // hitting return in the begining of a header will create empty header elements before the current one
                 // instead, make "<p><br></p>" element, which are what happens if you hit return in an empty paragraph
-                p = this.options.ownerDocument.createElement('p');
-                p.innerHTML = '<br>';
+                p = this.options.ownerDocument.createElement("p");
+                p.innerHTML = "<br>";
                 node.previousElementSibling.parentNode.insertBefore(p, node);
                 event.preventDefault();
             }
-        } else if (MediumEditor.util.isKey(event, MediumEditor.util.keyCode.DELETE) &&
-                    // between two sibling elements
-                    node.nextElementSibling &&
-                    node.previousElementSibling &&
-                    // not in a header
-                    !isHeader.test(tagName) &&
-                    // in an empty tag
-                    isEmpty.test(node.innerHTML) &&
-                    // when the next tag *is* a header
-                    isHeader.test(node.nextElementSibling.nodeName.toLowerCase())) {
+        } else if (
+            MediumEditor.util.isKey(event, MediumEditor.util.keyCode.DELETE) &&
+            // between two sibling elements
+            node.nextElementSibling &&
+            node.previousElementSibling &&
+            // not in a header
+            !isHeader.test(tagName) &&
+            // in an empty tag
+            isEmpty.test(node.innerHTML) &&
+            // when the next tag *is* a header
+            isHeader.test(node.nextElementSibling.nodeName.toLowerCase())
+        ) {
             // hitting delete in an empty element preceding a header, ex:
             //  <p>[CURSOR]</p><h1>Header</h1>
             // Will cause the h1 to become a paragraph.
             // Instead, delete the paragraph node and move the cursor to the begining of the h1
 
             // remove node and move cursor to start of header
-            MediumEditor.selection.moveCursor(this.options.ownerDocument, node.nextElementSibling);
+            MediumEditor.selection.moveCursor(
+                this.options.ownerDocument,
+                node.nextElementSibling
+            );
 
             node.previousElementSibling.parentNode.removeChild(node);
 
             event.preventDefault();
-        } else if (MediumEditor.util.isKey(event, MediumEditor.util.keyCode.BACKSPACE) &&
-                tagName === 'li' &&
-                // hitting backspace inside an empty li
-                isEmpty.test(node.innerHTML) &&
-                // is first element (no preceeding siblings)
-                !node.previousElementSibling &&
-                // parent also does not have a sibling
-                !node.parentElement.previousElementSibling &&
-                // is not the only li in a list
-                node.nextElementSibling &&
-                node.nextElementSibling.nodeName.toLowerCase() === 'li') {
+        } else if (
+            MediumEditor.util.isKey(
+                event,
+                MediumEditor.util.keyCode.BACKSPACE
+            ) &&
+            tagName === "li" &&
+            // hitting backspace inside an empty li
+            isEmpty.test(node.innerHTML) &&
+            // is first element (no preceeding siblings)
+            !node.previousElementSibling &&
+            // parent also does not have a sibling
+            !node.parentElement.previousElementSibling &&
+            // is not the only li in a list
+            node.nextElementSibling &&
+            node.nextElementSibling.nodeName.toLowerCase() === "li"
+        ) {
             // backspacing in an empty first list element in the first list (with more elements) ex:
             //  <ul><li>[CURSOR]</li><li>List Item 2</li></ul>
             // will remove the first <li> but add some extra element before (varies based on browser)
@@ -119,9 +174,12 @@
             // 3) move the cursor into the paragraph
 
             // create a paragraph before the list
-            p = this.options.ownerDocument.createElement('p');
-            p.innerHTML = '<br>';
-            node.parentElement.parentElement.insertBefore(p, node.parentElement);
+            p = this.options.ownerDocument.createElement("p");
+            p.innerHTML = "<br>";
+            node.parentElement.parentElement.insertBefore(
+                p,
+                node.parentElement
+            );
 
             // move the cursor into the new paragraph
             MediumEditor.selection.moveCursor(this.options.ownerDocument, p);
@@ -130,44 +188,58 @@
             node.parentElement.removeChild(node);
 
             event.preventDefault();
-        } else if (MediumEditor.util.isKey(event, MediumEditor.util.keyCode.BACKSPACE) &&
-                (MediumEditor.util.getClosestTag(node, 'blockquote') !== false) &&
-                MediumEditor.selection.getCaretOffsets(node).left === 0) {
-
+        } else if (
+            MediumEditor.util.isKey(
+                event,
+                MediumEditor.util.keyCode.BACKSPACE
+            ) &&
+            MediumEditor.util.getClosestTag(node, "blockquote") !== false &&
+            MediumEditor.selection.getCaretOffsets(node).left === 0
+        ) {
             // when cursor is at the begining of the element and the element is <blockquote>
             // then pressing backspace key should change the <blockquote> to a <p> tag
             event.preventDefault();
-            MediumEditor.util.execFormatBlock(this.options.ownerDocument, 'p');
-        } else if (MediumEditor.util.isKey(event, MediumEditor.util.keyCode.ENTER) &&
-                (MediumEditor.util.getClosestTag(node, 'blockquote') !== false) &&
-                MediumEditor.selection.getCaretOffsets(node).right === 0) {
-
+            MediumEditor.util.execFormatBlock(this.options.ownerDocument, "p");
+        } else if (
+            MediumEditor.util.isKey(event, MediumEditor.util.keyCode.ENTER) &&
+            MediumEditor.util.getClosestTag(node, "blockquote") !== false &&
+            MediumEditor.selection.getCaretOffsets(node).right === 0
+        ) {
             // when cursor is at the end of <blockquote>,
             // then pressing enter key should create <p> tag, not <blockquote>
-            p = this.options.ownerDocument.createElement('p');
-            p.innerHTML = '<br>';
+            p = this.options.ownerDocument.createElement("p");
+            p.innerHTML = "<br>";
             node.parentElement.insertBefore(p, node.nextSibling);
 
             // move the cursor into the new paragraph
             MediumEditor.selection.moveCursor(this.options.ownerDocument, p);
 
             event.preventDefault();
-        } else if (MediumEditor.util.isKey(event, MediumEditor.util.keyCode.BACKSPACE) &&
-                MediumEditor.util.isMediumEditorElement(node.parentElement) &&
-                !node.previousElementSibling &&
-                node.nextElementSibling &&
-                isEmpty.test(node.innerHTML)) {
-
+        } else if (
+            MediumEditor.util.isKey(
+                event,
+                MediumEditor.util.keyCode.BACKSPACE
+            ) &&
+            MediumEditor.util.isMediumEditorElement(node.parentElement) &&
+            !node.previousElementSibling &&
+            node.nextElementSibling &&
+            isEmpty.test(node.innerHTML)
+        ) {
             // when cursor is in the first element, it's empty and user presses backspace,
             // do delete action instead to get rid of the first element and move caret to 2nd
             event.preventDefault();
-            MediumEditor.selection.moveCursor(this.options.ownerDocument, node.nextSibling);
+            MediumEditor.selection.moveCursor(
+                this.options.ownerDocument,
+                node.nextSibling
+            );
             node.parentElement.removeChild(node);
         }
     }
 
     function handleKeyup(event) {
-        var node = MediumEditor.selection.getSelectionStart(this.options.ownerDocument),
+        var node = MediumEditor.selection.getSelectionStart(
+                this.options.ownerDocument
+            ),
             tagName;
 
         if (!node) {
@@ -176,29 +248,42 @@
 
         // https://github.com/yabwe/medium-editor/issues/994
         // Firefox thrown an error when calling `formatBlock` on an empty editable blockContainer that's not a <div>
-        if (MediumEditor.util.isMediumEditorElement(node) && node.children.length === 0 && !MediumEditor.util.isBlockContainer(node)) {
-            this.options.ownerDocument.execCommand('formatBlock', false, 'p');
+        if (
+            MediumEditor.util.isMediumEditorElement(node) &&
+            node.children.length === 0 &&
+            !MediumEditor.util.isBlockContainer(node)
+        ) {
+            this.options.ownerDocument.execCommand("formatBlock", false, "p");
         }
 
         // https://github.com/yabwe/medium-editor/issues/834
         // https://github.com/yabwe/medium-editor/pull/382
         // Don't call format block if this is a block element (ie h1, figCaption, etc.)
-        if (MediumEditor.util.isKey(event, MediumEditor.util.keyCode.ENTER) &&
+        if (
+            MediumEditor.util.isKey(event, MediumEditor.util.keyCode.ENTER) &&
             !MediumEditor.util.isListItem(node) &&
-            !MediumEditor.util.isBlockContainer(node)) {
-
+            !MediumEditor.util.isBlockContainer(node)
+        ) {
             tagName = node.nodeName.toLowerCase();
             // For anchor tags, unlink
-            if (tagName === 'a') {
-                this.options.ownerDocument.execCommand('unlink', false, null);
+            if (tagName === "a") {
+                this.options.ownerDocument.execCommand("unlink", false, null);
             } else if (!event.shiftKey && !event.ctrlKey) {
-                this.options.ownerDocument.execCommand('formatBlock', false, 'p');
+                this.options.ownerDocument.execCommand(
+                    "formatBlock",
+                    false,
+                    "p"
+                );
             }
         }
     }
 
     function handleEditableInput(event, editable) {
-        var textarea = editable.parentNode.querySelector('textarea[medium-editor-textarea-id="' + editable.getAttribute('medium-editor-textarea-id') + '"]');
+        var textarea = editable.parentNode.querySelector(
+            'textarea[medium-editor-textarea-id="' +
+                editable.getAttribute("medium-editor-textarea-id") +
+                '"]'
+        );
         if (textarea) {
             textarea.value = editable.innerHTML.trim();
         }
@@ -244,7 +329,7 @@
             selector = [];
         }
         // If string, use as query selector
-        if (typeof selector === 'string') {
+        if (typeof selector === "string") {
             selector = doc.querySelectorAll(selector);
         }
         // If element, put into array
@@ -257,9 +342,11 @@
             // selecotr might not be an array (ie NodeList) so use for loop
             for (var i = 0; i < selector.length; i++) {
                 var el = selector[i];
-                if (MediumEditor.util.isElement(el) &&
-                    !el.getAttribute('data-medium-editor-element') &&
-                    !el.getAttribute('medium-editor-textarea-id')) {
+                if (
+                    MediumEditor.util.isElement(el) &&
+                    !el.getAttribute("data-medium-editor-element") &&
+                    !el.getAttribute("medium-editor-textarea-id")
+                ) {
                     elements.push(el);
                 }
             }
@@ -272,11 +359,15 @@
     }
 
     function cleanupTextareaElement(element) {
-        var textarea = element.parentNode.querySelector('textarea[medium-editor-textarea-id="' + element.getAttribute('medium-editor-textarea-id') + '"]');
+        var textarea = element.parentNode.querySelector(
+            'textarea[medium-editor-textarea-id="' +
+                element.getAttribute("medium-editor-textarea-id") +
+                '"]'
+        );
         if (textarea) {
             // Un-hide the textarea
-            textarea.classList.remove('medium-editor-hidden');
-            textarea.removeAttribute('medium-editor-textarea-id');
+            textarea.classList.remove("medium-editor-hidden");
+            textarea.removeAttribute("medium-editor-textarea-id");
         }
         if (element.parentNode) {
             element.parentNode.removeChild(element);
@@ -294,16 +385,16 @@
 
     function initExtension(extension, name, instance) {
         var extensionDefaults = {
-            'window': instance.options.contentWindow,
-            'document': instance.options.ownerDocument,
-            'base': instance
+            window: instance.options.contentWindow,
+            document: instance.options.ownerDocument,
+            base: instance,
         };
 
         // Add default options into the extension
         extension = setExtensionDefaults(extension, extensionDefaults);
 
         // Call init on the extension
-        if (typeof extension.init === 'function') {
+        if (typeof extension.init === "function") {
             extension.init();
         }
 
@@ -317,9 +408,11 @@
     function isToolbarEnabled() {
         // If any of the elements don't have the toolbar disabled
         // We need a toolbar
-        if (this.elements.every(function (element) {
-                return !!element.getAttribute('data-disable-toolbar');
-            })) {
+        if (
+            this.elements.every(function (element) {
+                return !!element.getAttribute("data-disable-toolbar");
+            })
+        ) {
             return false;
         }
 
@@ -355,27 +448,27 @@
         // Since the file-dragging extension replaces the image-dragging extension,
         // we need to check if the user passed an overrided image-dragging extension.
         // If they have, to avoid breaking users, we won't use file-dragging extension.
-        return !this.options.extensions['imageDragging'];
+        return !this.options.extensions["imageDragging"];
     }
 
     function createContentEditable(textarea) {
-        var div = this.options.ownerDocument.createElement('div'),
+        var div = this.options.ownerDocument.createElement("div"),
             now = Date.now(),
-            uniqueId = 'medium-editor-' + now,
+            uniqueId = "medium-editor-" + now,
             atts = textarea.attributes;
 
         // Some browsers can move pretty fast, since we're using a timestamp
         // to make a unique-id, ensure that the id is actually unique on the page
         while (this.options.ownerDocument.getElementById(uniqueId)) {
             now++;
-            uniqueId = 'medium-editor-' + now;
+            uniqueId = "medium-editor-" + now;
         }
 
         div.className = textarea.className;
         div.id = uniqueId;
         div.innerHTML = textarea.value;
 
-        textarea.setAttribute('medium-editor-textarea-id', uniqueId);
+        textarea.setAttribute("medium-editor-textarea-id", uniqueId);
 
         // re-create all attributes from the textearea to the new created div
         for (var i = 0, n = atts.length; i < n; i++) {
@@ -388,64 +481,84 @@
         // If textarea has a form, listen for reset on the form to clear
         // the content of the created div
         if (textarea.form) {
-            this.on(textarea.form, 'reset', function (event) {
-                if (!event.defaultPrevented) {
-                    this.resetContent(this.options.ownerDocument.getElementById(uniqueId));
-                }
-            }.bind(this));
+            this.on(
+                textarea.form,
+                "reset",
+                function (event) {
+                    if (!event.defaultPrevented) {
+                        this.resetContent(
+                            this.options.ownerDocument.getElementById(uniqueId)
+                        );
+                    }
+                }.bind(this)
+            );
         }
 
-        textarea.classList.add('medium-editor-hidden');
-        textarea.parentNode.insertBefore(
-            div,
-            textarea
-        );
+        textarea.classList.add("medium-editor-hidden");
+        textarea.parentNode.insertBefore(div, textarea);
 
         return div;
     }
 
     function initElement(element, editorId) {
-        if (!element.getAttribute('data-medium-editor-element')) {
-            if (element.nodeName.toLowerCase() === 'textarea') {
+        if (!element.getAttribute("data-medium-editor-element")) {
+            if (element.nodeName.toLowerCase() === "textarea") {
                 element = createContentEditable.call(this, element);
 
                 // Make sure we only attach to editableInput once for <textarea> elements
                 if (!this.instanceHandleEditableInput) {
-                    this.instanceHandleEditableInput = handleEditableInput.bind(this);
-                    this.subscribe('editableInput', this.instanceHandleEditableInput);
+                    this.instanceHandleEditableInput =
+                        handleEditableInput.bind(this);
+                    this.subscribe(
+                        "editableInput",
+                        this.instanceHandleEditableInput
+                    );
                 }
             }
 
-            if (!this.options.disableEditing && !element.getAttribute('data-disable-editing')) {
-                element.setAttribute('contentEditable', true);
-                element.setAttribute('spellcheck', this.options.spellcheck);
+            if (
+                !this.options.disableEditing &&
+                !element.getAttribute("data-disable-editing")
+            ) {
+                element.setAttribute("contentEditable", true);
+                element.setAttribute("spellcheck", this.options.spellcheck);
             }
 
             // Make sure we only attach to editableKeydownEnter once for disable-return options
             if (!this.instanceHandleEditableKeydownEnter) {
-                if (element.getAttribute('data-disable-return') || element.getAttribute('data-disable-double-return')) {
-                    this.instanceHandleEditableKeydownEnter = handleDisabledEnterKeydown.bind(this);
-                    this.subscribe('editableKeydownEnter', this.instanceHandleEditableKeydownEnter);
+                if (
+                    element.getAttribute("data-disable-return") ||
+                    element.getAttribute("data-disable-double-return")
+                ) {
+                    this.instanceHandleEditableKeydownEnter =
+                        handleDisabledEnterKeydown.bind(this);
+                    this.subscribe(
+                        "editableKeydownEnter",
+                        this.instanceHandleEditableKeydownEnter
+                    );
                 }
             }
 
             // if we're not disabling return, add a handler to help handle cleanup
             // for certain cases when enter is pressed
-            if (!this.options.disableReturn && !element.getAttribute('data-disable-return')) {
-                this.on(element, 'keyup', handleKeyup.bind(this));
+            if (
+                !this.options.disableReturn &&
+                !element.getAttribute("data-disable-return")
+            ) {
+                this.on(element, "keyup", handleKeyup.bind(this));
             }
 
             var elementId = MediumEditor.util.guid();
 
-            element.setAttribute('data-medium-editor-element', true);
-            element.classList.add('medium-editor-element');
-            element.setAttribute('role', 'textbox');
-            element.setAttribute('aria-multiline', true);
-            element.setAttribute('data-medium-editor-editor-index', editorId);
+            element.setAttribute("data-medium-editor-element", true);
+            element.classList.add("medium-editor-element");
+            element.setAttribute("role", "textbox");
+            element.setAttribute("aria-multiline", true);
+            element.setAttribute("data-medium-editor-editor-index", editorId);
             // TODO: Merge data-medium-editor-element and medium-editor-index attributes for 6.0.0
             // medium-editor-index is not named correctly anymore and can be re-purposed to signify
             // whether the element has been initialized or not
-            element.setAttribute('medium-editor-index', elementId);
+            element.setAttribute("medium-editor-index", elementId);
             initialContent[elementId] = element.innerHTML;
 
             this.events.attachAllEventsToElement(element);
@@ -456,36 +569,53 @@
 
     function attachHandlers() {
         // attach to tabs
-        this.subscribe('editableKeydownTab', handleTabKeydown.bind(this));
+        this.subscribe("editableKeydownTab", handleTabKeydown.bind(this));
 
         // Bind keys which can create or destroy a block element: backspace, delete, return
-        this.subscribe('editableKeydownDelete', handleBlockDeleteKeydowns.bind(this));
-        this.subscribe('editableKeydownEnter', handleBlockDeleteKeydowns.bind(this));
+        this.subscribe(
+            "editableKeydownDelete",
+            handleBlockDeleteKeydowns.bind(this)
+        );
+        this.subscribe(
+            "editableKeydownEnter",
+            handleBlockDeleteKeydowns.bind(this)
+        );
 
         // Bind double space event
         if (this.options.disableExtraSpaces) {
-            this.subscribe('editableKeydownSpace', handleDisableExtraSpaces.bind(this));
+            this.subscribe(
+                "editableKeydownSpace",
+                handleDisableExtraSpaces.bind(this)
+            );
         }
 
         // Make sure we only attach to editableKeydownEnter once for disable-return options
         if (!this.instanceHandleEditableKeydownEnter) {
             // disabling return or double return
-            if (this.options.disableReturn || this.options.disableDoubleReturn) {
-                this.instanceHandleEditableKeydownEnter = handleDisabledEnterKeydown.bind(this);
-                this.subscribe('editableKeydownEnter', this.instanceHandleEditableKeydownEnter);
+            if (
+                this.options.disableReturn ||
+                this.options.disableDoubleReturn
+            ) {
+                this.instanceHandleEditableKeydownEnter =
+                    handleDisabledEnterKeydown.bind(this);
+                this.subscribe(
+                    "editableKeydownEnter",
+                    this.instanceHandleEditableKeydownEnter
+                );
             }
         }
     }
 
     function initExtensions() {
-
         this.extensions = [];
 
         // Passed in extensions
         Object.keys(this.options.extensions).forEach(function (name) {
             // Always save the toolbar extension for last
-            if (name !== 'toolbar' && this.options.extensions[name]) {
-                this.extensions.push(initExtension(this.options.extensions[name], name, this));
+            if (name !== "toolbar" && this.options.extensions[name]) {
+                this.extensions.push(
+                    initExtension(this.options.extensions[name], name, this)
+                );
             }
         }, this);
 
@@ -510,16 +640,16 @@
                     opts.allowedTypes = [];
                 }
             }
-            this.addBuiltInExtension('fileDragging', opts);
+            this.addBuiltInExtension("fileDragging", opts);
         }
 
         // Built-in extensions
         var builtIns = {
             paste: true,
-            'anchor-preview': isAnchorPreviewEnabled.call(this),
+            "anchor-preview": isAnchorPreviewEnabled.call(this),
             autoLink: isAutoLinkEnabled.call(this),
             keyboardCommands: isKeyboardCommandsEnabled.call(this),
-            placeholder: isPlaceholderEnabled.call(this)
+            placeholder: isPlaceholderEnabled.call(this),
         };
         Object.keys(builtIns).forEach(function (name) {
             if (builtIns[name]) {
@@ -530,31 +660,46 @@
         // Users can pass in a custom toolbar extension
         // so check for that first and if it's not present
         // just create the default toolbar
-        var toolbarExtension = this.options.extensions['toolbar'];
+        var toolbarExtension = this.options.extensions["toolbar"];
         if (!toolbarExtension && isToolbarEnabled.call(this)) {
             // Backwards compatability
-            var toolbarOptions = MediumEditor.util.extend({}, this.options.toolbar, {
-                allowMultiParagraphSelection: this.options.allowMultiParagraphSelection // deprecated
-            });
-            toolbarExtension = new MediumEditor.extensions.toolbar(toolbarOptions);
+            var toolbarOptions = MediumEditor.util.extend(
+                {},
+                this.options.toolbar,
+                {
+                    allowMultiParagraphSelection:
+                        this.options.allowMultiParagraphSelection, // deprecated
+                }
+            );
+            toolbarExtension = new MediumEditor.extensions.toolbar(
+                toolbarOptions
+            );
         }
 
         // If the toolbar is not disabled, so we actually have an extension
         // initialize it and add it to the extensions array
         if (toolbarExtension) {
-            this.extensions.push(initExtension(toolbarExtension, 'toolbar', this));
+            this.extensions.push(
+                initExtension(toolbarExtension, "toolbar", this)
+            );
         }
     }
 
     function mergeOptions(defaults, options) {
         var deprecatedProperties = [
-            ['allowMultiParagraphSelection', 'toolbar.allowMultiParagraphSelection']
+            [
+                "allowMultiParagraphSelection",
+                "toolbar.allowMultiParagraphSelection",
+            ],
         ];
         // warn about using deprecated properties
         if (options) {
             deprecatedProperties.forEach(function (pair) {
-                if (options.hasOwnProperty(pair[0]) && options[pair[0]] !== undefined) {
-                    MediumEditor.util.deprecated(pair[0], pair[1], 'v6.0.0');
+                if (
+                    options.hasOwnProperty(pair[0]) &&
+                    options[pair[0]] !== undefined
+                ) {
+                    MediumEditor.util.deprecated(pair[0], pair[1], "v6.0.0");
                 }
             });
         }
@@ -565,7 +710,8 @@
     function execActionInternal(action, opts) {
         /*jslint regexp: true*/
         var appendAction = /^append-(.+)$/gi,
-            justifyAction = /justify([A-Za-z]*)$/g, /* Detecting if is justifyCenter|Right|Left */
+            justifyAction =
+                /justify([A-Za-z]*)$/g /* Detecting if is justifyCenter|Right|Left */,
             match,
             cmdValueArgument;
         /*jslint regexp: false*/
@@ -574,55 +720,102 @@
         // type of block element (ie append-blockquote, append-h1, append-pre, etc.)
         match = appendAction.exec(action);
         if (match) {
-            return MediumEditor.util.execFormatBlock(this.options.ownerDocument, match[1]);
+            return MediumEditor.util.execFormatBlock(
+                this.options.ownerDocument,
+                match[1]
+            );
         }
 
-        if (action === 'fontSize') {
+        if (action === "fontSize") {
             // TODO: Deprecate support for opts.size in 6.0.0
             if (opts.size) {
-                MediumEditor.util.deprecated('.size option for fontSize command', '.value', '6.0.0');
+                MediumEditor.util.deprecated(
+                    ".size option for fontSize command",
+                    ".value",
+                    "6.0.0"
+                );
             }
             cmdValueArgument = opts.value || opts.size;
-            return this.options.ownerDocument.execCommand('fontSize', false, cmdValueArgument);
+            return this.options.ownerDocument.execCommand(
+                "fontSize",
+                false,
+                cmdValueArgument
+            );
         }
 
-        if (action === 'fontName') {
+        if (action === "fontName") {
             // TODO: Deprecate support for opts.name in 6.0.0
             if (opts.name) {
-                MediumEditor.util.deprecated('.name option for fontName command', '.value', '6.0.0');
+                MediumEditor.util.deprecated(
+                    ".name option for fontName command",
+                    ".value",
+                    "6.0.0"
+                );
             }
             cmdValueArgument = opts.value || opts.name;
-            return this.options.ownerDocument.execCommand('fontName', false, cmdValueArgument);
+            return this.options.ownerDocument.execCommand(
+                "fontName",
+                false,
+                cmdValueArgument
+            );
         }
 
-        if (action === 'createLink') {
+        if (action === "createLink") {
             return this.createLink(opts);
         }
 
-        if (action === 'image') {
-            var src = this.options.contentWindow.getSelection().toString().trim();
-            return this.options.ownerDocument.execCommand('insertImage', false, src);
+        if (action === "image") {
+            var src = this.options.contentWindow
+                .getSelection()
+                .toString()
+                .trim();
+            return this.options.ownerDocument.execCommand(
+                "insertImage",
+                false,
+                src
+            );
         }
 
-        if (action === 'html') {
-            var html = this.options.contentWindow.getSelection().toString().trim();
-            return MediumEditor.util.insertHTMLCommand(this.options.ownerDocument, html);
+        if (action === "html") {
+            var html = this.options.contentWindow
+                .getSelection()
+                .toString()
+                .trim();
+            return MediumEditor.util.insertHTMLCommand(
+                this.options.ownerDocument,
+                html
+            );
         }
 
         /* Issue: https://github.com/yabwe/medium-editor/issues/595
          * If the action is to justify the text */
         if (justifyAction.exec(action)) {
-            var result = this.options.ownerDocument.execCommand(action, false, null),
-                parentNode = MediumEditor.selection.getSelectedParentElement(MediumEditor.selection.getSelectionRange(this.options.ownerDocument));
+            var result = this.options.ownerDocument.execCommand(
+                    action,
+                    false,
+                    null
+                ),
+                parentNode = MediumEditor.selection.getSelectedParentElement(
+                    MediumEditor.selection.getSelectionRange(
+                        this.options.ownerDocument
+                    )
+                );
             if (parentNode) {
-                cleanupJustifyDivFragments.call(this, MediumEditor.util.getTopBlockContainer(parentNode));
+                cleanupJustifyDivFragments.call(
+                    this,
+                    MediumEditor.util.getTopBlockContainer(parentNode)
+                );
             }
 
             return result;
         }
 
         cmdValueArgument = opts && opts.value;
-        return this.options.ownerDocument.execCommand(action, false, cmdValueArgument);
+        return this.options.ownerDocument.execCommand(
+            action,
+            false,
+            cmdValueArgument
+        );
     }
 
     /* If we've just justified text within a container block
@@ -635,13 +828,15 @@
         }
 
         var textAlign,
-            childDivs = Array.prototype.slice.call(blockContainer.childNodes).filter(function (element) {
-                var isDiv = element.nodeName.toLowerCase() === 'div';
-                if (isDiv && !textAlign) {
-                    textAlign = element.style.textAlign;
-                }
-                return isDiv;
-            });
+            childDivs = Array.prototype.slice
+                .call(blockContainer.childNodes)
+                .filter(function (element) {
+                    var isDiv = element.nodeName.toLowerCase() === "div";
+                    if (isDiv && !textAlign) {
+                        textAlign = element.style.textAlign;
+                    }
+                    return isDiv;
+                });
 
         /* If we found child <div> elements with text-align style attributes
          * we should fix this by:
@@ -658,9 +853,15 @@
                     var lastChild = div.lastChild;
                     if (lastChild) {
                         // Instead of a div, extract the child elements and add a <br>
-                        MediumEditor.util.unwrap(div, this.options.ownerDocument);
-                        var br = this.options.ownerDocument.createElement('BR');
-                        lastChild.parentNode.insertBefore(br, lastChild.nextSibling);
+                        MediumEditor.util.unwrap(
+                            div,
+                            this.options.ownerDocument
+                        );
+                        var br = this.options.ownerDocument.createElement("BR");
+                        lastChild.parentNode.insertBefore(
+                            br,
+                            lastChild.nextSibling
+                        );
                     }
                 }
             }, this);
@@ -679,7 +880,8 @@
             this.origElements = elements;
 
             if (!this.options.elementsContainer) {
-                this.options.elementsContainer = this.options.ownerDocument.body;
+                this.options.elementsContainer =
+                    this.options.ownerDocument.body;
             }
 
             return this.setup();
@@ -715,7 +917,7 @@
             this.isActive = false;
 
             this.extensions.forEach(function (extension) {
-                if (typeof extension.destroy === 'function') {
+                if (typeof extension.destroy === "function") {
                     extension.destroy();
                 }
             }, this);
@@ -729,17 +931,17 @@
                 }
 
                 // cleanup extra added attributes
-                element.removeAttribute('contentEditable');
-                element.removeAttribute('spellcheck');
-                element.removeAttribute('data-medium-editor-element');
-                element.classList.remove('medium-editor-element');
-                element.removeAttribute('role');
-                element.removeAttribute('aria-multiline');
-                element.removeAttribute('medium-editor-index');
-                element.removeAttribute('data-medium-editor-editor-index');
+                element.removeAttribute("contentEditable");
+                element.removeAttribute("spellcheck");
+                element.removeAttribute("data-medium-editor-element");
+                element.classList.remove("medium-editor-element");
+                element.removeAttribute("role");
+                element.removeAttribute("aria-multiline");
+                element.removeAttribute("medium-editor-index");
+                element.removeAttribute("data-medium-editor-editor-index");
 
                 // Remove any elements created for textareas
-                if (element.getAttribute('medium-editor-textarea-id')) {
+                if (element.getAttribute("medium-editor-textarea-id")) {
                     cleanupTextareaElement(element);
                 }
             }, this);
@@ -796,9 +998,12 @@
                 len = this.elements.length;
 
             for (i = 0; i < len; i += 1) {
-                elementid = (this.elements[i].id !== '') ? this.elements[i].id : 'element-' + i;
+                elementid =
+                    this.elements[i].id !== ""
+                        ? this.elements[i].id
+                        : "element-" + i;
                 content[elementid] = {
-                    value: this.elements[i].innerHTML.trim()
+                    value: this.elements[i].innerHTML.trim(),
                 };
             }
             return content;
@@ -829,43 +1034,66 @@
             }
 
             switch (name) {
-                case 'anchor':
-                    merged = MediumEditor.util.extend({}, this.options.anchor, opts);
+                case "anchor":
+                    merged = MediumEditor.util.extend(
+                        {},
+                        this.options.anchor,
+                        opts
+                    );
                     extension = new MediumEditor.extensions.anchor(merged);
                     break;
-                case 'anchor-preview':
-                    extension = new MediumEditor.extensions.anchorPreview(this.options.anchorPreview);
+                case "anchor-preview":
+                    extension = new MediumEditor.extensions.anchorPreview(
+                        this.options.anchorPreview
+                    );
                     break;
-                case 'autoLink':
+                case "autoLink":
                     extension = new MediumEditor.extensions.autoLink();
                     break;
-                case 'fileDragging':
+                case "fileDragging":
                     extension = new MediumEditor.extensions.fileDragging(opts);
                     break;
-                case 'fontname':
-                    extension = new MediumEditor.extensions.fontName(this.options.fontName);
+                case "fontname":
+                    extension = new MediumEditor.extensions.fontName(
+                        this.options.fontName
+                    );
                     break;
-                case 'fontsize':
+                case "fontsize":
                     extension = new MediumEditor.extensions.fontSize(opts);
                     break;
-                case 'keyboardCommands':
-                    extension = new MediumEditor.extensions.keyboardCommands(this.options.keyboardCommands);
+                case "keyboardCommands":
+                    extension = new MediumEditor.extensions.keyboardCommands(
+                        this.options.keyboardCommands
+                    );
                     break;
-                case 'paste':
-                    extension = new MediumEditor.extensions.paste(this.options.paste);
+                case "paste":
+                    extension = new MediumEditor.extensions.paste(
+                        this.options.paste
+                    );
                     break;
-                case 'placeholder':
-                    extension = new MediumEditor.extensions.placeholder(this.options.placeholder);
+                case "placeholder":
+                    extension = new MediumEditor.extensions.placeholder(
+                        this.options.placeholder
+                    );
                     break;
                 default:
                     // All of the built-in buttons for MediumEditor are extensions
                     // so check to see if the extension we're creating is a built-in button
                     if (MediumEditor.extensions.button.isBuiltInButton(name)) {
                         if (opts) {
-                            merged = MediumEditor.util.defaults({}, opts, MediumEditor.extensions.button.prototype.defaults[name]);
-                            extension = new MediumEditor.extensions.button(merged);
+                            merged = MediumEditor.util.defaults(
+                                {},
+                                opts,
+                                MediumEditor.extensions.button.prototype
+                                    .defaults[name]
+                            );
+                            extension = new MediumEditor.extensions.button(
+                                merged
+                            );
                         } else {
-                            extension = new MediumEditor.extensions.button(name);
+                            extension = new MediumEditor.extensions.button(
+                                name
+                            );
                         }
                     }
             }
@@ -886,7 +1114,7 @@
         },
 
         checkSelection: function () {
-            var toolbar = this.getExtensionByName('toolbar');
+            var toolbar = this.getExtensionByName("toolbar");
             if (toolbar) {
                 toolbar.checkState();
             }
@@ -907,7 +1135,8 @@
             }
 
             try {
-                queryState = this.options.ownerDocument.queryCommandState(action);
+                queryState =
+                    this.options.ownerDocument.queryCommandState(action);
             } catch (exc) {
                 queryState = null;
             }
@@ -938,8 +1167,14 @@
             }
 
             // do some DOM clean-up for known browser issues after the action
-            if (action === 'insertunorderedlist' || action === 'insertorderedlist') {
-                MediumEditor.util.cleanListDOM(this.options.ownerDocument, this.getSelectedParentElement());
+            if (
+                action === "insertunorderedlist" ||
+                action === "insertorderedlist"
+            ) {
+                MediumEditor.util.cleanListDOM(
+                    this.options.ownerDocument,
+                    this.getSelectedParentElement()
+                );
             }
 
             this.checkSelection();
@@ -954,7 +1189,9 @@
         },
 
         selectAllContents: function () {
-            var currNode = MediumEditor.selection.getSelectionElement(this.options.contentWindow);
+            var currNode = MediumEditor.selection.getSelectionElement(
+                this.options.contentWindow
+            );
 
             if (currNode) {
                 // Move to the lowest descendant node that still selects all of the contents
@@ -967,9 +1204,14 @@
         },
 
         selectElement: function (element) {
-            MediumEditor.selection.selectNode(element, this.options.ownerDocument);
+            MediumEditor.selection.selectNode(
+                element,
+                this.options.ownerDocument
+            );
 
-            var selElement = MediumEditor.selection.getSelectionElement(this.options.contentWindow);
+            var selElement = MediumEditor.selection.getSelectionElement(
+                this.options.contentWindow
+            );
             if (selElement) {
                 this.events.focusElement(selElement);
             }
@@ -979,7 +1221,7 @@
             var focused;
             this.elements.some(function (element) {
                 // Find the element that has focus
-                if (!focused && element.getAttribute('data-medium-focused')) {
+                if (!focused && element.getAttribute("data-medium-focused")) {
                     focused = element;
                 }
 
@@ -993,12 +1235,17 @@
         // Export the state of the selection in respect to one of this
         // instance of MediumEditor's elements
         exportSelection: function () {
-            var selectionElement = MediumEditor.selection.getSelectionElement(this.options.contentWindow),
+            var selectionElement = MediumEditor.selection.getSelectionElement(
+                    this.options.contentWindow
+                ),
                 editableElementIndex = this.elements.indexOf(selectionElement),
                 selectionState = null;
 
             if (editableElementIndex >= 0) {
-                selectionState = MediumEditor.selection.exportSelection(selectionElement, this.options.ownerDocument);
+                selectionState = MediumEditor.selection.exportSelection(
+                    selectionElement,
+                    this.options.ownerDocument
+                );
             }
 
             if (selectionState !== null && editableElementIndex !== 0) {
@@ -1019,8 +1266,14 @@
                 return;
             }
 
-            var editableElement = this.elements[selectionState.editableElementIndex || 0];
-            MediumEditor.selection.importSelection(selectionState, editableElement, this.options.ownerDocument, favorLaterSelectionAnchor);
+            var editableElement =
+                this.elements[selectionState.editableElementIndex || 0];
+            MediumEditor.selection.importSelection(
+                selectionState,
+                editableElement,
+                this.options.ownerDocument,
+                favorLaterSelectionAnchor
+            );
         },
 
         restoreSelection: function () {
@@ -1028,7 +1281,9 @@
         },
 
         createLink: function (opts) {
-            var currentEditor = MediumEditor.selection.getSelectionElement(this.options.contentWindow),
+            var currentEditor = MediumEditor.selection.getSelectionElement(
+                    this.options.contentWindow
+                ),
                 customEvent = {},
                 targetUrl;
 
@@ -1038,17 +1293,23 @@
             }
 
             try {
-                this.events.disableCustomEvent('editableInput');
+                this.events.disableCustomEvent("editableInput");
                 // TODO: Deprecate support for opts.url in 6.0.0
                 if (opts.url) {
-                    MediumEditor.util.deprecated('.url option for createLink', '.value', '6.0.0');
+                    MediumEditor.util.deprecated(
+                        ".url option for createLink",
+                        ".value",
+                        "6.0.0"
+                    );
                 }
                 targetUrl = opts.url || opts.value;
                 if (targetUrl && targetUrl.trim().length > 0) {
-                    var currentSelection = this.options.contentWindow.getSelection();
+                    var currentSelection =
+                        this.options.contentWindow.getSelection();
                     if (currentSelection) {
                         var currRange = currentSelection.getRangeAt(0),
-                            commonAncestorContainer = currRange.commonAncestorContainer,
+                            commonAncestorContainer =
+                                currRange.commonAncestorContainer,
                             exportedSelection,
                             startContainerParentElement,
                             endContainerParentElement,
@@ -1060,28 +1321,45 @@
                         // If the selection is contained within a single text node, we
                         // want to just use the default browser 'createLink', so we need
                         // to account for this case and adjust the commonAncestorContainer accordingly
-                        if (currRange.endContainer.nodeType === 3 &&
+                        if (
+                            currRange.endContainer.nodeType === 3 &&
                             currRange.startContainer.nodeType !== 3 &&
                             currRange.startOffset === 0 &&
-                            currRange.startContainer.firstChild === currRange.endContainer) {
+                            currRange.startContainer.firstChild ===
+                                currRange.endContainer
+                        ) {
                             commonAncestorContainer = currRange.endContainer;
                         }
 
-                        startContainerParentElement = MediumEditor.util.getClosestBlockContainer(currRange.startContainer);
-                        endContainerParentElement = MediumEditor.util.getClosestBlockContainer(currRange.endContainer);
+                        startContainerParentElement =
+                            MediumEditor.util.getClosestBlockContainer(
+                                currRange.startContainer
+                            );
+                        endContainerParentElement =
+                            MediumEditor.util.getClosestBlockContainer(
+                                currRange.endContainer
+                            );
 
                         // If the selection is not contained within a single text node
                         // but the selection is contained within the same block element
                         // we want to make sure we create a single link, and not multiple links
                         // which can happen with the built in browser functionality
-                        if (commonAncestorContainer.nodeType !== 3 && commonAncestorContainer.textContent.length !== 0 && startContainerParentElement === endContainerParentElement) {
-                            var parentElement = (startContainerParentElement || currentEditor),
-                                fragment = this.options.ownerDocument.createDocumentFragment();
+                        if (
+                            commonAncestorContainer.nodeType !== 3 &&
+                            commonAncestorContainer.textContent.length !== 0 &&
+                            startContainerParentElement ===
+                                endContainerParentElement
+                        ) {
+                            var parentElement =
+                                    startContainerParentElement ||
+                                    currentEditor,
+                                fragment =
+                                    this.options.ownerDocument.createDocumentFragment();
 
                             // since we are going to create a link from an extracted text,
                             // be sure that if we are updating a link, we won't let an empty link behind (see #754)
                             // (Workaroung for Chrome)
-                            this.execAction('unlink');
+                            this.execAction("unlink");
 
                             exportedSelection = this.exportSelection();
                             fragment.appendChild(parentElement.cloneNode(true));
@@ -1102,8 +1380,11 @@
                                     parentElement.firstChild,
                                     0,
                                     parentElement.lastChild,
-                                    parentElement.lastChild.nodeType === 3 ?
-                                    parentElement.lastChild.nodeValue.length : parentElement.lastChild.childNodes.length
+                                    parentElement.lastChild.nodeType === 3
+                                        ? parentElement.lastChild.nodeValue
+                                              .length
+                                        : parentElement.lastChild.childNodes
+                                              .length
                                 );
                             } else {
                                 MediumEditor.selection.select(
@@ -1115,74 +1396,140 @@
                                 );
                             }
 
-                            var modifiedExportedSelection = this.exportSelection();
+                            var modifiedExportedSelection =
+                                this.exportSelection();
 
-                            textNodes = MediumEditor.util.findOrCreateMatchingTextNodes(
-                                this.options.ownerDocument,
-                                fragment,
-                                {
-                                    start: exportedSelection.start - modifiedExportedSelection.start,
-                                    end: exportedSelection.end - modifiedExportedSelection.start,
-                                    editableElementIndex: exportedSelection.editableElementIndex
-                                }
-                            );
+                            textNodes =
+                                MediumEditor.util.findOrCreateMatchingTextNodes(
+                                    this.options.ownerDocument,
+                                    fragment,
+                                    {
+                                        start:
+                                            exportedSelection.start -
+                                            modifiedExportedSelection.start,
+                                        end:
+                                            exportedSelection.end -
+                                            modifiedExportedSelection.start,
+                                        editableElementIndex:
+                                            exportedSelection.editableElementIndex,
+                                    }
+                                );
                             // If textNodes are not present, when changing link on images
                             // ex: <a><img src="http://image.test.com"></a>, change fragment to currRange.startContainer
                             // and set textNodes array to [imageElement, imageElement]
                             if (textNodes.length === 0) {
-                                fragment = this.options.ownerDocument.createDocumentFragment();
-                                fragment.appendChild(commonAncestorContainer.cloneNode(true));
-                                textNodes = [fragment.firstChild.firstChild, fragment.firstChild.lastChild];
+                                fragment =
+                                    this.options.ownerDocument.createDocumentFragment();
+                                fragment.appendChild(
+                                    commonAncestorContainer.cloneNode(true)
+                                );
+                                textNodes = [
+                                    fragment.firstChild.firstChild,
+                                    fragment.firstChild.lastChild,
+                                ];
                             }
 
                             // Creates the link in the document fragment
-                            MediumEditor.util.createLink(this.options.ownerDocument, textNodes, targetUrl.trim());
+                            MediumEditor.util.createLink(
+                                this.options.ownerDocument,
+                                textNodes,
+                                targetUrl.trim()
+                            );
 
                             // Chrome trims the leading whitespaces when inserting HTML, which messes up restoring the selection.
-                            var leadingWhitespacesCount = (fragment.firstChild.innerHTML.match(/^\s+/) || [''])[0].length;
+                            var leadingWhitespacesCount =
+                                (fragment.firstChild.innerHTML.match(
+                                    /^\s+/
+                                ) || [""])[0].length;
 
                             // Now move the created link back into the original document in a way to preserve undo/redo history
-                            MediumEditor.util.insertHTMLCommand(this.options.ownerDocument, fragment.firstChild.innerHTML.replace(/^\s+/, ''));
+                            MediumEditor.util.insertHTMLCommand(
+                                this.options.ownerDocument,
+                                fragment.firstChild.innerHTML.replace(
+                                    /^\s+/,
+                                    ""
+                                )
+                            );
                             exportedSelection.start -= leadingWhitespacesCount;
                             exportedSelection.end -= leadingWhitespacesCount;
 
                             this.importSelection(exportedSelection);
                         } else {
-                            this.options.ownerDocument.execCommand('createLink', false, targetUrl);
+                            this.options.ownerDocument.execCommand(
+                                "createLink",
+                                false,
+                                targetUrl
+                            );
                         }
 
-                        if (this.options.targetBlank || opts.target === '_blank') {
-                            MediumEditor.util.setTargetBlank(MediumEditor.selection.getSelectionStart(this.options.ownerDocument), targetUrl);
+                        if (
+                            this.options.targetBlank ||
+                            opts.target === "_blank"
+                        ) {
+                            MediumEditor.util.setTargetBlank(
+                                MediumEditor.selection.getSelectionStart(
+                                    this.options.ownerDocument
+                                ),
+                                targetUrl
+                            );
                         } else {
-                            MediumEditor.util.removeTargetBlank(MediumEditor.selection.getSelectionStart(this.options.ownerDocument), targetUrl);
+                            MediumEditor.util.removeTargetBlank(
+                                MediumEditor.selection.getSelectionStart(
+                                    this.options.ownerDocument
+                                ),
+                                targetUrl
+                            );
                         }
 
                         if (opts.buttonClass) {
-                            MediumEditor.util.addClassToAnchors(MediumEditor.selection.getSelectionStart(this.options.ownerDocument), opts.buttonClass);
+                            MediumEditor.util.addClassToAnchors(
+                                MediumEditor.selection.getSelectionStart(
+                                    this.options.ownerDocument
+                                ),
+                                opts.buttonClass
+                            );
                         }
                     }
                 }
                 // Fire input event for backwards compatibility if anyone was listening directly to the DOM input event
-                if (this.options.targetBlank || opts.target === '_blank' || opts.buttonClass) {
-                    customEvent = this.options.ownerDocument.createEvent('HTMLEvents');
-                    customEvent.initEvent('input', true, true, this.options.contentWindow);
-                    for (var i = 0, len = this.elements.length; i < len; i += 1) {
+                if (
+                    this.options.targetBlank ||
+                    opts.target === "_blank" ||
+                    opts.buttonClass
+                ) {
+                    customEvent =
+                        this.options.ownerDocument.createEvent("HTMLEvents");
+                    customEvent.initEvent(
+                        "input",
+                        true,
+                        true,
+                        this.options.contentWindow
+                    );
+                    for (
+                        var i = 0, len = this.elements.length;
+                        i < len;
+                        i += 1
+                    ) {
                         this.elements[i].dispatchEvent(customEvent);
                     }
                 }
             } finally {
-                this.events.enableCustomEvent('editableInput');
+                this.events.enableCustomEvent("editableInput");
             }
             // Fire our custom editableInput event
-            this.events.triggerCustomEvent('editableInput', customEvent, currentEditor);
+            this.events.triggerCustomEvent(
+                "editableInput",
+                customEvent,
+                currentEditor
+            );
         },
 
         cleanPaste: function (text) {
-            this.getExtensionByName('paste').cleanPaste(text);
+            this.getExtensionByName("paste").cleanPaste(text);
         },
 
         pasteHTML: function (html, options) {
-            this.getExtensionByName('paste').pasteHTML(html, options);
+            this.getExtensionByName("paste").pasteHTML(html, options);
         },
 
         setContent: function (html, index) {
@@ -1205,8 +1552,15 @@
         },
 
         checkContentChanged: function (editable) {
-            editable = editable || MediumEditor.selection.getSelectionElement(this.options.contentWindow);
-            this.events.updateInput(editable, { target: editable, currentTarget: editable });
+            editable =
+                editable ||
+                MediumEditor.selection.getSelectionElement(
+                    this.options.contentWindow
+                );
+            this.events.updateInput(editable, {
+                target: editable,
+                currentTarget: editable,
+            });
         },
 
         resetContent: function (element) {
@@ -1217,19 +1571,31 @@
             if (element) {
                 var index = this.elements.indexOf(element);
                 if (index !== -1) {
-                    this.setContent(initialContent[element.getAttribute('medium-editor-index')], index);
+                    this.setContent(
+                        initialContent[
+                            element.getAttribute("medium-editor-index")
+                        ],
+                        index
+                    );
                 }
                 return;
             }
 
             this.elements.forEach(function (el, idx) {
-                this.setContent(initialContent[el.getAttribute('medium-editor-index')], idx);
+                this.setContent(
+                    initialContent[el.getAttribute("medium-editor-index")],
+                    idx
+                );
             }, this);
         },
 
         addElements: function (selector) {
             // Convert elements into an array
-            var elements = createElementsArray(selector, this.options.ownerDocument, true);
+            var elements = createElementsArray(
+                selector,
+                this.options.ownerDocument,
+                true
+            );
 
             // Do we have elements to add now?
             if (elements.length === 0) {
@@ -1244,17 +1610,31 @@
                 this.elements.push(element);
 
                 // Trigger event so extensions can know when an element has been added
-                this.trigger('addElement', { target: element, currentTarget: element }, element);
+                this.trigger(
+                    "addElement",
+                    { target: element, currentTarget: element },
+                    element
+                );
             }, this);
         },
 
         removeElements: function (selector) {
             // Convert elements into an array
-            var elements = createElementsArray(selector, this.options.ownerDocument),
+            var elements = createElementsArray(
+                    selector,
+                    this.options.ownerDocument
+                ),
                 toRemove = elements.map(function (el) {
                     // For textareas, make sure we're looking at the editor div and not the textarea itself
-                    if (el.getAttribute('medium-editor-textarea-id') && el.parentNode) {
-                        return el.parentNode.querySelector('div[medium-editor-textarea-id="' + el.getAttribute('medium-editor-textarea-id') + '"]');
+                    if (
+                        el.getAttribute("medium-editor-textarea-id") &&
+                        el.parentNode
+                    ) {
+                        return el.parentNode.querySelector(
+                            'div[medium-editor-textarea-id="' +
+                                el.getAttribute("medium-editor-textarea-id") +
+                                '"]'
+                        );
                     } else {
                         return el;
                     }
@@ -1264,24 +1644,32 @@
                 // If this is an element we want to remove
                 if (toRemove.indexOf(element) !== -1) {
                     this.events.cleanupElement(element);
-                    if (element.getAttribute('medium-editor-textarea-id')) {
+                    if (element.getAttribute("medium-editor-textarea-id")) {
                         cleanupTextareaElement(element);
                     }
                     // Trigger event so extensions can clean-up elements that are being removed
-                    this.trigger('removeElement', { target: element, currentTarget: element }, element);
+                    this.trigger(
+                        "removeElement",
+                        { target: element, currentTarget: element },
+                        element
+                    );
                     return false;
                 }
                 return true;
             }, this);
-        }
+        },
     };
 
     MediumEditor.getEditorFromElement = function (element) {
-        var index = element.getAttribute('data-medium-editor-editor-index'),
-            win = element && element.ownerDocument && (element.ownerDocument.defaultView || element.ownerDocument.parentWindow);
+        var index = element.getAttribute("data-medium-editor-editor-index"),
+            win =
+                element &&
+                element.ownerDocument &&
+                (element.ownerDocument.defaultView ||
+                    element.ownerDocument.parentWindow);
         if (win && win._mediumEditors && win._mediumEditors[index]) {
             return win._mediumEditors[index];
         }
         return null;
     };
-}());
+})();

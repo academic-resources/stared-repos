@@ -268,7 +268,7 @@
   bundle size, `walkTree` is no longer exported from `react-apollo`,
   though you can still access it as follows:
   ```js
-  import { walkTree } from 'react-apollo/walkTree';
+  import { walkTree } from "react-apollo/walkTree";
   ```
 
 ## 2.4.0
@@ -1038,10 +1038,10 @@
 
 ```js
 // old
-import { getDataFromTree, renderToStringWithData } from 'react-apollo/server';
+import { getDataFromTree, renderToStringWithData } from "react-apollo/server";
 
 // new
-import { getDataFromTree, renderToStringWithData } from 'react-apollo';
+import { getDataFromTree, renderToStringWithData } from "react-apollo";
 ```
 
 - Feature: Better packaging [PR #306](https://github.com/apollostack/react-apollo/pull/306)
@@ -1059,7 +1059,7 @@ import { getDataFromTree, renderToStringWithData } from 'react-apollo';
 renderToStringWithData(component).then({ markup, initialState });
 
 // new -- you must get it yourself
-renderToStringWithData(component).then(markup => {
+renderToStringWithData(component).then((markup) => {
   const initialState = client.store.getState()[client.reduxRootKey];
 
   // ...

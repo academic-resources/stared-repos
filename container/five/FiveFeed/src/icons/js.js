@@ -1,7 +1,13 @@
 import React from 'react'
 
 export default () => (
-  <svg className="svg-icon" width="45px" height="45px" viewBox="0 0 45 45" version="1.1">
+  <svg
+    className="svg-icon"
+    width="45px"
+    height="45px"
+    viewBox="0 0 45 45"
+    version="1.1"
+  >
     <g
       id="Welcome"
       stroke="none"

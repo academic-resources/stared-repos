@@ -28,7 +28,7 @@ const randomizeContentBlockNodeKeys = (blockMap: BlockMap): BlockMap => {
 
   return OrderedMap(
     blockMap
-      .withMutations(blockMapState => {
+      .withMutations((blockMapState) => {
         blockMapState.forEach((block, index) => {
           const oldKey = block.getKey();
           const nextKey = block.getNextSiblingKey();
@@ -87,21 +87,21 @@ const randomizeContentBlockNodeKeys = (blockMap: BlockMap): BlockMap => {
             lastRootBlock = blockMapState.get(oldKey);
           }
 
-          childrenKeys.forEach(childKey => {
+          childrenKeys.forEach((childKey) => {
             const childBlock = blockMapState.get(childKey);
             if (childBlock) {
               blockMapState.setIn([childKey, 'parent'], key);
             } else {
               blockMapState.setIn(
                 [oldKey, 'children'],
-                block.getChildKeys().filter(child => child !== childKey),
+                block.getChildKeys().filter((child) => child !== childKey),
               );
             }
           });
         });
       })
       .toArray()
-      .map(block => [
+      .map((block) => [
         newKeysRef[block.getKey()],
         block.set('key', newKeysRef[block.getKey()]),
       ]),
@@ -110,7 +110,7 @@ const randomizeContentBlockNodeKeys = (blockMap: BlockMap): BlockMap => {
 
 const randomizeContentBlockKeys = (blockMap: BlockMap): BlockMap => {
   return OrderedMap(
-    blockMap.toArray().map(block => {
+    blockMap.toArray().map((block) => {
       const key = generateRandomKey();
       return [key, block.set('key', key)];
     }),

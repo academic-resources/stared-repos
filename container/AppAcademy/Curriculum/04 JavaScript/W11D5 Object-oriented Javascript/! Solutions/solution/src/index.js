@@ -1,4 +1,4 @@
-import FlappyBird from './game';
+import FlappyBird from "./game";
 
-const canvas = document.getElementById('bird-game');
+const canvas = document.getElementById("bird-game");
 new FlappyBird(canvas);

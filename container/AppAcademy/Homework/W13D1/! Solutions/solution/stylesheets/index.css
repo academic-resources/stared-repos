@@ -1,10 +1,32 @@
 /* AutoComplete */
 
-html, body, header, nav, h1, a,
-ul, li, strong, main, button, i,
-section, img, div, h2, p, form,
-fieldset, label, input, textarea,
-span, article, footer, time, small {
+html,
+body,
+header,
+nav,
+h1,
+a,
+ul,
+li,
+strong,
+main,
+button,
+i,
+section,
+img,
+div,
+h2,
+p,
+form,
+fieldset,
+label,
+input,
+textarea,
+span,
+article,
+footer,
+time,
+small {
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,7 +41,7 @@ span, article, footer, time, small {
   list-style: none;
 }
 
-.auto{
+.auto {
   color: white;
   font-weight: bold;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -34,16 +56,16 @@ span, article, footer, time, small {
   background-position: center;
 }
 
-.auto > *{
+.auto > * {
   margin-left: 30px;
 }
 
-.auto > input{
+.auto > input {
   margin: 10px 30px 0 30px;
   border: 1px solid black;
 }
 
-.auto li{
+.auto li {
   cursor: pointer;
   list-style-type: square;
 }
@@ -72,7 +94,7 @@ span, article, footer, time, small {
 
 /* Clock */
 
-.clock{
+.clock {
   font-size: 28px;
   color: white;
   font-family: Orbitron;
@@ -87,7 +109,7 @@ span, article, footer, time, small {
   background-position-y: 20%;
 }
 
-.clock p{
+.clock p {
   margin: 12px;
   display: flex;
   justify-content: space-between;
@@ -95,7 +117,7 @@ span, article, footer, time, small {
 
 /* Weather */
 
-.weather{
+.weather {
   font-size: 28px;
   width: 550px;
   height: 94px;
@@ -109,17 +131,17 @@ span, article, footer, time, small {
   background-position-y: 20%;
 }
 
-.weather p{
+.weather p {
   margin: 8px;
 }
 
-.loading{
+.loading {
   margin-top: 30px;
 }
 
 /* Tabs */
 
-.tab-header{
+.tab-header {
   width: 200px;
   height: 30px;
   margin: 0 20px;
@@ -127,7 +149,7 @@ span, article, footer, time, small {
   justify-content: space-between;
 }
 
-.tab-header > li{
+.tab-header > li {
   width: 65px;
   border-top: 2px solid black;
   border-left: 1px solid black;
@@ -141,29 +163,29 @@ span, article, footer, time, small {
   background-color: lightpink;
 }
 
-.tab-header > li:first-child{
+.tab-header > li:first-child {
   border-left: 2px solid black;
 }
 
-.tab-header > li:last-child{
+.tab-header > li:last-child {
   border-right: 2px solid black;
 }
 
-.tab-header > li:hover{
+.tab-header > li:hover {
   background-color: black;
   color: white;
 }
 
-.active{
+.active {
   font-weight: bold;
 }
 
-.tabs{
+.tabs {
   width: 240px;
   height: 200px;
 }
 
-.tab-content{
+.tab-content {
   font-weight: bold;
   color: white;
   height: 192px;
@@ -179,16 +201,16 @@ span, article, footer, time, small {
   background-size: cover;
 }
 
-.tab-content article{
+.tab-content article {
   text-align: center;
 }
 
-body{
+body {
   display: flex;
   justify-content: space-around;
 }
 
-.interactive{
+.interactive {
   display: flex;
   justify-content: space-around;
 }

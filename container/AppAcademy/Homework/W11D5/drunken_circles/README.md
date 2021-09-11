@@ -2,9 +2,9 @@
 
 **[Live Demo][live-demo]**
 
-* [index.html][index.html]
-* [lib/circle.js][circle.js]
-* [lib/game.js][game.js]
+- [index.html][index.html]
+- [lib/circle.js][circle.js]
+- [lib/game.js][game.js]
 
 [live-demo]: http://appacademy.github.io/DrunkenCircles/
 [index.html]: index.html
@@ -14,5 +14,5 @@
 ## Instructions to Run Locally
 
 0. Navigate to the project directory in your terminal.
-0. `$ webpack`
-0. `$ open index.html`
+1. `$ webpack`
+2. `$ open index.html`

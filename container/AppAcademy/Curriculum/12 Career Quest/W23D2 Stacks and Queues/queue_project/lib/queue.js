@@ -12,7 +12,7 @@
 // Constraints:
 // ------------
 //
-// Make sure the time and space complexity of each is equivalent to those 
+// Make sure the time and space complexity of each is equivalent to those
 // in the table provided in the Time and Space Complexity Analysis section
 // of your Stack reading!
 //
@@ -20,13 +20,9 @@
 // Let's Code!
 // -----------
 
-class Node {
+class Node {}
 
-}
-
-class Queue {
-
-}
+class Queue {}
 
 exports.Node = Node;
 exports.Queue = Queue;

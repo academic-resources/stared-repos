@@ -7,15 +7,15 @@
 /* Header */
 
 #header {
-  @include vendor('display', 'flex');
-  @include vendor('flex-direction', 'column');
-  @include vendor('align-items', 'center');
+  @include vendor("display", "flex");
+  @include vendor("flex-direction", "column");
+  @include vendor("align-items", "center");
   @include vendor(
-    'transition',
+    "transition",
     (
-      'transform #{_duration(article)} ease-in-out',
-      'filter #{_duration(article)} ease-in-out',
-      'opacity #{_duration(article)} ease-in-out'
+      "transform #{_duration(article)} ease-in-out",
+      "filter #{_duration(article)} ease-in-out",
+      "opacity #{_duration(article)} ease-in-out"
     )
   );
   background-image: -moz-radial-gradient(
@@ -38,12 +38,12 @@
   text-align: center;
 
   > * {
-    @include vendor('transition', 'opacity #{_duration(article)} ease-in-out');
+    @include vendor("transition", "opacity #{_duration(article)} ease-in-out");
     position: relative;
     margin-top: 3.5rem;
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: calc(-3.5rem - 1px);
@@ -85,14 +85,14 @@
 
     .inner {
       @include vendor(
-        'transition',
+        "transition",
         (
-          'max-height #{_duration(intro)} ease',
-          'padding #{_duration(intro)} ease',
-          'opacity #{_duration(article)} ease-in-out'
+          "max-height #{_duration(intro)} ease",
+          "padding #{_duration(intro)} ease",
+          "opacity #{_duration(article)} ease-in-out"
         )
       );
-      @include vendor('transition-delay', '0.25s');
+      @include vendor("transition-delay", "0.25s");
       padding: 3rem 2rem;
       max-height: 40rem;
       overflow: hidden;
@@ -112,7 +112,7 @@
 
   nav {
     ul {
-      @include vendor('display', 'flex');
+      @include vendor("display", "flex");
       margin-bottom: 0;
       list-style: none;
       padding-left: 0;
@@ -151,7 +151,7 @@
 
     &.use-middle {
       &:after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         top: 0;
@@ -172,8 +172,8 @@
   }
 
   body.is-article-visible & {
-    @include vendor('transform', 'scale(0.95)');
-    @include vendor('filter', 'blur(0.1rem)');
+    @include vendor("transform", "scale(0.95)");
+    @include vendor("filter", "blur(0.1rem)");
     opacity: 0;
   }
 
@@ -182,7 +182,7 @@
       opacity: 0;
     }
 
-    @include vendor('filter', 'blur(0.125rem)');
+    @include vendor("filter", "blur(0.125rem)");
 
     .content {
       .inner {
@@ -194,7 +194,7 @@
     }
   }
 
-  @include breakpoint('<=medium') {
+  @include breakpoint("<=medium") {
     .content {
       p {
         br {
@@ -204,7 +204,7 @@
     }
   }
 
-  @include breakpoint('<=small') {
+  @include breakpoint("<=small") {
     > * {
       margin-top: 2rem;
 
@@ -237,7 +237,7 @@
     }
   }
 
-  @include breakpoint('<=xsmall') {
+  @include breakpoint("<=xsmall") {
     padding: 1.5rem 0;
 
     .content {
@@ -248,7 +248,7 @@
 
     nav {
       ul {
-        @include vendor('flex-direction', 'column');
+        @include vendor("flex-direction", "column");
         min-width: 10rem;
         max-width: 100%;
 

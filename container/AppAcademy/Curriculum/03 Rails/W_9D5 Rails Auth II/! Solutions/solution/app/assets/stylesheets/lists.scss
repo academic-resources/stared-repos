@@ -1,5 +1,4 @@
 .main-list {
-
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +9,7 @@
     height: 100px;
     margin: 0 20px 20px 0;
     border-radius: 10px;
-    background-color: #FDDB61;
+    background-color: #fddb61;
 
     &:hover {
       background-color: orange;
@@ -21,7 +20,6 @@
       width: 100%;
       display: flex;
       align-items: center;
-
 
       p {
         width: 100%;

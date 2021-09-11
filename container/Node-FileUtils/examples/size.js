@@ -1,5 +1,5 @@
-var File = require ("../build/file-utils").File;
+var File = require("../build/file-utils").File;
 
-new File ("contains.js").size (function (error, size){
-	console.log (size); //Prints: 209
+new File("contains.js").size(function (error, size) {
+  console.log(size); //Prints: 209
 });

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FLOAT</title>
-  <style>
-  
-  /* 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FLOAT</title>
+    <style>
+      /* 
   
   The issues with block elements is that they take up the full width of their parent container. Even if you could constraint them, they still stack.
     
@@ -15,85 +14,108 @@
 
   So currently, we have to stick with floats from an early archetype and the use of .clearfix pseudo class.
     */
-  
-    h1 {
-      display: block;
-      background: yellow;
-    }
-  
-    p {
-      display: block;
-      background: orange;
-    }
 
-    img {
-      display: block;
-      width: 450px;
-      height: 600px;
+      h1 {
+        display: block;
+        background: yellow;
+      }
 
-      float: left;
+      p {
+        display: block;
+        background: orange;
+      }
 
-      opacity: .75;
-    }
+      img {
+        display: block;
+        width: 450px;
+        height: 600px;
 
-    article {
-      margin: 50px;
-      background: blue;
-      border: 10px solid red;
+        float: left;
 
-      clear: left;
-    }
-    
-    .stop-float{
-      display: block;
-      background: green;
+        opacity: 0.75;
+      }
 
-      clear: left;
-    }
+      article {
+        margin: 50px;
+        background: blue;
+        border: 10px solid red;
 
-    .pseudo-stop-float:after { /* :after injects after*/
-      /* content: "STOP THE FLOAT"; */
-      background: green;
+        clear: left;
+      }
 
-      display: block;
-      clear: both;
-    }
+      .stop-float {
+        display: block;
+        background: green;
 
-    .group:after {  /* more typically known as .clearfix */
-      content: ""; /* must have the empty string*/
-      display: block;
-      clear: both;
-    }
+        clear: left;
+      }
 
-  </style>
-</head>
-<body>
-  <article class="group">
-    <h1>Cats</h1>
+      .pseudo-stop-float:after {
+        /* :after injects after*/
+        /* content: "STOP THE FLOAT"; */
+        background: green;
 
-    <img src="cat.jpg" alt="cat">
-    <img src="cat.jpg" alt="cat">
-    
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
-    
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
-    
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
-    
-    <!-- <div class="stop-float"></div>  not ideal but works -->
-  </article>
-  
-  <article class="group">
-      <img src="cat.jpg" alt="cat">
-    <h1>Lasers</h1>
+        display: block;
+        clear: both;
+      }
 
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
+      .group:after {
+        /* more typically known as .clearfix */
+        content: ""; /* must have the empty string*/
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="group">
+      <h1>Cats</h1>
 
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
+      <img src="cat.jpg" alt="cat" />
+      <img src="cat.jpg" alt="cat" />
 
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
-  </article>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat
+        saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium
+        illo minima expedita nihil quisquam corporis omnis pariatur esse error.
+      </p>
 
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat
+        saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium
+        illo minima expedita nihil quisquam corporis omnis pariatur esse error.
+      </p>
 
-</body>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat
+        saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium
+        illo minima expedita nihil quisquam corporis omnis pariatur esse error.
+      </p>
+
+      <!-- <div class="stop-float"></div>  not ideal but works -->
+    </article>
+
+    <article class="group">
+      <img src="cat.jpg" alt="cat" />
+      <h1>Lasers</h1>
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat
+        saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium
+        illo minima expedita nihil quisquam corporis omnis pariatur esse error.
+      </p>
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat
+        saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium
+        illo minima expedita nihil quisquam corporis omnis pariatur esse error.
+      </p>
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat
+        saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium
+        illo minima expedita nihil quisquam corporis omnis pariatur esse error.
+      </p>
+    </article>
+  </body>
 </html>

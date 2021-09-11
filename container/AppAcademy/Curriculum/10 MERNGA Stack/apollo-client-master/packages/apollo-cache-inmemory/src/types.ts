@@ -1,14 +1,14 @@
-import { DocumentNode } from 'graphql';
-import { FragmentMatcher } from './readFromStore';
-import { Transaction } from 'apollo-cache';
-import { IdValue, StoreValue } from 'apollo-utilities';
+import { DocumentNode } from "graphql";
+import { FragmentMatcher } from "./readFromStore";
+import { Transaction } from "apollo-cache";
+import { IdValue, StoreValue } from "apollo-utilities";
 
 export interface IdGetterObj extends Object {
   __typename?: string;
   id?: string;
 }
 export declare type IdGetter = (
-  value: IdGetterObj,
+  value: IdGetterObj
 ) => string | null | undefined;
 
 /**
@@ -82,8 +82,8 @@ export interface FragmentMatcherInterface {
   match(
     idValue: IdValue,
     typeCondition: string,
-    context: ReadStoreContext,
-  ): boolean | 'heuristic';
+    context: ReadStoreContext
+  ): boolean | "heuristic";
 }
 
 export type PossibleTypesMap = { [key: string]: string[] };
@@ -103,7 +103,7 @@ export type IntrospectionResultData = {
 export type CacheResolver = (
   rootValue: any,
   args: { [argName: string]: any },
-  context: any,
+  context: any
 ) => any;
 
 export type CacheResolverMap = {

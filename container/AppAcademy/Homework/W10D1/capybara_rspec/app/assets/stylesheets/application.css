@@ -15,7 +15,15 @@
  */
 
 /* reset */
-body ,h1, h2, form, input, a, p, label, li {
+body,
+h1,
+h2,
+form,
+input,
+a,
+p,
+label,
+li {
   font-family: sans-serif;
   text-decoration: none;
   color: white;
@@ -51,9 +59,8 @@ body {
   display: flex;
   flex-direction: column;
   align-content: space-around;
-
 }
 
- .fat {
-   font-family: sans-serif
- }
+.fat {
+  font-family: sans-serif;
+}

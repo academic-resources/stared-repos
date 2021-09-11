@@ -102,7 +102,7 @@ const buildBlockTypeMap = (
     if (desc.aliasedElements !== undefined) {
       elements.push(...desc.aliasedElements);
     }
-    elements.forEach(element => {
+    elements.forEach((element) => {
       if (blockTypeMap[element] === undefined) {
         blockTypeMap[element] = blockType;
       } else if (typeof blockTypeMap[element] === 'string') {
@@ -121,7 +121,7 @@ const buildBlockTypeMap = (
  * existing list item depth classes are being used and preserve this style
  */
 const getListItemDepth = (node: HTMLElement, depth: number = 0): number => {
-  Object.keys(knownListItemDepthClasses).some(depthClass => {
+  Object.keys(knownListItemDepthClasses).some((depthClass) => {
     if (node.classList.contains(depthClass)) {
       depth = knownListItemDepthClasses[depthClass];
     }
@@ -476,13 +476,13 @@ class ContentBlocksBuilder {
 
     // We should not trim whitespaces for which an entity is defined.
     let entity = this.characterList.findEntry(
-      characterMetadata => characterMetadata.getEntity() !== null,
+      (characterMetadata) => characterMetadata.getEntity() !== null,
     );
     begin = entity !== undefined ? Math.min(begin, entity[0]) : begin;
 
     entity = this.characterList
       .reverse()
-      .findEntry(characterMetadata => characterMetadata.getEntity() !== null);
+      .findEntry((characterMetadata) => characterMetadata.getEntity() !== null);
     end = entity !== undefined ? Math.max(end, l - entity[0]) : end;
 
     if (begin > end) {
@@ -535,7 +535,7 @@ class ContentBlocksBuilder {
     const image: HTMLImageElement = node;
     const entityConfig = {};
 
-    imgAttr.forEach(attr => {
+    imgAttr.forEach((attr) => {
       const imageAttribute = image.getAttribute(attr);
       if (imageAttribute) {
         entityConfig[attr] = imageAttribute;
@@ -577,7 +577,7 @@ class ContentBlocksBuilder {
     const anchor: HTMLAnchorElement = node;
     const entityConfig = {};
 
-    anchorAttr.forEach(attr => {
+    anchorAttr.forEach((attr) => {
       const anchorAttribute = anchor.getAttribute(attr);
       if (anchorAttribute) {
         entityConfig[attr] = anchorAttribute;
@@ -648,7 +648,7 @@ class ContentBlocksBuilder {
       config.parent = parent;
       config.prevSibling = i > 0 ? blockConfigs[i - 1].key : null;
       config.nextSibling = i < l ? blockConfigs[i + 1].key : null;
-      config.children = List(config.childConfigs.map(child => child.key));
+      config.children = List(config.childConfigs.map((child) => child.key));
       this.contentBlocks.push(new ContentBlockNode({...config}));
       this._toContentBlocks(config.childConfigs, config.key);
     }
@@ -683,9 +683,7 @@ class ContentBlocksBuilder {
    * Extract the text and the associated inline styles form an
    * array of content block configs.
    */
-  _extractTextFromBlockConfigs(
-    blockConfigs: Array<ContentBlockConfig>,
-  ): {
+  _extractTextFromBlockConfigs(blockConfigs: Array<ContentBlockConfig>): {
     text: string,
     characterList: List<CharacterMetadata>,
   } {

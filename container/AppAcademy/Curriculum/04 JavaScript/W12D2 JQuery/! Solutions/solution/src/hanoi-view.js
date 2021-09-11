@@ -7,7 +7,7 @@ class View {
 
     this.fromTowerIdx = null;
 
-    this.$el.on('click', 'ul', this.clickTower.bind(this));
+    this.$el.on("click", "ul", this.clickTower.bind(this));
 
     this.setupTowers();
     this.render();
@@ -20,7 +20,7 @@ class View {
       this.fromTowerIdx = clickedTowerIdx;
     } else {
       if (!this.game.move(this.fromTowerIdx, clickedTowerIdx)) {
-        alert('Invalid Move! Try again.');
+        alert("Invalid Move! Try again.");
       }
 
       this.fromTowerIdx = null;
@@ -30,9 +30,9 @@ class View {
 
     if (this.game.isWon()) {
       // Remove click handler when done.
-      this.$el.off('click');
-      this.$el.addClass('game-over');
-      alert('Good work, you!');
+      this.$el.off("click");
+      this.$el.addClass("game-over");
+      alert("Good work, you!");
     }
   }
 
@@ -52,10 +52,10 @@ class View {
     let $tower, $disk;
 
     for (let towerIdx = 0; towerIdx < 3; towerIdx++) {
-      $tower = $('<ul>');
+      $tower = $("<ul>");
 
       for (let diskIdx = 0; diskIdx < 3; diskIdx++) {
-        $disk = $('<li>');
+        $disk = $("<li>");
         $tower.append($disk);
       }
 
@@ -71,11 +71,11 @@ class View {
     more light-weight approach and will speed up the
     redrawing in the browser.
     */
-    const $towers = this.$el.find('ul');
+    const $towers = this.$el.find("ul");
     $towers.removeClass();
 
     if (this.fromTowerIdx !== null) {
-      $towers.eq(this.fromTowerIdx).addClass('selected');
+      $towers.eq(this.fromTowerIdx).addClass("selected");
     }
 
     this.game.towers.forEach((disks, towerIdx) => {

@@ -79,7 +79,8 @@ class DraftEditorDecoratedLeaves extends React.Component<Props> {
         dir={dir}
         key={decoratorOffsetKey}
         entityKey={block.getEntityAt(leafSet.get('start'))}
-        offsetKey={decoratorOffsetKey}>
+        offsetKey={decoratorOffsetKey}
+      >
         {children}
       </DecoratorComponent>
     );

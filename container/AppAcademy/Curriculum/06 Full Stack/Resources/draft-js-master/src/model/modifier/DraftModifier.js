@@ -48,7 +48,7 @@ const {OrderedSet} = Immutable;
  * These functions encapsulate some of the most common transaction sequences.
  */
 const DraftModifier = {
-  replaceText: function(
+  replaceText: function (
     contentState: ContentState,
     rangeToReplace: SelectionState,
     text: string,
@@ -74,7 +74,7 @@ const DraftModifier = {
     );
   },
 
-  insertText: function(
+  insertText: function (
     contentState: ContentState,
     targetRange: SelectionState,
     text: string,
@@ -94,7 +94,7 @@ const DraftModifier = {
     );
   },
 
-  moveText: function(
+  moveText: function (
     contentState: ContentState,
     removalRange: SelectionState,
     targetRange: SelectionState,
@@ -114,7 +114,7 @@ const DraftModifier = {
     );
   },
 
-  replaceWithFragment: function(
+  replaceWithFragment: function (
     contentState: ContentState,
     targetRange: SelectionState,
     fragment: BlockMap,
@@ -132,7 +132,7 @@ const DraftModifier = {
     );
   },
 
-  removeRange: function(
+  removeRange: function (
     contentState: ContentState,
     rangeToRemove: SelectionState,
     removalDirection: DraftRemovalDirection,
@@ -191,7 +191,7 @@ const DraftModifier = {
     return removeRangeFromContentState(withoutEntities, adjustedRemovalRange);
   },
 
-  splitBlock: function(
+  splitBlock: function (
     contentState: ContentState,
     selectionState: SelectionState,
   ): ContentState {
@@ -207,7 +207,7 @@ const DraftModifier = {
     );
   },
 
-  applyInlineStyle: function(
+  applyInlineStyle: function (
     contentState: ContentState,
     selectionState: SelectionState,
     inlineStyle: string,
@@ -219,7 +219,7 @@ const DraftModifier = {
     );
   },
 
-  removeInlineStyle: function(
+  removeInlineStyle: function (
     contentState: ContentState,
     selectionState: SelectionState,
     inlineStyle: string,
@@ -231,37 +231,37 @@ const DraftModifier = {
     );
   },
 
-  setBlockType: function(
+  setBlockType: function (
     contentState: ContentState,
     selectionState: SelectionState,
     blockType: DraftBlockType,
   ): ContentState {
-    return modifyBlockForContentState(contentState, selectionState, block =>
+    return modifyBlockForContentState(contentState, selectionState, (block) =>
       block.merge({type: blockType, depth: 0}),
     );
   },
 
-  setBlockData: function(
+  setBlockData: function (
     contentState: ContentState,
     selectionState: SelectionState,
     blockData: Map<any, any>,
   ): ContentState {
-    return modifyBlockForContentState(contentState, selectionState, block =>
+    return modifyBlockForContentState(contentState, selectionState, (block) =>
       block.merge({data: blockData}),
     );
   },
 
-  mergeBlockData: function(
+  mergeBlockData: function (
     contentState: ContentState,
     selectionState: SelectionState,
     blockData: Map<any, any>,
   ): ContentState {
-    return modifyBlockForContentState(contentState, selectionState, block =>
+    return modifyBlockForContentState(contentState, selectionState, (block) =>
       block.merge({data: block.getData().merge(blockData)}),
     );
   },
 
-  applyEntity: function(
+  applyEntity: function (
     contentState: ContentState,
     selectionState: SelectionState,
     entityKey: ?string,

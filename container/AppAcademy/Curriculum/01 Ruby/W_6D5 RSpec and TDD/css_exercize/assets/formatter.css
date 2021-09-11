@@ -1,23 +1,23 @@
 body {
-  font-family: Arial, sans-serif
+  font-family: Arial, sans-serif;
 }
 
 h1 {
-  font-size: 38px
+  font-size: 38px;
 }
 
 h2 {
-  font-size: 32px 
+  font-size: 32px;
 }
 
 ul.ingredients-list {
-  list-style: square inside
+  list-style: square inside;
 }
 
 ol.directions-list {
-  list-style-type: circle
+  list-style-type: circle;
 }
 
-header img{
-  size: 100px
+header img {
+  size: 100px;
 }

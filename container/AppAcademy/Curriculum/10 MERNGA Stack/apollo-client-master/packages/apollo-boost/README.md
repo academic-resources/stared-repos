@@ -15,29 +15,31 @@ npm i apollo-boost graphql react-apollo -S
 Next, create your client. Once you create your client, hook it up to your app by passing it to the `ApolloProvider` exported from `react-apollo`.
 
 ```js
-import React from 'react';
-import { render } from 'react-dom';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import React from "react";
+import { render } from "react-dom";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
 
 // Pass your GraphQL endpoint to uri
-const client = new ApolloClient({ uri: 'https://nx9zvp49q7.lp.gql.zone/graphql' });
+const client = new ApolloClient({
+  uri: "https://nx9zvp49q7.lp.gql.zone/graphql",
+});
 
-const ApolloApp = AppComponent => (
+const ApolloApp = (AppComponent) => (
   <ApolloProvider client={client}>
     <AppComponent />
   </ApolloProvider>
 );
 
-render(ApolloApp(App), document.getElementById('root'));
+render(ApolloApp(App), document.getElementById("root"));
 ```
 
 Awesome! Your ApolloClient is now connected to your app. Let's create our `<App />` component and make our first query:
 
 ```js
-import React from 'react';
-import { gql } from 'apollo-boost';
-import { Query } from 'react-apollo';
+import React from "react";
+import { gql } from "apollo-boost";
+import { Query } from "react-apollo";
 
 const GET_MOVIES = gql`
   query {
@@ -46,7 +48,7 @@ const GET_MOVIES = gql`
       title
     }
   }
-`
+`;
 
 const App = () => (
   <Query query={GET_MOVIES}>
@@ -54,12 +56,10 @@ const App = () => (
       if (loading) return <div>Loading...</div>;
       if (error) return <div>Error :(</div>;
 
-      return (
-        <Movie title={data.movie.title} />
-      )
+      return <Movie title={data.movie.title} />;
     }}
   </Query>
-)
+);
 ```
 
 Time to celebrate! 🎉 You just made your first Query component. The Query component binds your GraphQL query to your UI so Apollo Client can take care of fetching your data, tracking loading & error states, and updating your UI via the `data` prop.

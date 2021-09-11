@@ -1,20 +1,20 @@
-import gql from 'graphql-tag';
-import { ApolloLink, Operation } from 'apollo-link';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { stripSymbols } from 'apollo-utilities';
+import gql from "graphql-tag";
+import { ApolloLink, Operation } from "apollo-link";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { stripSymbols } from "apollo-utilities";
 
-import { DocumentNode, OperationDefinitionNode } from 'graphql';
+import { DocumentNode, OperationDefinitionNode } from "graphql";
 
-import { mockSingleLink, mockObservableLink } from '../__mocks__/mockLinks';
+import { mockSingleLink, mockObservableLink } from "../__mocks__/mockLinks";
 
-import ApolloClient from '../';
+import ApolloClient from "../";
 
 const isSub = (operation: Operation) =>
   (operation.query as DocumentNode).definitions
-    .filter(x => x.kind === 'OperationDefinition')
-    .some((x: OperationDefinitionNode) => x.operation === 'subscription');
+    .filter((x) => x.kind === "OperationDefinition")
+    .some((x: OperationDefinitionNode) => x.operation === "subscription");
 
-describe('subscribeToMore', () => {
+describe("subscribeToMore", () => {
   const query = gql`
     query aQuery {
       entry {
@@ -25,31 +25,31 @@ describe('subscribeToMore', () => {
   const result = {
     data: {
       entry: {
-        value: '1',
+        value: "1",
       },
     },
   };
 
   const req1 = { request: { query } as Operation, result };
 
-  const results = ['Dahivat Pandya', 'Amanda Liu'].map(name => ({
+  const results = ["Dahivat Pandya", "Amanda Liu"].map((name) => ({
     result: { data: { name } },
     delay: 10,
   }));
 
   const results2 = [
-    { result: { data: { name: 'Amanda Liu' } }, delay: 10 },
-    { error: new Error('You cant touch this'), delay: 10 },
+    { result: { data: { name: "Amanda Liu" } }, delay: 10 },
+    { error: new Error("You cant touch this"), delay: 10 },
   ];
 
   const results3 = [
-    { error: new Error('You cant touch this'), delay: 10 },
-    { result: { data: { name: 'Amanda Liu' } }, delay: 10 },
+    { error: new Error("You cant touch this"), delay: 10 },
+    { result: { data: { name: "Amanda Liu" } }, delay: 10 },
   ];
 
   const result4 = {
     data: {
-      entry: [{ value: '1' }, { value: '2' }],
+      entry: [{ value: "1" }, { value: "2" }],
     },
   };
   const req4 = { request: { query } as Operation, result: result4 };
@@ -58,7 +58,7 @@ describe('subscribeToMore', () => {
     name: string;
   }
 
-  it('triggers new result from subscription data', done => {
+  it("triggers new result from subscription data", (done) => {
     let latestResult: any = null;
     const wSLink = mockObservableLink();
     const httpLink = mockSingleLink(req1);
@@ -71,7 +71,7 @@ describe('subscribeToMore', () => {
       link,
     });
 
-    const obsHandle = client.watchQuery<typeof req1['result']['data']>({
+    const obsHandle = client.watchQuery<typeof req1["result"]["data"]>({
       query,
     });
 
@@ -97,7 +97,7 @@ describe('subscribeToMore', () => {
       sub.unsubscribe();
       expect(counter).toBe(3);
       expect(stripSymbols(latestResult)).toEqual({
-        data: { entry: { value: 'Amanda Liu' } },
+        data: { entry: { value: "Amanda Liu" } },
         loading: false,
         networkStatus: 7,
         stale: false,
@@ -110,7 +110,7 @@ describe('subscribeToMore', () => {
     }
   });
 
-  it('calls error callback on error', done => {
+  it("calls error callback on error", (done) => {
     let latestResult: any = null;
     const wSLink = mockObservableLink();
     const httpLink = mockSingleLink(req1);
@@ -124,7 +124,7 @@ describe('subscribeToMore', () => {
       cache: new InMemoryCache({ addTypename: false }),
     });
 
-    const obsHandle = client.watchQuery<typeof req1['result']['data']>({
+    const obsHandle = client.watchQuery<typeof req1["result"]["data"]>({
       query,
     });
     const sub = obsHandle.subscribe({
@@ -153,7 +153,7 @@ describe('subscribeToMore', () => {
     setTimeout(() => {
       sub.unsubscribe();
       expect(stripSymbols(latestResult)).toEqual({
-        data: { entry: { value: 'Amanda Liu' } },
+        data: { entry: { value: "Amanda Liu" } },
         loading: false,
         networkStatus: 7,
         stale: false,
@@ -168,7 +168,7 @@ describe('subscribeToMore', () => {
     }
   });
 
-  it('prints unhandled subscription errors to the console', done => {
+  it("prints unhandled subscription errors to the console", (done) => {
     let latestResult: any = null;
 
     const wSLink = mockObservableLink();
@@ -206,14 +206,14 @@ describe('subscribeToMore', () => {
         }
       `,
       updateQuery: () => {
-        throw new Error('should not be called because of initial error');
+        throw new Error("should not be called because of initial error");
       },
     });
 
     setTimeout(() => {
       sub.unsubscribe();
       expect(stripSymbols(latestResult)).toEqual({
-        data: { entry: { value: '1' } },
+        data: { entry: { value: "1" } },
         loading: false,
         networkStatus: 7,
         stale: false,
@@ -229,7 +229,7 @@ describe('subscribeToMore', () => {
     }
   });
 
-  it('should not corrupt the cache (#3062)', async done => {
+  it("should not corrupt the cache (#3062)", async (done) => {
     let latestResult: any = null;
     const wSLink = mockObservableLink();
     const httpLink = mockSingleLink(req4);
@@ -239,22 +239,22 @@ describe('subscribeToMore', () => {
 
     const client = new ApolloClient({
       cache: new InMemoryCache({ addTypename: false }).restore({
-        'ROOT_QUERY.entry.0': {
+        "ROOT_QUERY.entry.0": {
           value: 1,
         },
-        'ROOT_QUERY.entry.1': {
+        "ROOT_QUERY.entry.1": {
           value: 2,
         },
         ROOT_QUERY: {
           entry: [
             {
-              type: 'id',
-              id: 'ROOT_QUERY.entry.0',
+              type: "id",
+              id: "ROOT_QUERY.entry.0",
               generated: true,
             },
             {
-              type: 'id',
-              id: 'ROOT_QUERY.entry.1',
+              type: "id",
+              id: "ROOT_QUERY.entry.1",
               generated: true,
             },
           ],
@@ -263,7 +263,7 @@ describe('subscribeToMore', () => {
       link,
     });
 
-    const obsHandle = client.watchQuery<typeof req4['result']['data']>({
+    const obsHandle = client.watchQuery<typeof req4["result"]["data"]>({
       query,
     });
 
@@ -289,15 +289,16 @@ describe('subscribeToMore', () => {
       },
     });
 
-    const wait = (dur: any) => new Promise(resolve => setTimeout(resolve, dur));
+    const wait = (dur: any) =>
+      new Promise((resolve) => setTimeout(resolve, dur));
 
     for (let i = 0; i < 2; i++) {
       // init optimistic mutation
-      let data = client.cache.readQuery<typeof req4['result']['data']>(
+      let data = client.cache.readQuery<typeof req4["result"]["data"]>(
         { query },
-        false,
+        false
       );
-      client.cache.recordOptimisticTransaction(proxy => {
+      client.cache.recordOptimisticTransaction((proxy) => {
         nextMutation = { value: results[i].result.data.name };
         proxy.writeQuery({
           data: { entry: [...((data && data.entry) || []), nextMutation] },
@@ -323,10 +324,10 @@ describe('subscribeToMore', () => {
             value: 2,
           },
           {
-            value: 'Dahivat Pandya',
+            value: "Dahivat Pandya",
           },
           {
-            value: 'Amanda Liu',
+            value: "Amanda Liu",
           },
         ],
       },
@@ -338,7 +339,7 @@ describe('subscribeToMore', () => {
   });
   // TODO add a test that checks that subscriptions are cancelled when obs is unsubscribed from.
 
-  it('allows specification of custom types for variables and payload (#4246)', done => {
+  it("allows specification of custom types for variables and payload (#4246)", (done) => {
     interface TypedOperation extends Operation {
       variables: {
         someNumber: number;
@@ -365,8 +366,8 @@ describe('subscribeToMore', () => {
     });
 
     const obsHandle = client.watchQuery<
-      typeof typedReq['result']['data'],
-      typeof typedReq['request']['variables']
+      typeof typedReq["result"]["data"],
+      typeof typedReq["request"]["variables"]
     >({
       query,
       variables: { someNumber: 1 },
@@ -386,7 +387,7 @@ describe('subscribeToMore', () => {
         }
       `,
       variables: {
-        someString: 'foo',
+        someString: "foo",
       },
       updateQuery: (_, { subscriptionData }) => {
         return { entry: { value: subscriptionData.data.name } };
@@ -397,7 +398,7 @@ describe('subscribeToMore', () => {
       sub.unsubscribe();
       expect(counter).toBe(3);
       expect(stripSymbols(latestResult)).toEqual({
-        data: { entry: { value: 'Amanda Liu' } },
+        data: { entry: { value: "Amanda Liu" } },
         loading: false,
         networkStatus: 7,
         stale: false,

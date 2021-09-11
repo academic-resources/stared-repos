@@ -12,7 +12,7 @@
 // Constraints:
 // ------------
 //
-// Make sure the time and space complexity of each is equivalent to those 
+// Make sure the time and space complexity of each is equivalent to those
 // in the table provided in the Time and Space Complexity Analysis section
 // of your Stack reading!
 //
@@ -36,7 +36,7 @@ class Queue {
 
   enqueue(val) {
     const newNode = new Node(val);
-    if(!this.front) {
+    if (!this.front) {
       this.front = newNode;
       this.back = newNode;
     } else {
@@ -56,7 +56,7 @@ class Queue {
     }
     this.front = this.front.next;
     this.length--;
-    return temp.value; 
+    return temp.value;
   }
 
   size() {

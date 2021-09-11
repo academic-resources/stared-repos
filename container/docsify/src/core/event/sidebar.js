@@ -1,52 +1,52 @@
-import {isMobile} from '../util/env'
-import * as dom from '../util/dom'
+import { isMobile } from "../util/env";
+import * as dom from "../util/dom";
 
-const title = dom.$.title
+const title = dom.$.title;
 /**
  * Toggle button
  */
 export function btn(el) {
-  const toggle = _ => dom.body.classList.toggle('close')
+  const toggle = (_) => dom.body.classList.toggle("close");
 
-  el = dom.getNode(el)
-  dom.on(el, 'click', e => {
-    e.stopPropagation()
-    toggle()
-  })
+  el = dom.getNode(el);
+  dom.on(el, "click", (e) => {
+    e.stopPropagation();
+    toggle();
+  });
 
   isMobile &&
     dom.on(
       dom.body,
-      'click',
-      _ => dom.body.classList.contains('close') && toggle()
-    )
+      "click",
+      (_) => dom.body.classList.contains("close") && toggle()
+    );
 }
 
 export function collapse(el) {
-  el = dom.getNode(el)
+  el = dom.getNode(el);
 
-  dom.on(el, 'click', ({target}) => {
+  dom.on(el, "click", ({ target }) => {
     if (
-      target.nodeName === 'A' &&
+      target.nodeName === "A" &&
       target.nextSibling &&
-      target.nextSibling.classList.contains('app-sub-sidebar')
+      target.nextSibling.classList.contains("app-sub-sidebar")
     ) {
-      dom.toggleClass(target.parentNode, 'collapse')
+      dom.toggleClass(target.parentNode, "collapse");
     }
-  })
+  });
 }
 
 export function sticky() {
-  const cover = dom.getNode('section.cover')
+  const cover = dom.getNode("section.cover");
   if (!cover) {
-    return
+    return;
   }
-  const coverHeight = cover.getBoundingClientRect().height
+  const coverHeight = cover.getBoundingClientRect().height;
 
-  if (window.pageYOffset >= coverHeight || cover.classList.contains('hidden')) {
-    dom.toggleClass(dom.body, 'add', 'sticky')
+  if (window.pageYOffset >= coverHeight || cover.classList.contains("hidden")) {
+    dom.toggleClass(dom.body, "add", "sticky");
   } else {
-    dom.toggleClass(dom.body, 'remove', 'sticky')
+    dom.toggleClass(dom.body, "remove", "sticky");
   }
 }
 
@@ -59,27 +59,31 @@ export function sticky() {
  * @return {element}
  */
 export function getAndActive(router, el, isParent, autoTitle) {
-  el = dom.getNode(el)
+  el = dom.getNode(el);
 
-  const links = dom.findAll(el, 'a')
-  const hash = decodeURI(router.toURL(router.getCurrentPath()))
-  let target
+  const links = dom.findAll(el, "a");
+  const hash = decodeURI(router.toURL(router.getCurrentPath()));
+  let target;
 
-  links.sort((a, b) => b.href.length - a.href.length).forEach(a => {
-    const href = a.getAttribute('href')
-    const node = isParent ? a.parentNode : a
+  links
+    .sort((a, b) => b.href.length - a.href.length)
+    .forEach((a) => {
+      const href = a.getAttribute("href");
+      const node = isParent ? a.parentNode : a;
 
-    if (hash.indexOf(href) === 0 && !target) {
-      target = a
-      dom.toggleClass(node, 'add', 'active')
-    } else {
-      dom.toggleClass(node, 'remove', 'active')
-    }
-  })
+      if (hash.indexOf(href) === 0 && !target) {
+        target = a;
+        dom.toggleClass(node, "add", "active");
+      } else {
+        dom.toggleClass(node, "remove", "active");
+      }
+    });
 
   if (autoTitle) {
-    dom.$.title = target ? (target.title || `${target.innerText} - ${title}`) : title
+    dom.$.title = target
+      ? target.title || `${target.innerText} - ${title}`
+      : title;
   }
 
-  return target
+  return target;
 }

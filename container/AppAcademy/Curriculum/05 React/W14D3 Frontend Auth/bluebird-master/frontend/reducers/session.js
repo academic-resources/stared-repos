@@ -1,14 +1,14 @@
-import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session';
+import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from "../actions/session";
 
 const _nullSession = {
-  currentUser: null
+  currentUser: null,
 };
 
 export default (state = _nullSession, action) => {
   Object.freeze(state);
-  switch(action.type) {
+  switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      const currentUser = action.user
+      const currentUser = action.user;
       return Object.assign({}, { currentUser });
     case LOGOUT_CURRENT_USER:
       return _nullSession;

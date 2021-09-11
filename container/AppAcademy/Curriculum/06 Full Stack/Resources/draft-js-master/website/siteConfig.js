@@ -16,9 +16,9 @@ const siteConfig = {
   headerLinks: [
     {doc: 'getting-started', label: 'Docs'},
     {
-      href: "https://github.com/facebook/draft-js",
-      label: "GitHub"
-    }
+      href: 'https://github.com/facebook/draft-js',
+      label: 'GitHub',
+    },
   ],
   headerIcon: 'img/draftjs-logo.svg',
   favicon: 'img/draftjs-logo.ico',
@@ -28,10 +28,7 @@ const siteConfig = {
     secondaryColor: '#843131',
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  copyright:
-    'Copyright © ' +
-    new Date().getFullYear() +
-    ' Facebook Inc.',
+  copyright: 'Copyright © ' + new Date().getFullYear() + ' Facebook Inc.',
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'atelier-forest-light',

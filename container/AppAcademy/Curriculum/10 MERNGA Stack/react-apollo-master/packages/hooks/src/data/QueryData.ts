@@ -2,22 +2,22 @@ import {
   ApolloQueryResult,
   ObservableQuery,
   ApolloError,
-  NetworkStatus
-} from 'apollo-client';
-import { isEqual } from 'apollo-utilities';
+  NetworkStatus,
+} from "apollo-client";
+import { isEqual } from "apollo-utilities";
 import {
   ApolloContextValue,
   DocumentType,
   QueryResult,
-  ObservableQueryFields
-} from '@apollo/react-common';
+  ObservableQueryFields,
+} from "@apollo/react-common";
 
 import {
   QueryPreviousData,
   QueryOptions,
-  QueryCurrentObservable
-} from '../types';
-import { OperationData } from './OperationData';
+  QueryCurrentObservable,
+} from "../types";
+import { OperationData } from "./OperationData";
 
 export class QueryData<TData, TVariables> extends OperationData {
   private previousData: QueryPreviousData<TData, TVariables> = {};
@@ -27,7 +27,7 @@ export class QueryData<TData, TVariables> extends OperationData {
   constructor({
     options,
     context,
-    forceUpdate
+    forceUpdate,
   }: {
     options: QueryOptions<TData, TVariables>;
     context: ApolloContextValue;
@@ -79,13 +79,13 @@ export class QueryData<TData, TVariables> extends OperationData {
 
     let { fetchPolicy } = opts;
     if (ssr === false) return false;
-    if (fetchPolicy === 'network-only' || fetchPolicy === 'cache-and-network') {
-      fetchPolicy = 'cache-first'; // ignore force fetch in SSR;
+    if (fetchPolicy === "network-only" || fetchPolicy === "cache-and-network") {
+      fetchPolicy = "cache-first"; // ignore force fetch in SSR;
     }
 
     const obs = this.refreshClient().client.watchQuery({
       ...opts,
-      fetchPolicy
+      fetchPolicy,
     });
 
     // Register the SSR observable, so it can be re-used once the value comes back.
@@ -117,13 +117,13 @@ export class QueryData<TData, TVariables> extends OperationData {
 
   private prepareObservableQueryOptions() {
     this.verifyDocumentType(this.getOptions().query, DocumentType.Query);
-    const displayName = this.getOptions().displayName || 'Query';
+    const displayName = this.getOptions().displayName || "Query";
 
     return {
       ...this.getOptions(),
       displayName,
       context: this.getOptions().context || {},
-      metadata: { reactComponent: { displayName } }
+      metadata: { reactComponent: { displayName } },
     };
   }
 
@@ -137,7 +137,7 @@ export class QueryData<TData, TVariables> extends OperationData {
       updateQuery: observable.updateQuery.bind(observable),
       startPolling: observable.startPolling.bind(observable),
       stopPolling: observable.stopPolling.bind(observable),
-      subscribeToMore: observable.subscribeToMore.bind(observable)
+      subscribeToMore: observable.subscribeToMore.bind(observable),
     } as ObservableQueryFields<TData, TVariables>;
   }
 
@@ -146,16 +146,15 @@ export class QueryData<TData, TVariables> extends OperationData {
     // data and if so, use it instead since it will contain the proper queryId
     // to fetch the result set. This is used during SSR.
     if (this.context && this.context.renderPromises) {
-      this.currentObservable.query = this.context.renderPromises.getSSRObservable(
-        this.getOptions()
-      );
+      this.currentObservable.query =
+        this.context.renderPromises.getSSRObservable(this.getOptions());
     }
 
     if (!this.currentObservable.query) {
       const observableQueryOptions = this.prepareObservableQueryOptions();
       this.previousData.observableQueryOptions = {
         ...observableQueryOptions,
-        children: null
+        children: null,
       };
       this.currentObservable.query = this.refreshClient().client.watchQuery(
         observableQueryOptions
@@ -171,7 +170,7 @@ export class QueryData<TData, TVariables> extends OperationData {
 
     const newObservableQueryOptions = {
       ...this.prepareObservableQueryOptions(),
-      children: null
+      children: null,
     };
 
     if (
@@ -208,11 +207,11 @@ export class QueryData<TData, TVariables> extends OperationData {
 
         this.updateCurrentData();
       },
-      error: error => {
+      error: (error) => {
         this.resubscribeToQuery();
-        if (!error.hasOwnProperty('graphQLErrors')) throw error;
+        if (!error.hasOwnProperty("graphQLErrors")) throw error;
         this.updateCurrentData();
-      }
+      },
     });
   }
 
@@ -232,13 +231,13 @@ export class QueryData<TData, TVariables> extends OperationData {
     this.startQuerySubscription();
     Object.assign(this.currentObservable.query!, {
       lastError,
-      lastResult
+      lastResult,
     });
   }
 
   private getQueryResult(): QueryResult<TData, TVariables> {
     let result = {
-      data: Object.create(null) as TData
+      data: Object.create(null) as TData,
     } as any;
 
     // Attach bound methods
@@ -255,7 +254,7 @@ export class QueryData<TData, TVariables> extends OperationData {
         ...result,
         data: undefined,
         error: undefined,
-        loading: false
+        loading: false,
       };
     } else {
       // Fetch the current result (if any) from the store.
@@ -280,7 +279,7 @@ export class QueryData<TData, TVariables> extends OperationData {
       } else if (error) {
         Object.assign(result, {
           data: (this.currentObservable.query!.getLastResult() || ({} as any))
-            .data
+            .data,
         });
       } else {
         const { fetchPolicy } = this.currentObservable.query!.options;
@@ -289,7 +288,7 @@ export class QueryData<TData, TVariables> extends OperationData {
           partialRefetch &&
           Object.keys(data).length === 0 &&
           partial &&
-          fetchPolicy !== 'cache-only'
+          fetchPolicy !== "cache-only"
         ) {
           // When a `Query` component is mounted, and a mutation is executed
           // that returns the same ID as the mounted `Query`, but has less
@@ -301,7 +300,7 @@ export class QueryData<TData, TVariables> extends OperationData {
           // this we'll attempt to refetch the `Query` data.
           Object.assign(result, {
             loading: true,
-            networkStatus: NetworkStatus.loading
+            networkStatus: NetworkStatus.loading,
           });
           result.refetch();
           return result;
@@ -327,11 +326,8 @@ export class QueryData<TData, TVariables> extends OperationData {
   }
 
   private handleErrorOrCompleted() {
-    const {
-      data,
-      loading,
-      error
-    } = this.currentObservable.query!.getCurrentResult();
+    const { data, loading, error } =
+      this.currentObservable.query!.getCurrentResult();
 
     if (!loading) {
       const { query, variables, onCompleted, onError } = this.getOptions();

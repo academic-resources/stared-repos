@@ -24,7 +24,7 @@ const randomizeBlockMapKeys = require('randomizeBlockMapKeys');
 
 const {List} = Immutable;
 
-const assertRandomizeBlockMapKeys = blockMapArray => {
+const assertRandomizeBlockMapKeys = (blockMapArray) => {
   expect(
     randomizeBlockMapKeys(BlockMapBuilder.createFromArray(blockMapArray))
       .toIndexedSeq()

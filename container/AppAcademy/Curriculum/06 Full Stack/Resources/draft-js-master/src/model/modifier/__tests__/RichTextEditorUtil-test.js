@@ -19,14 +19,10 @@ const SelectionState = require('SelectionState');
 const getSampleStateForTesting = require('getSampleStateForTesting');
 
 const {editorState, selectionState} = getSampleStateForTesting();
-const {
-  onBackspace,
-  onDelete,
-  onTab,
-  tryToRemoveBlockStyle,
-} = RichTextEditorUtil;
+const {onBackspace, onDelete, onTab, tryToRemoveBlockStyle} =
+  RichTextEditorUtil;
 
-const insertAtomicBlock = targetEditorState => {
+const insertAtomicBlock = (targetEditorState) => {
   const entityKey = targetEditorState
     .getCurrentContent()
     .createEntity('TEST', 'IMMUTABLE', null)
@@ -103,15 +99,16 @@ test('onBackspace resets the current block type at the start of the first block'
 });
 
 test('onBackspace removes a preceding atomic block', () => {
-  const blockSizeBeforeRemove = editorState.getCurrentContent().getBlockMap()
-    .size;
+  const blockSizeBeforeRemove = editorState
+    .getCurrentContent()
+    .getBlockMap().size;
   const withAtomicBlock = insertAtomicBlock(editorState);
   const afterBackspace = onBackspace(withAtomicBlock);
   const contentState = afterBackspace.getCurrentContent();
   const blockMap = contentState.getBlockMap();
   expect(blockMap.size === blockSizeBeforeRemove + 1).toMatchSnapshot();
   expect(
-    blockMap.some(block => block.getType() === 'atomic'),
+    blockMap.some((block) => block.getType() === 'atomic'),
   ).toMatchSnapshot();
 });
 
@@ -128,13 +125,14 @@ test('onDelete does not handle non-block-end or non-collapsed selections', () =>
 });
 
 test('onDelete removes a following atomic block', () => {
-  const blockSizeBeforeRemove = editorState.getCurrentContent().getBlockMap()
-    .size;
+  const blockSizeBeforeRemove = editorState
+    .getCurrentContent()
+    .getBlockMap().size;
   const withAtomicBlock = insertAtomicBlock(editorState);
   const content = withAtomicBlock.getCurrentContent();
   const atomicKey = content
     .getBlockMap()
-    .find(block => block.getType() === 'atomic')
+    .find((block) => block.getType() === 'atomic')
     .getKey();
 
   const blockBefore = content.getBlockBefore(atomicKey);
@@ -155,7 +153,7 @@ test('onDelete removes a following atomic block', () => {
   const blockMapAfterDelete = afterDelete.getCurrentContent().getBlockMap();
 
   expect(
-    blockMapAfterDelete.some(block => block.getType() === 'atomic'),
+    blockMapAfterDelete.some((block) => block.getType() === 'atomic'),
   ).toMatchSnapshot();
 
   expect(
@@ -176,13 +174,10 @@ test('tryToRemoveBlockStyleonDelete breaks out of code block on enter two blank 
 describe('onTab on list block', () => {
   const setListBlock = (contentState, type) =>
     DraftModifier.setBlockType(contentState, selectionState, type);
-  const changeBlockType = setListItem =>
+  const changeBlockType = (setListItem) =>
     EditorState.push(editorState, setListItem, 'change-block-type');
-  const getFirstBlockDepth = contentState =>
-    contentState
-      .getCurrentContent()
-      .getFirstBlock()
-      .getDepth();
+  const getFirstBlockDepth = (contentState) =>
+    contentState.getCurrentContent().getFirstBlock().getDepth();
   const addTab = (contentState, maxDepth = 2) =>
     onTab({preventDefault: () => {}}, contentState, maxDepth);
 

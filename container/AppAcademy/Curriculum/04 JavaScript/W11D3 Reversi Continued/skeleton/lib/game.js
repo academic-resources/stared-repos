@@ -5,16 +5,16 @@ const Board = require("./board.js");
 /**
  * Sets up the game with a board and the first player to play a turn.
  */
-function Game () {
+function Game() {
   this.board = new Board();
   this.turn = "black";
-};
+}
 
 /**
  * Flips the current turn to the opposite color.
  */
 Game.prototype._flipTurn = function () {
-  this.turn = (this.turn == "black") ? "white" : "black";
+  this.turn = this.turn == "black" ? "white" : "black";
 };
 
 // Dreaded global state!
@@ -27,7 +27,7 @@ Game.prototype.play = function () {
   rlInterface = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
-    terminal: false
+    terminal: false,
   });
 
   this.runLoop(function () {

@@ -7,7 +7,7 @@ function randomColor() {
 
   let color = "#";
   for (let i = 0; i < 3; i++) {
-    color += hexDigits[Math.floor((Math.random() * 16))];
+    color += hexDigits[Math.floor(Math.random() * 16)];
   }
 
   return color;
@@ -33,20 +33,15 @@ Ship.prototype.fireBullet = function fireBullet() {
     return;
   }
 
-  const relVel = Util.scale(
-    Util.dir(this.vel),
-    Bullet.SPEED
-  );
+  const relVel = Util.scale(Util.dir(this.vel), Bullet.SPEED);
 
-  const bulletVel = [
-    relVel[0] + this.vel[0], relVel[1] + this.vel[1]
-  ];
+  const bulletVel = [relVel[0] + this.vel[0], relVel[1] + this.vel[1]];
 
   const bullet = new Bullet({
     pos: this.pos,
     vel: bulletVel,
     color: this.color,
-    game: this.game
+    game: this.game,
   });
 
   this.game.add(bullet);

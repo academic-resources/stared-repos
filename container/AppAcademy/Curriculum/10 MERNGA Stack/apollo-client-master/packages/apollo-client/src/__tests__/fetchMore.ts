@@ -1,11 +1,11 @@
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { assign, cloneDeep } from 'lodash';
-import gql from 'graphql-tag';
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { assign, cloneDeep } from "lodash";
+import gql from "graphql-tag";
 
-import { mockSingleLink } from '../__mocks__/mockLinks';
-import ApolloClient, { NetworkStatus, ObservableQuery } from '../';
+import { mockSingleLink } from "../__mocks__/mockLinks";
+import ApolloClient, { NetworkStatus, ObservableQuery } from "../";
 
-describe('updateQuery on a simple query', () => {
+describe("updateQuery on a simple query", () => {
   const query = gql`
     query thing {
       entry {
@@ -17,15 +17,15 @@ describe('updateQuery on a simple query', () => {
   `;
   const result = {
     data: {
-      __typename: 'Query',
+      __typename: "Query",
       entry: {
-        __typename: 'Entry',
+        __typename: "Entry",
         value: 1,
       },
     },
   };
 
-  it('triggers new result from updateQuery', () => {
+  it("triggers new result from updateQuery", () => {
     let latestResult: any = null;
     const link = mockSingleLink({
       request: { query },
@@ -47,7 +47,7 @@ describe('updateQuery on a simple query', () => {
       },
     });
 
-    return new Promise(resolve => setTimeout(resolve, 5))
+    return new Promise((resolve) => setTimeout(resolve, 5))
       .then(() => obsHandle)
       .then((watchedQuery: ObservableQuery<any>) => {
         expect(latestResult.data.entry.value).toBe(1);
@@ -62,7 +62,7 @@ describe('updateQuery on a simple query', () => {
   });
 });
 
-describe('updateQuery on a query with required and optional variables', () => {
+describe("updateQuery on a query with required and optional variables", () => {
   const query = gql`
     query thing($requiredVar: String!, $optionalVar: String) {
       entry(requiredVar: $requiredVar, optionalVar: $optionalVar) {
@@ -74,20 +74,20 @@ describe('updateQuery on a query with required and optional variables', () => {
   `;
   // the test will pass if optionalVar is uncommented
   const variables = {
-    requiredVar: 'x',
+    requiredVar: "x",
     // optionalVar: 'y',
   };
   const result = {
     data: {
-      __typename: 'Query',
+      __typename: "Query",
       entry: {
-        __typename: 'Entry',
+        __typename: "Entry",
         value: 1,
       },
     },
   };
 
-  it('triggers new result from updateQuery', () => {
+  it("triggers new result from updateQuery", () => {
     let latestResult: any = null;
     const link = mockSingleLink({
       request: {
@@ -113,7 +113,7 @@ describe('updateQuery on a query with required and optional variables', () => {
       },
     });
 
-    return new Promise(resolve => setTimeout(resolve, 5))
+    return new Promise((resolve) => setTimeout(resolve, 5))
       .then(() => obsHandle)
       .then((watchedQuery: ObservableQuery<any>) => {
         expect(latestResult.data.entry.value).toBe(1);
@@ -128,7 +128,7 @@ describe('updateQuery on a query with required and optional variables', () => {
   });
 });
 
-describe('fetchMore on an observable query', () => {
+describe("fetchMore on an observable query", () => {
   const query = gql`
     query Comment($repoName: String!, $start: Int!, $limit: Int!) {
       entry(repoFullName: $repoName) {
@@ -150,7 +150,7 @@ describe('fetchMore on an observable query', () => {
     }
   `;
   const variables = {
-    repoName: 'org/repo',
+    repoName: "org/repo",
     start: 0,
     limit: 10,
   };
@@ -162,9 +162,9 @@ describe('fetchMore on an observable query', () => {
 
   const result: any = {
     data: {
-      __typename: 'Query',
+      __typename: "Query",
       entry: {
-        __typename: 'Entry',
+        __typename: "Entry",
         comments: [],
       },
     },
@@ -172,24 +172,24 @@ describe('fetchMore on an observable query', () => {
   const resultMore = cloneDeep(result);
   const result2: any = {
     data: {
-      __typename: 'Query',
+      __typename: "Query",
       comments: [],
     },
   };
   for (let i = 1; i <= 10; i++) {
     result.data.entry.comments.push({
       text: `comment ${i}`,
-      __typename: 'Comment',
+      __typename: "Comment",
     });
   }
   for (let i = 11; i <= 20; i++) {
     resultMore.data.entry.comments.push({
       text: `comment ${i}`,
-      __typename: 'Comment',
+      __typename: "Comment",
     });
     result2.data.comments.push({
       text: `new comment ${i}`,
-      __typename: 'Comment',
+      __typename: "Comment",
     });
   }
 
@@ -208,7 +208,7 @@ describe('fetchMore on an observable query', () => {
         },
         result,
       },
-      ...mockedResponses,
+      ...mockedResponses
     );
 
     client = new ApolloClient({
@@ -235,7 +235,7 @@ describe('fetchMore on an observable query', () => {
     sub = null;
   }
 
-  it('triggers new result with new variables', () => {
+  it("triggers new result with new variables", () => {
     latestResult = null;
     return setup({
       request: {
@@ -244,7 +244,7 @@ describe('fetchMore on an observable query', () => {
       },
       result: resultMore,
     })
-      .then(watchedQuery =>
+      .then((watchedQuery) =>
         watchedQuery.fetchMore({
           // Rely on the fact that the original variables had limit: 10
           variables: { start: 10 },
@@ -258,9 +258,9 @@ describe('fetchMore on an observable query', () => {
             ];
             return state;
           },
-        }),
+        })
       )
-      .then(data => {
+      .then((data) => {
         // This is the server result
         expect(data.data.entry.comments).toHaveLength(10);
         expect(data.loading).toBe(false);
@@ -273,7 +273,7 @@ describe('fetchMore on an observable query', () => {
       });
   });
 
-  it('basic fetchMore results merging', () => {
+  it("basic fetchMore results merging", () => {
     latestResult = null;
     return setup({
       request: {
@@ -282,7 +282,7 @@ describe('fetchMore on an observable query', () => {
       },
       result: resultMore,
     })
-      .then(watchedQuery => {
+      .then((watchedQuery) => {
         return watchedQuery.fetchMore({
           variables: { start: 10 }, // rely on the fact that the original variables had limit: 10
           updateQuery: (prev, options) => {
@@ -295,7 +295,7 @@ describe('fetchMore on an observable query', () => {
           },
         });
       })
-      .then(data => {
+      .then((data) => {
         expect(data.data.entry.comments).toHaveLength(10); // this is the server result
         expect(data.loading).toBe(false);
         const comments = latestResult.data.entry.comments;
@@ -307,7 +307,7 @@ describe('fetchMore on an observable query', () => {
       });
   });
 
-  it('fetching more with a different query', () => {
+  it("fetching more with a different query", () => {
     latestResult = null;
     return setup({
       request: {
@@ -316,7 +316,7 @@ describe('fetchMore on an observable query', () => {
       },
       result: result2,
     })
-      .then(watchedQuery => {
+      .then((watchedQuery) => {
         return watchedQuery.fetchMore({
           query: query2,
           variables: variables2,
@@ -343,14 +343,14 @@ describe('fetchMore on an observable query', () => {
       });
   });
 
-  it('will set the `network` status to `fetchMore`', done => {
+  it("will set the `network` status to `fetchMore`", (done) => {
     link = mockSingleLink(
       { request: { query, variables }, result, delay: 5 },
       {
         request: { query, variables: variablesMore },
         result: resultMore,
         delay: 5,
-      },
+      }
     );
 
     client = new ApolloClient({
@@ -397,23 +397,23 @@ describe('fetchMore on an observable query', () => {
             done();
             break;
           default:
-            done.fail(new Error('`next` called too many times'));
+            done.fail(new Error("`next` called too many times"));
         }
       },
-      error: error => done.fail(error),
-      complete: () => done.fail(new Error('Should not have completed')),
+      error: (error) => done.fail(error),
+      complete: () => done.fail(new Error("Should not have completed")),
     });
   });
 
-  it('will not get an error from `fetchMore` if thrown', done => {
-    const fetchMoreError = new Error('Uh, oh!');
+  it("will not get an error from `fetchMore` if thrown", (done) => {
+    const fetchMoreError = new Error("Uh, oh!");
     link = mockSingleLink(
       { request: { query, variables }, result, delay: 5 },
       {
         request: { query, variables: variablesMore },
         error: fetchMoreError,
         delay: 5,
-      },
+      }
     );
 
     client = new ApolloClient({
@@ -446,7 +446,7 @@ describe('fetchMore on an observable query', () => {
                   return state;
                 },
               })
-              .catch(e => {
+              .catch((e) => {
                 expect(e.networkError).toBe(fetchMoreError);
               });
             break;
@@ -462,17 +462,17 @@ describe('fetchMore on an observable query', () => {
         }
       },
       error: () => {
-        done.fail(new Error('`error` called when it wasn’t supposed to be.'));
+        done.fail(new Error("`error` called when it wasn’t supposed to be."));
       },
       complete: () => {
         done.fail(
-          new Error('`complete` called when it wasn’t supposed to be.'),
+          new Error("`complete` called when it wasn’t supposed to be.")
         );
       },
     });
   });
 
-  it('will not leak fetchMore query', () => {
+  it("will not leak fetchMore query", () => {
     latestResult = null;
     var beforeQueryCount;
     return setup({
@@ -482,9 +482,9 @@ describe('fetchMore on an observable query', () => {
       },
       result: resultMore,
     })
-      .then(watchedQuery => {
+      .then((watchedQuery) => {
         beforeQueryCount = Object.keys(
-          client.queryManager.queryStore.getStore(),
+          client.queryManager.queryStore.getStore()
         ).length;
         return watchedQuery.fetchMore({
           variables: { start: 10 }, // rely on the fact that the original variables had limit: 10
@@ -498,9 +498,9 @@ describe('fetchMore on an observable query', () => {
           },
         });
       })
-      .then(data => {
+      .then((data) => {
         var afterQueryCount = Object.keys(
-          client.queryManager.queryStore.getStore(),
+          client.queryManager.queryStore.getStore()
         ).length;
         expect(afterQueryCount).toBe(beforeQueryCount);
         unsetup();
@@ -508,7 +508,7 @@ describe('fetchMore on an observable query', () => {
   });
 });
 
-describe('fetchMore on an observable query with connection', () => {
+describe("fetchMore on an observable query with connection", () => {
   const query = gql`
     query Comment($repoName: String!, $start: Int!, $limit: Int!) {
       entry(repoFullName: $repoName, start: $start, limit: $limit)
@@ -532,7 +532,7 @@ describe('fetchMore on an observable query with connection', () => {
   `;
 
   const variables = {
-    repoName: 'org/repo',
+    repoName: "org/repo",
     start: 0,
     limit: 10,
   };
@@ -540,9 +540,9 @@ describe('fetchMore on an observable query with connection', () => {
 
   const result: any = {
     data: {
-      __typename: 'Query',
+      __typename: "Query",
       entry: {
-        __typename: 'Entry',
+        __typename: "Entry",
         comments: [],
       },
     },
@@ -552,13 +552,13 @@ describe('fetchMore on an observable query with connection', () => {
   for (let i = 1; i <= 10; i++) {
     result.data.entry.comments.push({
       text: `comment ${i}`,
-      __typename: 'Comment',
+      __typename: "Comment",
     });
   }
   for (let i = 11; i <= 20; i++) {
     resultMore.data.entry.comments.push({
       text: `comment ${i}`,
-      __typename: 'Comment',
+      __typename: "Comment",
     });
   }
 
@@ -577,7 +577,7 @@ describe('fetchMore on an observable query with connection', () => {
         },
         result,
       },
-      ...mockedResponses,
+      ...mockedResponses
     );
 
     client = new ApolloClient({
@@ -604,7 +604,7 @@ describe('fetchMore on an observable query with connection', () => {
     sub = null;
   }
 
-  it('fetchMore with connection results merging', () => {
+  it("fetchMore with connection results merging", () => {
     latestResult = null;
     return setup({
       request: {
@@ -613,7 +613,7 @@ describe('fetchMore on an observable query with connection', () => {
       },
       result: resultMore,
     })
-      .then(watchedQuery => {
+      .then((watchedQuery) => {
         return watchedQuery.fetchMore({
           variables: { start: 10 }, // rely on the fact that the original variables had limit: 10
           updateQuery: (prev, options) => {
@@ -626,7 +626,7 @@ describe('fetchMore on an observable query with connection', () => {
           },
         });
       })
-      .then(data => {
+      .then((data) => {
         expect(data.data.entry.comments).toHaveLength(10); // this is the server result
         expect(data.loading).toBe(false);
         const comments = latestResult.data.entry.comments;
@@ -638,14 +638,14 @@ describe('fetchMore on an observable query with connection', () => {
       });
   });
 
-  it('will set the network status to `fetchMore`', done => {
+  it("will set the network status to `fetchMore`", (done) => {
     link = mockSingleLink(
       { request: { query: transformedQuery, variables }, result, delay: 5 },
       {
         request: { query: transformedQuery, variables: variablesMore },
         result: resultMore,
         delay: 5,
-      },
+      }
     );
 
     client = new ApolloClient({
@@ -692,23 +692,23 @@ describe('fetchMore on an observable query with connection', () => {
             done();
             break;
           default:
-            done.fail(new Error('`next` called too many times'));
+            done.fail(new Error("`next` called too many times"));
         }
       },
-      error: error => done.fail(error),
-      complete: () => done.fail(new Error('Should not have completed')),
+      error: (error) => done.fail(error),
+      complete: () => done.fail(new Error("Should not have completed")),
     });
   });
 
-  it('will not get an error from `fetchMore` if thrown', done => {
-    const fetchMoreError = new Error('Uh, oh!');
+  it("will not get an error from `fetchMore` if thrown", (done) => {
+    const fetchMoreError = new Error("Uh, oh!");
     link = mockSingleLink(
       { request: { query: transformedQuery, variables }, result, delay: 5 },
       {
         request: { query: transformedQuery, variables: variablesMore },
         error: fetchMoreError,
         delay: 5,
-      },
+      }
     );
 
     client = new ApolloClient({
@@ -741,7 +741,7 @@ describe('fetchMore on an observable query with connection', () => {
                   return state;
                 },
               })
-              .catch(e => {
+              .catch((e) => {
                 expect(e.networkError).toBe(fetchMoreError);
               });
             break;
@@ -756,11 +756,11 @@ describe('fetchMore on an observable query with connection', () => {
         }
       },
       error: () => {
-        done.fail(new Error('`error` called when it wasn’t supposed to be.'));
+        done.fail(new Error("`error` called when it wasn’t supposed to be."));
       },
       complete: () => {
         done.fail(
-          new Error('`complete` called when it wasn’t supposed to be.'),
+          new Error("`complete` called when it wasn’t supposed to be.")
         );
       },
     });

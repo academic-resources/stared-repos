@@ -1,10 +1,10 @@
-import React from 'react';
-import { ApolloClient, DefaultOptions, Resolvers } from 'apollo-client';
-import { ApolloCache } from 'apollo-cache';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { ApolloProvider } from '@apollo/react-common';
-import { MockLink } from './mockLink';
-import { MockedResponse } from './types';
+import React from "react";
+import { ApolloClient, DefaultOptions, Resolvers } from "apollo-client";
+import { ApolloCache } from "apollo-cache";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { ApolloProvider } from "@apollo/react-common";
+import { MockLink } from "./mockLink";
+import { MockedResponse } from "./types";
 
 export interface MockedProviderProps<TSerializedCache = {}> {
   mocks?: ReadonlyArray<MockedResponse>;
@@ -23,9 +23,9 @@ export interface MockedProviderState {
 export class MockedProvider extends React.Component<
   MockedProviderProps,
   MockedProviderState
-  > {
+> {
   public static defaultProps: MockedProviderProps = {
-    addTypename: true
+    addTypename: true,
   };
 
   constructor(props: MockedProviderProps) {
@@ -36,7 +36,7 @@ export class MockedProvider extends React.Component<
       cache: cache || new Cache({ addTypename }),
       defaultOptions,
       link: new MockLink(mocks || [], addTypename),
-      resolvers
+      resolvers,
     });
 
     this.state = { client };

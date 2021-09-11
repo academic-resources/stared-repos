@@ -1,5 +1,4 @@
-
-require('../../node/index.js');
+require("../../node/index.js");
 
 // Note that in your own project you should use:
 // require('web-midi-api');
@@ -8,7 +7,7 @@ let midi;
 let inputs;
 let outputs;
 
-console.log('Jazz MIDI version: ' + navigator.jazzMidi.version);
+console.log("Jazz MIDI version: " + navigator.jazzMidi.version);
 
 function onMIDIFailure(msg) {
     console.log(`Failed to get MIDI access - ${msg}`);
@@ -23,9 +22,18 @@ function onMIDISuccess(midiAccess) {
 }
 
 function testOutputs() {
-    console.log('Testing MIDI-Out ports...');
+    console.log("Testing MIDI-Out ports...");
     outputs.forEach((port) => {
-        console.log('id:', port.id, 'manufacturer:', port.manufacturer, 'name:', port.name, 'version:', port.version);
+        console.log(
+            "id:",
+            port.id,
+            "manufacturer:",
+            port.manufacturer,
+            "name:",
+            port.name,
+            "version:",
+            port.version
+        );
         port.open();
         port.send([0x90, 60, 0x7f]);
     });
@@ -42,22 +50,31 @@ function stopOutputs() {
 function onMidiIn(ev) {
     const arr = [];
     for (let i = 0; i < ev.data.length; i++) {
-        arr.push((ev.data[i] < 16 ? '0' : '') + ev.data[i].toString(16));
+        arr.push((ev.data[i] < 16 ? "0" : "") + ev.data[i].toString(16));
     }
-    console.log('MIDI:', arr.join(' '));
+    console.log("MIDI:", arr.join(" "));
 }
 
 function testInputs() {
-    console.log('Testing MIDI-In ports...');
+    console.log("Testing MIDI-In ports...");
     inputs.forEach((port) => {
-        console.log('id:', port.id, 'manufacturer:', port.manufacturer, 'name:', port.name, 'version:', port.version);
+        console.log(
+            "id:",
+            port.id,
+            "manufacturer:",
+            port.manufacturer,
+            "name:",
+            port.name,
+            "version:",
+            port.version
+        );
         port.onmidimessage = onMidiIn;
     });
     setTimeout(stopInputs, 5000);
 }
 
 function stopInputs() {
-    console.log('Thank you!');
+    console.log("Thank you!");
     navigator.close(); // This will close MIDI inputs, otherwise Node.js will wait for MIDI input forever.
     process.exit(0);
 }

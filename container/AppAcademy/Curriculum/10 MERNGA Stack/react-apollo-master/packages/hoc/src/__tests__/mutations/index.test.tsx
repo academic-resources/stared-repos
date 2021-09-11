@@ -1,12 +1,12 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import gql from 'graphql-tag';
-import { ApolloProvider } from '@apollo/react-common';
-import { stripSymbols, createClient } from '@apollo/react-testing';
-import { NormalizedCacheObject } from 'apollo-cache-inmemory';
-import { ApolloClient } from 'apollo-client';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import gql from "graphql-tag";
+import { ApolloProvider } from "@apollo/react-common";
+import { stripSymbols, createClient } from "@apollo/react-testing";
+import { NormalizedCacheObject } from "apollo-cache-inmemory";
+import { ApolloClient } from "apollo-client";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
 const query: DocumentNode = gql`
   mutation addPerson {
@@ -29,10 +29,10 @@ interface Variables {
 }
 
 const expectedData = {
-  allPeople: { people: [{ name: 'Luke Skywalker' }] }
+  allPeople: { people: [{ name: "Luke Skywalker" }] },
 };
 
-describe('graphql(mutation)', () => {
+describe("graphql(mutation)", () => {
   let error: typeof console.error;
   let client: ApolloClient<NormalizedCacheObject>;
   beforeEach(() => {
@@ -46,12 +46,12 @@ describe('graphql(mutation)', () => {
     cleanup();
   });
 
-  it('binds a mutation to props', () => {
+  it("binds a mutation to props", () => {
     const ContainerWithData = graphql(query)(({ mutate, result }) => {
       expect(mutate).toBeTruthy();
       expect(result).toBeTruthy();
-      expect(typeof mutate).toBe('function');
-      expect(typeof result).toBe('object');
+      expect(typeof mutate).toBe("function");
+      expect(typeof result).toBe("object");
       return null;
     });
 
@@ -62,7 +62,7 @@ describe('graphql(mutation)', () => {
     );
   });
 
-  it('binds a mutation result to props', () => {
+  it("binds a mutation result to props", () => {
     type InjectedProps = {
       result: any;
     };
@@ -72,7 +72,7 @@ describe('graphql(mutation)', () => {
     )(({ result }) => {
       const { loading, error } = result;
       expect(result).toBeTruthy();
-      expect(typeof loading).toBe('boolean');
+      expect(typeof loading).toBe("boolean");
       expect(error).toBeFalsy();
 
       return null;
@@ -85,7 +85,7 @@ describe('graphql(mutation)', () => {
     );
   });
 
-  it('binds a mutation to props with a custom name', () => {
+  it("binds a mutation to props with a custom name", () => {
     interface Props {}
 
     type InjectedProps = {
@@ -95,12 +95,12 @@ describe('graphql(mutation)', () => {
 
     const ContainerWithData = graphql<Props, Data, Variables, InjectedProps>(
       query,
-      { name: 'customMutation' }
+      { name: "customMutation" }
     )(({ customMutation, customMutationResult }) => {
       expect(customMutation).toBeTruthy();
       expect(customMutationResult).toBeTruthy();
-      expect(typeof customMutation).toBe('function');
-      expect(typeof customMutationResult).toBe('object');
+      expect(typeof customMutation).toBe("function");
+      expect(typeof customMutationResult).toBe("object");
       return null;
     });
 
@@ -111,7 +111,7 @@ describe('graphql(mutation)', () => {
     );
   });
 
-  it('binds a mutation to custom props', () => {
+  it("binds a mutation to custom props", () => {
     interface Props {
       methodName: string;
     }
@@ -123,12 +123,12 @@ describe('graphql(mutation)', () => {
       {
         props: ({ ownProps, mutate: addPerson }) => ({
           [ownProps.methodName]: (name: string) =>
-            addPerson!({ variables: { name } })
-        })
+            addPerson!({ variables: { name } }),
+        }),
       }
     )(({ myInjectedMutationMethod }) => {
       expect(myInjectedMutationMethod).toBeTruthy();
-      expect(typeof myInjectedMutationMethod).toBe('function');
+      expect(typeof myInjectedMutationMethod).toBe("function");
       return null;
     });
 
@@ -139,7 +139,7 @@ describe('graphql(mutation)', () => {
     );
   });
 
-  it('does not swallow children errors', done => {
+  it("does not swallow children errors", (done) => {
     let bar: any;
     const ContainerWithData = graphql(query)(() => {
       bar(); // this will throw
@@ -167,11 +167,11 @@ describe('graphql(mutation)', () => {
     );
   });
 
-  it('can execute a mutation', done => {
+  it("can execute a mutation", (done) => {
     const Container = graphql(query)(
       class extends React.Component<ChildProps> {
         componentDidMount() {
-          this.props.mutate!().then(result => {
+          this.props.mutate!().then((result) => {
             expect(stripSymbols(result && result.data)).toEqual(expectedData);
             done();
           });
@@ -189,7 +189,7 @@ describe('graphql(mutation)', () => {
     );
   });
 
-  it('can execute a mutation with variables from props', done => {
+  it("can execute a mutation with variables from props", (done) => {
     const queryWithVariables = gql`
       mutation addPerson($first: Int) {
         allPeople(first: $first) {
@@ -208,7 +208,7 @@ describe('graphql(mutation)', () => {
     const Container = graphql<Props>(queryWithVariables)(
       class extends React.Component<ChildProps<Props>> {
         componentDidMount() {
-          this.props.mutate!().then(result => {
+          this.props.mutate!().then((result) => {
             expect(stripSymbols(result && result.data)).toEqual(expectedData);
             done();
           });
@@ -226,7 +226,7 @@ describe('graphql(mutation)', () => {
     );
   });
 
-  it('can execute a mutation with variables from BOTH options and arguments', done => {
+  it("can execute a mutation with variables from BOTH options and arguments", (done) => {
     const queryWithVariables = gql`
       mutation addPerson($first: Int!, $second: Int!) {
         allPeople(first: $first) {
@@ -238,21 +238,21 @@ describe('graphql(mutation)', () => {
     `;
     client = createClient(expectedData, queryWithVariables, {
       first: 1,
-      second: 2
+      second: 2,
     });
 
     interface Props {}
 
     const Container = graphql<Props>(queryWithVariables, {
       options: () => ({
-        variables: { first: 1 }
-      })
+        variables: { first: 1 },
+      }),
     })(
       class extends React.Component<ChildProps<Props>> {
         componentDidMount() {
           this.props.mutate!({
-            variables: { second: 2 }
-          }).then(result => {
+            variables: { second: 2 },
+          }).then((result) => {
             expect(stripSymbols(result && result.data)).toEqual(expectedData);
             done();
           });

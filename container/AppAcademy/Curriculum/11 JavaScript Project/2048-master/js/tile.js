@@ -6,15 +6,15 @@ class Tile {
     this.col = pos[1];
     this.value = value;
     this.merged = false;
-    this.id = id++
+    this.id = id++;
   }
 
   updatePos(pos) {
     this.row = pos[0];
-    this.col = pos[1]
+    this.col = pos[1];
   }
 
-  updateVal(value){
+  updateVal(value) {
     this.value = value;
   }
 }

@@ -2,11 +2,11 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 const { secretOrKey } = require("../../config/keys");
-const validateRegisterInput = require("../validation/register")
-const validateLoginInput = require("../validation/login")
+const validateRegisterInput = require("../validation/register");
+const validateLoginInput = require("../validation/login");
 
 // here we'll be taking in the `data` from our mutation
-const register = async data => {
+const register = async (data) => {
   try {
     // run it through our validator which returns if the data isValid
     // and if not it returns a nice message for the client side
@@ -33,9 +33,9 @@ const register = async data => {
       {
         name,
         email,
-        password: hashedPassword
+        password: hashedPassword,
       },
-      err => {
+      (err) => {
         if (err) throw err;
       }
     );
@@ -52,14 +52,14 @@ const register = async data => {
   }
 };
 
-const logout = async data => {
+const logout = async (data) => {
   const { _id } = data;
-  const leavingUser = await User.findById(_id)
-  const token = '';
-  return { token, loggedIn: false, ...leavingUser._doc, password: null }
-}
+  const leavingUser = await User.findById(_id);
+  const token = "";
+  return { token, loggedIn: false, ...leavingUser._doc, password: null };
+};
 
-const login = async data => {
+const login = async (data) => {
   try {
     // use our other validator we wrote to validate this data
     const { message, isValid } = validateLoginInput(data);
@@ -69,24 +69,23 @@ const login = async data => {
     }
 
     const { email, password } = data;
-    const user = await User.findOne({ email })
+    const user = await User.findOne({ email });
     if (!user) {
-      throw new Error("Email does not exist")
+      throw new Error("Email does not exist");
     }
 
-    const passwordMatch = await bcrypt.compareSync(password, user.password)
-    if(!passwordMatch) {
-      throw new Error("Password does not match")
+    const passwordMatch = await bcrypt.compareSync(password, user.password);
+    if (!passwordMatch) {
+      throw new Error("Password does not match");
     }
     const token = jwt.sign({ id: user._id }, secretOrKey);
-    return { token, loggedIn: true, ...user._doc, password: null }
-
+    return { token, loggedIn: true, ...user._doc, password: null };
   } catch (err) {
     throw err;
   }
 };
 
-const verifyUser = async data => {
+const verifyUser = async (data) => {
   try {
     // we take in the token from our mutation
     const { token } = data;
@@ -97,7 +96,7 @@ const verifyUser = async data => {
 
     // then we try to use the User with the id we just decoded
     // making sure we await the response
-    const loggedIn = await User.findById(id).then(user => {
+    const loggedIn = await User.findById(id).then((user) => {
       return user ? true : false;
     });
 
@@ -106,6 +105,5 @@ const verifyUser = async data => {
     return { loggedIn: false };
   }
 };
-
 
 module.exports = { register, logout, login, verifyUser };

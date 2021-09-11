@@ -18,37 +18,37 @@ const GodType = new GraphQLObjectType({
       type: AbodeType,
       resolve(parentValue) {
         return Abode.findById(parentValue.abode)
-          .then(abode => abode)
-          .catch(err => null);
-      }
+          .then((abode) => abode)
+          .catch((err) => null);
+      },
     },
     emblems: {
       type: new GraphQLList(EmblemType),
       resolve(parentValue) {
         return God.findById(parentValue.id)
           .populate("emblems")
-          .then(god => god.emblems);
-      }
+          .then((god) => god.emblems);
+      },
     },
     parents: {
       type: new GraphQLList(GodType),
       resolve(parentValue) {
         return God.findRelatives(parentValue.id, "parents");
-      }
+      },
     },
     children: {
       type: new GraphQLList(GodType),
       resolve(parentValue) {
         return God.findRelatives(parentValue.id, "children");
-      }
+      },
     },
     siblings: {
       type: new GraphQLList(GodType),
       resolve(parentValue) {
         return God.findRelatives(parentValue.id, "siblings");
-      }
-    }
-  })
+      },
+    },
+  }),
 });
 
 module.exports = GodType;

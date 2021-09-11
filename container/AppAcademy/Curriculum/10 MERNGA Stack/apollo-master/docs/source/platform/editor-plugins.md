@@ -34,8 +34,8 @@ In order for the VS Code plugin to know how to find the schema, it needs to be l
 ```js
 module.exports = {
   client: {
-    service: 'my-graphql-app'
-  }
+    service: "my-graphql-app",
+  },
 };
 ```
 
@@ -67,10 +67,10 @@ Sometimes it may make sense to link the editor to a locally running version of a
 module.exports = {
   client: {
     service: {
-      name: 'my-graphql-app',
-      url: 'http://localhost:4000/graphql'
-    }
-  }
+      name: "my-graphql-app",
+      url: "http://localhost:4000/graphql",
+    },
+  },
 };
 ```
 
@@ -150,7 +150,7 @@ Apollo supports publishing multiple versions ([variants](/platform/schema-regist
 
 The most common errors are configuration errors, like a missing `.env` file or incorrect service information in the `apollo.config.js` file. Please see [the Apollo config docs][] for more configuration guidance.
 
-[the Apollo config docs]: /references/apollo-config/
+[the apollo config docs]: /references/apollo-config/
 
 Other errors may be caused from an old version of a published schema. To reload a schema, open the Command Palette (`cmd + shift + p` on mac), search "Apollo" and choose the "Apollo: Reload Schema" option.
 

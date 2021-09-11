@@ -9,7 +9,7 @@
 3. When two tiles collide, if they have the same numeric value, they are combined and their values multiplied together.
 4. The game is over if the board is full and the player can make no move.
 
-### Functionality & MVP  
+### Functionality & MVP
 
 Users will be able to:
 

@@ -1,8 +1,8 @@
-import { DocumentNode, GraphQLError, ExecutionResult } from 'graphql';
-import { isEqual } from 'apollo-utilities';
-import { invariant } from 'ts-invariant';
-import { NetworkStatus } from '../core/networkStatus';
-import { isNonEmptyArray } from '../util/arrays';
+import { DocumentNode, GraphQLError, ExecutionResult } from "graphql";
+import { isEqual } from "apollo-utilities";
+import { invariant } from "ts-invariant";
+import { NetworkStatus } from "../core/networkStatus";
+import { isNonEmptyArray } from "../util/arrays";
 
 export type QueryStoreValue = {
   document: DocumentNode;
@@ -42,9 +42,9 @@ export class QueryStore {
     // an existing query (see also: https://github.com/apollostack/apollo-client/issues/732)
     invariant(
       !previousQuery ||
-      previousQuery.document === query.document ||
-      isEqual(previousQuery.document, query.document),
-      'Internal Error: may not update existing query string in store',
+        previousQuery.document === query.document ||
+        isEqual(previousQuery.document, query.document),
+      "Internal Error: may not update existing query string in store"
     );
 
     let isSetVariables = false;
@@ -101,7 +101,7 @@ export class QueryStore {
     // This is because the implementation of `fetchMore` *always* sets
     // `fetchPolicy` to `network-only` so we would never have a client result.
     if (
-      typeof query.fetchMoreForQueryId === 'string' &&
+      typeof query.fetchMoreForQueryId === "string" &&
       this.store[query.fetchMoreForQueryId]
     ) {
       this.store[query.fetchMoreForQueryId].networkStatus =
@@ -112,12 +112,14 @@ export class QueryStore {
   public markQueryResult(
     queryId: string,
     result: ExecutionResult,
-    fetchMoreForQueryId: string | undefined,
+    fetchMoreForQueryId: string | undefined
   ) {
     if (!this.store || !this.store[queryId]) return;
 
     this.store[queryId].networkError = null;
-    this.store[queryId].graphQLErrors = isNonEmptyArray(result.errors) ? result.errors : [];
+    this.store[queryId].graphQLErrors = isNonEmptyArray(result.errors)
+      ? result.errors
+      : [];
     this.store[queryId].previousVariables = null;
     this.store[queryId].networkStatus = NetworkStatus.ready;
 
@@ -125,7 +127,7 @@ export class QueryStore {
     // status for that query. See the branch for query initialization for more
     // explanation about this process.
     if (
-      typeof fetchMoreForQueryId === 'string' &&
+      typeof fetchMoreForQueryId === "string" &&
       this.store[fetchMoreForQueryId]
     ) {
       this.store[fetchMoreForQueryId].networkStatus = NetworkStatus.ready;
@@ -135,7 +137,7 @@ export class QueryStore {
   public markQueryError(
     queryId: string,
     error: Error,
-    fetchMoreForQueryId: string | undefined,
+    fetchMoreForQueryId: string | undefined
   ) {
     if (!this.store || !this.store[queryId]) return;
 
@@ -145,7 +147,7 @@ export class QueryStore {
     // If we have a `fetchMoreForQueryId` then we need to update the network
     // status for that query. See the branch for query initialization for more
     // explanation about this process.
-    if (typeof fetchMoreForQueryId === 'string') {
+    if (typeof fetchMoreForQueryId === "string") {
       this.markQueryResultClient(fetchMoreForQueryId, true);
     }
   }
@@ -166,7 +168,7 @@ export class QueryStore {
   }
 
   public reset(observableQueryIds: string[]) {
-    Object.keys(this.store).forEach(queryId => {
+    Object.keys(this.store).forEach((queryId) => {
       if (observableQueryIds.indexOf(queryId) < 0) {
         this.stopQuery(queryId);
       } else {

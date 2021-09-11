@@ -5,11 +5,11 @@
 
 /* Attribute selector targeting all elements
 with a class attribute containing 'col-' */
-[class*='col-'] {
+[class*="col-"] {
   padding-right: 20px;
 }
 
-[class*='col-']:last-of-type {
+[class*="col-"]:last-of-type {
   padding-right: 0;
 }
 
@@ -26,7 +26,7 @@ with a class attribute containing 'col-' */
 }
 
 @media all and (max-width: 1000px) {
-  [class*='col-'] {
+  [class*="col-"] {
     width: 100%;
   }
 }

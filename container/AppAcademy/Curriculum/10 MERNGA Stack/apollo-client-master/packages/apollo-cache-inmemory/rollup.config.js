@@ -1,10 +1,10 @@
-import { rollup } from '../../config/rollup.config';
+import { rollup } from "../../config/rollup.config";
 
 export default rollup({
-  name: 'apollo-cache-inmemory',
+  name: "apollo-cache-inmemory",
   extraGlobals: {
-    'graphql/language/printer': 'print',
-    optimism: 'optimism',
-    'graphql/language/visitor': 'visitor',
+    "graphql/language/printer": "print",
+    optimism: "optimism",
+    "graphql/language/visitor": "visitor",
   },
 });

@@ -4,7 +4,7 @@ order: 11
 description: Apollo Client API reference
 ---
 
-import {TypescriptApiBox} from 'gatsby-theme-apollo-docs';
+import { TypescriptApiBox } from "gatsby-theme-apollo-docs";
 
 ## `ApolloClient`
 
@@ -23,17 +23,17 @@ The Apollo Client constructor takes a small number of options, of which two are 
 ```js
 const defaultOptions = {
   watchQuery: {
-    fetchPolicy: 'cache-and-network',
-    errorPolicy: 'ignore',
+    fetchPolicy: "cache-and-network",
+    errorPolicy: "ignore",
   },
   query: {
-    fetchPolicy: 'network-only',
-    errorPolicy: 'all',
+    fetchPolicy: "network-only",
+    errorPolicy: "all",
   },
   mutate: {
-    errorPolicy: 'all'
-  }
-}
+    errorPolicy: "all",
+  },
+};
 ```
 
 These options will be merged with options supplied with each request.

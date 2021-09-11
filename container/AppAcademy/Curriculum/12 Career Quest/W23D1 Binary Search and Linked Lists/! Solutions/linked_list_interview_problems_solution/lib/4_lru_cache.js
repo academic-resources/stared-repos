@@ -6,7 +6,7 @@
 // Prompt:
 // -------
 //
-// Given the implementation of a Doubly Linked List, design and implement 
+// Given the implementation of a Doubly Linked List, design and implement
 // an LRU, or Least Recently Used, cache.
 //
 // ------------
@@ -126,7 +126,6 @@ class LRUCache {
   }
 }
 
-
 // ----------------------------------------
 // Given: Doubly Linked List - Do Not Edit!
 // ----------------------------------------
@@ -136,7 +135,6 @@ class ListNode {
     this.val = val;
     this.next = next;
   }
-
 
   delete() {
     if (this.prev) this.prev.next = this.next;

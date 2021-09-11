@@ -1,5 +1,5 @@
 div {
-  height: 200px; 
+  height: 200px;
   width: 200px;
   padding: 50px;
   border: 5px solid black;
@@ -9,16 +9,13 @@ div:last-child {
   height: 10px;
 }
 
-
 #first-div {
   background-color: #39cccc;
 }
 
-
-
 #second-div {
   background-color: #ff4136;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 #third-div {

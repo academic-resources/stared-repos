@@ -46,11 +46,10 @@ const isListBlock = (block?: RawDraftContentBlock): boolean => {
 
 const addDepthToChildren = (block: RawDraftContentBlock) => {
   if (Array.isArray(block.children)) {
-    block.children = block.children.map(
-      child =>
-        child.type === block.type
-          ? {...child, depth: (block.depth || 0) + 1}
-          : child,
+    block.children = block.children.map((child) =>
+      child.type === block.type
+        ? {...child, depth: (block.depth || 0) + 1}
+        : child,
     );
   }
 };
@@ -76,7 +75,7 @@ const DraftTreeAdapter = {
       return draftTreeState;
     }
 
-    traverseInDepthOrder(blocks, block => {
+    traverseInDepthOrder(blocks, (block) => {
       const newBlock = {
         ...block,
       };
@@ -113,7 +112,7 @@ const DraftTreeAdapter = {
     const transformedBlocks = [];
     const parentStack = [];
 
-    draftState.blocks.forEach(block => {
+    draftState.blocks.forEach((block) => {
       const isList = isListBlock(block);
       const depth = block.depth || 0;
       const treeBlock = {

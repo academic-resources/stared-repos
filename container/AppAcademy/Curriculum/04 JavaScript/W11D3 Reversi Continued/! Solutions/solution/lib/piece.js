@@ -1,7 +1,7 @@
 /**
  * Initializes the Piece with its color.
  */
-function Piece (color) {
+function Piece(color) {
   this.color = color;
 }
 
@@ -9,7 +9,7 @@ function Piece (color) {
  * Returns the color opposite the current piece.
  */
 Piece.prototype.oppColor = function () {
-  return (this.color === "black") ? "white" : "black";
+  return this.color === "black" ? "white" : "black";
 };
 
 /**
@@ -24,7 +24,7 @@ Piece.prototype.flip = function () {
  * based on its color.
  */
 Piece.prototype.toString = function () {
-  return (this.color === "black") ? "B" : "W";
+  return this.color === "black" ? "B" : "W";
 };
 
 module.exports = Piece;

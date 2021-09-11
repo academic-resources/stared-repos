@@ -1,5 +1,5 @@
 const Level = require("./level.js");
-const Bird = require("./bird.js")
+const Bird = require("./bird.js");
 
 class Game {
   constructor(canvas) {
@@ -10,14 +10,12 @@ class Game {
   }
 
   restart() {
-    this.level = new Level(this.canvasWidth, this.canvasHeight)
+    this.level = new Level(this.canvasWidth, this.canvasHeight);
   }
 
-  animate(context) {
-    
-  }
+  animate(context) {}
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-const g = new Game(document.getElementById("bird-game"))
+document.addEventListener("DOMContentLoaded", function () {
+  const g = new Game(document.getElementById("bird-game"));
 });

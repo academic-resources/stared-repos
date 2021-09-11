@@ -1,5 +1,5 @@
-import { NormalizedCache, NormalizedCacheObject, StoreObject } from './types';
-import { wrap, OptimisticWrapperFunction } from 'optimism';
+import { NormalizedCache, NormalizedCacheObject, StoreObject } from "./types";
+import { wrap, OptimisticWrapperFunction } from "optimism";
 
 const hasOwn = Object.prototype.hasOwnProperty;
 
@@ -9,13 +9,11 @@ export class DepTrackingCache implements NormalizedCache {
   private depend: OptimisticWrapperFunction<[string], StoreObject>;
 
   constructor(private data: NormalizedCacheObject = Object.create(null)) {
-    this.depend = wrap((
-      dataId: string,
-    ) => this.data[dataId], {
+    this.depend = wrap((dataId: string) => this.data[dataId], {
       disposable: true,
       makeCacheKey(dataId: string) {
         return dataId;
-      }
+      },
     });
   }
 
@@ -49,16 +47,16 @@ export class DepTrackingCache implements NormalizedCache {
 
   public replace(newData: NormalizedCacheObject): void {
     if (newData) {
-      Object.keys(newData).forEach(dataId => {
+      Object.keys(newData).forEach((dataId) => {
         this.set(dataId, newData[dataId]);
       });
-      Object.keys(this.data).forEach(dataId => {
-        if (! hasOwn.call(newData, dataId)) {
+      Object.keys(this.data).forEach((dataId) => {
+        if (!hasOwn.call(newData, dataId)) {
           this.delete(dataId);
         }
       });
     } else {
-      Object.keys(this.data).forEach(dataId => {
+      Object.keys(this.data).forEach((dataId) => {
         this.delete(dataId);
       });
     }
@@ -66,7 +64,7 @@ export class DepTrackingCache implements NormalizedCache {
 }
 
 export function defaultNormalizedCacheFactory(
-  seed?: NormalizedCacheObject,
+  seed?: NormalizedCacheObject
 ): NormalizedCache {
   return new DepTrackingCache(seed);
 }

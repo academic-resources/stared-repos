@@ -1,3 +1,1 @@
-
-
-module.exports = Bird
+module.exports = Bird;

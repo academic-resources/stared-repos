@@ -1,4 +1,7 @@
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-2.1.1.js"
+></script>
 
 <ul id="cool-things"></ul>
 
@@ -6,30 +9,32 @@
 <form id="cool-thing-form">
   <label>
     Cool Thing
-    <input type="text" name="cool_thing" id="cool_thing">
+    <input type="text" name="cool_thing" id="cool_thing" />
   </label>
 
-  <input type="submit" value="Create Cool Thing!">
+  <input type="submit" value="Create Cool Thing!" />
 </form>
 
 <script>
-$("#cool-thing-form").on("submit", event => {
-  event.preventDefault();
+  $("#cool-thing-form").on("submit", (event) => {
+    event.preventDefault();
 
-  const $input = $("#cool_thing");
-  const coolThingVal = $input.val();
-  // clear input
-  $input.val("");
+    const $input = $("#cool_thing");
+    const coolThingVal = $input.val();
+    // clear input
+    $input.val("");
 
-  const $li = $("<li></li>");
-  $li.text(coolThingVal);
+    const $li = $("<li></li>");
+    $li.text(coolThingVal);
 
-  $("#cool-things").append($li);
-});
+    $("#cool-things").append($li);
+  });
 </script>
 
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-2.1.1.js"
+></script>
 
 <button>Toggle Annoying Handler</button>
 
@@ -54,8 +59,10 @@ $("#cool-thing-form").on("submit", event => {
   });
 </script>
 
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-2.1.1.js"
+></script>
 
 <ul>
   <li>Racecars</li>
@@ -65,9 +72,9 @@ $("#cool-thing-form").on("submit", event => {
 
 <script>
   var $listItems = $("li");
-  $listItems.on("mouseover", event => {
+  $listItems.on("mouseover", (event) => {
     const currentTarget = event.currentTarget;
     const $currentTarget = $(currentTarget);
     alert($currentTarget.text());
-  })
+  });
 </script>

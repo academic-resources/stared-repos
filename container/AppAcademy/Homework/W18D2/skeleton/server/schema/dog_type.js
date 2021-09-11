@@ -15,9 +15,9 @@ const DogType = new GraphQLObjectType({
       type: ToyType,
       resolve(parentValue) {
         return Dog.findById(parentValue._id).populate("toys");
-      }
-    }
-  }
+      },
+    },
+  },
 });
 
 module.exports = DogType;

@@ -33,13 +33,16 @@ query DetailView {
 We know that the data is most likely already in the client cache, but because it's requested with a different query, Apollo Client doesn't know that. In order to tell Apollo Client where to look for the data, we can define custom resolvers:
 
 ```js
-import { toIdValue } from 'apollo-utilities';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { toIdValue } from "apollo-utilities";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
 const cache = new InMemoryCache({
   cacheRedirects: {
     Query: {
-      book: (_, args) => toIdValue(cache.config.dataIdFromObject({ __typename: 'Book', id: args.id })),
+      book: (_, args) =>
+        toIdValue(
+          cache.config.dataIdFromObject({ __typename: "Book", id: args.id })
+        ),
     },
   },
 });
@@ -102,12 +105,12 @@ const Feed = () => (
               <Link
                 to={{
                   pathname: `/${data.breed}/${data.id}`,
-                  state: { id: data.id }
+                  state: { id: data.id },
                 }}
                 onMouseOver={() =>
                   client.query({
                     query: GET_DOG,
-                    variables: { breed: data.breed }
+                    variables: { breed: data.breed },
                   })
                 }
                 style={{ textDecoration: "none" }}
@@ -217,23 +220,24 @@ query SeriesEpisodes($seriesId: Int!) {
 By adding a [custom resolver](/advanced/caching/#cache-redirects-with-cacheredirects) for the `oneSeries` field (and having dataIdFromObject function which normalizes the cache), the data can be resolved instantly from the store without a server round trip.
 
 ```javascript
-import { ApolloClient } from 'apollo-client';
-import { toIdValue } from 'apollo-utilities';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloClient } from "apollo-client";
+import { toIdValue } from "apollo-utilities";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
 const cache = new InMemoryCache({
   cacheResolvers: {
     Query: {
-      oneSeries: (_, { id }) => toIdValue(cache.config.dataIdFromObject({ __typename: 'Series', id })),
+      oneSeries: (_, { id }) =>
+        toIdValue(cache.config.dataIdFromObject({ __typename: "Series", id })),
     },
   },
   dataIdFromObject,
-})
+});
 
 const client = new ApolloClient({
   link, // your link,
   cache,
-})
+});
 ```
 
 A component for the second view that implements the two queries could look like this:
@@ -269,7 +273,7 @@ const SeriesDetailView = ({ seriesId }) => (
       <Query query={QUERY_SERIES_EPISODES} variables={{ seriesId }}>
         {({
           loading: episodesLoading,
-          data: { oneSeries: { episodes } = {} }
+          data: { oneSeries: { episodes } = {} },
         }) => (
           <div>
             <h1>{seriesLoading ? `Loading...` : oneSeries.title}</h1>
@@ -279,7 +283,7 @@ const SeriesDetailView = ({ seriesId }) => (
               {episodesLoading ? (
                 <li>Loading...</li>
               ) : (
-                episodes.map(episode => (
+                episodes.map((episode) => (
                   <li key={episode.id}>
                     <img src={episode.cover} />
                     <a href={`/episode/${episode.id}`}>{episode.title}</a>

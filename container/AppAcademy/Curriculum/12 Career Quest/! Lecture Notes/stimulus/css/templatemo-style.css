@@ -7,29 +7,36 @@ http://www.templatemo.com/tm-498-stimulus
 */
 
 body {
-	background: #ffffff;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-style: normal;
-	font-weight: 300;
-    overflow-x: hidden;
+  background: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  overflow-x: hidden;
 }
 
-html,body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
-
 
 /*---------------------------------------
     Typorgraphy              
 -----------------------------------------*/
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-style: normal;
   font-weight: 300;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   font-weight: 300;
 }
 
@@ -65,23 +72,23 @@ h5 {
 }
 
 strong {
-  color: #232B2B;
+  color: #232b2b;
   font-weight: normal;
 }
 
 p {
-    color: #888;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 28px;
-    letter-spacing: 0.2px;
+  color: #888;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0.2px;
 }
 
 .section-btn {
   background-color: transparent;
-  border: 3px solid #232B2B;
+  border: 3px solid #232b2b;
   border-radius: 100px;
-  color: #232B2B;
+  color: #232b2b;
   font-size: 13px;
   font-weight: bold;
   letter-spacing: 1.6px;
@@ -92,7 +99,7 @@ p {
 }
 
 .section-btn:hover {
-  background: #E3AE57;
+  background: #e3ae57;
   border-color: transparent;
   color: #ffffff;
 }
@@ -121,7 +128,7 @@ p {
 }
 
 #home .container,
-#about .container, 
+#about .container,
 #experience .container,
 #service .container,
 #education .container,
@@ -132,7 +139,7 @@ p {
 }
 
 #experience .experience-thumb,
-#education .education-thumb  {
+#education .education-thumb {
   padding: 22px 42px 42px 42px;
 }
 
@@ -144,20 +151,20 @@ footer {
 
 #experience,
 #education {
-  background: #E9724C;
+  background: #e9724c;
 }
 
 .background-image {
-    background-position: 50% 50% !important;
-    background-size: cover !important;
-    width: 100%;
-    height: 100%;
-    min-height: 75vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  background-position: 50% 50% !important;
+  background-size: cover !important;
+  width: 100%;
+  height: 100%;
+  min-height: 75vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .color-white {
@@ -165,11 +172,11 @@ footer {
 }
 
 .color-yellow {
-  color: #E3AE57;
+  color: #e3ae57;
 }
 
 .bg-yellow {
-  background: #E3AE57;
+  background: #e3ae57;
 }
 
 .bg-white {
@@ -180,25 +187,25 @@ footer {
   background: #161616;
 }
 
-
-
 /*---------------------------------------
     General               
 -----------------------------------------*/
 
-html{
+html {
   -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: #E3AE57;
+  color: #e3ae57;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
   text-decoration: none !important;
 }
-a:hover, a:active, a:focus {
-  color: #E3AE57;
+a:hover,
+a:active,
+a:focus {
+  color: #e3ae57;
   outline: none;
 }
 
@@ -214,8 +221,6 @@ a:hover, a:active, a:focus {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-
 
 /*---------------------------------------
     Preloader section              
@@ -242,7 +247,7 @@ a:hover, a:active, a:focus {
 }
 
 .spinner:before {
-  content: '';
+  content: "";
   box-sizing: border-box;
   position: absolute;
   top: 50%;
@@ -252,52 +257,54 @@ a:hover, a:active, a:focus {
   margin-top: -10px;
   margin-left: -10px;
   border-radius: 50%;
-  border: 2px solid #E3AE57;
+  border: 2px solid #e3ae57;
   border-top-color: #f9f9f9;
-  animation: spinner .6s linear infinite;
+  animation: spinner 0.6s linear infinite;
 }
 
 @-webkit-@keyframes spinner {
-  to {transform: rotate(360deg);}
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spinner {
-  to {transform: rotate(360deg);}
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-
 
 /*---------------------------------------
     Navigation section              
 -----------------------------------------*/
 
 .custom-navbar {
-    margin-bottom: 0;
-    background-color: #ffffff;
+  margin-bottom: 0;
+  background-color: #ffffff;
 }
 
 .custom-navbar .navbar-brand {
-    color: #333;
-	text-shadow: 1px 1px #fff;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 35px;
-    letter-spacing: 1px;
+  color: #333;
+  text-shadow: 1px 1px #fff;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+  letter-spacing: 1px;
 }
 
 .custom-navbar .nav li a {
-    color: #666;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    line-height: 40px;
-    transition: all 0.4s ease-in-out;
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 40px;
+  transition: all 0.4s ease-in-out;
 }
 
 .custom-navbar .nav li a:hover {
-    background: transparent;
-    color: #E3AE57;
+  background: transparent;
+  color: #e3ae57;
 }
 
 .custom-navbar .navbar-nav > li > a:hover,
@@ -306,39 +313,36 @@ a:hover, a:active, a:focus {
 }
 
 .custom-navbar .nav li.active > a {
-    background-color: transparent;
-    color: #E3AE57;
+  background-color: transparent;
+  color: #e3ae57;
 }
 
 .custom-navbar .navbar-toggle {
-    border: none;
-    padding-top: 10px;
+  border: none;
+  padding-top: 10px;
 }
 
 .custom-navbar .navbar-toggle {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .custom-navbar .navbar-toggle .icon-bar {
-    background: #E3AE57;
-    border-color: transparent;
+  background: #e3ae57;
+  border-color: transparent;
 }
 
-@media(min-width:768px) {
-    .custom-navbar {
-        padding: 12px 0;
-        border-bottom: 0;
-        background: 0 0; 
-    }
-    .custom-navbar.top-nav-collapse {
-        background: #ffffff;
-        box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
-        padding: 0;
-    }
-
+@media (min-width: 768px) {
+  .custom-navbar {
+    padding: 12px 0;
+    border-bottom: 0;
+    background: 0 0;
+  }
+  .custom-navbar.top-nav-collapse {
+    background: #ffffff;
+    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+    padding: 0;
+  }
 }
-
-
 
 /*---------------------------------------
     Home section              
@@ -350,13 +354,13 @@ a:hover, a:active, a:focus {
 
 #home .col-md-6 {
   background: #f1e2d7;
-/* light blue color: #c3eafd; */
+  /* light blue color: #c3eafd; */
   padding-right: 0;
   padding-left: 0;
 }
 
 #home .home-img {
-  background: url('../images/home-img.jpg') no-repeat;
+  background: url("../images/home-img.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;
@@ -376,14 +380,12 @@ a:hover, a:active, a:focus {
   padding: 0 45px 0 45px;
 }
 
-
-
 /*---------------------------------------
    About section              
 -----------------------------------------*/
 
 #about .about-img {
-    background: url('../images/about-img.jpg') no-repeat;
+  background: url("../images/about-img.jpg") no-repeat;
 }
 
 #about .about-thumb,
@@ -399,7 +401,7 @@ a:hover, a:active, a:focus {
 }
 
 #about .progress-bar-primary {
-  background: #232B2B;
+  background: #232b2b;
 }
 
 #about strong,
@@ -409,14 +411,12 @@ a:hover, a:active, a:focus {
   padding-bottom: 8px;
 }
 
-
-
 /*---------------------------------------
     Service section              
 -----------------------------------------*/
 
 #service {
-  background: #E9724C;
+  background: #e9724c;
 }
 
 #service p {
@@ -433,14 +433,12 @@ a:hover, a:active, a:focus {
   padding-bottom: 22px;
 }
 
-
-
 /*---------------------------------------
     Experience section              
 -----------------------------------------*/
 
 #experience .experience-img {
-  background: url('../images/experience-img.jpg') no-repeat;
+  background: url("../images/experience-img.jpg") no-repeat;
 }
 
 #experience .media-heading {
@@ -462,11 +460,11 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 #education {
-  background: #E3AE57;
+  background: #e3ae57;
 }
 
 #education .education-img {
-  background: url('../images/education-img.jpg') no-repeat;
+  background: url("../images/education-img.jpg") no-repeat;
 }
 
 #education .media-heading {
@@ -479,32 +477,30 @@ a:hover, a:active, a:focus {
 }
 
 #education small {
-  color: #886D1E;
+  color: #886d1e;
   font-weight: bold;
 }
-
-
 
 /*---------------------------------------
    Quotes section              
 -----------------------------------------*/
 
 #quotes {
-    background: url('../images/quotes-bg.jpg') 50% 0 repeat-y fixed;
-    background-size: cover;
-    background-position: center center;
-    color: #ffffff;
-    position: relative;
-    padding: 100px 0px;
+  background: url("../images/quotes-bg.jpg") 50% 0 repeat-y fixed;
+  background-size: cover;
+  background-position: center center;
+  color: #ffffff;
+  position: relative;
+  padding: 100px 0px;
 }
 
 #quotes .overlay {
-    background: #121212;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    opacity: 0.7;
+  background: #121212;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.7;
 }
 
 #quotes .fa {
@@ -517,13 +513,12 @@ a:hover, a:active, a:focus {
   padding-top: 32px;
 }
 
-
 /*---------------------------------------
     Contact section              
 -----------------------------------------*/
 
 #contact {
-  background: #E9724C;
+  background: #e9724c;
 }
 
 #contact .contact-form,
@@ -533,7 +528,7 @@ a:hover, a:active, a:focus {
 }
 
 #contact .contact-img {
-  background: url('../images/contact-img.jpg') no-repeat;
+  background: url("../images/contact-img.jpg") no-repeat;
   min-height: 75vh;
 }
 
@@ -542,14 +537,21 @@ a:hover, a:active, a:focus {
   padding-bottom: 6px;
 }
 
-#contact .form-control::-moz-placeholder{color:#ffffff;opacity:1}
-#contact .form-control:-ms-input-placeholder{color:#ffffff}
-#contact .form-control::-webkit-input-placeholder{color:#ffffff}
+#contact .form-control::-moz-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+#contact .form-control:-ms-input-placeholder {
+  color: #ffffff;
+}
+#contact .form-control::-webkit-input-placeholder {
+  color: #ffffff;
+}
 
 #contact .form-control {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #E3AE57;
+  border-bottom: 1px solid #e3ae57;
   border-radius: 0px;
   box-shadow: none;
   color: #ffffff;
@@ -585,59 +587,53 @@ a:hover, a:active, a:focus {
   padding-right: 10px;
 }
 
-
-
 /*---------------------------------------
    Footer section              
 -----------------------------------------*/
 
 footer {
-    padding: 140px 0px;
+  padding: 140px 0px;
 }
-
-
 
 /*---------------------------------------
    Social icon             
 -----------------------------------------*/
 
 .social-icon {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .social-icon li {
-    display: inline-block;
-    list-style: none;
+  display: inline-block;
+  list-style: none;
 }
 
 .social-icon li a {
-    border: 2px solid transparent;
-    color: #999;
-    border-radius: 100px;
-    cursor: pointer;
-    font-size: 16px;
-    text-decoration: none;
-    transition: all 0.4s ease-in-out;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    vertical-align: middle;
-    position: relative;
-    margin: 22px 4px 10px 4px;
+  border: 2px solid transparent;
+  color: #999;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  margin: 22px 4px 10px 4px;
 }
 
 .social-icon li a:hover {
-    background: #E3AE57;
-    border-color: #ffffff;
-    color: #ffffff;
-    transform: scale(1.1);
+  background: #e3ae57;
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: scale(1.1);
 }
-
-
 
 /*---------------------------------------
    Mobile Responsive         
@@ -671,7 +667,7 @@ footer {
   }
 
   #home .container,
-  #about .container, 
+  #about .container,
   #experience .container,
   #service .container,
   #education .container,

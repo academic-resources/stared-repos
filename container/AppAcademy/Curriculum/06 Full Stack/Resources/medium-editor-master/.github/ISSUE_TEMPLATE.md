@@ -16,6 +16,6 @@
 
 ### Versions
 
-- medium-editor:
-- browser:
-- OS:
+-   medium-editor:
+-   browser:
+-   OS:

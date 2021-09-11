@@ -1,4 +1,4 @@
-const Coord = require('./coord');
+const Coord = require("./coord");
 
 class Snake {
   constructor(board) {
@@ -6,7 +6,10 @@ class Snake {
     this.turning = false;
     this.board = board;
 
-    const center = new Coord(Math.floor(board.dim/2), Math.floor(board.dim/2));
+    const center = new Coord(
+      Math.floor(board.dim / 2),
+      Math.floor(board.dim / 2)
+    );
     this.segments = [center];
 
     this.growTurns = 0;
@@ -23,7 +26,7 @@ class Snake {
 
   isOccupying(array) {
     let result = false;
-    this.segments.forEach( segment => {
+    this.segments.forEach((segment) => {
       if (segment.i === array[0] && segment.j === array[1]) {
         result = true;
         return result;
@@ -79,8 +82,7 @@ class Snake {
 
   turn(dir) {
     // avoid turning directly back on yourself
-    if (Snake.DIFFS[this.dir].isOpposite(Snake.DIFFS[dir]) ||
-      this.turning) {
+    if (Snake.DIFFS[this.dir].isOpposite(Snake.DIFFS[dir]) || this.turning) {
       return;
     } else {
       this.turning = true;
@@ -90,10 +92,10 @@ class Snake {
 }
 
 Snake.DIFFS = {
-  "N": new Coord(-1, 0),
-  "E": new Coord(0, 1),
-  "S": new Coord(1, 0),
-  "W": new Coord(0, -1)
+  N: new Coord(-1, 0),
+  E: new Coord(0, 1),
+  S: new Coord(1, 0),
+  W: new Coord(0, -1),
 };
 
 Snake.SYMBOL = "S";

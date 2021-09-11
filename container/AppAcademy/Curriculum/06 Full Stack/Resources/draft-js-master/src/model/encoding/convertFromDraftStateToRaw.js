@@ -75,10 +75,10 @@ const encodeRawBlocks = (
   const entityCacheRef = {};
   let entityStorageKey = 0;
 
-  contentState.getBlockMap().forEach(block => {
+  contentState.getBlockMap().forEach((block) => {
     block.findEntityRanges(
-      character => character.getEntity() !== null,
-      start => {
+      (character) => character.getEntity() !== null,
+      (start) => {
         const entityKey = block.getEntityAt(start);
         // Stringify to maintain order of otherwise numeric keys.
         const stringifiedEntityKey = DraftStringKey.stringify(entityKey);

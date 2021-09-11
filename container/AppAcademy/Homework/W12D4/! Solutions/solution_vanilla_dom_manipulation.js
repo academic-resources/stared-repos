@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     li.addEventListener("click", toggleLi);
   });
 
-
-
   // adding SF places as list items
 
   const handleFavoriteSubmit = (e) => {
@@ -35,9 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const listSubmitButton = document.querySelector(".favorite-submit");
   listSubmitButton.addEventListener("click", handleFavoriteSubmit);
 
-
-
-
   // adding new photos
 
   const showPhotoForm = (e) => {
@@ -51,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const photoFormShowButton = document.querySelector(".photo-show-button");
   photoFormShowButton.addEventListener("click", showPhotoForm);
-
 
   const handlePhotoSubmit = (e) => {
     e.preventDefault();

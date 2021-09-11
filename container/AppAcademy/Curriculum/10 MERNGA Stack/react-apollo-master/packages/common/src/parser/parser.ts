@@ -2,14 +2,14 @@ import {
   DocumentNode,
   DefinitionNode,
   VariableDefinitionNode,
-  OperationDefinitionNode
-} from 'graphql';
-import { invariant } from 'ts-invariant';
+  OperationDefinitionNode,
+} from "graphql";
+import { invariant } from "ts-invariant";
 
 export enum DocumentType {
   Query,
   Mutation,
-  Subscription
+  Subscription,
 }
 
 export interface IDocumentDefinition {
@@ -24,13 +24,13 @@ export function operationName(type: DocumentType) {
   let name;
   switch (type) {
     case DocumentType.Query:
-      name = 'Query';
+      name = "Query";
       break;
     case DocumentType.Mutation:
-      name = 'Mutation';
+      name = "Mutation";
       break;
     case DocumentType.Subscription:
-      name = 'Subscription';
+      name = "Subscription";
       break;
   }
   return name;
@@ -51,27 +51,29 @@ export function parser(document: DocumentNode): IDocumentDefinition {
   );
 
   const fragments = document.definitions.filter(
-    (x: DefinitionNode) => x.kind === 'FragmentDefinition'
+    (x: DefinitionNode) => x.kind === "FragmentDefinition"
   );
 
   const queries = document.definitions.filter(
     (x: DefinitionNode) =>
-      x.kind === 'OperationDefinition' && x.operation === 'query'
+      x.kind === "OperationDefinition" && x.operation === "query"
   );
 
   const mutations = document.definitions.filter(
     (x: DefinitionNode) =>
-      x.kind === 'OperationDefinition' && x.operation === 'mutation'
+      x.kind === "OperationDefinition" && x.operation === "mutation"
   );
 
   const subscriptions = document.definitions.filter(
     (x: DefinitionNode) =>
-      x.kind === 'OperationDefinition' && x.operation === 'subscription'
+      x.kind === "OperationDefinition" && x.operation === "subscription"
   );
 
   invariant(
     !fragments.length ||
-      (queries.length || mutations.length || subscriptions.length),
+      queries.length ||
+      mutations.length ||
+      subscriptions.length,
     `Passing only a fragment to 'graphql' is not yet supported. ` +
       `You must include a query, subscription or mutation as well`
   );
@@ -103,10 +105,10 @@ export function parser(document: DocumentNode): IDocumentDefinition {
   const definition = definitions[0] as OperationDefinitionNode;
   variables = definition.variableDefinitions || [];
 
-  if (definition.name && definition.name.kind === 'Name') {
+  if (definition.name && definition.name.kind === "Name") {
     name = definition.name.value;
   } else {
-    name = 'data'; // fallback to using data if no name
+    name = "data"; // fallback to using data if no name
   }
 
   const payload = { name, type, variables };

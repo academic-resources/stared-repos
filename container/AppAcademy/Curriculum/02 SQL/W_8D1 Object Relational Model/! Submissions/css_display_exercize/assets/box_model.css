@@ -3,7 +3,7 @@
 body {
   /* If the user cannot load the Arial font, the sans-serif font is used */
   font-family: Arial, sans-serif;
-  background-color: #FEFFF1;
+  background-color: #fefff1;
   width: 900px;
   margin: 0 auto;
 }
@@ -52,7 +52,8 @@ nav {
 
 /* This selector selects ALL anchor tag children of ALL list elements that
 are children of an Unordered Lsit element */
-ul li a, figcaption a {
+ul li a,
+figcaption a {
   text-decoration: none;
   color: inherit;
 }
@@ -66,7 +67,6 @@ header > img {
 
 /* Selects all elements with the class attribute "ingredients-list" */
 .ingredients-list {
-
   /* The list style property is shorthand for multiple list-style properties*/
   list-style: square inside;
 }
@@ -81,24 +81,23 @@ ol {
 }
 
 input[type="radio"] {
-    -webkit-appearance: none;
-    width: 27px;
-    height: 27px;
-    background-image: url(../assets/stars.png);
-    vertical-align: bottom;
+  -webkit-appearance: none;
+  width: 27px;
+  height: 27px;
+  background-image: url(../assets/stars.png);
+  vertical-align: bottom;
 }
 
 input[type="radio"]:checked {
   background-position: 30px 30px;
 }
 
-
 input:last-child {
-    background: gold;
+  background: gold;
 }
 
 input:last-child:hover {
-    -webkit-filter: brightness(90%);
+  -webkit-filter: brightness(90%);
 }
 
 ol li:nth-of-type(2n) {
@@ -106,6 +105,5 @@ ol li:nth-of-type(2n) {
 }
 
 h2 + .user_review {
-    border-top: 1px solid black;
+  border-top: 1px solid black;
 }
-

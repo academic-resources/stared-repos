@@ -1,8 +1,7 @@
-
 // `Function.prototype.inherits` using surrogate trick
 
 Function.prototype.inherits1 = function (BaseClass) {
-  function Surrogate () {}
+  function Surrogate() {}
   Surrogate.prototype = BaseClass.prototype;
   this.prototype = new Surrogate();
   this.prototype.constructor = this;
@@ -15,7 +14,7 @@ Function.prototype.inherits2 = function (BaseClass) {
   this.prototype.constructor = this;
 };
 
-function Dog (name) {
+function Dog(name) {
   this.name = name;
 }
 
@@ -23,7 +22,7 @@ Dog.prototype.bark = function () {
   console.log(this.name + " barks!");
 };
 
-function Corgi (name) {
+function Corgi(name) {
   Dog.call(this, name);
 }
 

@@ -6,12 +6,14 @@ const EmblemSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
-  gods: [{
-    type: Schema.Types.ObjectId,
-    ref: "god"
-  }]
+  gods: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "god",
+    },
+  ],
 });
 
 module.exports = mongoose.model("emblem", EmblemSchema);

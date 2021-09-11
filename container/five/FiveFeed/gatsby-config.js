@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'five feed',
   },
-  developMiddleware: app => {
+  developMiddleware: (app) => {
     app.use(
       '/.netlify/functions/',
       proxy({

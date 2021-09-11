@@ -1,13 +1,12 @@
-
 html {
   box-sizing: border-box;
-  background: #A9DBB8;
+  background: #a9dbb8;
   text-align: center;
 }
 
 h1 {
-  color: #F0F2EF;
-  font-family: 'helvetica neue';
+  color: #f0f2ef;
+  font-family: "helvetica neue";
   font-size: 20px;
   font-weight: 200;
 }
@@ -36,7 +35,7 @@ h1 {
 
 .slide {
   opacity: 0;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .align-left.slide {
@@ -54,7 +53,7 @@ h1 {
 
 .dog-link {
   display: none;
-  background-color: #E5989B;
+  background-color: #e5989b;
   width: 300px;
   margin: 3px;
   padding: 3px 0;
@@ -62,15 +61,15 @@ h1 {
 }
 
 .dog-link:hover {
-  background-color: #B5838D;
+  background-color: #b5838d;
 }
 
 .dog-link > a {
-  color: #6D6875;
+  color: #6d6875;
 }
 
 .dog-link > a:hover {
-  color: #FFCDB2;
+  color: #ffcdb2;
 }
 
 .visible {
@@ -78,7 +77,7 @@ h1 {
 }
 
 .drop-down-dog-nav {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   font-size: 20px;
   /* font-weight: 400; */
 }
@@ -91,7 +90,7 @@ h1 {
 
 #party {
   font-size: 64px;
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
 }
 
 .clock-holder {
@@ -100,9 +99,8 @@ h1 {
   left: 10px;
   width: 130px;
   border-radius: 10px;
-  background-color: #E5989B;
+  background-color: #e5989b;
   padding: 5px;
-  font-family: 'press start 2p';
-  border: 2px solid #6D6875;
-
+  font-family: "press start 2p";
+  border: 2px solid #6d6875;
 }

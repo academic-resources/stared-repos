@@ -1,1 +1,1 @@
-export { equal as isEqual } from '@wry/equality';
+export { equal as isEqual } from "@wry/equality";

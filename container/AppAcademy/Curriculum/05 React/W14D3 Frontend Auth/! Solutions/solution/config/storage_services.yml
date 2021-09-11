@@ -24,7 +24,6 @@ amazon_prod:
   region: <%= Rails.application.credentials.aws[:region] %>
   bucket: <%= Rails.application.credentials.aws[:prod][:bucket] %>
 
-  
 # Remember not to checkin your GCS keyfile to a repository
 google:
   service: GCS
@@ -35,4 +34,4 @@ google:
 mirror:
   service: Mirror
   primary: local
-  secondaries: [ amazon, google ]
+  secondaries: [amazon, google]

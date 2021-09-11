@@ -1,22 +1,22 @@
-import React from 'react';
-import { ApolloProvider, resetApolloContext } from '@apollo/react-common';
-import { render, cleanup } from '@testing-library/react';
-import { ApolloClient } from 'apollo-client';
-import { ApolloLink } from 'apollo-link';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { InvariantError } from 'ts-invariant';
-import { useApolloClient } from '@apollo/react-hooks';
+import React from "react";
+import { ApolloProvider, resetApolloContext } from "@apollo/react-common";
+import { render, cleanup } from "@testing-library/react";
+import { ApolloClient } from "apollo-client";
+import { ApolloLink } from "apollo-link";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { InvariantError } from "ts-invariant";
+import { useApolloClient } from "@apollo/react-hooks";
 
-describe('useApolloClient Hook', () => {
+describe("useApolloClient Hook", () => {
   afterEach(() => {
     cleanup();
     resetApolloContext();
   });
 
-  it('should return a client instance from the context if available', () => {
+  it("should return a client instance from the context if available", () => {
     const client = new ApolloClient({
       cache: new InMemoryCache(),
-      link: ApolloLink.empty()
+      link: ApolloLink.empty(),
     });
 
     function App() {

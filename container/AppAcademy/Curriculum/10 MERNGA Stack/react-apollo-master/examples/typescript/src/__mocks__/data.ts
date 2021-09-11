@@ -2,9 +2,9 @@
 export const empty = null;
 
 export const hero_no_friends = {
-  __typename: 'Droid',
-  name: 'r2d2',
-  id: '1',
+  __typename: "Droid",
+  name: "r2d2",
+  id: "1",
   friends: null,
 };
 
@@ -19,8 +19,8 @@ export const friend_without_appearsIn = {
   ...hero_no_friends,
   ...{
     friends: [
-      { name: 'luke', id: '2', appearsIn: ['NEWHOPE'] },
-      { name: 'james', id: '777', appearsIn: [null] },
+      { name: "luke", id: "2", appearsIn: ["NEWHOPE"] },
+      { name: "james", id: "777", appearsIn: [null] },
     ],
   },
 };
@@ -28,6 +28,6 @@ export const friend_without_appearsIn = {
 export const full = {
   ...hero_no_friends,
   ...{
-    friends: [{ name: 'luke', id: '2', appearsIn: ['NEWHOPE'] }],
+    friends: [{ name: "luke", id: "2", appearsIn: ["NEWHOPE"] }],
   },
 };

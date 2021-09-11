@@ -1,5 +1,5 @@
-import { createStore, applyMiddleware } from 'redux';
-import rootReducer from '../reducers/root_reducer';
+import { createStore, applyMiddleware } from "redux";
+import rootReducer from "../reducers/root_reducer";
 
 const configureStore = (preloadedState = {}) => {
   const store = createStore(
@@ -16,7 +16,7 @@ const configureStore = (preloadedState = {}) => {
 };
 
 // Phase 3: Using Redux applyMiddleware
-const addLoggingToDispatch = store => next => action => {
+const addLoggingToDispatch = (store) => (next) => (action) => {
   console.log(store.getState());
   console.log(action);
   next(action);
@@ -24,7 +24,7 @@ const addLoggingToDispatch = store => next => action => {
 };
 
 // Bonus Phase: Add an extra middleware!
-const sillyMiddleware = store => next => action => {
+const sillyMiddleware = (store) => (next) => (action) => {
   console.log("Silly");
   next(action);
 };

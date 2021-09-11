@@ -1,12 +1,12 @@
 "use strict";
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   context: __dirname,
   entry: "./frontend/entry.jsx",
   output: {
     path: path.resolve(__dirname),
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -14,16 +14,16 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           query: {
-            presets: ['@babel/env', '@babel/react']
-          }
+            presets: ["@babel/env", "@babel/react"],
+          },
         },
-      }
-    ]
+      },
+    ],
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   resolve: {
-    extensions: [".js", ".jsx", "*"]
-  }
+    extensions: [".js", ".jsx", "*"],
+  },
 };

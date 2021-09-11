@@ -1,22 +1,22 @@
-import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import gql from 'graphql-tag';
-import { MockedProvider, MockedResponse } from '@apollo/react-testing';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+import React from "react";
+import { render, cleanup } from "@testing-library/react";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import gql from "graphql-tag";
+import { MockedProvider, MockedResponse } from "@apollo/react-testing";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
 const variables = {
-  username: 'mock_username'
+  username: "mock_username",
 };
 
 const userWithoutTypeName = {
-  id: 'user_id'
+  id: "user_id",
 };
 
 const user = {
-  __typename: 'User',
-  ...userWithoutTypeName
+  __typename: "User",
+  ...userWithoutTypeName,
 };
 
 const query: DocumentNode = gql`
@@ -46,25 +46,25 @@ interface Variables {
 }
 
 const withUser = graphql<Variables, Data, Variables>(query, {
-  options: props => ({
-    variables: props
-  })
+  options: (props) => ({
+    variables: props,
+  }),
 });
 
 const mocks: ReadonlyArray<MockedResponse> = [
   {
     request: {
       query,
-      variables
+      variables,
     },
-    result: { data: { user } }
-  }
+    result: { data: { user } },
+  },
 ];
 
-describe('General use', () => {
+describe("General use", () => {
   afterEach(cleanup);
 
-  it('mocks the data', done => {
+  it("mocks the data", (done) => {
     class Container extends React.Component<
       ChildProps<Variables, Data, Variables>
     > {
@@ -87,7 +87,7 @@ describe('General use', () => {
     );
   });
 
-  it('allows for querying with the typename', done => {
+  it("allows for querying with the typename", (done) => {
     class Container extends React.Component<
       ChildProps<Variables, Data, Variables>
     > {
@@ -104,9 +104,9 @@ describe('General use', () => {
     const withUserAndTypename = graphql<Variables, Data, Variables>(
       queryWithTypename,
       {
-        options: props => ({
-          variables: props
-        })
+        options: (props) => ({
+          variables: props,
+        }),
       }
     );
 
@@ -116,10 +116,10 @@ describe('General use', () => {
       {
         request: {
           query: queryWithTypename,
-          variables
+          variables,
         },
-        result: { data: { user } }
-      }
+        result: { data: { user } },
+      },
     ];
 
     render(
@@ -129,17 +129,17 @@ describe('General use', () => {
     );
   });
 
-  it('allows for using a custom cache', done => {
+  it("allows for using a custom cache", (done) => {
     const cache = new InMemoryCache();
     cache.writeQuery({
       query,
       variables,
-      data: { user }
+      data: { user },
     });
 
-    const Container: React.SFC<
-      ChildProps<Variables, Data, Variables>
-    > = props => {
+    const Container: React.SFC<ChildProps<Variables, Data, Variables>> = (
+      props
+    ) => {
       expect(props.data).toMatchObject({ user });
       done();
 
@@ -153,7 +153,7 @@ describe('General use', () => {
     );
   });
 
-  it('errors if the variables in the mock and component do not match', done => {
+  it("errors if the variables in the mock and component do not match", (done) => {
     class Container extends React.Component<
       ChildProps<Variables, Data, Variables>
     > {
@@ -175,7 +175,7 @@ describe('General use', () => {
     const ContainerWithData = withUser(Container);
 
     const variables2 = {
-      username: 'other_user'
+      username: "other_user",
     };
 
     render(
@@ -185,7 +185,7 @@ describe('General use', () => {
     );
   });
 
-  it('errors if the variables do not deep equal', done => {
+  it("errors if the variables do not deep equal", (done) => {
     class Container extends React.Component<
       ChildProps<Variables, Data, Variables>
     > {
@@ -212,16 +212,16 @@ describe('General use', () => {
           query,
           variables: {
             age: 13,
-            username: 'some_user'
-          }
+            username: "some_user",
+          },
         },
-        result: { data: { user } }
-      }
+        result: { data: { user } },
+      },
     ];
 
     const variables2 = {
-      username: 'some_user',
-      age: 42
+      username: "some_user",
+      age: 42,
     };
 
     render(
@@ -231,7 +231,7 @@ describe('General use', () => {
     );
   });
 
-  it('does not error if the variables match but have different order', done => {
+  it("does not error if the variables match but have different order", (done) => {
     class Container extends React.Component<
       ChildProps<Variables, Data, Variables>
     > {
@@ -253,16 +253,16 @@ describe('General use', () => {
           query,
           variables: {
             age: 13,
-            username: 'some_user'
-          }
+            username: "some_user",
+          },
         },
-        result: { data: { user } }
-      }
+        result: { data: { user } },
+      },
     ];
 
     const variables2 = {
-      username: 'some_user',
-      age: 13
+      username: "some_user",
+      age: 13,
     };
 
     render(
@@ -272,14 +272,14 @@ describe('General use', () => {
     );
   });
 
-  it('mocks a network error', done => {
+  it("mocks a network error", (done) => {
     class Container extends React.Component<
       ChildProps<Variables, Data, Variables>
     > {
       componentDidUpdate() {
         try {
           expect(this.props.data!.error).toEqual(
-            new Error('Network error: something went wrong')
+            new Error("Network error: something went wrong")
           );
           done();
         } catch (e) {
@@ -298,10 +298,10 @@ describe('General use', () => {
       {
         request: {
           query,
-          variables
+          variables,
         },
-        error: new Error('something went wrong')
-      }
+        error: new Error("something went wrong"),
+      },
     ];
 
     render(
@@ -311,7 +311,7 @@ describe('General use', () => {
     );
   });
 
-  it('errors if the query in the mock and component do not match', done => {
+  it("errors if the query in the mock and component do not match", (done) => {
     class Container extends React.Component<
       ChildProps<Variables, Data, Variables>
     > {
@@ -342,10 +342,10 @@ describe('General use', () => {
               }
             }
           `,
-          variables
+          variables,
         },
-        result: { data: { user } }
-      }
+        result: { data: { user } },
+      },
     ];
 
     render(
@@ -355,7 +355,7 @@ describe('General use', () => {
     );
   });
 
-  it('passes down props prop in mock as props for the component', done => {
+  it("passes down props prop in mock as props for the component", (done) => {
     interface VariablesWithProps {
       username: string;
       [propName: string]: any;
@@ -366,8 +366,8 @@ describe('General use', () => {
     > {
       componentDidUpdate() {
         try {
-          expect(this.props.foo).toBe('bar');
-          expect(this.props.baz).toBe('qux');
+          expect(this.props.foo).toBe("bar");
+          expect(this.props.baz).toBe("qux");
           done();
         } catch (e) {
           done.fail(e);
@@ -380,21 +380,21 @@ describe('General use', () => {
     }
 
     const withUser2 = graphql<VariablesWithProps, Data, Variables>(query, {
-      options: props => ({
-        variables: { username: props.username }
-      })
+      options: (props) => ({
+        variables: { username: props.username },
+      }),
     });
 
     const ContainerWithData = withUser2(Container);
 
     render(
-      <MockedProvider mocks={mocks} childProps={{ foo: 'bar', baz: 'qux' }}>
+      <MockedProvider mocks={mocks} childProps={{ foo: "bar", baz: "qux" }}>
         <ContainerWithData {...variables} />
       </MockedProvider>
     );
   });
 
-  it('doesnt crash on unmount if there is no query manager', () => {
+  it("doesnt crash on unmount if there is no query manager", () => {
     class Container extends React.Component {
       render() {
         return null;
@@ -409,12 +409,12 @@ describe('General use', () => {
     unmount();
   });
 
-  it('should support returning mocked results from a function', done => {
+  it("should support returning mocked results from a function", (done) => {
     let resultReturned = false;
 
     const testUser = {
-      __typename: 'User',
-      id: 12345
+      __typename: "User",
+      id: 12345,
     };
 
     class Container extends React.Component<
@@ -446,26 +446,26 @@ describe('General use', () => {
     `;
 
     const testVariables = {
-      username: 'jsmith'
+      username: "jsmith",
     };
     const testMocks = [
       {
         request: {
           query: testQuery,
-          variables: testVariables
+          variables: testVariables,
         },
         result() {
           resultReturned = true;
           return {
             data: {
               user: {
-                __typename: 'User',
-                id: 12345
-              }
-            }
+                __typename: "User",
+                id: 12345,
+              },
+            },
           };
-        }
-      }
+        },
+      },
     ];
 
     render(
@@ -475,7 +475,7 @@ describe('General use', () => {
     );
   });
 
-  it('allows for @connection queries', done => {
+  it("allows for @connection queries", (done) => {
     const feedQuery: DocumentNode = gql`
       query GetUserFeed($username: String!, $offset: Int, $limit: Int) {
         userFeed(username: $username, offset: $offset, limit: $limit)
@@ -487,7 +487,7 @@ describe('General use', () => {
 
     interface FeedData {
       userFeed: Array<{
-        __typename: 'UserFeedItem';
+        __typename: "UserFeedItem";
         title: string;
       }>;
     }
@@ -501,30 +501,30 @@ describe('General use', () => {
     const withUserFeed = graphql<FeedVariables, FeedData, FeedVariables>(
       feedQuery,
       {
-        options: props => ({
-          variables: props
-        })
+        options: (props) => ({
+          variables: props,
+        }),
       }
     );
 
-    const feedVariables = { username: 'another_user', offset: 0, limit: 10 };
+    const feedVariables = { username: "another_user", offset: 0, limit: 10 };
     const feedMocks: MockedResponse[] = [
       {
         request: {
           query: feedQuery,
-          variables: feedVariables
+          variables: feedVariables,
         },
         result: {
           data: {
             userFeed: [
               {
-                __typename: 'UserFeedItem',
-                title: 'First!'
-              }
-            ]
-          }
-        }
-      }
+                __typename: "UserFeedItem",
+                title: "First!",
+              },
+            ],
+          },
+        },
+      },
     ];
 
     class Container extends React.Component<
@@ -535,7 +535,7 @@ describe('General use', () => {
         try {
           expect(nextProps.data).toBeDefined();
           expect(nextProps.data!.userFeed).toHaveLength(1);
-          expect(nextProps.data!.userFeed![0].title).toEqual('First!');
+          expect(nextProps.data!.userFeed![0].title).toEqual("First!");
           expect(nextProps.data!.variables).toEqual(feedVariables);
           done();
         } catch (e) {
@@ -558,7 +558,7 @@ describe('General use', () => {
   });
 });
 
-describe('@client testing', () => {
+describe("@client testing", () => {
   let warn = console.warn;
   beforeAll(() => {
     console.warn = () => null;
@@ -569,9 +569,9 @@ describe('@client testing', () => {
   });
 
   it(
-    'should support using @client fields in the mocked link chain, when not ' +
-      'using local resolvers',
-    done => {
+    "should support using @client fields in the mocked link chain, when not " +
+      "using local resolvers",
+    (done) => {
       const networkStatusQuery: DocumentNode = gql`
         query NetworkStatus {
           networkStatus @client {
@@ -582,7 +582,7 @@ describe('@client testing', () => {
 
       interface NetworkStatus {
         networkStatus: {
-          __typename: 'NetworkStatus';
+          __typename: "NetworkStatus";
           isOnline: boolean;
         };
       }
@@ -592,17 +592,17 @@ describe('@client testing', () => {
       const networkStatusMocks: MockedResponse[] = [
         {
           request: {
-            query: networkStatusQuery
+            query: networkStatusQuery,
           },
           result: {
             data: {
               networkStatus: {
-                __typename: 'NetworkStatus',
-                isOnline: true
-              }
-            }
-          }
-        }
+                __typename: "NetworkStatus",
+                isOnline: true,
+              },
+            },
+          },
+        },
       ];
 
       class Container extends React.Component<ChildProps<{}, NetworkStatus>> {
@@ -611,7 +611,7 @@ describe('@client testing', () => {
           try {
             expect(nextProps.data).toBeDefined();
             expect(nextProps.data!.networkStatus.__typename).toEqual(
-              'NetworkStatus'
+              "NetworkStatus"
             );
             expect(nextProps.data!.networkStatus.isOnline).toEqual(true);
             done();
@@ -636,9 +636,9 @@ describe('@client testing', () => {
   );
 
   it(
-    'should prevent @client fields from being sent through the mocked link ' +
-      'chain, when using local resolvers',
-    done => {
+    "should prevent @client fields from being sent through the mocked link " +
+      "chain, when using local resolvers",
+    (done) => {
       const productQuery: DocumentNode = gql`
         query FindProduct($name: String!) {
           product(name: $name) {
@@ -650,7 +650,7 @@ describe('@client testing', () => {
 
       interface ProductData {
         product: Array<{
-          __typename: 'Product';
+          __typename: "Product";
           name: string;
         }>;
       }
@@ -664,29 +664,29 @@ describe('@client testing', () => {
         ProductData,
         ProductVariables
       >(productQuery, {
-        options: props => ({
-          variables: props
-        })
+        options: (props) => ({
+          variables: props,
+        }),
       });
 
-      const productVariables = { name: 'ACME 1' };
+      const productVariables = { name: "ACME 1" };
       const productMocks: MockedResponse[] = [
         {
           request: {
             query: productQuery,
-            variables: productVariables
+            variables: productVariables,
           },
           result: {
             data: {
               product: [
                 {
-                  __typename: 'Product',
-                  name: 'ACME 1'
-                }
-              ]
-            }
-          }
-        }
+                  __typename: "Product",
+                  name: "ACME 1",
+                },
+              ],
+            },
+          },
+        },
       ];
 
       class Container extends React.Component<
@@ -697,7 +697,7 @@ describe('@client testing', () => {
           try {
             expect(nextProps.data).toBeDefined();
             expect(nextProps.data!.product).toHaveLength(1);
-            expect(nextProps.data!.product![0].name).toEqual('ACME 1');
+            expect(nextProps.data!.product![0].name).toEqual("ACME 1");
             expect(nextProps.data!.variables).toEqual(productVariables);
             done();
           } catch (e) {
@@ -716,8 +716,8 @@ describe('@client testing', () => {
         Product: {
           isInCart() {
             return true;
-          }
-        }
+          },
+        },
       };
 
       render(

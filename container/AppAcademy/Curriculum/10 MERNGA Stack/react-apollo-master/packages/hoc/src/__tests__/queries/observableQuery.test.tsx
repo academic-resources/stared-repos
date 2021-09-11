@@ -1,18 +1,18 @@
-import React from 'react';
-import { render, cleanup, fireEvent } from '@testing-library/react';
-import gql from 'graphql-tag';
-import ApolloClient from 'apollo-client';
-import { InMemoryCache as Cache } from 'apollo-cache-inmemory';
-import { mockSingleLink, stripSymbols } from '@apollo/react-testing';
-import { ApolloProvider } from '@apollo/react-common';
-import { DocumentNode } from 'graphql';
-import { graphql, ChildProps } from '@apollo/react-hoc';
+import React from "react";
+import { render, cleanup, fireEvent } from "@testing-library/react";
+import gql from "graphql-tag";
+import ApolloClient from "apollo-client";
+import { InMemoryCache as Cache } from "apollo-cache-inmemory";
+import { mockSingleLink, stripSymbols } from "@apollo/react-testing";
+import { ApolloProvider } from "@apollo/react-common";
+import { DocumentNode } from "graphql";
+import { graphql, ChildProps } from "@apollo/react-hoc";
 
-describe('[queries] observableQuery', () => {
+describe("[queries] observableQuery", () => {
   afterEach(cleanup);
 
   // observableQuery
-  it('will recycle `ObservableQuery`s when re-rendering the entire tree', done => {
+  it("will recycle `ObservableQuery`s when re-rendering the entire tree", (done) => {
     const query: DocumentNode = gql`
       query people {
         allPeople(first: 1) {
@@ -22,7 +22,7 @@ describe('[queries] observableQuery', () => {
         }
       }
     `;
-    const data = { allPeople: { people: [{ name: 'Luke Skywalker' }] } };
+    const data = { allPeople: { people: [{ name: "Luke Skywalker" }] } };
     type Data = typeof data;
 
     const link = mockSingleLink(
@@ -31,7 +31,7 @@ describe('[queries] observableQuery', () => {
     );
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
 
     let unmount: any;
@@ -40,16 +40,16 @@ describe('[queries] observableQuery', () => {
 
     const assert1 = () => {
       const keys = Array.from((client.queryManager as any).queries.keys());
-      expect(keys).toEqual(['1']);
+      expect(keys).toEqual(["1"]);
     };
 
     const assert2 = () => {
       const keys = Array.from((client.queryManager as any).queries.keys());
-      expect(keys).toEqual(['1']);
+      expect(keys).toEqual(["1"]);
     };
 
     const Container = graphql<{}, Data>(query, {
-      options: { fetchPolicy: 'cache-and-network' }
+      options: { fetchPolicy: "cache-and-network" },
     })(
       class extends React.Component<ChildProps<{}, Data>> {
         componentDidMount() {
@@ -68,7 +68,7 @@ describe('[queries] observableQuery', () => {
 
             // ensure first assertion and umount tree
             assert1();
-            fireEvent.click(queryByText('Break things'));
+            fireEvent.click(queryByText("Break things"));
 
             // ensure cleanup
             assert2();
@@ -108,7 +108,7 @@ describe('[queries] observableQuery', () => {
 
     class AppWrapper extends React.Component<{}, { renderRedirect: boolean }> {
       state = {
-        renderRedirect: false
+        renderRedirect: false,
       };
 
       goToRedirect = () => {
@@ -144,7 +144,7 @@ describe('[queries] observableQuery', () => {
     queryByText = result.queryByText;
   });
 
-  it("will recycle `ObservableQuery`s when re-rendering a portion of the tree but not return stale data if variables don't match", done => {
+  it("will recycle `ObservableQuery`s when re-rendering a portion of the tree but not return stale data if variables don't match", (done) => {
     const query: DocumentNode = gql`
       query people($first: Int!) {
         allPeople(first: $first) {
@@ -161,13 +161,13 @@ describe('[queries] observableQuery', () => {
     const variables2 = { first: 2 };
     const data = {
       allPeople: {
-        people: [{ name: 'Luke Skywalker', friends: [{ name: 'r2d2' }] }]
-      }
+        people: [{ name: "Luke Skywalker", friends: [{ name: "r2d2" }] }],
+      },
     };
     const data2 = {
       allPeople: {
-        people: [{ name: 'Leia Skywalker', friends: [{ name: 'luke' }] }]
-      }
+        people: [{ name: "Leia Skywalker", friends: [{ name: "luke" }] }],
+      },
     };
 
     type Data = typeof data;
@@ -179,7 +179,7 @@ describe('[queries] observableQuery', () => {
     );
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
     let remount: any;
 
@@ -217,7 +217,7 @@ describe('[queries] observableQuery', () => {
     > {
       state = {
         showChildren: true,
-        variables: variables1
+        variables: variables1,
       };
 
       componentDidMount() {
@@ -226,7 +226,7 @@ describe('[queries] observableQuery', () => {
             setTimeout(() => {
               this.setState({
                 showChildren: true,
-                variables: variables2
+                variables: variables2,
               });
             }, 10);
           });
@@ -263,7 +263,7 @@ describe('[queries] observableQuery', () => {
     }, 5);
   });
 
-  it('not overly rerender', done => {
+  it("not overly rerender", (done) => {
     const query: DocumentNode = gql`
       query people($first: Int!) {
         allPeople(first: $first) {
@@ -280,20 +280,20 @@ describe('[queries] observableQuery', () => {
     const variables = { first: 1 };
     const data = {
       allPeople: {
-        people: [{ name: 'Luke Skywalker', friends: [{ name: 'r2d2' }] }]
-      }
+        people: [{ name: "Luke Skywalker", friends: [{ name: "r2d2" }] }],
+      },
     };
     type Data = typeof data;
     type Vars = typeof variables;
 
     const link = mockSingleLink({
       request: { query, variables },
-      result: { data }
+      result: { data },
     });
 
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
     let remount: any;
 
@@ -314,7 +314,7 @@ describe('[queries] observableQuery', () => {
             }
 
             if (count > 3) {
-              throw new Error('too many renders');
+              throw new Error("too many renders");
             }
           } catch (e) {
             done.fail(e);
@@ -331,7 +331,7 @@ describe('[queries] observableQuery', () => {
     > {
       state = {
         showChildren: true,
-        variables
+        variables,
       };
 
       componentDidMount() {
@@ -373,7 +373,7 @@ describe('[queries] observableQuery', () => {
     }, 5);
   });
 
-  it('does rerender if query returns differnt result', done => {
+  it("does rerender if query returns differnt result", (done) => {
     const query: DocumentNode = gql`
       query people($first: Int!) {
         allPeople(first: $first) {
@@ -390,15 +390,15 @@ describe('[queries] observableQuery', () => {
     const variables = { first: 1 };
     const dataOne = {
       allPeople: {
-        people: [{ name: 'Luke Skywalker', friends: [{ name: 'r2d2' }] }]
-      }
+        people: [{ name: "Luke Skywalker", friends: [{ name: "r2d2" }] }],
+      },
     };
     const dataTwo = {
       allPeople: {
         people: [
-          { name: 'Luke Skywalker', friends: [{ name: 'Leia Skywalker' }] }
-        ]
-      }
+          { name: "Luke Skywalker", friends: [{ name: "Leia Skywalker" }] },
+        ],
+      },
     };
 
     type Data = typeof dataOne;
@@ -407,17 +407,17 @@ describe('[queries] observableQuery', () => {
     const link = mockSingleLink(
       {
         request: { query, variables },
-        result: { data: dataOne }
+        result: { data: dataOne },
       },
       {
         request: { query, variables },
-        result: { data: dataTwo }
+        result: { data: dataTwo },
       }
     );
 
     const client = new ApolloClient({
       link,
-      cache: new Cache({ addTypename: false })
+      cache: new Cache({ addTypename: false }),
     });
     let remount: any;
 
@@ -443,7 +443,7 @@ describe('[queries] observableQuery', () => {
               done();
             }
             if (count > 3) {
-              throw new Error('too many renders');
+              throw new Error("too many renders");
             }
           } catch (e) {
             done.fail(e);

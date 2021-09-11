@@ -15,7 +15,7 @@ class Store {
   }
 
   dispatch(action) {
-    this.appliedMiddleware(this, action => {
+    this.appliedMiddleware(this, (action) => {
       this.state = this.rootReducer(this.state, action, this.subscriptions);
       return this.state;
     })(action);
@@ -28,11 +28,11 @@ class Store {
 
 const createStore = (...args) => new Store(...args);
 
-const combineReducers = config => {
+const combineReducers = (config) => {
   return (prevState, action, subscriptions) => {
     const nextState = {};
     let stateChanged = false;
-    Object.keys(config).forEach(k => {
+    Object.keys(config).forEach((k) => {
       if (!action) {
         const args = [, { type: "__initialize" }];
         nextState[k] = config[k](...args);
@@ -45,9 +45,9 @@ const combineReducers = config => {
     });
 
     if (stateChanged) {
-      if (subscriptions) subscriptions.forEach(cb => cb(nextState));
+      if (subscriptions) subscriptions.forEach((cb) => cb(nextState));
       return nextState;
     }
     return prevState;
-  }
-}
+  };
+};

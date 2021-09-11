@@ -164,8 +164,9 @@ class DraftEditorLeaf extends React.Component<Props> {
     return (
       <span
         data-offset-key={offsetKey}
-        ref={ref => (this.leaf = ref)}
-        style={styleObj}>
+        ref={(ref) => (this.leaf = ref)}
+        style={styleObj}
+      >
         <DraftEditorTextNode>{text}</DraftEditorTextNode>
       </span>
     );

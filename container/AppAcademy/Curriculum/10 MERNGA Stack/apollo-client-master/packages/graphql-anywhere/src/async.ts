@@ -4,7 +4,7 @@ import {
   FieldNode,
   FragmentDefinitionNode,
   InlineFragmentNode,
-} from 'graphql';
+} from "graphql";
 
 import {
   getMainDefinition,
@@ -16,7 +16,7 @@ import {
   isInlineFragment,
   resultKeyNameFromField,
   argumentsObjectFromField,
-} from 'apollo-utilities';
+} from "apollo-utilities";
 
 import {
   merge,
@@ -25,7 +25,7 @@ import {
   ExecContext,
   ExecInfo,
   ExecOptions,
-} from './graphql';
+} from "./graphql";
 
 /* Based on graphql function from graphql-js:
  *
@@ -49,7 +49,7 @@ export function graphql(
   rootValue?: any,
   contextValue?: any,
   variableValues?: VariableMap,
-  execOptions: ExecOptions = {},
+  execOptions: ExecOptions = {}
 ): Promise<null | Object> {
   const mainDefinition = getMainDefinition(document);
 
@@ -73,20 +73,20 @@ export function graphql(
   return executeSelectionSet(
     mainDefinition.selectionSet,
     rootValue,
-    execContext,
+    execContext
   );
 }
 
 async function executeSelectionSet(
   selectionSet: SelectionSetNode,
   rootValue: any,
-  execContext: ExecContext,
+  execContext: ExecContext
 ) {
   const { fragmentMap, contextValue, variableValues: variables } = execContext;
 
   const result = {};
 
-  const execute = async selection => {
+  const execute = async (selection) => {
     if (!shouldInclude(selection, variables)) {
       // Skip this entirely
       return;
@@ -127,7 +127,7 @@ async function executeSelectionSet(
       const fragmentResult = await executeSelectionSet(
         fragment.selectionSet,
         rootValue,
-        execContext,
+        execContext
       );
 
       merge(result, fragmentResult);
@@ -146,7 +146,7 @@ async function executeSelectionSet(
 async function executeField(
   field: FieldNode,
   rootValue: any,
-  execContext: ExecContext,
+  execContext: ExecContext
 ): Promise<null | Object> {
   const { variableValues: variables, contextValue, resolver } = execContext;
 
@@ -184,7 +184,7 @@ async function executeField(
 
 function executeSubSelectedArray(field, result, execContext) {
   return Promise.all(
-    result.map(item => {
+    result.map((item) => {
       // null value in array
       if (item === null) {
         return null;
@@ -197,6 +197,6 @@ function executeSubSelectedArray(field, result, execContext) {
 
       // This is an object, run the selection set on it
       return executeSelectionSet(field.selectionSet, item, execContext);
-    }),
+    })
   );
 }

@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #FEFFF1;
+  background-color: #fefff1;
   margin: 0 auto;
   width: 60%;
 }
@@ -14,7 +14,8 @@ h2 {
   font-size: 32px;
 }
 
-ul li a, figcaption a {
+ul li a,
+figcaption a {
   text-decoration: none;
   color: inherit;
 }
@@ -92,7 +93,8 @@ aside {
   margin: 15px 0px;
 }
 
-input[type="text"], select {
+input[type="text"],
+select {
   display: block;
   width: 175px;
 }
@@ -151,4 +153,4 @@ label {
   .hamburger-dropdown ul li:hover a {
     text-decoration: underline;
   }
-};
+} ;

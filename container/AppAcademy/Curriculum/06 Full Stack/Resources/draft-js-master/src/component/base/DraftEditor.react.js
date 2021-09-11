@@ -236,7 +236,7 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
         'onRightArrow',
         'onTab',
         'onUpArrow',
-      ].forEach(propName => {
+      ].forEach((propName) => {
         if (props.hasOwnProperty(propName)) {
           // eslint-disable-next-line no-console
           console.warn(
@@ -267,7 +267,7 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
     // Wrap event handlers in `flushControlled`. In sync mode, this is
     // effectively a no-op. In async mode, this ensures all updates scheduled
     // inside the handler are flushed before React yields to the browser.
-    return e => {
+    return (e) => {
       if (!this.props.readOnly) {
         const method = this._handler && this._handler[eventName];
         if (method) {
@@ -361,7 +361,8 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
         {this._renderPlaceholder()}
         <div
           className={cx('DraftEditor/editorContainer')}
-          ref={ref => (this.editorContainer = ref)}>
+          ref={(ref) => (this.editorContainer = ref)}
+        >
           <div
             aria-activedescendant={
               readOnly ? null : this.props.ariaActiveDescendantID
@@ -409,12 +410,13 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
             onMouseUp={this._onMouseUp}
             onPaste={this._onPaste}
             onSelect={this._onSelect}
-            ref={ref => (this.editor = ref)}
+            ref={(ref) => (this.editor = ref)}
             role={readOnly ? null : ariaRole}
             spellCheck={allowSpellCheck && this.props.spellCheck}
             style={contentStyle}
             suppressContentEditableWarning
-            tabIndex={this.props.tabIndex}>
+            tabIndex={this.props.tabIndex}
+          >
             {/*
               Needs to come earlier in the tree as a sibling (not ancestor) of
               all DraftEditorLeaf nodes so it's first in postorder traversal.
@@ -519,7 +521,7 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
    * handler module to ensure that DOM events are managed appropriately for
    * the active mode.
    */
-  setMode: DraftEditorModes => void = (mode: DraftEditorModes): void => {
+  setMode: (DraftEditorModes) => void = (mode: DraftEditorModes): void => {
     const {onPaste, onCut, onCopy} = this.props;
     const editHandler = {...handlerMap.edit};
 
@@ -590,7 +592,7 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
    * an `onChange` prop to receive state updates passed along from this
    * function.
    */
-  update: EditorState => void = (editorState: EditorState): void => {
+  update: (EditorState) => void = (editorState: EditorState): void => {
     this._latestEditorState = editorState;
     this.props.onChange(editorState);
   };

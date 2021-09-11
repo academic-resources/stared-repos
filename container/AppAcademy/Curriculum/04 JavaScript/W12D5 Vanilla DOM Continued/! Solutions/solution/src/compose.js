@@ -1,4 +1,4 @@
-const MessageStore = require('./message_store');
+const MessageStore = require("./message_store");
 
 module.exports = {
   renderForm() {
@@ -31,17 +31,17 @@ module.exports = {
     let container = document.createElement("div");
     container.className = "new-message";
     container.innerHTML = this.renderForm();
-    container.addEventListener('change', e => {
+    container.addEventListener("change", (e) => {
       let target = e.target;
       MessageStore.updateDraftField(target.name, target.value);
     });
 
-    container.addEventListener('submit', e => {
+    container.addEventListener("submit", (e) => {
       e.preventDefault();
       MessageStore.sendDraft();
       location.hash = "inbox";
     });
 
     return container;
-  }
+  },
 };

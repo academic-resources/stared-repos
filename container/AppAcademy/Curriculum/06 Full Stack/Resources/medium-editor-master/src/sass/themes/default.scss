@@ -16,7 +16,11 @@ $medium-editor-border-radius: 5px;
 
 .medium-editor-toolbar {
     background-color: $medium-editor-bgcolor;
-    background: linear-gradient(to bottom, $medium-editor-bgcolor, rgba($medium-editor-bgcolor, 0.75));
+    background: linear-gradient(
+        to bottom,
+        $medium-editor-bgcolor,
+        rgba($medium-editor-bgcolor, 0.75)
+    );
     border: 1px solid #000;
     border-radius: $medium-editor-border-radius;
     box-shadow: 0 0 3px #000;
@@ -24,16 +28,20 @@ $medium-editor-border-radius: 5px;
     li {
         button {
             background-color: $medium-editor-bgcolor;
-            background: linear-gradient(to bottom, $medium-editor-bgcolor, rgba($medium-editor-bgcolor, 0.89));
+            background: linear-gradient(
+                to bottom,
+                $medium-editor-bgcolor,
+                rgba($medium-editor-bgcolor, 0.89)
+            );
             border: 0;
             border-right: 1px solid #000;
             border-left: 1px solid #333;
-            border-left: 1px solid rgba(#fff, .1);
-            box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+            border-left: 1px solid rgba(#fff, 0.1);
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
             color: #fff;
             height: $medium-editor-button-size;
             min-width: $medium-editor-button-size;
-            transition: background-color .2s ease-in;
+            transition: background-color 0.2s ease-in;
 
             &:hover {
                 background-color: #000;
@@ -53,7 +61,11 @@ $medium-editor-border-radius: 5px;
 
         .medium-editor-button-active {
             background-color: #000;
-            background: linear-gradient(to bottom, $medium-editor-bgcolor, rgba(#000, 0.89));
+            background: linear-gradient(
+                to bottom,
+                $medium-editor-bgcolor,
+                rgba(#000, 0.89)
+            );
             color: #fff;
         }
     }

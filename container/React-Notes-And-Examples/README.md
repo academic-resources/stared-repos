@@ -4,10 +4,6 @@ description: English to Target Language Translator.
 
 # Notes
 
-
-
-
-
 ## React
 
 > React uses a syntax extension of JavaScript called JSX that allows you to write HTML directly within JavaScript
@@ -64,14 +60,14 @@ const JSX = (
 
 `ReactDOM.render(componentToRender, targetNode)`
 
-* the first argument is the React element or component that you want to render,
-* and the second argument is the DOM node that you want to render the component to.
+- the first argument is the React element or component that you want to render,
+- and the second argument is the DOM node that you want to render the component to.
 
 > ReactDOM.render\(\) must be called after the JSX element declarations, just like how you must declare variables before using them.
 
 > key difference in JSX is that you can no longer use the word class to define HTML classes.
 
-* ---&gt; This is because class is a reserved word in JavaScript. Instead, JSX uses className
+- ---&gt; This is because class is a reserved word in JavaScript. Instead, JSX uses className
 
 > the naming convention for all HTML attributes and event references in JSX become camelCase
 
@@ -79,8 +75,8 @@ const JSX = (
 
 ### Apply a class of myDiv to the div provided in the JSX code.
 
-* The constant JSX should return a div element.
-* The div should have a class of myDiv.
+- The constant JSX should return a div element.
+- The div should have a class of myDiv.
 
 ```text
 const JSX = (
@@ -146,7 +142,7 @@ const JSX = (
 
 **To create a component with a function, you simply write a JavaScript function that returns either JSX or null**
 
-* React requires your function name to begin with a capital letter.
+- React requires your function name to begin with a capital letter.
 
 > Here's an example of a stateless functional component that assigns an HTML class in JSX:
 
@@ -263,7 +259,7 @@ class MyComponent extends React.Component {
 
 > To compose these components together, you could create an App parent component which renders each of these three components as children. To render a component as a child in a React component, you include the component name written as a custom HTML tag in the JSX.
 
-* For example, in the render method you could write:
+- For example, in the render method you could write:
 
 ```text
 return (
@@ -281,8 +277,8 @@ return (
 
 > In the code editor, there is a simple functional component called ChildComponent and a class component called ParentComponent. Compose the two together by rendering the ChildComponent within the ParentComponent. Make sure to close the ChildComponent tag with a forward slash.
 
-* Note:**ChildComponent is defined with an ES6 arrow function because this is a very common practice when using React**.
-* However, know that this is just a function.
+- Note:**ChildComponent is defined with an ES6 arrow function because this is a very common practice when using React**.
+- However, know that this is just a function.
 
 ```text
 const ChildComponent = () => {
@@ -342,19 +338,9 @@ class ParentComponent extends React.Component {
 };
 ```
 
-
-
-
-
 Working in code sandbox
 
-
-
 {% embed url="https://codesandbox.io/s/twilight-snow-9c4uk?file=/src/App.js:0-569" %}
-
-
-
-
 
 ## Install create-react-app <a id="React-ModernReactwithReduxUdemyCourse-Installcreate-react-app"></a>
 
@@ -424,10 +410,6 @@ Note that the \#root element is defined in index.html
 </body>
 ```
 
-
-
-
-
 ## Create React Application <a id="React-TheCompleteGuideuDemyCourse-CreateReactApplication"></a>
 
 One time execution, command:
@@ -448,31 +430,17 @@ Change to the project directory and execute command to start Browser which will 
 npm start
 ```
 
-
-
 In code sandbox if you get an error you can always hit the refresh button to make it go away.
 
-
-
 ![](.gitbook/assets/image.png)
-
-
 
 ![](.gitbook/assets/image%20%282%29.png)
 
 ![](.gitbook/assets/image%20%283%29.png)
 
-
-
 App function is react component which is a js function that produces jsx and handels user events..
 
 All components are functions that return jsx
-
-
-
-
-
-
 
 ![](.gitbook/assets/image%20%281%29.png)
 
@@ -481,8 +449,6 @@ All components are functions that return jsx
 ![](.gitbook/assets/image%20%285%29.png)
 
 ![](.gitbook/assets/image%20%286%29.png)
-
-
 
 Field Component
 
@@ -513,84 +479,3 @@ This is what happens every time your browser loads the page:
 window makes http request to code sandbox
 
 from this request we get an index.html file to load and parse in the browser...
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

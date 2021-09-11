@@ -1,7 +1,7 @@
-const express = require('express');
-const { createServer } = require('http');
-const { PubSub } = require('apollo-server');
-const { ApolloServer, gql } = require('apollo-server-express');
+const express = require("express");
+const { createServer } = require("http");
+const { PubSub } = require("apollo-server");
+const { ApolloServer, gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type RocketInventory {
@@ -36,10 +36,10 @@ const typeDefs = gql`
 `;
 
 const rocketInventoryData = [
-  { id: 1, model: 'Titan I', year: 1965, stock: 3 },
-  { id: 2, model: 'Saturn I', year: 1962, stock: 6 },
-  { id: 3, model: 'Pegasus', year: 1990, stock: 2 },
-  { id: 4, model: 'Falcon I', year: 2006, stock: 12 }
+  { id: 1, model: "Titan I", year: 1965, stock: 3 },
+  { id: 2, model: "Saturn I", year: 1962, stock: 6 },
+  { id: 3, model: "Pegasus", year: 1990, stock: 2 },
+  { id: 4, model: "Falcon I", year: 2006, stock: 12 },
 ];
 let counter = rocketInventoryData.length;
 
@@ -49,28 +49,28 @@ const messages = [
   {
     id: 2,
     content:
-      'If anyone can find a 1965 "Thor-Burner", let John in Department 51 know!'
+      'If anyone can find a 1965 "Thor-Burner", let John in Department 51 know!',
   },
   {
     id: 3,
     content:
-      'Demand for "Juno II"\'s might spike after an upcoming Netflix documentary launches. Stock up!'
+      'Demand for "Juno II"\'s might spike after an upcoming Netflix documentary launches. Stock up!',
   },
   {
     id: 4,
     content:
-      'Hold all sales of "Minotaur I"\'s - NASA might be trying to undercut us.'
-  }
+      'Hold all sales of "Minotaur I"\'s - NASA might be trying to undercut us.',
+  },
 ];
 
 const pubsub = new PubSub();
-const LATEST_NEWS = 'LATEST_NEWS';
+const LATEST_NEWS = "LATEST_NEWS";
 
 const resolvers = {
   Query: {
     rocketInventory() {
       return rocketInventoryData;
-    }
+    },
   },
 
   Mutation: {
@@ -79,28 +79,28 @@ const resolvers = {
         counter += 1;
         const data = {
           ...{ id: counter },
-          ...rocket
+          ...rocket,
         };
         rocketInventoryData.push(data);
         return data;
       } else {
         throw new Error(`Couldn't save rocket - variables: ${rocket})}`);
       }
-    }
+    },
   },
 
   Subscription: {
     latestNews: {
       subscribe() {
         return pubsub.asyncIterator(LATEST_NEWS);
-      }
-    }
-  }
+      },
+    },
+  },
 };
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
 });
 
 const app = express();
@@ -109,16 +109,16 @@ const httpServer = createServer(app);
 server.installSubscriptionHandlers(httpServer);
 
 httpServer.listen(4000, () => {
-  console.log('Server ready');
+  console.log("Server ready");
 
   let messageId = 0;
   pubsub.publish(LATEST_NEWS, {
-    latestNews: messages[messageId]
+    latestNews: messages[messageId],
   });
   setInterval(() => {
     messageId = messageId === 4 ? 0 : messageId + 1;
     pubsub.publish(LATEST_NEWS, {
-      latestNews: messages[messageId]
+      latestNews: messages[messageId],
     });
   }, 5000);
 });

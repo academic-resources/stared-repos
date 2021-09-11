@@ -1,6 +1,6 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import NavBar from './nav_bar';
+import React from "react";
+import { connect } from "react-redux";
+import NavBar from "./nav_bar";
 
 // Comment this back in after you have built the login functionality
 
@@ -13,7 +13,6 @@ import NavBar from './nav_bar';
 // const mapDispatchToProps = dispatch => ({
 //   logout: () => dispatch(logout()),
 // });
-
 
 // Comment this out when you have built the login functionality
 const mapStateToProps = null;

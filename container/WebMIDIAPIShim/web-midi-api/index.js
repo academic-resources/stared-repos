@@ -1,13 +1,17 @@
 // This script is for Node.js only. Don't use it in HTML!
 
-'use strict';
+"use strict";
 
-var jazzMidi = require('jazz-midi');
+var jazzMidi = require("jazz-midi");
 var performance = {
-  now: require('performance-now')
+    now: require("performance-now"),
 };
-var navigator = {nodejs: true};
+var navigator = { nodejs: true };
 
-eval(require('fs').readFileSync(require('path').join(__dirname, 'WebMIDIAPI.min.js')) + '');
+eval(
+    require("fs").readFileSync(
+        require("path").join(__dirname, "WebMIDIAPI.min.js")
+    ) + ""
+);
 
 module.exports = navigator;

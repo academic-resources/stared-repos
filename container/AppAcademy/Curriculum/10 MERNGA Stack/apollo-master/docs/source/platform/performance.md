@@ -57,8 +57,8 @@ For example:
 
 ```graphql
 query Foo {
-  user(id : "hello") {
-    ... Baz
+  user(id: "hello") {
+    ...Baz
     timezone
     aliased: name
   }
@@ -71,7 +71,16 @@ fragment Baz on User {
 becomes
 
 ```graphql
-query Foo{user(id:""){name timezone...Baz}}fragment Baz on User{dob}
+query Foo {
+  user(id: "") {
+    name
+    timezone
+    ...Baz
+  }
+}
+fragment Baz on User {
+  dob
+}
 ```
 
 See the reference implementation of [query signatures](https://github.com/apollographql/apollo-tooling/blob/7e1f62a8635466e653d52064745bf8c66bb7dd10/packages/apollo-graphql/src/operationId.ts#L60) for more information.

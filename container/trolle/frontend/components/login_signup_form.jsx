@@ -1,52 +1,52 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import ErrorBlock from './error_block'
+import React from "react";
+import { Link } from "react-router-dom";
+import ErrorBlock from "./error_block";
 
 class LoginSignupForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       submitOK: false,
-      name: '',
-      email: '',
-      password: ''
-    }
-    this.checkButtonState = this.checkButtonState.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+      name: "",
+      email: "",
+      password: "",
+    };
+    this.checkButtonState = this.checkButtonState.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   checkButtonState() {
-    const { formType } = this.props
-    const isLogin = formType === 'login'
+    const { formType } = this.props;
+    const isLogin = formType === "login";
     const submitOK =
       (isLogin ? true : this.state.name) &&
       this.state.email &&
-      this.state.password
-    this.setState({ submitOK })
+      this.state.password;
+    this.setState({ submitOK });
   }
 
   handleSubmit() {
     if (this.state.submitOK) {
-      const { name, email, password } = this.state
+      const { name, email, password } = this.state;
       const user = {
         name,
         email,
-        password
-      }
-      this.props.clearErrors()
-      this.props.action(user).then(u => this.props.history.push('/boards'))
+        password,
+      };
+      this.props.clearErrors();
+      this.props.action(user).then((u) => this.props.history.push("/boards"));
     }
   }
 
   handleUpdate(field) {
-    return e => {
+    return (e) => {
       this.setState(
         {
-          [field]: e.target.value
+          [field]: e.target.value,
         },
         this.checkButtonState
-      )
-    }
+      );
+    };
   }
 
   render() {
@@ -54,16 +54,18 @@ class LoginSignupForm extends React.Component {
       session_errors: errors,
       formType,
       loginAsHarry,
-      clearErrors
-    } = this.props
+      clearErrors,
+    } = this.props;
 
-    const isLogin = formType === 'login'
-    const headingText = isLogin ? 'Log in to Trolle' : 'Create a Trolle Account'
+    const isLogin = formType === "login";
+    const headingText = isLogin
+      ? "Log in to Trolle"
+      : "Create a Trolle Account";
     const altText = isLogin
-      ? 'or create an account'
-      : 'or sign in to your account'
-    const altURL = isLogin ? '/signup' : '/login'
-    const buttonText = isLogin ? 'Log In' : 'Create New Account'
+      ? "or create an account"
+      : "or sign in to your account";
+    const altURL = isLogin ? "/signup" : "/login";
+    const buttonText = isLogin ? "Log In" : "Create New Account";
 
     return (
       <div className="login-form">
@@ -82,7 +84,7 @@ class LoginSignupForm extends React.Component {
                 <input
                   type="text"
                   value={this.state.name}
-                  onChange={this.handleUpdate('name')}
+                  onChange={this.handleUpdate("name")}
                   placeholder="e.g., Harry Houdini"
                 />
               </fieldset>
@@ -92,7 +94,7 @@ class LoginSignupForm extends React.Component {
               <input
                 type="text"
                 value={this.state.email}
-                onChange={this.handleUpdate('email')}
+                onChange={this.handleUpdate("email")}
                 placeholder="e.g., harry@gcloud.ai"
               />
             </fieldset>
@@ -101,13 +103,13 @@ class LoginSignupForm extends React.Component {
               <input
                 type="password"
                 value={this.state.password}
-                onChange={this.handleUpdate('password')}
+                onChange={this.handleUpdate("password")}
               />
             </fieldset>
 
             <input
               className={
-                this.state.submitOK ? 'button submit-ok' : 'button disabled'
+                this.state.submitOK ? "button submit-ok" : "button disabled"
               }
               type="submit"
               value={buttonText}
@@ -118,8 +120,8 @@ class LoginSignupForm extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default LoginSignupForm
+export default LoginSignupForm;

@@ -6,16 +6,18 @@ const AbodeSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   coordinates: {
     type: String,
-    required: true
+    required: true,
   },
-  gods: [{
-    type: Schema.Types.ObjectId,
-    ref: "god"
-  }]
+  gods: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "god",
+    },
+  ],
 });
 
 module.exports = mongoose.model("abode", AbodeSchema);

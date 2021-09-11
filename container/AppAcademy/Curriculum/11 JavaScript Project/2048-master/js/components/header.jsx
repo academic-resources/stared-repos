@@ -1,6 +1,5 @@
-import React from 'react';
-import MovePoints from './move-points';
-;
+import React from "react";
+import MovePoints from "./move-points";
 const Header = ({ resetGame, game }) => {
   return (
     <header>
@@ -9,12 +8,12 @@ const Header = ({ resetGame, game }) => {
         <ul className="score-row group">
           <li className="score">
             <h3>Score</h3>
-            <h2 className="current-score">{ game.score }</h2>
-            <MovePoints game={ game }/>
+            <h2 className="current-score">{game.score}</h2>
+            <MovePoints game={game} />
           </li>
           <li className="best">
             <h3>Best</h3>
-            <h2 className="best-score">{ game.bestScore }</h2>
+            <h2 className="best-score">{game.bestScore}</h2>
           </li>
         </ul>
       </section>
@@ -22,10 +21,12 @@ const Header = ({ resetGame, game }) => {
         <p>
           Join the numbers and get to the <strong>2048 tile!</strong>
         </p>
-        <button type="button" onClick={ resetGame }>New Game</button>
+        <button type="button" onClick={resetGame}>
+          New Game
+        </button>
       </section>
     </header>
   );
-}
+};
 
 export default Header;

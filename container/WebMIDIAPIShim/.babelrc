@@ -5,9 +5,7 @@
             "env",
             {
                 "targets": {
-                    "browsers": [
-                        "> 2%"
-                    ]
+                    "browsers": ["> 2%"]
                 },
                 "useBuiltIns": true
             }
@@ -15,9 +13,7 @@
     ],
     "env": {
         "production": {
-            "presets": [
-                "minify"
-            ]
+            "presets": ["minify"]
         }
     }
 }

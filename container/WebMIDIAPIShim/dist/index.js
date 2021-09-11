@@ -1,28 +1,44 @@
-'use strict';
+"use strict";
 
-var _midi_access = require('./midi/midi_access');
+var _midi_access = require("./midi/midi_access");
 
-var _util = require('./util/util');
+var _util = require("./util/util");
 
-var _midi_input = require('./midi/midi_input');
+var _midi_input = require("./midi/midi_input");
 
 var Input = _interopRequireWildcard(_midi_input);
 
-var _midi_output = require('./midi/midi_output');
+var _midi_output = require("./midi/midi_output");
 
 var Output = _interopRequireWildcard(_midi_output);
 
-var _midimessage_event = require('./midi/midimessage_event');
+var _midimessage_event = require("./midi/midimessage_event");
 
 var _midimessage_event2 = _interopRequireDefault(_midimessage_event);
 
-var _midiconnection_event = require('./midi/midiconnection_event');
+var _midiconnection_event = require("./midi/midiconnection_event");
 
 var _midiconnection_event2 = _interopRequireDefault(_midiconnection_event);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+function _interopRequireWildcard(obj) {
+    if (obj && obj.__esModule) {
+        return obj;
+    } else {
+        var newObj = {};
+        if (obj != null) {
+            for (var key in obj) {
+                if (Object.prototype.hasOwnProperty.call(obj, key))
+                    newObj[key] = obj[key];
+            }
+        }
+        newObj.default = obj;
+        return newObj;
+    }
+}
 
 // import MIDIInput from './midi/midi_input';
 // import MIDIOutput from './midi/midi_output';

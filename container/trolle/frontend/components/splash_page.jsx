@@ -1,14 +1,14 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { loginAsHarry } from '../actions/session_actions'
-import SplashCarousel from './splash_carousel'
+import React from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { loginAsHarry } from "../actions/session_actions";
+import SplashCarousel from "./splash_carousel";
 
-const mstp = state => ({})
+const mstp = (state) => ({});
 
-const mdtp = dispatch => ({
-  loginAsHarry: () => dispatch(loginAsHarry())
-})
+const mdtp = (dispatch) => ({
+  loginAsHarry: () => dispatch(loginAsHarry()),
+});
 
 const splash = ({ loginAsHarry }) => (
   <div id="splash">
@@ -79,9 +79,6 @@ const splash = ({ loginAsHarry }) => (
       </div>
     </section>
   </div>
-)
+);
 
-export default connect(
-  mstp,
-  mdtp
-)(splash)
+export default connect(mstp, mdtp)(splash);

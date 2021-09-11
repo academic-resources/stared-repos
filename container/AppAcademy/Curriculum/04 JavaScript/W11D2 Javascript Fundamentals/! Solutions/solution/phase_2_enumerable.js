@@ -15,16 +15,15 @@ NUMS.myEach((num) => {
 Array.prototype.myMap = function (func) {
   const mappedArray = [];
 
-  this.myEach(element => mappedArray.push(func(element)) );
+  this.myEach((element) => mappedArray.push(func(element)));
 
   return mappedArray;
 };
 
-console.log(NUMS.myMap( num => num * num ));
+console.log(NUMS.myMap((num) => num * num));
 
 // Array#myInject
 Array.prototype.myReduce = function (func, initialValue) {
-
   let arr = this;
 
   if (initialValue === undefined) {
@@ -34,9 +33,9 @@ Array.prototype.myReduce = function (func, initialValue) {
 
   let result = initialValue;
 
-  arr.myEach(el => result = func(result, el));
+  arr.myEach((el) => (result = func(result, el)));
 
   return result;
 };
 
-console.log(NUMS.myReduce( (total, item) => total + item ));
+console.log(NUMS.myReduce((total, item) => total + item));

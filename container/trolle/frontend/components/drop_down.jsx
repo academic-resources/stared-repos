@@ -1,30 +1,30 @@
-import React from 'react'
+import React from "react";
 
 class Dropdown extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       selected: this.props.options[0],
-      open: false
-    }
-    this.toggleOptions = this.toggleOptions.bind(this)
-    this.handleSelect = this.handleSelect.bind(this)
+      open: false,
+    };
+    this.toggleOptions = this.toggleOptions.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   toggleOptions() {
     this.setState({
-      open: !this.state.open
-    })
+      open: !this.state.open,
+    });
   }
 
   handleSelect(option) {
     return () => {
       this.setState({
         selected: option,
-        open: false
-      })
-      this.props.setSelected(option)
-    }
+        open: false,
+      });
+      this.props.setSelected(option);
+    };
   }
 
   render() {
@@ -38,7 +38,7 @@ class Dropdown extends React.Component {
         </div>
         {this.state.open && (
           <div className="dropdown-options">
-            {this.props.options.map(o => (
+            {this.props.options.map((o) => (
               <div
                 key={o.id}
                 className="dropdown-option"
@@ -55,8 +55,8 @@ class Dropdown extends React.Component {
           </div>
         )}
       </div>
-    )
+    );
   }
 }
 
-export default Dropdown
+export default Dropdown;

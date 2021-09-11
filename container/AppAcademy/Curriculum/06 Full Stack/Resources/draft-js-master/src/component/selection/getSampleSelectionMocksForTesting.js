@@ -86,11 +86,11 @@ const getSampleSelectionMocksForTesting = (): Object => {
   const contentState = ContentState.createFromBlockArray(contentBlocks);
   const editorState = EditorState.createWithContent(contentState);
 
-  const textNodes = text.map(text => {
+  const textNodes = text.map((text) => {
     return document.createTextNode(text);
   });
 
-  const leafChildren = textNodes.map(textNode => {
+  const leafChildren = textNodes.map((textNode) => {
     const span = document.createElement('span');
     span.appendChild(textNode);
     return span;
@@ -127,7 +127,7 @@ const getSampleSelectionMocksForTesting = (): Object => {
     return outerBlockElement;
   });
 
-  blocks.forEach(blockElem => {
+  blocks.forEach((blockElem) => {
     contents.appendChild(blockElem);
   });
 

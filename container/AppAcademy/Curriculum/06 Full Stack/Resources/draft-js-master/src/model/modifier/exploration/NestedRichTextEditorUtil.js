@@ -122,8 +122,8 @@ const NestedRichTextEditorUtil: RichTextUtils = {
       selection.getAnchorOffset() ||
       selection.getFocusOffset() ||
       (currentBlock.getType() === 'unstyled' &&
-        (previousBlockKey &&
-          content.getBlockForKey(previousBlockKey).getType() !== 'atomic'))
+        previousBlockKey &&
+        content.getBlockForKey(previousBlockKey).getType() !== 'atomic')
     ) {
       return null;
     }
@@ -163,18 +163,15 @@ const NestedRichTextEditorUtil: RichTextUtils = {
     // }
 
     // If that doesn't succeed, try to remove the current block style.
-    const withoutBlockStyle = NestedRichTextEditorUtil.tryToRemoveBlockStyle(
-      editorState,
-    );
+    const withoutBlockStyle =
+      NestedRichTextEditorUtil.tryToRemoveBlockStyle(editorState);
 
     if (withoutBlockStyle) {
       return EditorState.push(
         editorState,
         withoutBlockStyle,
-        withoutBlockStyle
-          .getBlockMap()
-          .get(currentBlock.getKey())
-          .getType() === 'unstyled'
+        withoutBlockStyle.getBlockMap().get(currentBlock.getKey()).getType() ===
+          'unstyled'
           ? 'change-block-type'
           : 'adjust-depth',
       );
@@ -204,12 +201,10 @@ const NestedRichTextEditorUtil: RichTextUtils = {
     const isSelectionCollapsed = selection.isCollapsed();
     const isMultiBlockSelection =
       selection.getAnchorKey() !== selection.getFocusKey();
-    const isUnsupportedNestingBlockType = NESTING_DISABLED_TYPES.includes(
-      blockType,
-    );
-    const isCurrentBlockOfUnsupportedNestingBlockType = NESTING_DISABLED_TYPES.includes(
-      currentBlock.getType(),
-    );
+    const isUnsupportedNestingBlockType =
+      NESTING_DISABLED_TYPES.includes(blockType);
+    const isCurrentBlockOfUnsupportedNestingBlockType =
+      NESTING_DISABLED_TYPES.includes(currentBlock.getType());
 
     // we don't allow this operations to avoid corrupting the document data model
     // to make sure that non nested blockTypes wont inherit children
@@ -249,7 +244,7 @@ const NestedRichTextEditorUtil: RichTextUtils = {
       .getBlockForKey(selection.getAnchorKey())
       .getCharacterList()
       .slice(selection.getStartOffset(), selection.getEndOffset())
-      .some(v => {
+      .some((v) => {
         const entity = v.getEntity();
         return !!entity && entityMap.__get(entity).getType() === 'LINK';
       });
@@ -521,19 +516,18 @@ const onUntab = (blockMap: BlockMap, block: ContentBlockNode): BlockMap => {
     invariant(nextSiblingKey != null, 'block must have a next sibling here');
     const blocks = blockMap.toSeq();
     blockMap = blocks
-      .takeUntil(block => block.getKey() === nextSiblingKey)
+      .takeUntil((block) => block.getKey() === nextSiblingKey)
       .concat(
         [[newBlock.getKey(), newBlock]],
-        blocks.skipUntil(block => block.getKey() === nextSiblingKey),
+        blocks.skipUntil((block) => block.getKey() === nextSiblingKey),
       )
       .toOrderedMap();
 
     // set the nextChildren's parent to the new block
-    blockMap = blockMap.map(
-      block =>
-        nextChildren.includes(block.getKey())
-          ? block.merge({parent: newBlock.getKey()})
-          : block,
+    blockMap = blockMap.map((block) =>
+      nextChildren.includes(block.getKey())
+        ? block.merge({parent: newBlock.getKey()})
+        : block,
     );
     // update the next/previous pointers for the children at the split
     blockMap = blockMap

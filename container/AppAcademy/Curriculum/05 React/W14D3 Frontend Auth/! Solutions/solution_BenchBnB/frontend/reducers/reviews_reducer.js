@@ -1,9 +1,6 @@
-import merge from 'lodash/merge';
+import merge from "lodash/merge";
 
-import {
-  RECEIVE_BENCH,
-  RECEIVE_REVIEW,
-} from '../actions/bench_actions';
+import { RECEIVE_BENCH, RECEIVE_REVIEW } from "../actions/bench_actions";
 
 const reviewsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -16,6 +13,6 @@ const reviewsReducer = (state = {}, action) => {
     default:
       return state;
   }
-}
+};
 
 export default reviewsReducer;

@@ -14,12 +14,12 @@ class CreateProduct extends Component {
       message: "",
       name: "",
       weight: "",
-      description: ""
+      description: "",
     };
   }
 
   update(field) {
-    return e => this.setState({ [field]: e.target.value });
+    return (e) => this.setState({ [field]: e.target.value });
   }
 
   // we need to remember to update our cache directly with our new product
@@ -38,7 +38,7 @@ class CreateProduct extends Component {
       let newProduct = data.newProduct;
       cache.writeQuery({
         query: FETCH_PRODUCTS,
-        data: { products: productArray.concat(newProduct) }
+        data: { products: productArray.concat(newProduct) },
       });
     }
   }
@@ -49,37 +49,37 @@ class CreateProduct extends Component {
       variables: {
         name: this.state.name,
         description: this.state.description,
-        weight: parseFloat(this.state.weight)
-      }
+        weight: parseFloat(this.state.weight),
+      },
     });
   }
 
   render() {
     return (
       <Mutation
-        mutation={ CREATE_PRODUCT }
+        mutation={CREATE_PRODUCT}
         // if we error out we can set the message here
-        onError={err => this.setState({ message: err.message })}
+        onError={(err) => this.setState({ message: err.message })}
         // we need to make sure we update our cache once our new product is created
         update={(cache, data) => this.updateCache(cache, data)}
         // when our query is complete we'll display a success message
-        onCompleted={data => {
+        onCompleted={(data) => {
           const { name } = data.newProduct;
           this.setState({
-            message: `New product ${name} created successfully`
+            message: `New product ${name} created successfully`,
           });
         }}
       >
         {(newProduct, { data }) => (
           <div>
-            <form onSubmit={e => this.handleSubmit(e, newProduct)}>
+            <form onSubmit={(e) => this.handleSubmit(e, newProduct)}>
               <input
                 onChange={this.update("name")}
                 value={this.state.name}
                 placeholder="Name"
               />
               <textarea
-                onChange={this.update("description")} 
+                onChange={this.update("description")}
                 value={this.state.description}
                 placeholder="description"
               />

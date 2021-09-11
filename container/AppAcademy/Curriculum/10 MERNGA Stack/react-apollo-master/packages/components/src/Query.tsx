@@ -1,8 +1,8 @@
-import { OperationVariables } from '@apollo/react-common';
-import { useQuery } from '@apollo/react-hooks';
-import PropTypes from 'prop-types';
+import { OperationVariables } from "@apollo/react-common";
+import { useQuery } from "@apollo/react-hooks";
+import PropTypes from "prop-types";
 
-import { QueryComponentOptions } from './types';
+import { QueryComponentOptions } from "./types";
 
 export function Query<TData = any, TVariables = OperationVariables>(
   props: QueryComponentOptions<TData, TVariables>

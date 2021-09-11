@@ -1,5 +1,5 @@
-import React from 'react';
-import ChirpItem from './chirp_item';
+import React from "react";
+import ChirpItem from "./chirp_item";
 
 class ChirpIndex extends React.Component {
   constructor(props) {
@@ -15,19 +15,17 @@ class ChirpIndex extends React.Component {
     return (
       <div>
         <ul>
-          {
-            chirps.map(chirp => (
-              <ChirpItem
+          {chirps.map((chirp) => (
+            <ChirpItem
               key={`chirp${chirp.id}`}
               chirp={chirp}
               likeChirp={this.props.likeChirp}
-              unLikeChirp={this.props.unLikeChirp}/>
-              )
-            )
-          }
+              unLikeChirp={this.props.unLikeChirp}
+            />
+          ))}
         </ul>
       </div>
-    )
+    );
   }
 }
 

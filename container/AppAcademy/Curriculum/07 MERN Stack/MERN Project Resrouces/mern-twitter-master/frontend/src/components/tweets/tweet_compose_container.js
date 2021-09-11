@@ -1,17 +1,17 @@
-import { connect } from 'react-redux';
-import { composeTweet } from '../../actions/tweet_actions';
-import TweetCompose from './tweet_compose';
+import { connect } from "react-redux";
+import { composeTweet } from "../../actions/tweet_actions";
+import TweetCompose from "./tweet_compose";
 
 const mapStateToProps = (state) => {
   return {
     currentUser: state.session.user,
-    newTweet: state.tweets.new
+    newTweet: state.tweets.new,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    composeTweet: data => dispatch(composeTweet(data))
+    composeTweet: (data) => dispatch(composeTweet(data)),
   };
 };
 

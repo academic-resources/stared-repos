@@ -1,5 +1,5 @@
-import { rollup } from '../../config/rollup.config';
+import { rollup } from "../../config/rollup.config";
 
 export default rollup({
-  name: 'apollo-cache',
+  name: "apollo-cache",
 });

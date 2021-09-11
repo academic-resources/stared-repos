@@ -7,9 +7,9 @@ const AbodeSchema = new Schema({
   gods: [
     {
       type: Schema.Types.ObjectId,
-      ref: "god"
-    }
-  ]
+      ref: "god",
+    },
+  ],
 });
 
 module.exports = mongoose.model("abode", AbodeSchema);

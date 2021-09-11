@@ -23,8 +23,8 @@ It's important to note that the component after the `on` clause is designated fo
 
 There are two principal uses for fragments in Apollo:
 
-  - Sharing fields between multiple queries, mutations or subscriptions.
-  - Breaking your queries up to allow you to co-locate field access with the places they are used.
+- Sharing fields between multiple queries, mutations or subscriptions.
+- Breaking your queries up to allow you to co-locate field access with the places they are used.
 
 In this document we'll outline patterns to do both; we'll also make use of utilities in the [`graphql-anywhere`](https://github.com/apollographql/apollo-client/tree/master/packages/graphql-anywhere) and [`graphql-tag`](https://github.com/apollographql/graphql-tag) packages which aim to help us, especially with the second problem.
 
@@ -35,7 +35,7 @@ The most straightforward use of fragments is to reuse parts of queries (or mutat
 To do so, we can simply share a fragment describing the fields we need for a comment:
 
 ```js
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 CommentsPage.fragments = {
   comment: gql`
@@ -59,7 +59,10 @@ When it's time to embed the fragment in a query, we simply use the `...Name` syn
 ```js
 const SUBMIT_COMMENT_MUTATION = gql`
   mutation SubmitComment($repoFullName: String!, $commentContent: String!) {
-    submitComment(repoFullName: $repoFullName, commentContent: $commentContent) {
+    submitComment(
+      repoFullName: $repoFullName
+      commentContent: $commentContent
+    ) {
       ...CommentsPageComment
     }
   }
@@ -148,16 +151,18 @@ FeedEntry.fragments = {
 We can also use the `graphql-anywhere` package to filter the exact fields from the `entry` before passing them to the subcomponent. So when we render a `VoteButtons`, we can simply do:
 
 ```jsx
-import { filter } from 'graphql-anywhere';
+import { filter } from "graphql-anywhere";
 
 <VoteButtons
   entry={filter(VoteButtons.fragments.entry, entry)}
   canVote={loggedIn}
-  onVote={type => onVote({
-    repoFullName: full_name,
-    type,
-  })}
-/>
+  onVote={(type) =>
+    onVote({
+      repoFullName: full_name,
+      type,
+    })
+  }
+/>;
 ```
 
 The `filter()` function will grab exactly the fields from the `entry` that the fragment defines.
@@ -227,12 +232,12 @@ With all of that, you simply run:
 In order to introspect the server manually, set this as a script to run at build time.
 
 ```js
-const fetch = require('node-fetch');
-const fs = require('fs');
+const fetch = require("node-fetch");
+const fs = require("fs");
 
 fetch(`${YOUR_API_HOST}/graphql`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
     variables: {},
     query: `
@@ -250,18 +255,18 @@ fetch(`${YOUR_API_HOST}/graphql`, {
     `,
   }),
 })
-  .then(result => result.json())
-  .then(result => {
+  .then((result) => result.json())
+  .then((result) => {
     // here we're filtering out any type information unrelated to unions or interfaces
     const filteredData = result.data.__schema.types.filter(
-      type => type.possibleTypes !== null,
+      (type) => type.possibleTypes !== null
     );
     result.data.__schema.types = filteredData;
-    fs.writeFile('./fragmentTypes.json', JSON.stringify(result.data), err => {
+    fs.writeFile("./fragmentTypes.json", JSON.stringify(result.data), (err) => {
       if (err) {
-        console.error('Error writing fragmentTypes file', err);
+        console.error("Error writing fragmentTypes file", err);
       } else {
-        console.log('Fragment types successfully extracted!');
+        console.log("Fragment types successfully extracted!");
       }
     });
   });
@@ -270,20 +275,20 @@ fetch(`${YOUR_API_HOST}/graphql`, {
 2. Create a new IntrospectionFragment matcher by passing in the `fragmentTypes.json` file you just created. You'll want to do this in the same file where you initialize the cache for Apollo Client.
 
 ```js
-import { IntrospectionFragmentMatcher } from 'apollo-cache-inmemory';
-import introspectionQueryResultData from './fragmentTypes.json';
+import { IntrospectionFragmentMatcher } from "apollo-cache-inmemory";
+import introspectionQueryResultData from "./fragmentTypes.json";
 
 const fragmentMatcher = new IntrospectionFragmentMatcher({
-  introspectionQueryResultData
+  introspectionQueryResultData,
 });
 ```
 
 3. Pass in the newly created `IntrospectionFragmentMatcher` to configure your cache during construction. Then, you pass your newly configured cache to `ApolloClient` to complete the process.
 
 ```js
-import ApolloClient from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { HttpLink } from 'apollo-link-http';
+import ApolloClient from "apollo-client";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { HttpLink } from "apollo-link-http";
 
 // add fragmentMatcher code from step 2 here
 

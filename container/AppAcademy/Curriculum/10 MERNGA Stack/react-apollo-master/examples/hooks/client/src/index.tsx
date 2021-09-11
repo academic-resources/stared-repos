@@ -1,28 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { ApolloClient } from 'apollo-client';
-import { getMainDefinition } from 'apollo-utilities';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { ApolloLink, split } from 'apollo-link';
-import { HttpLink } from 'apollo-link-http';
-import { WebSocketLink } from 'apollo-link-ws';
-import { ApolloProvider } from '@apollo/react-hooks';
-import { Container, Row, Col } from 'reactstrap';
-import { OperationDefinitionNode } from 'graphql';
+import React from "react";
+import ReactDOM from "react-dom";
+import { ApolloClient } from "apollo-client";
+import { getMainDefinition } from "apollo-utilities";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { ApolloLink, split } from "apollo-link";
+import { HttpLink } from "apollo-link-http";
+import { WebSocketLink } from "apollo-link-ws";
+import { ApolloProvider } from "@apollo/react-hooks";
+import { Container, Row, Col } from "reactstrap";
+import { OperationDefinitionNode } from "graphql";
 
-import { LatestNews } from './LatestNews';
-import { RocketInventoryList } from './RocketInventoryList';
-import { NewRocketForm } from './NewRocketForm';
+import { LatestNews } from "./LatestNews";
+import { RocketInventoryList } from "./RocketInventoryList";
+import { NewRocketForm } from "./NewRocketForm";
 
 const httpLink = new HttpLink({
-  uri: 'http://localhost:4000/graphql'
+  uri: "http://localhost:4000/graphql",
 });
 
 const wsLink = new WebSocketLink({
-  uri: 'ws://localhost:4000/graphql',
+  uri: "ws://localhost:4000/graphql",
   options: {
-    reconnect: true
-  }
+    reconnect: true,
+  },
 });
 
 const terminatingLink = split(
@@ -30,7 +30,7 @@ const terminatingLink = split(
     const { kind, operation } = getMainDefinition(
       query
     ) as OperationDefinitionNode;
-    return kind === 'OperationDefinition' && operation === 'subscription';
+    return kind === "OperationDefinition" && operation === "subscription";
   },
   wsLink,
   httpLink
@@ -40,7 +40,7 @@ const link = ApolloLink.from([terminatingLink]);
 
 const client = new ApolloClient({
   link,
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 
 function App() {
@@ -49,7 +49,7 @@ function App() {
       <Row>
         <Col sm="12">
           <h1>
-            Apollo Dealer Network{' '}
+            Apollo Dealer Network{" "}
             <span role="img" aria-label="rocket">
               🚀
             </span>
@@ -69,5 +69,5 @@ ReactDOM.render(
   <ApolloProvider client={client}>
     <App />
   </ApolloProvider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

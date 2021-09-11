@@ -1,20 +1,20 @@
 /* necessary for backward compat */
-export * from 'apollo-client';
-export * from 'apollo-link';
-export * from 'apollo-cache-inmemory';
+export * from "apollo-client";
+export * from "apollo-link";
+export * from "apollo-cache-inmemory";
 
-import { Operation, ApolloLink, Observable } from 'apollo-link';
-import { HttpLink, UriFunction } from 'apollo-link-http';
-import { onError, ErrorLink } from 'apollo-link-error';
-import { ApolloCache } from 'apollo-cache';
-import { InMemoryCache, CacheResolverMap } from 'apollo-cache-inmemory';
-import gql from 'graphql-tag';
+import { Operation, ApolloLink, Observable } from "apollo-link";
+import { HttpLink, UriFunction } from "apollo-link-http";
+import { onError, ErrorLink } from "apollo-link-error";
+import { ApolloCache } from "apollo-cache";
+import { InMemoryCache, CacheResolverMap } from "apollo-cache-inmemory";
+import gql from "graphql-tag";
 import ApolloClient, {
   Resolvers,
   LocalStateFragmentMatcher,
-} from 'apollo-client';
-import { DocumentNode } from 'graphql';
-import { invariant } from 'ts-invariant';
+} from "apollo-client";
+import { DocumentNode } from "graphql";
+import { invariant } from "ts-invariant";
 
 export { gql, HttpLink };
 
@@ -31,7 +31,7 @@ export interface PresetConfig {
   uri?: string | UriFunction;
   credentials?: string;
   headers?: any;
-  fetch?: GlobalFetch['fetch'];
+  fetch?: GlobalFetch["fetch"];
   fetchOptions?: HttpLink.Options;
   clientState?: ClientStateConfig;
   onError?: ErrorLink.ErrorHandler;
@@ -55,34 +55,34 @@ export interface PresetConfig {
 // For now, when updating the properties of the `PresetConfig` interface,
 // please also update this constant.
 const PRESET_CONFIG_KEYS = [
-  'request',
-  'uri',
-  'credentials',
-  'headers',
-  'fetch',
-  'fetchOptions',
-  'clientState',
-  'onError',
-  'cacheRedirects',
-  'cache',
-  'name',
-  'version',
-  'resolvers',
-  'typeDefs',
-  'fragmentMatcher',
+  "request",
+  "uri",
+  "credentials",
+  "headers",
+  "fetch",
+  "fetchOptions",
+  "clientState",
+  "onError",
+  "cacheRedirects",
+  "cache",
+  "name",
+  "version",
+  "resolvers",
+  "typeDefs",
+  "fragmentMatcher",
 ];
 
 export default class DefaultClient<TCache> extends ApolloClient<TCache> {
   constructor(config: PresetConfig = {}) {
     if (config) {
       const diff = Object.keys(config).filter(
-        key => PRESET_CONFIG_KEYS.indexOf(key) === -1,
+        (key) => PRESET_CONFIG_KEYS.indexOf(key) === -1
       );
 
       if (diff.length > 0) {
         invariant.warn(
-          'ApolloBoost was initialized with unsupported options: ' +
-            `${diff.join(' ')}`,
+          "ApolloBoost was initialized with unsupported options: " +
+            `${diff.join(" ")}`
         );
       }
     }
@@ -108,8 +108,8 @@ export default class DefaultClient<TCache> extends ApolloClient<TCache> {
 
     invariant(
       !cache || !cacheRedirects,
-      'Incompatible cache configuration. When not providing `cache`, ' +
-        'configure the provided instance with `cacheRedirects` instead.',
+      "Incompatible cache configuration. When not providing `cache`, " +
+        "configure the provided instance with `cacheRedirects` instead."
     );
 
     if (!cache) {
@@ -126,8 +126,8 @@ export default class DefaultClient<TCache> extends ApolloClient<TCache> {
               // tslint:disable-next-line
               invariant.warn(
                 `[GraphQL error]: Message: ${message}, Location: ` +
-                  `${locations}, Path: ${path}`,
-              ),
+                  `${locations}, Path: ${path}`
+              )
             );
           }
           if (networkError) {
@@ -139,10 +139,10 @@ export default class DefaultClient<TCache> extends ApolloClient<TCache> {
     const requestHandler = request
       ? new ApolloLink(
           (operation, forward) =>
-            new Observable(observer => {
+            new Observable((observer) => {
               let handle: any;
               Promise.resolve(operation)
-                .then(oper => request(oper))
+                .then((oper) => request(oper))
                 .then(() => {
                   handle = forward(operation).subscribe({
                     next: observer.next.bind(observer),
@@ -157,21 +157,21 @@ export default class DefaultClient<TCache> extends ApolloClient<TCache> {
                   handle.unsubscribe();
                 }
               };
-            }),
+            })
         )
       : false;
 
     const httpLink = new HttpLink({
-      uri: uri || '/graphql',
+      uri: uri || "/graphql",
       fetch,
       fetchOptions: fetchOptions || {},
-      credentials: credentials || 'same-origin',
+      credentials: credentials || "same-origin",
       headers: headers || {},
     });
 
-    const link = ApolloLink.from([errorLink, requestHandler, httpLink].filter(
-      x => !!x,
-    ) as ApolloLink[]);
+    const link = ApolloLink.from(
+      [errorLink, requestHandler, httpLink].filter((x) => !!x) as ApolloLink[]
+    );
 
     let activeResolvers = resolvers;
     let activeTypeDefs = typeDefs;

@@ -33,8 +33,8 @@ const createLink = () => {
   return contentState.createEntity('LINK', 'MUTABLE', {uri: 'zombo.com'});
 };
 
-const getSample = textBlocks => {
-  const contentBlocks = textBlocks.map(block => new ContentBlock(block));
+const getSample = (textBlocks) => {
+  const contentBlocks = textBlocks.map((block) => new ContentBlock(block));
   const blockMap = BlockMapBuilder.createFromArray(contentBlocks);
   return new ContentState({
     blockMap,
