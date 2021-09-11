@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PubNub JavaScript SDK QuickStart</title>
+</head>
+
+<body>
+<div>
+  <strong>Earth:</strong> <input id="update-text" type="input" placeholder="enter update for Earth here"/>
+  <input id="publish-button" type="submit" value="Submit Update to The Guide"/>
+  <p><strong>Updates</strong></p>
+  <div id="messages-top"/>
+</div>
+</body>
+
+<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.27.4.min.js"></script>
+
+<script>
+  const messagesTop = document.getElementById('messages-top');
+  const updateText = document.getElementById('update-text');
+  const sendButton = document.getElementById('publish-button');
+  sendButton.addEventListener('click', () => {submitUpdate(theEntry, updateText.value)});
+
+  const clientUUID = "ReplaceWithYourClientIdentifier";
+  const theChannel = 'the_guide';
+  const theEntry = 'Earth';
+
+  const pubnub = new PubNub({
+    // replace the following with your own publish and subscribe keys
+    publishKey: 'myPublishKey',
+    subscribeKey: 'mySubscribeKey',
+    uuid: clientUUID
+  });
+
+  pubnub.addListener({
+    message: function(event) {
+      displayMessage('[MESSAGE: received]',
+        event.message.entry + ': ' + event.message.update);
+    },
+    presence: function(event) {
+      displayMessage('[PRESENCE: ' + event.action + ']',
+        'uuid: ' + event.uuid + ', channel: ' + event.channel);
+    },
+    status: function(event) {
+      displayMessage('[STATUS: ' + event.category + ']',
+        'connected to channels: ' + event.affectedChannels);
+
+      if (event.category == 'PNConnectedCategory') {
+        submitUpdate(theEntry, 'Harmless.');
+      }
+    }
+  });
+
+  pubnub.subscribe({
+    channels: ['the_guide'],
+    withPresence: true
+  });
+
+  submitUpdate = function(anEntry, anUpdate) {
+    pubnub.publish({
+      channel : theChannel,
+      message : {'entry' : anEntry, 'update' : anUpdate}
+    },
+    function(status, response) {
+      if (status.error) {
+        console.log(status)
+      }
+      else {
+        displayMessage('[PUBLISH: sent]',
+          'timetoken: ' + response.timetoken);
+
+        updateText.value="";
+      }
+    });
+  };
+
+  displayMessage = function(messageType, aMessage) {
+    let pmessage = document.createElement('p');
+    let br = document.createElement('br');
+
+    messagesTop.after(pmessage);
+    pmessage.appendChild(document.createTextNode(messageType));
+    pmessage.appendChild(br);
+    pmessage.appendChild(document.createTextNode(aMessage));
+  }
+
+</script>
+</html>
