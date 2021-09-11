@@ -1,0 +1,229 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>ACCEPT + DISPLAY Terminal Exercise</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+
+<CENTER>
+<H2>
+<IMG SRC="T-CobolExercise.gif" HEIGHT=56 WIDTH=183></H2></CENTER>
+
+<CENTER>
+<H2>
+The Calculator and Countdown exercises</H2></CENTER>
+
+<CENTER>
+<HR WIDTH="100%"><FONT SIZE=-1>ACCEPT</FONT>, <FONT SIZE=-1>DISPLAY</FONT>,
+<FONT SIZE=-1>PERFORM..TIMES</FONT>, <FONT SIZE=-1>COMPUTE</FONT>, <FONT SIZE=-1>IF</FONT></CENTER>
+
+<CENTER>
+<HR WIDTH="100%"></CENTER>
+&nbsp;
+<H2>
+Introduction</H2>
+In this exercise you will amend the IterCalc.Cbl program.&nbsp; This program
+is a version of the example iteration program shown in the <A HREF="/cobol/Lectures/CS4312Topics.htm#General">introductory
+COBOL lecture</A>.&nbsp;&nbsp; Note - use your browsers back button to
+get back to this page.
+
+<P>Download the <A HREF="ftp://www.csis.ul.ie/cobol/exercises/itercalc.cbl">IterCalc.Cbl</A> 
+  program and save it to the \WorkArea directory on drive D:. 
+<P>Load the program into the NetExpress environment. <BR>
+  &nbsp;
+<H2>
+Examining IterCalc</H2>
+Compile and run the program IterCalc.Cbl.&nbsp; Use the Animator to step
+through the program and examine the contents of the Variables/Identifiers.
+
+<P>Examine the program and attempt to answer the following questions:-
+<OL>
+<LI>
+What is the maximum number of digits that the variable Num1 will hold?</LI>
+
+<LI>
+What is the maximum number of digits that&nbsp; Num2 will hold?</LI>
+
+<LI>
+What is the maximum number of digits that Result will hold?</LI>
+
+<LI>
+If a user enters more digits than the receiving variable will hold what
+happens to the number entered?</LI>
+
+<LI>
+No validation is done on values entered by the user.&nbsp;&nbsp; Examine
+the program and predict what will happen if an operator other than + or
+* is entered.</LI>
+</OL>
+Test your answers by running the program and using the Animator to follow
+the flow of control through the program (Step) and to examine the contents
+of the variables.
+<BR>&nbsp;
+<H2>
+Amending IterCalc</H2>
+Amend the program so that instead of doing a fixed number of calculations
+(three in IterCalc.Cbl) it asks the user to enter the number of calculations
+required and then executes the loop that many times.
+
+<P>The version of the <FONT SIZE=-1>PERFORM</FONT> used in this program
+has the syntax <FONT SIZE=-1>PERFORM </FONT><I>Identifer/Literal</I><FONT SIZE=-1>
+TIMES</FONT>. That is, either an identifer or a literal can be used to
+indicate how many times the loop is to be executed. The current version
+of IterCalc.Cbl uses a literal. You must change it so that it uses an identifier.
+
+<P>When run with the same data your amended program should the produce
+the results shown below.&nbsp; For purposes of illustration, user input
+is shown enlarged and in bold.
+<UL>
+<UL>
+<UL><U><FONT SIZE=+2>Example run</FONT></U></UL>
+<TT>Enter the number of calcs required :-<FONT SIZE=+1> <B>2</B></FONT></TT>
+<BR><TT>Enter First Number : <B><FONT SIZE=+1>3</FONT></B></TT>
+<BR><TT>Enter Second Number : <B><FONT SIZE=+1>3</FONT></B></TT>
+<BR><TT>Enter operator (+ or *) : <B><FONT SIZE=+1>*</FONT></B></TT>
+<BR><TT>Result is = 9</TT>
+<BR><TT>Enter First Number : <B><FONT SIZE=+1>3</FONT></B></TT>
+<BR><TT>Enter Second Number :<FONT SIZE=+1> <B>3</B></FONT></TT>
+<BR><TT>Enter operator (+ or *) : <B><FONT SIZE=+1>+</FONT></B></TT>
+<BR><TT>Result is = 6</TT>
+<BR>&nbsp;</UL>
+</UL>
+
+<H2>
+Making a new program</H2>
+Amend the program again. This time create a new program called Countdown.Cbl (use 
+<B><I>Save As</I></B> from the NetExpress <B><I>File</I></B> menu). This program 
+should get the user's name from the keyboard and should then display a count-down 
+before displaying the name that was entered. <BR>
+&nbsp;
+<BR>The program should produce results similar to those shown in the example
+run below.&nbsp; For purposes of illustration, user input is shown enlarged
+and in bold.
+<UL>
+<UL>
+<UL><U><FONT SIZE=+2>Example run</FONT></U></UL>
+<TT>Enter your name :- <B><FONT SIZE=+1>Mike Ryan</FONT></B></TT>
+<BR><TT>Enter the count-down start value :- <B><FONT SIZE=+1>05</FONT></B></TT>
+<BR><TT>Getting ready to display your name.</TT>
+<BR><TT>05</TT>
+<BR><TT>04</TT>
+<BR><TT>03</TT>
+<BR><TT>02</TT>
+<BR><TT>01</TT>
+<BR><TT>Your name is Mike Ryan</TT></UL>
+</UL>
+&nbsp;
+<H2>
+Conclusion</H2>
+You may be wondering if COBOL provides some sort of counting loop, like the FOR 
+loop in other languages, which you could use in this exercise.&nbsp; COBOL does 
+provide such a looping structure in the form of the <FONT SIZE=-1>PERFORM..VARYING</FONT>.&nbsp;&nbsp;&nbsp;<BR>
+<BR>
+<BR>
+The format (simplified) for this version&nbsp; is <FONT SIZE=-1>PERFORM</FONT> 
+<FONT SIZE=-1>VARYING</FONT> <I>counter</I> <FONT SIZE=-1>FROM</FONT> <I>start</I> 
+<FONT SIZE=-1>BY</FONT> <I>step</I> <FONT SIZE=-1>UNTIL</FONT> <I>terminatingcondition</I>.&nbsp;&nbsp; 
+<BR>
+<HR>
+<TABLE CELLSPACING=0 CELLPADDING=0 COLS=3 WIDTH="200" ><TR ALIGN=CENTER VALIGN=TOP>
+<TD><A HREF="default.htm"><IMG SRC="/pics/B-BackArrow.gif" ALT="Back to COBOL Exercises page" BORDER=0 HEIGHT=52 WIDTH=52></A>
+<FONT SIZE=-2>To COBOL Exercises</FONT></TD>
+
+<TD><A HREF="/CSISFORM.HTM"><IMG SRC="/pics/b-evaluation.gif" ALT="Please fill out our evaluation form" BORDER=0 HEIGHT=52 WIDTH=52></A>
+<FONT SIZE=-2>Evaluation Form</FONT></TD>
+
+<TD><A HREF="/SEARCH/CSISQueryHit.HTM"><IMG SRC="/pics/b-WebSearch.gif" ALT="Search the CSIS Web Site" BORDER=0 HEIGHT=52 WIDTH=52></A>
+<FONT SIZE=-2>Search CSIS Web Site</FONT></TD>
+<TD>
+
+<CENTER>
+<FORM>
+          Selectable Site Contents
+          <select name="list">
+            <option value="http://www.ul.ie/">UL Home Page</option>
+            <option value="http://www.ul.ie/~informat/">College of I&amp;E Home 
+            Page</option>
+            <option value="http://www.csis.ul.ie/default.htm">CSIS Home Page</option>
+            <option value="http://www.csis.ul.ie/courses.HTM">Courses On Offer</option>
+            <option value="http://www.csis.ul.ie/CompSys.HTM">...Computer Systems 
+            Degree</option>
+            <option value="http://www.csis.ul.ie/GradDip.HTM">...Graduate Diploma 
+            in Computing</option>
+            <option value="http://www.csis.ul.ie/software_localisation/default.htm">...Graduate 
+            Diploma/MSc in Software Localisation</option>
+            <option value="http://www.csis.ul.ie/ccmcm/default.htm">...MSc in 
+            Music Technology</option>
+            <option value="http://www.csis.ul.ie/soft_re_eng.html/default.htm">...MSc 
+            in Software Reengineering</option>
+            <option value="http://www.csis.ul.ie/Directory/Staff.HTM">Department 
+            Personnel</option>
+            <option value="http://www.csis.ul.ie/Directory/phone.HTM">...CSIS 
+            Telephone Directory</option>
+            <option value="http://www.ul.ie/ITD/PhoneBook.html">...UL Internal 
+            Telephone Directory</option>
+            <option value="http://www.csis.ul.ie/Research.HTM">Research</option>
+            <option value="http://www.csis.ul.ie/Research/ResearchCntr.HTM">...Research 
+            Centres</option>
+            <option value="http://www.csis.ul.ie/Research/ResearchPrj.HTM">...Research 
+            Projects</option>
+            <option value="http://www.csis.ul.ie/Research/RsrchPubs.htm">...Research 
+            Publications</option>
+            <option value="http://www.csis.ul.ie/Research/techrpts.htm">...Technical 
+            Reports</option>
+            <option value="http://www.csis.ul.ie/Research/PhdTheses.htm">...Ph.D 
+            Theses</option>
+            <option value="http://www.csis.ul.ie/Research/masters.htm">...M.Sc. 
+            Theses</option>
+            <option value="http://www.csis.ul.ie/StudentResources.HTM">Student 
+            Resources</option>
+            <option value="http://www.csis.ul.ie/photoalbum/classes/namesonly.htm">...Computer 
+            Systems Graduated Classes </option>
+            <option value="http://www.csis.ul.ie/staff/norahpower/FYPSuggestions9798.htm">...Final 
+            Year Project suggestions</option>
+            <option value="http://www.csis.ul.ie/fyp97/index.html">...Final Year 
+            Projects web page</option>
+            <option value="http://www.csis.ul.ie/studentresources/schedules/csislabs.htm">...Lab 
+            Schedules</option>
+            <option value="http://www.csis.ul.ie/studentresources/ModuleMaterial.htm">...Module 
+            Materials</option>
+            <option value="http://www.csis.ul.ie/studentresources/links.htm">...Useful 
+            Links</option>
+            <option value="http://www.csis.ul.ie/StudentResources/fyproj.htm">...Completed 
+            Final Year Projects</option>
+            <option value="http://www.csis.ul.ie/meetings/Meetings.HTM">Meetings</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/Album.htm">Photo Album</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/classes/default.htm">...Computer 
+            Systems - Class Photos</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuin.htm">...Schuman 
+            Interior</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuout.htm">...Schuman 
+            Environs</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/ULgrounds/default.htm">...University 
+            Grounds</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM">General Information</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Department">...Department 
+            Information</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Getting">...Getting 
+            Around</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Contacting">...Contacting 
+            the department</option>
+            <option value="http://www.csis.ul.ie/TOYS/WHOSON.HTM">...Who's on 
+            the server</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#About">...About these 
+            pages</option>
+          </select>
+          <INPUT TYPE=BUTTON VALUE="Go!" 
+onClick="top.location.href=this.form.list.options[this.form.list.selectedIndex].value">
+</FORM><p></P>
+</CENTER>
+
+</TD>
+</TR>
+</TABLE>
+
+<HR><I><FONT SIZE=-1>Last updated : March 1998</FONT></I>
+<BR><FONT SIZE=-1><A HREF="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</A></FONT>
+</BODY>
+</HTML>

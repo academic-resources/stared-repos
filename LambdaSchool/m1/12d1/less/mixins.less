@@ -1,0 +1,28 @@
+// Mixins in here
+
+.btnMixin(@justify, @align, @radius) {
+	display: flex;
+	width: 85%;
+	background-color: @colorTeal;
+	justify-content: @justify;
+	align-items: @align;
+	border-radius: @radius;
+	color: @white;
+	padding: 4% 2% 4% 2%;
+	font-size: @fontSize;
+}
+
+.flex100() {
+	display: flex;
+	width: 100%;
+}
+
+.sharedAnimation(@opacity, @animation, @delay) {
+	transform: translateY(0);
+	opacity: @opacity;
+	animation-name: @animation;
+	animation-timing-function: ease;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-delay: @delay;
+}

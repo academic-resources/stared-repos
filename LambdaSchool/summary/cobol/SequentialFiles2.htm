@@ -1,0 +1,664 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Processing Sequential Files</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+  <TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <CENTER>
+              <H2><img src="/cobol/course/Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> <B>Processing Sequential Files</B></H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><BR>
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top"> 
+                  <p><B><A href="#part1" target="">Organization and Access</A><BR>
+                    </B><FONT size="-1">This section introduces the concepts of 
+                    file organization and access. It describes how Sequential 
+                    files are organized and introduces the idea of ordered and 
+                    unordered Sequential files.</FONT><br>
+                    <br>
+                  </p>
+                  </TD>
+              </TR>
+              <tr> 
+                <td width="3%" valign="TOP" height="48">&nbsp;</td>
+                <td width="4%" valign="TOP" height="48"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" valign="top" height="48"> 
+                  <div align="left"> 
+                    <p><b><a href="#part2" target="">Processing unordered Sequential 
+                      files </a><br>
+                      </b><font size="-1">This section explores the processing 
+                      restrictions of unordered Sequential files. It demonstrates 
+                      that, while records can be easily added to unordered files, 
+                      deleting and updating records is not really feasible.<br>
+                      </font><font size="-1"> 
+                      <br>
+                      </font> </p>
+                    </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%"> 
+                  <div align="left"><b><a href="#part3" target="">Processing ordered 
+                    Sequential files</a><br>
+                    </b><font size="-1">This section demonstrates how to use a 
+                    file of batched transactions to insert (add), delete and update 
+                    records in an ordered Sequential file..<br>
+                    </font> <br>
+                  </div>
+                </td>
+              </tr>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><FONT face="Arial, Helvetica, sans-serif">Introduction</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" bgcolor="#FFFFCC" height="172"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="540" valign="top" height="172"> 
+            <div align="center"> 
+              <p align="left">The records in a Sequential file are organized serially, 
+                one after another, but the records in the file may be ordered 
+                or unordered. The serial organization of the file and whether 
+                the file is ordered or unordered has a significant baring on how 
+                we process the records in the file and what kind of processing 
+                we can do.</p>
+              <p align="left">This tutorial examines the consequences of ordering 
+                and organization and reviews some techniques for processing Sequential 
+                files.</p>
+            </div>
+            <div align="center">
+<center>
+              </center>
+              <hr width="50%">
+            </div>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="135"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="540" valign="top" height="135"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Understand how Sequential files are organized.</LI>
+              <LI>Understand the processing limitations imposed by an unordered 
+                Sequential file</LI>
+              <LI>Be able to add, delete and update records in an ordered Sequential 
+                file.</LI>
+            </OL>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="77"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="77" valign="top"> 
+            <p>Introduction to COBOL </p>
+            <p>Declaring data in COBOL </p>
+            <p>Basic Procedure Division Commands</p>
+            <p>Selection Constructs</p>
+            <p>Iteration Constructs</p>
+            <p>Introduction to Sequential files</p>
+            <p>&nbsp;</p>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part1"></a><FONT face="Arial, Helvetica, sans-serif">Organization 
+              and Access</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">Two important characteristics of files are <i>Data 
+                Organization</i> and <i>Method of Access</i><b>.</b></P>
+              <P align="left"><i>Data organization</i>, refers to the way the 
+                records of the file are organized on the backing storage device.
+                COBOL recognizes three main file organizations; </P>
+            </DIV>
+            <DIV align="center"></DIV>
+            <ul>
+              <li> 
+                <div align="left">Sequential - Records organized serially. </div>
+              </li>
+              <li> 
+                <div align="left">Relative - Relative record number based organization. 
+                </div>
+              </li>
+              <li> 
+                <div align="left">Indexed - Index based organization.</div>
+              </li>
+            </ul>
+            <DIV align="center"> 
+              <P align="left"><i>Method of access</i>, refers to the way in which 
+                records are accessed. Some organizations are more versatile than 
+                others. A file with an organization of Indexed or Relative may 
+                still have its records accessed sequentially; but records in a 
+                file with an organization of Sequential, cannot be accessed directly.</P>
+            </DIV>
+            <DIV align="center"> 
+              <center>
+              </center>
+              <hr width="50%">
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Sequential 
+              Organization </FONT></H4>
+            <H4>&nbsp;</H4>
+            <h4 align="center"><font size="-1"> </font></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <p align="left">Sequential organization is simplest file organization 
+                in COBOL. </p>
+              <p align="left">In a Sequential file the records are arranged serially, 
+                one after another, like cards in a dealing shoe. The only way 
+                to access records in a Sequential file, is serially. A program 
+                must start at the first record and read all the succeeding records 
+                until the required record is found or until the end of the file 
+                is reached.</p>
+              <p align="left">Sequential files may be <i>Ordered</i> or <i>Unordered</i> 
+                (these should be called Serial files). The ordering of the records 
+                in a file has a significant impact on the way in which it is processed 
+                and the processing that can be done on it. </p>
+            </DIV>
+            <div align="left"> 
+              <hr width="50%">
+              <p>&nbsp;</p>
+            </div>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Ordered 
+              and Unordered files</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <div align="center"> 
+                <p align="left">In an ordered file, the records are sequenced 
+                  on some field in the record (like StudentId or StudentName etc). 
+                  In an unordered file, the records are not in any particular 
+                  order.</p>
+              </div>
+              <P align="left">&nbsp;</P>
+              <table width="53%" border="1" bgcolor="#E1FFE1">
+                <tr bgcolor="#FFFFCC"> 
+                  <td width="39%"> 
+                    <div align="center"><b>Ordered File</b></div>
+                  </td>
+                  <td width="40%"> 
+                    <div align="center"><b>Unordered File</b></div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="39%"> 
+                    <p align="center">RecordA<br>
+                      RecordB<br>
+                      RecordG<br>
+                      RecordH<br>
+                      RecordK<br>
+                      RecordM<br>
+                      RecordN</p>
+                  </td>
+                  <td width="40%"> 
+                    <p align="center">RecordM<br>
+                      RecordH<br>
+                      RecordB<br>
+                      RecordN<br>
+                      RecordA<br>
+                      RecordK<br>
+                      RecordG</p>
+                  </td>
+                </tr>
+              </table>
+              <P align="center">&nbsp;</P>
+            </DIV>
+            <blockquote> 
+              <div align="left"></div>
+            </blockquote>
+            <DIV align="center"> </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A><FONT face="Arial, Helvetica, sans-serif">Processing 
+              unordered Sequential Files</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="97"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="97"> 
+            <P>It is easy to add records to an unordered Sequential file because 
+              we can simply add them to the end of the file by opening the file 
+              for<font size="-1"> EXTEND</font> (e.g.<font size="-1"> OPEN EXTEND 
+              </font>UnorderedFile). But it is not really possible to delete records 
+              from an unordered Sequential file. And it is not feasible to update 
+              records in an unordered Sequential file.</P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="157"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Adding 
+              records to an unordered Sequential File</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top" height="157"> 
+            <P>To add records to an unordered Sequential File the file must be 
+              opened for <font size="-1">EXTEND. </font>Opening a file for <font size="-1">EXTEND,</font> 
+              positions the Next Record Pointer (NRP) at the end of the file, 
+              so that when records are written to the file, they are appended 
+              to the end.</P>
+            <P>The animation below demonstrates how records are added to an unordered 
+              file. As in all the examples in this tutorial, the records to be 
+              added are contained in a transaction file. The transaction file 
+              records are <i>applied</i> to the unordered file and the result 
+              is an unordered file that has all the transaction file records appended 
+              to the end of it.</P>
+            <P align="center"><a href="Resources/ppz/TC-SeqFile2a.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0"></a></P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="173"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Problems 
+              with unordered Sequential files</FONT></h4>
+            <h4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></h4>
+            <p><font size="-1">Although it is true that in standard COBOL, Sequential 
+              files cannot be deleted or updated &quot;in situ&quot;, many vendors, 
+              including Microfocus, allow this for disk based files.</font></p>
+            <h4 align="center">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top" height="173"> 
+            <P>While it is easy to add records to an unordered Sequential file 
+              it is not really feasible to delete or update records in an unordered 
+              Sequential file.</P>
+            <P>Records in a Sequential file can not be deleted or updated “in 
+              situ”. The only way to <b>delete</b> records from a Sequential file, 
+              is to create a new file which does not contain them; and the only 
+              way to <b>update</b> records in a Sequential file, is to create 
+              a new file which contains the updated records. Because both these 
+              operations rely on record matching, they do not work for unordered 
+              Sequential files. </P>
+            <P>&nbsp; </P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="433"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Record 
+              matching </font></h4>
+          </TD>
+          <TD width="525" valign="top" height="433"> 
+            <P>Updates to Sequential files are normally done in batch mode. That 
+              is, all the updates are gathered together into a transaction file, 
+              and then applied to the target file in one go. The target file is 
+              often called the <i>master file.</i></P>
+            <P>There are few problems if we are just adding records to the end 
+              of a file, but if we want to update or delete records, then there 
+              must be some way of identifying the record we want to update or 
+              delete. A &quot;key field&quot; is normally used to achieve this. 
+            </P>
+            <P>A key field, is a field in the record whose value is unique to 
+              that record. For instance, in a student record, the StudentId is 
+              normally used as the key field. Without a key field to identify 
+              the record we require, we cannot delete or update records.</P>
+            <P>When we apply delete or update transaction records to a master 
+              file, we compare the key field in the transaction record with that 
+              in the master file record. If there is a <i>match, </i> we know 
+              we have to update or delete the master file record.</P>
+            <P>If both files are ordered on the key field, then this <i>record 
+              matching</i> operation functions correctly, but if either the transaction 
+              or the master file is unordered, record matching cannot work.</P>
+            <hr width="50%">
+            <P>&nbsp;</P>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="177"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Attempting 
+              to batch delete records in an unordered file.</FONT></H4>
+            <p>&nbsp;</p>
+          </TD>
+          <td width="525" valign="top" height="177"> 
+            <div align="center"> 
+              <p align="left">Suppose we have an unordered transaction file and 
+                an unordered master file. The transaction file contains records 
+                which indicate which records in the master file we want to delete. 
+                To delete the records we need to create a new master file which 
+                does not contain the deleted records.</p>
+              <p align="left">The animation below demonstrates what happens when 
+                we attempt to batch-delete records from an unordered Sequential 
+                file.</p>
+              <p align="center"><a href="Resources/ppz/TC-SeqFile2b.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0"></a></p>
+            </div>
+            <blockquote>&nbsp;</blockquote>
+            <div align="center"> 
+              <div align="left"></div>
+            </div>
+            <div align="center"> 
+              <center>
+              </center>
+              <hr width="50%">
+              <p>&nbsp;</p>
+            </div>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part3"></A><FONT face="Arial, Helvetica, sans-serif">Processing 
+              Ordered Sequential Files</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>An ordered Sequential file, is a file ordered upon some key field. 
+              The ordering of the records in the file makes it possible to process 
+              an ordered file in ways that are not available to us with unordered 
+              files. While it is not really possible to apply batch updates or 
+              deletes to an unordered file these are possible with ordered files.</P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="389"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Inserting 
+              records into an ordered Sequential file.</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="389"> 
+            <P align="left">To add records to an ordered file a major consideration 
+              is to preserve the ordering. This means that the record must be 
+              inserted into the file in the correct position. It can't just be 
+              added to the end of the file as it can with unordered files.</P>
+            <P align="left">As with all changes to ordered Sequential files we 
+              can't just insert the records into the existing file. To insert 
+              records into the file we have to create a new file that contains 
+              the inserted records.</P>
+            <P align="left">The animation below demonstrates how records are inserted 
+              into an ordered Sequential file.</P>
+            <P align="center"><a href="Resources/ppz/TC-SeqFile2c.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0"></a></P>
+            <P align="left">&nbsp;</P>
+            <blockquote> 
+              <div align="left"></div>
+            </blockquote>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="536"> 
+            <H4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Self 
+              Assessment questions</font></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/ProgFrag.gif" width="48" height="44"></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/i-SAQ2.gif" width="32" height="46"></H4>
+          </TD>
+          <TD width="525" valign="top" height="536"> 
+            <p>The main processing loop from the animation is shown below. Examine 
+              the code in this program fragment and then attempt to answer the 
+              questions below.</p>
+            <table width="392" border="1" align="center" cellpadding="5" background="Resources%5Cpics%5Ccode.gif">
+              <tr valign="top"> 
+                <td height="188"> 
+                  <pre>PERFORM UNTIL EndTF AND EndMF  
+  IF TFKey < MFKey
+     MOVE TFRec TO NFRec
+     WRITE NFRec
+     READ TF etc.
+   ELSE
+     IF TFKey > MFKey
+       MOVE MFRec TO NFRec
+       WRITE NFRec
+       READ MF etc.
+     END-IF
+  END-IF
+END-PERFORM
+</pre>
+                </td>
+              </tr>
+            </table>
+            <P>&nbsp;</P>
+            <form method="post" action="SequentialFiles2.htm">
+              <table width="96%" border="1" bgcolor="#FFFFCC" align="center">
+                <tr> 
+                  <td width="8%" bgcolor="#FFFFCC">Q1</td>
+                  <td width="62%" valign="top" bgcolor="#E1FFE1">In the program, 
+                    no allowance has been made for when the key fields are equal. 
+                    What would it mean if the keys were equal?</td>
+                  <td width="30%" valign="top" bgcolor="#E1FFE1"> 
+                    <select name="select" size="1">
+                      <option selected>Click the arrow for the answer</option>
+                      <option>---------------------------------------------------------------</option>
+                      <option>Since the key field is supposed to </option>
+                      <option>be unique this would be a transaction</option>
+                      <option>error. It would mean that we were trying </option>
+                      <option>to insert a record when a record with</option>
+                      <option>that key already exists.</option>
+                      <option>Of course, transaction errors do occur</option>
+                      <option>so you might want to include code</option>
+                      <option>to handle these errors.</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" bgcolor="#FFFFCC">Q2</td>
+                  <td width="62%" valign="top" bgcolor="#E1FFE1">Why do you think 
+                    the complex condition <i>EndTF <b>AND</b> EndMF</i> has been 
+                    used to terminate the loop?</td>
+                  <td width="30%" valign="top" bgcolor="#E1FFE1"> 
+                    <select name="select" size="1">
+                      <option selected>Click the arrow for the answer</option>
+                      <option>---------------------------------------------------------------</option>
+                      <option>Since we don't know which file is going</option>
+                      <option>to be exhausted first we have to use</option>
+                      <option>a condition which says - keep going</option>
+                      <option>until the end of both files is reached.</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" bgcolor="#FFFFCC">Q3</td>
+                  <td width="62%" valign="top" bgcolor="#E1FFE1">There does not 
+                    seem to be any special code to write out the remaining records 
+                    when one file ends before the other. Can the code above be 
+                    correct?</td>
+                  <td width="30%" valign="top" bgcolor="#E1FFE1"> 
+                    <select name="select" size="1">
+                      <option selected>Click the arrow for the answer</option>
+                      <option>---------------------------------------------------------------</option>
+                      <option>Yes the code is correct!!!</option>
+                      <option>It takes advantage of the fact that </option>
+                      <option>when either condition name is set to </option>
+                      <option>true, the corresponding record</option>
+                      <option>(including its key field) is filled with </option>
+                      <option>HIGH-VALUES. Since the key field of</option>
+                      <option>the ended file contains the highest </option>
+                      <option>possible value, all the keys in the </option>
+                      <option>other file will be less than it and so</option>
+                      <option>all the remaining records in that file will</option>
+                      <option>automatically be written to the new file.</option>
+                      <option>I told you using HIGH-VALUES would </option>
+                      <option>come in handy.</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <P>&nbsp;</P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="147"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Deleting 
+              records from an ordered Sequential file.</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="147"> 
+            <p>The animation below demonstrates how to delete records from an 
+              ordered Sequential file.</p>
+            <p align="center"><a href="Resources/ppz/TC-SeqFile2d.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0"></a></p>
+            <p>&nbsp; </p>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="210"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Updating 
+              records in an ordered Sequential file.</font></h4>
+            <h4 align="center">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top" height="210"> 
+            <P>Updating a record requires a change to one or more of the fields 
+              in the record. Updates to Sequential files are usually collected 
+              together and applied to the file in one go - a batch. To update 
+              the records in an ordered Sequential file from an ordered batch 
+              of transaction records we have to create a new file that contains 
+              the updated records. </P>
+            <P>The animation below demonstrates how to batch-update records in 
+              an ordered Sequential files.</P>
+            <P align="center"><a href="Resources/ppz/TC-SeqFile2e.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0"></a></P>
+            <p align="center">&nbsp;</p>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Multiple 
+              record type transaction files</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>In all the examples in this tutorial the transaction file has contained 
+              only records of one type or another. For instance, the transaction 
+              file contained either a batch of deletions, or a batch of insertions 
+              or a batch of updates. In real life though all these different kinds 
+              of transaction record would be gather together into one transaction 
+              file.</P>
+            <P>This raises some interesting problems. For one thing - the record 
+              sizes will be different. A deletion record only needs the key field, 
+              while an insertion requires the whole record, and an update may 
+              be somewhere between these two depending on how many fields we are 
+              updating in one go. There may even be different kinds of update 
+              record.</P>
+            <P>In future tutorials we will see how we can define and process files 
+              that contain multiple record types. </P>
+            <P>&nbsp;</P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+   
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : March 1999</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

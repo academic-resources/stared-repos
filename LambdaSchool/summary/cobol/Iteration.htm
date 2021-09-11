@@ -1,0 +1,1375 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>COBOL Interation Constructs</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+  <TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <CENTER>
+              <H2><img src="/cobol/course/Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> <B>COBOL Iteration Constructs</B></H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><BR>
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top"> 
+                  <p><B><A href="#part1" target="">PERFORM..Proc</A><BR>
+                    </B><FONT size="-1">This section introduces the format of 
+                    the PERFORM that is used to transfer control to a paragraph 
+                    or section.<br>
+                    <br>
+                    </FONT></p>
+                </TD>
+              </TR>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" valign="top"> 
+                  <div align="left"><b><a href="#part2" target="">Using the PERFORM..THRU</a><br>
+                    </b><font size="-1">This section demonstrates how the PERFORM..THRU 
+                    can be used to implement an emergency exit from a paragraph. 
+                    <br>
+                    <br>
+                    </font> </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%"> 
+                  <div align="left"><b><a href="#part3" target="">PERFORM..TIMES</a><br>
+                    </b><font size="-1">This section introduces the PERFORM..TIMES 
+                    which allow us to create an iteration that executes x number 
+                    of times. Also discusses the use of in-line versus out-of-line 
+                    PERFORMs <br>
+                    </font> <br>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%"><b><a href="#part4" target="">PERFORM..UNTIL </a><br>
+                  </b><font size="-1">In this section COBOL's version of of the 
+                  while and do/repeat loops is introduced.<br>
+                  </font> <br>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%"> 
+                  <div align="left"><b><a href="#part5" target="">PERFORM..VARYING</a><br>
+                    </b><font size="-1">This section demonstrates COBOL's version 
+                    of the for loop.<br>
+                    </font> <br>
+                  </div>
+                </td>
+              </tr>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><FONT face="Arial, Helvetica, sans-serif">Introduction</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="540"> 
+            <div align="center"> 
+              <p align="left">In almost every programming job, there is some task 
+                that needs to be done over and over again. For example: The job 
+                of processing a file of records is an iteration of the task - 
+                get and process record. The job of getting the sum of a stream 
+                of numbers is an iteration of the task - get and add number. These 
+                jobs are accomplished using iteration constructs. </p>
+              <p align="left">Other computer languages support a variety of looping 
+                constructs, including Repeat, While, and For loops. Although COBOL 
+                has a set of looping constructs that is just as rich as other 
+                languages - richer in some cases - it only has one iteration verb. 
+                In COBOL, all iteration is handled by the PERFORM verb. </p>
+            </div>
+            <div align="center"> 
+              <p align="left">&nbsp;</p>
+              <p align="CENTER"><b><font face="TIMES">Iteration constructs and 
+                their COBOL equivalents</font></b></p>
+              <p align="CENTER"> 
+              <center>
+                <table border cellspacing=1 cellpadding=7 width=411 bgcolor="#E1FFE1">
+                  <tr bgcolor="#FFFFCC"> 
+                    <td width="18%" valign="TOP"> 
+                      <div align="center"><b>C</b></div>
+                    </td>
+                    <td width="23%" valign="TOP"> 
+                      <div align="center"><b>Modula-2</b></div>
+                    </td>
+                    <td width="59%" valign="TOP"> 
+                      <div align="center"><b>COBOL</b></div>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td width="18%" valign="TOP"> 
+                      <div align="center">do{}while</div>
+                    </td>
+                    <td width="23%" valign="TOP"> 
+                      <p align="center">Repeat 
+                    </td>
+                    <td width="59%" valign="TOP"> 
+                      <p align="center">Perform Until ..With Test After </td>
+                  </tr>
+                  <tr> 
+                    <td width="18%" valign="TOP"> 
+                      <div align="center">while</div>
+                    </td>
+                    <td width="23%" valign="TOP"> 
+                      <p align="center">While 
+                    </td>
+                    <td width="59%" valign="TOP"> 
+                    <p align="center">Perform Until ..With Test Before </td>
+                  </tr>
+                  <tr> 
+                    <td width="18%" valign="TOP"> 
+                      <div align="center">for</div>
+                    </td>
+                    <td width="23%" valign="TOP"> 
+                      <p align="center">For 
+                    </td>
+                    <td width="59%" valign="TOP"> 
+                      <p align="center">Perform ..Varying 
+                    </td>
+                  </tr>
+                </table>
+                <p align="left">This tutorial demonstrates how the <font size="-1">PERFORM</font> 
+                  verb is used to create Repeat loops, While loops and For loops. 
+                  It will also demonstrate how the<font size="-1"> PERFORM</font> 
+                  is used to transfer control to an open subroutine.</p>
+              </center>
+              <hr width="50%">
+            </div>
+            <P>&nbsp; </P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="540" valign="top"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Understand how the PERFORM can be used to transfer control to 
+                block of code contained in a paragraph or section..</LI>
+              <LI>Know how to use the PERFORM..THRU and the GO TO and understand 
+                the restrictions placed on using them.</LI>
+              <LI>Understand the difference between in-line and out-of-line Performs</LI>
+              <LI>Be able to use the PERFORM..TIMES.</LI>
+              <LI>Understand how the PERFORM..UNTIL works and be able to use it 
+                to implement <i>while</i> or <i>do/repeat </i>loops. </LI>
+              <LI>Be able to use PERFORM..VARYING to implement counting iteration 
+                such as that implemented in other languages by the<i> for</i> 
+                construct.</LI>
+              <LI>Understand the significance of the order of execution in the 
+                PERFORM..VARYING flowchart </LI>
+            </OL>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="77"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="77" valign="top"> 
+            <p>Introduction to COBOL </p>
+            <p>Declaring data in COBOL </p>
+            <p>Basic Procedure Division Commands</p>
+            <p>Selection Constructs</p>
+            <p>&nbsp;</p>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part1"></a><FONT face="Arial, Helvetica, sans-serif">PERFORM..Proc</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">If you have written programs in another language, 
+                you will probably have come across the idea of a subroutine; a 
+                block of code that is executed, when invoked by name. What you 
+                may not have realized is that there are essentially two types 
+                of subroutine.: </P>
+              <P align="center">Open Subroutines<br>
+                and<br>
+                Closed Subroutines</P>
+              <P align="left">If the language you learned was C or Modula-2, you 
+                are probably familiar with closed subroutines. If you learned 
+                BASIC, you may be familiar with open subroutines.</P>
+              <P align="left"><b>Open subroutines.</b><br>
+                An open subroutine., is a named block of code that control can 
+                fall into, or through. An open subroutine., usually has access 
+                to all the data-items declared in the main program and it can't 
+                declare any data-items of its own. </P>
+              <P align="left">Although an open subroutine. is normally executed 
+                by invoking it by name, it is also possible, unless the programmer 
+                is careful, to fall into it from the main program. In BASIC, the 
+                GOSUB command allows programmers to implement open subroutines.</P>
+              <P align="left"><b>Closed subroutines.</b><br>
+                A closed subroutine., is a named block of code that can only be 
+                executed by invoking it by name. Usually a closed subroutine. 
+                can declare its own local data which cannot be accessed outside 
+                the subroutine. In a closed subroutine., data is usually passed 
+                between the main program and the subroutine. by means of parameters 
+                passed to the subroutine. when it is invoked.</P>
+              <P align="left">In C and Modula-2, Procedures and Functions implement 
+                closed subroutines.</P>
+              <P align="left"><b>COBOL subroutines.</b><br>
+                COBOL supports both open and closed subroutines. Open subroutines, 
+                are implemented using the first format of the <font size="-1">PERFORM</font> 
+                verb. Closed subroutines., are implemented using the <font size="-1">CALL</font> 
+                verb and contained or external subprograms.</P>
+              <P align="left">&nbsp;</P>
+            </DIV>
+            <DIV align="center"> 
+              <center>
+              </center>
+              <hr width="50%">
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">PERFORM 
+              format 1 syntax</FONT></H4>
+            <H4>&nbsp;</H4>
+            <h4 align="center"><img src="Resources/pics/i-LightBulbTip.gif" width="42" height="44"></h4>
+            <p align="left"><font size="-1">A paragraph is a block of code that 
+              starts at the paragraph name and extends to the next paragraph name, 
+              the next section name or the end of the program text.</font></p>
+            <p align="left"><font size="-1">A section is a block of code that 
+              starts at the section name and extends to the next section name 
+              or the end of the program text. A section must contain at least 
+              one paragraph. </font></p>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left"><img src="Resources/pics/Perform1.gif" width="317" height="74"> 
+              </P>
+              <P align="left">Unless it is otherwise instructed, a computer running 
+                a COBOL program processes the statements of the program in sequence, 
+                starting at the top of the program and working its way down until 
+                the <font size="-1">STOP RUN</font> is reached. The <font size="-1">PERFORM</font> 
+                verb is is one way of altering the sequential flow of control 
+                in a COBOL program. The <font size="-1">PERFORM</font> verb can 
+                be used for two major purposes;</P>
+            </DIV>
+            <blockquote> 
+              <div align="left">1. To transfer control to a designated block of 
+                code.<br>
+                2. To execute a block of code iteratively. </div>
+            </blockquote>
+            <DIV align="center"> 
+              <P align="left">While the other formats of the <font size="-1">PERFORM</font> 
+                verb implement various types of iteration, the format shown here 
+                is used to transfer control to an out-of-line block of code.</P>
+              <P align="left">The block of code may be one or more paragraphs, 
+                or one or more sections.</P>
+              <P align="left">&nbsp; </P>
+              <hr width="50%">
+              <P align="left">&nbsp;</P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">How 
+              this format works</FONT></H4>
+            <H4 align="center"><img src="Resources/pics/i-BugAlert.gif" width="56" height="62"></H4>
+            <p align="left"><font size="-1">The <font size="-2">PERFORM..THRU<font size="-1"> 
+              should be used sparingly and then only to<font size="-2"> PERFORM</font> 
+              a paragraph and its immediately succeeding paragraph.</font></font></font></p>
+            <p align="left"><font size="-1"><font size="-2"><font size="-1">The 
+              problem with using the <font size="-2">PERFORM..THRU<font size="-1"></font></font> 
+              to execute an number of paragraphs as one unit is that, in the maintenance 
+              phase of your program's life, another programmer may insert a paragraph 
+              in the middle of your <font size="-2"><font size="-1"><font size="-2">PERFORM..THRU</font></font></font> 
+              block. Suddenly your block won't work correctly because now its 
+              executing an additional, unintentional paragraph.</font></font></font></p>
+            <p align="left">&nbsp;</p>
+            <p align="left">&nbsp;</p>
+            <p align="left">&nbsp;</p>
+            <p align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></p>
+            <p align="left"><font size="-1"><font size="-2"><font size="-1">Although 
+              Netexpress does allow recursive Performs, this is a nonstandard 
+              extension. Please do not take advantage of it..</font></font></font></p>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">This format of the <font size="-1">PERFORM</font> 
+                verb, transfers control an out-of-line block of code. When the 
+                end of the block is reached, control reverts to the statement 
+                (not the sentence) immediately following the <font size="-1">PERFORM</font>. 
+              </P>
+              <P align="left">1stProc and EndProc are the names of paragraphs 
+                or sections. </P>
+              <P align="left">When the <font size="-1">PERFORM..THRU</font> is 
+                used, the paragraphs or sections from 1stProc to EndProc are treated 
+                a single block of code. COBOL programmers typically use this format 
+                of the <font size="-1">PERFORM</font> to divide a program into 
+                open subroutines. </P>
+              <P align="left">These subroutines are not as robust as the user-defined 
+                Procedures or Functions found in other languages, but when COBOL 
+                programmers require that kind of partitioning, they use contained 
+                or external subprograms. </P>
+              <P align="left">Open subroutines. are useful because they allow 
+                a programmer to code a subroutine. without the formality or overhead 
+                involved in coding a Procedure or Function.</P>
+            </DIV>
+            <div align="left"> 
+              <p><b><font size="-1">PERFORM</font> general notes.</b></p>
+            </div>
+            <blockquote> 
+              <div align="left"> 
+                <p><b><font size="-1">PERFORMs </font>may be nested.</b><br>
+                  That is, a PERFORM may execute a paragraph that contains a <font size="-1">PERFORM</font> 
+                  which in turn may execute a paragraph that contains another 
+                  <font size="-1">PERFORM</font>. As control reaches the end of 
+                  each paragraph it returns to the statement following the perform 
+                  which cause the paragraph to be executed.</p>
+                <p><b>Order of execution independent of physical placement</b><br>
+                  The order of execution of the paragraphs is independent of their 
+                  physical placement. So it doesn't matter where in the Procedure 
+                  Division we put our paragraphs the <font size="-1">PERFORM</font> 
+                  will find and execute them </p>
+                <p><b>Recursion not allowed.</b><br>
+                  Although <font size="-1">Performs</font> can be nested, neither 
+                  direct nor indirect recursion is allowed. This means that a 
+                  paragraph must not contain a <font size="-1">PERFORM</font> 
+                  that invokes itself or any ancestor paragraph (parent, grandparent 
+                  etc). Unfortunately this restriction is not enforced by the 
+                  compiler but your program will not work correctly if you use 
+                  recursive <font size="-1">Performs</font> </p>
+                <p>&nbsp;</p>
+              </div>
+            </blockquote>
+            <DIV align="center"> 
+              <hr width="50%">
+            </DIV>
+          </TD>
+        </TR>
+       <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Why 
+              use this format?</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>This format of the <font size="-1">PERFORM</font> verb is used 
+              to make programs more readable and maintainable. </P>
+            <P>When we can identify a block of code in the program that performs 
+              some specific task (e.g. Prints the report headings) this format 
+              allows us to replace the details of <i>how</i> the task is being 
+              accomplished with a name that indicates <i>what</i> is being done 
+              (e.g. <font size="-1">PERFORM </font>PrintReportHeadings). </P>
+            <P>We should use this format of the <font size="-1">PERFORM</font> 
+              to divide our programs into a hierarchy of tasks and sub-tasks.</P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+
+
+
+
+
+
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">PERFORM..PROC 
+              example </FONT></H4>
+            <H4 align="center"><img src="Resources/pics/program.gif" width="42" height="44"></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <table width="83%" border="1" align="center" cellpadding="5" background="Resources%5Cpics%5Ccode.gif">
+              <tr> 
+                <td> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  PerformFormat1.
+AUTHOR.  Michael Coughlan.
+* An example program using the Perform verb.
+
+PROCEDURE DIVISION.
+TopLevel.
+    DISPLAY "In TopLevel. Starting to run program"
+    PERFORM OneLevelDown
+    DISPLAY "Back in TopLevel.".
+    STOP RUN.
+
+
+TwoLevelsDown.
+    DISPLAY ">>>>>>>> Now in TwoLevelsDown."
+    PERFORM ThreeLevelsDown.
+    DISPLAY ">>>>>>>> Back in TwoLevelsDown.".
+
+
+OneLevelDown.
+    DISPLAY ">>>> Now in OneLevelDown"
+    PERFORM TwoLevelsDown
+    DISPLAY ">>>> Back in OneLevelDown".
+
+
+ThreeLevelsDown.
+    DISPLAY ">>>>>>>>>>>> Now in ThreeLevelsDown".
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp; </P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Self 
+              Assessment Questions</FONT></H4>
+            <H4 align="center"><img src="Resources/pics/i-SAQ2.gif" width="32" height="46"></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <div align="center"> 
+                <p align="left">Now that you understand how this version of the 
+                  <font size="-1">PERFORM</font> works, test your understanding 
+                  by referring to the example program above and answering the 
+                  following questions.</p>
+                <form method="post" action="Iteration.htm">
+                  <table width="96%" border="1" bgcolor="#E1FFE1">
+                    <tr> 
+                      <td width="8%" bgcolor="#FFFFCC">Q1</td>
+                      <td width="62%">Write out what the example program above 
+                        will display on the screen.</td>
+                      <td width="30%" valign="top"> 
+                        <select name="select5" size="1">
+                          <option selected>Click the arrow for the answer</option>
+                          <option>In TopLevel. Starting to run program</option>
+                          <option>&gt;&gt;&gt;&gt; Now in OneLevelDown</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Now in TwoLevelsDown.</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 
+                          Now in ThreeLevelsDown</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Back in TwoLevelsDown.</option>
+                          <option>&gt;&gt;&gt;&gt; Back in OneLevelDown</option>
+                          <option>Back in TopLevel.</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td width="8%" bgcolor="#FFFFCC">Q2</td>
+                      <td width="62%">Taking your pen in hand once more, write 
+                        out what the program will display if the <font size="-1">STOP 
+                        RUN</font> is missing.</td>
+                      <td width="30%" valign="top"> 
+                        <select name="select6" size="1">
+                          <option selected>Click the arrow for the answer</option>
+                          <option>With the STOP RUN missing control falls </option>
+                          <option>through the paragraphs</option>
+                          <option>-------------------------------------------</option>
+                          <option>In TopLevel. Starting to run program</option>
+                          <option>&gt;&gt;&gt;&gt; Now in OneLevelDown</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Now in TwoLevelsDown.</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 
+                          Now in ThreeLevelsDown</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Back in TwoLevelsDown.</option>
+                          <option>&gt;&gt;&gt;&gt; Back in OneLevelDown</option>
+                          <option>Back in TopLevel.</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Now in TwoLevelsDown.</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 
+                          Now in ThreeLevelsDown</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Back in TwoLevelsDown.</option>
+                          <option>&gt;&gt;&gt;&gt; Now in OneLevelDown</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Now in TwoLevelsDown.</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 
+                          Now in ThreeLevelsDown</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Back in TwoLevelsDown.</option>
+                          <option>&gt;&gt;&gt;&gt; Back in OneLevelDown</option>
+                          <option>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 
+                          Now in ThreeLevelsDown</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td width="8%" bgcolor="#FFFFCC">Q3</td>
+                      <td width="62%">Is it valid to insert the statement <font size="-1"><i>PERFORM</i></font><i> 
+                        ThreeLevelsDown</i> into the paragraph ThreeLevelsDown?</td>
+                      <td width="30%" valign="top"> 
+                        <select name="select7" size="1">
+                          <option selected>Click the arrow for the answer</option>
+                          <option>No! This is not valid in standard COBOL.</option>
+                          <option>This is recursion. </option>
+                          <option>In standard COBOL, if ThreeLevelsDown </option>
+                          <option>is performed from another paragraph </option>
+                          <option>the recursive perform will cause it to lose 
+                          </option>
+                          <option>the return address that paragraph </option>
+                          <option>and control will not be able to return to it.</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td width="8%" bgcolor="#FFFFCC">Q4</td>
+                      <td width="62%">Is it valid to have the statement <font size="-1"><i>PERFORM</i></font><i> 
+                        TwoLevelsDown</i> in the paragraph ThreeLevelsDown?</td>
+                      <td width="30%" valign="top"> 
+                        <select name="select8" size="1">
+                          <option selected>Click the arrow for the answer</option>
+                          <option>No. This is indirect recursion since</option>
+                          <option>TwoLevelsDown contains the statement </option>
+                          <option>PERFORM ThreeLevelsDown.</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </table>
+                </form>
+                <p align="left">&nbsp;</p>
+                <div align="left"> </div>
+              </div>
+            </DIV>
+          </TD>
+        </TR>
+
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A><FONT face="Arial, Helvetica, sans-serif">Using 
+              the PERFORM..THRU</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Although the <font size="-1">PERFORM..THRU</font> has dangers, 
+              as outlined above, it can be a useful construct for dealing with 
+              errors. Sometimes we need to stop executing a paragraph if an error 
+              is detected. The <font size="-1">PERFORM..THRU </font>provides a 
+              mechanism which allows us to do this.</P>
+            <hr width="50%">
+          </TD>
+        </TR>
+    <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Coping 
+              with errors</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/ProgFrag.gif" width="48" height="44"></h4>
+            </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P>In the program fragment below, the programmer does not want to 
+              execute the remaining statements in the paragraph if an error is 
+              detected. The solution he has adopted, based on nested <font size="-1">IF</font> 
+              statements, is somewhat cumbersome. </P>
+            <table width="49%" border="1" align="center" cellpadding="5" background="Resources%5Cpics%5Ccode.gif">
+              <tr valign="top"> 
+                <td> 
+                  <pre>PROCEDURE DIVISION.
+Begin.
+   PERFORM SumSales
+   STOP RUN.
+
+SumSales.
+   Statements
+   Statements
+   IF NoErrorFound
+      Statements
+      Statements
+      IF NoErrorFound
+         Statements
+         Statements
+         Statements
+         IF NoErrorFound
+            Statements
+            Statements
+            Statements
+            Statements
+         END-IF
+      END-IF       
+   END-IF.</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p><hr width="50%">
+          <p>&nbsp;</p></TD>
+        </TR>
+    <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Using 
+              the PERFORM..THRU</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></h4>
+            <p align="left"><font size="-1">Actually this approach will soon be 
+              unnecessary on the way out, because the coming COBOL standard solves 
+              the problem by having an<font size="-2"> EXIT PARAGRAPH</font> statement, 
+              that can be used to exit a paragraph prematurely.</font></p>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/ProgFrag.gif" width="48" height="44"></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P>In the program fragment below, the <font size="-1">PERFORM..THRU</font> 
+              is used to deal with detected errors in a more elegant manner. </P>
+            <P>When the statement <font size="-1">PERFORM</font> SumSales <font size="-1">THRU</font> 
+              SumSalesExit is executed, both paragraphs will be performed as if 
+              they were one paragraph. The <font size="-1">GO TO</font> jumps 
+              to the exit paragraph which, because the paragraphs are treated 
+              as one, is the end of the block of code. This technique allows the 
+              programmer to skip over the code he does not want executed if an 
+              error is detected. </P>
+            <P>The<font size="-1"> EXIT</font> statement in the SumSalesExit paragraph 
+              is a dummy statement. It has absolutely no effect on the flow of 
+              control. It is in the paragraph merely to conform to the rule that 
+              every paragraph must contain at least one sentence and in fact it 
+              must be the only sentence in the paragraph. It may be regarded as 
+              a comment.</P>
+            <table width="49%" border="1" align="center" cellpadding="5" background="Resources%5Cpics%5Ccode.gif">
+              <tr valign="top"> 
+                <td> 
+                  <pre>PROCEDURE DIVISION
+Begin.
+   PERFORM SumSales THRU SumSalesExit
+   STOP RUN.
+
+SumSales.
+   Statements
+   Statements
+   IF ErrorFound GO TO SumSalesExit
+   END-IF
+   Statements
+   Statements
+   IF ErrorFound GO TO SumSalesExit
+   END-IF
+   Statements
+   Statements
+   Statements
+   IF ErrorFound GO TO SumSalesExit
+   END-IF
+   Statements
+   Statements
+   Statements
+   Statements
+
+SumSalesExit.
+   EXIT.</pre>
+                </td>
+              </tr>
+            </table>
+            <P>&nbsp;</P>
+            <hr width="50%">
+          </TD>
+        </TR>
+    <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">PERFORM..THRU 
+              restrictions </font></h4>
+            <h4 align="center">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <font size="-1">PERFORM..THRU </font>and <font size="-1">GO 
+              TO</font> are dangerous constructs which, if used unwisely, will 
+              make your programs very difficult to read, understand and maintain. 
+              Because of this, the <font size="-1">PERFORM..THRU</font> should 
+              only be used to set up a paragraph exit as in the example above 
+              and it should only cover two paragraphs. No other use of the <font size="-1">PERFORM..THRU</font> 
+              is acceptable. </P>
+            <P>This is also the only time the <font size="-1">GO TO</font> should 
+              be used.</P>
+            <P>&nbsp;</P>
+            
+          </TD>
+        </TR>
+ 
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part3"></A><FONT face="Arial, Helvetica, sans-serif">PERFORM..TIMES 
+              </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <font size="-1">PERFORM..TIMES </font>format has no real equivalent 
+              in most programming languages. This format allows a block of code 
+              to be executed a specified number of times.</P>
+            <P>&nbsp;</P>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">PERFORM..TIMES 
+              Syntax</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P align="left"><img src="Resources/pics/Perform2.gif" width="406" height="105"></P>
+            <P align="left">&nbsp;</P>
+            <p>This format of the PERFORM executes a block of code RepeatCount 
+              number of times before returning control to the statement following 
+              the PERFORM.</p>
+            <p> Like the remaining formats of the PERFORM, this format allow two 
+              types of execution. </p>
+            <ul>
+              <li>Out-of-line execution of a block of code</li>
+              <li>In-line execution of a block of code. </li>
+            </ul>
+            <blockquote> 
+              <div align="left"></div>
+            </blockquote>
+            <hr width="50%">
+          <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">In-line 
+              vs Out-of-line</FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P><b>In-line execution</b><br>
+              In-line execution will be familiar to programmers who have used 
+              the iteration constructs (while,do/repeat, for) of most other programming 
+              languages. In an in-line <font size="-1">PERFORM, </font>the block 
+              of code to be iteratively executed is contained within the same 
+              paragraph as the <font size="-1">PERFORM</font>. That is, the loop 
+              body is in-line with the rest of the paragraph code. </P>
+            <P>The block of code to be executed starts at the keyword <font size="-1">PERFORM</font> 
+              and ends at the keyword <font size="-1">END-PERFORM</font> (see 
+              example program below).</P>
+            <P><b>Out-of-line execution</b><br>
+              In an out-of-line PERFORM the loop body is a separate paragraph 
+              or section. It is the equivalent of having a Procedure or Function 
+              call inside the loop body of a while or for construct.</P>
+            <P><b>Some guidelines</b><br>
+              In general, where a loop is needed but only a few statements are 
+              involved, an in-line <font size="-1">PERFORM</font> should be used. 
+            </P>
+            <P>Where out-of-line code is executed by a format 1 <font size="-1">PERFORM</font>, 
+              the code should perform some specific function and that function 
+              should be identified by the paragraph name chosen. </P>
+            <P>Where an out-of-line paragraph consists of 5 statements or less, 
+              there should be a good reason for placing these statements in a 
+              separate paragraph. </P>
+            <P>Programmers should try to achieve a balance between in-line and 
+              out-of-line code. The program should not be too fragmented, nor 
+              too monolithic.</P>
+            <hr width="50%">
+          <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Example 
+              </FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <table width="49%" border="1" align="center" cellpadding="5" background="Resources%5Cpics%5Ccode.gif">
+              <tr valign="top"> 
+                <td> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  InLineVsOutOfLine.
+AUTHOR.  Michael Coughlan.
+* An example program demonstrating 
+* in-line and out-of-line Performs.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 NumOfTimes           PIC 9 VALUE 5.
+
+PROCEDURE DIVISION.
+Begin.
+    DISPLAY "Starting to run program"
+    PERFORM 3 TIMES
+       DISPLAY ">>>>This is an in line Perform"
+    END-PERFORM
+    DISPLAY "Finished in line Perform"
+    PERFORM OutOfLineEG NumOfTimes TIMES
+    DISPLAY "Back in Begin. About to Stop".
+    STOP RUN.
+
+OutOfLineEG.
+    DISPLAY ">>>> This is an out of line Perform".
+
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Self 
+              Assessment Questions</font></h4>
+            <h4 align="center"><img src="Resources/pics/i-SAQ2.gif" width="32" height="46"></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Examine the program above and write out what it will display on 
+              the screen.</P>
+              <form>
+              <div align="center">
+                <select name="select">
+                  <option selected>Click the arrow for the answer</option>
+                  <option>--------------------------------------------</option>
+                  <option>Starting to run program</option>
+                  <option>&gt;&gt;&gt;&gt;This is an in line Perform</option>
+                  <option>&gt;&gt;&gt;&gt;This is an in line Perform</option>
+                  <option>&gt;&gt;&gt;&gt;This is an in line Perform</option>
+                  <option>Finished in line Perform</option>
+                  <option>&gt;&gt;&gt;&gt; This is an out of line Perform</option>
+                  <option>&gt;&gt;&gt;&gt; This is an out of line Perform</option>
+                  <option>&gt;&gt;&gt;&gt; This is an out of line Perform</option>
+                  <option>&gt;&gt;&gt;&gt; This is an out of line Perform</option>
+                  <option>&gt;&gt;&gt;&gt; This is an out of line Perform</option>
+                  <option>Back in Begin. About to stop</option>
+                </select>
+              </div>
+            </form>           
+          </TD>
+        </TR>
+
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part4"></A><FONT face="Arial, Helvetica, sans-serif">PERFORM..UNTIL 
+              </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="188"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="188"> 
+            <P>This format of the <font size="-1">PERFORM</font> is used where 
+              the <i>while</i> and <i>do/repeat</i> constructs are used in other 
+              languages. It causes a block of code to be iteratively executed 
+              until some terminating condition is reached.</P>
+            <P>&nbsp;</P>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">PERFORM..UNTIL 
+              syntax </FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P><img src="Resources/pics/Perform3.gif" width="502" height="126"></P>
+            <P><b>Notes<br>
+              </b>If the <font size="-1">WITH TEST BEFORE </font>phrase is used, 
+              the <font size="-1">PERFORM</font> behaves like a <i>while</i> loop 
+              and the condition is tested before the loop body is entered. </P>
+            <p>The <font size="-1">WITH TEST AFTER</font> phrase causes the <font size="-1">PERFORM</font> 
+              to act <i>do/repeat</i> loop and the condition is tested after the 
+              loop body is entered. </p>
+            <p>The <font size="-1">WITH TEST BEFORE</font> phrase is the default 
+              and so is rarely explicitly stated. </p>
+            <hr width="50%">
+          <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">How 
+              the PERFORM..UNTIL works</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P>The flowcharts below show how the <font size="-1">PERFORM..UNTIL</font> 
+              works. As you can see the terminating condition is only checked 
+              at the beginning of each iteration (<font size="-1">PERFORM WITH 
+              TEST BEFORE</font>) or at the end of each iteration (<font size="-1">PERFORM 
+              WITH TEST AFTER</font>).</P>
+            <P>The terminating condition is only checked at the beginning of each 
+              iteration (<font size="-1">PERFORM WITH TEST BEFORE</font>) or at 
+              the end of each iteration (<font size="-1">PERFORM WITH TEST AFTER</font>). 
+              If the terminating condition is reached in the middle of the iteration, 
+              the rest of the loop body will still be executed; although the terminating 
+              condition has been reached, it cannot be checked until the current 
+              iteration has finished.</P>
+            <p>Although the <font size="-1">PERFORM WITH TEST BEFORE</font> is 
+              often said to be equivalent to a <i>while</i> loop, this is not 
+              entirely true. In a <i>while</i> loop, the condition is tested to 
+              see whether the iteration should continue (for example, while(Letter 
+              != 's') ) but in a <font size="-1">PERFORM</font>, the condition 
+              is tested to see if the iteration should stop (For example, <font size="-1">PERFORM 
+              WITH TEST BEFORE UNTIL</font> Letter = &quot;s&quot;) .</p>
+            <p><img src="Resources/pics/PerfUntil.gif" width="500" height="414"></p>
+            <P>&nbsp;</P>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">TEST 
+              BEFORE Vs TEST AFTER</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Beginning programmers often ask; when should they use the <font size="-1">WITH 
+              TEST BEFORE</font> loop, and when should they use the <font size="-1">WITH 
+              TEST AFTER</font>.</P>
+            <P>There really isn't a cookbook answer to this. It's a matter of 
+              experience. But we can identify some circumstances, when it is better 
+              to use the <font size="-1">WITH TEST BEFORE, </font>than the <font size="-1">WITH 
+              TEST AFTER</font>.</P>
+            <P>When you need to process a stream of data items, and don't know 
+              the size of the stream, and can't detect the end of the stream until 
+              you attempt to retrieve the next item, then a <i>test before loop,</i> 
+              is the best construct to use.</P>
+            <P>If the end of the stream can be detected when the last item is 
+              retrieved, then the appropriate construct is probably a <i>test 
+              after loop</i>. </P>
+            <P>&nbsp;</P>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="188"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              &quot;read ahead&quot; technique</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="188"> 
+            <P>Processing a stream of data items of undetermined length, is a 
+              common operation in COBOL, because sequential files fall into this 
+              category. A useful strategy known as the “read ahead” has been developed 
+              for processing sequential files.</P>
+            <P>The central idea of the &quot;read ahead&quot; is that, because 
+              the end of the file cannot be detected until an attempt is made 
+              to read a record, the Read must be positioned as the last statement 
+              in the record processing loop. </P>
+            <P>You can see how this works in the processing template below. With 
+              the “read ahead” strategy we always try to stay one data item ahead 
+              of the processing. So the Read outside the loop, reads the first 
+              record and this record is processed inside the loop. The Read inside 
+              the loop, reads the next, and all the succeeding records. When the 
+              inside Read detects the end of file, it sets a Condition Name that 
+              immediately causes the loop to halt.</P>
+            <table width="75%" border="1" cellpadding="5" align="center" bgcolor="#E1FFE1">
+              <tr bgcolor="#FFFFCC"> 
+                <td> 
+                  <div align="center"><b>Processing Template</b></div>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+                  <pre>READ StudentRecords
+   AT END SET EndOfStudentFile TO TRUE
+END-READ
+PERFORM WITH TEST BEFORE UNTIL EndOfStudentFile
+   <i>record processing
+   record processing
+   record processing
+</i>   READ StudentRecords
+     AT END SET EndOfStudentFile TO TRUE
+   END-READ
+END-PERFORM</pre>
+                </td>
+              </tr>
+            </table>
+            <P>This approach to processing a sequential file has two main advantages. 
+            </P>
+            <ol>
+              <li>Because the read outside the loop reads the first record, the 
+                loop is never entered if the file is empty. </li>
+              <li>Because the Read is the last statement in the loop, the loop 
+                can be halted as soon as the end of file is detected.</li>
+            </ol>
+            <hr width="50%">
+          <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="122"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">PERFORM..UNTIL 
+              comment </FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="122"> 
+            <P>The primary concern of a programmer who creates a loop should be 
+              - will the loop terminate. Much of the work of proofs of program 
+              correctness goes into proving that the loops in a program are going 
+              to terminate. It seems curious then, that in most programming languages 
+              the loop condition concentrates on, not whether the loop will end, 
+              but on whether the loop will keep going. COBOL is one of the few 
+              languages that gets this right. In COBOL, the loop body is executed 
+              <b>until </b>the terminating condition is reached. </P>
+            </TD>
+        </TR>
+
+
+
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part5"></A><FONT face="Arial, Helvetica, sans-serif">PERFORM..VARYING 
+              </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <font size="-1">PERFORM..VARYING</font> is used to implement 
+              counting iteration. It is similar to the For construct in languages 
+              like Modula-2, Pascal and C. However, these languages permit only 
+              one counting variable per loop instruction, while COBOL allows up 
+              to three. </P>
+            <P>Why three? Earlier versions of COBOL only allowed tables with a 
+              maximum of three dimensions, and the <font size="-1">PERFORM..VARYING</font> 
+              was a mechanism for processing them. </P>
+            <P>&nbsp;</P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355" nowrap> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">PERFORM..VARYING 
+              syntax </FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P><img src="Resources/pics/Perform4.gif" width="502" height="234"></P>
+            <P>&nbsp;</P>
+            <P>N<b>otes</b><br>
+              The <font size="-1">AFTER</font> phrase cannot be used in an in-line 
+              <font size="-1">PERFORM</font>. This means that only one counter 
+              may be used with an in-line <font size="-1">PERFORM</font>.</P>
+            <P> The item after the <font size="-1">VARYING</font> phrase is the 
+              most significant counter, the counter following the first <font size="-1">AFTER</font> 
+              phrase is the next most significant, and the last counter is the 
+              least significant. </P>
+            <P>The least significant counter must go though all its values and 
+              reach its terminating condition before the next most significant 
+              counter can be incremented.</P>
+            <P>The item after the <font size="-1">FROM,</font> is the starting 
+              value of the counter. </P>
+            <P>The item after the <font size="-1">BY,</font> is the step value 
+              of the counter. This can be negative or positive. If a negative 
+              step value is used, the counter should be signed (<font size="-1">PIC 
+              S99</font>, etc.).</P>
+            <blockquote> </blockquote>
+            <p>When the iteration ends, the counters retain their terminating 
+              values. </p>
+            <P>As before, when no <font size="-1">WITH TEST</font> phrase is used, 
+              the <font size="-1">WITH TEST BEFORE</font> is assumed. </P>
+            <P>Though the condition would normally involve some evaluation of 
+              the counter, it is not mandatory. For instance, the statement that 
+              follows is perfectly valid: </P>
+            <blockquote>
+              <pre>PERFORM CountRecords
+        VARYING RecCount FROM 1 BY 1 UNTIL EndOfFile </pre>
+            </blockquote>
+            <P>&nbsp;</P>
+            <hr width="50%">
+          <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" nowrap> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">PERFORM..VARYING 
+              using one counter </FONT><font face="Arial, Helvetica, sans-serif" color="#800000">Example</font></h4>
+            <h4 align="left">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The example animation below demonstrates how a simple <font size="-1">PERFORM..VARYING</font>, 
+              using only one counter, work. Pay particular attention to when the 
+              counter is incremented. In the example note that the condition <i>Idx1 
+              = 3</i> results in only two passes through the loop body.</P>
+            <P align="center"><a href="Resources/ppz/TC-Perform1.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0"></a></P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="372"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">PERFORM..VARYING 
+              using two counter Example</font></h4>
+          </TD>
+          <TD width="525" valign="top" height="372"> 
+            <P>This example animation demonstrates how a <font size="-1">PERFORM..VARYING</font>, 
+              with two counters, works.</P>
+            <P>Note how the counter Idx2 must go through all its values and reach 
+              its terminating value before the Idx1 counter is incremented. An 
+              easy way to think about this is to think of it as a mileage counter. 
+              In a mileage counter, the units counter must go through all its 
+              values 0-9 before the tens counter is incremented, and the tens 
+              counter must go through all its values before the hundreds counter 
+              is increment.</P>
+            <P>Note that the first counter mentioned in the PERFORM is the most 
+              significant and the next is the next most significant etc. </P>
+            <P>&nbsp;</P>
+            <p align="center"><a href="Resources/ppz/TC-Perform2.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0"></a></p>
+            <hr width="50%">
+            <P>&nbsp;</P>
+            </TD>
+        </TR>
+       <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" nowrap> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">PERFORM..VARYING 
+              </FONT><font face="Arial, Helvetica, sans-serif" color="#800000">Example 
+              Program</font></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/program.gif" width="42" height="44"></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-SAQ2.gif" width="32" height="46"></h4>
+            <h4 align="left">&nbsp;</h4>
+            </TD>
+          <TD width="525" valign="top"> 
+            <P>In the example program simulates the mileage counter mentioned 
+              above. Examine this program an then attempt to answer the Self Assessment 
+              Question which follow.</P>
+            <P>&nbsp;</P>
+            <table width="486" border="1" align="center" cellpadding="5" background="Resources%5Cpics%5Ccode.gif">
+              <tr valign="top"> 
+                <td> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  MileageCounter.
+AUTHOR.  Michael Coughlan.
+* Simulates a mileage counter
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 Counters.
+   02 HundredsCnt          PIC 99 VALUE ZEROS.
+   02 TensCnt              PIC 99 VALUE ZEROS.
+   02 UnitsCnt             PIC 99 VALUE ZEROS.
+
+01 DisplayItems.
+   02 PrnHunds             PIC 9.
+   02 PrnTens              PIC 9.
+   02 PrnUnits             PIC 9.
+
+PROCEDURE DIVISION.
+Begin.
+   DISPLAY "Using an out-of-line Perform".
+   DISPLAY "About to start mileage counter simulation".
+   PERFORM CountMileage
+      VARYING HundredsCnt FROM 0 BY 1 UNTIL HundredsCnt > 9
+      AFTER   TensCnt     FROM 0 BY 1 UNTIL TensCnt > 9
+      AFTER   UnitsCnt    FROM 0 BY 1 UNTIL UnitsCnt > 9
+   DISPLAY "End of mileage counter simulation."
+
+   DISPLAY "Now using in-line Performs"
+   DISPLAY "About to start mileage counter simulation".
+   PERFORM VARYING HundredsCnt FROM 0 BY 1 UNTIL HundredsCnt > 9
+     PERFORM VARYING TensCnt FROM 0 BY 1 UNTIL TensCnt > 9
+        PERFORM VARYING UnitsCnt FROM 0 BY 1 UNTIL UnitsCnt > 9
+           MOVE HundredsCnt TO PrnHunds
+           MOVE TensCnt     TO PrnTens
+           MOVE UnitsCnt    TO PrnUnits
+           DISPLAY PrnHunds "-" PrnTens "-" PrnUnits
+        END-PERFORM
+     END-PERFORM
+   END-PERFORM.
+   DISPLAY "End of mileage counter simulation."
+   STOP RUN.
+
+
+
+CountMileage.
+   MOVE HundredsCnt TO PrnHunds
+   MOVE TensCnt     TO  PrnTens
+   MOVE UnitsCnt    TO PrnUnits
+   DISPLAY PrnHunds "-" PrnTens "-" PrnUnits.
+
+ </pre>
+                </td>
+              </tr>
+            </table>
+            <P>&nbsp;</P>
+            <form method="post" action="Iteration.htm">
+              <table width="86%" border="1" bgcolor="#E1FFE1" align="center">
+                <tr> 
+                  <td width="8%" bgcolor="#FFFFCC">Q1</td>
+                  <td width="62%">Why is &gt; 9 used in all the terminating conditions?.</td>
+                  <td width="30%" valign="top"> 
+                    <select name="select2" size="1">
+                      <option selected>Click the arrow for the answer</option>
+                      <option>--------------------------------------------------------</option>
+                      <option>If = 9 were used, control would </option>
+                      <option>never enter the loop body to </option>
+                      <option>display any 9's because the</option>
+                      <option>condition is tested before the </option>
+                      <option>loop body is entered.</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" bgcolor="#FFFFCC">Q2</td>
+                  <td width="62%">Why are the counters all declared as<font size="-1"> 
+                    PIC 99</font>. Surely the size of each counter should only 
+                    be one digit?</td>
+                  <td width="30%" valign="top"> 
+                    <select name="select2" size="1">
+                      <option selected>Click the arrow for the answer</option>
+                      <option>--------------------------------------------------------</option>
+                      <option>Consider what happens just after</option>
+                      <option>UnitsCnt displays the value 9 in</option>
+                      <option>the loop body. As control exits </option>
+                      <option>the loop the counter is incremented </option>
+                      <option>making it =10. If UnitsCnt had been</option>
+                      <option>been defined as PIC 9, there would</option>
+                      <option>not be enough room for the 2 digits </option>
+                      <option>in 10 and the most significant digit</option>
+                      <option>would be truncated, leaving the 0. </option>
+                      <option>When UnitsCnt was tested by the </option>
+                      <option>condition it would be found to </option>
+                      <option>contain a 0 and the program </option>
+                      <option>would continue to loop interminably.</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" bgcolor="#FFFFCC">Q3</td>
+                  <td width="62%">In the in-line <font size="-1">PERFORM</font> 
+                    why are there three separate <font size="-1">Performs</font>?</td>
+                  <td width="30%" valign="top"> 
+                    <select name="select2" size="1">
+                      <option selected>Click the arrow for the answer</option>
+                      <option>--------------------------------------------------------</option>
+                      <option>The AFTER phrase can not be </option>
+                      <option>used in an in-line PERFORM. </option>
+                      <option>So we have to use nested Performs</option>
+                      <option>to increment the other counters just</option>
+                      <option>as you would in C or Modula-2.</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+ 
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : March 1999</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

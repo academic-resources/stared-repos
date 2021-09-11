@@ -1,0 +1,1279 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Reference Modification</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+<TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <CENTER>
+              <H2><IMG src="Resources/pics/t-CobolCourse.gif" height=56 width=161 align="MIDDLE" 
+             alt="Cobol Course" border="0"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> <B>Reference Modification and Intrinsic Functions</B></H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives and prerequisites.</FONT> 
+                  <BR>
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"><B><A href="#part1" target="">Reference Modification</A><BR>
+                  </B><FONT size="-1">This section examines the syntax and semantics 
+                  of Reference Modification. The section ends with some animated 
+                  examples.<BR>
+                  <BR>
+                  </FONT> </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <DIV align="left"><B><A href="#part2" target="">Intrinsic Functions 
+                    - Introduction</A><BR>
+                    </B><FONT size="-1">This section introduces COBOL's predefined 
+                    functions - called Intrinsic Functions. It explains how they 
+                    may be used and introduces the notation used in the Intrinsic 
+                    Function definitions in the later sections.</FONT><BR>
+                    <BR>
+                  </DIV>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><A href="#part3" target=""><B>String Functions</B></A><BR>
+                    <FONT size="-1">This section presents the definitions of the 
+                    Intrinsic Functions used for string handling . The section 
+                    ends with some examples.<BR>
+                    <BR>
+                    </FONT></P>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><A href="#part4" target=""><B>Date Functions</B></A><BR>
+                    <FONT size="-1">This section presents the definitions of the 
+                    Intrinsic Functions used for date manipulations . The section 
+                    ends with a set of comprehensive examples.<BR>
+                    <BR>
+                    </FONT></P>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><A href="#part5" target=""><B>Miscellaneous Functions</B></A><BR>
+                    <FONT size="-1">This section presents the definitions of the 
+                    other (mainly maths) Intrinsic Functions including used for 
+                    string handling . The section ends with an example using the 
+                    RANDOM Intrinsic Function..<BR>
+                    <BR>
+                    </FONT></P>
+                </TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><FONT face="Arial, Helvetica, sans-serif">Introduction</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="540"> 
+            <P>The aim of this unit is to provide to provide you with a solid 
+              understanding of string manipulation using Reference Modification. 
+              It will also introduce you to Intrinsic Functions and will show 
+              how strings may be manipulated using the the String Intrinsic Functions.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="540"> 
+            <P>By the end of this unit you should:</P>
+            <OL>
+              <LI>Understand how Reference Modification works</LI>
+              <LI>Be able to use Reference Modification to extract and insert 
+                sub-strings. </LI>
+              <LI>Understand how Intrinsic Functions work.</LI>
+              <LI>Be able to using Intrinsic Functions for string and date manipulation.</LI>
+            </OL>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <TD width="525"> 
+            <P>You should be familiar with the material covered in the unit; </P>
+            <UL>
+              <LI>Data Declaration </LI>
+              <LI>Iteration</LI>
+              <LI>Selection</LI>
+              <LI>Tables</LI>
+              <LI>Edited Pictures</LI>
+              <LI>The<FONT size="2"> INSPECT</FONT> verb</LI>
+              <LI>The <FONT size="2">STRING</FONT> verb</LI>
+              <LI>The<FONT size="-1"> UNSTRING</FONT> verb</LI>
+            </UL>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <P>&nbsp; </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part1"></A><FONT face="Arial, Helvetica, sans-serif">Reference 
+              Modification</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Definition 
+              &amp; Syntax</FONT></H4>
+          </TD>
+          <TD width="540" valign="top"> 
+            <P>Reference Modification allows you to treat a numeric (<FONT size="-1">PIC 
+              9</FONT>) or alphanumeric (<FONT size="-1">PIC X</FONT>) data-item 
+              as if it were an array of characters. To access sub-strings using 
+              Reference Modification you must specify;</P>
+            <BLOCKQUOTE> 
+              <UL>
+                <LI>the name of the data-item</LI>
+                <LI> the start character position of the sub-string</LI>
+                <LI> the number of characters in the sub-string</LI>
+              </UL>
+            </BLOCKQUOTE>
+            <P>To apply Reference Modification the following syntax must be used.</P>
+            <BLOCKQUOTE>
+              <P> <FONT face="Arial, Helvetica, sans-serif"><B>DataName(</B><I>StartPos</I> 
+                [<B>:</B><I>SubStrLength</I>]<B>) </B> </FONT> </P>
+            </BLOCKQUOTE>
+            <P align="left"><I>StartPos</I> is the character position of the first 
+              character in the sub-string and <I>SubStrLength</I> is number of 
+              characters in the substring.</P>
+            <P>As the square brackets indicate, the SubStrLength may be omitted, 
+              and in that case the substring from StartPos to the end of the string 
+              is assumed. </P>
+            <P>Reference Modification may be used almost anywhere an alphanumeric 
+              data-item is permitted. </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Examples</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <PRE>WORKING-STORAGE SECTION.
+01 xString    PIC X(38) VALUE "This is the alphanumeric string". 
+01 nString    PIC 9(5)V99 VALUE 34526.56. 
+01 SubStrSize PIC 99 VALUE 12. 
+01 StartPos   PIC 99 VALUE 18.
+             </PRE>
+            <P align="center"> <OBJECT CLASSID="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" WIDTH=520 HEIGHT=333>
+                <PARAM NAME="File" VALUE="Resources/ppz/TC-RefModEg.ppz">
+                <EMBED WIDTH=520 HEIGHT=333 SRC="Resources/ppz/TC-RefModEg.ppz"></EMBED><NOEMBED> 
+                This page contains a Microsoft PowerPoint Animation that your 
+                browser was unable to view.<A HREF="Resources/ppz/TC-RefModEg.ppz">Click 
+                here to open Resources/ppz/TC-RefModEg.ppz fullscreen</A></NOEMBED> 
+              </OBJECT> </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A><FONT face="Arial, Helvetica, sans-serif">Intrinsic 
+              Functions </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Although COBOL does not permit user-defined functions or procedures, 
+              it does have a number of Intrinsic (built-in) Functions, which you 
+              can use in your programs. </P>
+            <P>These functions fall into three broad categories : date functions, 
+              numeric functions and string functions.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Using 
+              Intrinsic Functions</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Like functions in other languages, an Intrinsic Function is replaced 
+              in the position where it occurs by the function result. </P>
+            <P>In COBOL, an Intrinsic Function is a temporary data item whose 
+              value is determined at the time the function is executed. </P>
+            <P> Whereever a literal with the same type as the function result 
+              may be referenced, the Intrinsic Function may be referenced. </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Intrinsic 
+              Function Notes</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <UL>
+              <LI>Where the function result is alphanumeric it has an implicit 
+                usage of <FONT size="-1">DISPLAY</FONT>.<BR>
+                <BR>
+              </LI>
+              <LI>Functions that return a number value (numeric &amp; integer) 
+                are always considered to be signed.<BR>
+                <BR>
+              </LI>
+              <LI>A function that returns a number value can be used only in an 
+                arithmetic expression or as the source of a MOVE statement.<BR>
+                <BR>
+              </LI>
+              <LI>A function that returns a numeric value cannot be used where 
+                an interger operand is required (because it may return a non-integer 
+                value). </LI>
+            </UL>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Intrinsic 
+              Function Template</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>An Intrinsic Function consists of three parts;</P>
+            <OL>
+              <OL>
+                <LI>The start of the function is signalled by the keyword - FUNCTION.</LI>
+                <LI>The keyword is followed by the name of the function.</LI>
+                <LI>The name of the function is immediately followed by the bracketed 
+                  list of parameters or arguments.</LI>
+              </OL>
+            </OL>
+            <P align="left">The template for Intrinsic Functions is shown below:</P>
+            <BLOCKQUOTE> 
+              <BLOCKQUOTE> 
+                <P>FUNCTION FunctionName(<I>Parameters</I>)</P>
+              </BLOCKQUOTE>
+            </BLOCKQUOTE>
+            <P><I>FunctionName</I> is the name of the function and <I>Parameters</I> 
+              is one or more parameters supplied to the function.</P>
+            <P>Example declarations.</P>
+            <BLOCKQUOTE> 
+              <PRE>MOVE <B>FUNCTION RANDOM(99)</B> TO RandNum. </PRE>
+              <PRE>DISPLAY <B>FUNCTION UPPER-CASE(&quot;this will be in upper case&quot;)</B>.</PRE>
+            </BLOCKQUOTE>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Intrinsic 
+              Function Notation</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>In the Intrinsic Function definitions in the sections below the 
+              functions produce a result of one of the following types;</P>
+            <UL>
+              <LI> Alphanumeric </LI>
+              <LI>Numeric (includes Integer) </LI>
+              <LI>Integer (does not allow the decimal point)</LI>
+            </UL>
+            <P>Where parameters are required in the function the parameter name 
+              is used to indicate the type of the parameter. </P>
+            <UL>
+              <LI> <B>Alph</B> indicates Alphanumeric</LI>
+              <LI><B> Num</B> indicates any Numeric</LI>
+              <LI><B>PosNum</B> indicates a Positive Numeric</LI>
+              <LI><B> Int</B> indicates any Integer</LI>
+              <LI><B>PosInt</B> indicates a PositiveInteger</LI>
+              <LI><B>Any </B>indicates that any type may be used</LI>
+            </UL>
+            <P>Where a function takes a parameter list (indicated by <B>{Any}...</B> 
+              in the function definition) the parameter list may be replaced by 
+              an array. The reserved word ALL is used as the array subscript to 
+              indicate all the elements of the array.</P>
+            <P>For instance the ORD-MAX function may take a parameter list or 
+              an array may be used: </P>
+            <BLOCKQUOTE>
+<PRE>MOVE FUNCTION ORD-MAX(12 23 03 78 65) TO OrdPos
+                     <B>or</B>
+MOVE FUNCTION ORD-MAX(IntElement(ALL)) TO OrdPos             </PRE>
+            </BLOCKQUOTE>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part3"></A><FONT face="Arial, Helvetica, sans-serif">String 
+              Functions </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Definitions</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <TABLE cellspacing=0 border=2 cellpadding=7 width=502 bgcolor="#E1FFE1">
+                <TR> 
+                  <TD width="34%" valign="top"> 
+                    <DIV align="center"><B>Function Name</B></DIV>
+                  </TD>
+                  <TD width="20%" valign="top"> 
+                    <DIV align="center"><B>Result Type</B></DIV>
+                  </TD>
+                  <TD width="46%" valign="TOP"> 
+                    <DIV align="center"><B>Comment</B></DIV>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width="34%" valign="top"> <FONT face="TIMES" size=2> 
+                    <P>CHAR(PosInt) 
+                    </FONT></TD>
+                  <TD width="20%" valign="top"> 
+                    <DIV align="center"><FONT size="2">Alphanumeric</FONT></DIV>
+                  </TD>
+                  <TD width="46%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns the character at ordinal position <B>PosInt </B>of 
+                      the collating sequence. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="34%" valign="top"> <FONT face="TIMES" size=2> 
+                    <P>ORD(Alph) 
+                    </FONT></TD>
+                  <TD width="20%" valign="top"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD width="46%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns the ordinal position of character <B>Alph</B>. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="34%" valign="top"> 
+                    <P><FONT face="TIMES" size=2>ORD-MAX({Any}...)<BR>
+                      </FONT><FONT face="TIMES" size=2> </FONT></P>
+                    </TD>
+                  <TD width="20%" valign="top"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD width="46%" valign="TOP"><FONT size="2">Returns the </FONT><FONT face="TIMES" size="2"> 
+                    ordinal position of</FONT><FONT size="2"> whichever of the 
+                    parameters has the highest value. All parameters must be of 
+                    the same type. The parameter list may be replaced by an array.</FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="34%" valign="top"><FONT face="TIMES" size=2>ORD-MIN({Any}...) 
+                    </FONT></TD>
+                  <TD width="20%" valign="top"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD width="46%" valign="TOP"><FONT size="2">Returns the </FONT><FONT face="TIMES" size="2"> 
+                    ordinal position of</FONT><FONT size="2"> whichever of the 
+                    parameters has the lowest value. All parameters must be of 
+                    the same type.</FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="34%" valign="top"> <FONT face="TIMES" size=2> 
+                    <P>LENGTH(Any) 
+                    </FONT></TD>
+                  <TD width="20%" valign="top"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD width="46%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns the number of characters in <B>Any</B>. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="34%" valign="top"> <FONT face="TIMES" size=2> 
+                    <P>REVERSE(Alph) 
+                    </FONT></TD>
+                  <TD width="20%" valign="top"> 
+                    <DIV align="center"><FONT size="2">Alphanumeric </FONT></DIV>
+                  </TD>
+                  <TD width="46%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns a character string with the characters in <B>Alph</B> 
+                      reversed. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="34%" valign="top"> <FONT face="TIMES" size=2> 
+                    <P>LOWER-CASE(Alph) 
+                    </FONT></TD>
+                  <TD width="20%" valign="top"> 
+                    <DIV align="center"><FONT size="2">Alphanumeric </FONT></DIV>
+                  </TD>
+                  <TD width="46%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns a character string with the characters in <B>Alph</B> 
+                      changed to their lower case equivalents. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="34%" valign="top"> <FONT face="TIMES" size=2> 
+                    <P>UPPER-CASE(Alph) 
+                    </FONT></TD>
+                  <TD width="20%" valign="top"> 
+                    <DIV align="center"><FONT size="2">Alphanumeric </FONT></DIV>
+                  </TD>
+                  <TD width="46%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns a character string with the characters in <B>Alph</B> 
+                      changed to their upper case equivalents 
+                    </FONT></TD>
+                </TR>
+              </TABLE>
+            </DIV>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"> Examples 
+              </FONT></H4>
+            <H3>&nbsp;</H3>
+            <DIV align="right"></DIV>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The statements in the following examples produce the results shown 
+              below. </P>
+            <HR>
+            <TABLE border="0" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD> 
+                  <PRE>
+WORKING-STORAGE SECTION. 
+01 xString PIC X(38) VALUE "This is the alphanumeric string". 
+01 OrdPos PIC 99. 
+01 IntArray VALUE "1223037865".      
+   02 Ielement OCCURS 5 TIMES PIC 99.
+
+PROCEDURE DIVISION. 
+Begin. 
+PROCEDURE DIVISION.                                               
+Begin.                                                            
+  DISPLAY "Character at pos 39 is = " FUNCTION CHAR(39) 
+                                                                  
+  MOVE FUNCTION ORD("A") TO OrdPos
+  DISPLAY "Ord pos of A is = " OrdPos 
+                                                                  
+  MOVE FUNCTION ORD-MAX("t" "b" "x" "s") TO OrdPos
+  DISPLAY "Highest character in sequence is at pos " OrdPos
+                                                                  
+  MOVE FUNCTION ORD-MIN("t" "b" "x" "s") TO OrdPos
+  DISPLAY "Lowest character in sequence is at pos " OrdPos
+                                                                  
+  MOVE FUNCTION ORD-MAX(Ielement(ALL)) TO OrdPos
+  DISPLAY "Number " Ielement(OrdPos) " is the highest in array".
+                                                                  
+  DISPLAY "Length of xString is " FUNCTION LENGTH(xString) 
+  DISPLAY FUNCTION REVERSE(xString(1:31))
+  DISPLAY FUNCTION UPPER-CASE(xString)
+  DISPLAY FUNCTION LOWER-CASE(xString)
+  STOP RUN.
+
+</PRE>
+                </TD>
+              </TR></TABLE>
+            <HR>
+            <DIV align="center"> 
+              <TABLE CELLSPACING=0 BORDER=2 CELLPADDING=7 WIDTH=366 bgcolor="#DDFFFF">
+                <TR> 
+                  <TD WIDTH="21%" VALIGN="TOP" height="33" colspan="2"> 
+                    <DIV align="center"><FONT face="Arial, Helvetica, sans-serif"><B>Results 
+                      </B> </FONT> <FONT FACE="TIMES" SIZE=2> </FONT></DIV>
+                    </TD>
+                </TR>
+                <TR> 
+                  <TD WIDTH="21%" VALIGN="TOP" height="137"><FONT size=2>Display 
+                    1 = <BR>
+                    Display 2 = <BR>
+                    Display 3 = <BR>
+                    Display 4 = <BR>
+                    Display 5 = <BR>
+                    Display 6 = <BR>
+                    Display 7 = <BR>
+                    Display 8 =<BR>
+                    Display 9 =</FONT></TD>
+                  <TD WIDTH="79%" VALIGN="TOP" height="137"><FONT size="2">Character 
+                    at pos 39 is = <B>&amp;</B><BR>
+                    Ord pos of A is = <B>66</B> <BR>
+                    Highest character in sequence is at pos<B> 03</B></FONT><FONT size="2"> 
+                    <BR>
+                    Lowest character in sequence is at pos <B>02 </B><BR>
+                    Number <B>78</B> is the highest in array<BR>
+                    Length of xString is <B>38</B> <BR>
+                    <B>gnirts ciremunahpla eht si sihT </B><BR>
+                    <B>THIS IS THE ALPHANUMERIC STRING </B><BR>
+                    <B>this is the alphanumeric string </B></FONT></TD>
+                </TR>
+              </TABLE>
+            </DIV>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part4"></A><FONT face="Arial, Helvetica, sans-serif">Date 
+              Functions </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Definitions</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <TABLE CELLSPACING=0 BORDER=2 CELLPADDING=7 WIDTH=502 bgcolor="#E1FFE1">
+                <TR> 
+                  <TD WIDTH="36%" VALIGN="TOP"><B>Function Name</B></TD>
+                  <TD WIDTH="20%" VALIGN="TOP"> 
+                    <DIV align="center"><B>Result Type</B></DIV>
+                  </TD>
+                  <TD WIDTH="44%" VALIGN="TOP"> 
+                    <DIV align="center"><B>Comment</B></DIV>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD WIDTH="36%" VALIGN="TOP"> 
+                    <P><FONT FACE="TIMES" SIZE=2>CURRENT-DATE</FONT> 
+                  </TD>
+                  <TD WIDTH="20%" VALIGN="TOP"> 
+                    <DIV align="center"><FONT size="2">Alphanumeric</FONT></DIV>
+                  </TD>
+                  <TD WIDTH="44%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>Returns a 21 character string representing the current 
+                      date and time, and the difference between the local time 
+                      and Greenwich Mean Time. The format of the string is yyyymmddhhmmsshhxhhmm, 
+                      where xhhmm is the number of hours and minutes the local 
+                      time is ahead or behind GMT ( x = + or - or 0). If x = 0, 
+                      the hardware cannot provide this information. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD WIDTH="36%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>DATE-OF-INTEGER(PosInt) 
+                    </FONT></TD>
+                  <TD WIDTH="20%" VALIGN="TOP"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD WIDTH="44%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>Returns the yyyymmdd (standard date) equivalent of the 
+                      integer date - <B>PosInt</B>. The integer date is the number 
+                      of days that have passed since Dec 31st 1600 in the Gregorian 
+                      Calendar. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD WIDTH="36%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>DAY-OF-INTEGER(PosInt) 
+                    </FONT></TD>
+                  <TD WIDTH="20%" VALIGN="TOP"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD WIDTH="44%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>Returns the yyyddd ( Julien Date) equivalent of the integer 
+                      date - <B>PosInt</B>. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD WIDTH="36%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>INTEGER-OF-DATE(PosInt) 
+                    </FONT></TD>
+                  <TD WIDTH="20%" VALIGN="TOP"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD WIDTH="44%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>Returns the integer date equivalent of standard date <B>PosInt</B>. 
+                      Posint is an integer of the form yyyymmdd.
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD WIDTH="36%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>INTEGER-OF-DAY(PosInt) 
+                    </FONT></TD>
+                  <TD WIDTH="20%" VALIGN="TOP"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD WIDTH="44%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>Returns the integer date equivalent of Julian date (yyyyddd) 
+                      represented by <B>PosInt</B>. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD WIDTH="36%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>WHEN-COMPILED 
+                    </FONT></TD>
+                  <TD WIDTH="20%" VALIGN="TOP"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD WIDTH="44%" VALIGN="TOP"> <FONT FACE="TIMES" SIZE=2> 
+                    <P>Returns the date and time the program was compiled. Uses 
+                      the same format as CURRENT-DATE. 
+                    </FONT></TD>
+                </TR>
+              </TABLE>
+            </DIV>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Examples</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The example program below uses most of the date functions described 
+              in the table above. The results from running the program are shown 
+              below. </P>
+            <HR>
+            <TABLE border="0" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD> 
+                  <PRE>IDENTIFICATION DIVISION.
+PROGRAM-ID. DateFunctions.
+AUTHOR. Michael Coughlan.
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 DateAndTimeC.
+   02 DateC.
+      03 YearC    PIC 9(4).
+      03 MonthC   PIC 99.
+      03 DayC     PIC 99.
+   02 TimeC.
+      03 HourC    PIC 99.
+      03 MinC     PIC 99.
+      03 SecC     PIC 99.
+      03 HundredC PIC 99.
+   02 GMT.
+      03 GMTDiff  PIC X.
+         88 GMTNotSupported VALUE "0".
+      03 GMTHours PIC 99.
+      03 GMTMins  PIC 99.
+01 BillDate       PIC 9(8).
+01 DateNow        PIC 9(8).
+01 DaysOverdue    PIC S999.
+01 NumOfDays      PIC 999.
+01 IntFutureDate  PIC 9(8).
+01 FutureDate     PIC 9(8).
+01 DisplayDate REDEFINES FutureDate.
+   02 YearD       PIC 9999.
+   02 MonthD      PIC 99.
+   02 DayD        PIC 99.
+&nbsp;
+PROCEDURE DIVISION.
+Begin.
+* This example gets the current date and displays
+* its constituent parts.
+  MOVE FUNCTION CURRENT-DATE TO DateAndTimeC
+  DISPLAY "Current Date is " MonthC "/" DayC "/" YearC
+  DISPLAY "Current Time is " HourC ":" MinC ":" SecC
+  IF GMTNotSupported
+     DISPLAY "This computer cannot supply the time"
+     DISPLAY "difference between local and GMT."
+   ELSE
+     DISPLAY "The local time is - GMT "
+              GMTDiff GMTHours ":" GMTMins
+  END-IF.
+
+* In this example bills fall due 30 days from
+* the billing date.
+  DISPLAY "Enter the date of the bill (yyyymmdd) "
+           WITH NO ADVANCING
+  ACCEPT BillDate
+  MOVE DateC TO DateNow
+  COMPUTE DaysOverDue = (FUNCTION INTEGER-OF-DATE(DateNow))
+                      - (FUNCTION INTEGER-OF-DATE(BillDate)+ 30)
+  EVALUATE TRUE
+    WHEN DaysOverDue &gt; ZERO DISPLAY "This bill is over due"
+    WHEN DaysOverDue = ZERO DISPLAY "This bill is due today"
+    WHEN DaysOverDue &lt; ZERO DISPLAY "This bill is not yet due"
+  END-EVALUATE
+
+* This example displays the date NumOfDays days
+* from the current date
+  DISPLAY "Enter the number of days - "
+  WITH NO ADVANCING
+  ACCEPT NumOfDays
+  COMPUTE IntFutureDate =
+  FUNCTION INTEGER-OF-DATE(DateNow)+ NumOfDays + 1
+  MOVE FUNCTION DATE-OF-INTEGER(IntFutureDate) TO FutureDate
+  DISPLAY "The date in "
+  NumOfDays " days time will be " MonthD "/" DayD "/" YearD
+  STOP RUN.
+</PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <HR>
+            <DIV align="center">
+              <TABLE cellspacing=0 border=2 cellpadding=7 width=366 bgcolor="#DDFFFF">
+                <TR> 
+                  <TD width="21%" valign="TOP" height="33"> 
+                    <DIV align="center"><FONT face="Arial, Helvetica, sans-serif"><B>Results 
+                      </B> </FONT> <FONT face="TIMES" size=2> </FONT></DIV>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width="79%" valign="TOP" height="137"> <FONT size="2">Current 
+                    Date is 01/26/1998<BR>
+                    Current Time is 12:20:17<BR>
+                    The local time is - GMT +00:00<BR>
+                    Enter the date of the bill (yyyymmdd) 19971227<BR>
+                    This bill is due today<BR>
+                    Enter the number of days - 365<BR>
+                    The date in 365 days time will be 01/27/1999</FONT>
+                </TR>
+              </TABLE>
+            </DIV>
+<HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part5"></A><FONT face="Arial, Helvetica, sans-serif">Miscellaneous 
+              Functions </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Other 
+              Functions</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <TABLE cellspacing=0 border=2 cellpadding=7 width=502 bgcolor="#E1FFE1">
+                <TR> 
+                  <TD width="36%" valign="TOP"><B>Function Name</B></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><B>Result Type</B></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"> 
+                    <DIV align="center"><B>Comment</B></DIV>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"> 
+                    <P><FONT face="Times New Roman, Times, serif" size="2">ACOS(Num)</FONT> 
+                  </TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"> 
+                    <P> <FONT face="TIMES" size=2>Returns a numeric value in radians 
+                      that approximates the arccosine of <FONT face="Times New Roman, Times, serif" size="2"><B>Num</B></FONT><FONT face="TIMES" size=2>. 
+                      </FONT> </FONT> 
+                    <FONT face="TIMES" size=2> 
+                    <P>The value of <FONT face="Times New Roman, Times, serif" size="2">Num</FONT><FONT face="TIMES" size=2> 
+                      </FONT> must be greater than or equal to –1 and less than 
+                      or equal to +1. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"> 
+                    <P><FONT face="Times New Roman, Times, serif" size="2">ANNUITY(Num 
+                      PosInt) </FONT></P>
+                  </TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns a numeric 
+                    value approximating the ratio of an annuity paid at the end 
+                    of each period for the number of periods specified by <B>PosInt</B> 
+                    to an initial investment of one. Interest is earned at the 
+                    rate specified by <B>Num</B> and is applied at the end of 
+                    the period, before the payment. </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>ASIN(Num) 
+                    </FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns a numeric value in radians that approximates the 
+                      arcsine of <B>Num</B>. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>ATAN(Num) 
+                    <P>&nbsp; 
+                    </FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns a numeric value in radians that approximates the 
+                      arctangent of <B>Num</B>.<BR>
+                    
+                    <P>&nbsp; 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>FACTORIAL(PosInt) 
+                    <P>&nbsp; 
+                    </FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns an integer that is the factorial of <B>PosInt</B>. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>INTEGER(Num) 
+                    <P>&nbsp; 
+                    </FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns the greatest integer value that is less than or 
+                      equal to <B>Num</B>. For instance -2 is returned if the 
+                      Num has a value of -1.5 and 1 is returned if it has a value 
+                      of 1.5. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT face="TIMES" size=2>INTEGER-PART(Num) 
+                    </FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns the integer 
+                    part of <B>Num</B> so a value of -1.5 is returned as -1 and 
+                    a value of 1.5 is returned as 1. </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>LOG(PosNum) 
+                    </FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"> <FONT face="TIMES" size=2> 
+                    <P>Returns a numeric value that approximates the logarithm 
+                      to the base e (natural log) of <B>PosNum</B>.<BR>
+                      <FONT face="TIMES" size="2">PosNum must be greater than 
+                      0.</FONT>
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT face="Times New Roman, Times, serif" size="2">LOG10(</FONT><FONT face="TIMES" size=2>PosNum</FONT>)</TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns a numeric 
+                    value that approximates the logarithm to the base 10 of <B>PosNum</B>. 
+                    </FONT><FONT face="TIMES" size="2"><BR>
+                    <FONT face="TIMES" size="2">PosNum must be greater than 0.</FONT></FONT><FONT size="2"> 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"> 
+                    <P><FONT size="2">MAX({Any}...)</FONT></P>
+                    </TD>
+                  <TD width="21%" valign="TOP"><FONT size="2">Depends on type 
+                    of <B>Any</B> see note.</FONT></TD>
+                  <TD width="43%" valign="TOP"> 
+                    <P><FONT size="2">Takes a parameter list and returns the content 
+                      of whichever parameter contains the maximum value. <BR>
+                      Note. The returned type depends upon the parameter types 
+                      as follows; <BR>
+                      </FONT><FONT size="2"><B>Alphanumeric</B> if parameters 
+                      are Alphabetic or Alphnumeric.<BR>
+                      <B>Integer</B> if all are integer.<BR>
+                      <B>Numeric</B> if all are Numeric or mixed with Integer.<BR>
+                      An array may be used instead of the parameter list.</FONT></P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">MEAN({Num}...)</FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns a numeric 
+                    value that is the arithmetic mean (average) of its parameters. 
+                    An array may be used.</FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">MEDIAN({Num}...)</FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns the middle 
+                    value of a list of values after the values have been arranged 
+                    in sorted order. An array may be used.</FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">MIDRANGE({Num}...)</FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns a numeric 
+                    value that is the arithmetic mean (average) of the minimum 
+                    value and the maximum value. An array may be used.</FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"> 
+                    <P><FONT size="2">MIN({Any}...)</FONT></P>
+                    </TD>
+                  <TD width="21%" valign="TOP"><FONT size="2">Depends on type 
+                    of <B>Any</B> see note in MAX above.</FONT></TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Takes a parameter 
+                    list and returns the content of whichever parameter contains 
+                    the minimum value. An array may be used.</FONT><FONT size="2"> 
+                    </FONT><FONT size="2"> </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">MOD(Int1 Int2)</FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Integer</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"> 
+                    <P><FONT size="2">Returns an integer value defined as </FONT><FONT size="2"><B>Int1</B> 
+                      – (<B>Int2</B> * FUNCTION INTEGER (Int1 / Int2)).</FONT></P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">NUMVAL(Alph)</FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Converts the edited 
+                    numeric string contained in <B>Alph</B> to a numeric item. 
+                    Leading and trailing spaces are ignored and + - CR DB and 
+                    the decimal point are stripped off.</FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">PRESENT-VALUE(Num1 
+                    <BR>
+                    {Num2}...)</FONT></TD>
+                  <TD width="21%" valign="TOP"> 
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"> 
+                    <P><FONT size="2">Returns the amount to be invested today 
+                      to produce a future value at a particular rate of interest.<BR>
+                      <B>Num1</B> is the percent interest rate expressed as a 
+                      decimal valu</FONT><FONT size="2">e (.7 = 7%).<BR>
+                      <B>Num2</B> is the future desired value at the end of the 
+                      period. </FONT></P>
+                    </TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP">
+                    <P><FONT size="2">RANDOM(PosInt)<BR>
+                      or<BR>
+                      RANDOM </FONT></P>
+                    </TD>
+                  <TD width="21%" valign="TOP">
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP">
+                    <P><FONT size="2">Returns a numeric value that is a pseudo-random 
+                      number.<BR>
+                      If a parameter is used then <B>PosInt</B> is the seed. Subsequent 
+                      references without the parameter return the next number 
+                      in the sequence.<BR>
+                      A value &gt;0 and &lt;1 will be returned.</FONT></P>
+                    </TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">RANGE({Num1}...)</FONT></TD>
+                  <TD width="21%" valign="TOP">
+                    <DIV align="center"><FONT size="2">Integer if all parameter 
+                      are Integer else Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Examines a list 
+                    of parameters and returns a value that is equal to the value 
+                    of the maximum argument minus the value of the minimum argument. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">REM(Num1 Num2)</FONT></TD>
+                  <TD width="21%" valign="TOP">
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns a numeric 
+                    value that is the remainder of <B>Num1</B> divided by <B>Num2</B>. 
+                    </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">SIN(Num)</FONT></TD>
+                  <TD width="21%" valign="TOP">
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns an approximation 
+                    of the sine of an angle or arc, expressed in radians, that 
+                    is specified by <B>Num</B>. </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">SQRT(Num)</FONT></TD>
+                  <TD width="21%" valign="TOP">
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns an approximation 
+                    of the square root of <B>Num</B>.</FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">STANDARD-DEVIATION({Num}...)</FONT></TD>
+                  <TD width="21%" valign="TOP">
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns an approximation 
+                    of the standard deviation of its parameters.</FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">SUM({Num}...)</FONT></TD>
+                  <TD width="21%" valign="TOP">
+                    <DIV align="center"> <FONT size="2">Integer if all parameter 
+                      are Integer else Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns the sum 
+                    of the parameters.</FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">TAN(Num)</FONT></TD>
+                  <TD width="21%" valign="TOP">
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"><FONT size="2">Returns an approximation 
+                    of the tangent of an angle or arc, expressed in radians, that 
+                    is specified by <B>Num</B>. </FONT></TD>
+                </TR>
+                <TR> 
+                  <TD width="36%" valign="TOP"><FONT size="2">VARIANCE({Num}...)</FONT></TD>
+                  <TD width="21%" valign="TOP">
+                    <DIV align="center"><FONT size="2">Numeric</FONT></DIV>
+                  </TD>
+                  <TD width="43%" valign="TOP"> <FONT size="2">Returns an approximation 
+                    of the</FONT> <FONT size="2">variance of its arguments</FONT></TD>
+                </TR>
+              </TABLE>
+            </DIV>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">General 
+              Examples</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The example program below uses many of the functions described 
+              in the table above. The results from running the program are shown 
+              below. </P>
+            <HR>
+            <TABLE border="0" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD valign="top"> 
+                  <PRE>IDENTIFICATION DIVISION.
+PROGRAM-ID.  OtherFunctions.
+AUTHOR.  Michael Coughlan.
+* An example program using misc Intrinsic Functions
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01  IntParameters.
+    02 IP1          PIC 99   VALUE 25.
+    02 IP2          PIC 99   VALUE 50. 
+    02 IP3          PIC 9(5) VALUE 12.
+    02 IResult      PIC 9(5).
+                                                     
+01  NumResult       PIC 9.9(5).
+                                                     
+01 IntArray VALUE "1223037865".
+   02 Ielement OCCURS 5 TIMES PIC 99.
+                                                     
+PROCEDURE DIVISION.
+Begin.
+  MOVE FUNCTION MAX(IP1 545 IP3 IP2) TO IResult 
+  DISPLAY "Max value is = " IResult
+                                                     
+  MOVE FUNCTION MAX(Ielement(ALL)) TO IResult
+  DISPLAY "Max value is = " IResult
+                                                     
+  MOVE FUNCTION MEDIAN(Ielement(ALL)) TO IResult
+  DISPLAY "Median value is = " IResult
+                                                     
+  MOVE FUNCTION MIDRANGE(Ielement(ALL)) TO IResult
+  DISPLAY "Midrange value is = " IResult
+                                                     
+  MOVE FUNCTION MIN(Ielement(ALL)) TO IResult
+  DISPLAY "Min value is = " IResult
+                                                     
+  MOVE FUNCTION RANGE(Ielement(ALL)) TO IResult 
+  DISPLAY "Range is " IResult 
+                                                     
+  MOVE FUNCTION SUM(Ielement(ALL)) TO IResult 
+  DISPLAY "The sum of the values is " IResult
+
+  MOVE FUNCTION VARIANCE(Ielement(ALL)) TO IResult
+  DISPLAY "The variance of the values is " IResult
+  STOP RUN.</PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <HR>
+            <DIV align="center">
+              <TABLE cellspacing=0 border=2 cellpadding=7 width=366 bgcolor="#DDFFFF">
+                <TR> 
+                  <TD width="21%" valign="TOP" height="33"> 
+                    <DIV align="center"><FONT face="Arial, Helvetica, sans-serif"><B>Results 
+                      </B> </FONT> <FONT face="TIMES" size=2> </FONT></DIV>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width="79%" valign="TOP" height="137"> 
+                    <P><FONT size="2">Max value is = 00545<BR>
+                      Max value is = 00078<BR>
+                      Median value is = 00023<BR>
+                      Midrange value is = 00040<BR>
+                      Min value is = 00003<BR>
+                      The sum of the values is 00181<BR>
+                      The variance of the values is 00887</FONT></P>
+                    </TR>
+              </TABLE>
+            </DIV>
+<HR>
+          </TD>
+        </TR>
+
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Lotto 
+              Example</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The example program below uses the RANDOM function to get and display 
+              6 unique lotto numbers. Valid lotto numbers fall between 1 and 42.</P>
+            <P>In this program the last five digits of the system time (i.e. minutes, 
+              seconds and hundreths of seconds) is used as the random number seed.</P>
+            <P>The algorithm is based on Niklaus Wirth's algorithm for finding 
+              a set of unique integers. In this algorithm when the loop test in 
+              executed -</P>
+            <BLOCKQUOTE>
+              <P> i + 1 is the position where the current number was inserted<BR>
+                j is the first position where the current number was found<BR>
+                If i + 1 = j then the current number has no duplicates. </P>
+            </BLOCKQUOTE>
+            <HR>
+            <TABLE border="0" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD valign="top"> 
+                  <PRE>IDENTIFICATION DIVISION.
+PROGRAM-ID.  Lotto.
+AUTHOR.  Michael Coughlan.
+* This program displays six unique random lotto numbers.
+* It was Adapted from a program written by Dermot Shinners-Kennedy
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 LottoNum  PIC 9(5) OCCURS 6 TIMES INDEXED BY j.
+01 i         PIC 9(3).
+01 RandNum   PIC 9(3).
+01 SysDate.
+   02 FILLER PIC 9(11).
+   02 Seed   PIC 9(5).
+
+PROCEDURE DIVISION.
+Begin.
+   MOVE FUNCTION CURRENT-DATE TO SysDate
+   COMPUTE RandNum = FUNCTION RANDOM(Seed)
+
+   SET i to ZERO 
+   PERFORM 6 TIMES
+      PERFORM WITH TEST AFTER UNTIL i + 1 = j
+        COMPUTE LottoNum(i + 1), RandNum =
+                (FUNCTION RANDOM * 42) + 1
+        SET j to 1
+        SEARCH LottoNum
+           WHEN LottoNum(j) = RandNum CONTINUE
+        END-SEARCH
+      END-PERFORM
+      ADD 1 to i
+      DISPLAY LottoNum(i) SPACE WITH NO ADVANCING
+   END-PERFORM
+   STOP RUN.
+                                      
+</PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <DIV align="center"> </DIV>
+            
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <HR>
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="left">These COBOL course materials are the copyright property 
+                of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : August 1998</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

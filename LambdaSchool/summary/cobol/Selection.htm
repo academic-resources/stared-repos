@@ -1,0 +1,1625 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>COBOL Selection Constructs</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+  <TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <CENTER>
+              <H2><img src="/cobol/course/Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> <B>COBOL Selection Constructs</B></H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><BR>
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top"> 
+                  <p><B><A href="#part1" target="">Selection using IF</A><BR>
+                    </B><FONT size="-1">This section demonstrates selection using 
+                    the IF statement. It introduces Relation Conditions, Class 
+                    Condition, Sign Condition and Complex Conditions. It also 
+                    covers Implied Subjects and Nested IFs.</FONT><FONT size="-1"> 
+                    <BR>
+                    <br>
+                    </FONT> </p>
+                  </TD>
+              </TR>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" valign="top"> 
+                  <div align="left"><b><a href="#part2" target="">Condition Names</a><br>
+                    </b><font size="-1">In this section the concept of a Condition 
+                    Name is explained. <br>
+                    <br>
+                    </font> </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%"> 
+                  <div align="left"><b><a href="#part3" target="">Using the SET 
+                    verb with Condition Names</a><br>
+                    </b><font size="-1">This section demonstrates how the SET 
+                    verb may be used to set a Condition Name to true.<br>
+                    </font> <br>
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%"> 
+                  <div align="left"><b><a href="#part4" target="">The EVALUATE 
+                    verb </a><br>
+                    </b><font size="-1">In this section COBOL's version of Case/Switch 
+                    is introduced.<br>
+                    </font> <br>
+                  </div>
+                </td>
+              </tr>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><FONT face="Arial, Helvetica, sans-serif">Introduction</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="540"> 
+            <P>In most procedural languages,<font size="-1"> </font>If<font size="-1"> 
+              </font>and Case/Switch are the only selection constructs supported. 
+              COBOL supports advanced versions of both of these constructs, but 
+              it also introduces the concept of Condition Names - a kind of abstract 
+              condition.</P>
+            <P>In this tutorial we will examine COBOL's selection constructs, 
+              the<font size="-1"> IF</font> and the <font size="-1">EVALUATE</font> 
+              and we will demonstrate how to create and use Condition Names.</P>
+            <HR width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="540" valign="top"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Understand how an <font size="-1">IF</font> statement works.</LI>
+              <LI>Know the types of condition that COBOL supports and understand 
+                how and when to use them.</LI>
+              <LI>Know the condition precedence rules and be able to create complex 
+                conditions using <font size="-1">AND</font> and <font size="-1">OR</font>.</LI>
+              <LI>Know how to use Implied subjects.</LI>
+              <LI>Be able to create nested <font size="-1">IF</font> statements.</LI>
+              <LI>Understand how Condition Names work and be able to create and 
+                use them.</LI>
+              <LI>Be able to use the <font size="-1">SET</font> verb to set a 
+                Condition Name to true.</LI>
+              <LI>Know how to use a Condition Name to signal the end of a Sequential 
+                File.</LI>
+              <LI>Understand how the <font size="-1">EVALUATE</font> works.</LI>
+            </OL>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="77"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="77" valign="top"> 
+            <p>Introduction to COBOL </p>
+            <p>Declaring data in COBOL </p>
+            <p>Basic Procedure Division Commands</p>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part1"></a><FONT face="Arial, Helvetica, sans-serif">Selection 
+              using IF</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left"> When a program runs the program statements are 
+                executed one after another in sequence unless a statement is encountered 
+                that alters the order of execution. </P>
+              <P align="left">An IF statement is one of the statement types that 
+                can alter the order of execution in the program. </P>
+              <P align="left">An IF statement allows the programmer to specify 
+                that the block of code is to be executed only if the condition 
+                attached to the IF statement is satisfied.</P>
+              <hr width="50%">
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">IF syntax</FONT></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left"><img src="Resources/pics/Select1.gif" width="379" height="102"> 
+              </P>
+              <P align="left">When an <font size="-1">IF</font> statement is encountered 
+                in a program, the StatementBlock following the <font size="-1">THEN</font> 
+                is executed, if the condition is true, and the StatementBlock 
+                following the <font size="-1">ELSE</font> (is used) is executed, 
+                if the condition is false.</P>
+              <P align="left">The StatementBlock(s) can include any valid COBOL 
+                statement including further <font size="-1">IF</font> constructs, 
+                <font size="-1">PERFORM</font>s, etc.</P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Using 
+              the END-IF delimiter</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">Although the scope of the <font size="-1">IF</font> 
+                statement may be delimited by a full-stop (the old way), or by 
+                the <font size="-1">END-IF </font>(the new way), the <font size="-1">END-IF 
+                </font>delimiter should always be used. </P>
+              <P align="left">The <font size="-1">END-IF</font> makes explicit 
+                the scope of the statement. Using a full stop to delimit the scope 
+                of the IF can lead to problems. For instance, the two IF statements 
+                below are supposed to perform the same task. But the scope of 
+                the one on the left is delimited by the <font size="-1">END-IF</font>, 
+                while that on the right is delimited by a full stop. </P>
+              <table width="85%" border="0" align="center">
+                <tr> 
+                  <td width="46%" valign="top"> 
+                    <pre>
+Statement1
+Statement2
+IF VarA > VarD THEN
+   Statement3
+   Statement4
+END-IF
+Statement5
+Statement6.</pre>
+                  </td>
+                  <td width="46%" valign="top"> 
+                    <pre>Statement1
+Statement2
+IF VarA > VarD THEN
+   Statement3
+   Statement4
+Statement5
+Statement6.</pre>
+                  </td>
+                </tr>
+              </table>
+              <P align="left">Unfortunately, in the <font size="-1">IF</font> 
+                on the right, the programmer has forgotten to follow Statement4 
+                by a delimiting full stop. This means that Statement5 and 6 will 
+                be included in the scope of the <font size="-1">IF</font> (i.e. 
+                will only be executed if the condition is true) by mistake. If 
+                you use full stops to delimit the scope of an <font size="-1">IF</font> 
+                statement, this is an easy mistake to make and, once made, it 
+                is difficult to spot. A full stop is small and unobtrusive compared 
+                to an <font size="-1">END-IF</font>. </P>
+              <hr width="50%">
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Condition 
+              Types </FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p>The<font size="-1"> IF</font> statement is not as simple as the 
+              syntax diagram above seems to suggest. The condition following the 
+              <font size="-1">IF,</font> is drawn from one of the condition types 
+              shown in the table below.</P>
+            <table cellspacing=0 border=1 cellpadding=7 width=241 align="center" height="180">
+              <tr bgcolor="#FFFFCC"> 
+                <td valign="TOP"> 
+                  <div align="center"><b><font color="#FF0000">Condition Types</font></b></div>
+                </td>
+              </tr>
+              <tr bgcolor="#E1FFE1"> 
+                <td valign="TOP"> 
+                  <ul>
+                    <li><b>Simple Conditions</b> 
+                      <ul>
+                        <li>Relation Conditions </li>
+                        <li>Class Conditions</li>
+                        <li>Sign Conditions</li>
+                      </ul>
+                    </li>
+                    <li><b>Complex Conditions</b></li>
+                    <li><b>Condition Name</b></li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+            <p>Simple and Complex conditions are examined in this section, but 
+              Condition Names are so important that they are covered separately 
+              in the next section.</p>
+            <p>&nbsp; </p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Relation 
+              Conditions </FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <div align="center"> 
+                <p align="left"><img src="Resources/pics/Select2.gif" width="484" height="245"></p>
+                <p align="left">The syntax of a Relation Condition is shown above. 
+                  As you can see from the diagram a Relation Condition may be 
+                  used to test whether a value is less than, equal to, or greater 
+                  than, another value.</p>
+                <p align="left">In the comparison we can use the full words or 
+                  the symbols shown. Note however, that there is no symbol for 
+                  <font size="-1">NOT;</font> you must use the word if you want 
+                  to express this condition.</p>
+                <p align="left">When a condition is evaluated, it evaluates to 
+                  either True or False. It does not evaluate to 1 or 0.</p>
+                <p align="left">Note that the values of the compared items must 
+                  be type compatible. For instance, it is not valid to have a 
+                  statement that says </p>
+                <pre align="left">IF &quot;mike&quot; IS EQUAL TO 123 THEN etc
+                  </pre>
+                <div align="left"> 
+                  <pre align="left">&nbsp; </pre>
+                </div>
+              </div>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Class 
+              Conditions </FONT></H4>
+            <H4 align="center"><img src="Resources/pics/i-LightBulbTip.gif" width="42" height="44"></H4>
+            <p align="left"><font size="-1">Although this course will not cover 
+              the <font size="-2">SPECIAL-NAMES </font>paragraph in detail it 
+              is useful to acquaint yourself with its clauses. </font></p>
+            <p align="left"><font size="-1">As well as setting up a class name, 
+              the<font size="-2"> SPECIAL-NAMES </font>paragraph allows you to 
+              do such things as;<br>
+              </font><font size="-1">Specify the collating sequence - e.g. <font size="-2">ASCII</font> 
+              or <font size="-2">EBCDIC</font><br>
+              Specify the currency sign <br>
+              Create User Defined Figurative constants.</font></p>
+            <p align="left">&nbsp;</p>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p><img src="Resources/pics/Select3.gif" width="312" height="125"></P>
+            <p>Although COBOL data-items are not &quot;strongly typed&quot;, they 
+              do fall into some broad categories or classes, such as numeric or 
+              alphanumeric. A Class Condition may be used to determine whether 
+              the value of data-item is a member of one these classes. For instance, 
+              a <font size="-1">NUMERIC</font> Class Condition might be used on 
+              an alphanumeric (<font size="-1">PIC X</font>) or a numeric (<font size="-1">PIC 
+              9</font>) data-item to see if it contained numeric data. </p>
+            <p>The UserDefinedClassName is name that a programmer can assign to 
+              a set of characters. The programmer must use the <font size="-1">CLASS</font> 
+              clause of the <font size="-1">SPECIAL-NAMES</font> paragraph, of 
+              the <font size="-1">CONFIGURATION SECTION,</font> in the <font size="-1">ENVIRONMENT 
+              DIVISION,</font> to assign a class name to a set of characters.</p>
+            <p><b>Rules<br>
+              </b>The target of a class test must be a data-item whose usage is 
+              explicitly or implicitly, <font size="-1">DISPLAY</font>. In the 
+              case of numeric tests, data items with a usage of <font size="-1">PACKED-DECIMAL</font> 
+              may also be tested. </p>
+            <p>The numeric test may not be used with data items described as alphabetic 
+              (PIC A) or with group items when any of the elementary items specifies 
+              a sign.</p>
+            <p>An alphabetic test may not be used with any data items described 
+              as numeric (PIC 9). </p>
+            <p>An data-item conforms to the UserDefinedClassName if its contents 
+              consist entirely of the characters listed in the definition of the 
+              UserDefinedClassName.</p>
+            <p><b>Example </b></p>
+            <pre>
+* Uses the UPPER Intrinsic Function to convert to uppercase
+IF InputChar IS ALPHABETIC-LOWER
+   MOVE FUNCTION UPPER (InputChar) TO InputChar
+END-IF
+
+</pre>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Sign 
+              Condition </FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p><img src="Resources/pics/Select4.gif" width="313" height="76"></p>
+            <p>The Sign Condition determines whether or not the value of an arithmetic 
+              expression is less than, greater than, or equal to zero. Sign Conditions 
+              are shorter way of writing certain Relational Conditions. </p>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Complex 
+              Conditions</FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <h4 align="center">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-LightBulbTip.gif" width="42" height="44"></h4>
+            <p align="left"><font size="-1">You can see from the IF Amnt1 example, 
+              that figuring out how a complex condition will be evaluated is not 
+              straightfoward.<br>
+              </font><font size="-1">Always use brackets to make the order of 
+              evaluation explicit.</font></p>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p><font size="-1"><img src="Resources/pics/Select5.gif" width="228" height="52"></font></p>
+            <p>Complex Conditions are formed by combining two or more simple conditions 
+              using the conjunction operators <font size="-1">OR </font>or <font size="-1">AND</font>. 
+            </p>
+            <p> Like other conditions in COBOL, a complex condition evaluates 
+              to either True or False. A complex condition is an expression and 
+              like arithmetic expressions it is evaluated from left to right unless 
+              the order of evaluation is changed by the precedence rules (shown 
+              below) or by bracketing.</p>
+            <table border cellspacing=1 cellpadding=7 width=275 bgcolor="#E1FFE1" align="center">
+              <tr bgcolor="#FFFFCC"> 
+                <td width="23%" valign="TOP"> 
+                  <p align="CENTER"><font color="#FF0000"><b>Precedence</b></font> 
+                </td>
+                <td width="35%" valign="TOP"> 
+                  <p align="CENTER"><font color="#FF0000"><b>Condition Value</b></font> 
+                </td>
+                <td width="42%" valign="TOP"> 
+                  <p align="CENTER"><font color="#FF0000"><b>Arithmetic Equivalent</b></font> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="23%" valign="TOP"> 
+                  <p align="CENTER"><b>1.</b> 
+                </td>
+                <td width="35%" valign="TOP"> 
+                  <p align="CENTER"><font size="-1">NOT</font> 
+                </td>
+                <td width="42%" valign="TOP"> 
+                  <p align="CENTER"><b>**</b> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="23%" valign="TOP"> 
+                  <p align="CENTER"><b>2.</b> 
+                </td>
+                <td width="35%" valign="TOP"> 
+                  <p align="CENTER"><font size="-1">AND</font> 
+                </td>
+                <td width="42%" valign="TOP"> 
+                  <p align="CENTER"><b>*</b> or <b>/</b> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="23%" valign="TOP"> 
+                  <p align="CENTER"><b>3.</b> 
+                </td>
+                <td width="35%" valign="TOP"> 
+                  <p align="CENTER"><font size="-1">OR</font> 
+                </td>
+                <td width="42%" valign="TOP"> 
+                  <p align="CENTER"><b>+</b> or<b> -</b> 
+                </td>
+              </tr>
+            </table>
+            <p><b>Example</b></p>
+            <blockquote>
+              <pre>IF Row > 0 AND Row < 26 THEN
+   DISPLAY "On Screen" 
+END-IF 
+
+IF NOT Amnt1 < 10 OR Amnt2 = 50 AND Amnt3 > 150 THEN
+   DISPLAY "Done"
+END-IF
+</pre>
+            </blockquote>
+            <p><b>The effect of bracketing<br>
+              </b>Let's examine the last example above to see what difference 
+              bracketing makes to the order of evaluation.</p>
+            <p>First consider how the statement would be bracketed to make explicit 
+              what is actually happening. </p>
+            <blockquote> 
+              <p>The <font size="-1">NOT</font> takes precedence so we must write 
+                - <font size="-1"><b>NOT</b></font><b> (Amnt1 &lt;10)</b>.<br>
+                The <font size="-1">AND </font>is next in precedence so we must 
+                bracket -<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>((Amnt2=50)<font size="-1"> AND</font> 
+                (Amnt3 &gt; 150))</b>. <br>
+                Finally the <font size="-1">OR</font> is evaluated to give the 
+                full condition as -<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;(<font size="-1">NOT</font> (Amnt1 < 10)) 
+                <font size="-1">OR</font> ((Amnt2 = 50) <font size="-1">AND</font> 
+                (Amnt3 > 150))</p>
+            </blockquote>
+            <p>If all the simple conditions are true; will the Complex Condition 
+              be true? Let's check.</p>
+            <table width="94%" border="1" align="center">
+              <tr> 
+                <td width="16%" bgcolor="#FFFFCC"> 
+                  <p align="center"><font size="-1">Condition</font></p>
+                </td>
+                <td width="84%" bgcolor="#E1FFE1"> 
+                  <p align="center">&nbsp;(<font size="-1">NOT </font>(Amnt1 < 
+                    10)) <font size="-1">OR </font>((Amnt2 = 50) <font size="-1">AND</font> 
+                    (Amnt3 > 150))</p>
+                </td>
+              </tr>
+              <tr> 
+                <td width="16%" bgcolor="#FFFFCC"> 
+                  <p align="center"><font size="-1">Expressed as</font></p>
+                </td>
+                <td width="84%" bgcolor="#E1FFE1"> 
+                  <pre>   (NOT    (T))   OR      ((T)   AND      (T)) </pre>
+                </td>
+              </tr>
+              <tr> 
+                <td width="16%" height="17" bgcolor="#FFFFCC"> 
+                  <div align="center"><font size="-1">Evaluates to</font></div>
+                </td>
+                <td width="84%" height="17" bgcolor="#E1FFE1"> 
+                  <pre>      (F)         OR             (T) </pre>
+                </td>
+              </tr>
+              <tr> 
+                <td width="16%" bgcolor="#FFFFCC"> 
+                  <div align="center"><font size="-1">Evaluates to</font></div>
+                </td>
+                <td width="84%" bgcolor="#E1FFE1"> 
+                  <pre>                 <b><font color="#FF0000">True </font></b></pre>
+                </td>
+              </tr>
+            </table>
+            <p>Consider the condition in the table below and ask the same question. 
+              Is the Complex Condition true if all the Simple Conditions are true? 
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <table width="93%" border="1" align="center">
+              <tr> 
+                <td width="16%" bgcolor="#FFFFCC"> 
+                  <p align="center"><font size="-1">Condition</font></p>
+                </td>
+                <td width="84%" bgcolor="#E1FFE1"> 
+                  <p align="center"><font size="-1">NOT </font>((Amnt1 < 10) <font size="-1">OR</font> 
+                    (Amnt2 = 50)) <font size="-1">AND</font> (Amnt3 > 150)</p>
+                </td>
+              </tr>
+              <tr> 
+                <td width="16%" bgcolor="#FFFFCC"> 
+                  <p align="center"><font size="-1">Expressed as</font></p>
+                </td>
+                <td width="84%" bgcolor="#E1FFE1"> 
+                  <pre>   NOT     ((T)   OR      (T))   AND      (T)</pre>
+                </td>
+              </tr>
+              <tr> 
+                <td width="16%" height="17" bgcolor="#FFFFCC"> 
+                  <div align="center"><font size="-1">Evaluates to</font></div>
+                </td>
+                <td width="84%" height="17" bgcolor="#E1FFE1"> 
+                  <pre>   NOT            (T)            AND      (T)</pre>
+                </td>
+              </tr>
+              <tr> 
+                <td width="16%" bgcolor="#FFFFCC"> 
+                  <div align="center"><font size="-1">Evaluates to</font></div>
+                </td>
+                <td width="84%" bgcolor="#E1FFE1"> 
+                  <pre>          (F)                    AND      (T)</pre>
+                </td>
+              </tr>
+              <tr> 
+                <td width="16%" bgcolor="#FFFFCC"> 
+                  <div align="center"><font size="-1">Evaluates to</font></div>
+                </td>
+                <td width="84%" bgcolor="#E1FFE1"> 
+                  <pre>                 <font color="#FF0000"><b>False</b></font></pre>
+                </td>
+              </tr>
+            </table>
+            <blockquote> 
+              <blockquote> 
+                <p>&nbsp; </p>
+              </blockquote>
+            </blockquote>
+            <p>Now, consider the condition below and create a table similar to 
+              the ones above. Is this Complex Condition true if all the Simple 
+              Conditions are true?</p>
+            <p align="center"><font size="-1">IF NOT</font> (((Amnt1 < 10) <font size="-1">OR</font> 
+              (Amnt2 = 50)) <font size="-1">AND </font>(Amnt3 > 150)) <font size="-1">THEN</font></p>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Implied 
+              Subjects </FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p>Although COBOL is often verbose, it does occasionally provide constructs 
+              that enable quite succinct statements to be written. Implied Subjects 
+              is one of these constructs. </p>
+            <p>You can use Implied Subjects when you are making a number of comparisons 
+              against a single data-item.</p>
+            <p>For instance, in the first example in Complex Conditions above, 
+              we check to see if Row is greater than 0 and Row is less than 26. 
+              We could rewrite this statement using Implied Subjects as-</p>
+            <blockquote> 
+              <pre>IF Row &gt; 0 AND &lt; 26 THEN etc</pre>
+            </blockquote>
+            <p>the Implied Subject here is Row.</p>
+            <p><b>Examples</b><br>
+              In these examples the full condition is shown first and is followed 
+              by the condition using Implied Subjects</p>
+            <pre>IF TotalAmt > 10000 AND TotalAmt < 50000 THEN etc. 
+IF TotalAmt &gt; 10000 AND &lt; 50000 THEN etc
+* The Implied Subject is - TotalAmt
+
+IF Grade = "A" OR Grade = "B1" OR GRADE = "B2" OR GRADE = "B3"
+IF Grade = "A" OR "B1" OR "B2" OR "B3"
+*The Implied Subject is - Grade = "A"
+
+IF VarA > VarB AND VarA > VarC AND VarA > VarD
+   DISPLAY "VarA is the Greatest" <
+END-IF 
+IF VarA > VarB AND VarC AND VarD
+   DISPLAY "VarA is the Greatest" <
+END-IF 
+* The Implied Subject is - VarA >
+
+</pre>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Nested 
+              Ifs </FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/i-SAQ2.gif" width="32" height="46"></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p> COBOL allows nested <font size="-1">IF</font> statements.</p>
+            <p> For example: </p>
+            <blockquote> 
+              <pre>IF ( VarA < 10 ) AND ( VarB NOT > VarC ) THEN 
+   IF VarG = 14 THEN 
+        DISPLAY "First"
+    ELSE 
+        DISPLAY "Second" 
+   END-IF 
+ ELSE DISPLAY "Third" 
+END-IF 
+</pre>
+            </blockquote>
+            <p>The table below contains representations of the variables used 
+              in the nested <font size="-1">Ifs</font> above. In each instance, 
+              see if you can figure out which of the messages will be displayed. 
+              To see the answer, move your cursor over the text &quot;Answer&quot; 
+              and the correct answer should be shown. </p>
+            <form method="post" action="Selection.htm">
+              <table width="50%" border="1" bgcolor="#E1FFE1" align="center">
+                <tr bgcolor="#FFFFCC"> 
+                  <td width="13%"> 
+                    <div align="center"><font color="#FF0000"><b>VarA</b></font></div>
+                  </td>
+                  <td width="13%"> 
+                    <div align="center"><font color="#FF0000"><b>VarB</b></font></div>
+                  </td>
+                  <td width="13%"> 
+                    <div align="center"><font color="#FF0000"><b>VarC</b></font></div>
+                  </td>
+                  <td width="12%"> 
+                    <div align="center"><font color="#FF0000"><b>VarG</b></font></div>
+                  </td>
+                  <td bgcolor="#FFFFCC" width="49%"> 
+                    <div align="center"><font color="#FF0000"><b><font size="-1">DISPLAY</font></b></font></div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="13%"> 
+                    <div align="center">3</div>
+                  </td>
+                  <td width="13%"> 
+                    <div align="center">4</div>
+                  </td>
+                  <td width="13%"> 
+                    <div align="center">15</div>
+                  </td>
+                  <td width="12%"> 
+                    <div align="center">14</div>
+                  </td>
+                  <td bgcolor="#FFFFFF" width="49%"> 
+                    <div align="center"> 
+                      <select name="select">
+                        <option selected>Click arrow for answer</option>
+                        <option>First is displayed</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="13%"> 
+                    <div align="center">3</div>
+                  </td>
+                  <td width="13%"> 
+                    <div align="center">4</div>
+                  </td>
+                  <td width="13%"> 
+                    <div align="center">15</div>
+                  </td>
+                  <td width="12%"> 
+                    <div align="center">15</div>
+                  </td>
+                  <td bgcolor="#FFFFFF" width="49%"> 
+                    <div align="center"> 
+                      <select name="select2">
+                        <option selected>Click arrow for answer</option>
+                        <option>Second is displayed</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="13%"> 
+                    <div align="center">3</div>
+                  </td>
+                  <td width="13%"> 
+                    <div align="center">4</div>
+                  </td>
+                  <td width="13%"> 
+                    <div align="center">3</div>
+                  </td>
+                  <td width="12%"> 
+                    <div align="center">14</div>
+                  </td>
+                  <td bgcolor="#FFFFFF" width="49%"> 
+                    <div align="center"> 
+                      <select name="select3">
+                        <option selected>Click arrow for answer</option>
+                        <option>Third is displayed</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="13%"> 
+                    <div align="center">13</div>
+                  </td>
+                  <td width="13%"> 
+                    <div align="center">4</div>
+                  </td>
+                  <td width="13%"> 
+                    <div align="center">15</div>
+                  </td>
+                  <td width="12%"> 
+                    <div align="center">14</div>
+                  </td>
+                  <td bgcolor="#FFFFFF" width="49%"> 
+                    <div align="center"> 
+                      <select name="select4">
+                        <option selected>Click arrow for answer</option>
+                        <option>Third is displayed</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <p>&nbsp;</p>
+            <blockquote> 
+              <pre>&nbsp;
+</pre>
+            </blockquote>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A><FONT face="Arial, Helvetica, sans-serif">Condition 
+              Names </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P>Wherever a condition can occur, such as in an <font size="-1">IF 
+              </font>statement or an <font size="-1">EVALUATE</font> or a <font size="-1">PERFORM..UNTIL</font>, 
+              a Condition Name (Level 88) may be used. </P>
+            <P>Condition Names are defined in the <font size="-1">DATA DIVISION</font> 
+              using the special level number 88. They are always associated with 
+              a data-item and are defined immediately after the definition of 
+              the data-item. </P>
+            <P>A Condition Name is a name given to a specified subset of the values 
+              which its associated data-item can hold. </P>
+            <P>Like a condition, a Condition Name evaluates to True or False. 
+            </P>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Condition 
+              Name Syntax</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P align="left"><img src="/cobol/course/Resources/pics/Select6.gif" width="501" height="76"></P>
+            <P align="left">When used with Condition Names, the <font size="-1">VALUE</font> 
+              clause does not assign a value. It merely identifies the value(s) 
+              in the data-item which make the Condition Name True.</P>
+            <P align="left"> When identifying the condition values, you can specify 
+              a single value, a list of values, a range of values, or any combination 
+              of these. </P>
+            <P align="left">To specify a list of values, simply list the values 
+              after the keyword <font size="-1">VALUE</font>. The list entries 
+              may be separated by commas or spaces but must terminate with a full-stop. 
+            </P>
+            <blockquote> 
+              <div align="left"> 
+                <pre align="left">e.g. 02 DeptCode          PIC X. 
+        88 ProductionDept VALUE “I”,“L”,“T”. </pre>
+              </div>
+            </blockquote>
+            <P align="left">To specify a range, use the keyword <font size="-1">THRU</font>, 
+              or <font size="-1">THROUGH</font>, to separate the low and high 
+              values.</P>
+            <blockquote> 
+              <div align="left"> 
+                <pre align="left">E.g. 02 AgeInYears  PIC 9(3). 
+        88 Teenager VALUE 13 THRU 19. </pre>
+              </div>
+              <div align="left"></div>
+            </blockquote>
+            <P align="left">Several Condition Names may be associated with a single 
+              data item, </P>
+            <blockquote> 
+              <pre align="left">e.g. 02 AgeInYears  PIC 9(3). 
+        88 Child    VALUE 0  THRU 12. 
+        88 Teenager VALUE 13 THRU 19. 
+        88 Adult    VALUE 21 THRU 999. 
+</pre>
+            </blockquote>
+            <blockquote>
+              <div align="left"></div>
+              <div align="left"></div>
+            </blockquote>
+            <p align="left">More than one Condition Names may be true at the same 
+              time. For instance, if AgeInYears contains the value 20 both Teenager 
+              and Voter will be true.</p>
+            <blockquote> 
+              <pre align="left">E.g. 02 AgeInYears  PIC 9(3). 
+        88 Child    VALUE 0  THRU 12. 
+        88 Teenager VALUE 13 THRU 19. 
+        88 Adult    VALUE 21 THRU 999.
+        88 Voter    VALUE 18 THRU 999. 
+</pre>
+            </blockquote>
+            <p>&nbsp;</p>
+            <P align="left"><b>Condition Name notes</b></P>
+            <ul>
+              <li>A Condition Name evaluates to True or False depending on the 
+                value of its associated data-item. </li>
+              <li>A Condition Name may be associated with any data-item, whether 
+                it is a table element, or a group item, or an elementary item. 
+              </li>
+              <li>The data values specified for a Condition Name must be consistent 
+                with the data type of the associated data-item.</li>
+            </ul>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Condition 
+              Names examples </FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Examine the examples in the animation below. Make sure you understand 
+              how Condition Names are created, how they work and how they are 
+              used.</P>
+            <p align="center"><a href="Resources/ppz/TC-Condition1.htm"><img src="/cobol/course/Resources/pics/i-Animation.gif" width="62" height="62" alt="Click to view the animation" border="0"></a></p>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+      <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Using 
+              Condition Names correctly </FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <p>Condition Names should express the true condition being tested. 
+              For instance, consider the condition names below. In this example, 
+              the programmer has replaced the conditions that tested EUCountryCode, 
+              with Condition Names that do the same thing. Then he replaced the 
+              statement - <i>IF EUCountryCode = 2</i> by <i>IF CodeIs2</i>. </p>
+            <table width="75%" border="1" align="center">
+              <tr bgcolor="#E1FFE1" align="left"> 
+                <td> 
+                  <pre>01 EUCountryCode PIC 99. 
+   88 CodeIs1 VALUE 1. 
+   88 CodeIs2 VALUE 2. 
+   88 CodeIs3 VALUE 3. 
+        etc. 
+                   
+IF CodeIs2 THEN 
+   ADD Bonus to StructuralFunds(EUCountry) 
+END-IF 
+IF CodeIs1 THEN 
+   SUBTRACT Bonus FROM StructuralFunds(EUCountry) 
+END-IF 
+                 </pre>
+                </td>
+              </tr>
+            </table>
+            <P>The problem with these Condition Names is that the true condition 
+              being tested is not whether the code is 1 or 2, but what country 
+              a code of 1 or 2 represents. Choosing condition names like the ones 
+              above causes readability difficulties. For instance, can you tell 
+              which country is gaining and which is losing in the example above? 
+              No! You have to look at the rest of the program to find out what 
+              code is assigned to what country.</P>
+            <P> Now consider the Condition Names below. Can you see which country 
+              is losing and which is gaining now?</P>
+            <blockquote> 
+              <table width="75%" border="1" align="center">
+                <tr bgcolor="#E1FFE1"> 
+                  <td> 
+                    <pre>01 EUCountryCode PIC 99. 
+   88 France  VALUE 1. 
+   88 Ireland VALUE 2. 
+   88 Denmark VALUE 3. 
+         etc. 
+
+
+IF Ireland THEN 
+   ADD Bonus to StructuralFunds(EUCountry) 
+END-IF 
+IF France THEN 
+   SUBTRACT Bonus FROM StructuralFunds(EUCountry) 
+END-IF 
+</pre>
+                  </td>
+                </tr>
+              </table>
+            </blockquote>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+
+     <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A><FONT face="Arial, Helvetica, sans-serif">Using 
+              the SET verb with Condition Names </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="188"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="188"> 
+            <P>The SET verb is used for a number of unrelated functions in COBOL, 
+              so instead of dealing with it as a single topic, we will deal each 
+              format as we examine the construct to which it is most closely related.</P>
+            <P>In this section, we show how the SET verb may be used to set a 
+              Condition Name to True.</P>
+            <hr width="50%">
+          </TD>
+        </TR>
+      <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">SET 
+              syntax </FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P>SET {ConditionName} ... TO TRUE</P>
+            <P><font size="-1"></font><b> </b>A Condition Name set to true when 
+              one of the condition values mentioned in its <font size="-1">VALUE</font> 
+              clause is moved into its associated data-item. But you can also 
+              set a Condition Name to true using the <font size="-1">SET</font> 
+              verb. </P>
+            <P>When the <font size="-1">SET</font> verb is used to set a Condition 
+              Name, the first condition value specified after the <font size="-1">VALUE</font> 
+              clause in the definition is moved to the associated data-item. Thus, 
+              the value of the associated data-item is changed. </P>
+            <P>So, any operation which changes the value of the data-item may 
+              change the status of the associated Condition Names, and any operation 
+              which changes the status of a Condition Name may change the value 
+              of its associated data-item.</P>
+            <P>It is not (at present) possible to set a condition name to False. 
+            </P>
+            <P>&nbsp;</P>
+            <hr width="50%">
+          </TD>
+        </TR>
+
+
+      <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">SET 
+              verb example</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P>The <font size="-1">SET</font> verb is most often used to set an 
+              end of file Condition Name when reading Sequential Files. The animation 
+              below demonstrates how to set up and use an end of file Condition 
+              Name.</P>
+            <P>&nbsp; </P>
+            <P align="center"><a href="Resources/ppz/TC-Condition2.htm"><img src="/cobol/course/Resources/pics/i-Animation.gif" width="62" height="62" alt="Click to view the animation" border="0"></a></P>
+            <P>&nbsp;</P>
+            <hr width="50%">
+          </TD>
+        </TR>
+      <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Using 
+              the SET verb with Sequential Files</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/ProgFrag.gif" width="48" height="44"></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P>The animation above demonstrated a simplified version of how the 
+              <font size="-1">SET</font> verb may be used with Sequential Files. 
+              One problem with the approach shown, is that the Condition Name 
+              has to be declared in the <font size="-1">WORKING-STORAGE SECTION</font> 
+              and there may be hundreds of lines of code separating it from the 
+              file whose end it is signalling. </P>
+            <P>In the program fragment below, a somewhat different approach to 
+              setting an end of file Condition Name is demonstrated. This is the 
+              method you should use in your programs.</P>
+            <P>In this example, the EndOfStudentFile Condition Name is attached 
+              to the StudentDetails record. When EndOfStudentFile is set to true, 
+              every character of the record is filled with <font size="-1">HIGH-VALUES</font> 
+              (the highest <font size="-1">ASCII </font>value the character can 
+              hold).</P>
+            <P>Filling the record with<font size="-1"> HIGH-VALUES</font> produces 
+              a useful side-effect which we will examine when we discuss updating 
+              Sequential Files.</P>
+            <table width="95%" border="1" height="93" align="center" background="Resources/pics/Code.gif">
+              <tr> 
+                <td> 
+                  <pre>DATA DIVISION.
+FILE SECTION.
+FD StudentFile.
+01 StudentDetails.
+   88  EndOfStudentFile  VALUE HIGH-VALUES.
+   02  StudentId       PIC 9(7).
+   02  StudentName.
+       03 Surname      PIC X(8).
+       03 Initials     PIC XX.
+   02  DateOfBirth.
+       03 YOBirth      PIC 9(4).
+       03 MOBirth      PIC 9(2).
+       03 DOBirth      PIC 9(2).
+   02  CourseCode      PIC X(4).
+   02  Gender          PIC X.
+
+
+
+
+     etc.
+
+
+PROCEDURE DIVISION.
+Begin.
+   OPEN INPUT StudentFile
+   READ StudentFile
+      AT END SET EndOfStudentFile TO TRUE
+   END-READ
+   PERFORM UNTIL EndOfStudentFile
+      DISPLAY StudentId SPACE StudentName SPACE CourseCode
+      READ StudentFile
+         AT END SET EndOfStudentFile TO TRUE
+      END-READ
+   END-PERFORM
+   CLOSE StudentFile
+   STOP RUN.
+
+
+</pre>
+                </td>
+              </tr>
+            </table>
+            
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part4"></A><FONT face="Arial, Helvetica, sans-serif">The 
+              EVALUATE verb</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <font size="-1">EVALUATE</font> verb is COBOL's version of 
+              the Case or Switch construct but the <font size="-1">EVALUATE</font> 
+              is far more powerful and easier to use than either of these constructs.</P>
+            <P>The notes below briefly describe how the <font size="-1">EVALUATE</font> 
+              verb works, but you'll want to examine the syntax diagram in combination 
+              with the examples to gain a fuller understanding. </P>
+            <P>&nbsp;</P>
+            <hr width="50%">
+          <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Evaluate 
+              syntax </FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P><img src="Resources/pics/Select7.gif" width="523" height="453"></P>
+            <P>&nbsp;</P>
+            <P><font size="-1"><b>EVALUATE</b></font><b> notes</b><br>
+              The items immediately after the word <font size="-1">EVALUATE</font> 
+              and before the first <font size="-1">WHEN</font> are called <i>subjects</i>. 
+            </P>
+            <P> The items between the <font size="-1">WHEN</font> and its imperative 
+              statements are called <i>objects</i>.</P>
+            <P> The number of subject be equal to the number of objects and the 
+              type of each <i>subject</i> must be compatible with the type of 
+              its corresponding <i>object</i>.</P>
+            <P>The keyword <font size="-1">ALSO</font> must be used to separate 
+              each object from its succeeding object and each subject from its 
+              succeeding subject.</P>
+            <P> Only one <font size="-1">WHEN</font> branch is chosen per execution 
+              of the <font size="-1">EVALUATE</font>, and the checking of the 
+              <font size="-1">WHEN</font> branches is done from top to bottom. 
+            </P>
+            <P> If none of the <font size="-1">WHEN</font> branches can be chosen, 
+              and a <font size="-1">WHEN OTHER</font> phrase exists, the <font size="-1">WHEN 
+              OTHER</font> branch is executed.</P>
+            <P>If none of the <font size="-1">WHEN</font> branches can be chosen, 
+              and there is no <font size="-1">WHEN OTHER</font> phrase, the <font size="-1">EVALUATE</font> 
+              simply terminates. </P>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">EVALUATE 
+              example1 </FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P><b> </b>We want to create a ten character edit field to accept 
+              characters from the keyboard and allow them to be edited. The edit 
+              field will be implemented as a ten character array as shown below. 
+            </P>
+            <P align="center"><img src="/cobol/course/Resources/pics/eval1.gif" width="450" height="100" align="absmiddle"> 
+            </P>
+            <div align="center"></div>
+            <P>What sort of functionality do we want to implement?</P>
+            <ul>
+              <li>We want to insert characters typed at the keyboard into the 
+                array at the current cursor position and we want to move the cursor 
+                one character to the right unless it is already in position 10.</li>
+              <li> If a left arrow key is pressed we want to move the current 
+                cursor position one character to the left. </li>
+              <li> If a right arrow key is pressed we want to move the cursor 
+                position to the right. </li>
+              <li> If the delete key is pressed we want to delete the character 
+                at the current cursor position and shunt the remaining characters 
+                to the left.</li>
+              <li> We also want to implement wraparound so that if the cursor 
+                is at the first character position and we press the left arrow 
+                the cursor position is set to 10 and if the cursor is in position 
+                10 and the right arrow is pressed the cursor position is set to 
+                1.</li>
+            </ul>
+            <P>Let's assume we can get a character from the keyboard and that 
+              we have used Condition Names to detect the left-arrow, right-arrow 
+              and delete characters. What kind of an <font size="-1">EVALUATE</font> 
+              statement would we need to implement the rest of the functionality.</P>
+            <table width="76%" border="1" align="center" cellspacing="0" cellpadding="5">
+              <tr bgcolor="#E1FFE1"> 
+                <td> 
+                  <pre>EVALUATE TRUE   ALSO Position
+   WHEN L-Arrow ALSO 2 THRU 10 SUBTRACT 1 FROM Position
+   WHEN R-Arrow ALSO 1 THRU 9  ADD 1 TO Position
+   WHEN L-Arrow ALSO    1      MOVE 10 TO Position
+   WHEN R-Arrow ALSO   10      MOVE  1 TO Position
+   WHEN DelKey  ALSO   ANY     PERFORM DeleteChar
+   WHEN Char    ALSO 1 THRU 9  PERFORM InsertChar
+                               ADD 1 TO Position
+   WHEN Char ALSO     10       PERFORM InsertChar 
+   WHEN OTHER PERFORM DisplayErrorMessage
+END-EVALUATE
+</pre>
+                </td>
+              </tr>
+            </table>
+            
+            <p><b>How does this <font size="-1">EVALUATE</font> work?</b><br>
+              The <b>subjects</b> are <font size="-1">TRUE</font> and Position. 
+              So the first <b>object</b> after the <font size="-1">WHEN</font> 
+              clause must specify a condition to be compatible. with its <b>subject</b>, 
+              and the second must specify a value or range of values. So the first 
+              <font size="-1">WHEN</font> clause reads as - <i>When the L-Arrow 
+              Condition Name is true and the data-item Position has a value in 
+              the range 2-10 then we add 1 to the Position</i>.</p>
+            <p>Finally, in a language you are already familiar with, write a Switch/Case 
+              statement to do the same thing as the <font size="-1">EVALUATE</font> 
+              above does.</p>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">EVALUATE 
+              example2</font></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P>As you have already seen in the example above, the <font size="-1">EVALUATE</font> 
+              is very powerful construct; but where it really shines is implementing 
+              decision table logic. Consider the example below.</P>
+            <P>Jupiter Books - the largest on-line bookstore in the galaxy - sells 
+              books, through the Internet, to customers all over the world. For 
+              each order, Jupiter applies a percentage discount based on - the 
+              quantity of books in the current order, the value of books purchased 
+              in the last three months, and whether the customer is a member of 
+              the Jupiter Book Club.</P>
+            <P>Jupiter Books uses a decision table to decide what discount to 
+              apply. The decision table and the <font size="-1">EVALUATE</font> 
+              which implements it are shown below.</P>
+            <table width="83%" border="1" align="center" bgcolor="#E1FFE1">
+              <tr bgcolor="#FFFFCC" valign="top"> 
+                <td width="20%" height="10"> 
+                  <div align="center">
+                    <p>QtyOfBooks </p>
+                  </div>
+                </td>
+                <td width="43%" bgcolor="#FFFFCC" height="10"> 
+                  <div align="center">ValueOfPurchases (VOP) </div>
+                </td>
+                <td width="14%" height="10"> 
+                  <div align="center">ClubMember</div>
+                </td>
+                <td width="23%" height="10"> 
+                  <div align="center">% Discount</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">1-5</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$0-500</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">Y</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">2%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">6-16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$0-500</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">Y</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">3%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">&gt;16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$0-500</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">Y</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">5%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">1-5</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$501-2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">Y</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">7%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">6-16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$501-2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">Y</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">12%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">&gt;16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$501-2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">Y</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">18%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">1-5</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">&gt; $2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">Y</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">10%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">6-16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">&gt; $2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">Y</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">23%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">&gt;16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">&gt; $2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">Y</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">35%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">1-5</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$0-500</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">N</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">1%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">6-16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$0-500</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">N</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">2%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">&gt;16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$0-500</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">N</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">3%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">1-5</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$501-2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">N</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">5%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">6-16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$501-2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">N</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">10%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">&gt;16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">$501-2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">N</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">15%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">1-5</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">&gt; $2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">N</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">8%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">6-16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">&gt; $2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">N</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">23%</div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="20%"> 
+                  <div align="center">&gt;16</div>
+                </td>
+                <td width="43%"> 
+                  <div align="center">&gt; $2000</div>
+                </td>
+                <td width="14%"> 
+                  <div align="center">N</div>
+                </td>
+                <td width="23%"> 
+                  <div align="center">28%</div>
+                </td>
+              </tr>
+            </table>
+            <P>&nbsp;</P>
+            <table width="96%" border="1" bgcolor="#E1FFE1" align="center" cellpadding="5">
+              <tr valign="top"> 
+                <td height="331"> 
+                  <pre>EVALUATE Qty     ALSO    TRUE    ALSO Member 
+ WHEN  1 THRU 5  ALSO VOP &lt; 501  ALSO &quot;Y&quot;  MOVE 2  TO Discount
+ WHEN  6 THRU 16 ALSO VOP &lt; 501  ALSO &quot;Y&quot;  MOVE 3  TO Discount
+ WHEN 17 THRU 99 ALSO VOP &lt; 501  ALSO &quot;Y&quot;  MOVE 5  TO Discount
+ WHEN  1 THRU 5  ALSO VOP &lt; 2001 ALSO &quot;Y&quot;  MOVE 7  TO Discount
+ WHEN  6 THRU 16 ALSO VOP &lt; 2001 ALSO &quot;Y&quot;  MOVE 12 TO Discount
+ WHEN 17 THRU 99 ALSO VOP &lt; 2001 ALSO &quot;Y&quot;  MOVE 18 TO Discount
+ WHEN  1 THRU 5  ALSO VOP &gt; 2000 ALSO &quot;Y&quot;  MOVE 10 TO Discount
+ WHEN  6 THRU 16 ALSO VOP &gt; 2000 ALSO &quot;Y&quot;  MOVE 23 TO Discount
+ WHEN 17 THRU 99 ALSO VOP &gt; 2000 ALSO &quot;Y&quot;  MOVE 35 TO Discount
+ WHEN  1 THRU 5  ALSO VOP &lt; 501  ALSO &quot;N&quot;  MOVE 1  TO Discount
+ WHEN  6 THRU 16 ALSO VOP &lt; 501  ALSO &quot;N&quot;  MOVE 2  TO Discount
+ WHEN 17 THRU 99 ALSO VOP &lt; 501  ALSO &quot;N&quot;  MOVE 3  TO Discount
+ WHEN  1 THRU 5  ALSO VOP &lt; 2001 ALSO &quot;N&quot;  MOVE 5  TO Discount
+ WHEN  6 THRU 16 ALSO VOP &lt; 2001 ALSO &quot;N&quot;  MOVE 10 TO Discount
+ WHEN 17 THRU 99 ALSO VOP &lt; 2001 ALSO &quot;N&quot;  MOVE 15 TO Discount
+ WHEN  1 THRU 5  ALSO VOP &gt; 2000 ALSO &quot;N&quot;  MOVE 8  TO Discount
+ WHEN  6 THRU 16 ALSO VOP &gt; 2000 ALSO &quot;N&quot;  MOVE 23 TO Discount
+ WHEN 17 THRU 99 ALSO VOP &gt; 2000 ALSO &quot;N&quot;  MOVE 28 TO Discount
+END-EVALUATE
+</pre>
+                  </td>
+              </tr>
+            </table>
+            <P><b>Comments<br>
+              </b>Notice how easily and clearly the decision table is implemented 
+              using an <font size="-1">EVALUATE</font>. Not only is the <font size="-1">EVALUATE</font> 
+              clear but there is no temptation to take shortcuts which may cause 
+              problems later. For instance, at the moment, a discount of 23% is 
+              offered in two places in the table. A programmer writing in C might 
+              be tempted to take advantage of this by coding;</P>
+            <pre>if((Qty &gt; 5) && (Qty &lt; 17)) && (VOP &gt; 2000)
+ { Discount = 23;
+ }//end-if</pre>
+            <P>This immediately causes problems of readability. You have to ask 
+              yourself; is this an accurate reflection of the decision table or 
+              has the programmer introduced an error? </P>
+            <P>This code will also cause maintenance problems. What's going to 
+              happen if Jupiter decide change the second 23% discount to 20%. 
+              Big rewrite of the C code. One change to the COBOL code.</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            
+          </TD>
+        </TR>
+
+
+
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : March 1999</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

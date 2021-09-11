@@ -1,0 +1,364 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Using Tables</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+
+<CENTER><IMG SRC="T-CobolExercise.gif" HEIGHT=56 WIDTH=183></CENTER>
+
+<CENTER>
+<H2>
+Using Tables</H2></CENTER>
+
+<HR WIDTH="100%">
+<CENTER><FONT SIZE=-1>READ</FONT>, pre-defined Tables, Tables.</CENTER>
+
+<HR WIDTH="100%">
+<H2>
+<B>Introduction</B></H2>
+A program is required which will process the Students File (Students.Dat)
+and will count the number students born on each month of the year and will
+display the results to January to December order.
+
+<P>&nbsp;Download <A HREF="ftp://www.csis.ul.ie/cobol/exercises/students.dat">Students.Dat</A> 
+  and save it to the WorkArea directory on the drive D: <BR>
+  &nbsp;
+<H2>
+Student File Description</H2>
+The Students File is a sequential file held in <B>ascending StudentId</B>
+order.
+<BR>Each record of the students file contains the following items;
+<TABLE BORDER >
+  <TR> 
+    <TD WIDTH="144"> 
+      <CENTER>
+        <B>Field</B>
+      </CENTER>
+    </TD>
+    <TD WIDTH="67"> 
+      <CENTER>
+        <B>Type</B>
+      </CENTER>
+    </TD>
+    <TD WIDTH="78"> 
+      <CENTER>
+        <B>Length</B>
+      </CENTER>
+    </TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        <B>Value</B>
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="144">Student Id</TD>
+    <TD WIDTH="67"> 
+      <CENTER>
+        9
+      </CENTER>
+    </TD>
+    <TD WIDTH="78"> 
+      <CENTER>
+        7
+      </CENTER>
+    </TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        0-9999999
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="144">Student Name</TD>
+    <TD WIDTH="67"></TD>
+    <TD WIDTH="78"></TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        Group
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="144">Surname</TD>
+    <TD WIDTH="67"> 
+      <CENTER>
+        X
+      </CENTER>
+    </TD>
+    <TD WIDTH="78"> 
+      <CENTER>
+        8
+      </CENTER>
+    </TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        -
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="144">Initials</TD>
+    <TD WIDTH="67"> 
+      <CENTER>
+        X
+      </CENTER>
+    </TD>
+    <TD WIDTH="78"> 
+      <CENTER>
+        2
+      </CENTER>
+    </TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        -
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="144">DateOfBirth</TD>
+    <TD WIDTH="67"></TD>
+    <TD WIDTH="78"></TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        Group
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="144">Year</TD>
+    <TD WIDTH="67"> 
+      <CENTER>
+        9
+      </CENTER>
+    </TD>
+    <TD WIDTH="78"> 
+      <CENTER>
+        4 
+      </CENTER>
+    </TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        0000-9999 
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="144">Month</TD>
+    <TD WIDTH="67"> 
+      <CENTER>
+        9
+      </CENTER>
+    </TD>
+    <TD WIDTH="78"> 
+      <CENTER>
+        2
+      </CENTER>
+    </TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        01-12
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="144">Day</TD>
+    <TD WIDTH="67"> 
+      <CENTER>
+        9
+      </CENTER>
+    </TD>
+    <TD WIDTH="78"> 
+      <CENTER>
+        2
+      </CENTER>
+    </TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        01-31
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="144">Course Code</TD>
+    <TD WIDTH="67"> 
+      <CENTER>
+        X
+      </CENTER>
+    </TD>
+    <TD WIDTH="78"> 
+      <CENTER>
+        4
+      </CENTER>
+    </TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        -
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="144">Gender</TD>
+    <TD WIDTH="67"> 
+      <CENTER>
+        X
+      </CENTER>
+    </TD>
+    <TD WIDTH="78"> 
+      <CENTER>
+        1
+      </CENTER>
+    </TD>
+    <TD WIDTH="133"> 
+      <CENTER>
+        M/F
+      </CENTER>
+    </TD>
+  </TR>
+</TABLE>
+&nbsp;
+<UL>
+<UL>
+<UL><U><FONT SIZE=+2>Example Run</FONT></U>
+<BR><TT>&nbsp;Month&nbsp;&nbsp;&nbsp; StudCount</TT>
+<BR><TT>January&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</TT>
+<BR><TT>February&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</TT>
+<BR><TT>March&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3</TT>
+<BR><TT>April&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</TT>
+<BR><TT>May&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1</TT>
+<BR><TT>June&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0</TT>
+<BR><TT>July&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2</TT>
+<BR><TT>August&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</TT>
+<BR><TT>September&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</TT>
+<BR><TT>October&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5</TT>
+<BR><TT>November&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3</TT>
+<BR><TT>December&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5</TT></UL>
+</UL>
+</UL>
+Use Edited picture clauses and the zero suppression symbol to produce the
+output as shown.<TT></TT>
+
+<P>&nbsp;
+<H2>
+<B>Suggested Approaches.</B></H2>
+The main problem that we face here is that the results must be displayed
+in MonthName order but the file is held in StudentId order.
+
+<P>A tables based solution is a good idea here.&nbsp; We can use the month
+number as a direct index into the month table.
+<BR>&nbsp;
+<H2>
+Sample Solution</H2>
+<p>When you have written your program and have compiled it and have it working 
+  correctly you may wish to compare it with this <A HREF="ftp://www.csis.ul.ie/cobol/exercises/MonthTable.cbl">sample 
+  solution</A>. </p>
+<p align="center"><B><U><FONT COLOR="#FF0000">WARNING</FONT></U></B> </p>
+<p align="left">As always please do not look at the solution until you have finished 
+  your own program.&nbsp;&nbsp; At the very least you should make a substantial 
+  effort to complete your own attempt at the program before examining the sample 
+  solution. &nbsp; &nbsp; </p>
+<p align="left">&nbsp;</p>
+<hr>
+<table cellspacing=0 cellpadding=0 cols=3 width="200" >
+  <tr align=CENTER valign=TOP> 
+    <td><a href="default.htm"><img src="/pics/B-BackArrow.gif" alt="Back to COBOL Exercises page" border=0 height=52 width=52></a> 
+      <font size=-2>To COBOL Exercises</font></td>
+    <td><a href="/CSISFORM.HTM"><img src="/pics/b-evaluation.gif" alt="Please fill out our evaluation form" border=0 height=52 width=52></a> 
+      <font size=-2>Evaluation Form</font></td>
+    <td><a href="/SEARCH/CSISQueryHit.HTM"><img src="/pics/b-WebSearch.gif" alt="Search the CSIS Web Site" border=0 height=52 width=52></a> 
+      <font size=-2>Search CSIS Web Site</font></td>
+    <td> 
+      <center>
+        <form>
+          Selectable Site Contents 
+          <select name="list">
+            <option value="http://www.ul.ie/">UL Home Page</option>
+            <option value="http://www.ul.ie/~informat/">College of I&amp;E Home 
+            Page</option>
+            <option value="http://www.csis.ul.ie/default.htm">CSIS Home Page</option>
+            <option value="http://www.csis.ul.ie/courses.HTM">Courses On Offer</option>
+            <option value="http://www.csis.ul.ie/CompSys.HTM">...Computer Systems 
+            Degree</option>
+            <option value="http://www.csis.ul.ie/GradDip.HTM">...Graduate Diploma 
+            in Computing</option>
+            <option value="http://www.csis.ul.ie/software_localisation/default.htm">...Graduate 
+            Diploma/MSc in Software Localisation</option>
+            <option value="http://www.csis.ul.ie/ccmcm/default.htm">...MSc in 
+            Music Technology</option>
+            <option value="http://www.csis.ul.ie/soft_re_eng.html/default.htm">...MSc 
+            in Software Reengineering</option>
+            <option value="http://www.csis.ul.ie/Directory/Staff.HTM">Department 
+            Personnel</option>
+            <option value="http://www.csis.ul.ie/Directory/phone.HTM">...CSIS 
+            Telephone Directory</option>
+            <option value="http://www.ul.ie/ITD/PhoneBook.html">...UL Internal 
+            Telephone Directory</option>
+            <option value="http://www.csis.ul.ie/Research.HTM">Research</option>
+            <option value="http://www.csis.ul.ie/Research/ResearchCntr.HTM">...Research 
+            Centres</option>
+            <option value="http://www.csis.ul.ie/Research/ResearchPrj.HTM">...Research 
+            Projects</option>
+            <option value="http://www.csis.ul.ie/Research/RsrchPubs.htm">...Research 
+            Publications</option>
+            <option value="http://www.csis.ul.ie/Research/techrpts.htm">...Technical 
+            Reports</option>
+            <option value="http://www.csis.ul.ie/Research/PhdTheses.htm">...Ph.D 
+            Theses</option>
+            <option value="http://www.csis.ul.ie/Research/masters.htm">...M.Sc. 
+            Theses</option>
+            <option value="http://www.csis.ul.ie/StudentResources.HTM">Student 
+            Resources</option>
+            <option value="http://www.csis.ul.ie/photoalbum/classes/namesonly.htm">...Computer 
+            Systems Graduated Classes </option>
+            <option value="http://www.csis.ul.ie/staff/norahpower/FYPSuggestions9798.htm">...Final 
+            Year Project suggestions</option>
+            <option value="http://www.csis.ul.ie/fyp97/index.html">...Final Year 
+            Projects web page</option>
+            <option value="http://www.csis.ul.ie/studentresources/schedules/csislabs.htm">...Lab 
+            Schedules</option>
+            <option value="http://www.csis.ul.ie/studentresources/ModuleMaterial.htm">...Module 
+            Materials</option>
+            <option value="http://www.csis.ul.ie/studentresources/links.htm">...Useful 
+            Links</option>
+            <option value="http://www.csis.ul.ie/StudentResources/fyproj.htm">...Completed 
+            Final Year Projects</option>
+            <option value="http://www.csis.ul.ie/meetings/Meetings.HTM">Meetings</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/Album.htm">Photo Album</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/classes/default.htm">...Computer 
+            Systems - Class Photos</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuin.htm">...Schuman 
+            Interior</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuout.htm">...Schuman 
+            Environs</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/ULgrounds/default.htm">...University 
+            Grounds</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM">General Information</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Department">...Department 
+            Information</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Getting">...Getting 
+            Around</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Contacting">...Contacting 
+            the department</option>
+            <option value="http://www.csis.ul.ie/TOYS/WHOSON.HTM">...Who's on 
+            the server</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#About">...About these 
+            pages</option>
+          </select>
+          <input type=BUTTON value="Go!" 
+onclick="top.location.href=this.form.list.options[this.form.list.selectedIndex].value" name="BUTTON">
+        </form>
+        <p></p>
+      </center>
+    </td>
+  </tr>
+</table>
+<hr>
+<i><font size=-1>Last updated : February 1999</font></i> <br>
+<font size=-1><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font> 
+</BODY>
+</HTML>

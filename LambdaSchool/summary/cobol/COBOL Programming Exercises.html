@@ -1,0 +1,2139 @@
+
+<!-- saved from url=(0049)http://www.csis.ul.ie/cobol/exercises/default.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>COBOL Programming Exercises</title>
+
+<meta name="resource-type" content="document">
+<meta name="description" content="These pages contain COBOL programming exercises with sample answers. Where required, test data files are also supplied.">
+<meta name="keywords" content="COBOL,programming,exercise,programming exercise, COBOL program">
+<meta name="distribution" content="Global">
+<meta name="copyright" content="Michael Coughlan">
+<meta name="author" content="Michael Coughlan">
+<meta name="generator" content="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+<meta name="robots" content="All">
+<meta name="rating" content="General">
+
+<style type="text/css">@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);</style><style type="text/css">.huntr-ext-add-job-container .add-job-container {
+  padding: 25px 25px 100px 25px;
+  max-height: 550px;
+}
+.huntr-ext-add-job-container .save-job-footer {
+  width: 300px;
+  position: absolute;
+  bottom: 22px;
+  background-color: #f3f1f5;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.huntr-ext-add-job-container .btn {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  width: 150px !important;
+}
+.huntr-ext-add-job-container .btn.waiting {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.huntr-ext-add-job-container .list-item {
+  text-transform: capitalize;
+}
+.huntr-ext-parsed-jobs-container .no-results {
+  font-size: 14px !important;
+  color: rgba(25,4,69,0.7) !important;
+  padding: 40px;
+  text-align: center;
+}
+.huntr-ext-parsed-jobs-container .job-result {
+  padding: 20px 25px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.huntr-ext-parsed-jobs-container .job-result:hover {
+  background-color: rgba(25,4,69,0.1);
+}
+.huntr-ext-parsed-jobs-container .job-title {
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #190445 !important;
+  margin-bottom: 3px !important;
+}
+.huntr-ext-parsed-jobs-container .job-company,
+.huntr-ext-parsed-jobs-container .job-location {
+  max-width: 100px !important;
+}
+.huntr-ext-parsed-jobs-container .job-company {
+  margin-right: 10px !important;
+  font-weight: bold;
+  color: rgba(25,4,69,0.9);
+}
+.huntr-ext-parsed-jobs-container .job-location {
+  color: rgba(25,4,69,0.7);
+}
+.huntr-ext-parsed-jobs-container .job-description {
+  color: rgba(25,4,69,0.4);
+}
+.huntr-ext-parsed-jobs-container .job-company,
+.huntr-ext-parsed-jobs-container .job-description,
+.huntr-ext-parsed-jobs-container .job-location {
+  font-size: 13px;
+}
+.huntr-ext-parsed-jobs-container p {
+  line-height: 15px !important;
+  margin: 0 !important;
+}
+.huntr-ext-parsed-jobs-container span {
+  margin: 0 !important;
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+.huntr-capitalize {
+  text-transform: capitalize;
+}
+.huntr-error-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #ff3569;
+  padding: 15px;
+  font-size: 12px;
+  color: #fff;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: Lato, sans-serif;
+}
+.huntr-ext-add-job-success-container {
+  padding: 30px;
+  text-align: center;
+}
+.huntr-ext-add-job-success-container .message {
+  height: 180px !important;
+  margin-top: 20px !important;
+  border-bottom: 1px solid #eaeaea !important;
+}
+.huntr-ext-add-job-success-container .message p {
+  font-size: 22px !important;
+  line-height: 50px !important;
+  text-align: center !important;
+}
+.huntr-ext-add-job-success-container .message .huntr-icon {
+  font-size: 45px !important;
+  color: rgba(74,74,74,0.2) !important;
+}
+.huntr-ext-add-job-success-container .huntr-footer {
+  margin-top: 30px;
+}
+.huntr-ext-add-job-success-container .huntr-footer a.btn {
+  color: #fff !important;
+  width: 200px;
+}
+.huntr-ext-add-job-success-container .huntr-footer .btn img {
+  position: absolute;
+  left: 8px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+.huntr-ext-settings-container {
+  margin-top: 25px;
+  font-family: 'Lato', sans-serif !important;
+  font-size: 16px;
+  text-align: center;
+  color: #4a4a4a;
+  height: 140px;
+  margin-top: 50px;
+}
+.huntr-ext-settings-container p {
+  line-height: 18px;
+}
+.huntr-ext-time-to-upgrade {
+  padding: 35px;
+  text-align: center;
+  color: #6a4feb;
+}
+.huntr-ext-time-to-upgrade .huntr-icon {
+  margin: 10px 0 40px 0;
+  font-size: 60px;
+  color: rgba(106,79,235,0.1);
+}
+#huntr-react-container-2 {
+  position: absolute;
+  display: block !important;
+  font-family: 'Lato', sans-serif;
+}
+#huntr-react-container-2 a,
+#huntr-react-container-2 p,
+#huntr-react-container-2 span,
+#huntr-react-container-2 div {
+  font-family: 'Lato', sans-serif !important;
+}
+#huntr-react-container-2 form {
+  margin: 0;
+  padding: 0;
+}
+#huntr-react-container-2 ::-webkit-scrollbar-button {
+  width: 0px !important;
+  height: 0px !important;
+}
+#huntr-react-container-2 ::-webkit-scrollbar-track {
+  box-shadow: none !important;
+  background-color: "white" !important;
+}
+#huntr-react-container-2 ::-webkit-scrollbar-thumb {
+  background-color: rgba(24,0,69,0.1) !important;
+  border: 4px solid #fff !important;
+  border-radius: 100px !important;
+}
+#huntr-react-container-2 ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(24,0,69,0.2) !important;
+}
+#huntr-react-container-2 ::-webkit-scrollbar-thumb:active {
+  background-color: rgba(24,0,69,0.2) !important;
+}
+#huntr-react-container-2 ::-webkit-scrollbar {
+  width: 13px !important;
+  height: 20px !important;
+}
+#huntr-react-container-2 .huntr-title {
+  font-size: 22px;
+  font-weight: regular;
+  color: #190445 !important;
+}
+#huntr-react-container-2 .huntr-description {
+  font-size: 15px;
+  font-weight: regular;
+  color: rgba(25,4,69,0.7) !important;
+}
+#huntr-react-container-2 a {
+  cursor: pointer;
+}
+#huntr-react-container-2 .centered {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+#huntr-react-container-2 .field {
+  position: relative;
+}
+#huntr-react-container-2 .field-container .huntr-icon {
+  position: absolute;
+  right: 5px;
+  bottom: 14px;
+  font-size: 16px;
+  color: #d4d4d4;
+  cursor: pointer;
+}
+#huntr-react-container-2 .field-container .input-image {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  bottom: 14px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.1);
+}
+#huntr-react-container-2 .hide {
+  visibility: hidden;
+}
+#huntr-react-container-2 .btn {
+  font-family: 'Lato', sans-serif !important;
+  border-radius: 4px !important;
+  font-size: 14px;
+  display: block !important;
+  cursor: pointer !important;
+  text-transform: capitalize !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2px !important;
+  position: relative;
+  transition: all 0.4s ease-out !important;
+  text-align: center !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+  text-shadow: none !important;
+  line-height: 37px;
+  box-sizing: border-box !important;
+}
+#huntr-react-container-2 .btn .huntr-icon {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  color: rgba(255,255,255,0.4);
+  font-size: 16px;
+}
+#huntr-react-container-2 .btn-purple {
+  color: #fff;
+  text-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+  background-color: #6a4feb;
+}
+#huntr-react-container-2 .btn-purple:hover {
+  background-color: #8c35ff;
+}
+#huntr-react-container-2 .btn-purple:disabled {
+  cursor: not-allowed;
+  color: rgba(25,4,69,0.4) !important;
+  background-color: rgba(25,4,69,0.2) !important;
+}
+#huntr-react-container-2 ul {
+  margin: 0px;
+  padding: 0px;
+}
+#huntr-react-container-2 ul li {
+  list-style: none;
+}
+#huntr-react-container-2 .location-search .huntr-drop-down-menu span {
+  font-size: 11px;
+  display: inline-block;
+}
+#huntr-react-container-2 .truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#huntr-react-container-2 .huntr-drop-down-menu {
+  color: #4a4a4a;
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 13px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.1);
+  z-index: 1;
+  border: 1px solid #ddd;
+  max-height: 250px;
+  overflow-y: auto;
+}
+#huntr-react-container-2 .huntr-drop-down-menu .huntr-ddmenu-footer {
+  padding: 10px 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  cursor: pointer;
+}
+#huntr-react-container-2 .huntr-drop-down-menu .huntr-ddmenu-footer .huntr-icon {
+  margin-right: 10px;
+}
+#huntr-react-container-2 .huntr-logo img {
+  width: 16px;
+  position: relative;
+  top: -5px;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+#huntr-react-container-2 .huntr-ext-nav-menu .nav-tooltip {
+  display: none;
+  position: absolute;
+  background-color: #7f7b92;
+  color: #fff;
+  left: -45px;
+  font-size: 11px;
+  width: 90px;
+  line-height: 30px;
+  padding: 0px 15px;
+  border-radius: 20px;
+  top: -25px;
+  text-align: center;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu .nav-tooltip:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #7f7b92;
+  top: 30px;
+  left: 45px;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li {
+  position: relative;
+  padding: 0px;
+  cursor: pointer;
+  margin: 0px 31px 0px 0px;
+  font-size: 17px;
+  display: inline-block;
+  color: #b5b5b5;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li a,
+#huntr-react-container-2 .huntr-ext-nav-menu ul li span {
+  line-height: 50px;
+  vertical-align: middle;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li:first-child {
+  margin-left: 20px;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li:last-child {
+  margin: 0px;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li:hover {
+  color: rgba(0,0,0,0.8);
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li:hover .nav-tooltip {
+  display: inline-block;
+}
+#huntr-react-container-2 .huntr-ext-top-menu {
+  background-color: #f3f1f5;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+  width: 100%;
+  color: rgba(0,0,0,0.25);
+}
+#huntr-react-container-2 .huntr-ext-top-menu img {
+  max-width: 60px;
+  box-sizing: content-box;
+  padding: 12px 0px 10px 12px;
+}
+#huntr-react-container-2 p,
+#huntr-react-container-2 span {
+  text-shadow: none;
+}
+#huntr-react-container-2 p.huntr-icon,
+#huntr-react-container-2 span.huntr-icon {
+  font-family: 'simple-line-icons' !important;
+}
+#huntr-react-container-2 p.huntr-icon:before,
+#huntr-react-container-2 span.huntr-icon:before {
+  font-family: 'simple-line-icons' !important;
+}
+#huntr-react-container-2 h1 {
+  font-family: 'Lato', sans-serif !important;
+  text-transform: uppercase !important;
+  color: #4a4a4a !important;
+  letter-spacing: 5px !important;
+  font-size: 16px !important;
+  font-weight: 900;
+}
+#huntr-react-container-2 .huntr-ext-app-container {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  z-index: 100000;
+  max-height: 600px;
+  min-height: 300px;
+}
+#huntr-react-container-2 .huntr-ext-app-container .inner-container {
+  height: 100%;
+  background-color: #fff;
+  width: 300px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  outline: 1px solid rgba(0,0,0,0.1);
+}
+#huntr-react-container-2 .huntr-ext-minimize {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-size: 35px;
+  font-family: 'Lato', sans-serif;
+  line-height: normal;
+  transform: rotate(45deg);
+  cursor: pointer;
+  color: rgba(74,74,74,0.2);
+  font-weight: 400;
+  z-index: 1;
+}
+#huntr-react-container-2 .huntr-ext-minimize:hover {
+  color: rgba(74,74,74,0.7);
+}
+#huntr-react-container-2 .editable-text-field {
+  width: 100%;
+}
+#huntr-react-container-2 .huntr-ext-app-mini {
+  background-color: #6a4feb;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: fixed;
+  z-index: 10000;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+#huntr-react-container-2 .huntr-ext-app-mini:after {
+  content: 'h';
+}
+#huntr-react-container-2 .huntr-ext-component-container h1 {
+  text-align: center;
+  margin: 60px 0px;
+}
+#huntr-react-container-2 .huntr-ext-component-container .drop-down-button {
+  font-family: 'Lato', sans-serif !important;
+  -webkit-appearance: none !important;
+  outline: 0 !important;
+  border-radius: 2px !important;
+  box-sizing: border-box !important;
+  font-family: 'Lato', sans-serif !important;
+  width: 100% !important;
+  padding: 12px 12px !important;
+  font-size: 14px !important;
+  color: rgba(74,74,74,0.9) !important;
+  margin-bottom: 14px !important;
+  font-weight: 400 !important;
+  background-color: #fafafa !important;
+  border: 1px solid #dcdcdc !important;
+  transition: none !important;
+  text-align: left !important;
+  cursor: pointer !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input {
+  font-size: 16px;
+  height: 35px;
+}
+#huntr-react-container-2 .huntr-ext-component-container input::-webkit-input-placeholder {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  font-family: 'Lato', sans-serif !important;
+  color: rgba(24,0,69,0.3) !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container textarea {
+  font-size: 14px;
+  height: 130px;
+}
+#huntr-react-container-2 .huntr-ext-component-container textarea::-webkit-input-placeholder {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-family: 'Lato', sans-serif !important;
+  color: rgba(24,0,69,0.3) !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input,
+#huntr-react-container-2 .huntr-ext-component-container textarea {
+  box-shadow: none;
+  background-color: #fff;
+  background-image: none !important;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif !important;
+  letter-spacing: 0px;
+  width: 100%;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid #eee !important;
+  font-weight: 400 !important;
+  margin: 0px !important;
+  color: rgba(25,4,69,0.7) !important;
+  border-radius: 0 !important;
+  line-height: normal !important;
+  padding: 20px 0 !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input.clean,
+#huntr-react-container-2 .huntr-ext-component-container textarea.clean {
+  border: none !important;
+  height: 100%;
+  padding: 0 !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input.clean:focus,
+#huntr-react-container-2 .huntr-ext-component-container textarea.clean:focus,
+#huntr-react-container-2 .huntr-ext-component-container input.clean::selection,
+#huntr-react-container-2 .huntr-ext-component-container textarea.clean::selection {
+  border-bottom: none !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input:focus,
+#huntr-react-container-2 .huntr-ext-component-container textarea:focus,
+#huntr-react-container-2 .huntr-ext-component-container input::selection,
+#huntr-react-container-2 .huntr-ext-component-container textarea::selection {
+  outline: 0;
+  border-bottom: 1px solid #8c35ff !important;
+  background-color: #fff !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input::selection,
+#huntr-react-container-2 .huntr-ext-component-container textarea::selection {
+  background-color: #8c35ff !important;
+  color: #fff;
+}
+.huntr-loader ::after,
+.huntr-loader ::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.huntr-loader {
+  display: block;
+  height: 50px;
+  width: 50px;
+  animation: huntr-loader-1 3s linear infinite;
+  -webkit-animation: huntr-loader-1 3s linear infinite;
+}
+@-webkit-keyframes huntr-loader-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.huntr-loader span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  clip: rect(0px, 50px, 50px, 0);
+  -webkit-animation: huntr-loader-2 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: huntr-loader-2 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+@-webkit-keyframes huntr-loader-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.huntr-loader span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  border: 4px solid transparent;
+  border-top: 4px solid #6a4feb;
+  border-radius: 50%;
+  -webkit-animation: huntr-loader-3 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: huntr-loader-3 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+@-webkit-keyframes huntr-loader-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.huntr-loader span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  border: 4px solid rgba(106,79,235,0.2);
+  border-radius: 50%;
+}
+@-moz-keyframes huntr-loader-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes huntr-loader-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes huntr-loader-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes huntr-loader-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes huntr-loader-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes huntr-loader-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes huntr-loader-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes huntr-loader-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes huntr-loader-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes huntr-loader-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes huntr-loader-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes huntr-loader-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style><style type="text/css">/*!
+ * Quill Editor v1.3.0
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+#huntr-react-container-2 .ql-container span,
+#huntr-react-container-2 .ql-container li,
+#huntr-react-container-2 .ql-container ul,
+#huntr-react-container-2 .ql-container div,
+#huntr-react-container-2 .ql-container strong,
+#huntr-react-container-2 .ql-container b,
+#huntr-react-container-2 .ql-container h1,
+#huntr-react-container-2 .ql-container h2,
+#huntr-react-container-2 .ql-container h3,
+#huntr-react-container-2 .ql-container p  {
+  font-size: 14px;
+  font-family: Lato, Arial, sans-serif !important;
+  color: #180045 !important;
+}
+
+#huntr-react-container-2 .ql-container {
+  box-sizing: border-box;
+  font-family: Lato, Arial, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  margin: 0px;
+  position: relative;
+}
+#huntr-react-container-2 .ql-container.ql-disabled .ql-tooltip {
+  visibility: hidden;
+}
+#huntr-react-container-2 .ql-container.ql-disabled .ql-editor ul[data-checked] > li::before {
+  pointer-events: none;
+}
+#huntr-react-container-2 .ql-clipboard {
+  left: -100000px;
+  height: 1px;
+  overflow-y: hidden;
+  position: absolute;
+  top: 50%;
+}
+#huntr-react-container-2 .ql-clipboard p {
+  margin: 0;
+  padding: 0;
+}
+#huntr-react-container-2 .ql-editor {
+  box-sizing: border-box;
+  line-height: 1.42;
+  height: 100% !important;
+  outline: none;
+  overflow-y: auto;
+  padding: 12px 25px;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+#huntr-react-container-2 .ql-editor > * {
+  cursor: text;
+}
+#huntr-react-container-2 .ql-editor p,
+#huntr-react-container-2 .ql-editor ol,
+#huntr-react-container-2 .ql-editor ul,
+#huntr-react-container-2 .ql-editor pre,
+#huntr-react-container-2 .ql-editor blockquote,
+#huntr-react-container-2 .ql-editor h1,
+#huntr-react-container-2 .ql-editor h2,
+#huntr-react-container-2 .ql-editor h3,
+#huntr-react-container-2 .ql-editor h4,
+#huntr-react-container-2 .ql-editor h5,
+#huntr-react-container-2 .ql-editor h6 {
+  margin: 0;
+  padding: 0;
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol,
+#huntr-react-container-2 .ql-editor ul {
+  padding-left: 1.5em;
+}
+#huntr-react-container-2 .ql-editor ol > li,
+#huntr-react-container-2 .ql-editor ul > li {
+  list-style-type: none;
+}
+#huntr-react-container-2 .ql-editor ul > li::before {
+  content: '\2022';
+}
+#huntr-react-container-2 .ql-editor ul[data-checked=true],
+#huntr-react-container-2 .ql-editor ul[data-checked=false] {
+  pointer-events: none;
+}
+#huntr-react-container-2 .ql-editor ul[data-checked=true] > li *,
+#huntr-react-container-2 .ql-editor ul[data-checked=false] > li * {
+  pointer-events: all;
+}
+#huntr-react-container-2 .ql-editor ul[data-checked=true] > li::before,
+#huntr-react-container-2 .ql-editor ul[data-checked=false] > li::before {
+  color: #777;
+  cursor: pointer;
+  pointer-events: all;
+}
+#huntr-react-container-2 .ql-editor ul[data-checked=true] > li::before {
+  content: '\2611';
+}
+#huntr-react-container-2 .ql-editor ul[data-checked=false] > li::before {
+  content: '\2610';
+}
+#huntr-react-container-2 .ql-editor li::before {
+  display: inline-block;
+  white-space: nowrap;
+  width: 1.2em;
+}
+#huntr-react-container-2 .ql-editor li:not(.ql-direction-rtl)::before {
+  margin-left: -1.5em;
+  margin-right: 0.3em;
+  text-align: right;
+}
+#huntr-react-container-2 .ql-editor li.ql-direction-rtl::before {
+  margin-left: 0.3em;
+  margin-right: -1.5em;
+}
+#huntr-react-container-2 .ql-editor ol li:not(.ql-direction-rtl),
+#huntr-react-container-2 .ql-editor ul li:not(.ql-direction-rtl) {
+  padding-left: 1.5em;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-direction-rtl,
+#huntr-react-container-2 .ql-editor ul li.ql-direction-rtl {
+  padding-right: 1.5em;
+}
+#huntr-react-container-2 .ql-editor ol li {
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  counter-increment: list-0;
+}
+#huntr-react-container-2 .ql-editor ol li:before {
+  content: counter(list-0, decimal) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-1 {
+  counter-increment: list-1;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-1:before {
+  content: counter(list-1, lower-alpha) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-1 {
+  counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-2 {
+  counter-increment: list-2;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-2:before {
+  content: counter(list-2, lower-roman) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-2 {
+  counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-3 {
+  counter-increment: list-3;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-3:before {
+  content: counter(list-3, decimal) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-3 {
+  counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-4 {
+  counter-increment: list-4;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-4:before {
+  content: counter(list-4, lower-alpha) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-4 {
+  counter-reset: list-5 list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-5 {
+  counter-increment: list-5;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-5:before {
+  content: counter(list-5, lower-roman) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-5 {
+  counter-reset: list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-6 {
+  counter-increment: list-6;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-6:before {
+  content: counter(list-6, decimal) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-6 {
+  counter-reset: list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-7 {
+  counter-increment: list-7;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-7:before {
+  content: counter(list-7, lower-alpha) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-7 {
+  counter-reset: list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-8 {
+  counter-increment: list-8;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-8:before {
+  content: counter(list-8, lower-roman) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-8 {
+  counter-reset: list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-9 {
+  counter-increment: list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-9:before {
+  content: counter(list-9, decimal) '. ';
+}
+#huntr-react-container-2 .ql-editor .ql-indent-1:not(.ql-direction-rtl) {
+  padding-left: 3em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-1:not(.ql-direction-rtl) {
+  padding-left: 4.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-1.ql-direction-rtl.ql-align-right {
+  padding-right: 3em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-1.ql-direction-rtl.ql-align-right {
+  padding-right: 4.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-2:not(.ql-direction-rtl) {
+  padding-left: 6em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-2:not(.ql-direction-rtl) {
+  padding-left: 7.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-2.ql-direction-rtl.ql-align-right {
+  padding-right: 6em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-2.ql-direction-rtl.ql-align-right {
+  padding-right: 7.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-3:not(.ql-direction-rtl) {
+  padding-left: 9em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-3:not(.ql-direction-rtl) {
+  padding-left: 10.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-3.ql-direction-rtl.ql-align-right {
+  padding-right: 9em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-3.ql-direction-rtl.ql-align-right {
+  padding-right: 10.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-4:not(.ql-direction-rtl) {
+  padding-left: 12em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-4:not(.ql-direction-rtl) {
+  padding-left: 13.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-4.ql-direction-rtl.ql-align-right {
+  padding-right: 12em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-4.ql-direction-rtl.ql-align-right {
+  padding-right: 13.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-5:not(.ql-direction-rtl) {
+  padding-left: 15em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-5:not(.ql-direction-rtl) {
+  padding-left: 16.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-5.ql-direction-rtl.ql-align-right {
+  padding-right: 15em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-5.ql-direction-rtl.ql-align-right {
+  padding-right: 16.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-6:not(.ql-direction-rtl) {
+  padding-left: 18em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-6:not(.ql-direction-rtl) {
+  padding-left: 19.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-6.ql-direction-rtl.ql-align-right {
+  padding-right: 18em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-6.ql-direction-rtl.ql-align-right {
+  padding-right: 19.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-7:not(.ql-direction-rtl) {
+  padding-left: 21em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-7:not(.ql-direction-rtl) {
+  padding-left: 22.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-7.ql-direction-rtl.ql-align-right {
+  padding-right: 21em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-7.ql-direction-rtl.ql-align-right {
+  padding-right: 22.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-8:not(.ql-direction-rtl) {
+  padding-left: 24em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-8:not(.ql-direction-rtl) {
+  padding-left: 25.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-8.ql-direction-rtl.ql-align-right {
+  padding-right: 24em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-8.ql-direction-rtl.ql-align-right {
+  padding-right: 25.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-9:not(.ql-direction-rtl) {
+  padding-left: 27em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-9:not(.ql-direction-rtl) {
+  padding-left: 28.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-9.ql-direction-rtl.ql-align-right {
+  padding-right: 27em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-9.ql-direction-rtl.ql-align-right {
+  padding-right: 28.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-video {
+  display: block;
+  max-width: 100%;
+}
+#huntr-react-container-2 .ql-editor .ql-video.ql-align-center {
+  margin: 0 auto;
+}
+#huntr-react-container-2 .ql-editor .ql-video.ql-align-right {
+  margin: 0 0 0 auto;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-black {
+  background-color: #000;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-red {
+  background-color: #e60000;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-orange {
+  background-color: #f90;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-yellow {
+  background-color: #ff0;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-green {
+  background-color: #008a00;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-blue {
+  background-color: #06c;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-purple {
+  background-color: #93f;
+}
+#huntr-react-container-2 .ql-editor .ql-color-white {
+  color: #fff;
+}
+#huntr-react-container-2 .ql-editor .ql-color-red {
+  color: #e60000;
+}
+#huntr-react-container-2 .ql-editor .ql-color-orange {
+  color: #f90;
+}
+#huntr-react-container-2 .ql-editor .ql-color-yellow {
+  color: #ff0;
+}
+#huntr-react-container-2 .ql-editor .ql-color-green {
+  color: #008a00;
+}
+#huntr-react-container-2 .ql-editor .ql-color-blue {
+  color: #06c;
+}
+#huntr-react-container-2 .ql-editor .ql-color-purple {
+  color: #93f;
+}
+#huntr-react-container-2 .ql-editor .ql-font-serif {
+  font-family: Georgia, Times New Roman, serif;
+}
+#huntr-react-container-2 .ql-editor .ql-font-monospace {
+  font-family: Monaco, Courier New, monospace;
+}
+#huntr-react-container-2 .ql-editor .ql-size-small {
+  font-size: 0.75em;
+}
+#huntr-react-container-2 .ql-editor .ql-size-large {
+  font-size: 1.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-size-huge {
+  font-size: 2.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-direction-rtl {
+  direction: rtl;
+  text-align: inherit;
+}
+#huntr-react-container-2 .ql-editor .ql-align-center {
+  text-align: center;
+}
+#huntr-react-container-2 .ql-editor .ql-align-justify {
+  text-align: justify;
+}
+#huntr-react-container-2 .ql-editor .ql-align-right {
+  text-align: right;
+}
+#huntr-react-container-2 .ql-editor .ql-embed-selected {
+  border: 1px solid #777;
+  user-select: none;
+}
+#huntr-react-container-2 .ql-editor.ql-blank::before {
+  color: rgba(0,0,0,0.6);
+  content: attr(data-placeholder);
+  font-style: italic;
+  pointer-events: none;
+  position: absolute;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar:after,
+#huntr-react-container-2 .ql-snow .ql-toolbar:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button,
+#huntr-react-container-2 .ql-snow .ql-toolbar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  height: 24px;
+  padding: 3px 5px;
+  width: 28px;
+  box-shadow: none;
+  min-height: 1em;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button svg,
+#huntr-react-container-2 .ql-snow .ql-toolbar button svg {
+  float: left;
+  height: 100%;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button:active:hover,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:active:hover {
+  outline: none;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar input.ql-image[type=file],
+#huntr-react-container-2 .ql-snow .ql-toolbar input.ql-image[type=file] {
+  display: none;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button:hover,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:hover,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:focus,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:focus,
+#huntr-react-container-2 .ql-snow.ql-toolbar button.ql-active,
+#huntr-react-container-2 .ql-snow .ql-toolbar button.ql-active,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label:hover,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label:hover,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label.ql-active,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label.ql-active,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item:hover,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item:hover,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item.ql-selected,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+  color: #06c;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button:hover .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:hover .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:focus .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:focus .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar button.ql-active .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button.ql-active .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:focus .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:focus .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill {
+  fill: #06c;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:focus .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:focus .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar button.ql-active .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar button.ql-active .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:focus .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:focus .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar button.ql-active .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar button.ql-active .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
+  stroke: #06c;
+}
+@media (pointer: coarse) {
+  .ql-snow.ql-toolbar button:hover:not(.ql-active),
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) {
+    color: #444;
+  }
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-fill,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-fill,
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill {
+    fill: #444;
+  }
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke,
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter {
+    stroke: #444;
+  }
+}
+#huntr-react-container-2 .ql-snow {
+  box-sizing: border-box;
+}
+#huntr-react-container-2 .ql-snow * {
+  box-sizing: border-box;
+}
+#huntr-react-container-2 .ql-snow .ql-hidden {
+  display: none;
+}
+#huntr-react-container-2 .ql-snow .ql-out-bottom,
+#huntr-react-container-2 .ql-snow .ql-out-top {
+  visibility: hidden;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip {
+  position: absolute;
+  transform: translateY(10px);
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip a {
+  cursor: pointer;
+  text-decoration: none;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip.ql-flip {
+  transform: translateY(-10px);
+}
+#huntr-react-container-2 .ql-snow .ql-formats {
+  display: inline-block;
+  vertical-align: middle;
+}
+#huntr-react-container-2 .ql-snow .ql-formats:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+#huntr-react-container-2 .ql-snow .ql-stroke {
+  fill: none;
+  stroke: #444;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+#huntr-react-container-2 .ql-snow .ql-stroke-miter {
+  fill: none;
+  stroke: #444;
+  stroke-miterlimit: 10;
+  stroke-width: 2;
+}
+#huntr-react-container-2 .ql-snow .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-stroke.ql-fill {
+  fill: #444;
+}
+#huntr-react-container-2 .ql-snow .ql-empty {
+  fill: none;
+}
+#huntr-react-container-2 .ql-snow .ql-even {
+  fill-rule: evenodd;
+}
+#huntr-react-container-2 .ql-snow .ql-thin,
+#huntr-react-container-2 .ql-snow .ql-stroke.ql-thin {
+  stroke-width: 1;
+}
+#huntr-react-container-2 .ql-snow .ql-transparent {
+  opacity: 0.4;
+}
+#huntr-react-container-2 .ql-snow .ql-direction svg:last-child {
+  display: none;
+}
+#huntr-react-container-2 .ql-snow .ql-direction.ql-active svg:last-child {
+  display: inline;
+}
+#huntr-react-container-2 .ql-snow .ql-direction.ql-active svg:first-child {
+  display: none;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h1 {
+  font-size: 2em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h2 {
+  font-size: 1.5em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h3 {
+  font-size: 1.17em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h4 {
+  font-size: 1em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h5 {
+  font-size: 0.83em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h6 {
+  font-size: 0.67em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor a {
+  text-decoration: underline;
+}
+#huntr-react-container-2 .ql-snow .ql-editor blockquote {
+  border-left: 4px solid #ccc;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-left: 16px;
+}
+#huntr-react-container-2 .ql-snow .ql-editor code,
+#huntr-react-container-2 .ql-snow .ql-editor pre {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+#huntr-react-container-2 .ql-snow .ql-editor pre {
+  white-space: pre-wrap;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+#huntr-react-container-2 .ql-snow .ql-editor code {
+  font-size: 85%;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+#huntr-react-container-2 .ql-snow .ql-editor code:before,
+#huntr-react-container-2 .ql-snow .ql-editor code:after {
+  content: "\A0";
+  letter-spacing: -2px;
+}
+#huntr-react-container-2 .ql-snow .ql-editor pre.ql-syntax {
+  background-color: #23241f;
+  color: #f8f8f2;
+  overflow: visible;
+}
+#huntr-react-container-2 .ql-snow .ql-editor img {
+  max-width: 100%;
+}
+#huntr-react-container-2 .ql-snow .ql-picker {
+  color: #444;
+  display: inline-block;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  height: 24px;
+  position: relative;
+  vertical-align: middle;
+}
+#huntr-react-container-2 .ql-snow .ql-picker-label {
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+  padding-left: 8px;
+  padding-right: 2px;
+  position: relative;
+  width: 100%;
+}
+#huntr-react-container-2 .ql-snow .ql-picker-label::before {
+  display: inline-block;
+  line-height: 22px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker-options {
+  background-color: #fff;
+  display: none;
+  min-width: 100%;
+  padding: 4px 8px;
+  position: absolute;
+  white-space: nowrap;
+}
+#huntr-react-container-2 .ql-snow .ql-picker-options .ql-picker-item {
+  cursor: pointer;
+  display: block;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-expanded .ql-picker-label {
+  color: #ccc;
+  z-index: 2;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-fill {
+  fill: #ccc;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-stroke {
+  stroke: #ccc;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-expanded .ql-picker-options {
+  display: block;
+  margin-top: -1px;
+  top: 100%;
+  z-index: 1;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker,
+#huntr-react-container-2 .ql-snow .ql-icon-picker {
+  width: 28px;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker .ql-picker-label,
+#huntr-react-container-2 .ql-snow .ql-icon-picker .ql-picker-label {
+  padding: 2px 4px;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker .ql-picker-label svg,
+#huntr-react-container-2 .ql-snow .ql-icon-picker .ql-picker-label svg {
+  right: 4px;
+}
+#huntr-react-container-2 .ql-snow .ql-icon-picker .ql-picker-options {
+  padding: 4px 0px;
+}
+#huntr-react-container-2 .ql-snow .ql-icon-picker .ql-picker-item {
+  height: 24px;
+  width: 24px;
+  padding: 2px 4px;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker .ql-picker-options {
+  padding: 3px 5px;
+  width: 152px;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker .ql-picker-item {
+  border: 1px solid transparent;
+  float: left;
+  height: 16px;
+  margin: 2px;
+  padding: 0px;
+  width: 16px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+  position: absolute;
+  margin-top: -9px;
+  right: 0;
+  top: 50%;
+  width: 18px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-label]:not([data-label=''])::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-label[data-label]:not([data-label=''])::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-label[data-label]:not([data-label=''])::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-label]:not([data-label=''])::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item[data-label]:not([data-label=''])::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-label]:not([data-label=''])::before {
+  content: attr(data-label);
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header {
+  width: 98px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item::before {
+  content: 'Normal';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+  content: 'Heading 1';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+  content: 'Heading 2';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+  content: 'Heading 3';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+  content: 'Heading 4';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+  content: 'Heading 5';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+  content: 'Heading 6';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+  font-size: 2em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+  font-size: 1.5em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+  font-size: 1.17em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+  font-size: 1em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+  font-size: 0.83em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+  font-size: 0.67em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font {
+  width: 108px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-label::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item::before {
+  content: 'Sans Serif';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serif]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serif]::before {
+  content: 'Serif';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-label[data-value=monospace]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=monospace]::before {
+  content: 'Monospace';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serif]::before {
+  font-family: Georgia, Times New Roman, serif;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=monospace]::before {
+  font-family: Monaco, Courier New, monospace;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size {
+  width: 98px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-label::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: 'Normal';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=small]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+  content: 'Small';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=large]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+  content: 'Large';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=huge]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+  content: 'Huge';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+  font-size: 10px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+  font-size: 18px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+  font-size: 32px;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker.ql-background .ql-picker-item {
+  background-color: #fff;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker.ql-color .ql-picker-item {
+  background-color: #000;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow {
+  border-bottom: 1px solid #ECE9F2;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  padding: 8px;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-formats {
+  margin-right: 15px;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-picker-label {
+  border: 1px solid transparent;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-picker-options {
+  border: 1px solid transparent;
+  box-shadow: rgba(0,0,0,0.2) 0 2px 8px;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+  border-color: #ccc;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+  border-color: #ccc;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected,
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-color-picker .ql-picker-item:hover {
+  border-color: #000;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-top: 0px;
+  padding-bottom: 40px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px #ddd;
+  color: #444;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip::before {
+  content: "Visit URL:";
+  line-height: 26px;
+  margin-right: 8px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip input[type=text] {
+  display: none;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  height: 26px;
+  margin: 0px;
+  padding: 3px 5px;
+  width: 170px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip a.ql-preview {
+  display: inline-block;
+  max-width: 200px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip a.ql-action::after {
+  border-right: 1px solid #ccc;
+  content: 'Edit';
+  margin-left: 16px;
+  padding-right: 8px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip a.ql-remove::before {
+  content: 'Remove';
+  margin-left: 8px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip a {
+  line-height: 26px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip.ql-editing a.ql-preview,
+#huntr-react-container-2 .ql-snow .ql-tooltip.ql-editing a.ql-remove {
+  display: none;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip.ql-editing input[type=text] {
+  display: inline-block;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+  border-right: 0px;
+  content: 'Save';
+  padding-right: 0px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip[data-mode=link]::before {
+  content: "Enter link:";
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip[data-mode=formula]::before {
+  content: "Enter formula:";
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip[data-mode=video]::before {
+  content: "Enter video:";
+}
+#huntr-react-container-2 .ql-snow a {
+  color: #06c;
+}
+</style><style type="text/css">@font-face { font-family: 'simple-line-icons'; src: url('chrome-extension://mihdfbecejheednfigjpdacgeilhlmnf/assets/fonts/Simple-Line-Icons.ttf') format('truetype'); }</style></head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#FF0000" alink="#009B00" cz-shortcut-listen="true"><div id="huntr-react-container-2"><!-- react-empty: 1 --></div>
+<h2> <img src="./COBOL Programming Exercises_files/i-AtComputer.gif" border="1" height="40" width="40" align="ABSBOTTOM"><img src="./COBOL Programming Exercises_files/T-Dept.gif" hspace="5" height="36" width="297">&nbsp;<br>
+  COBOL Programming Exercises&nbsp; </h2>
+<hr width="800" align="left">
+<div align="left">
+  <table width="750">
+    <tbody><tr>
+      <td width="50">&nbsp;</td>
+      <td width="698"> 
+        <p><font size="-1">These pages contain -</font></p>
+        <ul>
+          <li><font size="-1">Simple COBOL programming exercises with sample answers.</font></li>
+          <li><font size="-1">Programming exam specifications with sample answers.</font></li>
+          <li><font size="-1">Programming p</font><font size="-1">roject specifications 
+            with no answers provided. </font></li>
+        </ul>
+        <p><font size="-1">Where required, test data files are also supplied.</font></p>
+        <p><font size="-1">The simple programming exercises are normally given 
+          as lab exercises. Good students should be able to do these in little 
+          more than one or two hours.</font></p>
+        <p><font size="-1">The specifications for the programming exams are actually 
+          old <a href="http://www.csis.ul.ie/cobol/exercises/COBOLExams/COBOLExams.htm">exam papers</a>. Good students 
+          should be able to produce a working program in four to six hours.</font></p>
+        <p><font size="-1">Unlike the exercises described above, the programming 
+          project specifications require programs that can not be written in one 
+          sitting. For each project, an estimate of the number of hours it should 
+          take to complete the project has been given.</font></p>
+        <p><font size="-1">In our course we normally allow students about one 
+          week for every 5 hours of the completion estimate. In other words if 
+          we estimate that a programming project will take 20 hours to complete, 
+          we allow the students 4 weeks to do it. </font></p>
+        <p align="center"><font size="-1"><b>Copyright Notice</b></font></p>
+        <p align="left"><font size="-1">These COBOL programming exercises, program 
+          specifications, and sample programs are the copyright property of Michael 
+          Coughlan. You have permission to use these materials for your own personal 
+          use but you may not reproduce them in any published work without written 
+          permission from the author.</font></p>
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+<hr align="left" width="800">
+<h3>Simple Programming Exercises</h3>
+<ul>
+  <img src="./COBOL Programming Exercises_files/BallRedG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/GettingStarted.htm">Getting 
+  Started</a> - Exercise to load, compile, run and alter an existing program. 
+  <p><img src="./COBOL Programming Exercises_files/BallRedG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/CountDown.htm">CountDown</a> 
+    - Exercise using the <font size="-1">ACCEPT</font>, <font size="-1">DISPLAY</font>, 
+    <font size="-1">PERFORM</font> ... <font size="-1">TIMES, COMPUTE</font> and <font size="-1">IF</font>. 
+  </p><p><img src="./COBOL Programming Exercises_files/BallRedG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/SeqRead.htm">Reading 
+    Sequential Files</a>&nbsp; - <font size="-1">READ, PERFORM.. UNTIL, DISPLAY</font> 
+  </p><p><img src="./COBOL Programming Exercises_files/BallRedG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/SeqReadIf.htm">Counting 
+    records in a Sequential File</a> - <font size="-1">READ, PERFORM..UNTIL, DISPLAY, 
+    IF, COMPUTE</font> 
+  </p><p><img src="./COBOL Programming Exercises_files/BallRedG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/SeqWrite.htm">Writing 
+    to a Sequential File</a> - <font size="-1">ACCEPT, DISPLAY, WRITE, PERFORM..UNTIL,</font> 
+  </p><p><img src="./COBOL Programming Exercises_files/BallRedG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/SeqInsert.htm">Inserting 
+    records into a Sequential File</a> - <font size="-1">READ</font>, <font size="-1">WRITE, 
+    PERFORM.. UNTIL.</font> 
+  </p><p><img src="./COBOL Programming Exercises_files/BallRedG.gif" hspace="4" height="14" width="14"><a href="http://www.csis.ul.ie/cobol/exercises/SeqUpdate.htm">Updating 
+    records in a Sequential File</a> - <font size="-1">READ</font>, <font size="-1">WRITE.</font> 
+  </p><p><img src="./COBOL Programming Exercises_files/BallRedG.gif" hspace="4" height="14" width="14"><a href="http://www.csis.ul.ie/cobol/exercises/SortIP.htm">Sorting 
+    a Sequential File</a> - <font size="-1">SORT</font>, <font size="-1">READ</font>, 
+    <font size="-1">RELEASE, </font>Input Procedure. 
+  </p><p><img src="./COBOL Programming Exercises_files/BallRedG.gif" hspace="4" height="14" width="14"><a href="http://www.csis.ul.ie/cobol/exercises/MonthTable.htm">Using 
+    Tables</a> - <font size="-1">READ</font>, pre-defined Tables, Tables. <br>
+    &nbsp;
+</p></ul>
+
+<hr>
+<h3>Programming Exam Specifications</h3>
+<blockquote>
+  <table width="750" border="0" cellspacing="0" cellpadding="0">
+    <tbody><tr> 
+      <td width="27%" valign="top" height="37"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-AromaSalesRpt/Exm-AromaSalesSummaryRpt.htm"></a><a href="http://www.csis.ul.ie/cobol/exercises/Exm-StudFeesRpt/Exm-StudPay.htm">Student 
+        Fees Report</a></td>
+      <td width="73%" valign="top" height="37"> 
+        <p><font size="-1">Write a program to apply a transaction file of student 
+          payments to a Student Master File and then produce a report showing 
+          those students whose fees are partially or wholly outstanding. <br>
+          (Indexed files, Print files, READ..NEXT RECORD, START, WRITE, REWRITE, 
+          IF,<br>
+          PERFORM, ADD, SUBTRACT) <br>
+          &nbsp; </font></p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="47"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-AromaSalesRpt/Exm-AromaSalesSummaryRpt.htm">Aromamora 
+        Summary Sales</a></td>
+      <td width="73%" valign="top" height="47"> 
+        <p><font size="-1">A program is required to produce a summary sales report 
+          from an unsorted sequential file containing the details of sales of 
+          essential and base oils to Aromamora customers.<br>
+          (SORT with Input Procedure and Output Procedure, Print Files, Sequential 
+          Files, COMPUTE)</font><br>
+          &nbsp; </p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="62"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-FlyByNightTravel/Exm-FlyByNight.htm">FlyByNight 
+        Summary File</a></td>
+      <td width="73%" height="62" valign="top"> 
+        <p><font size="-1"> A program is required which will read the tourist 
+          bookings master filee to produce a summary file sequenced upon ascending 
+          Destination-Name.<br>
+          </font><font size="-1">(Pre-Filled Tables, Sequential Files, SORT with 
+          Input Procedure, SEARCH, INSPECT)</font><br>
+          &nbsp;</p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="103"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-AromaOilFileMainRpt/Exm-AromaOilFileMainRpt.htm">AromamoraMaint&amp;Report</a></td>
+      <td width="73%" height="103" valign="top"> 
+        <p><font size="-1">A program is required which will apply a file of sorted, 
+          validated transactions to the Oil-Stock-File and then produce a report 
+          based on the contents of both the Oil-Details-File and the Oil-Stock-File. 
+          The report writer must be used to produce the report which must be printed 
+          sequenced on ascending Oil-Name.</font><br>
+          (<font size="-1">Indexed files, Relative Files, Sequential Files, Report 
+          Writer, EVALUATE, COMPUTE, READ, WRITE, REWRITE, START</font>)<br>
+          &nbsp; </p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="2"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-BookshopLectReqRpt/Exm-BookshopLectReqRpt.htm">BookshopLecturerReqRpt</a></td>
+      <td width="73%" height="2" valign="top"> 
+        <p><font size="-1">A program is required to produce a Purchase Requirements 
+          Report from the Publisher, Book and Purchase Requirements files. The 
+          report should be sequenced on ascending Publisher Name and should only 
+          detail the purchase requirements for the semester under scrutiny. <br>
+          </font><font size="-1">(Indexed files, Report Writer, Report Section, 
+          INITIATE, GENERATE, TERMINATE, READ, WRITE, REWRITE, START</font>) <br>
+          &nbsp; </p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="93"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-BookshopLectReqRpt/Exm-BookshopLectReqRpt.htm">ACME 
+        Stock Reorder</a></td>
+      <td width="73%" height="93" valign="top"> 
+        <p><font size="-1">A program is required which will process the Stock 
+          and Manufacturer files to create an Orders file containing ordering 
+          information for all the parts that need to be re-ordered (i.e. where 
+          the QtyInStock is less than the ReorderLevel). For EU countries only, 
+          the COSTOFITEMS and POSTAGE fields of each Orders file record must be 
+          calculated. The Postage rate is obtained by calling an existing program.<br>
+          (Indexed files, Relative Files, SubPrograms, CALL..USING, READ, WRITE, 
+          REWRITE, Condition Names (level 88s), EVALUATE, UNSTRING, MULTIPLY..ON 
+          SIZE ERROR)<br>
+          &nbsp; </font></p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="93"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-FileConversion/Exm-FileConversion.htm">File 
+        Conversion</a></td>
+      <td width="73%" height="93" valign="top"><font size="-1">A program is required 
+        to convert the unsorted Client-Names file of free-format, variable length, 
+        records into a sorted file of fixed length records. The sorted file must 
+        be sorted into ascending Client-Name within ascending County-Name. In 
+        addition to converting and sorting the file, the program must ensure that 
+        the county name is valid and must convert it to a county number.<br>
+        (Sequential files, SORT with Input Procedure, Pre-Defined Table of values, 
+        STRING, UNSTRING, INSPECT, SEARCH ALL )<br>
+        &nbsp; </font></td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="29"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-USSRshipRpt/Exm-USSRshipRpt.htm">USSR 
+        Ship Report</a></td>
+      <td width="73%" height="29" valign="top"> 
+        <p><font size="-1">A program is required to produce a report detailing 
+          the major vessels (Vessels of tonnage 3,500 or greater and all submarines) 
+          in each of oceans and major seas of the world.</font><br>
+          <font size="-1">(Sequential files, SORT with Input Procedure, Print 
+          Files, Pre-defined tables, Condition Names)<br>
+          &nbsp; </font></p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="57"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-SFbyMail/Exm-SFbyMai.htm">Science 
+        Fiction by mail</a></td>
+      <td width="73%" height="57" valign="top"><font size="-1">A program is required 
+        to apply the Orders file (containing customer orders) to the Book Stock 
+        file and to produce the Processed Orders file.<br>
+        (CALL, subprograms, Sequential files, Indexed files, READ, WRITE, REWRITE, 
+        COMPUTE, UNSTRING) <br>
+        &nbsp;</font></td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="65"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-CSISEmailDomain/Exm-CSISEmailDomain.htm">CSISEmailDomain</a></td>
+      <td width="73%" height="65" valign="top"> 
+        <p><font size="-1">A program is required which will produce a file, sorted 
+          on ascending email domain, from the unsorted GraduateInfo file.<br>
+          </font><font size="-1">(SORT with Input Procedure and Output Procedure, 
+          Sequential Files, Pre-Defined Tables, Run time filled tables, SEARCH)<br>
+          &nbsp;</font></p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="110"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-RoyaltyPaymentsRpt/Exm-LibRoyaltyRpt.htm">LibraryRoyaltiesRpt</a></td>
+      <td width="73%" height="110" valign="top"> 
+        <p><font size="-1">Each time a book is borrowed, the Pascal Memorial Library 
+          pays the author a small sum of money as royalty.� Royalties are paid 
+          to authors through their agents. A report is required which processes 
+          the Authors file and the Books File to produce a report which shows 
+          the amount to be sent to each agent, shows the breakdown of the agent 
+          payment into author payments, and shows the breakdown of each author 
+          payment into royalty payments per book.<br>
+          (Indexed Files, Print Files, READ..NEXT RECORD, READ..KEY IS, START, 
+          REWRITE, WRITE, MULTIPLY, SET)<br>
+          &nbsp; </font></p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="49"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-TopSupplierRpt/Exm-TopSupplierRpt.htm">TopSupplierRpt</a></td>
+      <td width="73%" height="49" valign="top"> 
+        <p><font size="-1">The manager of Metropolis Videos has asked you to write 
+          a program to produce a report showing the top three Video Suppliers 
+          (by total store video earnings) and for each of the top three the most 
+          popular video title (by average earnings) must be shown.<br>
+          (Indexed Files, Relative Files, Print Files, READ, START, Tables, DIVIDE)<br>
+          &nbsp; </font></p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="56"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-BestSellersRpt/Exm-FolioBestSellersRpt.htm">FolioBestSellersRpt</a></td>
+      <td width="73%" height="56" valign="top"><font size="-1">The Folio Society 
+        is a Book Club that sells fine books to customers all over the world. 
+        A program is required to print a list of the ten best selling books (by 
+        copies sold) in the Book Club. <br>
+        (Sequential Files, Print Files, SORT with Input Procedure and Output Procedure, 
+        Tables)<br>
+        &nbsp; </font></td>
+    </tr>
+    <tr>
+      <td width="27%" valign="top" height="56"><img src="./COBOL Programming Exercises_files/BallGreenG.gif" hspace="4" height="13" width="13"><a href="http://www.csis.ul.ie/cobol/exercises/Exm-DueSubsRpt/Exm-DueSubsRpt.htm">DueSubsRpt</a></td>
+      <td width="73%" height="56" valign="top"><font size="-1">NetNews is a company 
+        which runs an NNTP server carrying the complete USENET news feed with 
+        over 15,000 news groups. Access to this server is available to internet 
+        users all over the world. Users of the system pay a subscription fee for 
+        access. The fee may be paid monthly ($20), half-yearly ($100) or yearly 
+        ($180). A program is required to produce a report showing the subscriptions 
+        which are now due. The report will be based on the Due Subscriptions file. 
+        </font><br>
+        <font size="-1">(Sequential Files, Print Files, SORT with Input Procedure, 
+        Tables, SEARCH ALL)<br>
+        &nbsp; </font></td>
+    </tr>
+  </tbody></table>
+  <br>
+</blockquote>
+<hr>
+<h3>Programming Project Specifications</h3>
+<ul>
+  <table width="750" border="0" cellspacing="0" cellpadding="0">
+    <tbody><tr> 
+      <td width="27%" valign="top" height="156"> 
+        <p><img src="./COBOL Programming Exercises_files/BallOrangeG.gif" hspace="4" height="12" width="12"><a href="http://www.csis.ul.ie/cobol/exercises/Proj-CSISEvalform/CSISEvalForm.htm">CSIS 
+          evaluation form report</a></p>
+        <p>&nbsp;</p>
+        <p align="center">&nbsp;</p>
+      </td>
+      <td width="73%" height="156"> 
+        <p><font size="-1">A program is required which will produce a report from 
+          the file produced by the Evaluation Form on the CSIS web site. For each 
+          country from which the site has been visited the report should show-</font></p>
+        <ul>
+          <li><font size="-1">The name of the country </font></li>
+          <li><font size="-1">The number of visitors from this country.</font></li>
+          <li><font size="-1">Most common occupation of visitors from this country</font></li>
+          <li><font size="-1">The average evaluation of the web site by visitors 
+            from this country.<br>
+            <br>
+            </font></li>
+        </ul>
+        <p><font size="-1">The report must be implemented as an HTML web page 
+          and the information on the page should appear in ascending country name 
+          sequence.<br>
+          &nbsp; </font></p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="68"> 
+        <p><img src="./COBOL Programming Exercises_files/BallOrangeG.gif" hspace="4" height="12" width="12"><a href="http://www.csis.ul.ie/cobol/exercises/Prj-AromaSalesRpt/Prj-AromaSalesRpt.htm">Aroma 
+          Sales Report</a></p>
+        <p align="center">&nbsp;</p>
+      </td>
+      <td width="73%" height="68" valign="top"> <font size="-1">Aromamora PLC 
+        is a company which sells essential oils to Aromatherapists, Health Shops, 
+        Chemists and other mass users of essential oils. Every month, details 
+        of sales to these customers are gathered together into a Sales File . 
+        A program is required that will produce a report from this file showing 
+        the quantities and values of essential oils purchased. <br>
+        &nbsp; </font></td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="42"><img src="./COBOL Programming Exercises_files/BallOrangeG.gif" hspace="4" height="12" width="12"><a href="http://www.csis.ul.ie/cobol/exercises/Prj-NewtronicsFileMaint/Prj-NewtronicsFileMaint.htm">Newtronics 
+        File Maintenance</a></td>
+      <td width="73%" height="42" valign="top"> 
+        <p>A program is required to do file maintenance of the Stock master file 
+          and the Supplier master file of Newtronics Plc. using a file of transaction 
+          records.<br>
+          &nbsp; </p>
+      </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="42"><img src="./COBOL Programming Exercises_files/BallOrangeG.gif" hspace="4" height="12" width="12"><a href="http://www.csis.ul.ie/cobol/exercises/Prj-AromaInvoicesRpt/Prj-AromaInvoicesRpt.htm">Aroma 
+        Invoices Report</a></td>
+      <td width="73%" height="42" valign="top">A program is required that will 
+        examine the Aromamora Customer and Invoice files and from them produce 
+        a report showing the the unpaid customer invoices. The Cobol Report-Writer 
+        must be used to create the report.<br>
+        &nbsp; </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="42"><img src="./COBOL Programming Exercises_files/BallOrangeG.gif" hspace="4" height="12" width="12"><a href="http://www.csis.ul.ie/cobol/exercises/Prj-MunsterSurnamesFreqRpt/Prj-MunsterSurnamesFreqRpt.htm">MunsterSurnamesFreqRpt</a></td>
+      <td width="73%" height="42" valign="top">A program is required that will 
+        process the Census Population File to produce a report showing the surnames 
+        that occur most frequently in the counties of Munster.<br>
+        &nbsp; </td>
+    </tr>
+    <tr> 
+      <td width="27%" valign="top" height="42"><img src="./COBOL Programming Exercises_files/BallOrangeG.gif" hspace="4" height="12" width="12"><a href="http://www.csis.ul.ie/cobol/exercises/Prj-CAOPointsCalc/Prj-CAOcalculator.htm">CAO 
+        points calculator</a></td>
+      <td width="73%" height="42" valign="top">A program is required that will 
+        process the CAO Applications file and the Leaving Certificate Results 
+        file to create a Course Points File and to generate a report showing the 
+        number of applicants from each county to the University of Limerick (UL), 
+        the number of first choices for each UL course, and the number of first 
+        choices for the UL. <br>
+      </td>
+    </tr>
+  </tbody></table>
+</ul>
+
+<hr>
+<table cellspacing="0" cellpadding="0" cols="3" width="200"><tbody><tr align="CENTER" valign="TOP">
+<td> <a href="http://www.csis.ul.ie/currentstudents"><img src="./COBOL Programming Exercises_files/B-BackArrow.gif" alt="Back to Student Resources" border="0" height="52" width="52"></a> 
+      <font size="-2">To Student Resources</font></td>
+    <td><a href="http://www.csis.ul.ie/"><img src="./COBOL Programming Exercises_files/B-Evaluation.gif" alt="Please fill out our evaluation form" border="0" height="52" width="52"></a> 
+      <font size="-2">Evaluation Form</font></td>
+    <td><a href="http://www.csis.ul.ie/"><img src="./COBOL Programming Exercises_files/B-WebSearch.gif" alt="Search the CSIS Web Site" border="0" height="52" width="52"></a> 
+      <font size="-2">Search CSIS Web Site</font></td>
+    <td> 
+
+<center>
+<form>
+          Selectable Site Contents 
+          <select name="list">
+            <option value="http://www.ul.ie/">University of Limerick Home Page</option>
+            <!--<OPTION value="http://www.ul.ie/~informat/">College of I&amp;E Home 
+            Page</OPTION>-->
+            <option value="http://www.csis.ul.ie/">CSIS Home Page</option>
+            <option value="http://www.csis.ul.ie/undergraduate">Undergraduate - Prospective Students</option>
+            <option value="http://www.csis.ul.ie/postgraduate">Postgraduate - Prospective Students</option>            
+            <option value="http://www.csis.ul.ie/currentstudents">Current Students</option>
+            <option value="http://www.csis.ul.ie/research">Research</option>
+            <option value="http://www.csis.ul.ie/csis_staff">Staff</option>
+          <!--  <OPTION value="http://www.csis.ul.ie/CompSys.HTM">...Computer Systems 
+            Degree</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GradDip.HTM">...Graduate Diploma 
+            in Computing</OPTION>
+            <OPTION value="http://www.csis.ul.ie/software_localisation/default.htm">...Graduate 
+            Diploma/MSc in Software Localisation</OPTION>
+            <OPTION value="http://www.csis.ul.ie/ccmcm/default.htm">...MSc in 
+            Music Technology</OPTION>
+            <OPTION value="http://www.csis.ul.ie/soft_re_eng.html/default.htm">...MSc 
+            in Software Reengineering</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Directory/Staff.HTM">Department 
+            Personnel</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Directory/phone.HTM">...CSIS 
+            Telephone Directory</OPTION>
+            <OPTION value="http://www.ul.ie/ITD/PhoneBook.html">...UL Internal 
+            Telephone Directory</OPTION>-->
+            <!--
+            <OPTION value="http://www.csis.ul.ie/Research/ResearchCntr.HTM">...Research 
+            Centres</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Research/ResearchPrj.HTM">...Research 
+            Projects</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Research/RsrchPubs.htm">...Research 
+            Publications</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Research/techrpts.htm">...Technical 
+            Reports</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Research/PhdTheses.htm">...Ph.D 
+            Theses</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Research/masters.htm">...M.Sc. 
+            Theses</OPTION>
+            <OPTION value="http://www.csis.ul.ie/StudentResources.HTM">Student 
+            Resources</OPTION>
+            <OPTION value="http://www.csis.ul.ie/photoalbum/classes/namesonly.htm">...Computer 
+            Systems Graduated Classes </OPTION>
+            <OPTION value="http://www.csis.ul.ie/staff/norahpower/FYPSuggestions9798.htm">...Final 
+            Year Project suggestions</OPTION>
+            <OPTION value="http://www.csis.ul.ie/fyp97/index.html">...Final Year 
+            Projects web page</OPTION>
+            <OPTION value="http://www.csis.ul.ie/studentresources/schedules/csislabs.htm">...Lab 
+            Schedules</OPTION>
+            <OPTION value="http://www.csis.ul.ie/studentresources/ModuleMaterial.htm">...Module 
+            Materials</OPTION>
+            <OPTION value="http://www.csis.ul.ie/studentresources/links.htm">...Useful 
+            Links</OPTION>
+            <OPTION value="http://www.csis.ul.ie/StudentResources/fyproj.htm">...Completed 
+            Final Year Projects</OPTION>
+            <OPTION value="http://www.csis.ul.ie/meetings/Meetings.HTM">Meetings</OPTION>
+            <OPTION value="http://www.csis.ul.ie/PhotoAlbum/Album.htm">Photo Album</OPTION>
+            <OPTION value="http://www.csis.ul.ie/PhotoAlbum/classes/default.htm">...Computer 
+            Systems - Class Photos</OPTION>
+            <OPTION value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuin.htm">...Schuman 
+            Interior</OPTION>
+            <OPTION value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuout.htm">...Schuman 
+            Environs</OPTION>
+            <OPTION value="http://www.csis.ul.ie/PhotoAlbum/ULgrounds/default.htm">...University 
+            Grounds</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GenInfo.HTM">General Information</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GenInfo.HTM#Department">...Department 
+            Information</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GenInfo.HTM#Getting">...Getting 
+            Around</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GenInfo.HTM#Contacting">...Contacting 
+            the department</OPTION>
+            <OPTION value="http://www.csis.ul.ie/TOYS/WHOSON.HTM">...Who's on 
+            the server</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GenInfo.HTM#About">...About these 
+            pages</OPTION>-->
+          </select>
+          <input type="BUTTON" value="Go!" onclick="top.location.href=this.form.list.options[this.form.list.selectedIndex].value">
+        </form><p></p>
+</center>
+
+</td>
+</tr>
+</tbody></table>
+
+<hr>
+<i><font size="-1">Last updated : June 2002</font></i><br>
+<font size="-1"><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font>
+
+
+</body></html>

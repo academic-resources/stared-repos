@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Fun Bus Travel Agency - Solution</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+
+
+
+
+<div class="container home">
+  <header class="navigation">
+    <nav>
+      <div class="headerImage">
+        <h1>Fun Bus</h1>
+      </div>
+      <div class="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+  <section class="introImg">
+    <img src="img/fun-bus.jpg" />
+  </section>
+  <section class="introPara">
+    <h2>Welcome To Fun Bus!</h2>
+    <p>Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty design,
+      travelblogger adventure WordPress wanderlust theme blogger website expedition theme travelblogger. Adventure fun
+      traveler pretty design website expedition.</p>
+  </section>
+  <section class="content-section">
+    <div class="text-content">
+      <h2>Let's Go!</h2>
+      <p>Adventure webdesign pretty design design, excursion cute
+        WordPress blogger design webdesign adventure. Pretty simple
+        traveling fun WordPress wanderlust darn simple organized.</p>
+      <p>Expedition colorful design simple excursion blogger blogger
+        design WordPress design, design organized website theme.</p>
+    </div>
+    <div class="img-content">
+      <img src="img/adventure.jpg" alt="Let's go on an adventure!">
+    </div>
+  </section>
+  <section class="content-section inverse-content">
+    <div class="img-content">
+      <img src="img/fun.jpg" class="img-fluid rounded" alt="Lets have
+              fun!">
+    </div>
+    <div class="text-content">
+      <h2>Adventure Awaits</h2>
+      <p>Adventure webdesign pretty design design, excursion cute
+        WordPress blogger design webdesign adventure. Pretty simple
+        traveling fun WordPress wanderlust darn simple organized.</p>
+      <p>Expedition colorful design simple excursion blogger blogger
+        design WordPress design, design organized website theme.</p>
+    </div>
+
+  </section>
+  <section class="content-destination">
+    <h2>Pick Your Destination</h2>
+    <p>Expedition excursion design darn excursion fun, clean simple
+      organized WordPress Travel colorful webdesign. Traveler blogger
+      website design expedition clean excursion traveling.</p>
+    <img src="img/destination.jpg" alt="Second slide">
+  </section>
+  <section class="content-pick">
+
+    <div class="destination">
+      <h4>Fun In The Sun</h4>
+      <p>Expedition excursion design excursion fun, clean simple
+        organized WordPress Travel colorful webdesign. Traveler blogger
+        website design expedition clean excursion traveling.</p>
+      <div class="btn open-button" onclick="openForm()">Sign Me Up!</div>
+    </div>
+    <div class="destination">
+      <h4>Mountain Excursion</h4>
+      <p>Expedition excursion design excursion fun, clean simple
+        organized WordPress Travel colorful webdesign. Traveler blogger
+        website design expedition clean excursion traveling.</p>
+      <div class="btn open-button" onclick="openForm()">Sign Me Up!</div>
+    </div>
+    <div class="destination">
+      <h4>Island Getaway</h4>
+      <p>Expedition excursion design excursion fun, clean simple
+        organized WordPress Travel colorful webdesign. Traveler blogger
+        website design expedition clean excursion traveling.</p>
+      <div class="btn open-button" onclick="openForm()">Sign Me Up!</div>
+    </div>
+  </section>
+  <div class="form-popup" id="contactForm">
+    <form action="/action_page.php" class="form-container">
+      <h4>Contact Us!</h4>
+      <label for="vpackage"><b>Select a Vacation Package:</b></label>
+      <select name="vpackage" required>
+        <option value="Fun in the Sun">Fun in the Sun</option>
+        <option value="Mountain Excursion">Mountain Excursion</option>
+        <option value="Island Getaway">Island Getaway</option>
+      </select>
+
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="Enter your name." name="name" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter your email address." name="email" required>
+
+      <label for="phone"><b>Phone Number</b></label>
+      <input type="text" placeholder="(###) ###-####" name="phone" required>
+
+      <label for="sinstructions"><b>Special Instructions</b></label>
+      <input type="text" placeholder="Enter any special instructions." name="sinstructions">
+
+      <button type="submit" class="btn">Submit</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+
+
+</div><!-- container -->
+
+<footer class="footer">
+  <p>Copyright Fun Bus 2018</p>
+</footer>
+<script>
+  function openForm() {
+    document.getElementById("contactForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("contactForm").style.display = "none";
+  }
+</script>
+
+</body>
+
+</html>

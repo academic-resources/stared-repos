@@ -1,0 +1,17 @@
+{
+  "name": "webapi-ii-challenge",
+  "version": "0.0.1",
+  "description": "Challenge for Web API II Module",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "dependencies": {
+    "knex": "^0.19.4",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}

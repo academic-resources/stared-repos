@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.digit {
+  display: inline-block;
+  font-size: 80px;
+}
+
+.redDigit {
+  color: red;
+}
+
+.digits {
+  width: 100%;
+  text-align: center;
+}
+
+.clockButtons {
+  width: 100%;
+  text-align: center;
+}

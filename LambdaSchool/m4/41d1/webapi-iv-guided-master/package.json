@@ -1,0 +1,29 @@
+{
+  "name": "webapi-deployment",
+  "version": "1.0.0",
+  "description": "Guided project for **Web API IV** module.",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaSchool/webapi-deployment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/webapi-deployment/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/webapi-deployment#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "knex": "^0.20.3",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}

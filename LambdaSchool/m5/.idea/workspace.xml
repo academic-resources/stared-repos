@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="071d3167-b0fd-4ab6-b5bd-9af2aacf3de3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../labs/backend" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/backend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1/SC-ACSS" beforeDir="false" afterPath="$PROJECT_DIR$/../m1/SC-ACSS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m4/42a1/dbintro" beforeDir="false" afterPath="$PROJECT_DIR$/../m4/42a1/dbintro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m4/42a1/migrations" beforeDir="false" afterPath="$PROJECT_DIR$/../m4/42a1/migrations" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m4/43a1/authintro" beforeDir="false" afterPath="$PROJECT_DIR$/../m4/43a1/authintro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m4/43b2/sessions" beforeDir="false" afterPath="$PROJECT_DIR$/../m4/43b2/sessions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m4/43c1/jwts" beforeDir="false" afterPath="$PROJECT_DIR$/../m4/43c1/jwts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m4/43d1a/ls" beforeDir="false" afterPath="$PROJECT_DIR$/../m4/43d1a/ls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/AuthenticatedusersApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/SeedData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/config/AuthorizationServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/config/H2ServerConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/config/ResourceServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/config/SimpleCorsFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/controller/QuotesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/controller/RolesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/controller/UseremailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/model/Auditable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/model/Quote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/model/UserRoles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/model/Useremail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/repository/QuoteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/repository/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/repository/UseremailRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/service/QuoteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/service/QuoteServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/service/RoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/service/RoleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/service/UserAuditing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/service/UseremailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/service/UseremailServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/authenticatedusers/view/CountQuotes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/SeedData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/UserModelApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/config/H2ServerConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/controllers/RolesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/controllers/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/controllers/UseremailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/exceptions/ResourceFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/exceptions/ValidationError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/handlers/RestExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/logging/LogWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/logging/Loggable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/logging/LoggingAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/models/Auditable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/models/ErrorDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/models/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/models/UserRoles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/models/Useremail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/repository/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/repository/UseremailRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/services/RoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/services/RoleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/services/UserAuditing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/services/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/services/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/services/UseremailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/services/UseremailServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/view/JustTheCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/java/com/lambdaschool/usermodel/view/UserNameCountEmails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/resources/info/ChangeLog.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/resources/info/curl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/test/java/com/lambdaschool/authenticatedusers/AuthenticatedusersApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/52e1/src/test/java/com/lambdaschool/usermodel/UserModelApplication.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1aOsfD9ExOjWsL7WmLxc3kdxX2F" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/53a1" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="071d3167-b0fd-4ab6-b5bd-9af2aacf3de3" name="Default Changelist" comment="" />
+      <created>1586618076020</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586618076020</updated>
+      <workItem from="1586618077222" duration="15000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1180" y="274" key="FileChooserDialogImpl" timestamp="1586618089963">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1586618089963" />
+  </component>
+</project>

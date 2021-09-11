@@ -1,0 +1,975 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Introduction to Direct Access Files</TITLE>
+<style type="text/css">
+<!--
+-->
+</style></HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<CENTER>
+  <div align="LEFT">
+    <table border="0" width="710">
+      <tr> 
+        <td>
+          <center>
+            <h2><a name="top"></a> <img src="Resources/pics/t-CobolCourse.gif" height=56 width=161 align="MIDDLE" alt="Cobol Course" border="0"></h2>
+          </center>
+          <center>
+            <h2> <b>Introduction to Direct Access Files</b></h2>
+            <hr>
+          </center>
+</td>
+      </tr>
+    </table>
+  </div>
+</CENTER>
+<div align="LEFT">
+</div>
+<p align="LEFT">&nbsp; </p>
+<div align="LEFT">
+  <table border="0" width="710" vspace="15">
+    <tr> 
+      <td width="3%" valign="TOP">&nbsp;</td>
+      <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+      <td width="93%"> <b><a href="#intro" target="">Introduction</a><br>
+        </b><font size="-1">Unit aims, objectives and prerequisites. </font></td>
+    </tr>
+    <tr> 
+      <td width="3%" valign="TOP">&nbsp;</td>
+      <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+      <td width="93%"> <b><a href="#seq" target="">Organization of Sequential 
+        files</a><br>
+        </b><font size="-1">Provides a recap of Sequential file organization and 
+        the difficulties of adding, removing and updating records in an ordered 
+        Sequential file.</font> </td>
+    </tr>
+    <tr> 
+      <td width="3%" valign="TOP">&nbsp;</td>
+      <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+      <td width="93%"><b><a href="#rel">Organization of Relative files</a><br>
+        </b><font size="-1">Describes how Relative files are organized and shows 
+        how records may be added, deleted or updated.</font></td>
+    </tr>
+    <tr> 
+      <td width="3%" valign="TOP">&nbsp;</td>
+      <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+      <td width="93%"> <b><a href="#idx">Organization of Indexed files</a><br>
+        </b><font size="-1">Describes the organization of Indexed files. Shows 
+        how records may be added, deleted or updated and describes how records 
+        in an Indexed file may be processed directly or sequentially on any key. 
+        </font></td>
+    </tr>
+    <tr> 
+      <td width="3%" valign="TOP">&nbsp;</td>
+      <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+      <td width="93%"> 
+        <p><b><a href="#comp">Comparison of COBOL file organizations</a></b><br>
+          <font size="-1">Summarizes the advantages and disadvantages of each 
+          of the file organizations above.</font> </p>
+        <p>&nbsp;</p>
+      </td>
+    </tr>
+  </table>
+</div>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00">Introd<a name="intro"></a>uction</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#993300">Aims</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The aim of this unit is to provide a gentle introduction to COBOL's direct 
+        access file organizations and to equip you with a knowledge of the advantages 
+        and disadvantages of each type of organization.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Objectives</font></h3>
+    </td>
+    <td width="525"> 
+      <p>By the end of this unit you should:</p>
+      <ol>
+        <li> Have a good understanding of the drawbacks of inserting, deleting 
+          and amending records in an ordered Sequential file. <br>
+          <br>
+        </li>
+        <li>Have a basic knowledge of how Relative and Indexed files are organized. 
+          <br>
+          <br>
+        </li>
+        <li>Understand the advantages and disadvantages of the different file 
+          organizations. <br>
+          <br>
+        </li>
+        <li>Be able to choose the appropriate file organization for a particular 
+          set of circumstances . </li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC">
+      <h3><font color="#800000">Prerequisites</font></h3>
+    </td>
+    <td width="525"> 
+      <p>You should be familiar with the material covered in the unit; </p>
+      <ul>
+        <li>Sequential Files</li>
+      </ul>
+      <p>&nbsp;</p>
+      <p>&nbsp; </p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00">Sequential<a name="seq"></a> files</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>Access to records in a Sequential file is serial. To reach a particular 
+        record, all the preceding records must be read. </p>
+      <p>As we observed when the topic was introduced earlier in the course, the 
+        organization of an <b>unordered</b> Sequential file means it is only practical 
+        to read records from the file and add records to the end of the file (<font size="-1">OPEN..EXTEND</font>). 
+        It is not practical to delete or update records.</p>
+      <p>While it is possible to delete, update and insert records in an <b>ordered</b> 
+        Sequential file, these operations have some drawbacks.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Problems accessing ordered Sequential files. </font></h3>
+    </td>
+    <td width="525"> 
+      <p>Records in <font color="#000000">an order</font>ed Sequential file are 
+        arranged, in order, on some key field or fields. When we want to insert,delete 
+        or amend a record we must preserve the ordering. The only way to do this 
+        is to create a new file. In the case of an insertion or update, the new 
+        file will contain the inserted or updated record. In the case of a deletion, 
+        the deleted record will be missing from the new file.</p>
+      <p>The main drawback to inserting, deleting or amending records in an ordered 
+        Sequential file is that the entire file must be read and then the records 
+        written to a new file. Since disk access is one of the slowest things 
+        we can do in computing this is very wasteful of computer time when only 
+        a few records are involved.</p>
+      <p>For instance, if 10 records are to be inserted into a 10,000 record file, 
+        then 10,000 records will have to be read from the old file and 10,010 
+        written to the new file. The average time to insert a new record will 
+        thus be very great.</p>
+      <p>&nbsp;</p>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC">
+      <h3><font color="#800000">Contrast with direct access files</font></h3>
+    </td>
+    <td width="525">
+      <p>While Sequential files have a number of advantages over other types of 
+        file organization (and these are discussed fully in the<a href="#comp"> 
+        final section</a>) the fact that a new file must be created when we delete, 
+        update or insert a records causes problems.</p>
+      <p>These problems are addressed by direct access files. Direct access files 
+        allow us to read, update, delete and insert individual records, in situ, 
+        using a key. </p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Inserting records in an ordered Sequential file</font></h3>
+    </td>
+    <td width="525"> 
+      <p>To insert a record in an ordered Sequential file: </p>
+      <ol>
+        <li>All the records with a key value less than the record to be inserted 
+          must be read and then written to the new file.<br>
+          <br>
+        </li>
+        <li> Then the record to be inserted must be written to the new file.<br>
+          <br>
+        </li>
+        <li> Finally, the remaining records must be written to the new file.</li>
+      </ol>
+      <hr>
+      <div align="CENTER">
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#808080"> <font color="#800000">Deleting records from an 
+        ordered Sequential file</font></font></h3>
+    </td>
+    <td width="525"> 
+      <p>To delete a record in an ordered Sequential file:</p>
+      <ol>
+        <li>All the records with a key value less than the record to be deleted 
+          must be written to the new file.<br>
+          <br>
+        </li>
+        <li> When the record to be deleted is encountered it is not written to 
+          the new file.<br>
+          <br>
+        </li>
+        <li> Finally, all the remaining records must be written to the new file.</li>
+      </ol>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Amending records in an ordered Sequential file</font></h3>
+    </td>
+    <td width="525"> 
+      <p>To amend a record in an ordered Sequential file:</p>
+      <ol>
+        <li> All the records with a key value less than the record to be amended 
+          must be read and then written to the new file.<br>
+          <br>
+        </li>
+        <li> Then the record to be amended must be read the amendments applied 
+          to it and the amended record must then be written to the new file.<br>
+          <br>
+        </li>
+        <li> Finally, all the remaining records must be written to the new file.</li>
+      </ol>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Sequential files - animation</font></h3>
+    </td>
+    <td width="525"> 
+      <table border="0" width="525">
+        <tr> 
+          <td width="154" valign="TOP"> 
+            <p>The Sequential file animation opposite shows the operations of 
+              inserting, deleting and amending a record in an ordered Sequential 
+              file.</p>
+          </td>
+          <td width="364"> 
+            <center>
+              <object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=354 height=416>
+                <param name="File" value="Resources/ppz/seqintro.ppz">
+                <embed width=354 height=416 src="Resources/ppz/SeqIntro.ppz"></embed><noembed> 
+                This page contains a Microsoft PowerPoint Animation that your 
+                browser was unable to view.<a href="Resources/ppz/SeqIntro.ppz">Click 
+                here to open reinsert.ppz fullscreen</a></NOEMBED> 
+              </object> 
+            </center>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Summary</font> </h3>
+    </td>
+    <td width="525"> 
+      <p>The problem with Sequential files is that unless the file is ordered 
+        very few (only read and add) operations can be applied to it.</p>
+      <p>Even when a Sequential file is ordered; delete, insert and amend operations 
+        are prohibitively expensive (in processing terms) when only a few records 
+        in the file are affected (i.e. when the &quot;hit rate&quot; is low) .</p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00">Relative<a name="rel"></a> Files</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>As we have already noted, the problem with Sequential files is that access 
+        to the records is serial. To reach a particular record, all the proceeding 
+        records must be read.</p>
+      <p> Direct access files allow direct access to a particular record in the 
+        file using a key and this greatly facilitates the operations of reading, 
+        deleting, updating and inserting records.</p>
+      <p>COBOL supports two kinds of direct access file organizations -Relative 
+        and Indexed.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Organization of Relative files </font></h3>
+    </td>
+    <td width="525"> 
+      <p>Records in relative files are organized on ascending Relative Record 
+        Number. A Relative file may be visualized as a one dimension table stored 
+        on disk, where the Relative Record Number is the index into the table. 
+        Relative files support sequential access by allowing the active records 
+        to be read one after another. </p>
+      <p>Relative files support only one key. The key must be numeric and must 
+        take a value between 1 and the current highest Relative Record Number. 
+        Enough room is allocated to the file to contain records with Relative 
+        Record Numbers between 1 and the highest record number.</p>
+      <p>For instance, if the highest relative record number used is 10,000 then 
+        room for 10,000 records is allocated to the file.</p>
+      <p>Figure 1 below contains a schematic representation of a Relative file. 
+        In this example, enough room has been allocated on disk for 328 records. 
+        But although there is room for 328 records in the current allocation, 
+        not all the record locations contain records. The record areas labeled 
+        &quot;free&quot;, have not yet had record values written to them. </p>
+      <div align="CENTER">
+        <table border="0" width="48%">
+          <tr> 
+            <td><IMG SRC="Resources/pics/I-DFIntroFig1.gif" width="267" height="348"></td>
+          </tr>
+          <tr> 
+            <td> 
+              <p align="CENTER">Relative File - Organization<br>
+                Figure 1</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p>&nbsp; </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Accessing records in a Relative file</font></h3>
+    </td>
+    <td width="525"> 
+      <div align="CENTER">
+        <p align="LEFT">To access a records in a Relative file a Relative Record 
+          Number must be provided. Supplying this number allows the record to 
+          be accessed directly because the system can use </p>
+      </div>
+      <blockquote> 
+        <div align="LEFT">
+          the start position of the file on disk, <br>
+          the size of the record,<br>
+          and the Relative Record Number 
+        </div>
+      </blockquote>
+      <div align="CENTER">
+        <p align="LEFT">to calculate the position of the record. </p>
+        <p align="LEFT">Because the file management system only has to make a 
+          few calculations to find the record position the Relative file organization 
+          is the fastest of the two direct access file organizations available 
+          in COBOL. It is also the most storage efficient.</p>
+        <hr>
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Animation - Organization and use of </font><font color="#800000">Relative 
+        files </font></h3>
+    </td>
+    <td width="525"> 
+      <table border="0" width="525">
+        <tr> 
+          <td width="204" valign="TOP"> 
+            <p>To read, insert, delete or update a record directly, the Relative 
+              Record Number of the record must be placed in the key area and then 
+              the operation must be applied to the file. </p>
+            <p>Click on the diagram opposite to see these operations in action.</p>
+          </td>
+          <td width="364"> 
+            <center>
+              <object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=354 height=416>
+                <param name="File" value="Resources/ppz/relintro.ppz">
+                <embed width=354 height=416 src="Resources/ppz/relIntro.ppz"></embed><noembed> 
+                This page contains a Microsoft PowerPoint Animation that your 
+                browser was unable to view.<a href="Resources/ppz/relIntro.ppz">Click 
+                here to open reinsert.ppz fullscreen</a></NOEMBED> 
+              </object> 
+            </center>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Summary</font></h3>
+    </td>
+    <td width="525"> 
+      <p>A Relative file is organized like a one dimension table on disk where 
+        each record is an element of the table. The Relative Record Number acts 
+        like a table index to allow access to the records.</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00">Indexed <a name="idx"></a>Files</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>While the usefulness of a Relative file is constrained by its restrictive 
+        key, Indexed files suffer from no such limitation. </p>
+      <p>Indexed files may have up to 255 keys, the keys can be alphanumeric and 
+        only the primary key must be unique. </p>
+      <p>In addition, it is possible to read an Indexed file sequentially on any 
+        of its keys.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Organization of Indexed files </font></h3>
+    </td>
+    <td width="525"> 
+      <p>An Indexed file may have multiple keys. The key upon which the data records 
+        are ordered is called the <b>primary key</b>. The other keys are called 
+        <b>alternate keys</b>.</p>
+      <p>Records in the Indexed file are sequenced on ascending primary key. Over 
+        the actual data records, the file system builds an index. When direct 
+        access is required, the file system uses this index to find, read, insert, 
+        update or delete, the required record.</p>
+      <p>&nbsp; </p>
+      <p>For each of the alternate keys specified in an Indexed file, an alternate 
+        index is built. However, the lowest level of an alternate index does not 
+        contain actual data records. Instead, this level made up of base records 
+        which contain only the alternate key value and a pointer to where the 
+        actual record is. These base records are organized in ascending alternate 
+        key order.</p>
+      <p>As well as allowing direct access to records on the primary key or any 
+        of the 254 alternate keys, indexed files may also be processed sequentially. 
+        When processed sequentially, the records may be read in ascending order 
+        on the primary key or on any of the alternate keys. </p>
+      <blockquote></blockquote>
+      <p>Since the data records are in held in ascending primary key sequence 
+        it is easy to see how the file may be accessed sequentially on the primary 
+        key. It is not quite so obvious how sequential on the alternate keys is 
+        achieved. This is covered in the unit on Indexed files.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Animation - O</font><font color="#800000">rganization 
+        and use of Indexed files </font></h3>
+    </td>
+    <td width="525"> 
+      <div align="CENTER">
+        <table border="0" width="100%">
+          <tr> 
+            <td> 
+              <p>In the animation below you can see a representation of an Indexed 
+                file and its overlying primary key index. Note that the index 
+                records point to the actual data records which are held in ascending 
+                primary key sequence.</p>
+              <p>This animation shows how a direct read on the primary key is 
+                done. The record to be read has a key value of &quot;Ni&quot;. 
+                In the animation we see how the index is used to find the required 
+                record we.</p>
+              <p>The algorithm used for traversing the index is -</p>
+              <blockquote> 
+                <pre>IF RecordKeyValue &gt; RequiredKeyValue <br>   take this branch<br>ELSE<br>   go to next index record<br>END-IF</pre>
+              </blockquote>
+              <p>&nbsp;</p>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <div align="CENTER">
+                <object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=486 height=325>
+                  <param name="File" value="Resources/ppz/idxintro.ppz">
+                  <embed src="Resources/ppz/IdxIntro.ppz" width=486 height=325></embed><noembed> 
+                  This page contains a Microsoft PowerPoint Animation that your 
+                  browser was unable to view.<a href="Resources/ppz/IdxIntro.ppz">Click 
+                  here to open reinsert.ppz fullscreen</a></NOEMBED> 
+                </object> 
+              </div>
+            </td>
+          </tr>
+        </table>
+        <p align="LEFT">&nbsp;</p>
+      </div>
+      <div align="CENTER">
+        <hr>
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Summary</font></h3>
+    </td>
+    <td width="525"> 
+      <p>An Indexed file may have multiple, alphanumeric, keys.</p>
+      <p>Only the primary key must be unique.</p>
+      <p>For each key specified for an Indexed file, an index will be built.</p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00">Comparison<a name="comp"></a> of 
+        COBOL file organizations</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>In this section we examine the advantages and disadvantages of the three 
+        COBOL file organizations.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Sequential files</font></h3>
+      <h3>&nbsp;</h3>
+    </td>
+    <td width="525"> 
+      <h3 align="CENTER">Disadvantages</h3>
+      <table border="3" width="100%" cellpadding="4">
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Slow</b> 
+            </div>
+          </td>
+          <td width="404"> 
+            <p>The &quot;hit rate&quot; refers to the number of records in the 
+              file that are affected when updating a file. For instance, if only 
+              100 records are to affected by an insert, delete or amend operation 
+              in a file of 10,000 records then the hit rate is low. But if 9,000 
+              records are affected then the hit rate is high. </p>
+            <p>Sequential files are very slow to update when the hit rate is low 
+              because the entire file must be read and then written to a new file, 
+              just to update a few records.</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Complicated</b> 
+            </div>
+          </td>
+          <td width="404"> 
+            <p>Sequential files are also complicated to change. Changes to Sequential 
+              files are batched together into a transaction file to minimize the 
+              low hit rate problem but this makes updating the Sequential file 
+              much more complicated than updating a direct access file. </p>
+            <p>The complications come from having to match the records in the 
+              transaction file with those in the master file (i.e. the file to 
+              be updated).</p>
+          </td>
+        </tr>
+      </table>
+      <h3 align="CENTER">Advantages</h3>
+      <table border="1" width="101%" cellpadding="4">
+        <tr> 
+          <td valign="MIDDLE" bgcolor="#E8E8E8" width="150"> 
+            <div align="CENTER">
+              <b>Fast</b> 
+            </div>
+          </td>
+          <td valign="TOP" width="364"> 
+            <p>When the hit rate is high this is the fastest method of updating 
+              a file because the record position does not have to be calculated 
+              and no indexes have to be traversed.</p>
+          </td>
+        </tr>
+        <tr> 
+          <td valign="MIDDLE" bgcolor="#E8E8E8" width="150"> 
+            <div align="CENTER">
+              <b>Most storage efficient</b> 
+            </div>
+          </td>
+          <td valign="TOP" width="364"> 
+            <p>This is the most storage efficient of all the file organizations. 
+              No indexes are required. Space from deleted records is recovered. 
+              Only room actually required to hold the records is allocated to 
+              the file.</p>
+          </td>
+        </tr>
+        <tr> 
+          <td valign="MIDDLE" bgcolor="#E8E8E8" width="150"> 
+            <div align="CENTER">
+              <b>Simple organization</b> 
+            </div>
+          </td>
+          <td valign="TOP" width="364"> 
+            <p>This is the simplest file organization. Records are held serially.</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="MIDDLE" bgcolor="#E8E8E8" width="150"> 
+            <div align="CENTER">
+              <b>Files may be stored on serial media </b> 
+            </div>
+          </td>
+          <td valign="TOP" width="364"> 
+            <p>Sequential files may be stored on serial media such as magnetica 
+              tape.</p>
+            <p>These media are cheap, removable and voluminous.</p>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Relative files </font></h3>
+    </td>
+    <td width="525"> 
+      <h3 align="CENTER">Disadvantages</h3>
+      <table border="3" width="100%" cellpadding="4">
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Wastes storage if the file is only partially populated </b> 
+            </div>
+          </td>
+          <td width="433"> 
+            <p>If the file is only partially populated with records then this 
+              is a very wasteful file organization. The file will be allocated 
+              enough room to hold records from 1 to the highest Relative Record 
+              Number used, even if only a few records have actually been written 
+              to the file. </p>
+            <p>For instance, if the first record written to the file has a Relative 
+              Record Number of 10,000 then room for that many records is allocated 
+              to the file.&nbsp; </p>
+            <p>The fact that there is only one key and that it must be numeric 
+              and must take a value between 1 and the highest record number is 
+              limiting.</p>
+            </td>
+        </tr>
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Cannot recover space from deleted records </b> 
+            </div>
+          </td>
+          <td width="433"> 
+            <p>Relative files cannot recover the space from deleted records. </p>
+            <p>When a record is deleted in a Relative file, it is simply marked 
+              as deleted but the actual space that used to be occupied by the 
+              record is still allocated to the file (see record position 327 in 
+              Figure-1). </p>
+            <p>So if a Relative file is 560K in size when full, it will still 
+              be 560K when you have deleted half the records.</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Only a single key allowed</b> 
+            </div>
+          </td>
+          <td width="433"> 
+            <p>The usefulness of Relative files is severely constrained by the 
+              fact that; </p>
+            <ul>
+              <li>they can only have one key, </li>
+              <li>the key must be numeric </li>
+              <li>the key must have a value in the range - 1 to the highest key 
+                value.</li>
+            </ul>
+            <p>The single key is limiting because it is often the case that we 
+              need to access the file on more than one key. For instance, in a 
+              file of student records we might want to access the records on Student 
+              Id, Student Name, CourseCode or ModuleCode.</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>The key must be numeric</b> 
+            </div>
+          </td>
+          <td width="433"> 
+            <p>The mention of using StudentName, CourseCode or ModuleCode as a 
+              key, highlights another drawback with Relative files. </p>
+            <p>We frequently need to access the file using a key that is not numeric.</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>The key is inflexible</b> 
+            </div>
+          </td>
+          <td width="433"> 
+            <p>The fact that the key must be in the range 1 to the highest key 
+              value and that the file system allocates space for all the records 
+              between 1 and the highest Relative Record Number used, imposes severe 
+              constraints on the key.</p>
+            <p>For instance even though the StudentId is numeric we couldn't use 
+              it as a key because the file system would allocate space for records 
+              from 1 to the highest StudentId written to the file. </p>
+            <p>Suppose the highest StudentId written to the file was 9876543. 
+              The file system would allocate space for 9,876,543 records.</p>
+            <p>Sometimes we can get around the limitations of the key by using 
+              a transformation function to map the actual key on to the range 
+              of Relative Record Numbers.</p>
+            <p>There are a number of possible transformation, or &quot;hashing&quot;, 
+              functions, including truncation (only using some of the digits in 
+              the key as the Relative Record Number), folding (breaking the key 
+              into two or more parts and summing the parts), digit manipulation 
+              (manipulating some of the digits in the key to produce a Relative 
+              Record Number) and modulus division (using the remainder of a division 
+              operation as the Relative Record Number).</p>
+            <p>Some transformation functions might even allow keys that are not 
+              numeric.</p>
+            <p>Some transformation functions require special code to deal with 
+              duplication that occurs when the transformation of two different 
+              keys produces the same Relative Record Number.</p>
+            </td>
+        </tr>
+        <tr>
+          <td width="150" bgcolor="#E8E8E8"><b>Must be stored on direct access 
+            media</b></td>
+          <td width="433">Because Relative files are direct access files they 
+            must be stored on direct access media such as a hard or floppy disks. 
+            They can not be stored on magnetic tape.</td>
+        </tr>
+      </table>
+      <h3 align="CENTER">Advantages</h3>
+      <table border="1" width="101%" cellpadding="4">
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Fastest direct access organization</b> 
+            </div>
+          </td>
+          <td width="73%"> 
+            <p>This is the fastest direct access organization. To reach a particular 
+              record, only a few simple calculations have to be done.</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Very little storage overhead</b> 
+            </div>
+          </td>
+          <td width="73%"> 
+            <p>Unlike Indexed files, which must store the indexes as well as the 
+              data, Relative files have only a small storage overhead. </p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Can be read sequentially</b> 
+            </div>
+          </td>
+          <td width="73%"> 
+            <p>As well as allowing direct access, Relative files allow sequential 
+              access to the records in the file.</p>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Indexed files </font></h3>
+    </td>
+    <td width="525">
+      <h3 align="CENTER">Disadvantages</h3>
+      <table border="3" width="100%" cellpadding="4">
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Slowest direct access organization</b> 
+            </div>
+          </td>
+          <td width="73%"> 
+            <p>Because Indexed file achieve direct access by traversing a number 
+              of levels of index this is the slowest direct access organization.</p>
+            <p>Indexed files must have a primary key index and an index for each 
+              alternate key. </p>
+            <p>Each level of index implies an I/O operation on the hard disk. 
+            </p>
+            <p>For instance, in the Indexed file animation three I/O operations 
+              were required to read the record (two for the index records and 
+              one for data record).</p>
+            <p>Because of this, Indexed files are substantially slower than Relative 
+              files. They are especially slow when writing or deleting records 
+              because the primary key index and the alternate key indexes may 
+              need to be rebuilt.</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Not very storage efficient</b> 
+            </div>
+          </td>
+          <td width="73%"> 
+            <p>Indexed files require more storage than other file organizations 
+              because file must store;</p>
+            <ul>
+              <li> the primary key Index records</li>
+              <li>the index records for each alternate key</li>
+              <li>the actual data records</li>
+              <li>the base records for each alternate key</li>
+            </ul>
+            <p>In addition, the space from deleted records is only partially recovered.</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="150" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Must be stored on direct access media</b> 
+            </div>
+          </td>
+          <td width="73%">Because Indexed files are direct access files they must 
+            be stored on direct access media such as a hard or floppy disks. They 
+            cannot be stored on magnetic tape.</td>
+        </tr>
+      </table>
+      <h3 align="CENTER">Advantages</h3>
+      <table border="1" width="101%" cellpadding="4">
+        <tr> 
+          <td width="27%" bgcolor="#E8E8E8"> 
+            <div align="CENTER">
+              <b>Versatile keys</b> 
+            </div>
+          </td>
+          <td width="73%"> 
+            <p>Indexed files can have multiple alphanumeric keys and only the 
+              primary key has to be unique.</p>
+            <p>An indexed file may be read sequentially on any of its keys.</p>
+            <p>When we compare the number of disadvantages of Indexed files with 
+              the advantages we might be forgiven for thinking &quot;Why would 
+              we ever use Indexed files?&quot;. </p>
+            <p>But the versatility of its keys overrides all its disadvantages 
+              with the result that Indexed files are the most widely used direct 
+              access file organization.</p>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Summary</font></h3>
+    </td>
+    <td width="525"> 
+      <p>There is no one best file organization. Choosing an appropriate file 
+        organization is a case of &quot;horses for courses&quot;. </p>
+      <p>If the hit rate is high and we have no need for direct access to the 
+        records, a Sequential file might be best. </p>
+      <p>If the hit rate is low or if we require direct access to the records 
+        but one numeric key is sufficient, a Relative file might be the best choice. 
+      </p>
+      <p>If we need direct access on a number of keys or if the key must be alphanumeric, 
+        then we must choose an Indexed file. </p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<p align="CENTER">&nbsp; </p>
+<div align="LEFT">
+  <table border="0" width="710">
+    <tr> 
+      <td> 
+        <hr>
+        <h3 align="CENTER">Copyright Notice</h3>
+        <p align="LEFT">These COBOL course materials are the copyright property 
+          of Michael Coughlan.</p>
+        <p><font size="2">All rights reserved. No part of these course materials 
+          may be reproduced in any form or by any means - graphic, electronic, 
+          mechanical, photocopying, printing, recording, taping or stored in an 
+          information storage and retrieval system - without the written permission 
+          of </font><font size="2">the author.</font></p>
+        <p align="CENTER"><font size="2">(c) Michael Coughlan</font></p>
+        <hr>
+        <p><i><font size=-1>Last updated : April 1998</font></i> <br>
+          <font size=-1><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font> 
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>&nbsp; </p>
+</BODY>
+</HTML>

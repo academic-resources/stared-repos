@@ -1,0 +1,273 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Getting Started with the VISOC Environment</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+
+<CENTER>
+<H2>
+<IMG SRC="T-CobolExercise.gif" HEIGHT=56 WIDTH=183></H2></CENTER>
+
+<CENTER>
+  <H2> <B>Getting Started with the NetExpress Environment</B></H2>
+</CENTER>
+
+<CENTER>
+<HR WIDTH="100%"></CENTER>
+
+<CENTER><FONT SIZE=-1>ACCEPT, DISPLAY, MULTIPLY, COMPUTE</FONT></CENTER>
+
+<HR WIDTH="100%">
+<H2> Starting NetExpress</H2>
+<p>We will start by loading an existing COBOL program into the development environment 
+  and then compiling and running the program. </p>
+<p>The development environment we are using for this course is Microfocus NetExpress. 
+  NetExpress is an Integrated Development Environment (IDE) supporting an Object 
+  Oriented version of COBOL. The OO-COBOL supported by NetExpress is a preview 
+  of the coming standard.</p>
+<p>&nbsp; </p>
+<P>To load the program, click on the&nbsp; <A HREF="ftp://www.csis.ul.ie/cobol/exercises/gettingstarted.cbl">GettingStarted.Cbl</A>&nbsp; 
+  link.&nbsp;&nbsp; This will allow you (depending on how your browser is set 
+  up) to either download the file to your local hard disk or load it directly 
+  into the NetExpress environment. 
+<P>If you download the program you should save it to the \WorkArea directory on 
+  the drive D:.&nbsp;&nbsp; When the file has been downloaded, start NetExpress 
+  and load the program using the <B><I>File</I></B> option in the main menu bar. 
+<P>If you load it directly into the NetExpress environment you should use the 
+  <B><I>Save As</I></B> option in the <B><I>File</I></B> menu to save it as GettingStarted.Cbl 
+  to the \WorkArea directory. 
+<P>The NetExpress programming environment should now be running with the GettingStarted.Cbl 
+  file loaded. <BR>
+  &nbsp;
+<H2> Configuring the NetExpress environment</H2>
+The default NetExpress Environment makes it difficult to write programs the way 
+we would like so we need to make some changes to it. 
+<P>From the NetExpress <B><I>Options</I></B> menu select <B><I>Edit</I></B>. This 
+  brings up a dialogue box with a number of tabs.&nbsp; Make sure the <B><I>Profile</I></B> 
+  tab has the focus. 
+<P>In the <B><I>Margins</I></B> option change the left margin to 0.
+
+<P>Now select the <B><I>Blocks/Clipboard</I></B> tab. 
+<P>In the "<B><I>Selecting line blocks and column blocks</I></B>" option
+select "Select column blocks when dragging, except when in prefix area".
+
+<P>Select <B><I>OK</I></B> to close the dialogue box and observe the results.
+<BR>&nbsp;
+<H2>
+Compiling the program</H2>
+Click on the tick icon<IMG SRC="i-tick.gif" HSPACE=7 HEIGHT=24 WIDTH=24>in the 
+NetExpress toolbar. This compiles the program. 
+<P>&nbsp;
+<H2>
+Starting to run the program</H2>
+For the time being we will run our COBOL programs from within the NetExpress Animator.&nbsp; 
+Later in the course we will create stand alone programs (.EXE's). 
+<P>Position the cursor over program statement&nbsp; "ACCEPT Num1.".&nbsp;
+Click the right mouse button.&nbsp; From the menu which appears select
+<I><B>Set Breakpoint</B>.</I>
+
+<P>Now select "<B><I>Start Animating</I></B>" from within the <B><I>Animate</I></B>
+menu option and chose <B><I>OK</I></B> from the dialogue box which appears.
+
+<P>The program starts to run, the first statement in the Procedure Division
+is highlighted but is not executed.
+<BR>&nbsp;
+<H2>
+Using the Animator</H2>
+Before we continue with running the program let's have a look at some of
+the facilities the Animator provides.
+
+<P>Right click on the variable Num1 in the program statement "MULTIPLY
+Num1 BY Num2 GIVING Result. " Take note of all the options that appear
+in the right-click menu.
+
+<P>Let's suppose that we want to find out the size and type of Num1.
+
+<P>To do this select <B><I>Locate "Num1"</I></B> from the right-click menu.
+
+<P>The cursor jumps up to the Num1 declaration. Now right-click on a blank
+part of the program text and select "<B><I>Return</I></B>" from the right-click
+menu.
+
+<P>The cursor jumps back to where it came from.
+<BR>&nbsp;
+
+<P>Now let's examine two ways of monitoring the contents of variables.
+
+<P>In the program statement "MULTIPLY Num1 BY Num2 GIVING Result." right
+click on the variable Num1.
+
+<P>Select "<B><I>Examine Num1</I></B>" from the right-click menu. From
+the "Examine List" dialogue that appears select the <B><I>Monitor</I></B>
+option. This creates a little window which is used to monitor the contents
+of the variable Num1.
+
+<P>Right-click on Num2 and select "<B><I>Examine Num2</I></B>" from the
+right-click menu. From the dialogue that appears select the "<B><I>Add
+to List</I></B>" option. This creates a "Watch list" window and adds Num2
+to the watch list.
+
+<P>Do the same for the Result variable.
+
+<P>The watch list window should now have two entries - Num2 and Result.
+<BR>&nbsp;
+<H2>
+Continuing with the program run</H2>
+Let's go back to running the program.
+
+<P>From the NetExpress toolbar select the Step icon&nbsp;<IMG SRC="i-step.gif" HSPACE=7 HEIGHT=23 WIDTH=23>(if 
+  you position the cursor over each icon for a short time the computer will display 
+  a label for it). You can also select step from the <B><I>Animate</I></B> menu 
+  or by pressing Ctrl-S. 
+<P>The first Procedure Division statement should now be executed. A console
+window is created and has the focus and the program waits for the user
+(that's you) to enter the first number. Enter the value 3 and press return.
+
+<P>The focus returns to the NetExpress environment. 
+<P>Look at the monitoring window for the Num1 variable. Note the contents.
+
+<P>Click on the Step icon again to execute the Multiply instruction.
+
+<P>Note that the contents of the Result variable in the watch list window
+do not change (3*0=0).
+
+<P>Click on the step icon again and this time enter 5 in the console window
+and press return.
+
+<P>Note the value that has been assigned to Num2 in the watch list window.
+
+<P>Click on the step icon again to execute the Display instruction.
+
+<P>Note that this time the console window does not take the focus. You
+have to click on the console window to give it the focus.
+
+<P>Note that the program produces the wrong answer.
+
+<P>Click on the step icon again to execute the STOP-RUN.
+
+<P>Select "<B><I>Stop Animating</I></B>" from the <B><I>Animate</I></B>
+menu.
+
+<P>Select "<B><I>NO</I></B>" in response to the question "Do you want to
+keep the project created for the animate session".
+<BR>&nbsp;
+<H2>
+Fixing the Program</H2>
+Change the program so that it prompts the user for input (hint&nbsp; <FONT SIZE=-1>DISPLAY
+… WITH NO ADVANCING</FONT>) and produces the correct answer.
+<BR>&nbsp;
+<H2>
+Conclusion</H2>
+See if you can replace the MULTIPLY statement by the equivalent COMPUTE
+statement.
+
+<P>The format for the COMPUTE is&nbsp; -
+<UL>
+<UL>COMPUTE <I>result</I> = <I>operand operator operand</I></UL>
+</UL>
+
+<BR>
+
+<HR>
+<TABLE CELLSPACING=0 CELLPADDING=0 COLS=3 WIDTH="200" ><TR ALIGN=CENTER VALIGN=TOP>
+<TD><A HREF="default.htm"><IMG SRC="/pics/B-BackArrow.gif" ALT="Back to COBOL Exercises page" BORDER=0 HEIGHT=52 WIDTH=52></A>
+<FONT SIZE=-2>To COBOL Exercises</FONT></TD>
+
+<TD><A HREF="/CSISFORM.HTM"><IMG SRC="/pics/b-evaluation.gif" ALT="Please fill out our evaluation form" BORDER=0 HEIGHT=52 WIDTH=52></A>
+<FONT SIZE=-2>Evaluation Form</FONT></TD>
+
+<TD><A HREF="/SEARCH/CSISQueryHit.HTM"><IMG SRC="/pics/b-WebSearch.gif" ALT="Search the CSIS Web Site" BORDER=0 HEIGHT=52 WIDTH=52></A>
+<FONT SIZE=-2>Search CSIS Web Site</FONT></TD>
+<TD>
+
+<CENTER>
+<FORM>
+          Selectable Site Contents
+          <select name="list">
+            <option value="http://www.ul.ie/">UL Home Page</option>
+            <option value="http://www.ul.ie/~informat/">College of I&amp;E Home 
+            Page</option>
+            <option value="http://www.csis.ul.ie/default.htm">CSIS Home Page</option>
+            <option value="http://www.csis.ul.ie/courses.HTM">Courses On Offer</option>
+            <option value="http://www.csis.ul.ie/CompSys.HTM">...Computer Systems 
+            Degree</option>
+            <option value="http://www.csis.ul.ie/GradDip.HTM">...Graduate Diploma 
+            in Computing</option>
+            <option value="http://www.csis.ul.ie/software_localisation/default.htm">...Graduate 
+            Diploma/MSc in Software Localisation</option>
+            <option value="http://www.csis.ul.ie/ccmcm/default.htm">...MSc in 
+            Music Technology</option>
+            <option value="http://www.csis.ul.ie/soft_re_eng.html/default.htm">...MSc 
+            in Software Reengineering</option>
+            <option value="http://www.csis.ul.ie/Directory/Staff.HTM">Department 
+            Personnel</option>
+            <option value="http://www.csis.ul.ie/Directory/phone.HTM">...CSIS 
+            Telephone Directory</option>
+            <option value="http://www.ul.ie/ITD/PhoneBook.html">...UL Internal 
+            Telephone Directory</option>
+            <option value="http://www.csis.ul.ie/Research.HTM">Research</option>
+            <option value="http://www.csis.ul.ie/Research/ResearchCntr.HTM">...Research 
+            Centres</option>
+            <option value="http://www.csis.ul.ie/Research/ResearchPrj.HTM">...Research 
+            Projects</option>
+            <option value="http://www.csis.ul.ie/Research/RsrchPubs.htm">...Research 
+            Publications</option>
+            <option value="http://www.csis.ul.ie/Research/techrpts.htm">...Technical 
+            Reports</option>
+            <option value="http://www.csis.ul.ie/Research/PhdTheses.htm">...Ph.D 
+            Theses</option>
+            <option value="http://www.csis.ul.ie/Research/masters.htm">...M.Sc. 
+            Theses</option>
+            <option value="http://www.csis.ul.ie/StudentResources.HTM">Student 
+            Resources</option>
+            <option value="http://www.csis.ul.ie/photoalbum/classes/namesonly.htm">...Computer 
+            Systems Graduated Classes </option>
+            <option value="http://www.csis.ul.ie/staff/norahpower/FYPSuggestions9798.htm">...Final 
+            Year Project suggestions</option>
+            <option value="http://www.csis.ul.ie/fyp97/index.html">...Final Year 
+            Projects web page</option>
+            <option value="http://www.csis.ul.ie/studentresources/schedules/csislabs.htm">...Lab 
+            Schedules</option>
+            <option value="http://www.csis.ul.ie/studentresources/ModuleMaterial.htm">...Module 
+            Materials</option>
+            <option value="http://www.csis.ul.ie/studentresources/links.htm">...Useful 
+            Links</option>
+            <option value="http://www.csis.ul.ie/StudentResources/fyproj.htm">...Completed 
+            Final Year Projects</option>
+            <option value="http://www.csis.ul.ie/meetings/Meetings.HTM">Meetings</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/Album.htm">Photo Album</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/classes/default.htm">...Computer 
+            Systems - Class Photos</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuin.htm">...Schuman 
+            Interior</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuout.htm">...Schuman 
+            Environs</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/ULgrounds/default.htm">...University 
+            Grounds</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM">General Information</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Department">...Department 
+            Information</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Getting">...Getting 
+            Around</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Contacting">...Contacting 
+            the department</option>
+            <option value="http://www.csis.ul.ie/TOYS/WHOSON.HTM">...Who's on 
+            the server</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#About">...About these 
+            pages</option>
+          </select>
+          <INPUT TYPE=BUTTON VALUE="Go!" 
+onClick="top.location.href=this.form.list.options[this.form.list.selectedIndex].value">
+</FORM><p></P>
+</CENTER>
+
+</TD>
+</TR>
+</TABLE>
+
+<HR><I><FONT SIZE=-1>Last updated : March 1998</FONT></I>
+<BR><FONT SIZE=-1><A HREF="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</A></FONT>
+</BODY>
+</HTML>

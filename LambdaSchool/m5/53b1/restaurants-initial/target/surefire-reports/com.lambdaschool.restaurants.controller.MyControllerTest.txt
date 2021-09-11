@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.lambdaschool.restaurants.controller.MyControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.94 s <<< FAILURE! - in com.lambdaschool.restaurants.controller.MyControllerTest
+echo(com.lambdaschool.restaurants.controller.MyControllerTest)  Time elapsed: 0.91 s  <<< ERROR!
+java.net.ConnectException: Connection refused (Connection refused)
+	at com.lambdaschool.restaurants.controller.MyControllerTest.echo(MyControllerTest.java:15)
+

@@ -1,0 +1,15 @@
+{
+	"/api/*": "/$1",
+	"/:resource/:id/show": "/:resource/:id",
+	"/posts/:id": "/posts?id=:id",
+	"/users/:id": "/userinfo?id=:id",
+	"/users/:name": "/userinfo?name=:name",
+	"/users/:username": "/userinfo?username=:username",
+	"/users/:email": "/userinfo?email=:email",
+	"/users/:usertype": "/userinfo?usertype=:usertype",
+	"/tickets/:id": "/tickets?id=:id",
+	"/tickets/:title": "/tickets?title=:title",
+	"/tickets/:date": "/tickets?date=:date",
+	"/tickets/:category": "/tickets?category=:category",
+	"/tickets/:status": "/tickets?status=:status"
+}

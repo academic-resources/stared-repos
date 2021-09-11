@@ -1,0 +1,175 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Liu Jian Mao Cao', cursive;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+.header {
+	display: inline-block;
+	width: 100%;
+}
+
+.navBar {
+	width: 65%;
+	display: inline-block;
+	align-content: justify;
+	margin: 12px 12px 12px 40px;
+}
+
+.navImage {
+	width: 25%;
+	display: inline-block;
+	align: justify;
+	padding: 7px;
+	background-image: url("../img/logo.png");
+	background-size: 90%;
+	background-repeat: no-repeat;
+}
+
+.navigation {
+	display: inline-block;
+	width: 90%;
+	margin: 0 0 0 50px;
+	background-color: #002244;
+	position: fixed;
+}
+
+.title-bar {
+	display: inline-block;
+	border-top-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-right-style: none;
+	border-width: 2px;
+	border-color: black;
+	padding: 50px 0 50px 0;
+	margin: 0 0 0 50px;
+	width: 80%;
+}
+
+.title-bar-left {
+	width: 60%;
+	float: left;
+}
+
+.title-bar-right {
+	width: 35%;
+	float: right;
+}
+
+.paragraph-2 {
+	display: inline-block;
+	width: 45%;
+}
+
+.paragraph-3 {
+	display: inline-block;
+	width: 30%;
+	padding-bottom: 50px;
+}
+
+a {
+	color: #A5ACAF;
+	text-decoration: none;
+	padding: 10px;
+}
+
+.title-bar-text-left {
+	font-size: 72px;
+	text-align: center;
+}
+
+.button {
+	text-align: center;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	width: 30%;
+	padding: 5px 10px 5px 10px;
+	margin: 0 0 0 35%;
+}
+
+.content-text {
+	padding: 50px 0 50px 50px;
+}
+
+.content-image {
+	float: center;
+	padding: 0 0 0 50px;
+	margin: 0 0 0 20px;
+}
+
+.middle-img {
+	width: 90%;
+}
+
+.footer {
+	text-align: center;
+	padding: 50px 50px 100px 50px;
+}
+
+.address {
+	padding: 50px 0 0 0;
+	border-top-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-style: none;
+	border-width: 2px;
+	border-color: black;
+	width: 90%;
+}

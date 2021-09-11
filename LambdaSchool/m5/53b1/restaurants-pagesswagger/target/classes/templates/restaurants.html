@@ -1,0 +1,21 @@
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Display Restaurants Details</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Restaurant Name</th>
+        <th>Phone Name</th>
+        <th>City</th>
+    </tr>
+    <tr th:each="restaurant : ${restaurantList}">
+        <td th:text="${restaurant.name}">Name</td>
+        <td th:text="${restaurant.telephone}">phone</td>
+        <td th:text="${restaurant.city}">city</td>
+    </tr>
+</table>
+<strong><a href="/">Click here to go back</a></strong>
+</body>
+</html>

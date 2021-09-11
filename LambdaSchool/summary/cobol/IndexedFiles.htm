@@ -1,0 +1,1219 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Indexed Files</TITLE>
+<style type="text/css">
+<!--
+-->
+</style></HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<CENTER>
+</CENTER>
+<CENTER>
+  <div align="LEFT">
+    <table border="0" width="710">
+      <tr> 
+        <td> 
+          <center>
+            <h2><a name="top"></a> <img src="Resources/pics/t-CobolCourse.gif" height=56 width=161 align="MIDDLE" alt="Cobol Course" border="0"></h2>
+          </center>
+          <center>
+            <h2> <b>Indexed Files</b></h2>
+            <hr align="LEFT">
+          </center>
+        </td>
+      </tr>
+    </table>
+  </div>
+</CENTER>
+<table border="0" width="710" vspace="15">
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> <b><a href="#intro" target="">Introduction</a><br>
+      </b><font size="-1">Unit aims, objectives and prerequisites.</font> </td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> <b><a href="#progs" target="">A look at some programs that 
+      use Indexed files</a><br>
+      </b><font size="-1">We begin with three example programs. The first creates 
+      an Indexed file from a Sequential file, the second reads the Indexed file 
+      sequentially or either the primary or the alternate key, and the third reads 
+      the file directly on either key.</font></td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> <a href="#org"><b>Indexed file organization</b></a><br>
+      <font size="-1">Explains by means of an animated diagram how the index of 
+      the primary key is organized and shows how it is used to read a record directly. 
+      Explains how the alternate key index is organized and shows how it is used 
+      to read a record directly.</font></td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"><b><a href="#declar">Indexed file - declarations</a><br>
+      </b><font size="-1">Examines the SELECT and ASSIGN clause declarations required 
+      for an Indexed file.</font></td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> <b><a href="#verbs">Indexed file - file processing verbs</a><br>
+      </b><font size="-1">Examines the Procedure Division verbs used to process 
+      Indexed files - OPEN, CLOSE, READ, WRITE, REWRITE, DELETE, START</font> 
+    </td>
+  </tr>
+  <tr>
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%">
+      <p><a href="#example" target=""><b>A comprehensive example</b></a><br>
+        <font size="-1">We end with a comprehensive problem specification and 
+        solution.</font></p>
+      <p>&nbsp;</p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00">Introd<a name="intro"></a>uction</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#993300">Aims</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The aim of this unit is to provide you with a solid understanding of; 
+        the organization of Indexed files, the declarations required for them 
+        and the Procedure Division verbs used to process them.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Objectives</font></h3>
+    </td>
+    <td width="525"> 
+      <p>By the end of this unit you should:</p>
+      <ol>
+        <li>Be able to write the Environment Division and Data Division declarations 
+          required for a Indexed file. <br>
+          <br>
+        </li>
+        <li>Understand how the primary key and alternate key indexes are organized.<br>
+          <br>
+        </li>
+        <li>Be able to used the use the <font size="-1"> <font size="-1">START, 
+          OPEN, CLOSE, READ, WRITE, REWRITE</font> and <font size="-1">DELETE</font> 
+          </font>Procedure Division verbs required to process Indexed files.<br>
+          <br>
+        </li>
+        <li>Be able to process an Indexed file directly or sequentially. <br>
+        </li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Prerequisites</font></h3>
+    </td>
+    <td width="525">
+      <p>You should be familiar with the material covered in the unit; </p>
+      <ul>
+        <li>Introduction to direct access files</li>
+      </ul>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr>
+    <td>
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+</td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="progs"></a>A look at some 
+        programs that use Indexed files</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">Example program - Creating an Indexed 
+        file</font></h3>
+    </td>
+    <td width="525"> 
+      <table border="0" width="100%">
+        <tr> 
+          <td height="43" width="525"> 
+            <p>We'll start by looking at some example programs that use Indexed 
+              file. In the first program, an Indexed file is created by reading 
+              records from a Sequential file and writing them to the Indexed file. 
+              The second program shows how to read an Indexed file sequentially 
+              on either the primary or the alternate key. In the third program 
+              we demonstrate how to read an Indexed file directly on either key.</p>
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="525"> 
+            <p><object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" WIDTH=520 HEIGHT=541>
+                <param name="File" value="Resources/ppz/idxfile1.ppz">
+                <embed width=520 height=541 src="Resources/ppz/IdxFile1.ppz"></embed><noembed> 
+                This page contains a Microsoft PowerPoint Animation that your 
+                browser was unable to view.<a href="Resources/ppz/IdxFile1.ppz">Click 
+                here to open idxfile1.ppz fullscreen</a></NOEMBED> 
+              </object></p>
+            </td>
+        </tr>
+        <tr> 
+          <td width="525"> 
+            <p> You can download both the program and the sequential data file 
+              it uses. </p>
+            <blockquote> 
+              <blockquote> 
+                <blockquote> 
+                  <p><a href="Resources/progs/INX-EG1.CBL" target="">Download the 
+                    Indexed file example program 1</a></p>
+                  <p><a href="Resources/progs/INVIDEO.DAT" target="">Download the 
+                    Sequential data file </a></p>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Example program - Reading an Indexed file sequentially</font></h3>
+    </td>
+    <td width="525"> 
+      <table border="0" width="100%">
+        <tr> 
+          <td height="43"> 
+            <p>This example program demonstrates how to read an Indexed file sequentially 
+              on either the primary key (VideoCode) or the alternate key (VideoTitle). 
+            </p>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <p><object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=520 height=541>
+                <param name="File" value="Resources/ppz/idxfile2.ppz">
+                <embed width=520 height=541 src="Resources/ppz/IdxFile2.ppz"></embed><noembed> 
+                This page contains a Microsoft PowerPoint Animation that your 
+                browser was unable to view.<a href="Resources/ppz/IdxFile2.ppz">Click 
+                here to open idxfile2.ppz fullscreen</a></NOEMBED> 
+              </object></p>
+            <p>Below we see the results produced by two runs of the program.</p>
+            <pre><b>RUN OF INDEX-EG2.EXE USING VIDEOCODE KEY</b>
+Enter key : 1=VideoCode, 2=VideoTitle ->1
+00121  FLIGHT OF THE CONDOR, THE     03
+00333  PREDATOR                      02
+00444  LIVING EARTH, THE             03
+01001  COMMANDO                      02
+01100  ROBOCOP                       01
+02001  LEOPARD HUNTS IN DARKNESS, A  03
+02121  DIRTY DANCING                 04
+03031  COMPETENT CREW                05
+03032  YACHT MASTER                  05
+04041  OPEN OCEAN SAILING            05
+04042  PRINCESS BRIDE, THE           06
+04444  LIFE ON EARTH                 03
+05051  OVERBOARD                     01
+06061  HOPE AND GLORY                07
+07071  AMONG THE WILD CHIMPANZEES    03
+08081  WHALE NATION                  03
+09091  BESTSELLER                    07
+10001  WICKED WALTZING               04
+11111  TERMINATOR, THE               02
+13301  MASSACRE AT MASAI MARA        03
+14032  KNOTTY PROBLEMS FOR SAILORS   05
+17001  ALIEN                         07
+17002  ALIENS                        07
+17041  GARFIELD TAKES A HIKE         06
+18001  SURVIVING THE STORM           05
+19444  PINOCCIO                      02
+
+
+
+<b>RUN OF INDEX-EG2 USING VIDEOTITLE KEY</b>
+Enter key : 1=VideoCode, 2=VideoTitle ->2 
+17001  ALIEN                         07
+17002  ALIENS                        07
+07071  AMONG THE WILD CHIMPANZEES    03
+09091  BESTSELLER                    07
+01001  COMMANDO                      02
+03031  COMPETENT CREW                05
+02121  DIRTY DANCING                 04
+00121  FLIGHT OF THE CONDOR, THE     03
+17041  GARFIELD TAKES A HIKE         06
+06061  HOPE AND GLORY                07
+14032  KNOTTY PROBLEMS FOR SAILORS   05
+02001  LEOPARD HUNTS IN DARKNESS, A  03
+04444  LIFE ON EARTH                 03
+00444  LIVING EARTH, THE             03
+13301  MASSACRE AT MASAI MARA        03
+04041  OPEN OCEAN SAILING            05
+05051  OVERBOARD                     01
+19444  PINOCCIO                      02
+00333  PREDATOR                      02
+04042  PRINCESS BRIDE, THE           06
+01100  ROBOCOP                       01
+18001  SURVIVING THE STORM           05
+11111  TERMINATOR, THE               02
+08081  WHALE NATION                  03
+10001  WICKED WALTZING               04
+03032  YACHT MASTER                  05</pre>
+            <hr>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <p>If you downloaded the first example program and its data file you 
+              should already have the Indexed file (it was produced when you ran 
+              the first example program). You can use this file with the second 
+              Indexed file example program.&nbsp; </p>
+            <blockquote> 
+              <blockquote> 
+                <blockquote> 
+                  <p><a href="Resources/progs/INX-EG2.CBL" target="">Download Indexed 
+                    file example program 2</a></p>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p><hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Example program - Reading an Indexed file directly</font></h3>
+    </td>
+    <td width="525">
+      <table border="0" width="100%">
+        <tr> 
+          <td height="43"> 
+            <p>This example program demonstrates how to read an Indexed file directly 
+              using either the primary key (VideoCode) or the alternate key (VideoTitle). 
+            </p>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <p><object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=520 height=541>
+                <param name="File" value="Resources/ppz/idxfile3.ppz">
+                <embed width=520 height=541 src="Resources/ppz/IdxFile3.ppz"></embed><noembed> 
+                This page contains a Microsoft PowerPoint Animation that your 
+                browser was unable to view.<a href="Resources/ppz/IdxFile3.ppz">Click 
+                here to open idxfile3.ppz fullscreen</a></NOEMBED> 
+              </object></p>
+            <p>Below we see the results produced by a number of runs of the program.</p>
+            <pre><b>RUN OF INDEX-EG3.EXE USING VIDEOCODE</b>
+Chose key VideoCode = 1,  VideoTitle = 2 ->  1
+Enter Video Code (5 digits) -> 02121
+02121    DIRTY DANCING                               04
+
+<b>RUN OF INDEX-EG3.EXE USING VIDEOCODE</b>
+Chose key VideoCode = 1,  VideoTitle = 2 ->  1
+Enter Video Code (5 digits) -> 05051
+05051    OVERBOARD                                   01
+
+<b>RUN OF INDEX-EG3.EXE USING VIDEOTITLE</b>
+Chose key VideoCode = 1,  VideoTitle = 2 ->  2
+Enter Video Title (40 chars) -> OVERBOARD
+05051    OVERBOARD                                   01
+
+<b>RUN OF INDEX-EG3.EXE USING VIDEOTITLE</b>
+Chose key VideoCode = 1,  VideoTitle = 2 ->  2
+Enter Video Title (40 chars) -> DIRTY DANCING
+02121    DIRTY DANCING                               04
+
+<b>RUN OF INDEX-EG3.EXE USING NON EXISTANT VIDEOCODE</b>
+Chose key VideoCode = 1,  VideoTitle = 2 ->  1
+Enter Video Code (5 digits) -> 44444
+VIDEO STATUS :- 23</pre>
+            <hr>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <p>You can use the Indexed file that is created when you run the first 
+              sexample program with this third Indexed example program.&nbsp; 
+            </p>
+            <blockquote> 
+              <blockquote> 
+                <blockquote> 
+                  <p><a href="Resources/progs/INX-EG3.CBL" target="">Download Indexed 
+                    file example program 3</a></p>
+                  <p>&nbsp;</p>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="org"></a>Indexed file 
+        organization</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#993300">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>In the unit &quot;Introduction to direct access files&quot;, we showed 
+        how an Indexed file is organized and we noted;</p>
+      <ul>
+        <li> that the records in the Indexed file are held sequenced on ascending 
+          primary key and that this allows us to access the file sequentially 
+          on that key.</li>
+        <li>that over these records the file system builds an index which allows 
+          direct access to record using the primary key.</li>
+        <li> that an Indexed file may be read sequentially on any of its alternate 
+          keys.</li>
+      </ul>
+      <p>While we explained how primary key index of an Indexed file was organized, 
+        and how sequential access on the primary key is achieved, we did not explain 
+        how the alternate indexes are organized or how the file can be accessed 
+        sequentially on any of its alternate keys.</p>
+      <p>In this section we revisit, and expand on, the explanation of how the 
+        primary key index is organized and how it is used to read a record directly. 
+        In addition, we show an alternate key index is arranged and we show how 
+        this index is used to read the file directly. We also describe how sequential 
+        access on the alternate key is achieved.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Primary Key Index</font></h3>
+    </td>
+    <td width="525"> 
+      <p>Records in an Indexed file are sequenced on ascending primary key. Over 
+        the actual data records, the file system builds the primary key index. 
+      </p>
+      <p>When direct access is required on the primary, the file system uses this 
+        index to find, read, insert, update or delete, the required record. </p>
+      <p>Because the actual data records are arranged on ascending primary key, 
+        sequential access on the primary key is achieved by simply reading these 
+        data records in sequence.</p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Alternate Key Index</font></h3>
+    </td>
+    <td width="525"> 
+      <p>For each alternate key specified in an Indexed file, an alternate index 
+        is built. However, the lowest level of an alternate index does not contain 
+        actual data records. Instead, this level made up of base records that 
+        contain only the alternate key value and a pointer to where the actual 
+        record is. These base records are organized in ascending alternate key 
+        order. </p>
+      <p>Sequential access on an alternate key is achieved by reading the base 
+        records one after another in sequence. As each base record is read, its 
+        pointer is used to access the actual data record.</p>
+      <p>While this arrangement means that an Indexed file can be processed sequentially 
+        on its alternate keys, reading the file sequentially on an alternate key 
+        is slower than on the primary key. This is because alternate key access 
+        requires two I-O operations to get the data. The first gets the alternate 
+        key base record and the second gets the actual data record.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">Animation of the primary and alternate 
+        key indexes</font></h3>
+    </td>
+    <td width="525"> 
+      <table border="0" width="100%">
+        <tr> 
+          <td> 
+            <p>The animation below shows how the data records of an Indexed file 
+              and the overlying primary key index are organized and how the index 
+              is used to read a record directly.</p>
+            <p>The animation also shows how an alternate key index is organized 
+              and how this index is used to read a record directly.</p>
+            <p>The algorithm used for traversing both indexes is -</p>
+            <blockquote> 
+              <pre>IF RecordKeyValue &gt; RequiredKeyValue <br>   take this branch<br>ELSE<br>   go to next index record<br>END-IF</pre>
+            </blockquote>
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="CENTER">
+              <object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=486 height=325>
+                <param name="File" value="Resources/ppz/idxfile4.ppz">
+                <embed src="Resources/ppz/IdxFile4.ppz" width=486 height=325></embed><noembed> 
+                This page contains a Microsoft PowerPoint Animation that your 
+                browser was unable to view.<a href="Resources/ppz/IdxFile4.ppz">Click 
+                here to open idxfile4.ppz fullscreen</a></NOEMBED> 
+              </object> 
+            </div>
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="declar"></a>Indexed file 
+        - Declarations</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>As we have seen in the example programs, when Indexed files are used 
+        a number of new entries for the <font size="-1">SELECT</font> and <font size="-1">ASSIGN</font> 
+        clause are required.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Select and Assign clause syntax </font></h3>
+    </td>
+    <td width="525"> 
+      <p><img src="Resources/pics/I-DFidx1.gif" width="474" height="245"></p>
+      <p>&nbsp;</p>
+      <div align="CENTER">
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">The Record Key phrase</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">RECORD KEY</font> phrase defines the Indexed file's 
+        primary key.</p>
+      <p>Every Indexed file must have a primary key. The key <b>must</b> be a 
+        field in the record description that contains a unique value for each 
+        record. </p>
+      <p>Contrast this with Relative Files where the key must not be part of the 
+        file's record description. </p>
+      <p>The key field must be a numeric or alphanumeric data item.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">The Alternate Record Key phrase</font></h3>
+    </td>
+    <td width="525"> 
+      <div align="CENTER">
+        <div align="LEFT">
+          <p>In addition to the primary key, up to 254 alternate keys may be defined 
+            for the file. </p>
+          <p>Just as with the primary key, these alternate keys must be fields 
+            in the file's record description. </p>
+          <p>Each alternate key may be unique or may have duplicate values (for 
+            this the <font size="2">WITH DUPLICATES</font> clause is required).</p>
+          <p>&nbsp; </p>
+        </div>
+      </div>
+      <div align="CENTER">
+        <div align="LEFT">
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<hr>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="verbs"></a>Indexed file 
+        - file processing verbs </font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The file processing verb used with Indexed files are the same as those 
+        used with Relative files. </p>
+      <p>Indexed files use the same file processing verbs as Relative files (<font size="2">OPEN, 
+        CLOSE, READ, WRITE, REWRITE, DELETE </font>and<font size="2"> START</font>) 
+        but there are some syntactic and semantic differences.</p>
+      <p>In this section we will only examine those verbs which differ in syntax 
+        or semantics from those used with Relative files.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">The READ verb</font></h3>
+    </td>
+    <td width="525"> 
+      <p>When an Indexed file has an <font size="2">ACCESS MODE </font>of <font size="2">SEQUENTIAL</font>, 
+        the format of the <font size="2">READ</font> is the same as for Sequential 
+        files, but when the <font size="2">ACCESS MODE</font> is <font size="2">DYNAMIC 
+        </font>Sequential processing of the file is complicated by the presence 
+        of a number of indexes. The order in which the data records will be read, 
+        will depend on which index is being processed sequentially. </p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Key Of Reference</font></h3>
+    </td>
+    <td width="525"> 
+      <p>When an Indexed file has an <font size="2">ACCESS MODE</font> of <font size="2">SEQUENTIAL</font>, 
+        the file is always processed in ascending primary key order. </p>
+      <p>But, if an Indexed file has an <font size="2">ACCESS MODE</font> of <font size="2">DYNAMIC</font> 
+        and is processed sequentially, the file system must be able to tell which 
+        of the keys to use as the basis for processing the file. </p>
+      <p>Since the format of the sequential <font size="2">READ</font> does not 
+        have a key phrase, the file system refers to a special item called the 
+        Key Of Reference to discover which key to use for processing the file.</p>
+      <p>Before reading a file that has an <font size="2">ACCESS MODE</font> of 
+        <font size="2">DYNAMIC</font> sequentially, the programmer must establish 
+        one of the file's keys as the Key Of Reference.</p>
+      <p>A Key Of Reference is established by using the key in a <font size="2">START</font> 
+        or a direct <font size="2">READ</font>. </p>
+      <p>When the file is opened the primary key is, by default, the Key Of Reference.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Reading Sequentially</font></h3>
+    </td>
+    <td width="525"> 
+      <p><img src="Resources/pics/I-DFrel4.gif"></p>
+      <p><b>Notes</b><b><br>
+        </b>This format is used when the <font size="2">ACCESS MODE</font> is 
+        <font size="2">DYNAMIC</font> and we wish to read the file sequentially.</p>
+      <p>This format will read the file in ascending sequence on the key that 
+        has been established as the key of reference.</p>
+      <p>The <font size="2">READ NEXT</font> will read the logical record pointed 
+        to by the next record pointer (This will be the current record if positioned 
+        by the <font size="2">START</font> and the next record if positioned by 
+        a direct <font size="2">READ</font>).</p>
+      <p><b>Operation<br>
+        </b>To read a record sequentially from an Indexed file that has an <font size="2">ACCESS 
+        MODE </font>of <font size="2">DYNAMIC</font></p>
+      <ol>
+        <li>First, if the default is not satisfactory, one of the keys must be 
+          established as the Key Of Reference by doing a START or a direct READ 
+          using that key.</li>
+        <li>Then the <font size="2">READ</font> must be executed.</li>
+      </ol>
+      <p></p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Reading using a key</font></h3>
+    </td>
+    <td width="525"> 
+      <p><img src="Resources/pics/I-DFrel3.gif"></p>
+      <p>The syntax of the direct READ is the same as that for Relative files 
+        but the semantics are somewhat different</p>
+      <p><b>Operation<br>
+        </b>To read a record directly from an Indexed file</p>
+      <ol>
+        <li>The key value must be placed in the <i>KeyName</i> data item (the 
+          <i>KeyName</i> data item is the area of storage identified as the primary 
+          key or one of the alternate keys in the the <font size="2">SELECT</font> 
+          and <font size="2">ASSIGN</font> clause).</li>
+        <li>Then the <font size="2">READ</font> must be executed.</li>
+      </ol>
+      <p>When the <font size="2">READ</font> is executed the record with the key 
+        value equal to the present value of <i>KeyName</i> will be read.</p>
+      <p>&nbsp;</p>
+      <p><b>Notes<br>
+        </b>If the record does not exist the <font size="2">INVALID KEY</font> 
+        clause will activate and the statement block following the clause will 
+        be executed. </p>
+      <p>If the <font size="2">KEY IS</font> clause is omitted, the key used will 
+        be the primary key.</p>
+      <p>When the <font size="2">READ</font> is executed, the key mentioned in 
+        the <font size="2">KEY IS</font> phrase will be established as the Key 
+        Of Reference.</p>
+      <p>If there is no <font size="2">KEY IS</font> phrase, the primary key will 
+        be established as the Key Of Reference. </p>
+      <p>If duplicates are allowed, only the first record in a group with duplicates 
+        can be read directly. The rest of the duplicates must be read sequentially 
+        using the <font size="2">READ NEXT </font>format. </p>
+      <p>The <font size="2">KEY IS</font> phrase can only be used with Indexed 
+        files and it is used because Indexed files may have more than one key. 
+      </p>
+      <p>After the record has been read, the next record pointer points to the 
+        next logical record in the file. If the Key Of Reference is the primary 
+        key then this record will be an actual data record but if the Key Of Reference 
+        is one of the alternate keys then the pointer will point to the next alternate 
+        index base record.</p>
+      <p>The file must have an <font size="2">ACCESS MODE</font> of <font size="2">DYNAMIC</font> 
+        or <font size="2">RANDOM</font>. </p>
+      <p>The file must be opened for I-O or <font size="2">INPUT</font>.&nbsp; 
+      </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3 align="LEFT"><font color="#800000">The WRITE, REWRITE and DELETE verbs.</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The syntax and semantics of the <font size="2">WRITE</font>, <font size="2">REWRITE</font> 
+        and <font size="2">DELETE</font> verbs is the same as that for Relative 
+        files with the following exceptions;</p>
+      <ul>
+        <li>Direct access on an Indexed file for all these verbs is based on the 
+          primary key only. </li>
+        <li>The <font size="2">REWRITE</font> may not change the value of the 
+          primary key but it may change the values of any of the alternate keys.</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">The START verb</font></h3>
+    </td>
+    <td width="525"> 
+      <p>In Indexed files, the the <font size="2">START</font> verb is used to 
+        control the position of the next record pointer and to establish a key 
+        as the Key Of Reference. </p>
+      <p>Where the <font size="2">START</font> verb appears in a program it is 
+        usually followed by a sequential <font size="2">READ</font> or <font size="2">WRITE</font>.</p>
+      <p><img src="Resources/pics/I-DFrel8.gif"></p>
+      <p><b>Operation<br>
+        </b>To establish a key as the Key of Reference and position the Next Record 
+        Pointer at a particular record</p>
+      <ol>
+        <li>Move the key value to the appropriate key data item. For instance, 
+          referring back to the example programs, we might move &quot;Hope and 
+          glory&quot; to the VideoTitle if we wanted to establish VideoTitle as 
+          the Key Of Reference.</li>
+        <li>Execute the <font size="2">START..KEY IS EQUAL TO</font></li>
+      </ol>
+      <p>To establish a key as the Key of Reference and position the Next Record 
+        Pointer at the first record in that key sequence </p>
+      <ol>
+        <li>Move zeros to the the appropriate key data item. For instance we might 
+          move spaces to VideoTitle to position the pointer at the first logical 
+          record in VideoTitle sequence.</li>
+        <li>Execute the <font size="2">START..KEY IS GREATER THAN</font></li>
+      </ol>
+      <p><b>Notes<br>
+        </b><i>KeyName</i> is the primary key or one of the alternate keys. It 
+        is the key of comparison. </p>
+      <p>Before the <font size="2">START</font> is executed some value must be 
+        moved to the <i>KeyName</i>. </p>
+      <p>Using the <font size="2">START</font> with some key establishes that 
+        key as the Key Of Reference. </p>
+      <p>The file must be opened for <font size="2">INPUT</font> or I-O when the 
+        <font size="2">START</font> is executed. </p>
+      <p>Execution of the <font size="2">START</font> statement does not change 
+        the contents of the record area (i.e. the <font size="2">START</font> 
+        does not actually read the record it merely positions the Next Record 
+        Pointer). </p>
+      <p>When the <font size="2">START</font> is executed the Next Record Pointer 
+        is set to the first logical record in the file whose key satisfies the 
+        condition. If no record satisfies the condition then the <font size="2">INVALID</font> 
+        key clause is activated.</p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="example"></a>An Comprehensive 
+        Example Program</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">Program Specification</font></h3>
+    </td>
+    <td width="525"> 
+      <p align="CENTER">ROYALTY PAYMENT REPORT PROGRAM. </p>
+      <p><b>Introduction</b><br>
+        Each time a book is borrowed, the Niklaus Wirth Memorial Library pays 
+        the author a small sum of money as royalty. Because the sum owed for each 
+        "borrowing" is very small, royalties are only paid once every quarter. 
+        Royalties are paid to authors through their agents. Only one cheque per 
+        quarter is sent to each agent but to allow him to pay his authors the 
+        correct amount, a breakdown of the royalties owed to each author is included 
+        with the cheque. A report is required which; </p>
+      <ul>
+        <li>Shows the amount to be sent to each agent. </li>
+        <li>Shows the breakdown of the agent payment into author payments. </li>
+        <li>Shows the breakdown of each author payment into royalty payments per 
+          book. </li>
+      </ul>
+      <p>The report must be printed in agent name sequence. The sequence of authors 
+        within each agent and of books within each author does not matter. The 
+        print specification for the report is on the next page. </p>
+      <p>All the data required to produce the <font size="2">ROYALTY PAYMENT REPORT</font> 
+        is contained in two indexed files. The indexed file <font size="2">BOOKS.DAT</font> 
+        has the following record description;- </p>
+      <table border="1" width="100%">
+        <tr> 
+          <td width="26%"> 
+            <div align="CENTER">
+              <b>Field </b> 
+            </div>
+          </td>
+          <td width="25%" align="CENTER"> 
+            <div align="CENTER">
+              <b>Key Type </b> 
+            </div>
+          </td>
+          <td width="17%" align="CENTER"> 
+            <div align="CENTER">
+              <b>Type</b> 
+            </div>
+          </td>
+          <td width="14%" align="CENTER"> 
+            <div align="CENTER">
+              <b>Length</b> 
+            </div>
+          </td>
+          <td width="18%" align="CENTER"> 
+            <div align="CENTER">
+              <b>Value </b> 
+            </div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="26%">BookNumber</td>
+          <td width="25%" align="CENTER">primary</td>
+          <td width="17%" align="CENTER">N </td>
+          <td width="14%" align="CENTER">7</td>
+          <td width="18%" align="CENTER">1-9999999</td>
+        </tr>
+        <tr> 
+          <td width="26%">BookName</td>
+          <td width="25%" align="CENTER">-</td>
+          <td width="17%" align="CENTER">X</td>
+          <td width="14%" align="CENTER">25</td>
+          <td width="18%" align="CENTER">- </td>
+        </tr>
+        <tr> 
+          <td width="26%">AuthorNumber</td>
+          <td width="25%" align="CENTER">alt with duplicates</td>
+          <td width="17%" align="CENTER">N </td>
+          <td width="14%" align="CENTER">7</td>
+          <td width="18%" align="CENTER">1-9999999</td>
+        </tr>
+        <tr> 
+          <td width="26%">RoyaltyRate</td>
+          <td width="25%" align="CENTER"> -</td>
+          <td width="17%" align="CENTER">N</td>
+          <td width="14%" align="CENTER">3</td>
+          <td width="18%" align="CENTER">.001-.999 </td>
+        </tr>
+        <tr> 
+          <td width="26%">QuarterBorrowings</td>
+          <td width="25%" align="CENTER">- </td>
+          <td width="17%" align="CENTER">N</td>
+          <td width="14%" align="CENTER">3</td>
+          <td width="18%" align="CENTER">0-999</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p> The indexed file <font size="2">AUTHOR.DAT</font> has the following 
+        record description;- </p>
+      <table border="1" width="100%">
+        <tr> 
+          <td width="26%"> 
+            <div align="CENTER">
+              <b>Field </b> 
+            </div>
+          </td>
+          <td width="25%" align="CENTER"> 
+            <div align="CENTER">
+              <b>Key Type </b> 
+            </div>
+          </td>
+          <td width="17%" align="CENTER"> 
+            <div align="CENTER">
+              <b>Type</b> 
+            </div>
+          </td>
+          <td width="14%" align="CENTER"> 
+            <div align="CENTER">
+              <b>Length</b> 
+            </div>
+          </td>
+          <td width="18%" align="CENTER"> 
+            <div align="CENTER">
+              <b>Value </b> 
+            </div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="26%">AuthorNumber </td>
+          <td width="25%" align="CENTER">primary</td>
+          <td width="17%" align="CENTER">N </td>
+          <td width="14%" align="CENTER">7</td>
+          <td width="18%" align="CENTER">1-9999999</td>
+        </tr>
+        <tr> 
+          <td width="26%">AuthorName</td>
+          <td width="25%" align="CENTER">-</td>
+          <td width="17%" align="CENTER">X</td>
+          <td width="14%" align="CENTER">25</td>
+          <td width="18%" align="CENTER">- </td>
+        </tr>
+        <tr> 
+          <td width="26%">AgentName</td>
+          <td width="25%" align="CENTER">alt with duplicates</td>
+          <td width="17%" align="CENTER">X</td>
+          <td width="14%" align="CENTER">25</td>
+          <td width="18%" align="CENTER">-</td>
+        </tr>
+      </table>
+      <p> <b>Program Procedure</b><br>
+        Some fields required in the report do not appear in either of the Indexed 
+        files and must be calculated. The following describes these fields and 
+        how to calculate them; </p>
+      <blockquote> 
+        <p><b>BookRoyalty</b> contains the royalty to be paid for a book for the 
+          quarter. It is obtained by multiplying QuarterBorrowings by RoyaltyRate. 
+          It is a numeric field with up to three places before the decimal point 
+          and two places after.</p>
+        <p> <b>QuarterAuthorBorrows</b> contains the sum of QuarterBorrowings 
+          for all of an authors books on loan in the library. It is a numeric 
+          field up to four digits long.</p>
+        <p> <b>AuthorRoyalties</b> is the sum of an author's BookRoyaltys. It 
+          is a numeric field with up to four places before the decimal point and 
+          two after. </p>
+        <p><b>AgentPayment </b>is the sum of an agent's AuthorRoyalties. It is 
+          a numeric field with up to six places before the decimal point and two 
+          after it. </p>
+      </blockquote>
+      <p>In addition to producing the report the program must perform a small 
+        update on the QuarterBorrowings field of the BOOKS file. When all the 
+        calculations involving the QuarterBorrowings field have been done, it 
+        must be set to zero so that the borrowings for the new quarter may be 
+        accumulated.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" colspan="2"> 
+      <hr>
+      <h2 align="CENTER">Example program</h2>
+    </td>
+  </tr>
+  <tr> 
+    <td width="100" colspan="2" BACKGROUND="Resources\pics\code.gif"> 
+      <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.   WirthMemLib.
+AUTHOR.  Michael Coughlan.
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT BookFile ASSIGN TO "BOOKS.DAT"
+        ORGANIZATION IS INDEXED
+        ACCESS MODE IS DYNAMIC
+        RECORD KEY IS BookNumber
+        ALTERNATE RECORD KEY IS AuthorNumber 
+                            WITH DUPLICATES    
+        FILE STATUS IS BookErrorStatus.
+
+    SELECT AuthorFile ASSIGN TO "AUTHOR.DAT"
+        ORGANIZATION IS INDEXED
+        
+        ACCESS MODE IS DYNAMIC
+        RECORD KEY IS AuthorNum
+        ALTERNATE RECORD KEY IS AgentName
+                          WITH DUPLICATES
+        FILE STATUS IS AuthorErrorStatus.
+
+    SELECT PrintFile ASSIGN TO "REPORT.EXM".
+
+
+DATA DIVISION.
+FILE SECTION.    
+FD  BookFile.
+01  BookRec.
+    88 EndOfBookFile     VALUE HIGH-VALUES.
+    88 NotEndOfBookFile  VALUE LOW-VALUES.
+    02 BookNumber            PIC X(7).
+    02 BookName              PIC X(25).
+    02 AuthorNumber          PIC 9(7).
+    02 RoyaltyRate           PIC V999.
+    02 QtrBorrowings         PIC 999.
+
+FD  AuthorFile.
+01  AuthorRec.    
+    88 EndOfAuthorFile   VALUE HIGH-VALUES
+    02 AuthorNum             PIC X(7).
+    02 AuthorName            PIC X(25).
+    02 AgentName             PIC X(25).
+
+FD  PrintFile.
+01  PrintLine                PIC X(130).
+
+
+WORKING-STORAGE SECTION.
+01  ErrorStates.
+    02  BookErrorStatus      PIC X(2).
+        88 RecordAlreadyExists   VALUE "22".
+        88 RecordDoesNotExist    VALUE "23".
+    02  AuthorErrorStatus    PIC X(2).
+        88 RecordAlreadyExists    VALUE "22".
+        88 RecordDoesNotExist    VALUE "23".
+
+01  IntermediateVariables.
+    02 BookRoyalty           PIC 9(3)V99.
+    02 QtrAuthorBorrows      PIC 9(4).
+    02 AuthorRoyalties       PIC 9(4)V99.
+    02 AgentPayment          PIC 9(6)V99.
+    02 PrevAuthor            PIC 9(7).
+    02 PrevAgent             PIC X(25).
+
+01  ReportLines.
+    02 ReportHeader.
+       03 FILLER             PIC X(37) VALUE SPACES.
+       03 FILLER             PIC X(24) VALUE "ROYALTY  PAYMENT  REPORT".
+    02 Underline.
+       03 FILLER             PIC X(36) VALUE SPACES.
+       03 FILLER             PIC X(25) VALUE ALL "-".
+    02 FieldHeaders.
+       03 FILLER             PIC X(9) VALUE SPACES.
+       03 FILLER             PIC X(5) VALUE "AGENT".
+       03 FILLER             PIC X(21) VALUE SPACES.
+       03 FILLER             PIC X(6) VALUE "AUTHOR".
+       03 FILLER             PIC X(20) VALUE SPACES.
+       03 FILLER             PIC X(4) VALUE "BOOK".
+       03 FILLER             PIC X(16) VALUE SPACES.
+       03 FILLER             PIC X(7) VALUE "QTR.BRW".
+       03 FILLER             PIC X(9) VALUE "  ROYALTY".
+    02 BookLine.
+       03 AgentNamePrn       PIC X(25).
+       03 AuthorNamePrn      PIC BBX(25).
+       03 BookNamePrn        PIC BBX(25).
+       03 BookQtrBorrowsPrn  PIC BBBBZZ9.
+       03 BookRoyaltyPrn     PIC BBBB$$$9.99.
+    02 AuthorLines.
+       03 QtrBorrowsLine.
+          04 FILLER          PIC X(54) VALUE SPACES.
+          04 FILLER          PIC X(36) VALUE "QUARTER BORROWINGS FOR THIS AUTHOR =".
+          04 QtrBorrowsPrn   PIC BBBBBZ,ZZ9.
+       03 QtrRoyaltiesLine.
+          04 FILLER          PIC X(54) VALUE SPACES.
+          04 FILLER          PIC X(36) VALUE "ROYALTIES OWED TO THIS AUTHOR      =".
+          04 QtrRoyaltiesPrn PIC B$$,$$9.99.
+    02 AgentLine.
+       03 FILLER             PIC X(55) VALUE SPACES.
+       03 FILLER             PIC X(33) VALUE "AMOUNT TO BE PAID TO THIS AGENT =".
+       03 AgentRoyaltiesPrn  PIC B$$$$,$$9.99.
+
+
+
+PROCEDURE DIVISION.
+Begin.
+    OPEN  I-O  BookFile.
+    OPEN  I-O AuthorFile.
+    OPEN OUTPUT PrintFile.
+
+    MOVE SPACES TO PrintLine.
+    WRITE PrintLine AFTER ADVANCING PAGE.
+    WRITE PrintLine FROM ReportHeader AFTER ADVANCING 1  LINE.
+    WRITE PrintLine FROM Underline AFTER ADVANCING 1 LINE.
+    WRITE PrintLine FROM FieldHeaders AFTER ADVANCING 3 LINES.
+    MOVE SPACES TO PrintLine.
+    WRITE PrintLine AFTER ADVANCING 1 LINE.
+
+    MOVE SPACES TO AgentName.
+    START AuthorFile KEY IS GREATER THAN AgentName
+        INVALID KEY DISPLAY "OH DEAR SOMETHING WRONG IN BEGIN PARA"
+    END-START.
+    READ AuthorFile NEXT RECORD 
+        AT END SET EndOfAuthorFile TO TRUE
+    END-READ.
+    PERFORM ProcessAgents UNTIL EndOfAuthorFile.
+
+    CLOSE BookFile.
+    CLOSE AuthorFile.
+    CLOSE PrintFile.
+    STOP RUN.    
+
+ProcessAgents.
+    MOVE AgentName TO AgentNamePrn, PrevAgent.
+    MOVE ZEROS TO AgentPayment.
+
+    PERFORM ProcessAuthors 
+        UNTIL EndOfAuthorFile
+            OR AgentName NOT EQUAL TO PrevAgent.
+
+    MOVE AgentPayment TO AgentRoyaltiesPrn.
+    WRITE PrintLine FROM AgentLine AFTER ADVANCING 1 LINE.
+    MOVE SPACES TO PrintLine.
+    WRITE PrintLine AFTER ADVANCING 2 LINES.
+
+ProcessAuthors.
+    MOVE ZEROS TO QtrAuthorBorrows, AuthorRoyalties.
+    MOVE AuthorNum TO AuthorNumber, PrevAuthor.
+    MOVE AuthorName TO AuthorNamePrn.
+    READ BookFile 
+        KEY IS AuthorNumber
+        INVALID KEY
+         DISPLAY "ERROR IN ProcessAgents = " BookErrorStatus
+    END-READ.
+    PERFORM ProcessBooks 
+        UNTIL EndOfBookFile 
+            OR AuthorNumber NOT EQUAL TO PrevAuthor.
+    SET NotEndOfBookFile TO TRUE.
+
+    MOVE QtrAuthorBorrows TO QtrBorrowsPrn.
+    MOVE AuthorRoyalties  TO QtrRoyaltiesPrn.
+    WRITE PrintLine FROM QtrBorrowsLine AFTER ADVANCING 2 LINES.
+    WRITE PrintLine FROM QtrRoyaltiesLine AFTER ADVANCING 1 LINE.
+    MOVE SPACES TO PrintLine.
+    WRITE PrintLine AFTER ADVANCING 2 LINES.
+
+    READ AuthorFile NEXT RECORD 
+        AT END SET EndOfAuthorFile TO TRUE
+    END-READ.
+
+
+ProcessBooks.
+    PERFORM ProcessOneBook.
+    READ BookFile NEXT RECORD
+        AT END SET EndOfBookFile TO TRUE
+    END-READ.
+    MOVE SPACES TO AuthorNamePrn, AgentNamePrn.
+
+ProcessOneBook.
+    MULTIPLY QtrBorrowings BY RoyaltyRate 
+        GIVING BookRoyalty ROUNDED.
+    ADD QtrBorrowings  TO QtrAuthorBorrows.
+    ADD BookRoyalty  TO AuthorRoyalties, AgentPayment.
+    MOVE BookName TO BookNamePrn.
+    MOVE QtrBorrowings TO BookQtrBorrowsPrn.
+    MOVE BookRoyalty TO BookRoyaltyPrn.
+    WRITE PrintLine FROM BookLine
+             AFTER ADVANCING 1 LINE.
+
+    MOVE ZEROS TO QtrBorrowings.
+    REWRITE BookRec
+        INVALID KEY
+        DISPLAY "REWRITE ProcessOneBook " BookErrorStatus
+    END-REWRITE.
+
+
+</pre>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="100" colspan="2">
+      <div align="CENTER">
+        <p><a href="Resources/progs/wirthmemlib.cbl" target="">Download this example 
+          program</a></p>
+      </div>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr>
+    <td> 
+      <hr>
+      <h3 align="CENTER">Copyright Notice</h3>
+      <p align="LEFT">These COBOL course materials are the copyright property 
+        of Michael Coughlan.</p>
+      <p><font size="2">All rights reserved. No part of these course materials 
+        may be reproduced in any form or by any means - graphic, electronic, mechanical, 
+        photocopying, printing, recording, taping or stored in an information 
+        storage and retrieval system - without the written permission of </font><font size="2">the 
+        author.</font></p>
+      <p align="CENTER"><font size="2">(c) Michael Coughlan</font></p>
+      <hr>
+      <p><i><font size=-1>Last updated : April 1998</font></i> <br>
+        <font size=-1><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font> 
+      </p>
+    </td>
+  </tr>
+</table>
+<h3 align="CENTER">&nbsp;</h3>
+<h3 align="CENTER">&nbsp;</h3>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+</BODY>
+</HTML>

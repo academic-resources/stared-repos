@@ -1,0 +1,859 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Relative Files</TITLE>
+<style type="text/css">
+<!--
+-->
+</style></HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<CENTER>
+  <H2>&nbsp;</H2>
+</CENTER>
+<CENTER>
+  <div align="LEFT">
+    <table border="0" width="710">
+      <tr> 
+        <td> 
+          <center>
+            <h2><a name="top"></a> <img src="Resources/pics/t-CobolCourse.gif" height=56 width=161 align="MIDDLE" alt="Cobol Course" border="0"></h2>
+          </center>
+          <center>
+            <h2> <b>Relative Files</b></h2>
+          </center>
+          <hr>
+        </td>
+      </tr>
+    </table>
+  </div>
+</CENTER>
+<blockquote> 
+  <CENTER>
+  </CENTER>
+</blockquote>
+<p> 
+  <CENTER>
+  </CENTER>
+</p>
+<div align="LEFT">
+  <table border="0" width="710" vspace="15">
+    <tr> 
+      <td width="3%" valign="TOP">&nbsp;</td>
+      <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+      <td width="93%"> <b><a href="#intro" target="">Introduction</a><br>
+        </b><font size="-1">Unit aims, objectives and prerequisites. </font></td>
+    </tr>
+    <tr> 
+      <td width="3%" valign="TOP">&nbsp;</td>
+      <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+      <td width="93%"> <b><a href="#progs" target="">A look at some programs that 
+        use Relative files</a><br>
+        </b><font size="-1">We begin with two example programs. The first creates 
+        a Relative File from a Sequential file and the second reads and displays 
+        records from the Relative file.</font></td>
+    </tr>
+    <tr> 
+      <td width="3%" valign="TOP">&nbsp;</td>
+      <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+      <td width="93%"><b><a href="#declar">Relative file - declarations</a><br>
+        </b><font size="-1">Examines the declarations required for a Relative 
+        file including the SELECT and ASSIGN clause and the key.</font></td>
+    </tr>
+    <tr> 
+      <td width="3%" valign="TOP">&nbsp;</td>
+      <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+      <td width="93%"> <b><a href="#verbs">Relative file - file processing verbs</a><br>
+        </b><font size="-1">Examines the Procedure Division verbs used to process 
+        Relative files - OPEN, CLOSE, READ, WRITE, REWRITE, DELETE, START</font> 
+      </td>
+    </tr>
+    <tr> 
+      <td width="3%" valign="TOP">&nbsp;</td>
+      <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+      <td width="93%"> 
+        <p><b><a href="#declaratives" target="">Introduction to Declaratives</a></b><br>
+          <font size="-1">Introduces Declaratives, showing when and how to use 
+          them.</font> </p>
+        <p>&nbsp;</p>
+      </td>
+    </tr>
+  </table>
+</div>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00">Introd<a name="intro"></a>uction</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#993300">Aims</font></h3>
+    </td>
+    <td width="550"> 
+      <p>The aim of this unit is to provide you with a solid understanding of 
+        declarations required for Relative files and the Procedure Division verbs 
+        used to process them.</p>
+      <p>An additional aim is to introduce you to the uses of Declaratives and 
+        declarations required for them.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Objectives</font></h3>
+    </td>
+    <td width="550"> 
+      <p>By the end of this unit you should:</p>
+      <ol>
+        <li>Be able to write the Environment Division and Data Division declarations 
+          required for a Relative file. <br>
+          <br>
+        </li>
+        <li>Understand the difference between a file's access mode and its organization.<br>
+          <br>
+        </li>
+        <li>Be able to used the use the <font size="-1"> <font size="-1">START, 
+          OPEN, CLOSE, READ, WRITE, REWRITE</font> and <font size="-1">DELETE</font> 
+          </font>Procedure Division verbs required to process Relative files.<br>
+          <br>
+        </li>
+        <li>Be able to process a Relative file directly or sequentially. <br>
+          <br>
+        </li>
+        <li>Understand when, and how, to use Declaratives.</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Prerequisites</font></h3>
+    </td>
+    <td width="550">
+      <p>You should be familiar with the material covered in the unit; </p>
+      <ul>
+        <li>Introduction to direct access files</li>
+      </ul>
+      <p>&nbsp;</p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="progs"></a>A look at some 
+        programs that use Relative files</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">Example program - Creating a Relative 
+        file</font></h3>
+    </td>
+    <td width="525"> 
+      <table border="0" width="100%">
+        <tr> 
+          <td height="43" width="525"> 
+            <p>We'll start by looking at some example programs. In the first program, 
+              a Relative file is created by reading records from a Sequential 
+              file and writing them to the Relative file. The second program demonstrates 
+              how a Relative file may be read directly and sequentially.</p>
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="525"> 
+            <p><object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" WIDTH=520 HEIGHT=541>
+                <param name="File" value="Resources/ppz/relfile1.ppz">
+                <embed width=520 height=541 src="Resources/ppz/RelFile1.ppz"></embed><noembed> 
+                This page contains a Microsoft PowerPoint Animation that your 
+                browser was unable to view.<a href="Resources/ppz/RelFile1.ppz">Click 
+                here to open relfile1.ppz fullscreen</a></NOEMBED> 
+              </object></p>
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="525"> 
+            <p>It is a good idea to download the program and use the animator 
+              to watch how the Relative file is created. You can download both 
+              the program and the sequential data file it uses. </p>
+            <blockquote>
+              <blockquote>
+<blockquote> 
+                  <p><a href="Resources/progs/REL-EG1.CBL" target="">Download Relative 
+                    file example program 1</a></p>
+                  <p><a href="Resources/progs/INSUPP.DAT" target="">Download the Sequential 
+                    data file </a></p>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p><hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Example program - Reading a Relative file</font></h3>
+    </td>
+    <td width="525"> 
+      <table border="0" width="100%">
+        <tr> 
+          <td height="43"> 
+            <p>In this example we see how a Relative file may be read. The program 
+              allows the file to be read either directly, using a key, or sequentially.</p>
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <p><object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=520 height=541>
+                <param name="File" value="Resources/ppz/relfile2.ppz">
+                <embed width=520 height=541 src="Resources/ppz/RelFile2.ppz"></embed><noembed> 
+                This page contains a Microsoft PowerPoint Animation that your 
+                browser was unable to view.<a href="Resources/ppz/RelFile2.ppz">Click 
+                here to open relfile2.ppz fullscreen</a></NOEMBED> 
+              </object></p>
+            <p>Below we see the results produced by two runs of the program.</p>
+            <pre>RUN USING SEQUENTIAL READING
+Enter Read type (Direct=1, Seq=2)-> 2
+  01  VESTRON VIDEOS        OVER THE SEA SOMEWHERE IN LONDON
+  02  EMI STUDIOS           HOLLYWOOD, CALIFORNIA, USA 
+  03  BBC WILDLIFE          BUSH HOUSE, LONDON, ENGLAND
+  04  CBS STUDIOS           HOLLYWOOD, CALIFORNIA, USA
+  05  YACHTING MONTHLY      TREE HOUSE, LONDON, ENGLAND
+  06  VIRGIN VIDEOS         IS THIS ONE ALSO LOCATED IN ENGLAND
+  07  CIC VIDEOS            NEW YORK PLAZZA, NEW YORK, USA
+
+RUN USING DIRECT READ
+Enter Read type (Direct=1, Seq=2)-> 1
+Enter supplier key (2 digits)-> 05
+  05  YACHTING MONTHLY      TREE HOUSE, LONDON, ENGLAND</pre>
+            <hr>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <p>If you downloaded the first example program and its data file you 
+              should already have the Relative file (it was produced when you 
+              ran the first example program). You can use this file with the second 
+              Relative file example program.&nbsp; </p>
+            <blockquote> 
+              <blockquote> 
+                <blockquote> 
+                  <p><a href="Resources/progs/REL-EG2.CBL" target="">Download Relative 
+                    file example program 2</a></p>
+                  <p>&nbsp;</p>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="declar"></a>Relative file 
+        - Declarations</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>As we have seen in the example programs when Relative files are used 
+        a number of new entries for the <font size="-1">SELECT</font> and <font size="-1">ASSIGN</font> 
+        clause are required.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Select and Assign clause syntax </font></h3>
+    </td>
+    <td width="525"> 
+      <p><img src="Resources/pics/I-DFrel1.gif" width="507" height="189"></p>
+      <p>&nbsp;</p>
+      <div align="CENTER">
+      </div>
+      </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">The Optional phrase</font></h3>
+    </td>
+    <td width="525"> 
+      <div align="CENTER">
+        <div align="LEFT">
+          <p> The <font size="2">OPTIONAL</font> phrase must be specified for 
+            files opened for <font size="2">INPUT</font>, <font size="2">I-O</font>, 
+            or <font size="2">EXTEND</font> that need not be present when the 
+            program runs. </p>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+      </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000"> The Access Mode</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">ACCESS MODE</font> of a file refers to the way in 
+        which the file is to be used. If an <font size="2">ACCESS MODE</font> 
+        of <font size="2">SEQUENTIAL</font> is specified then it will only be 
+        possible to process the records in the file sequentially. If <font size="2">RANDOM</font> 
+        is specified it will only be possible to access the file directly. If 
+        <font size="2">DYNAMIC</font> is specified, the file may be accessed both 
+        directly and sequentially. </p>
+      <p>&nbsp;</p>
+      </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">The Record Key phrase</font></h3>
+    </td>
+    <td width="525"> 
+      <div align="CENTER">
+        <div align="LEFT">
+          <p>The <font size="2">RECORD KEY</font> phrase is used to define the 
+            relative key. There can be only one key in a Relative File. The <i>UniqueRecKey 
+            </i>must be a numeric data item and must not be part of the file's 
+            record description although it may be part of another file's record 
+            description. It is normally described in the <font size="2">WORKING-STORAGE 
+            SECTION</font>.</p>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+      <div align="CENTER">
+        <div align="LEFT">
+        </div>
+      </div>
+      </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">The File Status</font></h3>
+    </td>
+    <td width="525"> 
+      <div align="CENTER">
+        <div align="LEFT">
+          <p>The <font size="2">FILE STATUS</font> clause identifies a two character 
+            area of storage that holds the result of every I-O operation for the 
+            file. The <font size="2">FILE STATUS</font> data item is declared 
+            as <font size="2">PIC X(2)</font> in the <font size="2">WORKING-STORAGE 
+            SECTION</font>. Whenever an I-O operation is performed, some value 
+            will be returned to <i>FileStatus</i> indicating whether or not the 
+            operation was successful. </p>
+        </div>
+      </div>
+      <div align="CENTER">
+        <div align="LEFT">
+          There are a large number of <font size="2">FILE STATUS</font> values 
+          but three of major interest are; 
+        </div>
+      </div>
+      <blockquote> 
+        <blockquote> 
+          <div align="LEFT">
+            00 = Operation successful. 
+          </div>
+          <p> 22 = Duplicate key. i.e. The record already exists. </p>
+          <p> 23 = Record not found</p>
+        </blockquote>
+      </blockquote>
+      <div align="CENTER">
+        <div align="LEFT">
+          <p>22 may occur after an attempt to write a record and 23 after trying 
+            to <font size="2">READ</font> or <font size="2">DELETE</font> a record.</p>
+          <p>Note that although a code of 00 generally means the operation was 
+            successful there are other codes that also indicate success. </p>
+        </div>
+      </div>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="verbs"></a>Relative file 
+        - file processing verbs </font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>Direct access files can support a far greater range of operations than 
+        Sequential files. Just like Sequential files, direct access files support 
+        the <font size="2">OPEN</font>, <font size="2">CLOSE</font>, <font size="2">READ</font> 
+        and <font size="2">WRITE </font>operations. But in addition to these, 
+        direct access files also support the <font size="2">DELETE</font>, <font size="2">REWRITE 
+        </font>and <font size="2">START</font> operations.</p>
+      <p>In this section we examine these new operations and any changes to the 
+        operations we are already familiar with.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">The Invalid Key clause</font></h3>
+    </td>
+    <td width="525"> 
+      <p>When any of the file processing verbs are used for direct access, the 
+        <font size="2">INVALID KEY</font> clause must be used unless declaratives 
+        have been specified. </p>
+      <p>When the <font size="2">INVALID KEY</font> clause is specified, any I-O 
+        error, such as attempting to read a record that does not exist or write 
+        a record that already exists, will activate the clause and cause the statement 
+        block following it to be executed. </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">OPEN/CLOSE verbs</font></h3>
+    </td>
+    <td width="525"> 
+      <div align="CENTER">
+        <p align="LEFT">The syntax for the CLOSE is the same for all file organizations.</p>
+        <p align="LEFT">The full syntax for the OPEN verbs is shown below. Note 
+          the new I-O entry. This is used with direct access files when we intend 
+          to update or both read and write to the file.</p>
+        <p align="LEFT"><img src="Resources/pics/I-DFrel2.gif"></p>
+        <p align="LEFT"><b>Notes<br>
+          </b>If the file is opened for input then only<font size="2"> READ </font>and<font size="2"> 
+          START </font>will be allowed. </p>
+        <p align="LEFT">If the file is opened for output then only<font size="2"> 
+          WRITE</font> will be allowed. </p>
+        <p align="LEFT">If the file is opened for I-O then <font size="2">READ, 
+          WRITE, START, REWRITE </font>and<font size="2"> DELETE</font> will be 
+          allowed.&nbsp; </p>
+        <p align="LEFT">If <font size="2">OPEN INPUT</font> is used, and the file 
+          does not possess the <font size="2">OPTIONAL</font> tag, then the file 
+          must exist or the <font size="2">OPEN</font> will fail. &nbsp; </p>
+        <p align="LEFT">If<font size="2"> OPEN OUTPUT </font>or I-O is used then 
+          the file will be created if it does not already exist as long as the 
+          file possesses the <font size="2">OPTIONAL </font>tag<font size="2">. 
+          </font></p>
+      </div>
+      <div align="CENTER">
+        <hr>
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">The READ verb</font></h3>
+    </td>
+    <td width="525"> 
+      <p>When a Relative file has an <font size="2">ACCESS MODE </font>of <font size="2">SEQUENTIAL</font>, 
+        the format of the <font size="2">READ</font> is the same as for Sequential 
+        files, but when the <font size="2">ACCESS MODE</font> is <font size="2">DYNAMIC 
+        </font>or <font size="2">RANDOM</font>, the <font size="2">READ</font> 
+        has a different format.</p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Reading using a key</font></h3>
+    </td>
+    <td width="525"> 
+      <p><img src="Resources/pics/I-DFrel3.gif"></p>
+      <p><b>Operation<br>
+        </b>To read a record directly from a Relative file</p>
+      <ol>
+        <li>The key value must be placed in the <i>KeyName</i> data item (the 
+          <i>KeyName</i> data item is the area of storage identified as the relative 
+          key in the <font size="2">RECORD KEY IS</font> phrase of the <font size="2">SELECT</font> 
+          and <font size="2">ASSIGN</font> clause).</li>
+        <li>Then the <font size="2">READ</font> must be executed.</li>
+      </ol>
+      <p>When the <font size="2">READ</font> is executed, the record with the 
+        Relative Record Number equal to the present value of the relative key 
+        (i.e.<i>KeyName</i>) will be read into the file's record buffer (defined 
+        in the FD entry). </p>
+      <p>If the record does not exist the <font size="2">INVALID KEY</font> clause 
+        will activate and the statement block following the clause will be executed. 
+      </p>
+      <p>After the record has been read the next record pointer will be pointing 
+        to the next record in the file. </p>
+      <p><b>Notes<br>
+        </b>The file must have an <font size="2">ACCESS MODE</font> declaration 
+        for the file specifying an <font size="2">ACCESS MODE</font> <font size="2">DYNAMIC</font> 
+        or <font size="2">RANDOM</font>. </p>
+      <p>The file must be opened for I-O or <font size="2">INPUT</font>.&nbsp; 
+      </p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000"> Reading Sequentially</font></h3>
+    </td>
+    <td width="525"> 
+      <p>When the <font size="2">ACCESS MODE</font> is <font size="2">DYNAMIC</font> 
+        and we wish to read the file sequentially then we must use the format 
+        below for the <font size="2">READ</font>. There is very little difference 
+        between this format and the format of the ordinary sequential <font size="2">READ 
+        </font>except that in this format the <font size="2">NEXT RECORD </font>phrase 
+        is used.</p>
+      <p><img src="Resources/pics/I-DFrel4.gif"></p>
+      <p><b>Notes<br>
+        </b>This format is used to access a Relative file sequentially when the 
+        <font size="2">ACCESS MODE</font> has been declared as<font size="2"> 
+        DYNAMIC </font>and the file has been opened for<font size="2"> INPUT</font> 
+        or I-O. </p>
+      <p>For Relative files the next record pointer may be positioned by the <font size="2">START</font> 
+        verb or by doing a direct <font size="2">READ</font>. </p>
+      <p>The <font size="2">READ NEXT</font> will read the record pointed to by 
+        the next record pointer (This will be the current record if positioned 
+        by the <font size="2">START</font> and the next record if positioned by 
+        a direct <font size="2">READ</font>). </p>
+      <p>The <font size="2">AT END</font> statement is activated when the end 
+        of the file has been reached</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3 align="LEFT"><font color="#800000">The WRITE verb</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The format for writing sequentially to a Relative file is the same as 
+        that used for writing to a Sequential file, but to write directly to a 
+        Relative file a key must be used and this requires a different <font size="2">WRITE</font> 
+        format.</p>
+      <p><img src="Resources/pics/I-DFrel5.gif"></p>
+      <p><b>Operation<br>
+        </b>To write a record directly to a Relative file </p>
+      <ol>
+        <li>The record value must be placed in the files record buffer.</li>
+        <li>The key value must be placed in the file's relative key.</li>
+        <li>The <font size="2">WRITE </font>must be executed.</li>
+      </ol>
+      <p>When the <font size="2">WRITE</font> is executed the data in the record 
+        buffer is written to the record position with a Relative Record Number 
+        equal to the present value of the key. </p>
+      <p><b>Notes<br>
+        </b>The <font size="2">INVALID KEY</font> clause must be used for direct 
+        access to Relative files. If the record being written already 'exists' 
+        the <font size="2">INVALID KEY</font> clause will be activate and the 
+        statement following the clause will be done. Any other I-O error will 
+        also activate the <font size="2">INVALID KEY</font> clause.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3 align="LEFT"><font color="#800000">The REWRITE verb</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">REWRITE</font> is used to update a record in situ 
+        by overwriting it. The format of the <font size="2">REWRITE </font>verb 
+        is shown below.</p>
+      <p><img src="Resources/pics/I-DFrel6.gif"></p>
+      <p><b>Operation<br>
+        </b>The <font size="2">REWRITE</font> is normally used in the following 
+        way;</p>
+      <ol>
+        <li>The record we wish to update is read directly into the record buffer 
+          (place the key value in the key are and execute the <font size="2">READ</font>).</li>
+        <li>The required changes are made to the record in the buffer.</li>
+        <li>The record in the buffer is rewritten to the file. </li>
+      </ol>
+      <p><b>Notes<br>
+        </b>If the file has an <font size="2">ACCESS MODE</font> of <font size="2">SEQUENTIAL</font> 
+        then the <font size="2">INVALID KEY</font> clause cannot be used but if 
+        the <font size="2">ACCESS MODE</font> is <font size="2">RANDOM</font> 
+        or <font size="2">DYNAMIC</font> the<font size="2"> INVALID KEY</font> 
+        clause must be present (unless declaratives are being used). </p>
+      <p>When the file has <font size="2">ACCESS MODE IS SEQUENTIAL</font> the 
+        record that is replaced must have been the subject of a <font size="2">READ 
+        </font>or <font size="2">START</font> before the <font size="2">REWRITE</font> 
+        is used. </p>
+      <p>For all access modes the file must be opened for I-O.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3 align="LEFT"><font color="#800000">The DELETE verb</font></h3>
+    </td>
+    <td width="525"> 
+      <p><img src="Resources/pics/I-DFrel7.gif"></p>
+      <p><b>Operation<br>
+        </b>To delete a record</p>
+      <ol>
+        <li>The Relative Record Number of the record to be deleted must be placed 
+          in the file's relative key.</li>
+        <li>Then the <font size="2">DELETE</font> must be executed.</li>
+      </ol>
+      <p>The record with the Relative Record number equal to the current value 
+        of the key are will be deleted.</p>
+      <p><b>Notes<br>
+        </b>To use the <font size="2">DELETE</font>, the file must have been opened 
+        for I-O. </p>
+      <p>When the <font size="2">ACCESS MODE IS SEQUENTIAL</font> a <font size="2">READ 
+        </font>statement must access the record to be deleted. </p>
+      <p>When the <font size="2">ACCESS MODE IS RANDOM</font> or<font size="2"> 
+        DYNAMIC</font> the record to be deleted is identified by the file's Relative 
+        key. </p>
+      <p>If the record does not exist the <font size="2">INVALID KEY</font> statement 
+        will be activated. </p>
+      <p>Note that when a record is deleted its space does not become available 
+        to other records.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">The START verb</font></h3>
+    </td>
+    <td width="525"> 
+      <p>In Relative files, the only thing the the <font size="2">START</font> 
+        verb is used for, is to control the position of the next record pointer. 
+        Where the <font size="2">START</font> verb appears in a program it is 
+        usually followed by a sequential <font size="2">READ</font> or <font size="2">WRITE</font>.</p>
+      <p>&nbsp;</p>
+      <p><img src="Resources/pics/I-DFrel8.gif"></p>
+      <p><b>Operation<br>
+        </b>To position the Next Record Pointer at a particular record</p>
+      <ol>
+        <li>Move the Relative Record Number of the record to the file's relative 
+          key.</li>
+        <li>Execute the <font size="2">START..KEY IS EQUAL TO</font></li>
+      </ol>
+      <p>To position the Next Record Pointer at the first record in the file</p>
+      <ol>
+        <li>Move zeros to the file's relative key.</li>
+        <li>Execute the <font size="2">START..KEY IS GREATER THAN</font></li>
+      </ol>
+      <p>To position the pointer at the last record in the file</p>
+      <ol>
+        <li>Move all 9's to the file's relative key.</li>
+        <li>Execute the <font size="2">START..KEY IS LESS THAN</font></li>
+      </ol>
+      <p><b>Notes<br>
+        </b><i>KeyDataName</i> is the file's relative key. It is the key of comparison. 
+      </p>
+      <p> The file must be opened for <font size="2">INPUT</font> or I-O when 
+        the <font size="2">START</font> is executed. </p>
+      <p>Execution of the <font size="2">START</font> statement does not change 
+        the contents of the record area (i.e. the <font size="2">START</font> 
+        does not actually read the record it merely positions the next record 
+        pointer). </p>
+      <p>When the <font size="1">START</font> is executed the Next Record Pointer 
+        is set to the first record in the file whose key satisfies the condition. 
+        If no record satisfies the condition then the <font size="2">INVALID KEY</font> 
+        clause is activated.</p>
+      
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="declaratives"></a>Introduction 
+        to Declaratives</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>Declaratives allow us to define exception handling procedures for files. 
+        When there are declaratives for a file the <font size="2">INVALID KEY</font> 
+        clause is not required. </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">The Declaratives template</font></h3>
+    </td>
+    <td width="525"> 
+      <table border="0" width="100%">
+        <tr>
+          <td width="50%"> 
+            <p>The template opposite shows how declaratives are set up.</p>
+            <p>Declaratives must be defined at the start of the<font size="2"> 
+              PROCEDURE DIVISION.</font></p>
+            <p> They must start with the<font size="2"> DECLARATIVES</font> keyword 
+              and end with the keyword <font size="2">END-DECLARATIVES</font>.</p>
+            <p>Declaratives are divided into sections and each section is associated 
+              with a particular <font size="2">USE</font> phrase. </p>
+            <p>The sections and <font size="2">USE</font> phrases allow us to 
+              specify a separate exception procedure for each file. </p>
+            <p>We can also specify general exception procedures for all <font size="2">INPUT, 
+              OUTPUT, I-O </font>and<font size="2"> EXTEND</font> errors.</p>
+          </td>
+          <td width="50%" align="CENTER"> 
+            <table  width="89%" cellpadding="10" border="5">
+              <tr> 
+                <td width="44%" height="365" background="Resources\pics\code.gif" valign="TOP"> 
+                  <pre>PROCEDURE DIVISION.
+DECLARATIVES. 
+SectionOne SECTION. 
+    USE clause for file1.
+ParSectOne1. 
+   ????????????????
+   ???????????????? 
+ParSectOne2. 
+   ????????????????
+   ???????????????? 
+
+SectionTwo SECTION. 
+    USE clause for file2.
+ParSectTwo1.
+   ???????????????? 
+   ???????????????? 
+ParSectTwo2. 
+   ???????????????? 
+   ????????????????  
+END-DECLARATIVES. 
+Main SECTION. 
+Begin.</pre>
+                  </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <hr>
+      <div align="CENTER">
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">The Use phrase</font></h3>
+    </td>
+    <td width="525"> 
+      <div align="CENTER">
+        <div align="LEFT">
+          <p> <img src="Resources/pics/I-DFrel9.gif"></p>
+          <p><b>Notes</b></p>
+          <p> A <font size="2">USE</font> statement can be used only in a sentence 
+            immediately after a section header in the <font size="2">PROCEDURE 
+            DIVISION</font> declaratives area. It must be the only statement in 
+            the sentence. </p>
+          <p><font size="2">ERROR</font> and <font size="2">EXCEPTION</font> are 
+            synonyms. </p>
+          <p>A Declarative cannot refer to a non-Declarative procedure. However, 
+            the PERFORM can transfer control from a Declarative procedure to another 
+            Declarative procedure or from a non-Declarative procedure to a Declarative 
+            procedure. </p>
+          <p>A Declarative executes automatically whenever an I-O condition occurs 
+            that would result in a non-zero value in the <font size="2">FILE STATUS</font> 
+            data item. </p>
+          <p>When <font size="2">USE</font> phrases refer to both a <i>FileName</i> 
+            and the more general <font size="2">INPUT</font>, <font size="2">OUTPUT</font>, 
+            <font size="2">I-O</font> and <font size="2">EXTEND</font> then the 
+            <i>FileName</i> procedure takes precedence.</p>
+          <p>&nbsp;</p>
+          <hr>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="CENTER"><font color="#800000">Example program - fragment</font></h3>
+    </td>
+    <td width="525" BACKGROUND="Resources\pics\code.gif"> 
+      <pre> PROCEDURE DIVISION. 
+ DECLARATIVES. 
+ FileError SECTION.
+    USE AFTER ERROR PROCEDURE ON RelativeFile.
+ CheckFileStatus.
+    EVALUATE TRUE 
+      WHEN RecordDoesNotExist  DISPLAY "Record does not exist" 
+      WHEN RecordAlreadyExists DISPLAY "Record already exists"
+      WHEN FileNotOpen OPEN I-O RelativeFile 
+    END-EVALUATE. 
+ END-DECLARATIVES.
+ Main SECTION.
+ Begin.</pre>  
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <h3 align="CENTER">Copyright Notice</h3>
+      <p align="LEFT">These COBOL course materials are the copyright property 
+        of Michael Coughlan.</p>
+      <p><font size="2">All rights reserved. No part of these course materials 
+        may be reproduced in any form or by any means - graphic, electronic, mechanical, 
+        photocopying, printing, recording, taping or stored in an information 
+        storage and retrieval system - without the written permission of </font><font size="2">the 
+        author.</font></p>
+      <p align="CENTER"><font size="2">(c) Michael Coughlan</font></p>
+      <hr>
+      <p><i><font size=-1>Last updated : April 1998</font></i> <br>
+        <font size=-1><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font> 
+      </p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</BODY>
+</HTML>

@@ -1,0 +1,32 @@
+
+	if (name?.length > 0) {
+		const pattern = new RegExp(name, 'i');
+		pendingConnections = pendingConnections.filter(
+			c =>
+				c.contact.name?.match(pattern) ||
+				c.contact.industry?.match(pattern) ||
+				c.contact.jobtitle?.match(pattern) ||
+				c.contact.location?.match(pattern) ||
+				c.contact.tagline?.match(pattern) ||
+				c.contact.bio?.match(pattern) ||
+				(c.contact.profile.length > 0 && c.contact.profile[0].value.match(pattern)) ||
+				(c.contact.profile.length > 1 && c.contact.profile[1].value.match(pattern)) ||
+				(c.contact.profile.length > 2 && c.contact.profile[2].value.match(pattern)) ||
+				(c.contact.profile.length > 3 && c.contact.profile[3].value.match(pattern)) ||
+				(c.contact.profile.length > 4 && c.contact.profile[4].value.match(pattern))
+		);
+		connections = connections.filter(
+			c =>
+				c.contact.name?.match(pattern) ||
+				c.contact.industry?.match(pattern) ||
+				c.contact.jobtitle?.match(pattern) ||
+				c.contact.location?.match(pattern) ||
+				c.contact.tagline?.match(pattern) ||
+				c.contact.bio?.match(pattern) ||
+				(c.contact.profile.length > 0 && c.contact.profile[0].value.match(pattern)) ||
+				(c.contact.profile.length > 1 && c.contact.profile[1].value.match(pattern)) ||
+				(c.contact.profile.length > 2 && c.contact.profile[2].value.match(pattern)) ||
+				(c.contact.profile.length > 3 && c.contact.profile[3].value.match(pattern)) ||
+				(c.contact.profile.length > 4 && c.contact.profile[4].value.match(pattern))
+		);
+	}

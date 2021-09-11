@@ -1,0 +1,42 @@
+- Inconsistent user experience
+	- 
+	- 
+01 User isn't warned before they delete a contact (just deletes on click) (iOS & WEB)
+	- Add an alert warning window before deleting contact
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/pages/contacts.js
+02 Mobile app and web portal aren't displaying the same information (iOS & WEB)
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/pages/profile.js
+03 Changing birthdate on app won't update birthdate on the web portal.
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/pages/profile.js
+04 Job title, location, tagline, bio section is not included on the Web Portal
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/pages/profile.js
+05 Profile information on Mobile app is left out unless you're editing
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/pages/profile.js
+06 Profile picture alignment is off (WEB)
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/pages/profile.js
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/styles/custom-utilities.css
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/styles/index.css
+	- <div className="self-end mt-6 -mr-20">
+	- possibly add css class to move profile picture below to fix
+        <img
+          className="rounded-full shadow-lg w-96 h-96 object-cover"
+          src={data.user.picture}
+          alt={`profile picuture of ${data.user.name}`}
+        />
+      </div>
+	 .pl-6 {padding-left: 1.5rem;}   .pt-20 {padding-top: 5rem;}
+07 Link updating/creation may be confusing for the user, refactor to enhance ease of use (WEB)
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/pages/profile.js
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/pages/profile-edit.js
+08 token expiration needs to be fixed (WEB)
+	- 
+	- 
+	- 
+09 Update/refactor CSS/cloudinary for profile picture
+	- 
+	- 
+	- 
+10 Add testing for updated features
+	- a lot of potential testing to do
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/pages/__tests__/profile.js
+	- https://github.com/Lambda-School-Labs/conference-contacts-fe/blob/master/src/pages/__tests__/settings.js

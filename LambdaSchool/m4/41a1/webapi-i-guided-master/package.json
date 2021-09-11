@@ -1,0 +1,34 @@
+{
+  "name": "node-api1-guided",
+  "version": "1.0.0",
+  "description": "Node API 1 Guided Project",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "db:latest": "knex migrate:latest",
+    "seeds": "knex seed:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaSchool/node-api1-guided.git"
+  },
+  "keywords": [
+    "node",
+    "backend",
+    "guided",
+    "lambda",
+    "api"
+  ],
+  "author": "Lambda School",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/node-api1-guided/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/node-api1-guided#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  },
+  "dependencies": {
+    "knex": "^0.20.3",
+    "sqlite3": "^4.1.0"
+  }
+}

@@ -1,0 +1,13 @@
+[00:00:00]
+>> Mike North: So we're going to create some familiar looking utilities built around a dictionary type. Has anyone here used map and reduce on raise? Show of hands. Awesome, everybody. So we're gonna build map and reduce for dictionaries and we're going to define a dictionary type. So here's an example.
+
+[00:00:23]
+We have a file extensions dictionary on the right we would say this is a dictionary of string arrays, and we want to iterate over the values for talking about mapping. We want to produce a dictionary with the same keys but with transformed values. So we would get something like what we see in the bottom right.
+
+[00:00:46]
+So maybe we're building like a open file dialogue where we wanna list all of the extensions looks like jpegs and html files have multiple extensions that are valid.
+>> Mike North: And we're going to use our knowledge of type parameters so that this should work neatly with an arbitrary dictionary.
+
+[00:01:08]
+Where we can operate on things that have types that we don't know the details about, but using type parameters, we can still abstract all of that away, operate on these data structures, and give our consumers back the high-fidelity types that they can then carry on and use. So this is in the challenges slash dict folder
+

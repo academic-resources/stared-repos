@@ -1,0 +1,483 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>The STRING verb</TITLE>
+<style type="text/css">
+<!--
+-->
+</style></HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<CENTER>
+</CENTER>
+<CENTER>
+  <div align="LEFT">
+    <table border="0" width="710">
+      <tr> 
+        <td> 
+          <center>
+            <h2><a name="top"></a> <img src="Resources/pics/t-CobolCourse.gif" height=56 width=161 align="MIDDLE" alt="Cobol Course" border="0"></h2>
+          </center>
+          <center>
+            <h2> <b>The STRING verb</b></h2>
+            <hr align="LEFT">
+          </center>
+        </td>
+      </tr>
+    </table>
+  </div>
+</CENTER>
+<table border="0" width="710" vspace="15">
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> 
+      <p><b><a href="#intro" target="">Introduction</a><br>
+        </b><font size="-1">Unit aims, objectives and prerequisites.<br>
+        <br>
+        </font></p>
+      </td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> <b><a href="#verb" target="">The STRING verb</a><br>
+      </b><font size="-1">This section examines the syntax, functioning and rules 
+      of the STRING verb<br>
+      <br>
+      </font></td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> 
+      <p><a href="#examples" target=""><b>STRING examples</b></a><br>
+        <font size="-1">This section starts with some animated examples and ends 
+        with some examples that take the form of Self Assessment Questions (SAQ).<br>
+        <br>
+        </font></p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00">Introd<a name="intro"></a>uction</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#993300">Aims</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The aim of this unit is to provide to provide you with a solid understanding 
+        of the <font size="2">STRING</font> verb.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Objectives</font></h3>
+    </td>
+    <td width="525"> 
+      <p>By the end of this unit you should:By the end of this unit you should:</p>
+      <ol>
+        <li>Understand how the <font size="2">STRING</font> verb works.</li>
+        <li>Be able to use the <font size="2">STRING </font> to concatenate text 
+          strings in your programs</li>
+      </ol>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Prerequisites</font></h3>
+    </td>
+    <td width="525"> 
+      <p>You should be familiar with the material covered in the unit; </p>
+      <ul>
+        <li>Data Declaration </li>
+        <li>Iteration</li>
+        <li>Selection</li>
+        <li>Tables</li>
+        <li>Edited Pictures</li>
+        <li>The INSPECT verb</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr>
+    <td>
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+</td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="verb"></a>The STRING verb 
+        </font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">STRING </font>verb is used for string concatenation. 
+        That is, it is used to join together the contents of two or more source 
+        strings or partial source string to create a single destination string.</p>
+      <p>The examples below show how the <font size="2">STRING</font> is used. 
+      </p>
+      <p>The first example concatenates the entire contents of the identifiers 
+        Indent1 and Ident2 with the literal &quot;10&quot; and puts the resulting 
+        sting into DestString.</p>
+      <p>The second example concatenates the entire contents of Ident1, with the 
+        partial contents of Ident2 (all the characters up to the first space) 
+        and Ident3 (all the characters up to the word &quot;frogs&quot;).</p>
+      <blockquote> 
+        <pre>STRING Ident1, Ident2, "10" DELIMITED BY SIZE
+    INTO DestString
+END-STRING        
+
+STRING 
+   Ident1 DELIMITED BY SIZE
+   Ident2 DELIMITED BY SPACES
+   Ident3 DELIMITED BY "Frogs"
+INTO Ident4 WITH POINTER StrPtr
+END-STRING.</pre>
+      </blockquote>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">STRING syntax</font></h3>
+    </td>
+    <td width="525"> 
+      <p><img src="Resources/pics/I-String.gif"></p>
+      <p>&nbsp;</p>
+      <div align="CENTER">
+        <table border="1" width="77%" cellpadding="5" bgcolor="#DDFFDD">
+          <tr> 
+            <td width="21%">Delim$il</td>
+            <td width="79%">Character or set of characters in a source string 
+              that terminates data transfer to the destination string.</td>
+          </tr>
+          <tr> 
+            <td width="21%">Pointer#i </td>
+            <td width="79%">Points to the position in the destination string where 
+              the next character will go.</td>
+          </tr>
+        </table>
+        <p>&nbsp;</p></div>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">How the STRING works</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">STRING</font> statement moves characters from the 
+        source string to the destination string according to the rules for alphanumeric 
+        to alphanumeric moves. </p>
+      <p>However, no space filling occurs and unless characters in the destination 
+        string are explicitly overwritten they remain undisturbed. </p>
+      <p>As usual with alphanumeric to alphanumeric <font size="2">MOVE</font>s, 
+        data movement is from left to right. </p>
+      <p>The leftmost character of the source is moved to the leftmost position 
+        of the destination then the next leftmost of the source to the next leftmost 
+        of the destination and so on. </p>
+      <p>When a number of source strings are concatenated, characters are moved 
+        from the leftmost source string first.</p>
+      <p> When a <font size="2">WITH POINTER</font> phrase is used, its value 
+        determines the starting character position for insertion into the destination 
+        string. </p>
+      <p>The <font size="2">ON OVERFLOW </font>clause executes if there are still 
+        valid characters left in the source strings but the destination string 
+        is full. </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Data movement termination</font></h3>
+    </td>
+    <td width="525"> 
+      <p>Data movement from a particular source string ends when either;</p>
+      <ul>
+        <li>the end of the source string is reached </li>
+        <li>the end of the destination string is reached </li>
+        <li>the delimiter is detected. </li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC">
+      <h3><font color="#800000">STRING termination</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">STRING </font>statement ends when either; </p>
+      <ul>
+        <li>all the source strings have been processed </li>
+        <li> the destination string is full </li>
+        <li> the pointer points outside the string. </li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">STRING rules</font></h3>
+    </td>
+    <td width="525"> 
+      <ol>
+        <li>Where a literal can be use, a Figurative Constant can be used except 
+          the <font size="2">ALL</font> (literal). <br>
+          <br>
+        </li>
+        <li>When a Figurative Constant is used its size is one character. <br>
+          <br>
+        </li>
+        <li>The destination item Dest$i must be an elementary data item without 
+          editing symbols or the <font size="2">JUSTIFIED</font> clause. <br>
+          <br>
+        </li>
+        <li>Pointer#i must be an integer item and its description must allow it 
+          to contain a value one greater than the size of the destination string. 
+          For instance, a pointer declared as PIC 9 is too small if the destination 
+          string is 10 characters long. </li>
+      </ol>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC">
+      <h3><font color="#800000">STRING clauses</font></h3>
+    </td>
+    <td width="525"> 
+      <p> <font size="2"><b>ON OVERFLOW</b></font><b></b><br>
+        If the <font size="2">ON OVERFLOW</font> clause is used then the statement 
+        following it will be executed if there are still characters left to pass 
+        across in the source field(s) but the destination field has been filled. 
+      </p>
+      <p><font size="2"><b>WITH POINTER</b></font><b></b><br>
+        The <font size="2">WITH POINTER</font> phrase allows an identifier/dataname 
+        to be kept which holds the position in the Destination String where the 
+        next character will go. </p>
+      <p>When the <font size="2">WITH POINTER</font> phrase is used, the program 
+        must set the pointer to an initial value greater than 0 and less than 
+        the length of the destination string before the <font size="2">STRING</font> 
+        statement executes. </p>
+      <p>If the <font size="2">WITH POINTER</font> phrase is <b>not </b>used, 
+        operation on the destination field starts from the leftmost position. 
+      </p>
+      <p><font size="2"><b>DELIMITED BY SIZE</b></font><b></b><br>
+        The <font size="2">DELIMITED BY SIZE</font> clause means that the whole 
+        of the sending field will be added to the destination string.</p>
+      
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="examples"></a>STRING examples</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#993300">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>This section starts with some examples to reinforce the material you 
+        have just read and it ends with a few test/examples to let you see if 
+        you have understood everything so far.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Example 1<br>
+        (animation) </font></h3>
+    </td>
+    <td width="525"> 
+      <p>The animation in this example shows how the STRING works by stepping 
+        though each clause in the <font size="2">STRING</font> statement.</p>
+      <p>&nbsp; </p>
+      <p><object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=520 height=333>
+          <param name="File" value="Resources/ppz/STRING1.ppz">
+          <embed width=520 height=333 src="Resources/ppz/String1.ppz"></embed><noembed> 
+          This page contains a Microsoft PowerPoint Animation that your browser 
+          was unable to view.<a href="Resources/ppz/String1.ppz">Click here to open 
+          Resources/ppz/string1.ppz fullscreen</a></NOEMBED> 
+        </object></p>
+      <p align="CENTER"><font size="2">Click on the diagram below to step through 
+        the animation. Left click or PageDown to go to the next step and right 
+        click or press PageUp to go to the previous step.</font></p>
+      <p>&nbsp;</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Example 2<br>
+        (animation) </font></h3>
+      <h3>&nbsp;</h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">WITH POINTER</font> phrase is often very useful because 
+        it means that we don't have to <font size="2">STRING</font> all the source 
+        strings together in one go. </p>
+      <p>Using the <font size="2">WITH POINTER</font> we can build the destination 
+        string by executing a number of separate STRING statements or by executing 
+        a <font size="2">STRING</font> statement a number of times.</p>
+      <p>In this example we show how a destination string may be built a piece 
+        at a time by executing several separate <font size="2">STRING</font> statements. 
+        At the end of this unit in the combined example you will see how a <font size="2">STRING</font> 
+        statement may be used within a loop to build a destination string.</p>
+      <p>&nbsp;</p>
+      <p> <OBJECT CLASSID="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" WIDTH=520 HEIGHT=416>
+          <PARAM NAME="File" VALUE="Resources/ppz/String2.ppz">
+          <EMBED WIDTH=520 HEIGHT=416 SRC="Resources/ppz/String2.ppz"></EMBED><NOEMBED>
+          This page contains a Microsoft PowerPoint Animation that your browser 
+          was unable to view.<A HREF="Resources/ppz/String2.ppz">Click here to open 
+          String2.ppz fullscreen</A></NOEMBED> 
+        </OBJECT></p>
+      <p align="CENTER"><font size="2">Click on the diagram below to step through 
+        the animation. Left click or PageDown to go to the next step and right 
+        click or press PageUp to go to the previous step.</font></p>
+      <p>&nbsp; </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">Self assessment questions/examples</font></h3>
+      <h3 align="LEFT">&nbsp;</h3>
+      <h3 align="LEFT">&nbsp;</h3>
+      </td>
+    <td width="525"> 
+      <p>The examples below consist of data delarations and a number of <font size="2">STRING</font> 
+        statements.</p>
+      <p>For each <font size="2">STRING</font> example, write out the text that 
+        would be displayed by the<font size="2"> DISPLAY </font>statement. Assume 
+        that the data starts off fresh for each <font size="2">STRING </font>statement.</p>
+      <p>Treat the examples as an opportunity to test your understanding of the 
+        <font size="2">STRING</font> verb. Before you click on the answers in 
+        the frame below write down your own answer. </p>
+      <p>&nbsp; </p>
+      <p><b>Data Declarations. </b></p>
+      <pre>01 StringFields.
+   02 Field1   PIC X(18) VALUE "Where does this go".
+   02 Field2   PIC X(30) VALUE "This is the destination string".
+   02 Field3   PIC X(15) VALUE "Here is another".
+   02 Field4   PIC X(15) VALUE SPACES.
+
+01 StrPointers.
+   02 StrPtr  PIC 99.
+   02 NewPtr  PIC 9.</pre>
+      <p><b>STRING examples. </b></p>
+      <pre>1. STRING Field1 DELIMITED BY SPACES INTO Field2.
+   DISPLAY Field2.
+
+2. STRING Field1 DELIMITED BY SIZE INTO Field2.
+   DISPLAY Field2.
+
+3. MOVE 6 TO StrPtr.
+   STRING Field1, Field3 DELIMITED BY SPACE 
+       INTO Field2 WITH POINTER StrPtr
+       ON OVERFLOW DISPLAY "String Error"
+       NOT ON OVERFLOW DISPLAY &quot;No Error&quot;
+   END-STRING.
+   DISPLAY Field2.
+
+4. STRING Field1, Field2, Field3 
+       DELIMITED BY SPACES INTO Field4
+   END-STRING.
+   DISPLAY Field4
+
+5. MOVE 4 TO NewPtr.
+   STRING Field1 DELIMITED BY "this"
+          Field3 DELIMITED BY SPACE
+          "END"  DELIMITED BY SIZE
+          INTO Field2
+   END-STRING.
+   DISPLAY Field2.
+
+6. MOVE 4 TO NewPtr.
+   STRING Field1 DELIMITED BY "this"
+          Field3 DELIMITED BY SPACE
+          "Tom"  DELIMITED BY SIZE
+       INTO Field2 WITH POINTER NewPtr
+       ON OVERFLOW DISPLAY "String Error"
+       NOT ON OVERFLOW DISPLAY &quot;No Error&quot;
+   END-STRING.
+   DISPLAY Field2. </pre>
+      </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC">
+      <h3><font color="#800000">Answers to SAQs</font></h3>
+    </td>
+    <td width="525"> 
+      <p align="CENTER"><object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" WIDTH=520 HEIGHT=208>
+          <param name="File" value="Resources/ppz/STRING3.ppz">
+          <embed WIDTH=520 HEIGHT=208 src="Resources/ppz/String3.ppz"></embed><noembed> 
+          This page contains a Microsoft PowerPoint Animation that your browser 
+          was unable to view.<a href="Resources/ppz/String3.ppz">Click here to open 
+          Resources/ppz/string3.ppz fullscreen</a></NOEMBED> 
+        </object><font size="2">Left click or PageDown to go to the next answer 
+        and right click or press PageUp to go to the previous answer.&nbsp;</font></p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr>
+    <td> 
+      <hr>
+      <h3 align="CENTER">Copyright Notice</h3>
+      <p align="LEFT">These COBOL course materials are the copyright property 
+        of Michael Coughlan.</p>
+      <p><font size="2">All rights reserved. No part of these course materials 
+        may be reproduced in any form or by any means - graphic, electronic, mechanical, 
+        photocopying, printing, recording, taping or stored in an information 
+        storage and retrieval system - without the written permission of </font><font size="2">the 
+        author.</font></p>
+      <p align="CENTER"><font size="2">(c) Michael Coughlan</font></p>
+      <hr>
+      <p><i><font size=-1>Last updated : April 1998</font></i> <br>
+        <font size=-1><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font> 
+      </p>
+    </td>
+  </tr>
+</table>
+<h3 align="CENTER">&nbsp;</h3>
+<h3 align="CENTER">&nbsp;</h3>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+</BODY>
+</HTML>

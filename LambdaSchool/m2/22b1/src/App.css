@@ -1,0 +1,155 @@
+.container {
+    background-color: #a61938;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 15px;
+    border: 2px solid grey;
+    padding-bottom: 25px;
+}
+
+.display {
+    margin-top: 25px;
+    height: 100px;
+    width: 450px;
+    border-radius: 50px;
+    color: white;
+    background-color: #323335;
+    box-shadow: 1px 1px #322c2d;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 8%;
+    margin-left: 4%;
+    font-size: 5rem;
+}
+
+.calc {
+    background-color: #a61938;
+    border-radius: 15px;
+}
+
+.screen {
+    background-color: #323335;
+    color: white;
+    width: 90%;
+    text-align: right;
+    padding-right: 2%;
+}
+
+.buttonSp {
+    display: flex;
+    flex-direction: row;
+    background-color: #255d9c;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 35px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px #322c2d;
+    padding: 0%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.buttonOp {
+    display: flex;
+    background-color: #287291;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 35px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px #322c2d;
+    padding: 0%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.buttonNu {
+    display: flex;
+    background-color: #1b4378;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 35px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-shadow: 3px 3px #322c2d;
+    padding: 0%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 4%;
+}
+
+.buttonRow1 {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0;
+    margin-top: 4%;
+}
+
+.buttonRow2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0;
+}
+
+.buttonColumn1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    width: 78%;
+    margin: 0;
+}
+
+.buttonColumn2 {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    width: 17%;
+    margin: 0;
+    margin-top: 2%;
+}
+
+.zeroButton {
+    width: 200px;
+}
+
+.buttonDisplay {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+colors: 
+specials: #255d9c .buttonSp
+numbers:  #1b4378 .buttonNu
+red: #a61938 calc background
+gray #323335 .screen
+operator buttons #287291 .buttonOp
+*/
