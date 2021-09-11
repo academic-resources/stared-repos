@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>MultiPlayer</title>
+<link rel="icon" type="image/png" href="./assets/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/docs.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/syntax.css">
+
+<script src="/assets/scripts/prefixfree.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+</head>
+<body>
+
+	
+
+	
+
+	<div id="sidebar" >
+
+	<div id="searchbox">
+		<input type="text">
+		<div id="clear"></div>
+	</div>
+
+	<div id="scroller">
+
+		
+
+		
+
+		
+			<div class="group">
+				<h1>component</h1>
+
+				
+
+				
+					<a href="AmplitudeEnvelope"  class="item" >AmplitudeEnvelope</a>
+				
+					<a href="Analyser"  class="item" >Analyser</a>
+				
+					<a href="Compressor"  class="item" >Compressor</a>
+				
+					<a href="CrossFade"  class="item" >CrossFade</a>
+				
+					<a href="EQ3"  class="item" >EQ3</a>
+				
+					<a href="Envelope"  class="item" >Envelope</a>
+				
+					<a href="FeedbackCombFilter"  class="item" >FeedbackCombFilter</a>
+				
+					<a href="Filter"  class="item" >Filter</a>
+				
+					<a href="Follower"  class="item" >Follower</a>
+				
+					<a href="FrequencyEnvelope"  class="item" >FrequencyEnvelope</a>
+				
+					<a href="Gate"  class="item" >Gate</a>
+				
+					<a href="LFO"  class="item" >LFO</a>
+				
+					<a href="Limiter"  class="item" >Limiter</a>
+				
+					<a href="LowpassCombFilter"  class="item" >LowpassCombFilter</a>
+				
+					<a href="Merge"  class="item" >Merge</a>
+				
+					<a href="Meter"  class="item" >Meter</a>
+				
+					<a href="MidSideCompressor"  class="item" >MidSideCompressor</a>
+				
+					<a href="MidSideMerge"  class="item" >MidSideMerge</a>
+				
+					<a href="MidSideSplit"  class="item" >MidSideSplit</a>
+				
+					<a href="Mono"  class="item" >Mono</a>
+				
+					<a href="MultibandCompressor"  class="item" >MultibandCompressor</a>
+				
+					<a href="MultibandSplit"  class="item" >MultibandSplit</a>
+				
+					<a href="PanVol"  class="item" >PanVol</a>
+				
+					<a href="Panner"  class="item" >Panner</a>
+				
+					<a href="ScaledEnvelope"  class="item" >ScaledEnvelope</a>
+				
+					<a href="Split"  class="item" >Split</a>
+				
+					<a href="Volume"  class="item" >Volume</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>control</h1>
+
+				
+
+				
+					<a href="CtrlInterpolate"  class="item" >CtrlInterpolate</a>
+				
+					<a href="CtrlMarkov"  class="item" >CtrlMarkov</a>
+				
+					<a href="CtrlPattern"  class="item" >CtrlPattern</a>
+				
+					<a href="CtrlRandom"  class="item" >CtrlRandom</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>core</h1>
+
+				
+
+				
+					<a href="Buffer"  class="item" >Buffer</a>
+				
+					<a href="Buffers"  class="item" >Buffers</a>
+				
+					<a href="Clock"  class="item" >Clock</a>
+				
+					<a href="Delay"  class="item" >Delay</a>
+				
+					<a href="Emitter"  class="item" >Emitter</a>
+				
+					<a href="Gain"  class="item" >Gain</a>
+				
+					<a href="IntervalTimeline"  class="item" >IntervalTimeline</a>
+				
+					<a href="Master"  class="item" >Master</a>
+				
+					<a href="Param"  class="item" >Param</a>
+				
+					<a href="Timeline"  class="item" >Timeline</a>
+				
+					<a href="TimelineState"  class="item" >TimelineState</a>
+				
+					<a href="Tone"  class="item" >Tone</a>
+				
+					<a href="Transport"  class="item" >Transport</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>effect</h1>
+
+				
+
+				
+					<a href="AutoFilter"  class="item" >AutoFilter</a>
+				
+					<a href="AutoPanner"  class="item" >AutoPanner</a>
+				
+					<a href="AutoWah"  class="item" >AutoWah</a>
+				
+					<a href="BitCrusher"  class="item" >BitCrusher</a>
+				
+					<a href="Chebyshev"  class="item" >Chebyshev</a>
+				
+					<a href="Chorus"  class="item" >Chorus</a>
+				
+					<a href="Convolver"  class="item" >Convolver</a>
+				
+					<a href="Distortion"  class="item" >Distortion</a>
+				
+					<a href="Effect"  class="item" >Effect</a>
+				
+					<a href="FeedbackDelay"  class="item" >FeedbackDelay</a>
+				
+					<a href="FeedbackEffect"  class="item" >FeedbackEffect</a>
+				
+					<a href="Freeverb"  class="item" >Freeverb</a>
+				
+					<a href="JCReverb"  class="item" >JCReverb</a>
+				
+					<a href="MidSideEffect"  class="item" >MidSideEffect</a>
+				
+					<a href="Phaser"  class="item" >Phaser</a>
+				
+					<a href="PingPongDelay"  class="item" >PingPongDelay</a>
+				
+					<a href="PitchShift"  class="item" >PitchShift</a>
+				
+					<a href="StereoEffect"  class="item" >StereoEffect</a>
+				
+					<a href="StereoFeedbackEffect"  class="item" >StereoFeedbackEffect</a>
+				
+					<a href="StereoWidener"  class="item" >StereoWidener</a>
+				
+					<a href="StereoXFeedbackEffect"  class="item" >StereoXFeedbackEffect</a>
+				
+					<a href="Tremolo"  class="item" >Tremolo</a>
+				
+					<a href="Vibrato"  class="item" >Vibrato</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>event</h1>
+
+				
+
+				
+					<a href="Event"  class="item" >Event</a>
+				
+					<a href="Loop"  class="item" >Loop</a>
+				
+					<a href="Part"  class="item" >Part</a>
+				
+					<a href="Pattern"  class="item" >Pattern</a>
+				
+					<a href="Sequence"  class="item" >Sequence</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>instrument</h1>
+
+				
+
+				
+					<a href="AMSynth"  class="item" >AMSynth</a>
+				
+					<a href="DuoSynth"  class="item" >DuoSynth</a>
+				
+					<a href="FMSynth"  class="item" >FMSynth</a>
+				
+					<a href="Instrument"  class="item" >Instrument</a>
+				
+					<a href="MembraneSynth"  class="item" >MembraneSynth</a>
+				
+					<a href="MetalSynth"  class="item" >MetalSynth</a>
+				
+					<a href="MonoSynth"  class="item" >MonoSynth</a>
+				
+					<a href="Monophonic"  class="item" >Monophonic</a>
+				
+					<a href="NoiseSynth"  class="item" >NoiseSynth</a>
+				
+					<a href="PluckSynth"  class="item" >PluckSynth</a>
+				
+					<a href="PolySynth"  class="item" >PolySynth</a>
+				
+					<a href="Sampler"  class="item" >Sampler</a>
+				
+					<a href="SimpleSynth"  class="item" >SimpleSynth</a>
+				
+					<a href="Synth"  class="item" >Synth</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>signal</h1>
+
+				
+
+				
+					<a href="Abs"  class="item" >Abs</a>
+				
+					<a href="Add"  class="item" >Add</a>
+				
+					<a href="AudioToGain"  class="item" >AudioToGain</a>
+				
+					<a href="EqualPowerGain"  class="item" >EqualPowerGain</a>
+				
+					<a href="Expr"  class="item" >Expr</a>
+				
+					<a href="GainToAudio"  class="item" >GainToAudio</a>
+				
+					<a href="GreaterThan"  class="item" >GreaterThan</a>
+				
+					<a href="GreaterThanZero"  class="item" >GreaterThanZero</a>
+				
+					<a href="Modulo"  class="item" >Modulo</a>
+				
+					<a href="Multiply"  class="item" >Multiply</a>
+				
+					<a href="Negate"  class="item" >Negate</a>
+				
+					<a href="Normalize"  class="item" >Normalize</a>
+				
+					<a href="Pow"  class="item" >Pow</a>
+				
+					<a href="Scale"  class="item" >Scale</a>
+				
+					<a href="ScaleExp"  class="item" >ScaleExp</a>
+				
+					<a href="Signal"  class="item" >Signal</a>
+				
+					<a href="SignalBase"  class="item" >SignalBase</a>
+				
+					<a href="Subtract"  class="item" >Subtract</a>
+				
+					<a href="TimelineSignal"  class="item" >TimelineSignal</a>
+				
+					<a href="WaveShaper"  class="item" >WaveShaper</a>
+				
+					<a href="Zero"  class="item" >Zero</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>source</h1>
+
+				
+
+				
+					<a href="AMOscillator"  class="item" >AMOscillator</a>
+				
+					<a href="BufferSource"  class="item" >BufferSource</a>
+				
+					<a href="ExternalInput"  class="item" >ExternalInput</a>
+				
+					<a href="FMOscillator"  class="item" >FMOscillator</a>
+				
+					<a href="FatOscillator"  class="item" >FatOscillator</a>
+				
+					<a href="GrainPlayer"  class="item" >GrainPlayer</a>
+				
+					<a href="Microphone"  class="item" >Microphone</a>
+				
+					<a href="MultiPlayer"  class="active item" >MultiPlayer</a>
+				
+					<a href="Noise"  class="item" >Noise</a>
+				
+					<a href="OmniOscillator"  class="item" >OmniOscillator</a>
+				
+					<a href="Oscillator"  class="item" >Oscillator</a>
+				
+					<a href="PWMOscillator"  class="item" >PWMOscillator</a>
+				
+					<a href="Player"  class="item" >Player</a>
+				
+					<a href="PulseOscillator"  class="item" >PulseOscillator</a>
+				
+					<a href="Source"  class="item" >Source</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>type</h1>
+
+				
+
+				
+					<a href="Frequency"  class="item" >Frequency</a>
+				
+					<a href="Time"  class="item" >Time</a>
+				
+					<a href="TimeBase"  class="item" >TimeBase</a>
+				
+					<a href="TransportTime"  class="item" >TransportTime</a>
+				
+			</div>
+		
+	</div>
+	<div id="seperator"></div>
+</div>
+<div id="hamburger">
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+</div>
+
+<script>
+
+	var allListItems = []
+	var items = document.querySelectorAll("#sidebar .item")
+	for (var i = 0; i < items.length; i++){
+		var el = items[i]
+		var name = el.textContent.toLowerCase()
+		allListItems.push({
+			"name" : name,
+			"element" : el
+		})
+	}
+
+	document.querySelector("#searchbox input").addEventListener("input", function(e){
+		var word = e.target.value.toLowerCase()
+		allListItems.forEach(function(item){
+			if (item.name.indexOf(word) === -1){
+				item.element.style.display = "none"
+			} else {
+				item.element.style.display = "inherit"
+			}
+		})
+	})
+
+	document.querySelector("#searchbox #clear").addEventListener("click", function(e){
+		document.querySelector("#searchbox input").value = "";
+		allListItems.forEach(function(item){ item.element.style.display = "inherit" })
+	})
+
+	//the hamburger menu
+	document.querySelector("#hamburger").addEventListener("click", function(){
+		var sidebar = document.querySelector("#sidebar")
+		var currentDisplay = sidebar.classList.contains("visible")
+		if (currentDisplay){
+			sidebar.classList.remove("visible")
+		} else {
+			sidebar.classList.add("visible")
+		}
+	})
+
+	//also offset the sidebar when an item is selected
+	var activeEl = document.querySelector('#sidebar .active.item')
+	if (activeEl){
+		document.querySelector('#sidebar').scrollTop = activeEl.parentElement.offsetTop - 10
+	}
+</script>
+
+
+	
+	
+
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	
+
+	<div id="content">
+		
+
+		
+
+
+
+<div id="constructor">
+
+	<div id="top">
+
+		<h1>Tone.MultiPlayer</h1>
+
+		
+
+			<span id="extends">
+				&#8627; EXTENDS
+				<a href="./Tone">
+					Tone
+				</a>
+			</span>
+		
+
+	</div>
+
+	
+
+	
+
+	<div id="description">
+		<p>Tone.MultiPlayer is well suited for one-shots, multi-sampled istruments or any time you need to play a bunch of audio buffers.</p>
+
+	</div>
+
+	<div id="invocation">
+		
+
+			<h3>CONSTRUCTOR</h3>
+
+			<span class="red">new</span>
+			<span id="class_name">Tone.MultiPlayer</span>
+
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		<div class="param">buffers</div> <span class="punc">,</span> <div class="param">onload</div>
+	<span class="punc">)</span>
+</span>
+
+
+			<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				buffers
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The buffers which are available to the MultiPlayer</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">Object</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">Array</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Buffers">Tone.Buffers</a>
+			</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				onload
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The callback to invoke when all of the buffers are loaded.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">function</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+		
+	</div>
+
+	
+
+
+
+
+	<div id="defaults">
+		<h3>DEFAULTS</h3>
+
+		<div id="values">
+
+			<div class="paren"> { </div>
+<div class="break"></div>
+
+
+
+	<div class="block">
+		<span class="key"> onload </span>
+
+		<span class="punc">:</span>
+
+		
+			<span class="value">Tone.noOp</span>
+		
+		
+		
+			<span class="comma">,</span>
+		
+		<div class="break"></div>
+	</div>
+
+
+
+	<div class="block">
+		<span class="key"> fadeIn </span>
+
+		<span class="punc">:</span>
+
+		
+			<span class="value">0</span>
+		
+		
+		
+			<span class="comma">,</span>
+		
+		<div class="break"></div>
+	</div>
+
+
+
+	<div class="block">
+		<span class="key"> fadeOut </span>
+
+		<span class="punc">:</span>
+
+		
+			<span class="value">0</span>
+		
+		
+		
+		<div class="break"></div>
+	</div>
+
+
+
+<div class="paren"> } </div>
+
+
+		</div>
+	</div>
+
+
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">multiPlayer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MultiPlayer</span><span class="p">({</span>
+	<span class="s2">"kick"</span> <span class="p">:</span> <span class="s2">"path/to/kick.mp3"</span><span class="p">,</span>
+	<span class="s2">"snare"</span> <span class="p">:</span> <span class="s2">"path/to/snare.mp3"</span><span class="p">,</span>
+<span class="p">},</span> <span class="kd">function</span><span class="p">(){</span>
+	<span class="nx">multiPlayer</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s2">"kick"</span><span class="p">);</span>
+<span class="p">});</span>
+ </code></pre></figure>
+
+	</div>
+
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//can also store the values in an array</span>
+<span class="kd">var</span> <span class="nx">multiPlayer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MultiPlayer</span><span class="p">([</span><span class="s2">"path/to/kick.mp3"</span><span class="p">,</span> <span class="s2">"path/to/snare.mp3"</span><span class="p">],</span> 
+<span class="kd">function</span><span class="p">(){</span>
+	<span class="c1">//if an array is passed in, the samples are referenced to by index</span>
+	<span class="nx">multiPlayer</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">});</span></code></pre></figure>
+
+	</div>
+
+
+	<div id="class_index">
+		<ul>
+
+	
+	<div class="group members">
+		<div>MEMBERS</div>
+		
+			<li>
+				<a href="#buffers">buffers</a>
+			</li>
+		
+			<li>
+				<a href="#fadein">fadeIn</a>
+			</li>
+		
+			<li>
+				<a href="#fadeout">fadeOut</a>
+			</li>
+		
+			<li>
+				<a href="#mute">mute</a>
+			</li>
+		
+			<li>
+				<a href="#state">state</a>
+			</li>
+		
+			<li>
+				<a href="#volume">volume</a>
+			</li>
+		
+	</div>
+
+
+
+	
+	<div class="group methods">
+		<div>METHODS</div>
+		
+			<li>
+				<a href="#add">add</a>
+			</li>
+		
+			<li>
+				<a href="#dispose">dispose</a>
+			</li>
+		
+			<li>
+				<a href="#start">start</a>
+			</li>
+		
+			<li>
+				<a href="#stop">stop</a>
+			</li>
+		
+			<li>
+				<a href="#stopall">stopAll</a>
+			</li>
+		
+	</div>
+
+
+
+	
+
+
+	
+
+
+</ul>
+
+	</div>
+
+</div>
+
+
+		
+
+		
+
+			<h2 class='property member'>Members</h2>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="buffers">
+			.buffers
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Buffers">Tone.Buffers</a>
+			</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#buffers">#</a>
+
+</span>
+
+	<div id="description">
+		<p>All the buffers belonging to the player.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L36">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="fadein">
+			.fadeIn
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#fadein">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The fade in envelope which is applied to the beginning of the BufferSource</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L53">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="fadeout">
+			.fadeOut
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#fadeout">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The fade out envelope which is applied to the end of the BufferSource</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L60">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="mute">
+			.mute
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#mute">#</a>
+
+</span>
+
+	<div id="description">
+		<p>Mute the output.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//mute the output</span>
+<span class="nx">source</span><span class="p">.</span><span class="nx">mute</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L209">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="state">
+			.state
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="State">Tone.State</a>
+			</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#state">#</a>
+
+</span>
+
+	<div id="description">
+		<p>Returns the playback state of the source. “started” if there are any buffers playing. “stopped” otherwise.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L195">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+			<a href="https://github.com/Tonejs/Tone.js/wiki/Signals" id="signal">&#8767;</a>
+		
+
+		<h4 id="volume">
+			.volume
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#decibels">
+						Decibels
+					</a>
+				</span>
+		
+	
+</span>
+
+
+		
+
+	
+
+	<a id="name_link" href="#volume">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The volume of the output in decibels.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">source</span><span class="p">.</span><span class="nx">volume</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">6</span><span class="p">;</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L76">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+			<h2 class='property method'>Methods</h2>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="add">
+			<span id="main">
+				.add
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#add">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				name
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The name to that the buffer is refered to in start/stop methods.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				url
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The url of the buffer to load or the buffer.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Buffer">Tone.Buffer</a>
+			</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				callback
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The function to invoke after the buffer is loaded.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#function">
+						function
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Add another buffer to the available buffers.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L190">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="dispose">
+			<span id="main">
+				.dispose
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#dispose">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="MultiPlayer">Tone.MultiPlayer</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Clean up.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L231">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="start">
+			<span id="main">
+				.start
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#start">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				buffer
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The name of the buffer to start. Or pass in a buffer which will be started.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audiobuffer">
+						AudioBuffer
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>When to start the buffer.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				offset
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The offset into the buffer to play from.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">0</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				duration
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>How long to play the buffer for.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				interval
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The interval to repitch the buffer.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#interval">
+						Interval
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">0</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				gain
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The gain to play the sample at.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#gain">
+						Gain
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">1</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="MultiPlayer">Tone.MultiPlayer</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Start a buffer by name. The <code class="highlighter-rouge">start</code> method allows a number of options to be passed in such as offset, interval, and gain. This is good for multi-sampled instruments and sound sprites where samples are repitched played back at different velocities.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L127">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="stop">
+			<span id="main">
+				.stop
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#stop">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				buffer
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The buffer to stop.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audiobuffer">
+						AudioBuffer
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>When to stop the buffer</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="MultiPlayer">Tone.MultiPlayer</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Stop all instances of the currently playing buffer at the given time.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L158">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="stopall">
+			<span id="main">
+				.stopAll
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#stopall">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>When to stop the buffers.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="MultiPlayer">Tone.MultiPlayer</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Stop all currently playing buffers at the given time.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r7/Tone/source/MultiPlayer.js#L174">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+		
+
+		
+
+	</div>
+
+	
+	<div id="generated">docs generated Sep 15 2019</div>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89548134-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<script src="//unpkg.com/tone@r7/build/Tone.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,5356 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Tone</title>
+<link rel="icon" type="image/png" href="./assets/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/docs.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/syntax.css">
+
+<script src="/assets/scripts/prefixfree.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+</head>
+<body>
+
+	
+
+	
+
+	<div id="sidebar" >
+
+	<div id="searchbox">
+		<input type="text">
+		<div id="clear"></div>
+	</div>
+
+	<div id="scroller">
+
+		
+
+		
+
+		
+			<div class="group">
+				<h1>core</h1>
+
+				
+
+				
+					<a href="AudioNode"  class="item" >AudioNode</a>
+				
+					<a href="Buffer"  class="item" >Buffer</a>
+				
+					<a href="Buffers"  class="item" >Buffers</a>
+				
+					<a href="Clock"  class="item" >Clock</a>
+				
+					<a href="Context"  class="item" >Context</a>
+				
+					<a href="Delay"  class="item" >Delay</a>
+				
+					<a href="Draw"  class="item" >Draw</a>
+				
+					<a href="Emitter"  class="item" >Emitter</a>
+				
+					<a href="Gain"  class="item" >Gain</a>
+				
+					<a href="IntervalTimeline"  class="item" >IntervalTimeline</a>
+				
+					<a href="Listener"  class="item" >Listener</a>
+				
+					<a href="Master"  class="item" >Master</a>
+				
+					<a href="OfflineContext"  class="item" >OfflineContext</a>
+				
+					<a href="Param"  class="item" >Param</a>
+				
+					<a href="Timeline"  class="item" >Timeline</a>
+				
+					<a href="TimelineState"  class="item" >TimelineState</a>
+				
+					<a href="Tone"  class="active item" >Tone</a>
+				
+					<a href="Transport"  class="item" >Transport</a>
+				
+					<a href="TransportEvent"  class="item" >TransportEvent</a>
+				
+					<a href="TransportRepeatEvent"  class="item" >TransportRepeatEvent</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>instrument</h1>
+
+				
+
+				
+					<a href="AMSynth"  class="item" >AMSynth</a>
+				
+					<a href="DuoSynth"  class="item" >DuoSynth</a>
+				
+					<a href="FMSynth"  class="item" >FMSynth</a>
+				
+					<a href="Instrument"  class="item" >Instrument</a>
+				
+					<a href="MembraneSynth"  class="item" >MembraneSynth</a>
+				
+					<a href="MetalSynth"  class="item" >MetalSynth</a>
+				
+					<a href="MonoSynth"  class="item" >MonoSynth</a>
+				
+					<a href="Monophonic"  class="item" >Monophonic</a>
+				
+					<a href="NoiseSynth"  class="item" >NoiseSynth</a>
+				
+					<a href="PluckSynth"  class="item" >PluckSynth</a>
+				
+					<a href="PolySynth"  class="item" >PolySynth</a>
+				
+					<a href="Sampler"  class="item" >Sampler</a>
+				
+					<a href="Synth"  class="item" >Synth</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>source</h1>
+
+				
+
+				
+					<a href="AMOscillator"  class="item" >AMOscillator</a>
+				
+					<a href="BufferSource"  class="item" >BufferSource</a>
+				
+					<a href="FMOscillator"  class="item" >FMOscillator</a>
+				
+					<a href="FatOscillator"  class="item" >FatOscillator</a>
+				
+					<a href="GrainPlayer"  class="item" >GrainPlayer</a>
+				
+					<a href="Noise"  class="item" >Noise</a>
+				
+					<a href="OmniOscillator"  class="item" >OmniOscillator</a>
+				
+					<a href="Oscillator"  class="item" >Oscillator</a>
+				
+					<a href="OscillatorNode"  class="item" >OscillatorNode</a>
+				
+					<a href="PWMOscillator"  class="item" >PWMOscillator</a>
+				
+					<a href="Player"  class="item" >Player</a>
+				
+					<a href="Players"  class="item" >Players</a>
+				
+					<a href="PulseOscillator"  class="item" >PulseOscillator</a>
+				
+					<a href="Source"  class="item" >Source</a>
+				
+					<a href="TickSource"  class="item" >TickSource</a>
+				
+					<a href="UserMedia"  class="item" >UserMedia</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>effect</h1>
+
+				
+
+				
+					<a href="AutoFilter"  class="item" >AutoFilter</a>
+				
+					<a href="AutoPanner"  class="item" >AutoPanner</a>
+				
+					<a href="AutoWah"  class="item" >AutoWah</a>
+				
+					<a href="BitCrusher"  class="item" >BitCrusher</a>
+				
+					<a href="Chebyshev"  class="item" >Chebyshev</a>
+				
+					<a href="Chorus"  class="item" >Chorus</a>
+				
+					<a href="Convolver"  class="item" >Convolver</a>
+				
+					<a href="Distortion"  class="item" >Distortion</a>
+				
+					<a href="Effect"  class="item" >Effect</a>
+				
+					<a href="FeedbackDelay"  class="item" >FeedbackDelay</a>
+				
+					<a href="FeedbackEffect"  class="item" >FeedbackEffect</a>
+				
+					<a href="Freeverb"  class="item" >Freeverb</a>
+				
+					<a href="JCReverb"  class="item" >JCReverb</a>
+				
+					<a href="MidSideEffect"  class="item" >MidSideEffect</a>
+				
+					<a href="Phaser"  class="item" >Phaser</a>
+				
+					<a href="PingPongDelay"  class="item" >PingPongDelay</a>
+				
+					<a href="PitchShift"  class="item" >PitchShift</a>
+				
+					<a href="Reverb"  class="item" >Reverb</a>
+				
+					<a href="StereoEffect"  class="item" >StereoEffect</a>
+				
+					<a href="StereoFeedbackEffect"  class="item" >StereoFeedbackEffect</a>
+				
+					<a href="StereoWidener"  class="item" >StereoWidener</a>
+				
+					<a href="StereoXFeedbackEffect"  class="item" >StereoXFeedbackEffect</a>
+				
+					<a href="Tremolo"  class="item" >Tremolo</a>
+				
+					<a href="Vibrato"  class="item" >Vibrato</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>component</h1>
+
+				
+
+				
+					<a href="AmplitudeEnvelope"  class="item" >AmplitudeEnvelope</a>
+				
+					<a href="Analyser"  class="item" >Analyser</a>
+				
+					<a href="Channel"  class="item" >Channel</a>
+				
+					<a href="Compressor"  class="item" >Compressor</a>
+				
+					<a href="CrossFade"  class="item" >CrossFade</a>
+				
+					<a href="EQ3"  class="item" >EQ3</a>
+				
+					<a href="Envelope"  class="item" >Envelope</a>
+				
+					<a href="FFT"  class="item" >FFT</a>
+				
+					<a href="FeedbackCombFilter"  class="item" >FeedbackCombFilter</a>
+				
+					<a href="Filter"  class="item" >Filter</a>
+				
+					<a href="Follower"  class="item" >Follower</a>
+				
+					<a href="FrequencyEnvelope"  class="item" >FrequencyEnvelope</a>
+				
+					<a href="Gate"  class="item" >Gate</a>
+				
+					<a href="LFO"  class="item" >LFO</a>
+				
+					<a href="Limiter"  class="item" >Limiter</a>
+				
+					<a href="LowpassCombFilter"  class="item" >LowpassCombFilter</a>
+				
+					<a href="Merge"  class="item" >Merge</a>
+				
+					<a href="Meter"  class="item" >Meter</a>
+				
+					<a href="MidSideCompressor"  class="item" >MidSideCompressor</a>
+				
+					<a href="MidSideMerge"  class="item" >MidSideMerge</a>
+				
+					<a href="MidSideSplit"  class="item" >MidSideSplit</a>
+				
+					<a href="Mono"  class="item" >Mono</a>
+				
+					<a href="MultibandCompressor"  class="item" >MultibandCompressor</a>
+				
+					<a href="MultibandSplit"  class="item" >MultibandSplit</a>
+				
+					<a href="PanVol"  class="item" >PanVol</a>
+				
+					<a href="Panner"  class="item" >Panner</a>
+				
+					<a href="Panner3D"  class="item" >Panner3D</a>
+				
+					<a href="ScaledEnvelope"  class="item" >ScaledEnvelope</a>
+				
+					<a href="Solo"  class="item" >Solo</a>
+				
+					<a href="Split"  class="item" >Split</a>
+				
+					<a href="Volume"  class="item" >Volume</a>
+				
+					<a href="Waveform"  class="item" >Waveform</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>type</h1>
+
+				
+
+				
+					<a href="Frequency"  class="item" >Frequency</a>
+				
+					<a href="Midi"  class="item" >Midi</a>
+				
+					<a href="Ticks"  class="item" >Ticks</a>
+				
+					<a href="Time"  class="item" >Time</a>
+				
+					<a href="TimeBase"  class="item" >TimeBase</a>
+				
+					<a href="TransportTime"  class="item" >TransportTime</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>event</h1>
+
+				
+
+				
+					<a href="Event"  class="item" >Event</a>
+				
+					<a href="Loop"  class="item" >Loop</a>
+				
+					<a href="Part"  class="item" >Part</a>
+				
+					<a href="Pattern"  class="item" >Pattern</a>
+				
+					<a href="Sequence"  class="item" >Sequence</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>signal</h1>
+
+				
+
+				
+					<a href="Abs"  class="item" >Abs</a>
+				
+					<a href="Add"  class="item" >Add</a>
+				
+					<a href="AudioToGain"  class="item" >AudioToGain</a>
+				
+					<a href="EqualPowerGain"  class="item" >EqualPowerGain</a>
+				
+					<a href="GainToAudio"  class="item" >GainToAudio</a>
+				
+					<a href="GreaterThan"  class="item" >GreaterThan</a>
+				
+					<a href="GreaterThanZero"  class="item" >GreaterThanZero</a>
+				
+					<a href="Modulo"  class="item" >Modulo</a>
+				
+					<a href="Multiply"  class="item" >Multiply</a>
+				
+					<a href="Negate"  class="item" >Negate</a>
+				
+					<a href="Normalize"  class="item" >Normalize</a>
+				
+					<a href="Pow"  class="item" >Pow</a>
+				
+					<a href="Scale"  class="item" >Scale</a>
+				
+					<a href="ScaleExp"  class="item" >ScaleExp</a>
+				
+					<a href="Signal"  class="item" >Signal</a>
+				
+					<a href="SignalBase"  class="item" >SignalBase</a>
+				
+					<a href="Subtract"  class="item" >Subtract</a>
+				
+					<a href="TickSignal"  class="item" >TickSignal</a>
+				
+					<a href="TransportTimelineSignal"  class="item" >TransportTimelineSignal</a>
+				
+					<a href="WaveShaper"  class="item" >WaveShaper</a>
+				
+					<a href="Zero"  class="item" >Zero</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>control</h1>
+
+				
+
+				
+					<a href="CtrlInterpolate"  class="item" >CtrlInterpolate</a>
+				
+					<a href="CtrlMarkov"  class="item" >CtrlMarkov</a>
+				
+					<a href="CtrlPattern"  class="item" >CtrlPattern</a>
+				
+					<a href="CtrlRandom"  class="item" >CtrlRandom</a>
+				
+			</div>
+		
+	</div>
+	<div id="seperator"></div>
+</div>
+<div id="hamburger">
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+</div>
+
+<script>
+
+	var allListItems = []
+	var items = document.querySelectorAll("#sidebar .item")
+	for (var i = 0; i < items.length; i++){
+		var el = items[i]
+		var name = el.textContent.toLowerCase()
+		allListItems.push({
+			"name" : name,
+			"element" : el
+		})
+	}
+
+	document.querySelector("#searchbox input").addEventListener("input", function(e){
+		var word = e.target.value.toLowerCase()
+		allListItems.forEach(function(item){
+			if (item.name.indexOf(word) === -1){
+				item.element.style.display = "none"
+			} else {
+				item.element.style.display = "inherit"
+			}
+		})
+	})
+
+	document.querySelector("#searchbox #clear").addEventListener("click", function(e){
+		document.querySelector("#searchbox input").value = "";
+		allListItems.forEach(function(item){ item.element.style.display = "inherit" })
+	})
+
+	//the hamburger menu
+	document.querySelector("#hamburger").addEventListener("click", function(){
+		var sidebar = document.querySelector("#sidebar")
+		var currentDisplay = sidebar.classList.contains("visible")
+		if (currentDisplay){
+			sidebar.classList.remove("visible")
+		} else {
+			sidebar.classList.add("visible")
+		}
+	})
+
+	//also offset the sidebar when an item is selected
+	var activeEl = document.querySelector('#sidebar .active.item')
+	if (activeEl){
+		document.querySelector('#sidebar').scrollTop = activeEl.parentElement.offsetTop - 10
+	}
+</script>
+
+
+	
+	
+
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	
+
+	<div id="content">
+		
+
+		
+
+
+
+<div id="constructor">
+
+	<div id="top">
+
+		<h1>Tone</h1>
+
+		
+
+	</div>
+
+	
+
+	
+
+	<div id="description">
+		<p>Tone is the base class of all other classes.</p>
+
+	</div>
+
+	<div id="invocation">
+		
+
+			<h3>CONSTRUCTOR</h3>
+
+			<span class="red">new</span>
+			<span id="class_name">Tone</span>
+
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+
+			<div id="parameters">
+	
+
+	
+
+</div>
+
+		
+	</div>
+
+	
+
+
+
+
+
+
+	
+
+	<div id="class_index">
+		<ul>
+
+	
+	<div class="group members">
+		<div>MEMBERS</div>
+		
+			<li>
+				<a href="#context">context</a>
+			</li>
+		
+	</div>
+
+
+
+	
+	<div class="group methods">
+		<div>METHODS</div>
+		
+			<li>
+				<a href="#toticks">toTicks</a>
+			</li>
+		
+			<li>
+				<a href="#receive">receive</a>
+			</li>
+		
+			<li>
+				<a href="#send">send</a>
+			</li>
+		
+			<li>
+				<a href="#tofrequency">toFrequency</a>
+			</li>
+		
+			<li>
+				<a href="#toseconds">toSeconds</a>
+			</li>
+		
+	</div>
+
+
+
+	
+
+
+	
+	<div class="group static_methods">
+		<div>STATIC METHODS</div>
+		
+			<li>
+				<a href="#connect-static">connect</a>
+			</li>
+		
+			<li>
+				<a href="#connectseries-static">connectSeries</a>
+			</li>
+		
+			<li>
+				<a href="#dbtogain-static">dbToGain</a>
+			</li>
+		
+			<li>
+				<a href="#defaultarg-static">defaultArg</a>
+			</li>
+		
+			<li>
+				<a href="#defaults-static">defaults</a>
+			</li>
+		
+			<li>
+				<a href="#disconnect-static">disconnect</a>
+			</li>
+		
+			<li>
+				<a href="#equalpowerscale-static">equalPowerScale</a>
+			</li>
+		
+			<li>
+				<a href="#extend-static">extend</a>
+			</li>
+		
+			<li>
+				<a href="#gaintodb-static">gainToDb</a>
+			</li>
+		
+			<li>
+				<a href="#getcontext-static">getContext</a>
+			</li>
+		
+			<li>
+				<a href="#immediate-static">immediate</a>
+			</li>
+		
+			<li>
+				<a href="#intervaltofrequencyratio-static">intervalToFrequencyRatio</a>
+			</li>
+		
+			<li>
+				<a href="#isarray-static">isArray</a>
+			</li>
+		
+			<li>
+				<a href="#isboolean-static">isBoolean</a>
+			</li>
+		
+			<li>
+				<a href="#isdefined-static">isDefined</a>
+			</li>
+		
+			<li>
+				<a href="#isfunction-static">isFunction</a>
+			</li>
+		
+			<li>
+				<a href="#isnote-static">isNote</a>
+			</li>
+		
+			<li>
+				<a href="#isnumber-static">isNumber</a>
+			</li>
+		
+			<li>
+				<a href="#isobject-static">isObject</a>
+			</li>
+		
+			<li>
+				<a href="#isstring-static">isString</a>
+			</li>
+		
+			<li>
+				<a href="#isundef-static">isUndef</a>
+			</li>
+		
+			<li>
+				<a href="#loaded-static">loaded</a>
+			</li>
+		
+			<li>
+				<a href="#noop-static">noOp</a>
+			</li>
+		
+			<li>
+				<a href="#now-static">now</a>
+			</li>
+		
+			<li>
+				<a href="#setcontext-static">setContext</a>
+			</li>
+		
+			<li>
+				<a href="#start-static">start</a>
+			</li>
+		
+			<li>
+				<a href="#offline-static">Offline</a>
+			</li>
+		
+	</div>
+
+
+
+</ul>
+
+	</div>
+
+</div>
+
+
+		
+
+		
+
+			<h2 class='property member'>Members</h2>
+
+			
+				<div class="member">
+
+	
+
+	
+
+	<span id="name">
+
+	
+
+		
+
+		<h4 id="context">
+			.context
+		</h4>
+
+		<span class="orange">&#8605;</span>
+
+		<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Context">Tone.Context</a>
+			</span>
+		
+	
+</span>
+
+
+		
+			<span id="readonly" class="keyword">READONLY</span>
+		
+
+	
+
+	<a id="name_link" href="#context">#</a>
+
+</span>
+
+	<div id="description">
+		<p>The AudioContext</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L738">&lt;&#47;&gt;</a>
+</div>
+
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+			<h2 class='property method'>Methods</h2>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="toticks">
+			<span id="main">
+				.toTicks
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#toticks">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#ticks">
+						Ticks
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the time in ticks</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a time representation into ticks.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/type/Type.js#L211">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="receive">
+			<span id="main">
+				.receive
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#receive">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				channelName
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>A named channel to send the signal to.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				channelNumber
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The channel to connect to</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Receive the input from the desired channelName to the input</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">reverbEffect</span><span class="p">.</span><span class="nx">receive</span><span class="p">(</span><span class="s2">"reverb"</span><span class="p">);</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Bus.js#L48">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="send">
+			<span id="main">
+				.send
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#send">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				channelName
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>A named channel to send the signal to.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#string">
+						String
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				amount
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The amount of the source to send to the bus.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#decibels">
+						Decibels
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#gainnode">
+						GainNode
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>The gain node which connects this node to the desired channel. Can be used to adjust the levels of the send.</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Send this signal to the channel name.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">source</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">"reverb"</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">);</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Bus.js#L28">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="tofrequency">
+			<span id="main">
+				.toFrequency
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#tofrequency">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				freq
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#frequency">
+						Frequency
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#hertz">
+						Hertz
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the frequency in hertz</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert a frequency representation into a number.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/type/Type.js#L196">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="toseconds">
+			<span id="main">
+				.toSeconds
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#toseconds">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				time
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#seconds">
+						Seconds
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert Time into seconds. Unlike the method which it overrides, this takes into account transporttime and musical notation. Time : 1.40 Notation: 4n or 1m or 2t Now Relative: +3n</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/type/Type.js#L179">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+		
+
+		
+
+			<h2 class='property staticMethod'>Static Methods</h2>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="connect-static">
+			<span id="main">
+				.connect
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#connect-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				srcNode
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The source node</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				dstNode
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The destination node</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioParam">Tone.AudioParam</a>
+			</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				outputNumber
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The output channel of the srcNode</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">0</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				inputNumber
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The input channel of the dstNode</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">0</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Connect two nodes together so that signal flows from the first node to the second. The second node can be an AudioParam. Optionally specific the input and output channels.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L335">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="connectseries-static">
+			<span id="main">
+				.connectSeries
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#connectseries-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				nodes
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>connect together all of the arguments in series</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L316">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="dbtogain-static">
+			<span id="main">
+				.dbToGain
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#dbtogain-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				db
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#decibels">
+						Decibels
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert decibels into gain.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L586">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="defaultarg-static">
+			<span id="main">
+				.defaultArg
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#defaultarg-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				given
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				fallback
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>If the <code class="highlighter-rouge">given</code> parameter is undefined, use the <code class="highlighter-rouge">fallback</code>. If both <code class="highlighter-rouge">given</code> and <code class="highlighter-rouge">fallback</code> are object literals, it will return a deep copy which includes all of the parameters from both objects. If a parameter is undefined in given, it will return the fallback property. <br /><br /> WARNING: if object is self referential, it will go into an an infinite recursive loop.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L251">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="defaults-static">
+			<span id="main">
+				.defaults
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#defaults-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				values
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The arguments array</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#array">
+						Array
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				keys
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The names of the arguments</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#array">
+						Array
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				constr
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The class constructor</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#function">
+						function
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#object">
+						Object
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#object">
+						Object
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>An object composed of the defaults between the class’ defaults and the passed in arguments.</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L219">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="disconnect-static">
+			<span id="main">
+				.disconnect
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#disconnect-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				srcNode
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The source node</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				dstNode
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The destination node</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audionode">
+						AudioNode
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioNode">Tone.AudioNode</a>
+			</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audioparam">
+						AudioParam
+					</a>
+				</span>
+		
+			<span class="punc">or</span>
+		
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="AudioParam">Tone.AudioParam</a>
+			</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				outputNumber
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The output channel of the srcNode</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">0</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				inputNumber
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The input channel of the dstNode</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="default">
+						<span class="keyword">default:</span>
+						<span class="default_value">0</span>
+					</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Disconnect a node from all nodes or optionally include a destination node and input/output channels.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L365">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="equalpowerscale-static">
+			<span id="main">
+				.equalPowerScale
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#equalpowerscale-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				percent
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>(0-1)</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#normalrange">
+						NormalRange
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>output gain (0-1)</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Equal power gain scale. Good for cross-fading.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L574">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="extend-static">
+			<span id="main">
+				.extend
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#extend-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				child
+			</span>
+
+			<span id="param_description">
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#function">
+						function
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				parent
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>(optional) parent to inherit from if no parent is supplied, the child will inherit from Tone</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#function">
+						function
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+					<div id="optional" class="keyword">optional</div>
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>have a child inherit all of Tone’s (or a parent’s) prototype to inherit the parent’s properties, make sure to call Parent.call(this) in the child’s constructor based on closure library’s inherit function</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L679">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="gaintodb-static">
+			<span id="main">
+				.gainToDb
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#gaintodb-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				gain
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>(0-1)</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#decibels">
+						Decibels
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert gain to decibels.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L597">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="getcontext-static">
+			<span id="main">
+				.getContext
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#getcontext-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				resolve
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>Callback when the context is initialized</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#function">
+						function
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+		
+		<span class="type_name">
+				<a href="Tone">Tone</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Get the context when it becomes available</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L830">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="immediate-static">
+			<span id="main">
+				.immediate
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#immediate-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the currentTime from the AudioContext</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Return the current time of the AudioContext clock without any lookAhead.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L657">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="intervaltofrequencyratio-static">
+			<span id="main">
+				.intervalToFrequencyRatio
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#intervaltofrequencyratio-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				interval
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the number of semitones above the base note</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#interval">
+						Interval
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the frequency ratio</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Convert an interval (in semitones) to a frequency ratio.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">tone</span><span class="p">.</span><span class="nx">intervalToFrequencyRatio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// 1</span>
+<span class="nx">tone</span><span class="p">.</span><span class="nx">intervalToFrequencyRatio</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span> <span class="c1">// 2</span>
+<span class="nx">tone</span><span class="p">.</span><span class="nx">intervalToFrequencyRatio</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">);</span> <span class="c1">// 0.5</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L612">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isarray-static">
+			<span id="main">
+				.isArray
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isarray-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						Boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is an array</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the argument is an Array</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L480">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isboolean-static">
+			<span id="main">
+				.isBoolean
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isboolean-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						Boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is a boolean</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the argument is a boolean.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L469">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isdefined-static">
+			<span id="main">
+				.isDefined
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isdefined-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						Boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is undefined</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the arg is not undefined</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L425">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isfunction-static">
+			<span id="main">
+				.isFunction
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isfunction-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						Boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is a function</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the arg is a function</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L436">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isnote-static">
+			<span id="main">
+				.isNote
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isnote-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						Boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is a string</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the argument is in the form of a note in scientific pitch notation. e.g. “C4”</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L503">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isnumber-static">
+			<span id="main">
+				.isNumber
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isnumber-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						Boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is a number</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the argument is a number.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L447">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isobject-static">
+			<span id="main">
+				.isObject
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isobject-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						Boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is an object literal.</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the given argument is an object literal (i.e. <code class="highlighter-rouge"><span class="p">{}</span></code>);</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L458">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isstring-static">
+			<span id="main">
+				.isString
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isstring-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						Boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is a string</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the argument is a string.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L491">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="isundef-static">
+			<span id="main">
+				.isUndef
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#isundef-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				arg
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the argument to test</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#">
+						*
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#boolean">
+						Boolean
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>true if the arg is undefined</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Test if the arg is undefined</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L414">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="loaded-static">
+			<span id="main">
+				.loaded
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#loaded-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#promise">
+						Promise
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Returns a Promise which resolves when all of the buffers have loaded</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Buffer.js#L548">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="noop-static">
+			<span id="main">
+				.noOp
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#noop-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>An empty function.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L511">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="now-static">
+			<span id="main">
+				.now
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#now-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#number">
+						Number
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>the currentTime from the AudioContext</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Return the current time of the AudioContext clock plus the lookAhead.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L637">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="setcontext-static">
+			<span id="main">
+				.setContext
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#setcontext-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				ctx
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>The new audio context to set</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#audiocontext">
+						AudioContext
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Tone automatically creates a context on init, but if you are working with other libraries which also create an AudioContext, it can be useful to set your own. If you are going to set your own context, be sure to do it at the start of your code, before creating any objects.</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L759">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="start-static">
+			<span id="main">
+				.start
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#start-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#promise">
+						Promise
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>This promise is resolved when the audio context is started.</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Most browsers will not play <em>any</em> audio until a user clicks something (like a play button). Invoke this method on a click or keypress event handler to start the audio context. More about the Autoplay policy <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio">here</a></p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#playbutton'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">start</span><span class="p">())</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Tone.js#L713">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+				<div class="staticMethod">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="offline-static">
+			<span id="main">
+				.Offline
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#offline-static">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				callback
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>All Tone.js nodes which are created and scheduled within this callback are recorded into the output Buffer.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#function">
+						function
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+		<div class="param">
+
+
+			<span id="param_name">
+				duration
+			</span>
+
+			<span id="param_description">
+
+				
+
+					<p>the amount of time to record for.</p>
+
+
+				
+
+				<div id="type">
+					<span id="type_text" class="keyword">type:</span> <span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#time">
+						Time
+					</a>
+				</span>
+		
+	
+</span>
+
+				</div>
+
+				
+
+
+			</span>
+
+		</div>
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			<!-- check for a typedef -->
+			
+
+			
+		
+		<span class="type_name">
+					<a href="Type#promise">
+						Promise
+					</a>
+				</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>The promise which is invoked with the Tone.Buffer of the recorded output.</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>Generate a buffer by rendering all of the Tone.js code within the callback using the OfflineAudioContext. The OfflineAudioContext is capable of rendering much faster than real time in many cases. The callback function also passes in an offline instance of Tone.Transport which can be used to schedule events along the Transport. <strong>NOTE</strong> OfflineAudioContext has the same restrictions as the AudioContext in that on certain platforms (like iOS) it must be invoked by an explicit user action like a click or tap.</p>
+
+	</div>
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//render 2 seconds of the oscillator</span>
+<span class="nx">Tone</span><span class="p">.</span><span class="nx">Offline</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+	<span class="c1">//only nodes created in this callback will be recorded</span>
+	<span class="kd">var</span> <span class="nx">oscillator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">Oscillator</span><span class="p">().</span><span class="nx">toMaster</span><span class="p">().</span><span class="nx">start</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+	<span class="c1">//schedule their events</span>
+<span class="p">},</span> <span class="mi">2</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">buffer</span><span class="p">){</span>
+	<span class="c1">//do something with the output buffer</span>
+<span class="p">})</span></code></pre></figure>
+
+	</div>
+
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//can also schedule events along the Transport</span>
+<span class="c1">//using the passed in Offline Transport</span>
+<span class="nx">Tone</span><span class="p">.</span><span class="nx">Offline</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">Transport</span><span class="p">){</span>
+	<span class="kd">var</span> <span class="nx">osc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">Oscillator</span><span class="p">().</span><span class="nx">toMaster</span><span class="p">()</span>
+	<span class="nx">Transport</span><span class="p">.</span><span class="nx">schedule</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">time</span><span class="p">){</span>
+		<span class="nx">osc</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="nx">time</span><span class="p">).</span><span class="nx">stop</span><span class="p">(</span><span class="nx">time</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">)</span>
+	<span class="p">},</span> <span class="mi">1</span><span class="p">)</span>
+	<span class="nx">Transport</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="p">},</span> <span class="mi">4</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">buffer</span><span class="p">){</span>
+	<span class="c1">//do something with the output buffer</span>
+<span class="p">})</span></code></pre></figure>
+
+	</div>
+
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/13.8.25/Tone/core/Offline.js#L39">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+
+		
+
+	</div>
+
+	
+	<div id="generated">docs generated Sep 15 2019</div>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89548134-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<script src="//unpkg.com/tone@13.8.25/build/Tone.js"></script>
+
+</body>
+</html>

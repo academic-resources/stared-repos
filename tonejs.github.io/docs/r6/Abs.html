@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Abs</title>
+<link rel="icon" type="image/png" href="./assets/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/docs.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/syntax.css">
+
+<script src="/assets/scripts/prefixfree.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+</head>
+<body>
+
+	
+
+	
+
+	<div id="sidebar" >
+
+	<div id="searchbox">
+		<input type="text">
+		<div id="clear"></div>
+	</div>
+
+	<div id="scroller">
+
+		
+
+		
+
+		
+			<div class="group">
+				<h1>component</h1>
+
+				
+
+				
+					<a href="AmplitudeEnvelope"  class="item" >AmplitudeEnvelope</a>
+				
+					<a href="Analyser"  class="item" >Analyser</a>
+				
+					<a href="Compressor"  class="item" >Compressor</a>
+				
+					<a href="CrossFade"  class="item" >CrossFade</a>
+				
+					<a href="EQ3"  class="item" >EQ3</a>
+				
+					<a href="Envelope"  class="item" >Envelope</a>
+				
+					<a href="FeedbackCombFilter"  class="item" >FeedbackCombFilter</a>
+				
+					<a href="Filter"  class="item" >Filter</a>
+				
+					<a href="Follower"  class="item" >Follower</a>
+				
+					<a href="FrequencyEnvelope"  class="item" >FrequencyEnvelope</a>
+				
+					<a href="Gate"  class="item" >Gate</a>
+				
+					<a href="LFO"  class="item" >LFO</a>
+				
+					<a href="Limiter"  class="item" >Limiter</a>
+				
+					<a href="LowpassCombFilter"  class="item" >LowpassCombFilter</a>
+				
+					<a href="Merge"  class="item" >Merge</a>
+				
+					<a href="Meter"  class="item" >Meter</a>
+				
+					<a href="MidSideCompressor"  class="item" >MidSideCompressor</a>
+				
+					<a href="MidSideMerge"  class="item" >MidSideMerge</a>
+				
+					<a href="MidSideSplit"  class="item" >MidSideSplit</a>
+				
+					<a href="Mono"  class="item" >Mono</a>
+				
+					<a href="MultibandCompressor"  class="item" >MultibandCompressor</a>
+				
+					<a href="MultibandSplit"  class="item" >MultibandSplit</a>
+				
+					<a href="PanVol"  class="item" >PanVol</a>
+				
+					<a href="Panner"  class="item" >Panner</a>
+				
+					<a href="ScaledEnvelope"  class="item" >ScaledEnvelope</a>
+				
+					<a href="Split"  class="item" >Split</a>
+				
+					<a href="Volume"  class="item" >Volume</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>control</h1>
+
+				
+
+				
+					<a href="CtrlInterpolate"  class="item" >CtrlInterpolate</a>
+				
+					<a href="CtrlMarkov"  class="item" >CtrlMarkov</a>
+				
+					<a href="CtrlPattern"  class="item" >CtrlPattern</a>
+				
+					<a href="CtrlRandom"  class="item" >CtrlRandom</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>core</h1>
+
+				
+
+				
+					<a href="Buffer"  class="item" >Buffer</a>
+				
+					<a href="Clock"  class="item" >Clock</a>
+				
+					<a href="Delay"  class="item" >Delay</a>
+				
+					<a href="Emitter"  class="item" >Emitter</a>
+				
+					<a href="Gain"  class="item" >Gain</a>
+				
+					<a href="IntervalTimeline"  class="item" >IntervalTimeline</a>
+				
+					<a href="Master"  class="item" >Master</a>
+				
+					<a href="Note"  class="item" >Note</a>
+				
+					<a href="Param"  class="item" >Param</a>
+				
+					<a href="Timeline"  class="item" >Timeline</a>
+				
+					<a href="TimelineState"  class="item" >TimelineState</a>
+				
+					<a href="Tone"  class="item" >Tone</a>
+				
+					<a href="Transport"  class="item" >Transport</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>effect</h1>
+
+				
+
+				
+					<a href="AutoFilter"  class="item" >AutoFilter</a>
+				
+					<a href="AutoPanner"  class="item" >AutoPanner</a>
+				
+					<a href="AutoWah"  class="item" >AutoWah</a>
+				
+					<a href="BitCrusher"  class="item" >BitCrusher</a>
+				
+					<a href="Chebyshev"  class="item" >Chebyshev</a>
+				
+					<a href="Chorus"  class="item" >Chorus</a>
+				
+					<a href="Convolver"  class="item" >Convolver</a>
+				
+					<a href="Distortion"  class="item" >Distortion</a>
+				
+					<a href="Effect"  class="item" >Effect</a>
+				
+					<a href="FeedbackDelay"  class="item" >FeedbackDelay</a>
+				
+					<a href="FeedbackEffect"  class="item" >FeedbackEffect</a>
+				
+					<a href="Freeverb"  class="item" >Freeverb</a>
+				
+					<a href="JCReverb"  class="item" >JCReverb</a>
+				
+					<a href="MidSideEffect"  class="item" >MidSideEffect</a>
+				
+					<a href="Phaser"  class="item" >Phaser</a>
+				
+					<a href="PingPongDelay"  class="item" >PingPongDelay</a>
+				
+					<a href="PitchShift"  class="item" >PitchShift</a>
+				
+					<a href="StereoEffect"  class="item" >StereoEffect</a>
+				
+					<a href="StereoFeedbackEffect"  class="item" >StereoFeedbackEffect</a>
+				
+					<a href="StereoWidener"  class="item" >StereoWidener</a>
+				
+					<a href="StereoXFeedbackEffect"  class="item" >StereoXFeedbackEffect</a>
+				
+					<a href="Tremolo"  class="item" >Tremolo</a>
+				
+					<a href="Vibrato"  class="item" >Vibrato</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>event</h1>
+
+				
+
+				
+					<a href="Event"  class="item" >Event</a>
+				
+					<a href="Loop"  class="item" >Loop</a>
+				
+					<a href="Part"  class="item" >Part</a>
+				
+					<a href="Pattern"  class="item" >Pattern</a>
+				
+					<a href="Sequence"  class="item" >Sequence</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>instrument</h1>
+
+				
+
+				
+					<a href="AMSynth"  class="item" >AMSynth</a>
+				
+					<a href="DrumSynth"  class="item" >DrumSynth</a>
+				
+					<a href="DuoSynth"  class="item" >DuoSynth</a>
+				
+					<a href="FMSynth"  class="item" >FMSynth</a>
+				
+					<a href="Instrument"  class="item" >Instrument</a>
+				
+					<a href="MonoSynth"  class="item" >MonoSynth</a>
+				
+					<a href="Monophonic"  class="item" >Monophonic</a>
+				
+					<a href="NoiseSynth"  class="item" >NoiseSynth</a>
+				
+					<a href="PluckSynth"  class="item" >PluckSynth</a>
+				
+					<a href="PolySynth"  class="item" >PolySynth</a>
+				
+					<a href="Sampler"  class="item" >Sampler</a>
+				
+					<a href="SimpleAM"  class="item" >SimpleAM</a>
+				
+					<a href="SimpleFM"  class="item" >SimpleFM</a>
+				
+					<a href="SimpleSynth"  class="item" >SimpleSynth</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>signal</h1>
+
+				
+
+				
+					<a href="AND"  class="item" >AND</a>
+				
+					<a href="Abs"  class="active item" >Abs</a>
+				
+					<a href="Add"  class="item" >Add</a>
+				
+					<a href="AudioToGain"  class="item" >AudioToGain</a>
+				
+					<a href="Clip"  class="item" >Clip</a>
+				
+					<a href="Equal"  class="item" >Equal</a>
+				
+					<a href="EqualPowerGain"  class="item" >EqualPowerGain</a>
+				
+					<a href="EqualZero"  class="item" >EqualZero</a>
+				
+					<a href="Expr"  class="item" >Expr</a>
+				
+					<a href="GainToAudio"  class="item" >GainToAudio</a>
+				
+					<a href="GreaterThan"  class="item" >GreaterThan</a>
+				
+					<a href="GreaterThanZero"  class="item" >GreaterThanZero</a>
+				
+					<a href="IfThenElse"  class="item" >IfThenElse</a>
+				
+					<a href="LessThan"  class="item" >LessThan</a>
+				
+					<a href="Max"  class="item" >Max</a>
+				
+					<a href="Min"  class="item" >Min</a>
+				
+					<a href="Modulo"  class="item" >Modulo</a>
+				
+					<a href="Multiply"  class="item" >Multiply</a>
+				
+					<a href="NOT"  class="item" >NOT</a>
+				
+					<a href="Negate"  class="item" >Negate</a>
+				
+					<a href="Normalize"  class="item" >Normalize</a>
+				
+					<a href="OR"  class="item" >OR</a>
+				
+					<a href="Pow"  class="item" >Pow</a>
+				
+					<a href="Route"  class="item" >Route</a>
+				
+					<a href="Scale"  class="item" >Scale</a>
+				
+					<a href="ScaleExp"  class="item" >ScaleExp</a>
+				
+					<a href="Select"  class="item" >Select</a>
+				
+					<a href="Signal"  class="item" >Signal</a>
+				
+					<a href="SignalBase"  class="item" >SignalBase</a>
+				
+					<a href="Subtract"  class="item" >Subtract</a>
+				
+					<a href="Switch"  class="item" >Switch</a>
+				
+					<a href="TimelineSignal"  class="item" >TimelineSignal</a>
+				
+					<a href="WaveShaper"  class="item" >WaveShaper</a>
+				
+			</div>
+		
+			<div class="group">
+				<h1>source</h1>
+
+				
+
+				
+					<a href="ExternalInput"  class="item" >ExternalInput</a>
+				
+					<a href="Microphone"  class="item" >Microphone</a>
+				
+					<a href="Noise"  class="item" >Noise</a>
+				
+					<a href="OmniOscillator"  class="item" >OmniOscillator</a>
+				
+					<a href="Oscillator"  class="item" >Oscillator</a>
+				
+					<a href="PWMOscillator"  class="item" >PWMOscillator</a>
+				
+					<a href="Player"  class="item" >Player</a>
+				
+					<a href="PulseOscillator"  class="item" >PulseOscillator</a>
+				
+					<a href="Source"  class="item" >Source</a>
+				
+			</div>
+		
+	</div>
+	<div id="seperator"></div>
+</div>
+<div id="hamburger">
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+</div>
+
+<script>
+
+	var allListItems = []
+	var items = document.querySelectorAll("#sidebar .item")
+	for (var i = 0; i < items.length; i++){
+		var el = items[i]
+		var name = el.textContent.toLowerCase()
+		allListItems.push({
+			"name" : name,
+			"element" : el
+		})
+	}
+
+	document.querySelector("#searchbox input").addEventListener("input", function(e){
+		var word = e.target.value.toLowerCase()
+		allListItems.forEach(function(item){
+			if (item.name.indexOf(word) === -1){
+				item.element.style.display = "none"
+			} else {
+				item.element.style.display = "inherit"
+			}
+		})
+	})
+
+	document.querySelector("#searchbox #clear").addEventListener("click", function(e){
+		document.querySelector("#searchbox input").value = "";
+		allListItems.forEach(function(item){ item.element.style.display = "inherit" })
+	})
+
+	//the hamburger menu
+	document.querySelector("#hamburger").addEventListener("click", function(){
+		var sidebar = document.querySelector("#sidebar")
+		var currentDisplay = sidebar.classList.contains("visible")
+		if (currentDisplay){
+			sidebar.classList.remove("visible")
+		} else {
+			sidebar.classList.add("visible")
+		}
+	})
+
+	//also offset the sidebar when an item is selected
+	var activeEl = document.querySelector('#sidebar .active.item')
+	if (activeEl){
+		document.querySelector('#sidebar').scrollTop = activeEl.parentElement.offsetTop - 10
+	}
+</script>
+
+
+	
+	
+
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	
+
+	<div id="content">
+		
+
+		
+
+
+
+<div id="constructor">
+
+	<div id="top">
+
+		<h1>Tone.Abs</h1>
+
+		
+
+			<span id="extends">
+				&#8627; EXTENDS
+				<a href="./SignalBase">
+					Tone.SignalBase
+				</a>
+			</span>
+		
+
+	</div>
+
+	
+
+	
+
+	<div id="description">
+		<p>Return the absolute value of an incoming signal.</p>
+
+	</div>
+
+	<div id="invocation">
+		
+
+			<h3>CONSTRUCTOR</h3>
+
+			<span class="red">new</span>
+			<span id="class_name">Tone.Abs</span>
+
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+
+			<div id="parameters">
+	
+
+	
+
+</div>
+
+		
+	</div>
+
+	
+
+
+
+
+
+
+	
+	<div class="example">
+		<h3>EXAMPLE</h3>
+		
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">signal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">Signal</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">abs</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tone</span><span class="p">.</span><span class="nx">Abs</span><span class="p">();</span>
+<span class="nx">signal</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">abs</span><span class="p">);</span>
+<span class="c1">//the output of abs is 1. </span></code></pre></figure>
+
+	</div>
+
+
+	<div id="class_index">
+		<ul>
+
+	
+
+
+	
+	<div class="group methods">
+		<div>METHODS</div>
+		
+			<li>
+				<a href="#dispose">dispose</a>
+			</li>
+		
+	</div>
+
+
+
+	
+
+
+	
+
+
+</ul>
+
+	</div>
+
+</div>
+
+
+		
+
+		
+
+		
+
+		
+
+			<h2 class='property method'>Methods</h2>
+
+			
+				<div class="method">
+
+	
+
+	
+
+	<span id="name">
+
+	
+		<h4 id="dispose">
+			<span id="main">
+				.dispose
+			</span>
+			
+
+<span id="inline_parameters">
+	<span class="punc">(</span>
+		
+	<span class="punc">)</span>
+</span>
+
+		</h4>
+	
+
+	<a id="name_link" href="#dispose">#</a>
+
+</span>
+
+	<div id="parameters">
+	
+
+	
+
+		<div id="returns">
+
+			
+
+
+			<span id="type">
+
+				<span id="ret_text" class="keyword">&#8618; returns</span>
+
+				<span class="type">
+	
+		
+			
+			
+		
+		<span class="type_name">
+				<a href="Abs">Tone.Abs</a>
+			</span>
+		
+	
+</span>
+
+			</span>
+
+			<span id="param_description">
+				<p>this</p>
+
+			</span>
+
+		</div>
+
+	
+
+</div>
+
+
+	<div id="description">
+		<p>dispose method</p>
+
+	</div>
+
+	
+
+	
+
+<div id="line_num">
+	<a target="_blank" href="https://github.com/Tonejs/Tone.js/blob/r6/Tone/signal/Abs.js#L53">&lt;&#47;&gt;</a>
+</div>
+
+</div>
+
+			
+
+		
+
+		
+
+		
+
+		
+
+		
+
+	</div>
+
+	
+	<div id="generated">docs generated Sep 15 2019</div>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89548134-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<script src="//unpkg.com/tone@r6/build/Tone.js"></script>
+
+</body>
+</html>

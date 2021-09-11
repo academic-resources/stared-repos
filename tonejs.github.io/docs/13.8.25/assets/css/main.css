@@ -1,0 +1,8 @@
+body { font-family: 'Inconsolata', monospace; font-size: 16px; margin: 3px; line-height: 22px; color: black; }
+@media (max-width: 700px) { body { font-size: 14px; } }
+body a { color: inherit; text-decoration: none; color: inherit; font-weight: bold; line-height: inherit; }
+body a:hover { color: #7F33ED; }
+body a:hover:active { color: #3833ED; }
+body figure { margin: 5px; }
+body pre { tab-size: 4; font-size: 0.85em; }
+body #content { position: relative; max-width: 1000px; margin: 0 auto 0 auto; }
