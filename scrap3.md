@@ -422,23 +422,4 @@ git clone  https://github.com/omarjuice/algo-viz
 git clone  https://github.com/johnmarcampbell/resume-site
 git clone  https://github.com/archivy/archivy
 git clone  https://github.com/microsoft/Web-Dev-For-Beginners
-git clone  https://github.com/blackcater/blackcater
-git clone  https://github.com/coderjojo/creative-profile-readme
-git clone  https://github.com/n-riesco/ijavascript
-git clone  https://github.com/bgoonz/web-dev-notes-resource-site
-git clone  https://github.com/foobar404/Wave.js
-git clone  https://github.com/anguelmetodiev/WebProject
-git clone  https://github.com/mrowl01/HTML-to-JSON
-git clone  https://github.com/GabrielRocha/tj_crawler
-git clone  https://github.com/gto76/standard-aliases
-git clone  https://github.com/relevance/etc
-git clone  https://github.com/wklken/config
-git clone  https://github.com/oleganza/bash-settings
-git clone  https://github.com/algotech/dotaliases
-git clone  https://github.com/brayra/bashrc-custom
-git clone  https://github.com/Praneethpsp/.bashrc
-git clone  https://github.com/lganet/bashrc
-git clone  https://github.com/PatrickDuncan/bash_shell
-git clone  https://github.com/joecabezas/bashrc
-git clone  https://github.com/angela-d/brain-dump
 

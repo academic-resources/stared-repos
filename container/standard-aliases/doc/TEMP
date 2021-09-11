@@ -1,0 +1,18 @@
+TEMP
+
+global completion functions (start with underscore):
+
+apt_file
+cd
+cd_devices
+command
+expand
+filedir
+
+/usr/share/bash-completion/completions:
+apropos
+chown
+g++
+gdb...
+
+

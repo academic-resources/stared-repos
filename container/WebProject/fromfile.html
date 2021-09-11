@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Internet and Web Technologies</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="search.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 400px)' href='mobilestyles.css' />
+	</head>
+
+		<body>
+      <script src="script.js"></script>
+
+<div class="navbar">
+<ul>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Course</a>
+    <div class="dropdown-content">
+		<a href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanSpring2019">Zybook</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Search</a>
+    <div class="dropdown-content">
+		<a href="search.html">Fixed List</a>
+		<a href="fromfile.html">From File</a>
+		<a href="searchapi.html">Google API</a>
+		<a href="#">Custom Search Engine</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Browser</a>
+    <div class="dropdown-content">
+      <a href="index.html" onclick="BrowserInfo()">Navigator</a>
+      <a href="index.html" onclick="WindowInfo()">Window</a>
+      <a href="index.html" onclick="applyOrientation()">Screen</a>
+      <a href="index.html" onclick="geturl()">Location</a>
+      <a href="index.html" onclick="getLocation()">Geolocation</a>
+    </div>
+  </li>
+  
+      <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">About</a>
+    <div class="dropdown-content">
+      <a href="index.html" onclick="AboutMe()">Anguel Metodiev</a>
+      <a href="index.html" onclick="ContactMe()">Contact Me</a>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div>
+<form class="example" action="" disabled>
+  <input type="text" placeholder="Machine Learning" name="search">
+  <button type="submit" disabled><i class="fa fa-search"></i></button>
+</form>
+</div>
+
+<div style="overflow-x:auto;">
+  <table id="tableItems">
+    <tr>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+        <input type="checkbox" name="resItems"  onclick="checkAll(this)" value="itemSelAll">Select all<br><br>        
+        <input type="radio" id="radioCSV" name="typeFormat" value="csv"> CSV <br>
+        <input type="radio" id="radioJSON" name="typeFormat" value="json"> JSON<br>
+        <input type="radio" id="radioXML" name="typeFormat" value="xml"> XML<br><br>
+        <input type="button" name="saveFormat" value="Save" onclick="SaveSpecificFormat(this)"><br><br>
+        <input type='file' id='fileinput'>
+        <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+      <td>
+	    <div class="Results">
+	      <input type="checkbox" name="resItems" value="item1">Choose<br>
+        <p class="Title" id="title"><a href="https://www.google.com/url?q=https://www.sas.com/en_us/insights/analytics/machine-learning.html&sa=U&ved=0ahUKEwjkyrqyh__gAhVineAKHc5zDeAQFggEMAA&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw2iC_sydl5yzMxgenrvrYPE">Machine Learning: What it is and why it matters | SAS</a></p>
+        <p class="URL">https://www.sas.com/en_us/insights/.../machine-learning.html</p>
+        <p class="Description">Machine learning is a method of data analysis that automates analytical model building. It is a branch of artificial intelligence based on the idea that systems can  ...</p>
+	    </div>
+	    </td>
+      </tr>
+    <tr>
+	<td>
+	  <div class="Results">
+        <input type="checkbox" name="resItems" value="item2">Choose<br>
+        <p class="Title"><a href="https://en.wikipedia.org/wiki/Machine_learning">Machine learning - Wikipedia</a></p>
+        <p class="URL">https://en.wikipedia.org/wiki/Machine_learning</p>
+        <p class="Description">Machine learning (ML) is the scientific study of algorithms and statistical models that computer systems use to effectively perform a specific task without using ...</p>
+      </div>
+	  </td>
+    </tr>
+
+ <tr>
+	<td>
+	  <div class="Results">
+        <input type="checkbox" name="resItems" value="item3">Choose<br>
+        <p class="Title"><a href="https://developers.google.com/machine-learning/crash-course/">Machine Learning Crash Course | Google Developers</a></p>
+        <p class="URL">https://developers.google.com/machine-learning/crash-course/</p>
+        <p class="Description">An intensive, practical 20-hour introduction to machine learning fundamentals, with companion TensorFlow exercises</p>
+      </div>
+	  </td>
+  </tr>
+  
+  <tr>
+	  <td>
+	  <div class="Results">
+        <input type="checkbox" name="resItems" value="item4">Choose<br>
+        <p class="Title"><a href="https://www.google.com/url?q=https://searchenterpriseai.techtarget.com/definition/machine-learning-ML&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggKMAM&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw3jmeQwZIgZKGGzNxDyRm-p">What is machine learning (ML)? - Definition from WhatIs.com</a></p>
+        <p class="URL">https://searchenterpriseai.techtarget.com/.../machine-learning-ML</p>
+        <p class="Description">Machine learning (ML) is a category of algorithm that allows software applications to become more accurate in predicting outcomes without being explicitly ...</p>
+      </div>
+	  </td>
+  </tr>
+  
+     <tr>
+	<td>
+	  <div class="Results">
+        <input type="checkbox" name="resItems" value="item5">Choose<br>
+        <p class="Title"><a href="https://www.google.com/url?q=https://www.geeksforgeeks.org/machine-learning/&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggMMAQ&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw3Y6yy5oAv5taX4qvVrObC8">Machine Learning - GeeksforGeeks</a></p>
+        <p class="URL">https://www.geeksforgeeks.org/machine-learning/</p>
+        <p class="Description">As it is evident from the name, it gives the computer that which makes it more similar to humans: The ability to learn. Machine learning is actively being used ...</p>
+      </div>
+	  </td>
+  </tr>
+  
+       <tr>
+	<td>
+	  <div class="Results">
+        <input type="checkbox" name="resItems" value="item6">Choose<br>
+        <p class="Title"><a href="https://www.google.com/url?q=https://www.coursera.org/learn/machine-learning&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggOMAU&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw3MM_Cz-MhOA44T68PcL3Qm">Machine Learning | Coursera</a></p>
+        <p class="URL">https://www.coursera.org/learn/machine-learning</p>
+        <p class="Description">Machine Learning from Stanford University. Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade,  ...</p>
+      </div>
+	  </td>
+  </tr>
+  
+        <tr>
+	<td>
+	  <div class="Results">
+        <input type="checkbox" name="resItems" value="item7">Choose<br>
+        <p class="Title"><a href="https://www.google.com/url?q=https://www.ml.cmu.edu/&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggQMAY&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw3m7VljoeGAUSqtz1HFRUm0">Machine Learning | Carnegie Mellon University</a></p>
+        <p class="URL">https://www.ml.cmu.edu/</p>
+        <p class="Description">@Carnegie Mellon University - Pittsburgh Pennsylvania Machine Learning Department at Carnegie Mellon University. Machine learning ( ML) is a fascinating field of AI research and practice, where computer agents ...</p>
+      </div>
+	  </td>
+  </tr>
+  
+     <tr>
+	<td>
+	  <div class="Results">
+        <input type="checkbox" name="resItems" value="item8">Choose<br>
+        <p class="Title" ><a href="https://www.google.com/url?q=https://towardsdatascience.com/machine-learning/home&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggSMAc&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw0cvq5SzcrYRomFUjDc7O4b">Machine Learning – Towards Data Science</a></p>
+        <p class="URL">https://towardsdatascience.com/machine-learning/home</p>
+        <p class="Description">Read here our best posts on machine learning. Sharing concepts, ideas, and codes.</p>
+      </div>
+	  </td>
+  </tr>
+  
+      <tr>
+	<td>
+	  <div class="Results">
+        <input type="checkbox" name="resItems" value="item9">Choose<br>
+        <p class="Title"><a href="https://www.google.com/url?q=https://developers.google.com/machine-learning/crash-course/ml-intro&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggUMAg&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw0QWxoPIg_NGhudARIDHH70">Introduction to Machine Learning | Machine Learning Crash </a></p>        <p class="URL">https://developers.google.com/machine-learning/crash.../ml-intro</p>
+        <p class="Description">This module introduces Machine Learning (ML). Estimated Time: 3 minutes Learning Objectives; Recognize the practical benefits of mastering machine learning ...</p>
+      </div>
+	  </td>
+  </tr>
+  
+       <tr>
+	<td>
+	  <div class="Results">
+        <input type="checkbox" name="resItems" value="item10">Choose<br>
+        <p class="Title"><a href="https://www.google.com/url?q=https://www.sas.com/ro_ro/software/visual-data-mining-machine-learning.html&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggWMAk&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw1BCMM607OlLNAEixX8Z1RO">SAS Visual Data Mining and Machine Learning | SAS </a></p>
+        <p class="URL">https://www.sas.com/ro.../visual-data-mining-machine-learning.html</p>
+        <p class="Description">SAS Visual Data Mining and Machine Learning provides a single, integrated in- memory environment for solving your most complex problems faster.</p>
+      </div>
+	  </td>
+  </tr>
+	  
+    </tr>
+  </table>
+</div>
+
+<script src="geolocation.js"></script>
+
+<script src="search.js"></script>
+
+<script>
+function checkAll(obj)
+{
+  var items = document.getElementsByTagName("input"), len, i;
+  for (i = 0, len = items.length; i < len; i += 1) {
+    if (items.item(i).type && items.item(i).type === "checkbox") {       
+      if (obj.checked) {
+        items.item(i).checked = true;
+      } else {
+        items.item(i).checked = false;
+      }       
+    }
+  }
+}
+</script>
+
+<script>
+function SaveSpecificFormat(obj)
+{
+  var items = document.getElementsByTagName("input"), len, i;
+  var listItems = new Array();
+  for (i = 4, len = items.length; i < len; i += 1) {
+    if (items.item(i).type === "checkbox" && items.item(i).checked) {       
+      listItems.push(i);
+    }
+  }
+
+  if (document.getElementById("radioJSON").checked)
+    downloadObjectAsJson(listItems, makeid(10));
+  else if (document.getElementById("radioXML").checked)
+    downloadObjectAsXML(listItems, makeid(10));
+  else if (document.getElementById("radioCSV").checked)
+    downloadCSV(listItems, makeid(10));
+}
+</script>
+
+<script>
+function makeid(length) {
+    var currentDate = new Date("Month dd, yyyy hh:mm:ss");
+
+    var currentDate = new Date("Month dd, yyyy hh:mm:ss");
+
+	var date = currentDate.getDate();
+    var month = currentDate.getMonth(); //Be careful! January is 0 not 1
+    var year = currentDate.getFullYear();
+    var hour = currentDate.getHours();
+    var minutes = currentDate.getMinutes();
+    var seconds = currentDate.getSeconds();
+    
+    return Date("Month dd, yyyy hh:mm:ss");
+
+}
+</script>
+
+<script>
+function downloadObjectAsJson(listItems, exportName){
+  var resArr = new Array();
+  for (i = 0, len = listItems.length; i < len; i += 1) {
+    var title = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[0].textContent;
+    var url = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[1].textContent;
+    var description = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[2].textContent;      
+    resArr.push({'title' : title, 'url' : url, 'description' : description});
+  }
+  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(resArr));
+  var downloadAnchorNode = document.createElement('a');
+  downloadAnchorNode.setAttribute("href",     dataStr);
+  downloadAnchorNode.setAttribute("download", exportName + ".json");
+  document.body.appendChild(downloadAnchorNode);
+  downloadAnchorNode.click();
+  downloadAnchorNode.remove();
+}
+</script>
+
+<script>
+function downloadObjectAsXML(listItems, exportName){
+  var xmldata=['<?xml version="1.0 encoding="UTF-8"?>'];
+  xmldata.push("<Results>");
+
+  for (i = 0, len = listItems.length; i < len; i += 1) {
+    var title = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[0].textContent;
+    var url = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[1].textContent;
+    var description = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[2].textContent;      
+
+    var el=document.createElement("Result");
+    var elTit=document.createElement("Title");
+    elTit.text = title;
+    el.appendChild(elTit);
+
+    var elUrl=document.createElement("Url");
+    elUrl.innerText = url;
+    el.appendChild(elUrl);
+    
+    var elDesc=document.createElement("Description");
+    elDesc.innerText = description;
+    el.appendChild(elDesc);
+
+    xmldata.push(el.outerHTML);
+  }
+
+  xmldata.push("</Results>");
+  xmldata.join('\n');
+
+  var link=document.createElement("A");
+  link.setAttribute("href",encodeURI("data:xml" + xmldata));
+  link.setAttribute("style","display:none");
+  link.setAttribute("download",exportName + ".xml");
+  document.body.appendChild(link);
+  link.click();
+  setTimeout(function(){ document.body.removeChild(link)},1000);
+}
+</script>
+
+<script>  
+function convertArrayOfObjectsToCSV(args) {
+  var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+
+  data = args.data || null;
+  if (data == null || !data.length) {
+      return null;
+  }
+
+  columnDelimiter = args.columnDelimiter || ',';
+  lineDelimiter = args.lineDelimiter || '\n';
+
+  keys = Object.keys(data[0]);
+
+  result = '';
+  result += keys.join(columnDelimiter);
+  result += lineDelimiter;
+
+  data.forEach(function(item) {
+      ctr = 0;
+      keys.forEach(function(key) {
+          if (ctr > 0) result += columnDelimiter;
+
+          result += item[key];
+          ctr++;
+      });
+      result += lineDelimiter;
+  });
+
+  return result;
+}
+
+function downloadCSV(listItems, filename) {
+  var infoData = [];
+  for (i = 0, len = listItems.length; i < len; i += 1) {
+    var title = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[0].textContent;
+    var url = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[1].textContent;
+    var description = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[2].textContent;  
+    infoData.push({Title : title, URL : url, Description : description})
+  }
+
+  var data, link;
+  var csv = convertArrayOfObjectsToCSV({
+      data: infoData
+  });
+  if (csv == null) return;
+
+  if (!csv.match(/^data:text\/csv/i)) {
+      csv = 'data:text/csv;charset=utf-8,' + csv;
+  }
+  data = encodeURI(csv);
+
+  link = document.createElement('a');
+  link.setAttribute('href', data);
+  link.setAttribute('download', filename + ".csv");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+<script>
+function loadFile() {
+  var input, file, fr;
+
+  if (typeof window.FileReader !== 'function') {
+    alert("The file API isn't supported on this browser yet.");
+    return;
+  }
+
+  input = document.getElementById('fileinput');
+  if (!input) {
+    alert("Um, couldn't find the fileinput element.");
+  }
+  else if (!input.files) {
+    alert("This browser doesn't seem to support the `files` property of file inputs.");
+  }
+  else if (!input.files[0]) {
+    alert("Please select a file before clicking 'Load'");
+  }
+  else {
+    file = input.files[0];
+    fr = new FileReader();
+    var arrFilename = file.name.split('.');
+    if (arrFilename[1] == "csv")
+      fr.onload = receivedTextFromCSV;
+    else if (arrFilename[1] == "json")
+      fr.onload = receivedTextFromJson;
+    else if (arrFilename[1] == "xml")
+      fr.onload = receivedTextFromXml;
+    fr.readAsText(file);
+  }
+
+  function receivedTextFromJson(e) {
+    let lines = e.target.result;
+    var newArr = JSON.parse(lines); 
+
+    var tableHeaderRowCount = 1;
+    var table = document.getElementById('tableItems');
+    var rowCount = table.rows.length;
+    for (var i = tableHeaderRowCount; i < rowCount; i++) {
+        table.deleteRow(tableHeaderRowCount);
+    }
+
+    for(i = tableHeaderRowCount; i < newArr.length + 1; ++i) {
+      var row = table.insertRow(i);
+      var cell = row.insertCell(0);
+      cell.innerHTML = '<div class="Results">' +
+        '<input type="checkbox" name="resItems" value="item6">Choose<br>' +
+        '<p class="Title"><a href=' + newArr[i - 1].url + '>' + newArr[i - 1].title + '</a></p>' +
+        '<p class="URL">' + newArr[i - 1].url + '</p>' +
+        '<p class="Description">' + newArr[i - 1].description + '</p>' + '</div>';
+    }
+  }
+}
+</script>
+
+<p id="demo"></p>
+
+<script>
+function receivedTextFromXml(e)
+{
+  var tableHeaderRowCount = 1;
+  var table = document.getElementById('tableItems');
+  var rowCount = table.rows.length;
+  for (var i = tableHeaderRowCount; i < rowCount; i++) {
+      table.deleteRow(tableHeaderRowCount);
+  }
+
+  var stringContainingXMLSource = e.target.result.split("\n");
+
+  var parser = new DOMParser();
+  var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
+
+  var title = "";
+  var url = "";
+  var descr = "";
+  var res = doc.getElementsByTagName("result");
+  
+  for (var i = 0; i < res.length; ++i) {
+    title = res[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+    url = res[i].getElementsByTagName("url")[0].childNodes[0].nodeValue;
+    descr = res[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+
+    var row = table.insertRow(i + tableHeaderRowCount);
+    var cell = row.insertCell(0);
+
+    cell.innerHTML = '<div class="Results">' +
+          '<input type="checkbox" name="resItems" value="item6">Choose<br>' +
+          '<p class="Title"><a href=' + url + '>' + title + '</a></p>' +
+          '<p class="URL">' + url + '</p>' +
+          '<p class="Description">' + descr + '</p>' + '</div>';
+  }
+}
+</script>
+
+<script>
+  function receivedTextFromCSV(e) {
+
+    var tableHeaderRowCount = 1;
+    var table = document.getElementById('tableItems');
+    var rowCount = table.rows.length;
+    for (var i = tableHeaderRowCount; i < rowCount; i++) {
+        table.deleteRow(tableHeaderRowCount);
+    }
+
+    var rows = e.target.result.split("\n");
+    for(i = tableHeaderRowCount; i < rows.length; ++i) {
+      var items = rows[i].split(',');
+      if (items.length > 1) {
+        var row = table.insertRow(i);
+        var cell = row.insertCell(0);
+
+        var description = items[2];
+        for(j = 3; j < items.length; ++j) {
+          description += "," + items[j];
+        }
+        
+        cell.innerHTML = '<div class="Results">' +
+          '<input type="checkbox" name="resItems" value="item6">Choose<br>' +
+          '<p class="Title"><a href=' + items[1] + '>' + items[0] + '</a></p>' +
+          '<p class="URL">' + items[1] + '</p>' +
+          '<p class="Description">' + description + '</p>' + '</div>';
+      }
+      
+    }
+
+    
+  }
+</script>
+
+</body>
+</html>

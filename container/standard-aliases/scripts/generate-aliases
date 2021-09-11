@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# Usage: generate-aliases
+# Runs parse-rc.py script, that parses ~/.standardrc and prints
+# results.
+
+# Stops execution if any command fails.
+set -eo pipefail
+
+main() {
+  scriptsDir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+  existingCommands=$(
+    (compgen -c | tr ' ' '\n' | sort -u
+    compgen -A function | tr ' ' '\n' | sort -u)  \
+      | sort \
+      | uniq -u \
+      | tr '\n' ' ')
+  existingCompletions=$(
+    . /usr/share/bash-completion/bash_completion 2> /dev/null
+    complete)
+  aliases=$(
+    "$scriptsDir"/parse-rc.py \
+      "$existingCommands" \
+      "$existingCompletions")
+  echo "$aliases"
+}
+
+main "$@"

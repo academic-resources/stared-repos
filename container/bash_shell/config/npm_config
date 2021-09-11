@@ -1,0 +1,7 @@
+#!/bin/sh
+
+npm config set userconfig $HOME/.config/npm/npmrc
+npm config set prefix $HOME/.local
+npm config set cache $HOME/.cache/npm
+npm config set init-module $HOME/.config/npm/npm-init.js
+

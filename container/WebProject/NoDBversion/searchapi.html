@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Internet and Web Technologies</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="search.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 400px)' href='mobilestyles.css' />
+	</head>
+
+		<body>
+			<script src="script.js"></script>
+
+<div class="navbar">
+<ul>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Course</a>
+    <div class="dropdown-content">
+		<a href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanSpring2019">Zybook</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Search</a>
+    <div class="dropdown-content">
+		<a href="search.html">Fixed List</a>
+		<a href="#">From File</a>
+		<a href="searchapi.html">Google API</a>
+		<a href="#">Custom Search Engine</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Browser</a>
+    <div class="dropdown-content">
+      <a href="index.html" onclick="BrowserInfo()">Navigator</a>
+      <a href="index.html" onclick="WindowInfo()">Window</a>
+      <a href="index.html" onclick="applyOrientation()">Screen</a>
+      <a href="index.html" onclick="geturl()">Location</a>
+      <a href="index.html" onclick="getLocation()">Geolocation</a>
+    </div>
+  </li>
+  
+      <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">About</a>
+    <div class="dropdown-content">
+      <a href="index.html" onclick="AboutMe()">Anguel Metodiev</a>
+      <a href="index.html" onclick="ContactMe()">Contact Me</a>
+    </div>
+  </li>
+</ul>
+</div>
+
+<script>
+  (function() {
+    var cx = '018379122786601901865:mgunhojaa70';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+
+
+
+
+
+<script src="geolocation.js"></script>
+
+<script src="search.js"></script>
+	
+</body>
+</html>
+
