@@ -1,0 +1,21 @@
+.section {
+    padding-top: $spacing-y;
+    padding-bottom: $spacing-y;
+    page-break-inside: avoid;
+
+    &__title {
+        margin-bottom: $spacing-y;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid $gray;
+    }
+}
+
+.grid .section {
+    grid-column: span 2;
+
+    @include mq(md, true) {
+        &--half {
+            grid-column: span 1;
+        }
+    }
+}

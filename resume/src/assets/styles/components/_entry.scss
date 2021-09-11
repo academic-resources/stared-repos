@@ -1,0 +1,33 @@
+.entry {
+    &__header {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__time {
+        color: $gray;
+        font-size: 0.875rem;
+        letter-spacing: 0.125em;
+        text-transform: uppercase;
+        order: -1;
+        margin-bottom: 0.25rem;
+    }
+
+    &__title {
+    }
+
+    &__organization {
+        font-size: 1.125rem;
+    }
+
+    &__content {
+        max-width: 60ch;
+        * > * {
+            margin-top: 1em;
+        }
+    }
+}

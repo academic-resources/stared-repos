@@ -1,0 +1,44 @@
+.entrylist {
+    position: relative;
+    padding-left: 1rem;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 1px;
+        background: $gray;
+        background: linear-gradient(
+            to top,
+            rgba($gray, 0) 0%,
+            rgba($gray, 1) 100px,
+            rgba($gray, 1) 100%
+        );
+        position: absolute;
+        top: 2.25rem;
+        left: 1rem;
+        bottom: 0;
+    }
+
+    > * + * {
+        margin-top: $spacing-y;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: $spacing-x;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-radius: 50%;
+            background-color: $secondary-color;
+            background-color: var(--secondary-color, $secondary-color);
+            position: absolute;
+            top: 2.25rem;
+            left: 0;
+            transform: translate(-50%, 0);
+        }
+    }
+}

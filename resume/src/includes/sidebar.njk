@@ -1,0 +1,21 @@
+<aside class="sidebar">
+    <div class="container">
+
+        <div class="actions">
+            {% if author.email %}
+                <a class="actions__btn has-tooltip" aria-label="{{ strings.labels.email }}" href="mailto:{{ author.email | obfuscate | safe }}">
+                    {% icon "email" %}
+                </a>
+            {% endif %}
+            {% if author.telephone %}
+                <a class="actions__btn has-tooltip" aria-label="{{ strings.labels.telephone }}" href="tel:{{ author.telephone | stripSpaces }}">
+                    {% icon "telephone" %}
+                </a>
+            {% endif %}
+            <button class="actions__btn js-print utl-screen-only has-tooltip" aria-label="{{ strings.labels.print }}">
+                {% icon "print" %}
+            </button>
+        </div>
+
+    </div>
+</aside>

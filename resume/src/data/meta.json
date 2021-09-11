@@ -1,0 +1,9 @@
+{
+    "url": "https://demo-resume.netlify.app",
+    "lang": "en",
+    "locale": "en_us",
+    "colors": {
+        "primary": "#005b96",
+        "secondary": "#fc6767"
+    }
+}

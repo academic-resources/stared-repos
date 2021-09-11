@@ -1,0 +1,44 @@
+{
+    "name": "Anna Quincey",
+    "occupation": "Front-End Developer",
+    "location": "Vienna, AT",
+    "avatar": "avatar.jpg",
+    "pronouns": "she/her",
+    "email": "anna.quincey@gmail.com",
+    "telephone": "+01 23 456 789",
+    "website": "https://annaquincey.dev",
+    "skills": [
+        "HTML",
+        "CSS",
+        "Javascript / ES6",
+        "UI Design",
+        "React",
+        "Git"
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "level": "native"
+        },
+        {
+            "name": "German",
+            "level": "fluent"
+        },
+        {
+            "name": "French",
+            "level": "basic"
+        }
+    ],
+    "social": [
+        {
+            "name": "Github",
+            "user": "@annaquincey",
+            "url": "https://github.com/annaquincey"
+        },
+        {
+            "name": "LinkedIn",
+            "user": "AnnaQncy",
+            "url": "https://www.linkedin.com/in/annaquincey"
+        }
+    ]
+}

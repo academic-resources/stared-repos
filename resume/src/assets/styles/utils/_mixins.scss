@@ -1,0 +1,89 @@
+//--------------------
+// SCSS MIXINS
+//--------------------
+
+/// Creates media query for breakpoint and bigger
+///
+/// @param {string} $name - The name of the breakpoint
+/// @param {boolean} $print [false] - If the styles should also apply in print
+@mixin mq($name, $print: false) {
+    $min: breakpoint-min($name, $breakpoints);
+    @if $min {
+        @media #{if($print, 'print, all ', 'all')} and (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+/// Creates media query for smaller than breakpoint
+///
+/// @param {string} $name - The name of the breakpoint
+/// @param {boolean} $print [false] - If the styles should also apply in print
+@mixin mq-down($name, $print: false) {
+    $min: breakpoint-min($name, $breakpoints);
+    @if $min {
+        @media #{if($print, 'print, all ', 'all')} and (max-width: ($min - 1px)) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin hover-focus {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@mixin sr-only-focusable {
+    &:active,
+    &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+    }
+}
+
+@mixin hyphenate() {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+@mixin coverall() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin scrollable() {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@mixin button-reset() {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+}

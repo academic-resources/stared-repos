@@ -1,0 +1,56 @@
+{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(meta.url) }}{%- endset -%}
+{%- set pageTitle -%}{{ author.name }}{% if author.occupation %} - {{ author.occupation }}{% endif %}{% if author.location %} in {{ author.location }}{% endif %}{%- endset -%}
+{%- set pageDescription -%}Online Resume of {{ author.name }}{%- endset -%}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ pageTitle }}</title>
+
+{# General #}
+<meta name="description" content="{{ pageDescription }}">
+<link rel="canonical" href="{{ absolutePageUrl }}">
+
+{# Open Graph #}
+<meta property="og:site_name" content="{{ pageTitle }}">
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:description" content="{{ pageDescription }}">
+<meta property="og:url" content="{{ absolutePageUrl }}">
+<meta property="og:locale" content="{{ meta.locale }}">
+<meta name="twitter:card" content="summary">
+{%- if author.avatar -%}
+    {%- set avatarUrl -%}/assets/images/{{ author.avatar }}{% endset %}
+    <meta property="og:image" content="{{ avatarUrl | url | absoluteUrl(meta.url) }}">
+{%- endif -%}
+
+{# Favicon #}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon.png' | url }}">
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-32x32.png' | url }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-16x16.png' | url }}" sizes="16x16">
+<link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico' | url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | url }}">
+{% if meta.colors.primary %}
+    <link rel="mask-icon" href="{{ '/assets/images/favicon/safari-pinned-tab.svg' | url }}" color="{{ meta.colors.primary }}">
+    <meta name="theme-color" content="{{ meta.colors.primary }}">
+{% endif %}
+
+{# JSON LD #}
+<script type="application/ld+json">
+    {
+        "name":"{{ author.name }}",
+        "description":"{{ author.occupation }}{% if author.location %} in {{ author.location }}{% endif %}",
+        "author": {
+            "@type":"Person",
+            "name":"{{ author.name }}"
+        },
+        "@type":"WebSite",
+        "url":"{{ meta.url }}",
+        "image":"{{ meta.url }}/assets/images/{{ author.avatar }}",
+        "headline":"{{ author.name }}",
+        "sameAs":[
+            {%- for social in author.social -%}
+                "{{ social.url }}"{%- if not loop.last -%},{%- endif -%}
+            {%- endfor -%}
+        ],
+        "@context":"http://schema.org"
+    }
+</script>
