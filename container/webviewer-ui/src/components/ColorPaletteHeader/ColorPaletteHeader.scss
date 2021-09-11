@@ -1,0 +1,62 @@
+@import '../../constants/styles.scss';
+
+.palette-options {
+  display: flex;
+  // margin: 0 4px;
+  margin-bottom: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  width: 100%;
+  cursor: pointer;
+
+  .palette-options-button {
+    @include button-reset;
+    // flex breaks ellipsis text overflow for some reason
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    // flex-grow: 1;
+    flex: 1;
+    border-radius: 0px;
+
+    &:first-child {
+      border-bottom-left-radius: 4px;
+      border-top-left-radius: 4px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+
+    &:hover {
+      background: var(--popup-button-hover);
+    }
+
+    &.active {
+      background: var(--popup-button-active)
+    }
+
+    &.disabled {
+      color: var(--gray-6);
+      cursor: default;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+
+  .palette-options-divider {
+    width: 1px;
+    background: var(--divider);
+  }
+}

@@ -1,0 +1,99 @@
+@import './styles';
+
+$popup-button-height: 38px;
+$popup-icon-height: 18px;
+$popup-icon-width: 18px;
+$popup-z-index: 70;
+
+%popup {
+  @extend %open;
+  @extend %closed;
+  position: absolute;
+  z-index: $popup-z-index;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:empty {
+    padding: 0;
+  }
+
+  .buttons {
+    display: flex;
+  }
+
+  .Button {
+    margin: 4px;
+    width: 32px;
+    height: 32px;
+
+    @include mobile {
+      width: 42px;
+      height: 42px;
+    }
+
+    &:hover {
+      background: var(--popup-button-hover);
+    }
+
+    .Icon {
+      width: 18px;
+      height: 18px;
+
+      @include mobile {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+%popup-landscape {
+  @media (orientation: landscape) {
+    max-height: calc(100% - #{$top-bar-height} - 5px);
+    overflow: auto;
+  }
+}
+
+%popup-mobile {
+  @include mobile {
+    position: fixed;
+    width: 100vw;
+    top: initial !important;
+    left: 0px !important;
+    bottom: 0px;
+    height: calc(100% - #{$top-bar-height-m});
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &.open {
+      animation: bottom-up 0.3s;
+    }
+
+    &.closed {
+      transition: visibility 0s 0.3s;
+      animation: up-bottom 0.3s;
+    }
+  }
+}
+
+@keyframes bottom-up {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes up-bottom {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}

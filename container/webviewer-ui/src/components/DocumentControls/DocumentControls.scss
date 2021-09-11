@@ -1,0 +1,69 @@
+@import '../../constants/styles';
+
+.documentControls {
+  display: flex;
+  flex-direction: column;
+
+  .divider {
+    height: 1px;
+    background: var(--divider);
+    margin-top: 16px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    margin-left: 16px;
+  }
+
+  .documentControlsInput {
+    display: flex;
+    flex-direction: row;
+    padding-left: 16px;
+    padding-right: 8px;
+    padding-bottom: 16px;
+    padding-top: 8px;
+
+    .pagesInput {
+      width: 100%;
+      height: 30px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-color);
+
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
+
+      &:focus {
+        outline: none;
+        border: 1px solid var(--focus-border);
+      }
+
+      &::placeholder {
+        color: var(--placeholder-text);
+      }
+    }
+
+    .documentControlsButton {
+      display: flex;
+      flex-direction: row;
+
+      .Button {
+        height: 30px;
+        padding: 0px;
+        width: 30px;
+        margin: 0px 4px;
+
+        .Icon {
+          height: 24px;
+          width: 24px;
+          color: var(--icon-color);
+        }
+
+        &:hover {
+          background: var(--view-header-button-hover);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

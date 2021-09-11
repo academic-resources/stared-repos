@@ -1,0 +1,23 @@
+@import '../../constants/styles.scss';
+@import '../../constants/popup.scss';
+
+.StylePopup {
+  padding-top: 4px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+  flex-direction: column;
+  // overflow: auto;
+
+  // @include mobile {
+  //   padding-top: 0px;
+  //   padding-bottom: 0px;
+  // }
+
+  .sliders-container {
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 4px;
+  }
+}

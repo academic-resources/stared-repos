@@ -1,0 +1,89 @@
+@import '../../constants/styles';
+@import '../../constants/overlay';
+
+.PageNavOverlay {
+  height: 32px;
+
+  @include mobile {
+    height: 36px;
+  }
+
+  font-family: 'Lato';
+  font-weight: bold;
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.85;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background: #485056;
+  border-radius: 4px;
+  z-index: 0;
+  bottom: 20px;
+
+  .side-arrow-container {
+    @include button-reset;
+    width: 24px;
+    height: 24px;
+
+    @include mobile {
+      width: 40px;
+      height: 28px;
+    }
+
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+
+    &:hover {
+      background: #21242A;
+    }
+
+    .side-arrow {
+      width: 16px;
+      height: 16px;
+      color: #FFFFFF;
+    }
+  }
+
+  .formContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    form {
+      top: -1px;
+      position: relative;
+      color: #FFFFFF;
+
+      input {
+        min-width: 8px;
+        padding: 0;
+        border: none;
+        text-align: right;
+        font-family: 'Lato';
+        font-weight: bold;
+        background: transparent;
+        color: #FFFFFF;
+
+        cursor: pointer;
+        outline: none;
+        border-bottom: 1px solid var(--icon-color);
+        border-radius: 0px;
+      }
+    }
+  }
+}
+
+.FadeOut {
+  opacity: 0;
+  transition: opacity .3s ease;
+}

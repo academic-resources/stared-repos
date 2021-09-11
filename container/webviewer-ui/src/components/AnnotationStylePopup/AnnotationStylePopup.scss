@@ -1,0 +1,7 @@
+@import '../../constants/popup';
+
+.AnnotationStylePopup {
+	@include mobile {
+		padding-top: 4px;
+	}
+}

@@ -1,0 +1,56 @@
+@import './styles';
+
+%panel {
+  // position: fixed;
+  z-index: 65;
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s ease, visibility 0s .3s ease;
+
+  @include mobile {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.open {
+    transform: none;
+    visibility: visible;
+    transition: transform .3s ease, visibility 0s ease 0s;
+  }
+}
+
+@mixin closed($translate) {
+  &.closed {
+    visibility: hidden;
+    transition: transform .3s ease, visibility 0s ease .3s;
+    transform: $translate;
+
+    @include mobile {
+      transform: translateY(100%);
+    }
+  }
+}
+
+%right-panel {
+  @extend %panel;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 0px;
+}
+
+%left-panel {
+  @extend %panel;
+}
+
+%sub-panel {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+  flex-direction: column;
+}
+
+%center-of-panel {
+  margin: auto 0;
+  align-self: center;
+}

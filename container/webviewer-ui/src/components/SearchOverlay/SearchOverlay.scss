@@ -1,0 +1,140 @@
+@import '../../constants/styles';
+@import '../../constants/overlay';
+
+.SearchOverlay {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  flex-wrap: nowrap;
+  border: 0px;
+  border-radius: 0px;
+  background: transparent;
+  visibility: visible !important;
+  padding-right: 18px;
+  flex-grow: 0;
+
+  .input-container {
+    display: flex;
+    position: relative;
+    flex: 1 0 auto;
+
+    input {
+      width: 100%;
+      padding-left: 8px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-color);
+      padding-bottom: 6px;
+      padding-right: 42px;
+      padding-top: 4px;
+
+      &:focus {
+        outline: none;
+        border: 1px solid var(--focus-border);
+      }
+
+      &::placeholder {
+        color: var(--placeholder-text);
+      }
+    }
+
+    .input-button {
+      @include button-reset;
+      cursor: pointer;
+      background: var(--primary-button);
+      border-radius: 4px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+
+      .Icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      svg {
+        color: var(--primary-button-text);
+      }
+
+      &:hover {
+        background: var(--primary-button-hover);
+      }
+    }
+  }
+
+  .divider{
+    height: 1px;
+    width: 100%;
+    background: var(--divider);
+    margin: 16px 0px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    margin-top: 5px;
+
+    // toolkit choice component
+    > span {
+      margin-left: 16px;
+
+      // label of toolkit choice component
+      > label {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--faded-text);
+    margin-bottom: 16px;
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      align-self: flex-end;
+      margin-left: auto;
+
+      .button {
+        @include button-reset;
+        width: 28px;
+        height: 28px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8px;
+        cursor: pointer;
+
+        border: 1px solid var(--primary-button);
+        svg {
+          color: var(--primary-button);
+        }
+
+        &:hover {
+          background: var(--primary-button-hover);
+          border: 1px solid var(--primary-button-hover);
+          svg {
+            color: var(--primary-button-text);
+          }
+        }
+      }
+
+      .arrow {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

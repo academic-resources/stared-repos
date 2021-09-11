@@ -1,0 +1,71 @@
+@import '../../constants/styles';
+
+.Thumbnail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+
+  &.active {
+    .container {
+      .page-image {
+        border: 2px solid var(--focus-border);
+        box-shadow: none;
+        // so that thumbnail does not resize when putting a border on max-width max height canvas
+        box-sizing: content-box;
+      }
+    }
+
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 13px 10px 5px 10px;
+
+    cursor: pointer;
+
+    .page-image {
+      box-shadow: 0px 0px 3px 0px var(--box-shadow);
+    }
+
+    .annotation-image, .page-image {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .page-label {
+    margin-top: 11px;
+  }
+
+  &.selected {
+    $selected-icon-size: 16px;
+    $selected-border-size: 3px;
+
+    .container {
+      .thumbnail::before {
+        color: white;
+        background: var(--focus-border);
+        width: $selected-icon-size;
+        height: $selected-icon-size;
+        position: absolute;
+        z-index: 10;
+      }
+    }
+
+    .page-label {
+      color: var(--focus-border) !important;
+    }
+
+    canvas:first-of-type {
+      border: solid var(--focus-border) $selected-border-size !important;
+    }
+  }
+}
