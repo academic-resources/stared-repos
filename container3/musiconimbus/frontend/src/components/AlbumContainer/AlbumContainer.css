@@ -1,0 +1,52 @@
+.album__title {
+  box-sizing: border-box;
+  padding-bottom: .35em;
+  text-align: center;
+}
+
+.album__cover {
+  box-sizing: border-box;
+  max-width: 200px;
+  text-align: center;
+  padding: .5em;
+}
+
+.album__cover--placeholder {
+  font-size: 5em;
+  max-height: 150px;
+  box-sizing: border-box;
+}
+
+.artist {
+  font-weight: 300;
+  padding-top: .1em;
+}
+
+.container {
+  border: 1px solid black;
+  width: 275px;
+  height: 325px;
+  display: flex;
+  box-sizing: border-box;
+  margin: .2em .5em;
+  padding: 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: .1em;
+}
+
+.container:hover {
+  box-shadow: 0 0 7px rgba(157, 106, 253, .9);
+}
+
+.container:hover .album__cover--placeholder {
+  text-shadow: 0 1px 7px rgba(157, 106, 253, .9);
+
+}
+
+
+
+
+

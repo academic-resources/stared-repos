@@ -1,0 +1,5 @@
+node_modules
+.yarnclean
+yarn.lock
+*.log
+src/index.js

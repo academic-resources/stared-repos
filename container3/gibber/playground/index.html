@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Gibber</title>
+    <!-- tern + codemirror -->
+    <!--<link rel="stylesheet" href="../node_modules/codemirror/addon/hint/show-hint.css">-->
+    <!--<link rel="stylesheet" href="../node_modules/codemirror/addon/dialog/dialog.css">-->
+    <!--<link rel="stylesheet" href="../node_modules/codemirror/addon/tern/tern.css">-->
+    <!--<link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/show-hint.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/tern/tern.css">
+    <link rel="stylesheet" href="./gibber.css">
+    <link rel="icon" href="data:,">
+
+    <!--<script src='./gibberwocky.js'></script>-->
+    <script src='./bundle.js'></script>
+    <script src='./jsdsp.js'></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!--<script src='./babel.min.js'></script>-->
+    <!--<script src='./gibberwocky.js'></script>-->
+  </head>
+
+  <body>
+
+    <canvas id='metronome'></canvas>
+    <header>
+      <h1>gibber</h1>
+
+      <select id='examplesMenu'></select>
+
+      <img id='themer' src='./resources/themes/soyuz.png'></img>
+      <div id='thememenu'>
+        <ul>
+          <li><img src='./resources/themes/apollo.png' /></li>
+          <li><img src='./resources/themes/battlestation.png' /></li>
+          <li><img src='./resources/themes/lotus.png' /></li>
+          <li><img src='./resources/themes/marble.png' /></li>
+          <li><img src='./resources/themes/murata.png' /></li>
+          <li><img src='./resources/themes/ninetynine.png' /></li>
+          <li><img src='./resources/themes/noir.png' /></li>
+          <li><img src='./resources/themes/nord.png' /></li>
+          <li><img src='./resources/themes/sonicpi.png' /></li>
+          <li><img src='./resources/themes/soyuz.png' /></li>
+          <li><img src='./resources/themes/zenburn.png' /></li>
+        </ul>
+      </div>
+
+      <button id='sharebtn'>share</button>
+      <button id='connect'>gabber</button>
+      <button id='restart'>restart engine</button>
+
+      <span id='reference'>
+        <ul>
+          <li><a target='_blank' href='./docs/index.html'>reference</a></li>
+          <li><a target='_blank' href='https://github.com/gibber-cc/gibber'>source code</a></li>
+          <li><a target='_blank' href='https://discord.gg/REawtZZbQv'>discord</a></li>
+          <li><a target='_blank' href='https://forum.toplap.org/c/communities/gibber/16'>forum</a></li>
+          <li><a target='_blank' href='https://twitter.com/gibber_cc'>twitter</a></li>
+        </ul>
+      </span>
+    </header>
+
+    <div id='editor'></div>
+
+    <button id='hidebtn'>&#9650;</button>
+
+    <canvas id='graphics'></canvas>
+    <!--<div id='console'>-->
+    <!--  <div id='splitbar'></div>-->
+    <!--  <div id='main'></div> -->
+    <!--</div>-->
+  </body>
+
+</html>

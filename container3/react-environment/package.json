@@ -1,0 +1,33 @@
+{
+  "version": "0.5.0",
+  "name": "react-environment",
+  "description": "React Environment is a tool set for adding environment specific things that will be removed.",
+  "repository": "iammerrick/react-environment",
+  "author": "iammerrick <merrick.christensen@gmail.com>",
+  "main": "dist/index.js",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.16.0",
+    "babel-jest": "^16.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "glob": "^7.1.1",
+    "jest": "^16.0.1",
+    "webpack": "^1.13.2"
+  },
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "babel src/index.js --out-file dist/index.js && webpack",
+    "test": "jest",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "boilerplate",
+    "babel-plugin",
+    "react"
+  ],
+  "dependencies": {}
+}

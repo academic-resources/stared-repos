@@ -1,0 +1,26 @@
+extends layout
+
+append head
+  link(rel="stylesheet" href="/stylesheets/main.css")
+  if isProduction
+    script(src='/home.js' type='module' defer)
+  else
+    script(src="/javascripts/home.js" type="module" defer)
+  link(href='https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap' rel='stylesheet')
+
+block content
+  #content
+    #questionsHeader
+      if searchTerm
+        h2.searchHeader Search Results For: #{searchTerm}
+        span#searchTerm.searchHeader #{searchTerm}
+      else
+        h2 Top Questions
+        a(href="/questions/new" class="newQuestion")
+          button.buttonHover New Question
+        #sortBar
+          button(class="sortButton sortButton--selected buttonHover" id="recent") Recent
+          button(class="sortButton buttonHover" id="popular") Popular
+    #questions
+    #buttonContainer
+      #pageSelection

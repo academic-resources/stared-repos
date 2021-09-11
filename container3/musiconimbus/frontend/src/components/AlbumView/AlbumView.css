@@ -1,0 +1,148 @@
+.add-song {
+  margin-top: 1em;
+}
+
+.album-edit {
+  margin: 1em .5em;
+}
+
+.album__artist {
+  font-size: 2em;
+  padding-bottom: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.album__content--left {
+  display: flex;
+  flex-direction: column;
+  padding: 0 .5em 1.5em;
+}
+
+.album__content--right {
+  box-sizing: border-box;
+  padding: 0 2em 1em;
+  min-width: 372px;
+}
+
+.album__content--title {
+  margin-bottom: .3em;
+}
+
+.album__description {
+  flex-wrap: no-wrap;
+  margin-bottom: 1.4em;
+  max-width: 400px;
+}
+
+.album__layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 2em;
+}
+
+.edit-button {
+  box-sizing: border-box;
+  padding: .1em .5em;
+  outline: 0;
+  border: none;
+  background-color: white;
+  font-size: 1.2em;
+  align-self: center;
+}
+
+.edit-button:hover {
+  text-shadow: 0 0 4px rgba(157, 106, 253, 1);
+  font-size: 1.5em;
+  padding: 0 .2872em;
+}
+
+.single-album__cover {
+  max-width: 300px;
+  max-height: 300px;
+  align-self: center;
+  margin-bottom: 1.5em;
+  margin-top: .4em;
+}
+
+.single-album__cover--placeholder {
+  padding: 0;
+  font-size: 3em;
+}
+
+.single-album__cover--placeholder-container {
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+}
+
+.single-album__title {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.single-album__title--container {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: none;
+  width: 100%;
+}
+
+.single-album__title .edit-button{
+  font-size: .6em;
+  padding: 0;
+  margin: 0;
+  height: 2em;
+}
+
+.song-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.songs--layout {
+  margin-bottom: 3em;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .album__content {
+    margin-top: 1.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .album__content--right {
+    min-width: 100%;
+    justify-content: flex-start;
+  }
+
+  .single-album__cover--placeholder-container {
+    width: 250px;
+    height: 250px;
+    font-size: 2.2em;
+  }
+
+  .single-album__cover {
+    max-width: 250px;
+    max-height: 250px;
+  }
+}

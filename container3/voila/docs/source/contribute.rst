@@ -1,0 +1,227 @@
+.. Copyright (c) 2018, Voilà Contributors
+   Copyright (c) 2018, QuantStack
+
+   Distributed under the terms of the BSD 3-Clause License.
+
+   The full license is in the file LICENSE, distributed with this software.
+
+.. _contribute:
+
+=====================
+Contributing to Voilà
+=====================
+
+Voilà is a subproject of Project Jupyter and subject to the `Jupyter governance <https://github.com/jupyter/governance>`_ and `Code of conduct <https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md>`_.
+
+General Guidelines
+==================
+
+For general documentation about contributing to Jupyter projects, see the `Project Jupyter Contributor Documentation <https://jupyter.readthedocs.io/en/latest/contributing/content-contributor.html>`_.
+
+Community
+=========
+
+The Voilà team organizes public video meetings. The schedule for future meetings and minutes of past meetings can be found on our `team compass <https://voila-dashboards.github.io/>`_
+
+Setting up a development environment
+====================================
+
+First, you need to fork the project. Then setup your environment:
+
+.. code-block:: bash
+
+   # create a new conda environment
+   conda create -n voila -c conda-forge notebook nodejs
+   conda activate voila
+
+   # download voila from your GitHub fork
+   git clone https://github.com/<your-github-username>/voila.git
+
+   # install JS dependencies and build js assets
+   cd voila/js
+   npm install
+   cd ..
+
+   # install Voilà in editable mode
+   python -m pip install -e .
+
+Run Voilà
+=========
+
+To start Voilà, run:
+
+.. code-block:: bash
+
+   voila
+
+or
+
+.. code-block:: bash
+
+   python -m voila
+
+This will open a new browser tab at [http://localhost:8866/](http://localhost:8866/).
+
+When making changes to the frontend side of Voilà, open a new terminal window and run:
+
+.. code-block:: bash
+
+   cd packages/voila/
+   npm run watch
+
+Then reload the browser tab.
+
+**Note**: the notebooks directory contains some examples that can be run with Voilà.
+Checkout the `instructions <using.html#the-example-notebooks>`__ in the user guide
+for details on how to run them.
+
+Extensions
+==========
+
+Server extension
+----------------
+
+To manually enable the classic notebook server extension:
+
+.. code-block:: bash
+
+   jupyter serverextension enable voila --sys-prefix
+
+For Jupyter Server:
+
+.. code-block:: bash
+
+   jupyter server extension enable voila.server_extension --sys-prefix
+
+This makes Voilà available as a server extension: `http://localhost:8888/voila/tree <http://localhost:8888/voila/tree>`_.
+
+Notebook extension
+------------------
+
+To install the notebook extension:
+
+.. code-block:: bash
+
+   jupyter nbextension install voila --sys-prefix --py
+   jupyter nbextension enable voila --sys-prefix --py
+
+JupyterLab extension
+--------------------
+
+Node.js is required and can be installed with conda:
+
+.. code-block:: bash
+
+   conda install -c conda-forge nodejs
+
+The JupyterLab extension requires the server extension to be enabled. This can be done by running:
+
+.. code-block:: bash
+
+   jupyter serverextension enable voila --sys-prefix
+
+You can verify if the server extension is enabled by running:
+
+.. code-block:: bash
+
+   jupyter serverextension list
+
+
+If you use Jupyter Server:
+
+.. code-block:: bash
+
+   jupyter server extension enable voila --sys-prefix
+
+You can verify if the server extension is enabled by running:
+
+.. code-block:: bash
+
+   jupyter server extension list
+
+The JupyterLab extension is developed as a prebuilt extension using the new distribution system
+added in JupyterLab 3.0. To setup the development environment:
+
+.. code-block:: bash
+
+   # install the package in development mode
+   python -m pip install -e .
+
+   # link your development version of the extension with JupyterLab
+   jupyter labextension develop . --overwrite
+
+   # build the lab extension
+   jlpm run build --scope @voila-dashboards/jupyterlab-preview
+
+   # it is also possible to start in watch mode to pick up changes automatically
+   jlpm run watch
+
+
+Frontend Packages
+-----------------
+
+The Voilà repository consists of several packages such as the Voilà frontend and the JupyterLab extension.
+
+It follows a monorepo structure and uses ``lerna`` to streamline the workflow.
+
+To build all the frontend packages at once, run the following commands:
+
+.. code-block:: bash
+
+   # install dependencies
+   jlpm
+
+   # build the packages
+   jlpm run build
+
+This will run the ``build`` script in each of the packages.
+
+Using this structure, packages can easily be linted and follow the same code style and conventions used in other Jupyter projects.
+To lint the packages:
+
+.. code-block:: bash
+
+   # install dependencies
+   jlpm
+
+   # run ESLint
+   jlpm run eslint
+
+   # run prettier
+   jlpm run prettier
+
+
+Tests
+=====
+
+Install the test dependencies
+
+.. code-block:: bash
+
+   python -m pip install -e ".[test]"
+
+Enable the Jupyter server extension:
+
+.. code-block:: bash
+
+   jupyter server extension enable voila.server_extension --sys-prefix
+
+Running the tests locally also requires the `test_template` to be installed:
+
+.. code-block:: bash
+
+   python -m pip install ./tests/test_template
+
+Finally, to run the tests:
+
+.. code-block:: bash
+
+   python -m pytest
+
+Editing templates
+=================
+
+The default template files are located in the folder `share/jupyter/voila/templates/default`. They are automatically picked up when running Voilà in development mode.
+
+After editing the templates, reload the browser tab to see the changes.
+

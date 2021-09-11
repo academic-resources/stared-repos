@@ -1,0 +1,26 @@
+#newquestion__title {
+    margin: 0px 10px 10px 10px;
+    width: 80%;
+}
+
+#newquestion__body {
+    margin: 0px 10px 10px 10px;
+    width: 80%;
+}
+
+#newquestion__labelDiv{
+    width: 80%;
+    margin-top:10px
+}
+
+#newquestion__labelDiv2{
+    width: 80%;
+}
+
+.newQuestionContainer {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }

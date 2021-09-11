@@ -1,0 +1,63 @@
+name: Jupyter Server Tests [Mac OS]
+on:
+  push:
+    branches: "master"
+  pull_request:
+    branches: "*"
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos]
+        python-version:
+          ["3.6", "3.7", "3.8", "3.9", "3.10-dev", "pypy-3.7-v7.3.3"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: "x64"
+      - name: Upgrade packaging dependencies
+        run: |
+          pip install --upgrade pip setuptools wheel --user
+      - name: Get pip cache dir
+        id: pip-cache
+        run: |
+          echo "::set-output name=dir::$(pip cache dir)"
+      - name: Cache pip
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.pip-cache.outputs.dir }}
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('setup.cfg') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+            ${{ runner.os }}-pip-
+      - name: Install the Python dependencies
+        run: |
+          pip install -e .[test] codecov
+      - name: List installed packages
+        run: |
+          pip freeze
+          pip check
+      - name: Run the tests
+        if: ${{ !startsWith( matrix.python-version, 'pypy' ) }}
+        run: |
+          pytest -vv jupyter_server --cov jupyter_server --cov-branch --cov-report term-missing:skip-covered
+      - name: Run the tests on pypy
+        if: ${{ startsWith( matrix.python-version, 'pypy' ) }}
+        run: |
+          pytest -vv jupyter_server
+      - name: Install the Python dependencies for the examples
+        run: |
+          cd examples/simple && pip install -e .
+      - name: Run the tests for the examples
+        run: |
+          pytest examples/simple
+      - name: Coverage
+        if: ${{ !startsWith( matrix.python-version, 'pypy' ) }}
+        run: |
+          codecov

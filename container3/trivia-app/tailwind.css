@@ -1,0 +1,84 @@
+@tailwind base;
+
+@tailwind components;
+
+.btn {
+  @apply block px-5 py-3 rounded-lg uppercase tracking-wider text-2xl font-semibold;
+}
+
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+
+.btn-blue {
+  @apply bg-blue-400 text-white;
+}
+
+.btn-blue:hover {
+  @apply bg-blue-600;
+}
+
+.btn-blue:active {
+  @apply bg-blue-600;
+}
+
+.card {
+  @apply grid py-3 px-3 text-center border-solid border-4 shadow-xl rounded-lg border-gray-600;
+}
+
+.flex-center-all {
+  @apply flex items-center justify-center;
+}
+
+
+@tailwind utilities;
+
+/* Show and hide questions inside results */
+.truncate::before {
+  content: "+ ";
+}
+
+.show-some-text::before {
+  content: "- ";
+}
+
+.correct {
+  @apply text-green-600;
+}
+
+.incorrect {
+  @apply text-red-600;
+}
+
+
+/*  Spinner courtesy of https://tobiasahlin.com/spinkit/ */
+.spinner {
+  width: 80px;
+  height: 80px;
+  margin: 100px auto;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+  animation: sk-scaleout 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}

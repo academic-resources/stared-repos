@@ -1,0 +1,23 @@
+extends layout
+include utils
+block content
+  div.newQuestionContainer
+    h1(id="heading") New Question
+    div.pageWidthContainer
+      .container
+        if errors
+          div#errorDiv
+            ul.errorsList
+              each error in errors
+                li=error
+        div#formContainer
+          form(action="/questions" method="post" id="form")
+            div.signUpDiv(id="newquestion__labelDiv")
+              label(for="title" class="formLabel") Title
+            textarea(name="title" id="newquestion__title" class="textField" rows="2" cols="70")= titleVal
+            div.signUpDiv(id="newquestion__labelDiv2")
+              label(for="body" class="formLabel") Body
+            textarea(name="body" id="newquestion__body" class="textField" rows="25" cols="70")= bodyVal
+            input(type="submit" value="Post" id="loginButton")
+            input(type="hidden" name="_csrf" value=csrfToken)
+            input(type="hidden" name="isQuestion" value=true)

@@ -1,0 +1,27 @@
+<!doctype html>
+<meta charset="utf8">
+<head>
+  <link rel="stylesheet" href="lib/mocha/mocha.css">
+
+  <script src="lib/mocha/mocha.js"></script>
+  <script src="lib/chai/chai.js"></script>
+  <script type="text/javascript">
+    // Setup mocha
+    mocha.setup('bdd');
+
+    // Expose chai's expect method
+    var expect = chai.expect;
+  </script>
+  <script src="lib/underscore.js"></script>
+
+  <script src="lib/skipper.js"></script>
+
+  <script src="spec/stackSpec.js"></script>
+  <script src="spec/queueSpec.js"></script>
+
+</head>
+<body>
+<div id="mocha">
+</div>
+</body>
+</html>

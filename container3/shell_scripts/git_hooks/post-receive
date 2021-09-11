@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd /opt/codecurious
+git --git-dir /opt/bare --work-tree /opt/codecurious checkout master -f
+
+npm run deploy

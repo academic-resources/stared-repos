@@ -1,0 +1,15 @@
+{
+  "short_name": "MusicoNimbus",
+  "name": "MusicoNimbus",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,69 @@
+.switch {
+    cursor: pointer;
+    margin: 1vh;
+    text-align: center;
+    display: inline-block;
+    width: 6vh;
+}
+
+.button {
+    height: 5vh;
+    width: 6vh;
+    background-size: 100%;
+    background-image: url("../img/switch.png");
+}
+
+.switches {
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateZ(1px);
+    -moz-transform: translateZ(1px);
+}
+
+.leds {
+    position: absolute;
+    bottom: 14vh;
+    left: 0;
+    width: 100%;
+}
+
+.led {
+    text-align: center;
+    display: inline-block;
+    height: 1.6vh;
+    width: 1.6vh;
+    border-radius: 50%;
+    box-shadow: inset 0px -3px 6px 1px rgba(255,255,255,0.5);
+    background-color: hsla(100, 20%, 50%, 0.4);
+    -webkit-transition: box-shadow 100ms;
+    -moz-transition: box-shadow 100ms;
+    opacity: 0.6;
+    -webkit-transform: translateZ(1px);
+    -moz-transform: translateZ(1px);
+}
+
+.led:after {
+    content: '';
+    display: block;
+    height: 1.6vh;
+    width: 1.6vh;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 2px 12px 1px rgba(0,0,0,1);
+}
+
+.led.on {
+    opacity: 1;
+    background-color: hsla(100, 60%, 80%, 1);
+    box-shadow:
+        /*0px 2px 8px 1px rgba(0,0,0,1),*/
+        inset 0px -2px 7px 2px rgba(255,255,255,0.7),
+        0px 0px 60px 30px hsla(100, 75%, 75%, 0.9),
+        inset 2px 0px 4px 1px hsla(100,50%,55%,0.9);
+}
+
+.led.on:after {
+    box-shadow: 0px 2px 12px 1px rgba(0,0,0,0.2);
+}

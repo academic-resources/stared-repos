@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultsContainer should be rendered correctly 1`] = `
+<InfiniteScroll
+  onFetchMore={[Function]}
+>
+  <SearchResults
+    columnsNum={3}
+    isLoading={false}
+    searchItems={Array []}
+  />
+</InfiniteScroll>
+`;
+
+exports[`SearchResultsContainer should be rendered correctly with custom columns num 1`] = `
+<InfiniteScroll
+  onFetchMore={[Function]}
+>
+  <SearchResults
+    columnsNum={4}
+    isLoading={false}
+    searchItems={Array []}
+  />
+</InfiniteScroll>
+`;

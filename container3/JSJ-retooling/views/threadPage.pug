@@ -1,0 +1,42 @@
+extends layout.pug
+block content
+  link(rel='stylesheet', href='/stylesheets/threadPage.css')
+  .threadContainer
+    .questionTitle
+      h1= title
+    .post.question(id=`post-${threadQuestion.id}`)
+      if threadQuestion.User.id === userId
+        i(data-backend-id=threadQuestion.id)#delete-question.delete.far.fa-trash-alt
+        i(data-backend-id=threadQuestion.id)#edit-question.edit.fas.fa-edit
+      .body
+        .bodyContainer !{threadQuestion.body}
+      .bodyScore
+        i(data-backend-id=threadQuestion.id).post-vote-up.voting-button.fas.fa-chevron-up
+        p(data-backend-id=threadQuestion.id id=`score-${threadQuestion.id}`).scoreThreadPage=threadQuestion.score
+        i(data-backend-id=threadQuestion.id).post-vote-down.voting-button.fas.fa-chevron-down
+        p.label Likes
+    if threadAnswers
+      each answer in threadAnswers
+        .post.answer(id=`post-${answer.id}`)
+          if answer.User.id === userId
+            i(data-backend-id=answer.id).delete-answer.delete.far.fa-trash-alt
+            i(data-backend-id=answer.id).edit-answer.edit.fas.fa-edit
+          .body
+            .bodyContainer !{answer.body}
+          .bodyScore
+            i(data-backend-id=answer.id).post-vote-up.voting-button.fas.fa-chevron-up
+            p(data-backend-id=answer.id id=`score-${answer.id}`).scoreThreadPage=answer.score
+            i(data-backend-id=answer.id).post-vote-down.voting-button.fas.fa-chevron-down
+            p.label Likes
+  .answerContainer
+    .answerBox
+      form.create-answer(method='POST' action=`/questions/${threadQuestion.threadId}`)
+        label#answerInputLabel(for='answerInput') Provide Your Own Answer
+        textarea#answerInput(name='answerInput', cols='30', rows='10')
+        input(type='hidden' name='isQuestion' value='false')
+        input#csrf(type='hidden' name='_csrf' value=csrfToken)
+        button#answer-submit(type='submit') Submit
+  if isProduction
+    script(src='/interactivity.js' type='module' defer)
+  else
+    script(type='module' src='/javascripts/interactivity.js' defer)

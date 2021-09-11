@@ -1,0 +1,252 @@
+.threadContainer {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+}
+
+.threadContainer :not(pre) > code {
+  background-color: rgb(48, 141, 48);
+  border: 2px solid rgb(48, 141, 48);
+  border-radius: 3px;
+  color: white;
+}
+
+.threadContainer a:link {
+  text-decoration: none;
+  color: rgb(79, 175, 0)
+}
+
+.threadContainer a > code {
+  color: greenyellow;
+}
+
+
+.threadContainer .body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 1.25em;
+}
+
+.threadContainer .bodyContainer {
+  width: 72vw;
+  min-width: 400px;
+  max-width: 900px;
+  padding: 10px 0px;
+}
+
+.threadContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.threadContainer pre {
+  background-color: rgb(48, 141, 48);
+  border: 5px solid rgb(48, 141, 48);
+  border-radius: 3px;
+  color: white;
+  white-space: pre-wrap;
+}
+
+.threadContainer .post {
+  position: relative;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 10px 0 0;
+  margin: 10px auto;
+  width: 90vw;
+  min-width: 500px;
+  max-width: 1000px;
+  border: 3px solid black;
+  justify-content: flex-end;
+  max-height: 500px;
+  overflow-y: auto;
+  white-space: inherit;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+
+}
+
+.post::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+.post::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(22, 105, 5, 0.3);
+}
+
+.post::-webkit-scrollbar-thumb {
+  background-color: rgb(17, 158, 76);
+  outline: 1px solid rgb(188, 255, 214);
+}
+
+.threadContainer .post p {
+  margin: 0;
+}
+
+.threadContainer .post.question {
+  box-shadow: 0px 0px 10px 0px rgb(48, 200, 48);
+  margin-bottom: 100px;
+}
+
+.threadContainer .post.answer.best {
+  box-shadow: 0px 0px 10px 0px rgb(48, 157, 200);
+  margin-bottom: 50px;
+}
+
+.threadContainer .questionTitle {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10vw;
+}
+
+.threadContainer .questionTitle h1 {
+  text-align: center;
+}
+
+.threadContainer .questionTitle > h1 {
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(24, 24, 24);
+  font-weight: 400;
+
+}
+
+.threadContainer .post-vote-up.voted {
+  color: rgb(48, 200, 48);
+}
+
+.threadContainer .post-vote-down.voted {
+  color: rgb(230, 49, 49);
+}
+
+.threadContainer .voting-button {
+  font-size: 30px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.threadContainer .voting-button:hover {
+  cursor: pointer;
+  bottom: 2px;
+}
+
+.threadContainer .voting-button:active {
+  bottom: 0px
+}
+
+.threadContainer .post-vote-up:hover, .post-vote-up:active {
+  color: rgb(48, 200, 48);
+}
+
+.threadContainer .post-vote-down:hover, .post-vote-down:active {
+  color: rgb(230, 49, 49);
+}
+
+.threadContainer .bodyScore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75px;
+}
+
+.threadContainer .bodyScore > * {
+  align-self: center;
+}
+
+.threadContainer .bodyScore p.scoreThreadPage {
+  margin: 0 0;
+  font-size: 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.threadContainer .bodyScore p.label {
+  margin: 4px auto 0 auto;
+  font-size: 20px;
+}
+
+.answerContainer {
+  padding: 50px 0;
+  background-color: rgb(240, 240, 240);
+}
+
+.answerBox {
+  margin:  0 auto;
+  width: 50%;
+}
+
+.create-answer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.create-answer input {
+  padding: 5px;
+  margin: 5px;
+}
+
+.create-answer button {
+  outline: 0;
+  border: 1px solid rgb(44, 44, 44);
+  background-color:rgb(236, 236, 236);
+  font-size: 1em;
+  padding: 5px;
+  margin-top: 5px;
+  font-weight: 400;
+  transition: all 0.1s linear;
+}
+
+.create-answer button:hover {
+  color: white;
+  background-color:rgb(17, 158, 76);
+}
+
+#answerInputLabel {
+  font-size: x-large;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+#answer-submit {
+  width: 15%;
+  height: 5%;
+  align-self: flex-end;
+}
+
+.threadContainer .delete {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: rgb(245, 59, 59);
+}
+
+.threadContainer .edit {
+  position: absolute;
+  right: 25px;
+  top: 5px;
+}
+
+.edit-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 60vw;
+  height: 80vh;
+  left: 20vw;
+  right: 20vw;
+  top: 10vh;
+}

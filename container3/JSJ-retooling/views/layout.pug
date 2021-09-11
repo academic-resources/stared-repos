@@ -1,0 +1,47 @@
+include utils
+doctype html
+html
+  head
+    block head
+      title=title
+      meta(name='image' property="og:image" content="%PUBLIC_URL%/meta-image.png")
+      meta(name="description" property="og:description" content="The go to resource for any question you may have about JavaScript and related frameworks.")
+      link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+      link(rel='stylesheet' href='/stylesheets/main.css')
+      script(src="https://kit.fontawesome.com/0ccb37cdbe.js" crossorigin="anonymous")
+      if isProduction
+        script(src='/index.js' type='module')
+      else
+        script(src="/javascripts/index.js" type='module')
+  body
+    div(class='page-wrapper')
+      nav#navbar
+        a(href='/' id="homeButton")
+          img(id="homeButtonImage" src="../images/jsjungle_logo.png" alt="logo")
+
+        span(class="searchIcon" style="font-size: 1.6em; color: LightGreen;")
+          i(class="fas fa-search" id="searchIcon")
+
+        input#searchBar.textField(type="search" placeholder="Search..." name='searchbar' maxlength="70" value=searchTerm || '')
+
+        if authenticated
+          a(href='/users/' + user.id id="profileButton")
+            span(style="font-size: 2em; color: LightGreen;")
+              i(class="fas fa-user")
+        else
+          a(href='/users/login' id="logInLink")
+            span(style="font-size: 2em; color: LightGreen;")
+              i(class="fas fa-sign-in-alt")
+
+      block content
+
+      div(id='footer-container')
+        div(id='footer')
+          +authorInfo('Giiaga Agha', 'https://github.com/Giiaga', 'https://www.linkedin.com/in/giiaga-agha-a500031b3/',
+          'https://angel.co/u/giiaga-agha', null)
+          +authorInfo('Joshua Alan', 'https://github.com/jm-alan', 'https://www.linkedin.com/in/j-alan/',
+          null, null)
+          +authorInfo('Andrew Dotterer', 'https://github.com/adotterer', 'https://www.linkedin.com/in/adotterer/',
+          'https://angel.co/u/adotterer', 'https://adotterer.github.io/')
+          +authorInfo('Jacob Premo', 'https://github.com/jpremo', 'https://www.linkedin.com/in/jacob-premo/',
+          'https://angel.co/u/jacob-premo', 'https://www.jacobpremo.com/')

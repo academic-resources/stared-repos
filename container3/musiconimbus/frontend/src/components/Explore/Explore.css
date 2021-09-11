@@ -1,0 +1,12 @@
+.albums__layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tagline-explore {
+  box-sizing: border-box;
+  padding-bottom: 2em;
+}

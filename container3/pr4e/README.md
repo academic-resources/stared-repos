@@ -1,0 +1,1 @@
+Here are the examples and worked exercises for the course: Python for Everybody by Charles Severance (https://class.coursera.org/pythonlearn-004/)

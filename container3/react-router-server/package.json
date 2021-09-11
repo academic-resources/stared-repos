@@ -1,0 +1,60 @@
+{
+  "name": "react-router-server",
+  "author": "Gabriel Bull",
+  "version": "4.2.3",
+  "description": "Server Side Rendering library for React Router v4",
+  "main": "./build/index.js",
+  "types": "./index.d.ts",
+  "keywords": [
+    "code-splitting",
+    "react",
+    "react-component",
+    "react-router",
+    "reactjs",
+    "server",
+    "server side rendering",
+    "ssr",
+    "webpack",
+    "webpack2"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabrielbull/react-router-server.git"
+  },
+  "scripts": {
+    "eslint": "eslint ./src",
+    "prebuild": "npm run eslint && npm run test && del build",
+    "build": "babel ./src --out-dir ./build",
+    "build-publish": "npm run build && npm publish",
+    "test": "mocha test"
+  },
+  "peerDependencies": {
+    "react": "^15.3 || ^16.0 || ^16.0.0-alpha.12",
+    "react-dom": "^15.3 || ^16.0 || ^16.0.0-alpha.12",
+    "react-router": "^4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.34",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-system-import-transformer": "^3.1.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.16.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.5.1",
+    "mocha": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "stats-webpack-plugin": "^0.6.2",
+    "webpack": "^3.10.0"
+  }
+}

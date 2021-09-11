@@ -1,0 +1,32 @@
+h1 {
+  color: #555555;
+}
+
+body {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.textField {
+  border-radius: 6px;
+  border: 1px solid rgb(39, 39, 39);
+  /* background-color: rgb(235, 186, 131); */
+  color: black;
+  transition: all 0.2s ease-in;
+
+}
+
+.textField:focus {
+  /* background-color: rgb(185, 147, 104); */
+  border: 1px solid rgb(19, 124, 19);
+  outline: 0px;
+}
+
+.textField::placeholder {
+  color: rgb(32, 32, 32);
+}
+
+.formLabel {
+  color: rgb(37, 37, 37);
+  font-size: large;
+}

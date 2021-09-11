@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchSummary should be rendered correctly 1`] = `
+<div
+  className="mb-3"
+>
+  <small>
+    Total results:  
+    <span
+      className="badge badge-dark"
+    >
+      42
+    </span>
+  </small>
+</div>
+`;
+
+exports[`SearchSummary should be rendered if nothing was found 1`] = `
+<div
+  className="mb-3"
+>
+  <small>
+    Total results:  
+    <span
+      className="badge badge-dark"
+    >
+      0
+    </span>
+  </small>
+</div>
+`;
+
+exports[`SearchSummary should not be rendered if there are no search items 1`] = `null`;

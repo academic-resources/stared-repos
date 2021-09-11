@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    # Replace username/repo:tag with your name and image details.
+    image: 'trekhleb/hello-docker:latest'
+    ports:
+      - '80:80'
+    networks:
+      - 'webnet'
+  redis:
+    image: redis
+    networks:
+      - 'webnet'
+networks:
+  webnet:

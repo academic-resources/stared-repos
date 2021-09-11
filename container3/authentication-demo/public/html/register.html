@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h2>Register</h2>
+            <form v-on:submit.prevent="register">
+                <input placeholder="username" v-model="registerForm.username">
+                <input placeholder="password" type="password" v-model="registerForm.password">
+                <input type="submit">
+
+            </form>
+            <h2>Log In</h2>
+            <form v-on:submit.prevent="login">
+                <input placeholder="username" v-model="loginForm.username">
+                <input placeholder="password" type="password" v-model="loginForm.password">
+                <input type="submit">
+
+            </form>
+            <hr>
+            <li><a href="/logout">log out</a></li>
+            <hr>
+        </div>
+        <script src="/js/register.js"></script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+{
+  "name": "scribbletune",
+  "version": "4.1.1",
+  "description": "Create music with JavaScript and Node.js!",
+  "main": "./index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "doc": "npx typedoc --out docs src/ src/typings.d.ts",
+    "doc:json": "npx typedoc --json typedoc-out.json src",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build:node": "npx webpack",
+    "build:browser": "cross-env TARGET=browser npx webpack",
+    "build:cdn": "cross-env TARGET=cdn npx webpack",
+    "build:max": "cross-env TARGET=max npx webpack",
+    "build": "npm t && npm run build:node && npm run build:browser && npm run build:cdn && npm run build:max",
+    "watch:browser": "cross-env TARGET=browser npx webpack --watch --mode=development",
+    "watch:cdn": "cross-env TARGET=cdn npx webpack --watch",
+    "watch:max": "cross-env TARGET=max npx webpack --watch",
+    "watch:node": "npx webpack --watch",
+    "rebuild": "rm -rf node_modules; rm package-lock.json; npm i; npm run build"
+  },
+  "dependencies": {
+    "harmonics": "^1.0.7",
+    "jsmidgen": "~0.1.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.19.15",
+    "cross-env": "^7.0.3",
+    "dts-bundle": "^0.7.3",
+    "jest": "^26.6.3",
+    "prettier": "1.19.1",
+    "ts-jest": "^26.4.4",
+    "ts-loader": "^6.2.2",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-plugin-prettier": "^2.3.0",
+    "typescript": "^3.9.7",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scribbletune/scribbletune.git"
+  },
+  "keywords": [
+    "javascript",
+    "music",
+    "music theory",
+    "midi",
+    "web audio api",
+    "jsmidgen",
+    "tone.js",
+    "tonal"
+  ],
+  "author": "Walmik Deshpande",
+  "license": "MIT",
+  "runkitExampleFilename": "runkit.js",
+  "bugs": {
+    "url": "https://github.com/scribbletune/scribbletune/issues"
+  },
+  "engines": {
+    "node": ">8.x.x"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,0 +1,41 @@
+.add-song__title {
+  margin-bottom: .5em;
+}
+
+.add-song__title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2.5em;
+}
+
+.form__song {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  max-width: 100%;
+  margin-top: .7em;
+}
+
+select {
+  max-width: 14em;
+}
+
+.x {
+  box-sizing: border-box;
+  padding: 0;
+  text-align: right;
+  width: 10%;
+  outline: 0;
+  border: none;
+  background-color: white;
+  font-size: 1.7em;
+  align-self: center;
+}
+
+.x:hover {
+  text-shadow: 0 0 4px rgba(157, 106, 253, 1);
+}

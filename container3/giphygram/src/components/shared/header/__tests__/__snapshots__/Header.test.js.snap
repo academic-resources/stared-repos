@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should be rendered correctly 1`] = `
+<div>
+  <h1
+    className="text-center italic mt-5 mb-5 logo"
+  >
+    <a
+      className="text-dark"
+      href="/"
+      onClick={[Function]}
+    >
+      GiphyGram
+    </a>
+  </h1>
+  <div
+    className="mb-3"
+  >
+    <SearchFormContainerConnected />
+  </div>
+</div>
+`;

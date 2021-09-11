@@ -1,0 +1,44 @@
+{
+  "name": "express-project-starter",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=16.x"
+  },
+  "scripts": {
+    "heroku-postbuild": "npm run build && rm -rf ./public/javascripts",
+    "start": "per-env",
+    "start:development": "nodemon --trace-warnings -r dotenv/config ./bin/www",
+    "start:production": "node ./build/main.js",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@sucrase/webpack-loader": "^2.0.0",
+    "bcryptjs": "^2.4.3",
+    "connect-session-sequelize": "^7.0.4",
+    "cookie-parser": "~1.4.4",
+    "core-js": "^3.16.2",
+    "csurf": "^1.11.0",
+    "express": "~4.16.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.7.0",
+    "faker": "^5.5.3",
+    "http-errors": "~1.6.3",
+    "marked": "^2.0.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "per-env": "^1.0.2",
+    "pg": "^8.4.2",
+    "pug": "^3.0.2",
+    "sanitize-html": "^2.2.0",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^4.0.0",
+    "nodemon": "^2.0.6"
+  }
+}

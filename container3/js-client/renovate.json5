@@ -1,0 +1,24 @@
+{
+  extends: ['github>netlify/renovate-config:default'],
+  ignorePresets: [':prHourlyLimit2'],
+  semanticCommits: true,
+  dependencyDashboard: true,
+  automerge: false,
+  packageRules: [
+    {
+      // Those cannot be upgraded to a major version
+      packageNames: [
+        // Requires Node.js >= 10
+        'ava',
+        'nock',
+        'p-map',
+        'tempy',
+        // Requires Node.js >= 12
+        'p-wait-for',
+      ],
+      major: {
+        enabled: false,
+      },
+    },
+  ],
+}

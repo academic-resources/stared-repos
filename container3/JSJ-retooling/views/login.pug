@@ -1,0 +1,33 @@
+extends layout
+include utils
+block content
+  if isProduction
+    script(src='/login.js' type='module' defer)
+  else
+    script(src="/javascripts/login.js" type="module" defer)
+  div.wholePageContainer
+    h1(id="heading") Login
+    div.pageWidthContainer
+      .container
+        if errors
+          div#errorDiv
+            ul.errorsList
+              each error in errors
+                li=error
+        div#formContainer
+          if (pref)
+            form(action=`/users/login?pref=${pref}` method="post" id="form")
+              +field2("Username/Email", "identification", "text", null, "labelUserSignUp", "username")
+              +field2("Password", "password", "password", null, null, "password")
+              input(type="submit" value="Log In" class="inputButton")
+              input(type="hidden" name="_csrf" value=csrfToken)
+              a(href=`/users/signup?pref=${pref}` id="signupLink" class="formLabel") Sign Up
+              button(id="demoUser" type="submit" class="formLabel inputButton") Demo Login
+          else
+            form(action=`/users/login` method="post" id="form")
+              +field2("Username/Email", "identification", "text", null, "labelUserSignUp", "username")
+              +field2("Password", "password", "password", null, null, "password")
+              input(type="submit" value="Log In" class="inputButton")
+              input(type="hidden" name="_csrf" value=csrfToken)
+              a(href=`/signup` id="signupLink" class="signUpLink") Sign Up
+              button(id="demoUser" type="submit" class="formLabel inputButton") Demo Login

@@ -1,0 +1,33 @@
+
+.button-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form__title {
+  font-family: 'Lora', serif;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.signup {
+  color: #777;
+  font-size: .8em;
+  align-self: center;
+}
+
+.signup__link {
+  color: #777;
+  text-decoration: underline;
+}
+
+.signup__link:hover {
+  color: black;
+}

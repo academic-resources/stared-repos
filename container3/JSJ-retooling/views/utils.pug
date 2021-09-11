@@ -1,0 +1,24 @@
+mixin field( fieldName, fieldType, id, fieldValue=null, fieldLabel)
+    label(for=fieldName)=fieldLabel
+    input(type=fieldType name=fieldName id=id value=fieldValue class="textField")
+mixin field2(fieldLabel, fieldName, fieldType, fieldValue=null, id=null, inputId= null)
+    div.signUpDiv(id=id)
+        label(for=fieldName class="formLabel")=fieldLabel
+    div
+        input(type=fieldType name=fieldName value=fieldValue class="textField signUpField" id=inputId)
+mixin linkCircle( faInfo, link)
+    a(href=link target="_blank" class='footer-link')
+        div(class='footer-link-image-wrapper')
+            i(class=faInfo)
+mixin authorInfo( name, github=null, linkedIn=null, angelList=null, personalSite=null)
+    div(class='footer-user-info')
+        div(class='footer-button-wrapper')
+            if github
+                +linkCircle('fab fa-github fa-lg', github)
+            if linkedIn
+                +linkCircle('fab fa-linkedin fa-lg', linkedIn)
+            if angelList
+                +linkCircle('fab fa-angellist fa-lg', angelList)
+            if personalSite
+                +linkCircle('fas fa-briefcase fa-lg', personalSite)
+        div(class='footer-name')=name

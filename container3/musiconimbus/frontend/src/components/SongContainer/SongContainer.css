@@ -1,0 +1,90 @@
+.btn--play-select {
+  box-sizing: border-box;
+  border: none;
+  width: 90%;
+  padding: .5em;
+  background-color: white;
+  border-radius: none;
+  margin: 0;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  align-self: flex-start;
+  justify-content: space-between;
+}
+
+.btn--play-select:hover {
+  background-color: #9d6afd;
+}
+
+.btn--play-select:hover p {
+  color: black;
+}
+
+.composer {
+  box-sizing: border-box;
+  text-align: right;
+  padding-left: 1em;
+  font-size: .8em;
+  color: #777;
+}
+
+.form__song select {
+  width: 100%;
+  max-width: 100%;
+  height: 2.2em;
+}
+
+.song__container {
+  width: 100%;
+  max-width: 400px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.song__title {
+  font-size: 1em;
+  margin-left: .5em;
+  text-align: left;
+}
+
+.song__title--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+@media screen and (max-width: 650px) {
+  .composer {
+    padding: .2em 0 0 1.5em;
+    /* width: 100%; */
+    /* text-align: center; */
+    font-size: 1em;
+  }
+
+  .song__title {
+    font-size: 1.3em;
+  }
+
+  .btn--play-select {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .song__container {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+}

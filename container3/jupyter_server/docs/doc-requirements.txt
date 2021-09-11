@@ -1,0 +1,12 @@
+ipykernel
+jinja2
+jupyter_client
+myst-parser
+nbformat
+prometheus_client
+pydata_sphinx_theme
+Send2Trash
+sphinxcontrib-openapi
+sphinxcontrib_github_alt
+sphinxemoji
+tornado

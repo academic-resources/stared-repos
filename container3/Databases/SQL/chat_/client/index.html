@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chat with JSON!</title>
+    <script src="vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/setup.js"></script>
+  </head>
+  <body>
+
+    <div id="main">
+      <h1>Chat with JSON!</h1>
+      <input id = "inputBox" type = "text" placeholder = "Enter your message here"><br>
+      <input id="submit" type = "submit" value = "Post your Message"> <br>
+      <div id="chat">
+        <input id="createChatRoom" type = "submit" value = "Create a Chat Room">
+        <select id="enterChatRoom">
+          <option>Enter a Chat Room</option>
+          <option value="general">Home</option>
+        </select>
+    </div>
+    </div>
+    <div id="container"></div>
+  </body>
+</html>

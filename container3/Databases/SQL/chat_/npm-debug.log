@@ -1,0 +1,23 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/boxen/nodenv/versions/v0.8/bin/node',
+1 verbose cli   '/opt/boxen/nodenv/versions/v0.8/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.1.59
+3 info using node@v0.8.8
+4 verbose node symlink /opt/boxen/nodenv/versions/v0.8/bin/node
+5 verbose read json /Users/hackreactor/package.json
+6 error install Couldn't read dependencies
+7 error Error: ENOENT, open '/Users/hackreactor/package.json'
+8 error If you need help, you may report this log at:
+8 error     <http://github.com/isaacs/npm/issues>
+8 error or email it to:
+8 error     <npm-@googlegroups.com>
+9 error System Darwin 12.3.0
+10 error command "/opt/boxen/nodenv/versions/v0.8/bin/node" "/opt/boxen/nodenv/versions/v0.8/bin/npm" "install"
+11 error cwd /Users/hackreactor/Desktop/2013-08-chat-server-master
+12 error node -v v0.8.8
+13 error npm -v 1.1.59
+14 error path /Users/hackreactor/package.json
+15 error code ENOENT
+16 error errno 34
+17 verbose exit [ 34, true ]
