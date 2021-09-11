@@ -1,0 +1,44 @@
+.piece {
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-color: transparent;
+	z-index:3;
+}
+.rook_black {
+	background-image: url(../images/chesspieces/rook.black.png);
+}
+.knight_black {
+	background-image: url(../images/chesspieces/knight.black.png);
+}
+.bishop_black {
+	background-image: url(../images/chesspieces/bishop.black.png);
+}
+.queen_black {
+	background-image: url(../images/chesspieces/queen.black.png);
+}
+.king_black {
+	background-image: url(../images/chesspieces/king.black.png);
+}
+.pawn_black {
+	background-image: url(../images/chesspieces/pawn.black.png);
+}
+
+.rook_white {
+	background-image: url(../images/chesspieces/rook.white.png);
+}
+.knight_white {
+	background-image: url(../images/chesspieces/knight.white.png);
+}
+.bishop_white {
+	background-image: url(../images/chesspieces/bishop.white.png);
+}
+.queen_white {
+	background-image: url(../images/chesspieces/queen.white.png);
+}
+.king_white {
+	background-image: url(../images/chesspieces/king.white.png);
+}
+.pawn_white {
+	background-image: url(../images/chesspieces/pawn.white.png);
+}

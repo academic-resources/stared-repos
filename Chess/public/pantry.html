@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="text/javascript" src="javascripts/jquery-1.5.1.min.js"></script>
+	<script type="text/javascript" src="javascripts/underscore-min.js"></script>
+	<script type="text/javascript" src="javascripts/store.js"></script>
+	<style>
+	
+	</style>
+	
+</head>
+
+<body>
+	<div id="nav">
+		<ul>
+			<li>
+				<a href="javascript:$('#cal').empty();mealPlanet.init();_.each(cal.rows, function(row){_.each(row.cells, function(cell){if(cell.cellIndex != new Date().getDay()+1 && cell.cellIndex != 0 ){$(cell).hide()}})})">Today</a>
+			</li>
+			<li>
+				<a href="javascript:$('#cal').empty();mealPlanet.init();_.each(cal.rows, function(row){_.each(row.cells, function(cell){if(cell.cellIndex != new Date().getDay()+2 && cell.cellIndex != 0 ){$(cell).hide()}})})">Tomorrow</a>
+			</li>
+			<li>
+				<a href="javascript:$('#cal').empty();mealPlanet.init()">Week</a>	
+			</li>
+			<li>
+				<a href="http://127.0.0.1:3001/">Pantry</a>
+			</li>
+			<li>
+				Meals
+			</li>
+			<li>
+				Recipes
+			</li>
+		</ul>
+	</div>
+	<div>
+		<input type="text" name="ingredient"></input>
+		<select multiple="multiple" name="type" id ="type" class="chzn-select"></select>
+		<input type="text" name="quantity"></input>
+		<select multiple="multiple" name="measure" id="measure" class="chzn-select"></select>
+	</div>
+</body>
+
+<script type="text/javascript">
+var itemTypes = ["food staple", "Dairy/cheese", "Grain/carbs", "Meat/protein", "Fruit", "Vegetable", "Spices", "Sweeteners", "Baking", "Oils", "Vinegars"]
+,		quantities = ["grams", "ounces", "cups", "pounds", "package", "milliliters", "liters", "teaspoons"];
+
+$('type').append(_.each(itemTypes, function(){
+	
+}))
+
+
+</script>
+
+</html>

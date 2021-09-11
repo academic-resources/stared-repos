@@ -1,0 +1,47 @@
+<div class='boardOptions'>
+  <h1>
+    Game
+  </h1>
+  <div class='controls'>
+    <button type='submit' onclick='game.reset()'>NEW <br />GAME</button>
+    <button type='submit' onclick='game._clearBoard()'>CLEAR <br /> PIECES</button>
+    <button type='submit'  onclick='game.rotate()'>ROTATE BOARD</button>
+  </div>
+  <fieldset>
+        <label class='forClock'>
+      <input name='useGameClock' type='checkbox' /> 
+        <div class='checkspot'></div>
+        <p class='instructions'>SHOW GAME CLOCK</p>
+    </label>
+  </fieldset>
+  <fieldset id='variantSelector'>
+    <legend>
+      SELECT VARIANT
+    </legend>
+    <label>
+      <input name='variant' id='standard' type='radio' checked=true />
+      <div class='radio'></div>
+       <p class='instructions'>STANDARD CHESS</p>
+    </label>
+    <br />
+    <label>
+       <input name='variant' id='fischerrandom' type='radio' />
+       <div class='radio'></div>
+        <p class='instructions'>FISCHER-RANDOM 960</p>
+    </label>
+    <br />
+    <label>
+       <input name='variant' id='princes' type='radio' />
+       <div class='radio'></div>
+        <p class='instructions'>SLUGFEST 7x7</p>
+    </label>
+    <br />
+    <label style='display:none'>
+       <input name='variant' id='blank' type='radio' />
+       <div class='radio'></div>
+        <p class='instructions'>EMPTY BOARD</p>
+       <input type='text' name='rows' id='gridX' value=8></input> <span class='x'>x</span>
+       <input type='text' name='columns' id='gridY' value=8></input> 
+    </label>
+  </fieldset>
+</div>
