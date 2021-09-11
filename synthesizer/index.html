@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway|Mr+Dafoe:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/308f5cd3cc.js"></script>
+    <script src="./dist/main.js"></script>
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>Wavy Synthesizer</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <a href="https://www.linkedin.com/in/john-michael-riley-22006018a/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <div class="header-name">John-Michael Riley</div>
+      </div>
+      <h1>wavy</h1>
+      <a href="https://github.com/jm-riley">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="synth-container">
+      <div class="synth-controls">
+        <div class="waveform-controls">
+          <div class="control-section-title">oscillators</div>
+          <div class="sine-control">
+            <img src="./dist/sine.png" />
+            <input
+              class="gain-slider"
+              type="range"
+              id="sine-gain"
+              min="0.0"
+              max="1.0"
+              step="0.025"
+            />
+          </div>
+          <div class="sawtooth-control">
+            <img src="./dist/sawtooth.png" />
+            <input
+              class="gain-slider"
+              type="range"
+              id="sawtooth-gain"
+              min="0.0"
+              max="1.0"
+              step="0.025"
+            />
+          </div>
+          <div class="square-control">
+            <img src="./dist/square.png" />
+            <input
+              class="gain-slider"
+              type="range"
+              id="square-gain"
+              min="0.0"
+              max="1.0"
+              step="0.025"
+            />
+          </div>
+        </div>
+        <div class="oscilloscope-contaier">
+          <canvas id="oscilloscope"></canvas>
+        </div>
+        <div class="synth-panel-right">
+          <div class="filter-controls">
+            <div class="control-section-title">lowpass filter</div>
+            <div class="filter-control">
+              <span>cutoff</span>
+              <input id="lpf" type="range" min="20" max="8000" step="0.1" />
+            </div>
+          </div>
+          <div class="envelope-controls">
+            <div class="control-section-title">amplitude envelope</div>
+            <div class="envelope-control">
+              <span>attack</span>
+              <input id="attack" type="range" min="0" max="1" step="0.025" />
+            </div>
+            <div class="envelope-control">
+              <span>release</span>
+              <input id="release" type="range" min="0" max="1" step="0.025" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="keyboard">
+        <div class="keyboard-keys">
+          <div class="keys white-key" id="65">A</div>
+          <div class="keys black-key" id="87">W</div>
+          <div class="keys white-key" id="83">S</div>
+          <div class="keys black-key" id="69">E</div>
+          <div class="keys white-key" id="68">D</div>
+          <div class="keys white-key" id="70">F</div>
+          <div class="keys black-key" id="84">T</div>
+          <div class="keys white-key" id="71">G</div>
+          <div class="keys black-key" id="89">Y</div>
+          <div class="keys white-key" id="72">H</div>
+          <div class="keys black-key" id="85">U</div>
+          <div class="keys white-key" id="74">J</div>
+          <div class="keys white-key" id="75">K</div>
+        </div>
+      </div>
+    </div>
+    <div class="frequency-graph-container">
+      <canvas id="frequencies"> </canvas>
+    </div>
+  </body>
+</html>
