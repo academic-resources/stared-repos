@@ -1,0 +1,12 @@
+version: '3'
+services:
+    api:
+        build: .
+        command: uvicorn crawler_api.main:app --host 0.0.0.0 --reload
+        ports:
+            - 8000:8000
+        volumes:
+            - ./:/opt/code
+        container_name: api-legal-process
+        networks:
+            - default

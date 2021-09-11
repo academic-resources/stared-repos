@@ -1,0 +1,4 @@
+aiohttp
+fastapi
+parsel
+uvicorn
