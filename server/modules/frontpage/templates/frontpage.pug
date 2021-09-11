@@ -1,0 +1,22 @@
+extends /layouts/main
+
+include blocks/_frontpage-content
+
+block append variables
+  - var headTitle = t('tutorial.modern_javascript_tutorial');
+  - var title = t('tutorial.modern_javascript_tutorial')
+  - var header = t('tutorial.modern_javascript_tutorial')
+  - var layout_main_class = 'main_width-limit-wide'
+  - var layout_page_class = 'page_frontpage'
+  - var content_class = 'frontpage'
+
+
+block append head
+  !=js("tutorial", {defer: true})
+  !=css("frontpage", {defer: true})
+  meta(name="description" content=t('site.meta.description'))
+
+block content
+  +frontpage-content({
+    tutorialTree, topArticlesRendered
+  })

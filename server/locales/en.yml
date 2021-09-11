@@ -1,0 +1,101 @@
+site:
+  privacy_policy: Privacy policy
+  terms: terms of usage
+
+  gdpr_dialog:
+    title: This website uses cookies
+    text: We use browser technologies such as cookies and local storage to store your preferences. You need to accept our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Use</a> for us to do so.
+    accept: Accept
+    cancel: Cancel
+
+  toolbar:
+    lang_switcher:
+      cta_text: We want to make this open-source project available for people all around the world. Please <a href="https://github.com/javascript-tutorial/en.javascript.info" rel="noopener noreferrer" target="_blank">help us to translate</a> the content of this tutorial to the language you know
+      footer_text: how much content is translated to the corresponding language
+      old_version: Old version is published, needs backporting.
+    logo:
+      normal:
+        svg: sitetoolbar__logo_en.svg
+        width: 200 # 171
+      normal-white:
+        svg: sitetoolbar__logo_en-white.svg
+      small:
+        svg: sitetoolbar__logo_small_en.svg
+        width: 70
+      small-white:
+        svg: sitetoolbar__logo_small_en-white.svg
+    sections:
+    - slug: ''
+      url: '/'
+      title: 'Tutorial'
+    - slug: 'courses'
+      title: 'Courses'
+    buy_ebook_extra: 'Buy'
+    buy_ebook: 'EPUB/PDF'
+    search_placeholder: 'Search on Javascript.info'
+    search_button: 'Search'
+
+    public_profile: Public profile
+    account: Account
+    notifications: Notifications
+    admin: Admin
+    logout: Logout
+
+  sorry_old_browser: Sorry, IE<10 is not supported, please use a newer browser.
+  contact_us: contact us
+  about_the_project: about the project
+  ilya_kantor: Ilya Kantor
+  comments: Comments
+  loading: Loading...
+  search: Search
+  share: Share
+  read_before_commenting: read this before commenting…
+
+  last_updated_at: "Last updated at #{date}"
+  meta:
+    description: 'Modern JavaScript Tutorial: simple, but detailed explanations with examples and tasks, including: closures, document and events, object oriented programming and more.'
+
+  tablet-menu:
+    choose_section: Choose section
+    search_placeholder: Search in the tutorial
+    search_button: Search
+
+  comment:
+    help:
+      - If you have suggestions what to improve - please <a href="https://github.com/javascript-tutorial/en.javascript.info/issues/new">submit a GitHub issue</a> or a pull request instead of commenting.
+      - If you can't understand something in the article – please elaborate.
+      - To insert a few words of code, use the <code>&lt;code&gt;</code> tag, for several lines – use <code>&lt;pre&gt;</code>, for more than 10 lines – use a sandbox (<a href='https://plnkr.co/edit/?p=preview'>plnkr</a>, <a href='http://jsbin.com'>JSBin</a>, <a href='http://codepen.io'>codepen</a>…)
+
+  edit_on_github: Edit on GitHub
+  error: error
+  close: close
+
+  hide_forever: hide permanently
+  hidden_forever: This information will not show up any more.
+
+
+  subscribe:
+    title: Watch for javascript.info updates
+    text: 'We do not send advertisements, only relevant stuff. You choose what to receive:'
+    agreement: 'By signing up to newsletters you agree to the <a href="#{link}" target="_blank">terms of usage</a>.'
+    button: Subscribe
+    button_unsubscribe: Unsubscribe from all
+    common_updates: Common updates
+    common_updates_text: new courses, master classes, article and screencast releases
+    your_email: your@email.here
+    newsletters: 'newsletter,newsletters,newsletters'
+    no_selected: Nothing selected
+
+  form:
+    value_must_not_be_empty: Value must not be empty.
+    value_is_too_long: Value is too long.
+    value_is_too_short: Value is too short.
+    invalid_email: Invalid email.
+    invalid_value: Invalid value.
+    invalid_autocomplete: Please, choose from the list
+    invalid_date: 'Invalid date, format: dd.mm.yyyyy.'
+    invalid_range: This date is invalid here.
+    save: Save
+    upload_file: Upload file
+    cancel: Cancel
+    server_error: Request error, status code
