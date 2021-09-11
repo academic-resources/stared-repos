@@ -1,0 +1,126 @@
+#menu-button {
+  position: fixed;
+  bottom: 45px;
+  
+  line-height: 17px;
+  width: 28px;
+  height: 30px;
+
+  z-index: 2;
+  cursor: pointer;
+
+  transform: translate3d(32px, 32px, 0);
+  transition: transform .5s ease;
+
+  &.on { 
+    transform: translate3d(475px, 32px, 0);
+
+    @include desktop() {
+      transform: translate3d(430px, 32px, 0);
+    }
+    @include phone-s() {
+      transform: translate3d(300px, 32px, 0);
+    }
+  }
+  @include phone-l() {
+    width: 100%;
+    height: 6%;
+    
+    left: 0;
+    bottom: 0;
+
+    padding-left: 5%;
+    padding-top: 1.2rem;
+    
+    background-color: #999999;
+    transform: translate3d(0, 0, 0);
+
+  }
+}
+
+#menu-toggle {
+  display: block;
+  padding-top: 1rem;
+  
+  width: 100%;
+  height: 100%;
+
+  position: static;
+
+  @include phone-l() { width: 45px; }
+
+}
+
+#menu-toggle span {
+  width: 100%;
+  height: 5px;
+
+  display: block;
+  background-color: #888;
+  border-radius: 2px;
+
+  transition: background-color 0.3s;
+  backface-visibility: hidden;
+
+  position: relative;
+
+  @include phone-l() {  background-color: lighten($site-hover, 50%);}
+
+  &:before {
+    width: 100%;
+    height: 5px;
+
+    left: 0;
+    top: 9px;
+
+    display: block;
+    content: "";
+    position: absolute;
+    
+    background-color: #888;
+    border-radius: 2px;
+    
+    transition: transform 0.3s;
+    backface-visibility: hidden;
+
+    @include phone-l() {  background-color: lighten($site-hover, 50%);}
+  }
+  &:after {
+    width: 100%;
+    height: 5px;
+
+    left: 0;
+    top: -9px;
+
+    display: block;
+    content: "";
+    position: absolute;
+    
+    background-color: #888;
+    border-radius: 2px;
+    
+    transition: all 0.3s;
+    backface-visibility: hidden;
+
+    @include phone-l() {  background-color: lighten($site-hover, 50%);}
+  }
+}
+
+// active state
+#menu-toggle.on span {
+  background-color: transparent;
+
+  &:before {
+    transform: rotate(-45deg) translate(7px, -8px);
+    background-color: lighten($site-hover, 50%);
+  }
+  &:after {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: lighten($site-hover, 50%);
+  }
+}
+
+#menu-toggle.on + #menu {
+  opacity: 1;
+  visibility: visible;
+}

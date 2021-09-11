@@ -1,0 +1,6 @@
+
+@mixin type-size ($size) {
+  font-size: $size + rem;
+  line-height: $size * $line-height-factor + rem;
+  letter-spacing: $size * $letter-spacing-factor + rem;
+}

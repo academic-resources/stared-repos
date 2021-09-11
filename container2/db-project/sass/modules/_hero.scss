@@ -1,0 +1,17 @@
+.hero {
+  padding: 5rem 0;
+  
+  .flex-item { margin: 0}
+  .heading { 
+    font-family: $light;
+    @include type-size(5);
+  }
+  .hero-info { 
+    text-align: right;
+    color: lighten($site-color, 50%);
+
+    font-family: $light;
+    @include type-size(3);
+
+  }
+}

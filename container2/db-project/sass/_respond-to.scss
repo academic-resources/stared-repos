@@ -1,0 +1,37 @@
+// respond-to
+$media-style: max-width;
+@mixin respond-to($breakpoint, $media-style) {
+  @media only screen and ($media-style: $breakpoint + px) { @content; }
+}
+
+// build media queries
+@mixin tiny() {
+  @include respond-to($tiny, $media-style) { @content; }
+}
+@mixin small() {
+  @include respond-to($small, $media-style) { @content; }
+}
+@mixin phone() {
+  @include respond-to($phone, $media-style) { @content; }
+}
+@mixin phone-l() {
+  @include respond-to($phone-l, $media-style) { @content; }
+}
+@mixin phone-s() {
+  @include respond-to($phone-s, $media-style) { @content; }
+}
+@mixin tablet() {
+  @include respond-to($tablet, $media-style) { @content; }
+}
+@mixin tablet-m() {
+  @include respond-to($tablet-m, $media-style) { @content; }
+}
+@mixin tablet-l() {
+  @include respond-to($tablet-l, $media-style) { @content; }
+}
+@mixin full() {
+  @include respond-to($full, $media-style) { @content; }
+}
+@mixin desktop() {
+  @include respond-to($desktop, $media-style) { @content; }
+}

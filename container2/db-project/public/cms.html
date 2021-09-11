@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CMS</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="" content="" />
+  <meta name="" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="../style/main.css">
+
+	<title>Form</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="flex">
+			<div class="flex-item flex-item-25">
+				<form id="input" action="/post" enctype="multipart/form-data" method="POST" class="form">
+					<!-- INVENTORY NUMBER -->
+					<input type="text" name="inventoryNumber" autocomplete="on" placeholder="Inventory Number">
+
+					<!-- WORK IMAGE -->
+					<input type="file" name="workImage" accept="image/*" placeholder="Choose File">
+
+					<!-- ARTIST INFO -->
+					<input type="text" name="artist" autocomplete="on" placeholder="Artist">
+					<input type="text" name="artistDates" placeholder="Artist Dates">
+					<input type="text" name="artistOrigin" autocomplete="on" placeholder="Artist Origin">
+
+					<!-- WORK INFO -->
+					<input type="text" name="workTitle" placeholder="Work Title">
+					<input type="date" name="workYear" placeholder="Year of Work">
+					<input type="text" name="workOrigin" autocomplete="on" placeholder="Origin of Work">
+					<input type="text" name="workSignature" placeholder="Signature">
+
+					<!-- WORK Details -->
+					<input type="text" name="detailEdition" placeholder="Edition">
+					<input type="text" name="detailDimensions" placeholder="Dimensions">
+					<input type="text" name="detailFrameSupport" placeholder="Frame Support">
+					<input type="text" name="detailMedium" autocomplete="on" placeholder="Medium">
+					<input type="text" name="detailMediaType" autocomplete="on" placeholder="Media Type">
+					<input type="text" name="detailProvenance" autocomplete="on" placeholder="Provenance">
+					<input type="text" name="detailExhibitions" placeholder="Exhibitions">
+					<input type="text" name="detailReferences" placeholder="References">
+
+					<!-- INVOICE INFO -->
+					<input type="text" name="invoiceNumber" placeholder="Invoice Number">
+					<input type="text" name="invoiceDate" placeholder="Purchase Date">
+					<input type="text" name="invoiceSeller" placeholder="Seller">
+					<input type="text" name="invoicePurchasePrice" placeholder="Purchase Price">
+					<input type="text" name="invoiceRetailPrice" placeholder="Retail Price">
+					<input type="text" name="invoiceInsuredValue" placeholder="Insured Value">
+
+					<!-- TAX INFO -->
+					<input type="text" name="taxValue" placeholder="Value Date">
+					<input type="text" name="taxPaid" placeholder="Tax Paid">
+					<input type="text" name="taxRate" placeholder="Tax Rate">
+					<input type="text" name="taxState" autocomplete="on" placeholder="State of Purchace">
+
+					<!-- SUBMIT -->
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+			<div class="flex-item flex-item-75"></div>
+		</div>
+		<dialog> please fill out the required boxes outlined in red</dialog>
+	</div>
+	<script src="scripts/bundle.js" type="text/javascript"></script>
+</body>
+</html>

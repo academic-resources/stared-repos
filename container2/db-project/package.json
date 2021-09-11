@@ -1,0 +1,34 @@
+{
+  "name": "db-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build:css": "node-sass sass/ -o public/style",
+    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
+    "prefix": "postcss --use autoprefixer -o public/style/main.css public/style/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "browserify entry.js -o public/scripts/bundle.js -t brfs -d",
+    "watch:js": "watchify entry.js -o public/scripts/bundle.js -t brfs -d",
+    "watch": "npm run watch:js & npm run watch:css",
+    "build": "npm run prefix",
+    "dev-start": "nodemon server.js",
+    "develop": "parallelshell 'npm run dev-start' 'npm run watch'",
+    "db-post": "./test-post.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^5.2.0",
+    "brfs": "^1.4.0",
+    "catch-links": "^2.0.0",
+    "concat-stream": "^1.5.0",
+    "ecstatic": "^0.7.4",
+    "formidable": "^1.0.17",
+    "level": "^0.18.0",
+    "postcss": "^4.1.16",
+    "postcss-cli": "^1.4.0",
+    "router": "^1.1.2",
+    "wayfarer": "^4.3.1"
+  }
+}
