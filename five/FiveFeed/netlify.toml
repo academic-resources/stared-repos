@@ -1,0 +1,6 @@
+ 
+[build]
+  base = "FiveFeed/"
+  Functions = "lambda"
+  publish = "FiveFeed/public/"
+  command = "gatsby build"
