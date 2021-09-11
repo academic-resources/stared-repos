@@ -1,0 +1,1247 @@
+  [1m[35mSQL (4.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "chirps" CASCADE[0m
+  [1m[35m (85.2ms)[0m  [1m[35mCREATE TABLE "chirps" ("id" bigserial primary key, "body" text NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_chirps_on_author_id" ON "chirps"  ("author_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows" CASCADE[0m
+  [1m[35m (30.9ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "follower_id" integer NOT NULL, "followee_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_followee_id" ON "follows"  ("followee_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_follower_id" ON "follows"  ("follower_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" integer NOT NULL, "chirp_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (26.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying, "password_digest" character varying, "session_token" character varying)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (27.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (46.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170828221731)[0m
+  [1m[35m (4.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170816164052),
+(20170816174156),
+(20170816170838),
+(20170816171327),
+(20170816162825),
+(20170823202541);
+
+[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (27.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-15 15:20:09.658191"], ["updated_at", "2019-05-15 15:20:09.658191"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "chirps" CASCADE[0m
+  [1m[35m (86.5ms)[0m  [1m[35mCREATE TABLE "chirps" ("id" bigserial primary key, "body" text NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_chirps_on_author_id" ON "chirps"  ("author_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "follower_id" integer NOT NULL, "followee_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_followee_id" ON "follows"  ("followee_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_follower_id" ON "follows"  ("follower_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" integer NOT NULL, "chirp_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (32.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying, "password_digest" character varying, "session_token" character varying)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (26.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170828221731)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170816164052),
+(20170816174156),
+(20170816170838),
+(20170816171327),
+(20170816162825),
+(20170823202541);
+
+[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-15 15:20:10.055496"], ["updated_at", "2019-05-15 15:20:10.055496"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (25.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-05-15 15:20:10.087543"], ["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mChirp Load (1.0ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Eulah Lockman"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Eulah Lockman"], ["email", "lelandharris@walsh.name"], ["password_digest", "$2a$10$hjL4oPEwAi5PLfFajBuZf.RV2aIzcfRh7qNRpYGCVQAn4upddAmwq"], ["session_token", "GTUpSO5AlPE_ES7mic_c0Q"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Errol Schuster"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Errol Schuster"], ["email", "elijah@watsica.info"], ["password_digest", "$2a$10$naE6xQXaD5XMIvYGMFBgXOiefuXTxkeCNvrnRDKVxb.ApuYGF8Som"], ["session_token", "dpxtHvQm6VeBpQqByzUgGA"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Otis Schuster"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Otis Schuster"], ["email", "marieblanda@beierschulist.co"], ["password_digest", "$2a$10$WnPrs7DbVbAmhDXpqvmSSOsjuiLrNABw9NKZw5o0an2/kdMxL70ZS"], ["session_token", "CSbtM184JyYNqwY6F0Pgaw"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (13.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Jonell Bergnaum"], ["LIMIT", 1]]
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Jonell Bergnaum"], ["email", "kylie@mcdermottebert.org"], ["password_digest", "$2a$10$BARhRKpmXxDvJPKmebH7Z.n2cna6YKjWK2ebxMMSpd3hHnEnOpp1O"], ["session_token", "mZ9fXJ1FiR7kH0kFaiQxHg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Ruben Crooks"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Ruben Crooks"], ["email", "gaston@denesikvon.com"], ["password_digest", "$2a$10$fMk8LvCCrb/9QD7OPj7sPupg40Jsc9MjOZWb8.JfxcNWL5UmlBizW"], ["session_token", "_sSdvd9gIDeaINg3DteEGQ"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Booker Torphy"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Booker Torphy"], ["email", "irving@casperhirthe.io"], ["password_digest", "$2a$10$09.5pHEC7a55iUuItCAKdO2HPwXGAEJs8I4HjM68VeaKIiJjM8Dya"], ["session_token", "UeWcDPf-Lue5aQ36fGEhSw"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Stephen Hintz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Stephen Hintz"], ["email", "hellentorp@stroman.io"], ["password_digest", "$2a$10$ZYWHT5.oJY1TyaC645cMXOFdNFCc9AwFooOCpkwg4Ed6Cw643HnYa"], ["session_token", "6SAxa-POP7pgC8Zn04-bVA"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Lavon Zboncak"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Lavon Zboncak"], ["email", "jenna@walter.net"], ["password_digest", "$2a$10$cO0PjmOlWIEOnqYSPHeqg.k9shKY45IsWXPe2M.yr19B.Kjy1JIly"], ["session_token", "nGBXeo3Y5gXipszsm7PW4w"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Phoebe Barton"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Phoebe Barton"], ["email", "brucethiel@rogahncorkery.name"], ["password_digest", "$2a$10$CIqdrePFxrT5gbeFWaLtf./xRhDjXrQ2D4LY/PedGjNnex4dCUySa"], ["session_token", "nvKsbR570emeqJlyKvwP0g"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?"], ["author_id", 1], ["created_at", "2019-05-15 15:20:13.340100"], ["updated_at", "2019-05-15 15:20:13.340100"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "To the well-organized mind, death is but the next great adventure."], ["author_id", 1], ["created_at", "2019-05-15 15:20:13.355059"], ["updated_at", "2019-05-15 15:20:13.355059"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (25.5ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends."], ["author_id", 2], ["created_at", "2019-05-15 15:20:13.361605"], ["updated_at", "2019-05-15 15:20:13.361605"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Happiness can be found even in the darkest of times if only one remembers to turn on the light."], ["author_id", 2], ["created_at", "2019-05-15 15:20:13.393906"], ["updated_at", "2019-05-15 15:20:13.393906"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "It is the unknown we fear when we look upon death and darkness, nothing more."], ["author_id", 2], ["created_at", "2019-05-15 15:20:13.408279"], ["updated_at", "2019-05-15 15:20:13.408279"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (25.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["chirp_id", 1], ["created_at", "2019-05-15 15:20:13.487462"], ["updated_at", "2019-05-15 15:20:13.487462"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["chirp_id", 2], ["created_at", "2019-05-15 15:20:13.507351"], ["updated_at", "2019-05-15 15:20:13.507351"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (25.8ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["chirp_id", 2], ["created_at", "2019-05-15 15:20:13.541436"], ["updated_at", "2019-05-15 15:20:13.541436"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["chirp_id", 1], ["created_at", "2019-05-15 15:20:13.550847"], ["updated_at", "2019-05-15 15:20:13.550847"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (295.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "BlueBird_development"[0m
+  [1m[35m (303.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "BlueBird_test"[0m
+  [1m[35m (1099.7ms)[0m  [1m[35mCREATE DATABASE "BlueBird_development" ENCODING = 'unicode'[0m
+  [1m[35m (636.4ms)[0m  [1m[35mCREATE DATABASE "BlueBird_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "chirps" CASCADE[0m
+  [1m[35m (48.4ms)[0m  [1m[35mCREATE TABLE "chirps" ("id" bigserial primary key, "body" text NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_chirps_on_author_id" ON "chirps"  ("author_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "follower_id" integer NOT NULL, "followee_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_followee_id" ON "follows"  ("followee_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_follower_id" ON "follows"  ("follower_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" integer NOT NULL, "chirp_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying, "password_digest" character varying, "session_token" character varying)[0m
+  [1m[35m (29.4ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170828221731)[0m
+  [1m[35m (26.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170816164052),
+(20170816174156),
+(20170816170838),
+(20170816171327),
+(20170816162825),
+(20170823202541);
+
+[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-15 15:21:23.109552"], ["updated_at", "2019-05-15 15:21:23.109552"]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "chirps" CASCADE[0m
+  [1m[35m (52.3ms)[0m  [1m[35mCREATE TABLE "chirps" ("id" bigserial primary key, "body" text NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_chirps_on_author_id" ON "chirps"  ("author_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows" CASCADE[0m
+  [1m[35m (32.2ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "follower_id" integer NOT NULL, "followee_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_followee_id" ON "follows"  ("followee_id")[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_follower_id" ON "follows"  ("follower_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" integer NOT NULL, "chirp_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (77.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying, "password_digest" character varying, "session_token" character varying)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (26.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170828221731)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170816164052),
+(20170816174156),
+(20170816170838),
+(20170816171327),
+(20170816162825),
+(20170823202541);
+
+[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-15 15:21:23.500326"], ["updated_at", "2019-05-15 15:21:23.500326"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-05-15 15:21:23.506507"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (22.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mChirp Load (1.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mLike Load (0.9ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (23.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Miss Jarrett Runolfsdottir"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Miss Jarrett Runolfsdottir"], ["email", "kevinwitting@hilllcollier.io"], ["password_digest", "$2a$10$QlPgtMwKYpC4PoKwoPHY6.jwEWGgC.RDqJfg.mWD53eU8qs9mCmt."], ["session_token", "eVbNtlO0VKCXtRZS1WQwew"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Curt Zulauf"], ["LIMIT", 1]]
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Curt Zulauf"], ["email", "berenicenolan@blick.org"], ["password_digest", "$2a$10$0hrrXnsjVIA4PFpq0TKtbecFv11z2YdhuBwc7C7y0i3TAYkIg1gDO"], ["session_token", "nH5bJE8gUw8rz5_iDLzkRw"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Leandro Kohler"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Leandro Kohler"], ["email", "williams@walkermueller.net"], ["password_digest", "$2a$10$SypYT0sdB5v1Ggc4R8jGxOcXbPvTcl.avEGy8srAPLnHPql2QFY36"], ["session_token", "wDspM3E2bFsSKPSJ5b2_4g"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Tim Nader"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Tim Nader"], ["email", "dave@raynor.name"], ["password_digest", "$2a$10$Og58ItvzDbyxcNKadcKnEeD9IjT5Afb7.HyeezWycwBEtfjqCNK5S"], ["session_token", "hZcOIuOJzpfc47Zk7020uw"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (4.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Julee Crooks"], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Julee Crooks"], ["email", "mariam@grady.com"], ["password_digest", "$2a$10$UiKK4olcv47Qt6E80FTC9eIl5wK7LMJhAGbUMT4VO1mjyntO5AeSy"], ["session_token", "H0tAmsQBzaJndnPnSxrFTA"]]
+  [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (8.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Antione Sanford"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Antione Sanford"], ["email", "carroll@boscokris.biz"], ["password_digest", "$2a$10$HyRCTJcIPsEysM6.O7iRtO1KUzw7QqZk2ud0DnCILJVflX.Ra9oCu"], ["session_token", "nMqieVUHUFUnwfmHfX2sZQ"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Wilton Johnson"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Wilton Johnson"], ["email", "jenise@altenwerth.biz"], ["password_digest", "$2a$10$u3iY09wlnVHifWLabqLzNe2CGMdue9VcfgXKSD.oBEfGLkF7Aa8By"], ["session_token", "9Gj15TcYhtYjV9y0wyzVZg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Mr. Brigida Lang"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Mr. Brigida Lang"], ["email", "juanitaturcotte@aufderhar.net"], ["password_digest", "$2a$10$JmByvbqEUEsXJblJEWqo7OUbx5MkriP02bDjk10jjWJDpt0RstwlW"], ["session_token", "f439vgz47kyXk_bXoQFpig"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Felton Paucek"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Felton Paucek"], ["email", "yurikonader@reynolds.org"], ["password_digest", "$2a$10$alNhNS4JpZbfTVPciHygP.n/.0Muwj/hvk3jIBqcLvJ.4R0lbqopW"], ["session_token", "TdjXnTNz2QsABvuabE-bnw"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Words are in my not-so-humble opinion, the most inexhaustible form of magic we have, capable both of inflicting injury and remedying it."], ["author_id", 1], ["created_at", "2019-05-15 15:21:26.440600"], ["updated_at", "2019-05-15 15:21:26.440600"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "It’s wingardium leviOsa, not leviosAH."], ["author_id", 1], ["created_at", "2019-05-15 15:21:26.450202"], ["updated_at", "2019-05-15 15:21:26.450202"]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (26.1ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "There are some things you can't share without ending up liking each other, and knocking out a twelve-foot mountain troll is one of them."], ["author_id", 2], ["created_at", "2019-05-15 15:21:26.461971"], ["updated_at", "2019-05-15 15:21:26.461971"]]
+  [1m[35m (49.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "To the well-organized mind, death is but the next great adventure."], ["author_id", 2], ["created_at", "2019-05-15 15:21:26.543621"], ["updated_at", "2019-05-15 15:21:26.543621"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?"], ["author_id", 2], ["created_at", "2019-05-15 15:21:26.549096"], ["updated_at", "2019-05-15 15:21:26.549096"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (23.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["chirp_id", 1], ["created_at", "2019-05-15 15:21:26.596331"], ["updated_at", "2019-05-15 15:21:26.596331"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (26.1ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["chirp_id", 2], ["created_at", "2019-05-15 15:21:26.611867"], ["updated_at", "2019-05-15 15:21:26.611867"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["chirp_id", 2], ["created_at", "2019-05-15 15:21:26.644533"], ["updated_at", "2019-05-15 15:21:26.644533"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.3ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["chirp_id", 1], ["created_at", "2019-05-15 15:21:26.651265"], ["updated_at", "2019-05-15 15:21:26.651265"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "chirps" CASCADE[0m
+  [1m[35m (37.2ms)[0m  [1m[35mCREATE TABLE "chirps" ("id" bigserial primary key, "body" text NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_chirps_on_author_id" ON "chirps"  ("author_id")[0m
+  [1m[35m (4.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows" CASCADE[0m
+  [1m[35m (32.4ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "follower_id" integer NOT NULL, "followee_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_followee_id" ON "follows"  ("followee_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_follower_id" ON "follows"  ("follower_id")[0m
+  [1m[35m (28.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" integer NOT NULL, "chirp_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (44.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying, "password_digest" character varying, "session_token" character varying)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (17.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (41.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "chirps" CASCADE[0m
+  [1m[35m (40.9ms)[0m  [1m[35mCREATE TABLE "chirps" ("id" bigserial primary key, "body" text NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_chirps_on_author_id" ON "chirps"  ("author_id")[0m
+  [1m[35m (5.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows" CASCADE[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "follower_id" integer NOT NULL, "followee_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_followee_id" ON "follows"  ("followee_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_follower_id" ON "follows"  ("follower_id")[0m
+  [1m[35m (4.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "likes" CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" integer NOT NULL, "chirp_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (33.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (40.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "email" character varying, "password_digest" character varying, "session_token" character varying)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2019-05-15 15:21:42.262468"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-05-15 15:21:42.294062"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mChirp Load (1.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Darrick Treutel"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Darrick Treutel"], ["email", "kimberley@grimes.io"], ["password_digest", "$2a$10$z2Ym95O6h5YTEG3FfT0ZNOGd9hpzn8WKpI0Ttq4lKG2iWuxT1iryW"], ["session_token", "PuSLtF6dBNE-q9K7zq96Bw"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Gene Yundt"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Gene Yundt"], ["email", "zenaidanolan@auer.co"], ["password_digest", "$2a$10$f1ArNCG99ykVfCwmdEXBwuo5eUbotJrOZrv7OwUawt4z3vZwb7.C6"], ["session_token", "dwmkGiKoqkmsd-68XxzOLw"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Ebony Schmitt"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Ebony Schmitt"], ["email", "mildred@brakushills.info"], ["password_digest", "$2a$10$EyNBEFT3yoKmaT4v/omg6OHCCXQ/YJQmmV6kZuvJc8Y4cOOtnQvHm"], ["session_token", "s5-TGKL54_G8fb8g2vV6kw"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Ms. Orval Kub"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Ms. Orval Kub"], ["email", "tomasmraz@prosacco.name"], ["password_digest", "$2a$10$0mb4N0bmA.ef6/g9kNo.Lu6i64YCo40PZyyVltaF/lhdx9ynKC/02"], ["session_token", "FS_WaI7RMxTuAc7v8DoDXA"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Luther Dare"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Luther Dare"], ["email", "noelhermiston@zulaufdavis.biz"], ["password_digest", "$2a$10$OF6wIo9odtVaA1w2iNaUc.luodOm4OwlHppC63Jaqk9D/XtTEQic."], ["session_token", "PMwfSHQiyW3juc4ROON2Ww"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (8.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Shanell Mohr III"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Shanell Mohr III"], ["email", "hienschneider@oreillybeatty.org"], ["password_digest", "$2a$10$Jx.ToGeOU8YDNowCne4sO.kaUVPBhNOYIa4bAy9zhp9vuPN3LHyaS"], ["session_token", "yXsin-Pz5tYaV06L_wPMHA"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (11.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Mrs. Tula Quigley"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Mrs. Tula Quigley"], ["email", "fumikorolfson@kihnprice.net"], ["password_digest", "$2a$10$tIQsP7UFcks7.H7OemZfweq/hB0Tmt5xy1kLAPxVwgvm2A6iXqwTq"], ["session_token", "n2c1Awu6FEkynC5INMjULw"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (11.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Marcelino Keeling III"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Marcelino Keeling III"], ["email", "chi@corwinlangworth.co"], ["password_digest", "$2a$10$iVTnUO9vIUSxzxfJdydiSOJjOeOmcpwJNlUtlANj02.0Jn9hYPVQ."], ["session_token", "w4yogYWEUePgiTZobQll1w"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Irwin Schroeder I"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Irwin Schroeder I"], ["email", "arnitacole@hilpertstanton.com"], ["password_digest", "$2a$10$QnTCGtebElvq1fQ0AVMmluW0esdqUH7JbEOMPK3sdQSICm2ufohju"], ["session_token", "XNwbhuWGrNs3LQ0a2imlkA"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (27.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "After all this time? Always."], ["author_id", 1], ["created_at", "2019-05-15 15:21:45.141886"], ["updated_at", "2019-05-15 15:21:45.141886"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "If you want to know what a man’s like, take a good look at how he treats his inferiors, not his equals."], ["author_id", 1], ["created_at", "2019-05-15 15:21:45.147945"], ["updated_at", "2019-05-15 15:21:45.147945"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "To the well-organized mind, death is but the next great adventure."], ["author_id", 1], ["created_at", "2019-05-15 15:21:45.154094"], ["updated_at", "2019-05-15 15:21:45.154094"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (25.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "To the well-organized mind, death is but the next great adventure."], ["author_id", 2], ["created_at", "2019-05-15 15:21:45.190220"], ["updated_at", "2019-05-15 15:21:45.190220"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "chirps" ("body", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "It is our choices, Harry, that show what we truly are, far more than our abilities."], ["author_id", 2], ["created_at", "2019-05-15 15:21:45.195612"], ["updated_at", "2019-05-15 15:21:45.195612"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (1.3ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["chirp_id", 1], ["created_at", "2019-05-15 15:21:45.246452"], ["updated_at", "2019-05-15 15:21:45.246452"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["chirp_id", 2], ["created_at", "2019-05-15 15:21:45.255064"], ["updated_at", "2019-05-15 15:21:45.255064"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (24.9ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["chirp_id", 3], ["created_at", "2019-05-15 15:21:45.263729"], ["updated_at", "2019-05-15 15:21:45.263729"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["chirp_id", 3], ["created_at", "2019-05-15 15:21:45.294317"], ["updated_at", "2019-05-15 15:21:45.294317"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["chirp_id", 1], ["created_at", "2019-05-15 15:21:45.302260"], ["updated_at", "2019-05-15 15:21:45.302260"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["chirp_id", 2], ["created_at", "2019-05-15 15:21:45.309613"], ["updated_at", "2019-05-15 15:21:45.309613"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mChirp Load (1.4ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+Started GET "/" for ::1 at 2019-05-15 08:55:51 -0700
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 2362ms (Views: 2357.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 08:57:05 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver", "email"=>"oliver@oliver.com", "password"=>"[FILTERED]"}}
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver"], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "oliver"], ["email", "oliver@oliver.com"], ["password_digest", "$2a$10$MlOXnuKbEIDjha9ptklWD.50mLWto2gf7vrOT0iI/BdqAbcbtxRN."], ["session_token", "XtRZKv8YXFdRt2v7k546jg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 168ms (Views: 14.3ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 08:57:05 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (1.8ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (0.7ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (96.6ms)
+Completed 200 OK in 164ms (Views: 85.0ms | ActiveRecord: 36.3ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 09:01:30 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 584ms (Views: 567.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 09:01:45 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver", "email"=>"oliver@oliver.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver"], ["LIMIT", 1]]
+  [1m[35m (13.7ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 1707ms (Views: 0.3ms | ActiveRecord: 17.1ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 09:02:32 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver1", "email"=>"oliver1@oliver.com", "password"=>"[FILTERED]"}}
+  [1m[35m (17.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (117.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver1"], ["LIMIT", 1]]
+  [1m[35mSQL (45.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "oliver1"], ["email", "oliver1@oliver.com"], ["password_digest", "$2a$10$nG4mDVlGorvvXe.RfkbGJevdZeF7A5T8M6Y47xC2kEW9a7o3cWQYC"], ["session_token", "uPwttujWGEgSROcogBFxqQ"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 386ms (Views: 20.8ms | ActiveRecord: 186.0ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:02:33 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (1.0ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (0.7ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (37.5ms)
+Completed 200 OK in 65ms (Views: 54.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 09:06:22 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver2", "email"=>"oliver2@oliver.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (77.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver2"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "oliver2"], ["email", "oliver2@oliver.com"], ["password_digest", "$2a$10$vy8UCLDm6dc3m/TvrHzQT.2nbc9ww.MyDbtWcYKup9W/gKSycn4ha"], ["session_token", "gc-JoMTphxxsXWvhj48a5g"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (3.9ms)
+Completed 200 OK in 251ms (Views: 23.0ms | ActiveRecord: 81.3ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:06:23 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (1.0ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (1.6ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.3ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (28.2ms)
+Completed 200 OK in 51ms (Views: 40.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 09:07:46 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 708ms (Views: 699.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:07:47 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (32.2ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (0.8ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.3ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (50.7ms)
+Completed 200 OK in 74ms (Views: 35.6ms | ActiveRecord: 32.2ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 09:07:49 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 121ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:07:50 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (1.8ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (0.5ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (124.6ms)
+Completed 200 OK in 145ms (Views: 139.1ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 09:08:00 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver3", "email"=>"oliver3@oliver.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver3"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "oliver3"], ["email", "oliver3@oliver.com"], ["password_digest", "$2a$10$4CTuk/4RpPTmO.TjAv60hOVbrK1LS1zLglYrsaXtPvzAAHeRCxYXG"], ["session_token", "l5kwsmgsXSmWV0xt8RsCRA"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 133ms (Views: 17.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:08:00 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (1.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (0.8ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/index.json.jbuilder (88.7ms)
+Completed 200 OK in 122ms (Views: 111.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 09:08:47 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 154ms (Views: 148.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:08:48 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (0.6ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (119.3ms)
+Completed 200 OK in 167ms (Views: 154.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 09:09:00 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver4", "email"=>"oliver4@oliver.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver4"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "oliver4"], ["email", "oliver4@oliver.com"], ["password_digest", "$2a$10$vVyp1WV5uJW8exs70Y55get4fv9MH8dywoKYm3ob73QoLx2w3Rwvm"], ["session_token", "iEDEtrPwXYXqY4Je4FncVw"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 113ms (Views: 15.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:09:00 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (1.0ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (0.6ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (81.3ms)
+Completed 200 OK in 108ms (Views: 102.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 09:09:38 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "iEDEtrPwXYXqY4Je4FncVw"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "oliver4"], ["id", 14], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "G7lvikgz3cdEsRL2ukGnvg"], ["id", 14]]
+  [1m[35m (194.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 262ms (Views: 3.2ms | ActiveRecord: 198.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 09:16:11 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 186ms (Views: 176.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:16:12 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (192.3ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (2.4ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (1.3ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (259.4ms)
+Completed 200 OK in 289ms (Views: 83.0ms | ActiveRecord: 192.3ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 09:16:29 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver5", "email"=>"oliver5@oliver.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver5"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "oliver5"], ["email", "oliver5@oliver.com"], ["password_digest", "$2a$10$riU6JJSidKi8KdZpFNe21OPO52QnnirxNi8tFQ5J/HVANC7yw07Jq"], ["session_token", "lzxy6D6VjgPUlqt3uchIAw"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 126ms (Views: 12.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:16:29 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (3.4ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (0.7ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (38.2ms)
+Completed 200 OK in 61ms (Views: 51.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 09:16:31 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lzxy6D6VjgPUlqt3uchIAw"], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 102.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:16:32 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (6.0ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (0.6ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (21.4ms)
+Completed 200 OK in 42ms (Views: 31.0ms | ActiveRecord: 6.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 09:41:27 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lzxy6D6VjgPUlqt3uchIAw"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "oliver5"], ["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "gzOykTvzZ_EjYFHdgwKAGQ"], ["id", 15]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 26ms (Views: 4.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 09:41:32 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 330ms (Views: 322.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 09:42:03 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver6", "email"=>"oliver6@oliver.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver6"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "oliver6"], ["email", "oliver6@oliver.com"], ["password_digest", "$2a$10$Yfddx4Xd31RSG0jgMo5NnevUOCrLUWSWXcpRUWtYHcfC4HcdXuP/G"], ["session_token", "1h4QqsELcvQQxsTZ5vGgOA"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 94ms (Views: 11.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:42:03 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (1.3ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (19.8ms)
+Completed 200 OK in 57ms (Views: 47.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:42:32 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (0.6ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (2.5ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.3ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/index.json.jbuilder (47.3ms)
+Completed 200 OK in 105ms (Views: 87.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 09:42:34 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1h4QqsELcvQQxsTZ5vGgOA"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "oliver6"], ["id", 16], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "Z_QwgUxGaRpZw-iEYeugNA"], ["id", 16]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 09:46:24 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 489ms (Views: 478.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:46:25 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (30.9ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (2.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (200.7ms)
+Completed 200 OK in 231ms (Views: 190.3ms | ActiveRecord: 30.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 09:46:58 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 243ms (Views: 237.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 09:47:12 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver7", "email"=>"oliver7@oliver.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver7"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "oliver7"], ["email", "oliver7@oliver.com"], ["password_digest", "$2a$10$T/h19qMSZBEJYD5aoc5BQODdMHPVCFbHmneVoRNRnYH/GObzg82va"], ["session_token", "9YitqFRe6Xevyc6V3oYL4g"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 104ms (Views: 12.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:47:12 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (3.9ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  Rendered api/chirps/_chirp.json.jbuilder (0.8ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.2ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/_chirp.json.jbuilder (0.1ms)
+  Rendered api/chirps/index.json.jbuilder (29.3ms)
+Completed 200 OK in 65ms (Views: 51.8ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 09:47:43 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "9YitqFRe6Xevyc6V3oYL4g"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "oliver7"], ["id", 17], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "Xz0ZQHWRxdPMlREUE4K0NA"], ["id", 17]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 09:49:05 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 373ms (Views: 363.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 09:49:14 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver8", "email"=>"oliver8@oliver.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver8"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "oliver8"], ["email", "oliver8@oliver.com"], ["password_digest", "$2a$10$CGy2pJGo3GZaBd1T78mbnej6UGhskAK6y1sRvCEds13Aitmahg726"], ["session_token", "Un0Kt2QyWKQel5KYPIiXdg"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.5ms)
+Completed 200 OK in 99ms (Views: 14.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 09:49:15 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[35m (36.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Un0Kt2QyWKQel5KYPIiXdg"], ["LIMIT", 1]]
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 1], ["user_id", 18], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (126.6ms)
+  [1m[35m (16.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 2]]
+  [1m[36mLike Load (1.2ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 2], ["user_id", 18], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (21.7ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 3]]
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 3], ["user_id", 18], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (4.5ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 4]]
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 4], ["user_id", 18], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (4.1ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 5]]
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 5], ["user_id", 18], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (5.1ms)
+  Rendered api/chirps/index.json.jbuilder (197.6ms)
+Completed 200 OK in 227ms (Views: 141.3ms | ActiveRecord: 77.9ms)
+
+
+Started POST "/api/likes" for ::1 at 2019-05-15 09:49:24 -0700
+Processing by Api::LikesController#create as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Un0Kt2QyWKQel5KYPIiXdg"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.4ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 18], ["chirp_id", 1], ["created_at", "2019-05-15 16:49:24.587085"], ["updated_at", "2019-05-15 16:49:24.587085"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/chirps/show.json.jbuilder
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 1]]
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 1], ["user_id", 18], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (20.8ms)
+  Rendered api/chirps/show.json.jbuilder (23.1ms)
+Completed 200 OK in 88ms (Views: 18.7ms | ActiveRecord: 45.2ms)
+
+
+Started DELETE "/api/likes" for ::1 at 2019-05-15 09:49:26 -0700
+Processing by Api::LikesController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Un0Kt2QyWKQel5KYPIiXdg"], ["LIMIT", 1]]
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."chirp_id" = $2 LIMIT $3[0m  [["user_id", 18], ["chirp_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering api/chirps/show.json.jbuilder
+  [1m[35m (10.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 1]]
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 1], ["user_id", 18], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (39.1ms)
+  Rendered api/chirps/show.json.jbuilder (41.1ms)
+Completed 200 OK in 63ms (Views: 41.8ms | ActiveRecord: 14.0ms)
+
+
+Started POST "/api/likes" for ::1 at 2019-05-15 09:49:28 -0700
+Processing by Api::LikesController#create as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Un0Kt2QyWKQel5KYPIiXdg"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChirp Load (0.5ms)[0m  [1m[34mSELECT  "chirps".* FROM "chirps" WHERE "chirps"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "chirp_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 18], ["chirp_id", 1], ["created_at", "2019-05-15 16:49:28.628145"], ["updated_at", "2019-05-15 16:49:28.628145"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/chirps/show.json.jbuilder
+  [1m[35m (23.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 1]]
+  [1m[36mLike Load (1.7ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 1], ["user_id", 18], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (33.9ms)
+  Rendered api/chirps/show.json.jbuilder (35.9ms)
+Completed 200 OK in 64ms (Views: 25.3ms | ActiveRecord: 28.2ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 10:43:03 -0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2869ms (Views: 2865.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 10:43:44 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 123ms (Views: 116.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 10:44:26 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 82ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 10:44:49 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 105ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 10:46:52 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 10:51:55 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 431ms (Views: 424.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-05-15 10:52:13 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"oliver", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "oliver"], ["LIMIT", 1]]
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 195ms (Views: 12.8ms | ActiveRecord: 42.7ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 10:52:13 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (7.1ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CJ8-lCmpCYxZGYR80AO91w"], ["LIMIT", 1]]
+  [1m[36mLike Load (5.0ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 1], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (91.3ms)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 2]]
+  [1m[36mLike Load (26.2ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 2], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (34.3ms)
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 3]]
+  [1m[36mLike Load (1.0ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 3], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (8.5ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 4]]
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 4], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (5.8ms)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 5]]
+  [1m[36mLike Load (25.1ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 5], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (29.6ms)
+  Rendered api/chirps/index.json.jbuilder (261.4ms)
+Completed 200 OK in 380ms (Views: 220.7ms | ActiveRecord: 129.1ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 10:59:01 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CJ8-lCmpCYxZGYR80AO91w"], ["LIMIT", 1]]
+Completed 200 OK in 162ms (Views: 152.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 10:59:02 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (0.9ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[35m (39.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 1]]
+  [1m[36mUser Load (106.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CJ8-lCmpCYxZGYR80AO91w"], ["LIMIT", 1]]
+  [1m[36mLike Load (21.4ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 1], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (180.9ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 2]]
+  [1m[36mLike Load (3.7ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 2], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (11.4ms)
+  [1m[35m (26.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 3]]
+  [1m[36mLike Load (2.6ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 3], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (33.7ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 4]]
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 4], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (5.7ms)
+  [1m[35m (291.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 5]]
+  [1m[36mLike Load (83.8ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 5], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (383.2ms)
+  Rendered api/chirps/index.json.jbuilder (641.6ms)
+Completed 200 OK in 666ms (Views: 80.7ms | ActiveRecord: 578.7ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 10:59:18 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CJ8-lCmpCYxZGYR80AO91w"], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 102.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/chirps" for ::1 at 2019-05-15 10:59:19 -0700
+Processing by Api::ChirpsController#index as JSON
+  Rendering api/chirps/index.json.jbuilder
+  [1m[36mChirp Load (101.9ms)[0m  [1m[34mSELECT "chirps".* FROM "chirps"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 1]]
+  [1m[36mUser Load (98.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CJ8-lCmpCYxZGYR80AO91w"], ["LIMIT", 1]]
+  [1m[36mLike Load (47.9ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 1], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (160.1ms)
+  [1m[35m (18.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 2]]
+  [1m[36mLike Load (1.1ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 2], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (26.2ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 3]]
+  [1m[36mLike Load (3.0ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 3], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (9.2ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 4]]
+  [1m[36mLike Load (25.2ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 4], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (30.6ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."chirp_id" = $1[0m  [["chirp_id", 5]]
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."chirp_id" = $1 AND "likes"."user_id" = $2 LIMIT $3[0m  [["chirp_id", 5], ["user_id", 10], ["LIMIT", 1]]
+  Rendered api/chirps/_chirp.json.jbuilder (5.3ms)
+  Rendered api/chirps/index.json.jbuilder (374.7ms)
+Completed 200 OK in 397ms (Views: 91.6ms | ActiveRecord: 300.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-05-15 10:59:49 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CJ8-lCmpCYxZGYR80AO91w"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (4.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "oliver"], ["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (27.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "1DBiaQpDo0fBP4uEioEY8A"], ["id", 10]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 78ms (Views: 0.9ms | ActiveRecord: 35.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 10:59:50 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 112ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:00:33 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 130ms (Views: 125.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:01:07 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 866ms (Views: 849.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:01:32 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 152ms (Views: 143.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:01:59 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 111ms (Views: 105.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:02:02 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 87ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:02:16 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 119ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:02:32 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 96ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:02:34 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 87ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:04:04 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 523ms (Views: 516.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:05:18 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 581ms (Views: 574.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:06:21 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 96ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:11:24 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 597ms (Views: 591.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:12:01 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 814ms (Views: 807.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:12:16 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 821ms (Views: 816.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-05-15 11:12:17 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (29.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 4051ms (Views: 0.4ms | ActiveRecord: 35.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-15 11:12:33 -0700
+Processing by RootController#root as HTML
+  Rendering root/root.html.erb within layouts/application
+  Rendered root/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 758ms (Views: 751.9ms | ActiveRecord: 0.0ms)
+
+

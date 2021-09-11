@@ -52,6 +52,13 @@ function minChange(coins, amount, memo = {}) {
     console.log(numCoins)
     return memo[amount]
 
+    // let lastCoin = coins[coins.length - 1]
+    // let change = amount % lastCoin
+    // let coinCt = (amount - change) / lastCoin
+    // if (change > 0) {
+    //     coinCt += minChange(coins.slice(0, coins.length - 1), change, memo)
+    // }
+    // return coinCt
 }
 
 console.log(minChange([1, 2, 5], 11))         // => 3, because 5 + 5 + 1 = 11

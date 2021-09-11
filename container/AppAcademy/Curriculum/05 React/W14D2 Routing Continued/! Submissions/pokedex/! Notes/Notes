@@ -1,0 +1,7 @@
+Item Reducer
+
+Pokemon Details (like a show)
+  - should how details and items
+
+Receive a pokemon which will have it's items
+  - need to create a presentational element from the details

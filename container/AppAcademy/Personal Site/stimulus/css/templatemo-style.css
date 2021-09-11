@@ -278,7 +278,7 @@ a:hover, a:active, a:focus {
 
 .custom-navbar .navbar-brand {
     color: #333;
-	text-shadow: 1px 1px #aaa;
+	text-shadow: 1px 1px #fff;
     font-weight: bold;
     font-size: 24px;
     line-height: 35px;
@@ -356,7 +356,7 @@ a:hover, a:active, a:focus {
 }
 
 #home .home-img {
-  background: url('../images/oli_splash.jpg ') no-repeat;
+  background: url('../images/home-img.jpg') no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;

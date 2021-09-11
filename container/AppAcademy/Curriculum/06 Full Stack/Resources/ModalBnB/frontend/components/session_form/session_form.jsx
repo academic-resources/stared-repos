@@ -38,9 +38,6 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-        <div className="error-message-container">
-          { renderErrors() }
-        </div>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to BenchBnB!
           <br/>

@@ -21,12 +21,10 @@ class Node
   end
 
   def remove
-    @prev.next = @next
-    @next.prev = @prev
-    # prev_node = @prev
-    # next_node = @next
-    # prev_node.next = @next
-    # next_node.prev = @prev
+    prev_node = @prev
+    next_node = @next
+    prev_node.next = @next
+    next_node.prev = @prev
     self
   end
 end

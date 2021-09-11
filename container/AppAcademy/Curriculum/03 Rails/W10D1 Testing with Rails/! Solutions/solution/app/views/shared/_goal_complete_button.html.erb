@@ -1,0 +1,12 @@
+<form action="<%= goal_url(goal) %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PUT">
+  <input type="hidden" name="goal[completed]" value="<%= !goal.completed %>">
+  <input type="submit"
+  <% if goal.completed %>
+  value="Oops!  Did not complete."
+  <% else %>
+  value="Complete"
+  <% end %>
+  id="goal_<%= goal.id %>_completed">
+</form>

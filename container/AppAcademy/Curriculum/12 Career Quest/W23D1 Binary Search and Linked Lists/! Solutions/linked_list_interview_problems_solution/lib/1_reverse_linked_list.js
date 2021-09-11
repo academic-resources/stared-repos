@@ -80,9 +80,6 @@ function reverseLinkedList(linkedList) {
   return linkedList;
 }
 
-//[1] -> [2] -> [3] -> [4] -> [5]
-//[1] <- [2] <- [3] <- [4] <- [5] = [5] -> [4] -> [3] -> [2] -> [1]
-
 // ----------------------------------------
 // Given: Singly Linked List - Do Not Edit!
 // ----------------------------------------

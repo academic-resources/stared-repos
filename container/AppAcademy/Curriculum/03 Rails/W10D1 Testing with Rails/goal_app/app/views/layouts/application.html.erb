@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GoalApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h1>GOALING APP</h1>
+    
+    <% if !!current_user %>
+      <div>
+        <p><a href="<%=new_user_url%>">Sign Up</a></p>
+        <p>or</p>
+        <p><a href="<%=new_session_url%>">Log In</a></p>
+      </div>
+    <% else %>
+      <div>
+        <p>Welcome <%= current_user.username %> </p>
+        
+        <form action="session_url" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" value="Log Out">
+        </form>
+      </div>
+    <% end %>
+    
+    
+    <%= yield %>
+  </body>
+</html>

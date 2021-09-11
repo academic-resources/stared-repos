@@ -60,20 +60,24 @@ class SudokuGame
   end
 
   def solved?
-    board.solved?  # removed 'if'
-    #     tiles << self[[i, j]]
-    # end
-
-    # tiles
+    board.solved?
   end
 
-  def squares
-    (0..8).to_a.map { |i| square(i) }
+  def valid_pos?(pos)
+    pos.is_a?(Array) &&
+      pos.length == 2 &&
+      pos.all? { |x| x.between?(0, board.size - 1) }
+  end
+
+  def valid_val?(val)
+    val.is_a?(Integer) &&
+      val.between?(0, 9)
   end
 
   private
   attr_reader :board
 end
+
 
 game = SudokuGame.from_file("puzzles/sudoku1.txt")
 game.run

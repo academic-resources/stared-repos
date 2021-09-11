@@ -65,8 +65,7 @@ Book.create!(
 Book.create!(
   title: 'The Art of War',
   author: 'Sun Tzu',
-  # year: -400, Original
-  year: 400, #modified
+  year: -400,
   category: 'Military Science',
   description: "Attributed to the ancient Chinese military strategist Sun Tzu ('Master Sun', also spelled Sunzi) the text is composed of 13 chapters, each of which is devoted to one aspect of warfare. It is commonly thought of as a definitive work on military strategy and tactics."
 )

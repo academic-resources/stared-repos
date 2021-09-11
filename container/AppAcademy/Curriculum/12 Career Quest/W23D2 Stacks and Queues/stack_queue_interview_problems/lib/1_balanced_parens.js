@@ -75,80 +75,8 @@
 // -----------
 // Let's code!
 // -----------
-function firstApproachbalancedParens(str) {
-  const opens = { '(': 1, '[': 1, '{': 1 }
-  const closes = { ')': -1, ']': -1, '}': -1 }
-
-  let balance = 0
-  for (let charIdx = 0; charIdx < str.length; charIdx++) {
-    if (balance < 0) return false
-    let char = str[charIdx]
-    if (opens[char]) balance += opens[char]
-    if (closes[char]) balance += closes[char]
-  }
-  return !balance
-}
-
 function balancedParens(str) {
-  let nest = new Stack
-  const opens = { '(': 'p', '[': 'b', '{': 'c', }
-  const closes = { ')': 'p', ']': 'b', '}': 'c', }
-  for (let charIdx = 0; charIdx < str.length; charIdx++) {
-    let char = str[charIdx]
-    if (opens[char]) nest.push(opens[char])
-    if (closes[char]) {
-      if (!nest.top) {
-        return false
-      } else {
-        if (closes[char] !== nest.top.value) return false
-        if (closes[char]) nest.pop(closes[char])
-      }
-    }
-  }
-  return nest.length ? false : true
+
 }
-
-class Node {
-  constructor(val) {
-    this.value = val
-    this.next = null
-  }
-}
-
-class Stack {
-  constructor() {
-    this.top = null
-    this.bottom = null
-    this.length = 0
-  }
-
-  push(val) {
-    const newNode = new Node(val)
-    if (!this.top) {
-      this.top = newNode
-      this.bottom = newNode
-    } else {
-      let oldTop = this.top
-      this.top = newNode
-      newNode.next = oldTop
-    }
-    return ++this.length
-  }
-
-  pop() {
-    const popped = this.top
-    if (!popped) return null
-    if (this.length === 1) this.bottom = null
-    this.top = this.top.next
-    this.length--
-    return popped.value
-  }
-
-  size() {
-    return this.length
-  }
-}
-
-console.log(balancedParens("(())"))
 
 exports.balancedParens = balancedParens;
