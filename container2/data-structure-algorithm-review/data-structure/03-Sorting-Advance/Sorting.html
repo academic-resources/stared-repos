@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting</title>
+    <script src="mergeSort.js"></script>
+    <script src="quickSort.js"></script>
+    <script src="quickSortV2.js"></script>
+    <script src="quickSortV3.js"></script>
+    <script src="mergeSort-reversePairs.js"></script>
+    <script src="../Sort-Test-Helper/sort-test-helper.js"></script>
+    <script>
+        var helper = new Helper();
+        var test = new Tester();
+        var execute = function(){
+            var arr = helper.generateRandomArray(500000, 0, 500000);
+            var arr_copy = arr.slice();
+            var arr_copy_1 = arr.slice();
+            var arr_copy_2 = arr.slice();
+            var arr_copy_3 = arr.slice();
+            var arr_copy_4 = arr.slice();
+            test.testSort("Merge Sort", mergeSort, arr, 500000);
+            test.testSort("Merge Sort V1", mergeSortV1, arr_copy, 500000);
+            test.testSort("Merge Sort V2", mergeSortBU, arr_copy_1, 500000);
+            test.testSort("Quick Sort", quickSort, arr_copy_2, 500000);
+            test.testSort("Quick Sort 双路排序法", quickSortV2, arr_copy_3, 500000 );
+            test.testSort("Quick Sort 三路排序法", quickSortV3, arr_copy_4, 500000 );
+
+            console.log("reverse pairs test (Using mergesort idea) : " + reversePair([4, 5, 8, 9, 1, 10, 2, 3]));
+//            test.testSort("Insertion Sort", insertion, arr_copy, 500000);
+//            test.testSort("Insertion Sort Advanced", insertionAdvanced, arr_copy_1, 500000);
+//            test.testSort("Bubble Sort", bubbleSort, arr_copy_2, 500000);
+//            test.testSort("Shell Sort Naive", shellSort, arr_copy_3, 500000);
+        };
+    </script>
+</head>
+<body onload="execute()">
+<p></p>
+</body>
+</html>

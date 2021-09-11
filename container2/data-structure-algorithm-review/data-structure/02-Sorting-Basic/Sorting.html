@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting</title>
+    <script src="selectionSort.js"></script>
+    <script src="insertionSort.js"></script>
+    <script src="insertion-advance.js"></script>
+    <script src="bubbleSort.js"></script>
+    <script src="shellSort.js"></script>
+    <script src="../Sort-Test-Helper/sort-test-helper.js"></script>
+    <script>
+        var helper = new Helper();
+        var test = new Tester();
+        var execute = function(){
+            var arr = helper.generateRandomArray(10000, 0, 10000);
+            var arr_copy = arr.slice();
+            var arr_copy_1 = arr.slice();
+            var arr_copy_2 = arr.slice();
+            var arr_copy_3 = arr.slice();
+            test.testSort("Selection Sort", selection, arr, 10000);
+            test.testSort("Insertion Sort", insertion, arr_copy, 10000);
+            test.testSort("Insertion Sort Advanced", insertionAdvanced, arr_copy_1, 10000);
+            test.testSort("Bubble Sort", bubbleSort, arr_copy_2, 10000);
+            test.testSort("Shell Sort Naive", shellSort, arr_copy_3, 10000);
+        };
+    </script>
+</head>
+<body onload="execute()">
+    <p></p>
+</body>
+</html>
