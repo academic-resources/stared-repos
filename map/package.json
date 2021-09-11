@@ -1,0 +1,35 @@
+{
+  "name": "util-map",
+  "version": "1.0.1",
+  "description": "Map over an object, array or string",
+  "main": "map.js",
+  "scripts": {
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/map.git"
+  },
+  "keywords": [
+    "map",
+    "value",
+    "object",
+    "string",
+    "array"
+  ],
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/map/issues"
+  },
+  "homepage": "https://github.com/blakeembrey/map",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.3.0"
+  }
+}
