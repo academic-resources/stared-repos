@@ -1,0 +1,18 @@
+{
+  "name": "react-list",
+  "version": "0.4.2",
+  "main": "react-list.js",
+  "ignore": [
+    ".gitignore",
+    ".npmignore",
+    "cogs.js",
+    "Makefile",
+    "node_modules",
+    "package.json",
+    "index.html",
+    "react-list.es6"
+  ],
+  "dependencies": {
+    "react": "0.13.x"
+  }
+}
