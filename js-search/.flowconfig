@@ -1,0 +1,13 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+untyped-type-import=error
+untyped-import=error
+
+[options]
+
+[strict]
