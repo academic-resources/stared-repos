@@ -1,0 +1,33 @@
+{
+  "name": "util-invoke",
+  "version": "1.0.1",
+  "description": "Functional utility for invoking the same method on every call.",
+  "main": "invoke.js",
+  "scripts": {
+    "test": "istanbul cover _mocha -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/invoke.git"
+  },
+  "keywords": [
+    "invoke",
+    "method",
+    "functional"
+  ],
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/invoke/issues"
+  },
+  "homepage": "https://github.com/blakeembrey/invoke",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.3.0"
+  }
+}
