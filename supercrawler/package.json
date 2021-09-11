@@ -1,0 +1,44 @@
+{
+  "name": "supercrawler",
+  "description": "A web crawler. Supercrawler automatically crawls websites. Define custom handlers to parse content. Obeys robots.txt, rate limits and concurrency limits.",
+  "version": "2.0.0",
+  "homepage": "https://github.com/brendonboshell/supercrawler",
+  "author": "Brendon Boshell <brendonboshell@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendonboshell/supercrawler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brendonboshell/supercrawler/issues"
+  },
+  "keywords": [
+    "crawler",
+    "spider",
+    "supercrawler"
+  ],
+  "scripts": {
+    "test": "mocha --recursive",
+    "coverage": "nyc --reporter=lcov --check-coverage npm test"
+  },
+  "main": "./lib/index.js",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.0",
+    "proxyquire": "^2.1.0",
+    "sinon": "^1.17.7"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.4",
+    "cheerio": "^1.0.0-rc.3",
+    "ioredis": "^4.9.3",
+    "lodash": "^4.17.11",
+    "mime-types": "^2.1.24",
+    "node-cache": "^4.2.0",
+    "request": "^2.88.0",
+    "robots-parser": "^2.1.1",
+    "sequelize": "^5.8.5",
+    "sqlite3": "^4.0.7"
+  }
+}
