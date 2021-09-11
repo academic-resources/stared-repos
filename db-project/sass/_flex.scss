@@ -1,0 +1,66 @@
+// row maintain equal height
+.flex {
+  width: 100%;
+  display: flex;
+  
+  flex-flow: row nowrap; 
+
+  @for $i from 1 through 100 {
+    .flex-item-#{$i} {
+      width: $i * 1%;
+      margin:0 auto;
+    }
+  }
+
+  @for $i from 1 through 12 {
+    .flex-order-#{$i} { order: $i;}
+  }
+}
+
+// one column stack
+.flex-col {
+  flex-flow: column nowrap; 
+}
+
+//space between
+.flex-gutter {
+  padding: 0 1rem 0 1rem;
+  &-large { padding: 0 2rem 0 2rem;}
+}
+
+//flex align example: http://flexboxin5.com/
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-center {
+  align-items: center; 
+}
+
+.flex-baseline {
+  align-items: baseline;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-top {
+  align-items: flex-start;
+}
+
+.flex-bottom {
+  align-items: flex-end;
+}
+
+@include tablet-m() {
+  .flex-gutter {
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0;
+  }
+}
+

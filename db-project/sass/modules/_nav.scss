@@ -1,0 +1,65 @@
+.nav-wrapper {
+  max-width: 100%;
+  width: 100%;
+  height: 7rem;
+
+  padding-left: 10%;
+  padding-top: 2rem;
+  background-color: darken(white, 40%);
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  overflow: hidden;
+  z-index: 1;
+  backface-visibility: hidden;
+
+  transition: transform .5s ease;
+  transform: translate3d(0,100%,0);
+
+  &.show { transform: translate3d(0,0,0);}
+
+  @include tablet-m() { padding-top: .8rem; }
+  @include phone-l() { padding-left: 20px;  height: 50%; }
+}
+.nav {
+  max-width: 640px;
+
+  .nav-item { 
+    display: block;
+    width: 25%;  
+
+     @include phone-l() {
+      width: 100%; 
+      border-bottom: 1px solid $site-dark-gray;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+
+      &:last-child {border-bottom: 0; padding-bottom: 0}
+    } 
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: lighten($site-hover, 30%);
+
+    @include type-size(2);
+    transition: color .2s ease;
+    
+    &:hover{ color: darken($site-dark-gray, 25%);}
+
+    @include phone-l() {
+      display: block;
+      text-align: center;
+
+      font-size: 3rem;
+      line-height: normal;
+    }
+
+  }
+  @include desktop() { max-width: 100%; }
+  @include phone-l() {
+    &.flex { flex-flow: column nowrap;}
+  } 
+}

@@ -1,0 +1,25 @@
+.list {
+    list-style: none;
+    overflow: hidden;
+    &.bulleted {
+        .list-item {
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+    }
+}
+
+.list-item {
+	@include type-size(1.5);
+	margin-bottom: $spacing;	
+}
+
+.list-inline {
+	@extend .list;
+	.list-item, li {
+		float: left;
+		padding: 0 $spacing 0 0;
+		margin-bottom: 0;
+	}
+}
+
