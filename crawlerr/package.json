@@ -1,0 +1,72 @@
+{
+  "name": "crawlerr",
+  "version": "1.5.0",
+  "keywords": [
+    "web-crawler",
+    "crawler",
+    "spider",
+    "scraper",
+    "jsdom",
+    "nodejs"
+  ],
+  "engines": {
+    "node": ">=8.12.0"
+  },
+  "description": "A simple and fully customizable web crawler/spider for Node.js with server-side DOM. Comes with elegant and hell-simple APIs.",
+  "author": "Łaniewski Bartosz <bartosz@laniewski.me> (https://laniewski.me/)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bartozzz/crawlerr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bartozzz/crawlerr/issues"
+  },
+  "dependencies": {
+    "bloomfilter": "^0.0.18",
+    "get-link": "^1.0.3",
+    "jsdom": "^13.1.0",
+    "merge-descriptors": "^1.0.1",
+    "queue-promise": "^1.3.0",
+    "request": "^2.88.0",
+    "retry-request": "^4.0.0",
+    "setprototypeof": "^1.1.0",
+    "type-is": "^1.6.16",
+    "wildcard-named": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/register": "7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.6.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-flowtype": "^3.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "flow-bin": "^0.89.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.14.3"
+  },
+  "scripts": {
+    "test": "npm run test:eslint && npm run test:flow && npm run test:mocha",
+    "test:flow": "flow",
+    "test:mocha": "mocha --require @babel/register",
+    "test:eslint": "eslint --fix src",
+    "clean": "rm -rf dist",
+    "build": "babel src -d dist",
+    "watch": "babel src -d dist -w",
+    "prepare": "npm run clean && npm run test && npm run build"
+  }
+}
