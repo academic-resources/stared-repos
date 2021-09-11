@@ -1,17 +1,17 @@
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1 {
-    font-family: fantasy;
-    font-size: 50px;
+  font-family: fantasy;
+  font-size: 50px;
 }
-.hanoi { 
-    display: flex; 
-    min-width: 80%;
+.hanoi {
+  display: flex;
+  min-width: 80%;
 }
 
 ul {
@@ -30,10 +30,10 @@ ul {
 }
 
 ul li {
-    background-color: gray;
-    border-radius: 30px;
-    margin: 7px;
-    display: none;    
+  background-color: gray;
+  border-radius: 30px;
+  margin: 7px;
+  display: none;
 }
 
 .selected {
@@ -41,19 +41,18 @@ ul li {
 }
 
 .disc-1 {
-    width: 35%;
-    height: 40px;
-    display: list-item;
+  width: 35%;
+  height: 40px;
+  display: list-item;
 }
 
 .disc-2 {
-    width: 65%;
-    height: 40px;
-    display: list-item;
+  width: 65%;
+  height: 40px;
+  display: list-item;
 }
 .disc-3 {
-    width: 90%;
-    height: 40px;
-    display: list-item;
+  width: 90%;
+  height: 40px;
+  display: list-item;
 }
-

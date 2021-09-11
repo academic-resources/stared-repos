@@ -1,7 +1,7 @@
 /* PHASE 11: Icons */
 
-[class*='icon-'] {
-  background-image: url('https://assets.aaonline.io/fullstack/html-css/micro-projects/css-friends/docs/images/sprite.png');
+[class*="icon-"] {
+  background-image: url("https://assets.aaonline.io/fullstack/html-css/micro-projects/css-friends/docs/images/sprite.png");
   background-size: 25px 250px;
   display: inline-block;
   width: 25px;
@@ -34,7 +34,7 @@
   background-position: 0 -75px;
 }
 
-[class*='icon-small-'] {
+[class*="icon-small-"] {
   width: 20px;
   padding-top: 20px;
 }

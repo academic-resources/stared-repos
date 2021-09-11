@@ -1,6 +1,7 @@
 import pygame
 import time
 import random
+
 pygame.init()
 white = (255, 255, 255)  # creating colour with RGB parameter
 black = (0, 0, 0)
@@ -9,8 +10,9 @@ green = (0, 155, 0)
 display_width = 800
 display_height = 600
 gameDisplay = pygame.display.set_mode(
-    (display_width, display_height))  # creating the game room
-pygame.display.set_caption('snake dj')  # adding the screen title
+    (display_width, display_height)
+)  # creating the game room
+pygame.display.set_caption("snake dj")  # adding the screen title
 pygame.display.update()
 
 clock = pygame.time.Clock()  # capital C activating pygame clock
@@ -22,8 +24,7 @@ font = pygame.font.SysFont(None, 25)
 
 def snake(block_size, snakelist):
     for XnY in snakelist:
-        pygame.draw.rect(gameDisplay, green,
-                         [XnY[0], XnY[1], block_size, block_size])
+        pygame.draw.rect(gameDisplay, green, [XnY[0], XnY[1], block_size, block_size])
 
 
 def message_to_screen(msg, colour):
@@ -42,15 +43,12 @@ def gameLoop():
     lead_y_change = 0
     snakelist = []
     snakelength = 1
-    randAppleX = round(
-        random.randrange(0, display_width - block_size) / 10.0) * 10.0
-    randAppleY = round(
-        random.randrange(0, display_height - block_size) / 10.0) * 10.0
+    randAppleX = round(random.randrange(0, display_width - block_size) / 10.0) * 10.0
+    randAppleY = round(random.randrange(0, display_height - block_size) / 10.0) * 10.0
     while not gameExit:  # starting game loop
         while gameOver == True:
             gameDisplay.fill(white)
-            message_to_screen("game over,press C to play again or Q to quit",
-                              red)
+            message_to_screen("game over,press C to play again or Q to quit", red)
             pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
@@ -80,19 +78,25 @@ def gameLoop():
                 elif event.key == pygame.K_DOWN:
                     lead_y_change = block_size
                     lead_x_change = 0
-        if lead_x >= display_width or lead_x < 0 or lead_y >= display_height or lead_y < 0:
+        if (
+            lead_x >= display_width
+            or lead_x < 0
+            or lead_y >= display_height
+            or lead_y < 0
+        ):
             gameOver = True  # x>=800 y>=600 is used to avoid boundary problem
-            '''if event.type==pygame.KEYUP:
+            """if event.type==pygame.KEYUP:
                 if event.key==pygame.K_LEFT or event.key==pygame.K_RIGHT:
                     lead_x_change = 0
-             '''
+             """
         lead_x += lead_x_change
         lead_y += lead_y_change
         # problem due to not defining fps
 
         gameDisplay.fill(white)
-        pygame.draw.rect(gameDisplay, red,
-                         [randAppleX, randAppleY, block_size, block_size])
+        pygame.draw.rect(
+            gameDisplay, red, [randAppleX, randAppleY, block_size, block_size]
+        )
 
         snakehead = []
         snakehead.append(lead_x)
@@ -110,23 +114,26 @@ def gameLoop():
         # it does not make the block moving continuously
         pygame.display.update()
         if lead_x == randAppleX and lead_y == randAppleY:
-            randAppleX = round(
-                random.randrange(0, display_width - block_size) / 10.0) * 10.0
-            randAppleY = round(
-                random.randrange(0, display_height - block_size) / 10.0) * 10.0
+            randAppleX = (
+                round(random.randrange(0, display_width - block_size) / 10.0) * 10.0
+            )
+            randAppleY = (
+                round(random.randrange(0, display_height - block_size) / 10.0) * 10.0
+            )
             snakelength += 5
         clock.tick(FPS)
-    #message_to_screen("YOU LOSE",red)
+    # message_to_screen("YOU LOSE",red)
     # right fps for snake game
     # first define movement then define fps
 
     # updating the display in each step
     # print(event)
 
-# message_to_screen("YOU LOSE,GO OUTSIDE YOU FOOL",red)
-# pygame.display.update()
-# time.sleep(2)#user have to wait for some time
+    # message_to_screen("YOU LOSE,GO OUTSIDE YOU FOOL",red)
+    # pygame.display.update()
+    # time.sleep(2)#user have to wait for some time
     pygame.quit()
     quit()
+
 
 gameLoop()

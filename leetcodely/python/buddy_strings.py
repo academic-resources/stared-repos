@@ -18,7 +18,7 @@ class Solution(object):
         return len(diff) == 2 and diff[0] == diff[1][::-1]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.buddyStrings("ab", "ba"))
     print(solution.buddyStrings("ab", "ab"))

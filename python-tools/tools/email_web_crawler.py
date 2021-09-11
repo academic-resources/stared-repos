@@ -17,11 +17,11 @@ def email_web_crawler(urls):
     list_emails = []
     for url in urls:
         if not parse.urlparse(url.strip()).scheme:
-            url = 'http://' + url.strip()
+            url = "http://" + url.strip()
         try:
             response = urlopen(url.strip(), timeout=5)
-            html = response.read().decode('utf-8')
-            for email in re.findall('([\w\.,]+@[\w\.,]+\.\w+)', html):
+            html = response.read().decode("utf-8")
+            for email in re.findall("([\w\.,]+@[\w\.,]+\.\w+)", html):
                 if email not in list_emails:
                     list_emails.append(email)
         except Exception:

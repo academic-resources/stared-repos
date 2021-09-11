@@ -1,23 +1,23 @@
-const mongoose = require('mongoose');
-mongoose.set('useCreateIndex', true);
+const mongoose = require("mongoose");
+mongoose.set("useCreateIndex", true);
 const Schema = mongoose.Schema;
 
 const AbodeSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   coordinates: {
     type: String,
-    required: true
+    required: true,
   },
   gods: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'god'
-    }
-  ]
+      ref: "god",
+    },
+  ],
 });
 
-module.exports = mongoose.model('abode', AbodeSchema);
+module.exports = mongoose.model("abode", AbodeSchema);

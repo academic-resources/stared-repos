@@ -21,8 +21,8 @@ try:
     # disable boto (S3 download)
     from scrapy import optional_features
 
-    if 'boto' in optional_features:
-        optional_features.remove('boto')
+    if "boto" in optional_features:
+        optional_features.remove("boto")
 except ImportError:
     pass
 
@@ -42,12 +42,18 @@ def run_config(config):
         config.index_name,
         config.index_name_tmp,
         AlgoliaSettings.get(config, strategy.levels),
-        config.query_rules
+        config.query_rules,
     )
 
-    root_module = 'src.' if __name__ == '__main__' else 'scraper.src.'
-    DOWNLOADER_MIDDLEWARES_PATH = root_module + 'custom_downloader_middleware.' + CustomDownloaderMiddleware.__name__
-    DUPEFILTER_CLASS_PATH = root_module + 'custom_dupefilter.' + CustomDupeFilter.__name__
+    root_module = "src." if __name__ == "__main__" else "scraper.src."
+    DOWNLOADER_MIDDLEWARES_PATH = (
+        root_module
+        + "custom_downloader_middleware."
+        + CustomDownloaderMiddleware.__name__
+    )
+    DUPEFILTER_CLASS_PATH = (
+        root_module + "custom_dupefilter." + CustomDupeFilter.__name__
+    )
 
     headers = {
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -72,24 +78,26 @@ def run_config(config):
 
     DEFAULT_REQUEST_HEADERS = headers
 
-    process = CrawlerProcess({
-        'LOG_ENABLED': '1',
-        'LOG_LEVEL': 'ERROR',
-        'USER_AGENT': config.user_agent,
-        'DOWNLOADER_MIDDLEWARES': {DOWNLOADER_MIDDLEWARES_PATH: 900},
-        # Need to be > 600 to be after the redirectMiddleware
-        'DUPEFILTER_USE_ANCHORS': config.use_anchors,
-        # Use our custom dupefilter in order to be scheme agnostic regarding link provided
-        'DUPEFILTER_CLASS': DUPEFILTER_CLASS_PATH,
-        'DEFAULT_REQUEST_HEADERS': DEFAULT_REQUEST_HEADERS,
-        'TELNETCONSOLE_ENABLED': False
-    })
+    process = CrawlerProcess(
+        {
+            "LOG_ENABLED": "1",
+            "LOG_LEVEL": "ERROR",
+            "USER_AGENT": config.user_agent,
+            "DOWNLOADER_MIDDLEWARES": {DOWNLOADER_MIDDLEWARES_PATH: 900},
+            # Need to be > 600 to be after the redirectMiddleware
+            "DUPEFILTER_USE_ANCHORS": config.use_anchors,
+            # Use our custom dupefilter in order to be scheme agnostic regarding link provided
+            "DUPEFILTER_CLASS": DUPEFILTER_CLASS_PATH,
+            "DEFAULT_REQUEST_HEADERS": DEFAULT_REQUEST_HEADERS,
+            "TELNETCONSOLE_ENABLED": False,
+        }
+    )
 
     process.crawl(
         DocumentationSpider,
         config=config,
         algolia_helper=algolia_helper,
-        strategy=strategy
+        strategy=strategy,
     )
 
     process.start()
@@ -105,15 +113,15 @@ def run_config(config):
 
     if DocumentationSpider.NB_INDEXED > 0:
         algolia_helper.commit_tmp_index()
-        print('Nb hits: {}'.format(DocumentationSpider.NB_INDEXED))
+        print("Nb hits: {}".format(DocumentationSpider.NB_INDEXED))
         config.update_nb_hits_value(DocumentationSpider.NB_INDEXED)
     else:
-        print('Crawling issue: nbHits 0 for ' + config.index_name)
+        print("Crawling issue: nbHits 0 for " + config.index_name)
         exit(EXIT_CODE_NO_RECORD)
     print("")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     from os import environ
 
-    run_config(environ['CONFIG'])
+    run_config(environ["CONFIG"])

@@ -1,29 +1,30 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
-
+import React from "react";
+import { withRouter } from "react-router-dom";
 
 class NotebookIndexItem extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-
   }
 
-  render(){
+  render() {
     const notebookId = this.props.id;
     const noteCount = this.props.noteIds.length;
-    return(
-      <div className= 'notebook-item-container'>
-        <li className='notebook-item'
-            onClick={() => {
-              this.props.selectNotebook(notebookId);
-              this.props.history.push('/notebooks');
-            } }>
-
+    return (
+      <div className="notebook-item-container">
+        <li
+          className="notebook-item"
+          onClick={() => {
+            this.props.selectNotebook(notebookId);
+            this.props.history.push("/notebooks");
+          }}
+        >
           <h5>
             {this.props.title}
-            <div className='notebook-item-buttons'>
-              <button className='button-notebook'
-                onClick={() => this.props.deleteWarning()}>
+            <div className="notebook-item-buttons">
+              <button
+                className="button-notebook"
+                onClick={() => this.props.deleteWarning()}
+              >
                 <img src={window.staticImages.whiteTrashCan} />
               </button>
             </div>
@@ -31,7 +32,7 @@ class NotebookIndexItem extends React.Component {
 
           <p>{`${noteCount} notes`}</p>
         </li>
-        <div className='bottom-border'></div>
+        <div className="bottom-border"></div>
       </div>
     );
   }

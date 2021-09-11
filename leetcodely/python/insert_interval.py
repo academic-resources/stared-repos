@@ -26,13 +26,16 @@ class Solution(object):
         """
         res = []
         i = 0
-        #add the portion with no merge
+        # add the portion with no merge
         while i < len(intervals) and intervals[i].end < newInterval.start:
             res.append(intervals[i])
             i += 1
         # add the merge
         while i < len(intervals) and intervals[i].start <= newInterval.end:
-            newInterval = Interval(min(intervals[i].start, newInterval.start), max(intervals[i].end, newInterval.end))
+            newInterval = Interval(
+                min(intervals[i].start, newInterval.start),
+                max(intervals[i].end, newInterval.end),
+            )
             i += 1
         res.append(newInterval)
 

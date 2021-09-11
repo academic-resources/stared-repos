@@ -50,11 +50,7 @@ if __name__ == "__main__":
     import sys
 
     parser = argparse.ArgumentParser(description="Pretty print json")
-    parser.add_argument(
-        "path",
-        metavar="PATH",
-        help="path to file, or - for stdin",
-    )
+    parser.add_argument("path", metavar="PATH", help="path to file, or - for stdin")
     parser.add_argument(
         "-i",
         "--indent",

@@ -69,7 +69,7 @@ class Command(BaseCommand):
             for hostname, target in mapping.items()
         ]
         client.change_resource_record_sets(
-            HostedZoneId=zone_id, ChangeBatch={"Changes": changes},
+            HostedZoneId=zone_id, ChangeBatch={"Changes": changes}
         )
 
     def add_dns_records(self):

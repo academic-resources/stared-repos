@@ -37,7 +37,7 @@ class Solution:
             self.dfs(image, visited, row, col - 1, oldColor, newColor)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     image = [[1, 1, 1], [1, 1, 0], [1, 0, 1]]
     solution = Solution()
     print(solution.floodFill(image, 1, 1, 2))

@@ -16,7 +16,7 @@ def decrypt(msg, MORSE_CODE_DICTIONARY):
             if j not in li2:
                 print(j)
                 DecryptedMessage.clear()
-                DecryptedMessage.append('INVALID MORSE CODE!!')
+                DecryptedMessage.append("INVALID MORSE CODE!!")
                 return DecryptedMessage
             Word = Word + dic[j]
         DecryptedMessage.append(Word)

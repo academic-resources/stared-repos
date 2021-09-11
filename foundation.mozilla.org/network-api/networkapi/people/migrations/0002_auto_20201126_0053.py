@@ -5,22 +5,11 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('people', '0001_to_0026'),
-    ]
+    dependencies = [("people", "0001_to_0026")]
 
     operations = [
-        migrations.RemoveField(
-            model_name='person',
-            name='internet_health_issues',
-        ),
-        migrations.DeleteModel(
-            name='Affiliation',
-        ),
-        migrations.DeleteModel(
-            name='InternetHealthIssue',
-        ),
-        migrations.DeleteModel(
-            name='Person',
-        ),
+        migrations.RemoveField(model_name="person", name="internet_health_issues"),
+        migrations.DeleteModel(name="Affiliation"),
+        migrations.DeleteModel(name="InternetHealthIssue"),
+        migrations.DeleteModel(name="Person"),
     ]

@@ -15,8 +15,9 @@ def timed(fn):
         result = fn(*arg, **kw)
         te = time.time()
 
-        logger.info('[Benchmark] Function = %s, Time = %2.2f sec' \
-                    % (fn.__name__, (te - ts)))
+        logger.info(
+            "[Benchmark] Function = %s, Time = %2.2f sec" % (fn.__name__, (te - ts))
+        )
 
         return result
 

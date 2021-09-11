@@ -3,7 +3,7 @@ from astunparse import unparse
 from wrapper_types import TYPES
 
 funcs = {
-    'friends': '''
+    "friends": """
 class Solution:
     def findCircleNum(self, M) -> int:
         N = len(M)
@@ -32,17 +32,15 @@ class Solution:
 Solution().findCircleNum([[1,1],[1,1]])
 
 
-    ''',
-
-
-    'loop': '''
+    """,
+    "loop": """
 
 for a,b, (c,d) in [[1,2, [3,4]]]:
     a + b + c + d
 
 
-    ''',
-    'assignments': '''
+    """,
+    "assignments": """
 
 def g():
     a = 1
@@ -62,33 +60,33 @@ z = 5
 del (x,(y,z))
 
 
-''',
-    'func': '''
+""",
+    "func": """
 class K:
     def func(self,a,b,c=5,*d):
         self = 5
         return self
 K().func(1,2,3,4,5,6)
-''',
-    'class': '''
+""",
+    "class": """
 class S:
     z = 1
     def __init__(self):
         1 + 1
-''',
-    'generator': '''
+""",
+    "generator": """
 (a): int = 1
 
 a += 1+1
 # b = f"sin({a})"
-''',
-    'lambda': '''
+""",
+    "lambda": """
 
 a = lambda x,y,*z : x + y + sum(z)
 
 a(1,2,3,4,5,6,7,8,9,10)
-''',
-    'DNA': '''
+""",
+    "DNA": """
 
 def findRepeatedDnaSequences(s: str):
         seen = {}
@@ -105,22 +103,19 @@ def findRepeatedDnaSequences(s: str):
 
         return output
 findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT")
-''',
-
-    'import': '''
+""",
+    "import": """
 
 from x import *
 
-''',
-
-    'with': '''
+""",
+    "with": """
 
 with x as (m,n,(o,p)):
     ...
 
-''',
-
-    'comprehensions': '''
+""",
+    "comprehensions": """
 
 arr = [[i for i in range(2)] for j in range(5)]
 
@@ -132,32 +127,29 @@ z = [(a,b) for line in arr if 1+1 if 1 for (a,b) in line]
 
 
 
-'''
-
-
-
+""",
 }
 
 
 class TestRunner:
     def __(self, val, info):
-        assert hasattr(TYPES, info['type'])
-        if info['type'] == TYPES.PROGRAM:
-            assert info['scope'] == (None, 0)
+        assert hasattr(TYPES, info["type"])
+        if info["type"] == TYPES.PROGRAM:
+            assert info["scope"] == (None, 0)
         else:
-            inst = isinstance(info['scope'], tuple)
-            l = len(info['scope']) == 2
+            inst = isinstance(info["scope"], tuple)
+            l = len(info["scope"]) == 2
             assert inst and l
 
-        if info['type'] == TYPES.DECLARATION:
-            assert isinstance(info['block'], bool)
-            assert info['block'] == False
-        if info['type'] == TYPES.ASSIGNMENT:
-            assert isinstance(info['name'], tuple)
-            assert isinstance(info['varName'], str)
-        if info['type'] in [TYPES.FUNC, TYPES.RETURN]:
-            assert isinstance(info['funcName'], str)
-            assert isinstance(info['funcID'], str)
+        if info["type"] == TYPES.DECLARATION:
+            assert isinstance(info["block"], bool)
+            assert info["block"] == False
+        if info["type"] == TYPES.ASSIGNMENT:
+            assert isinstance(info["name"], tuple)
+            assert isinstance(info["varName"], str)
+        if info["type"] in [TYPES.FUNC, TYPES.RETURN]:
+            assert isinstance(info["funcName"], str)
+            assert isinstance(info["funcID"], str)
 
         # start, end = info.get('name', (0, 0))
         # print(info['type'], ':', code[start:end] or info.get('funcName'))
@@ -176,7 +168,7 @@ for name, code in funcs.items():
 
         _name, imports = input
 
-        open('transpiled.py', "w+").write(transpiled)
+        open("transpiled.py", "w+").write(transpiled)
         # globals()[_name] = TestRunner()
 
         # exec(transpiled, {_name: TestRunner(), 'dir': None, 'open': None}, {})

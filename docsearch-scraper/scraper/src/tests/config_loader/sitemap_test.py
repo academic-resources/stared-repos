@@ -9,7 +9,7 @@ class TestSitemap:
         """ Should throw if CONFIG need sitemap_urls """
         # Given
 
-        urls_sitemap_less = config({'force_sitemap_urls_crawling': True})
+        urls_sitemap_less = config({"force_sitemap_urls_crawling": True})
 
         # When / Then
         with pytest.raises(Exception):
@@ -17,10 +17,7 @@ class TestSitemap:
 
     def test_need_sitemap_urls_regex(self):
         """ Should throw if CONFIG need sitemap_urls """
-        urls_sitemap_less = {
-            'sitemap_urls_regexs': ["/doc/"]
-
-        }
+        urls_sitemap_less = {"sitemap_urls_regexs": ["/doc/"]}
 
         # When / Then
         with pytest.raises(Exception):
@@ -29,11 +26,12 @@ class TestSitemap:
     def test_config_loader(self):
         """ Should throw if CONFIG need sitemap_urls """
         additional_config = {
-            'sitemap_urls_regexs': ["/doc/", "/docs/"],
-            'force_sitemap_urls_crawling': True,
-            'sitemap_urls': ["http://www.test.com/sitemap.xml",
-                             "http://www.test.com/doc/sitemap.xml"]
-
+            "sitemap_urls_regexs": ["/doc/", "/docs/"],
+            "force_sitemap_urls_crawling": True,
+            "sitemap_urls": [
+                "http://www.test.com/sitemap.xml",
+                "http://www.test.com/doc/sitemap.xml",
+            ],
         }
 
         config_loaded = ConfigLoader(config(additional_config))

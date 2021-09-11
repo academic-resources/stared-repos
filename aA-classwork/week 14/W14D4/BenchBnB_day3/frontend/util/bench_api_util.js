@@ -1,13 +1,13 @@
-export const fetchBenches = filters =>
+export const fetchBenches = (filters) =>
   $.ajax({
-    method: 'GET',
-    url: 'api/benches',
-    data: filters
-  })
+    method: "GET",
+    url: "api/benches",
+    data: filters,
+  });
 
-export const createBench = bench =>
+export const createBench = (bench) =>
   $.ajax({
-    method: 'POST',
-    url: 'api/benches',
-    data: bench
-  })
+    method: "POST",
+    url: "api/benches",
+    data: bench,
+  });

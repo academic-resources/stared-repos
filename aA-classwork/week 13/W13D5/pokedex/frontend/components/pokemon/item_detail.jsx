@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const ItemDetail = ({ item }) => {
   return (
@@ -7,7 +7,7 @@ const ItemDetail = ({ item }) => {
       <div>Price: {item.price}</div>
       <div>Happiness: {item.happiness}</div>
     </div>
-  )
-}
+  );
+};
 
-export default ItemDetail
+export default ItemDetail;

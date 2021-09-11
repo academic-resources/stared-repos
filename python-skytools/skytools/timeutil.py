@@ -14,14 +14,13 @@ import time
 from datetime import datetime, timedelta, tzinfo
 from typing import Optional, Pattern
 
-__all__ = (
-    'parse_iso_timestamp', 'FixedOffsetTimezone', 'datetime_to_timestamp',
-)
+__all__ = ("parse_iso_timestamp", "FixedOffsetTimezone", "datetime_to_timestamp")
 
 
 class FixedOffsetTimezone(tzinfo):
     """Fixed offset in minutes east from UTC."""
-    __slots__ = ('__offset', '__name')
+
+    __slots__ = ("__offset", "__name")
 
     __offset: timedelta
     __name: str
@@ -95,25 +94,28 @@ def parse_iso_timestamp(s: str, default_tz: Optional[tzinfo] = None):
 
     m = _iso_rc.match(s)
     if not m:
-        raise ValueError('Date not in ISO format: %s' % repr(s))
+        raise ValueError("Date not in ISO format: %s" % repr(s))
 
     tz = default_tz
-    if m.group('tzsign'):
-        tzofs = int(m.group('tzhr')) * 60
-        if m.group('tzmin'):
-            tzofs += int(m.group('tzmin'))
-        if m.group('tzsign') == '-':
+    if m.group("tzsign"):
+        tzofs = int(m.group("tzhr")) * 60
+        if m.group("tzmin"):
+            tzofs += int(m.group("tzmin"))
+        if m.group("tzsign") == "-":
             tzofs = -tzofs
         tz = FixedOffsetTimezone(tzofs)
-    elif m.group('tzname'):
+    elif m.group("tzname"):
         tz = UTC
 
     return datetime(
-        int(m.group('year')), int(m.group('month')), int(m.group('day')),
-        int(m.group('hour')), int(m.group('min')),
-        m.group('sec') and int(m.group('sec')) or 0,
-        m.group('ss') and int(m.group('ss').ljust(6, '0')) or 0,
-        tz
+        int(m.group("year")),
+        int(m.group("month")),
+        int(m.group("day")),
+        int(m.group("hour")),
+        int(m.group("min")),
+        m.group("sec") and int(m.group("sec")) or 0,
+        m.group("ss") and int(m.group("ss").ljust(6, "0")) or 0,
+        tz,
     )
 
 
@@ -143,4 +145,3 @@ def datetime_to_timestamp(dt: datetime, local_time=True) -> float:
     else:
         delta = dt - UTC_NOTZ_EPOCH
         return delta.total_seconds()
-

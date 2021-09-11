@@ -3,7 +3,12 @@ from modelcluster.fields import ParentalKey
 
 from wagtail.core.models import Orderable, Page
 from wagtail.core.fields import StreamField
-from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel, StreamFieldPanel
+from wagtail.admin.edit_handlers import (
+    FieldPanel,
+    InlinePanel,
+    MultiFieldPanel,
+    StreamFieldPanel,
+)
 from wagtail.documents.edit_handlers import DocumentChooserPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.snippets.edit_handlers import SnippetChooserPanel
@@ -11,7 +16,11 @@ from wagtail.snippets.edit_handlers import SnippetChooserPanel
 from wagtail_localize.fields import SynchronizedField, TranslatableField
 
 from networkapi.wagtailpages.models import ContentAuthor, PublicationPage
-from networkapi.wagtailpages.utils import get_plaintext_titles, set_main_site_nav_information, TitleWidget
+from networkapi.wagtailpages.utils import (
+    get_plaintext_titles,
+    set_main_site_nav_information,
+    TitleWidget,
+)
 
 from ..mixin.foundation_metadata import FoundationMetadataPageMixin
 from ..article_fields import article_fields
@@ -23,15 +32,10 @@ class ArticleAuthors(Orderable):
     page = ParentalKey("wagtailpages.ArticlePage", related_name="authors")
 
     author = models.ForeignKey(
-        ContentAuthor,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=False
+        ContentAuthor, on_delete=models.SET_NULL, null=True, blank=False
     )
 
-    panels = [
-        SnippetChooserPanel("author"),
-    ]
+    panels = [SnippetChooserPanel("author")]
 
     def __str__(self):
         return self.author.name
@@ -46,92 +50,92 @@ class ArticlePage(FoundationMetadataPageMixin, Page):
     If not a child of a Publication Page, page nav at bottom of page
     and breadcrumbs will not render.
     """
+
     subpage_types = []
     body = StreamField(article_fields)
 
     toc_thumbnail_image = models.ForeignKey(
-        'wagtailimages.Image',
+        "wagtailimages.Image",
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        related_name='+',
-        verbose_name='Table of Content Thumbnail',
-        help_text='Thumbnail image to show on table of content. Use square image of 320×320 pixels or larger.',
+        related_name="+",
+        verbose_name="Table of Content Thumbnail",
+        help_text="Thumbnail image to show on table of content. Use square image of 320×320 pixels or larger.",
     )
 
     hero_image = models.ForeignKey(
-        'wagtailimages.Image',
+        "wagtailimages.Image",
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        related_name='+',
-        verbose_name='Publication Hero Image',
+        related_name="+",
+        verbose_name="Publication Hero Image",
     )
 
-    subtitle = models.CharField(
-        blank=True,
-        max_length=250,
-    )
+    subtitle = models.CharField(blank=True, max_length=250)
 
-    secondary_subtitle = models.CharField(
-        blank=True,
-        max_length=250,
-    )
+    secondary_subtitle = models.CharField(blank=True, max_length=250)
 
     publication_date = models.DateField("Publication date", null=True, blank=True)
 
     article_file = models.ForeignKey(
-        'wagtaildocs.Document',
+        "wagtaildocs.Document",
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        related_name='+',
+        related_name="+",
     )
 
     show_side_share_buttons = models.BooleanField(
-        default=True,
-        help_text="Show social share buttons on the side"
+        default=True, help_text="Show social share buttons on the side"
     )
 
     content_panels = [
         FieldPanel(
             "title",
             classname="full title",
-            widget=TitleWidget(attrs={"class": "max-length-warning", "data-max-length": 60})
+            widget=TitleWidget(
+                attrs={"class": "max-length-warning", "data-max-length": 60}
+            ),
         ),
-        MultiFieldPanel([
-            InlinePanel("authors", label="Author", min_num=0)
-        ], heading="Author(s)"),
-        MultiFieldPanel([
-            ImageChooserPanel("toc_thumbnail_image"),
-        ], heading="Table of Content Thumbnail"),
-        MultiFieldPanel([
-            ImageChooserPanel("hero_image"),
-            FieldPanel('subtitle'),
-            FieldPanel('secondary_subtitle'),
-            FieldPanel('publication_date'),
-            DocumentChooserPanel('article_file'),
-        ], heading="Hero"),
-        FieldPanel('show_side_share_buttons'),
-        StreamFieldPanel('body'),
+        MultiFieldPanel(
+            [InlinePanel("authors", label="Author", min_num=0)], heading="Author(s)"
+        ),
+        MultiFieldPanel(
+            [ImageChooserPanel("toc_thumbnail_image")],
+            heading="Table of Content Thumbnail",
+        ),
+        MultiFieldPanel(
+            [
+                ImageChooserPanel("hero_image"),
+                FieldPanel("subtitle"),
+                FieldPanel("secondary_subtitle"),
+                FieldPanel("publication_date"),
+                DocumentChooserPanel("article_file"),
+            ],
+            heading="Hero",
+        ),
+        FieldPanel("show_side_share_buttons"),
+        StreamFieldPanel("body"),
         InlinePanel("footnotes", label="Footnotes"),
     ]
 
     translatable_fields = [
         # Promote tab fields
-        SynchronizedField('slug'),
-        TranslatableField('seo_title'),
-        SynchronizedField('show_in_menus'),
-        TranslatableField('search_description'),
-        SynchronizedField('search_image'),
+        SynchronizedField("slug"),
+        TranslatableField("seo_title"),
+        SynchronizedField("show_in_menus"),
+        TranslatableField("search_description"),
+        SynchronizedField("search_image"),
         # Content tab fields
-        TranslatableField('title'),
-        SynchronizedField('toc_thumbnail_image'),
-        SynchronizedField('hero_image'),
-        TranslatableField('subtitle'),
-        SynchronizedField('article_file'),
-        TranslatableField('body'),
-        TranslatableField('footnotes'),
+        TranslatableField("title"),
+        SynchronizedField("toc_thumbnail_image"),
+        SynchronizedField("hero_image"),
+        TranslatableField("subtitle"),
+        SynchronizedField("article_file"),
+        TranslatableField("body"),
+        TranslatableField("footnotes"),
     ]
 
     @property
@@ -157,7 +161,9 @@ class ArticlePage(FoundationMetadataPageMixin, Page):
         if parent.is_chapter_page:
             # if there is no next page look for the next chapter
             if not next_page:
-                next_page = parent.get_siblings().filter(path__gt=self.path, live=True).first()
+                next_page = (
+                    parent.get_siblings().filter(path__gt=self.path, live=True).first()
+                )
                 # if there is no next chapter return to the parent.get_parent()
                 if not next_page:
                     next_page = parent.get_parent()
@@ -183,12 +189,19 @@ class ArticlePage(FoundationMetadataPageMixin, Page):
         """
 
         parent = self.get_parent().specific
-        prev_page = self.get_siblings().filter(path__lt=self.path, live=True).reverse().first()
+        prev_page = (
+            self.get_siblings().filter(path__lt=self.path, live=True).reverse().first()
+        )
         if parent.is_chapter_page:
             # look for the previous page in this chapter
             # if there is no previous page look for the previous chapter
             if not prev_page:
-                prev_page = parent.get_siblings().filter(path__lt=self.path, live=True).reverse().first()
+                prev_page = (
+                    parent.get_siblings()
+                    .filter(path__lt=self.path, live=True)
+                    .reverse()
+                    .first()
+                )
                 # if there is no previous chapter return to the parent.get_parent()
                 if not prev_page:
                     prev_page = parent.get_parent()
@@ -216,5 +229,5 @@ class ArticlePage(FoundationMetadataPageMixin, Page):
         # Add get_titles to the page context. This is in get_context() because
         # we need access to the `request` object
         # menu_items is required for zen_nav in the templates
-        context['get_titles'] = get_plaintext_titles(request, self.body, "content")
-        return set_main_site_nav_information(self, context, 'Homepage')
+        context["get_titles"] = get_plaintext_titles(request, self.body, "content")
+        return set_main_site_nav_information(self, context, "Homepage")

@@ -7,6 +7,7 @@ canConstruct("aa", "ab") -> false
 canConstruct("aa", "aab") -> true"""
 import collections
 
+
 class Solution:
     def canConstruct(self, ransomNote, magazine):
         """
@@ -15,14 +16,15 @@ class Solution:
         :rtype: bool
         """
         count_map = collections.Counter(magazine)
-        for i,v in enumerate(ransomNote):
+        for i, v in enumerate(ransomNote):
             if v not in count_map or count_map[v] <= 0:
                 return False
             count_map[v] -= 1
         return True
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.canConstruct('aa', 'aab'))
-    print(solution.canConstruct('a', 'b'))
-    print(solution.canConstruct('aa', 'ab'))
+    print(solution.canConstruct("aa", "aab"))
+    print(solution.canConstruct("a", "b"))
+    print(solution.canConstruct("aa", "ab"))

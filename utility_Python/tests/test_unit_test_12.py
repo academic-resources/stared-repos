@@ -13,13 +13,12 @@ from sqlalchemy.exc import DatabaseError
 
 
 class TestMyFunc(unittest.TestCase):
-
-    @patch.object(sqlalchemy, 'create_engine', side_effect=sqlalchemy.exc.ArgumentError)
+    @patch.object(sqlalchemy, "create_engine", side_effect=sqlalchemy.exc.ArgumentError)
     def test_get_db_conn(self, mock_sqlalchemy):
 
         if self.assertRaises(sqlalchemy.exc.ArgumentError):
             get_db_conn()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

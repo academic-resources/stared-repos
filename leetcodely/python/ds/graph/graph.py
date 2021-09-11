@@ -41,7 +41,7 @@ class Graph:
             s += str(k)
             s += ":"
             s += str(v)
-            s += '\n'
+            s += "\n"
         s += " }"
         return s
 

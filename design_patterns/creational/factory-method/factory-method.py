@@ -1,7 +1,9 @@
 from __future__ import annotations
 
-class Application():
+
+class Application:
     """Creator - Interface"""
+
     documents = []
 
     def create_document(self) -> Document:
@@ -15,7 +17,8 @@ class Application():
     def open_document(self):
         pass
 
-class Document():
+
+class Document:
     """Product - Interface"""
 
     def open(self):
@@ -30,11 +33,13 @@ class Document():
     def revert(self):
         pass
 
+
 class MyApplication(Application):
     """Concrete Creator"""
 
     def create_document(self) -> MyDocument:
         return MyDocument()
+
 
 class MyDocument(Document):
     """Concrete Product"""
@@ -42,12 +47,14 @@ class MyDocument(Document):
     def open(self):
         return "My application-specific document"
 
+
 def client_code():
     """ Demo code """
 
     myCreator = MyApplication()
     myCreator.new_document()
     print(myCreator.documents)
+
 
 if __name__ == "__main__":
     client_code()

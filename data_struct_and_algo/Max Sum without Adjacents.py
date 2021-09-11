@@ -9,36 +9,36 @@
 # Output: 110
 # Explanation: 5+100+5=110
 
+
 def findMaxSum(a, n):
-    max=0
+    max = 0
     for i in a:
         if max <= i:
-            max=i            
+            max = i
         else:
-            max=max
-   
+            max = max
 
     for i in range(n):
-        if a[i]==max:
-            index=i
-    sum=0
+        if a[i] == max:
+            index = i
+    sum = 0
 
-    if index%2!=0:
-        for i in range(0,len(a)):
-            if i%2!=0:
- 
-                sum+=a[i]
+    if index % 2 != 0:
+        for i in range(0, len(a)):
+            if i % 2 != 0:
 
+                sum += a[i]
 
-    if index%2==0:
-        for i in range(0,len(a)):
-            if i%2==0:
+    if index % 2 == 0:
+        for i in range(0, len(a)):
+            if i % 2 == 0:
 
-                sum+=a[i]
+                sum += a[i]
 
     return sum
 
-a=[5,5,10,100,10,5]
+
+a = [5, 5, 10, 100, 10, 5]
 
 
-print(findMaxSum(a,len(a)))
+print(findMaxSum(a, len(a)))

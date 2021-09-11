@@ -35,39 +35,60 @@ def connect_message_queue(name, url=None, maxsize=0, lazy_limit=True):
 
     if not url:
         from pyspider.libs.multiprocessing_queue import Queue
+
         return Queue(maxsize=maxsize)
 
     parsed = urlparse.urlparse(url)
-    if parsed.scheme == 'amqp':
+    if parsed.scheme == "amqp":
         from .rabbitmq import Queue
+
         return Queue(name, url, maxsize=maxsize, lazy_limit=lazy_limit)
-    elif parsed.scheme == 'redis':
+    elif parsed.scheme == "redis":
         from .redis_queue import Queue
-        if ',' in parsed.netloc:
+
+        if "," in parsed.netloc:
             """
             redis in cluster mode (there is no concept of 'db' in cluster mode)
             ex. redis://host1:port1,host2:port2,...,hostn:portn
             """
             cluster_nodes = []
-            for netloc in parsed.netloc.split(','):
-                cluster_nodes.append({'host': netloc.split(':')[0], 'port': int(netloc.split(':')[1])})
+            for netloc in parsed.netloc.split(","):
+                cluster_nodes.append(
+                    {"host": netloc.split(":")[0], "port": int(netloc.split(":")[1])}
+                )
 
-            return Queue(name=name, maxsize=maxsize, lazy_limit=lazy_limit, cluster_nodes=cluster_nodes)
+            return Queue(
+                name=name,
+                maxsize=maxsize,
+                lazy_limit=lazy_limit,
+                cluster_nodes=cluster_nodes,
+            )
 
         else:
-            db = parsed.path.lstrip('/').split('/')
+            db = parsed.path.lstrip("/").split("/")
             try:
                 db = int(db[0])
             except:
-                logging.warning('redis DB must zero-based numeric index, using 0 instead')
+                logging.warning(
+                    "redis DB must zero-based numeric index, using 0 instead"
+                )
                 db = 0
 
             password = parsed.password or None
 
-            return Queue(name=name, host=parsed.hostname, port=parsed.port, db=db, maxsize=maxsize, password=password, lazy_limit=lazy_limit)
-    elif url.startswith('kombu+'):
-        url = url[len('kombu+'):]
+            return Queue(
+                name=name,
+                host=parsed.hostname,
+                port=parsed.port,
+                db=db,
+                maxsize=maxsize,
+                password=password,
+                lazy_limit=lazy_limit,
+            )
+    elif url.startswith("kombu+"):
+        url = url[len("kombu+") :]
         from .kombu_queue import Queue
+
         return Queue(name, url, maxsize=maxsize, lazy_limit=lazy_limit)
     else:
-        raise Exception('unknown connection url: %s', url)
+        raise Exception("unknown connection url: %s", url)

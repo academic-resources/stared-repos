@@ -51,7 +51,10 @@ if "APPLICATION_ID" not in environ or len(environ["APPLICATION_ID"]) == 0:
 if "API_KEY" not in environ or len(environ["API_KEY"]) == 0:
     CREDENTIALS = False
 
-if "APPLICATION_ID_PROD_INTERNAL" not in environ or len(environ["APPLICATION_ID_PROD_INTERNAL"]) == 0:
+if (
+    "APPLICATION_ID_PROD_INTERNAL" not in environ
+    or len(environ["APPLICATION_ID_PROD_INTERNAL"]) == 0
+):
     ADMIN = False
 
 cmds = []
@@ -84,11 +87,17 @@ def print_usage(no_ansi=False):
     printer("Options:", 2, no_ansi)
 
     if no_ansi:
-        printer("  " + "--help" + (" " * 4) + "Display help message", 4,
-                no_ansi)
+        printer("  " + "--help" + (" " * 4) + "Display help message", 4, no_ansi)
     else:
-        printer("  " + get_color(1) + "--help" + get_color() + (
-            " " * 4) + "Display help message", 4)
+        printer(
+            "  "
+            + get_color(1)
+            + "--help"
+            + get_color()
+            + (" " * 4)
+            + "Display help message",
+            4,
+        )
 
     printer("", 4, no_ansi)
 
@@ -116,12 +125,21 @@ def print_usage(no_ansi=False):
         for cmd in groups[key]:
             nb_spaces = longest_cmd_name + 2 - len(cmd.get_name())
             if no_ansi:
-                printer("  " + cmd.get_name() + (
-                    " " * nb_spaces) + cmd.get_description(), 4, no_ansi)
+                printer(
+                    "  " + cmd.get_name() + (" " * nb_spaces) + cmd.get_description(),
+                    4,
+                    no_ansi,
+                )
             else:
-                printer("  " + get_color(1) + cmd.get_name() + get_color() + (
-                    " " * nb_spaces) + cmd.get_description(),
-                        no_ansi)
+                printer(
+                    "  "
+                    + get_color(1)
+                    + cmd.get_name()
+                    + get_color()
+                    + (" " * nb_spaces)
+                    + cmd.get_description(),
+                    no_ansi,
+                )
 
 
 def find_command(name, cmds):
@@ -160,6 +178,6 @@ def run():
                 else:
                     exit(command.run(sys.argv[2:]))
         else:
-            print_error("Command \"" + sys.argv[1] + "\" not found")
+            print_error('Command "' + sys.argv[1] + '" not found')
 
     exit(1)

@@ -20,13 +20,14 @@ if pin == password:
 
         # Showing  info to user
 
-        print(""" 
+        print(
+            """ 
 			1 == balance
 			2 == withdraw balance
 			3 == deposit balance
 			4 == exit
 			"""
-              )
+        )
 
         try:
             # taking an option from user
@@ -62,4 +63,3 @@ if pin == password:
 
 else:
     print("wrong pin Please try again")
-

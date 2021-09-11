@@ -28,8 +28,7 @@ if type_del == "tab":
 output_file = input_path.replace(".csv", ".md")
 
 # I used encoding UTF-8 as we won't have to worry about errors while decoding contents of a csv file
-csv_dict = csv.DictReader(open(input_path, encoding="UTF-8"),
-                          delimiter=type_del)
+csv_dict = csv.DictReader(open(input_path, encoding="UTF-8"), delimiter=type_del)
 
 # storing the content of csv file in a list_of_rows. Each row is a dict.
 

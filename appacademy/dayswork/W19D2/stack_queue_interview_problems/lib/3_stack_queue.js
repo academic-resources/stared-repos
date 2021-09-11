@@ -26,115 +26,115 @@
 
 class Node {
   constructor(value) {
-    this.value = value
-    this.next = null
+    this.value = value;
+    this.next = null;
   }
 }
 
 class Stack {
   constructor() {
-    this.top = null
-    this.bottom = null
-    this.length = 0
+    this.top = null;
+    this.bottom = null;
+    this.length = 0;
   }
 
   push(val) {
-    let node
+    let node;
 
-    if (typeof val === 'object') {
-      node = new Node(val.value)
+    if (typeof val === "object") {
+      node = new Node(val.value);
     } else {
-      node = new Node(val)
+      node = new Node(val);
     }
 
     if (!this.top) {
-      this.top = node
-      this.bottom = node
+      this.top = node;
+      this.bottom = node;
     } else {
-      const temp = this.top
-      this.top = node
-      this.top.next = temp
+      const temp = this.top;
+      this.top = node;
+      this.top.next = temp;
     }
-    return ++this.length
+    return ++this.length;
   }
 
   pop() {
     if (!this.top) {
-      return null
+      return null;
     }
 
-    const temp = this.top
+    const temp = this.top;
     if (this.top === this.bottom) {
-      this.bottom = null
+      this.bottom = null;
     }
-    this.top = this.top.next
-    this.length--
+    this.top = this.top.next;
+    this.length--;
 
-    return temp
+    return temp;
   }
 
   size() {
-    return this.length
+    return this.length;
   }
 }
 
 class StackQueue {
   constructor() {
-    this.inStack = new Stack()
-    this.outStack = new Stack()
-    this.front = null
-    this.back = null
+    this.inStack = new Stack();
+    this.outStack = new Stack();
+    this.front = null;
+    this.back = null;
   }
 
   enqueue(value) {
-    const node = new Node(value)
+    const node = new Node(value);
     if (!this.front) {
-      this.front = node
-      this.back = node
+      this.front = node;
+      this.back = node;
     } else {
-      this.back.next = node
-      this.back = node
+      this.back.next = node;
+      this.back = node;
     }
 
-    this.inStack.push(node)
-    return this.size()
+    this.inStack.push(node);
+    return this.size();
   }
 
   dequeue() {
     if (!this.front) {
-      return null
+      return null;
     } else if (this.size() === 1) {
-      this.front = null
-      this.back = null
+      this.front = null;
+      this.back = null;
     } else {
-      this.front = this.front.next
+      this.front = this.front.next;
     }
 
     if (this.outStack.size() === 0) {
-      this.moveToOutStack()
+      this.moveToOutStack();
     }
-    return this.outStack.pop()
+    return this.outStack.pop();
   }
 
   size() {
-    return this.inStack.size() + this.outStack.size()
+    return this.inStack.size() + this.outStack.size();
   }
 
   moveToInStack() {
     while (this.outStack.size()) {
-      const node = this.outStack.pop()
-      this.inStack.push(node)
+      const node = this.outStack.pop();
+      this.inStack.push(node);
     }
   }
 
   moveToOutStack() {
     while (this.inStack.size()) {
-      const node = this.inStack.pop()
-      this.outStack.push(node)
+      const node = this.inStack.pop();
+      this.outStack.push(node);
     }
   }
 }
 
-exports.Node = Node
-exports.Stack = Stack
-exports.StackQueue = StackQueue
+exports.Node = Node;
+exports.Stack = Stack;
+exports.StackQueue = StackQueue;

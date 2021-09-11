@@ -20,20 +20,21 @@
 """Warp one timeseries into the other"""
 
 import numpy
-import scipy.interpolate 
+import scipy.interpolate
 
 
 # Ties in x are removed and their y mean is used
-def _solveTies(x,y):
+def _solveTies(x, y):
     n = numpy.bincount(x)
-    s = numpy.bincount(x,y)
-    return numpy.arange(len(n)), s/n
+    s = numpy.bincount(x, y)
+    return numpy.arange(len(n)), s / n
+
 
 # Should mimic R's stats::approx as closely as possible
 def _interp(x, y):
-    xt, yt = _solveTies(x,y)
+    xt, yt = _solveTies(x, y)
     return scipy.interpolate.interp1d(xt, yt)
-    
+
 
 def warp(d, index_reference=False):
     # IMPORT_RDOCSTRING warp

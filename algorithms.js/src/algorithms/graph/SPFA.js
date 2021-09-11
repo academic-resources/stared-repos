@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Calculates the shortest paths in a graph to every node from the node s
@@ -48,7 +48,7 @@ function SPFA(graph, s) {
           if (cnt[v] > graph.vertices.size)
             // indicates negative-weighted cycle
             return {
-              distance: {}
+              distance: {},
             };
         }
       }
@@ -57,7 +57,7 @@ function SPFA(graph, s) {
 
   return {
     distance: distance,
-    previous: previous
+    previous: previous,
   };
 }
 

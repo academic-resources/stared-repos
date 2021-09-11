@@ -66,12 +66,11 @@ class Solution(object):
         return res[0]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     nested_list = []
     nested_list.append(NestedInteger([1, 1]))
     nested_list.append(NestedInteger(2))
     nested_list.append(NestedInteger([1, 1]))
-
 
     # print(nested_list)
     solution = Solution()

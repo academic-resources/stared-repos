@@ -11,7 +11,4 @@ class FileType(db.Model):
     file = db.relationship("File", back_populates="file_type")
 
     def to_dict(self):
-        return {
-            "id": self.id,
-            "name": self.name
-        }
+        return {"id": self.id, "name": self.name}

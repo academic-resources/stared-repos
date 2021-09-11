@@ -36,8 +36,6 @@ class Solution(object):
                 curr = curr.left
         return ans
 
-
-
         # ans = None
         # while root:
         #     if root.val <= p.val:

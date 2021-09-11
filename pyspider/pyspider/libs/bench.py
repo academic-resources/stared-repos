@@ -9,7 +9,8 @@
 
 import time
 import logging
-logger = logging.getLogger('bench')
+
+logger = logging.getLogger("bench")
 
 from six.moves import queue as Queue
 from pyspider.scheduler import ThreadBaseScheduler as Scheduler
@@ -20,20 +21,13 @@ from pyspider.libs.utils import md5string
 
 
 def bench_test_taskdb(taskdb):
-    project_name = '__bench_test__'
+    project_name = "__bench_test__"
     task = {
-        "fetch": {
-            "fetch_type": "js",
-            "headers": {
-                "User-Agent": "BaiDuSpider"
-            }
-        },
-        "process": {
-            "callback": "detail_page"
-        },
+        "fetch": {"fetch_type": "js", "headers": {"User-Agent": "BaiDuSpider"}},
+        "process": {"callback": "detail_page"},
         "project": project_name,
         "taskid": "553300d2582154413b4982c00c34a2d5",
-        "url": "http://www.sciencedirect.com/science/article/pii/S1674200109000704"
+        "url": "http://www.sciencedirect.com/science/article/pii/S1674200109000704",
     }
 
     track = {
@@ -41,13 +35,11 @@ def bench_test_taskdb(taskdb):
             "content": None,
             "encoding": "unicode",
             "error": None,
-            "headers": {
-                "last-modified": "Wed, 04 Mar 2015 09:24:33 GMT"
-            },
+            "headers": {"last-modified": "Wed, 04 Mar 2015 09:24:33 GMT"},
             "ok": True,
             "redirect_url": None,
             "status_code": 200,
-            "time": 5.543
+            "time": 5.543,
         },
         "process": {
             "exception": None,
@@ -55,45 +47,53 @@ def bench_test_taskdb(taskdb):
             "logs": "",
             "ok": True,
             "result": "{'url': u'",
-            "time": 0.07105398178100586
-        }
+            "time": 0.07105398178100586,
+        },
     }
 
     def test_insert(n, start=0):
         logger.info("taskdb insert %d", n)
         start_time = time.time()
         for i in range(n):
-            task['url'] = 'http://bench.pyspider.org/?l=%d' % (i + start)
-            task['taskid'] = md5string(task['url'])
-            task['track'] = {}
-            taskdb.insert(task['project'], task['taskid'], task)
+            task["url"] = "http://bench.pyspider.org/?l=%d" % (i + start)
+            task["taskid"] = md5string(task["url"])
+            task["track"] = {}
+            taskdb.insert(task["project"], task["taskid"], task)
         end_time = time.time()
         cost_time = end_time - start_time
-        logger.info("cost %.2fs, %.2f/s %.2fms",
-                    cost_time, n * 1.0 / cost_time, cost_time / n * 1000)
+        logger.info(
+            "cost %.2fs, %.2f/s %.2fms",
+            cost_time,
+            n * 1.0 / cost_time,
+            cost_time / n * 1000,
+        )
 
     def test_update(n, start=0):
         logger.info("taskdb update %d" % n)
         start_time = time.time()
         for i in range(n):
-            task['url'] = 'http://bench.pyspider.org/?l=%d' % (i + start)
-            task['taskid'] = md5string(task['url'])
-            task['track'] = track
-            taskdb.update(task['project'], task['taskid'], task)
+            task["url"] = "http://bench.pyspider.org/?l=%d" % (i + start)
+            task["taskid"] = md5string(task["url"])
+            task["track"] = track
+            taskdb.update(task["project"], task["taskid"], task)
         end_time = time.time()
         cost_time = end_time - start_time
-        logger.info("cost %.2fs, %.2f/s %.2fms",
-                    cost_time, n * 1.0 / cost_time, cost_time / n * 1000)
+        logger.info(
+            "cost %.2fs, %.2f/s %.2fms",
+            cost_time,
+            n * 1.0 / cost_time,
+            cost_time / n * 1000,
+        )
 
     request_task_fields = [
-        'taskid',
-        'project',
-        'url',
-        'status',
-        'fetch',
-        'process',
-        'track',
-        'lastcrawltime'
+        "taskid",
+        "project",
+        "url",
+        "status",
+        "fetch",
+        "process",
+        "track",
+        "lastcrawltime",
     ]
 
     def test_get(n, start=0, random=True, fields=request_task_fields):
@@ -101,17 +101,22 @@ def bench_test_taskdb(taskdb):
         range_n = list(range(n))
         if random:
             from random import shuffle
+
             shuffle(range_n)
         start_time = time.time()
         for i in range_n:
-            task['url'] = 'http://bench.pyspider.org/?l=%d' % (i + start)
-            task['taskid'] = md5string(task['url'])
-            task['track'] = track
-            taskdb.get_task(task['project'], task['taskid'], fields=fields)
+            task["url"] = "http://bench.pyspider.org/?l=%d" % (i + start)
+            task["taskid"] = md5string(task["url"])
+            task["track"] = track
+            taskdb.get_task(task["project"], task["taskid"], fields=fields)
         end_time = time.time()
         cost_time = end_time - start_time
-        logger.info("cost %.2fs, %.2f/s %.2fms",
-                    cost_time, n * 1.0 / cost_time, cost_time / n * 1000)
+        logger.info(
+            "cost %.2fs, %.2f/s %.2fms",
+            cost_time,
+            n * 1.0 / cost_time,
+            cost_time / n * 1000,
+        )
 
     try:
         test_insert(1000)
@@ -128,31 +133,28 @@ def bench_test_taskdb(taskdb):
 
 def bench_test_message_queue(queue):
     task = {
-        "fetch": {
-            "fetch_type": "js",
-            "headers": {
-                "User-Agent": "BaiDuSpider"
-            }
-        },
-        "process": {
-            "callback": "detail_page"
-        },
+        "fetch": {"fetch_type": "js", "headers": {"User-Agent": "BaiDuSpider"}},
+        "process": {"callback": "detail_page"},
         "project": "__bench_test__",
         "taskid": "553300d2582154413b4982c00c34a2d5",
-        "url": "http://www.sciencedirect.com/science/article/pii/S1674200109000704"
+        "url": "http://www.sciencedirect.com/science/article/pii/S1674200109000704",
     }
 
     def test_put(n):
         logger.info("message queue put %d", n)
         start_time = time.time()
         for i in range(n):
-            task['url'] = 'http://bench.pyspider.org/?l=%d' % i
-            task['taskid'] = md5string(task['url'])
+            task["url"] = "http://bench.pyspider.org/?l=%d" % i
+            task["taskid"] = md5string(task["url"])
             queue.put(task, block=True, timeout=1)
         end_time = time.time()
         cost_time = end_time - start_time
-        logger.info("cost %.2fs, %.2f/s %.2fms",
-                    cost_time, n * 1.0 / cost_time, cost_time / n * 1000)
+        logger.info(
+            "cost %.2fs, %.2f/s %.2fms",
+            cost_time,
+            n * 1.0 / cost_time,
+            cost_time / n * 1000,
+        )
 
     def test_get(n):
         logger.info("message queue get %d", n)
@@ -161,12 +163,16 @@ def bench_test_message_queue(queue):
             try:
                 queue.get(True, 1)
             except Queue.Empty:
-                logger.error('message queue empty while get %d', i)
+                logger.error("message queue empty while get %d", i)
                 raise
         end_time = time.time()
         cost_time = end_time - start_time
-        logger.info("cost %.2fs, %.2f/s %.2fms",
-                    cost_time, n * 1.0 / cost_time, cost_time / n * 1000)
+        logger.info(
+            "cost %.2fs, %.2f/s %.2fms",
+            cost_time,
+            n * 1.0 / cost_time,
+            cost_time / n * 1000,
+        )
 
     try:
         test_put(1000)
@@ -176,7 +182,7 @@ def bench_test_message_queue(queue):
     except Exception as e:
         logger.exception(e)
     finally:
-        if hasattr(queue, 'channel'):
+        if hasattr(queue, "channel"):
             queue.channel.queue_purge(queue.name)
 
         # clear message queue
@@ -189,6 +195,7 @@ def bench_test_message_queue(queue):
 
 class BenchMixin(object):
     """Report to logger for bench test"""
+
     def _bench_init(self):
         self.done_cnt = 0
         self.start_time = time.time()
@@ -200,11 +207,12 @@ class BenchMixin(object):
         now = time.time()
         if now - self.last_report >= 1:
             rps = float(self.done_cnt - self.last_cnt) / (now - self.last_report)
-            output = ''
+            output = ""
             if prefix:
                 output += " " * prefix
-            output += ("%s %s pages (at %d pages/min)" % (
-                name, self.done_cnt, rps * 60.0)).rjust(rjust)
+            output += (
+                "%s %s pages (at %d pages/min)" % (name, self.done_cnt, rps * 60.0)
+            ).rjust(rjust)
             logger.info(output)
             self.last_cnt = self.done_cnt
             self.last_report = now
@@ -216,7 +224,7 @@ class BenchScheduler(Scheduler, BenchMixin):
         self._bench_init()
 
     def on_task_status(self, task):
-        self._bench_report('Crawled')
+        self._bench_report("Crawled")
         return super(BenchScheduler, self).on_task_status(task)
 
 
@@ -255,9 +263,14 @@ from pyspider.libs.base_handler import BaseHandler
 
 class Handler(BaseHandler):
     def on_start(self, response):
-        self.crawl('http://127.0.0.1:5000/bench',
-                   params={'total': response.save.get('total', 10000), 'show': response.save.get('show', 20)},
-                   callback=self.index_page)
+        self.crawl(
+            "http://127.0.0.1:5000/bench",
+            params={
+                "total": response.save.get("total", 10000),
+                "show": response.save.get("show", 20),
+            },
+            callback=self.index_page,
+        )
 
     def index_page(self, response):
         for each in response.doc('a[href^="http://"]').items():

@@ -4,13 +4,12 @@ from django.db import migrations
 
 from wagtail.core.models import BootstrapTranslatableModel
 
+
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('wagtailpages', '0026_add_localization_to_subclasses'),
-    ]
+    dependencies = [("wagtailpages", "0026_add_localization_to_subclasses")]
 
     operations = [
-        BootstrapTranslatableModel('wagtailpages.Petition'),
-        BootstrapTranslatableModel('wagtailpages.Signup'),
+        BootstrapTranslatableModel("wagtailpages.Petition"),
+        BootstrapTranslatableModel("wagtailpages.Signup"),
     ]

@@ -7,7 +7,7 @@ they are read back as one whole stream.
 import gzip
 import io
 
-__all__ = ('gzip_append',)
+__all__ = ("gzip_append",)
 
 
 def gzip_append(filename: str, data: bytes, level: int = 6) -> None:
@@ -30,4 +30,3 @@ def gzip_append(filename: str, data: bytes, level: int = 6) -> None:
             f.seek(pos, 0)
             f.truncate()
             raise ex
-

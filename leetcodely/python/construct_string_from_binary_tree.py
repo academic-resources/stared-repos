@@ -20,15 +20,12 @@ class Solution(object):
         :rtype: str
         """
         if not t:
-            return ''
+            return ""
         if not t.left and not t.right:
             return str(t.val)
         l = self.tree2str(t.left)
         r = self.tree2str(t.right)
-        res = str(t.val) + '(' + l + ')'
+        res = str(t.val) + "(" + l + ")"
         if t.right:
-            res += '(' + r + ')'
+            res += "(" + r + ")"
         return res
-
-
-

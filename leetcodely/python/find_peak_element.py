@@ -22,6 +22,6 @@ class Solution(object):
         return low
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.findPeakElement([1, 2, 1, 3, 5, 6, 4]))

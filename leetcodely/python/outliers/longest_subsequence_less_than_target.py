@@ -18,4 +18,5 @@ def longest_subsequence(arr, target):
         max_length = max(i - j + 1, max_length)
     return max_length
 
+
 print(longest_subsequence([8, 3, 7, 4, 1, 6, 5], 16))

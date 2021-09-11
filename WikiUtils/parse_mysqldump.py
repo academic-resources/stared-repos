@@ -3,20 +3,34 @@
 import re
 import gzip
 import sys
-from tqdm import tqdm 
+from tqdm import tqdm
 from collections import namedtuple
 
-FILEPROPS=namedtuple("Fileprops", "parser num_fields column_indexes")
+FILEPROPS = namedtuple("Fileprops", "parser num_fields column_indexes")
 
-#CATEGORYLINKS_PARSER=re.compile(r'(?P<row0>[0-9]+?),(?P<row1>\'.*?\'?),(?P<row2>\'.*?\'?),(?P<row3>\'[0-9\ \-:]+\'?),(?P<row4>\'\'?),(?P<row5>\'.*?\'?),(?P<row6>\'.*?\'?)')
-CATEGORYLINKS_PARSER=re.compile(r'^(?P<row0>[0-9]+?),(?P<row1>\'.*?\'?),(?P<row2>\'.*?\'?),(?P<row3>\'[0-9\ \-:]+\'?),(?P<row4>\'.*?\'?),(?P<row5>\'[a-z\-]*?\'?),(?P<row6>\'[a-z]+\'?)$')
-PAGELINKS_PARSER=re.compile(r'^(?P<row0>[0-9]+?),(?P<row1>[0-9]+?),(?P<row2>\'.*?\'?),(?P<row3>[0-9]+?)$')
-REDIRECT_PARSER=re.compile(r'^(?P<row0>[0-9]+?),(?P<row1>-?[0-9]+?),(?P<row2>\'.*?\'?),(?P<row3>\'.*?\'?),(?P<row4>\'.*?\'?)$')
-CATEGORY_PARSER=re.compile(r'^(?P<row0>[0-9]+?),(?P<row1>\'.*?\'?),(?P<row2>[0-9]+?),(?P<row3>[0-9]+?),(?P<row4>[0-9]+?)$')
-PAGE_PROPS_PARSER=re.compile(r'^([0-9]+),(\'.*?\'),(\'.*?\'),(\'[0-9\ \-:]+\'),(\'\'),(\'.*?\'),(\'.*?\')$')
-PAGE_PARSER=re.compile((r'^(?P<row0>[0-9]+?),(?P<row1>[0-9]+?),(?P<row2>\'.*?\'?),(?P<row3>\'.*?\'?),(?P<row4>[0-9]+?),(?P<row5>[0-9]+?),(?P<row6>[0-9]?),'
-    r'(?P<row7>[0-9\.]+?),(?P<row8>\'.*?\'?),(?P<row9>(?P<row9val>\'.*?\'?)|(?P<row9null>NULL)),(?P<row10>[0-9]+?),(?P<row11>[0-9]+?),'
-    r'(?P<row12>(?P<row12val>\'.*?\'?)|(?P<row12null>NULL)),(?P<row13>(?P<row13val>\'.*?\'?)|(?P<row13null>NULL))$'))
+# CATEGORYLINKS_PARSER=re.compile(r'(?P<row0>[0-9]+?),(?P<row1>\'.*?\'?),(?P<row2>\'.*?\'?),(?P<row3>\'[0-9\ \-:]+\'?),(?P<row4>\'\'?),(?P<row5>\'.*?\'?),(?P<row6>\'.*?\'?)')
+CATEGORYLINKS_PARSER = re.compile(
+    r"^(?P<row0>[0-9]+?),(?P<row1>\'.*?\'?),(?P<row2>\'.*?\'?),(?P<row3>\'[0-9\ \-:]+\'?),(?P<row4>\'.*?\'?),(?P<row5>\'[a-z\-]*?\'?),(?P<row6>\'[a-z]+\'?)$"
+)
+PAGELINKS_PARSER = re.compile(
+    r"^(?P<row0>[0-9]+?),(?P<row1>[0-9]+?),(?P<row2>\'.*?\'?),(?P<row3>[0-9]+?)$"
+)
+REDIRECT_PARSER = re.compile(
+    r"^(?P<row0>[0-9]+?),(?P<row1>-?[0-9]+?),(?P<row2>\'.*?\'?),(?P<row3>\'.*?\'?),(?P<row4>\'.*?\'?)$"
+)
+CATEGORY_PARSER = re.compile(
+    r"^(?P<row0>[0-9]+?),(?P<row1>\'.*?\'?),(?P<row2>[0-9]+?),(?P<row3>[0-9]+?),(?P<row4>[0-9]+?)$"
+)
+PAGE_PROPS_PARSER = re.compile(
+    r"^([0-9]+),(\'.*?\'),(\'.*?\'),(\'[0-9\ \-:]+\'),(\'\'),(\'.*?\'),(\'.*?\')$"
+)
+PAGE_PARSER = re.compile(
+    (
+        r"^(?P<row0>[0-9]+?),(?P<row1>[0-9]+?),(?P<row2>\'.*?\'?),(?P<row3>\'.*?\'?),(?P<row4>[0-9]+?),(?P<row5>[0-9]+?),(?P<row6>[0-9]?),"
+        r"(?P<row7>[0-9\.]+?),(?P<row8>\'.*?\'?),(?P<row9>(?P<row9val>\'.*?\'?)|(?P<row9null>NULL)),(?P<row10>[0-9]+?),(?P<row11>[0-9]+?),"
+        r"(?P<row12>(?P<row12val>\'.*?\'?)|(?P<row12null>NULL)),(?P<row13>(?P<row13val>\'.*?\'?)|(?P<row13null>NULL))$"
+    )
+)
 
 """
 # page
@@ -46,16 +60,17 @@ PAGE_PARSER=re.compile((r'^(?P<row0>[0-9]+?),(?P<row1>[0-9]+?),(?P<row2>\'.*?\'?
 """
 
 
-FILETYPE_PROPS=dict(
-        categorylinks=FILEPROPS(CATEGORYLINKS_PARSER, 7, (0, 1, 6)),
-        pagelinks=FILEPROPS(PAGELINKS_PARSER, 4, (0, 1, 2, 3)),
-        redirect=FILEPROPS(REDIRECT_PARSER, 5, (0, 1, 2)),
-        category=FILEPROPS(CATEGORY_PARSER, 5, (0, 1, 2, 3, 4)),
-        page_props=FILEPROPS(PAGE_PROPS_PARSER, 7, (0, 1)),
-        page=FILEPROPS(PAGE_PARSER, 14, (0, 1, 2, 5, 11, 12, 13)),
-        )
+FILETYPE_PROPS = dict(
+    categorylinks=FILEPROPS(CATEGORYLINKS_PARSER, 7, (0, 1, 6)),
+    pagelinks=FILEPROPS(PAGELINKS_PARSER, 4, (0, 1, 2, 3)),
+    redirect=FILEPROPS(REDIRECT_PARSER, 5, (0, 1, 2)),
+    category=FILEPROPS(CATEGORY_PARSER, 5, (0, 1, 2, 3, 4)),
+    page_props=FILEPROPS(PAGE_PROPS_PARSER, 7, (0, 1)),
+    page=FILEPROPS(PAGE_PARSER, 14, (0, 1, 2, 5, 11, 12, 13)),
+)
 
-#VALUE_PARSER=re.compile(r'\(([0-9]+),(\'.*?\'),(\'.*?\'),(\'[0-9\ \-:]+\'),(\'\'),(\'.*?\'),(\'.*?\')\)')
+# VALUE_PARSER=re.compile(r'\(([0-9]+),(\'.*?\'),(\'.*?\'),(\'[0-9\ \-:]+\'),(\'\'),(\'.*?\'),(\'.*?\')\)')
+
 
 def parse_match(match, column_indexes):
     row = match.groupdict()
@@ -74,12 +89,19 @@ def parse_value(value, parser, column_indexes, value_idx=0, pbar=None):
         except Exception as e:
             print("Line: {!r}, Exception: {}".format(value, e), file=sys.stderr)
     if not parsed_correctly:
-        print("Line: {!r}, IDX: {}, Exception: {}".format(value, value_idx, "Unable to parse."), file=sys.stderr)
+        print(
+            "Line: {!r}, IDX: {}, Exception: {}".format(
+                value, value_idx, "Unable to parse."
+            ),
+            file=sys.stderr,
+        )
 
 
-def process_insert_values_line(line, parser, column_indexes, count_inserts=0, pbar=None):
-    start, partition, values = line.partition(' VALUES ')
-    # Each insert statement has format: 
+def process_insert_values_line(
+    line, parser, column_indexes, count_inserts=0, pbar=None
+):
+    start, partition, values = line.partition(" VALUES ")
+    # Each insert statement has format:
     # INSERT INTO "table_name" VALUES (v1,v2,v3),(v1,v2,v3),(v1,v2,v3);
     # When splitting by "),(" we need to only consider string from values[1:-2]
     # This ignores the starting "(" and ending ");"
@@ -101,10 +123,11 @@ def process_file(fp, fp_out, filetype, column_indexes=None, silent=False):
     with tqdm(disable=silent) as pbar:
         count_inserts = 0
         for line_no, line in enumerate(fp, start=1):
-            if line.startswith('INSERT INTO `{}` VALUES '.format(filetype)):
+            if line.startswith("INSERT INTO `{}` VALUES ".format(filetype)):
                 count_inserts += 1
                 for row in process_insert_values_line(
-                        line, parser, column_indexes, count_inserts, pbar):
+                    line, parser, column_indexes, count_inserts, pbar
+                ):
                     if pbar is not None:
                         pbar.update(1)
                     print("\t".join(row), file=fp_out)
@@ -112,26 +135,45 @@ def process_file(fp, fp_out, filetype, column_indexes=None, silent=False):
 
 def main():
     import argparse
+
     parser = argparse.ArgumentParser()
-    parser.add_argument("filename",
-            help="name of the wikipedia sql.gz file.")
-    parser.add_argument("filetype",
-            help="following filetypes are supported:\n[{}]".format(
-                ", ".join(FILETYPE_PROPS.keys())
-                ))
-    parser.add_argument("outputfile", 
-            help="name of the output file")
-    parser.add_argument("--column-indexes", "-c", default=None,
-            help="column indexes to use in output file")
-    parser.add_argument("--silent", "-q", default=False, action="store_true",
-            help="Disable tqdm output.")
+    parser.add_argument("filename", help="name of the wikipedia sql.gz file.")
+    parser.add_argument(
+        "filetype",
+        help="following filetypes are supported:\n[{}]".format(
+            ", ".join(FILETYPE_PROPS.keys())
+        ),
+    )
+    parser.add_argument("outputfile", help="name of the output file")
+    parser.add_argument(
+        "--column-indexes",
+        "-c",
+        default=None,
+        help="column indexes to use in output file",
+    )
+    parser.add_argument(
+        "--silent",
+        "-q",
+        default=False,
+        action="store_true",
+        help="Disable tqdm output.",
+    )
     args = parser.parse_args()
 
     print(args)
-    with gzip.open(args.filename, 'rt', encoding='ascii', errors='backslashreplace') as fp, open(args.outputfile, 'wt', encoding='utf-8') as fp_out:
-        process_file(fp, fp_out, args.filetype, column_indexes=args.column_indexes, silent=args.silent)
-    
-    #with gzip.open("enwiki-20170920-categorylinks.sql.gz", 'rt') as fp, open("categorylinks.txt", "wt") as fp_out:
+    with gzip.open(
+        args.filename, "rt", encoding="ascii", errors="backslashreplace"
+    ) as fp, open(args.outputfile, "wt", encoding="utf-8") as fp_out:
+        process_file(
+            fp,
+            fp_out,
+            args.filetype,
+            column_indexes=args.column_indexes,
+            silent=args.silent,
+        )
+
+    # with gzip.open("enwiki-20170920-categorylinks.sql.gz", 'rt') as fp, open("categorylinks.txt", "wt") as fp_out:
+
 
 if __name__ == "__main__":
     main()

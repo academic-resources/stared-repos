@@ -1,4 +1,3 @@
-
 from nameko.rpc import rpc
 from faker import Faker
 
@@ -7,7 +6,7 @@ fake = Faker()
 
 class PeopleListService:
 
-    name = 'peoplelist'
+    name = "peoplelist"
 
     @rpc
     def populate(self, number=20):

@@ -30,17 +30,20 @@ class ProjectDB(BaseProjectDB):
                 if name in project_names:
                     project_names.remove(name)
                 updatetime = os.path.getmtime(filename)
-                if name not in self.projects or updatetime > self.projects[name]['updatetime']:
+                if (
+                    name not in self.projects
+                    or updatetime > self.projects[name]["updatetime"]
+                ):
                     project = self._build_project(filename)
                     if not project:
                         continue
-                    self.projects[project['name']] = project
+                    self.projects[project["name"]] = project
 
         for name in project_names:
             del self.projects[name]
 
-    rate_re = re.compile(r'^\s*#\s*rate.*?(\d+(\.\d+)?)', re.I | re.M)
-    burst_re = re.compile(r'^\s*#\s*burst.*?(\d+(\.\d+)?)', re.I | re.M)
+    rate_re = re.compile(r"^\s*#\s*rate.*?(\d+(\.\d+)?)", re.I | re.M)
+    burst_re = re.compile(r"^\s*#\s*burst.*?(\d+(\.\d+)?)", re.I | re.M)
 
     def _build_project(self, filename):
         try:
@@ -59,17 +62,17 @@ class ProjectDB(BaseProjectDB):
                 burst = 3
 
             return {
-                'name': os.path.splitext(os.path.basename(filename))[0],
-                'group': None,
-                'status': 'RUNNING',
-                'script': script,
-                'comments': None,
-                'rate': rate,
-                'burst': burst,
-                'updatetime': os.path.getmtime(filename),
+                "name": os.path.splitext(os.path.basename(filename))[0],
+                "group": None,
+                "status": "RUNNING",
+                "script": script,
+                "comments": None,
+                "rate": rate,
+                "burst": burst,
+                "updatetime": os.path.getmtime(filename),
             }
         except OSError as e:
-            logging.error('loading project script error: %s', e)
+            logging.error("loading project script error: %s", e)
             return None
 
     def get_all(self, fields=None):
@@ -91,5 +94,5 @@ class ProjectDB(BaseProjectDB):
     def check_update(self, timestamp, fields=None):
         self.load_scripts()
         for projectname, project in six.iteritems(self.projects):
-            if project['updatetime'] > timestamp:
+            if project["updatetime"] > timestamp:
                 yield self.get(projectname, fields)

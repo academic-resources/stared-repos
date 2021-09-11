@@ -1,17 +1,14 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import NavBar from './nav_bar'
-import { logout } from '../../actions/session'
+import React from "react";
+import { connect } from "react-redux";
+import NavBar from "./nav_bar";
+import { logout } from "../../actions/session";
 
-const mapStateToProps = state => ({
-  currentUser: state.session.currentUser
-})
+const mapStateToProps = (state) => ({
+  currentUser: state.session.currentUser,
+});
 
-const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
-})
+const mapDispatchToProps = (dispatch) => ({
+  logout: () => dispatch(logout()),
+});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NavBar)
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

@@ -16,30 +16,14 @@ has the following keys:
 """
 
 waypoints = [
-    {
-        "lat": 43,
-        "lon": -121,
-        "name": "a place"
-    },
-    {
-        "lat": 41,
-        "lon": -123,
-        "name": "another place"
-    },
-    {
-        "lat": 43,
-        "lon": -122,
-        "name": "a third place"
-    }
+    {"lat": 43, "lon": -121, "name": "a place"},
+    {"lat": 41, "lon": -123, "name": "another place"},
+    {"lat": 43, "lon": -122, "name": "a third place"},
 ]
 
 # Add a new waypoint to the list
 # YOUR CODE HERE
-seattle = {
-    "lat": 47,
-    "lon": -122,
-    "name": "seattle"
-}
+seattle = {"lat": 47, "lon": -122, "name": "seattle"}
 waypoints.append(seattle)
 
 # Modify the dictionary with name "a place" such that its longitude
@@ -53,4 +37,4 @@ waypoints[0]["name"] = "not a real place"
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
 for valueX in waypoints:
-        print(valueX.values())
+    print(valueX.values())

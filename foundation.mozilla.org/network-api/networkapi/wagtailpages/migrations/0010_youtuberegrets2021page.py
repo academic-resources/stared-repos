@@ -8,25 +8,50 @@ import wagtailmetadata.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('wagtailcore', '0060_fix_workflow_unique_constraint'),
-        ('wagtailimages', '0023_add_choose_permissions'),
-        ('wagtailpages', '0009_auto_20210603_1034'),
+        ("wagtailcore", "0060_fix_workflow_unique_constraint"),
+        ("wagtailimages", "0023_add_choose_permissions"),
+        ("wagtailpages", "0009_auto_20210603_1034"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='YoutubeRegrets2021Page',
+            name="YoutubeRegrets2021Page",
             fields=[
-                ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('search_image', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='wagtailimages.Image', verbose_name='Search image')),
+                (
+                    "page_ptr",
+                    models.OneToOneField(
+                        auto_created=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        parent_link=True,
+                        primary_key=True,
+                        serialize=False,
+                        to="wagtailcore.Page",
+                    ),
+                ),
+                (
+                    "search_image",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="+",
+                        to="wagtailimages.Image",
+                        verbose_name="Search image",
+                    ),
+                ),
             ],
-            options={
-                'abstract': False,
-            },
-            bases=(wagtailmetadata.models.WagtailImageMetadataMixin, 'wagtailcore.page', models.Model),
+            options={"abstract": False},
+            bases=(
+                wagtailmetadata.models.WagtailImageMetadataMixin,
+                "wagtailcore.page",
+                models.Model,
+            ),
         ),
         migrations.AlterModelOptions(
-            name='youtuberegrets2021page',
-            options={'verbose_name': 'YouTube Regrets 2021 Page', 'verbose_name_plural': 'YouTube Regrets 2021 Pages'},
+            name="youtuberegrets2021page",
+            options={
+                "verbose_name": "YouTube Regrets 2021 Page",
+                "verbose_name_plural": "YouTube Regrets 2021 Pages",
+            },
         ),
     ]

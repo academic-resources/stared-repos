@@ -16,5 +16,5 @@ class Node:
 
         for child in self.children:
             child.depthFirstSearch(array)
-        
+
         return array

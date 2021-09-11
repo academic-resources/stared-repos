@@ -6,7 +6,7 @@ from .config_manager import ConfigManager
 
 
 def print_init():
-    if 'APPLICATION_ID' not in os.environ or 'API_KEY' not in os.environ:
+    if "APPLICATION_ID" not in os.environ or "API_KEY" not in os.environ:
         print("")
         print("ERROR: missing configuration")
         print("")
@@ -25,13 +25,13 @@ def deploy_config(config_name, config_exists, push_config=True):
 
     print_init()
 
-    config_folder = environ.get('PUBLIC_CONFIG_FOLDER')
+    config_folder = environ.get("PUBLIC_CONFIG_FOLDER")
 
     if config_folder is None:
-        print('PUBLIC_CONFIG_FOLDER must be defined in the environment')
+        print("PUBLIC_CONFIG_FOLDER must be defined in the environment")
         exit()
 
-    config_folder += '/configs'
+    config_folder += "/configs"
 
     if not path.isdir(config_folder):
         print("Folder: " + config_folder + " does not exist")
@@ -39,21 +39,23 @@ def deploy_config(config_name, config_exists, push_config=True):
 
     # config_exists = config_name in fetchers.get_configs_from_repos()
 
-    if push_config == 'True':
+    if push_config == "True":
         # Not using the config manager to avoid it stashing the config that we want to push
-        helpers.check_output_decoded(['git', 'add', config_name + '.json'],
-                                    cwd=config_folder)
         helpers.check_output_decoded(
-            ['git', 'commit', '-m', 'update ' + config_name],
-            cwd=config_folder)
+            ["git", "add", config_name + ".json"], cwd=config_folder
+        )
+        helpers.check_output_decoded(
+            ["git", "commit", "-m", "update " + config_name], cwd=config_folder
+        )
 
-        helpers.check_output_decoded(['git', 'push', 'origin', 'master'],
-                                    cwd=config_folder)
+        helpers.check_output_decoded(
+            ["git", "push", "origin", "master"], cwd=config_folder
+        )
 
     config_manager = ConfigManager().instance
     print(config_exists)
     # Already live, we will only update the change
-    if config_exists == 'True':
+    if config_exists == "True":
         deploy_configs([], [config_name], [], force_deploy=True)
     # Didn't exist, we add it
     else:
@@ -102,27 +104,20 @@ def deploy_configs(added, changed, removed, force_deploy=False):
                 print("")
                 for current_config_name in added:
                     config_manager.add_config(current_config_name)
-                reports.append(
-                    {'title': 'Added connectors', 'text': added_log})
+                reports.append({"title": "Added connectors", "text": added_log})
 
             if len(changed):
                 print("")
 
                 for current_config_name in changed:
                     config_manager.update_config(current_config_name)
-                reports.append({
-                    'title': 'Updated connectors',
-                    'text': updated_log
-                })
+                reports.append({"title": "Updated connectors", "text": updated_log})
 
             if len(removed):
                 for current_config_name in removed:
                     config_manager.remove_config(current_config_name)
 
-                reports.append({
-                    'title': 'Removed connectors',
-                    'text': removed_log
-                })
+                reports.append({"title": "Removed connectors", "text": removed_log})
             helpers.send_slack_notif(reports)
 
     else:

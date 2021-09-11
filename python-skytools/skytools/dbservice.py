@@ -10,10 +10,13 @@ except ImportError:
     pass
 
 __all__ = (
-    'DBService', 'ServiceContext',
-    'get_record', 'get_record_list',
-    'make_record', 'make_record_array',
-    'TableAPI',
+    "DBService",
+    "ServiceContext",
+    "get_record",
+    "get_record_list",
+    "make_record",
+    "make_record_array",
+    "TableAPI",
     #'log_result', 'transform_fields'
 )
 
@@ -40,6 +43,7 @@ def transform_fields(rows, key_fields, name_field, data_field):
 
 # render_table
 
+
 def render_table(rows, fields):
     """ Render result rows as a table.
         Returns array of lines.
@@ -51,18 +55,19 @@ def render_table(rows, fields):
             widths[i] = widths[i] > rlen and widths[i] or rlen
     widths = [w + 2 for w in widths]
 
-    fmt = '%%-%ds' * (len(widths) - 1) + '%%s'
+    fmt = "%%-%ds" * (len(widths) - 1) + "%%s"
     fmt = fmt % tuple(widths[:-1])
 
     lines = []
     lines.append(fmt % tuple(fields))
-    lines.append(fmt % tuple(['-' * 15] * len(fields)))
+    lines.append(fmt % tuple(["-" * 15] * len(fields)))
     for row in rows:
         lines.append(fmt % tuple(str(row.get(k)) for k in fields))
     return lines
 
 
 # data conversion to and from url
+
 
 def get_record(arg):
     """ Parse data for one urlencoded record.
@@ -72,10 +77,10 @@ def get_record(arg):
         return dbdict()
 
     # allow array of single record
-    if arg[0] in ('{', '['):
+    if arg[0] in ("{", "["):
         lst = skytools.parse_pgarray(arg)
         if len(lst) != 1:
-            raise ValueError('get_record() expects exactly 1 row, got %d' % len(lst))
+            raise ValueError("get_record() expects exactly 1 row, got %d" % len(lst))
         arg = lst[0]
 
     # parse record
@@ -128,15 +133,15 @@ def make_record_array(rowlist):
     """ Takes list of records got from plpy execute and turns it into postgers aray string.
         Used to send data out of db service layer.
     """
-    return '{' + ','.join([make_record(row) for row in rowlist]) + '}'
+    return "{" + ",".join([make_record(row) for row in rowlist]) + "}"
 
 
 def get_result_items(rec_list, name):
     """ Get return values from result
     """
     for r in rec_list:
-        if r['res_code'] == name:
-            return get_record_list(r['res_rows'])
+        if r["res_code"] == name:
+            return get_record_list(r["res_rows"])
     return None
 
 
@@ -146,27 +151,32 @@ def log_result(log, rec_list):
     msglist = get_result_items(rec_list, "_status")
     if msglist is None:
         if rec_list:
-            log.warning('Unhandled output result: _status res_code not present.')
+            log.warning("Unhandled output result: _status res_code not present.")
     else:
         for msg in msglist:
-            log.debug(msg['_message'])
+            log.debug(msg["_message"])
 
 
 class DBService:
     """  Wrap parameterized query handling and multiset stored procedure writing
     """
-    ROW = "_row"            # name of the fake field where internal record id is stored
-    FIELD = "_field"        # parameter name for the field in record that is related to current message
-    PARAM = "_param"        # name of the parameter to which message relates
-    SKIP = "skip"           # used when record is needed for it's data but is not been updated
+
+    ROW = "_row"  # name of the fake field where internal record id is stored
+    FIELD = (
+        "_field"
+    )  # parameter name for the field in record that is related to current message
+    PARAM = "_param"  # name of the parameter to which message relates
+    SKIP = "skip"  # used when record is needed for it's data but is not been updated
     INSERT = "insert"
     UPDATE = "update"
     DELETE = "delete"
-    INFO = "info"           # just informative message for the user
-    NOTICE = "notice"       # more than info less than warning
-    WARNING = "warning"     # warning message, something is out of ordinary
-    ERROR = "error"         # error found but execution continues until check then error is raised
-    FATAL = "fatal"         # execution is terminated at once and all found errors returned
+    INFO = "info"  # just informative message for the user
+    NOTICE = "notice"  # more than info less than warning
+    WARNING = "warning"  # warning message, something is out of ordinary
+    ERROR = (
+        "error"
+    )  # error found but execution continues until check then error is raised
+    FATAL = "fatal"  # execution is terminated at once and all found errors returned
 
     rows_found = 0
 
@@ -174,17 +184,19 @@ class DBService:
         """ This object must be initiated in the beginning of each db service
         """
         rec = skytools.db_urldecode(context)
-        self._context = context             # used to run dbservice in retval
-        self.global_dict = global_dict      # used for cacheing query plans
-        self._retval = []                   # used to collect return resultsets
-        self._is_test = 'is_test' in rec    # used to convert output into human readable form
+        self._context = context  # used to run dbservice in retval
+        self.global_dict = global_dict  # used for cacheing query plans
+        self._retval = []  # used to collect return resultsets
+        self._is_test = (
+            "is_test" in rec
+        )  # used to convert output into human readable form
 
-        self.sqls = None                    # if sqls stays None then no recording of sqls is done
-        if "show_sql" in rec:               # api must add exected sql to resultset
-            self.sqls = []                  # sql's executed by dbservice, used for dubugging
+        self.sqls = None  # if sqls stays None then no recording of sqls is done
+        if "show_sql" in rec:  # api must add exected sql to resultset
+            self.sqls = []  # sql's executed by dbservice, used for dubugging
 
-        self.can_save = True                # used to keep value most severe error found so far
-        self.messages = []                  # used to hold list of messages to be returned to the user
+        self.can_save = True  # used to keep value most severe error found so far
+        self.messages = []  # used to hold list of messages to be returned to the user
 
     # error and message handling
 
@@ -194,7 +206,7 @@ class DBService:
             If fatal message then error or found errors are raised at once
         """
         params = params or kvargs
-        #plpy.notice("%s %s: %s %s" % (severity, code, message, str(params)))
+        # plpy.notice("%s %s: %s %s" % (severity, code, message, str(params)))
         params["_severity"] = severity
         params["_code"] = code
         params["_message"] = message
@@ -309,7 +321,10 @@ class DBService:
                 res_rows = make_record_array(rows)
                 results.append([res_name, res_count, res_rows])
         if service_name:
-            sql = "select * from %s( {i_context}, {i_params} );" % skytools.quote_fqident(service_name)
+            sql = (
+                "select * from %s( {i_context}, {i_params} );"
+                % skytools.quote_fqident(service_name)
+            )
             par = dbdict(i_context=self._context, i_params=make_record(params))
             res = self.run_query(sql, par)
             for r in res:
@@ -330,13 +345,23 @@ class DBService:
         for field in fields:
             params[self.FIELD] = field
             if field in record:
-                if record[field] is None or (isinstance(record[field], str) and len(record[field]) == 0):
-                    self.tell_user(severity, "dbsXXXX", "Required value missing: {%s}.{%s}" % (
-                                   self.PARAM, self.FIELD), **params)
+                if record[field] is None or (
+                    isinstance(record[field], str) and len(record[field]) == 0
+                ):
+                    self.tell_user(
+                        severity,
+                        "dbsXXXX",
+                        "Required value missing: {%s}.{%s}" % (self.PARAM, self.FIELD),
+                        **params
+                    )
                     missing.append(field)
             else:
-                self.tell_user(severity, "dbsXXXX", "Required field missing: {%s}.{%s}" % (
-                               self.PARAM, self.FIELD), **params)
+                self.tell_user(
+                    severity,
+                    "dbsXXXX",
+                    "Required field missing: {%s}.{%s}" % (self.PARAM, self.FIELD),
+                    **params
+                )
                 missing.append(field)
         return missing
 
@@ -345,16 +370,17 @@ class DBService:
 class TableAPI:
     """ Class for managing one record updates using primary key
     """
-    _table = None   # schema name and table name
-    _where = None   # where condition used for update and delete
-    _id = None      # name of the primary key filed
-    _id_type = None  # column type of primary key
-    _op = None      # operation currently carried out
-    _ctx = None     # context object for username and version
-    _logging = True  # should tapi log data changed
-    _row = None     # row identifer from calling program
 
-    def __init__(self, ctx, table, create_log=True, id_type='int8'):
+    _table = None  # schema name and table name
+    _where = None  # where condition used for update and delete
+    _id = None  # name of the primary key filed
+    _id_type = None  # column type of primary key
+    _op = None  # operation currently carried out
+    _ctx = None  # context object for username and version
+    _logging = True  # should tapi log data changed
+    _row = None  # row identifer from calling program
+
+    def __init__(self, ctx, table, create_log=True, id_type="int8"):
         """ Table name is used to construct insert update and delete statements
             Table must have primary key field whose name is in format id_<table>
             Tablename should be in format schema.tablename
@@ -363,7 +389,11 @@ class TableAPI:
         self._table = skytools.quote_fqident(table)
         self._id = "id_" + skytools.fq_name_parts(table)[1]
         self._id_type = id_type
-        self._where = '%s = {%s:%s}' % (skytools.quote_ident(self._id), self._id, self._id_type)
+        self._where = "%s = {%s:%s}" % (
+            skytools.quote_ident(self._id),
+            self._id,
+            self._id_type,
+        )
         self._logging = create_log
 
     def _log(self, result, original=None):
@@ -373,10 +403,12 @@ class TableAPI:
             return
         changes = []
         for key in result.keys():
-            if self._op == 'update':
+            if self._op == "update":
                 if key in original:
                     if str(original[key]) != str(result[key]):
-                        changes.append(key + ": " + str(original[key]) + " -> " + str(result[key]))
+                        changes.append(
+                            key + ": " + str(original[key]) + " -> " + str(result[key])
+                        )
             else:
                 changes.append(key + ": " + str(result[key]))
         self._ctx.log(self._table, result[self._id], self._op, "\n".join(changes))
@@ -384,32 +416,43 @@ class TableAPI:
     def _version_check(self, original, version):
         if original is None:
             self._ctx.tell_user(
-                self._ctx.INFO, "dbsXXXX",
+                self._ctx.INFO,
+                "dbsXXXX",
                 "Record ({table}.{field}={id}) has been deleted by other user "
                 "while you were editing. Check version ({ver}) in changelog for details.",
-                table=self._table, field=self._id, id=original[self._id],
-                ver=original.version, _row=self._row
+                table=self._table,
+                field=self._id,
+                id=original[self._id],
+                ver=original.version,
+                _row=self._row,
             )
         if version is not None and original.version is not None:
             if int(version) != int(original.version):
                 self._ctx.tell_user(
-                    self._ctx.INFO, "dbsXXXX",
+                    self._ctx.INFO,
+                    "dbsXXXX",
                     "Record ({table}.{field}={id}) has been changed by other user while you were editing. "
                     "Version in db: ({db_ver}) and version sent by caller ({caller_ver}). "
                     "See changelog for details.",
-                    table=self._table, field=self._id, id=original[self._id], db_ver=original.version,
-                    caller_ver=version, _row=self._row
+                    table=self._table,
+                    field=self._id,
+                    id=original[self._id],
+                    db_ver=original.version,
+                    caller_ver=version,
+                    _row=self._row,
                 )
 
     def _insert(self, data):
         fields = []
         values = []
         for key in data.keys():
-            if data[key] is not None:       # ignore empty
+            if data[key] is not None:  # ignore empty
                 fields.append(skytools.quote_ident(key))
                 values.append("{" + key + "}")
         sql = "insert into %s (%s) values (%s) returning *;" % (
-            self._table, ",".join(fields), ",".join(values)
+            self._table,
+            ",".join(fields),
+            ",".join(values),
         )
         result = self._ctx.run_query_row(sql, data)
         self._log(result)
@@ -425,7 +468,11 @@ class TableAPI:
                 pairs.append(key + " = NULL")
             else:
                 pairs.append(key + " = {" + key + "}")
-        sql = "update %s set %s where %s returning *;" % (self._table, ", ".join(pairs), self._where)
+        sql = "update %s set %s where %s returning *;" % (
+            self._table,
+            ", ".join(pairs),
+            self._where,
+        )
         result = self._ctx.run_query_row(sql, data)
         self._log(result, original)
         return result
@@ -440,16 +487,20 @@ class TableAPI:
     def do(self, data):
         """ Do dml according to special field _op that must be given together wit data
         """
-        result = data                               # so it is initialized for skip
-        self._op = data.pop(self._ctx.OP)           # determines operation done
-        self._row = data.pop(self._ctx.ROW, None)   # internal record id used for error reporting
-        if self._row is None:                       # if no _row variable was provided
-            self._row = data.get(self._id, None)    # use id instead
-        if self._id in data and data[self._id]:     # if _id field is given
-            if int(data[self._id]) < 0:             # and it is fake key generated by ui
-                data.pop(self._id)                  # remove fake key so real one can be assigned
-        version = data.get('version', None)         # version sent from caller
-        data['version'] = self._ctx.version         # current transaction id is stored in each record
+        result = data  # so it is initialized for skip
+        self._op = data.pop(self._ctx.OP)  # determines operation done
+        self._row = data.pop(
+            self._ctx.ROW, None
+        )  # internal record id used for error reporting
+        if self._row is None:  # if no _row variable was provided
+            self._row = data.get(self._id, None)  # use id instead
+        if self._id in data and data[self._id]:  # if _id field is given
+            if int(data[self._id]) < 0:  # and it is fake key generated by ui
+                data.pop(self._id)  # remove fake key so real one can be assigned
+        version = data.get("version", None)  # version sent from caller
+        data[
+            "version"
+        ] = self._ctx.version  # current transaction id is stored in each record
         if self._op == self._ctx.INSERT:
             result = self._insert(data)
         elif self._op == self._ctx.UPDATE:
@@ -459,9 +510,14 @@ class TableAPI:
         elif self._op == self._ctx.SKIP:
             pass
         else:
-            self._ctx.tell_user(self._ctx.ERROR, "dbsXXXX",
-                                "Unahndled _op='{op}' value in TableAPI (table={table}, id={id})",
-                                op=self._op, table=self._table, id=data[self._id])
+            self._ctx.tell_user(
+                self._ctx.ERROR,
+                "dbsXXXX",
+                "Unahndled _op='{op}' value in TableAPI (table={table}, id={id})",
+                op=self._op,
+                table=self._table,
+                id=data[self._id],
+            )
         result[self._ctx.OP] = self._op
         result[self._ctx.ROW] = self._row
         return result
@@ -469,8 +525,9 @@ class TableAPI:
 
 # ServiceContext
 
+
 class ServiceContext(DBService):
-    OP = "_op"              # name of the fake field where record modificaton operation is stored
+    OP = "_op"  # name of the fake field where record modificaton operation is stored
 
     def __init__(self, context, global_dict=None):
         """ This object must be initiated in the beginning of each db service
@@ -480,12 +537,12 @@ class ServiceContext(DBService):
         rec = skytools.db_urldecode(context)
         if "username" not in rec:
             plpy.error("Username must be provided in db service context parameter")
-        self.username = rec['username']     # used for logging purposes
+        self.username = rec["username"]  # used for logging purposes
 
         res = plpy.execute("select txid_current() as txid;")
         row = res[0]
         self.version = row["txid"]
-        self.rows_found = 0                 # Flag set by run query to inicate number of rows got
+        self.rows_found = 0  # Flag set by run query to inicate number of rows got
 
     # logging
 
@@ -494,9 +551,13 @@ class ServiceContext(DBService):
         """
         self.run_query(
             "select log.log_change( {version}, {username}, {object_type}, {key_object}, {change_op}, {payload} );",
-            version=self.version, username=self.username,
-            object_type=_object_type, key_object=_key_object,
-            change_op=_change_op, payload=_payload)
+            version=self.version,
+            username=self.username,
+            object_type=_object_type,
+            key_object=_key_object,
+            change_op=_change_op,
+            payload=_payload,
+        )
 
     # data conversion to and from url
 
@@ -535,13 +596,13 @@ class ServiceContext(DBService):
     def _changelog(self, fields):
         log = True
         if fields:
-            if '_log' in fields:
-                if not fields.pop('_log'):
+            if "_log" in fields:
+                if not fields.pop("_log"):
                     log = False
-            if '_log_id' in fields:
-                fields.pop('_log_id')
-            if '_log_field' in fields:
-                fields.pop('_log_field')
+            if "_log_id" in fields:
+                fields.pop("_log_id")
+            if "_log_field" in fields:
+                fields.pop("_log_field")
         return log
 
     def tapi_do(self, tablename, row, **fields):
@@ -584,7 +645,10 @@ class ServiceContext(DBService):
             For example to return data after doing save
         """
         self.raise_if_errors()
-        service_sql = "select * from %s( {i_context}, {i_params} );" % skytools.quote_fqident(service_name)
+        service_sql = (
+            "select * from %s( {i_context}, {i_params} );"
+            % skytools.quote_fqident(service_name)
+        )
         service_params = {"i_context": ctx, "i_params": self.make_record(params)}
         results = self.run_query(service_sql, service_params)
         retval = self.retval()
@@ -609,4 +673,3 @@ class ServiceContext(DBService):
             If dict was not provied with call it is created
         """
         return fields
-

@@ -258,7 +258,7 @@ Ctl+Shift+I
 To write our first JavaScript code, we used a built-in function **console.log()**. We passed an argument as input data, and the function displays the output. We passed 'Hello, World' as input data or argument in the console.log() function.
 
 ```js
-console.log('Hello, World!')
+console.log("Hello, World!");
 ```
 
 ##### Console.log with Multiple Arguments
@@ -268,9 +268,9 @@ The **console.log()** function can take multiple parameters separated by comma. 
 ![console log multiple arguments](./images/console_log_multipl_arguments.png)
 
 ```js
-console.log('Hello', 'World', '!')
-console.log('HAPPY', 'NEW', 'YEAR', 2020)
-console.log('Welcome', 'to', 30, 'Days', 'Of', 'JavaScript')
+console.log("Hello", "World", "!");
+console.log("HAPPY", "NEW", "YEAR", 2020);
+console.log("Welcome", "to", 30, "Days", "Of", "JavaScript");
 ```
 
 As you can see from the snippet code above, _console.log()_ can take multiple arguments. It is recommended to use as many console.log() prints to check what is happening in your code but don't keep all console.log() tests on your code forever. Make your life easy by keeping the browser console open.
@@ -302,17 +302,17 @@ Programming languages are similar to human languages. English or many other lang
 I made a deliberate mistake. As a result, the console raises syntax errors. Actually, the syntax is very informative. It informs what type of mistake was made. By reading the error feedback guideline, we can correct the syntax and fix the problem. The process of identifying and removing errors from a program is called debugging. Let us fix the errors:
 
 ```js
-console.log('Hello, World!')
-console.log('Hello, World!')
+console.log("Hello, World!");
+console.log("Hello, World!");
 ```
 
 So far, we saw how to display text using the _console.log()_. If we are printing text or string using _console.log()_, the text has to be inside the single quotes, double quotes, or a backtick quotes.
 **Example:**
 
 ```js
-console.log('Hello, World!')
-console.log('Hello, World!')
-console.log(`Hello, World!`)
+console.log("Hello, World!");
+console.log("Hello, World!");
+console.log(`Hello, World!`);
 ```
 
 #### Arithmetics
@@ -324,12 +324,12 @@ The console can directly take arguments without the **_console.log()_** function
 ![Arithmetic](images/arithmetic.png)
 
 ```js
-console.log(2 + 3) // Addition
-console.log(3 - 2) // Subtraction
-console.log(2 * 3) // Multiplication
-console.log(3 / 2) // Division
-console.log(3 % 2) // Modulus - finding remainder
-console.log(3 ** 2) // Exponentiation 3 ** 2 == 3 * 3
+console.log(2 + 3); // Addition
+console.log(3 - 2); // Subtraction
+console.log(2 * 3); // Multiplication
+console.log(3 / 2); // Division
+console.log(3 % 2); // Modulus - finding remainder
+console.log(3 ** 2); // Exponentiation 3 ** 2 == 3 * 3
 ```
 
 ### Code Editor

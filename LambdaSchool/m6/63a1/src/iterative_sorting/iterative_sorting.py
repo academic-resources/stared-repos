@@ -5,7 +5,7 @@
 
 
 def selection_sort(arr):
-    '''
+    """
         procedure selection sort 
             arr         : array of items
             arraylength : size of arr
@@ -25,7 +25,7 @@ def selection_sort(arr):
                     swap arr[smallest_index] and arr[i]
 
         end procedure
-    '''
+    """
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
         cur_index = i
@@ -33,9 +33,9 @@ def selection_sort(arr):
         smallest_index = cur_index
 
         # check the element to be minimum
-        for j in range(i+1, len(arr)):
+        for j in range(i + 1, len(arr)):
             if arr[j] < arr[smallest_index]:
-                smallest_index = j;
+                smallest_index = j
 
         # swap the minimum element with the current element
         if smallest_index != i:
@@ -44,12 +44,13 @@ def selection_sort(arr):
             i_value = arr[i]
             arr[smallest_index] = i_value
             arr[i] = si_value
-            
+
     return arr
+
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    '''
+    """
         procedure bubbleSort( arr : array of items )
         length = arr.count;
         for i = 0 to length-1 do:
@@ -65,26 +66,26 @@ def bubble_sort(arr):
                 break
         return arr
         end procedure 
-    '''
+    """
     length = arr.count
     for i in range(0, len(arr) - 1):
         swapped = False
-        for j in range(0, len(arr)-1):
+        for j in range(0, len(arr) - 1):
             # compare the adjacent elements
-            if arr[j] > arr[j+1]:
+            if arr[j] > arr[j + 1]:
                 # swap them
                 # swap(arr[j], arr[j+1])
                 j_value = arr[j]
-                j1_value = arr[j+1]
+                j1_value = arr[j + 1]
                 arr[j] = j1_value
-                arr[j+1] = j_value
+                arr[j + 1] = j_value
                 swapped = True
         # if no number was swapped that means array is sorted now, break the loop.*/
         if swapped is False:
             break
     return arr
 
-    '''
+    """
         procedure bubbleSort( list : array of items )
         loop = list.count;
         for i = 0 to loop-1 do:
@@ -104,38 +105,38 @@ def bubble_sort(arr):
             end if
         end for
         end procedure return list
-    '''
+    """
 
 
 # STRETCH: implement the Count Sort function below
 def count_sort(arr, maximum=-1):
     if arr == []:
-        return arr 
+        return arr
     # get maximum element from array
     maxElement = maximum
-    for i in range(0, len(arr)-1):
+    for i in range(0, len(arr) - 1):
         if arr[i] > maxElement:
             maxElement = arr[i]
         if arr[i] < 0:
             return "Error, negative numbers not allowed in Count Sort"
 
-    arrOutput = [0] * (maxElement+1)
+    arrOutput = [0] * (maxElement + 1)
     # max = getMax(array, maximum)
-    count = [0] * (maxElement+1) # create count array (max+1 number of elements)
+    count = [0] * (maxElement + 1)  # create count array (max+1 number of elements)
 
-    for i in range(0, (maxElement-1)):
+    for i in range(0, (maxElement - 1)):
         # initialize count array to all zero
         count[i] = 0
 
     for i in range(1, maximum):
         # increase number count in count array.
         count[arr[i]] += 1
-        
+
     for i in range(1, maxElement - 1):
         # find cumulative frequency
         count[i] += count[i - 1]
-        
-    for i in range(len(arr)-1, -1, -1):
+
+    for i in range(len(arr) - 1, -1, -1):
         if i >= 0:
             x = arr[i]
             y = count[x]
@@ -147,7 +148,7 @@ def count_sort(arr, maximum=-1):
     arrDifference = int(len(arrOutput) - len(arr))
 
     for i in range((len(arrOutput) - 1), -1, -1):
-        
+
         if int(arrOutput[i]) == int(0):
             del arrOutput[i]
 
@@ -156,13 +157,7 @@ def count_sort(arr, maximum=-1):
 
     return arrOutput
 
-
-
-
-
-
-
-    '''
+    """
     Begin
         max = get maximum element from array.
         define count array of size [max+1]
@@ -186,6 +181,6 @@ def count_sort(arr, maximum=-1):
 
         return the output array
     End
-    '''
+    """
 
     return arr

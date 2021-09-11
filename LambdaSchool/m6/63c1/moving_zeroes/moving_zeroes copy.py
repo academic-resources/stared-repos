@@ -1,7 +1,7 @@
-'''
+"""
 Input: a List of integers
 Returns: a List of integers
-'''
+"""
 # Write a function that:
 def moving_zeroes(arr):
     # takes an array of integers
@@ -24,10 +24,11 @@ def moving_zeroes(arr):
                 pass
         # returns the altered array.
         return arr
-    except ValueError: return arr
+    except ValueError:
+        return arr
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Use the main function here to test out your implementation
     arr = [0, 3, 1, 0, -2]
 

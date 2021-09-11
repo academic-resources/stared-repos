@@ -22,15 +22,7 @@ if len(sys.argv) == 1:
 
 try:
     for fn in sys.argv[1:]:
-        args = [
-            "git",
-            "--no-pager",
-            "log",
-            "--diff-filter=A",
-            "--format=%ai",
-            "--",
-            fn,
-        ]
+        args = ["git", "--no-pager", "log", "--diff-filter=A", "--format=%ai", "--", fn]
         cp = sp.run(args, stdout=sp.PIPE, stderr=sp.DEVNULL, text=True, check=True)
         # Sometimes this git command will return *multiple dates*!
         # In that case, select the oldest.

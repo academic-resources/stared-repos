@@ -4,7 +4,7 @@
 # Output : 3
 # Explanation : After first given rotation {0, 2}
 #                 arr[] = {3, 1, 2, 4, 5}
-#               After second rotation {0, 3} 
+#               After second rotation {0, 3}
 #                 arr[] = {4, 3, 1, 2, 5}
 # After all rotations we have element 3 at given
-# index 1. 
+# index 1.

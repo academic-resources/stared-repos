@@ -1,8 +1,8 @@
 # Array
 
-* Overview
-* Applications
-* Design & Implementation
+- Overview
+- Applications
+- Design & Implementation
 
 ## Overview
 
@@ -20,9 +20,9 @@ An array is a collection of items storeda t contiguous memory locations. The ide
 
 ### Java
 
-* In Java all arrays are **dynamically allocated**.
-* Size of an array must be specified by an `int` or `short` value.
-* Length can be found using the object property `length`.
-* Declared as `<type>[]`
-* The direct superclass is `Object`.
-* Every array type implements the interfaces `Cloneable` and `java.io.Serializable`.
+- In Java all arrays are **dynamically allocated**.
+- Size of an array must be specified by an `int` or `short` value.
+- Length can be found using the object property `length`.
+- Declared as `<type>[]`
+- The direct superclass is `Object`.
+- Every array type implements the interfaces `Cloneable` and `java.io.Serializable`.

@@ -78,27 +78,25 @@
       }
     }
 
-      .email-compose {
-        position: relative;
+    .email-compose {
+      position: relative;
       .email-compose-body {
         padding: 30px 20px;
-
       }
+    }
+  }
+
+  &.side-active {
+    .email-side-nav {
+      @include to($breakpoint-md) {
+        left: 0;
       }
     }
 
-
-    &.side-active {
-      .email-side-nav {
-        @include to($breakpoint-md) {
-          left: 0;
-        }
-      }
-
-      .email-wrapper {
-        @include to($breakpoint-md) {
-          left: 250px;
-        }
+    .email-wrapper {
+      @include to($breakpoint-md) {
+        left: 250px;
       }
     }
+  }
 }

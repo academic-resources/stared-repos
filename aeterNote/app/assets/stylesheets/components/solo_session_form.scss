@@ -1,10 +1,8 @@
-
 .solo-session-bg {
   min-height: 900px;
   height: 100vh;
   background-color: $EvernoteSuperLightGray;
 }
-
 
 .solo-session {
   display: flex;
@@ -21,7 +19,7 @@
   .greeting {
     padding: 10px 5px;
   }
-  .solo-session-template{
+  .solo-session-template {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -47,7 +45,6 @@
       background-color: $EvernoteGreen;
       color: #fff;
       transition: background-color 0.5s ease;
-
     }
     button:hover {
       background-color: $EvernoteHoverGreen;

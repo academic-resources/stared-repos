@@ -9,4 +9,4 @@ def decimal_to_binary(decimal):
         str: Return binary value.
 
     """
-    return format(decimal, 'b')
+    return format(decimal, "b")

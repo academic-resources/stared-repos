@@ -31,6 +31,7 @@ class Solution:
                 curr = prev.next
         return head
 
+
 l = ListNode(1)
 l.next = ListNode(2)
 l.next.next = ListNode(3)

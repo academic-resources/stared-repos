@@ -28,9 +28,9 @@ def raise_to(exp):
     return raise_to_exp
 
 
-if __name__ == '__main__':
-    print(sort_by_last_letter(['My', 'name', 'is', 'soumasish', 'goswami']))
-    print(_sort_by_last_letter(['My', 'name', 'is', 'soumasish', 'goswami']))
+if __name__ == "__main__":
+    print(sort_by_last_letter(["My", "name", "is", "soumasish", "goswami"]))
+    print(_sort_by_last_letter(["My", "name", "is", "soumasish", "goswami"]))
     i = outer()
     print(i(4))
     square = raise_to(2)

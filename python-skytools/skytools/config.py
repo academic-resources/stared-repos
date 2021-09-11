@@ -8,16 +8,25 @@ import socket
 from configparser import MAX_INTERPOLATION_DEPTH, ConfigParser
 from configparser import Error as ConfigError
 from configparser import (
-    ExtendedInterpolation, Interpolation, InterpolationDepthError,
-    InterpolationError, NoOptionError, NoSectionError, RawConfigParser,
+    ExtendedInterpolation,
+    Interpolation,
+    InterpolationDepthError,
+    InterpolationError,
+    NoOptionError,
+    NoSectionError,
+    RawConfigParser,
 )
 from typing import Dict, List, Mapping, Optional, Sequence, Tuple
 
 import skytools
 
 __all__ = (
-    'Config', 'NoOptionError', 'ConfigError',
-    'ConfigParser', 'ExtendedConfigParser', 'ExtendedCompatConfigParser'
+    "Config",
+    "NoOptionError",
+    "ConfigError",
+    "ConfigParser",
+    "ExtendedConfigParser",
+    "ExtendedCompatConfigParser",
 )
 
 
@@ -34,7 +43,7 @@ def read_versioned_config(filenames: Sequence[str], main_section: str) -> Config
     elif ver == "2":
         cf = ExtendedConfigParser()
     else:
-        raise ConfigError('Unsupported config format %r in %r' % (ver, filenames))
+        raise ConfigError("Unsupported config format %r in %r" % (ver, filenames))
     cf.read(filenames)
     return cf
 
@@ -47,18 +56,22 @@ class Config:
      - Accepts defaults in get() functions.
      - List value support.
     """
-    main_section: str               # main section
-    filename: Optional[str]         # file name that was loaded
-    override: Mapping[str, str]     # override values in config file
-    defs: Mapping[str, str]         # defaults visible in all sections
-    cf: ConfigParser                # actual ConfigParser instance
 
-    def __init__(self, main_section: str,
-                 filename: Optional[str],
-                 sane_config: Optional[bytes] = None,   # unused
-                 user_defs: Optional[Mapping[str, str]] = None,
-                 override: Optional[Mapping[str, str]] = None,
-                 ignore_defs: bool = False):
+    main_section: str  # main section
+    filename: Optional[str]  # file name that was loaded
+    override: Mapping[str, str]  # override values in config file
+    defs: Mapping[str, str]  # defaults visible in all sections
+    cf: ConfigParser  # actual ConfigParser instance
+
+    def __init__(
+        self,
+        main_section: str,
+        filename: Optional[str],
+        sane_config: Optional[bytes] = None,  # unused
+        user_defs: Optional[Mapping[str, str]] = None,
+        override: Optional[Mapping[str, str]] = None,
+        ignore_defs: bool = False,
+    ):
         """Initialize Config and read from file.
         """
         # use config file name as default job_name
@@ -72,13 +85,13 @@ class Config:
             self.defs = {}
         else:
             self.defs = {
-                'job_name': job_name,
-                'service_name': main_section,
-                'host_name': socket.gethostname(),
+                "job_name": job_name,
+                "service_name": main_section,
+                "host_name": socket.gethostname(),
             }
             if filename:
-                self.defs['config_dir'] = os.path.dirname(filename)
-                self.defs['config_file'] = filename
+                self.defs["config_dir"] = os.path.dirname(filename)
+                self.defs["config_file"] = filename
             if user_defs:
                 self.defs.update(user_defs)
 
@@ -90,7 +103,7 @@ class Config:
             self.cf = ConfigParser()
             self.cf.add_section(main_section)
         elif not os.path.isfile(filename):
-            raise ConfigError('Config file not found: ' + filename)
+            raise ConfigError("Config file not found: " + filename)
         else:
             self.cf = read_versioned_config([filename], main_section)
 
@@ -169,7 +182,9 @@ class Config:
             res.append(v.strip())
         return res
 
-    def getdict(self, key: str, default: Optional[Mapping[str, str]] = None) -> Mapping[str, str]:
+    def getdict(
+        self, key: str, default: Optional[Mapping[str, str]] = None
+    ) -> Mapping[str, str]:
         """Reads key-value dict from parameter.
 
         Key and value are separated with ':'.  If missing,
@@ -186,7 +201,7 @@ class Config:
         if not s:
             return res
         for kv in s.split(","):
-            tmp = kv.split(':', 1)
+            tmp = kv.split(":", 1)
             if len(tmp) > 1:
                 k = tmp[0].strip()
                 v = tmp[1].strip()
@@ -205,7 +220,7 @@ class Config:
         if fn == "" or fn == "-":
             return fn
         # simulate that the cwd is script location
-        #path = os.path.dirname(sys.argv[0])
+        # path = os.path.dirname(sys.argv[0])
         #  seems bad idea, cwd should be cwd
 
         fn = os.path.expanduser(fn)
@@ -234,7 +249,7 @@ class Config:
         keys = [key]
 
         for wild in values:
-            key = key.replace('*', wild, 1)
+            key = key.replace("*", wild, 1)
             keys.append(key)
         keys.reverse()
 
@@ -275,23 +290,25 @@ class Config:
 
 
 class ExtendedInterpolationCompat(Interpolation):
-    _EXT_VAR_RX = r'\$\$|\$\{[^(){}]+\}'
-    _OLD_VAR_RX = r'%%|%\([^(){}]+\)s'
-    _var_rc = re.compile('(%s|%s)' % (_EXT_VAR_RX, _OLD_VAR_RX))
-    _bad_rc = re.compile('[%$]')
+    _EXT_VAR_RX = r"\$\$|\$\{[^(){}]+\}"
+    _OLD_VAR_RX = r"%%|%\([^(){}]+\)s"
+    _var_rc = re.compile("(%s|%s)" % (_EXT_VAR_RX, _OLD_VAR_RX))
+    _bad_rc = re.compile("[%$]")
 
     def before_get(self, parser, section, option, rawval, defaults):
         dst = []
         self._interpolate_ext(dst, parser, section, option, rawval, defaults, set())
-        return ''.join(dst)
+        return "".join(dst)
 
     def before_set(self, parser, section, option, value):
-        sub = self._var_rc.sub('', value)
+        sub = self._var_rc.sub("", value)
         if self._bad_rc.search(sub):
             raise ValueError("invalid interpolation syntax in %r" % value)
         return value
 
-    def _interpolate_ext(self, dst, parser, section, option, rawval, defaults, loop_detect):
+    def _interpolate_ext(
+        self, dst, parser, section, option, rawval, defaults, loop_detect
+    ):
         if not rawval:
             return
 
@@ -300,7 +317,9 @@ class ExtendedInterpolationCompat(Interpolation):
 
         xloop = (section, option)
         if xloop in loop_detect:
-            raise InterpolationError(section, option, 'Loop detected: %r in %r' % (xloop, loop_detect))
+            raise InterpolationError(
+                section, option, "Loop detected: %r in %r" % (xloop, loop_detect)
+            )
         loop_detect.add(xloop)
 
         parts = self._var_rc.split(rawval)
@@ -310,29 +329,33 @@ class ExtendedInterpolationCompat(Interpolation):
             if i % 2 == 0:
                 dst.append(frag)
                 continue
-            if frag in ('$$', '%%'):
+            if frag in ("$$", "%%"):
                 dst.append(frag[0])
                 continue
-            if frag.startswith('${') and frag.endswith('}'):
+            if frag.startswith("${") and frag.endswith("}"):
                 fullkey = frag[2:-1]
 
                 # use section access only for new-style keys
-                if ':' in fullkey:
-                    ksect, key = fullkey.split(':', 1)
+                if ":" in fullkey:
+                    ksect, key = fullkey.split(":", 1)
                     use_vars = None
                 else:
                     ksect, key = section, fullkey
-            elif frag.startswith('%(') and frag.endswith(')s'):
+            elif frag.startswith("%(") and frag.endswith(")s"):
                 fullkey = frag[2:-2]
                 ksect, key = section, fullkey
             else:
-                raise InterpolationError(section, option, 'Internal parse error: %r' % frag)
+                raise InterpolationError(
+                    section, option, "Internal parse error: %r" % frag
+                )
 
             key = parser.optionxform(key)
             newpart = parser.get(ksect, key, raw=True, vars=use_vars)
             if newpart is None:
-                raise InterpolationError(ksect, key, 'Key referenced is None')
-            self._interpolate_ext(dst, parser, ksect, key, newpart, defaults, loop_detect)
+                raise InterpolationError(ksect, key, "Key referenced is None")
+            self._interpolate_ext(
+                dst, parser, ksect, key, newpart, defaults, loop_detect
+            )
 
         loop_detect.remove(xloop)
 
@@ -342,6 +365,7 @@ class ExtendedConfigParser(ConfigParser):
 
     Syntax: ${var} and ${section:var}
     """
+
     _DEFAULT_INTERPOLATION: Interpolation = ExtendedInterpolation()
 
 
@@ -352,4 +376,3 @@ class ExtendedCompatConfigParser(ExtendedConfigParser):
     and ${sect:key} to refer key in other sections.
     """
     _DEFAULT_INTERPOLATION: Interpolation = ExtendedInterpolationCompat()
-

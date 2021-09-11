@@ -28,7 +28,7 @@ class Solution(object):
         return len(queue)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     intervals = [Interval(s=0, e=30), Interval(s=5, e=10), Interval(s=15, e=20)]
     print(solution.minMeetingRooms(intervals))

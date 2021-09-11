@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 
 class Tool(ABC):
     """Client interface"""
+
     drawing = []
 
     @abstractmethod
@@ -13,6 +14,7 @@ class Tool(ABC):
 
 class GraphicTool(Tool):
     """Client"""
+
     __drawing = []
 
     def __init__(self, graphic_prototype=None):
@@ -47,6 +49,7 @@ class Graphic(ABC):
 
 class Staff(Graphic):
     """Concrete Prototype"""
+
     def __init__(self, color="grey"):
         self._color = color
 
@@ -100,7 +103,7 @@ def client_code():
     client.graphic = whole_note
     client.manipulate()
 
-    client.graphic.color = 'red'
+    client.graphic.color = "red"
     client.manipulate()
 
     client.graphic = staff

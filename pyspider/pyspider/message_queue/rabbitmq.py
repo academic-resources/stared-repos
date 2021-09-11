@@ -14,6 +14,7 @@ import threading
 
 import amqp
 from six.moves.urllib.parse import unquote
+
 try:
     from urllib import parse as urlparse
 except ImportError:
@@ -24,8 +25,10 @@ from six.moves import queue as BaseQueue
 def catch_error(func):
     """Catch errors of rabbitmq then reconnect"""
     import amqp
+
     try:
         import pika.exceptions
+
         connect_exceptions = (
             pika.exceptions.ConnectionClosed,
             pika.exceptions.AMQPConnectionError,
@@ -33,19 +36,16 @@ def catch_error(func):
     except ImportError:
         connect_exceptions = ()
 
-    connect_exceptions += (
-        select.error,
-        socket.error,
-        amqp.ConnectionError
-    )
+    connect_exceptions += (select.error, socket.error, amqp.ConnectionError)
 
     def wrap(self, *args, **kwargs):
         try:
             return func(self, *args, **kwargs)
         except connect_exceptions as e:
-            logging.error('RabbitMQ error: %r, reconnect.', e)
+            logging.error("RabbitMQ error: %r, reconnect.", e)
             self.reconnect()
             return func(self, *args, **kwargs)
+
     return wrap
 
 
@@ -58,8 +58,13 @@ class PikaQueue(object):
     Full = BaseQueue.Full
     max_timeout = 0.3
 
-    def __init__(self, name, amqp_url='amqp://guest:guest@localhost:5672/%2F',
-                 maxsize=0, lazy_limit=True):
+    def __init__(
+        self,
+        name,
+        amqp_url="amqp://guest:guest@localhost:5672/%2F",
+        maxsize=0,
+        lazy_limit=True,
+    ):
         """
         Constructor for a PikaQueue.
 
@@ -100,7 +105,7 @@ class PikaQueue(object):
         except pika.exceptions.ChannelClosed:
             self.connection = pika.BlockingConnection(pika.URLParameters(self.amqp_url))
             self.channel = self.connection.channel()
-        #self.channel.queue_purge(self.name)
+        # self.channel.queue_purge(self.name)
 
     @catch_error
     def qsize(self):
@@ -173,7 +178,9 @@ class PikaQueue(object):
     @catch_error
     def get_nowait(self, ack=False):
         with self.lock:
-            method_frame, header_frame, body = self.channel.basic_get(self.name, not ack)
+            method_frame, header_frame, body = self.channel.basic_get(
+                self.name, not ack
+            )
             if method_frame is None:
                 raise BaseQueue.Empty
             if ack:
@@ -191,8 +198,13 @@ class AmqpQueue(PikaQueue):
     Full = BaseQueue.Full
     max_timeout = 0.3
 
-    def __init__(self, name, amqp_url='amqp://guest:guest@localhost:5672/%2F',
-                 maxsize=0, lazy_limit=True):
+    def __init__(
+        self,
+        name,
+        amqp_url="amqp://guest:guest@localhost:5672/%2F",
+        maxsize=0,
+        lazy_limit=True,
+    ):
         """
         Constructor for a AmqpQueue.
 
@@ -225,23 +237,25 @@ class AmqpQueue(PikaQueue):
         """Reconnect to rabbitmq server"""
         parsed = urlparse.urlparse(self.amqp_url)
         port = parsed.port or 5672
-        self.connection = amqp.Connection(host="%s:%s" % (parsed.hostname, port),
-                                          userid=parsed.username or 'guest',
-                                          password=parsed.password or 'guest',
-                                          virtual_host=unquote(
-                                              parsed.path.lstrip('/') or '%2F')).connect()
+        self.connection = amqp.Connection(
+            host="%s:%s" % (parsed.hostname, port),
+            userid=parsed.username or "guest",
+            password=parsed.password or "guest",
+            virtual_host=unquote(parsed.path.lstrip("/") or "%2F"),
+        ).connect()
         self.channel = self.connection.channel()
         try:
             self.channel.queue_declare(self.name)
         except amqp.exceptions.PreconditionFailed:
             pass
-        #self.channel.queue_purge(self.name)
+        # self.channel.queue_purge(self.name)
 
     @catch_error
     def qsize(self):
         with self.lock:
             name, message_count, consumer_count = self.channel.queue_declare(
-                self.name, passive=True)
+                self.name, passive=True
+            )
         return message_count
 
     @catch_error
@@ -266,5 +280,6 @@ class AmqpQueue(PikaQueue):
             if ack:
                 self.channel.basic_ack(message.delivery_tag)
         return umsgpack.unpackb(message.body)
+
 
 Queue = PikaQueue

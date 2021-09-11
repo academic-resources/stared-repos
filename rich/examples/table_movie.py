@@ -163,12 +163,7 @@ with Live(table_centered, console=console, screen=False, refresh_per_second=20):
     with beat(10):
         table.border_style = "bright_yellow"
 
-    for box in [
-        box.SQUARE,
-        box.MINIMAL,
-        box.SIMPLE,
-        box.SIMPLE_HEAD,
-    ]:
+    for box in [box.SQUARE, box.MINIMAL, box.SIMPLE, box.SIMPLE_HEAD]:
         with beat(10):
             table.box = box
 

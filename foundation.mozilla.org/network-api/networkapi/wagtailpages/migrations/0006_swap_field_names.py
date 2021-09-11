@@ -5,18 +5,11 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('wagtailpages', '0005_auto_20210330_2042'),
-    ]
+    dependencies = [("wagtailpages", "0005_auto_20210330_2042")]
 
     operations = [
-        migrations.RemoveField(
-            model_name='productupdates',
-            name='update',
-        ),
+        migrations.RemoveField(model_name="productupdates", name="update"),
         migrations.RenameField(
-            model_name='productupdates',
-            old_name='update_new',
-            new_name='update',
+            model_name="productupdates", old_name="update_new", new_name="update"
         ),
     ]

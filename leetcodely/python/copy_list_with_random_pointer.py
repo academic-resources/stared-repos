@@ -9,6 +9,7 @@ class RandomListNode(object):
         self.next = None
         self.random = None
 
+
 from collections import OrderedDict
 
 
@@ -35,6 +36,3 @@ class Solution(object):
                 n.next = d[m.next]
             m = m.next
         return d[head]
-
-
-

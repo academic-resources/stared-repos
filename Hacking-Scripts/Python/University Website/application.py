@@ -6,8 +6,8 @@ from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///student.sqlite3'
-app.config['SECRET_KEY'] = 'ec9439cfc6c796ae2029594d'
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///student.sqlite3"
+app.config["SECRET_KEY"] = "ec9439cfc6c796ae2029594d"
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
@@ -41,7 +41,9 @@ class Student(db.Model, UserMixin):
 
     @password.setter
     def password(self, plain_text_password):
-        self.password_hash = bcrypt.generate_password_hash(plain_text_password).decode('utf-8')
+        self.password_hash = bcrypt.generate_password_hash(plain_text_password).decode(
+            "utf-8"
+        )
 
     def check_password_correction(self, attempted_password):
         return bcrypt.check_password_hash(self.password_hash, attempted_password)
@@ -56,8 +58,6 @@ class Student(db.Model, UserMixin):
         return False
 
 
-
-
 class Course(db.Model):
     roll = db.Column(db.Integer(), nullable=False)
     faculty_id = db.Column(db.Integer(), primary_key=True)
@@ -67,7 +67,7 @@ class Course(db.Model):
     faculty_mobile = db.Column(db.String(length=12), nullable=False)
 
     def __repr__(self):
-        return f'Fees {self.faculty_id}'
+        return f"Fees {self.faculty_id}"
 
 
 class Fees(db.Model):
@@ -77,7 +77,7 @@ class Fees(db.Model):
     fees_desc = db.Column(db.String(length=1024), nullable=False)
 
     def __repr__(self):
-        return f'Fees {self.id}'
+        return f"Fees {self.id}"
 
 
 class Result(db.Model):
@@ -87,7 +87,7 @@ class Result(db.Model):
     sgpa = db.Column(db.String(length=5), nullable=False)
 
     def __repr__(self):
-        return f'Result {self.course_name}'
+        return f"Result {self.course_name}"
 
 
 class Attendance(db.Model):
@@ -99,7 +99,7 @@ class Attendance(db.Model):
     percentage = db.Column(db.Float(), nullable=False)
 
     def __repr__(self):
-        return f'Result {self.total_days}'
+        return f"Result {self.total_days}"
 
 
 class Timetable(db.Model):
@@ -110,10 +110,10 @@ class Timetable(db.Model):
     course4 = db.Column(db.String(length=50), nullable=False)
     course5 = db.Column(db.String(length=50), nullable=False)
     course6 = db.Column(db.String(length=50), nullable=False)
-    days = db.Column(db.String(length=50), nullable=False,primary_key=True)
+    days = db.Column(db.String(length=50), nullable=False, primary_key=True)
+
 
 # Routes
 
 
 routes.route(app, db)
-

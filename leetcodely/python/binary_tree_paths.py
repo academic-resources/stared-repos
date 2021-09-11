@@ -27,7 +27,7 @@ class Solution(object):
 
             if not node.left and not node.right:
                 path.append(str(node.val))
-                s = '->'.join(path)
+                s = "->".join(path)
                 answer.append(s)
                 path.pop()
                 return
@@ -46,7 +46,7 @@ class Solution(object):
         return answer
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     bst = BinarySearchTree()
     bst.insert(12)
     bst.insert(9)
@@ -56,4 +56,3 @@ if __name__ == '__main__':
     bst.insert(17)
     solution = Solution()
     print(solution.binaryTreePaths(bst.root))
-

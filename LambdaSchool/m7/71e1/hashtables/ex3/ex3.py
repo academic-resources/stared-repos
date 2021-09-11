@@ -1,6 +1,7 @@
 intersection_array = []
 cache = {}
 
+
 def arrays_length_two(arrays, intersection_array):
     if len(arrays[1]) <= 5 and len(arrays[0]) <= 5:
         for y in arrays[1]:
@@ -29,6 +30,7 @@ def arrays_length_two(arrays, intersection_array):
         print(intersection_array)
     return arrays, intersection_array
 
+
 def arrays_length_three(arrays, x, intersection_array):
     if len(intersection_array) > 0:
         intersection_list = list(intersection_array)
@@ -39,24 +41,25 @@ def arrays_length_three(arrays, x, intersection_array):
         min_a = min(x)
         max_a = max(x)
         # get smallest max of each array
-        # 
+        #
         max_x_to_check = int(min_a + 4)
         for single_intersection_item in intersection_array:
-            '''
+            """
             for y in x:
                 if y <= last_array_item:
                     if y not in x:
-            '''
+            """
             if single_intersection_item not in x[:max_x_to_check]:
                 intersection_array.remove(single_intersection_item)
         arrays.remove(x)
     return arrays, x, intersection_array
 
+
 def intersection(arrays):
     global intersection_array
     # original_arrays = arrays.copy()
     # if str(arrays) in cache.items():
-        # return cache[str(arrays)]
+    # return cache[str(arrays)]
     # double nested loops to compare first two arrays
     if len(arrays) < 2:
         return None
@@ -76,6 +79,7 @@ def intersection(arrays):
         # return result
         # cache.update({str(original_arrays): intersection_array})
         return intersection_array
+
 
 if __name__ == "__main__":
     arrays = []

@@ -22,48 +22,48 @@
 
 class Node {
   constructor(val) {
-    this.value = val
-    this.next = null
+    this.value = val;
+    this.next = null;
   }
 }
 
 class Stack {
   constructor() {
-    this.top = null
-    this.bottom = null
-    this.length = 0
+    this.top = null;
+    this.bottom = null;
+    this.length = 0;
   }
 
   push(val) {
-    const node = new Node(val)
-    node.next = this.top
-    this.top = node
-    this.length++
-    if (this.length === 1) this.bottom = this.top
+    const node = new Node(val);
+    node.next = this.top;
+    this.top = node;
+    this.length++;
+    if (this.length === 1) this.bottom = this.top;
     if (this.length === 0) {
-      this.bottom = null
-      this.top = null
+      this.bottom = null;
+      this.top = null;
     }
-    return this.length
+    return this.length;
   }
 
   pop() {
-    if (this.length === 0) return null
-    const node = this.top
-    this.top = this.top.next
-    this.length--
-    if (this.length === 1) this.bottom = this.top
+    if (this.length === 0) return null;
+    const node = this.top;
+    this.top = this.top.next;
+    this.length--;
+    if (this.length === 1) this.bottom = this.top;
     if (this.length === 0) {
-      this.bottom = null
-      this.top = null
+      this.bottom = null;
+      this.top = null;
     }
-    return node.value
+    return node.value;
   }
 
   size() {
-    return this.length
+    return this.length;
   }
 }
 
-exports.Node = Node
-exports.Stack = Stack
+exports.Node = Node;
+exports.Stack = Stack;

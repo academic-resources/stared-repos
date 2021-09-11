@@ -2,19 +2,19 @@ import sys
 from flask import Flask, session, url_for, redirect
 
 app = Flask(__name__)
-app.secret_key = 'secret'
+app.secret_key = "secret"
 
 
-@app.route('/')
+@app.route("/")
 def set():
     session.clear()
-    session['works'] = True
-    return redirect(url_for('get'))
+    session["works"] = True
+    return redirect(url_for("get"))
 
 
-@app.route('/get')
+@app.route("/get")
 def get():
-    works = session.get('works', False)
+    works = session.get("works", False)
     return str(works)
 
 

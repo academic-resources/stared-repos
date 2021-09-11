@@ -40,18 +40,18 @@
 // }
 
 function stepper(nums) {
-  const canIGetTo = new Array(nums.length).fill(false)
-  canIGetTo[0] = true
+  const canIGetTo = new Array(nums.length).fill(false);
+  canIGetTo[0] = true;
 
   for (let i = 0; i < nums.length; i++) {
     if (canIGetTo[i] === true) {
       for (let j = i + 1; j <= nums[i] + i; j++) {
-        canIGetTo[j] = true
+        canIGetTo[j] = true;
       }
     }
   }
 
-  return canIGetTo[nums.length - 1]
+  return canIGetTo[nums.length - 1];
 }
 
 // Write a function, maxNonAdjacentSum(nums), that takes in an array of nonnegative numbers.
@@ -65,15 +65,15 @@ function stepper(nums) {
 // maxNonAdjacentSum([2, 7, 9, 3, 4])   // => 15, because 2 + 9 + 4
 // maxNonAdjacentSum([4,2,1,6])         // => 10, because 4 + 6
 function maxNonAdjacentSum(nums) {
-  if (nums.length === 0) return 0
-  const maxUpTo = new Array(nums.length).fill(0)
-  maxUpTo[0] = nums[0]
+  if (nums.length === 0) return 0;
+  const maxUpTo = new Array(nums.length).fill(0);
+  maxUpTo[0] = nums[0];
   for (let i = 1; i < nums.length; i++) {
-    const sumIncl = i === 1 ? nums[i] : nums[i] + maxUpTo[i - 2]
-    const sumExcl = maxUpTo[i - 1]
-    maxUpTo[i] = Math.max(sumIncl, sumExcl)
+    const sumIncl = i === 1 ? nums[i] : nums[i] + maxUpTo[i - 2];
+    const sumExcl = maxUpTo[i - 1];
+    maxUpTo[i] = Math.max(sumIncl, sumExcl);
   }
-  return maxUpTo[nums.length - 1]
+  return maxUpTo[nums.length - 1];
 }
 
 // Write a function, minChange(coins, amount), that accepts an array of coin values
@@ -89,10 +89,10 @@ function maxNonAdjacentSum(nums) {
 // minChange([1, 5, 10, 25], 15)    // => 2, because 10 + 5 = 15
 // minChange([1, 5, 10, 25], 100)   // => 4, because 25 + 25 + 25 + 25 = 100
 function minChange(coins, amount) {
-  let minCoinsForAmount = new Array(amount + 1).fill(Infinity)
-  minCoinsForAmount[0] = 0
+  let minCoinsForAmount = new Array(amount + 1).fill(Infinity);
+  minCoinsForAmount[0] = 0;
 
-  coins.forEach(coin => {
+  coins.forEach((coin) => {
     for (
       let amountBeingConsidered = 0;
       amountBeingConsidered <= amount;
@@ -103,19 +103,19 @@ function minChange(coins, amount) {
         numThisCoin * coin <= amountBeingConsidered;
         numThisCoin++
       ) {
-        remainder = amountBeingConsidered - numThisCoin * coin
-        attempt = minCoinsForAmount[remainder] + numThisCoin
+        remainder = amountBeingConsidered - numThisCoin * coin;
+        attempt = minCoinsForAmount[remainder] + numThisCoin;
         if (attempt < minCoinsForAmount[amountBeingConsidered])
-          minCoinsForAmount[amountBeingConsidered] = attempt
+          minCoinsForAmount[amountBeingConsidered] = attempt;
       }
     }
-  })
+  });
 
-  return minCoinsForAmount[amount]
+  return minCoinsForAmount[amount];
 }
 
 module.exports = {
   stepper,
   maxNonAdjacentSum,
-  minChange
-}
+  minChange,
+};

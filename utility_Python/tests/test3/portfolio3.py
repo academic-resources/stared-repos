@@ -21,6 +21,7 @@ class Portfolio:
     21263.0
 
     """
+
     def __init__(self):
         # A list of lists: [[name, shares, price], ...]
         self.stocks = []
@@ -56,7 +57,7 @@ class Portfolio:
         url += self.SUFFIX
         data = requests.get(url).text
         lines = data.splitlines()[1:]
-        return { row[0]: float(row[3]) for row in csv.reader(lines) }
+        return {row[0]: float(row[3]) for row in csv.reader(lines)}
 
     def value(self):
         """Return the current value of the portfolio."""

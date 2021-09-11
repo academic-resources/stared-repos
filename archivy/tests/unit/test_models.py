@@ -12,11 +12,7 @@ attributes = ["type", "title", "tags", "path", "id"]
 
 
 def test_new_bookmark(test_app):
-    bookmark = DataObj(
-        type="bookmark",
-        tags=["example"],
-        url="http://example.org",
-    )
+    bookmark = DataObj(type="bookmark", tags=["example"], url="http://example.org")
     bookmark.process_bookmark_url()
     bookmark_id = bookmark.insert()
     assert bookmark_id == 1

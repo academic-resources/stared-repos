@@ -1,7 +1,9 @@
 # portfolio1.py
 
+
 class Portfolio:
     """A simple stock portfolio"""
+
     def __init__(self):
         # A list of lists: [[name, shares, price], ...]
         self.stocks = []

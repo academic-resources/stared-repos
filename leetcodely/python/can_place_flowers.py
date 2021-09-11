@@ -15,13 +15,13 @@ class Solution(object):
         """
         flowerbed.insert(0, 0)
         flowerbed.append(0)
-        for i in range(1, len(flowerbed) -1):
-            if flowerbed[i-1] == flowerbed[i] == flowerbed[i+1] == 0:
+        for i in range(1, len(flowerbed) - 1):
+            if flowerbed[i - 1] == flowerbed[i] == flowerbed[i + 1] == 0:
                 flowerbed[i] = 1
                 n -= 1
         return n <= 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.canPlaceFlowers([1,0,0,0,1], 1))
+    print(solution.canPlaceFlowers([1, 0, 0, 0, 1], 1))

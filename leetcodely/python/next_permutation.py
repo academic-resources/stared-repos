@@ -11,7 +11,6 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 
 
 class Solution:
-
     def nextPermutation(self, nums):
         """
         :type nums: List[int]
@@ -27,10 +26,10 @@ class Solution:
         while j > i and nums[j] <= nums[i]:
             j -= 1
         nums[i], nums[j] = nums[j], nums[i]
-        nums[i + 1:] = sorted(nums[i + 1:])
+        nums[i + 1 :] = sorted(nums[i + 1 :])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.nextPermutation([1, 2, 3]))
     print(solution.nextPermutation([3, 2, 1]))

@@ -1,18 +1,18 @@
 function depthFirstSearch(root, targetVal) {
-  let stack = [root]
+  let stack = [root];
 
   while (stack.length) {
-    let node = stack.pop()
+    let node = stack.pop();
 
-    if (node.val === targetVal) return node
+    if (node.val === targetVal) return node;
 
-    if (node.right) stack.push(node.right)
-    if (node.left) stack.push(node.left)
+    if (node.right) stack.push(node.right);
+    if (node.left) stack.push(node.left);
   }
 
-  return null
+  return null;
 }
 
 module.exports = {
-  depthFirstSearch
-}
+  depthFirstSearch,
+};

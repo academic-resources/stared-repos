@@ -6,10 +6,11 @@ import tkinter.ttk as ttk
 import tkinter.font as font
 from tkinter import filedialog
 
-filenames = filedialog.askopenfilename(initialdir="/",
-                                       title="Select file",
-                                       filetypes=(("*.jpeg", "*.jpg"),
-                                                  ("all files", "*.*")))
+filenames = filedialog.askopenfilename(
+    initialdir="/",
+    title="Select file",
+    filetypes=(("*.jpeg", "*.jpg"), ("all files", "*.*")),
+)
 for filename in os.listdir("."):
     filename = filenames
     if filename.endswith(".zip"):

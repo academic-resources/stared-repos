@@ -18,17 +18,33 @@ $responsive: true;
 // ---------------------------------------------------------
 
 @for $i from 0 through 4 {
-  .t-#{$i} { top: #{$i}px; }
-  .r-#{$i} { right: #{$i}px; }
-  .b-#{$i} { bottom: #{$i}px; }
-  .l-#{$i} { left: #{$i}px; }
+  .t-#{$i} {
+    top: #{$i}px;
+  }
+  .r-#{$i} {
+    right: #{$i}px;
+  }
+  .b-#{$i} {
+    bottom: #{$i}px;
+  }
+  .l-#{$i} {
+    left: #{$i}px;
+  }
 
   @if ($responsive == true) {
     @include generateResponsive() {
-      .t-#{$i}\@#{$breakpointAlias} { top: #{$i}px; }
-      .r-#{$i}\@#{$breakpointAlias} { right: #{$i}px; }
-      .b-#{$i}\@#{$breakpointAlias} { bottom: #{$i}px; }
-      .l-#{$i}\@#{$breakpointAlias} { left: #{$i}px; }
+      .t-#{$i}\@#{$breakpointAlias} {
+        top: #{$i}px;
+      }
+      .r-#{$i}\@#{$breakpointAlias} {
+        right: #{$i}px;
+      }
+      .b-#{$i}\@#{$breakpointAlias} {
+        bottom: #{$i}px;
+      }
+      .l-#{$i}\@#{$breakpointAlias} {
+        left: #{$i}px;
+      }
     }
   }
 }
@@ -39,17 +55,33 @@ $responsive: true;
 
 @for $i from 5 through 35 {
   @if $i % 5 == 0 {
-    .t-#{$i} { top: #{$i}px; }
-    .r-#{$i} { right: #{$i}px; }
-    .b-#{$i} { bottom: #{$i}px; }
-    .l-#{$i} { left: #{$i}px; }
+    .t-#{$i} {
+      top: #{$i}px;
+    }
+    .r-#{$i} {
+      right: #{$i}px;
+    }
+    .b-#{$i} {
+      bottom: #{$i}px;
+    }
+    .l-#{$i} {
+      left: #{$i}px;
+    }
 
     @if ($responsive == true) {
       @include generateResponsive() {
-        .t-#{$i}\@#{$breakpointAlias} { top: #{$i}px; }
-        .r-#{$i}\@#{$breakpointAlias} { right: #{$i}px; }
-        .b-#{$i}\@#{$breakpointAlias} { bottom: #{$i}px; }
-        .l-#{$i}\@#{$breakpointAlias} { left: #{$i}px; }
+        .t-#{$i}\@#{$breakpointAlias} {
+          top: #{$i}px;
+        }
+        .r-#{$i}\@#{$breakpointAlias} {
+          right: #{$i}px;
+        }
+        .b-#{$i}\@#{$breakpointAlias} {
+          bottom: #{$i}px;
+        }
+        .l-#{$i}\@#{$breakpointAlias} {
+          left: #{$i}px;
+        }
       }
     }
   }
@@ -61,17 +93,33 @@ $responsive: true;
 
 @for $i from 40 through 160 {
   @if $i % 10 == 0 {
-    .t-#{$i} { top: #{$i}px; }
-    .r-#{$i} { right: #{$i}px; }
-    .b-#{$i} { bottom: #{$i}px; }
-    .l-#{$i} { left: #{$i}px; }
+    .t-#{$i} {
+      top: #{$i}px;
+    }
+    .r-#{$i} {
+      right: #{$i}px;
+    }
+    .b-#{$i} {
+      bottom: #{$i}px;
+    }
+    .l-#{$i} {
+      left: #{$i}px;
+    }
 
     @if ($responsive == true) {
       @include generateResponsive() {
-        .t-#{$i}\@#{$breakpointAlias} { top: #{$i}px; }
-        .r-#{$i}\@#{$breakpointAlias} { right: #{$i}px; }
-        .b-#{$i}\@#{$breakpointAlias} { bottom: #{$i}px; }
-        .l-#{$i}\@#{$breakpointAlias} { left: #{$i}px; }
+        .t-#{$i}\@#{$breakpointAlias} {
+          top: #{$i}px;
+        }
+        .r-#{$i}\@#{$breakpointAlias} {
+          right: #{$i}px;
+        }
+        .b-#{$i}\@#{$breakpointAlias} {
+          bottom: #{$i}px;
+        }
+        .l-#{$i}\@#{$breakpointAlias} {
+          left: #{$i}px;
+        }
       }
     }
   }
@@ -91,10 +139,18 @@ $responsive: true;
   right: 50%;
 }
 
-.t-50p { top: 50%; }
-.r-50p { right: 50%; }
-.b-50p { bottom: 50%; }
-.l-50p { left: 50%; }
+.t-50p {
+  top: 50%;
+}
+.r-50p {
+  right: 50%;
+}
+.b-50p {
+  bottom: 50%;
+}
+.l-50p {
+  left: 50%;
+}
 
 @if ($responsive == true) {
   @include generateResponsive() {
@@ -108,9 +164,17 @@ $responsive: true;
       right: 50%;
     }
 
-    .t-50p\@#{$breakpointAlias} { top: 50%; }
-    .r-50p\@#{$breakpointAlias} { right: 50%; }
-    .b-50p\@#{$breakpointAlias} { bottom: 50%; }
-    .l-50p\@#{$breakpointAlias} { left: 50%; }
+    .t-50p\@#{$breakpointAlias} {
+      top: 50%;
+    }
+    .r-50p\@#{$breakpointAlias} {
+      right: 50%;
+    }
+    .b-50p\@#{$breakpointAlias} {
+      bottom: 50%;
+    }
+    .l-50p\@#{$breakpointAlias} {
+      left: 50%;
+    }
   }
 }

@@ -12,15 +12,16 @@ class instaBot:
         self.password = password
 
         usernamefield = self.driver.find_element_by_xpath(
-            '//*[@id="loginForm"]/div/div[1]/div/label/input')
+            '//*[@id="loginForm"]/div/div[1]/div/label/input'
+        )
         usernamefield.send_keys(username)
 
         passwordfield = self.driver.find_element_by_xpath(
-            '//*[@id="loginForm"]/div/div[2]/div/label/input')
+            '//*[@id="loginForm"]/div/div[2]/div/label/input'
+        )
         passwordfield.send_keys(password)
 
-        loginbtn = self.driver.find_element_by_xpath(
-            '//*[@id="loginForm"]/div/div[3]')
+        loginbtn = self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]')
         loginbtn.click()
         sleep(10)
 
@@ -30,7 +31,7 @@ class instaBot:
         sleep(5)
 
         self.driver.find_element_by_xpath(
-            '/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[5]/div[2]/div[2]/div[2]/a[1]/div/div[2]/div/div/div'
+            "/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[5]/div[2]/div[2]/div[2]/a[1]/div/div[2]/div/div/div"
         ).click()
 
         sleep(5)
@@ -47,16 +48,14 @@ class instaBot:
         ).click()
         followers = self.get_names()
 
-        not_following_back = [
-            user for user in following if user not in followers
-        ]
+        not_following_back = [user for user in following if user not in followers]
 
         print("Information Collection Successful .....\n")
         print('Writing usernames to "listfile.txt" ......\n')
 
-        with open('listfile.txt', 'w') as filehandle:
+        with open("listfile.txt", "w") as filehandle:
             for listitem in not_following_back:
-                filehandle.write('%s\n' % listitem)
+                filehandle.write("%s\n" % listitem)
 
         self.driver.quit()
 
@@ -65,7 +64,8 @@ class instaBot:
     def get_names(self):
         sleep(2)
         scroll_box = self.driver.find_element_by_xpath(
-            '/html/body/div[5]/div/div/div[2]')
+            "/html/body/div[5]/div/div/div[2]"
+        )
 
         last_ht, ht = 0, 1
 
@@ -76,21 +76,36 @@ class instaBot:
                 """
                 arguments[0].scrollTo(0, arguments[0].scrollHeight); 
                 return arguments[0].scrollHeight;
-                """, scroll_box)
+                """,
+                scroll_box,
+            )
 
-        links = self.driver.find_elements_by_tag_name('a')
-        all = [name.text for name in links if name.text != '']
+        links = self.driver.find_elements_by_tag_name("a")
+        all = [name.text for name in links if name.text != ""]
 
         self.driver.find_element_by_xpath(
-            '/html/body/div[5]/div/div/div[1]/div/div[2]/button').click()
+            "/html/body/div[5]/div/div/div[1]/div/div[2]/button"
+        ).click()
 
         trash = [
-            'Edit Profile', 'POSTS', 'IGTV', 'SAVED', 'TAGGED', 'ABOUT',
-            'HELP', 'PRESS', 'API', 'JOBS', 'PRIVACY', 'TERMS', 'LOCATIONS',
-            'TOP ACCOUNTS', 'HASHTAGS'
+            "Edit Profile",
+            "POSTS",
+            "IGTV",
+            "SAVED",
+            "TAGGED",
+            "ABOUT",
+            "HELP",
+            "PRESS",
+            "API",
+            "JOBS",
+            "PRIVACY",
+            "TERMS",
+            "LOCATIONS",
+            "TOP ACCOUNTS",
+            "HASHTAGS",
         ]
 
-        del all[0:int(len(trash))]
+        del all[0 : int(len(trash))]
         return all
 
 

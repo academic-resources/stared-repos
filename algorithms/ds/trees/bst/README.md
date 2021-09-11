@@ -2,13 +2,13 @@
 
 ![](2021-08-07-00-46-09.png)
 
-A BST is organized in a __binary tree__. We can represent such a tree by a linked data structure in which each node is an object. In addition to a _key_ and satellite data, each node contains attributes `left`, `right` and `p` that point to the nodes corresponding. If a child or the parent is missing, the appropriate attribute contains the value `NIL`.
+A BST is organized in a **binary tree**. We can represent such a tree by a linked data structure in which each node is an object. In addition to a _key_ and satellite data, each node contains attributes `left`, `right` and `p` that point to the nodes corresponding. If a child or the parent is missing, the appropriate attribute contains the value `NIL`.
 
-Basic operations on a BST take time proportional to the height of the tree. For a complete BST with `n` nodes, such operations run in `Theta(lg n)` __worst-case time__. If the tree is a linear chain of `n` nodes, however, the same operations take `Theta(n)` rost-case time. Luckly, the expected height of a randomly built BST is O(lg n), so basic dynamic-set operations on such a tree take `Theta(lg n)` time on __average__.
+Basic operations on a BST take time proportional to the height of the tree. For a complete BST with `n` nodes, such operations run in `Theta(lg n)` **worst-case time**. If the tree is a linear chain of `n` nodes, however, the same operations take `Theta(n)` rost-case time. Luckly, the expected height of a randomly built BST is O(lg n), so basic dynamic-set operations on such a tree take `Theta(lg n)` time on **average**.
 
 ## BST Property
 
-The __keys__ in a BST are always stored in such a way as to __satisfy the binary-search-tree property__.
+The **keys** in a BST are always stored in such a way as to **satisfy the binary-search-tree property**.
 
 > Let `x` be a node ina BST. If `y` is a node in the left subtree of `x`, then `y.key <= x.key`. If `y` is a node in the right subtree of x, then `y.key >= x.key`.
 
@@ -16,7 +16,7 @@ The __keys__ in a BST are always stored in such a way as to __satisfy the binary
 
 ### Inorder tree walk
 
-The BST property allows us to print out all the keys in a BST in sorted order by a simple recursive algorithm, called an __inorder tree walk__. This prints the key of the root of a subtree between printing the values in its left subtree and printing those in its right subtree.
+The BST property allows us to print out all the keys in a BST in sorted order by a simple recursive algorithm, called an **inorder tree walk**. This prints the key of the root of a subtree between printing the values in its left subtree and printing those in its right subtree.
 
 ```
 INORDER-TREE-WALK(x):
@@ -109,19 +109,18 @@ TREE-INSERT(T, z)
         T.root = z
     else if z.key < y.key
         y.left = z
-    else y.right = z 
+    else y.right = z
 ```
 
 ### Deletion
 
 The strategy for deleting a node `z` from a BST `T` has four basic cases:
 
-* CASE 1: If `z` has no children, then we simply remove it by modifying its parent to replace `z` with `NIL`.
+- CASE 1: If `z` has no children, then we simply remove it by modifying its parent to replace `z` with `NIL`.
 
-* CASE 2: If `z` has just one child, then we elevate that child to take `z`'s position in the tree by modifying `z`'s parent.
+- CASE 2: If `z` has just one child, then we elevate that child to take `z`'s position in the tree by modifying `z`'s parent.
 
-* CASE 3/4: If `z` has two children, the we find `z`'s successor `y`, which must be in `z`'s right subtree, and have `y` take `z`'s position in the tree. The rest of `z`'s original right subtree becomes `y`'s new right subtree, and `z`'s left subtree becomes `y`'s new left subtree. This case is the tricky one, because, it matters whether y is `z`'s right child.
-
+- CASE 3/4: If `z` has two children, the we find `z`'s successor `y`, which must be in `z`'s right subtree, and have `y` take `z`'s position in the tree. The rest of `z`'s original right subtree becomes `y`'s new right subtree, and `z`'s left subtree becomes `y`'s new left subtree. This case is the tricky one, because, it matters whether y is `z`'s right child.
 
 The procedure for deleting a given node `z` from a BST `T` takes as arguments pointers to `T` and `z`. It organizes its cases a bit differently from the three cases outlined previously by considering the four cases.
 
@@ -168,4 +167,4 @@ So far, little is known about the average height of a BST when both insertion an
 
 We can define a randomly built BST on |n| keys as one that arises from inserting the keys in random order into an initially empty tree, where each of the n! permutations of the input keys is equally likely.
 
-The __expected height__ of a randomly built BST on `n` distinct keys is `O(lg n)`.
+The **expected height** of a randomly built BST on `n` distinct keys is `O(lg n)`.

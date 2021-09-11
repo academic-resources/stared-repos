@@ -1,5 +1,5 @@
-'use strict';
-var Comparator = require('../../util/comparator');
+"use strict";
+var Comparator = require("../../util/comparator");
 
 /**
  * Insertion sort algorithm O(n + d)

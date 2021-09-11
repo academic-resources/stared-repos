@@ -18,11 +18,11 @@ class Solution:
                 for n3 in nums:
                     for n4 in nums:
                         if int(n1) * 10 + int(n2) < 24 and int(n3) * 10 + int(n4) < 60:
-                            times.add(n1 + n2 + ':' + n3 + n4)
+                            times.add(n1 + n2 + ":" + n3 + n4)
         times = sorted(list(times))
         return times[(times.index(time) + 1) % len(times)]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.nextClosestTime('19:34'))
+    print(solution.nextClosestTime("19:34"))

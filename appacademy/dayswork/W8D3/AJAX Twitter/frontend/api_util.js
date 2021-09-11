@@ -1,32 +1,32 @@
 const APIUtil = {
-  followUser: id =>
+  followUser: (id) =>
     $.ajax({
-      method: 'POST',
+      method: "POST",
       url: `/users/${id}/follow`,
-      dataType: 'json'
+      dataType: "json",
     }),
-  unfollowUser: id =>
+  unfollowUser: (id) =>
     $.ajax({
-      method: 'DELETE',
+      method: "DELETE",
       url: `/users/${id}/follow`,
-      dataType: 'json'
+      dataType: "json",
     }),
   searchUsers: (queryVal, success) => {
     $.ajax({
-      method: 'GET',
+      method: "GET",
       url: `/users/search`,
       data: { query: queryVal },
-      dataType: 'json',
-      success: success
-    })
+      dataType: "json",
+      success: success,
+    });
   },
-  createTweet: data =>
+  createTweet: (data) =>
     $.ajax({
-      method: 'POST',
+      method: "POST",
       url: `/tweets`,
       data: data,
-      dataType: 'json'
-    })
-}
+      dataType: "json",
+    }),
+};
 
-module.exports = APIUtil
+module.exports = APIUtil;

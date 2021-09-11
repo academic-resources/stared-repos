@@ -1,23 +1,22 @@
 export const userReducer = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_USER':
-      const newState = state.slice()
-      newState.push(action.user)
+    case "ADD_USER":
+      const newState = state.slice();
+      newState.push(action.user);
       return newState;
     default:
       return state;
   }
-}
+};
 
-export const roleReducer = (state = '', action) => {
+export const roleReducer = (state = "", action) => {
   switch (action.type) {
-    case 'CHANGE_ROLE':
+    case "CHANGE_ROLE":
       return state;
     default:
       return state;
   }
-}
-
+};
 
 // reducer
 // {
@@ -36,21 +35,21 @@ export const roleReducer = (state = '', action) => {
 export const combineReducers = (obj) => {
   const reducerObject = obj;
   return (prevState, action, subscriptions) => {
-    const newState = {}
+    const newState = {};
     let changed = false;
-      const keys = Object.keys(reducerObject);
-    keys.forEach(key => {
-        newState[key] = reducerObject[key](prevState[key], action)
-        if(newState[key] !== prevState[key]) changed = true;
-    })
+    const keys = Object.keys(reducerObject);
+    keys.forEach((key) => {
+      newState[key] = reducerObject[key](prevState[key], action);
+      if (newState[key] !== prevState[key]) changed = true;
+    });
     // debugger
     if (changed) {
-        subscriptions.forEach( s => s(newState))
-        return newState
+      subscriptions.forEach((s) => s(newState));
+      return newState;
     }
-    return prevState
-  }
-}
+    return prevState;
+  };
+};
 
 // const myNoiseReducer = (prevState = "peace and quiet", action) => {
 //     switch (action.type) {

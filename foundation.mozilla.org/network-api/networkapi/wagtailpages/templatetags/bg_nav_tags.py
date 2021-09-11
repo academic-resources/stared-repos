@@ -5,19 +5,19 @@ register = template.Library()
 
 
 # Determine if a category nav link should be marked active
-@register.simple_tag(name='check_active_category')
+@register.simple_tag(name="check_active_category")
 def check_active_category(current_category, target_category):
     # because we're working with potentially localized data,
     # make sure to compare the linguistic originals.
-    current_category = getattr(current_category, 'original', current_category)
-    target_category = getattr(target_category, 'original', target_category)
-    return 'active' if current_category == target_category else ''
+    current_category = getattr(current_category, "original", current_category)
+    target_category = getattr(target_category, "original", target_category)
+    return "active" if current_category == target_category else ""
 
 
 # Determine if a nav link should be active.
-@register.simple_tag(name='bg_active_nav')
+@register.simple_tag(name="bg_active_nav")
 def bg_active_nav(current, target):
-    return 'active' if urlparse(current).path == urlparse(target).path else ''
+    return "active" if urlparse(current).path == urlparse(target).path else ""
 
 
 """

@@ -10,6 +10,7 @@
 
 import collections
 
+
 class Solution(object):
     def sumOfLeftLeaves(self, root):
         """
@@ -27,5 +28,3 @@ class Solution(object):
                 count += self.sumOfLeftLeaves(root.left)
         count += self.sumOfLeftLeaves(root.right)
         return count
-
-

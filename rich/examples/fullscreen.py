@@ -28,8 +28,7 @@ def make_layout() -> Layout:
         Layout(name="footer", size=7),
     )
     layout["main"].split_row(
-        Layout(name="side"),
-        Layout(name="body", ratio=2, minimum_size=60),
+        Layout(name="side"), Layout(name="body", ratio=2, minimum_size=60)
     )
     layout["side"].split(Layout(name="box1"), Layout(name="box2"))
     return layout
@@ -67,8 +66,7 @@ def make_sponsor_message() -> Panel:
 
     message_panel = Panel(
         Align.center(
-            Group(intro_message, "\n", Align.center(sponsor_message)),
-            vertical="middle",
+            Group(intro_message, "\n", Align.center(sponsor_message)), vertical="middle"
         ),
         box=box.ROUNDED,
         padding=(1, 2),
@@ -153,10 +151,7 @@ overall_task = overall_progress.add_task("All Jobs", total=int(total))
 progress_table = Table.grid(expand=True)
 progress_table.add_row(
     Panel(
-        overall_progress,
-        title="Overall Progress",
-        border_style="green",
-        padding=(2, 2),
+        overall_progress, title="Overall Progress", border_style="green", padding=(2, 2)
     ),
     Panel(job_progress, title="[b]Jobs", border_style="red", padding=(1, 2)),
 )

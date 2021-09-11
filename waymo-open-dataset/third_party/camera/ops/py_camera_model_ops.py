@@ -37,7 +37,8 @@ from __future__ import print_function
 import tensorflow as tf
 
 camera_model_module = tf.load_op_library(
-    tf.compat.v1.resource_loader.get_path_to_datafile('camera_model_ops.so'))
+    tf.compat.v1.resource_loader.get_path_to_datafile("camera_model_ops.so")
+)
 
 world_to_image = camera_model_module.world_to_image
 image_to_world = camera_model_module.image_to_world

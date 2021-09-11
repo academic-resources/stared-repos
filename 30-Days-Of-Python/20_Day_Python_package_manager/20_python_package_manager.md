@@ -11,6 +11,7 @@
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
 <small>Second Edition: July, 2021</small>
 </sub>
+
 </div>
 
 [<< Day 19](../19_Day_File_handling/19_file_handling.md) | [Day 21 >>](../21_Day_Classes_and_objects/21_classes_and_objects.md)
@@ -234,12 +235,13 @@ asabeneh@Asabeneh:~$ pip install requests
 ```
 
 We will see _get_, _status_code_, _headers_, _text_ and _json_ methods in _requests_ module:
-  - _get()_: to open a network and fetch data from url - it returns a response object
-  - _status_code_: After we fetched data, we can check the status of the operation (success, error, etc)
-  - _headers_: To check the header types
-  - _text_: to extract the text from the fetched response object 
-  - _json_: to extract json data
-Let's read a txt file from this website, https://www.w3.org/TR/PNG/iso_8859-1.txt.
+
+- _get()_: to open a network and fetch data from url - it returns a response object
+- _status_code_: After we fetched data, we can check the status of the operation (success, error, etc)
+- _headers_: To check the header types
+- _text_: to extract the text from the fetched response object
+- _json_: to extract json data
+  Let's read a txt file from this website, https://www.w3.org/TR/PNG/iso_8859-1.txt.
 
 ```py
 import requests # importing the request module
@@ -330,7 +332,7 @@ We use _json()_ method from response object, if the we are fetching JSON data. F
 We organize a large number of files in different folders and sub-folders based on some criteria, so that we can find and manage them easily. As you know, a module can contain multiple objects, such as classes, functions, etc. A package can contain one or more relevant modules. A package is actually a folder containing one or more module files. Let us create a package named mypackage, using the following steps:
 
 Create a new folder named mypacakge inside 30DaysOfPython folder
-Create an empty **__init__**.py file in the mypackage folder.
+Create an empty ****init****.py file in the mypackage folder.
 Create modules arithmetic.py and greet.py with following code:
 
 ```py
@@ -405,8 +407,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-As you can see our package works perfectly. The package folder contains a special file called **__init__**.py - it stores the package's content. If we put **__init__**.py in the package folder, python start recognizes it as a package.
-The **__init__**.py exposes specified resources from its modules to be imported to other python files. An empty **__init__**.py file makes all functions available when a package is imported. The **__init__**.py is essential for the folder to be recognized by Python as a package.
+As you can see our package works perfectly. The package folder contains a special file called ****init****.py - it stores the package's content. If we put ****init****.py in the package folder, python start recognizes it as a package.
+The ****init****.py exposes specified resources from its modules to be imported to other python files. An empty ****init****.py file makes all functions available when a package is imported. The ****init****.py is essential for the folder to be recognized by Python as a package.
 
 ### Further Information About Packages
 
@@ -419,6 +421,7 @@ The **__init__**.py exposes specified resources from its modules to be imported 
   - Flask - micro framework for Python based on Werkzeug, Jinja 2. (It's BSD licensed)
     - _pip install flask_
 - HTML Parser
+
   - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - HTML/XML parser designed for quick turnaround projects like screen-scraping, will accept bad markup.
     - _pip install beautifulsoup4_
   - PyQuery - implements jQuery in Python; faster than BeautifulSoup, apparently.

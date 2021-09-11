@@ -1,4 +1,4 @@
-'''
+"""
 1. Change setup.py version
 2. Commit all changes for release
 3. Tag commit with new version
@@ -12,4 +12,4 @@
         twine upload --repository-url https://test.pypi.org/legacy/ dist/*
     Production:
         twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
-'''
+"""

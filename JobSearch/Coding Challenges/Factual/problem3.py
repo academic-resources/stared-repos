@@ -14,6 +14,7 @@
 
 # in that order for this example would be 7
 
+
 def mapifyArgument(arg):
     map = {}
     for i in range(0, len(arg)):
@@ -23,9 +24,10 @@ def mapifyArgument(arg):
             map[module] = []
         map[module].append(dep)
     return map
-    
+
+
 def solution(modulesToBuild, dependencies):
     deps = mapifyArgument(dependencies)
-        
+
     # Type your solution here
     pass

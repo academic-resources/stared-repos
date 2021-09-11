@@ -49,20 +49,18 @@ def main():
     :return: None
     """
     # start Spark application and get Spark session, logger and config
-    spark, log, config = start_spark(
-        app_name='my_etl_job',
-        files=['etl_config.json'])
+    spark, log, config = start_spark(app_name="my_etl_job", files=["etl_config.json"])
 
     # log that main ETL job is starting
-    log.warn('etl_job is up-and-running')
+    log.warn("etl_job is up-and-running")
 
     # execute ETL pipeline
     data = extract_data(spark)
-    data_transformed = transform_data(data, config['steps_per_floor'])
+    data_transformed = transform_data(data, config["steps_per_floor"])
     load_data(data_transformed)
 
     # log the success and terminate Spark application
-    log.warn('test_etl_job is finished')
+    log.warn("test_etl_job is finished")
     spark.stop()
     return None
 
@@ -72,10 +70,7 @@ def extract_data(spark):
     :param spark: Spark session object.
     :return: Spark DataFrame.
     """
-    df = (
-        spark
-        .read
-        .parquet('tests/test_data/employees'))
+    df = spark.read.parquet("tests/test_data/employees")
 
     return df
 
@@ -86,12 +81,11 @@ def transform_data(df, steps_per_floor_):
     :param steps_per_floor_: The number of steps per-floor at 43 Tanner Street.
     :return: Transformed DataFrame.
     """
-    df_transformed = (
-        df
-        .select(
-            col('id'),
-            concat_ws(' ', col('first_name'), col('second_name')).alias('name'),
-            (col('floor') * lit(steps_per_floor_)).alias('steps_to_desk')))
+    df_transformed = df.select(
+        col("id"),
+        concat_ws(" ", col("first_name"), col("second_name")).alias("name"),
+        (col("floor") * lit(steps_per_floor_)).alias("steps_to_desk"),
+    )
 
     return df_transformed
 
@@ -101,10 +95,7 @@ def load_data(df):
     :param df: DataFrame to print.
     :return: None
     """
-    (df
-     .coalesce(1)
-     .write
-     .csv('loaded_data', mode='overwrite', header=True))
+    (df.coalesce(1).write.csv("loaded_data", mode="overwrite", header=True))
     return None
 
 
@@ -117,38 +108,41 @@ def create_test_data(spark, config):
     """
     # create example data from scratch
     local_records = [
-        Row(id=1, first_name='Dan', second_name='Germain', floor=1),
-        Row(id=2, first_name='Dan', second_name='Sommerville', floor=1),
-        Row(id=3, first_name='Alex', second_name='Ioannides', floor=2),
-        Row(id=4, first_name='Ken', second_name='Lai', floor=2),
-        Row(id=5, first_name='Stu', second_name='White', floor=3),
-        Row(id=6, first_name='Mark', second_name='Sweeting', floor=3),
-        Row(id=7, first_name='Phil', second_name='Bird', floor=4),
-        Row(id=8, first_name='Kim', second_name='Suter', floor=4)
+        Row(id=1, first_name="Dan", second_name="Germain", floor=1),
+        Row(id=2, first_name="Dan", second_name="Sommerville", floor=1),
+        Row(id=3, first_name="Alex", second_name="Ioannides", floor=2),
+        Row(id=4, first_name="Ken", second_name="Lai", floor=2),
+        Row(id=5, first_name="Stu", second_name="White", floor=3),
+        Row(id=6, first_name="Mark", second_name="Sweeting", floor=3),
+        Row(id=7, first_name="Phil", second_name="Bird", floor=4),
+        Row(id=8, first_name="Kim", second_name="Suter", floor=4),
     ]
 
     df = spark.createDataFrame(local_records)
 
     # write to Parquet file format
-    (df
-     .coalesce(1)
-     .write
-     .parquet('tests/test_data/employees', mode='overwrite'))
+    (df.coalesce(1).write.parquet("tests/test_data/employees", mode="overwrite"))
 
     # create transformed version of data
-    df_tf = transform_data(df, config['steps_per_floor'])
+    df_tf = transform_data(df, config["steps_per_floor"])
 
     # write transformed version of data to Parquet
-    (df_tf
-     .coalesce(1)
-     .write
-     .parquet('tests/test_data/employees_report', mode='overwrite'))
+    (
+        df_tf.coalesce(1).write.parquet(
+            "tests/test_data/employees_report", mode="overwrite"
+        )
+    )
 
     return None
 
 
-def start_spark(app_name='my_spark_app', master='local[*]', jar_packages=[],
-                files=[], spark_config={}):
+def start_spark(
+    app_name="my_spark_app",
+    master="local[*]",
+    jar_packages=[],
+    files=[],
+    spark_config={},
+):
     """Start Spark session, get the Spark logger and load config files.
     Start a Spark session on the worker node and register the Spark
     application with the cluster. NOTE - only the app_name argument
@@ -171,26 +165,19 @@ def start_spark(app_name='my_spark_app', master='local[*]', jar_packages=[],
     :return: A tuple of references to the Spark session, logger and
     config dict (only if available).
     """
-    if __name__ == '__main__':
+    if __name__ == "__main__":
         # get Spark session factory
-        spark_builder = (
-            SparkSession
-            .builder
-            .appName(app_name))
+        spark_builder = SparkSession.builder.appName(app_name)
     else:
         # get Spark session factory
-        spark_builder = (
-            SparkSession
-            .builder
-            .master(master)
-            .appName(app_name))
+        spark_builder = SparkSession.builder.master(master).appName(app_name)
 
         # create Spark JAR packages string
-        spark_jars_packages = ','.join(list(jar_packages))
-        spark_builder.config('spark.jars.packages', spark_jars_packages)
+        spark_jars_packages = ",".join(list(jar_packages))
+        spark_builder.config("spark.jars.packages", spark_jars_packages)
 
-        spark_files = ','.join(list(files))
-        spark_builder.config('spark.files', spark_files)
+        spark_files = ",".join(list(files))
+        spark_builder.config("spark.files", spark_files)
 
         # add other config params
         for key, val in spark_config.items():
@@ -202,16 +189,18 @@ def start_spark(app_name='my_spark_app', master='local[*]', jar_packages=[],
 
     # get config file if sent to cluster with --files
     spark_files_dir = SparkFiles.getRootDirectory()
-    config_files = [filename
-                    for filename in listdir(spark_files_dir)
-                    if filename.endswith('config.json')]
+    config_files = [
+        filename
+        for filename in listdir(spark_files_dir)
+        if filename.endswith("config.json")
+    ]
 
     if len(config_files) != 0:
         path_to_config_file = path.join(spark_files_dir, config_files[0])
-        with open(path_to_config_file, 'r') as config_file:
-            config_json = config_file.read().replace('\n', '')
+        with open(path_to_config_file, "r") as config_file:
+            config_json = config_file.read().replace("\n", "")
         config_dict = loads(config_json)
-        spark_logger.warn('loaded config from ' + config_files[0])
+        spark_logger.warn("loaded config from " + config_files[0])
     else:
         config_dict = None
 
@@ -224,5 +213,5 @@ def start_spark(app_name='my_spark_app', master='local[*]', jar_packages=[],
 
 
 # entry point for PySpark ETL application
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

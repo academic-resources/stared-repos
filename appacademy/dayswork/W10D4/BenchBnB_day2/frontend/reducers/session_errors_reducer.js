@@ -1,16 +1,16 @@
 import {
   RECEIVE_SESSION_ERRORS,
-  RECEIVE_CURRENT_USER
-} from '../actions/session_actions'
+  RECEIVE_CURRENT_USER,
+} from "../actions/session_actions";
 
 export default (state = [], action) => {
-  Object.freeze(state)
+  Object.freeze(state);
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
-      return action.errs
+      return action.errs;
     case RECEIVE_CURRENT_USER:
-      return []
+      return [];
     default:
-      return state
+      return state;
   }
-}
+};

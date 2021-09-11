@@ -10,7 +10,7 @@ import string
 class Codec:
     def __init__(self):
         self.map = {}
-        self.host = 'https://tinyurl.com/'
+        self.host = "https://tinyurl.com/"
 
     def encode(self, longUrl):
         """Encodes a URL to a shortened URL.
@@ -31,9 +31,16 @@ class Codec:
         return self.map[shortUrl]
 
     def id_generator(self, size):
-        return ''.join([random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(size)])
+        return "".join(
+            [
+                random.choice(
+                    string.ascii_uppercase + string.ascii_lowercase + string.digits
+                )
+                for _ in range(size)
+            ]
+        )
 
 
 # Your Codec object will be instantiated and called as such:
 codec = Codec()
-print(codec.decode(codec.encode('https://leetcode.com/problems/design-tinyurl')))
+print(codec.decode(codec.encode("https://leetcode.com/problems/design-tinyurl")))

@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   web:
@@ -7,6 +7,6 @@ services:
     environment:
       - FLASK_ENV=development
     ports:
-      - '4000:5000'
+      - "4000:5000"
   redis:
     image: redis:4.0.11-alpine

@@ -38,7 +38,6 @@
       li:last-of-type {
         border-bottom: 1px solid $EvernoteErrorRed;
       }
-
     }
 
     input {
@@ -56,12 +55,10 @@
       color: #fff;
       border-color: $EvernoteGreen;
       transition: background-color 0.5s ease;
-
     }
     input:last-of-type:hover {
       background-color: $EvernoteHoverGreen;
       border-color: $EvernoteHoverGreen;
     }
-
   }
 }

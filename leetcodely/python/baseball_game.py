@@ -23,17 +23,17 @@ class Solution(object):
         """
         stack = []
         for item in ops:
-            if item == '+':
+            if item == "+":
                 stack.append(stack[-1] + stack[-2])
-            elif item == 'D':
+            elif item == "D":
                 stack.append(stack[-1] * 2)
-            elif item == 'C':
+            elif item == "C":
                 stack.pop()
             else:
                 stack.append(int(item))
         return sum(stack)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.calPoints(["5", "-2", "4", "C", "D", "9", "+", "+"]))

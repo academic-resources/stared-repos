@@ -3,13 +3,14 @@ import os
 
 # pip install Wand
 from wand.image import Image
+
 # pip install http://pypi.python.org/packages/source/h/hurry.filesize/hurry.filesize-0.9.tar.gz
 from hurry.filesize import size
 
 
 # constants
-PATH = '/../../../..'
-PATTERN = '*.jpg'
+PATH = "/../../../.."
+PATTERN = "*.jpg"
 
 
 def get_image_file_names(filepath, pattern):
@@ -19,8 +20,11 @@ def get_image_file_names(filepath, pattern):
             for filename in fnmatch.filter(filenames, pattern):
                 matches.append(os.path.join(root, filename))  # full path
         if matches:
-            print("Found {} files, with a total file size of {}.".format(
-                len(matches), get_total_size(matches)))
+            print(
+                "Found {} files, with a total file size of {}.".format(
+                    len(matches), get_total_size(matches)
+                )
+            )
             return matches
         else:
             print("No files found.")
@@ -42,12 +46,12 @@ def resize_images(list_of_image_names):
             image_binary = f.read()
         with Image(blob=image_binary) as img:
             if img.height >= 600:
-                img.transform(resize='x600')
+                img.transform(resize="x600")
                 img.save(filename=image_name)
     print("Optimization complete.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     all_images = get_image_file_names(PATH, PATTERN)
     resize_images(all_images)
     get_image_file_names(PATH, PATTERN)

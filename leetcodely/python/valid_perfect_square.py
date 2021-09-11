@@ -4,6 +4,7 @@
 
 # TODO: some weird error
 
+
 class Solution(object):
     def isPerfectSquare(self, num):
         """
@@ -26,7 +27,6 @@ class Solution(object):
         return False
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.isPerfectSquare(104976))

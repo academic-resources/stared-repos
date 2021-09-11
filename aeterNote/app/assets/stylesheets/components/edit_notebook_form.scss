@@ -1,11 +1,10 @@
 .modal-holder {
   min-height: 100vh;
   min-width: 100vw;
-
 }
 
 .hide-notebook-edit-form {
-  display:none;
+  display: none;
 }
 
 .hide-note-delete-warning {
@@ -46,8 +45,7 @@
       margin-bottom: 25px;
     }
 
-    .info-title  {
-
+    .info-title {
       font-family: $sans-serif;
       display: flex;
       flex-direction: column;
@@ -81,7 +79,7 @@
       height: 40px;
       margin-bottom: 5px;
     }
-    .mini-title{
+    .mini-title {
       display: inline;
       border: 1px solid $EvernoteMediumGray;
       border-radius: 5px;
@@ -92,7 +90,7 @@
       font-weight: 400;
     }
 
-    .edit-title{
+    .edit-title {
       align-self: flex-start;
       height: 35px;
 
@@ -100,7 +98,6 @@
       font-size: 14px;
       color: $EvernoteGreen;
       font-weight: 200;
-
     }
 
     .edit-title::placeholder {
@@ -108,7 +105,6 @@
     }
 
     .edit-notebook-form {
-
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -169,7 +165,6 @@
           font-size: 13.5px;
           text-align: center;
           padding: 0;
-
         }
         .edit-cancel {
           color: $EvernoteDarkGray;
@@ -192,10 +187,9 @@
         }
 
         .edit-submit:hover {
-            background-color: $EvernoteHoverGreen;
+          background-color: $EvernoteHoverGreen;
         }
       }
     }
-
   }
 }

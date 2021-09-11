@@ -67,18 +67,8 @@ def main(argv):
         t3 = str(starttime + t3)[:-10]
         logging.info(f"encoding is expected to take until {t2} on average")
         logging.info(f"but it could be anywhere between {t1} and {t3}")
-        a1 = mkargs(
-            fn,
-            1,
-            tc,
-            start=args.start,
-        )
-        a2 = mkargs(
-            fn,
-            2,
-            tc,
-            start=args.start,
-        )
+        a1 = mkargs(fn, 1, tc, start=args.start)
+        a2 = mkargs(fn, 2, tc, start=args.start)
         if not args.dummy:
             origbytes, newbytes = encode(a1, a2)
         else:

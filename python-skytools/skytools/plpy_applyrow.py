@@ -48,20 +48,24 @@ def canapply_tstamp_helper(rnew, rold, tscol):
     tnew = rnew[tscol]
     told = rold[tscol]
     if not tnew[0].isdigit():
-        raise DataError('invalid timestamp')
+        raise DataError("invalid timestamp")
     if not told[0].isdigit():
-        raise DataError('invalid timestamp')
+        raise DataError("invalid timestamp")
     return tnew > told
 
 
-def applyrow(tblname, ev_type, new_row,
-             backup_row=None,
-             alt_pkey_cols=None,
-             fkey_cols=None,
-             fkey_ref_table=None,
-             fkey_ref_cols=None,
-             fn_canapply=canapply_dummy,
-             fn_colfilter=colfilter_full):
+def applyrow(
+    tblname,
+    ev_type,
+    new_row,
+    backup_row=None,
+    alt_pkey_cols=None,
+    fkey_cols=None,
+    fkey_ref_table=None,
+    fkey_ref_cols=None,
+    fn_canapply=canapply_dummy,
+    fn_colfilter=colfilter_full,
+):
     """Core logic.  Actual decisions will be done in callback functions.
 
     - [IUD]: If row referenced by fkey does not exist, event is not applied
@@ -80,23 +84,23 @@ def applyrow(tblname, ev_type, new_row,
     gd = None
 
     # parse ev_type
-    tmp = ev_type.split(':', 1)
-    if len(tmp) != 2 or tmp[0] not in ('I', 'U', 'D'):
-        raise DataError('Unsupported ev_type: ' + repr(ev_type))
+    tmp = ev_type.split(":", 1)
+    if len(tmp) != 2 or tmp[0] not in ("I", "U", "D"):
+        raise DataError("Unsupported ev_type: " + repr(ev_type))
     if not tmp[1]:
-        raise DataError('No pkey in event')
+        raise DataError("No pkey in event")
 
     cmd = tmp[0]
-    pkey_cols = tmp[1].split(',')
+    pkey_cols = tmp[1].split(",")
     qtblname = skytools.quote_fqident(tblname)
 
     # parse ev_data
     fields = skytools.db_urldecode(new_row)
 
-    if ev_type.find('}') >= 0:
-        raise DataError('Really suspicious activity')
-    if ",".join(fields.keys()).find('}') >= 0:
-        raise DataError('Really suspicious activity 2')
+    if ev_type.find("}") >= 0:
+        raise DataError("Really suspicious activity")
+    if ",".join(fields.keys()).find("}") >= 0:
+        raise DataError("Really suspicious activity 2")
 
     # generate pkey expressions
     tmp = ["%s = {%s}" % (skytools.quote_ident(k), k) for k in pkey_cols]
@@ -119,7 +123,8 @@ def applyrow(tblname, ev_type, new_row,
         fkey_expr = " and ".join(tmp)
         q = "select 1 from only %s where %s" % (
             skytools.quote_fqident(fkey_ref_table),
-            fkey_expr)
+            fkey_expr,
+        )
         res = skytools.plpy_exec(gd, q, fields)
         if not res:
             return "IGN: parent row does not exist"
@@ -165,11 +170,11 @@ def applyrow(tblname, ev_type, new_row,
         oldrow = None
 
     if res:
-        if cmd == 'I':
-            cmd = 'U'
+        if cmd == "I":
+            cmd = "U"
     else:
-        if cmd == 'U':
-            cmd = 'I'
+        if cmd == "U":
+            cmd = "I"
 
     # allow column changes
     if oldrow:
@@ -180,14 +185,14 @@ def applyrow(tblname, ev_type, new_row,
         fields = fields2
 
     # apply change
-    if cmd == 'I':
+    if cmd == "I":
         q = skytools.mk_insert_sql(fields, tblname, pkey_cols)
-    elif cmd == 'U':
+    elif cmd == "U":
         q = skytools.mk_update_sql(fields, tblname, pkey_cols)
-    elif cmd == 'D':
+    elif cmd == "D":
         q = skytools.mk_delete_sql(fields, tblname, pkey_cols)
     else:
-        plpy.error('Huh')
+        plpy.error("Huh")
 
     plpy.execute(q)
 
@@ -198,27 +203,28 @@ def ts_conflict_handler(gd, args):
     """Conflict handling based on timestamp column."""
 
     conf = skytools.db_urldecode(args[0])
-    timefield = conf['timefield']
+    timefield = conf["timefield"]
     ev_type = args[1]
     ev_data = args[2]
     ev_extra1 = args[3]
     ev_extra2 = args[4]
-    #ev_extra3 = args[5]
-    #ev_extra4 = args[6]
+    # ev_extra3 = args[5]
+    # ev_extra4 = args[6]
     altpk = None
-    if 'altpk' in conf:
-        altpk = conf['altpk'].split(',')
+    if "altpk" in conf:
+        altpk = conf["altpk"].split(",")
 
     def ts_canapply(rnew, rold):
         return canapply_tstamp_helper(rnew, rold, timefield)
 
     return applyrow(
-        ev_extra1, ev_type, ev_data,
+        ev_extra1,
+        ev_type,
+        ev_data,
         backup_row=ev_extra2,
         alt_pkey_cols=altpk,
-        fkey_ref_table=conf.get('fkey_ref_table'),
-        fkey_ref_cols=conf.get('fkey_ref_cols'),
-        fkey_cols=conf.get('fkey_cols'),
-        fn_canapply=ts_canapply
+        fkey_ref_table=conf.get("fkey_ref_table"),
+        fkey_ref_cols=conf.get("fkey_ref_cols"),
+        fkey_cols=conf.get("fkey_cols"),
+        fn_canapply=ts_canapply,
     )
-

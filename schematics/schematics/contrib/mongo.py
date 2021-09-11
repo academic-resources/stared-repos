@@ -8,10 +8,12 @@ from schematics.exceptions import ConversionError, ValidationError
 import bson
 
 try:
-    unicode #PY2
+    unicode  # PY2
 except:
     import codecs
-    unicode = str #PY3
+
+    unicode = str  # PY3
+
 
 class ObjectIdType(BaseType):
 
@@ -22,9 +24,7 @@ class ObjectIdType(BaseType):
     typically obtained after a successful save to Mongo.
     """
 
-    MESSAGES = {
-        'convert': u"Couldn't interpret value as an ObjectId.",
-    }
+    MESSAGES = {"convert": u"Couldn't interpret value as an ObjectId."}
 
     def __init__(self, auto_fill=False, **kwargs):
         self.auto_fill = auto_fill
@@ -35,7 +35,7 @@ class ObjectIdType(BaseType):
             try:
                 value = bson.objectid.ObjectId(unicode(value))
             except bson.objectid.InvalidId:
-                raise ConversionError(self.messages['convert'])
+                raise ConversionError(self.messages["convert"])
         return value
 
     def to_primitive(self, value, context=None):
@@ -46,5 +46,5 @@ class ObjectIdType(BaseType):
             try:
                 value = bson.objectid.ObjectId(unicode(value))
             except Exception:
-                raise ValidationError('Invalid ObjectId')
+                raise ValidationError("Invalid ObjectId")
         return True

@@ -326,30 +326,33 @@ Hand-checkable example given in [Myers1980] p 61 - see JSS paper
     def plot(self):
         """Provide a visual description of a StepPattern object"""
         import matplotlib.pyplot as plt
+
         x = self.mx
         pats = numpy.arange(1, 1 + self.get_n_patterns())
 
-        alpha = .5
+        alpha = 0.5
         fudge = [0, 0]
 
         fig, ax = plt.subplots(figsize=(6, 6))
         for i in pats:
             ss = x[:, 0] == i
             ax.plot(-x[ss, 1], -x[ss, 2], lw=2, color="tab:blue")
-            ax.plot(-x[ss, 1], -x[ss, 2], 'o', color="black", marker="o", fillstyle="none")
+            ax.plot(
+                -x[ss, 1], -x[ss, 2], "o", color="black", marker="o", fillstyle="none"
+            )
 
-            if numpy.sum(ss) == 1: continue
+            if numpy.sum(ss) == 1:
+                continue
 
             xss = x[ss, :]
             xh = alpha * xss[:-1, 1] + (1 - alpha) * xss[1:, 1]
             yh = alpha * xss[:-1, 2] + (1 - alpha) * xss[1:, 2]
 
             for xx, yy, tt in zip(xh, yh, xss[1:, 3]):
-                ax.annotate("{:.2g}".format(tt), (-xx - fudge[0],
-                                                  -yy - fudge[1]))
+                ax.annotate("{:.2g}".format(tt), (-xx - fudge[0], -yy - fudge[1]))
 
         endpts = x[:, 3] == -1
-        ax.plot(-x[endpts, 1], -x[endpts, 2], 'o', color="black")
+        ax.plot(-x[endpts, 1], -x[endpts, 2], "o", color="black")
 
         ax.set_xlabel("Query index")
         ax.set_ylabel("Reference index")
@@ -376,14 +379,13 @@ Hand-checkable example given in [Myers1980] p 61 - see JSS paper
         return s.T.reshape(-1)
 
 
-
 # Alternate constructor for ease of R import
 def _c(*v):
     va = numpy.array([*v])
     if len(va) % 4 != 0:
         _error("Internal error in _c constructor")
     va = va.reshape((-1, 4))
-    return (va)
+    return va
 
 
 # Kludge because lambda: raise doesn't work
@@ -395,6 +397,7 @@ def _error(s):
 ##################################################
 
 # Reimplementation of the building process
+
 
 class _P:
     def __init__(self, pid, subtype, smoothing):
@@ -455,7 +458,7 @@ See documentation for the StepPattern class.
         4: _RJtypeIV,
         5: _RJtypeV,
         6: _RJtypeVI,
-        7: _RJtypeVII
+        7: _RJtypeVII,
     }.get(ptype, lambda: _error("Invalid type"))
 
     r = f(slope_weighting, smoothed)
@@ -469,65 +472,82 @@ See documentation for the StepPattern class.
 
 
 def _RJtypeI(s, m):
-    return numpy.vstack([
-        _P(1, s, m).step(1, 0).get(),
-        _P(2, s, m).step(1, 1).get(),
-        _P(3, s, m).step(0, 1).get()])
+    return numpy.vstack(
+        [
+            _P(1, s, m).step(1, 0).get(),
+            _P(2, s, m).step(1, 1).get(),
+            _P(3, s, m).step(0, 1).get(),
+        ]
+    )
 
 
 def _RJtypeII(s, m):
-    return numpy.vstack([
-        _P(1, s, m).step(1, 1).step(1, 0).get(),
-        _P(2, s, m).step(1, 1).get(),
-        _P(3, s, m).step(1, 1).step(0, 1).get()])
+    return numpy.vstack(
+        [
+            _P(1, s, m).step(1, 1).step(1, 0).get(),
+            _P(2, s, m).step(1, 1).get(),
+            _P(3, s, m).step(1, 1).step(0, 1).get(),
+        ]
+    )
 
 
 def _RJtypeIII(s, m):
-    return numpy.vstack([
-        _P(1, s, m).step(2, 1).get(),
-        _P(2, s, m).step(1, 1).get(),
-        _P(3, s, m).step(1, 2).get()])
+    return numpy.vstack(
+        [
+            _P(1, s, m).step(2, 1).get(),
+            _P(2, s, m).step(1, 1).get(),
+            _P(3, s, m).step(1, 2).get(),
+        ]
+    )
 
 
 def _RJtypeIV(s, m):
-    return numpy.vstack([
-        _P(1, s, m).step(1, 1).step(1, 0).get(),
-        _P(2, s, m).step(1, 2).step(1, 0).get(),
-        _P(3, s, m).step(1, 1).get(),
-        _P(4, s, m).step(1, 2).get(),
-    ])
+    return numpy.vstack(
+        [
+            _P(1, s, m).step(1, 1).step(1, 0).get(),
+            _P(2, s, m).step(1, 2).step(1, 0).get(),
+            _P(3, s, m).step(1, 1).get(),
+            _P(4, s, m).step(1, 2).get(),
+        ]
+    )
 
 
 def _RJtypeV(s, m):
-    return numpy.vstack([
-        _P(1, s, m).step(1, 1).step(1, 0).step(1, 0).get(),
-        _P(2, s, m).step(1, 1).step(1, 0).get(),
-        _P(3, s, m).step(1, 1).get(),
-        _P(4, s, m).step(1, 1).step(0, 1).get(),
-        _P(5, s, m).step(1, 1).step(0, 1).step(0, 1).get(),
-    ])
+    return numpy.vstack(
+        [
+            _P(1, s, m).step(1, 1).step(1, 0).step(1, 0).get(),
+            _P(2, s, m).step(1, 1).step(1, 0).get(),
+            _P(3, s, m).step(1, 1).get(),
+            _P(4, s, m).step(1, 1).step(0, 1).get(),
+            _P(5, s, m).step(1, 1).step(0, 1).step(0, 1).get(),
+        ]
+    )
 
 
 def _RJtypeVI(s, m):
-    return numpy.vstack([
-        _P(1, s, m).step(1, 1).step(1, 1).step(1, 0).get(),
-        _P(2, s, m).step(1, 1).get(),
-        _P(3, s, m).step(1, 1).step(1, 1).step(0, 1).get()
-    ])
+    return numpy.vstack(
+        [
+            _P(1, s, m).step(1, 1).step(1, 1).step(1, 0).get(),
+            _P(2, s, m).step(1, 1).get(),
+            _P(3, s, m).step(1, 1).step(1, 1).step(0, 1).get(),
+        ]
+    )
 
 
 def _RJtypeVII(s, m):
-    return numpy.vstack([
-        _P(1, s, m).step(1, 1).step(1, 0).step(1, 0).get(),
-        _P(2, s, m).step(1, 2).step(1, 0).step(1, 0).get(),
-        _P(3, s, m).step(1, 3).step(1, 0).step(1, 0).get(),
-        _P(4, s, m).step(1, 1).step(1, 0).get(),
-        _P(5, s, m).step(1, 2).step(1, 0).get(),
-        _P(6, s, m).step(1, 3).step(1, 0).get(),
-        _P(7, s, m).step(1, 1).get(),
-        _P(8, s, m).step(1, 2).get(),
-        _P(9, s, m).step(1, 3).get(),
-    ])
+    return numpy.vstack(
+        [
+            _P(1, s, m).step(1, 1).step(1, 0).step(1, 0).get(),
+            _P(2, s, m).step(1, 2).step(1, 0).step(1, 0).get(),
+            _P(3, s, m).step(1, 3).step(1, 0).step(1, 0).get(),
+            _P(4, s, m).step(1, 1).step(1, 0).get(),
+            _P(5, s, m).step(1, 2).step(1, 0).get(),
+            _P(6, s, m).step(1, 3).step(1, 0).get(),
+            _P(7, s, m).step(1, 1).get(),
+            _P(8, s, m).step(1, 2).get(),
+            _P(9, s, m).step(1, 3).get(),
+        ]
+    )
 
 
 ##########################################################################################
@@ -558,70 +578,85 @@ def _RJtypeVII(s, m):
 ## White-Neely symmetric (default)
 ## aka Quasi-symmetric \cite{White1976}
 ## normalization: no (N+M?)
-symmetric1 = StepPattern(_c(
-    1, 1, 1, -1,
-    1, 0, 0, 1,
-    2, 0, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 0, -1,
-    3, 0, 0, 1
-));
+symmetric1 = StepPattern(
+    _c(1, 1, 1, -1, 1, 0, 0, 1, 2, 0, 1, -1, 2, 0, 0, 1, 3, 1, 0, -1, 3, 0, 0, 1)
+)
 
 ## Normal symmetric
 ## normalization: N+M
-symmetric2 = StepPattern(_c(
-    1, 1, 1, -1,
-    1, 0, 0, 2,
-    2, 0, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 0, -1,
-    3, 0, 0, 1
-), "N+M");
+symmetric2 = StepPattern(
+    _c(1, 1, 1, -1, 1, 0, 0, 2, 2, 0, 1, -1, 2, 0, 0, 1, 3, 1, 0, -1, 3, 0, 0, 1), "N+M"
+)
 
 ## classic asymmetric pattern: max slope 2, min slope 0
 ## normalization: N
-asymmetric = StepPattern(_c(
-    1, 1, 0, -1,
-    1, 0, 0, 1,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 2, -1,
-    3, 0, 0, 1
-), "N");
+asymmetric = StepPattern(
+    _c(1, 1, 0, -1, 1, 0, 0, 1, 2, 1, 1, -1, 2, 0, 0, 1, 3, 1, 2, -1, 3, 0, 0, 1), "N"
+)
 
 # % \item{\code{symmetricVelichkoZagoruyko}}{symmetric, reproduced from %
 # [Sakoe1978]. Use distance matrix \code{1-d}}
-# 
+#
 
 ## normalization: max[N,M]
 ## note: local distance matrix is 1-d
 ## \cite{Velichko}
-_symmetricVelichkoZagoruyko = StepPattern(_c(
-    1, 0, 1, -1,
-    2, 1, 1, -1,
-    2, 0, 0, -1.001,
-    3, 1, 0, -1));
+_symmetricVelichkoZagoruyko = StepPattern(
+    _c(1, 0, 1, -1, 2, 1, 1, -1, 2, 0, 0, -1.001, 3, 1, 0, -1)
+)
 
 # % \item{\code{asymmetricItakura}}{asymmetric, slope contrained 0.5 -- 2
 # from reference [Itakura1975]. This is the recursive definition % that
 # generates the Itakura parallelogram; }
-# 
+#
 
 ## Itakura slope-limited asymmetric \cite{Itakura1975}
 ## Max slope: 2; min slope: 1/2
 ## normalization: N
-_asymmetricItakura = StepPattern(_c(
-    1, 1, 2, -1,
-    1, 0, 0, 1,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 2, 1, -1,
-    3, 1, 0, 1,
-    3, 0, 0, 1,
-    4, 2, 2, -1,
-    4, 1, 0, 1,
-    4, 0, 0, 1
-));
+_asymmetricItakura = StepPattern(
+    _c(
+        1,
+        1,
+        2,
+        -1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        2,
+        1,
+        -1,
+        3,
+        1,
+        0,
+        1,
+        3,
+        0,
+        0,
+        1,
+        4,
+        2,
+        2,
+        -1,
+        4,
+        1,
+        0,
+        1,
+        4,
+        0,
+        0,
+        1,
+    )
+)
 
 #############################
 ## Slope-limited versions
@@ -635,117 +670,330 @@ _asymmetricItakura = StepPattern(_c(
 
 
 ## Row P=0
-symmetricP0 = symmetric2;
+symmetricP0 = symmetric2
 
 ## normalization: N ?
-asymmetricP0 = StepPattern(_c(
-    1, 0, 1, -1,
-    1, 0, 0, 0,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 0, -1,
-    3, 0, 0, 1
-), "N");
+asymmetricP0 = StepPattern(
+    _c(1, 0, 1, -1, 1, 0, 0, 0, 2, 1, 1, -1, 2, 0, 0, 1, 3, 1, 0, -1, 3, 0, 0, 1), "N"
+)
 
 ## alternative implementation
-_asymmetricP0b = StepPattern(_c(
-    1, 0, 1, -1,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 0, -1,
-    3, 0, 0, 1
-), "N");
+_asymmetricP0b = StepPattern(
+    _c(1, 0, 1, -1, 2, 1, 1, -1, 2, 0, 0, 1, 3, 1, 0, -1, 3, 0, 0, 1), "N"
+)
 
 ## Row P=1/2
-symmetricP05 = StepPattern(_c(
-    1, 1, 3, -1,
-    1, 0, 2, 2,
-    1, 0, 1, 1,
-    1, 0, 0, 1,
-    2, 1, 2, -1,
-    2, 0, 1, 2,
-    2, 0, 0, 1,
-    3, 1, 1, -1,
-    3, 0, 0, 2,
-    4, 2, 1, -1,
-    4, 1, 0, 2,
-    4, 0, 0, 1,
-    5, 3, 1, -1,
-    5, 2, 0, 2,
-    5, 1, 0, 1,
-    5, 0, 0, 1
-), "N+M");
+symmetricP05 = StepPattern(
+    _c(
+        1,
+        1,
+        3,
+        -1,
+        1,
+        0,
+        2,
+        2,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        2,
+        -1,
+        2,
+        0,
+        1,
+        2,
+        2,
+        0,
+        0,
+        1,
+        3,
+        1,
+        1,
+        -1,
+        3,
+        0,
+        0,
+        2,
+        4,
+        2,
+        1,
+        -1,
+        4,
+        1,
+        0,
+        2,
+        4,
+        0,
+        0,
+        1,
+        5,
+        3,
+        1,
+        -1,
+        5,
+        2,
+        0,
+        2,
+        5,
+        1,
+        0,
+        1,
+        5,
+        0,
+        0,
+        1,
+    ),
+    "N+M",
+)
 
-asymmetricP05 = StepPattern(_c(
-    1, 1, 3, -1,
-    1, 0, 2, 1 / 3,
-    1, 0, 1, 1 / 3,
-    1, 0, 0, 1 / 3,
-    2, 1, 2, -1,
-    2, 0, 1, .5,
-    2, 0, 0, .5,
-    3, 1, 1, -1,
-    3, 0, 0, 1,
-    4, 2, 1, -1,
-    4, 1, 0, 1,
-    4, 0, 0, 1,
-    5, 3, 1, -1,
-    5, 2, 0, 1,
-    5, 1, 0, 1,
-    5, 0, 0, 1
-), "N");
+asymmetricP05 = StepPattern(
+    _c(
+        1,
+        1,
+        3,
+        -1,
+        1,
+        0,
+        2,
+        1 / 3,
+        1,
+        0,
+        1,
+        1 / 3,
+        1,
+        0,
+        0,
+        1 / 3,
+        2,
+        1,
+        2,
+        -1,
+        2,
+        0,
+        1,
+        0.5,
+        2,
+        0,
+        0,
+        0.5,
+        3,
+        1,
+        1,
+        -1,
+        3,
+        0,
+        0,
+        1,
+        4,
+        2,
+        1,
+        -1,
+        4,
+        1,
+        0,
+        1,
+        4,
+        0,
+        0,
+        1,
+        5,
+        3,
+        1,
+        -1,
+        5,
+        2,
+        0,
+        1,
+        5,
+        1,
+        0,
+        1,
+        5,
+        0,
+        0,
+        1,
+    ),
+    "N",
+)
 
 ## Row P=1
 ## Implementation of Sakoe's P=1, Symmetric algorithm
 
-symmetricP1 = StepPattern(_c(
-    1, 1, 2, -1,  # First branch: g(i-1,j-2)+
-    1, 0, 1, 2,  # + 2d(i  ,j-1)
-    1, 0, 0, 1,  # +  d(i  ,j)
-    2, 1, 1, -1,  # Second branch: g(i-1,j-1)+
-    2, 0, 0, 2,  # +2d(i,  j)
-    3, 2, 1, -1,  # Third branch: g(i-2,j-1)+
-    3, 1, 0, 2,  # + 2d(i-1,j)
-    3, 0, 0, 1  # +  d(  i,j)
-), "N+M");
+symmetricP1 = StepPattern(
+    _c(
+        1,
+        1,
+        2,
+        -1,  # First branch: g(i-1,j-2)+
+        1,
+        0,
+        1,
+        2,  # + 2d(i  ,j-1)
+        1,
+        0,
+        0,
+        1,  # +  d(i  ,j)
+        2,
+        1,
+        1,
+        -1,  # Second branch: g(i-1,j-1)+
+        2,
+        0,
+        0,
+        2,  # +2d(i,  j)
+        3,
+        2,
+        1,
+        -1,  # Third branch: g(i-2,j-1)+
+        3,
+        1,
+        0,
+        2,  # + 2d(i-1,j)
+        3,
+        0,
+        0,
+        1,  # +  d(  i,j)
+    ),
+    "N+M",
+)
 
-asymmetricP1 = StepPattern(_c(
-    1, 1, 2, -1,
-    1, 0, 1, .5,
-    1, 0, 0, .5,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 2, 1, -1,
-    3, 1, 0, 1,
-    3, 0, 0, 1
-), "N");
+asymmetricP1 = StepPattern(
+    _c(
+        1,
+        1,
+        2,
+        -1,
+        1,
+        0,
+        1,
+        0.5,
+        1,
+        0,
+        0,
+        0.5,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        2,
+        1,
+        -1,
+        3,
+        1,
+        0,
+        1,
+        3,
+        0,
+        0,
+        1,
+    ),
+    "N",
+)
 
 ## Row P=2
-symmetricP2 = StepPattern(_c(
-    1, 2, 3, -1,
-    1, 1, 2, 2,
-    1, 0, 1, 2,
-    1, 0, 0, 1,
-    2, 1, 1, -1,
-    2, 0, 0, 2,
-    3, 3, 2, -1,
-    3, 2, 1, 2,
-    3, 1, 0, 2,
-    3, 0, 0, 1
-), "N+M");
+symmetricP2 = StepPattern(
+    _c(
+        1,
+        2,
+        3,
+        -1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        1,
+        2,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        2,
+        3,
+        3,
+        2,
+        -1,
+        3,
+        2,
+        1,
+        2,
+        3,
+        1,
+        0,
+        2,
+        3,
+        0,
+        0,
+        1,
+    ),
+    "N+M",
+)
 
-asymmetricP2 = StepPattern(_c(
-    1, 2, 3, -1,
-    1, 1, 2, 2 / 3,
-    1, 0, 1, 2 / 3,
-    1, 0, 0, 2 / 3,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 3, 2, -1,
-    3, 2, 1, 1,
-    3, 1, 0, 1,
-    3, 0, 0, 1
-), "N");
+asymmetricP2 = StepPattern(
+    _c(
+        1,
+        2,
+        3,
+        -1,
+        1,
+        1,
+        2,
+        2 / 3,
+        1,
+        0,
+        1,
+        2 / 3,
+        1,
+        0,
+        0,
+        2 / 3,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        3,
+        2,
+        -1,
+        3,
+        2,
+        1,
+        1,
+        3,
+        1,
+        0,
+        1,
+        3,
+        0,
+        0,
+        1,
+    ),
+    "N",
+)
 
 ################################
 ## Taken from Table III, page 49.
@@ -775,194 +1023,503 @@ asymmetricP2 = StepPattern(_c(
 ## Mostly unchecked
 
 # R-Myers     R-Juang
-# type I      type II   
+# type I      type II
 # type II     type III
 # type III    type IV
 # type IV     type VII
 
 
-typeIa = StepPattern(_c(
-    1, 2, 1, -1,
-    1, 1, 0, 1,
-    1, 0, 0, 0,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 2, -1,
-    3, 0, 1, 1,
-    3, 0, 0, 0
-));
+typeIa = StepPattern(
+    _c(
+        1,
+        2,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        1,
+        2,
+        -1,
+        3,
+        0,
+        1,
+        1,
+        3,
+        0,
+        0,
+        0,
+    )
+)
 
-typeIb = StepPattern(_c(
-    1, 2, 1, -1,
-    1, 1, 0, 1,
-    1, 0, 0, 1,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 2, -1,
-    3, 0, 1, 1,
-    3, 0, 0, 1
-));
+typeIb = StepPattern(
+    _c(
+        1,
+        2,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        1,
+        2,
+        -1,
+        3,
+        0,
+        1,
+        1,
+        3,
+        0,
+        0,
+        1,
+    )
+)
 
-typeIc = StepPattern(_c(
-    1, 2, 1, -1,
-    1, 1, 0, 1,
-    1, 0, 0, 1,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 2, -1,
-    3, 0, 1, 1,
-    3, 0, 0, 0
-), "N");
+typeIc = StepPattern(
+    _c(
+        1,
+        2,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        1,
+        2,
+        -1,
+        3,
+        0,
+        1,
+        1,
+        3,
+        0,
+        0,
+        0,
+    ),
+    "N",
+)
 
-typeId = StepPattern(_c(
-    1, 2, 1, -1,
-    1, 1, 0, 2,
-    1, 0, 0, 1,
-    2, 1, 1, -1,
-    2, 0, 0, 2,
-    3, 1, 2, -1,
-    3, 0, 1, 2,
-    3, 0, 0, 1
-), "N+M");
+typeId = StepPattern(
+    _c(
+        1,
+        2,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        2,
+        3,
+        1,
+        2,
+        -1,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        0,
+        1,
+    ),
+    "N+M",
+)
 
 ## ----------
 ## smoothed variants of above
 
-typeIas = StepPattern(_c(
-    1, 2, 1, -1,
-    1, 1, 0, .5,
-    1, 0, 0, .5,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 2, -1,
-    3, 0, 1, .5,
-    3, 0, 0, .5
-));
+typeIas = StepPattern(
+    _c(
+        1,
+        2,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        0.5,
+        1,
+        0,
+        0,
+        0.5,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        1,
+        2,
+        -1,
+        3,
+        0,
+        1,
+        0.5,
+        3,
+        0,
+        0,
+        0.5,
+    )
+)
 
-typeIbs = StepPattern(_c(
-    1, 2, 1, -1,
-    1, 1, 0, 1,
-    1, 0, 0, 1,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 2, -1,
-    3, 0, 1, 1,
-    3, 0, 0, 1
-));
+typeIbs = StepPattern(
+    _c(
+        1,
+        2,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        1,
+        2,
+        -1,
+        3,
+        0,
+        1,
+        1,
+        3,
+        0,
+        0,
+        1,
+    )
+)
 
-typeIcs = StepPattern(_c(
-    1, 2, 1, -1,
-    1, 1, 0, 1,
-    1, 0, 0, 1,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 1, 2, -1,
-    3, 0, 1, .5,
-    3, 0, 0, .5
-), "N");
+typeIcs = StepPattern(
+    _c(
+        1,
+        2,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        1,
+        2,
+        -1,
+        3,
+        0,
+        1,
+        0.5,
+        3,
+        0,
+        0,
+        0.5,
+    ),
+    "N",
+)
 
-typeIds = StepPattern(_c(
-    1, 2, 1, -1,
-    1, 1, 0, 1.5,
-    1, 0, 0, 1.5,
-    2, 1, 1, -1,
-    2, 0, 0, 2,
-    3, 1, 2, -1,
-    3, 0, 1, 1.5,
-    3, 0, 0, 1.5
-), "N+M");
+typeIds = StepPattern(
+    _c(
+        1,
+        2,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        1.5,
+        1,
+        0,
+        0,
+        1.5,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        2,
+        3,
+        1,
+        2,
+        -1,
+        3,
+        0,
+        1,
+        1.5,
+        3,
+        0,
+        0,
+        1.5,
+    ),
+    "N+M",
+)
 
 ## ----------
 
-typeIIa = StepPattern(_c(
-    1, 1, 1, -1,
-    1, 0, 0, 1,
-    2, 1, 2, -1,
-    2, 0, 0, 1,
-    3, 2, 1, -1,
-    3, 0, 0, 1
-));
+typeIIa = StepPattern(
+    _c(1, 1, 1, -1, 1, 0, 0, 1, 2, 1, 2, -1, 2, 0, 0, 1, 3, 2, 1, -1, 3, 0, 0, 1)
+)
 
-typeIIb = StepPattern(_c(
-    1, 1, 1, -1,
-    1, 0, 0, 1,
-    2, 1, 2, -1,
-    2, 0, 0, 2,
-    3, 2, 1, -1,
-    3, 0, 0, 2
-));
+typeIIb = StepPattern(
+    _c(1, 1, 1, -1, 1, 0, 0, 1, 2, 1, 2, -1, 2, 0, 0, 2, 3, 2, 1, -1, 3, 0, 0, 2)
+)
 
-typeIIc = StepPattern(_c(
-    1, 1, 1, -1,
-    1, 0, 0, 1,
-    2, 1, 2, -1,
-    2, 0, 0, 1,
-    3, 2, 1, -1,
-    3, 0, 0, 2
-), "N");
+typeIIc = StepPattern(
+    _c(1, 1, 1, -1, 1, 0, 0, 1, 2, 1, 2, -1, 2, 0, 0, 1, 3, 2, 1, -1, 3, 0, 0, 2), "N"
+)
 
-typeIId = StepPattern(_c(
-    1, 1, 1, -1,
-    1, 0, 0, 2,
-    2, 1, 2, -1,
-    2, 0, 0, 3,
-    3, 2, 1, -1,
-    3, 0, 0, 3
-), "N+M");
+typeIId = StepPattern(
+    _c(1, 1, 1, -1, 1, 0, 0, 2, 2, 1, 2, -1, 2, 0, 0, 3, 3, 2, 1, -1, 3, 0, 0, 3), "N+M"
+)
 
 ## ----------
 
 ## Rabiner [3] discusses why this is not equivalent to Itakura's
 
-typeIIIc = StepPattern(_c(
-    1, 1, 2, -1,
-    1, 0, 0, 1,
-    2, 1, 1, -1,
-    2, 0, 0, 1,
-    3, 2, 1, -1,
-    3, 1, 0, 1,
-    3, 0, 0, 1,
-    4, 2, 2, -1,
-    4, 1, 0, 1,
-    4, 0, 0, 1
-), "N");
+typeIIIc = StepPattern(
+    _c(
+        1,
+        1,
+        2,
+        -1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        2,
+        1,
+        -1,
+        3,
+        1,
+        0,
+        1,
+        3,
+        0,
+        0,
+        1,
+        4,
+        2,
+        2,
+        -1,
+        4,
+        1,
+        0,
+        1,
+        4,
+        0,
+        0,
+        1,
+    ),
+    "N",
+)
 
 ## ----------
 
 ## numbers follow as production rules in fig 2.16
 
-typeIVc = StepPattern(_c(
-    1, 1, 1, -1,
-    1, 0, 0, 1,
-    2, 1, 2, -1,
-    2, 0, 0, 1,
-    3, 1, 3, -1,
-    3, 0, 0, 1,
-    4, 2, 1, -1,
-    4, 1, 0, 1,
-    4, 0, 0, 1,
-    5, 2, 2, -1,
-    5, 1, 0, 1,
-    5, 0, 0, 1,
-    6, 2, 3, -1,
-    6, 1, 0, 1,
-    6, 0, 0, 1,
-    7, 3, 1, -1,
-    7, 2, 0, 1,
-    7, 1, 0, 1,
-    7, 0, 0, 1,
-    8, 3, 2, -1,
-    8, 2, 0, 1,
-    8, 1, 0, 1,
-    8, 0, 0, 1,
-    9, 3, 3, -1,
-    9, 2, 0, 1,
-    9, 1, 0, 1,
-    9, 0, 0, 1
-), "N");
+typeIVc = StepPattern(
+    _c(
+        1,
+        1,
+        1,
+        -1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        2,
+        -1,
+        2,
+        0,
+        0,
+        1,
+        3,
+        1,
+        3,
+        -1,
+        3,
+        0,
+        0,
+        1,
+        4,
+        2,
+        1,
+        -1,
+        4,
+        1,
+        0,
+        1,
+        4,
+        0,
+        0,
+        1,
+        5,
+        2,
+        2,
+        -1,
+        5,
+        1,
+        0,
+        1,
+        5,
+        0,
+        0,
+        1,
+        6,
+        2,
+        3,
+        -1,
+        6,
+        1,
+        0,
+        1,
+        6,
+        0,
+        0,
+        1,
+        7,
+        3,
+        1,
+        -1,
+        7,
+        2,
+        0,
+        1,
+        7,
+        1,
+        0,
+        1,
+        7,
+        0,
+        0,
+        1,
+        8,
+        3,
+        2,
+        -1,
+        8,
+        2,
+        0,
+        1,
+        8,
+        1,
+        0,
+        1,
+        8,
+        0,
+        0,
+        1,
+        9,
+        3,
+        3,
+        -1,
+        9,
+        2,
+        0,
+        1,
+        9,
+        1,
+        0,
+        1,
+        9,
+        0,
+        0,
+        1,
+    ),
+    "N",
+)
 
 #############################
-## 
+##
 ## Mori's asymmetric step-constrained pattern. Normalized in the
 ## reference length.
 ##
@@ -972,18 +1529,44 @@ typeIVc = StepPattern(_c(
 ## 560-563
 ##
 
-mori2006 = StepPattern(_c(
-    1, 2, 1, -1,
-    1, 1, 0, 2,
-    1, 0, 0, 1,
-    2, 1, 1, -1,
-    2, 0, 0, 3,
-    3, 1, 2, -1,
-    3, 0, 1, 3,
-    3, 0, 0, 3
-), "M");
+mori2006 = StepPattern(
+    _c(
+        1,
+        2,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1,
+        -1,
+        2,
+        0,
+        0,
+        3,
+        3,
+        1,
+        2,
+        -1,
+        3,
+        0,
+        1,
+        3,
+        3,
+        0,
+        0,
+        3,
+    ),
+    "M",
+)
 
 ## Completely unflexible: fixed slope 1. Only makes sense with
 ## open.begin and open.end
-rigid = StepPattern(_c(1, 1, 1, -1,
-                       1, 0, 0, 1), "N")
+rigid = StepPattern(_c(1, 1, 1, -1, 1, 0, 0, 1), "N")

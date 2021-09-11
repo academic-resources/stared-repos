@@ -48,6 +48,4 @@ def generate(seed):
     homepage_cause_statement_link.generate(seed)
 
 
-__all__ = [
-    'generate',
-]
+__all__ = ["generate"]

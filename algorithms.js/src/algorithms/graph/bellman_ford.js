@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Calculates the shortest paths in a graph to every node
@@ -25,7 +25,7 @@ var bellmanFord = function (graph, startNode) {
       edges.push({
         source: s,
         target: t,
-        weight: graph.edge(s, t)
+        weight: graph.edge(s, t),
       });
     });
 
@@ -64,13 +64,13 @@ var bellmanFord = function (graph, startNode) {
   if (iteration == adjacencyListSize) {
     // Empty 'distance' object indicates Negative-Weighted Cycle
     return {
-      distance: {}
+      distance: {},
     };
   }
 
   return {
     distance: minDistance,
-    previous: previousVertex
+    previous: previousVertex,
   };
 };
 

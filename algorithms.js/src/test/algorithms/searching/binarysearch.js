@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-var binarySearch = require('../../..').Search.binarySearch,
-    assert = require('assert');
+var binarySearch = require("../../..").Search.binarySearch,
+  assert = require("assert");
 
-describe('Binary Search', function () {
-  it('should find elements in the sorted array', function () {
+describe("Binary Search", function () {
+  it("should find elements in the sorted array", function () {
     assert.equal(binarySearch([1, 2, 3, 4, 5], 3), 2);
     assert.equal(binarySearch([1, 2, 3, 4, 5], 1), 0);
     assert.equal(binarySearch([1, 2, 3, 4, 5], 2), 1);
@@ -15,5 +15,3 @@ describe('Binary Search', function () {
     assert.equal(binarySearch([1, 2, 3, 4, 5], 100), -1);
   });
 });
-
-

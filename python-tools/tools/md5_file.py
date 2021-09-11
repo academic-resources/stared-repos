@@ -13,7 +13,7 @@ def md5_file(file):
 
     """
     md5 = hashlib.md5()
-    with open(file, 'rb') as f:
-        for block in iter(lambda: f.read(65536), b''):
+    with open(file, "rb") as f:
+        for block in iter(lambda: f.read(65536), b""):
             md5.update(block)
     return md5.hexdigest()

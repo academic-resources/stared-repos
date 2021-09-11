@@ -1,38 +1,38 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { receiveTodo, removeTodo } from '../../actions/todo_actions'
-import TodoDetailView from './todo_detail_view'
+import React from "react";
+import { connect } from "react-redux";
+import { receiveTodo, removeTodo } from "../../actions/todo_actions";
+import TodoDetailView from "./todo_detail_view";
 
-const mdtp = dispatch => ({
-  removeTodo: todo => dispatch(removeTodo(todo)),
-  receiveTodo: todo => dispatch(receiveTodo(todo))
-})
+const mdtp = (dispatch) => ({
+  removeTodo: (todo) => dispatch(removeTodo(todo)),
+  receiveTodo: (todo) => dispatch(receiveTodo(todo)),
+});
 
 class TodoListItem extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      detail: false
-    }
-    this.toggleDetail = this.toggleDetail.bind(this)
-    this.updateStatus = this.updateStatus.bind(this)
+      detail: false,
+    };
+    this.toggleDetail = this.toggleDetail.bind(this);
+    this.updateStatus = this.updateStatus.bind(this);
   }
 
   toggleDetail() {
     this.setState({
-      detail: !this.state.detail
-    })
+      detail: !this.state.detail,
+    });
   }
 
   updateStatus(todo) {
-    const newTodo = Object.assign({}, todo)
-    newTodo.done = !newTodo.done
-    this.props.receiveTodo(newTodo)
+    const newTodo = Object.assign({}, todo);
+    newTodo.done = !newTodo.done;
+    this.props.receiveTodo(newTodo);
   }
 
   render() {
-    const { todo, removeTodo } = this.props
-    const buttonLabel = todo.done ? 'done' : 'undo'
+    const { todo, removeTodo } = this.props;
+    const buttonLabel = todo.done ? "done" : "undo";
     return (
       <li>
         <div>
@@ -45,11 +45,8 @@ class TodoListItem extends React.Component {
           )}
         </div>
       </li>
-    )
+    );
   }
 }
 
-export default connect(
-  null,
-  mdtp
-)(TodoListItem)
+export default connect(null, mdtp)(TodoListItem);

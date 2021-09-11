@@ -1,4 +1,3 @@
-
 from schematics.types.base import BaseType
 
 
@@ -23,12 +22,19 @@ def serializable(*args, **kwargs):
     :param serialized_name:
         The name of this field in the serialized output.
     """
+
     def wrapper(func):
-        serialized_type = kwargs.pop("type", BaseType())  # pylint: disable=no-value-for-parameter
+        serialized_type = kwargs.pop(
+            "type", BaseType()
+        )  # pylint: disable=no-value-for-parameter
         serialized_name = kwargs.pop("serialized_name", None)
         serialize_when_none = kwargs.pop("serialize_when_none", True)
-        return Serializable(func, type=serialized_type, serialized_name=serialized_name,
-                            serialize_when_none=serialize_when_none)
+        return Serializable(
+            func,
+            type=serialized_type,
+            serialized_name=serialized_name,
+            serialize_when_none=serialize_when_none,
+        )
 
     if len(args) == 1 and callable(args[0]):
         # No arguments, this is the decorator
@@ -39,18 +45,20 @@ def serializable(*args, **kwargs):
 
 
 class Serializable(object):
-
     def __init__(self, func, type=None, serialized_name=None, serialize_when_none=True):
         self.func = func
         self.type = type
         self.serialized_name = serialized_name
         self.serialize_when_none = serialize_when_none
 
-        if hasattr(type, 'export_loop'):
+        if hasattr(type, "export_loop"):
+
             def make_export_loop(_type):
                 def export_loop(*args, **kwargs):
                     return _type.export_loop(*args, **kwargs)
+
                 return export_loop
+
             self.export_loop = make_export_loop(self.type)
 
     def __get__(self, instance, cls):

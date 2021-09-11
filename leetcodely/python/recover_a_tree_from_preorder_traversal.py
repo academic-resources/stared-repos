@@ -8,14 +8,14 @@ class TreeNode:
 
 import re
 
+
 class Solution:
     def recoverFromPreorder(self, S: str) -> TreeNode:
-        tokens = [i for i in re.split(r'(\d+|\W+)', S) if i]
+        tokens = [i for i in re.split(r"(\d+|\W+)", S) if i]
         itr = iter(tokens)
+
         def recover_tree(arr, i):
             item = next(arr, None)
-            
-
 
 
 solution = Solution()

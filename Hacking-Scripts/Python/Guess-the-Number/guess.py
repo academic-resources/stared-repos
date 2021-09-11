@@ -1,9 +1,12 @@
-#library for getting a random number
+# library for getting a random number
 import random
 import math
+
 num = random.randint(0, 20)
 
-num1 =random.randint(3,6)  # for number of chances. i am taking the number which should be greater than or equal to 3 to make user friendly game 
+num1 = random.randint(
+    3, 6
+)  # for number of chances. i am taking the number which should be greater than or equal to 3 to make user friendly game
 
 print("--Welcome to Guess The Number Game--")
 print("\n you have " + str(num1) + " chances to guess the number")
@@ -27,6 +30,6 @@ while count < num1:
         print("Hurray! you won, this is the correct number🥳")
         exit(0)
         guessCheck = "correct"
-if (count >= num1):
-   print("the number is "+ str(num)+" and you loose the game ☹️")        
+if count >= num1:
+    print("the number is " + str(num) + " and you loose the game ☹️")
 print("Thank you for playing Guess The Number. See you again!")

@@ -10,21 +10,22 @@ TIMEOUT = 60
 
 
 def pytest_generate_tests(metafunc):
-    if 'not headless' in metafunc.config.option.markexpr:
+    if "not headless" in metafunc.config.option.markexpr:
         return  # test deslected by mark expression
     base_url = metafunc.config.option.base_url
     if not base_url:
         pytest.skip(
-            'This test requires a base URL to be specified on the command '
-            'line or in a configuration file.')
+            "This test requires a base URL to be specified on the command "
+            "line or in a configuration file."
+        )
     paths = (
-        '/exp/firefox/',
-        '/exp/firefox/new/',
-        '/exp/firefox/mobile/',
-        '/exp/',
-        '/exp/firefox/accounts'
+        "/exp/firefox/",
+        "/exp/firefox/new/",
+        "/exp/firefox/mobile/",
+        "/exp/",
+        "/exp/firefox/accounts",
     )
-    metafunc.parametrize('url', [base_url + path for path in paths])
+    metafunc.parametrize("url", [base_url + path for path in paths])
 
 
 @pytest.mark.headless

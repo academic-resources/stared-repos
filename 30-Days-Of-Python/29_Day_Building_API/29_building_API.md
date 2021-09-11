@@ -32,7 +32,6 @@
 
 ## Building API
 
-
 In this section, we will cove a RESTful API that uses HTTP request methods to GET, PUT, POST and DELETE data.
 
 RESTful API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data. In the previous sections, we have learned about python, flask and mongoDB. We will use the knowledge we acquire to develop a RESTful API using python flask and mongoDB. Every application which has CRUD(Create, Read, Update, Delete) operation has an API to create data, to get data, to update data or to delete data from database.

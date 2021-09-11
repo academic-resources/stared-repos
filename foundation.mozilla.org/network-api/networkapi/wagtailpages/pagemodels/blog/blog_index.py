@@ -17,26 +17,19 @@ from .blog_category import BlogPageCategory
 
 
 class FeaturedBlogPages(WagtailOrderable, models.Model):
-    page = ParentalKey(
-        'wagtailpages.BlogIndexPage',
-        related_name='featured_pages',
-    )
+    page = ParentalKey("wagtailpages.BlogIndexPage", related_name="featured_pages")
 
     blog = models.ForeignKey(
-        'wagtailpages.BlogPage',
-        on_delete=models.CASCADE,
-        related_name='+'
+        "wagtailpages.BlogPage", on_delete=models.CASCADE, related_name="+"
     )
 
-    panels = [
-        PageChooserPanel('blog', 'wagtailpages.BlogPage'),
-    ]
+    panels = [PageChooserPanel("blog", "wagtailpages.BlogPage")]
 
     class Meta:
-        ordering = ['sort_order']  # not automatically inherited!
+        ordering = ["sort_order"]  # not automatically inherited!
 
     def __str__(self):
-        return self.page.title + '->' + self.blog.title
+        return self.page.title + "->" + self.blog.title
 
 
 class BlogIndexPage(IndexPage):
@@ -45,15 +38,13 @@ class BlogIndexPage(IndexPage):
     with additional logic to explore categories.
     """
 
-    subpage_types = [
-        'BlogPage'
-    ]
+    subpage_types = ["BlogPage"]
 
     content_panels = IndexPage.content_panels + [
         InlinePanel(
-            'featured_pages',
-            label='Featured',
-            help_text='Choose two blog pages to feature',
+            "featured_pages",
+            label="Featured",
+            help_text="Choose two blog pages to feature",
             min_num=0,
             max_num=2,
         )
@@ -62,14 +53,14 @@ class BlogIndexPage(IndexPage):
     # Empty translatable fields
     translatable_fields = IndexPage.translatable_fields
 
-    template = 'wagtailpages/blog_index_page.html'
+    template = "wagtailpages/blog_index_page.html"
 
     def get_all_entries(self):
         """
         Do we need to filter the featured blog entries
         out, so they don't show up twice?
         """
-        if hasattr(self, 'filtered'):
+        if hasattr(self, "filtered"):
             return super().get_all_entries()
 
         featured = [entry.blog.pk for entry in self.featured_pages.all()]
@@ -78,14 +69,14 @@ class BlogIndexPage(IndexPage):
     def filter_entries(self, entries, context):
         entries = super().filter_entries(entries, context)
 
-        if context['filtered'] == 'category':
+        if context["filtered"] == "category":
             entries = self.filter_entries_for_category(entries, context)
-            context['total_entries'] = len(entries)
+            context["total_entries"] = len(entries)
 
         return entries
 
     def filter_entries_for_category(self, entries, context):
-        category = self.filtered.get('category')
+        category = self.filtered.get("category")
 
         # The following "if" statements update page share metadata when filtered by category.
         #
@@ -93,26 +84,26 @@ class BlogIndexPage(IndexPage):
         # If not set, default to category's "intro" text.
         # If "intro" is not set, use the foundation's default meta description.
         if category.share_description:
-            setattr(self, 'search_description', category.share_description)
+            setattr(self, "search_description", category.share_description)
         elif category.intro:
-            setattr(self, 'search_description', category.intro)
+            setattr(self, "search_description", category.intro)
 
         # If the category has a search image set, update page metadata.
         if category.share_image:
-            setattr(self, 'search_image_id', category.share_image_id)
+            setattr(self, "search_image_id", category.share_image_id)
 
         # make sure we bypass "x results for Y"
-        context['no_filter_ui'] = True
+        context["no_filter_ui"] = True
 
         # and that we don't show the primary tag/category
-        context['hide_classifiers'] = True
+        context["hide_classifiers"] = True
 
         # explicitly set the index page title and intro
-        context['index_title'] = titlecase(f'{category.name} {self.title}')
-        context['index_intro'] = category.intro
+        context["index_title"] = titlecase(f"{category.name} {self.title}")
+        context["index_intro"] = category.intro
 
         # and then the filtered content
-        context['terms'] = [category.name, ]
+        context["terms"] = [category.name]
 
         # This code is not efficient, but its purpose is to get us logs
         # that we can use to figure out what's going wrong more than
@@ -125,7 +116,7 @@ class BlogIndexPage(IndexPage):
 
         try:
             for entry in entries.specific():
-                if hasattr(entry, 'category'):
+                if hasattr(entry, "category"):
                     entry_categories = entry.category.all()
                     try:
                         if category in entry_categories:
@@ -133,14 +124,14 @@ class BlogIndexPage(IndexPage):
                     except Exception as e:
                         if settings.SENTRY_ENVIRONMENT is not None:
                             push_scope().set_extra(
-                                'reason',
-                                f'entry_categories has an iteration problem; {str(entry_categories)}'
+                                "reason",
+                                f"entry_categories has an iteration problem; {str(entry_categories)}",
                             )
                             capture_exception(e)
 
         except Exception as e:
             if settings.SENTRY_ENVIRONMENT is not None:
-                push_scope().set_extra('reason', 'entries.specific threw')
+                push_scope().set_extra("reason", "entries.specific threw")
                 capture_exception(e)
 
         entries = in_category
@@ -179,12 +170,9 @@ class BlogIndexPage(IndexPage):
         if category_object is None:
             raise ObjectDoesNotExist
 
-        self.filtered = {
-            'type': 'category',
-            'category': category_object
-        }
+        self.filtered = {"type": "category", "category": category_object}
 
-    @route(r'^category/(?P<category>.+)/entries/')
+    @route(r"^category/(?P<category>.+)/entries/")
     def generate_category_entries_set_html(self, request, category, *args, **kwargs):
         """
         JSON endpoint for getting a set of (pre-rendered) category entries
@@ -197,7 +185,7 @@ class BlogIndexPage(IndexPage):
 
         return self.generate_entries_set_html(request, *args, **kwargs)
 
-    @route(r'^category/(?P<category>.+)/')
+    @route(r"^category/(?P<category>.+)/")
     def entries_by_category(self, request, category, *args, **kwargs):
         """
         If this page was called with `/category/...` as suffix, extract

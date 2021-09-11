@@ -3,8 +3,8 @@ import PyPDF2
 # Open the pdf file
 file1 = input("Enter the path of pdf1 : ")
 file2 = input("Enter the path of pdf2 : ")
-pdf1 = open(file1, 'rb')
-pdf2 = open(file2, 'rb')
+pdf1 = open(file1, "rb")
+pdf2 = open(file2, "rb")
 
 # Read the files
 reader1 = PyPDF2.PdfFileReader(pdf1)
@@ -24,7 +24,7 @@ for i in range(reader2.numPages):
     writer.addPage(pages)
 
 # Now that you have copied all the pages in both the documents, write them into the a new document
-mergedfile = open('MergedFiles.pdf', 'wb')
+mergedfile = open("MergedFiles.pdf", "wb")
 writer.write(mergedfile)
 
 # Close all the files - Created as well as opened

@@ -9,7 +9,7 @@ Assume that words = ["practice", "makes", "perfect", "coding", "makes"].
 Given word1 = “coding”, word2 = “practice”, return 3.
 Given word1 = "makes", word2 = "coding", return 1."""
 
-#TODO: Times out
+# TODO: Times out
 
 import sys
 
@@ -32,12 +32,14 @@ class WordDistance(object):
         if word1 == word2:
             return self.shortest_distance_in_list(self.index_map[word1])
         else:
-            return self.shortest_distance_between_lists(self.index_map[word1], self.index_map[word2])
+            return self.shortest_distance_between_lists(
+                self.index_map[word1], self.index_map[word2]
+            )
 
     def shortest_distance_in_list(self, lst):
         curr = sys.maxsize
         for i in range(1, len(lst)):
-            curr = min(curr, lst[i] - lst[i-1])
+            curr = min(curr, lst[i] - lst[i - 1])
         return curr
 
     def shortest_distance_between_lists(self, lst1, lst2):
@@ -52,6 +54,6 @@ class WordDistance(object):
         return curr
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     word_distance = WordDistance(["practice", "makes", "perfect", "coding", "makes"])
-    print(word_distance.shortest('practice', 'coding'))
+    print(word_distance.shortest("practice", "coding"))

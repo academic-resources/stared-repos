@@ -1,28 +1,28 @@
 # Sliding Window Counter
 
-* Overview
-* Pros
-* Cons
+- Overview
+- Pros
+- Cons
 
 ## Overview
 
-Hybrid approach that combines the *fixed window counter* and *sliding window log* algorithms. There are various implementations. We'll cover only one of them:
+Hybrid approach that combines the _fixed window counter_ and _sliding window log_ algorithms. There are various implementations. We'll cover only one of them:
 
 ![](2021-08-29-22-44-38.png)
 
 Assume the rate limiter allows a maximum of 7 requests per minute, and there are 5 requests in the previous minute and 3 in the current minute. For a new request that arrives at a 30% position in the current minute, the number of requests in the rolling window is calculated using the following formula:
 
-* Requests in current window + requests in previous window * overlap percentage of the rolling window and previous window.
+- Requests in current window + requests in previous window \* overlap percentage of the rolling window and previous window.
 
-* Using this formula we get 3 + 5 * 0.7 = 6.5 requests. Depending on the use case, the number can either be rounded up or down. In our exampl, it is rounded down to 6.
+- Using this formula we get 3 + 5 \* 0.7 = 6.5 requests. Depending on the use case, the number can either be rounded up or down. In our exampl, it is rounded down to 6.
 
 Since the rate limiter allows a maximum of 7 requests per minute, the current request can go through. However, the limit will be reached after receiving one more request.
 
 ## Pros
 
-* It smooths out spikes in traffic because the rate is based on the average rate of the previous window.
+- It smooths out spikes in traffic because the rate is based on the average rate of the previous window.
 
-* Memory efficient.
+- Memory efficient.
 
 ## Cons
 

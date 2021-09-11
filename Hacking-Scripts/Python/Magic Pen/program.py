@@ -1,6 +1,7 @@
 # Importing Necessary projects
 import cv2
 import numpy as np
+
 # Creating the video capture object
 cap = cv2.VideoCapture(0)
 
@@ -33,8 +34,7 @@ while True:
     final = cv2.dilate(mask, kernel, iterations=1)
 
     # Finding contours in the mask
-    contours, _ = cv2.findContours(final, cv2.RETR_EXTERNAL,
-                                   cv2.CHAIN_APPROX_NONE)
+    contours, _ = cv2.findContours(final, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     # Getting the largest contours assuming it would be the object of interest
     if contours:
         cnt = max(contours, key=cv2.contourArea)
@@ -44,12 +44,13 @@ while True:
             x0, y0 = x + width // 2, y + height // 2
         else:
             # Drawing on the temporary masked image
-            temp = cv2.line(temp, (x0, y0), (x + width // 2, y + height // 2),
-                            (0, 0, 255), 5)
+            temp = cv2.line(
+                temp, (x0, y0), (x + width // 2, y + height // 2), (0, 0, 255), 5
+            )
             # To track can be removed if necessary
-            frame = cv2.line(frame, (x0, y0),
-                             (x + width // 2, y + height // 2),
-                             (255, 255, 255), 5)
+            frame = cv2.line(
+                frame, (x0, y0), (x + width // 2, y + height // 2), (255, 255, 255), 5
+            )
             x0, y0 = x + width // 2, y + height // 2
     else:
         x0, y0 = -1, -1
@@ -67,7 +68,7 @@ while True:
     # Red foreground and black background
     Result = cv2.bitwise_or(frame, fg)
 
-    cv2.imshow('Result', Result)
+    cv2.imshow("Result", Result)
     # To end the program
     key = cv2.waitKey(1) & 0xFF
     if key == 27:

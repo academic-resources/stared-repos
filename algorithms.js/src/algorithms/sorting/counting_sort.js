@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Sorts an array of objects according to their 'key' property

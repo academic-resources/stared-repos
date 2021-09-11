@@ -10,6 +10,7 @@ from __future__ import unicode_literals, division, absolute_import
 import time
 import logging
 from collections import deque
+
 try:
     from UserDict import DictMixin
 except ImportError:
@@ -21,7 +22,6 @@ from six.moves import cPickle
 
 
 class BaseCounter(object):
-
     def __init__(self):
         pass
 
@@ -157,9 +157,14 @@ class TimebaseAverageEventCounter(BaseCounter):
             self.cache_value = 0
             self.cache_start = None
 
-        if self.window_size != self.max_window_size and self._first_data_time is not None:
+        if (
+            self.window_size != self.max_window_size
+            and self._first_data_time is not None
+        ):
             time_passed = now - self._first_data_time
-            self.window_size = min(self.max_window_size, time_passed / self.window_interval)
+            self.window_size = min(
+                self.max_window_size, time_passed / self.window_interval
+            )
         window_limit = now - self.window_size * self.window_interval
         while self.times and self.times[0] < window_limit:
             self.times.popleft()
@@ -168,7 +173,7 @@ class TimebaseAverageEventCounter(BaseCounter):
 
     @property
     def avg(self):
-        events = (sum(self.events) + self.cache_event)
+        events = sum(self.events) + self.cache_event
         if not events:
             return 0
         return float(self.sum) / events
@@ -236,9 +241,14 @@ class TimebaseAverageWindowCounter(BaseCounter):
             self.cache_value = 0
             self.cache_start = None
 
-        if self.window_size != self.max_window_size and self._first_data_time is not None:
+        if (
+            self.window_size != self.max_window_size
+            and self._first_data_time is not None
+        ):
             time_passed = now - self._first_data_time
-            self.window_size = min(self.max_window_size, time_passed / self.window_interval)
+            self.window_size = min(
+                self.max_window_size, time_passed / self.window_interval
+            )
         window_limit = now - self.window_size * self.window_interval
         while self.times and self.times[0] < window_limit:
             self.times.popleft()
@@ -275,15 +285,15 @@ class CounterValue(DictMixin):
         self._keys = keys
 
     def __getitem__(self, key):
-        if key == '__value__':
+        if key == "__value__":
             key = self._keys
             return self.manager.counters[key]
         else:
-            key = self._keys + (key, )
+            key = self._keys + (key,)
 
         available_keys = []
         for _key in list(self.manager.counters.keys()):
-            if _key[:len(key)] == key:
+            if _key[: len(key)] == key:
                 available_keys.append(_key)
 
         if len(available_keys) == 0:
@@ -308,9 +318,9 @@ class CounterValue(DictMixin):
     def keys(self):
         result = set()
         for key in list(self.manager.counters.keys()):
-            if key[:len(self._keys)] == self._keys:
-                key = key[len(self._keys):]
-                result.add(key[0] if key else '__value__')
+            if key[: len(self._keys)] == self._keys:
+                key = key[len(self._keys) :]
+                result.add(key[0] if key else "__value__")
         return result
 
     def to_dict(self, get_value=None):
@@ -345,7 +355,7 @@ class CounterManager(DictMixin):
     def event(self, key, value=1):
         """Fire a event of a counter by counter key"""
         if isinstance(key, six.string_types):
-            key = (key, )
+            key = (key,)
         assert isinstance(key, tuple), "event key type error"
         if key not in self.counters:
             self.counters[key] = self.cls()
@@ -355,7 +365,7 @@ class CounterManager(DictMixin):
     def value(self, key, value=1):
         """Set value of a counter by counter key"""
         if isinstance(key, six.string_types):
-            key = (key, )
+            key = (key,)
         # assert all(isinstance(k, six.string_types) for k in key)
         assert isinstance(key, tuple), "event key type error"
         if key not in self.counters:
@@ -370,10 +380,10 @@ class CounterManager(DictMixin):
                 del self.counters[key]
 
     def __getitem__(self, key):
-        key = (key, )
+        key = (key,)
         available_keys = []
         for _key in list(self.counters.keys()):
-            if _key[:len(key)] == key:
+            if _key[: len(key)] == key:
                 available_keys.append(_key)
 
         if len(available_keys) == 0:
@@ -387,10 +397,10 @@ class CounterManager(DictMixin):
             return CounterValue(self, key)
 
     def __delitem__(self, key):
-        key = (key, )
+        key = (key,)
         available_keys = []
         for _key in list(self.counters.keys()):
-            if _key[:len(key)] == key:
+            if _key[: len(key)] == key:
                 available_keys.append(_key)
         for _key in available_keys:
             del self.counters[_key]
@@ -423,7 +433,7 @@ class CounterManager(DictMixin):
     def dump(self, filename):
         """Dump counters to file"""
         try:
-            with open(filename, 'wb') as fp:
+            with open(filename, "wb") as fp:
                 cPickle.dump(self.counters, fp)
         except Exception as e:
             logging.warning("can't dump counter to file %s: %s", filename, e)
@@ -433,7 +443,7 @@ class CounterManager(DictMixin):
     def load(self, filename):
         """Load counters to file"""
         try:
-            with open(filename, 'rb') as fp:
+            with open(filename, "rb") as fp:
                 self.counters = cPickle.load(fp)
         except:
             logging.debug("can't load counter from file: %s", filename)

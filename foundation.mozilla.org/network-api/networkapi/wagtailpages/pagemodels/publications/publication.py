@@ -25,9 +25,7 @@ class PublicationAuthors(Orderable):
         ContentAuthor, on_delete=models.SET_NULL, null=True, blank=False
     )
 
-    panels = [
-        SnippetChooserPanel("author"),
-    ]
+    panels = [SnippetChooserPanel("author")]
 
     def __str__(self):
         return f"Author: {self.author.name}"
@@ -46,98 +44,84 @@ class PublicationPage(FoundationMetadataPageMixin, Page):
     An Article can only belong to one Chapter/Publication Page
     """
 
-    subpage_types = ['ArticlePage', 'PublicationPage']
+    subpage_types = ["ArticlePage", "PublicationPage"]
 
     toc_thumbnail_image = models.ForeignKey(
-        'wagtailimages.Image',
+        "wagtailimages.Image",
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        related_name='toc_thumbnail_image',
-        verbose_name='Table of Content Thumbnail',
-        help_text='Thumbnail image to show on table of content. Use square image of 320×320 pixels or larger.',
+        related_name="toc_thumbnail_image",
+        verbose_name="Table of Content Thumbnail",
+        help_text="Thumbnail image to show on table of content. Use square image of 320×320 pixels or larger.",
     )
 
     hero_image = models.ForeignKey(
-        'wagtailimages.Image',
+        "wagtailimages.Image",
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        related_name='publication_hero_image',
-        verbose_name='Publication Hero Image',
+        related_name="publication_hero_image",
+        verbose_name="Publication Hero Image",
     )
-    subtitle = models.CharField(
-        blank=True,
-        max_length=250,
-    )
-    secondary_subtitle = models.CharField(
-        blank=True,
-        max_length=250,
-    )
+    subtitle = models.CharField(blank=True, max_length=250)
+    secondary_subtitle = models.CharField(blank=True, max_length=250)
     publication_date = models.DateField("Publication date", null=True, blank=True)
     publication_file = models.ForeignKey(
-        'wagtaildocs.Document',
+        "wagtaildocs.Document",
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        related_name='+',
+        related_name="+",
     )
     additional_author_copy = models.CharField(
-        help_text="Example: with contributing authors",
-        max_length=100,
-        blank=True,
+        help_text="Example: with contributing authors", max_length=100, blank=True
     )
-    intro_notes = RichTextField(
-        blank=True,
-        features=['link', 'bold', 'italic', 'h4']
-    )
+    intro_notes = RichTextField(blank=True, features=["link", "bold", "italic", "h4"])
     notes = RichTextField(
-        blank=True,
-        features=['link', 'bold', 'italic', 'h4', 'ol', 'ul']
+        blank=True, features=["link", "bold", "italic", "h4", "ol", "ul"]
     )
     contents_title = models.CharField(
-        blank=True,
-        default="Table of Contents",
-        max_length=250,
+        blank=True, default="Table of Contents", max_length=250
     )
     content_panels = Page.content_panels + [
         MultiFieldPanel(
             [
-                FieldPanel('subtitle'),
-                FieldPanel('secondary_subtitle'),
-                FieldPanel('publication_date'),
-                ImageChooserPanel('toc_thumbnail_image'),
-                ImageChooserPanel('hero_image'),
-                DocumentChooserPanel('publication_file'),
-                InlinePanel('authors', label='Author'),
-                FieldPanel('additional_author_copy'),
+                FieldPanel("subtitle"),
+                FieldPanel("secondary_subtitle"),
+                FieldPanel("publication_date"),
+                ImageChooserPanel("toc_thumbnail_image"),
+                ImageChooserPanel("hero_image"),
+                DocumentChooserPanel("publication_file"),
+                InlinePanel("authors", label="Author"),
+                FieldPanel("additional_author_copy"),
             ],
-            heading='Hero',
+            heading="Hero",
         ),
-        FieldPanel('intro_notes'),
-        FieldPanel('contents_title'),
-        FieldPanel('notes'),
+        FieldPanel("intro_notes"),
+        FieldPanel("contents_title"),
+        FieldPanel("notes"),
     ]
 
     translatable_fields = [
         # Promote tab fields
-        SynchronizedField('slug'),
-        TranslatableField('seo_title'),
-        SynchronizedField('show_in_menus'),
-        TranslatableField('search_description'),
-        SynchronizedField('search_image'),
+        SynchronizedField("slug"),
+        TranslatableField("seo_title"),
+        SynchronizedField("show_in_menus"),
+        TranslatableField("search_description"),
+        SynchronizedField("search_image"),
         # Content tab fields
         TranslatableField("title"),
         TranslatableField("subtitle"),
-        TranslatableField('secondary_subtitle'),
-        SynchronizedField('toc_thumbnail_image'),
-        SynchronizedField('hero_image'),
-        SynchronizedField('publication_date'),
-        SynchronizedField('publication_file'),
-        TranslatableField('additional_author_copy'),
-        TranslatableField('intro_notes'),
-        TranslatableField('contents_title'),
-        TranslatableField('notes'),
+        TranslatableField("secondary_subtitle"),
+        SynchronizedField("toc_thumbnail_image"),
+        SynchronizedField("hero_image"),
+        SynchronizedField("publication_date"),
+        SynchronizedField("publication_file"),
+        TranslatableField("additional_author_copy"),
+        TranslatableField("intro_notes"),
+        TranslatableField("contents_title"),
+        TranslatableField("notes"),
     ]
 
     @property
@@ -179,7 +163,12 @@ class PublicationPage(FoundationMetadataPageMixin, Page):
         """
         prev_page = self.get_parent()
         if self.is_chapter_page:
-            sibling = self.get_siblings().filter(path__lt=self.path, live=True).reverse().first()
+            sibling = (
+                self.get_siblings()
+                .filter(path__lt=self.path, live=True)
+                .reverse()
+                .first()
+            )
             if sibling:
                 # If there is no more chapters. Return the parent page.
                 prev_page = sibling
@@ -201,15 +190,11 @@ class PublicationPage(FoundationMetadataPageMixin, Page):
         for page in self.get_children():
             if request.user.is_authenticated:
                 # User is logged in, and can preview a page. Get all pages, even drafts.
-                pages.append({
-                    'child': page,
-                    'grandchildren': page.get_children()
-                })
+                pages.append({"child": page, "grandchildren": page.get_children()})
             elif page.live:
                 # User is not logged in AND this page is live. Only fetch live grandchild pages.
-                pages.append({
-                    'child': page,
-                    'grandchildren': page.get_children().live()
-                })
-        context['child_pages'] = pages
-        return set_main_site_nav_information(self, context, 'Homepage')
+                pages.append(
+                    {"child": page, "grandchildren": page.get_children().live()}
+                )
+        context["child_pages"] = pages
+        return set_main_site_nav_information(self, context, "Homepage")

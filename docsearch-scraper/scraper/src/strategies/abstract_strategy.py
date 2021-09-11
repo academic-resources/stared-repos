@@ -13,6 +13,7 @@ class AbstractStrategy:
     """
     Abstract Strategy
     """
+
     config = None
 
     def __init__(self, config):
@@ -22,8 +23,7 @@ class AbstractStrategy:
     @staticmethod
     def pprint(data):
         """Pretty print a JSON-like structure"""
-        print(
-            json.dumps(data, indent=2, sort_keys=True, separators=(',', ': ')))
+        print(json.dumps(data, indent=2, sort_keys=True, separators=(",", ": ")))
 
     @staticmethod
     def get_body(response):
@@ -45,17 +45,17 @@ class AbstractStrategy:
         return result
 
     def get_strip_chars(self, level, selectors):
-        if selectors[level]['strip_chars'] is None:
+        if selectors[level]["strip_chars"] is None:
             return self.config.strip_chars
-        return selectors[level]['strip_chars']
+        return selectors[level]["strip_chars"]
 
     def get_selectors_set_key(self, url):
-        selectors_key = 'default'
+        selectors_key = "default"
 
         if url is not None:
             for start_url in self.config.start_urls:
-                if re.search(start_url['compiled_url'], url) is not None:
-                    selectors_key = start_url['selectors_key']
+                if re.search(start_url["compiled_url"], url) is not None:
+                    selectors_key = start_url["selectors_key"]
                     break
 
         return selectors_key
@@ -64,7 +64,7 @@ class AbstractStrategy:
         selectors_key = self.get_selectors_set_key(url)
 
         if selectors_key not in self.config.selectors:
-            return self.config.selectors['default']
+            return self.config.selectors["default"]
 
         return self.config.selectors[selectors_key]
 
@@ -72,7 +72,7 @@ class AbstractStrategy:
         selectors_key = self.get_selectors_set_key(url)
 
         if selectors_key not in self.config.min_indexed_level:
-            return self.config.min_indexed_level['default']
+            return self.config.min_indexed_level["default"]
 
         return self.config.min_indexed_level[selectors_key]
 
@@ -86,7 +86,7 @@ class AbstractStrategy:
             if node.tag not in AbstractStrategy.keep_tags:
                 yield node.text
             else:
-                yield '<' + node.tag + '>' + node.text + '</' + node.tag + '>'
+                yield "<" + node.tag + ">" + node.text + "</" + node.tag + ">"
         for e in node:
             for s in AbstractStrategy.itertext(e):
                 yield s
@@ -103,7 +103,7 @@ class AbstractStrategy:
             text = text.replace(html.escape(opening_tag), opening_tag)
             text = text.replace(html.escape(closing_tag), closing_tag)
 
-        text = text.replace('&amp;', '&')
+        text = text.replace("&amp;", "&")
 
         return text
 
@@ -143,10 +143,13 @@ class AbstractStrategy:
         if len(elements) == 0:
             return None
 
-        text = ' '.join(
-            [AbstractStrategy.get_text(element, strip_chars) for element in
-             elements
-             if AbstractStrategy.get_text(element, strip_chars) is not None])
+        text = " ".join(
+            [
+                AbstractStrategy.get_text(element, strip_chars)
+                for element in elements
+                if AbstractStrategy.get_text(element, strip_chars) is not None
+            ]
+        )
 
         if len(text) == 0:
             return None
@@ -180,7 +183,7 @@ class AbstractStrategy:
         >>> self.get_level_weight('lvl3') = 70
         >>> self.get_level_weight('content') = 0
         """
-        matches = re.match(r'lvl([0-9]*)', level)
+        matches = re.match(r"lvl([0-9]*)", level)
         if matches:
             return 100 - int(matches.group(1)) * 10
         return 0

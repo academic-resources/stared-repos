@@ -26,9 +26,14 @@ def clearAll():
 # function for checking error
 def checkError():
 
-    if (dayField.get() == "" or monthField.get() == ""
-        or yearField.get() == "" or givenDayField.get() == ""
-            or givenMonthField.get() == "" or givenYearField.get() == ""):
+    if (
+        dayField.get() == ""
+        or monthField.get() == ""
+        or yearField.get() == ""
+        or givenDayField.get() == ""
+        or givenMonthField.get() == ""
+        or givenYearField.get() == ""
+    ):
 
         # error message
         messagebox.showerror("Input Error")
@@ -37,6 +42,7 @@ def checkError():
         clearAll()
 
         return -1
+
 
 # Function to Calculate the age
 
@@ -64,12 +70,12 @@ def calculateAge():
         # as to subtract the date and get the remaining days
         month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-        if (birth_day > given_day):
+        if birth_day > given_day:
             given_month = given_month - 1
-            given_day = given_day + month[birth_month-1]
+            given_day = given_day + month[birth_month - 1]
 
         # if birth month exceeds given month
-        if (birth_month > given_month):
+        if birth_month > given_month:
             given_year = given_year - 1
             given_month = given_month + 12
 
@@ -86,37 +92,37 @@ def calculateAge():
 
 
 # The Driver Code
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     # Creating the GUI window
     root = Tk()
 
     # Setting the background color
-    root.config(background='pink')
+    root.config(background="pink")
 
     # Setting the name of the GUI applications
-    root.title('Age Calculator')
+    root.title("Age Calculator")
 
     # Setting the geometry of the GUI application
-    root.geometry('525x260')
+    root.geometry("525x260")
 
     # Create the Date of birth : Label
-    dob = Label(root, bg='purple')
+    dob = Label(root, bg="purple")
 
     # Create the Given Date : Label
-    givenDate = Label(root, text='Given Date', bg='purple')
+    givenDate = Label(root, text="Given Date", bg="purple")
 
     # Create the Given Date : Label
-    birthDate = Label(root, text='Birth Date', bg='purple')
+    birthDate = Label(root, text="Birth Date", bg="purple")
 
     # Create a Day : label
-    day = Label(root, text='Day', bg='pink')
+    day = Label(root, text="Day", bg="pink")
 
     # Create a Month : label
-    month = Label(root, text='Month', bg='pink')
+    month = Label(root, text="Month", bg="pink")
 
     # Create a Year : label
-    year = Label(root, text='Year', bg='pink')
+    year = Label(root, text="Year", bg="pink")
 
     # Create a Given Day : label
     givenDay = Label(root, text="Given Day", bg="pink")
@@ -150,12 +156,14 @@ if __name__ == '__main__':
     rsltDayField = Entry(root)
 
     # Create a Resultant Age Button and attached to calculateAge function
-    resultantAge = Button(root, text="Resultant Age",
-                          fg="Black", bg="Red", command=calculateAge)
+    resultantAge = Button(
+        root, text="Resultant Age", fg="Black", bg="Red", command=calculateAge
+    )
 
     # Create a Clear All Button and attached to clearAll function
-    clearAllEntry = Button(root, text="Clear All Output",
-                           fg='Black', bg='Red', command=clearAll)
+    clearAllEntry = Button(
+        root, text="Clear All Output", fg="Black", bg="Red", command=clearAll
+    )
 
     dob.grid(row=0, column=1)
 

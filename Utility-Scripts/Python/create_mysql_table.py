@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import MySQLdb
 
-db=MySQLdb.connect("localhost",username,password,"company")
+db = MySQLdb.connect("localhost", username, password, "company")
 
 cursor = db.cursor()
 

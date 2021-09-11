@@ -1,7 +1,7 @@
 from six import iteritems
 
-class BaseError(Exception):
 
+class BaseError(Exception):
     def __init__(self, messages):
         if not isinstance(messages, (list, tuple, dict)):
             messages = [messages]
@@ -31,6 +31,7 @@ class BaseError(Exception):
 class ConversionError(BaseError, TypeError):
 
     """ Exception raised when data cannot be converted to the correct python type """
+
     pass
 
 
@@ -41,6 +42,7 @@ class ModelConversionError(ConversionError):
 class ValidationError(BaseError, ValueError):
 
     """Exception raised when invalid data is encountered."""
+
     pass
 
 
@@ -51,9 +53,11 @@ class ModelValidationError(ValidationError):
 class StopValidation(ValidationError):
 
     """Exception raised when no more validation need occur."""
+
     pass
 
 
 class MockCreationError(ValueError):
     """Exception raised when a mock value cannot be generated."""
+
     pass

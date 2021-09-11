@@ -47,6 +47,7 @@ class bubbleSort:
                 self.array = contains array
                 self.length = contains length
     """
+
     def __init__(self, array):
         self.array = array
         self.length = len(array)
@@ -66,8 +67,7 @@ class bubbleSort:
         #  the largest element is moved (or bubbled) to the end
         for i in range(n - 1):
             if self.array[i] > self.array[i + 1]:
-                self.array[i], self.array[i + 1] = self.array[i +
-                                                              1], self.array[i]
+                self.array[i], self.array[i + 1] = self.array[i + 1], self.array[i]
 
         # Largest element is fixed, recur for remaining array
         self.bubbleSortRecursive(n - 1)
@@ -80,4 +80,4 @@ array = [64, 34, 25, 12, 22, 11, 90]
 sort = bubbleSort(array)
 print(sort)
 sort.bubbleSortRecursive()
-print(f'Sorted Array: \n{sort}')
+print(f"Sorted Array: \n{sort}")

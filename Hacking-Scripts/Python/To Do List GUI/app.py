@@ -12,7 +12,6 @@ class Dialog(QDialog):
         self.ui.setupUi(self)
 
 
-
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
@@ -43,7 +42,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             lambda: self.add_task(dlg.ui.new_task_input.text())
         )
         dlg.exec()
-
 
 
 app = QApplication([])

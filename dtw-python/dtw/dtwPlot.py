@@ -21,6 +21,7 @@
 
 import numpy
 
+
 def dtwPlot(x, type, **kwargs):
     # IMPORT_RDOCSTRING plot.dtw
     """Plotting of dynamic time warp results
@@ -76,6 +77,7 @@ plot_type :
 
 def dtwPlotAlignment(d, xlab="Query index", ylab="Reference index", **kwargs):
     import matplotlib.pyplot as plt
+
     fig, ax = plt.subplots(figsize=(6, 6))
 
     ax.plot(d.index1, d.index2, **kwargs)
@@ -86,14 +88,18 @@ def dtwPlotAlignment(d, xlab="Query index", ylab="Reference index", **kwargs):
     return ax
 
 
-def dtwPlotTwoWay(d, xts=None, yts=None,
-                  offset=0,
-                  ts_type="l",
-                  match_indices=None,
-                  match_col="gray",
-                  xlab="Index",
-                  ylab="Query value",
-                  **kwargs):
+def dtwPlotTwoWay(
+    d,
+    xts=None,
+    yts=None,
+    offset=0,
+    ts_type="l",
+    match_indices=None,
+    match_col="gray",
+    xlab="Index",
+    ylab="Query value",
+    **kwargs
+):
     # IMPORT_RDOCSTRING dtwPlotTwoWay
     """Plotting of dynamic time warp results: pointwise comparison
 
@@ -149,7 +155,7 @@ When ``offset`` is set values on the left axis only apply to the query.
     # ENDIMPORT
 
     import matplotlib.pyplot as plt
-    from matplotlib import collections  as mc
+    from matplotlib import collections as mc
 
     if xts is None or yts is None:
         try:
@@ -163,17 +169,17 @@ When ``offset`` is set values on the left axis only apply to the query.
 
     maxlen = max(len(xts), len(yts))
     times = numpy.arange(maxlen)
-    xts = numpy.pad(xts,(0,maxlen-len(xts)),"constant",constant_values=numpy.nan)
-    yts = numpy.pad(yts,(0,maxlen-len(yts)),"constant",constant_values=numpy.nan)
+    xts = numpy.pad(xts, (0, maxlen - len(xts)), "constant", constant_values=numpy.nan)
+    yts = numpy.pad(yts, (0, maxlen - len(yts)), "constant", constant_values=numpy.nan)
 
     fig, ax = plt.subplots()
     if offset != 0:
         ax2 = ax.twinx()
-        ax2.tick_params('y', colors='b')
+        ax2.tick_params("y", colors="b")
     else:
         ax2 = ax
 
-    ax.plot(times, xts, color='k', **kwargs)
+    ax.plot(times, xts, color="k", **kwargs)
     ax2.plot(times, yts, **kwargs)
 
     ql, qh = ax.get_ylim()
@@ -197,8 +203,9 @@ When ``offset`` is set values on the left axis only apply to the query.
 
     col = []
     for i in idx:
-        col.append([(d.index1[i], xts[d.index1[i]]),
-                    (d.index2[i], -offset + yts[d.index2[i]])])
+        col.append(
+            [(d.index1[i], xts[d.index1[i]]), (d.index2[i], -offset + yts[d.index2[i]])]
+        )
 
     lc = mc.LineCollection(col, linewidths=1, linestyles=":", colors=match_col)
     ax.add_collection(lc)
@@ -207,11 +214,16 @@ When ``offset`` is set values on the left axis only apply to the query.
     return ax
 
 
-def dtwPlotThreeWay(d, xts=None, yts=None,
-                    match_indices=None,
-                    match_col="gray",
-                    xlab="Query index",
-                    ylab="Reference index", **kwargs):
+def dtwPlotThreeWay(
+    d,
+    xts=None,
+    yts=None,
+    match_indices=None,
+    match_col="gray",
+    xlab="Query index",
+    ylab="Reference index",
+    **kwargs
+):
     # IMPORT_RDOCSTRING dtwPlotThreeWay
     """Plotting of dynamic time warp results: annotated warping function
 
@@ -270,7 +282,7 @@ title_margin :
     # ENDIMPORT
     import matplotlib.pyplot as plt
     import matplotlib.gridspec as gridspec
-    from matplotlib import collections  as mc
+    from matplotlib import collections as mc
 
     if xts is None or yts is None:
         try:
@@ -285,9 +297,7 @@ title_margin :
     mm1 = numpy.arange(mm)
 
     fig = plt.figure()
-    gs = gridspec.GridSpec(2, 2,
-                           width_ratios=[1, 3],
-                           height_ratios=[3, 1])
+    gs = gridspec.GridSpec(2, 2, width_ratios=[1, 3], height_ratios=[3, 1])
     axr = plt.subplot(gs[0])
     ax = plt.subplot(gs[1])
     axq = plt.subplot(gs[3])
@@ -311,10 +321,8 @@ title_margin :
 
     col = []
     for i in idx:
-        col.append([(d.index1[i], 0),
-                    (d.index1[i], d.index2[i])])
-        col.append([(0, d.index2[i]),
-                    (d.index1[i], d.index2[i])])
+        col.append([(d.index1[i], 0), (d.index1[i], d.index2[i])])
+        col.append([(0, d.index2[i]), (d.index1[i], d.index2[i])])
 
     lc = mc.LineCollection(col, linewidths=1, linestyles=":", colors=match_col)
     ax.add_collection(lc)
@@ -323,9 +331,9 @@ title_margin :
     return ax
 
 
-def dtwPlotDensity(d, normalize=False,
-                   xlab="Query index",
-                   ylab="Reference index", **kwargs):
+def dtwPlotDensity(
+    d, normalize=False, xlab="Query index", ylab="Reference index", **kwargs
+):
     # IMPORT_RDOCSTRING dtwPlotDensity
     """Display the cumulative cost density with the warping path overimposed
 
@@ -386,7 +394,9 @@ long (>2 steps) horizontal stretches are allowed within the window.
     try:
         cm = d.costMatrix
     except:
-        raise ValueError("dtwPlotDensity requires dtw internals (set keep.internals=True on dtw() call)")
+        raise ValueError(
+            "dtwPlotDensity requires dtw internals (set keep.internals=True on dtw() call)"
+        )
 
     if normalize:
         norm = d.stepPattern.hint
@@ -403,7 +413,7 @@ long (>2 steps) horizontal stretches are allowed within the window.
     fig, ax = plt.subplots(figsize=(6, 6))
 
     ax.imshow(cm.T, origin="lower", cmap=plt.get_cmap("terrain"))
-    co = ax.contour(cm.T, colors="black", linewidths = 1)
+    co = ax.contour(cm.T, colors="black", linewidths=1)
     ax.clabel(co)
 
     ax.plot(d.index1, d.index2, color="blue", linewidth=2)

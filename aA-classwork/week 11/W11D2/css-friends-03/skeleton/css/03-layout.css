@@ -4,7 +4,8 @@
   display: flex;
 }
 
-.content-sidebar, .content-main {
+.content-sidebar,
+.content-main {
   border: 2px solid black;
   margin: 10px;
 }

@@ -90,19 +90,13 @@ def test_render_link():
 def test_render_combine():
     result = render("[green]X[blue]Y[/blue]Z[/green]")
     assert str(result) == "XYZ"
-    assert result.spans == [
-        Span(0, 3, "green"),
-        Span(1, 2, "blue"),
-    ]
+    assert result.spans == [Span(0, 3, "green"), Span(1, 2, "blue")]
 
 
 def test_render_overlap():
     result = render("[green]X[bold]Y[/green]Z[/bold]")
     assert str(result) == "XYZ"
-    assert result.spans == [
-        Span(0, 2, "green"),
-        Span(1, 3, "bold"),
-    ]
+    assert result.spans == [Span(0, 2, "green"), Span(1, 3, "bold")]
 
 
 def test_adjoint():

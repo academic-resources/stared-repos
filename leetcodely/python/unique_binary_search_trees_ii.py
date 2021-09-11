@@ -8,7 +8,6 @@ class TreeNode:
 
 class Solution:
     def generateTrees(self, n: int) -> list[TreeNode]:
-
         def helper(start, stop):
             res = []
 
@@ -19,9 +18,9 @@ class Solution:
                 res.append(TreeNode(start))
                 return res
             left, right = [], []
-            for i in range(start, stop+1):
-                left = helper(start, i-1)
-                right = helper(i+1, stop)
+            for i in range(start, stop + 1):
+                left = helper(start, i - 1)
+                right = helper(i + 1, stop)
 
                 for lnode in left:
                     for rnode in right:
@@ -30,6 +29,5 @@ class Solution:
                         root.right = rnode
                         res.append(root)
             return res
+
         return helper(1, n)
-
-

@@ -2,7 +2,7 @@ import requests
 import re
 
 # get url
-url = input('Enter a URL (include `http://`): ')
+url = input("Enter a URL (include `http://`): ")
 
 # connect to the url
 website = requests.get(url)

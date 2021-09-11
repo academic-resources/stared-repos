@@ -31,27 +31,27 @@ In the following example, we see how to get data from input and access elements 
 Let's get data from uncontrolled input element.
 
 ```js
-import React, { useRef } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useRef } from "react";
+import ReactDOM from "react-dom";
 
 const App = (props) => {
-  const ref = useRef(null)
+  const ref = useRef(null);
   const onClick = () => {
-    let value = ref.current.value
-    alert(value)
-  }
+    let value = ref.current.value;
+    alert(value);
+  };
   return (
-    <div className='App'>
+    <div className="App">
       <h1>How to use data from uncontrolled input using useRef</h1>
-      <input type='text' ref={ref} />
+      <input type="text" ref={ref} />
       <br />
       <button onClick={onClick}>Get Input Data</button>
     </div>
-  )
-}
+  );
+};
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ## Focus
@@ -59,26 +59,26 @@ ReactDOM.render(<App />, rootElement)
 Using the useRef we can trigger the focus event on input.
 
 ```js
-import React, { useRef } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useRef } from "react";
+import ReactDOM from "react-dom";
 
 const App = (props) => {
-  const ref = useRef(null)
+  const ref = useRef(null);
   const onClick = () => {
-    ref.current.focus()
-  }
+    ref.current.focus();
+  };
   return (
-    <div className='App'>
+    <div className="App">
       <h1>How to focus on input element useRef</h1>
-      <input type='text' ref={ref} />
+      <input type="text" ref={ref} />
       <br />
       <button onClick={onClick}>Click to Focus on input</button>
     </div>
-  )
-}
+  );
+};
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ## Getting Content from DOM tree
@@ -86,26 +86,26 @@ ReactDOM.render(<App />, rootElement)
 Don't touch the DOM when you develop a React application because React has its own way to manipulate the DOM using the virtual DOM. In case, we get interested to get some content from the DOM tree we can use the useRef hook. See the example:
 
 ```js
-import React, { useRef } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useRef } from "react";
+import ReactDOM from "react-dom";
 
 const App = (props) => {
-  const ref = useRef(null)
+  const ref = useRef(null);
   const onClick = () => {
-    let content = ref.current.textContent
-    alert(content)
-    console.log(content)
-  }
+    let content = ref.current.textContent;
+    alert(content);
+    console.log(content);
+  };
   return (
-    <div className='App'>
+    <div className="App">
       <h1 ref={ref}>How to getting content from the DOM tree</h1>
       <button onClick={onClick}>Getting Content</button>
     </div>
-  )
-}
+  );
+};
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ## Accessing and Styling a DOM element

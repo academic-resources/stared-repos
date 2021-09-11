@@ -12,7 +12,7 @@ def no_dups(s):
         if word not in cache:
             cache[word] = 1
             no_duplicates.append(word)
-    final_string = ' '.join(no_duplicates)
+    final_string = " ".join(no_duplicates)
     print(final_string)
     return final_string
 

@@ -23,9 +23,9 @@ class Game {
     this.board.print();
     console.log(`Current Turn: ${this.currentPlayer}`);
 
-    reader.question('Enter rowIdx: ', rowIdxStr => {
+    reader.question("Enter rowIdx: ", (rowIdxStr) => {
       const rowIdx = parseInt(rowIdxStr);
-      reader.question('Enter colIdx: ', colIdxStr => {
+      reader.question("Enter colIdx: ", (colIdxStr) => {
         const colIdx = parseInt(colIdxStr);
         callback([rowIdx, colIdx]);
       });
@@ -33,7 +33,7 @@ class Game {
   }
 
   run(reader, gameCompletionCallback) {
-    this.promptMove(reader, move => {
+    this.promptMove(reader, (move) => {
       try {
         this.playMove(move);
       } catch (e) {
@@ -49,7 +49,7 @@ class Game {
         if (this.winner()) {
           console.log(`${this.winner()} has won!`);
         } else {
-          console.log('NO ONE WINS!');
+          console.log("NO ONE WINS!");
         }
         gameCompletionCallback();
       } else {

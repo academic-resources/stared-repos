@@ -1,8 +1,7 @@
-'use strict';
+"use strict";
 
-var PriorityQueue = require('../../data_structure/priority_queue'),
-    Graph = require('../../data_structure/graph');
-
+var PriorityQueue = require("../../data_structure/priority_queue"),
+  Graph = require("../../data_structure/graph");
 
 /**
  * Prim's minimum spanning tree (forest) algorithm.
@@ -14,7 +13,7 @@ var PriorityQueue = require('../../data_structure/priority_queue'),
  */
 var prim = function (graph) {
   if (graph.directed) {
-    throw new Error('Can\'t build MST of a directed graph.');
+    throw new Error("Can't build MST of a directed graph.");
   }
 
   var mst = new Graph(false);
@@ -36,12 +35,11 @@ var prim = function (graph) {
   while (!q.isEmpty()) {
     var top = q.extract(true);
     var vertex = top.item,
-        weight = top.priority;
+      weight = top.priority;
 
     if (parent[vertex]) {
       mst.addEdge(parent[vertex], vertex, weight);
-    }
-    else {
+    } else {
       mst.addVertex(vertex);
     }
 
@@ -50,6 +48,5 @@ var prim = function (graph) {
 
   return mst;
 };
-
 
 module.exports = prim;

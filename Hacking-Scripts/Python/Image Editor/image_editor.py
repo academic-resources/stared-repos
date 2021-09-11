@@ -1,4 +1,3 @@
-
 # Image Editor
 
 # imported necessary library
@@ -14,7 +13,7 @@ import os
 import numpy as np
 import random
 
-#created main window
+# created main window
 window = Tk()
 window.geometry("1000x700")
 window.title("Image Editor")
@@ -32,32 +31,36 @@ panelA = None
 
 # function defined to get the path of the image selected
 def getpath(path):
-    a = path.split(r'/')
+    a = path.split(r"/")
     # print(a)
     fname = a[-1]
     l = len(fname)
     location = path[:-l]
     return location
 
+
 # function defined to get the folder name from which image is selected
 def getfoldername(path):
-    a = path.split(r'/')
+    a = path.split(r"/")
     # print(a)
     name = a[-1]
     return name
 
+
 # function defined to get the file name of image is selected
 def getfilename(path):
-    a = path.split(r'/')
+    a = path.split(r"/")
     fname = a[-1]
-    a = fname.split('.')
+    a = fname.split(".")
     a = a[0]
     return a
+
 
 # function defined to open the image file
 def openfilename():
     filename = filedialog.askopenfilename(title='"pen')
     return filename
+
 
 # function defined to open the selected image
 def open_img():
@@ -84,6 +87,7 @@ def open_img():
         panelA.image = img
         panelB.image = img
 
+
 # function defined for make the sketch of image selected
 def sketch_convert():
     image = cv2.imread(x)
@@ -102,7 +106,9 @@ def sketch_convert():
     output = cv2.divide(grayImage, 255 - grayImageInv, scale=256.0)
     # edge
     gray = cv2.medianBlur(grayImage, 1)
-    edges = cv2.adaptiveThreshold(gray, 10, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 9, 9)
+    edges = cv2.adaptiveThreshold(
+        gray, 10, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 9, 9
+    )
     color = cv2.bilateralFilter(output, 6, 60, 200)
     global o1
     o1 = cv2.bitwise_and(color, color, mask=edges)
@@ -112,6 +118,7 @@ def sketch_convert():
     panelB.configure(image=image)
     panelB.image = image
     mbox.showinfo("Success", "Image converted to Sketch format!")
+
 
 # function defined to make the image sharp
 def sharpen_convert():
@@ -145,7 +152,9 @@ def cartoon_convert():
     image_edge = cv2.Laplacian(image_gray, -1, ksize=5)
     image_edge = 255 - image_edge
     ret, image_edge = cv2.threshold(image_edge, 150, 255, cv2.THRESH_BINARY)
-    edgePreservingImage = cv2.edgePreservingFilter(image, flags=2, sigma_s=50, sigma_r=0.4)
+    edgePreservingImage = cv2.edgePreservingFilter(
+        image, flags=2, sigma_s=50, sigma_r=0.4
+    )
     global o4
     output = np.zeros(image_gray.shape)
     output = cv2.bitwise_and(edgePreservingImage, edgePreservingImage, mask=image_edge)
@@ -231,66 +240,143 @@ def reset():
     panelB.image = image
     mbox.showinfo("Success", "Image reset to original format!")
 
+
 # function defined to same the edited image
 def save_img():
     global location, filename, eimg
     # eimg.save(location + filename + r"_edit.png")
-    filename = filedialog.asksaveasfile(mode='w', defaultextension=".jpg")
+    filename = filedialog.asksaveasfile(mode="w", defaultextension=".jpg")
     if not filename:
         return
     eimg.save(filename)
     mbox.showinfo("Success", "Edited Image Saved Successfully!")
 
 
-
 # top label
-start1 = tk.Label(text = "Image  Editor", font=("Arial", 40), fg="magenta",underline=0) # same way bg
-start1.place(x = 350, y = 10)
+start1 = tk.Label(
+    text="Image  Editor", font=("Arial", 40), fg="magenta", underline=0
+)  # same way bg
+start1.place(x=350, y=10)
 
 # original image label
-start1 = tk.Label(text = "Original\nImage", font=("Arial", 40), fg="magenta") # same way bg
-start1.place(x = 100, y = 270)
+start1 = tk.Label(
+    text="Original\nImage", font=("Arial", 40), fg="magenta"
+)  # same way bg
+start1.place(x=100, y=270)
 
 # edited image label
-start1 = tk.Label(text = "Edited\nImage", font=("Arial", 40), fg="magenta") # same way bg
-start1.place(x = 700, y = 270)
+start1 = tk.Label(text="Edited\nImage", font=("Arial", 40), fg="magenta")  # same way bg
+start1.place(x=700, y=270)
 
 # choose button created
-chooseb = Button(window, text="Choose",command=open_img,font=("Arial", 20), bg = "orange", fg = "blue", borderwidth=3, relief="raised")
-chooseb.place(x =30 , y =20 )
+chooseb = Button(
+    window,
+    text="Choose",
+    command=open_img,
+    font=("Arial", 20),
+    bg="orange",
+    fg="blue",
+    borderwidth=3,
+    relief="raised",
+)
+chooseb.place(x=30, y=20)
 
 # save button created
-saveb = Button(window, text="Save",command=save_img,font=("Arial", 20), bg = "orange", fg = "blue", borderwidth=3, relief="raised")
-saveb.place(x =170 , y =20 )
+saveb = Button(
+    window,
+    text="Save",
+    command=save_img,
+    font=("Arial", 20),
+    bg="orange",
+    fg="blue",
+    borderwidth=3,
+    relief="raised",
+)
+saveb.place(x=170, y=20)
 
 # skecth button created
-sketchb = Button(window, text="Sketch",command=sketch_convert,font=("Arial", 20), bg = "light green", fg = "blue", borderwidth=3, relief="raised")
-sketchb.place(x =80 , y =620 )
+sketchb = Button(
+    window,
+    text="Sketch",
+    command=sketch_convert,
+    font=("Arial", 20),
+    bg="light green",
+    fg="blue",
+    borderwidth=3,
+    relief="raised",
+)
+sketchb.place(x=80, y=620)
 
 # sharpen button created
-sharpb = Button(window, text="Sharpen",command=sharpen_convert,font=("Arial", 20), bg = "light green", fg = "blue", borderwidth=3, relief="raised")
-sharpb.place(x =250 , y =620 )
+sharpb = Button(
+    window,
+    text="Sharpen",
+    command=sharpen_convert,
+    font=("Arial", 20),
+    bg="light green",
+    fg="blue",
+    borderwidth=3,
+    relief="raised",
+)
+sharpb.place(x=250, y=620)
 
 # cartoon button created
-cartoonb = Button(window, text="Cartoon",command=cartoon_convert,font=("Arial", 20), bg = "light green", fg = "blue", borderwidth=3, relief="raised")
-cartoonb.place(x =440 , y =620 )
+cartoonb = Button(
+    window,
+    text="Cartoon",
+    command=cartoon_convert,
+    font=("Arial", 20),
+    bg="light green",
+    fg="blue",
+    borderwidth=3,
+    relief="raised",
+)
+cartoonb.place(x=440, y=620)
 
 # kelvin button created
-kelvinb = Button(window, text="kelvin",command=kelvin_convert,font=("Arial", 20), bg = "light green", fg = "blue", borderwidth=3, relief="raised")
-kelvinb.place(x =630 , y =620 )
+kelvinb = Button(
+    window,
+    text="kelvin",
+    command=kelvin_convert,
+    font=("Arial", 20),
+    bg="light green",
+    fg="blue",
+    borderwidth=3,
+    relief="raised",
+)
+kelvinb.place(x=630, y=620)
 
 # reset button created
-resetb = Button(window, text="Reset",command=reset,font=("Arial", 20), bg = "yellow", fg = "blue", borderwidth=3, relief="raised")
-resetb.place(x =800 , y =620 )
+resetb = Button(
+    window,
+    text="Reset",
+    command=reset,
+    font=("Arial", 20),
+    bg="yellow",
+    fg="blue",
+    borderwidth=3,
+    relief="raised",
+)
+resetb.place(x=800, y=620)
 
 # function created for exiting
 def exit_win():
     if mbox.askokcancel("Exit", "Do you want to exit?"):
         window.destroy()
 
+
 # exit button created
-exitb = Button(window, text="EXIT",command=exit_win,font=("Arial", 20), bg = "red", fg = "blue", borderwidth=3, relief="raised")
-exitb.place(x =880 , y =20 )
+exitb = Button(
+    window,
+    text="EXIT",
+    command=exit_win,
+    font=("Arial", 20),
+    bg="red",
+    fg="blue",
+    borderwidth=3,
+    relief="raised",
+)
+exitb.place(x=880, y=20)
 
 
 window.protocol("WM_DELETE_WINDOW", exit_win)

@@ -21,7 +21,6 @@ class TestEx1(unittest.TestCase):
         self.assertTrue(answer_3[0] == 3)
         self.assertTrue(answer_3[1] == 1)
 
-
     def test_ex1_4(self):
         weights_4 = [12, 6, 7, 14, 19, 3, 0, 25, 40]
         answer_4 = get_indices_of_item_weights(weights_4, 9, 7)
@@ -29,5 +28,5 @@ class TestEx1(unittest.TestCase):
         self.assertTrue(answer_4[1] == 2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

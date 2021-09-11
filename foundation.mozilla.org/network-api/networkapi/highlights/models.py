@@ -16,10 +16,10 @@ from networkapi.utility.images import get_image_upload_path
 
 def get_highlights_image_upload_path(instance, filename):
     return get_image_upload_path(
-        app_name='highlights',
-        prop_name='title',
+        app_name="highlights",
+        prop_name="title",
         instance=instance,
-        current_filename=filename
+        current_filename=filename,
     )
 
 
@@ -27,11 +27,11 @@ class HighlightQuerySet(models.query.QuerySet):
     """
     A QuerySet for highlights that filters for published highlights.
     """
+
     def published(self):
         now = timezone.now()
         return self.filter(
-            Q(expires__gt=now) | Q(expires__isnull=True),
-            publish_after__lt=now,
+            Q(expires__gt=now) | Q(expires__isnull=True), publish_after__lt=now
         )
 
 
@@ -42,29 +42,24 @@ class Highlight(TranslatableMixin, SortableMixin):
     projects, custom pages, etc
     Especially on the homepage under "Get Involved"
     """
-    title = models.CharField(
-        max_length=300,
-        help_text='Title of the higlight',
-    )
+
+    title = models.CharField(max_length=300, help_text="Title of the higlight")
     description = models.TextField(
-        max_length=5000,
-        help_text='Description of the higlight',
+        max_length=5000, help_text="Description of the higlight"
     )
     link_label = models.CharField(
         max_length=300,
-        help_text='Text to show that links to this higlight\'s '
-                  'details page',
+        help_text="Text to show that links to this higlight's " "details page",
     )
     link_url = models.URLField(
-        max_length=2048,
-        help_text='Link to this higlight\'s details page',
+        max_length=2048, help_text="Link to this higlight's details page"
     )
     image = models.ForeignKey(
-        'wagtailimages.Image',
+        "wagtailimages.Image",
         on_delete=models.SET_NULL,
         blank=False,
         null=True,
-        related_name='+',
+        related_name="+",
     )
     footer = RichTextField(
         "footer",
@@ -73,21 +68,16 @@ class Highlight(TranslatableMixin, SortableMixin):
         null=True,
     )
     publish_after = models.DateTimeField(
-        help_text='Make this highlight visible only '
-                  'after this date and time (UTC)',
+        help_text="Make this highlight visible only " "after this date and time (UTC)",
         null=True,
     )
     expires = models.DateTimeField(
-        help_text='Hide this highlight after this date and time (UTC)',
+        help_text="Hide this highlight after this date and time (UTC)",
         default=None,
         null=True,
         blank=True,
     )
-    order = models.PositiveIntegerField(
-        default=0,
-        editable=False,
-        db_index=True,
-    )
+    order = models.PositiveIntegerField(default=0, editable=False, db_index=True)
 
     panels = [
         FieldPanel("title"),
@@ -101,17 +91,17 @@ class Highlight(TranslatableMixin, SortableMixin):
     ]
 
     translatable_fields = [
-        TranslatableField('title'),
-        TranslatableField('description'),
-        TranslatableField('link_label'),
-        TranslatableField('footer'),
+        TranslatableField("title"),
+        TranslatableField("description"),
+        TranslatableField("link_label"),
+        TranslatableField("footer"),
     ]
 
     objects = HighlightQuerySet.as_manager()
 
     class Meta(TranslatableMixin.Meta):
-        verbose_name_plural = 'highlights'
-        ordering = ('order',)
+        verbose_name_plural = "highlights"
+        ordering = ("order",)
 
     def __str__(self):
         return str(self.title)

@@ -32,10 +32,12 @@ class MinHeap:
     # It's assumed that new_val is smaller than heap[i]
     def decreaseKey(self, i, new_val):
         self.heap[i] = new_val
-        while (i != 0 and self.heap[self.parent(i)] > self.heap[i]):
+        while i != 0 and self.heap[self.parent(i)] > self.heap[i]:
             # Swap heap[i] with heap[parent(i)]
             self.heap[i], self.heap[self.parent(i)] = (
-                self.heap[self.parent(i)], self.heap[i])
+                self.heap[self.parent(i)],
+                self.heap[i],
+            )
 
     # Method to remove minimum element from heap
     def extractMin(self):

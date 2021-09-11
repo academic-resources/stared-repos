@@ -6,6 +6,7 @@
 
 # 4 + -1 + 9 + -56 + 201 + 18 = 175
 
+
 def sum_minimum_elements(array):
     total = 0
     if len(array) == 0:
@@ -34,5 +35,4 @@ def sum_minimum_elements(array):
     return total
 
 
-sum_minimum_elements([[8, 4], [90, -1, 3], [9, 62],
-                      [-7, -1, -56, -6], [201], [76, 18]])
+sum_minimum_elements([[8, 4], [90, -1, 3], [9, 62], [-7, -1, -56, -6], [201], [76, 18]])

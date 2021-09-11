@@ -8,24 +8,17 @@ try:
 except NameError:
     long = int
 
+
 def test_basic_type():
     class PlayerInfo(Model):
         categories = DictType(StringType)
 
-    info = PlayerInfo(dict(categories={
-        "math": "math",
-        "batman": "batman",
-    }))
+    info = PlayerInfo(dict(categories={"math": "math", "batman": "batman"}))
 
     assert info.categories["math"] == "math"
 
     d = info.serialize()
-    assert d == {
-        "categories": {
-            "math": "math",
-            "batman": "batman",
-        }
-    }
+    assert d == {"categories": {"math": "math", "batman": "batman"}}
 
 
 def test_dict_type_with_model_type():
@@ -38,16 +31,14 @@ def test_dict_type_with_model_type():
         # TODO: Maybe it would be cleaner to have
         #       DictType(CategoryStats) and implicitly convert to ModelType(CategoryStats)
 
-    info = PlayerInfo(dict(categories={
-        "math": {
-            "category_slug": "math",
-            "total_wins": 1
-        },
-        "batman": {
-            "category_slug": "batman",
-            "total_wins": 3
-        }
-    }))
+    info = PlayerInfo(
+        dict(
+            categories={
+                "math": {"category_slug": "math", "total_wins": 1},
+                "batman": {"category_slug": "batman", "total_wins": 3},
+            }
+        )
+    )
 
     math_stats = CategoryStats({"category_slug": "math", "total_wins": 1})
     assert info.categories["math"] == math_stats
@@ -55,14 +46,8 @@ def test_dict_type_with_model_type():
     d = info.serialize()
     assert d == {
         "categories": {
-            "math": {
-                "category_slug": "math",
-                "total_wins": 1
-            },
-            "batman": {
-                "category_slug": "batman",
-                "total_wins": 3
-            }
+            "math": {"category_slug": "math", "total_wins": 1},
+            "batman": {"category_slug": "batman", "total_wins": 3},
         }
     }
 
@@ -85,14 +70,9 @@ def test_dict_type_with_model_type_init_with_instance():
         # TODO: Maybe it would be cleaner to have
         #       DictType(CategoryStats) and implicitly convert to ModelType(CategoryStats)
 
-    math_stats = CategoryStats({
-        "category_slug": "math",
-        "total_wins": 1
-    })
+    math_stats = CategoryStats({"category_slug": "math", "total_wins": 1})
 
-    info = PlayerInfo(dict(id=1, categories={
-        "math": math_stats,
-    }))
+    info = PlayerInfo(dict(id=1, categories={"math": math_stats}))
 
     assert info.categories["math"] == math_stats
 
@@ -101,14 +81,8 @@ def test_dict_type_with_model_type_init_with_instance():
     assert d == {
         "id": 1,
         "categories": {
-            "math": {
-                "category_slug": "math",
-                "total_wins": 1,
-                "xp_level": {
-                    "level": 1
-                }
-            },
-        }
+            "math": {"category_slug": "math", "total_wins": 1, "xp_level": {"level": 1}}
+        },
     }
 
 
@@ -118,9 +92,7 @@ def test_with_empty():
 
     class PlayerInfo(Model):
         categories = DictType(
-            ModelType(CategoryStatsInfo),
-            default=lambda: {},
-            serialize_when_none=True,
+            ModelType(CategoryStatsInfo), default=lambda: {}, serialize_when_none=True
         )
 
     info = PlayerInfo()
@@ -128,9 +100,7 @@ def test_with_empty():
     assert info.categories == {}
 
     d = info.serialize()
-    assert d == {
-        "categories": {},
-    }
+    assert d == {"categories": {}}
 
 
 def test_key_type():
@@ -143,19 +113,11 @@ def test_key_type():
     class PlayerInfo(Model):
         categories = DictType(ModelType(CategoryStatsInfo), coerce_key=player_id)
 
-    stats = CategoryStatsInfo({
-        "slug": "math",
-    })
+    stats = CategoryStatsInfo({"slug": "math"})
 
-    info = PlayerInfo({
-        "categories": {
-            1: {"slug": "math"}
-        },
-    })
+    info = PlayerInfo({"categories": {1: {"slug": "math"}}})
 
     assert info.categories == {1: stats}
 
     d = info.serialize()
-    assert d == {
-        "categories": {1: {"slug": "math"}}
-    }
+    assert d == {"categories": {1: {"slug": "math"}}}

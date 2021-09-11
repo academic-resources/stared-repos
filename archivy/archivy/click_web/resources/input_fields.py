@@ -59,9 +59,7 @@ class FieldId:
 
     @classmethod
     def from_string(cls, field_info_as_string) -> "FieldId":
-        args = field_info_as_string.split(cls.SEPARATOR) + [
-            field_info_as_string,
-        ]
+        args = field_info_as_string.split(cls.SEPARATOR) + [field_info_as_string]
         return cls(*args)
 
 
@@ -162,9 +160,7 @@ class ChoiceInput(BaseInput):
 
 
 class FlagInput(BaseInput):
-    def is_supported(
-        self,
-    ):
+    def is_supported(self,):
         return self.param.param_type_name == "option" and self.param.is_bool_flag
 
     @property

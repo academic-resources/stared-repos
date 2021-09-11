@@ -1,5 +1,5 @@
 def enclosing():
-    x = 'closed over'
+    x = "closed over"
 
     def local_func():
         print(x)

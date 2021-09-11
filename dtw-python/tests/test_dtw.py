@@ -1,10 +1,8 @@
-
 import unittest
 
 import numpy as np
 from numpy import nan
-from numpy.testing import (assert_approx_equal,
-                           assert_array_equal, assert_raises)
+from numpy.testing import assert_approx_equal, assert_array_equal, assert_raises
 
 from dtw import *
 
@@ -40,11 +38,9 @@ warp> par(mfrow=c(2,1));
 """
 
 
-
 class TestDTW(unittest.TestCase):
     def test_sincos(self):
-        idx = np.linspace(0,6.28,num=100)
-        query = np.sin(idx) + np.random.uniform(size=100)/10.0
+        idx = np.linspace(0, 6.28, num=100)
+        query = np.sin(idx) + np.random.uniform(size=100) / 10.0
         reference = np.cos(idx)
-        alignment = dtw(query,reference)
-        
+        alignment = dtw(query, reference)

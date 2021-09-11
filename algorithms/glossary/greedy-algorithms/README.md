@@ -1,15 +1,15 @@
 # Greedy Algorithms
 
-* Overview
-* Design Process
-  * Greedy-choice Property
-  * Optimal Substructure
-  * Greedy vs Dynamic Programming
-* Well-Known Problems
+- Overview
+- Design Process
+  - Greedy-choice Property
+  - Optimal Substructure
+  - Greedy vs Dynamic Programming
+- Well-Known Problems
 
 ## Overview
 
-A __greedy algorithm__ always makes the choice that looks best at the moment. That is, **it obtains an optimal solution to a problem by amking a sequence of locally optimal choices**. This **heuristic strategy** does not always produce an optimal solution.
+A **greedy algorithm** always makes the choice that looks best at the moment. That is, **it obtains an optimal solution to a problem by amking a sequence of locally optimal choices**. This **heuristic strategy** does not always produce an optimal solution.
 
 Greedy algorithms do not always yield optimal solutions, but for many problems they do.
 
@@ -47,7 +47,7 @@ We can assemble a global optimal solution by making locally optimal (greedy) cho
 
 ### Optimal Substructure
 
-A problem exhibits *optimal substructure* if an optimal solution to the problem contains within it optimal solutions to subproblems. 
+A problem exhibits _optimal substructure_ if an optimal solution to the problem contains within it optimal solutions to subproblems.
 
 > This property is a key ingredient of assessing the applicability of dynamic programming as well as greedy algorithms.
 
@@ -55,12 +55,12 @@ This scheme implicitly uses induction on the subproblems to prove that making th
 
 ### Greedy vs Dynamic PRogramming
 
-> Unlike *dynamic programming*, which solves the subproblems before making the first choice, a *greedy algorithm* makes its first choice before solving any subproblems.
+> Unlike _dynamic programming_, which solves the subproblems before making the first choice, a _greedy algorithm_ makes its first choice before solving any subproblems.
 
-* Dynamic algorithms usually proceed bottom up, whereas a greedy strategy usually progresses in a top-down fashion, making one greedy choice after another, reducing each given problem instance into a smaller one.
+- Dynamic algorithms usually proceed bottom up, whereas a greedy strategy usually progresses in a top-down fashion, making one greedy choice after another, reducing each given problem instance into a smaller one.
 
 ## Well-Known Problems
 
-* Activity Selection
-* Fractional Knapsack Problem
-* Huffman Codes
+- Activity Selection
+- Fractional Knapsack Problem
+- Huffman Codes

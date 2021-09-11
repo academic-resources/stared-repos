@@ -136,9 +136,7 @@ class Tree(JupyterMixin):
             for first, line in loop_first(renderable_lines):
                 if prefix:
                     yield from _Segment.apply_style(
-                        prefix,
-                        style.background_style,
-                        post_style=remove_guide_styles,
+                        prefix, style.background_style, post_style=remove_guide_styles
                     )
                 yield from line
                 yield new_line

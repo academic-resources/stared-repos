@@ -23,7 +23,3 @@ class Stack:
             item = self.stack.pop()
             self.buffer_not_full.notify_all()
             return item
-
-
-
-

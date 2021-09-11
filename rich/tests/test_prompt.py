@@ -25,10 +25,7 @@ def test_prompt_str_default():
     INPUT = ""
     console = Console(file=io.StringIO())
     name = Prompt.ask(
-        "what is your name",
-        console=console,
-        default="Will",
-        stream=io.StringIO(INPUT),
+        "what is your name", console=console, default="Will", stream=io.StringIO(INPUT)
     )
     assert name == "Will"
     expected = "what is your name (Will): "
@@ -40,11 +37,7 @@ def test_prompt_str_default():
 def test_prompt_int():
     INPUT = "foo\n100"
     console = Console(file=io.StringIO())
-    number = IntPrompt.ask(
-        "Enter a number",
-        console=console,
-        stream=io.StringIO(INPUT),
-    )
+    number = IntPrompt.ask("Enter a number", console=console, stream=io.StringIO(INPUT))
     assert number == 100
     expected = "Enter a number: Please enter a valid integer number\nEnter a number: "
     output = console.file.getvalue()
@@ -55,11 +48,7 @@ def test_prompt_int():
 def test_prompt_confirm_no():
     INPUT = "foo\nNO\nn"
     console = Console(file=io.StringIO())
-    answer = Confirm.ask(
-        "continue",
-        console=console,
-        stream=io.StringIO(INPUT),
-    )
+    answer = Confirm.ask("continue", console=console, stream=io.StringIO(INPUT))
     assert answer is False
     expected = "continue [y/n]: Please enter Y or N\ncontinue [y/n]: Please enter Y or N\ncontinue [y/n]: "
     output = console.file.getvalue()
@@ -70,11 +59,7 @@ def test_prompt_confirm_no():
 def test_prompt_confirm_yes():
     INPUT = "foo\nNO\ny"
     console = Console(file=io.StringIO())
-    answer = Confirm.ask(
-        "continue",
-        console=console,
-        stream=io.StringIO(INPUT),
-    )
+    answer = Confirm.ask("continue", console=console, stream=io.StringIO(INPUT))
     assert answer is True
     expected = "continue [y/n]: Please enter Y or N\ncontinue [y/n]: Please enter Y or N\ncontinue [y/n]: "
     output = console.file.getvalue()

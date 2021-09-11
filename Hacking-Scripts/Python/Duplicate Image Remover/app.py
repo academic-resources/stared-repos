@@ -12,9 +12,9 @@ print(len(file_list))
 
 duplicates = []
 hash_keys = dict()
-for index, filename in enumerate(os.listdir('.')):
+for index, filename in enumerate(os.listdir(".")):
     if os.path.isfile(filename):
-        with open(filename, 'rb') as f:
+        with open(filename, "rb") as f:
             filehash = hashlib.md5(f.read()).hexdigest()
         if filehash not in hash_keys:
             hash_keys[filehash] = index

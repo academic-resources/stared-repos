@@ -10,9 +10,10 @@ from PIL import Image
 import sys
 
 if len(sys.argv[1:]) != 3:
-    print ("## Requires 3 arguments ##")
-    print ("qrcode_gen.py /path/to/an/image string_or_url your_new_image.jpg")
+    print("## Requires 3 arguments ##")
+    print("qrcode_gen.py /path/to/an/image string_or_url your_new_image.jpg")
     exit(1)
+
 
 def main():
     img = Image.open(sys.argv[1])
@@ -20,5 +21,6 @@ def main():
     img.paste(qr)
     img.save(sys.argv[3])
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

@@ -77,28 +77,28 @@
 // -----------
 
 function balancedParens(str) {
-  const stack = []
+  const stack = [];
   const pairs = {
-    '(': ')',
-    '[': ']',
-    '{': '}'
-  }
+    "(": ")",
+    "[": "]",
+    "{": "}",
+  };
 
   for (let i = 0; i < str.length; i++) {
-    var char = str[i]
+    var char = str[i];
 
     if (pairs[char]) {
-      stack.push(char)
-    } else if (char === '}' || char === ']' || char === ')') {
+      stack.push(char);
+    } else if (char === "}" || char === "]" || char === ")") {
       if (pairs[stack.pop()] !== char) {
-        return false
+        return false;
       }
     }
   }
 
   // Return false if there are any unclosed brackets remaining in the stack
   // Ah!!! was returning true here!!!
-  return stack.length === 0
+  return stack.length === 0;
 }
 
-exports.balancedParens = balancedParens
+exports.balancedParens = balancedParens;

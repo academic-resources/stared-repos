@@ -1,33 +1,32 @@
+# Lecture III Notes
 
-# Lecture III Notes  
 a. [Additional Resources](#Additional-Resources)  
-b. [What is the difference between an algorithm and a function?](#What-is-the-difference-between-an-algorithm-and-a-function?)   
-c. [Abstraction](#Abstraction)    
-d. [POLYA Problem Solving Technique](#POLYA-Problem-Solving-Technique)   
-e. [What if we don't understand the problem?](#What-if-we-don't-understand-the-problem?)   
+b. [What is the difference between an algorithm and a function?](#What-is-the-difference-between-an-algorithm-and-a-function?)  
+c. [Abstraction](#Abstraction)  
+d. [POLYA Problem Solving Technique](#POLYA-Problem-Solving-Technique)  
+e. [What if we don't understand the problem?](#What-if-we-don't-understand-the-problem?)  
 f. [Factorials](#Factorials)  
 g. [The 3 main rules of Big O](#The-3-main-rules-of-Big-O)  
 h. [Recursive Solution](#Recursive-Solution)  
-i. [Fibonacci Sequence](#Fibonacci-Sequence)  
-
+i. [Fibonacci Sequence](#Fibonacci-Sequence)
 
 <br>
 
-If you feel so inclined, you can contribute to these notes by [donating coffee to the author](buymeacoff.ee/G1stPBuYU), for caffeine-fueled focus during lectures.    
+If you feel so inclined, you can contribute to these notes by [donating coffee to the author](buymeacoff.ee/G1stPBuYU), for caffeine-fueled focus during lectures.
 
 <br>
 
 # Additional Resources
 
-[TK: How to Write and Analyze Algorithms](https://learn.lambdaschool.com/cs/module/recrCuZQMVI6LvxhD)  
+[TK: How to Write and Analyze Algorithms](https://learn.lambdaschool.com/cs/module/recrCuZQMVI6LvxhD)
 
-[Coming Up With a First Pass Solution - 11 min](https://youtu.be/vtoYShxbPQw)  
+[Coming Up With a First Pass Solution - 11 min](https://youtu.be/vtoYShxbPQw)
 
-[Improving Upon a First Pass Solution - 15 min](https://youtu.be/1QCmUv4-sIc)  
+[Improving Upon a First Pass Solution - 15 min](https://youtu.be/1QCmUv4-sIc)
 
-[Visualgo](https://visualgo.net/en): visualizing data structures and algorithms through animation.  
+[Visualgo](https://visualgo.net/en): visualizing data structures and algorithms through animation.
 
-[Hacker's Delight](https://www.hackersdelight.org): a collection of programming tricks at the bit level.  
+[Hacker's Delight](https://www.hackersdelight.org): a collection of programming tricks at the bit level.
 
 <br>
 <br>
@@ -36,11 +35,11 @@ If you feel so inclined, you can contribute to these notes by [donating coffee t
 
 <br>
 
-[Lecture III Recording: CS19 Beej Jorgensen](https://www.youtube.com/watch?v=lB1n6lY8Lw0)  
+[Lecture III Recording: CS19 Beej Jorgensen](https://www.youtube.com/watch?v=lB1n6lY8Lw0)
 
 <br>
 
-# What is the difference between an algorithm and a function? 
+# What is the difference between an algorithm and a function?
 
 An algorithm is a little more general than a function. An algorithm is a set of steps to solve some problem, whereas a function is a set of specific steps to solve a specific problem.
 
@@ -67,7 +66,7 @@ Instead of trying to solve a problem we encounter specifically, this week we wan
 
 This is a four step problem solving process you can use to identify problems and come up with a solution.
 
-See this [in depth POLYA explanation](https://math.berkeley.edu/~gmelvin/polya.pdf).  
+See this [in depth POLYA explanation](https://math.berkeley.edu/~gmelvin/polya.pdf).
 
 The common steps are....
 
@@ -79,7 +78,7 @@ This means making sure you're solving what is actually being asked to be solved.
 
 Ask questions and ensure you have a solid understanding of the problem before beginning any following steps.
 
-*"Can I assume that..."*
+_"Can I assume that..."_
 
 Like, "Can I assume that the user will only input valid numerical data or do I need to assume they can input anything?"
 
@@ -107,7 +106,7 @@ The most important thing is to get it working, even if in a brute force manner.
 
 <br>
 
-#### 4. Analyze and Optimize 
+#### 4. Analyze and Optimize
 
 During this step is a good time to find edge cases or ways that you would optimize your solution, expressing the logic behind those to your interviewer.
 
@@ -115,7 +114,6 @@ Consider addressing issues of scalability or unusual cases. Refactor for cleaner
 
 <br>
 <br>
-
 
 ## What if we don't understand the problem?
 
@@ -147,7 +145,7 @@ _See file [day3_work.py](day3_work.py) for the code to this section:_
 
 A factorial is when something is the product of an integer and all the integers below it.
 
-> I.e. 4! = 4 * 3 * 2 * 1  
+> I.e. 4! = 4 _ 3 _ 2 \* 1
 
 What are some questions we might ask about writing a function that returns the factorial of the given number, using an iterative approach (not recursion)?
 
@@ -180,7 +178,7 @@ Our plan looks like:
     result = 1
     # loop until 1
         # multiply
-    
+
     return result
 ```
 
@@ -198,7 +196,7 @@ def iter_factorial(n):
         # multiply
         result *= n
         n -= 1
-    
+
     return result
 
 n = 4
@@ -219,17 +217,15 @@ Remember though, we drop associated integers when evaluating run time so this wo
 <br>
 <br>
 
-
 ## The 3 main rules of Big O
 
-
-> 1. Discard the constant  
->  
-> 2. The bigger Big O Notation dominates (less efficient wins)  
->  
-> 3. We're interested in what happens with large values of `n` 
-because some processes can be deceptively efficient with small 
-values, but that doesn't account for scalability.  
+> 1. Discard the constant
+>
+> 2. The bigger Big O Notation dominates (less efficient wins)
+>
+> 3. We're interested in what happens with large values of `n`
+>    because some processes can be deceptively efficient with small
+>    values, but that doesn't account for scalability.
 
 <br>
 <br>
@@ -301,7 +297,6 @@ def rec_factorial(n):
 
 <br>
 
-
 #### What is the runtime evaluation?
 
 There are no loops but we do have a recursive function call. When we see a recursive call, we want to visualize, "How many times will this recursive function call be made?"
@@ -319,7 +314,7 @@ While this may be time efficient, it is not memory (space) efficient due to the 
 
 We can practice solving using dynamic programming techniques with the Fibonacci sequence.
 
-Learn more [here](https://en.wikipedia.org/wiki/Fibonacci_number).  
+Learn more [here](https://en.wikipedia.org/wiki/Fibonacci_number).
 
 In math, the Fibonacci sequence is numbers in order, where each number is the sum of the two preceding one, starting from 0 and 1.
 
@@ -355,10 +350,10 @@ So let's define the function and call it recursively:
 def fib(n):
     if n == 0:
         return 0
-    
+
     if n == 1:
         return 1
-    
+
     return fib(n-1) + fib(n-2)
 
 for i in range(10):
@@ -371,7 +366,6 @@ This works and outputs the first 10 Fibonacci number.
 
 Recursive solutions work and can make sense. But if we try to run it for range(30), our terminal will drastically slow down, due to the poor run time of this algorithm.
 
-Go in depth on Fibonacci [here](http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibmaths.html).  
+Go in depth on Fibonacci [here](http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibmaths.html).
 
 This is an example of `O(2^n)` runtime because for each additional input, the operations computed grow exponentially.
-

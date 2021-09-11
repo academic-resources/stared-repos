@@ -7,14 +7,11 @@ from networkapi.wagtailpages.models import (
     BlogPage,
 )
 
-from networkapi.utility.faker.helpers import (
-    reseed,
-    get_homepage
-)
+from networkapi.utility.faker.helpers import reseed, get_homepage
 
 
 def generate(seed):
-    print('Generating Homepage Focus Areas and Spotlights')
+    print("Generating Homepage Focus Areas and Spotlights")
 
     home_page = get_homepage()
 
@@ -23,18 +20,15 @@ def generate(seed):
     # These are "guaranteed" to exist as they are created as
     # part of the wagtailpages migrations:
     HomepageFocusAreas.objects.create(
-        page=home_page,
-        area=FocusArea.objects.get(name='Empower Action')
+        page=home_page, area=FocusArea.objects.get(name="Empower Action")
     )
 
     HomepageFocusAreas.objects.create(
-        page=home_page,
-        area=FocusArea.objects.get(name='Connect Leaders')
+        page=home_page, area=FocusArea.objects.get(name="Connect Leaders")
     )
 
     HomepageFocusAreas.objects.create(
-        page=home_page,
-        area=FocusArea.objects.get(name='Investigate & Research')
+        page=home_page, area=FocusArea.objects.get(name="Investigate & Research")
     )
 
     NUM_SPOTLIGHT_POSTS = 3
@@ -42,10 +36,7 @@ def generate(seed):
     all_blogs = list(BlogPage.objects.all())
 
     home_page.spotlight_posts = [
-        HomepageSpotlightPosts.objects.create(
-            page=home_page,
-            blog=choice(all_blogs)
-        )
+        HomepageSpotlightPosts.objects.create(page=home_page, blog=choice(all_blogs))
         for i in range(NUM_SPOTLIGHT_POSTS)
     ]
 

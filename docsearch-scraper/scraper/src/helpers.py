@@ -4,16 +4,16 @@ import json
 
 
 def confirm(message="Confirm"):
-    prompt = message + ' [y/n]:\n'
+    prompt = message + " [y/n]:\n"
 
     while True:
         ans = input(prompt)
-        if ans not in ['y', 'Y', 'n', 'N']:
-            print('please enter y or n.')
+        if ans not in ["y", "Y", "n", "N"]:
+            print("please enter y or n.")
             continue
-        if ans == 'y' or ans == 'Y':
+        if ans == "y" or ans == "Y":
             return True
-        if ans == 'n' or ans == 'N':
+        if ans == "n" or ans == "N":
             return False
 
 
@@ -30,6 +30,7 @@ def is_number(s):
 
     try:
         import unicodedata
+
         unicodedata.numeric(s)
         return True
     except (TypeError, ValueError):

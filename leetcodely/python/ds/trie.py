@@ -49,12 +49,12 @@ class TrieNode:
         self.end_of_word = False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     trie = Trie()
-    trie.add('foobar')
-    trie.add('foo')
-    trie.add('bar')
-    trie.add('foob')
-    trie.add('foof')
+    trie.add("foobar")
+    trie.add("foo")
+    trie.add("bar")
+    trie.add("foob")
+    trie.add("foof")
 
-    print(list(trie.all_words_beginning_with_prefix('foo')))
+    print(list(trie.all_words_beginning_with_prefix("foo")))

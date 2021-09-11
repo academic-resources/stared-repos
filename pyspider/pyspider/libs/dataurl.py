@@ -11,7 +11,7 @@ from . import utils
 from six.moves.urllib.parse import quote, unquote
 
 
-def encode(data, mime_type='', charset='utf-8', base64=True):
+def encode(data, mime_type="", charset="utf-8", base64=True):
     """
     Encode data to DataURL
     """
@@ -24,28 +24,28 @@ def encode(data, mime_type='', charset='utf-8', base64=True):
     else:
         data = utils.text(quote(data))
 
-    result = ['data:', ]
+    result = ["data:"]
     if mime_type:
         result.append(mime_type)
     if charset:
-        result.append(';charset=')
+        result.append(";charset=")
         result.append(charset)
     if base64:
-        result.append(';base64')
-    result.append(',')
+        result.append(";base64")
+    result.append(",")
     result.append(data)
 
-    return ''.join(result)
+    return "".join(result)
 
 
 def decode(data_url):
     """
     Decode DataURL data
     """
-    metadata, data = data_url.rsplit(',', 1)
-    _, metadata = metadata.split('data:', 1)
-    parts = metadata.split(';')
-    if parts[-1] == 'base64':
+    metadata, data = data_url.rsplit(",", 1)
+    _, metadata = metadata.split("data:", 1)
+    parts = metadata.split(";")
+    if parts[-1] == "base64":
         data = b64decode(data)
     else:
         data = unquote(data)

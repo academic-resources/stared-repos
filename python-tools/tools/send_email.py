@@ -28,12 +28,14 @@ def send_email(server, port, ssl, user, password, to, subject, body):
         smtp_server.starttls()
         smtp_server.ehlo()
     smtp_server.login(user, password)
-    types = 'plain'
-    regex_html = '(?i)<\/?\w+((\s+\w+(\s*=\s*(?:".*?"|\'.*?\'|[^\'">\s]+))?)+\s*|\s*)\/?>'
+    types = "plain"
+    regex_html = (
+        "(?i)<\/?\w+((\s+\w+(\s*=\s*(?:\".*?\"|'.*?'|[^'\">\s]+))?)+\s*|\s*)\/?>"
+    )
     if re.match(regex_html, body):
-        types = 'html'
-    msg = MIMEMultipart('alternative')
-    msg['Subject'] = Header(subject, 'utf-8')
-    msg.attach(MIMEText(body, types, 'utf-8'))
+        types = "html"
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = Header(subject, "utf-8")
+    msg.attach(MIMEText(body, types, "utf-8"))
     smtp_server.sendmail(user, to, msg.as_string())
     smtp_server.close()

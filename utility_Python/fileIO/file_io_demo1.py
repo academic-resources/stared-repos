@@ -30,51 +30,51 @@ ab+ : Opens a file for both appending and reading in binary format. The file poi
 
 """
 
-# mode = 'r' 
+# mode = 'r'
 # Opens a file for reading only. The file pointer is placed at the beginning of the file. This is the default mode.
-print ("="*30)
-print ("model = r")
-with open("fileIO/test.txt", mode='r') as f:
-    print (f.read())
+print("=" * 30)
+print("model = r")
+with open("fileIO/test.txt", mode="r") as f:
+    print(f.read())
 
 # mode = 'rb'
 # Opens a file for reading only in binary format. The file pointer is placed at the beginning of the file. This is the default mode.
-print ("="*30)
-print ("model = rb")
-with open("fileIO/test.txt", mode='rb') as f:
-    print (f.read())
+print("=" * 30)
+print("model = rb")
+with open("fileIO/test.txt", mode="rb") as f:
+    print(f.read())
 
 
 # mode = 'r+'
 # Opens a file for both reading and writing. The file pointer will be at the beginning of the file.
-print ("="*30)
-print ("model = r+")
-with open("fileIO/test.txt", mode='r+') as f:
-    print (f.read())
+print("=" * 30)
+print("model = r+")
+with open("fileIO/test.txt", mode="r+") as f:
+    print(f.read())
 
 # mode = 'w'
 # Opens a file for writing only. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.
-print ("="*30)
-print ("model = w")
-with open("fileIO/test2.txt", mode='w') as f:
-    print ("write to file with w mode")
+print("=" * 30)
+print("model = w")
+with open("fileIO/test2.txt", mode="w") as f:
+    print("write to file with w mode")
     f.write("this is test2.txt with w mode")
     f.close()
 
 # mode = 'wb'
 # Opens a file for writing only in binary format. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.
-print ("="*30)
-print ("model = wb")
-with open("fileIO/test2.txt", mode='wb') as f:
-    print ("write to file with wb mode")
-    f.write(b'this is test2.txt with wb mode')
+print("=" * 30)
+print("model = wb")
+with open("fileIO/test2.txt", mode="wb") as f:
+    print("write to file with wb mode")
+    f.write(b"this is test2.txt with wb mode")
     f.close()
 
 # mode = 'w+'
 # Opens a file for both writing and reading. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.
-print ("="*30)
-print ("model = w+")
-with open("fileIO/test2.txt", mode='w+') as f:
-    print ("write to file with wb mode")
+print("=" * 30)
+print("model = w+")
+with open("fileIO/test2.txt", mode="w+") as f:
+    print("write to file with wb mode")
     f.write("this is test2.txt with w+ mode")
     f.close()

@@ -1,5 +1,5 @@
-const SAVE_USER = 'user/SAVE_USER';
-const LOGOUT_USER = 'user/LOGOUT_USER';
+const SAVE_USER = "user/SAVE_USER";
+const LOGOUT_USER = "user/LOGOUT_USER";
 
 const save_user = (user) => ({
   type: SAVE_USER,

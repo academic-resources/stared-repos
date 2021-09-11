@@ -3,7 +3,6 @@ from python.ds.graph import Graph
 
 
 class GraphTestMethods(unittest.TestCase):
-
     def test_repr(self):
         graph = Graph()
         graph.add_edge("A", "B")
@@ -14,5 +13,5 @@ class GraphTestMethods(unittest.TestCase):
         self.assertEqual(len(graph), 5)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

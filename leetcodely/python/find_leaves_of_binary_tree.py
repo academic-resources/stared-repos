@@ -25,6 +25,7 @@ class Solution:
                     root.right = None
             helper(root.left)
             helper(root.right)
+
         while True:
             if not root.right and not root.left:
                 res.append([root.val])
@@ -33,4 +34,3 @@ class Solution:
             res.append(ans)
             ans = []
         return res
-

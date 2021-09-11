@@ -1,9 +1,7 @@
-
 .hide-show {
   display: none;
 }
 .notebook-show {
-
   top: 0;
   bottom: 0;
   width: 350px;
@@ -12,12 +10,10 @@
   flex-direction: column;
 
   .notebook-header {
-
     background-color: $EvernoteOffBlack;
     height: 152px;
     display: flex;
     flex-direction: column;
-
 
     img {
       margin: 10px;
@@ -28,8 +24,6 @@
     img:hover {
       cursor: pointer;
     }
-
-
 
     h3 {
       text-align: center;
@@ -54,7 +48,7 @@
       align-items: flex-end;
       border-bottom: 1px solid $EvernoteMediumGray;
 
-      p{
+      p {
         margin: 10px 15px;
         font-family: $sans-serif;
         color: $EvernoteMediumGray;
@@ -76,14 +70,12 @@
     }
 
     .notes-index {
-
       .notebook-show-notes {
         height: calc(100vh - 209px);
       }
     }
   }
 }
-
 
 .locked {
   display: none;

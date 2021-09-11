@@ -10,7 +10,7 @@ class FastVsNormalTestCase(unittest.TestCase):
         y = np.random.rand(np.random.randint(2, 100))
 
         d1, c1, acc1, p1 = dtw(x, y, dist=lambda x, y: np.abs((x - y)))
-        d2, c2, acc2, p2 = accelerated_dtw(x, y, 'euclidean')
+        d2, c2, acc2, p2 = accelerated_dtw(x, y, "euclidean")
 
         self.assertAlmostEqual(d1, d2)
         self.assertAlmostEqual((c1 - c2).sum(), 0)
@@ -27,7 +27,7 @@ class FastVsNormalTestCase(unittest.TestCase):
         y = np.random.rand(m2, N)
 
         d1, c1, acc1, p1 = dtw(x, y, dist=lambda x, y: np.linalg.norm((x - y)))
-        d2, c2, acc2, p2 = accelerated_dtw(x, y, 'euclidean')
+        d2, c2, acc2, p2 = accelerated_dtw(x, y, "euclidean")
 
         self.assertAlmostEqual(d1, d2)
         self.assertAlmostEqual((c1 - c2).sum(), 0)
@@ -41,7 +41,7 @@ class FastVsNormalTestCase(unittest.TestCase):
 
         euclidean = lambda x, y: np.abs((x - y))
 
-        d1, _, _, _ = accelerated_dtw(x, y, 'euclidean')
+        d1, _, _, _ = accelerated_dtw(x, y, "euclidean")
         d2, _, _, _ = accelerated_dtw(x, y, dist=euclidean)
         d3, _, _, _ = dtw(x, y, dist=euclidean)
 

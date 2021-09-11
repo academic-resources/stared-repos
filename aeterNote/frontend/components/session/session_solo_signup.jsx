@@ -1,14 +1,11 @@
-import React from 'react';
-import SessionForm from '../session/session_form_container';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { removeSessionErrors } from '../../actions/session_actions';
+import React from "react";
+import SessionForm from "../session/session_form_container";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { removeSessionErrors } from "../../actions/session_actions";
 
-
-
-class SoloSignup extends React.Component  {
+class SoloSignup extends React.Component {
   constructor(props) {
-
     super(props);
   }
 
@@ -17,27 +14,26 @@ class SoloSignup extends React.Component  {
   }
 
   render() {
-    return(
-      <div className='solo-session-bg'>
-        <div className='solo-session'>
-          <img  src={window.staticImages.logoMain} />
-          <p className='greeting'>Welcome to æterNote</p>
-          <div className='solo-session-template'>
+    return (
+      <div className="solo-session-bg">
+        <div className="solo-session">
+          <img src={window.staticImages.logoMain} />
+          <p className="greeting">Welcome to æterNote</p>
+          <div className="solo-session-template">
             <SessionForm />
-
           </div>
           <p>Already have an account?</p>
-          <Link to='/login'>Login</Link>
+          <Link to="/login">Login</Link>
         </div>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  const demo = {email: 'pt@barnum.com', password: 'circus'};
+const mapDispatchToProps = (dispatch) => {
+  const demo = { email: "pt@barnum.com", password: "circus" };
   return {
-    removeErrors: () => dispatch(removeSessionErrors())
+    removeErrors: () => dispatch(removeSessionErrors()),
   };
 };
 

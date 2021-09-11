@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const pokemonIndexItem = ({ poke }) => {
   return (
@@ -9,7 +9,7 @@ const pokemonIndexItem = ({ poke }) => {
         {poke.name}
       </Link>
     </li>
-  )
-}
+  );
+};
 
-export default pokemonIndexItem
+export default pokemonIndexItem;

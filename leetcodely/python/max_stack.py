@@ -2,7 +2,6 @@ import heapq
 
 
 class MaxStack:
-
     def __init__(self):
         self.stack = []
 
@@ -23,7 +22,7 @@ class MaxStack:
         i = len(self.stack) - 1
         while self.stack[i] != max_item:
             i -= 1
-        del(self.stack[i])
+        del self.stack[i]
         return max_item
 
 

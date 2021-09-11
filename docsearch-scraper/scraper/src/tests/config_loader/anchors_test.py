@@ -16,9 +16,7 @@ class TestAnchors:
     def test_use_anchor_set_to_true(self):
         """ Should set the `use_anchors` parameter to False """
         # When
-        c = config({
-            'use_anchors': True
-        })
+        c = config({"use_anchors": True})
 
         # When
         actual = ConfigLoader(c)
@@ -29,9 +27,7 @@ class TestAnchors:
     def test_use_anchor_set_to_false(self):
         """ Should set the `use_anchors` parameter to False """
         # When
-        c = config({
-            'use_anchors': False
-        })
+        c = config({"use_anchors": False})
 
         # When
         actual = ConfigLoader(c)

@@ -10,8 +10,10 @@ class Person:
         self.annual_income = None
 
     def __str__(self):
-        return f'Address: {self.street_address}, {self.postcode}, {self.city}' + \
-            f'Employed at {self.company_name} as a {self.postcode} earning {self.annual_income}'
+        return (
+            f"Address: {self.street_address}, {self.postcode}, {self.city}"
+            + f"Employed at {self.company_name} as a {self.postcode} earning {self.annual_income}"
+        )
 
 
 class PersonBuilder:
@@ -28,6 +30,7 @@ class PersonBuilder:
 
     def build(self):
         return self.person
+
 
 class PersonJobBuilder(PersonBuilder):
     def __init__(self, person):
@@ -64,15 +67,14 @@ class PersonAddressBuilder(PersonBuilder):
 
 
 pb = PersonBuilder()
-person = pb\
-    .lives\
-        .at('123 London Road')\
-        .in_city('London')\
-        .with_postcode('SW12BC')\
-    .works\
-        .at('Google')\
-        .as_a('Engineer')\
-        .earning(123000)\
+person = (
+    pb.lives.at("123 London Road")
+    .in_city("London")
+    .with_postcode("SW12BC")
+    .works.at("Google")
+    .as_a("Engineer")
+    .earning(123000)
     .build()
+)
 
 print(person)

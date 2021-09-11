@@ -3,6 +3,7 @@
 import unittest
 from portfolio1 import Portfolio
 
+
 class PortfolioTest(unittest.TestCase):
     def test_empty(self):
         p = Portfolio()

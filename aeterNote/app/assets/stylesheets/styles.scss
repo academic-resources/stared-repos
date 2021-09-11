@@ -1,18 +1,18 @@
-$EvernoteGreen: #57BF60;
-$EvernoteHoverGreen: #48A041;
-$EvernoteDarkGray: #7F7F82;
-$EvernoteMediumGray: #D9D9D9;
-$EvernoteMediumLightGray: #ECECEC;
-$EvernoteSuperLightGray: #F8F8F8;
-$EvernoteErrorRed: #BA2A26;
-$EvernoteErrorPink: #F8D0D1;
-$EvernoteInputBlue: #EEF2F3;
-$EvernoteElephantGray: #807F83;
-$EvernoteMediumDarkGray: #A6A6A6;
-$EvernoteOffBlack: #383D41;
+$EvernoteGreen: #57bf60;
+$EvernoteHoverGreen: #48a041;
+$EvernoteDarkGray: #7f7f82;
+$EvernoteMediumGray: #d9d9d9;
+$EvernoteMediumLightGray: #ececec;
+$EvernoteSuperLightGray: #f8f8f8;
+$EvernoteErrorRed: #ba2a26;
+$EvernoteErrorPink: #f8d0d1;
+$EvernoteInputBlue: #eef2f3;
+$EvernoteElephantGray: #807f83;
+$EvernoteMediumDarkGray: #a6a6a6;
+$EvernoteOffBlack: #383d41;
 
-$serif: 'Roboto Slab', serif;
-$sans-serif: 'Raleway', sans-serif;
+$serif: "Roboto Slab", serif;
+$sans-serif: "Raleway", sans-serif;
 
 .no-scroll {
   overflow: hidden;
@@ -28,24 +28,21 @@ $sans-serif: 'Raleway', sans-serif;
 
 @keyframes fadein {
   0% {
-
     opacity: 0;
   }
-  100%{
-
+  100% {
     opacity: 100%;
   }
 }
 
 @keyframes fadeout {
   0% {
-    opacity: 100%
+    opacity: 100%;
   }
   100% {
     opacity: 0;
   }
 }
-
 
 @keyframes slidein {
   0% {
@@ -70,11 +67,10 @@ $sans-serif: 'Raleway', sans-serif;
     opacity: 0;
   }
   25% {
-    opacity: 1.0
+    opacity: 1;
   }
 
   100% {
     opacity: 0;
   }
-
 }

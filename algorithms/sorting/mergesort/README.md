@@ -12,9 +12,9 @@ The recursion "bottoms out" when the sequence to be sorted has length 1. The key
 
 ## Characteristics
 
-* In Place
-* Worst Time O(n log n)
-* Worst Space O(n)
+- In Place
+- Worst Time O(n log n)
+- Worst Space O(n)
 
 ## Pseudocode
 

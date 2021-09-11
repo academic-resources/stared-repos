@@ -38,16 +38,7 @@ def _click_to_tree(ctx: click.Context, node: click.BaseCommand, ancestors=[]):
             children, key=lambda c: isinstance(c, click.core.MultiCommand)
         )
         for child in children:
-            res_childs.append(
-                _click_to_tree(
-                    ctx,
-                    child,
-                    ancestors[:]
-                    + [
-                        node,
-                    ],
-                )
-            )
+            res_childs.append(_click_to_tree(ctx, child, ancestors[:] + [node]))
 
     res["name"] = node.name
 

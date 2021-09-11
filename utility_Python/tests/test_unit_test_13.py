@@ -21,20 +21,26 @@ import data_manipulator
 #     else:
 #         raise ValueError
 
+
 class ManipulationTest(unittest.TestCase):
     mock_data_good = ["Rosco", "Dude", 99]
     mock_data_bad = []
 
     def test_do_manipulation(self):
-        with patch.object(data_manipulator, "get_data", return_value=ManipulationTest.mock_data_good) as mocked_get, \
-        patch.object(data_manipulator, "save_data", return_value=True) as mocked_save:
+        with patch.object(
+            data_manipulator, "get_data", return_value=ManipulationTest.mock_data_good
+        ) as mocked_get, patch.object(
+            data_manipulator, "save_data", return_value=True
+        ) as mocked_save:
             result = data_manipulator.do_manipulation()
             self.assertTrue(result)
 
-        with patch.object(data_manipulator, "get_data", return_value=ManipulationTest.mock_data_bad) as mocked_get, \
-        patch.object(data_manipulator, "save_data") as mocked_save:
+        with patch.object(
+            data_manipulator, "get_data", return_value=ManipulationTest.mock_data_bad
+        ) as mocked_get, patch.object(data_manipulator, "save_data") as mocked_save:
             with self.assertRaises(ValueError):
                 result = data_manipulator.do_manipulation()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

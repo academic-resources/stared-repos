@@ -16,5 +16,5 @@ def seed_categories():
 
 
 def undo_categories():
-    db.session.execute('TRUNCATE categories CASCADE;')
+    db.session.execute("TRUNCATE categories CASCADE;")
     db.session.commit()

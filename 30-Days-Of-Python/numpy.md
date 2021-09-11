@@ -31,7 +31,7 @@
     - [How to reverse the rows and the whole array?](#how-to-reverse-the-rows-and-the-whole-array)
     - [Reverse the row and column positions](#reverse-the-row-and-column-positions)
   - [How to represent missing values ?](#how-to-represent-missing-values-)
-      - [Generating Random Numbers](#generating-random-numbers)
+    - [Generating Random Numbers](#generating-random-numbers)
     - [Generationg random numbers](#generationg-random-numbers)
   - [Numpy and Statistics](#numpy-and-statistics)
     - [Matrix in numpy](#matrix-in-numpy)

@@ -19,13 +19,15 @@ if filecount >= 1000:
 
 if fileloc == "~":
     myuser = subprocess.check_output("whoami", shell=True, stderr=subprocess.STDOUT)
-    myuser = myuser.decode('ascii')
-    myuser = myuser.strip('\n')
+    myuser = myuser.decode("ascii")
+    myuser = myuser.strip("\n")
     fileloc = "/home/" + myuser
+
 
 def picker(n):
     wordguy = os.listdir(fileloc)
-    for i in range(0,n):
-        print(i,random.choice(wordguy))
+    for i in range(0, n):
+        print(i, random.choice(wordguy))
+
 
 picker(filecount)

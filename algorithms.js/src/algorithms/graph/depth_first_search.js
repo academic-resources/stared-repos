@@ -1,5 +1,4 @@
-'use strict';
-
+"use strict";
 
 /**
  * @typedef {Object} Callbacks
@@ -14,7 +13,6 @@
  * @param {function(vertex: *)} leaveVertex - Called when DFS leaves the vertex.
  */
 
-
 /**
  * Fill in missing callbacks.
  * @param {Callbacks} callbacks
@@ -25,23 +23,25 @@
 var normalizeCallbacks = function (callbacks, seenVertices) {
   callbacks = callbacks || {};
 
-  callbacks.allowTraversal = callbacks.allowTraversal || (function () {
-    var seen = {};
-    seenVertices.forEach(function (vertex) {
-      seen[vertex] = true;
-    });
+  callbacks.allowTraversal =
+    callbacks.allowTraversal ||
+    (function () {
+      var seen = {};
+      seenVertices.forEach(function (vertex) {
+        seen[vertex] = true;
+      });
 
-    return function (vertex, neighbor) {
-      // It should still be possible to redefine other callbacks,
-      // so we better do all at once here.
+      return function (vertex, neighbor) {
+        // It should still be possible to redefine other callbacks,
+        // so we better do all at once here.
 
-      if (!seen[neighbor]) {
-        seen[neighbor] = true;
-        return true;
-      }
-      return false;
-    };
-  }());
+        if (!seen[neighbor]) {
+          seen[neighbor] = true;
+          return true;
+        }
+        return false;
+      };
+    })();
 
   var noop = function () {};
   callbacks.beforeTraversal = callbacks.beforeTraversal || noop;
@@ -51,7 +51,6 @@ var normalizeCallbacks = function (callbacks, seenVertices) {
 
   return callbacks;
 };
-
 
 /**
  * Run Depth-First Search from a start vertex.
@@ -64,7 +63,6 @@ var normalizeCallbacks = function (callbacks, seenVertices) {
 var depthFirstSearch = function (graph, startVertex, callbacks) {
   dfsLoop(graph, startVertex, normalizeCallbacks(callbacks, [startVertex]));
 };
-
 
 var dfsLoop = function dfsLoop(graph, vertex, callbacks) {
   callbacks.enterVertex(vertex);
@@ -79,6 +77,5 @@ var dfsLoop = function dfsLoop(graph, vertex, callbacks) {
 
   callbacks.leaveVertex(vertex);
 };
-
 
 module.exports = depthFirstSearch;

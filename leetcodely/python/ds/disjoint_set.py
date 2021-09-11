@@ -23,15 +23,12 @@ class DisjointSet:
         return count
 
 
-data = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-sets = [('a', 'c'), ('b', 'e', 'd'), ('f', 'g')]
+data = ["a", "b", "c", "d", "e", "f", "g"]
+sets = [("a", "c"), ("b", "e", "d"), ("f", "g")]
 d = DisjointSet(data)
-d.union('a', 'c')
-d.union('b', 'e')
-d.union('b', 'd')
-d.union('e', 'd')
-d.union('f', 'g')
+d.union("a", "c")
+d.union("b", "e")
+d.union("b", "d")
+d.union("e", "d")
+d.union("f", "g")
 print(d.count())
-
-
-

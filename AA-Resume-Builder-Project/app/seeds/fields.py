@@ -21,16 +21,27 @@ def seed_fields():
     linkedin = Field(name="linkedin", placeholder="LinkedIn Address")
     db.session.add(linkedin)
 
-    intro_header = Field(name="intro_header", placeholder="Desired Position (Ex. Fullstack Developer)")
+    intro_header = Field(
+        name="intro_header", placeholder="Desired Position (Ex. Fullstack Developer)"
+    )
     db.session.add(intro_header)
 
-    intro_mission = Field(name="intro_mission", placeholder="Mission Statement (Ex. Spearhead multidisciplinary & novel approaches to increase workplace efficiency)")
+    intro_mission = Field(
+        name="intro_mission",
+        placeholder="Mission Statement (Ex. Spearhead multidisciplinary & novel approaches to increase workplace efficiency)",
+    )
     db.session.add(intro_mission)
 
-    intro_long = Field(name="intro_long", placeholder="Detailed Mission (Ex. Pragmatic self-starter that designs tools and models using current technology to solve complex problems with combination of engineering knowledge and computer science programming methods.  Leverage experience in engineering lab research, computer science, athletic leadership positions, and high-pressure industrial environments to create and progress positive and attainable work goals and communicate essential information to teams of different backgrounds and exposure levels.")
+    intro_long = Field(
+        name="intro_long",
+        placeholder="Detailed Mission (Ex. Pragmatic self-starter that designs tools and models using current technology to solve complex problems with combination of engineering knowledge and computer science programming methods.  Leverage experience in engineering lab research, computer science, athletic leadership positions, and high-pressure industrial environments to create and progress positive and attainable work goals and communicate essential information to teams of different backgrounds and exposure levels.",
+    )
     db.session.add(intro_long)
 
-    intro_skill = Field(name="intro_skill", placeholder="Important Skill (Ex. Frontend React Development)")
+    intro_skill = Field(
+        name="intro_skill",
+        placeholder="Important Skill (Ex. Frontend React Development)",
+    )
     db.session.add(intro_skill)
 
     experience_company = Field(name="experience_company", placeholder="Company Name")
@@ -42,22 +53,32 @@ def seed_fields():
     experience_date = Field(name="experience_date", placeholder="Dates")
     db.session.add(experience_date)
 
-    experience_description = Field(name="experience_description", placeholder="Role Description")
+    experience_description = Field(
+        name="experience_description", placeholder="Role Description"
+    )
     db.session.add(experience_description)
 
     experience_title = Field(name="experience_title", placeholder="Role Title")
     db.session.add(experience_title)
 
-    experience_responsibility = Field(name="experience_responsibility", placeholder="Primary Responsibility")
+    experience_responsibility = Field(
+        name="experience_responsibility", placeholder="Primary Responsibility"
+    )
     db.session.add(experience_responsibility)
 
-    education_facility = Field(name="education_facility", placeholder="Name of Facility")
+    education_facility = Field(
+        name="education_facility", placeholder="Name of Facility"
+    )
     db.session.add(education_facility)
 
-    education_degree = Field(name="education_degree", placeholder="Degree, Cert., Qualification")
+    education_degree = Field(
+        name="education_degree", placeholder="Degree, Cert., Qualification"
+    )
     db.session.add(education_degree)
 
-    education_graduation_date = Field(name="education_graduation_date", placeholder="Date Attended")
+    education_graduation_date = Field(
+        name="education_graduation_date", placeholder="Date Attended"
+    )
     db.session.add(education_graduation_date)
 
     eduction_gpa = Field(name="education_gpa", placeholder="GPA")
@@ -65,8 +86,6 @@ def seed_fields():
 
     education_minor = Field(name="education_minor", placeholder="Minor")
     db.session.add(education_minor)
-
-
 
     # contact = Field(name="contact", resume_html="""<div class="flex-vertical-align_start"><div class="flex-horizontal-space_between"><p>City</p><p>Phone Number</p></div><div class="flex-horizontal-space_between"><p>LinkedIn</p><p>Email</p></div></div>""", form_html="""<div><input type="text" name="city" id="city" placeholder="City" /><input type="text" name="phone_number" id="phone_number" placeholder="Phone Number" /><input type="text" name="linkedin_link" id="linkedin_link" placeholder="LinkedIn" /><input type="email" name="email" id="email" placeholder="Email" /></div>""")
 
@@ -84,10 +103,11 @@ def seed_fields():
 
     db.session.commit()
 
+
 # Uses a raw SQL query to TRUNCATE the users table.
 # SQLAlchemy doesn't have a built in function to do this
 # TRUNCATE Removes all the data from the table, and resets
 # the auto incrementing primary key
 def undo_fields():
-    db.session.execute('TRUNCATE fields CASCADE;')
+    db.session.execute("TRUNCATE fields CASCADE;")
     db.session.commit()

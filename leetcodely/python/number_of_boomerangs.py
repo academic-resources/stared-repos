@@ -25,6 +25,6 @@ class Solution(object):
         return (b[0] - a[0]) ^ 2 + (b[1] - a[1]) ^ 2
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.numberOfBoomerangs([[0,0],[1,0],[2,0]]))
+    print(solution.numberOfBoomerangs([[0, 0], [1, 0], [2, 0]]))

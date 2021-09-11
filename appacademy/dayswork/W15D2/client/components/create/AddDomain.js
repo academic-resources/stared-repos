@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AddDomain = (props) => {
-  return <div>Adding Domain...</div>
-}
+  return <div>Adding Domain...</div>;
+};
 
-export default AddDomain
+export default AddDomain;

@@ -9,22 +9,22 @@
 }
 
 .header-list {
-    position: relative;
+  position: relative;
 }
 
 .notification-dropdown {
-    position: absolute;
-    top: 40px;
-    display: none;
+  position: absolute;
+  top: 40px;
+  display: none;
 }
 
 .header-list:hover .notification-dropdown {
-    display: block;
+  display: block;
 }
 
 .notification-dropdown li {
-    color: black;
-    background-color: white;
-    border: 1px solid grey;
-    padding: 10px;
+  color: black;
+  background-color: white;
+  border: 1px solid grey;
+  padding: 10px;
 }

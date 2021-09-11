@@ -37,5 +37,3 @@ class Solution(object):
             if i != x and (knows(x, i) or not knows(i, x)):
                 return -1
         return x
-
-

@@ -1,29 +1,26 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { createPokemon } from '../../actions/pokemon_actions'
-import PokemonForm from './pokemon_form'
+import React from "react";
+import { connect } from "react-redux";
+import { createPokemon } from "../../actions/pokemon_actions";
+import PokemonForm from "./pokemon_form";
 
-const mstp = state => {
+const mstp = (state) => {
   return {
     pokemon: {
-      name: '',
-      attack: '',
-      defense: '',
-      poke_type: 'fire',
+      name: "",
+      attack: "",
+      defense: "",
+      poke_type: "fire",
       moves: [],
-      image_url: ''
+      image_url: "",
     },
-    errors: state.errors
-  }
-}
+    errors: state.errors,
+  };
+};
 
-const mdtp = dispatch => {
+const mdtp = (dispatch) => {
   return {
-    action: poke => dispatch(createPokemon(poke))
-  }
-}
+    action: (poke) => dispatch(createPokemon(poke)),
+  };
+};
 
-export default connect(
-  mstp,
-  mdtp
-)(PokemonForm)
+export default connect(mstp, mdtp)(PokemonForm);

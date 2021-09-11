@@ -7,10 +7,12 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from mpl_finance import candlestick_ohlc
 
-'''
+"""
 Function for visualizing stock data
 Using Candlestick Charts
-'''
+"""
+
+
 def visualize():
 
     # Get Dates From DateEntry and Convert It To Datetime
@@ -22,30 +24,31 @@ def visualize():
 
     # Load Ticker From Entry And Download Data
     ticker = text_ticker.get()
-    data = web.DataReader(ticker, 'yahoo', start, end)
+    data = web.DataReader(ticker, "yahoo", start, end)
 
     # Restructure Data Into OHLC Format
-    data = data[['Open', 'High', 'Low', 'Close']]
+    data = data[["Open", "High", "Low", "Close"]]
 
     # Reset Index And Convert Dates Into Numerical Format
     data.reset_index(inplace=True)
-    data['Date'] = data['Date'].map(mdates.date2num)
+    data["Date"] = data["Date"].map(mdates.date2num)
 
     # Adjust Style Of The Plot
     ax = plt.subplot()
     ax.grid(True)
     ax.set_axisbelow(True)
-    ax.set_title('{} Share Price'.format(ticker), color='white')
-    ax.figure.canvas.set_window_title('Stock Visualizer ')
-    ax.set_facecolor('black')
-    ax.figure.set_facecolor('#121212')
-    ax.tick_params(axis='x', colors='white')
-    ax.tick_params(axis='y', colors='white')
+    ax.set_title("{} Share Price".format(ticker), color="white")
+    ax.figure.canvas.set_window_title("Stock Visualizer ")
+    ax.set_facecolor("black")
+    ax.figure.set_facecolor("#121212")
+    ax.tick_params(axis="x", colors="white")
+    ax.tick_params(axis="y", colors="white")
     ax.xaxis_date()
 
     # Plot The Candlestick Chart
-    candlestick_ohlc(ax, data.values, width=0.5, colorup='#00ff00')
+    candlestick_ohlc(ax, data.values, width=0.5, colorup="#00ff00")
     plt.show()
+
 
 # Define Main Window
 root = Tk()

@@ -61,23 +61,23 @@
 // Let's code!
 // -----------
 function reverseLinkedList(linkedList) {
-  let currentNode = linkedList.head
-  let originalHead = currentNode
-  let nodePreviouslyAfter
-  let nodePreviouslyBefore = null
+  let currentNode = linkedList.head;
+  let originalHead = currentNode;
+  let nodePreviouslyAfter;
+  let nodePreviouslyBefore = null;
 
   while (currentNode.next) {
-    nodePreviouslyAfter = currentNode.next
-    currentNode.next = nodePreviouslyBefore
-    nodePreviouslyBefore = currentNode
-    currentNode = nodePreviouslyAfter
+    nodePreviouslyAfter = currentNode.next;
+    currentNode.next = nodePreviouslyBefore;
+    nodePreviouslyBefore = currentNode;
+    currentNode = nodePreviouslyAfter;
   }
 
-  linkedList.head = currentNode
-  linkedList.head.next = nodePreviouslyBefore
-  linkedList.tail = originalHead
+  linkedList.head = currentNode;
+  linkedList.head.next = nodePreviouslyBefore;
+  linkedList.tail = originalHead;
 
-  return linkedList
+  return linkedList;
 }
 
 // ----------------------------------------
@@ -85,33 +85,33 @@ function reverseLinkedList(linkedList) {
 // ----------------------------------------
 class Node {
   constructor(val) {
-    this.value = val
-    this.next = null
+    this.value = val;
+    this.next = null;
   }
 }
 
 class LinkedList {
   constructor() {
-    this.head = null
-    this.tail = null
-    this.length = 0
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
   }
 
   addToTail(val) {
-    const newNode = new Node(val)
+    const newNode = new Node(val);
 
     if (!this.head) {
-      this.head = newNode
+      this.head = newNode;
     } else {
-      this.tail.next = newNode
+      this.tail.next = newNode;
     }
 
-    this.tail = newNode
-    this.length++
-    return this
+    this.tail = newNode;
+    this.length++;
+    return this;
   }
 }
 
-exports.Node = Node
-exports.LinkedList = LinkedList
-exports.reverseLinkedList = reverseLinkedList
+exports.Node = Node;
+exports.LinkedList = LinkedList;
+exports.reverseLinkedList = reverseLinkedList;

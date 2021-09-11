@@ -19,7 +19,7 @@ def sqlalchemy_to_dict(obj):
         data = obj.__getattribute__(field)
         try:
             if isinstance(data, datetime):
-                data = data.strftime('%Y-%m-%d %H:%M:%S')
+                data = data.strftime("%Y-%m-%d %H:%M:%S")
             json.dumps(data)
             fields[field] = data
         except TypeError:

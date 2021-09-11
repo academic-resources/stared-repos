@@ -10,7 +10,7 @@ lettersAndDigits = string.ascii_letters + string.digits
 
 def transform(code, input):
     tokens = asttokens.ASTTokens(code)
-    tree = ast.parse(code,  mode="exec")
+    tree = ast.parse(code, mode="exec")
     tokens.mark_tokens(tree)
     transformer = Transformer(tree, tokens)
     input[0] = transformer.wrapper_name
@@ -18,16 +18,13 @@ def transform(code, input):
     transformed = transformer.visit(tree)
     call_node = ast.Expr(
         value=ast.Call(
-            func=ast.Attribute(value=ast.Name(
-                id=transformer.wrapper_name, ctx=ast.Load()), attr="setGlobal", ctx=ast.Load()),
-            args=[
-                ast.Call(
-                    func=ast.Name("globals"),
-                    args=[],
-                    keywords=[]
-                )
-            ],
-            keywords=[]
+            func=ast.Attribute(
+                value=ast.Name(id=transformer.wrapper_name, ctx=ast.Load()),
+                attr="setGlobal",
+                ctx=ast.Load(),
+            ),
+            args=[ast.Call(func=ast.Name("globals"), args=[], keywords=[])],
+            keywords=[],
         )
     )
     transformed.body.insert(0, call_node)
@@ -42,9 +39,7 @@ def obj_to_node(obj):
     if isinstance(obj, (int, float, complex)):
         return ast.Num(obj)
     if isinstance(obj, (tuple, list)):
-        return ast.Tuple(
-            elts=[obj_to_node(el) for el in obj], ctx=ast.Load()
-        )
+        return ast.Tuple(elts=[obj_to_node(el) for el in obj], ctx=ast.Load())
     if obj == None:
         return ast.NameConstant(None)
     if isinstance(obj, dict):
@@ -53,28 +48,25 @@ def obj_to_node(obj):
         for key, value in obj.items():
             dict_keys.append(ast.Str(key))
             dict_values.append(obj_to_node(value))
-        return ast.Dict(
-            keys=dict_keys,
-            values=dict_values
-        )
+        return ast.Dict(keys=dict_keys, values=dict_values)
 
 
 def is_wrapper(node):
-    return hasattr(node, '_wrapper')
+    return hasattr(node, "_wrapper")
 
 
 def flat_map_assignments(targets, depth=0):
     assignments = []
-    for target in (reversed(targets) if depth == 0 else targets):
+    for target in reversed(targets) if depth == 0 else targets:
         if isinstance(target, ast.Name):
             assignments.append(target)
         elif isinstance(target, (ast.Tuple, ast.List)):
-            for name in flat_map_assignments(target.elts, depth=depth+1):
+            for name in flat_map_assignments(target.elts, depth=depth + 1):
                 assignments.append(name)
         elif isinstance(target, ast.Starred):
-            for name in flat_map_assignments([target.value], depth=depth+1):
+            for name in flat_map_assignments([target.value], depth=depth + 1):
                 assignments.append(name)
-    return (assignments)
+    return assignments
 
 
 def get_body_idx(parent, node):
@@ -97,64 +89,67 @@ class Transformer(ast.NodeTransformer):
         self.wrapper_name = self.create_id(5, 1)
         self.imports = []
         for t in expression_types:
-            key = 'visit_' + t
+            key = "visit_" + t
             setattr(self, key, self.visit_expr)
 
-        for t in ['Tuple', 'List']:
-            key = 'visit_' + t
+        for t in ["Tuple", "List"]:
+            key = "visit_" + t
             setattr(self, key, self.visit_list_or_tuple)
 
-        tree.body.insert(0, self.wrapper(ast.NameConstant(value=None), {
-            'type': TYPES.PROGRAM,
-            'scope': self.scopes.get_scope(tree)
-        }, expr=True))
+        tree.body.insert(
+            0,
+            self.wrapper(
+                ast.NameConstant(value=None),
+                {"type": TYPES.PROGRAM, "scope": self.scopes.get_scope(tree)},
+                expr=True,
+            ),
+        )
 
     def create_id(self, l=3, num_=1):
 
         id = ""
 
         while id in self.ids:
-            id = ''.join('_' for i in range(num_)) + \
-                ''.join(choice(lettersAndDigits) for i in range(l))
+            id = "".join("_" for i in range(num_)) + "".join(
+                choice(lettersAndDigits) for i in range(l)
+            )
 
         self.ids.add(id)
         return id
 
     def get_assignment_details(self, name, block=False):
         return {
-            'scope': self.scopes.get_scope(name),
-            'name': self.tokens.get_text_range(name),
-            'type': self.scopes.add_identifier(name),
-            'varName': name.id,
-            'block': block
+            "scope": self.scopes.get_scope(name),
+            "name": self.tokens.get_text_range(name),
+            "type": self.scopes.add_identifier(name),
+            "varName": name.id,
+            "block": block,
         }
 
     def wrapper(self, node, details, expr=False, is_generated=False):
 
         if not is_generated:
-            if not 'scope' in details:
-                details['scope'] = self.scopes.get_scope(node)
-            if not 'name' in details:
-                details['name'] = self.tokens.get_text_range(node)
+            if not "scope" in details:
+                details["scope"] = self.scopes.get_scope(node)
+            if not "name" in details:
+                details["name"] = self.tokens.get_text_range(node)
 
         details = obj_to_node(details)
 
         call_node = ast.Call(
-            func=ast.Attribute(value=ast.Name(
-                id=self.wrapper_name, ctx=ast.Load()), attr="__", ctx=ast.Load()),
-            args=[
-                node,
-                details
-            ],
-            keywords=[]
+            func=ast.Attribute(
+                value=ast.Name(id=self.wrapper_name, ctx=ast.Load()),
+                attr="__",
+                ctx=ast.Load(),
+            ),
+            args=[node, details],
+            keywords=[],
         )
 
-        setattr(call_node, '_wrapper', True)
+        setattr(call_node, "_wrapper", True)
         if expr:
-            n = ast.Expr(
-                value=call_node
-            )
-            setattr(n, '_wrapper', True)
+            n = ast.Expr(value=call_node)
+            setattr(n, "_wrapper", True)
             return n
         else:
             return call_node
@@ -163,9 +158,7 @@ class Transformer(ast.NodeTransformer):
         if isinstance(node, (ast.ListComp, ast.SetComp, ast.DictComp)):
             self.scopes.add_scope(node)
         self.generic_visit(node)
-        return self.wrapper(node, {
-            'type': TYPES.EXPRESSION
-        })
+        return self.wrapper(node, {"type": TYPES.EXPRESSION})
 
     def generic_visit(self, node):
 
@@ -175,9 +168,12 @@ class Transformer(ast.NodeTransformer):
 
     def should_wrap_list_or_tuple_or_subscript(self, node):
         parent = self.scopes.parents[node]
-        if isinstance(parent, (ast.Assign, ast.Delete, )) and node in parent.targets:
+        if isinstance(parent, (ast.Assign, ast.Delete)) and node in parent.targets:
             return False
-        elif isinstance(parent, (ast.For, ast.AugAssign, ast.comprehension)) and node == parent.target:
+        elif (
+            isinstance(parent, (ast.For, ast.AugAssign, ast.comprehension))
+            and node == parent.target
+        ):
             return False
         elif isinstance(parent, (ast.List, ast.Tuple)):
             return self.should_wrap_list_or_tuple_or_subscript(parent)
@@ -214,11 +210,7 @@ class Transformer(ast.NodeTransformer):
         if is_wrapper(node):
             return node
         self.generic_visit(node)
-        return ast.copy_location(
-            self.wrapper(node, {
-                'type': TYPES.CALL
-            }), node
-        )
+        return ast.copy_location(self.wrapper(node, {"type": TYPES.CALL}), node)
 
     def visit_Assign(self, node):
         self.generic_visit(node)
@@ -229,9 +221,7 @@ class Transformer(ast.NodeTransformer):
         for name in reversed(assignments):
             new_name = ast.Name(id=name.id, ctx=ast.Load())
             new_node = self.wrapper(
-                new_name,
-                self.get_assignment_details(name),
-                expr=True
+                new_name, self.get_assignment_details(name), expr=True
             )
             body.insert(idx + 1, new_node)
         return node
@@ -244,12 +234,8 @@ class Transformer(ast.NodeTransformer):
         for name in reversed(deletions):
             details = self.get_assignment_details(name)
             details["type"] = TYPES.DELETE_VARIABLE
-            new_node = self.wrapper(
-                ast.NameConstant(None),
-                details,
-                expr=True
-            )
-            body.insert(idx+1, new_node)
+            new_node = self.wrapper(ast.NameConstant(None), details, expr=True)
+            body.insert(idx + 1, new_node)
         return node
 
     def visit_AnnAssign(self, node):
@@ -260,9 +246,7 @@ class Transformer(ast.NodeTransformer):
             body, idx = get_body_idx(parent, node)
             new_name = ast.Name(id=node.target.id, ctx=ast.Load())
             new_node = self.wrapper(
-                new_name,
-                self.get_assignment_details(node.target),
-                expr=True
+                new_name, self.get_assignment_details(node.target), expr=True
             )
             body.insert(idx + 1, new_node)
         return node
@@ -276,12 +260,8 @@ class Transformer(ast.NodeTransformer):
             new_name = ast.Name(id=node.target.id, ctx=ast.Load())
 
             details = self.get_assignment_details(node.target)
-            details['type'] = TYPES.ASSIGNMENT
-            new_node = self.wrapper(
-                new_name,
-                details,
-                expr=True
-            )
+            details["type"] = TYPES.ASSIGNMENT
+            new_node = self.wrapper(new_name, details, expr=True)
             body.insert(idx + 1, new_node)
         return node
 
@@ -291,9 +271,7 @@ class Transformer(ast.NodeTransformer):
         for name in reversed(assignments):
             new_name = ast.Name(id=name.id, ctx=ast.Load())
             new_node = self.wrapper(
-                new_name,
-                self.get_assignment_details(name),
-                expr=True
+                new_name, self.get_assignment_details(name), expr=True
             )
             node.body.insert(0, new_node)
         return node
@@ -301,15 +279,12 @@ class Transformer(ast.NodeTransformer):
     def visit_With(self, node):
         self.generic_visit(node)
         assignments = flat_map_assignments(
-            [item.optional_vars for item in node.items],
-            depth=1
+            [item.optional_vars for item in node.items], depth=1
         )
         for name in reversed(assignments):
             new_name = ast.Name(id=name.id, ctx=ast.Load())
             new_node = self.wrapper(
-                new_name,
-                self.get_assignment_details(name),
-                expr=True
+                new_name, self.get_assignment_details(name), expr=True
             )
             node.body.insert(0, new_node)
         return node
@@ -323,30 +298,20 @@ class Transformer(ast.NodeTransformer):
             new_name = ast.Name(id=name.id, ctx=ast.Load())
             dec_details = self.get_assignment_details(name, True)
             assn_details = self.get_assignment_details(name, True)
-            declarations.append(
-                self.wrapper(
-                    ast.NameConstant(None),
-                    dec_details
-                )
-            )
-            elts.append(self.wrapper(
-                new_name,
-                assn_details,
-            ))
+            declarations.append(self.wrapper(ast.NameConstant(None), dec_details))
+            elts.append(self.wrapper(new_name, assn_details))
 
         elts.append(ast.NameConstant(True))
         declarations.append(node.iter)
         dec_list_node = ast.List(elts=declarations)
         node.iter = ast.Subscript(
-            value=dec_list_node,
-            slice=ast.Index(value=ast.Num(-1))
+            value=dec_list_node, slice=ast.Index(value=ast.Num(-1))
         )
         assign_list_node = ast.List(elts=elts)
 
-        node.ifs.insert(0, ast.Subscript(
-            value=assign_list_node,
-            slice=ast.Index(value=ast.Num(-1))
-        ))
+        node.ifs.insert(
+            0, ast.Subscript(value=assign_list_node, slice=ast.Index(value=ast.Num(-1)))
+        )
         return node
 
     def visit_GeneratorExp(self, node):
@@ -364,7 +329,7 @@ class Transformer(ast.NodeTransformer):
         if node.args.vararg:
             args.append(node.args.vararg)
 
-        setattr(node, 'funcID',  self.create_id(4, 1))
+        setattr(node, "funcID", self.create_id(4, 1))
 
         new_nodes = []
         for name in reversed(args):
@@ -372,62 +337,70 @@ class Transformer(ast.NodeTransformer):
             new_node = self.wrapper(
                 new_name,
                 {
-                    'scope': scope,
-                    'name': self.tokens.get_text_range(name),
-                    'type': self.scopes.add_identifier(name, scope[1]),
-                    'varName': name.arg,
-                    'block': False
+                    "scope": scope,
+                    "name": self.tokens.get_text_range(name),
+                    "type": self.scopes.add_identifier(name, scope[1]),
+                    "varName": name.arg,
+                    "block": False,
                 },
             )
             assn = ast.Assign()
             assn.targets = [ast.Name(id=name.arg, ctx=ast.Store)]
             assn.value = new_node
-            setattr(assn, '_wrapper', True)
+            setattr(assn, "_wrapper", True)
             new_nodes.append(assn)
         name = node.name
         parent = self.scopes.parents[node]
         if isinstance(parent, ast.ClassDef):
-            name = parent.name + '.' + name
-        setattr(node, 'funcName', name)
+            name = parent.name + "." + name
+        setattr(node, "funcName", name)
         self.generic_visit(node)
 
         for new_node in new_nodes:
             node.body.insert(0, new_node)
 
-        node.body.insert(0, self.wrapper(
-            ast.NameConstant(value=None),
-            {
-                'type': TYPES.FUNC,
-                'funcName': name,
-                'funcID': getattr(node, 'funcID'),
-                'scope': self.scopes.get_scope(node),
-
-            },
-            expr=True, is_generated=True))
-        if node.body and not isinstance(node.body[-1], ast.Return):
-            node.body.append(self.wrapper(
+        node.body.insert(
+            0,
+            self.wrapper(
                 ast.NameConstant(value=None),
                 {
-                    'type': TYPES.RETURN,
-                    'funcName': name,
-                    'funcID': getattr(node, 'funcID'),
-                    'scope': self.scopes.get_scope(node),
+                    "type": TYPES.FUNC,
+                    "funcName": name,
+                    "funcID": getattr(node, "funcID"),
+                    "scope": self.scopes.get_scope(node),
                 },
-                expr=True, is_generated=True))
+                expr=True,
+                is_generated=True,
+            ),
+        )
+        if node.body and not isinstance(node.body[-1], ast.Return):
+            node.body.append(
+                self.wrapper(
+                    ast.NameConstant(value=None),
+                    {
+                        "type": TYPES.RETURN,
+                        "funcName": name,
+                        "funcID": getattr(node, "funcID"),
+                        "scope": self.scopes.get_scope(node),
+                    },
+                    expr=True,
+                    is_generated=True,
+                )
+            )
         return node
 
     def visit_ClassDef(self, node):
         self.scopes.add_scope(node)
         self.generic_visit(node)
-        node.body.insert(0,
-                         self.wrapper(
-                             ast.NameConstant(value=None),
-                             {
-                                 'type': TYPES.BLOCK,
-                                 'scope': self.scopes.get_scope(node),
-                             },
-                             expr=True, is_generated=True)
-                         )
+        node.body.insert(
+            0,
+            self.wrapper(
+                ast.NameConstant(value=None),
+                {"type": TYPES.BLOCK, "scope": self.scopes.get_scope(node)},
+                expr=True,
+                is_generated=True,
+            ),
+        )
         return node
 
     def visit_Lambda(self, node):
@@ -442,39 +415,46 @@ class Transformer(ast.NodeTransformer):
         if node.args.vararg:
             args.append(node.args.vararg)
 
-        body = [self.wrapper(
-            ast.NameConstant(value=None),
-            {
-                'type': TYPES.FUNC,
-                'funcName': funcID,
-                'funcID': funcID,
-                'scope': scope,
-            },
-            expr=True, is_generated=True)]
+        body = [
+            self.wrapper(
+                ast.NameConstant(value=None),
+                {
+                    "type": TYPES.FUNC,
+                    "funcName": funcID,
+                    "funcID": funcID,
+                    "scope": scope,
+                },
+                expr=True,
+                is_generated=True,
+            )
+        ]
 
         for name in args:
             new_name = ast.Name(id=name.arg, ctx=ast.Load())
             new_node = self.wrapper(
                 new_name,
                 {
-                    'scope': scope,
-                    'name': self.tokens.get_text_range(name),
-                    'type': self.scopes.add_identifier(name, scope[1]),
-                    'varName': name.arg,
-                    'block': False
+                    "scope": scope,
+                    "name": self.tokens.get_text_range(name),
+                    "type": self.scopes.add_identifier(name, scope[1]),
+                    "varName": name.arg,
+                    "block": False,
                 },
             )
 
             body.append(new_node)
 
-        body.append(self.wrapper(
-            node.body, {
-                'type': TYPES.RETURN,
-                'funcName': funcID,
-                'funcID': funcID,
-                'scope': scope
-            }
-        ))
+        body.append(
+            self.wrapper(
+                node.body,
+                {
+                    "type": TYPES.RETURN,
+                    "funcName": funcID,
+                    "funcID": funcID,
+                    "scope": scope,
+                },
+            )
+        )
         body = ast.List(elts=body)
         subscript = ast.Subscript()
         subscript.value = body
@@ -489,25 +469,24 @@ class Transformer(ast.NodeTransformer):
         while not isinstance(parent, ast.FunctionDef):
             parent = self.scopes.parents[parent]
 
-        funcID = getattr(parent, 'funcID')
-        funcName = getattr(parent, 'funcName')
+        funcID = getattr(parent, "funcID")
+        funcName = getattr(parent, "funcName")
 
-        node.value = self.wrapper(node.value or ast.NameConstant(value=None), {
-            'type': TYPES.RETURN,
-            'funcName': funcName,
-            'funcID': funcID,
-            'scope': self.scopes.get_scope(parent)
-        })
+        node.value = self.wrapper(
+            node.value or ast.NameConstant(value=None),
+            {
+                "type": TYPES.RETURN,
+                "funcName": funcName,
+                "funcID": funcID,
+                "scope": self.scopes.get_scope(parent),
+            },
+        )
 
         return node
 
     def visit_Import(self, node):
         for imp in node.names:
-            info = {
-                'type': 'import',
-                'module': imp.name,
-                'alias': imp.asname
-            }
+            info = {"type": "import", "module": imp.name, "alias": imp.asname}
             self.imports.append(info)
 
         return None
@@ -516,25 +495,18 @@ class Transformer(ast.NodeTransformer):
         module_name = node.module
         names = []
         for imp in node.names:
-            names.append({
-                'name': imp.name,
-                'alias': imp.asname
-            })
-        self.imports.append({
-            'type': 'from',
-            'module': module_name,
-            'names': names
-        })
+            names.append({"name": imp.name, "alias": imp.asname})
+        self.imports.append({"type": "from", "module": module_name, "names": names})
         return None
 
     def visit_Try(self, node):
-        raise SyntaxError('Try blocks are not allowed.')
+        raise SyntaxError("Try blocks are not allowed.")
 
     def visit_TryFinally(self, node):
-        raise SyntaxError('Try blocks are not allowed.')
+        raise SyntaxError("Try blocks are not allowed.")
 
     def visit_TryExcept(self, node):
-        raise SyntaxError('Try blocks are not allowed.')
+        raise SyntaxError("Try blocks are not allowed.")
 
 
 class Scopes:

@@ -13,6 +13,7 @@ force a win, assuming both players play optimally.
 You can always assume that maxChoosableInteger will not be larger than 20 and desiredTotal will not be larger 
 than 300."""
 
+
 class Solution(object):
     def canIWin(self, maxChoosableInteger, desiredTotal):
         """

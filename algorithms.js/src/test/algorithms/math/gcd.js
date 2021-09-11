@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-var root = require('../../..'),
-    gcd = root.Math.gcd,
-    assert = require('assert');
+var root = require("../../.."),
+  gcd = root.Math.gcd,
+  assert = require("assert");
 
-describe('GCD', function () {
-  it('should calculate the correct GCD between two numbers', function () {
+describe("GCD", function () {
+  it("should calculate the correct GCD between two numbers", function () {
     assert.equal(gcd(1, 0), 1);
     assert.equal(gcd(2, 2), 2);
     assert.equal(gcd(2, 4), 2);
@@ -18,8 +18,10 @@ describe('GCD', function () {
     assert.equal(gcd(35, 49), 7);
   });
 
-  it('should calculate the correct GCD between two numbers using ' +
-    'the binary method', function () {
+  it(
+    "should calculate the correct GCD between two numbers using " +
+      "the binary method",
+    function () {
       var gcdb = gcd.binary;
       assert.equal(gcdb(1, 0), 1);
       assert.equal(gcdb(0, 1), 1);
@@ -33,7 +35,6 @@ describe('GCD', function () {
       assert.equal(gcdb(7, 49), 7);
       assert.equal(gcdb(7, 5), 1);
       assert.equal(gcdb(35, 49), 7);
-    });
+    }
+  );
 });
-
-

@@ -2,16 +2,16 @@
 
 // Function.prototype.inherits = function (superClass) {
 //     Surrogate.prototype = superClass.prototype;
-//     this.prototype = new Surrogate(); 
+//     this.prototype = new Surrogate();
 //     this.prototype.constructor = this;
 // };
 
-Function.prototype.inherits = function(superClass) {
+Function.prototype.inherits = function (superClass) {
   this.prototype = Object.create(superClass);
   this.prototype.constructor = this;
 };
 
-function Ship () {}
+function Ship() {}
 function MovingObject() {}
 function Asteroid() {}
 function Alien() {}
@@ -24,11 +24,11 @@ Ship.prototype.flies = function () {
   console.log("flying!");
 };
 
-MovingObject.prototype.moves = function() {
+MovingObject.prototype.moves = function () {
   console.log("moving!");
 };
 
-ET.prototype.callHome = function() {
+ET.prototype.callHome = function () {
   console.log("calling home!");
 };
 

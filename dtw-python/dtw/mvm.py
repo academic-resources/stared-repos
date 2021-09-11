@@ -23,6 +23,7 @@
 from dtw.stepPattern import StepPattern
 import numpy
 
+
 def mvmStepPattern(elasticity=20):
     # IMPORT_RDOCSTRING mvmStepPattern
     """Minimum Variance Matching algorithm

@@ -63,7 +63,9 @@ class TestTimeQueue(unittest.TestCase):
         interval = 5.0 / 1000
 
         for i in range(0, 20):
-            it = InQueueTask(str(i), priority=int(i // 10), exetime=time.time() + (i + 1) * interval)
+            it = InQueueTask(
+                str(i), priority=int(i // 10), exetime=time.time() + (i + 1) * interval
+            )
             tq.put(it.taskid, it.priority, it.exetime)
             fifo_queue.put(it)
             # six.print_('put, taskid=', it.taskid, 'priority=', it.priority, 'exetime=', it.exetime)
@@ -85,7 +87,9 @@ class TestTimeQueue(unittest.TestCase):
         tasks = dict()
         for i in range(0, 20):
             priority = int(i // 10)
-            it = InQueueTask(str(i), priority=priority, exetime=time.time() + (i + 1) * interval)
+            it = InQueueTask(
+                str(i), priority=priority, exetime=time.time() + (i + 1) * interval
+            )
             tq.put(it.taskid, it.priority, it.exetime)
             tasks[it.taskid] = it
 
@@ -119,5 +123,5 @@ class TestTimeQueue(unittest.TestCase):
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

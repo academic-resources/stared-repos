@@ -16,13 +16,7 @@ from pygments.token import Token
 from . import pretty
 from ._loop import loop_first, loop_last
 from .columns import Columns
-from .console import (
-    Console,
-    ConsoleOptions,
-    ConsoleRenderable,
-    RenderResult,
-    group,
-)
+from .console import Console, ConsoleOptions, ConsoleRenderable, RenderResult, group
 from .constrain import Constrain
 from .highlighter import RegexHighlighter, ReprHighlighter
 from .panel import Panel
@@ -133,12 +127,16 @@ def install(
         # if wihin ipython, use customized traceback
         ip = get_ipython()  # type: ignore
         ipy_excepthook_closure(ip)
-        return sys.excepthook  # type: ignore # more strict signature that mypy can't interpret
+        return (
+            sys.excepthook
+        )  # type: ignore # more strict signature that mypy can't interpret
     except Exception:
         # otherwise use default system hook
         old_excepthook = sys.excepthook
         sys.excepthook = excepthook
-        return old_excepthook  # type: ignore # more strict signature that mypy can't interpret
+        return (
+            old_excepthook
+        )  # type: ignore # more strict signature that mypy can't interpret
 
 
 @dataclass
@@ -459,11 +457,11 @@ class Traceback:
             if not last:
                 if stack.is_cause:
                     yield Text.from_markup(
-                        "\n[i]The above exception was the direct cause of the following exception:\n",
+                        "\n[i]The above exception was the direct cause of the following exception:\n"
                     )
                 else:
                     yield Text.from_markup(
-                        "\n[i]During handling of the above exception, another exception occurred:\n",
+                        "\n[i]During handling of the above exception, another exception occurred:\n"
                     )
 
     @group()
@@ -483,8 +481,7 @@ class Traceback:
         offset = min(syntax_error.offset - 1, len(syntax_error_text))
         syntax_error_text.stylize("bold underline", offset, offset)
         syntax_error_text += Text.from_markup(
-            "\n" + " " * offset + "[traceback.offset]▲[/]",
-            style="pygments.text",
+            "\n" + " " * offset + "[traceback.offset]▲[/]", style="pygments.text"
         )
         yield syntax_error_text
 
@@ -573,18 +570,10 @@ class Traceback:
                 )
                 yield ""
             except Exception as error:
-                yield Text.assemble(
-                    (f"\n{error}", "traceback.error"),
-                )
+                yield Text.assemble((f"\n{error}", "traceback.error"))
             else:
                 yield (
-                    Columns(
-                        [
-                            syntax,
-                            *render_locals(frame),
-                        ],
-                        padding=1,
-                    )
+                    Columns([syntax, *render_locals(frame)], padding=1)
                     if frame.locals
                     else syntax
                 )

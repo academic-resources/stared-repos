@@ -19,6 +19,6 @@ class Solution(object):
         return matrix
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.rotate([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))

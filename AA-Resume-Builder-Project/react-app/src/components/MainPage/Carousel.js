@@ -1,5 +1,5 @@
-import React from 'react';
-import './MainPage.css';
+import React from "react";
+import "./MainPage.css";
 
 const Carousel = () => {
   return (
@@ -15,7 +15,10 @@ const Carousel = () => {
           hidden=""
           checked="checked"
         />
-        <div className="carousel-item absolute opacity-0" style={{ height: '50vh' }}>
+        <div
+          className="carousel-item absolute opacity-0"
+          style={{ height: "50vh" }}
+        >
           <div className="block h-full w-full bg-accentLight text-white text-5xl text-center">
             My Resumes
           </div>
@@ -42,7 +45,10 @@ const Carousel = () => {
           aria-hidden="true"
           hidden=""
         />
-        <div className="carousel-item absolute opacity-0" style={{ height: '50vh' }}>
+        <div
+          className="carousel-item absolute opacity-0"
+          style={{ height: "50vh" }}
+        >
           <div className="block h-full w-full bg-orange-500 text-white text-5xl text-center">
             Slide 2
           </div>
@@ -69,7 +75,10 @@ const Carousel = () => {
           aria-hidden="true"
           hidden=""
         />
-        <div className="carousel-item absolute opacity-0" style={{ height: '50vh' }}>
+        <div
+          className="carousel-item absolute opacity-0"
+          style={{ height: "50vh" }}
+        >
           <div className="block h-full w-full bg-green-500 text-white text-5xl text-center">
             Slide 3
           </div>

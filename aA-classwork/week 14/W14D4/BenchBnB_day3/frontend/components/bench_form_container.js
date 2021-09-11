@@ -1,23 +1,20 @@
-import { connect } from 'react-redux'
+import { connect } from "react-redux";
 
-import { createBench } from '../actions/bench_action'
-import BenchForm from './bench_form'
+import { createBench } from "../actions/bench_action";
+import BenchForm from "./bench_form";
 
 const mstp = (state, { location }) => {
   return {
-    lat: new URLSearchParams(location.search).get('lat'),
-    lng: new URLSearchParams(location.search).get('lng')
-  }
-}
+    lat: new URLSearchParams(location.search).get("lat"),
+    lng: new URLSearchParams(location.search).get("lng"),
+  };
+};
 
-const mdtp = dispatch => ({
-  createBench: bench => dispatch(createBench(bench))
-})
+const mdtp = (dispatch) => ({
+  createBench: (bench) => dispatch(createBench(bench)),
+});
 
-export default connect(
-  mstp,
-  mdtp
-)(BenchForm)
+export default connect(mstp, mdtp)(BenchForm);
 
 // var paramsString = "q=URLUtils.searchParams&topic=api";
 // var searchParams = new URLSearchParams(paramsString);

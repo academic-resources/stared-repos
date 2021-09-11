@@ -1,5 +1,5 @@
 // const htmlGenerator = require('./warmup.js')
-import {htmlGenerator} from "./warmup.js";
+import { htmlGenerator } from "./warmup.js";
 
 class Clock {
   constructor() {
@@ -54,7 +54,6 @@ class Clock {
   _incrementHours() {
     this.hours = (this.hours + 1) % 24;
   }
-  
 }
 
 const clockElement = document.querySelector("#clock");

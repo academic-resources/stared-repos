@@ -11,7 +11,7 @@ SELECTORS = {
     "lvl3": "h4",
     "lvl4": "h5",
     "lvl5": "h6",
-    "content": "p"
+    "content": "p",
 }
 
 
@@ -22,20 +22,20 @@ def get_strategy(config=None):
     global SELECTORS
 
     modified_config = {
-        'allowed_domains': 'test',
-        'api_key': 'test',
-        'app_id': 'test',
-        'custom_settings': None,
-        'hash_strategy': 'test',
-        'index_name': 'test',
-        'selectors': SELECTORS,
-        'selectors_exclude': 'test',
-        'start_urls': ['test'],
-        'stop_urls': ['test'],
-        'strategy': 'test',
-        'js_render': False,
-        'js_wait': 0,
-        'use_anchors': False
+        "allowed_domains": "test",
+        "api_key": "test",
+        "app_id": "test",
+        "custom_settings": None,
+        "hash_strategy": "test",
+        "index_name": "test",
+        "selectors": SELECTORS,
+        "selectors_exclude": "test",
+        "start_urls": ["test"],
+        "stop_urls": ["test"],
+        "strategy": "test",
+        "js_render": False,
+        "js_wait": 0,
+        "use_anchors": False,
     }
 
     for key in config:

@@ -7,6 +7,6 @@ class SingleQuoteBlock(blocks.StructBlock):
     attribution = blocks.CharBlock(required=False)
 
     class Meta:
-        template = 'wagtailpages/blocks/single_quote_block.html'
-        icon = 'openquote'
-        help_text = 'A single quote block'
+        template = "wagtailpages/blocks/single_quote_block.html"
+        icon = "openquote"
+        help_text = "A single quote block"

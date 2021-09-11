@@ -12,4 +12,9 @@ def valid_email(email):
         bool: Return True if in valid email format and False if not.
 
     """
-    return bool(re.match('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$', email))
+    return bool(
+        re.match(
+            "^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
+            email,
+        )
+    )

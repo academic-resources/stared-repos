@@ -1,24 +1,24 @@
-import React from 'react'
-import { Link, Route } from 'react-router-dom'
-import ItemDetailContainer from '../items/item_detail_container'
+import React from "react";
+import { Link, Route } from "react-router-dom";
+import ItemDetailContainer from "../items/item_detail_container";
 
 class PokemonDetail extends React.Component {
   componentDidMount() {
-    this.props.requestSinglePokemon(this.props.id)
+    this.props.requestSinglePokemon(this.props.id);
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.id !== this.props.id)
-      this.props.requestSinglePokemon(this.props.id)
+      this.props.requestSinglePokemon(this.props.id);
   }
 
   render() {
-    const { pokemon, items } = this.props
-    const itemsLIs = items.map(i => (
+    const { pokemon, items } = this.props;
+    const itemsLIs = items.map((i) => (
       <li key={i.id}>
         <Link to={`/pokemon/${pokemon.id}/items/${i.id}`}>{i.name}</Link>
       </li>
-    ))
+    ));
     return (
       <div className="pokemon-detail">
         <img src={pokemon.image_url} />
@@ -35,8 +35,8 @@ class PokemonDetail extends React.Component {
           component={ItemDetailContainer}
         />
       </div>
-    )
+    );
   }
 }
 
-export default PokemonDetail
+export default PokemonDetail;

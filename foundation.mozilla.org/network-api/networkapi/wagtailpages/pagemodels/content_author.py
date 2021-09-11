@@ -11,16 +11,10 @@ class ContentAuthor(TranslatableMixin, models.Model):
     name = models.CharField(max_length=70, blank=False)
 
     image = models.ForeignKey(
-        'wagtailimages.Image',
-        on_delete=models.SET_NULL,
-        blank=True,
-        null=True,
+        "wagtailimages.Image", on_delete=models.SET_NULL, blank=True, null=True
     )
 
-    panels = [
-        FieldPanel("name"),
-        ImageChooserPanel("image"),
-    ]
+    panels = [FieldPanel("name"), ImageChooserPanel("image")]
 
     def __str__(self):
         return self.name

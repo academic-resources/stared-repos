@@ -45,7 +45,7 @@ class Solution:
         return total
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     employee_list = [[1, 5, [2, 3]], [2, 3, [4]], [3, 4, []], [4, 1, []]]
     employees = [Employee(e[0], e[1], e[2]) for e in employee_list]

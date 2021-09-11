@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-@import 'variables';
+@import "variables";
 
 html {
   height: 100%;
@@ -195,7 +195,7 @@ h3 {
   }
 
   .logo {
-    background-image: url('pokemon-logo.svg');
+    background-image: url("pokemon-logo.svg");
     height: 100px;
     width: 100%;
     background-repeat: no-repeat;

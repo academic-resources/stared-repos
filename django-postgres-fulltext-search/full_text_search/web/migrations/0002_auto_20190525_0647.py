@@ -7,18 +7,18 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('web', '0001_initial'),
-    ]
+    dependencies = [("web", "0001_initial")]
 
     operations = [
         migrations.AddField(
-            model_name='page',
-            name='content_search',
+            model_name="page",
+            name="content_search",
             field=django.contrib.postgres.search.SearchVectorField(null=True),
         ),
         migrations.AddIndex(
-            model_name='page',
-            index=django.contrib.postgres.indexes.GinIndex(fields=['content_search'], name='web_page_content_505071_gin'),
+            model_name="page",
+            index=django.contrib.postgres.indexes.GinIndex(
+                fields=["content_search"], name="web_page_content_505071_gin"
+            ),
         ),
     ]

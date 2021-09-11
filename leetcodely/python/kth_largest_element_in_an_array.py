@@ -6,6 +6,7 @@ For example,
 Given [3,2,1,5,6,4] and k = 2, return 5."""
 import heapq
 
+
 class Solution(object):
     def findKthLargest(self, nums, k):
         """
@@ -19,6 +20,6 @@ class Solution(object):
         return heapq.nlargest(k, queue)[-1]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.findKthLargest([3, 2, 1, 5, 6, 4], 2))

@@ -38,6 +38,11 @@ class Solution(object):
         #     f = curr[:]
         # return min(f)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.minCost([[5, 8, 6], [19, 14, 13], [7, 5, 12], [14, 15, 17], [3, 20, 10]]))
+    print(
+        solution.minCost(
+            [[5, 8, 6], [19, 14, 13], [7, 5, 12], [14, 15, 17], [3, 20, 10]]
+        )
+    )

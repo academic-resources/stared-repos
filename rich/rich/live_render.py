@@ -56,10 +56,7 @@ class LiveRender:
                 ControlType.CARRIAGE_RETURN,
                 (ControlType.ERASE_IN_LINE, 2),
                 *(
-                    (
-                        (ControlType.CURSOR_UP, 1),
-                        (ControlType.ERASE_IN_LINE, 2),
-                    )
+                    ((ControlType.CURSOR_UP, 1), (ControlType.ERASE_IN_LINE, 2))
                     * (height - 1)
                 )
             )

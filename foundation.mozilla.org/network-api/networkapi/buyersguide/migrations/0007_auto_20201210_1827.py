@@ -5,54 +5,55 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('buyersguide', '0006_buyersguideproductcategory_og_image'),
-    ]
+    dependencies = [("buyersguide", "0006_buyersguideproductcategory_og_image")]
 
     operations = [
         migrations.AddField(
-            model_name='buyersguideproductcategory',
-            name='name_de',
+            model_name="buyersguideproductcategory",
+            name="name_de",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AddField(
-            model_name='buyersguideproductcategory',
-            name='name_en',
+            model_name="buyersguideproductcategory",
+            name="name_en",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AddField(
-            model_name='buyersguideproductcategory',
-            name='name_es',
+            model_name="buyersguideproductcategory",
+            name="name_es",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AddField(
-            model_name='buyersguideproductcategory',
-            name='name_fr',
+            model_name="buyersguideproductcategory",
+            name="name_fr",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AddField(
-            model_name='buyersguideproductcategory',
-            name='name_fy_NL',
+            model_name="buyersguideproductcategory",
+            name="name_fy_NL",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AddField(
-            model_name='buyersguideproductcategory',
-            name='name_nl',
+            model_name="buyersguideproductcategory",
+            name="name_nl",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AddField(
-            model_name='buyersguideproductcategory',
-            name='name_pl',
+            model_name="buyersguideproductcategory",
+            name="name_pl",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AddField(
-            model_name='buyersguideproductcategory',
-            name='name_pt',
+            model_name="buyersguideproductcategory",
+            name="name_pt",
             field=models.CharField(max_length=100, null=True),
         ),
         migrations.AlterField(
-            model_name='buyersguideproductcategory',
-            name='slug',
-            field=models.SlugField(blank=True, help_text='A URL-friendly version of the category name. This is an auto-generated field.'),
+            model_name="buyersguideproductcategory",
+            name="slug",
+            field=models.SlugField(
+                blank=True,
+                help_text="A URL-friendly version of the category name. This is an auto-generated field.",
+            ),
         ),
     ]

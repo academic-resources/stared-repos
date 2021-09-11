@@ -192,7 +192,7 @@ def pocket_fixture(test_app, mocked_responses):
                     "resolved_url": "https://example.com",
                     "excerpt": "Lorem ipsum",
                     "is_article": "1",
-                },
+                }
             },
         },
     )

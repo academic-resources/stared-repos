@@ -42,5 +42,5 @@ class QueueTests(unittest.TestCase):
         self.assertEqual(self.s.len(), 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

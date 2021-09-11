@@ -6,6 +6,7 @@ class ListNode(object):
         self.val = x
         self.next = None
 
+
 class Solution(object):
     def deleteNode(self, node):
         """
@@ -16,4 +17,4 @@ class Solution(object):
             node.val = node.next.val
             node.next = node.next.next
         else:
-            node = None 
+            node = None

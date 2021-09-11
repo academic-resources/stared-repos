@@ -8,7 +8,7 @@ For example, `Z = <B, C, D, B>` is a subsequence of `X = <A, B, C, B, D, A, B>` 
 
 ## Common subsequence
 
-Given two sequences `X` and `Y`, we say that a sequence `Z` is a __common subsequence__ of `X` and `Y` if `Z` is a subsequence of both.
+Given two sequences `X` and `Y`, we say that a sequence `Z` is a **common subsequence** of `X` and `Y` if `Z` is a subsequence of both.
 
 ## LCM problem
 
@@ -20,7 +20,7 @@ We are given two sequences and wish to find a maximum length common subsequence.
 
 In a brute-force approach to solving LCS problem, we would enumerate all subsequences of X and check each subsequence to see whether it is also a subsequence of Y, keeping track of the longest subsequence we find. Because `X` has `2^m` subsequences, this approach requires exponential time.
 
-LCS problem has an optimal-substructure property. Given a sequence `X = <x1...xm>`, we define the __ith prefix__ of X as `Xi = <x1...xi>`.
+LCS problem has an optimal-substructure property. Given a sequence `X = <x1...xm>`, we define the **ith prefix** of X as `Xi = <x1...xi>`.
 
 #### Theorem
 
@@ -44,9 +44,9 @@ c[i,j] = max(c[i, j-1], c[i-1, j])  // if i,j > 0 and xi != yj
 
 ### Step 3: Computing the length of an LCS
 
-Since the LCS has only _Theta(m*n)_ distinch subproblems, we can use dynamic programming to compute the solutions bottom up and achieve this complexity.
+Since the LCS has only _Theta(m\*n)_ distinch subproblems, we can use dynamic programming to compute the solutions bottom up and achieve this complexity.
 
-Procedure `LCS-LENGTH` takes two sequences as inputs (`X = <x1...xm>` and `Y = <y1...yn>`). It stores `c[i,j]` values in a __row-major__ order (first row of c from left to right, then second row, and so on). This procedure also maintains table `b[1..m, 1..n]` to help us construct an optimal solution by pointing to the table entry corresponding to the optimal subproblem solution chosen when computing `c[i,j]`. Finally, `c[m,n]` contains the length of an LCS of `X` and `Y`.
+Procedure `LCS-LENGTH` takes two sequences as inputs (`X = <x1...xm>` and `Y = <y1...yn>`). It stores `c[i,j]` values in a **row-major** order (first row of c from left to right, then second row, and so on). This procedure also maintains table `b[1..m, 1..n]` to help us construct an optimal solution by pointing to the table entry corresponding to the optimal subproblem solution chosen when computing `c[i,j]`. Finally, `c[m,n]` contains the length of an LCS of `X` and `Y`.
 
 ```
 LCS-LENGTH(X, Y)                     // Theta(m*n)

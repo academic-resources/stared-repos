@@ -28,7 +28,7 @@
 // and all devices above it.
 
 @mixin from($breakpoint) {
-  @media screen and (min-width: $breakpoint){
+  @media screen and (min-width: $breakpoint) {
     @content;
   }
 }
@@ -51,7 +51,7 @@
 
 // Mixin used to match the devices between 2 breakpoints.
 
-@mixin between($start, $end){
+@mixin between($start, $end) {
   @media screen and (min-width: $start) and (max-width: $end - 1px) {
     @content;
   }

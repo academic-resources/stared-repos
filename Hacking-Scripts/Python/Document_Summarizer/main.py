@@ -1,4 +1,3 @@
-
 import nltk
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
@@ -42,33 +41,34 @@ def summarize_sentences(sentences: str, language="english") -> list:
     # Preparation sentences
     corpus_maker = EnglishCorpus()
     preprocessed_sentences = corpus_maker.preprocessing(sentences)
-    preprocessed_sentence_list = corpus_maker.make_sentence_list(
-        preprocessed_sentences)
+    preprocessed_sentence_list = corpus_maker.make_sentence_list(preprocessed_sentences)
     corpus = corpus_maker.make_corpus()
     parser = PlaintextParser.from_string(" ".join(corpus), Tokenizer(language))
 
     # Call the summarization algorithm and do the summarization
     summarizer = LexRankSummarizer()
     summarizer.stop_words = get_stop_words(language)
-    summary = summarizer(document=parser.document,
-                         sentences_count=len(corpus) * 2 // 10)
+    summary = summarizer(
+        document=parser.document, sentences_count=len(corpus) * 2 // 10
+    )
 
     return summary
+
 
 def main():
     filepath = input("please input text's filepath->")
     with open(filepath) as f:
         sentences = f.readlines()
-    sentences = ' '.join(sentences)
+    sentences = " ".join(sentences)
 
     summary = summarize_sentences(sentences)
 
-    filepath_index = filepath.find('.txt')
-    outputpath = filepath[:filepath_index] + '_summary.txt'
+    filepath_index = filepath.find(".txt")
+    outputpath = filepath[:filepath_index] + "_summary.txt"
 
-    with open(outputpath, 'w') as w:
+    with open(outputpath, "w") as w:
         for sentence in summary:
-            w.write(str(sentence) + '\n')
+            w.write(str(sentence) + "\n")
 
 
 if __name__ == "__main__":

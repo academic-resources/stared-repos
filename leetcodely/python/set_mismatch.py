@@ -14,7 +14,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        index_map = {i+1: 0 for i in range(len(nums))}
+        index_map = {i + 1: 0 for i in range(len(nums))}
         duplicate, missing = -1, -1
         for item in nums:
             index_map[item] += 1
@@ -27,6 +27,6 @@ class Solution(object):
         return [duplicate, missing]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.findErrorNums([1, 5, 3, 2, 2, 7, 6, 4, 8, 9]))

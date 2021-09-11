@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import App from './App';
-import { PokemonContext } from './PokemonContext';
-import { baseUrl } from './config';
+import React, { useState } from "react";
+import App from "./App";
+import { PokemonContext } from "./PokemonContext";
+import { baseUrl } from "./config";
 
 const AppWithContext = () => {
-  const localStorageToken = localStorage.getItem('state-pokedex-token');
+  const localStorageToken = localStorage.getItem("state-pokedex-token");
 
   const [pokemon, setPokemon] = useState([]);
   const [singlePokemon, setSinglePokemon] = useState(null);
@@ -12,7 +12,7 @@ const AppWithContext = () => {
   const [needLogin, setNeedLogin] = useState(!localStorageToken);
 
   const login = (token) => {
-    window.localStorage.setItem('state-pokedex-token', token);
+    window.localStorage.setItem("state-pokedex-token", token);
     setAuthToken(token);
     setNeedLogin(false);
   };

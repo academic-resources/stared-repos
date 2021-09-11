@@ -39,6 +39,10 @@ class Solution(object):
         return curr_min
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.shortestDistance(["practice", "makes", "perfect", "coding", "makes"], 'practice', 'coding'))
+    print(
+        solution.shortestDistance(
+            ["practice", "makes", "perfect", "coding", "makes"], "practice", "coding"
+        )
+    )

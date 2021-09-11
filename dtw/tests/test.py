@@ -8,7 +8,9 @@ class Test(unittest.TestCase):
     def test_distance(self):
         x = np.array([0, 0, 1, 1, 2, 4, 2, 1, 2, 0]).reshape(-1, 1)
         y = np.array([1, 1, 1, 2, 2, 2, 2, 3, 2, 0]).reshape(-1, 1)
-        dist, cost, acc, path = dtw(x, y, dist=lambda x, y: np.linalg.norm(x - y, ord=1))
+        dist, cost, acc, path = dtw(
+            x, y, dist=lambda x, y: np.linalg.norm(x - y, ord=1)
+        )
         assert dist == 4.0
 
     def test_symmetry(self):
@@ -21,8 +23,9 @@ class Test(unittest.TestCase):
     def test_warping(self):
         x = np.array([0, 0, 1, 1, 2, 4, 2, 1, 2, 0]).reshape(-1, 1)
         y = np.array([1, 1, 1, 2, 2, 2, 2, 3, 2, 0]).reshape(-1, 1)
-        dist, cost, acc, path = dtw(x, y, dist=lambda x, y: np.linalg.norm(x - y, ord=1),
-                                    warp=2)
+        dist, cost, acc, path = dtw(
+            x, y, dist=lambda x, y: np.linalg.norm(x - y, ord=1), warp=2
+        )
         assert dist == 1.0
 
     def test_input_size(self):

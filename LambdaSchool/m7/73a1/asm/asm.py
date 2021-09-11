@@ -19,40 +19,40 @@ import re
 
 # Opcodes
 OPCODES = {
-    "ADD":  {"type": 2, "code": "10100000"},
-    "AND":  {"type": 2, "code": "10101000"},
+    "ADD": {"type": 2, "code": "10100000"},
+    "AND": {"type": 2, "code": "10101000"},
     "CALL": {"type": 1, "code": "01010000"},
-    "CMP":  {"type": 2, "code": "10100111"},
-    "DEC":  {"type": 1, "code": "01100110"},
-    "DIV":  {"type": 2, "code": "10100011"},
-    "HLT":  {"type": 0, "code": "00000001"},
-    "INC":  {"type": 1, "code": "01100101"},
-    "INT":  {"type": 1, "code": "01010010"},
+    "CMP": {"type": 2, "code": "10100111"},
+    "DEC": {"type": 1, "code": "01100110"},
+    "DIV": {"type": 2, "code": "10100011"},
+    "HLT": {"type": 0, "code": "00000001"},
+    "INC": {"type": 1, "code": "01100101"},
+    "INT": {"type": 1, "code": "01010010"},
     "IRET": {"type": 0, "code": "00010011"},
-    "JEQ":  {"type": 1, "code": "01010101"},
-    "JGE":  {"type": 1, "code": "01011010"},
-    "JGT":  {"type": 1, "code": "01010111"},
-    "JLE":  {"type": 1, "code": "01011001"},
-    "JLT":  {"type": 1, "code": "01011000"},
-    "JMP":  {"type": 1, "code": "01010100"},
-    "JNE":  {"type": 1, "code": "01010110"},
-    "LD":   {"type": 2, "code": "10000011"},
-    "LDI":  {"type": 8, "code": "10000010"},
-    "MOD":  {"type": 2, "code": "10100100"},
-    "MUL":  {"type": 2, "code": "10100010"},
-    "NOP":  {"type": 0, "code": "00000000"},
-    "NOT":  {"type": 1, "code": "01101001"},
-    "OR":   {"type": 2, "code": "10101010"},
-    "POP":  {"type": 1, "code": "01000110"},
-    "PRA":  {"type": 1, "code": "01001000"},
-    "PRN":  {"type": 1, "code": "01000111"},
+    "JEQ": {"type": 1, "code": "01010101"},
+    "JGE": {"type": 1, "code": "01011010"},
+    "JGT": {"type": 1, "code": "01010111"},
+    "JLE": {"type": 1, "code": "01011001"},
+    "JLT": {"type": 1, "code": "01011000"},
+    "JMP": {"type": 1, "code": "01010100"},
+    "JNE": {"type": 1, "code": "01010110"},
+    "LD": {"type": 2, "code": "10000011"},
+    "LDI": {"type": 8, "code": "10000010"},
+    "MOD": {"type": 2, "code": "10100100"},
+    "MUL": {"type": 2, "code": "10100010"},
+    "NOP": {"type": 0, "code": "00000000"},
+    "NOT": {"type": 1, "code": "01101001"},
+    "OR": {"type": 2, "code": "10101010"},
+    "POP": {"type": 1, "code": "01000110"},
+    "PRA": {"type": 1, "code": "01001000"},
+    "PRN": {"type": 1, "code": "01000111"},
     "PUSH": {"type": 1, "code": "01000101"},
-    "RET":  {"type": 0, "code": "00010001"},
-    "SHL":  {"type": 2, "code": "10101100"},
-    "SHR":  {"type": 2, "code": "10101101"},
-    "ST":   {"type": 2, "code": "10000100"},
-    "SUB":  {"type": 2, "code": "10100001"},
-    "XOR":  {"type": 2, "code": "10101011"},
+    "RET": {"type": 0, "code": "00010001"},
+    "SHL": {"type": 2, "code": "10101100"},
+    "SHR": {"type": 2, "code": "10101101"},
+    "ST": {"type": 2, "code": "10000100"},
+    "SUB": {"type": 2, "code": "10100001"},
+    "XOR": {"type": 2, "code": "10101011"},
 }
 
 # Regex for matching lines
@@ -152,8 +152,7 @@ def pass1(inputfile, sym, code):
 
         if m is None:
             if fatal:
-                print(f"Line {line_num}: unknown register {op}",
-                      file=sys.stderr)
+                print(f"Line {line_num}: unknown register {op}", file=sys.stderr)
                 sys.exit(1)
             else:
                 return None
@@ -231,8 +230,8 @@ def pass1(inputfile, sym, code):
         for i in range(len(data)):
             print_char = data[i]
 
-            if print_char == ' ':
-                print_char = '[space]'
+            if print_char == " ":
+                print_char = "[space]"
 
             code.append(f"{p8(ord(data[i]))} # {print_char}")
 
@@ -257,12 +256,11 @@ def pass1(inputfile, sym, code):
             val = int(data, 0)
 
         except ValueError:
-            print(f"line {line_num}: invalid integer argument to DB",
-                  file=sys.stderr)
+            print(f"line {line_num}: invalid integer argument to DB", file=sys.stderr)
             sys.exit(2)
 
         # Force to byte size
-        val &= 0xff
+        val &= 0xFF
 
         code.append(f"{p8(val)} # {data}")
 
@@ -274,12 +272,12 @@ def pass1(inputfile, sym, code):
         def check_ops_count(desired, found):
             # Makes sure we have right operand count
             if found < desired:
-                print(f"Line {line_num}: missing operand to {opcode}",
-                      file=sys.stderr)
+                print(f"Line {line_num}: missing operand to {opcode}", file=sys.stderr)
                 sys.exit(1)
             elif found > desired:
-                print(f"Line {line_num}: unexpected operand to {opcode}",
-                      file=sys.stderr)
+                print(
+                    f"Line {line_num}: unexpected operand to {opcode}", file=sys.stderr
+                )
                 sys.exit(1)
 
         # Make sure we know this opcode at all
@@ -306,18 +304,13 @@ def pass1(inputfile, sym, code):
             check_ops_count(2, total_operands)
 
     # Type to function mapping
-    type_f = {
-        0: out0,
-        1: out1,
-        2: out2,
-        8: out8,
-    }
+    type_f = {0: out0, 1: out1, 2: out2, 8: out8}
 
     for line in inputfile:
         line_num += 1
 
         # Strip comments
-        comment_index = line.find(';')
+        comment_index = line.find(";")
         if comment_index != -1:
             line = line[:comment_index]
 
@@ -325,7 +318,7 @@ def pass1(inputfile, sym, code):
         line = line.strip()
 
         # Ignore blank lines
-        if input == '':
+        if input == "":
             continue
 
         # print(line)  # debug
@@ -341,12 +334,12 @@ def pass1(inputfile, sym, code):
             if label is not None:
                 sym[label] = addr
                 # print(f"Label {label}: {addr}")  # debug
-                code.append(f'# {label} (address {addr}):')
+                code.append(f"# {label} (address {addr}):")
 
             if opcode is not None:
-                if opcode == 'DS':
+                if opcode == "DS":
                     handle_ds(line)
-                elif opcode == 'DB':
+                elif opcode == "DB":
                     handle_db(line)
                 else:
                     # Check operand count
@@ -368,7 +361,7 @@ def pass2(outputfile, sym, code):
 
     for c in code:
         # Replace symbols
-        if c[:4] == 'sym:':
+        if c[:4] == "sym:":
             s = c[4:].strip()
 
             if s in sym:

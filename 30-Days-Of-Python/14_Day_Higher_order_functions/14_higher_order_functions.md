@@ -7,16 +7,18 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
-  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small>Second Edition: July, 2021</small>
-  </sub>
+<sub>Author:
+<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
+<small>Second Edition: July, 2021</small>
+</sub>
+
 </div>
 </div>
 
 [<< Day 13](../13_Day_List_comprehension/13_list_comprehension.md) | [Day 15>>](../15_Day_Python_type_errors/15_python_type_errors.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
+
 - [📘 Day 14](#-day-14)
   - [Higher Order Functions](#higher-order-functions)
     - [Function as a Parameter](#function-as-a-parameter)
@@ -355,7 +357,7 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 1. Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries
 1. Declare a function called categorize_countries that returns a list of countries with some common pattern (you can find the [countries list](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py) in this repository as countries.js(eg 'land', 'ia', 'island', 'stan')).
 1. Create a function returning a dictionary, where keys stand for starting letters of countries and values are the number of country names starting with that letter.
-2. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
+1. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
 1. Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
 
 ### Exercises: Level 3

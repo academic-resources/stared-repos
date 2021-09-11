@@ -7,19 +7,31 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('wagtailimages', '0023_add_choose_permissions'),
-        ('wagtailpages', '0011_auto_20210714_0048'),
+        ("wagtailimages", "0023_add_choose_permissions"),
+        ("wagtailpages", "0011_auto_20210714_0048"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='blogpage',
-            name='hero_image',
-            field=models.ForeignKey(blank=True, help_text='Image for the blog page hero section.', null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='hero_banner_image', to='wagtailimages.Image', verbose_name='Hero Image'),
+            model_name="blogpage",
+            name="hero_image",
+            field=models.ForeignKey(
+                blank=True,
+                help_text="Image for the blog page hero section.",
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="hero_banner_image",
+                to="wagtailimages.Image",
+                verbose_name="Hero Image",
+            ),
         ),
         migrations.AddField(
-            model_name='blogpage',
-            name='hero_video',
-            field=models.CharField(blank=True, help_text='URL to video for blog page hero section.', max_length=500),
+            model_name="blogpage",
+            name="hero_video",
+            field=models.CharField(
+                blank=True,
+                help_text="URL to video for blog page hero section.",
+                max_length=500,
+            ),
         ),
     ]

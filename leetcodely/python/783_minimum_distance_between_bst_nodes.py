@@ -26,7 +26,7 @@ class Solution(object):
         return arr[0]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     bst = BinarySearchTree()
     bst.insert(90)
     bst.insert(69)

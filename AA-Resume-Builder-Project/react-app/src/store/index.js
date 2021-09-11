@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 import thunk from "redux-thunk";
-import * as storage from 'redux-storage';
-import createEngine from 'redux-storage-engine-localstorage';
+import * as storage from "redux-storage";
+import createEngine from "redux-storage-engine-localstorage";
 
-import resumeReducer from './resume';
+import resumeReducer from "./resume";
 import templateReducer from "./template";
 import userReducer from "./user";
 
@@ -14,7 +14,7 @@ const rootReducer = {
 };
 
 const finalReducer = storage.reducer(combineReducers(rootReducer));
-const engine = createEngine('my-save-key');
+const engine = createEngine("my-save-key");
 const storageWare = storage.createMiddleware(engine);
 
 let enhancer;
@@ -32,7 +32,7 @@ const store = createStore(finalReducer, enhancer);
 const load = storage.createLoader(engine);
 
 load(store)
-  .then((newState) => console.log('Loaded state:', newState))
-  .catch(() => console.log('Failed to load previous state'));
+  .then((newState) => console.log("Loaded state:", newState))
+  .catch(() => console.log("Failed to load previous state"));
 
 export default store;

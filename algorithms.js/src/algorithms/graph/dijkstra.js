@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var PriorityQueue = require('../../data_structure/priority_queue');
+var PriorityQueue = require("../../data_structure/priority_queue");
 
 /**
  * Calculates the shortest paths in a graph to every node from the node s
@@ -38,7 +38,7 @@ function dijkstra(graph, s) {
   }
   return {
     distance: distance,
-    previous: previous
+    previous: previous,
   };
 }
 

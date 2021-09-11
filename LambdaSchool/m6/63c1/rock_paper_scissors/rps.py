@@ -12,43 +12,44 @@ import sys
 
 # If you opt to define an inner recursive helper function, don't forget to make an initial call to the recursive helper function to kick off the recursion.
 def rock_paper_scissors(n):
-  choices = ["rock", "paper", "scissors"]
+    choices = ["rock", "paper", "scissors"]
 
-  def rounds(n):
+    def rounds(n):
 
-    # saving all lists of the possible plays here
-    plays = list()
+        # saving all lists of the possible plays here
+        plays = list()
 
-    # if no rounds, there are no plays
-    if n == 0:
-      plays.append([])
+        # if no rounds, there are no plays
+        if n == 0:
+            plays.append([])
 
-    # if there is one round, there are three plays
-    # loop through possible choices & append each to plays
-    elif n == 1:
-      for choice in choices:
-        plays.append([choice])
+        # if there is one round, there are three plays
+        # loop through possible choices & append each to plays
+        elif n == 1:
+            for choice in choices:
+                plays.append([choice])
 
-    # if there is more than one round:
-    elif n > 1:
-      # loop through possible choices
-      for choice in choices:
-        # recursively run through n-1 rounds (decrement -1 from n)
-        # this adds each round from end to beginning 
-        for round in rounds(n - 1):
-          # insert choice at beginning of inner list
-          round.insert(0, choice)
-          # append round list to plays
-          plays.append(round)
+        # if there is more than one round:
+        elif n > 1:
+            # loop through possible choices
+            for choice in choices:
+                # recursively run through n-1 rounds (decrement -1 from n)
+                # this adds each round from end to beginning
+                for round in rounds(n - 1):
+                    # insert choice at beginning of inner list
+                    round.insert(0, choice)
+                    # append round list to plays
+                    plays.append(round)
 
-    # return list of potential plays
-    return plays
+        # return list of potential plays
+        return plays
 
-  return rounds(n)
+    return rounds(n)
+
 
 if __name__ == "__main__":
-  if len(sys.argv) > 1:
-    num_plays = int(sys.argv[1])
-    print(rock_paper_scissors(num_plays))
-  else:
-    print('Usage: rps.py [num_plays]')
+    if len(sys.argv) > 1:
+        num_plays = int(sys.argv[1])
+        print(rock_paper_scissors(num_plays))
+    else:
+        print("Usage: rps.py [num_plays]")

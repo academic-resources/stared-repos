@@ -4,10 +4,7 @@ import optparse
 
 def get_arguments():  # function to pass input in console
     parser = optparse.OptionParser()
-    parser.add_option("-t",
-                      "--target",
-                      dest="target",
-                      help="Target IP / IP range.")
+    parser.add_option("-t", "--target", dest="target", help="Target IP / IP range.")
     options, arguments = parser.parse_args()
     return options
 
@@ -18,8 +15,7 @@ def scan(ip):
     arp_request_broadcast = broadcast / arp_request
     # print(arp_request_broadcast.summary())
     # arp_request_broadcast.show()
-    answered_list = scapy.srp(arp_request_broadcast, timeout=1,
-                              verbose=False)[0]
+    answered_list = scapy.srp(arp_request_broadcast, timeout=1, verbose=False)[0]
     # print(answered_list.summary())
     # print(unanswered.summary())
 
@@ -29,7 +25,7 @@ def scan(ip):
         clients_list.append(clients_dict)
         # print(element[1].psrc +"\t\t"+element[1].hwsrc)
 
-    return (clients_list)
+    return clients_list
 
 
 def print_result(result_list):

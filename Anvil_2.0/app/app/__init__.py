@@ -19,7 +19,7 @@ from .config import Config
 app = Flask(__name__)
 
 login = LoginManager(app)
-login.login_view = 'auth.unauthorized'
+login.login_view = "auth.unauthorized"
 
 
 @login.user_loader
@@ -29,11 +29,11 @@ def load_user(id):
 
 app.cli.add_command(seed_commands)
 app.config.from_object(Config)
-app.register_blueprint(user_routes, url_prefix='/api/users')
-app.register_blueprint(auth_routes, url_prefix='/api/auth')
-app.register_blueprint(folder_routes, url_prefix='/api/folder')
-app.register_blueprint(category_routes, url_prefix='/api/category')
-app.register_blueprint(file_routes, url_prefix='/api/file')
+app.register_blueprint(user_routes, url_prefix="/api/users")
+app.register_blueprint(auth_routes, url_prefix="/api/auth")
+app.register_blueprint(folder_routes, url_prefix="/api/folder")
+app.register_blueprint(category_routes, url_prefix="/api/category")
+app.register_blueprint(file_routes, url_prefix="/api/file")
 
 db.init_app(app)
 Migrate(app, db)
@@ -43,28 +43,28 @@ CORS(app)
 
 @app.before_request
 def https_redirect():
-    if os.environ.get('FLASK_ENV') == 'production':
-        if request.headers.get('X-Forwarded-Proto') == 'http':
-            url = request.url.replace('http://', 'https://', 1)
+    if os.environ.get("FLASK_ENV") == "production":
+        if request.headers.get("X-Forwarded-Proto") == "http":
+            url = request.url.replace("http://", "https://", 1)
             code = 301
             return redirect(url, code=code)
 
 
 @app.after_request
 def inject_csrf_token(response):
-    response.set_cookie('csrf_token',
-                        generate_csrf(),
-                        secure=True if os.environ.get(
-                            'FLASK_ENV') == 'production' else False,
-                        samesite='Strict' if os.environ.get(
-                            'FLASK_ENV') == 'production' else None,
-                        httponly=True)
+    response.set_cookie(
+        "csrf_token",
+        generate_csrf(),
+        secure=True if os.environ.get("FLASK_ENV") == "production" else False,
+        samesite="Strict" if os.environ.get("FLASK_ENV") == "production" else None,
+        httponly=True,
+    )
     return response
 
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
+@app.route("/", defaults={"path": ""})
+@app.route("/<path:path>")
 def react_root(path):
-    if path in ('favicon.ico', 'manifest.json', 'demo_logged_in_landing.png'):
+    if path in ("favicon.ico", "manifest.json", "demo_logged_in_landing.png"):
         return app.send_static_file(path)
-    return app.send_static_file('index.html')
+    return app.send_static_file("index.html")

@@ -11,7 +11,9 @@ class BaseCrawler(ABC):
         self.session = session
 
     async def execute(self, **kwargs):
-        task = [self._start_request(_id, url, **kwargs) for _id, url in self.paths.items()]
+        task = [
+            self._start_request(_id, url, **kwargs) for _id, url in self.paths.items()
+        ]
         result = await asyncio.gather(*task)
         return (item for item in result if item)
 

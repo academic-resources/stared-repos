@@ -16,6 +16,6 @@ class Solution:
 
         return result
 
+
 solution = Solution()
 print(solution.minimumTime(4, [8, 4, 6, 12]))
-

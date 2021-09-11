@@ -7,7 +7,7 @@ class Heap:
         self.storage.append(x)
         self._bubble_up(len(self.storage) - 1)
 
-    # delete last node in array and shift items around in response 
+    # delete last node in array and shift items around in response
     def delete(self):
         first = self.storage[0]
 
@@ -15,7 +15,7 @@ class Heap:
         node_last = self.storage[len(self.storage) - 1]
         self.storage[0] = node_last
 
-        # delete last node 
+        # delete last node
         del self.storage[len(self.storage) - 1]
 
         # if not empty shift node 0
@@ -29,54 +29,63 @@ class Heap:
     def get_max(self):
         return self.storage[0]
 
-    # return length of storage array 
+    # return length of storage array
     def get_size(self):
         return len(self.storage)
 
     # if current index greater than parent index, swap them; recursively run
     def _bubble_up(self, current_index):
-        # get parent index 
+        # get parent index
         ip = max(0, ((current_index + 1) // 2) - 1)
         p = self.storage[ip]
         c = self.storage[current_index]
-        # check if current index greater than parent index 
+        # check if current index greater than parent index
         if p < c:
-            # if it is, swap them 
+            # if it is, swap them
             self.storage[ip], self.storage[current_index] = c, p
-            # recursively run this 
+            # recursively run this
             self._bubble_up(ip)
 
     #
     def _sift_down(self, index):
         # assign to variables nodes converted to array/indexes:
-        # (left 2x+1 | right 2x+2) minus one for index number 
+        # (left 2x+1 | right 2x+2) minus one for index number
         ln = index * 2
         rn = index * 2 + 1
 
-        # shifting default to not done 
+        # shifting default to not done
         shifting_done = False
 
-        # running this while swapping not complete 
+        # running this while swapping not complete
         while not shifting_done:
 
-            # try to swap this way first 
+            # try to swap this way first
             try:
                 # if current storage[index] less than storage[leftnode] OR current storage[index] less than storage[rightnode]
-                if self.storage[index] < self.storage[ln] or self.storage[index] < self.storage[rn]:
+                if (
+                    self.storage[index] < self.storage[ln]
+                    or self.storage[index] < self.storage[rn]
+                ):
                     # if storage[leftnode] > storage[rightnode]
                     if self.storage[ln] > self.storage[rn]:
                         # swap current node & left node
-                        self.storage[index], self.storage[ln] = self.storage[ln], self.storage[index]
+                        self.storage[index], self.storage[ln] = (
+                            self.storage[ln],
+                            self.storage[index],
+                        )
                         # set current index as leftnode
                         index = ln
-                        # get new left node 
+                        # get new left node
                         ln = ln * 2
-                        # get new right node 
+                        # get new right node
                         rn = ln * 2 + 1
                     # if storage[leftnode] < storage[rightnode]
                     else:
-                        # swap current node & right node 
-                        self.storage[index], self.storage[rn] = self.storage[rn], self.storage[index]
+                        # swap current node & right node
+                        self.storage[index], self.storage[rn] = (
+                            self.storage[rn],
+                            self.storage[index],
+                        )
                         # set current index as rightnode
                         index = rn
                         # get new left node
@@ -92,9 +101,12 @@ class Heap:
                 try:
                     # if storage[index] less than storage[leftnode]
                     if self.storage[index] < self.storage[ln]:
-                        # swap 
-                        self.storage[index], self.storage[ln] = self.storage[ln], self.storage[index]
-                        # set current index as left node 
+                        # swap
+                        self.storage[index], self.storage[ln] = (
+                            self.storage[ln],
+                            self.storage[index],
+                        )
+                        # set current index as left node
                         index = ln
                         # shifting complete
                         shifting_done = True

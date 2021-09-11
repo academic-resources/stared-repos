@@ -1,16 +1,16 @@
-'use strict';
+"use strict";
 
-var Stack = require('../..').DataStructure.Stack,
-    assert = require('assert');
+var Stack = require("../..").DataStructure.Stack,
+  assert = require("assert");
 
-describe('Stack', function () {
-  it('should start empty', function () {
+describe("Stack", function () {
+  it("should start empty", function () {
     var s = new Stack();
     assert(s.isEmpty());
     assert.equal(s.length, 0);
   });
 
-  it('should implement a LIFO logic', function () {
+  it("should implement a LIFO logic", function () {
     var s = new Stack();
     s.push(1);
     s.push(2);
@@ -20,11 +20,15 @@ describe('Stack', function () {
     assert.equal(s.pop(), 2);
     assert.equal(s.pop(), 1);
     assert(s.isEmpty());
-    assert.throws(function () { s.pop(); }, Error);
+    assert.throws(function () {
+      s.pop();
+    }, Error);
   });
 
-  it('should allow me to peek at the top element in' +
-    ' the stack without popping it', function () {
+  it(
+    "should allow me to peek at the top element in" +
+      " the stack without popping it",
+    function () {
       var s = new Stack();
       s.push(1);
       s.push(2);
@@ -33,8 +37,6 @@ describe('Stack', function () {
       assert.equal(s.peek(), 3);
       s.pop();
       assert.equal(s.peek(), 2);
-    });
-
+    }
+  );
 });
-
-

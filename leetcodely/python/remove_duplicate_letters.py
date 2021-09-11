@@ -1,5 +1,6 @@
 import collections
 
+
 class Solution(object):
     def removeDuplicateLetters(self, s):
         """
@@ -17,18 +18,9 @@ class Solution(object):
                     stack.pop()
                 stack.append(c)
                 count_map[c] -= 1
-        return ''.join(stack)
+        return "".join(stack)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.removeDuplicateLetters('cbacdcbc'))
-
-
-
-
-
-
-
-
-
+    print(solution.removeDuplicateLetters("cbacdcbc"))

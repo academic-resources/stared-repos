@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-const DomNodeCollection = require('./dom_node_collection.js');
+const DomNodeCollection = require("./dom_node_collection.js");
 
 const functions = [];
 
-window.$1 = function(arg) {
-  if (typeof arg === 'string') {
+window.$1 = function (arg) {
+  if (typeof arg === "string") {
     const nodeList = document.querySelectorAll(arg);
     const nodeListArray = [];
     nodeList.forEach((el) => {
@@ -12,13 +12,13 @@ window.$1 = function(arg) {
     });
     const collection = new DomNodeCollection(nodeListArray);
     return collection;
-  } else if (typeof arg === 'function') {
+  } else if (typeof arg === "function") {
     if (loaded) {
       arg();
     } else {
       functions.push(arg);
     }
-  } else if (typeof arg === 'object') {
+  } else if (typeof arg === "object") {
     const nodeListArray = [];
     nodeListArray.push(arg);
     const collection = new DomNodeCollection(nodeListArray);
@@ -26,7 +26,7 @@ window.$1 = function(arg) {
   }
 };
 
-$1.extend = function(...objects) {
+$1.extend = function (...objects) {
   const extendedObject = {};
   objects.forEach((obj) => {
     Object.keys(obj).forEach((key) => {
@@ -36,19 +36,19 @@ $1.extend = function(...objects) {
   return extendedObject;
 };
 
-$1.ajax = function(options) {
+$1.ajax = function (options) {
   const defaults = {
     success: new Function(),
     error: new Function(),
     url: window.location,
-    method: 'GET',
+    method: "GET",
     data: {},
-    contentType: 'json',
+    contentType: "json",
   };
   options = $1.extend(defaults, options);
   const xhr = new XMLHttpRequest();
   xhr.open(options.method, options.url);
-  xhr.onload = function() {
+  xhr.onload = function () {
     if (xhr.status === 200) {
       options.success(JSON.parse(xhr.response));
     } else {
@@ -58,11 +58,10 @@ $1.ajax = function(options) {
   xhr.send(options.data);
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // eslint-disable-next-line no-var
   var loaded = true;
-  functions.forEach( (func) => {
+  functions.forEach((func) => {
     func();
   });
 });
-

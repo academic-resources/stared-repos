@@ -16,12 +16,11 @@ TWILIO_AUTH_TOKEN = "YOUR TWILIO AUTH TOKEN"
 client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
 
 # Send SMS
-message = client.messages \
-    .create(
-        body='I am using twilio to send messages',
-        from_=VIRTUAL_TWILIO_NUMBER,
-        to=VERIFIED_NUMBER
-    )
+message = client.messages.create(
+    body="I am using twilio to send messages",
+    from_=VIRTUAL_TWILIO_NUMBER,
+    to=VERIFIED_NUMBER,
+)
 
 # Get Response
 print(message.sid)

@@ -3,7 +3,6 @@ in a string t."""
 
 
 class SubStringSearch:
-
     @staticmethod
     def naive_search(t, p):
         for i in range(len(t)):
@@ -28,7 +27,6 @@ class SubStringSearch:
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     searcher = SubStringSearch()
-    print(searcher.naive_search('abcbcglx', 'bcglx'))
-
+    print(searcher.naive_search("abcbcglx", "bcglx"))

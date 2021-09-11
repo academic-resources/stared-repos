@@ -5,12 +5,14 @@ hight order function : a function which can
 
 """
 
-# function as input 
+# function as input
 def greet(func):
-	func 
+    func
 
-# function as output 
+
+# function as output
 def greet2():
-	def func():
-		return 5 
-	return func
+    def func():
+        return 5
+
+    return func

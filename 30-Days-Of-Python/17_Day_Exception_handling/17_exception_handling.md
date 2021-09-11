@@ -7,15 +7,17 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
-  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> Second Edition: July, 2021</small>
-  </sub>
+<sub>Author:
+<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
+<small> Second Edition: July, 2021</small>
+</sub>
+
 </div>
 
 [<< Day 16](../16_Day_Python_date_time/16_python_datetime.md) | [Day 18 >>](../18_Day_Regular_expressions/18_regular_expressions.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
+
 - [📘 Day 17](#-day-17)
   - [Exception Handling](#exception-handling)
   - [Packing and Unpacking Arguments in Python](#packing-and-unpacking-arguments-in-python)
@@ -128,6 +130,7 @@ I alway run.
 ```
 
 It is also shorten the above code as follows:
+
 ```py
 try:
     name = input('Enter your name:')
@@ -257,7 +260,7 @@ print(nordic_countries)  # ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
 
 ## Enumerate
 
-If we are interested in an index of a list, we use *enumerate* built-in function to get the index of each item in the list.
+If we are interested in an index of a list, we use _enumerate_ built-in function to get the index of each item in the list.
 
 ```py
 for index, item in enumerate([20, 30, 40]):
@@ -280,7 +283,7 @@ The country Finland has been found at index 1.
 Sometimes we would like to combine lists when looping through them. See the example below:
 
 ```py
-fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']                    
+fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']
 vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot']
 fruits_and_veges = []
 for f, v in zip(fruits, vegetables):

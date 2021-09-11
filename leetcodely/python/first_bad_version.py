@@ -14,6 +14,7 @@ find the first bad version. You should minimize the number of calls to the API."
 def isBadVersion(version):
     pass
 
+
 class Solution(object):
     def firstBadVersion(self, n):
         """
@@ -28,5 +29,3 @@ class Solution(object):
             else:
                 start = mid + 1
         return start
-
-

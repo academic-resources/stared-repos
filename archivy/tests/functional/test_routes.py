@@ -109,11 +109,7 @@ def test_creating_bookmark_without_passing_path_saves_to_default_dir(
     test_app.config["DEFAULT_BOOKMARKS_DIR"] = bookmarks_dir
     create_dir(bookmarks_dir)
     resp = client.post(
-        "/bookmarks/new",
-        data={
-            "url": "http://example.org",
-            "submit": "true",
-        },
+        "/bookmarks/new", data={"url": "http://example.org", "submit": "true"}
     )
     bookmark = get_items(structured=False)[0]
     assert (
@@ -273,10 +269,7 @@ def test_bookmark_with_long_title_gets_truncated(test_app, client, mocked_respon
     # and would cause an error, without our truncating
     assert os.pathconf("/", "PC_NAME_MAX") < len(long_title)
     mocked_responses.add(GET, "https://example.com", f"<title>{long_title}</title>")
-    bookmark_data = {
-        "url": "https://example.com",
-        "submit": "true",
-    }
+    bookmark_data = {"url": "https://example.com", "submit": "true"}
 
     resp = client.post("/bookmarks/new", data=bookmark_data)
     assert resp.status_code == 200

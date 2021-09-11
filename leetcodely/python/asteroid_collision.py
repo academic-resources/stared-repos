@@ -31,6 +31,6 @@ class Solution:
         return stack
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.asteroidCollision([-2, -1, 1, 2]))

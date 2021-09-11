@@ -5,13 +5,13 @@ from wagtail_localize.models import LocaleSynchronization
 
 
 class Command(BaseCommand):
-    help = 'Sync pages with original English pages'
+    help = "Sync pages with original English pages"
 
     def handle(self, *args, **options):
         print("Select a language code to sync with English. ie: de")
 
         for language_code, name in settings.WAGTAIL_CONTENT_LANGUAGES:
-            if language_code != 'en':
+            if language_code != "en":
                 print(f"{language_code} ({name})")
 
         language_code = input("Language code: ")
@@ -23,13 +23,12 @@ class Command(BaseCommand):
             return
 
         print("Getting both locales...")
-        english_locale, _ = Locale.objects.get_or_create(language_code='en')
+        english_locale, _ = Locale.objects.get_or_create(language_code="en")
         locale, _ = Locale.objects.get_or_create(language_code=language_code)
 
         print("Getting LocaleSynchronization object")
         sync, created = LocaleSynchronization.objects.get_or_create(
-            locale=locale,
-            sync_from=english_locale,
+            locale=locale, sync_from=english_locale
         )
         if created:
             print("\tNew LocaleSynchronization object created")

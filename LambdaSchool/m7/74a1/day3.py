@@ -1,4 +1,4 @@
-# Problem 1:  Merge Two Sorted Lists 
+# Problem 1:  Merge Two Sorted Lists
 
 # Merge two sorted linked lists and return it as a new sorted list.
 # The new list should be made by splicing together the nodes of the first two lists.
@@ -30,7 +30,9 @@ class Solution(object):
             else:
                 return ListNode(l1.val, l2)
 
+
 # Problem 2:  Decode String
+
 
 def decodeString(s):
     """
@@ -49,10 +51,10 @@ def decodeString(s):
     # start at end of encoded string
     # if current item is letter, add to beginning of decoded
     # if current item is ]:
-        # find [
-        # save string in between []
-        # get number before [
-        # repeat-add to beginning of decoded the string in between [] as many times as number
+    # find [
+    # save string in between []
+    # get number before [
+    # repeat-add to beginning of decoded the string in between [] as many times as number
     decoded = ""
     close_brackets = [index for index, letter in enumerate(s) if letter == str("]")]
     open_brackets = [index for index, letter in enumerate(s) if letter == str("[")]
@@ -70,9 +72,9 @@ def decodeString(s):
             start_sub = last_open_bracket + 1
             substring = s[start_sub:end_sub]
             # get number before [
-            repeat_times = int(s[last_open_bracket-1])
+            repeat_times = int(s[last_open_bracket - 1])
             # repeat-add to beginning of decoded the string in between [] as many times as number
-            for x in range(0, repeat_times-1):
+            for x in range(0, repeat_times - 1):
                 decoded = substring + decoded
     print(decoded)
     return decoded
@@ -80,4 +82,3 @@ def decodeString(s):
 
 decodeString("3[a]2[bc]")
 decodeString("3[a2[c]]")
-

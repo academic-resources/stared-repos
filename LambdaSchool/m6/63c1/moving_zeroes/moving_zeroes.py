@@ -1,7 +1,9 @@
-'''
+"""
 Input: a List of integers
 Returns: a List of integers
-'''
+"""
+
+
 def loop_zeroes(arr):
     for x in range(0, len(arr)):
         item = arr[x]
@@ -10,6 +12,7 @@ def loop_zeroes(arr):
             arr.append(item)
         else:
             pass
+
 
 # Write a function that:
 def moving_zeroes(arr):
@@ -22,10 +25,11 @@ def moving_zeroes(arr):
         print(arr)
         # returns the altered array.
         return arr
-    except ValueError: return arr
+    except ValueError:
+        return arr
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Use the main function here to test out your implementation
     arr = [0, 3, 1, 0, -2]
 

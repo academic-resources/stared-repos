@@ -10,10 +10,11 @@ class Solution(object):
             return 10
         ans, base = 10, 9
         for i in range(1, n):
-            base *= (10 - i)
+            base *= 10 - i
             ans += base
         return ans
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     solution = Solution()
     print(solution.countNumbersWithUniqueDigits(2))

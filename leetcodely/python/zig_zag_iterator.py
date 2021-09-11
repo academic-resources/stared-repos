@@ -5,8 +5,8 @@ v2 = [3, 4, 5, 6]
 By calling next repeatedly until hasNext returns false, the order of elements returned by next should be:
 [1, 3, 2, 4, 5, 6]. """
 
-class ZigzagIterator(object):
 
+class ZigzagIterator(object):
     def __init__(self, v1, v2):
         """
         Initialize your data structure here.
@@ -32,7 +32,7 @@ class ZigzagIterator(object):
         return len(self.queue) > 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     zigzag = ZigzagIterator([1, 2], [3, 4, 5, 6])
     while zigzag.hasNext():
         print(zigzag.next())

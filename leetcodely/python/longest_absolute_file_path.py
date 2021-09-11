@@ -37,23 +37,24 @@ class Solution(object):
         if not input or len(input) == 0:
             return 0
         stack = collections.deque()
-        input_list = input.split('\n')
+        input_list = input.split("\n")
 
         for item in input_list:
-            level = item.count('\t')
+            level = item.count("\t")
             while len(stack) > level:
                 curr_len -= stack.pop()
 
-            stack.append(len(item.strip('\t')) + 1)
+            stack.append(len(item.strip("\t")) + 1)
             curr_len += stack[-1]
-            if '.' in item:
+            if "." in item:
                 max_len = max(max_len, curr_len - 1)
         return max_len
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.lengthLongestPath("dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"))
-
-            
-
+    print(
+        solution.lengthLongestPath(
+            "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"
+        )
+    )

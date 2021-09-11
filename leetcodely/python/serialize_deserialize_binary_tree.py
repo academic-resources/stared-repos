@@ -42,14 +42,14 @@ class Codec:
         """
         data = []
         self.serialize_helper(root, data)
-        return ''.join(data)
+        return "".join(data)
 
     def serialize_helper(self, root, data):
         if not root:
-            data.append('#,')
+            data.append("#,")
             return
         data.append(str(root.val))
-        data.append(',')
+        data.append(",")
         self.serialize_helper(root.left, data)
         self.serialize_helper(root.right, data)
 
@@ -59,7 +59,7 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
-        data_list = data.split(',')
+        data_list = data.split(",")
         itr = iter(data_list)
         return self.deserialize_helper(data_list, itr)
 
@@ -68,14 +68,15 @@ class Codec:
             item = next(itr)
         except StopIteration:
             return
-        if item == '#':
+        if item == "#":
             return None
         root = TreeNode(item)
         root.left = self.deserialize_helper(data, itr)
         root.right = self.deserialize_helper(data, itr)
         return root
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     bst = BST()
     bst.add(9)
     bst.add(11)

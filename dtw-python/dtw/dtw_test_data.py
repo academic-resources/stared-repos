@@ -23,6 +23,7 @@
 import numpy
 from pkgutil import get_data
 
+
 def aami():
     # IMPORT_RDOCSTRING aami
     """ANSI/AAMI EC13 Test Waveforms, 3a and 3b
@@ -79,15 +80,14 @@ Timestamps (ms) are in the first row, values (mV) in the second.
 """
     # ENDIMPORT
 
-    ts = lambda v: numpy.arange(len(v))/720.*1000.
-    a3a = numpy.fromstring(get_data(__name__, 'data/aami3a.csv'), sep="\n")
-    a3b = numpy.fromstring(get_data(__name__, 'data/aami3b.csv'), sep="\n")
+    ts = lambda v: numpy.arange(len(v)) / 720.0 * 1000.0
+    a3a = numpy.fromstring(get_data(__name__, "data/aami3a.csv"), sep="\n")
+    a3b = numpy.fromstring(get_data(__name__, "data/aami3b.csv"), sep="\n")
 
-    aami3a = numpy.vstack([ts(a3a),a3a])
-    aami3b = numpy.vstack([ts(a3b),a3b])
-    
+    aami3a = numpy.vstack([ts(a3a), a3a])
+    aami3b = numpy.vstack([ts(a3b), a3b])
+
     return (aami3a, aami3b)
-
 
 
 def sin_cos():
@@ -101,8 +101,5 @@ as follows:
     reference = numpy.cos(_idx)
 
 """
-    _idx = numpy.linspace(0,6.28,num=100)
-    return (
-        numpy.sin(_idx) + numpy.random.uniform(0,0.1,len(_idx)),
-        numpy.cos(_idx)
-    )
+    _idx = numpy.linspace(0, 6.28, num=100)
+    return (numpy.sin(_idx) + numpy.random.uniform(0, 0.1, len(_idx)), numpy.cos(_idx))

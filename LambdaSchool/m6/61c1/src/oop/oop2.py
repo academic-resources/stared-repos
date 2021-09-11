@@ -1,4 +1,4 @@
-class GroundVehicle():
+class GroundVehicle:
 
     # Also change it so the num_wheels defaults to 4 if not specified when the
     # object is constructed.
@@ -9,12 +9,14 @@ class GroundVehicle():
     def drive(self):
         return "vroooom"
 
+
 # Subclass Motorcycle from GroundVehicle.
 class Motorcycle(GroundVehicle):
     def __init__(self):
         # Make it so when you instantiate a Motorcycle, it automatically sets the number
         # of wheels to 2 by passing that to the constructor of its superclass.
         self.num_wheels = 2
+
     # Override the drive() method in Motorcycle so that it returns "BRAAAP!!"
     def drive(self):
         return "BRAAAP!!"

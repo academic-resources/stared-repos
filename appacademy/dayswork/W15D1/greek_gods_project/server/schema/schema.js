@@ -9,5 +9,5 @@ const RootQueryType = require("./root_query_type");
 // create and export our schema
 module.exports = new GraphQLSchema({
   query: RootQueryType,
-  mutation: mutations
+  mutation: mutations,
 });

@@ -55,8 +55,12 @@ import psycopg2.extras
 from psycopg2 import Error as DBError
 
 __all__ = (
-    'connect_database', 'DBError', 'I_AUTOCOMMIT', 'I_READ_COMMITTED',
-    'I_REPEATABLE_READ', 'I_SERIALIZABLE',
+    "connect_database",
+    "DBError",
+    "I_AUTOCOMMIT",
+    "I_READ_COMMITTED",
+    "I_REPEATABLE_READ",
+    "I_SERIALIZABLE",
 )
 
 #: Isolation level for db.set_isolation_level()
@@ -77,4 +81,3 @@ def connect_database(connstr):
     """
     db = psycopg2.connect(connstr, cursor_factory=psycopg2.extras.DictCursor)
     return db
-

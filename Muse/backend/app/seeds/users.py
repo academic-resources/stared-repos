@@ -6,12 +6,12 @@ from app.models import db, User
 
 def seed_users():
 
-    demo = User(username='Demo', email='demo@demo.demo',
-                password='Darks@8927')
+    demo = User(username="Demo", email="demo@demo.demo", password="Darks@8927")
 
     db.session.add(demo)
 
     db.session.commit()
+
 
 # Uses a raw SQL query to TRUNCATE the users table.
 # SQLAlchemy doesn't have a built in function to do this
@@ -20,5 +20,5 @@ def seed_users():
 
 
 def undo_users():
-    db.session.execute('TRUNCATE users;')
+    db.session.execute("TRUNCATE users;")
     db.session.commit()

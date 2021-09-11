@@ -45,13 +45,13 @@ In the context of web development, an API is defined as a set of specifications,
 
 Web API has been moving away from Simple Object Access Protocol (SOAP) based web services and service-oriented architecture (SOA) towards more direct representational state transfer (REST) style web resources.
 
-Social media services, web APIs have allowed web communities to share content and data between communities and different platforms. 
+Social media services, web APIs have allowed web communities to share content and data between communities and different platforms.
 
 Using API, content that is created in one place dynamically can be posted and updated to multiple locations on the web.
 
 For example, Twitter's REST API allows developers to access core Twitter data and the Search API provides methods for developers to interact with Twitter Search and trends data.
 
-Many applications provide API end points. Some  examples of API such as the countries [API](https://restcountries.eu/rest/v2/all), [cat's breed API](https://api.thecatapi.com/v1/breeds).
+Many applications provide API end points. Some examples of API such as the countries [API](https://restcountries.eu/rest/v2/all), [cat's breed API](https://api.thecatapi.com/v1/breeds).
 
 In this section, we will cover a RESTful API that uses HTTP request methods to GET, PUT, POST and DELETE data.
 
@@ -80,7 +80,7 @@ The format of the request and response messages are similar. Both kinds of messa
 - a blank line (i.e. a CRLF by itself), and
 - an optional message body (e.g. a file, or query data, or query output).
 
-Let us an example of request and response messages by navigating this site:https://thirtydaysofpython-v1-final.herokuapp.com/. This site has been deployed on Heroku free dyno and in some months may not work because of high request. Support this work to make the server run all the time. 
+Let us an example of request and response messages by navigating this site:https://thirtydaysofpython-v1-final.herokuapp.com/. This site has been deployed on Heroku free dyno and in some months may not work because of high request. Support this work to make the server run all the time.
 
 ![Request and Response header](../images/request_response_header.png)
 

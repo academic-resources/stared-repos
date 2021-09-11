@@ -19,7 +19,7 @@ class Solution(object):
         """
         arr = []
         self.inorder_helper(root, arr)
-        i, j = 0, len(arr)-1
+        i, j = 0, len(arr) - 1
         while i < j:
             total = arr[i] + arr[j]
             if total > k:

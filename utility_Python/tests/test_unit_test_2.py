@@ -1,5 +1,5 @@
 # """
-# modify from 
+# modify from
 # https://realpython.com/python-mock-library/#patch
 # """
 # import unittest

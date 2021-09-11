@@ -17,6 +17,6 @@ class Solution(object):
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.subsets([1, 2, 3]))

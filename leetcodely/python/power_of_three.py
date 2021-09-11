@@ -12,6 +12,6 @@ class Solution(object):
         return 1162261467 % n == 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.isPowerOfThree(45))

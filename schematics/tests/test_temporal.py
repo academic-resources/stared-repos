@@ -18,11 +18,14 @@ def test_timezone_to_date():
 def test_date_to_timestamp():
     assert TimeStampType.date_to_timestamp(EPOCH) == 0
 
-    ts = TimeStampType.date_to_timestamp(datetime(2014, 5, 8, 22, 40, 40, tzinfo=tzutc()))
+    ts = TimeStampType.date_to_timestamp(
+        datetime(2014, 5, 8, 22, 40, 40, tzinfo=tzutc())
+    )
     assert ts == 1399588840.0
 
     ts = TimeStampType.date_to_timestamp(
-        datetime(2014, 5, 8, 22, 40, 40, tzinfo=gettz('PST8PDT')))
+        datetime(2014, 5, 8, 22, 40, 40, tzinfo=gettz("PST8PDT"))
+    )
     assert ts == 1399614040.0
 
 
@@ -34,5 +37,5 @@ def test_date_to_primitive():
     ts = tsobj.to_primitive(datetime(2014, 5, 8, 22, 40, 40, tzinfo=tzutc()))
     assert ts == 1399588840.0
 
-    ts = tsobj.to_primitive(datetime(2014, 5, 8, 22, 40, 40, tzinfo=gettz('PST8PDT')))
+    ts = tsobj.to_primitive(datetime(2014, 5, 8, 22, 40, 40, tzinfo=gettz("PST8PDT")))
     assert ts == 1399614040.0

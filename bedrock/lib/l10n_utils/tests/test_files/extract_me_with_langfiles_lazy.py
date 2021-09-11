@@ -7,10 +7,7 @@
 from lib.l10n_utils.dotlang import _lazy as _
 
 
-LANG_FILES = [
-    'donnie',
-    'walter',
-]
+LANG_FILES = ["donnie", "walter"]
 
 
 def do_translate():

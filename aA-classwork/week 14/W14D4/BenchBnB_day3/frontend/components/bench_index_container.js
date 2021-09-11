@@ -1,13 +1,13 @@
-import { connect } from 'react-redux'
-import { fetchBenches } from '../actions/bench_action'
-import BenchIndex from './bench_index'
+import { connect } from "react-redux";
+import { fetchBenches } from "../actions/bench_action";
+import BenchIndex from "./bench_index";
 
-const mstp = state => ({
-  benches: Object.values(state.entities.benches)
-})
+const mstp = (state) => ({
+  benches: Object.values(state.entities.benches),
+});
 
-const mdtp = dispatch => ({
-  fetchBenches: () => dispatch(fetchBenches())
-})
+const mdtp = (dispatch) => ({
+  fetchBenches: () => dispatch(fetchBenches()),
+});
 
-export default connect(mstp, mdtp)(BenchIndex)
+export default connect(mstp, mdtp)(BenchIndex);

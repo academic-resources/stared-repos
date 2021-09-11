@@ -10,18 +10,19 @@ Have you consider that the string might be empty? This is a good question to ask
 For the purpose of this problem, we define empty string as valid palindrome."""
 import re
 
+
 class Solution(object):
     def isPalindrome(self, s):
         """
         :type s: str
         :rtype: bool
         """
-        cleaned = re.sub('[^0-9a-zA-Z]', '', s)
+        cleaned = re.sub("[^0-9a-zA-Z]", "", s)
         if cleaned.lower() == cleaned[::-1].lower():
             return True
         return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.isPalindrome("A man, a plan, a canal: Panama"))

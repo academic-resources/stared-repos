@@ -21,7 +21,8 @@ class Solution:
             s += str(node.val)
             dfs(node.left, s)
             dfs(node.right, s)
-        dfs(root, '')
+
+        dfs(root, "")
         print(result_arr)
         return sum([int(i, 2) for i in result_arr])
 

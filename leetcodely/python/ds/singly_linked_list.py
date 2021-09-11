@@ -15,7 +15,7 @@ class SinglyLinkedList:
 
     def remove(self, item):
         if not self.head:
-            return ValueError('Can\'t remove from a list with no items.')
+            return ValueError("Can't remove from a list with no items.")
         curr = self.head
         while curr:
             if curr.next.val == item:
@@ -40,15 +40,15 @@ class SinglyLinkedList:
 
     def __str__(self):
         if not self.head:
-            return '[]'
-        s = '['
+            return "[]"
+        s = "["
         curr = self.head
         for item in self:
             s += str(item)
             if curr.next:
-                s += ','
+                s += ","
             curr = curr.next
-        s += ']'
+        s += "]"
         return s
 
 
@@ -58,7 +58,7 @@ class ListNode:
         self.next = None
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     slist = SinglyLinkedList()
     slist.add(12)
     slist.add(13)

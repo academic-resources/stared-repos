@@ -12,11 +12,11 @@ _fingerprint_cache = weakref.WeakKeyDictionary()
 
 class CustomDupeFilter(RFPDupeFilter):
     def request_fingerprint(self, request, remove_scheme=None):
-        return self.custom_request_fingerprint(request,
-                                               remove_scheme=remove_scheme)
+        return self.custom_request_fingerprint(request, remove_scheme=remove_scheme)
 
-    def custom_request_fingerprint(self, request, include_headers=None,
-                                   remove_scheme=None):
+    def custom_request_fingerprint(
+        self, request, include_headers=None, remove_scheme=None
+    ):
         """
         Overridden given that some URL can have a wrong encoding (when it is comes from selenium driver) changes:
         encode.('utf-8) & in order to be no scheme compliant
@@ -24,19 +24,20 @@ class CustomDupeFilter(RFPDupeFilter):
 
         # If use_anchors, anchors in URL matters since each anchor
         # define a different webpage and content (special js_rendering)
-        url_for_finger_print = canonicalize_url(
-            request.url) if not self.use_anchors else request.url
-        url_for_hash = url_for_finger_print.encode('utf-8')
+        url_for_finger_print = (
+            canonicalize_url(request.url) if not self.use_anchors else request.url
+        )
+        url_for_hash = url_for_finger_print.encode("utf-8")
 
         # scheme agnosticism
         if remove_scheme:
-            match_capture_any_scheme = r'(https?)(.*)'
-            url_for_hash = re.sub(match_capture_any_scheme, r"\2",
-                                  url_for_finger_print)
+            match_capture_any_scheme = r"(https?)(.*)"
+            url_for_hash = re.sub(match_capture_any_scheme, r"\2", url_for_finger_print)
 
         if include_headers:
-            include_headers = tuple(to_bytes(h.lower())
-                                    for h in sorted(include_headers))
+            include_headers = tuple(
+                to_bytes(h.lower()) for h in sorted(include_headers)
+            )
         cache = _fingerprint_cache.setdefault(request, {})
 
         if include_headers not in cache or not remove_scheme:
@@ -44,9 +45,9 @@ class CustomDupeFilter(RFPDupeFilter):
             # we compute the fingerprint which take into account the scheme.
             # Avoid caching
             fp = hashlib.sha1()
-            fp.update(to_bytes(request.method.encode('utf-8')))
+            fp.update(to_bytes(request.method.encode("utf-8")))
             fp.update(to_bytes(url_for_hash))
-            fp.update(request.body or ''.encode('utf-8'))
+            fp.update(request.body or "".encode("utf-8"))
             if include_headers:
                 for hdr in include_headers:
                     if hdr in request.headers:
@@ -65,8 +66,8 @@ class CustomDupeFilter(RFPDupeFilter):
     # Overridden method in order to add the use_anchors attribute
     @classmethod
     def from_settings(cls, settings):
-        debug = settings.getbool('DUPEFILTER_DEBUG')
-        use_anchors = settings.getbool('DUPEFILTER_USE_ANCHORS')
+        debug = settings.getbool("DUPEFILTER_DEBUG")
+        use_anchors = settings.getbool("DUPEFILTER_USE_ANCHORS")
         return cls(job_dir(settings), debug, use_anchors)
 
     def request_seen(self, request):
@@ -80,8 +81,10 @@ class CustomDupeFilter(RFPDupeFilter):
         fp = self.request_fingerprint(request, remove_scheme=True)
         fp_with_scheme = self.request_fingerprint(request, remove_scheme=False)
         # Request from a redirection which is followed byt he RedirectionMiddleware
-        isRedirected = request.meta.get('redirect_times') and request.meta.get(
-            'redirect_times') > 0
+        isRedirected = (
+            request.meta.get("redirect_times")
+            and request.meta.get("redirect_times") > 0
+        )
         isFallback = request.meta.get("alternative_fallback")
 
         if isRedirected or isFallback:

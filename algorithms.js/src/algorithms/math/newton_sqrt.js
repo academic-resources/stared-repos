@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Newton's method to calculate square root

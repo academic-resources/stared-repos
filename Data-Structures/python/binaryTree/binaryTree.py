@@ -51,7 +51,6 @@ class BinaryTree:
             self.traversePrintTree(curNode.right)
 
 
-
 bT = BinaryTree()
 
 # adding Nodes

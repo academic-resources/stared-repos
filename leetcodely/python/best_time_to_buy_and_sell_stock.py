@@ -25,5 +25,3 @@ class Solution(object):
             min_buying = min(min_buying, v)
             profit = max(profit, v - min_buying)
         return profit
-
-

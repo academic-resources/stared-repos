@@ -14,7 +14,7 @@ class DomNodeCollection {
 
   empty() {
     this.array.forEach((el) => {
-      el.innerHTML = '';
+      el.innerHTML = "";
     });
   }
 
@@ -91,14 +91,14 @@ class DomNodeCollection {
   on(eventName, callback) {
     this.array.forEach((el) => {
       el.addEventListener(eventName, callback);
-      el.setAttribute('callback', callback);
+      el.setAttribute("callback", callback);
     });
   }
 
   off(eventName) {
     this.array.forEach((el) => {
       const targetEvents = getEventListeners(el, eventName)[eventName];
-      targetEvents.forEach( (event) => {
+      targetEvents.forEach((event) => {
         el.removeEventListener(eventName, event.listener);
       });
       // const callback = new Function(el.getAttribute('callback'));

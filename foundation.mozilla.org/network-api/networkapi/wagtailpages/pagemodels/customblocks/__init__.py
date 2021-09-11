@@ -22,7 +22,12 @@ from .quote_block import QuoteBlock
 from .single_quote_block import SingleQuoteBlock
 from .video_block import VideoBlock
 from .youtube_regret_block import YoutubeRegretBlock
-from .articles import ArticleRichText, ArticleDoubleImageBlock, ArticleFullWidthImageBlock, ArticleImageBlock
+from .articles import (
+    ArticleRichText,
+    ArticleDoubleImageBlock,
+    ArticleFullWidthImageBlock,
+    ArticleImageBlock,
+)
 from .dear_internet_letter_block import DearInternetLetterBlock
 
 

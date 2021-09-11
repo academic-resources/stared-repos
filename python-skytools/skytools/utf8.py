@@ -8,10 +8,10 @@ import codecs
 import re
 from typing import Match, Optional, Pattern, Tuple
 
-__all__ = ('safe_utf8_decode', 'sanitize_unicode')
+__all__ = ("safe_utf8_decode", "sanitize_unicode")
 
 # by default, use same symbol as 'replace'
-REPLACEMENT_SYMBOL = chr(0xFFFD)   # 65533
+REPLACEMENT_SYMBOL = chr(0xFFFD)  # 65533
 
 _urc: Optional[Pattern[str]] = None
 
@@ -35,7 +35,7 @@ def sanitize_unicode(u: str) -> str:
     global _urc
 
     if not isinstance(u, str):
-        raise TypeError('Need unicode string')
+        raise TypeError("Need unicode string")
 
     # regex for finding invalid chars, works on unicode string
     if not _urc:
@@ -58,7 +58,7 @@ def safe_replace(exc):
     c2 = REPLACEMENT_SYMBOL
 
     # we could assume latin1
-    #if 0:
+    # if 0:
     #    c1 = exc.object[exc.start]
     #    c2 = chr(ord(c1))
 
@@ -84,13 +84,12 @@ def safe_utf8_decode(s: bytes) -> Tuple[bool, str]:
     ok = True
     try:
         # expect no errors by default
-        u = s.decode('utf8')
+        u = s.decode("utf8")
     except UnicodeDecodeError:
-        u = s.decode('utf8', 'safe_replace')
+        u = s.decode("utf8", "safe_replace")
         ok = False
 
     u2 = sanitize_unicode(u)
     if u is not u2:
         ok = False
     return (ok, u2)
-

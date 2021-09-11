@@ -2,13 +2,12 @@ from . import algolia_helper, fetchers
 
 
 def _is_automatically_updated(config, attribute):
-    for start_url in config['start_urls']:
+    for start_url in config["start_urls"]:
         if not isinstance(start_url, str):
-            if 'variables' in start_url:
-                for variable in start_url['variables']:
-                    if (variable == attribute):
-                        if not isinstance(start_url['variables'][variable],
-                                          list):
+            if "variables" in start_url:
+                for variable in start_url["variables"]:
+                    if variable == attribute:
+                        if not isinstance(start_url["variables"][variable], list):
                             return True
     return False
 
@@ -60,18 +59,22 @@ Have a nice day :)"""
 """
 
     # Let the user know how they can access their Analytics
-    analytics_details = ''
+    analytics_details = ""
     if isinstance(analytics_statuses, dict):
         for email, analytics_status in list(analytics_statuses.items()):
-            analytics_details += '- ' + email
+            analytics_details += "- " + email
             if isinstance(analytics_status, str):
-                analytics_details += '''\
+                analytics_details += (
+                    """\
  can get access to the full Algolia analytics for your DocSearch index by creating an account,\
- following this link: ''' + analytics_status + '\n'
+ following this link: """
+                    + analytics_status
+                    + "\n"
+                )
             else:
-                analytics_details += '''\
+                analytics_details += """\
  has already an Algolia account. Analytics available from the Algolia dashboard by selecting\
- the application DOCSEARCH (access granted)'''
+ the application DOCSEARCH (access granted)"""
 
     facets = algolia_helper.get_facets(config)
 
@@ -93,36 +96,44 @@ Have a nice day :)"""
             keys.sort()
 
             if len(keys) > 0:
-                updated = "is automatically fetched from your website" if _is_automatically_updated(
-                    configs[config],
-                    name) else "is hardcoded in the config"
-                facet_template += base_facet_template.replace('{{NAME}}', name) \
-                    .replace('{{CAPITALISE_NAME}}', name.upper()) \
-                    .replace("{{UPDATED}}", updated) \
-                    .replace("{{VALUES}}", ', '.join(keys))
+                updated = (
+                    "is automatically fetched from your website"
+                    if _is_automatically_updated(configs[config], name)
+                    else "is hardcoded in the config"
+                )
+                facet_template += (
+                    base_facet_template.replace("{{NAME}}", name)
+                    .replace("{{CAPITALISE_NAME}}", name.upper())
+                    .replace("{{UPDATED}}", updated)
+                    .replace("{{VALUES}}", ", ".join(keys))
+                )
 
-                example_phrase.append('the ' + name + ' "' + keys[0] + '"')
-                example_code.append("\"" + name + ":" + keys[0] + "\"")
-                example_options.append(
-                    "\"" + name + ":$" + name.upper() + "\"")
+                example_phrase.append("the " + name + ' "' + keys[0] + '"')
+                example_code.append('"' + name + ":" + keys[0] + '"')
+                example_options.append('"' + name + ":$" + name.upper() + '"')
 
         if len(example_options) > 0:
-            algolia_options += ",\n  algoliaOptions: { 'facetFilters': [" + (
-                ', '.join(example_options)) + "] }"
+            algolia_options += (
+                ",\n  algoliaOptions: { 'facetFilters': ["
+                + (", ".join(example_options))
+                + "] }"
+            )
             facet_template += base_example_template.replace(
-                '{{EXAMPLE_PHRASE}}', ' and '.join(example_phrase)) \
-                .replace('{{EXAMPLE_CODE}}', ', '.join(example_code))
+                "{{EXAMPLE_PHRASE}}", " and ".join(example_phrase)
+            ).replace("{{EXAMPLE_CODE}}", ", ".join(example_code))
 
         if facet_template == "\n":
             facet_template = ""
 
     api_key = algolia_helper.get_docsearch_key(config)
-    api_key = "### REPLACE ME ####" if api_key == 'Not found' else api_key
+    api_key = "### REPLACE ME ####" if api_key == "Not found" else api_key
 
-    template = base_template.replace('{{API_KEY}}', api_key) \
-        .replace('{{INDEX_NAME}}', config) \
-        .replace('{{FACETS}}', facet_template) \
-        .replace('{{ALGOLIA_OPTIONS}}', algolia_options) \
-        .replace('{{ANALYTICS}}', analytics_details)
+    template = (
+        base_template.replace("{{API_KEY}}", api_key)
+        .replace("{{INDEX_NAME}}", config)
+        .replace("{{FACETS}}", facet_template)
+        .replace("{{ALGOLIA_OPTIONS}}", algolia_options)
+        .replace("{{ANALYTICS}}", analytics_details)
+    )
 
     return template

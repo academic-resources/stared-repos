@@ -689,9 +689,7 @@ class Console:
 
         self._lock = threading.RLock()
         self._log_render = LogRender(
-            show_time=log_time,
-            show_path=log_path,
-            time_format=log_time_format,
+            show_time=log_time, show_path=log_path, time_format=log_time_format
         )
         self.highlighter: HighlighterType = highlighter or _null_highlighter
         self.safe_box = safe_box
@@ -1203,7 +1201,9 @@ class Console:
         if hasattr(renderable, "__rich__") and not isclass(renderable):
             renderable = renderable.__rich__()  # type: ignore
         if hasattr(renderable, "__rich_console__") and not isclass(renderable):
-            render_iterable = renderable.__rich_console__(self, _options)  # type: ignore
+            render_iterable = renderable.__rich_console__(
+                self, _options
+            )  # type: ignore
         elif isinstance(renderable, str):
             text_renderable = self.render_str(
                 renderable, highlight=_options.highlight, markup=_options.markup
@@ -1885,9 +1885,7 @@ class Console:
             if style:
                 append(
                     style.render(
-                        text,
-                        color_system=color_system,
-                        legacy_windows=legacy_windows,
+                        text, color_system=color_system, legacy_windows=legacy_windows
                     )
                 )
             elif not (not_terminal and control):

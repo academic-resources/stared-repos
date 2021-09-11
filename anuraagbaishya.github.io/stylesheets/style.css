@@ -1,17 +1,85 @@
 /* line 5, ../../../../../usr/local/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,7 +94,8 @@ html {
 }
 
 /* line 24, ../../../../../usr/local/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -37,18 +106,24 @@ table {
 }
 
 /* line 28, ../../../../../usr/local/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
+caption,
+th,
+td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
 /* line 30, ../../../../../usr/local/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
+q,
+blockquote {
   quotes: none;
 }
 /* line 103, ../../../../../usr/local/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
   content: "";
   content: none;
 }
@@ -59,7 +134,19 @@ a img {
 }
 
 /* line 116, ../../../../../usr/local/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
   display: block;
 }
 
@@ -104,7 +191,7 @@ img {
 
 /* line 34, ../sass/style.scss */
 h1 {
-  font-family: 'Slabo 27px', serif;
+  font-family: "Slabo 27px", serif;
   font-size: 1.5em;
   padding: 0 1em;
 }
@@ -113,7 +200,8 @@ h1 {
 .header {
   height: 100%;
   background-position: center;
-  background: linear-gradient(rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.75)), url("../images/background.jpg");
+  background: linear-gradient(rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.75)),
+    url("../images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 6em 0 2em;
@@ -136,7 +224,7 @@ h1 {
 /* line 63, ../sass/style.scss */
 .header .about-text {
   padding: 3em 1em 1em 1em;
-  font-family: 'Slabo 27px', serif;
+  font-family: "Slabo 27px", serif;
   font-size: 1.5em;
   text-align: justify;
   width: 75%;
@@ -147,7 +235,7 @@ h1 {
 /* line 74, ../sass/style.scss */
 .about {
   padding: 1em;
-  font-family: 'Slabo 27px', serif;
+  font-family: "Slabo 27px", serif;
   font-size: 1.5em;
   text-align: justify;
 }
@@ -207,7 +295,7 @@ h1 {
   margin: 1em;
   font-size: 2em;
   font-style: bold;
-  font-family: 'Slabo 27px', serif;
+  font-family: "Slabo 27px", serif;
 }
 
 @media screen and (max-width: 540px) {

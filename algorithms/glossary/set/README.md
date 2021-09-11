@@ -1,6 +1,6 @@
 # Set
 
-Sets are as fundamental to computer science as they are to mathematics. Sets manipulated by algorithms can grow, shrink, or otherwise change over time, we call such sets __dynamic__. Data structures present techniques for representing finite dynamic sets and manipulating them on a computer.
+Sets are as fundamental to computer science as they are to mathematics. Sets manipulated by algorithms can grow, shrink, or otherwise change over time, we call such sets **dynamic**. Data structures present techniques for representing finite dynamic sets and manipulating them on a computer.
 
 The best way to implement a dynamic set depends upon the operations that must be supported.
 
@@ -8,34 +8,34 @@ The best way to implement a dynamic set depends upon the operations that must be
 
 Can be grouped into two categories:
 
-1. __Queries__, which simply return information about the set.
-2. __Modifying operations__, which change the set.
+1. **Queries**, which simply return information about the set.
+2. **Modifying operations**, which change the set.
 
 ---
 
-* `SEARCH(S,k)`
+- `SEARCH(S,k)`
 
-* `INSERT(S,x)`
+- `INSERT(S,x)`
 
-* `DELETE(S,x)`
+- `DELETE(S,x)`
 
-* `MINIMUM(S)`
+- `MINIMUM(S)`
 
-* `MAXIMUM(S)`
+- `MAXIMUM(S)`
 
-* `SUCCESSOR(S,x)`
+- `SUCCESSOR(S,x)`
 
-* `PREDECESSOR(S,x)`
+- `PREDECESSOR(S,x)`
 
 ## Dictionaries
 
 Algorithms may require several different types of operations to be performed on sets. For example, many algorithms need only the ability to:
 
-* Insert elements into
-* Delete elements from
-* Test membership in a set.
+- Insert elements into
+- Delete elements from
+- Test membership in a set.
 
-We call a dynamic set that supports these operations a __dictionary__.
+We call a dynamic set that supports these operations a **dictionary**.
 
 ## Other types of sets
 

@@ -1,7 +1,7 @@
 from binary_search_tree import BinarySearchTree
 import time
 
-# MVP: 
+# MVP:
 # Navigate into the `names` directory. Here you will find two text files containing 10, 000 names each, along with a program `names.py` that compares the two files and prints out duplicate name entries.
 # Try running the code with `python3 names.py`. Be patient because it might take a while: approximately six seconds on my laptop.
 # What is the runtime complexity of this code?
@@ -23,25 +23,25 @@ import time
 
 start_time = time.time()
 
-f = open('names_1.txt', 'r')
+f = open("names_1.txt", "r")
 names_1 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
-f = open('names_2.txt', 'r')
+f = open("names_2.txt", "r")
 names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
-'''
+"""
 for name_1 in names_1:
     for name_2 in names_2:
         if name_1 == name_2:
             duplicates.append(name_1)
-'''
+"""
 
-'''
+"""
 # MVP Solution:
 # runtime: 0.002018451690673828 seconds
 # complexity:  O(n) (linear)
@@ -57,7 +57,7 @@ class BSTNames:
 
     def contains(self, target):
         BinarySearchTree.contains(self, target)
-'''
+"""
 
 
 # ---------- Stretch Goal -----------

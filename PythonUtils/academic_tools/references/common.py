@@ -11,7 +11,7 @@ def normalize_title(title):
     :param title: the original paper title
     :return: the normalized title
     """
-    return re.sub('\s+', ' ', re.sub('[\W_]+', ' ', title.lower()))
+    return re.sub("\s+", " ", re.sub("[\W_]+", " ", title.lower()))
 
 
 def get_from_pdf(filename, acl_anthology_by_title):
@@ -23,10 +23,10 @@ def get_from_pdf(filename, acl_anthology_by_title):
     """
     try:
         # Get the "title" - first line in the file
-        text = textract.process(filename).decode('utf-8')
+        text = textract.process(filename).decode("utf-8")
 
         # Search for it in the ACL anthology
-        title = text.split('\n')[0]
+        title = text.split("\n")[0]
         bib_entry = acl_anthology_by_title.get(normalize_title(title), None)
     except:
         return None
@@ -38,7 +38,7 @@ def get_from_pdf(filename, acl_anthology_by_title):
         return None
 
 
-def process_acl_anthology_file(filename='anthology.bib', show_progress=True):
+def process_acl_anthology_file(filename="anthology.bib", show_progress=True):
     """
     Reads the single ACL anthology bib entries file and saves it as
     a dictionary of title -> bib entry. Titles are lower-cased and trimmed (e.g.
@@ -48,11 +48,11 @@ def process_acl_anthology_file(filename='anthology.bib', show_progress=True):
     """
     entries_by_id, entries_by_title = {}, {}
     title_pattern = re.compile('\s*title\s*=\s*"([^"]+)"')
-    entry_pattern = re.compile('\s*@InProceedings{([^,]+),')
+    entry_pattern = re.compile("\s*@InProceedings{([^,]+),")
     entry = []
     id, normalized_title = None, None
 
-    with codecs.open(filename, 'r', 'utf-8') as f_in:
+    with codecs.open(filename, "r", "utf-8") as f_in:
         lines = tqdm.tqdm(f_in) if show_progress else f_in
         for line in lines:
             line = line.strip()
@@ -66,9 +66,9 @@ def process_acl_anthology_file(filename='anthology.bib', show_progress=True):
                 id = match.group(1).upper()
 
             # End of bib entry
-            elif line == '}':
-                entry.append('}')
-                entry_text = '\n'.join(entry)
+            elif line == "}":
+                entry.append("}")
+                entry_text = "\n".join(entry)
 
                 if normalized_title is not None:
                     entries_by_title[normalized_title] = entry_text
@@ -96,13 +96,14 @@ def extract_authors(bib_entry):
     :param bib_entry: the bibtexparser bib entry
     :return: a readable string of author names
     """
-    authors = bib_entry['author'].replace('\n', ' ')
+    authors = bib_entry["author"].replace("\n", " ")
 
     # Split by and, and save in the format: first (initial) last name
-    authors_list = [author.strip()
-                    if ',' not in author
-                    else ' '.join(author.strip().split(', ')[1:] + [author.split(', ')[0]])
-                    for author in authors.split(' and ')]
+    authors_list = [
+        author.strip()
+        if "," not in author
+        else " ".join(author.strip().split(", ")[1:] + [author.split(", ")[0]])
+        for author in authors.split(" and ")
+    ]
 
     return authors_list
-

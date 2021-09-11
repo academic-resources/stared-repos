@@ -1,5 +1,4 @@
-'use strict';
-
+"use strict";
 
 /**
  * Floyd-Warshall algorithm.
@@ -10,7 +9,6 @@
  * @return {{distance, path}}
  */
 var floydWarshall = function (graph) {
-
   // Fill in the distances with initial values:
   //   - 0 if source == destination;
   //   - edge(source, destination) if there is a direct edge;
@@ -52,7 +50,7 @@ var floydWarshall = function (graph) {
   graph.vertices.forEach(function (vertex) {
     if (distance[vertex][vertex] < 0) {
       // Negative-weighted cycle found.
-      throw new Error('The graph contains a negative-weighted cycle!');
+      throw new Error("The graph contains a negative-weighted cycle!");
     }
   });
 
@@ -81,7 +79,7 @@ var floydWarshall = function (graph) {
           pushInOrder(src, middle);
           pushInOrder(middle, dest);
         }
-      }(src, dest));
+      })(src, dest);
     }
 
     return path;
@@ -89,9 +87,8 @@ var floydWarshall = function (graph) {
 
   return {
     distance: distance,
-    path: path
+    path: path,
   };
 };
-
 
 module.exports = floydWarshall;

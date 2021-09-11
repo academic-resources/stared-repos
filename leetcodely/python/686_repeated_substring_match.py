@@ -2,6 +2,7 @@
 If no such solution, return -1.
 For example, with A = "abcd" and B = "cdabcdab". """
 
+
 class Solution(object):
     def repeatedStringMatch(self, A, B):
         """
@@ -16,12 +17,11 @@ class Solution(object):
             count += 1
         if B in curr:
             return count
-        if B in curr+A:
+        if B in curr + A:
             return count + 1
         return -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.repeatedStringMatch("bb", "bbbbbbb"))
-

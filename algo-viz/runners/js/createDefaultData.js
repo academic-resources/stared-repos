@@ -1,7 +1,7 @@
-const fs = require('fs')
-const execute = require('./execute')
-const transpile = require('./transpile')
-const input = { _name: null, references: {} }
+const fs = require("fs");
+const execute = require("./execute");
+const transpile = require("./transpile");
+const input = { _name: null, references: {} };
 const code = `
 
 const hello = Viz.SLL.create('HELLO'.split(''));
@@ -17,19 +17,12 @@ const emote = new Set(['🤓'])
     
 const message = 'See the ℹ️ for a guide ----->'
 
-`
+`;
 
+const transpiled = transpile(code, input);
 
+const { _name } = input;
 
+const data = execute(_name, transpiled, code);
 
-const transpiled = transpile(code, input)
-
-const { _name } = input
-
-
-
-const data = execute(_name, transpiled, code)
-
-
-fs.writeFileSync('../../client/src/store/default_javascript.json', data)
-
+fs.writeFileSync("../../client/src/store/default_javascript.json", data);

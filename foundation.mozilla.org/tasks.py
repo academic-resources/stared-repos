@@ -56,9 +56,7 @@ def create_env_file(env_file):
         dbname = re.search("POSTGRES_DB=(.*)", docker_compose).group(1) or dbname
 
     # Update the DATABASE_URL env
-    new_db_url = (
-        f"DATABASE_URL=postgresql://{username}@postgres:5432/{dbname}"
-    )
+    new_db_url = f"DATABASE_URL=postgresql://{username}@postgres:5432/{dbname}"
     old_db_url = re.search("DATABASE_URL=.*", env_vars)
     env_vars = env_vars.replace(old_db_url.group(0), new_db_url)
 
@@ -92,9 +90,13 @@ def new_db(ctx):
     print("* Starting the postgres service")
     ctx.run("docker-compose up -d postgres")
     print("* Delete the database")
-    ctx.run("docker-compose run --rm postgres dropdb --if-exists wagtail -h postgres -U foundation")
+    ctx.run(
+        "docker-compose run --rm postgres dropdb --if-exists wagtail -h postgres -U foundation"
+    )
     print("* Create the database")
-    ctx.run("docker-compose run --rm postgres createdb wagtail -h postgres -U foundation")
+    ctx.run(
+        "docker-compose run --rm postgres createdb wagtail -h postgres -U foundation"
+    )
     print("* Applying database migrations.")
     migrate(ctx)
     print("* Creating fake data")

@@ -14,8 +14,7 @@ from sqlalchemy.exc import DatabaseError
 
 
 class TestMyFunc(unittest.TestCase):
-
-    @patch('my_db_utils.sqlalchemy')
+    @patch("my_db_utils.sqlalchemy")
     def test_get_db_conn(self, mock_sqlalchemy):
         mock_sqlalchemy.create_engine.side_effect = DatabaseError
         mock_sqlalchemy.get_conn.return_value = "db_conn"
@@ -25,5 +24,5 @@ class TestMyFunc(unittest.TestCase):
         assert mock_sqlalchemy.get_conn() == "db_conn"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -9,29 +9,29 @@
 }
 
 .post-form {
-    display: flex;
-    flex-direction: row;
-    width: calc(100% - 50px);
-    min-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 50px);
+  min-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
-    
 
 .input {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex: 1;
 }
 
-.post-title, .post-body {
-    border: 1px solid gray;
-    display: block;
-    background: #fff;
-    padding: 10px;
-    width: 90%;
-    border-radius: 5px;
+.post-title,
+.post-body {
+  border: 1px solid gray;
+  display: block;
+  background: #fff;
+  padding: 10px;
+  width: 90%;
+  border-radius: 5px;
 }
 
 .submit {
@@ -41,16 +41,16 @@
 }
 
 .submit input {
-    padding: 10px 20px;
-    color: #fff;
-    background: #0c0;
-    font-weight: 700;
-    border-radius: 5px;
-    box-shadow: 0 3px 0 0 #070;
+  padding: 10px 20px;
+  color: #fff;
+  background: #0c0;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0 3px 0 0 #070;
 }
 
 fieldset {
-  background:#ccc;
+  background: #ccc;
   flex: 1;
 }
 

@@ -24,6 +24,6 @@ class Solution(object):
         return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.judgeSquareSum(25))

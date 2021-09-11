@@ -1,5 +1,5 @@
-'use strict';
-var Comparator = require('../../util/comparator');
+"use strict";
+var Comparator = require("../../util/comparator");
 
 /**
  * Bubble sort algorithm O(n^2)
@@ -20,8 +20,7 @@ var bubbleSort = function (a, comparatorFn) {
         check = true;
       }
     }
-    if (!check)
-      return a;
+    if (!check) return a;
     bound = newbound;
   }
   return a;

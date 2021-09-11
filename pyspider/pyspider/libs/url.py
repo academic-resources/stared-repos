@@ -15,7 +15,7 @@ from requests.models import RequestEncodingMixin
 
 def get_content_type(filename):
     """Guessing file type by filename"""
-    return mimetypes.guess_type(filename)[0] or 'application/octet-stream'
+    return mimetypes.guess_type(filename)[0] or "application/octet-stream"
 
 
 _encode_params = RequestEncodingMixin._encode_params
@@ -31,31 +31,31 @@ def _build_url(url, _params):
 
     # Support for unicode domain names and paths.
     scheme, netloc, path, params, query, fragment = urlparse(url)
-    netloc = netloc.encode('idna').decode('utf-8')
+    netloc = netloc.encode("idna").decode("utf-8")
     if not path:
-        path = '/'
+        path = "/"
 
     if six.PY2:
         if isinstance(scheme, six.text_type):
-            scheme = scheme.encode('utf-8')
+            scheme = scheme.encode("utf-8")
         if isinstance(netloc, six.text_type):
-            netloc = netloc.encode('utf-8')
+            netloc = netloc.encode("utf-8")
         if isinstance(path, six.text_type):
-            path = path.encode('utf-8')
+            path = path.encode("utf-8")
         if isinstance(params, six.text_type):
-            params = params.encode('utf-8')
+            params = params.encode("utf-8")
         if isinstance(query, six.text_type):
-            query = query.encode('utf-8')
+            query = query.encode("utf-8")
         if isinstance(fragment, six.text_type):
-            fragment = fragment.encode('utf-8')
+            fragment = fragment.encode("utf-8")
 
     enc_params = _encode_params(_params)
     if enc_params:
         if query:
-            query = '%s&%s' % (query, enc_params)
+            query = "%s&%s" % (query, enc_params)
         else:
             query = enc_params
-    url = (urlunparse([scheme, netloc, path, params, query, fragment]))
+    url = urlunparse([scheme, netloc, path, params, query, fragment])
     return url
 
 
@@ -64,9 +64,11 @@ def quote_chinese(url, encodeing="utf-8"):
     if isinstance(url, six.text_type):
         return quote_chinese(url.encode(encodeing))
     if six.PY3:
-        res = [six.int2byte(b).decode('latin-1') if b < 128 else '%%%02X' % b for b in url]
+        res = [
+            six.int2byte(b).decode("latin-1") if b < 128 else "%%%02X" % b for b in url
+        ]
     else:
-        res = [b if ord(b) < 128 else '%%%02X' % ord(b) for b in url]
+        res = [b if ord(b) < 128 else "%%%02X" % ord(b) for b in url]
     return "".join(res)
 
 
@@ -81,43 +83,43 @@ def curl_to_arguments(curl):
         if command is None:
             # curl
             command = part
-        elif not part.startswith('-') and not current_opt:
+        elif not part.startswith("-") and not current_opt:
             # waiting for url
             urls.append(part)
-        elif current_opt is None and part.startswith('-'):
+        elif current_opt is None and part.startswith("-"):
             # flags
-            if part == '--compressed':
-                kwargs['use_gzip'] = True
+            if part == "--compressed":
+                kwargs["use_gzip"] = True
             else:
                 current_opt = part
         else:
             # option
             if current_opt is None:
-                raise TypeError('Unknow curl argument: %s' % part)
-            elif current_opt in ('-H', '--header'):
-                key_value = part.split(':', 1)
+                raise TypeError("Unknow curl argument: %s" % part)
+            elif current_opt in ("-H", "--header"):
+                key_value = part.split(":", 1)
                 if len(key_value) == 2:
                     key, value = key_value
                     headers[key.strip()] = value.strip()
-            elif current_opt in ('-d', '--data'):
-                kwargs['data'] = part
-            elif current_opt in ('--data-binary'):
-                if part[0] == '$':
+            elif current_opt in ("-d", "--data"):
+                kwargs["data"] = part
+            elif current_opt in ("--data-binary"):
+                if part[0] == "$":
                     part = part[1:]
-                kwargs['data'] = part
-            elif current_opt in ('-X', '--request'):
-                kwargs['method'] = part
+                kwargs["data"] = part
+            elif current_opt in ("-X", "--request"):
+                kwargs["method"] = part
             else:
-                raise TypeError('Unknow curl option: %s' % current_opt)
+                raise TypeError("Unknow curl option: %s" % current_opt)
             current_opt = None
 
     if not urls:
-        raise TypeError('curl: no URL specified!')
+        raise TypeError("curl: no URL specified!")
     if current_opt:
-        raise TypeError('Unknow curl option: %s' % current_opt)
+        raise TypeError("Unknow curl option: %s" % current_opt)
 
-    kwargs['urls'] = urls
+    kwargs["urls"] = urls
     if headers:
-        kwargs['headers'] = headers
+        kwargs["headers"] = headers
 
     return kwargs

@@ -1,11 +1,11 @@
 # pip install pyttsx3
-import pyttsx3      
+import pyttsx3
 
 # pip install SpeechRecognition
-import speech_recognition as sr                     
+import speech_recognition as sr
 
 # pip install pywikihow
-from pywikihow import search_wikihow                
+from pywikihow import search_wikihow
 
 # creating object
 engine = pyttsx3.init()
@@ -14,6 +14,7 @@ engine = pyttsx3.init()
 def fun_talk(audio):
     engine.say(audio)
     engine.runAndWait()
+
 
 # function for taking the voice commands and recognizing it
 def get_command():
@@ -27,7 +28,7 @@ def get_command():
 
         try:
             print("Recognizing...")
-            query = rec.recognize_google(audio, language='en-in')
+            query = rec.recognize_google(audio, language="en-in")
             print(f"You said: {query}\n")
 
         except Exception as e:
@@ -38,16 +39,16 @@ def get_command():
         return query
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
-    #while True:
+    # while True:
     if 1:
 
         # taking the voice command  from the user
         query = get_command().lower()
 
         # checking if it contains the phrase 'how to'
-        if 'how to' in query:
+        if "how to" in query:
             try:
                 max_results = 1
                 data = search_wikihow(query, max_results)
@@ -55,4 +56,4 @@ if __name__ == '__main__':
                 fun_talk(data[0].summary)
 
             except Exception as e:
-                fun_talk('Sorry, I am unable to find the answer for your query.')
+                fun_talk("Sorry, I am unable to find the answer for your query.")

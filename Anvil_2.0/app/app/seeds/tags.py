@@ -16,5 +16,5 @@ def seed_tags():
 
 
 def undo_tags():
-    db.session.execute('TRUNCATE tags CASCADE;')
+    db.session.execute("TRUNCATE tags CASCADE;")
     db.session.commit()

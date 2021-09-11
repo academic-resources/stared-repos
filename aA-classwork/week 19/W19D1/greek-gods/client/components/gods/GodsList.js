@@ -1,13 +1,13 @@
-import React from 'react';
-import { Query } from 'react-apollo';
-import { Link } from 'react-router-dom';
-import Queries from '../../graphql/queries';
+import React from "react";
+import { Query } from "react-apollo";
+import { Link } from "react-router-dom";
+import Queries from "../../graphql/queries";
 const { FETCH_GODS } = Queries;
-import DeleteGod from './DeleteGod';
+import DeleteGod from "./DeleteGod";
 
 const GodsList = () => {
   return (
-    <div className='outer'>
+    <div className="outer">
       <ul>
         <Query query={FETCH_GODS}>
           {({ loading, error, data }) => {
@@ -19,7 +19,7 @@ const GodsList = () => {
                   <Link to={`/gods/${id}`}>
                     <h4>{name}</h4>
                   </Link>
-                  <p className='description'>Description: {description}</p>
+                  <p className="description">Description: {description}</p>
                   <DeleteGod id={id} />
                 </li>
               );

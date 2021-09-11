@@ -12,6 +12,8 @@ def remove_diacritics(text):
         str: Return text without diacritics.
 
     """
-    text = unicodedata.normalize('NFD', text)
-    shaved = unicodedata.normalize('NFC', ''.join(c for c in text if not unicodedata.combining(c)))
-    return unicodedata.normalize('NFC', shaved)
+    text = unicodedata.normalize("NFD", text)
+    shaved = unicodedata.normalize(
+        "NFC", "".join(c for c in text if not unicodedata.combining(c))
+    )
+    return unicodedata.normalize("NFC", shaved)

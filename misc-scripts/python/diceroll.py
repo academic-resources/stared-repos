@@ -21,14 +21,14 @@ if len(sys.argv) == 3:
 
 # assume range of 0 / 1000 if not given
 if len(sys.argv) <= 1:
-    startrange = '0'
-    endrange = '1000'
+    startrange = "0"
+    endrange = "1000"
 
 
 def diceroll(startrange, endrange):
     rollrange = random.randint(int(startrange), int(endrange))
-    rollresult = (f"A magic die has been rolled between {startrange}")
-    rollresult += (f" and {endrange}, you rolled {rollrange}.")
+    rollresult = f"A magic die has been rolled between {startrange}"
+    rollresult += f" and {endrange}, you rolled {rollrange}."
     print(rollresult)
 
 

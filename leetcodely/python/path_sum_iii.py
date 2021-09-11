@@ -21,7 +21,6 @@ class Solution:
         self.dfs(node.left, target)
         self.dfs(node.right, target)
 
-
     def find_path(self, node, target):
         if not node:
             return
@@ -29,5 +28,3 @@ class Solution:
             self.num_paths += 1
         self.find_path(node.left, target - node.val)
         self.find_path(node.right, target - node.val)
-
-

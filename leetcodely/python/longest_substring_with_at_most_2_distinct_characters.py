@@ -20,12 +20,12 @@ class Solution(object):
                 else:
                     d[s[j]] -= 1
                 j += 1
-            curr = s[j:i + 1]
+            curr = s[j : i + 1]
             max_len = max(len(curr), max_len)
 
         return max_len
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.lengthOfLongestSubstringTwoDistinct("ccaabbb"))

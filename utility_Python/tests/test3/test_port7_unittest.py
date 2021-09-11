@@ -3,6 +3,7 @@
 import unittest
 from portfolio3 import Portfolio
 
+
 class PortfolioTest(unittest.TestCase):
     def test_empty(self):
         p = Portfolio()
@@ -50,7 +51,7 @@ class PortfolioSellTest(unittest.TestCase):
 # code.
 class PortfolioValueTest(unittest.TestCase):
     def fake_current_prices(self):
-        return {'IBM': 140.0, 'HPQ': 32.0}
+        return {"IBM": 140.0, "HPQ": 32.0}
 
     def setUp(self):
         self.p = Portfolio()

@@ -1,6 +1,6 @@
-import React from 'react'
-import { NavLink, Route } from 'react-router-dom'
-import Indigo from './indigo'
+import React from "react";
+import { NavLink, Route } from "react-router-dom";
+import Indigo from "./indigo";
 
 class Blue extends React.Component {
   render() {
@@ -14,8 +14,8 @@ class Blue extends React.Component {
 
         <Route path="/blue/indigo" component={Indigo} />
       </div>
-    )
+    );
   }
 }
 
-export default Blue
+export default Blue;

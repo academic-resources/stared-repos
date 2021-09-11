@@ -1,6 +1,7 @@
 import _sha512
 from getpass import getpass
 import string
+
 """
     This password generator takes length of
     password, username, service name and a secret key.
@@ -58,7 +59,7 @@ def password_generator(credentials, n):
     # If number of usable values is less than needed
     # then start again with hash as new credentials.
     # If false output list will have charecters insted of numbers.
-    if (len(lst) < n):
+    if len(lst) < n:
         lst = password_generator(hash, n)
 
     # Converts integers in list to their ASCII eqvivalant
@@ -71,9 +72,12 @@ def password_generator(credentials, n):
     # Checks if password have upeercase, lowercase,
     # digit and special charecters.
     # If any is missing start again with hash as new input.
-    if not (any(c.islower() for c in lst) and any(c.isupper() for c in lst)
-            and any(c.isdigit()
-                    for c in lst) and any(isspecial(c) for c in lst)):
+    if not (
+        any(c.islower() for c in lst)
+        and any(c.isupper() for c in lst)
+        and any(c.isdigit() for c in lst)
+        and any(isspecial(c) for c in lst)
+    ):
         lst = password_generator(hash, n)
 
     return lst

@@ -10,21 +10,24 @@ from pages.regions.modal import ModalProtocol
 
 class LeadershipPage(BasePage):
 
-    _URL_TEMPLATE = '/{locale}/about/leadership/'
+    _URL_TEMPLATE = "/{locale}/about/leadership/"
 
-    _corporation_bios_locator = (By.CSS_SELECTOR, '.gallery.mgmt-corp .vcard.has-bio')
-    _foundation_bios_locator = (By.CSS_SELECTOR, '.gallery.mgmt-foundation .vcard.has-bio')
-    _modal_bio_locator = (By.CSS_SELECTOR, '.mzp-c-modal .vcard.has-bio')
+    _corporation_bios_locator = (By.CSS_SELECTOR, ".gallery.mgmt-corp .vcard.has-bio")
+    _foundation_bios_locator = (
+        By.CSS_SELECTOR,
+        ".gallery.mgmt-foundation .vcard.has-bio",
+    )
+    _modal_bio_locator = (By.CSS_SELECTOR, ".mzp-c-modal .vcard.has-bio")
 
     @property
     def corporation(self):
         leaders = self.find_elements(*self._corporation_bios_locator)
-        return [l.get_attribute('id') for l in leaders]
+        return [l.get_attribute("id") for l in leaders]
 
     @property
     def foundation(self):
         leaders = self.find_elements(*self._foundation_bios_locator)
-        return [l.get_attribute('id') for l in leaders]
+        return [l.get_attribute("id") for l in leaders]
 
     def open_biography(self, value):
         modal = ModalProtocol(self)
@@ -34,5 +37,8 @@ class LeadershipPage(BasePage):
 
     def is_biography_displayed(self, value):
         return self.is_element_displayed(
-            *(By.CSS_SELECTOR, '.mzp-c-modal .vcard.has-bio[data-id="{0}"]'.format(value))
+            *(
+                By.CSS_SELECTOR,
+                '.mzp-c-modal .vcard.has-bio[data-id="{0}"]'.format(value),
+            )
         )

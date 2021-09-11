@@ -1,6 +1,15 @@
 class Solution:
     def __init__(self):
-        self.neighbors = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1)]
+        self.neighbors = [
+            (-1, -1),
+            (0, -1),
+            (1, -1),
+            (-1, 0),
+            (1, 0),
+            (-1, 1),
+            (0, 1),
+            (1, 1),
+        ]
 
     def find_all_words(self, board, word_set):
         result = []
@@ -17,7 +26,11 @@ class Solution:
                 ni, nj = row + di, col + dj
                 if self.valid(board, ni, nj) and (ni, nj) not in visited:
                     visited.add(ni, nj)
-                    found.extend(self.helper(board, word_set, current + board[ni][nj], ni, nj, visited))
+                    found.extend(
+                        self.helper(
+                            board, word_set, current + board[ni][nj], ni, nj, visited
+                        )
+                    )
                     visited.remove(ni, nj)
             return list(set(found))
 
@@ -25,7 +38,11 @@ class Solution:
         return 0 <= row < len(board) and 0 <= col < len(board[row])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.find_all_words([['a', 'p', 'p'], ['b', 'a', 'l'], ['d', 't', 'e']],
-                                  set(['apple', 'balet', 'app', 'pat', 'pet', 'let', 'lap'])))
+    print(
+        solution.find_all_words(
+            [["a", "p", "p"], ["b", "a", "l"], ["d", "t", "e"]],
+            set(["apple", "balet", "app", "pat", "pet", "let", "lap"]),
+        )
+    )

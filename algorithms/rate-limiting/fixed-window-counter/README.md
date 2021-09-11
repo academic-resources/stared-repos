@@ -1,22 +1,22 @@
 # Fixed Window Counter
 
-* Overview
-* Pros
-* Cons
+- Overview
+- Pros
+- Cons
 
 ## Overview
 
 ![](2021-08-29-19-31-24.png)
 
-* The algorithm divides the timeline into **fix-sized time windows and assign a counter for each window**. Each request increments the counter by one. **Once the counter reaches the pre-defined treshold, new requests are dropped until a new time window starts**.
+- The algorithm divides the timeline into **fix-sized time windows and assign a counter for each window**. Each request increments the counter by one. **Once the counter reaches the pre-defined treshold, new requests are dropped until a new time window starts**.
 
 ## Pros
 
-* Memory efficient.
+- Memory efficient.
 
-* Easy to understand.
+- Easy to understand.
 
-* Resetting available quota at the end of a unit time window fits certain use cases.
+- Resetting available quota at the end of a unit time window fits certain use cases.
 
 ## Cons
 

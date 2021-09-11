@@ -5,10 +5,41 @@ to be less than 2^31 - 1."""
 
 class Solution(object):
     def __init__(self):
-        self.units = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven',
-                 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen']
-        self.tens = ['', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety']
-        self.thousands = ['', 'Thousand', 'Million', 'Billion']
+        self.units = [
+            "",
+            "One",
+            "Two",
+            "Three",
+            "Four",
+            "Five",
+            "Six",
+            "Seven",
+            "Eight",
+            "Nine",
+            "Ten",
+            "Eleven",
+            "Twelve",
+            "Thirteen",
+            "Fourteen",
+            "Fifteen",
+            "Sixteen",
+            "Seventeen",
+            "Eighteen",
+            "Nineteen",
+        ]
+        self.tens = [
+            "",
+            "Ten",
+            "Twenty",
+            "Thirty",
+            "Forty",
+            "Fifty",
+            "Sixty",
+            "Seventy",
+            "Eighty",
+            "Ninety",
+        ]
+        self.thousands = ["", "Thousand", "Million", "Billion"]
 
     def numberToWords(self, num):
         """
@@ -35,6 +66,6 @@ class Solution(object):
             return self.units[num // 100] + " Hundred " + self.helper(num % 100)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.numberToWords(23))

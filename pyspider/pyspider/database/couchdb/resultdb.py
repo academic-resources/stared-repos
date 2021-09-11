@@ -4,9 +4,9 @@ from .couchdbbase import SplitTableMixin
 
 
 class ResultDB(SplitTableMixin, BaseResultDB):
-    collection_prefix = ''
+    collection_prefix = ""
 
-    def __init__(self, url, database='resultdb', username=None, password=None):
+    def __init__(self, url, database="resultdb", username=None, password=None):
         self.username = username
         self.password = password
         self.base_url = url
@@ -24,15 +24,12 @@ class ResultDB(SplitTableMixin, BaseResultDB):
         collection_name = self._get_collection_name(project)
         self.create_database(collection_name)
         # create index
-        payload = {
-            'index': {
-                'fields': ['taskid']
-            },
-            'name': collection_name
-        }
+        payload = {"index": {"fields": ["taskid"]}, "name": collection_name}
 
-        res = self.session.post(self.base_url + collection_name + "/_index", json=payload).json()
-        self.index = res['id']
+        res = self.session.post(
+            self.base_url + collection_name + "/_index", json=payload
+        ).json()
+        self.index = res["id"]
         self._list_project()
 
     def save(self, project, taskid, url, result):
@@ -40,10 +37,10 @@ class ResultDB(SplitTableMixin, BaseResultDB):
             self._create_project(project)
         collection_name = self._get_collection_name(project)
         obj = {
-            'taskid': taskid,
-            'url': url,
-            'result': result,
-            'updatetime': time.time(),
+            "taskid": taskid,
+            "url": url,
+            "result": result,
+            "updatetime": time.time(),
         }
         return self.update_doc(collection_name, taskid, obj)
 
@@ -58,18 +55,9 @@ class ResultDB(SplitTableMixin, BaseResultDB):
         if fields is None:
             fields = []
         if limit == 0:
-            sel = {
-                'selector': {},
-                'fields': fields,
-                'skip': offset
-            }
+            sel = {"selector": {}, "fields": fields, "skip": offset}
         else:
-            sel = {
-              'selector': {},
-              'fields': fields,
-              'skip': offset,
-              'limit': limit
-            }
+            sel = {"selector": {}, "fields": fields, "skip": offset, "limit": limit}
         for result in self.get_docs(collection_name, sel):
             yield result
 
@@ -89,10 +77,7 @@ class ResultDB(SplitTableMixin, BaseResultDB):
         collection_name = self._get_collection_name(project)
         if fields is None:
             fields = []
-        sel = {
-            'selector': {'taskid': taskid},
-            'fields': fields
-        }
+        sel = {"selector": {"taskid": taskid}, "fields": fields}
         ret = self.get_docs(collection_name, sel)
         if len(ret) == 0:
             return None

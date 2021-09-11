@@ -16,34 +16,35 @@ import unittest
 from pyspider import run
 from pyspider.libs import utils
 
-class TestBench(unittest.TestCase):
 
+class TestBench(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        shutil.rmtree('./data/bench', ignore_errors=True)
-        os.makedirs('./data/bench')
+        shutil.rmtree("./data/bench", ignore_errors=True)
+        os.makedirs("./data/bench")
 
     @classmethod
     def tearDownClass(self):
-        shutil.rmtree('./data/bench', ignore_errors=True)
+        shutil.rmtree("./data/bench", ignore_errors=True)
 
     def test_10_bench(self):
         import subprocess
-        #cmd = [sys.executable]
-        cmd = ['coverage', 'run']
-        p = subprocess.Popen(cmd+[
-            inspect.getsourcefile(run),
-            '--queue-maxsize=0',
-            'bench',
-            '--total=500'
-        ], close_fds=True, stderr=subprocess.PIPE)
+
+        # cmd = [sys.executable]
+        cmd = ["coverage", "run"]
+        p = subprocess.Popen(
+            cmd
+            + [inspect.getsourcefile(run), "--queue-maxsize=0", "bench", "--total=500"],
+            close_fds=True,
+            stderr=subprocess.PIPE,
+        )
 
         stdout, stderr = p.communicate()
         stderr = utils.text(stderr)
         print(stderr)
 
         self.assertEqual(p.returncode, 0, stderr)
-        self.assertIn('Crawled', stderr)
-        self.assertIn('Fetched', stderr)
-        self.assertIn('Processed', stderr)
-        self.assertIn('Saved', stderr)
+        self.assertIn("Crawled", stderr)
+        self.assertIn("Fetched", stderr)
+        self.assertIn("Processed", stderr)
+        self.assertIn("Saved", stderr)

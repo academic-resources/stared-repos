@@ -2,8 +2,8 @@ import unittest
 import random
 from count_th import *
 
-class Test(unittest.TestCase):
 
+class Test(unittest.TestCase):
     def setUp(self):
         self.word = ""
 
@@ -16,7 +16,7 @@ class Test(unittest.TestCase):
         self.word = "abcthxyz"
         count = count_th(self.word)
         self.assertEqual(1, count)
-    
+
     def test_count_th_multiple(self):
         self.word = "abcthefthghith"
         count = count_th(self.word)
@@ -32,6 +32,6 @@ class Test(unittest.TestCase):
         count = count_th(self.word)
         self.assertEqual(1, count)
 
-    
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

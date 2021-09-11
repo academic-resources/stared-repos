@@ -1,2 +1,2 @@
-import Resume from "./Resume"
-export default Resume
+import Resume from "./Resume";
+export default Resume;

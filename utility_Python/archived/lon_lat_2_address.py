@@ -1,4 +1,4 @@
-# python 3 
+# python 3
 
 
 import pandas as pd
@@ -42,42 +42,39 @@ def get_geolocator():
 def get_geolocator():
     geolocator = Nominatim()
     requester = geolocator.urlopen
+
     def requester_hack(req, **kwargs):
         req = Request(url=req, headers=geolocator.headers)
         return requester(req, **kwargs)
+
     geolocator.urlopen = requester_hack
     return geolocator
 
 
-def rev_geocoder_fixed(lat,lon):
+def rev_geocoder_fixed(lat, lon):
     time.sleep(1)
     try:
-        g = geocoder.google([lat,lon], method = 'reverse')
-        address = g.json['address']
-        #print (address)
+        g = geocoder.google([lat, lon], method="reverse")
+        address = g.json["address"]
+        # print (address)
         address = address.replace("'", "''")
     except:
-        location = get_geolocator().reverse("{},{}".format(lat,lon))
-        address = location.address.replace("'", "''").replace("-", "''").replace("/", "''")
-        #address=''
+        location = get_geolocator().reverse("{},{}".format(lat, lon))
+        address = (
+            location.address.replace("'", "''").replace("-", "''").replace("/", "''")
+        )
+        # address=''
     return address
 
 
 def run_r_geocoder(row):
-    if row['multiple_cells_p'] == 1:
-        addr = row['name']
+    if row["multiple_cells_p"] == 1:
+        addr = row["name"]
     else:
-        addr = rev_geocoder_fixed(row['lat'],row['lon'])
+        addr = rev_geocoder_fixed(row["lat"], row["lon"])
     print(addr)
     return addr
 
 
-
-
-if __name__ == '__main__':
-    df['address'] = df.apply(run_r_geocoder, axis=1)
-
-
-
-
-
+if __name__ == "__main__":
+    df["address"] = df.apply(run_r_geocoder, axis=1)

@@ -9,7 +9,7 @@ class FooBar:
         self.foo_not_printed = threading.Condition(lock=self.lock)
         self.bar_not_printed = threading.Condition(lock=self.lock)
 
-    def foo(self, printFoo: 'Callable[[], None]') -> None:
+    def foo(self, printFoo: "Callable[[], None]") -> None:
 
         for i in range(self.n):
             # printFoo() outputs "foo". Do not change or remove this line.
@@ -21,7 +21,7 @@ class FooBar:
             self.foo_not_printed.notify_all()
             self.lock.release()
 
-    def bar(self, printBar: 'Callable[[], None]') -> None:
+    def bar(self, printBar: "Callable[[], None]") -> None:
 
         for i in range(self.n):
             # printBar() outputs "bar". Do not change or remove this line.

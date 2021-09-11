@@ -2,27 +2,26 @@ import { observable, action } from "mobx";
 import { RootStore } from ".";
 
 class Editor {
-    @observable code: string = ''
-    @observable active: boolean = false
-    root: RootStore
-    constructor(store: RootStore, code: string) {
-        this.root = store
-        this.code = code
+  @observable code: string = "";
+  @observable active: boolean = false;
+  root: RootStore;
+  constructor(store: RootStore, code: string) {
+    this.root = store;
+    this.code = code;
+  }
+  @action submit() {
+    this.root.api.runCode(this.code).then(() => {
+      if (this.active && !this.root.api.error) this.toggle();
+    });
+  }
+  @action toggle() {
+    this.active = !this.active;
+    this.root.allowRender = !this.active;
+    if (this.root.allowRender && this.root.iterator.index > -1) {
+      this.root.iterator.reset();
     }
-    @action submit() {
-        this.root.api.runCode(this.code).then(() => {
-            if (this.active && !this.root.api.error) this.toggle()
-        })
-    }
-    @action toggle() {
-        this.active = !this.active
-        this.root.allowRender = !this.active;
-        if (this.root.allowRender && this.root.iterator.index > -1) {
-            this.root.iterator.reset()
-        }
-        this.root.api.error = null
-    }
-
+    this.root.api.error = null;
+  }
 }
 
-export default Editor
+export default Editor;

@@ -24,7 +24,7 @@ class Solution(object):
                 curr_max_left = max(nums[i], curr_max_left)
                 max_left[i] = curr_max_left
 
-        for i in range(len(nums) -1, -1, -1):
+        for i in range(len(nums) - 1, -1, -1):
             j = i % k
             if j == 0:
                 curr_max_right = nums[i]
@@ -34,13 +34,14 @@ class Solution(object):
                 max_right[i] = curr_max_right
 
         for i in range(len(nums) - k):
-            curr_max = max(max_left[i], max_right[i + k -1])
+            curr_max = max(max_left[i], max_right[i + k - 1])
             results.append(curr_max)
         return results
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     solution = Solution()
     print(solution.maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3))
 
 
-#TODO: Still needs debugging.
+# TODO: Still needs debugging.

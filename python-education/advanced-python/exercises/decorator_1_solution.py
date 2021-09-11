@@ -9,7 +9,6 @@ RE_OPERATION = re.compile(r"\((?P<operation>\w+) (?P<v1>\d+) (?P<v2>\d+)\)")
 
 
 def register(func):
-
     @functools.wraps(func)
     def wrapped(v1: int, v2: int) -> int:
         result = func(v1, v2)

@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 # Setup login manager
 login = LoginManager(app)
-login.login_view = 'auth.unauthorized'
+login.login_view = "auth.unauthorized"
 
 
 @login.user_loader
@@ -35,15 +35,14 @@ app.cli.add_command(seed_commands)
 
 app.config.from_object(Config)
 
-app.register_blueprint(user_routes, url_prefix='/api/users')
-app.register_blueprint(auth_routes, url_prefix='/api/auth')
+app.register_blueprint(user_routes, url_prefix="/api/users")
+app.register_blueprint(auth_routes, url_prefix="/api/auth")
 app.register_blueprint(
-    note_routes, url_prefix='/api/users/<int:userid>/notebooks/<int:notebookid>/notes')
-app.register_blueprint(
-    notebook_routes, url_prefix='/api/users/<int:userid>/notebooks')
-app.register_blueprint(tag_routes, url_prefix='/api/users/<int:userid>/tags')
-app.register_blueprint(
-    note_tag_routes, url_prefix='/api/notes/<int:noteid>/tags')
+    note_routes, url_prefix="/api/users/<int:userid>/notebooks/<int:notebookid>/notes"
+)
+app.register_blueprint(notebook_routes, url_prefix="/api/users/<int:userid>/notebooks")
+app.register_blueprint(tag_routes, url_prefix="/api/users/<int:userid>/tags")
+app.register_blueprint(note_tag_routes, url_prefix="/api/notes/<int:noteid>/tags")
 
 
 db.init_app(app)
@@ -55,31 +54,33 @@ CORS(app)
 
 @app.before_request
 def redirect_https():
-    if os.environ.get('FLASK_ENV') == 'production':
-        if request.headers.get('X-Forwarded-Proto') == 'http':
-            url = request.url.replace('http://', 'https://', 1)
+    if os.environ.get("FLASK_ENV") == "production":
+        if request.headers.get("X-Forwarded-Proto") == "http":
+            url = request.url.replace("http://", "https://", 1)
             code = 301
             return redirect(url, code=code)
 
 
 @app.after_request
 def inject_csrf_token(response):
-    response.set_cookie('csrf_token',
-                        generate_csrf(),
-                        secure=True if os.environ.get(
-                            'FLASK_ENV') == 'production' else False,
-                        samesite='Strict' if os.environ.get(
-                            'FLASK_ENV') == 'production' else None,
-                        httponly=True)
+    response.set_cookie(
+        "csrf_token",
+        generate_csrf(),
+        secure=True if os.environ.get("FLASK_ENV") == "production" else False,
+        samesite="Strict" if os.environ.get("FLASK_ENV") == "production" else None,
+        httponly=True,
+    )
     return response
 
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
+@app.route("/", defaults={"path": ""})
+@app.route("/<path:path>")
 def react_root(path):
-    if (path.startswith('favicon')
-      or path.startswith('android')
-      or path.startswith('apple')
-      or path.startswith('mstile')):
+    if (
+        path.startswith("favicon")
+        or path.startswith("android")
+        or path.startswith("apple")
+        or path.startswith("mstile")
+    ):
         return app.send_static_file(path)
-    return app.send_static_file('index.html')
+    return app.send_static_file("index.html")

@@ -11,26 +11,26 @@ from logging import LoggerAdapter
 import skytools
 import skytools.tnetstrings
 
-__all__ = ['getLogger']
+__all__ = ["getLogger"]
 
 # add TRACE level
 TRACE = 5
-logging.TRACE = TRACE   # type: ignore
-logging.addLevelName(TRACE, 'TRACE')
+logging.TRACE = TRACE  # type: ignore
+logging.addLevelName(TRACE, "TRACE")
 
 # extra info to be added to each log record
-_service_name = 'unknown_svc'
-_job_name = 'unknown_job'
+_service_name = "unknown_svc"
+_job_name = "unknown_job"
 _hostname = socket.gethostname()
 try:
     _hostaddr = socket.gethostbyname(_hostname)
 except BaseException:
     _hostaddr = "0.0.0.0"
 _log_extra = {
-    'job_name': _job_name,
-    'service_name': _service_name,
-    'hostname': _hostname,
-    'hostaddr': _hostaddr,
+    "job_name": _job_name,
+    "service_name": _service_name,
+    "hostname": _hostname,
+    "hostaddr": _hostaddr,
 }
 
 
@@ -41,8 +41,8 @@ def set_service_name(service_name, job_name):
     _service_name = service_name
     _job_name = job_name
 
-    _log_extra['job_name'] = _job_name
-    _log_extra['service_name'] = _service_name
+    _log_extra["job_name"] = _job_name
+    _log_extra["service_name"] = _service_name
 
 
 # Make extra fields available to all log records
@@ -61,6 +61,7 @@ logging.setLogRecordFactory(_new_factory)
 # configurable file logger
 class EasyRotatingFileHandler(logging.handlers.RotatingFileHandler):
     """Easier setup for RotatingFileHandler."""
+
     def __init__(self, filename, maxBytes=10 * 1024 * 1024, backupCount=3):
         """Args same as for RotatingFileHandler, but in filename '~' is expanded."""
         fn = os.path.expanduser(filename)
@@ -73,22 +74,24 @@ class UdpLogServerHandler(logging.handlers.DatagramHandler):
 
     # map logging levels to logserver levels
     _level_map = {
-        logging.DEBUG: 'DEBUG',
-        logging.INFO: 'INFO',
-        logging.WARNING: 'WARN',
-        logging.ERROR: 'ERROR',
-        logging.CRITICAL: 'FATAL',
+        logging.DEBUG: "DEBUG",
+        logging.INFO: "INFO",
+        logging.WARNING: "WARN",
+        logging.ERROR: "ERROR",
+        logging.CRITICAL: "FATAL",
     }
 
     # JSON message template
-    _log_template = '{\n\t'\
-        '"logger": "skytools.UdpLogServer",\n\t'\
-        '"timestamp": %.0f,\n\t'\
-        '"level": "%s",\n\t'\
-        '"thread": null,\n\t'\
-        '"message": %s,\n\t'\
-        '"properties": {"application":"%s", "apptype": "%s", "type": "sys", "hostname":"%s", "hostaddr": "%s"}\n'\
-        '}\n'
+    _log_template = (
+        "{\n\t"
+        '"logger": "skytools.UdpLogServer",\n\t'
+        '"timestamp": %.0f,\n\t'
+        '"level": "%s",\n\t'
+        '"thread": null,\n\t'
+        '"message": %s,\n\t'
+        '"properties": {"application":"%s", "apptype": "%s", "type": "sys", "hostname":"%s", "hostaddr": "%s"}\n'
+        "}\n"
+    )
 
     # cut longer msgs
     MAXMSG = 1024
@@ -98,15 +101,20 @@ class UdpLogServerHandler(logging.handlers.DatagramHandler):
         # get & cut msg
         msg = self.format(record)
         if len(msg) > self.MAXMSG:
-            msg = msg[:self.MAXMSG]
+            msg = msg[: self.MAXMSG]
         txt_level = self._level_map.get(record.levelno, "ERROR")
         hostname = _hostname
         hostaddr = _hostaddr
         jobname = _job_name
         svcname = _service_name
         pkt = self._log_template % (
-            time.time() * 1000, txt_level, skytools.quote_json(msg),
-            jobname, svcname, hostname, hostaddr
+            time.time() * 1000,
+            txt_level,
+            skytools.quote_json(msg),
+            jobname,
+            svcname,
+            hostname,
+            hostaddr,
         )
         return pkt
 
@@ -114,7 +122,7 @@ class UdpLogServerHandler(logging.handlers.DatagramHandler):
         """Disable socket caching."""
         sock = self.makeSocket()
         if not isinstance(s, bytes):
-            s = s.encode('utf8')
+            s = s.encode("utf8")
         sock.sendto(s, (self.host, self.port))
         sock.close()
 
@@ -125,8 +133,18 @@ class UdpTNetStringsHandler(logging.handlers.DatagramHandler):
 
     # LogRecord fields to send
     send_fields = [
-        'created', 'exc_text', 'levelname', 'levelno', 'message', 'msecs', 'name',
-        'hostaddr', 'hostname', 'job_name', 'service_name']
+        "created",
+        "exc_text",
+        "levelname",
+        "levelno",
+        "message",
+        "msecs",
+        "name",
+        "hostaddr",
+        "hostname",
+        "job_name",
+        "service_name",
+    ]
 
     _udp_reset = 0
 
@@ -164,11 +182,11 @@ class LogDBHandler(logging.handlers.SocketHandler):
 
     # map codes to string
     _level_map = {
-        logging.DEBUG: 'DEBUG',
-        logging.INFO: 'INFO',
-        logging.WARNING: 'WARNING',
-        logging.ERROR: 'ERROR',
-        logging.CRITICAL: 'FATAL',
+        logging.DEBUG: "DEBUG",
+        logging.INFO: "INFO",
+        logging.WARNING: "WARNING",
+        logging.ERROR: "ERROR",
+        logging.CRITICAL: "FATAL",
     }
 
     def __init__(self, connect_string):
@@ -230,7 +248,7 @@ class LogDBHandler(logging.handlers.SocketHandler):
             self.flush_stats(_job_name)
 
         # dont send more than one line
-        ln = msg.find('\n')
+        ln = msg.find("\n")
         if ln > 0:
             msg = msg[:ln]
 
@@ -244,7 +262,7 @@ class LogDBHandler(logging.handlers.SocketHandler):
         for rec in msg.split(", "):
             k, v = rec.split(": ")
             agg = self.stat_cache.get(k, 0)
-            if v.find('.') >= 0:
+            if v.find(".") >= 0:
                 agg += float(v)
             else:
                 agg += int(v)
@@ -283,12 +301,13 @@ class SysLogHandler(logging.handlers.SysLogHandler):
     _udp_reset = 0
 
     def _custom_format(self, record):
-        msg = self.format(record) + '\000'
+        msg = self.format(record) + "\000"
 
         # We need to convert record level to lowercase, maybe this will
         # change in the future.
-        prio = '<%d>' % self.encodePriority(self.facility,
-                                            self.mapPriority(record.levelname))
+        prio = "<%d>" % self.encodePriority(
+            self.facility, self.mapPriority(record.levelname)
+        )
         msg = prio + msg
         return msg
 
@@ -302,9 +321,9 @@ class SysLogHandler(logging.handlers.SysLogHandler):
         msg = self._custom_format(record)
         # Message is a string. Convert to bytes as required by RFC 5424
         if not isinstance(msg, bytes):
-            msg = msg.encode('utf-8')
+            msg = msg.encode("utf-8")
             ## this puts BOM in wrong place
-            #if codecs:
+            # if codecs:
             #    msg = codecs.BOM_UTF8 + msg
         try:
             if self.unixsocket:
@@ -333,20 +352,25 @@ class SysLogHostnameHandler(SysLogHandler):
 
     def _custom_format(self, record):
         msg = self.format(record)
-        format_string = '<%d> %s %s %s\000'
-        msg = format_string % (self.encodePriority(self.facility, self.mapPriority(record.levelname)),
-                               _hostname, _service_name, msg)
+        format_string = "<%d> %s %s %s\000"
+        msg = format_string % (
+            self.encodePriority(self.facility, self.mapPriority(record.levelname)),
+            _hostname,
+            _service_name,
+            msg,
+        )
         return msg
 
 
 # add missing aliases (that are in Logger class)
-if not hasattr(LoggerAdapter, 'fatal'):
-    LoggerAdapter.fatal = LoggerAdapter.critical    # type: ignore
+if not hasattr(LoggerAdapter, "fatal"):
+    LoggerAdapter.fatal = LoggerAdapter.critical  # type: ignore
 
 
 class SkyLogger(LoggerAdapter):
     """Adds API to existing Logger.
     """
+
     def trace(self, msg, *args, **kwargs):
         """Log message with severity TRACE."""
         self.log(TRACE, msg, *args, **kwargs)
@@ -362,4 +386,3 @@ def getLogger(name=None, **kwargs_extra):
     """
     log = logging.getLogger(name)
     return SkyLogger(log, kwargs_extra)
-

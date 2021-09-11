@@ -9,6 +9,7 @@ import time
 import json
 import logging
 from six.moves import queue as Queue
+
 logger = logging.getLogger("result")
 
 
@@ -25,27 +26,29 @@ class ResultWorker(object):
         self._quit = False
 
     def on_result(self, task, result):
-        '''Called every result'''
+        """Called every result"""
         if not result:
             return
-        if 'taskid' in task and 'project' in task and 'url' in task:
-            logger.info('result %s:%s %s -> %.30r' % (
-                task['project'], task['taskid'], task['url'], result))
+        if "taskid" in task and "project" in task and "url" in task:
+            logger.info(
+                "result %s:%s %s -> %.30r"
+                % (task["project"], task["taskid"], task["url"], result)
+            )
             return self.resultdb.save(
-                project=task['project'],
-                taskid=task['taskid'],
-                url=task['url'],
-                result=result
+                project=task["project"],
+                taskid=task["taskid"],
+                url=task["url"],
+                result=result,
             )
         else:
-            logger.warning('result UNKNOW -> %.30r' % result)
+            logger.warning("result UNKNOW -> %.30r" % result)
             return
 
     def quit(self):
         self._quit = True
 
     def run(self):
-        '''Run loop'''
+        """Run loop"""
         logger.info("result_worker starting...")
 
         while not self._quit:
@@ -67,21 +70,28 @@ class ResultWorker(object):
 
 
 class OneResultWorker(ResultWorker):
-    '''Result Worker for one mode, write results to stdout'''
+    """Result Worker for one mode, write results to stdout"""
+
     def on_result(self, task, result):
-        '''Called every result'''
+        """Called every result"""
         if not result:
             return
-        if 'taskid' in task and 'project' in task and 'url' in task:
-            logger.info('result %s:%s %s -> %.30r' % (
-                task['project'], task['taskid'], task['url'], result))
-            print(json.dumps({
-                'taskid': task['taskid'],
-                'project': task['project'],
-                'url': task['url'],
-                'result': result,
-                'updatetime': time.time()
-            }))
+        if "taskid" in task and "project" in task and "url" in task:
+            logger.info(
+                "result %s:%s %s -> %.30r"
+                % (task["project"], task["taskid"], task["url"], result)
+            )
+            print(
+                json.dumps(
+                    {
+                        "taskid": task["taskid"],
+                        "project": task["project"],
+                        "url": task["url"],
+                        "result": result,
+                        "updatetime": time.time(),
+                    }
+                )
+            )
         else:
-            logger.warning('result UNKNOW -> %.30r' % result)
+            logger.warning("result UNKNOW -> %.30r" % result)
             return

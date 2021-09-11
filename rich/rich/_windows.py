@@ -40,9 +40,7 @@ else:
     _GetConsoleMode.restype = wintypes.BOOL
 
     _GetStdHandle = windll.kernel32.GetStdHandle
-    _GetStdHandle.argtypes = [
-        wintypes.DWORD,
-    ]
+    _GetStdHandle.argtypes = [wintypes.DWORD]
     _GetStdHandle.restype = wintypes.HANDLE
 
     def get_windows_console_features() -> WindowsConsoleFeatures:

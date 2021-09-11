@@ -13,10 +13,12 @@ world = World()
 # map_file = "E:\\projects\\LambdaSchool\\m7\\72a1\\projects\\adventure\\maps\\test_cross.txt"
 # map_file = "E:\\projects\\LambdaSchool\\m7\\72a1\\projects\\adventure\\maps\\test_loop.txt"
 # map_file = "E:\\projects\\LambdaSchool\\m7\\72a1\\projects\\adventure\\maps\\test_loop_fork.txt"
-map_file = "E:\\projects\\LambdaSchool\\m7\\72a1\\projects\\adventure\\maps\\main_maze.txt"
+map_file = (
+    "E:\\projects\\LambdaSchool\\m7\\72a1\\projects\\adventure\\maps\\main_maze.txt"
+)
 
 # Loads the map into a dictionary
-room_graph=literal_eval(open(map_file, "r").read())
+room_graph = literal_eval(open(map_file, "r").read())
 world.load_graph(room_graph)
 
 # Print an ASCII map
@@ -42,7 +44,7 @@ player.number_rooms_in_world = len(world.rooms)
 while player.lowest_moves > 970:
     # reset current room to starting room
     player.current_room = world.starting_room
-    # reset current path to nothing 
+    # reset current path to nothing
     player.current_path = []
     # create current traversal path
     player.new_traversal_path()
@@ -63,7 +65,6 @@ print(str(len(player.current_path)) + " moves")
 print("------------")
 
 
-
 # TRAVERSAL TEST
 visited_rooms = set()
 player.current_room = world.starting_room
@@ -74,7 +75,9 @@ for move in traversal_path:
     visited_rooms.add(player.current_room)
 
 if len(visited_rooms) == len(room_graph):
-    print(f"TESTS PASSED: {len(traversal_path)} moves, {len(visited_rooms)} rooms visited")
+    print(
+        f"TESTS PASSED: {len(traversal_path)} moves, {len(visited_rooms)} rooms visited"
+    )
 else:
     print("TESTS FAILED: INCOMPLETE TRAVERSAL")
     print(f"{len(room_graph) - len(visited_rooms)} unvisited rooms")

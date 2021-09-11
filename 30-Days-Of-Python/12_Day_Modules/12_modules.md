@@ -141,7 +141,7 @@ python script.py Asabeneh 30DaysOfPython
 The result:
 
 ```sh
-Welcome Asabeneh. Enjoy  30DayOfPython challenge! 
+Welcome Asabeneh. Enjoy  30DayOfPython challenge!
 ```
 
 Some useful sys commands:
@@ -184,7 +184,7 @@ print(math.ceil(9.81))   # 10, rounding to the highest
 print(math.log10(100))   # 2, logarithm with 10 as base
 ```
 
-Now, we have imported the *math* module which contains lots of function which can help us to perform mathematical calculations. To check what functions the module has got, we can use _help(math)_, or _dir(math)_. This will display the available functions in the module. If we want to import only a specific function from the module we import it as follows:
+Now, we have imported the _math_ module which contains lots of function which can help us to perform mathematical calculations. To check what functions the module has got, we can use _help(math)_, or _dir(math)_. This will display the available functions in the module. If we want to import only a specific function from the module we import it as follows:
 
 ```py
 from math import pi
@@ -257,7 +257,7 @@ print(randint(5, 20)) # it returns a random integer number between [5, 20] inclu
      '1ee33d'
    ```
 2. Modify the previous task. Declare a function named user_id_gen_by_user. It doesn’t take any parameters but it takes two inputs using input(). One of the inputs is the number of characters and the second input is the number of IDs which are supposed to be generated.
-   
+
 ```py
 print(user_id_gen_by_user()) # user input: 5 5
 #output:
@@ -266,7 +266,7 @@ print(user_id_gen_by_user()) # user input: 5 5
 #bWmeq
 #ZXOYh
 #2Rgxf
-   
+
 print(user_id_gen_by_user()) # 16 5
 #1GCSgPLMaBAVQZ26
 #YD7eFwNQKNs7qXaT
@@ -276,7 +276,7 @@ print(user_id_gen_by_user()) # 16 5
 ```
 
 3. Write a function named rgb_color_gen. It will generate rgb colors (3 values ranging from 0 to 255 each).
-   
+
 ```py
 print(rgb_color_gen())
 # rgb(125,244,255) - the output should be in this form
@@ -289,11 +289,11 @@ print(rgb_color_gen())
 1. Write a function generate_colors which can generate any number of hexa or rgb colors.
 
 ```py
-   generate_colors('hexa', 3) # ['#a3e12f','#03ed55','#eb3d2b'] 
+   generate_colors('hexa', 3) # ['#a3e12f','#03ed55','#eb3d2b']
    generate_colors('hexa', 1) # ['#b334ef']
-   generate_colors('rgb', 3)  # ['rgb(5, 55, 175','rgb(50, 105, 100','rgb(15, 26, 80'] 
+   generate_colors('rgb', 3)  # ['rgb(5, 55, 175','rgb(50, 105, 100','rgb(15, 26, 80']
    generate_colors('rgb', 1)  # ['rgb(33,79, 176)']
-   ```
+```
 
 ### Exercises: Level 3
 

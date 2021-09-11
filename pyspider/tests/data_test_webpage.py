@@ -7,9 +7,10 @@
 
 from httpbin import app
 
-@app.route('/pyspider/test.html')
+
+@app.route("/pyspider/test.html")
 def test_page():
-    return '''
+    return """
 <a href="/404">404
 <a href="/links/10/0">0
 <a href="/links/10/1">1
@@ -24,11 +25,12 @@ def test_page():
 <a href="/robots.txt">robots
 <a href="/cache">cache
 <a href="/stream/20">stream
-'''
+"""
 
-@app.route('/pyspider/ajax.html')
+
+@app.route("/pyspider/ajax.html")
 def test_ajax():
-    return '''
+    return """
 <div class=status>loading...</div>
 <div class=ua></div>
 <div class=ip></div>
@@ -43,11 +45,12 @@ xhr.onload = function() {
 xhr.open("get", "/get", true);
 xhr.send();
 </script>
-'''
+"""
 
-@app.route('/pyspider/ajax_click.html')
+
+@app.route("/pyspider/ajax_click.html")
 def test_ajax_click():
-    return '''
+    return """
 <div class=status>loading...</div>
 <div class=ua></div>
 <div class=ip></div>
@@ -65,4 +68,4 @@ function load() {
     xhr.send();
 }
 </script>
-'''
+"""

@@ -3,7 +3,6 @@ from python.ds.heap.heap import MinHeap, MaxHeap
 
 
 class TestHeap(unittest.TestCase):
-
     def test_push(self):
         min_heap = MinHeap()
         max_heap = MaxHeap()
@@ -39,5 +38,5 @@ class TestHeap(unittest.TestCase):
         self.assertEqual(max_heap.peek(), 9)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

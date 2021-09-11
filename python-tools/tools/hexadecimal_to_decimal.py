@@ -9,4 +9,9 @@ def hexadecimal_to_decimal(hex):
         int: Return decimal value.
 
     """
-    return sum(['0123456789ABCDEF'.find(var) * 16 ** i for i, var in enumerate(reversed(hex.upper()))])
+    return sum(
+        [
+            "0123456789ABCDEF".find(var) * 16 ** i
+            for i, var in enumerate(reversed(hex.upper()))
+        ]
+    )

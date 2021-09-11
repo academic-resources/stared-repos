@@ -9,8 +9,8 @@ Given two strings, check to see if they're anagrams of each other.
 
 # Not optimal in interview - relies on built in methods
 def anagram_check_one(string_one: str, string_two: str) -> bool:
-    string_one = string_one.replace(' ', '').lower()
-    string_two = string_two.replace(' ', '').lower()
+    string_one = string_one.replace(" ", "").lower()
+    string_two = string_two.replace(" ", "").lower()
 
     # Verify that the lengths of each string are equal
     if len(string_one) != len(string_two):
@@ -21,8 +21,8 @@ def anagram_check_one(string_one: str, string_two: str) -> bool:
 
 # More manual solution
 def anagram_check_two(string_one: str, string_two: str) -> bool:
-    string_one = string_one.replace(' ', '').lower()
-    string_two = string_two.replace(' ', '').lower()
+    string_one = string_one.replace(" ", "").lower()
+    string_two = string_two.replace(" ", "").lower()
 
     # Verify that the lengths of each string are equal
     if len(string_one) != len(string_two):

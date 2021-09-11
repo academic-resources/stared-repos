@@ -39,6 +39,6 @@ class Solution:
         return curr_index
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.taskScheduler([1, 1, 2, 1], 2))

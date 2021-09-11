@@ -10,29 +10,23 @@ import re
 # NOTE: When get/get_all/check_update from database with default fields,
 #       all following fields should be included in output dict.
 {
-    'project': {
-        'name': str,
-        'group': str,
-        'status': str,
-        'script': str,
+    "project": {
+        "name": str,
+        "group": str,
+        "status": str,
+        "script": str,
         # 'config': str,
-        'comments': str,
+        "comments": str,
         # 'priority': int,
-        'rate': int,
-        'burst': int,
-        'updatetime': int,
+        "rate": int,
+        "burst": int,
+        "updatetime": int,
     }
 }
 
 
 class ProjectDB(object):
-    status_str = [
-        'TODO',
-        'STOP',
-        'CHECKING',
-        'DEBUG',
-        'RUNNING',
-    ]
+    status_str = ["TODO", "STOP", "CHECKING", "DEBUG", "RUNNING"]
 
     def insert(self, name, obj={}):
         raise NotImplementedError
@@ -54,9 +48,9 @@ class ProjectDB(object):
 
     def split_group(self, group, lower=True):
         if lower:
-            return re.split("\W+", (group or '').lower())
+            return re.split("\W+", (group or "").lower())
         else:
-            return re.split("\W+", group or '')
+            return re.split("\W+", group or "")
 
     def verify_project_name(self, name):
         if len(name) > 64:
@@ -66,11 +60,11 @@ class ProjectDB(object):
         return True
 
     def copy(self):
-        '''
+        """
         database should be able to copy itself to create new connection
 
         it's implemented automatically by pyspider.database.connect_database
         if you are not create database connection via connect_database method,
         you should implement this
-        '''
+        """
         raise NotImplementedError

@@ -55,7 +55,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   path.includes("edit")
                     ? dispatch(removeFieldSaved(field))
                     : dispatch(removeFieldTemplate(field));
-                }}>
+                }}
+              >
                 Remove Field
               </button>
             </div>
@@ -160,7 +161,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   path.includes("edit")
                     ? dispatch(addFieldSaved(field))
                     : dispatch(addFieldTemplate(field));
-                }}>
+                }}
+              >
                 Add Skill
               </button>
               <button
@@ -169,7 +171,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   path.includes("edit")
                     ? dispatch(removeFieldSaved(field))
                     : dispatch(removeFieldTemplate(field));
-                }}>
+                }}
+              >
                 Remove Skill
               </button>
             </div>
@@ -339,7 +342,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   path.includes("edit")
                     ? dispatch(removeFieldSaved(field))
                     : dispatch(removeFieldTemplate(field));
-                }}>
+                }}
+              >
                 Remove GPA
               </button>
             </div>
@@ -370,7 +374,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   path.includes("edit")
                     ? dispatch(removeFieldSaved(field))
                     : dispatch(removeFieldTemplate(field));
-                }}>
+                }}
+              >
                 Remove Minor
               </button>
             </div>
@@ -410,7 +415,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   return newState;
                 });
               }}
-              placeholder={field.placeholder}></textarea>
+              placeholder={field.placeholder}
+            ></textarea>
           </p>
         );
         break;
@@ -429,7 +435,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   return newState;
                 });
               }}
-              placeholder={field.placeholder}></textarea>
+              placeholder={field.placeholder}
+            ></textarea>
           </p>
         );
         break;
@@ -448,7 +455,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   return newState;
                 });
               }}
-              placeholder={field.placeholder}></textarea>
+              placeholder={field.placeholder}
+            ></textarea>
           </p>
         );
         break;
@@ -467,7 +475,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   return newState;
                 });
               }}
-              placeholder={field.placeholder}></textarea>
+              placeholder={field.placeholder}
+            ></textarea>
             <div className="flex justify-center space-x-1">
               <button
                 className="focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-accentLight hover:bg-accentDark hover:shadow-lg"
@@ -475,7 +484,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   path.includes("edit")
                     ? dispatch(addFieldSaved(field))
                     : dispatch(addFieldTemplate(field));
-                }}>
+                }}
+              >
                 Add Responsibility
               </button>
               <button
@@ -484,7 +494,8 @@ const EditHelper = ({ field, form, value, setValues, number }) => {
                   path.includes("edit")
                     ? dispatch(removeFieldSaved(field))
                     : dispatch(removeFieldTemplate(field));
-                }}>
+                }}
+              >
                 Remove Responsibility
               </button>
             </div>

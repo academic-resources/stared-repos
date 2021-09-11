@@ -2,8 +2,8 @@ import fnmatch
 import os
 
 # constants
-PATH = './'
-PATTERN = '*.md'
+PATH = "./"
+PATTERN = "*.md"
 
 
 def get_file_names(filepath, pattern):
@@ -27,5 +27,5 @@ def output_files(list_of_files):
         print(filename)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     get_file_names(PATH, PATTERN)

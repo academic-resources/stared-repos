@@ -2,6 +2,7 @@
 The path refers to any sequence of nodes from some starting node to any node in the tree along the parent-child
 connections. The longest consecutive path need to be from parent to child (cannot be the reverse). """
 
+
 class Solution(object):
     def longestConsecutive(self, root):
         """
@@ -20,7 +21,7 @@ class Solution(object):
             max_val = max(curr_val, max_val)
         else:
             curr_val = 1
-        return max(self.dfs(root.left, root.val + 1, curr_val, max_val), self.dfs(root.right, root.val + 1, curr_val, max_val))
-
-
-
+        return max(
+            self.dfs(root.left, root.val + 1, curr_val, max_val),
+            self.dfs(root.right, root.val + 1, curr_val, max_val),
+        )

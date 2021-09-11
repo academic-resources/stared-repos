@@ -1,19 +1,19 @@
-const mongoose = require('mongoose');
-mongoose.set('useCreateIndex', true);
+const mongoose = require("mongoose");
+mongoose.set("useCreateIndex", true);
 const Schema = mongoose.Schema;
 
 const EmblemSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   gods: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'god'
-    }
-  ]
+      ref: "god",
+    },
+  ],
 });
 
-module.exports = mongoose.model('emblem', EmblemSchema);
+module.exports = mongoose.model("emblem", EmblemSchema);

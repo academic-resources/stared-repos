@@ -3,14 +3,14 @@ import random
 
 
 def PickClass():
-    wow_classes = ['warrior', 'mage', 'priest']
+    wow_classes = ["warrior", "mage", "priest"]
     myclass = random.choice(wow_classes)
     print("My random pick is " + myclass)
-    if myclass == 'warrior':
+    if myclass == "warrior":
         print("It is so, Warrior")
-    elif myclass == 'mage':
+    elif myclass == "mage":
         print("STINKING MAGIC")
-    elif myclass == 'priest':
+    elif myclass == "priest":
         print("Well then, priest")
     else:
         print("Darn, go to sleep")
@@ -18,7 +18,7 @@ def PickClass():
 
 
 def PickRace():
-    races = ['orc', 'ogre']
+    races = ["orc", "ogre"]
     for spam in races:
         print("I smell me some", spam)
     badone = random.choice(races)

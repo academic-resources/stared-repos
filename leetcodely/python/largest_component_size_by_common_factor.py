@@ -1,5 +1,4 @@
 class Solution:
-
     def largestComponentSize(self, A: [int]) -> int:
         parent = {c: c for c in A}
 
@@ -22,6 +21,6 @@ class Solution:
             return False
 
         for i in range(len(A)):
-            for j in range(i+1, len(A)):
+            for j in range(i + 1, len(A)):
                 if common(A[i], A[j]):
                     union(A[i], A[j])

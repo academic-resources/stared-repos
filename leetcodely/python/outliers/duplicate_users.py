@@ -15,7 +15,7 @@ def find_duplicate_users(arr: list) -> list:
         result = [arr[0]]
         for i in range(1, len(arr)):
             for k in result:
-                for j in (arr[i]):
+                for j in arr[i]:
                     if j in k:
                         k.add(arr[i])
                         break

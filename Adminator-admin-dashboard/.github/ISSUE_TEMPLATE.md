@@ -2,7 +2,7 @@
 PLEASE HELP US PROCESS GITHUB ISSUES FASTER BY PROVIDING THE FOLLOWING INFORMATION.
 ISSUES MISSING IMPORTANT INFORMATION MAY BE CLOSED WITHOUT INVESTIGATION.
 
-PLEASE SEARCH GITHUB FOR A SIMILAR ISSUE OR PR BEFORE SUBMITTING 
+PLEASE SEARCH GITHUB FOR A SIMILAR ISSUE OR PR BEFORE SUBMITTING
 -->
 
 <!-- DON'T FORGET REMOVE UNNECESSARY -->
@@ -14,18 +14,22 @@ PLEASE SEARCH GITHUB FOR A SIMILAR ISSUE OR PR BEFORE SUBMITTING
 <!-- Optionally describe the motivation or the concrete use case -->
 
 # Current behavior
+
 <!-- Describe how the issue manifests -->
 
-# Expected behavior 
+# Expected behavior
+
 <!-- Describe what the desired behavior would be. -->
 <!-- For bug reports please provide the *STEPS TO REPRODUCE* and if possible a *MINIMAL DEMO* of the problem -->
 
 # Environment
-Platform: 
-Browser: 
+
+Platform:
+Browser:
 
 For building issues:
-Node:           
-NPM:          
+Node:  
+NPM:
+
 <!-- run `node --version` -->
 <!-- run `npm --version` -->

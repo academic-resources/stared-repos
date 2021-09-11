@@ -1,5 +1,6 @@
 import scapy.all as scapy
 from scapy.layers import http
+
 # from scapy_http import http
 
 
@@ -30,8 +31,8 @@ def process_sniffed_packet(packet):
         print("[+] HTTP REQUEST >> \n" + url)
         login_info = get_login_info(packet)
         if login_info:
-            print("\n\n[+] possible username/password >>" + login_info +
-                  "\n\n")
+            print("\n\n[+] possible username/password >>" + login_info + "\n\n")
+
 
 # ----interfaceon which you want to sniff
 sniff("eth0")

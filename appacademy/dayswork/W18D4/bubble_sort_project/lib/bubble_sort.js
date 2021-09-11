@@ -1,28 +1,28 @@
 function swap(array, idx1, idx2) {
-  let temp = array[idx1]
-  array[idx1] = array[idx2]
-  array[idx2] = temp
-  return array
+  let temp = array[idx1];
+  array[idx1] = array[idx2];
+  array[idx2] = temp;
+  return array;
 }
 
 function bubbleSort(arr) {
-  let swapped = true
+  let swapped = true;
 
   while (swapped) {
-    swapped = false
+    swapped = false;
 
     for (let i = 0; i < arr.length - 1; i++) {
       if (arr[i] > arr[i + 1]) {
-        swap(arr, i, i + 1)
-        swapped = true
+        swap(arr, i, i + 1);
+        swapped = true;
       }
     }
   }
 
-  return arr
+  return arr;
 }
 
 module.exports = {
   bubbleSort,
-  swap
-}
+  swap,
+};

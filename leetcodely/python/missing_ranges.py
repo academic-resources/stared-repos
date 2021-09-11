@@ -33,9 +33,9 @@ class Range:
         if self.lower and not self.upper or self.lower == self.upper:
             return str(self.lower)
         else:
-            return ''.join([str(self.lower), '->', str(self.upper)])
+            return "".join([str(self.lower), "->", str(self.upper)])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.findMissingRanges([], 1, 1))

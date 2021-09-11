@@ -3,14 +3,16 @@
 # importing os module
 import os
 from PIL import Image
+
 # Importing Pillow Python Imaging Library:that adds support for opening, manipulating, and saving many different image file formats.
 from PIL.ExifTags import TAGS
+
 # importing required modules
 
 # print(TAGS) checking if libraries are imported or not which basically returns a key value pairs of all the metadata.
 
 # Enter your Image here, here it is as image.jpg
-image_file = 'image.jpg'
+image_file = "image.jpg"
 
 # on execution an object of Image type is returned and stored in image_file variable.
 
@@ -32,8 +34,8 @@ for tag, value in image._getexif().items():
 
 # checking if image is copyrighted
 try:
-    if 'Copyright' in exif:
-        print("Image is Copyrighted, by ", exif['Copyright'])
+    if "Copyright" in exif:
+        print("Image is Copyrighted, by ", exif["Copyright"])
 except KeyError:
     pass
 

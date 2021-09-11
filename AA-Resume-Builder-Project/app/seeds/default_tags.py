@@ -1,5 +1,6 @@
 from app.models import db, Default_Tag
 
+
 def seed_default_tags():
 
     types = ("College", "Professional", "Internship", "Co-op")
@@ -9,6 +10,7 @@ def seed_default_tags():
 
     db.session.commit()
 
+
 def undo_default_tags():
-  db.session.execute('TRUNCATE default_tags CASCADE;')
-  db.session.commit()
+    db.session.execute("TRUNCATE default_tags CASCADE;")
+    db.session.commit()

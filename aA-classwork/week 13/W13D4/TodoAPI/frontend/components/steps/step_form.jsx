@@ -1,45 +1,45 @@
-import React from 'react'
-import { uniqueId } from '../../util/util'
+import React from "react";
+import { uniqueId } from "../../util/util";
 
 class StepForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      title: '',
-      body: ''
-    }
-    this.updateTitle = this.updateTitle.bind(this)
-    this.handleSave = this.handleSave.bind(this)
-    this.updateBody = this.updateBody.bind(this)
+      title: "",
+      body: "",
+    };
+    this.updateTitle = this.updateTitle.bind(this);
+    this.handleSave = this.handleSave.bind(this);
+    this.updateBody = this.updateBody.bind(this);
   }
 
   handleSave(e) {
-    e.preventDefault()
+    e.preventDefault();
     const step = {
       id: uniqueId(),
       title: this.state.title,
       body: this.state.body,
       todo_id: this.props.todo_id,
-      done: false
-    }
-    const { createStep } = this.props
-    createStep(step)
+      done: false,
+    };
+    const { createStep } = this.props;
+    createStep(step);
     this.setState({
-      title: '',
-      body: ''
-    })
+      title: "",
+      body: "",
+    });
   }
 
   updateTitle(e) {
     this.setState({
-      title: e.currentTarget.value
-    })
+      title: e.currentTarget.value,
+    });
   }
 
   updateBody(e) {
     this.setState({
-      body: e.currentTarget.value
-    })
+      body: e.currentTarget.value,
+    });
   }
 
   render() {
@@ -67,8 +67,8 @@ class StepForm extends React.Component {
           Create Step!
         </button>
       </form>
-    )
+    );
   }
 }
 
-export default StepForm
+export default StepForm;

@@ -45,6 +45,7 @@ class WordDictionary(object):
         :type word: str
         :rtype: bool
         """
+
         def _search(_word, index, curr):
             if index == len(_word):
                 if not curr.is_end:
@@ -53,17 +54,19 @@ class WordDictionary(object):
                     return True
             if _word[index] == ".":
                 for char in curr.child.keys():
-                    if _search(_word,  index+1, curr.child[char]):
+                    if _search(_word, index + 1, curr.child[char]):
                         return True
             else:
-                if _word[index] in curr.child and _search(_word, index+1, curr.child[_word[index]]):
+                if _word[index] in curr.child and _search(
+                    _word, index + 1, curr.child[_word[index]]
+                ):
                     return True
             return False
 
         return _search(word, 0, self.trie_node)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     wordDictionary = WordDictionary()
-    wordDictionary.addWord('bad')
-    print(wordDictionary.search('.ad'))
+    wordDictionary.addWord("bad")
+    print(wordDictionary.search(".ad"))

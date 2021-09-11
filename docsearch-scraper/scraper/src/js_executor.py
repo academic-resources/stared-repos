@@ -19,4 +19,4 @@ class JsExecutor:
             parsed_result = json.loads(result)
             return parsed_result
         except ValueError:
-            raise ValueError('CONFIG is not a valid JSON')
+            raise ValueError("CONFIG is not a valid JSON")

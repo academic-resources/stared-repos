@@ -6,6 +6,7 @@
 # Created on 2014-02-07 16:53:08
 
 import time
+
 try:
     import threading as _threading
 except ImportError:
@@ -14,9 +15,9 @@ except ImportError:
 
 class Bucket(object):
 
-    '''
+    """
     traffic flow control with token bucket
-    '''
+    """
 
     update_interval = 30
 
@@ -31,7 +32,7 @@ class Bucket(object):
         self.last_update = time.time()
 
     def get(self):
-        '''Get the number of tokens in bucket'''
+        """Get the number of tokens in bucket"""
         now = time.time()
         if self.bucket >= self.burst:
             self.last_update = now
@@ -47,9 +48,9 @@ class Bucket(object):
         return self.bucket
 
     def set(self, value):
-        '''Set number of tokens in bucket'''
+        """Set number of tokens in bucket"""
         self.bucket = value
 
     def desc(self, value=1):
-        '''Use value tokens'''
+        """Use value tokens"""
         self.bucket -= value

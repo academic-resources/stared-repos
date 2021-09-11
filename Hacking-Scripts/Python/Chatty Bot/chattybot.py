@@ -1,20 +1,21 @@
 # A simple and interactive chatBot
 
+
 def greet(bot_name, birth_year):
-    print('Hello! My name is ' + bot_name + '.')
-    print('I am your an interactive chat bot!')
-    print('I was created in ' + birth_year + '.')
+    print("Hello! My name is " + bot_name + ".")
+    print("I am your an interactive chat bot!")
+    print("I was created in " + birth_year + ".")
 
 
 def remind_name():
-    print('Please, remind me your name.')
+    print("Please, remind me your name.")
     name = input()
-    print('What a great name you have, ' + name + '!')
+    print("What a great name you have, " + name + "!")
 
 
 def guess_age():
-    print('Let me guess your age.')
-    print('Enter remainders of dividing your age by 3, 5 and 7.')
+    print("Let me guess your age.")
+    print("Enter remainders of dividing your age by 3, 5 and 7.")
 
     rem3 = int(input())
     rem5 = int(input())
@@ -25,7 +26,7 @@ def guess_age():
 
 
 def count():
-    print('Now I will prove to you that I can count to any number you want.')
+    print("Now I will prove to you that I can count to any number you want.")
 
     num = int(input())
     curr = 0
@@ -42,17 +43,17 @@ def test():
     print("3. To determine the execution time of a program.")
     print("4. To interrupt the execution of a program.")
     answer = int(input())
-    while answer != 3 :
+    while answer != 3:
         print("Please, try again.")
         answer = int(input())
-    print('Completed, have a nice day!')
+    print("Completed, have a nice day!")
 
 
 def end():
-    print('Congratulations, have a nice day!')
+    print("Congratulations, have a nice day!")
 
 
-greet('Aid', '2021')  # change it as you need
+greet("Aid", "2021")  # change it as you need
 remind_name()
 guess_age()
 count()

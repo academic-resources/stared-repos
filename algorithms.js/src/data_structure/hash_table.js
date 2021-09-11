@@ -1,21 +1,21 @@
-'use strict';
+"use strict";
 
-var LinkedList = require('./linked_list');
+var LinkedList = require("./linked_list");
 
 function HashTable(initialCapacity) {
   this._table = new Array(initialCapacity || 64);
   this._items = 0;
 
-  Object.defineProperty(this, 'capacity', {
+  Object.defineProperty(this, "capacity", {
     get: function () {
       return this._table.length;
-    }
+    },
   });
 
-  Object.defineProperty(this, 'size', {
+  Object.defineProperty(this, "size", {
     get: function () {
       return this._items;
-    }
+    },
   });
 }
 
@@ -28,10 +28,10 @@ function HashTable(initialCapacity) {
  * (The hash value of the empty string is zero.)
  */
 HashTable.prototype.hash = function (s) {
-  if (typeof s !== 'string') s = JSON.stringify(s);
+  if (typeof s !== "string") s = JSON.stringify(s);
   var hash = 0;
   for (var i = 0; i < s.length; i++) {
-    hash = ((hash << 5) - hash) + s.charCodeAt(i);
+    hash = (hash << 5) - hash + s.charCodeAt(i);
     hash &= hash; // Keep it a 32bit int
   }
   return hash;
@@ -51,7 +51,7 @@ HashTable.prototype.put = function (key, value) {
     // Hashing with chaining
     this._table[i] = new LinkedList();
   }
-  var item = {k: key, v: value};
+  var item = { k: key, v: value };
 
   var node = this._findInList(this._table[i], key);
   if (node) {

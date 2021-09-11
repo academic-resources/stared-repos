@@ -3,8 +3,8 @@ import { Mutation } from "react-apollo";
 import { CREATE_PRODUCT } from "../../graphql/mutations";
 import { FETCH_PRODUCTS } from "../../graphql/queries";
 import CategoryDropdown from "../CategoryDropdown";
-import { Query } from 'react-apollo'
-import { FETCH_CATEGORIES } from '../../graphql/queries'
+import { Query } from "react-apollo";
+import { FETCH_CATEGORIES } from "../../graphql/queries";
 
 class CreateProduct extends Component {
   defaultcat;
@@ -16,18 +16,15 @@ class CreateProduct extends Component {
       name: "",
       weight: "",
       description: "",
-      category: ""
+      category: "",
     };
-
   }
 
   update(field) {
-    return e => {
-      
+    return (e) => {
       this.setState({ [field]: e.target.value });
-    }
+    };
   }
-
 
   // we need to remember to update our cache directly with our new product
   updateCache(cache, { data }) {
@@ -45,21 +42,21 @@ class CreateProduct extends Component {
       let newProduct = data.newProduct;
       cache.writeQuery({
         query: FETCH_PRODUCTS,
-        data: { products: productArray.concat(newProduct) }
+        data: { products: productArray.concat(newProduct) },
       });
     }
   }
 
   handleSubmit(e, newProduct) {
     e.preventDefault();
-    
+
     newProduct({
       variables: {
         name: this.state.name,
         description: this.state.description,
         weight: parseInt(this.state.weight),
-        category: this.state.category ? this.state.category : this.defaultcat 
-      }
+        category: this.state.category ? this.state.category : this.defaultcat,
+      },
     });
   }
 
@@ -68,20 +65,20 @@ class CreateProduct extends Component {
       <Mutation
         mutation={CREATE_PRODUCT}
         // if we error out we can set the message here
-        onError={err => this.setState({ message: err.message })}
+        onError={(err) => this.setState({ message: err.message })}
         // we need to make sure we update our cache once our new product is created
         update={(cache, data) => this.updateCache(cache, data)}
         // when our query is complete we'll display a success message
-        onCompleted={data => {
+        onCompleted={(data) => {
           const { name } = data.newProduct;
           this.setState({
-            message: `New product ${name} created successfully`
+            message: `New product ${name} created successfully`,
           });
         }}
       >
         {(newProduct, { data }) => (
           <div>
-            <form onSubmit={e => this.handleSubmit(e, newProduct)}>
+            <form onSubmit={(e) => this.handleSubmit(e, newProduct)}>
               <input
                 onChange={this.update("name")}
                 value={this.state.name}
@@ -101,17 +98,17 @@ class CreateProduct extends Component {
 
               <Query query={FETCH_CATEGORIES}>
                 {({ loading, error, data }) => {
-                    if (loading) return null
-                    this.defaultcat = data.categories[0]._id
-                    return (
-                      <CategoryDropdown onChange={this.update("category")} 
-                                        categories={data.categories} />
-                    );
+                  if (loading) return null;
+                  this.defaultcat = data.categories[0]._id;
+                  return (
+                    <CategoryDropdown
+                      onChange={this.update("category")}
+                      categories={data.categories}
+                    />
+                  );
                 }}
               </Query>
 
-              
-              
               <button type="submit">Create Product</button>
             </form>
             <p>{this.state.message}</p>
@@ -122,4 +119,4 @@ class CreateProduct extends Component {
   }
 }
 
-export default CreateProduct; 
+export default CreateProduct;

@@ -3,55 +3,52 @@ import datetime
 
 from schematics.models import Model
 from schematics.exceptions import (
-    BaseError, ValidationError, ConversionError,
-    ModelValidationError, ModelConversionError,
+    BaseError,
+    ValidationError,
+    ConversionError,
+    ModelValidationError,
+    ModelConversionError,
 )
 from schematics.types import StringType, DateTimeType, BooleanType
 from schematics.types.compound import ModelType, ListType, DictType
 
 
-future_error_msg = u'Future dates are not valid'
+future_error_msg = u"Future dates are not valid"
 
 
 def test_choices_validates():
     class Document(Model):
-        language = StringType(choices=['en', 'de'])
+        language = StringType(choices=["en", "de"])
 
-    doc = Document({'language': 'de'})
+    doc = Document({"language": "de"})
     doc.validate()
 
 
 def test_validation_fails():
     class Document(Model):
-        language = StringType(choices=['en', 'de'])
+        language = StringType(choices=["en", "de"])
 
-    doc = Document({'language': 'fr'})
+    doc = Document({"language": "fr"})
     with pytest.raises(ValidationError):
         doc.validate()
 
 
 def test_choices_validates_with_embedded():
     class Document(Model):
-        language = StringType(choices=['en', 'de'])
+        language = StringType(choices=["en", "de"])
         other = ListType(StringType())
 
-    doc = Document({
-        'language': 'de',
-        'other': ['somevalue', 'other']
-    })
+    doc = Document({"language": "de", "other": ["somevalue", "other"]})
 
     doc.validate()
 
 
 def test_validation_failes_with_embedded():
     class Document(Model):
-        language = StringType(choices=['en', 'de'])
+        language = StringType(choices=["en", "de"])
         other = ListType(StringType())
 
-    doc = Document({
-        'language': 'fr',
-        'other': ['somevalue', 'other']
-    })
+    doc = Document({"language": "fr", "other": ["somevalue", "other"]})
 
     with pytest.raises(ValidationError):
         doc.validate()
@@ -65,7 +62,7 @@ def test_validation_none_fails():
         Player({"first_name": None}).validate()
 
         assert len(exception.messages) == 1  # Only one failure
-        assert u'This field is required' in exception.messages["first_name"][0]
+        assert u"This field is required" in exception.messages["first_name"][0]
 
 
 def test_custom_validators():
@@ -81,35 +78,37 @@ def test_custom_validators():
         title = StringType(required=False)
 
     with pytest.raises(ValidationError) as exception:
-        TestDoc({
-            "publish": datetime.datetime(2012, 2, 1, 0, 0),
-            "author": "Hemingway",
-            "title": "Old Man"
-        }).validate()
+        TestDoc(
+            {
+                "publish": datetime.datetime(2012, 2, 1, 0, 0),
+                "author": "Hemingway",
+                "title": "Old Man",
+            }
+        ).validate()
 
-        assert future_error_msg in exception.messages['publish']
+        assert future_error_msg in exception.messages["publish"]
 
 
 def test_messages_subclassing():
     class MyStringType(StringType):
-        MESSAGES = {'required': u'Never forget'}
+        MESSAGES = {"required": u"Never forget"}
 
     class TestDoc(Model):
         title = MyStringType(required=True)
 
     with pytest.raises(ValidationError) as exception:
-        TestDoc({'title': None}).validate()
+        TestDoc({"title": None}).validate()
 
-        assert u'Never forget' in exception.messages['title']
+        assert u"Never forget" in exception.messages["title"]
 
 
 def test_messages_instance_level():
     class TestDoc(Model):
-        title = StringType(required=True, messages={'required': u'Never forget'})
+        title = StringType(required=True, messages={"required": u"Never forget"})
 
     with pytest.raises(ValidationError) as exception:
-        TestDoc({'title': None}).validate()
-        assert u'Never forget' in exception.messages['title']
+        TestDoc({"title": None}).validate()
+        assert u"Never forget" in exception.messages["title"]
 
 
 def test_model_validators():
@@ -123,11 +122,11 @@ def test_model_validators():
         publish = DateTimeType()
 
         def validate_publish(self, data, dt):
-            if dt > datetime.datetime(2012, 1, 1, 0, 0) and not data['can_future']:
+            if dt > datetime.datetime(2012, 1, 1, 0, 0) and not data["can_future"]:
                 raise ValidationError(future_error_msg)
 
     with pytest.raises(ValidationError):
-        TestDoc({'publish': future}).validate()
+        TestDoc({"publish": future}).validate()
 
 
 def test_multi_key_validation():
@@ -141,17 +140,17 @@ def test_multi_key_validation():
         publish = DateTimeType()
 
         def validate_publish(self, data, dt):
-            if data['should_raise'] is True:
-                raise ValidationError(u'')
+            if data["should_raise"] is True:
+                raise ValidationError(u"")
             return dt
 
     with pytest.raises(ValidationError):
-        GoodModel({'publish': input}).validate()
+        GoodModel({"publish": input}).validate()
 
-    GoodModel({'publish': input, 'should_raise': False}).validate()
+    GoodModel({"publish": input, "should_raise": False}).validate()
 
     with pytest.raises(ValidationError):
-        GoodModel({'publish': input, 'should_raise': True}).validate()
+        GoodModel({"publish": input, "should_raise": True}).validate()
 
 
 def test_multi_key_validation_part_two():
@@ -160,15 +159,17 @@ def test_multi_key_validation_part_two():
         call_me = BooleanType(default=False)
 
         def validate_call_me(self, data, value):
-            if data['name'] == u'Brad' and value is True:
-                raise ValidationError(u'I\'m sorry I never call people who\'s name is Brad')
+            if data["name"] == u"Brad" and value is True:
+                raise ValidationError(
+                    u"I'm sorry I never call people who's name is Brad"
+                )
             return value
 
-    Signup({'name': u'Brad'}).validate()
-    Signup({'name': u'Brad', 'call_me': False}).validate()
+    Signup({"name": u"Brad"}).validate()
+    Signup({"name": u"Brad", "call_me": False}).validate()
 
     with pytest.raises(ValidationError):
-        Signup({'name': u'Brad', 'call_me': True}).validate()
+        Signup({"name": u"Brad", "call_me": True}).validate()
 
 
 def test_basic_error():
@@ -220,14 +221,9 @@ def test_deep_errors_with_lists():
         courses = ListType(ModelType(Course))
 
     valid_data = {
-        'courses': [
-            {'id': 'ENG103', 'attending': [
-                {'name': u'Danny'},
-                {'name': u'Sandy'}]},
-            {'id': 'ENG203', 'attending': [
-                {'name': u'Danny'},
-                {'name': u'Sandy'}
-            ]}
+        "courses": [
+            {"id": "ENG103", "attending": [{"name": u"Danny"}, {"name": u"Sandy"}]},
+            {"id": "ENG203", "attending": [{"name": u"Danny"}, {"name": u"Sandy"}]},
         ]
     }
 
@@ -235,7 +231,7 @@ def test_deep_errors_with_lists():
     school.validate()
 
     invalid_data = school.serialize()
-    invalid_data['courses'][0]['attending'][0]['name'] = None
+    invalid_data["courses"][0]["attending"][0]["name"] = None
 
     school = School(invalid_data)
     with pytest.raises(ValidationError) as exception:
@@ -244,15 +240,7 @@ def test_deep_errors_with_lists():
         messages = exception.messages
 
         assert messages == {
-            'courses': [
-                {
-                    'attending': [
-                        {
-                            'name': [u'This field is required.'],
-                        },
-                    ],
-                }
-            ]
+            "courses": [{"attending": [{"name": [u"This field is required."]}]}]
         }
 
 
@@ -268,18 +256,14 @@ def test_deep_errors_with_dicts():
         courses = DictType(ModelType(Course))
 
     valid_data = {
-        'courses': {
+        "courses": {
             "ENG103": {
-                'id': 'ENG103', 'attending': [
-                    {'name': u'Danny'},
-                    {'name': u'Sandy'},
-                ],
+                "id": "ENG103",
+                "attending": [{"name": u"Danny"}, {"name": u"Sandy"}],
             },
             "ENG203": {
-                'id': 'ENG203', 'attending': [
-                    {'name': u'Danny'},
-                    {'name': u'Sandy'},
-                ],
+                "id": "ENG203",
+                "attending": [{"name": u"Danny"}, {"name": u"Sandy"}],
             },
         }
     }
@@ -288,7 +272,7 @@ def test_deep_errors_with_dicts():
     school.validate()
 
     invalid_data = school.serialize()
-    invalid_data['courses']["ENG103"]['attending'][0]['name'] = None
+    invalid_data["courses"]["ENG103"]["attending"][0]["name"] = None
 
     school = School(invalid_data)
     with pytest.raises(ValidationError) as exception:
@@ -297,15 +281,8 @@ def test_deep_errors_with_dicts():
         messages = exception.messages
 
         assert messages == {
-            'courses': {
-                "ENG103":
-                {
-                    'attending': [
-                        {
-                            'name': [u'This field is required.']
-                        }
-                    ]
-                }
+            "courses": {
+                "ENG103": {"attending": [{"name": [u"This field is required."]}]}
             }
         }
 
@@ -327,15 +304,15 @@ def test_clean_validation_messages_dict():
 
 def test_builtin_conversion_exception():
     with pytest.raises(TypeError):
-        raise ConversionError('TypeError')
+        raise ConversionError("TypeError")
 
     with pytest.raises(TypeError):
-        raise ModelConversionError('TypeError')
+        raise ModelConversionError("TypeError")
 
 
 def test_builtin_validation_exception():
     with pytest.raises(ValueError):
-        raise ValidationError('ValueError')
+        raise ValidationError("ValueError")
 
     with pytest.raises(ValueError):
-        raise ModelValidationError('ValueError')
+        raise ModelValidationError("ValueError")

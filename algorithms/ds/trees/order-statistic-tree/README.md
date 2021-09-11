@@ -1,6 +1,6 @@
 # Order Statistic Tree
 
-An __order-statistic tree__ T is simply a red-black tree with additional information stored in each node. Besides the usual red-black tree attributes `x.key`, `x.color`, `x.p`, `x.left`, and `x.right` in a node `x`, we have another attribute, `x.size`. This attributes contains the number of (internal) nodes in the subtree rooted at `x` (including `x` itself), that is, __the size of the subtree__. This data structure supports __fast order-statistic operations__.
+An **order-statistic tree** T is simply a red-black tree with additional information stored in each node. Besides the usual red-black tree attributes `x.key`, `x.color`, `x.p`, `x.left`, and `x.right` in a node `x`, we have another attribute, `x.size`. This attributes contains the number of (internal) nodes in the subtree rooted at `x` (including `x` itself), that is, **the size of the subtree**. This data structure supports **fast order-statistic operations**.
 
 ```
 x.size = x.left.size + x.right.size + 1

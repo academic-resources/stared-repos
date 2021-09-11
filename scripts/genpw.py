@@ -87,7 +87,7 @@ def genpw(length, encoder):
     Returns:
         A password string.
     """
-    d = secrets.token_bytes(2*length)
+    d = secrets.token_bytes(2 * length)
     return encoder(d).decode()[:length]
 
 

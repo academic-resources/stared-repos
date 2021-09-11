@@ -5,11 +5,11 @@ from sqlalchemy.sql import func
 import json
 
 
-notebook_routes = Blueprint('notebook', __name__)
+notebook_routes = Blueprint("notebook", __name__)
 
 
 # create a new notebook
-@notebook_routes.route('/', methods=['POST'], strict_slashes=False)
+@notebook_routes.route("/", methods=["POST"], strict_slashes=False)
 @login_required
 def create_notebook(userid):
     data_title = json.loads(request.data)
@@ -23,12 +23,12 @@ def create_notebook(userid):
 
 
 # edit an existing notebook
-@notebook_routes.route('/<int:notebookid>', methods=['PUT'], strict_slashes=False)
+@notebook_routes.route("/<int:notebookid>", methods=["PUT"], strict_slashes=False)
 @login_required
 def edit_notebook(userid, notebookid):
     data = json.loads(request.data)
     notebook = Notebook.query.filter(Notebook.id == notebookid).first()
-    notebook.title = data['title']
+    notebook.title = data["title"]
     notebook.updated_at = func.now()
     db.session.commit()
 
@@ -36,7 +36,7 @@ def edit_notebook(userid, notebookid):
 
 
 # delete an existing notebook
-@notebook_routes.route('/<int:notebookid>', methods=['DELETE'], strict_slashes=False)
+@notebook_routes.route("/<int:notebookid>", methods=["DELETE"], strict_slashes=False)
 @login_required
 def delete_notebook(userid, notebookid):
     notebook = Notebook.query.filter(Notebook.id == notebookid).first()

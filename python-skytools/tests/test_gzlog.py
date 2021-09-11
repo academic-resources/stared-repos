@@ -1,4 +1,3 @@
-
 import gzip
 import os
 import tempfile
@@ -7,10 +6,10 @@ from skytools.gzlog import gzip_append
 
 
 def test_gzlog():
-    fd, tmpname = tempfile.mkstemp(suffix='.gz')
+    fd, tmpname = tempfile.mkstemp(suffix=".gz")
     os.close(fd)
     try:
-        blk = b'1234567890' * 100
+        blk = b"1234567890" * 100
         write_total = 0
         for i in range(5):
             gzip_append(tmpname, blk)
@@ -27,4 +26,3 @@ def test_gzlog():
         os.remove(tmpname)
 
     assert read_total == write_total
-

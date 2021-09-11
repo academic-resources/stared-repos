@@ -1,30 +1,30 @@
-import React from "react"
-import { Route, Link } from "react-router-dom"
-import ItemDetailContainer from "./item_detail_container"
-import LoadingSpinner from "../loading_spinner"
+import React from "react";
+import { Route, Link } from "react-router-dom";
+import ItemDetailContainer from "./item_detail_container";
+import LoadingSpinner from "../loading_spinner";
 
 class PokemonDetail extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
-    this.props.requestSinglePokemon(this.props.match.params.id)
+    this.props.requestSinglePokemon(this.props.match.params.id);
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.id !== this.props.match.params.id) {
-      this.props.requestSinglePokemon(this.props.match.params.id)
+      this.props.requestSinglePokemon(this.props.match.params.id);
     }
   }
 
   render() {
-    const { items, pokemon } = this.props
-    if (!items) return null
+    const { items, pokemon } = this.props;
+    if (!items) return null;
     // debugger
-    let spinner
+    let spinner;
     if (this.props.loading) {
-      spinner = <LoadingSpinner />
+      spinner = <LoadingSpinner />;
     }
     let itemList = items.map((item, i) => {
       return (
@@ -33,11 +33,11 @@ class PokemonDetail extends React.Component {
             <img src={item.image_url} alt="poke_item_img" width="100px" />
           </div>
         </Link>
-      )
-    })
-    let pokeInfo, pokeMoves
+      );
+    });
+    let pokeInfo, pokeMoves;
     if (this.props.pokemon.moves) {
-      const { pokemon } = this.props
+      const { pokemon } = this.props;
       // debugger
       // if (pokemon.moves) {
       //   pokeMoves = pokemon.moves.map((move, i) => {
@@ -57,7 +57,7 @@ class PokemonDetail extends React.Component {
           <li>Type: {pokemon.poke_type}</li>
           <li>Moves: {pokemon.moves.join(", ")}</li>
         </div>
-      )
+      );
     }
     // debugger
 
@@ -75,8 +75,8 @@ class PokemonDetail extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default PokemonDetail
+export default PokemonDetail;

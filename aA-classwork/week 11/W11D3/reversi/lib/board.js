@@ -4,11 +4,11 @@ let Piece = require("./piece");
  * Returns a 2D array (8 by 8) with two black pieces at [3, 4] and [4, 3]
  * and two white pieces at [3, 3] and [4, 4]
  */
-function _makeGrid () {
+function _makeGrid() {
   const x = new Array(8);
   for (let i = 0; i < x.length; i++) {
     x[i] = new Array(8);
-  };
+  }
   x[3][4] = new Piece("black");
   x[4][3] = new Piece("black");
   x[3][3] = new Piece("white");
@@ -19,14 +19,19 @@ function _makeGrid () {
 /**
  * Constructs a Board with a starting grid set up.
  */
-function Board () {
+function Board() {
   this.grid = _makeGrid();
 }
 
 Board.DIRS = [
-  [ 0,  1], [ 1,  1], [ 1,  0],
-  [ 1, -1], [ 0, -1], [-1, -1],
-  [-1,  0], [-1,  1]
+  [0, 1],
+  [1, 1],
+  [1, 0],
+  [1, -1],
+  [0, -1],
+  [-1, -1],
+  [-1, 0],
+  [-1, 1],
 ];
 
 /**
@@ -36,19 +41,19 @@ Board.DIRS = [
 Board.prototype.getPiece = function (pos) {
   const x = pos[0];
   const y = pos[1];
-  if (!x.between(0,7) || !y.between(0,7)) throw new Error("Not valid pos!");
+  if (!x.between(0, 7) || !y.between(0, 7)) throw new Error("Not valid pos!");
   return this.grid[x][y];
 };
 
-Number.prototype.between = function(num1, num2) {
-  return (this >= num1 && this <= num2);
+Number.prototype.between = function (num1, num2) {
+  return this >= num1 && this <= num2;
 };
 
 /**
  * Checks if there are any valid moves for the given color.
  */
 Board.prototype.hasMove = function (color) {
-  return (this.validMoves(color).length > 0);
+  return this.validMoves(color).length > 0;
 };
 
 /**
@@ -57,7 +62,7 @@ Board.prototype.hasMove = function (color) {
  */
 Board.prototype.isMine = function (pos, color) {
   if (this.grid[pos[0]][pos[1]] === undefined) return false;
-  return (this.grid[pos[0]][pos[1]].color === color);
+  return this.grid[pos[0]][pos[1]].color === color;
 };
 
 /**
@@ -74,7 +79,7 @@ Board.prototype.isOccupied = function (pos) {
 Board.prototype.isOver = function () {
   if (this.hasMove("black")) return false;
   if (this.hasMove("white")) return false;
-  return true
+  return true;
 };
 
 /**
@@ -83,7 +88,7 @@ Board.prototype.isOver = function () {
 Board.prototype.isValidPos = function (pos) {
   const x = pos[0];
   const y = pos[1];
-  if (!x.between(0,7) || !y.between(0,7)) return false;
+  if (!x.between(0, 7) || !y.between(0, 7)) return false;
   return true;
 };
 
@@ -100,14 +105,14 @@ Board.prototype.isValidPos = function (pos) {
  *
  * Returns null if no pieces of the opposite color are found.
  */
-function _positionsToFlip (board, pos, color, dir, piecesToFlip = []) {
+function _positionsToFlip(board, pos, color, dir, piecesToFlip = []) {
   const newPos = [pos[0] + dir[0], pos[1] + dir[1]];
   if (!board.isValidPos(newPos) || !board.isOccupied(newPos)) return null;
   if (board.isMine(newPos, color) && piecesToFlip.length === 0) return null;
-  if ( board.grid[newPos[0]][newPos[1]].color !== color ) {
+  if (board.grid[newPos[0]][newPos[1]].color !== color) {
     piecesToFlip.push(newPos);
     return _positionsToFlip(board, newPos, color, dir, piecesToFlip);
-  };
+  }
   return piecesToFlip;
 }
 
@@ -122,29 +127,34 @@ Board.prototype.placePiece = function (pos, color) {
   this.grid[pos[0]][pos[1]] = new Piece(color);
 
   for (let i = 0; i < Board.DIRS.length; i++) {
-    const flippablePositions = _positionsToFlip(this, pos, color, Board.DIRS[i]);
+    const flippablePositions = _positionsToFlip(
+      this,
+      pos,
+      color,
+      Board.DIRS[i]
+    );
     if (flippablePositions) {
       for (let j = 0; j < flippablePositions.length; j++) {
         this.getPiece(flippablePositions[j]).flip();
       }
-    };
-  };
+    }
+  }
 };
 
 /**
  * Prints a string representation of the Board to the console.
  */
 Board.prototype.print = function () {
-  console.log("   0  1  2  3  4  5  6  7")
+  console.log("   0  1  2  3  4  5  6  7");
   for (let i = 0; i < this.grid.length; i++) {
     let row = `${i} `;
     for (let j = 0; j < this.grid.length; j++) {
       if (this.getPiece([i, j])) {
-        row += (` ${this.getPiece([i, j]).toString()} `);
-      } else row += (" _ ");
-    };
+        row += ` ${this.getPiece([i, j]).toString()} `;
+      } else row += " _ ";
+    }
     console.log(row);
-  };
+  }
 };
 
 /**
@@ -153,13 +163,18 @@ Board.prototype.print = function () {
  * color being flipped.
  */
 Board.prototype.validMove = function (pos, color) {
-  debugger
+  debugger;
   if (this.isOccupied(pos)) return false;
   // iterate through directions
   for (let i = 0; i < Board.DIRS.length; i++) {
-    const flippablePositions = _positionsToFlip(this, pos, color, Board.DIRS[i])
+    const flippablePositions = _positionsToFlip(
+      this,
+      pos,
+      color,
+      Board.DIRS[i]
+    );
     if (flippablePositions) return true;
-  };
+  }
   return false;
 };
 
@@ -179,5 +194,5 @@ Board.prototype.validMoves = function (color) {
 
 module.exports = Board;
 
-const board = new Board;
+const board = new Board();
 board.print();

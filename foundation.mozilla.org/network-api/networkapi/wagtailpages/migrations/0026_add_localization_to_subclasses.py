@@ -7,29 +7,41 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('wagtailcore', '0062_comment_models_and_pagesubscription'),
-        ('wagtailpages', '0025_remove_localization_from_cta_model'),
+        ("wagtailcore", "0062_comment_models_and_pagesubscription"),
+        ("wagtailpages", "0025_remove_localization_from_cta_model"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='petition',
-            name='locale',
-            field=models.ForeignKey(editable=False, null=True, on_delete=django.db.models.deletion.PROTECT, related_name='+', to='wagtailcore.locale'),
+            model_name="petition",
+            name="locale",
+            field=models.ForeignKey(
+                editable=False,
+                null=True,
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name="+",
+                to="wagtailcore.locale",
+            ),
         ),
         migrations.AddField(
-            model_name='petition',
-            name='translation_key',
+            model_name="petition",
+            name="translation_key",
             field=models.UUIDField(editable=False, null=True),
         ),
         migrations.AddField(
-            model_name='signup',
-            name='locale',
-            field=models.ForeignKey(editable=False, null=True, on_delete=django.db.models.deletion.PROTECT, related_name='+', to='wagtailcore.locale'),
+            model_name="signup",
+            name="locale",
+            field=models.ForeignKey(
+                editable=False,
+                null=True,
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name="+",
+                to="wagtailcore.locale",
+            ),
         ),
         migrations.AddField(
-            model_name='signup',
-            name='translation_key',
+            model_name="signup",
+            name="translation_key",
             field=models.UUIDField(editable=False, null=True),
         ),
     ]

@@ -228,16 +228,7 @@ class Style:
         style._link = None
         style._link_id = ""
         style._meta = None
-        style._hash = hash(
-            (
-                color,
-                bgcolor,
-                None,
-                None,
-                None,
-                None,
-            )
-        )
+        style._hash = hash((color, bgcolor, None, None, None, None))
         style._null = not (color or bgcolor)
         return style
 
@@ -258,16 +249,7 @@ class Style:
         style._link = None
         style._link_id = ""
         style._meta = dumps(meta)
-        style._hash = hash(
-            (
-                None,
-                None,
-                None,
-                None,
-                None,
-                style._meta,
-            )
-        )
+        style._hash = hash((None, None, None, None, None, style._meta))
         style._null = not (meta)
         return style
 

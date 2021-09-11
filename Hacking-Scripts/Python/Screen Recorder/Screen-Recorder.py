@@ -12,10 +12,11 @@ import time
 
 class App(QWidget, Thread):
     """Inherit the class Thread"""
+
     def __init__(self):
         """Initialize init"""
         super().__init__()
-        self.title = 'Screen Recorder'
+        self.title = "Screen Recorder"
         self.left = 10
         self.top = 10
         self.width = 500
@@ -23,8 +24,7 @@ class App(QWidget, Thread):
         self.count = 0
         self.status = True
         Thread.__init__(self)
-        self.daemon = Thread(target=self.start_recording,
-                             name="start_recording")
+        self.daemon = Thread(target=self.start_recording, name="start_recording")
         self.daemon.setDaemon(True)
         self.initUI()
 
@@ -32,16 +32,16 @@ class App(QWidget, Thread):
         """Initialize UI"""
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
-        button = QPushButton('Start Desktop Recorder', self)
-        button.setToolTip('Click here to start recording')
+        button = QPushButton("Start Desktop Recorder", self)
+        button.setToolTip("Click here to start recording")
         button.move(10, 10)
         button.clicked.connect(self.start_threading)
-        button = QPushButton('Take Screenshot', self)
-        button.setToolTip('Click here to take screenshot')
+        button = QPushButton("Take Screenshot", self)
+        button.setToolTip("Click here to take screenshot")
         button.move(190, 10)
         button.clicked.connect(self.take_screenshot)
-        button = QPushButton('Stop Desktop Recording', self)
-        button.setToolTip('Click here to stop recording')
+        button = QPushButton("Stop Desktop Recording", self)
+        button.setToolTip("Click here to stop recording")
         button.move(320, 10)
         button.clicked.connect(self.stop_recording)
         self.show()
@@ -66,21 +66,22 @@ class App(QWidget, Thread):
     @pyqtSlot()
     def stop_recording(self):
         """Stop Recording and create video."""
-        print('Stop Button has been pressed')
+        print("Stop Button has been pressed")
         try:
             img_array = []
             self.status = False
-            for filename in glob.glob('screenshots/*.jpg'):
+            for filename in glob.glob("screenshots/*.jpg"):
                 img = cv2.imread(filename)
                 height, width, layers = img.shape
                 size = (width, height)
                 img_array.append(img)
-            out = cv2.VideoWriter('project.avi',
-                                  cv2.VideoWriter_fourcc(*'DIVX'), 24, size)
+            out = cv2.VideoWriter(
+                "project.avi", cv2.VideoWriter_fourcc(*"DIVX"), 24, size
+            )
             for i in range(len(img_array)):
                 out.write(img_array[i])
             out.release()
-            shutil.rmtree('screenshots')
+            shutil.rmtree("screenshots")
             exit()
         except:
             exit()
@@ -96,7 +97,7 @@ class App(QWidget, Thread):
         cv2.waitKey(0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app = QApplication(sys.argv)
     ex = App()
     sys.exit(app.exec_())

@@ -6,7 +6,9 @@ CacheKey = TypeVar("CacheKey")
 CacheValue = TypeVar("CacheValue")
 
 
-class LRUCache(Generic[CacheKey, CacheValue], OrderedDict):  # type: ignore # https://github.com/python/mypy/issues/6904
+class LRUCache(
+    Generic[CacheKey, CacheValue], OrderedDict
+):  # type: ignore # https://github.com/python/mypy/issues/6904
     """
     A dictionary-like container that stores a given maximum items.
 

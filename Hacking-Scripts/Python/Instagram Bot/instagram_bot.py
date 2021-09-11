@@ -1,5 +1,5 @@
-
 from instabot import Bot
+
 bot = Bot()
 bot.login(username="", password="")
 
@@ -10,7 +10,7 @@ bot.upload_photo("yoda.jpg", caption="biscuit eating baby")
 bot.follow("elonrmuskk")
 
 ######  send a message #######
-bot.send_message("Hello from Neel", ['user1','user2'])
+bot.send_message("Hello from Neel", ["user1", "user2"])
 
 ######  get follower info #######
 my_followers = bot.get_user_followers("username")

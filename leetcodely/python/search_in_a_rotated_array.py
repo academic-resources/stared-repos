@@ -42,6 +42,6 @@ class Solution(object):
         return -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.search([4, 5, 6, 7, 0, 1, 2], 0))

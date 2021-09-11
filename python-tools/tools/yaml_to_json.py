@@ -12,5 +12,5 @@ def yaml_to_json(yaml_file, json_file):
 
     """
     with open(yaml_file) as f:
-        with open(json_file, 'w') as f1:
+        with open(json_file, "w") as f1:
             f1.write(json.dumps(yaml.load(f.read()), ensure_ascii=False))

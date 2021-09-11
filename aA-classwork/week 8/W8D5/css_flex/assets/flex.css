@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #FEFFF1;
+  background-color: #fefff1;
 }
 
 h1 {
@@ -12,7 +12,8 @@ h2 {
   font-size: 32px;
 }
 
-ul li a, figcaption a {
+ul li a,
+figcaption a {
   text-decoration: none;
   color: inherit;
 }
@@ -22,7 +23,6 @@ header > img {
 }
 
 .ingredients-list {
-
   list-style: square inside;
 }
 
@@ -36,24 +36,23 @@ ol {
 }
 
 input[type="radio"] {
-    -webkit-appearance: none;
-    width: 27px;
-    height: 27px;
-    background-image: url(../assets/stars.png);
-    vertical-align: bottom;
+  -webkit-appearance: none;
+  width: 27px;
+  height: 27px;
+  background-image: url(../assets/stars.png);
+  vertical-align: bottom;
 }
 
 input[type="radio"]:checked {
   background-position: 30px 30px;
 }
 
-
 input[type="submit"]:last-child {
-    background: gold;
+  background: gold;
 }
 
 input:last-child:hover {
-    -webkit-filter: brightness(90%);
+  -webkit-filter: brightness(90%);
 }
 
 ol li:nth-of-type(2n) {
@@ -62,7 +61,7 @@ ol li:nth-of-type(2n) {
 }
 
 h2 + .user_review {
-    border-top: 1px solid black;
+  border-top: 1px solid black;
 }
 
 header {
@@ -75,38 +74,38 @@ nav ul {
 }
 
 nav ul li a {
-    padding: 20px;
-    display: block;
+  padding: 20px;
+  display: block;
 }
 
 body {
   margin: 0 auto;
-    width: 60%;
+  width: 60%;
 }
 
 aside {
-    display: inline-block;
+  display: inline-block;
 }
 
 .ingredients-list li {
-    margin: 15px 0px;
+  margin: 15px 0px;
 }
 
-input[type="text"], select {
-    display: block;
-    width: 175px;
+input[type="text"],
+select {
+  display: block;
+  width: 175px;
 }
 
 select {
-    margin: 10px 0;
-    width: 180px;
+  margin: 10px 0;
+  width: 180px;
 }
 
 textarea {
-    width: 350px;
+  width: 350px;
 }
 
 label {
-    display: block;
+  display: block;
 }
-

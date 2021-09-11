@@ -29,6 +29,6 @@ class Solution(object):
             pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.productExceptSelf([1, 2, 3, 4]))

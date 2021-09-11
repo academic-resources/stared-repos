@@ -2,15 +2,15 @@
 
 We are given a sequence (chain) `<A1, A2, ..., An>` of `n` matrices to be multiplied, and we wish to compute the product `A1.A2...An`.
 
-Matrix multiplication is __associative__, and so all parenthesizations yield the same product. A product of matrices is __fully paranthesized__ if it is either a single matrix or the product of two fully parenthesized matrix products, surrounded by parentheses.
+Matrix multiplication is **associative**, and so all parenthesizations yield the same product. A product of matrices is **fully paranthesized** if it is either a single matrix or the product of two fully parenthesized matrix products, surrounded by parentheses.
 
 For example, if the chain of matrices is `<A1,A2,A3,A4>`, then we can fully parenthesize the product `A1.A2.A3.A4` in five distinct ways.
 
-* `(A1.(A2.(A3.A4))`
-* `(A1.((A2.A3).A4))`
-* `((A1.A2).(A3.A4))`
-* `((A1.(A2.A3)).A4)`
-* `(((A1.A2).A3).A4)`
+- `(A1.(A2.(A3.A4))`
+- `(A1.((A2.A3).A4))`
+- `((A1.A2).(A3.A4))`
+- `((A1.(A2.A3)).A4)`
+- `(((A1.A2).A3).A4)`
 
 How we parenthesize a chain of matrices can have a dramatic impact on the the cost of evaluating the product.
 
@@ -28,14 +28,13 @@ MATRIX-MULTIPLY(A, B)
         return C
 ```
 
-
 ## Optimizazation problem
 
-We state the __matrix-chain multiplication problem__ as follows: given a chain `<A1,...,An>` of `n` matrices, where for `i=1..n`, matrix `A_i`, fully parenthesize the product in a way that minimized the number of scalar multiplications.
+We state the **matrix-chain multiplication problem** as follows: given a chain `<A1,...,An>` of `n` matrices, where for `i=1..n`, matrix `A_i`, fully parenthesize the product in a way that minimized the number of scalar multiplications.
 
 ### Cost
 
-We can multiply two matrices A and B only if they are __compatible__: the number of `A.columns` must equal number of `B.rows`. If `A` is a `p x q` matrix and `B` is a `q x r` matrix, the resulting matric `C` is a `p x r` matrix. The time to compute `C` is dominated by the number of scalar multiplicatins, which is `p * q * r`.
+We can multiply two matrices A and B only if they are **compatible**: the number of `A.columns` must equal number of `B.rows`. If `A` is a `p x q` matrix and `B` is a `q x r` matrix, the resulting matric `C` is a `p x r` matrix. The time to compute `C` is dominated by the number of scalar multiplicatins, which is `p * q * r`.
 
 ## Counting number of parenthesizations
 
@@ -48,7 +47,7 @@ P(n) = 1 // if n = 1
 P(n) = Sum(from k=1 to n-1): P(k) * P(n-k) // if n >= 2
 ```
 
-A solution to a similar recurrence is the sequence of __Catalan numbers__, which grows as _Gamma(4^n / n^(3/2)). Thge solution is thus __exponential to n__, and the brute-force method of exhaustive search makes for a poor strategy when determining how to optimally parenthesize a matrix chain.
+A solution to a similar recurrence is the sequence of **Catalan numbers**, which grows as \_Gamma(4^n / n^(3/2)). Thge solution is thus **exponential to n**, and the brute-force method of exhaustive search makes for a poor strategy when determining how to optimally parenthesize a matrix chain.
 
 ### Applying dynamic programming
 
@@ -60,7 +59,7 @@ The optimal substructure of this problem is as follows.
 
 The way we parenthesize the "prefix" subchain `A_i_k` within the optimal parenthesization of `A_i_j`, must be an optimal parenthesization. The similar holds for `A_k+1_j`.
 
-Now we use our optimal substructure to show that __we can construct an optimal solution to the problem from optimal solutions to subproblems.
+Now we use our optimal substructure to show that \_\_we can construct an optimal solution to the problem from optimal solutions to subproblems.
 
 #### Step 2: A recursive solution
 

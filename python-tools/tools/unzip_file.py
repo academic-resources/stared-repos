@@ -10,5 +10,5 @@ def unzip_file(input, output):
         output (str): Target directory.
 
     """
-    with zipfile.ZipFile(input, 'r') as zip:
+    with zipfile.ZipFile(input, "r") as zip:
         zip.extractall(output)

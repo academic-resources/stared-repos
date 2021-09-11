@@ -7,16 +7,16 @@ class Folder(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
-    user_id = db.Column(db.Integer,
-                        db.ForeignKey('users.id',
-                                      onupdate="CASCADE",
-                                      ondelete="CASCADE"),
-                        nullable=False)
-    category_id = db.Column(db.Integer,
-                            db.ForeignKey('categories.id',
-                                          onupdate="CASCADE",
-                                          ondelete="CASCADE"),
-                            nullable=False)
+    user_id = db.Column(
+        db.Integer,
+        db.ForeignKey("users.id", onupdate="CASCADE", ondelete="CASCADE"),
+        nullable=False,
+    )
+    category_id = db.Column(
+        db.Integer,
+        db.ForeignKey("categories.id", onupdate="CASCADE", ondelete="CASCADE"),
+        nullable=False,
+    )
     created_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
@@ -31,5 +31,5 @@ class Folder(db.Model):
             "created_at": self.created_at,
             "updated_at": self.updated_at,
             "category": {"id": self.category.id, "name": self.category.name},
-            "files": [user_file.to_dict() for user_file in self.file]
+            "files": [user_file.to_dict() for user_file in self.file],
         }

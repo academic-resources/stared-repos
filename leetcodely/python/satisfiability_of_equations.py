@@ -18,11 +18,11 @@ class Solution:
             return parent[item]
 
         for equation in equations:
-            if equation[1] == '=':
+            if equation[1] == "=":
                 union(equation[0], equation[-1])
 
         for equation in equations:
-            if equation[1] == '!':
+            if equation[1] == "!":
                 if find(equation[0]) == find(equation[-1]):
                     return False
 
@@ -30,4 +30,4 @@ class Solution:
 
 
 solution = Solution()
-print(solution.equationsPossible(["b==a","a==b"]))
+print(solution.equationsPossible(["b==a", "a==b"]))

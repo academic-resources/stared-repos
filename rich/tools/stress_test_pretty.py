@@ -6,12 +6,7 @@ DATA = {
     "foo": [1, 2, 3, (), {}, (1, 2, 3), {4, 5, 6, (7, 8, 9)}, "Hello, World"],
     "bar": [None, (False, True)] * 2,
     "Dune": {
-        "names": {
-            "Paul Atreides",
-            "Vladimir Harkonnen",
-            "Thufir Hawat",
-            "Duncan Idaho",
-        }
+        "names": {"Paul Atreides", "Vladimir Harkonnen", "Thufir Hawat", "Duncan Idaho"}
     },
 }
 console = Console()

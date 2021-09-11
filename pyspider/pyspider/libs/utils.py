@@ -54,6 +54,7 @@ def hide_me(tb, g=globals()):
 def run_in_thread(func, *args, **kwargs):
     """Run function in thread, return a Thread object"""
     from threading import Thread
+
     thread = Thread(target=func, args=args, kwargs=kwargs)
     thread.daemon = True
     thread.start()
@@ -63,6 +64,7 @@ def run_in_thread(func, *args, **kwargs):
 def run_in_subprocess(func, *args, **kwargs):
     """Run function in subprocess, return a Process object"""
     from multiprocessing import Process
+
     thread = Process(target=func, args=args, kwargs=kwargs)
     thread.daemon = True
     thread.start()
@@ -85,7 +87,7 @@ def format_date(date, gmt_offset=0, relative=True, shorter=False, full_format=Fa
     """
 
     if not date:
-        return '-'
+        return "-"
     if isinstance(date, float) or isinstance(date, int):
         date = datetime.datetime.utcfromtimestamp(date)
     now = datetime.datetime.utcnow()
@@ -107,7 +109,9 @@ def format_date(date, gmt_offset=0, relative=True, shorter=False, full_format=Fa
 
     format = None
     if not full_format:
-        ret_, fff_format = fix_full_format(days, seconds, relative, shorter, local_date, local_yesterday)
+        ret_, fff_format = fix_full_format(
+            days, seconds, relative, shorter, local_date, local_yesterday
+        )
         format = fff_format
         if ret_:
             return format
@@ -115,55 +119,74 @@ def format_date(date, gmt_offset=0, relative=True, shorter=False, full_format=Fa
             format = format
 
     if format is None:
-        format = "%(month_name)s %(day)s, %(year)s" if shorter else \
-            "%(month_name)s %(day)s, %(year)s at %(time)s"
+        format = (
+            "%(month_name)s %(day)s, %(year)s"
+            if shorter
+            else "%(month_name)s %(day)s, %(year)s at %(time)s"
+        )
 
     str_time = "%d:%02d" % (local_date.hour, local_date.minute)
 
     return format % {
-        "month_name": local_date.strftime('%b'),
-        "weekday": local_date.strftime('%A'),
+        "month_name": local_date.strftime("%b"),
+        "weekday": local_date.strftime("%A"),
         "day": str(local_date.day),
         "year": str(local_date.year),
         "month": local_date.month,
-        "time": str_time
+        "time": str_time,
     }
 
 
 def fix_full_format(days, seconds, relative, shorter, local_date, local_yesterday):
     if relative and days == 0:
         if seconds < 50:
-            return True, (("1 second ago" if seconds <= 1 else
-                    "%(seconds)d seconds ago") % {"seconds": seconds})
+            return (
+                True,
+                (
+                    ("1 second ago" if seconds <= 1 else "%(seconds)d seconds ago")
+                    % {"seconds": seconds}
+                ),
+            )
 
         if seconds < 50 * 60:
             minutes = round(seconds / 60.0)
-            return True, (("1 minute ago" if minutes <= 1 else
-                    "%(minutes)d minutes ago") % {"minutes": minutes})
+            return (
+                True,
+                (
+                    ("1 minute ago" if minutes <= 1 else "%(minutes)d minutes ago")
+                    % {"minutes": minutes}
+                ),
+            )
 
         hours = round(seconds / (60.0 * 60))
-        return True, (("1 hour ago" if hours <= 1 else
-                "%(hours)d hours ago") % {"hours": hours})
+        return (
+            True,
+            (
+                ("1 hour ago" if hours <= 1 else "%(hours)d hours ago")
+                % {"hours": hours}
+            ),
+        )
     format = None
     if days == 0:
         format = "%(time)s"
-    elif days == 1 and local_date.day == local_yesterday.day and \
-            relative:
+    elif days == 1 and local_date.day == local_yesterday.day and relative:
         format = "yesterday" if shorter else "yesterday at %(time)s"
     elif days < 5:
         format = "%(weekday)s" if shorter else "%(weekday)s at %(time)s"
     elif days < 334:  # 11mo, since confusing for same month last year
-        format = "%(month)s-%(day)s" if shorter else \
-            "%(month)s-%(day)s at %(time)s"
+        format = "%(month)s-%(day)s" if shorter else "%(month)s-%(day)s at %(time)s"
     return False, format
+
 
 class TimeoutError(Exception):
     pass
 
+
 try:
     import signal
-    if not hasattr(signal, 'SIGALRM'):
-        raise ImportError('signal')
+
+    if not hasattr(signal, "SIGALRM"):
+        raise ImportError("signal")
 
     class timeout:
         """
@@ -173,7 +196,7 @@ try:
             time.sleep(10)
         """
 
-        def __init__(self, seconds=1, error_message='Timeout'):
+        def __init__(self, seconds=1, error_message="Timeout"):
             self.seconds = seconds
             self.error_message = error_message
 
@@ -182,7 +205,9 @@ try:
 
         def __enter__(self):
             if not isinstance(threading.current_thread(), threading._MainThread):
-                logging.warning("timeout only works on main thread, are you running pyspider in threads?")
+                logging.warning(
+                    "timeout only works on main thread, are you running pyspider in threads?"
+                )
                 self.seconds = 0
             if self.seconds:
                 signal.signal(signal.SIGALRM, self.handle_timeout)
@@ -192,6 +217,7 @@ try:
             if self.seconds:
                 signal.alarm(0)
 
+
 except ImportError as e:
     warnings.warn("timeout is not supported on your platform.", FutureWarning)
 
@@ -200,7 +226,7 @@ except ImportError as e:
         Time limit of command (for windows)
         """
 
-        def __init__(self, seconds=1, error_message='Timeout'):
+        def __init__(self, seconds=1, error_message="Timeout"):
             pass
 
         def __enter__(self):
@@ -217,14 +243,14 @@ def utf8(string):
     If parameter is a object, object.__str__ will been called before encode as bytes
     """
     if isinstance(string, six.text_type):
-        return string.encode('utf8')
+        return string.encode("utf8")
     elif isinstance(string, six.binary_type):
         return string
     else:
-        return six.text_type(string).encode('utf8')
+        return six.text_type(string).encode("utf8")
 
 
-def text(string, encoding='utf8'):
+def text(string, encoding="utf8"):
     """
     Make sure string is unicode type, decode with given encoding if it's not.
 
@@ -247,7 +273,7 @@ def pretty_unicode(string):
     try:
         return string.decode("utf8")
     except UnicodeDecodeError:
-        return string.decode('Latin-1').encode('unicode_escape').decode("utf8")
+        return string.decode("Latin-1").encode("unicode_escape").decode("utf8")
 
 
 def unicode_string(string):
@@ -261,7 +287,7 @@ def unicode_string(string):
     try:
         return string.decode("utf8")
     except UnicodeDecodeError:
-        return '[BASE64-DATA]' + base64.b64encode(string) + '[/BASE64-DATA]'
+        return "[BASE64-DATA]" + base64.b64encode(string) + "[/BASE64-DATA]"
 
 
 def unicode_dict(_dict):
@@ -308,8 +334,8 @@ def decode_unicode_string(string):
     """
     Decode string encoded by `unicode_string`
     """
-    if string.startswith('[BASE64-DATA]') and string.endswith('[/BASE64-DATA]'):
-        return base64.b64decode(string[len('[BASE64-DATA]'):-len('[/BASE64-DATA]')])
+    if string.startswith("[BASE64-DATA]") and string.endswith("[/BASE64-DATA]"):
+        return base64.b64decode(string[len("[BASE64-DATA]") : -len("[/BASE64-DATA]")])
     return string
 
 
@@ -351,7 +377,7 @@ class ObjectDict(dict):
 
     def __getattr__(self, name):
         ret = self.__getitem__(name)
-        if hasattr(ret, '__get__'):
+        if hasattr(ret, "__get__"):
             return ret.__get__(self, ObjectDict)
         return ret
 
@@ -360,9 +386,9 @@ def load_object(name):
     """Load object from module"""
 
     if "." not in name:
-        raise Exception('load object need module.object')
+        raise Exception("load object need module.object")
 
-    module_name, object_name = name.rsplit('.', 1)
+    module_name, object_name = name.rsplit(".", 1)
     if six.PY2:
         module = __import__(module_name, globals(), locals(), [utf8(object_name)], -1)
     else:
@@ -377,6 +403,7 @@ def get_python_console(namespace=None):
 
     if namespace is None:
         import inspect
+
         frame = inspect.currentframe()
         caller = frame.f_back
         if not caller:
@@ -387,16 +414,19 @@ def get_python_console(namespace=None):
 
     try:
         from IPython.terminal.interactiveshell import TerminalInteractiveShell
+
         shell = TerminalInteractiveShell(user_ns=namespace)
     except ImportError:
         try:
             import readline
             import rlcompleter
+
             readline.set_completer(rlcompleter.Completer(namespace).complete)
             readline.parse_and_bind("tab: complete")
         except ImportError:
             pass
         import code
+
         shell = code.InteractiveConsole(namespace)
         shell._quit = False
 
@@ -420,6 +450,7 @@ def python_console(namespace=None):
 
     if namespace is None:
         import inspect
+
         frame = inspect.currentframe()
         caller = frame.f_back
         if not caller:
@@ -431,7 +462,7 @@ def python_console(namespace=None):
     return get_python_console(namespace=namespace).interact()
 
 
-def check_port_open(port, addr='127.0.0.1'):
+def check_port_open(port, addr="127.0.0.1"):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         result = sock.connect_ex((addr, port))
         if result == 0:

@@ -48,40 +48,44 @@ const getFile = (file) => ({
   file,
 });
 
-export const signup = ({ username, email, password }) => async (dispatch) => {
-  const response = await fetch("/api/auth/signup", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      username: username,
-      email: email,
-      password: password,
-    }),
-  });
+export const signup =
+  ({ username, email, password }) =>
+  async (dispatch) => {
+    const response = await fetch("/api/auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        email: email,
+        password: password,
+      }),
+    });
 
-  const parsedResponse = await response.json();
-  dispatch(setUser(parsedResponse));
-  return parsedResponse;
-};
+    const parsedResponse = await response.json();
+    dispatch(setUser(parsedResponse));
+    return parsedResponse;
+  };
 
-export const login = ({ email, password }) => async (dispatch) => {
-  const response = await fetch("/api/auth/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email,
-      password,
-    }),
-  });
+export const login =
+  ({ email, password }) =>
+  async (dispatch) => {
+    const response = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
 
-  const parsedResponse = await response.json();
-  dispatch(setUser(parsedResponse));
-  return parsedResponse;
-};
+    const parsedResponse = await response.json();
+    dispatch(setUser(parsedResponse));
+    return parsedResponse;
+  };
 
 export const restoreUser = () => async (dispatch) => {
   const response = await fetch("/api/auth/");
@@ -115,42 +119,44 @@ export const removeSelectedFolder = () => async (dispatch) => {
   dispatch(removeFolder());
 };
 
-export const editUserFolder = ({ id, name, category }) => async (dispatch) => {
-  const response = await fetch(`/api/folder/${id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: name,
-      category: category,
-    }),
-  });
+export const editUserFolder =
+  ({ id, name, category }) =>
+  async (dispatch) => {
+    const response = await fetch(`/api/folder/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        category: category,
+      }),
+    });
 
-  const parsedResponse = await response.json();
-  dispatch(updateFolder(parsedResponse));
-  return parsedResponse;
-};
+    const parsedResponse = await response.json();
+    dispatch(updateFolder(parsedResponse));
+    return parsedResponse;
+  };
 
-export const createUserFolder = ({ name, userId, categoryId }) => async (
-  dispatch
-) => {
-  const response = await fetch("/api/folder", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: name,
-      user_id: userId,
-      category_id: categoryId,
-    }),
-  });
+export const createUserFolder =
+  ({ name, userId, categoryId }) =>
+  async (dispatch) => {
+    const response = await fetch("/api/folder", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        user_id: userId,
+        category_id: categoryId,
+      }),
+    });
 
-  const parsedResponse = await response.json();
-  dispatch(createFolder(parsedResponse));
-  return parsedResponse;
-};
+    const parsedResponse = await response.json();
+    dispatch(createFolder(parsedResponse));
+    return parsedResponse;
+  };
 
 export const deleteUserFolder = (id) => async (dispatch) => {
   const response = await fetch(`/api/folder/${id}`, { method: "DELETE" });
@@ -159,51 +165,44 @@ export const deleteUserFolder = (id) => async (dispatch) => {
   return parsedResponse;
 };
 
-export const createUserFile = ({
-  name,
-  content,
-  url,
-  folderId,
-  fileTypeId,
-}) => async (dispatch) => {
-  const response = await fetch("/api/file", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      name: name,
-      content: content,
-      s3_url: url,
-      folder_id: folderId,
-      file_type_id: fileTypeId,
-    }),
-  });
-  const parsedResponse = await response.json();
-  dispatch(updateFolder(parsedResponse));
-  return parsedResponse;
-};
+export const createUserFile =
+  ({ name, content, url, folderId, fileTypeId }) =>
+  async (dispatch) => {
+    const response = await fetch("/api/file", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        content: content,
+        s3_url: url,
+        folder_id: folderId,
+        file_type_id: fileTypeId,
+      }),
+    });
+    const parsedResponse = await response.json();
+    dispatch(updateFolder(parsedResponse));
+    return parsedResponse;
+  };
 
-export const editUserFile = ({
-  fileId,
-  name,
-  contentString,
-  folderId,
-}) => async (dispatch) => {
-  const response = await fetch(`/api/file/${fileId}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: name,
-      folder_id: folderId,
-      content: contentString,
-    }),
-  });
+export const editUserFile =
+  ({ fileId, name, contentString, folderId }) =>
+  async (dispatch) => {
+    const response = await fetch(`/api/file/${fileId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        folder_id: folderId,
+        content: contentString,
+      }),
+    });
 
-  const parsedResponse = await response.json();
-  dispatch(updateFolder(parsedResponse));
-  return parsedResponse;
-};
+    const parsedResponse = await response.json();
+    dispatch(updateFolder(parsedResponse));
+    return parsedResponse;
+  };
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {

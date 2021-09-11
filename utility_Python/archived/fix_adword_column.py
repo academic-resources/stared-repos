@@ -1,20 +1,19 @@
-
-
-
 def extract_col(sql_line):
-    start = 'V:'
-    end = '::'
+    start = "V:"
+    end = "::"
     s = sql_line
-    return   (s[s.find(start)+len(start):s.rfind(end)])
-    #print (s[s.find(start)+len(start):s.rfind(end)])
+    return s[s.find(start) + len(start) : s.rfind(end)]
+    # print (s[s.find(start)+len(start):s.rfind(end)])
+
 
 # EnhancedDisplayCreativeLandscapeLogoImageMediaId -> ENHANCED_DISPLAY_CREATIVE_LANDSCAPE_LOGO_IMAGE_MEDIA_ID
 def fix_dbt_col(col_name):
-    import re 
-    result = re.sub('(?<=[A-Za-z])(?=[A-Z][a-z])', '~', col_name,)
-    result = re.split('~', result)
-    return '_'.join(result).upper()
-    
+    import re
+
+    result = re.sub("(?<=[A-Za-z])(?=[A-Z][a-z])", "~", col_name)
+    result = re.split("~", result)
+    return "_".join(result).upper()
+
 
 # -------------------------------  DEMO -------------------------------
 
@@ -23,10 +22,10 @@ def fix_dbt_col(col_name):
 #         print (line)
 #     else:
 #         print ( line.split(' as ')[0]  +  " as " +  fix_dbt_col(extract_col(line)) + ',')
-        
-  
-# output :  
-      
+
+
+# output :
+
 # SELECT
 # '846_445_0947' AS "ACCOUNT_ID",
 #  V:"AdGroupId"::INTEGER as "AD_GROUP_ID",
@@ -125,10 +124,6 @@ def fix_dbt_col(col_name):
 # FROM "STAGING"."ADWORDS_P_ADGROUP_894_635_1017"
 
 
-
-
-
-
 # sql = """
 
 # SELECT
@@ -225,7 +220,7 @@ def fix_dbt_col(col_name):
 #  V:"TargetCpa"::INTEGER as "TargetCpa" ,
 #  V:"TargetCpaBidSource"::VARCHAR as "TargetCpaBidSource" ,
 #  V:"TrackingUrlTemplate"::VARCHAR as "TrackingUrlTemplate" ,
-#  V:"UrlCustomParameters"::VARCHAR as "UrlCustomParameters" 
+#  V:"UrlCustomParameters"::VARCHAR as "UrlCustomParameters"
 # FROM "STAGING"."ADWORDS_P_ADGROUP_894_635_1017"
 
 # """

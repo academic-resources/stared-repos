@@ -1,7 +1,9 @@
 # importing Image module from Python Imaging Library
 from PIL import Image
+
 # importing random module to generate random numbers from 1 to 6 on the dice
 import random
+
 # the maximum value on the board above is end
 end = 30
 
@@ -9,10 +11,10 @@ end = 30
 
 
 def displayBoard():
-    img = Image.open(
-        "Snakes and Ladders Game/Images/snakes-and-ladders.jpg")
+    img = Image.open("Snakes and Ladders Game/Images/snakes-and-ladders.jpg")
     # To view the image, we need to call the show() function in Image module
     img.show()
+
 
 # play() function
 
@@ -28,20 +30,20 @@ def play():
     pp2 = 0
     # number of turns turn=0
     turn = 0
-    while(1):
+    while 1:
         # if the number of turns is even, it's player1's turn
         if turn % 2 == 0:
             print(p1_name, ",It's your turn")
             # asking player1 if he wants to continue or quit
             c = int(input("press 1 to continue, 0 to quit: "))
             # Displaying scores and a thank you message if he wants to quit
-            if(c == 0):
-                print(p1_name, ' ,you scored ', pp1)
-                print(p2_name, ' ,you scored ', pp2)
-                if(pp1 > pp2):
-                    print(p1_name, " is leading by ", (pp1-pp2), " points.")
+            if c == 0:
+                print(p1_name, " ,you scored ", pp1)
+                print(p2_name, " ,you scored ", pp2)
+                if pp1 > pp2:
+                    print(p1_name, " is leading by ", (pp1 - pp2), " points.")
                 else:
-                    print(p2_name, " is leading by ", (pp2-pp1), " points.")
+                    print(p2_name, " is leading by ", (pp2 - pp1), " points.")
                     print("Quitting the game, Thanks for playing.")
                     break
             # else, the program generates a random number from 1 to 6
@@ -49,7 +51,7 @@ def play():
             dice = random.randint(1, 6)
             print("Dice showed: ", dice)
             # adding the dice points to the player1's score
-            pp1 = pp1+dice
+            pp1 = pp1 + dice
             # checking if there is any ladder at the player1's position
             pp1 = checkLadder(pp1)
             # checking if there is any snake at the player1's position
@@ -61,8 +63,8 @@ def play():
             print(p1_name, " ,Your score is ", pp1)
             # checking if player1 reached the end of the board
             # if he reached the end, declare player1 as winner! and exit the game
-            if(reachedEnd(pp1)):
-                print(p1_name, " won by ", (pp1-pp2), " points")
+            if reachedEnd(pp1):
+                print(p1_name, " won by ", (pp1 - pp2), " points")
                 print("Congratulations! ", p1_name)
                 print("Quitting the game, Thanks for playing.")
                 break
@@ -72,13 +74,13 @@ def play():
             # asking player2 if he wants to continue or quit
             c = int(input("press 1 to continue, 0 to quit: "))
             # Displaying scores and a thank you message if he wants to quit
-            if(c == 0):
-                print(p1_name, ' ,you scored ', pp1)
-                print(p2_name, ' ,you scored ', pp2)
-                if(pp1 > pp2):
-                    print(p1_name, " is leading by ", (pp1-pp2), " points.")
+            if c == 0:
+                print(p1_name, " ,you scored ", pp1)
+                print(p2_name, " ,you scored ", pp2)
+                if pp1 > pp2:
+                    print(p1_name, " is leading by ", (pp1 - pp2), " points.")
                 else:
-                    print(p2_name, " is leading by ", (pp2-pp1), " points.")
+                    print(p2_name, " is leading by ", (pp2 - pp1), " points.")
                     print("Quitting the game, Thanks for playing.")
                     break
             # else, the program generates a random number from 1 to 6
@@ -86,7 +88,7 @@ def play():
             dice = random.randint(1, 6)
             print("Dice showed: ", dice)
             # adding the dice points to the player2's score
-            pp2 = pp2+dice
+            pp2 = pp2 + dice
             # checking if there is any ladder at the player2's position
             pp2 = checkLadder(pp2)
             # checking if there is any snake at the player2's position
@@ -98,8 +100,8 @@ def play():
             print(p2_name, " ,Your score is ", pp2)
             # checking if player2 reached the end of the board
             # if he reached the end, declare player2 as winner! and exit the game
-            if(reachedEnd(pp2)):
-                print(p2_name, " won by ", (pp2-pp1), " points")
+            if reachedEnd(pp2):
+                print(p2_name, " won by ", (pp2 - pp1), " points")
                 print("Congratulations! ", p2_name)
                 print("Quitting the game, Thanks for playing.")
                 break

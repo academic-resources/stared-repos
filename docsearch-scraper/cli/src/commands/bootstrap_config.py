@@ -47,9 +47,8 @@ class BootstrapConfig(AbstractCommand):
 
     def config_to_s(self, config):
         import json
-        config = OrderedDict(sorted(list(config.items()),
-                                    key=key_sort)
-                             )
+
+        config = OrderedDict(sorted(list(config.items()), key=key_sort))
 
         return json.dumps(config, separators=(",", ": "), indent=2)
 
@@ -94,7 +93,7 @@ def key_sort(attr):
         "synonyms": 19,
         "conversation_id": 22,
         "comments": 29,
-        "nb_hits": 30
+        "nb_hits": 30,
     }
     if attr[0] in list(ref.keys()):
         return ref[attr[0]]

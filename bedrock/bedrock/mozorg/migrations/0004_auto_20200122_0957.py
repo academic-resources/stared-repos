@@ -5,15 +5,9 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('mozorg', '0003_delete_blogarticle'),
-    ]
+    dependencies = [("mozorg", "0003_delete_blogarticle")]
 
     operations = [
-        migrations.DeleteModel(
-            name='ContributorActivity',
-        ),
-        migrations.DeleteModel(
-            name='TwitterCache',
-        ),
+        migrations.DeleteModel(name="ContributorActivity"),
+        migrations.DeleteModel(name="TwitterCache"),
     ]

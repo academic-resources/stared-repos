@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const graphql = require("graphql");
 const { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLList } = graphql;
-const AbodeType = require("./abode_type")
-const EmblemType = require("./emblem_type")
-const God = require("../models/God")
+const AbodeType = require("./abode_type");
+const EmblemType = require("./emblem_type");
+const God = require("../models/God");
 
 const GodType = new GraphQLObjectType({
   name: "GodType",
@@ -20,38 +20,38 @@ const GodType = new GraphQLObjectType({
       type: AbodeType,
       resolve(parentValue) {
         return Abode.findById(parentValue.abode)
-          .then(abode => abode)
-          .catch(err => null)
-      }
+          .then((abode) => abode)
+          .catch((err) => null);
+      },
     },
     emblems: {
       // Gods have many emblems so we wrap them in a list
       type: new GraphQLList(EmblemType),
       resolve(parentValue) {
         return God.findById(parentValue.id)
-          .populate('emblems')
-          .then(god => god.emblems);
-      }
+          .populate("emblems")
+          .then((god) => god.emblems);
+      },
     },
     parents: {
       type: new GraphQLList(GodType),
       resolve(parentValue) {
-        return God.findRelatives(parentValue.id, 'parents');
-      }
+        return God.findRelatives(parentValue.id, "parents");
+      },
     },
     children: {
       type: new GraphQLList(GodType),
       resolve(parentValue) {
-        return God.findRelatives(parentValue.id, 'children');
-      }
+        return God.findRelatives(parentValue.id, "children");
+      },
     },
     siblings: {
       type: new GraphQLList(GodType),
       resolve(parentValue) {
-        return God.findRelatives(parentValue.id, 'siblings');
-      }
+        return God.findRelatives(parentValue.id, "siblings");
+      },
     },
-  })
+  }),
 });
 
 module.exports = GodType;

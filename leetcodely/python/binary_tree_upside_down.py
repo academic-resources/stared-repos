@@ -10,6 +10,7 @@ left leaf nodes."""
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def upsideDownBinaryTree(self, root):
         """
@@ -26,4 +27,3 @@ class Solution(object):
         root.left = None
         root.right = None
         return new_root
-

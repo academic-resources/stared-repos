@@ -29,7 +29,7 @@ class Solution(object):
             d2[t[i]] = s[i]
         return True
 
-if __name__ == '__main__':
-    solution = Solution()
-    print(solution.isIsomorphic('egg', 'add'))
 
+if __name__ == "__main__":
+    solution = Solution()
+    print(solution.isIsomorphic("egg", "add"))

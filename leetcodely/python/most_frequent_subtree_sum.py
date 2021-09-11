@@ -1,4 +1,4 @@
-#Definition for a binary tree node.
+# Definition for a binary tree node.
 import collections
 
 
@@ -20,10 +20,8 @@ class Solution:
             s = node.val + dfs(node.left) + dfs(node.right)
             count[s] += 1
             return s
+
         count = collections.Counter()
         dfs(root)
         max_val = max(count.values())
         return [s for s in count if count[s] == max_val]
-
-
-

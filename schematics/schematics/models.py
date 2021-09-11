@@ -17,10 +17,11 @@ from .validate import validate
 from .datastructures import OrderedDict as OrderedDictWithSort
 
 try:
-    unicode #PY2
+    unicode  # PY2
 except:
     import codecs
-    unicode = str #PY3
+
+    unicode = str  # PY3
 
 if sys.version_info[0] >= 3 or sys.version_info[1] >= 7:
     metacopy = deepcopy
@@ -71,8 +72,9 @@ class FieldDescriptor(object):
         Checks the field name against a model and deletes the field.
         """
         if self.name not in instance._fields:
-            raise AttributeError('%r has no attribute %r' %
-                                 (type(instance).__name__, self.name))
+            raise AttributeError(
+                "%r has no attribute %r" % (type(instance).__name__, self.name)
+            )
         del instance._fields[self.name]
 
 
@@ -84,8 +86,7 @@ class ModelOptions(object):
     instance of a model.
     """
 
-    def __init__(self, klass, namespace=None, roles=None,
-                 serialize_when_none=True):
+    def __init__(self, klass, namespace=None, roles=None, serialize_when_none=True):
         """
         :param klass:
             The class which this options instance belongs to.
@@ -131,16 +132,16 @@ class ModelMeta(type):
 
         # Accumulate metas info from parent classes
         for base in reversed(bases):
-            if hasattr(base, '_fields'):
+            if hasattr(base, "_fields"):
                 fields.update(metacopy(base._fields))
-            if hasattr(base, '_serializables'):
+            if hasattr(base, "_serializables"):
                 serializables.update(metacopy(base._serializables))
-            if hasattr(base, '_validator_functions'):
+            if hasattr(base, "_validator_functions"):
                 validator_functions.update(base._validator_functions)
 
         # Parse this class's attributes into meta structures
         for key, value in iteritems(attrs):
-            if key.startswith('validate_') and callable(value):
+            if key.startswith("validate_") and callable(value):
                 validator_functions[key[9:]] = value
             if isinstance(value, BaseType):
                 fields[key] = value
@@ -156,18 +157,19 @@ class ModelMeta(type):
             attrs[key] = FieldDescriptor(key)
 
         # Ready meta data to be klass attributes
-        attrs['_fields'] = fields
-        attrs['_serializables'] = serializables
-        attrs['_validator_functions'] = validator_functions
-        attrs['_options'] = options
+        attrs["_fields"] = fields
+        attrs["_serializables"] = serializables
+        attrs["_validator_functions"] = validator_functions
+        attrs["_options"] = options
 
         klass = type.__new__(mcs, name, bases, attrs)
 
         # Add reference to klass to each field instance
         def set_owner_model(field, klass):
             field.owner_model = klass
-            if hasattr(field, 'field'):
+            if hasattr(field, "field"):
                 set_owner_model(field.field, klass)
+
         for field_name, field in fields.items():
             set_owner_model(field, klass)
             field.name = field_name
@@ -194,9 +196,9 @@ class ModelMeta(type):
                     if not key.startswith("_") and not key == "klass":
                         options_members[key] = value
 
-        options_class = attrs.get('__optionsclass__', ModelOptions)
-        if 'Options' in attrs:
-            for key, value in inspect.getmembers(attrs['Options']):
+        options_class = attrs.get("__optionsclass__", ModelOptions)
+        if "Options" in attrs:
+            for key, value in inspect.getmembers(attrs["Options"]):
                 if not key.startswith("_"):
                     if key == "roles":
                         roles = options_members.get("roles", {}).copy()
@@ -212,12 +214,14 @@ class ModelMeta(type):
     def fields(cls):
         return cls._fields
 
+
 #   def __iter__(self):
 #       return itertools.chain(
 #           self.fields.iteritems(),
 #           self._unbound_fields.iteritems(),
 #           self._unbound_serializables.iteritems()
 #       )
+
 
 @add_metaclass(ModelMeta)
 class Model(object):
@@ -232,7 +236,7 @@ class Model(object):
     possible to convert the raw data into richer Python constructs.
     """
 
-    #__metaclass__ = ModelMeta
+    # __metaclass__ = ModelMeta
     __optionsclass__ = ModelOptions
 
     def __init__(self, raw_data=None, deserialize_mapping=None, strict=True):
@@ -255,8 +259,7 @@ class Model(object):
             Complain about unrecognized keys. Default: False
         """
         try:
-            data = validate(self.__class__, self._data, partial=partial,
-                            strict=strict)
+            data = validate(self.__class__, self._data, partial=partial, strict=strict)
             self._data.update(**data)
         except BaseError as exc:
             raise ModelValidationError(exc.messages)
@@ -270,8 +273,8 @@ class Model(object):
             The data to be imported.
         """
         data = self.convert(raw_data, **kw)
-        #[x * 2 if x % 2 == 0 else x for x in a_list]
-        del_keys = [ k for k in data.keys() if data[k] is None]
+        # [x * 2 if x % 2 == 0 else x for x in a_list]
+        del_keys = [k for k in data.keys() if data[k] is None]
         for k in del_keys:
             del data[k]
 
@@ -369,7 +372,7 @@ class Model(object):
                 try:
                     values[name] = field.mock(context)
                 except MockCreationError as exc:
-                    raise MockCreationError('%s: %s' % (name, exc.message))
+                    raise MockCreationError("%s: %s" % (name, exc.message))
         values.update(overrides)
         return cls(values)
 
@@ -411,20 +414,20 @@ class Model(object):
         try:
             obj = unicode(self)
         except (UnicodeEncodeError, UnicodeDecodeError):
-            obj = '[Bad Unicode data]'
+            obj = "[Bad Unicode data]"
 
         try:
             class_name = unicode(self.__class__.__name__)
         except (UnicodeEncodeError, UnicodeDecodeError):
-            class_name = '[Bad Unicode class name]'
+            class_name = "[Bad Unicode class name]"
 
         return u"<%s: %s>" % (class_name, obj)
 
     def __str__(self):
-        return '%s object' % self.__class__.__name__        
+        return "%s object" % self.__class__.__name__
 
     def __unicode__(self):
-        return '%s object' % self.__class__.__name__
+        return "%s object" % self.__class__.__name__
 
 
 from .types.compound import ModelType

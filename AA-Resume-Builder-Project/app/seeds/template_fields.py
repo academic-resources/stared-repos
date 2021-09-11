@@ -107,7 +107,6 @@ def seed_template_fields():
     db.session.add(Template_Field(template_id=2, field_id=14, page_order=24))
     db.session.add(Template_Field(template_id=2, field_id=16, page_order=25))
 
-
     db.session.add(Template_Field(template_id=3, field_id=11, page_order=18))
     db.session.add(Template_Field(template_id=3, field_id=12, page_order=19))
     db.session.add(Template_Field(template_id=3, field_id=13, page_order=20))
@@ -140,11 +139,13 @@ def seed_template_fields():
 
     db.session.commit()
 
+
 # Uses a raw SQL query to TRUNCATE the users table.
 # SQLAlchemy doesn't have a built in function to do this
 # TRUNCATE Removes all the data from the table, and resets
 # the auto incrementing primary key
 
+
 def undo_template_fields():
-    db.session.execute('TRUNCATE template_fields CASCADE;')
+    db.session.execute("TRUNCATE template_fields CASCADE;")
     db.session.commit()

@@ -1,29 +1,29 @@
-import React from 'react'
-import { createNewUser } from '../../actions/session'
+import React from "react";
+import { createNewUser } from "../../actions/session";
 
 class Signup extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      username: '',
-      email: '',
-      password: ''
-    }
-    this.handleSubmit = this.handleSubmit.bind(this)
+      username: "",
+      email: "",
+      password: "",
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInput(type) {
-    return e =>
+    return (e) =>
       this.setState({
-        [type]: e.target.value
-      })
+        [type]: e.target.value,
+      });
   }
 
   handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     this.props
       .createNewUser(this.state)
-      .then(() => this.props.history.push('/chirps'))
+      .then(() => this.props.history.push("/chirps"));
   }
 
   render() {
@@ -36,7 +36,7 @@ class Signup extends React.Component {
             <input
               type="text"
               value={this.state.username}
-              onChange={this.handleInput('username')}
+              onChange={this.handleInput("username")}
             />
           </label>
           <label>
@@ -44,7 +44,7 @@ class Signup extends React.Component {
             <input
               type="text"
               value={this.state.email}
-              onChange={this.handleInput('email')}
+              onChange={this.handleInput("email")}
             />
           </label>
           <label>
@@ -52,13 +52,13 @@ class Signup extends React.Component {
             <input
               type="password"
               value={this.state.password}
-              onChange={this.handleInput('password')}
+              onChange={this.handleInput("password")}
             />
           </label>
           <button onClick={this.handleSubmit}>Sign Up</button>
         </form>
       </div>
-    )
+    );
   }
 }
-export default Signup
+export default Signup;

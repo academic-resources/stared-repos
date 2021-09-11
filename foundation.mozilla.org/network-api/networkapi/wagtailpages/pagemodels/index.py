@@ -31,67 +31,64 @@ class IndexPage(FoundationMetadataPageMixin, RoutablePageMixin, Page):
     or "all the various campaigns", etc.
     """
 
-    header = models.CharField(
-        max_length=250,
-        blank=True
-    )
+    header = models.CharField(max_length=250, blank=True)
 
     intro = models.CharField(
         max_length=250,
         blank=True,
-        help_text='Intro paragraph to show in hero cutout box'
+        help_text="Intro paragraph to show in hero cutout box",
     )
 
     DEFAULT_PAGE_SIZE = 12
 
     PAGE_SIZES = (
-        (4, '4'),
-        (8, '8'),
+        (4, "4"),
+        (8, "8"),
         (DEFAULT_PAGE_SIZE, str(DEFAULT_PAGE_SIZE)),
-        (24, '24'),
+        (24, "24"),
     )
 
     page_size = models.IntegerField(
         choices=PAGE_SIZES,
         default=DEFAULT_PAGE_SIZE,
-        help_text='The number of entries to show by default, and per incremental load'
+        help_text="The number of entries to show by default, and per incremental load",
     )
 
     content_panels = Page.content_panels + [
-        FieldPanel('header'),
-        FieldPanel('intro'),
-        FieldPanel('page_size'),
+        FieldPanel("header"),
+        FieldPanel("intro"),
+        FieldPanel("page_size"),
     ]
 
     translatable_fields = [
         # Promote tab fields
-        SynchronizedField('slug'),
-        TranslatableField('seo_title'),
-        SynchronizedField('show_in_menus'),
-        TranslatableField('search_description'),
-        SynchronizedField('search_image'),
+        SynchronizedField("slug"),
+        TranslatableField("seo_title"),
+        SynchronizedField("show_in_menus"),
+        TranslatableField("search_description"),
+        SynchronizedField("search_image"),
         # Content tab fields
-        TranslatableField('title'),
-        TranslatableField('intro'),
-        TranslatableField('header'),
-        SynchronizedField('page_size'),
+        TranslatableField("title"),
+        TranslatableField("intro"),
+        TranslatableField("header"),
+        SynchronizedField("page_size"),
     ]
 
     def get_context(self, request):
         # bootstrap the render context
         context = super().get_context(request)
-        context = set_main_site_nav_information(self, context, 'Homepage')
+        context = set_main_site_nav_information(self, context, "Homepage")
         context = get_page_tree_information(self, context)
 
         # perform entry pagination and (optional) filterin
         entries = self.get_entries(context)
-        context['has_more'] = self.page_size < len(entries)
-        context['entries'] = entries[0:self.page_size]
+        context["has_more"] = self.page_size < len(entries)
+        context["entries"] = entries[0 : self.page_size]
         return context
 
     @property
     def cache_key(self):
-        return f'index_items_{self.slug}'
+        return f"index_items_{self.slug}"
 
     def clear_index_page_cache(self):
         cache.delete(self.cache_key)
@@ -104,7 +101,12 @@ class IndexPage(FoundationMetadataPageMixin, RoutablePageMixin, Page):
         child_set = cache.get(self.cache_key)
 
         if child_set is None:
-            child_set = self.get_children().live().public().order_by('-first_published_at', 'title')
+            child_set = (
+                self.get_children()
+                .live()
+                .public()
+                .order_by("-first_published_at", "title")
+            )
             cache.set(self.cache_key, child_set, settings.INDEX_PAGE_CACHE_TIMEOUT)
 
         return child_set
@@ -115,18 +117,18 @@ class IndexPage(FoundationMetadataPageMixin, RoutablePageMixin, Page):
         the `self.filtered` field being set or not.
         """
         entries = self.get_all_entries()
-        if hasattr(self, 'filtered'):
+        if hasattr(self, "filtered"):
             entries = self.filter_entries(entries, context)
         return entries
 
     def filter_entries(self, entries, context):
-        filter_type = self.filtered.get('type')
-        context['filtered'] = filter_type
+        filter_type = self.filtered.get("type")
+        context["filtered"] = filter_type
 
-        if filter_type == 'tags':
+        if filter_type == "tags":
             entries = self.filter_entries_for_tag(entries, context)
 
-        context['total_entries'] = len(entries)
+        context["total_entries"] = len(entries)
         return entries
 
     def filter_entries_for_tag(self, entries, context):
@@ -138,27 +140,24 @@ class IndexPage(FoundationMetadataPageMixin, RoutablePageMixin, Page):
         specific model before we can test for whether i) there are tags
         to work with and then ii) those tags match the specified ones.
         """
-        terms = self.filtered.get('terms')
+        terms = self.filtered.get("terms")
 
         # "unsluggify" all terms. Note that we cannot use list comprehension,
         # as not all terms might be real tags, and list comprehension cannot
         # be made to ignore throws.
-        context['terms'] = list()
+        context["terms"] = list()
         for term in terms:
             try:
                 tag = Tag.objects.get(slug=term)
-                context['terms'].append(str(tag))
+                context["terms"].append(str(tag))
             except Tag.DoesNotExist:
                 # ignore non-existent tags
                 pass
 
         entries = [
             entry
-            for
-            entry in entries.specific()
-            if
-            hasattr(entry, 'tags')
-            and not
+            for entry in entries.specific()
+            if hasattr(entry, "tags") and not
             # Determine whether there is any overlap between 'all tags' and
             # the tags specified. This effects ANY matching (rather than ALL).
             set([tag.slug for tag in entry.tags.all()]).isdisjoint(terms)
@@ -170,23 +169,23 @@ class IndexPage(FoundationMetadataPageMixin, RoutablePageMixin, Page):
     Sub routes
     """
 
-    @route('^entries/')
+    @route("^entries/")
     def generate_entries_set_html(self, request, *args, **kwargs):
         """
         JSON endpoint for getting a set of (pre-rendered) entries
         """
 
         page = 1
-        if 'page' in request.GET:
+        if "page" in request.GET:
             try:
-                page = int(request.GET['page'])
+                page = int(request.GET["page"])
             except ValueError:
                 pass
 
         page_size = self.page_size
-        if 'page_size' in request.GET:
+        if "page_size" in request.GET:
             try:
-                page_size = int(request.GET['page_size'])
+                page_size = int(request.GET["page_size"])
             except ValueError:
                 pass
 
@@ -195,7 +194,7 @@ class IndexPage(FoundationMetadataPageMixin, RoutablePageMixin, Page):
         entries = self.get_entries()
 
         # Exclude model types if data-exclude="" has a value in the template
-        if 'exclude' in request.GET:
+        if "exclude" in request.GET:
             try:
                 # Try to get the content type. Then get the model_class.
                 # This allows us to say "exclude 'publicationpage'" and get the model
@@ -209,23 +208,20 @@ class IndexPage(FoundationMetadataPageMixin, RoutablePageMixin, Page):
         has_next = end < len(entries)
 
         hide_classifiers = False
-        if hasattr(self, 'filtered'):
-            if self.filtered.get('type') == 'category':
+        if hasattr(self, "filtered"):
+            if self.filtered.get("type") == "category":
                 hide_classifiers = True
 
         html = loader.render_to_string(
-            'wagtailpages/fragments/entry_cards.html',
+            "wagtailpages/fragments/entry_cards.html",
             context={
-                'entries': entries[start:end],
-                'hide_classifiers': hide_classifiers
+                "entries": entries[start:end],
+                "hide_classifiers": hide_classifiers,
             },
-            request=request
+            request=request,
         )
 
-        return JsonResponse({
-            'entries_html': html,
-            'has_next': has_next,
-        })
+        return JsonResponse({"entries_html": html, "has_next": has_next})
 
     """
     tag routes
@@ -233,13 +229,10 @@ class IndexPage(FoundationMetadataPageMixin, RoutablePageMixin, Page):
 
     # helper function for /tags/... subroutes
     def extract_tag_information(self, tag):
-        terms = list(filter(None, re.split('/', tag)))
-        self.filtered = {
-            'type': 'tags',
-            'terms': terms
-        }
+        terms = list(filter(None, re.split("/", tag)))
+        self.filtered = {"type": "tags", "terms": terms}
 
-    @route(r'^tags/(?P<tag>.+)/entries/')
+    @route(r"^tags/(?P<tag>.+)/entries/")
     def generate_tagged_entries_set_html(self, request, tag, *args, **kwargs):
         """
         JSON endpoint for getting a set of (pre-rendered) tagged entries
@@ -247,7 +240,7 @@ class IndexPage(FoundationMetadataPageMixin, RoutablePageMixin, Page):
         self.extract_tag_information(tag)
         return self.generate_entries_set_html(request, *args, **kwargs)
 
-    @route(r'^tags/(?P<tag>.+)/')
+    @route(r"^tags/(?P<tag>.+)/")
     def entries_by_tag(self, request, tag, *args, **kwargs):
         """
         If this page was called with `/tags/...` as suffix, extract

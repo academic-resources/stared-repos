@@ -5,7 +5,7 @@ from .db import db
 
 
 class User(db.Model, UserMixin):
-    __tablename__ = 'users'
+    __tablename__ = "users"
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(40), nullable=False, unique=True)
@@ -30,8 +30,8 @@ class User(db.Model, UserMixin):
 
     def to_dict(self):
         return {
-          "id": self.id,
-          "username": self.username,
-          "email": self.email,
-          "folders": [user_folder.to_dict() for user_folder in self.folder]
+            "id": self.id,
+            "username": self.username,
+            "email": self.email,
+            "folders": [user_folder.to_dict() for user_folder in self.folder],
         }

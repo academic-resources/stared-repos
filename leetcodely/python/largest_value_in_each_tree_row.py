@@ -9,6 +9,7 @@ import sys, collections
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def largestValues(self, root):
         """
@@ -18,7 +19,7 @@ class Solution(object):
         result = []
         curr_row_largest = -sys.maxsize
         queue = collections.deque()
-        delimiter = '#'
+        delimiter = "#"
         queue.appendleft(root)
         queue.appendleft(delimiter)
         while len(queue) > 0:

@@ -14,6 +14,7 @@ class Solution:
             _helper(root.left, res)
             _helper(root.right, res)
             res.append(root.val)
+
         res = []
         _helper(root, res)
         return res

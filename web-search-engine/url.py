@@ -19,80 +19,97 @@ import justext
 import tldextract
 from html import unescape
 
-def domain(url) :
+
+def domain(url):
     """
     Get the domain of the url.
     """
     return tldextract.extract(url).registered_domain
 
-def crawl(url) :
+
+def crawl(url):
     """
     Crawl an URL.
     Return URL data.
     """
-    try :
+    try:
         r = requests.get(url)
-    except :
+    except:
         return None
     return r
 
-def detect_language(html) :
+
+def detect_language(html):
     """
     Detect the language of the text content of a page.
     """
     # handle string, need bytes
-    try :
+    try:
         html = html.decode("utf8")
-    except :
-        try :
+    except:
+        try:
             html = html.decode("latin1")
-        except :
+        except:
             pass
     h = html2text.HTML2Text()
     return langdetect.detect(h.handle(html))
 
-def extract_content(html, lang) :
+
+def extract_content(html, lang):
     """
     Extract the main text content of a page by removing boilerplate parts.
     """
     body = []
     boilerplate = []
-    paragraphs = justext.justext(html, justext.get_stoplist(lang[:1].upper()+lang[1:]))
-    for p in paragraphs :
-        if p.text.count(" ") >= 5 :
+    paragraphs = justext.justext(
+        html, justext.get_stoplist(lang[:1].upper() + lang[1:])
+    )
+    for p in paragraphs:
+        if p.text.count(" ") >= 5:
             body.append(p.text)
-        else :
+        else:
             boilerplate.append(p.text)
     return ". ".join(body), ". ".join(boilerplate)
 
-def extract_title(html) :
+
+def extract_title(html):
     """
     Extract the title of a page.
     """
-    try :
+    try:
         title = unescape(re.search("<title>([^<]+)</title>", html).group(1))
-    except :
-        title = None # no title on page
+    except:
+        title = None  # no title on page
     return title
 
-def extract_description(html) :
+
+def extract_description(html):
     """
     Extract the description of a page.
     """
-    try :
-        description = unescape(re.search('<meta name="[^">]*description"[^">]*content="([^">]+)',html).group(1))
-    except :
-        description = None # no description on page
+    try:
+        description = unescape(
+            re.search(
+                '<meta name="[^">]*description"[^">]*content="([^">]+)', html
+            ).group(1)
+        )
+    except:
+        description = None  # no description on page
     return description
 
-def create_description(body) :
+
+def create_description(body):
     """
     Artificially create a description from main content of page (only, in case of no meta description).
     """
     # extract all long sentences (possible candidates)
-    candidates = sorted([sentence for sentence in body.split('.')],key=lambda s : s.count(" "), reverse=True)
+    candidates = sorted(
+        [sentence for sentence in body.split(".")],
+        key=lambda s: s.count(" "),
+        reverse=True,
+    )
 
     # return the best candidate or nothing
-    if not candidates :
+    if not candidates:
         return None
     return candidates[0]

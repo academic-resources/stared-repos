@@ -426,12 +426,7 @@ def test_progress_max_refresh() -> None:
     )
     column = TextColumn("{task.description}")
     column.max_refresh = 3
-    progress = Progress(
-        column,
-        get_time=get_time,
-        auto_refresh=False,
-        console=console,
-    )
+    progress = Progress(column, get_time=get_time, auto_refresh=False, console=console)
     console.begin_capture()
     with progress:
         task_id = progress.add_task("start")
@@ -469,10 +464,7 @@ def test_no_output_if_progress_is_disabled() -> None:
         legacy_windows=False,
         _environ={},
     )
-    progress = Progress(
-        console=console,
-        disable=True,
-    )
+    progress = Progress(console=console, disable=True)
     test = ["foo", "bar", "baz"]
     expected_values = iter(test)
     with progress:

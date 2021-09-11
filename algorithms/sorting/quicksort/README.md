@@ -1,16 +1,16 @@
 # Quicksort
 
-* Worst-case running time of O(n^2).
-* Often the best practical choice because it is remarkably efficient on the average, expected running time is O(n lg n), and the hidden constant factors are quite small.
-* Sorts in place.
+- Worst-case running time of O(n^2).
+- Often the best practical choice because it is remarkably efficient on the average, expected running time is O(n lg n), and the hidden constant factors are quite small.
+- Sorts in place.
 
 Quicksort, like merge sort, applies the divide-and-conquer paradigm.
 
-1. __Divide__: partition (rearrange) the array `A[p..r]` into two (possible empty) subarrays `A[p..q-1]` and `A[q+1..r]` such that each element of `A[p..q-1]` is less than or equal to `A[q]`, which is, in turn, less than or equal to each element of `A[q+1..r]`. Compute the index `q` as part of this partitioning procedure.
+1. **Divide**: partition (rearrange) the array `A[p..r]` into two (possible empty) subarrays `A[p..q-1]` and `A[q+1..r]` such that each element of `A[p..q-1]` is less than or equal to `A[q]`, which is, in turn, less than or equal to each element of `A[q+1..r]`. Compute the index `q` as part of this partitioning procedure.
 
-2. __Conquer__: Sort the two subarrays A[p..q-1] and A[q+1..r] by recursive calls to quicksort.
+2. **Conquer**: Sort the two subarrays A[p..q-1] and A[q+1..r] by recursive calls to quicksort.
 
-3. __Combine__: Because the subarrays are already sorted, no work is needed to combine them, entire array `A[p..q]` is sorted.
+3. **Combine**: Because the subarrays are already sorted, no work is needed to combine them, entire array `A[p..q]` is sorted.
 
 ## Implementation
 
@@ -60,7 +60,7 @@ In the average case, PARTITION produces a mix of "good" and "bad" splits, which 
 
 We cannot always expect that permutations of input numbers are equally likely.
 
-We could use __random sampling__, instead of always using `A[r]` as the pivot, we will select a randomly chosen element for the subarray `A[p..r]`. We do so by first exchanging the element `A[r]` with the randomly chosen element.
+We could use **random sampling**, instead of always using `A[r]` as the pivot, we will select a randomly chosen element for the subarray `A[p..r]`. We do so by first exchanging the element `A[r]` with the randomly chosen element.
 
 By randomly sampling the range `p,...,r` we ensure that the pivot element `x = A[r]` is equally likely to be any of the r-p+1 elements in the subarray, and we can expect the split of the input array to be reasonably well balanced on average.
 

@@ -15,9 +15,9 @@ from .mongodbbase import SplitTableMixin
 
 
 class ResultDB(SplitTableMixin, BaseResultDB):
-    collection_prefix = ''
+    collection_prefix = ""
 
-    def __init__(self, url, database='resultdb'):
+    def __init__(self, url, database="resultdb"):
         self.conn = MongoClient(url)
         self.conn.admin.command("ismaster")
         self.database = self.conn[database]
@@ -33,18 +33,18 @@ class ResultDB(SplitTableMixin, BaseResultDB):
 
     def _create_project(self, project):
         collection_name = self._collection_name(project)
-        self.database[collection_name].ensure_index('taskid')
+        self.database[collection_name].ensure_index("taskid")
         self._list_project()
 
     def _parse(self, data):
-        data['_id'] = str(data['_id'])
-        if 'result' in data:
-            data['result'] = json.loads(data['result'])
+        data["_id"] = str(data["_id"])
+        if "result" in data:
+            data["result"] = json.loads(data["result"])
         return data
 
     def _stringify(self, data):
-        if 'result' in data:
-            data['result'] = json.dumps(data['result'])
+        if "result" in data:
+            data["result"] = json.dumps(data["result"])
         return data
 
     def save(self, project, taskid, url, result):
@@ -52,13 +52,13 @@ class ResultDB(SplitTableMixin, BaseResultDB):
             self._create_project(project)
         collection_name = self._collection_name(project)
         obj = {
-            'taskid'    : taskid,
-            'url'       : url,
-            'result'    : result,
-            'updatetime': time.time(),
+            "taskid": taskid,
+            "url": url,
+            "result": result,
+            "updatetime": time.time(),
         }
         return self.database[collection_name].update(
-            {'taskid': taskid}, {"$set": self._stringify(obj)}, upsert=True
+            {"taskid": taskid}, {"$set": self._stringify(obj)}, upsert=True
         )
 
     def select(self, project, fields=None, offset=0, limit=0):
@@ -69,7 +69,9 @@ class ResultDB(SplitTableMixin, BaseResultDB):
         offset = offset or 0
         limit = limit or 0
         collection_name = self._collection_name(project)
-        for result in self.database[collection_name].find({}, fields, skip=offset, limit=limit):
+        for result in self.database[collection_name].find(
+            {}, fields, skip=offset, limit=limit
+        ):
             yield self._parse(result)
 
     def count(self, project):
@@ -86,7 +88,7 @@ class ResultDB(SplitTableMixin, BaseResultDB):
         if project not in self.projects:
             return
         collection_name = self._collection_name(project)
-        ret = self.database[collection_name].find_one({'taskid': taskid}, fields)
+        ret = self.database[collection_name].find_one({"taskid": taskid}, fields)
         if not ret:
             return ret
         return self._parse(ret)

@@ -1,4 +1,3 @@
-require('./User')
-require('./Category')
-require('./Product')
-
+require("./User");
+require("./Category");
+require("./Product");

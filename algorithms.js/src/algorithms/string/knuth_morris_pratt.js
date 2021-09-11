@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * String Matching algorithm
@@ -28,13 +28,11 @@ var knuthMorrisPratt = function (text, pattern) {
         return m;
       }
       ++i;
-    }
-    else {
+    } else {
       if (table[i] >= 0) {
         i = table[i];
         m = m + i - table[i];
-      }
-      else {
+      } else {
         i = 0;
         ++m;
       }
@@ -68,11 +66,9 @@ var buildTable = function (pattern) {
       ++cnd;
       table[position] = cnd;
       ++position;
-    }
-    else if (cnd > 0) {
+    } else if (cnd > 0) {
       cnd = table[cnd];
-    }
-    else {
+    } else {
       table[position] = 0;
       ++position;
     }

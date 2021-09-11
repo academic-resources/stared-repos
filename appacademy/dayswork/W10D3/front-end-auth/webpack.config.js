@@ -1,25 +1,25 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './frontend/bluebird.jsx',
+  entry: "./frontend/bluebird.jsx",
   output: {
-    path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, "app", "assets", "javascripts"),
+    filename: "bundle.js",
   },
   module: {
     rules: [
       {
         test: [/\.jsx?$/],
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         query: {
-          presets: ['env', 'react']
-        }
-      }
-    ]
+          presets: ["env", "react"],
+        },
+      },
+    ],
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   resolve: {
-    extensions: ['.js', '.jsx', '*'],
-  }
+    extensions: [".js", ".jsx", "*"],
+  },
 };

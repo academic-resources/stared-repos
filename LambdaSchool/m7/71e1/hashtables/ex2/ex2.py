@@ -4,8 +4,10 @@ class Ticket:
         self.source = source
         self.destination = destination
 
+
 returned_array = []
 returned_list = []
+
 
 def loop_tickets(tickets, destination, length):
     global returned_array

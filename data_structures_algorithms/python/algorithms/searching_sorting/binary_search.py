@@ -40,4 +40,4 @@ def recursive_binary_search(arr: List[int], element: int) -> bool:
             return recursive_binary_search(arr[:mid], element)
         else:
             # Choose upper half of the list
-            return recursive_binary_search(arr[mid + 1:], element)
+            return recursive_binary_search(arr[mid + 1 :], element)

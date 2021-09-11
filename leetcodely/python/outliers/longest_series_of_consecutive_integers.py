@@ -22,15 +22,18 @@ class Solution:
         self.maxer = [-1, -1]
 
     def dfs(self, grid: [list]) -> int:
-
         def helper(row, col, num, visited, counter):
             visited[row][col] = True
             counter.append(1)
 
             for neighbor in self.neighbors:
                 row, col = row + neighbor[0], col + neighbor[1]
-                if 0 <= row < len(grid) and 0 <= col < len(grid[row]) and grid[row][col] == num and not visited[row][
-                    col]:
+                if (
+                    0 <= row < len(grid)
+                    and 0 <= col < len(grid[row])
+                    and grid[row][col] == num
+                    and not visited[row][col]
+                ):
                     helper(row, col, num, visited, counter)
 
         for i in range(len(grid)):
@@ -46,7 +49,6 @@ class Solution:
         return self.maxer[0]
 
     def bfs(self, grid: [list]) -> int:
-
         def bfs(queue, visited, num, counter):
             while len(queue) > 0:
                 row, col = queue.pop()
@@ -54,13 +56,19 @@ class Solution:
                 counter.append(1)
                 for neighbor in self.neighbors:
                     row, col = row + neighbor[0], col + neighbor[1]
-                    if 0 <= row < len(grid) and 0 <= col < len(grid[row]) and grid[row][col] == num and not \
-                    visited[row][col]:
+                    if (
+                        0 <= row < len(grid)
+                        and 0 <= col < len(grid[row])
+                        and grid[row][col] == num
+                        and not visited[row][col]
+                    ):
                         queue.appendleft((row, col))
 
         for i in range(len(grid)):
             for j in range(len(grid[i])):
-                visited = [[False for _ in range(len(grid[i]))] for i in range(len(grid))]
+                visited = [
+                    [False for _ in range(len(grid[i]))] for i in range(len(grid))
+                ]
                 lst = []
                 queue = collections.deque()
                 queue.appendleft((i, j))
@@ -75,7 +83,6 @@ class Solution:
 
 
 class TestSolution(unittest.TestCase):
-
     def setUp(self) -> None:
         self.grid = [[2, 3, 3, 1], [2, 3, 3, 2], [2, 2, 3, 5]]
         self.solution = Solution()
@@ -87,5 +94,5 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(self.solution.bfs(self.grid), 3)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

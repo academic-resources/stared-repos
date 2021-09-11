@@ -31,7 +31,8 @@ class Solution(object):
                     queue.append((child, curr[1] + 1))
         return [v for v in dic.values()]
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     bst = BST()
     bst.add(9)
     bst.add(3)

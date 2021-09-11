@@ -38,8 +38,8 @@ class HuffmanCoding:
                 traverse(p.right, path + str(1))
 
         root = heapq.heappop(self.heap)
-        traverse(root, '')
-        res = ''
+        traverse(root, "")
+        res = ""
         for item in string:
             res += str(frequency_map[item])
         return res
@@ -64,6 +64,6 @@ class Node:
             return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     huffman = HuffmanCoding()
-    print(huffman.encode('katya'))
+    print(huffman.encode("katya"))

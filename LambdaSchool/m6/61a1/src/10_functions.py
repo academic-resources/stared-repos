@@ -16,5 +16,6 @@ def is_even(x):
         print("Even!")
     else:
         print("Odd")
-        
+
+
 is_even(num)

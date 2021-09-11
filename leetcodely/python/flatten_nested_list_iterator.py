@@ -17,23 +17,22 @@ By calling next repeatedly until hasNext returns false, the order of elements re
 # """
 
 
-
 class NestedInteger(object):
-   def isInteger(self):
-       """
+    def isInteger(self):
+        """
        @return True if this NestedInteger holds a single integer, rather than a nested list.
        :rtype bool
        """
 
-   def getInteger(self):
-       """
+    def getInteger(self):
+        """
        @return the single integer that this NestedInteger holds, if it holds a single integer
        Return None if this NestedInteger holds a nested list
        :rtype int
        """
 
-   def getList(self):
-       """
+    def getList(self):
+        """
        @return the nested list that this NestedInteger holds, if it holds a nested list
        Return None if this NestedInteger holds a single integer
        :rtype List[NestedInteger]
@@ -68,7 +67,6 @@ class NestedIterator(object):
                 for item in list(reversed(item_list)):
                     self.stack.append(item)
         return False
-
 
 
 # Your NestedIterator object will be instantiated and called as such:

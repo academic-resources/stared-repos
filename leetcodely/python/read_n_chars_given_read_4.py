@@ -12,10 +12,12 @@ The read function will only be called once for each test case."""
 # @param buf, a list of characters
 # @return an integer
 
-#TODO:Not passing a few tests
+# TODO:Not passing a few tests
+
 
 def read4(buf):
     pass
+
 
 class Solution(object):
     def read(self, buf, n):
@@ -25,7 +27,7 @@ class Solution(object):
         :rtype: The number of characters read (int)
         """
         i = 0
-        buf4 = [''] * 4
+        buf4 = [""] * 4
         while True:
             num_bytes = read4(buf4)
             for i, v in enumerate(buf4):

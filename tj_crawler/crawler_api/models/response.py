@@ -8,12 +8,12 @@ class Message(BaseModel):
 
 
 class Representatives(BaseModel):
-    type_: str = Field(alias='type')
+    type_: str = Field(alias="type")
     name: str
 
 
 class PartiesInvolved(BaseModel):
-    type_: str = Field(alias='type')
+    type_: str = Field(alias="type")
     name: str
     representatives: List[Representatives]
 
@@ -25,7 +25,7 @@ class LegalProcessUpdate(BaseModel):
 
 class LegalProcessDetail(BaseModel):
     degree: str
-    class_: str = Field(alias='class')
+    class_: str = Field(alias="class")
     area: Optional[str]
     subject: Optional[str]
     distribution: Optional[str]

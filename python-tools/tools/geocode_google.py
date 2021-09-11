@@ -14,11 +14,13 @@ def geocode_google(address):
     """
     geodata = {}
     try:
-        response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address).json()
+        response = requests.get(
+            "https://maps.googleapis.com/maps/api/geocode/json?address=" + address
+        ).json()
     except Exception:
         return geodata
-    if response['status'] == 'OK':
-        geodata['lat'] = response['results'][0]['geometry']['location']['lat']
-        geodata['lng'] = response['results'][0]['geometry']['location']['lng']
-        geodata['address'] = response['results'][0]['formatted_address']
+    if response["status"] == "OK":
+        geodata["lat"] = response["results"][0]["geometry"]["location"]["lat"]
+        geodata["lng"] = response["results"][0]["geometry"]["location"]["lng"]
+        geodata["address"] = response["results"][0]["formatted_address"]
     return geodata

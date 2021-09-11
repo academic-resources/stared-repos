@@ -48,7 +48,7 @@ class MinStack(object):
         return self.min_stack[-1]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     minStack = MinStack()
     minStack.push(12)
     minStack.push(9)
@@ -58,6 +58,3 @@ if __name__ == '__main__':
     minStack.pop()
     print(minStack.getMin())
     print(minStack.top())
-
-
-

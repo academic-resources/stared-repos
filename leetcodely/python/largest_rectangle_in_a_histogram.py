@@ -2,7 +2,7 @@
 """Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find 
 the area of largest rectangle in the histogram."""
 
-#TODO: Still not completely correct
+# TODO: Still not completely correct
 import sys
 
 
@@ -17,12 +17,12 @@ class Stack:
 
     def peek(self):
         if self.size == 0:
-            return KeyError('Peeking an empty stack')
+            return KeyError("Peeking an empty stack")
         return self.store[-1]
 
     def pop(self):
         if self.size == 0:
-            return KeyError('Popping an empty stack')
+            return KeyError("Popping an empty stack")
         self.size -= 1
         return self.store.pop()
 
@@ -60,8 +60,6 @@ class Solution(object):
         return max_area
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.largestRectangleArea([2, 1, 5, 6, 2, 3]))
-
-

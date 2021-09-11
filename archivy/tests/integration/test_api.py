@@ -25,11 +25,7 @@ def test_create_bookmark(test_app, client: FlaskClient, mocked_responses):
     mocked_responses.add(responses.GET, "http://example.org", body="Example\n")
     response: Flask.response_class = client.post(
         "/api/bookmarks",
-        json={
-            "url": "http://example.org",
-            "tags": ["test"],
-            "path": "",
-        },
+        json={"url": "http://example.org", "tags": ["test"], "path": ""},
     )
     assert response.status_code == 200
 
@@ -47,12 +43,7 @@ def test_creating_bookmark_without_passing_path_saves_to_default_dir(
     bookmarks_dir = "bookmarks"
     test_app.config["DEFAULT_BOOKMARKS_DIR"] = bookmarks_dir
     create_dir(bookmarks_dir)
-    resp = client.post(
-        "/api/bookmarks",
-        json={
-            "url": "http://example.org",
-        },
-    )
+    resp = client.post("/api/bookmarks", json={"url": "http://example.org"})
     bookmark = get_items(structured=False)[0]
     assert (
         "bookmarks" in bookmark["path"]

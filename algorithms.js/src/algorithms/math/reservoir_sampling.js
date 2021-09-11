@@ -1,5 +1,4 @@
-'use strict';
-
+"use strict";
 
 /**
  * Sample random elements from the array using reservoir algorithm.
@@ -10,7 +9,7 @@
  */
 var reservoirSampling = function (array, sampleSize) {
   if (sampleSize > array.length) {
-    throw new Error('Sample size exceeds the total number of elements.');
+    throw new Error("Sample size exceeds the total number of elements.");
   }
   var reservoir = array.slice(0, sampleSize);
   for (var i = sampleSize; i < array.length; ++i) {
@@ -21,6 +20,5 @@ var reservoirSampling = function (array, sampleSize) {
   }
   return reservoir;
 };
-
 
 module.exports = reservoirSampling;

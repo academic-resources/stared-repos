@@ -8,7 +8,8 @@
 from __future__ import unicode_literals, division, absolute_import
 
 import logging
-logger = logging.getLogger('database.basedb')
+
+logger = logging.getLogger("database.basedb")
 
 from six import itervalues
 from pyspider.libs import utils
@@ -16,18 +17,19 @@ from pyspider.libs import utils
 
 class BaseDB:
 
-    '''
+    """
     BaseDB
 
     dbcur should be overwirte
-    '''
+    """
+
     __tablename__ = None
-    placeholder = '%s'
+    placeholder = "%s"
     maxlimit = -1
 
     @staticmethod
     def escape(string):
-        return '`%s`' % string
+        return "`%s`" % string
 
     @property
     def dbcur(self):
@@ -38,10 +40,12 @@ class BaseDB:
         dbcur.execute(sql_query, values)
         return dbcur
 
-    def _select(self, tablename=None, what="*", where="", where_values=[], offset=0, limit=None):
+    def _select(
+        self, tablename=None, what="*", where="", where_values=[], offset=0, limit=None
+    ):
         tablename = self.escape(tablename or self.__tablename__)
         if isinstance(what, list) or isinstance(what, tuple) or what is None:
-            what = ','.join(self.escape(f) for f in what) if what else '*'
+            what = ",".join(self.escape(f) for f in what) if what else "*"
 
         sql_query = "SELECT %s FROM %s" % (what, tablename)
         if where:
@@ -55,17 +59,25 @@ class BaseDB:
         for row in self._execute(sql_query, where_values):
             yield row
 
-    def _select2dic(self, tablename=None, what="*", where="", where_values=[],
-                    order=None, offset=0, limit=None):
+    def _select2dic(
+        self,
+        tablename=None,
+        what="*",
+        where="",
+        where_values=[],
+        order=None,
+        offset=0,
+        limit=None,
+    ):
         tablename = self.escape(tablename or self.__tablename__)
         if isinstance(what, list) or isinstance(what, tuple) or what is None:
-            what = ','.join(self.escape(f) for f in what) if what else '*'
+            what = ",".join(self.escape(f) for f in what) if what else "*"
 
         sql_query = "SELECT %s FROM %s" % (what, tablename)
         if where:
             sql_query += " WHERE %s" % where
         if order:
-            sql_query += ' ORDER BY %s' % order
+            sql_query += " ORDER BY %s" % order
         if limit:
             sql_query += " LIMIT %d, %d" % (offset, limit)
         elif offset:
@@ -85,7 +97,7 @@ class BaseDB:
         tablename = self.escape(tablename or self.__tablename__)
         if values:
             _keys = ", ".join(self.escape(k) for k in values)
-            _values = ", ".join([self.placeholder, ] * len(values))
+            _values = ", ".join([self.placeholder] * len(values))
             sql_query = "REPLACE INTO %s (%s) VALUES (%s)" % (tablename, _keys, _values)
         else:
             sql_query = "REPLACE INTO %s DEFAULT VALUES" % tablename
@@ -101,7 +113,7 @@ class BaseDB:
         tablename = self.escape(tablename or self.__tablename__)
         if values:
             _keys = ", ".join((self.escape(k) for k in values))
-            _values = ", ".join([self.placeholder, ] * len(values))
+            _values = ", ".join([self.placeholder] * len(values))
             sql_query = "INSERT INTO %s (%s) VALUES (%s)" % (tablename, _keys, _values)
         else:
             sql_query = "INSERT INTO %s DEFAULT VALUES" % tablename
@@ -115,9 +127,9 @@ class BaseDB:
 
     def _update(self, tablename=None, where="1=0", where_values=[], **values):
         tablename = self.escape(tablename or self.__tablename__)
-        _key_values = ", ".join([
-            "%s = %s" % (self.escape(k), self.placeholder) for k in values
-        ])
+        _key_values = ", ".join(
+            ["%s = %s" % (self.escape(k), self.placeholder) for k in values]
+        )
         sql_query = "UPDATE %s SET %s WHERE %s" % (tablename, _key_values, where)
         logger.debug("<sql: %s>", sql_query)
 
@@ -132,6 +144,7 @@ class BaseDB:
 
         return self._execute(sql_query, where_values)
 
+
 if __name__ == "__main__":
     import sqlite3
 
@@ -143,7 +156,7 @@ if __name__ == "__main__":
             self.conn = sqlite3.connect(":memory:")
             cursor = self.conn.cursor()
             cursor.execute(
-                '''CREATE TABLE `%s` (id INTEGER PRIMARY KEY AUTOINCREMENT, name, age)'''
+                """CREATE TABLE `%s` (id INTEGER PRIMARY KEY AUTOINCREMENT, name, age)"""
                 % self.__tablename__
             )
 

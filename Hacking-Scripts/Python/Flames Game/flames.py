@@ -29,13 +29,13 @@ def result_flame(x, y):
     count = len(x) + len(y)
     result = ["Love", "Friends", "Affection", "Marriage", "Enemy", "Siblings"]
     while len(result) > 1:
-        split_index = (count % len(result) - 1)
-        if (split_index >= 0):
-            right = result[split_index + 1:]
+        split_index = count % len(result) - 1
+        if split_index >= 0:
+            right = result[split_index + 1 :]
             left = result[:split_index]
             result = right + left
         else:
-            result = result[:len(result) - 1]
+            result = result[: len(result) - 1]
     return result
 
 
@@ -43,17 +43,17 @@ if __name__ == "__main__":
     # creating a GUI
     root = Tk()
     # NOW, SET THE BG COLOR
-    root.configure(background='pink')
+    root.configure(background="pink")
     # LET'S SET THE CONFIGURATION
     root.geometry("430x300")
     # SET THE NAME OF WINDOW
     root.title("Let's try once")
     # ply 1 name: label
-    label1 = Label(root, text="Name 1 ", fg='yellow', bg='#0000cd')
+    label1 = Label(root, text="Name 1 ", fg="yellow", bg="#0000cd")
     # ply 2 name: label
-    label2 = Label(root, text="Name 2 ", fg='yellow', bg='#0000cd')
+    label2 = Label(root, text="Name 2 ", fg="yellow", bg="#0000cd")
     # relation status
-    label3 = Label(root, text="Relationship Status", fg='black', bg='#82EEFD')
+    label3 = Label(root, text="Relationship Status", fg="black", bg="#82EEFD")
     # grid method is used for placing
 
     label1.grid(row=1, column=0, sticky="E")
@@ -70,18 +70,10 @@ if __name__ == "__main__":
     Ply2_field.grid(row=4, column=3, ipadx="50")
     Status_field.grid(row=12, column=3, ipadx="50")
     # creating a submit button
-    button1 = Button(root,
-                     text="Flame",
-                     bg="#007fff",
-                     fg="white",
-                     command=status)
+    button1 = Button(root, text="Flame", bg="#007fff", fg="white", command=status)
 
     # Creating a Clear Button
-    button2 = Button(root,
-                     text="Clear",
-                     bg="#007fff",
-                     fg="white",
-                     command=clear_all)
+    button2 = Button(root, text="Clear", bg="#007fff", fg="white", command=clear_all)
 
     # grid method is used for placing the widgets at respective positions
 

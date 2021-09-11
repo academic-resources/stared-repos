@@ -12,11 +12,7 @@ from archivy.click_web.resources import cmd_form, input_fields
     "param, command_index, expected",
     [
         (
-            click.Argument(
-                [
-                    "an_argument",
-                ]
-            ),
+            click.Argument(["an_argument"]),
             0,
             {
                 "checked": "",
@@ -32,12 +28,7 @@ from archivy.click_web.resources import cmd_form, input_fields
             },
         ),
         (
-            click.Argument(
-                [
-                    "an_argument",
-                ],
-                nargs=2,
-            ),
+            click.Argument(["an_argument"], nargs=2),
             1,
             {
                 "checked": "",
@@ -53,11 +44,7 @@ from archivy.click_web.resources import cmd_form, input_fields
             },
         ),
         (
-            click.Option(
-                [
-                    "--an_option",
-                ]
-            ),
+            click.Option(["--an_option"]),
             0,
             {
                 "checked": "",
@@ -74,12 +61,7 @@ from archivy.click_web.resources import cmd_form, input_fields
             },
         ),
         (
-            click.Option(
-                [
-                    "--an_option",
-                ],
-                nargs=2,
-            ),
+            click.Option(["--an_option"], nargs=2),
             1,
             {
                 "checked": "",
@@ -96,13 +78,7 @@ from archivy.click_web.resources import cmd_form, input_fields
             },
         ),
         (
-            click.Option(
-                [
-                    "--flag/--no-flag",
-                ],
-                default=True,
-                help="help",
-            ),
+            click.Option(["--flag/--no-flag"], default=True, help="help"),
             3,
             {
                 "checked": 'checked="checked"',
@@ -132,12 +108,7 @@ def test_get_input_field(ctx, click_cli, param, expected, command_index):
     "param, command_index, expected",
     [
         (
-            click.Argument(
-                [
-                    "an_argument",
-                ],
-                nargs=-1,
-            ),
+            click.Argument(["an_argument"], nargs=-1),
             0,
             {
                 "checked": "",
@@ -151,7 +122,7 @@ def test_get_input_field(ctx, click_cli, param, expected, command_index):
                 "type": "text",
                 "value": None,
             },
-        ),
+        )
     ],
 )
 def test_variadic_arguments(ctx, click_cli, param, expected, command_index):
@@ -164,12 +135,7 @@ def test_variadic_arguments(ctx, click_cli, param, expected, command_index):
     "param, command_index, expected",
     [
         (
-            click.Argument(
-                [
-                    "a_file_argument",
-                ],
-                type=click.File("rb"),
-            ),
+            click.Argument(["a_file_argument"], type=click.File("rb")),
             0,
             {
                 "checked": "",
@@ -185,12 +151,7 @@ def test_variadic_arguments(ctx, click_cli, param, expected, command_index):
             },
         ),
         (
-            click.Option(
-                [
-                    "--a_file_option",
-                ],
-                type=click.File("rb"),
-            ),
+            click.Option(["--a_file_option"], type=click.File("rb")),
             0,
             {
                 "checked": "",
@@ -218,12 +179,7 @@ def test_get_file_input_field(ctx, click_cli, param, expected, command_index):
     "param, command_index, expected",
     [
         (
-            click.Argument(
-                [
-                    "a_file_argument",
-                ],
-                type=click.File("wb"),
-            ),
+            click.Argument(["a_file_argument"], type=click.File("wb")),
             0,
             {
                 "checked": "",
@@ -239,12 +195,7 @@ def test_get_file_input_field(ctx, click_cli, param, expected, command_index):
             },
         ),
         (
-            click.Option(
-                [
-                    "--a_file_option",
-                ],
-                type=click.File("wb"),
-            ),
+            click.Option(["--a_file_option"], type=click.File("wb")),
             0,
             {
                 "checked": "",

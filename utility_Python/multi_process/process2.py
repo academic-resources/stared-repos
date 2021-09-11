@@ -1,2 +1,2 @@
 # process2.py
-print('End of process 2')
+print("End of process 2")

@@ -4,8 +4,8 @@ module.exports = {
   context: __dirname,
   entry: "./frontend/aeternote.jsx",
   output: {
-    path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-    filename: "bundle.js"
+    path: path.resolve(__dirname, "app", "assets", "javascripts"),
+    filename: "bundle.js",
   },
 
   module: {
@@ -13,16 +13,16 @@ module.exports = {
       {
         test: [/\.jsx?$/, /\.js?$/],
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         query: {
-          presets: ['env', 'react', 'es2015']
-        }
-      }]
-    },
+          presets: ["env", "react", "es2015"],
+        },
+      },
+    ],
+  },
 
-  devtool: 'source-map',
+  devtool: "source-map",
   resolve: {
-
-    extensions: [".ts", ".js", ".jsx", ".svg", "*"]
-  }
+    extensions: [".ts", ".js", ".jsx", ".svg", "*"],
+  },
 };

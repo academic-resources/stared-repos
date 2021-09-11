@@ -33,13 +33,18 @@ import calendar
 from datetime import datetime
 from datetime import date
 
-def generateCalendar(month=date.today().strftime("%m"), year=date.today().strftime("%y")):
-    try: 
+
+def generateCalendar(
+    month=date.today().strftime("%m"), year=date.today().strftime("%y")
+):
+    try:
         c = calendar.TextCalendar(calendar.SUNDAY)
         str = c.formatmonth(int(year), int(month))
         print(str)
     except:
         print(
-            "Entering no inputs will retrieve the current month's calendar.  Enter one argument for the month or two arguments for month and year:  `14_cal.py [month] [year]`.")
+            "Entering no inputs will retrieve the current month's calendar.  Enter one argument for the month or two arguments for month and year:  `14_cal.py [month] [year]`."
+        )
+
 
 generateCalendar()

@@ -9,9 +9,9 @@ def bytes_to_human(bytes):
         str: Return bytes into human readable format.
 
     """
-    suffix = 'B'
-    for unit in ['', 'K', 'M', 'G', 'T', 'P', 'E', 'Z']:
+    suffix = "B"
+    for unit in ["", "K", "M", "G", "T", "P", "E", "Z"]:
         if abs(bytes) < 1024.0:
-            return '%3.1f%s%s' % (bytes, unit, suffix)
+            return "%3.1f%s%s" % (bytes, unit, suffix)
         bytes /= 1024.0
-    return '%.1f%s%s' % (bytes, 'Y', suffix)
+    return "%.1f%s%s" % (bytes, "Y", suffix)

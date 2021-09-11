@@ -6,19 +6,21 @@ import networkapi.wagtailpages.fields
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('wagtailpages', '0029_fix_software_fields_part_1'),
-    ]
+    dependencies = [("wagtailpages", "0029_fix_software_fields_part_1")]
 
     operations = [
         migrations.AlterField(
-            model_name='softwareproductpage',
-            name='easy_to_learn_and_use',
-            field=networkapi.wagtailpages.fields.ExtendedBoolean(help_text='Is it easy to learn & use the features?'),
+            model_name="softwareproductpage",
+            name="easy_to_learn_and_use",
+            field=networkapi.wagtailpages.fields.ExtendedBoolean(
+                help_text="Is it easy to learn & use the features?"
+            ),
         ),
         migrations.AlterField(
-            model_name='softwareproductpage',
-            name='medical_privacy_compliant',
-            field=networkapi.wagtailpages.fields.ExtendedBoolean(help_text='Compliant with US medical privacy laws?'),
+            model_name="softwareproductpage",
+            name="medical_privacy_compliant",
+            field=networkapi.wagtailpages.fields.ExtendedBoolean(
+                help_text="Compliant with US medical privacy laws?"
+            ),
         ),
     ]

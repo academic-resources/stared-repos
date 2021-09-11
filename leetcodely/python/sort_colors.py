@@ -33,6 +33,6 @@ class Solution(object):
         print(nums)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.sortColors([1, 1, 0, 2, 2, 1, 0, 2, 1, 2, 0, 0]))

@@ -1,5 +1,6 @@
 from util import Queue, Stack, Graph
 
+
 def earliest_ancestor(ancestors, current_vertex):
     # create blank graph for ancestors
     current_graph = Graph()
@@ -31,7 +32,9 @@ def earliest_ancestor(ancestors, current_vertex):
         # if last vertex is smaller than current earliest ancestor )
         # ##### OR
         # if traversed path is longer than max_path
-        if(tp_length >= max_path and last_vertex < earliest_ancestor) or (tp_length > max_path):
+        if (tp_length >= max_path and last_vertex < earliest_ancestor) or (
+            tp_length > max_path
+        ):
             # set earliest ancestor as last vertex
             # set max path as last item in traversed path
             earliest_ancestor = last_vertex

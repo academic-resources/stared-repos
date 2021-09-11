@@ -15,8 +15,8 @@ from pyspider.database.basedb import BaseDB
 
 
 class TaskDB(SQLiteMixin, SplitTableMixin, BaseTaskDB, BaseDB):
-    __tablename__ = 'taskdb'
-    placeholder = '?'
+    __tablename__ = "taskdb"
+    placeholder = "?"
 
     def __init__(self, path):
         self.path = path
@@ -25,22 +25,25 @@ class TaskDB(SQLiteMixin, SplitTableMixin, BaseTaskDB, BaseDB):
         self._list_project()
 
     def _create_project(self, project):
-        assert re.match(r'^\w+$', project) is not None
+        assert re.match(r"^\w+$", project) is not None
         tablename = self._tablename(project)
-        self._execute('''CREATE TABLE IF NOT EXISTS `%s` (
+        self._execute(
+            """CREATE TABLE IF NOT EXISTS `%s` (
                 taskid PRIMARY KEY,
                 project,
                 url, status,
                 schedule, fetch, process, track,
                 lastcrawltime, updatetime
-                )''' % tablename)
+                )"""
+            % tablename
+        )
         self._execute(
-            '''CREATE INDEX `status_%s_index` ON %s (status)'''
+            """CREATE INDEX `status_%s_index` ON %s (status)"""
             % (tablename, self.escape(tablename))
         )
 
     def _parse(self, data):
-        for each in ('schedule', 'fetch', 'process', 'track'):
+        for each in ("schedule", "fetch", "process", "track"):
             if each in data:
                 if data[each]:
                     data[each] = json.loads(data[each])
@@ -49,7 +52,7 @@ class TaskDB(SQLiteMixin, SplitTableMixin, BaseTaskDB, BaseDB):
         return data
 
     def _stringify(self, data):
-        for each in ('schedule', 'fetch', 'process', 'track'):
+        for each in ("schedule", "fetch", "process", "track"):
             if each in data:
                 data[each] = json.dumps(data[each])
         return data
@@ -60,7 +63,7 @@ class TaskDB(SQLiteMixin, SplitTableMixin, BaseTaskDB, BaseDB):
         where = "status = %d" % status
 
         if project:
-            projects = [project, ]
+            projects = [project]
         else:
             projects = self.projects
 
@@ -78,22 +81,26 @@ class TaskDB(SQLiteMixin, SplitTableMixin, BaseTaskDB, BaseDB):
         if project not in self.projects:
             return None
         tablename = self._tablename(project)
-        for each in self._select2dic(tablename, what=fields, where=where, where_values=(taskid, )):
+        for each in self._select2dic(
+            tablename, what=fields, where=where, where_values=(taskid,)
+        ):
             return self._parse(each)
         return None
 
     def status_count(self, project):
-        '''
+        """
         return a dict
-        '''
+        """
         result = dict()
         if project not in self.projects:
             self._list_project()
         if project not in self.projects:
             return result
         tablename = self._tablename(project)
-        for status, count in self._execute("SELECT `status`, count(1) FROM %s GROUP BY `status`" %
-                                           self.escape(tablename)):
+        for status, count in self._execute(
+            "SELECT `status`, count(1) FROM %s GROUP BY `status`"
+            % self.escape(tablename)
+        ):
             result[status] = count
         return result
 
@@ -102,9 +109,9 @@ class TaskDB(SQLiteMixin, SplitTableMixin, BaseTaskDB, BaseDB):
             self._create_project(project)
             self._list_project()
         obj = dict(obj)
-        obj['taskid'] = taskid
-        obj['project'] = project
-        obj['updatetime'] = time.time()
+        obj["taskid"] = taskid
+        obj["project"] = project
+        obj["updatetime"] = time.time()
         tablename = self._tablename(project)
         return self._insert(tablename, **self._stringify(obj))
 
@@ -114,8 +121,10 @@ class TaskDB(SQLiteMixin, SplitTableMixin, BaseTaskDB, BaseDB):
         tablename = self._tablename(project)
         obj = dict(obj)
         obj.update(kwargs)
-        obj['updatetime'] = time.time()
+        obj["updatetime"] = time.time()
         return self._update(
-            tablename, where="`taskid` = %s" % self.placeholder, where_values=(taskid, ),
+            tablename,
+            where="`taskid` = %s" % self.placeholder,
+            where_values=(taskid,),
             **self._stringify(obj)
         )

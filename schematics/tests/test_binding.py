@@ -78,14 +78,9 @@ def test_field_binding():
         courses = ListType(ModelType(Course))
 
     valid_data = {
-        'courses': [
-            {'id': 'ENG103', 'attending': [
-                {'name': u'Danny'},
-                {'name': u'Sandy'}]},
-            {'id': 'ENG203', 'attending': [
-                {'name': u'Danny'},
-                {'name': u'Sandy'}
-            ]}
+        "courses": [
+            {"id": "ENG103", "attending": [{"name": u"Danny"}, {"name": u"Sandy"}]},
+            {"id": "ENG203", "attending": [{"name": u"Danny"}, {"name": u"Sandy"}]},
         ]
     }
 
@@ -112,4 +107,5 @@ def test_serializable_doesnt_keep_global_state():
     location_IS = Location({"country_code": "IS"})
 
     assert id(location_US._serializables["country_name"]) == id(
-        location_IS._serializables["country_name"])
+        location_IS._serializables["country_name"]
+    )

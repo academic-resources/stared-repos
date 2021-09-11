@@ -26,6 +26,7 @@ import collections
 #         self.right = None
 #         self.next = None
 
+
 class Solution:
     # @param root, a tree link node
     # @return nothing
@@ -34,16 +35,16 @@ class Solution:
             return
         queue = collections.deque()
         queue.appendleft(root)
-        queue.appendleft('#')
+        queue.appendleft("#")
         curr_list = []
         while len(queue) > 0:
             curr = queue.pop()
-            if curr == '#':
+            if curr == "#":
                 if len(queue) > 0:
-                    queue.appendleft('#')
+                    queue.appendleft("#")
                     count = 1
                     while count < len(curr_list):
-                        curr_list[count-1].next = curr_list[count]
+                        curr_list[count - 1].next = curr_list[count]
                         count += 1
                     curr_list[-1].next = None
                     curr_list = []

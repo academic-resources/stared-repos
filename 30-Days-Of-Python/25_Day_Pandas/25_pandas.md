@@ -7,10 +7,10 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
-  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small>Second Edition: July, 2021</small>
-  </sub>
+<sub>Author:
+<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
+<small>Second Edition: July, 2021</small>
+</sub>
 
 </div>
 
@@ -23,10 +23,10 @@
     - [Installing Pandas](#installing-pandas)
     - [Importing Pandas](#importing-pandas)
     - [Creating Pandas Series with Default Index](#creating-pandas-series-with-default-index)
-    - [Creating  Pandas Series with custom index](#creating--pandas-series-with-custom-index)
+    - [Creating Pandas Series with custom index](#creating--pandas-series-with-custom-index)
     - [Creating Pandas Series from a Dictionary](#creating-pandas-series-from-a-dictionary)
     - [Creating a Constant Pandas Series](#creating-a-constant-pandas-series)
-    - [Creating a  Pandas Series Using Linspace](#creating-a--pandas-series-using-linspace)
+    - [Creating a Pandas Series Using Linspace](#creating-a--pandas-series-using-linspace)
   - [DataFrames](#dataframes)
     - [Creating DataFrames from List of Lists](#creating-dataframes-from-list-of-lists)
     - [Creating DataFrame Using Dictionary](#creating-dataframe-using-dictionary)
@@ -41,14 +41,14 @@
   - [Checking data types of Column values](#checking-data-types-of-column-values)
     - [Boolean Indexing](#boolean-indexing)
   - [Exercises: Day 25](#exercises-day-25)
-  
+
 # 📘 Day 25
 
 ## Pandas
 
 Pandas is an open source, high-performance, easy-to-use data structures and data analysis tools for the Python programming language.
-Pandas adds data structures and tools designed to work with table-like data which is *Series* and *Data Frames*.
-Pandas provides tools for data manipulation: 
+Pandas adds data structures and tools designed to work with table-like data which is _Series_ and _Data Frames_.
+Pandas provides tools for data manipulation:
 
 - reshaping
 - merging
@@ -56,34 +56,36 @@ Pandas provides tools for data manipulation:
 - slicing
 - aggregation
 - imputation.
-If you are using anaconda, you do not have install pandas.
+  If you are using anaconda, you do not have install pandas.
 
 ### Installing Pandas
 
 For Mac:
+
 ```py
 pip install conda
 conda install pandas
 ```
 
 For Windows:
+
 ```py
 pip install conda
 pip install pandas
 ```
 
-Pandas data structure is based on *Series* and *DataFrames*. 
+Pandas data structure is based on _Series_ and _DataFrames_.
 
-A *series* is a *column* and a DataFrame is a *multidimensional table* made up of collection of *series*. In order to create a pandas series we should use numpy to create a one dimensional arrays or a python list.
+A _series_ is a _column_ and a DataFrame is a _multidimensional table_ made up of collection of _series_. In order to create a pandas series we should use numpy to create a one dimensional arrays or a python list.
 Let us see an example of a series:
 
 Names Pandas Series
 
-![pandas series](../images/pandas-series-1.png) 
+![pandas series](../images/pandas-series-1.png)
 
 Countries Series
 
-![pandas series](../images/pandas-series-2.png) 
+![pandas series](../images/pandas-series-2.png)
 
 Cities Series
 
@@ -125,7 +127,7 @@ print(s)
     dtype: int64
 ```
 
-### Creating  Pandas Series with custom index
+### Creating Pandas Series with custom index
 
 ```python
 nums = [1, 2, 3, 4, 5]
@@ -187,7 +189,7 @@ print(s)
     dtype: int64
 ```
 
-### Creating a  Pandas Series Using Linspace
+### Creating a Pandas Series Using Linspace
 
 ```python
 s = pd.Series(np.linspace(5, 20, 10)) # linspace(starting, end, items)
@@ -216,7 +218,7 @@ Pandas data frames can be created in different ways.
 
 ```python
 data = [
-    ['Asabeneh', 'Finland', 'Helsink'], 
+    ['Asabeneh', 'Finland', 'Helsink'],
     ['David', 'UK', 'London'],
     ['John', 'Sweden', 'Stockholm']
 ]
@@ -362,7 +364,6 @@ Let us read only the first 5 rows using head()
 print(df.head()) # give five rows we can increase the number of rows by passing argument to the head() method
 ```
 
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -455,7 +456,7 @@ print(df.tail()) # tails give the last five rows, we can increase the rows by pa
   </tbody>
 </table>
 
-As you can see the csv file has three rows: Gender, Height and Weight. If the DataFrame would have a long rows, it would be hard to know all the columns. Therefore, we should use a method to know the colums.  we do not know the number of rows. Let's use shape meathod.
+As you can see the csv file has three rows: Gender, Height and Weight. If the DataFrame would have a long rows, it would be hard to know all the columns. Therefore, we should use a method to know the colums. we do not know the number of rows. Let's use shape meathod.
 
 ```python
 print(df.shape) # as you can see 10000 rows and three columns
@@ -487,7 +488,7 @@ print(heights)
     2       74.110105
     3       71.730978
     4       69.881796
-              ...    
+              ...
     9995    66.172652
     9996    67.067155
     9997    63.867992
@@ -510,7 +511,7 @@ print(weights)
     2       212.740856
     3       220.042470
     4       206.349801
-               ...    
+               ...
     9995    136.777454
     9996    170.867906
     9997    128.475319
@@ -620,11 +621,10 @@ Similar to describe(), the info() method also give information about the dataset
 ## Modifying a DataFrame
 
 Modifying a DataFrame:
-    * We can create a new DataFrame
-    * We can create a new column and add it to the DataFrame, 
-    * we can remove an existing column from a DataFrame, 
-    * we can modify an existing column in a DataFrame, 
-    * we can change the data type of column values in the DataFrame
+_ We can create a new DataFrame
+_ We can create a new column and add it to the DataFrame,
+_ we can remove an existing column from a DataFrame,
+_ we can modify an existing column in a DataFrame, \* we can change the data type of column values in the DataFrame
 
 ### Creating a DataFrame
 
@@ -768,7 +768,7 @@ print(df)
   </tbody>
 </table>
 
-As you can see in the DataFrame above, we did add new columns, Weight and Height. Let's add one additional column called BMI(Body Mass Index) by calculating their BMI using thier mass and height. BMI is mass divided by height squared (in meters) - Weight/Height * Height.
+As you can see in the DataFrame above, we did add new columns, Weight and Height. Let's add one additional column called BMI(Body Mass Index) by calculating their BMI using thier mass and height. BMI is mass divided by height squared (in meters) - Weight/Height \* Height.
 
 As you can see, the height is in centimeters, so we shoud change it to meters. Let's modify the height row.
 
@@ -828,11 +828,10 @@ def calculate_bmi ():
         b = w/(h*h)
         bmi.append(b)
     return bmi
-    
+
 bmi = calculate_bmi()
 
 ```
-
 
 ```python
 df['BMI'] = bmi
@@ -1102,7 +1101,7 @@ print(df)
   </tbody>
 </table>
 
-The person in the first row lived so far for 251 years. It is unlikely for someone to live so long. Either it is a typo or the data is cooked. So lets fill that data with average of the columns without including outlier. 
+The person in the first row lived so far for 251 years. It is unlikely for someone to live so long. Either it is a typo or the data is cooked. So lets fill that data with average of the columns without including outlier.
 
 mean = (35 + 30)/ 2
 
@@ -1151,7 +1150,6 @@ print(df[df['Ages'] > 120])
     </tr>
   </tbody>
 </table>
-
 
 ```python
 print(df[df['Ages'] < 120])
@@ -1202,14 +1200,14 @@ print(df[df['Ages'] < 120])
 
 ## Exercises: Day 25
 
-1. Read the hacker_news.csv file from data directory 
+1. Read the hacker_news.csv file from data directory
 1. Get the first five rows
 1. Get the last five rows
 1. Get the title column as pandas series
 1. Count the number of rows and columns
-    - Filter the titles which contain python
-    - Filter the titles which contain JavaScript
-    - Explore the data and make sense of it
+   - Filter the titles which contain python
+   - Filter the titles which contain JavaScript
+   - Explore the data and make sense of it
 
 🎉 CONGRATULATIONS ! 🎉
 

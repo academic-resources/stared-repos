@@ -60,29 +60,13 @@ def main():
 def setup():
     """Process command line arguments."""
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("-t", "--title", type=str, help="document title")
     parser.add_argument(
-        "-t",
-        "--title",
-        type=str,
-        help="document title",
+        "-a", "--author", type=str, help="name of the person that authored the document"
     )
+    parser.add_argument("-s", "--subject", type=str, help="what is the document about")
     parser.add_argument(
-        "-a",
-        "--author",
-        type=str,
-        help="name of the person that authored the document",
-    )
-    parser.add_argument(
-        "-s",
-        "--subject",
-        type=str,
-        help="what is the document about",
-    )
-    parser.add_argument(
-        "-k",
-        "--keywords",
-        type=str,
-        help="comma separated list of keywords",
+        "-k", "--keywords", type=str, help="comma separated list of keywords"
     )
     parser.add_argument(
         "-o",

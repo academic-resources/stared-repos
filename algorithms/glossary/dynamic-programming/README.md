@@ -1,16 +1,16 @@
 # Dynamic Programming
 
-* Overview
-* Design Process
-  * Approach 1: Top-Down with Memoization
-  * Approach 2: Bottom-Up
-* Well-Known Problems
+- Overview
+- Design Process
+  - Approach 1: Top-Down with Memoization
+  - Approach 2: Bottom-Up
+- Well-Known Problems
 
 ---
 
 ## Overview
 
-Divide-and-conquer algorithms partition the problem into disjoint subproblems, solve the subproblems recursively, and then combine their solutions to solve the original problem. In contrast, __dynamic programming__ applies when the __subproblems overlap__. It saves subproblems' answers in a table, thereby avoiding the work of recomputing the answer. Dynamic programming thus __uses additional memory to save computation time__. The savings may be dramatic, an exponential-time solution may be transformed into a polynomial-time solution.
+Divide-and-conquer algorithms partition the problem into disjoint subproblems, solve the subproblems recursively, and then combine their solutions to solve the original problem. In contrast, **dynamic programming** applies when the **subproblems overlap**. It saves subproblems' answers in a table, thereby avoiding the work of recomputing the answer. Dynamic programming thus **uses additional memory to save computation time**. The savings may be dramatic, an exponential-time solution may be transformed into a polynomial-time solution.
 
 A dynamic-programming approach runs in polynomial time when the number of _distinct_ subproblems involved is polynomial in the input size and we can solve each such subproblem in polynomial time.
 
@@ -42,4 +42,4 @@ When solving a particular subproblem, we have already solved all of the smaller 
 
 ## Well-Known Problems
 
-* 0-1 Knapsack Problem
+- 0-1 Knapsack Problem

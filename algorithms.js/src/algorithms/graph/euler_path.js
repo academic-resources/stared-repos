@@ -1,9 +1,7 @@
-'use strict';
+"use strict";
 
-
-var Graph = require('../../data_structure/graph'),
-    depthFirstSearch = require('../../algorithms/graph/depth_first_search');
-
+var Graph = require("../../data_structure/graph"),
+  depthFirstSearch = require("../../algorithms/graph/depth_first_search");
 
 /** Examine a graph and compute pair of end vertices of the existing Euler path.
  * Return pair of undefined values if there is no specific choice of end points.
@@ -30,8 +28,7 @@ var eulerEndpoints = function (graph) {
         rank[neighbor] -= 1;
       });
     });
-  }
-  else {
+  } else {
     // Compute ranks from vertex degree parity values.
     var startChosen = false;
     graph.vertices.forEach(function (vertex) {
@@ -50,16 +47,16 @@ var eulerEndpoints = function (graph) {
   graph.vertices.forEach(function (vertex) {
     if (rank[vertex] == 1) {
       if (start) {
-        throw new Error('Duplicate start vertex.');
+        throw new Error("Duplicate start vertex.");
       }
       start = vertex;
     } else if (rank[vertex] == -1) {
       if (finish) {
-        throw new Error('Duplicate finish vertex.');
+        throw new Error("Duplicate finish vertex.");
       }
       finish = vertex;
     } else if (rank[vertex]) {
-      throw new Error('Unexpected vertex degree for ' + vertex);
+      throw new Error("Unexpected vertex degree for " + vertex);
     } else if (!v) {
       v = vertex;
     }
@@ -69,10 +66,8 @@ var eulerEndpoints = function (graph) {
     start = finish = v;
   }
 
-  return {start: start,
-          finish: finish};
+  return { start: start, finish: finish };
 };
-
 
 /**
  * Compute Euler path (either walk or tour, depending on the graph).
@@ -104,16 +99,15 @@ var eulerPath = function (graph) {
     },
     afterTraversal: function (vertex) {
       route.push(vertex);
-    }
+    },
   });
 
   graph.vertices.forEach(function (vertex) {
     if (seen.neighbors(vertex).length < graph.neighbors(vertex).length) {
-      throw new Error('There is no euler path for a disconnected graph.');
+      throw new Error("There is no euler path for a disconnected graph.");
     }
   });
   return route.reverse();
 };
-
 
 module.exports = eulerPath;

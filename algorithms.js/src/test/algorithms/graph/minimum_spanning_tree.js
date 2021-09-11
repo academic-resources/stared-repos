@@ -1,15 +1,13 @@
-'use strict';
+"use strict";
 
-var root = require('../../../'),
-    kruskal = root.Graph.kruskal,
-    prim = root.Graph.prim,
-    depthFirstSearch = root.Graph.depthFirstSearch,
-    Graph = root.DataStructure.Graph,
-    assert = require('assert');
+var root = require("../../../"),
+  kruskal = root.Graph.kruskal,
+  prim = root.Graph.prim,
+  depthFirstSearch = root.Graph.depthFirstSearch,
+  Graph = root.DataStructure.Graph,
+  assert = require("assert");
 
-
-describe('Minimum Spanning Tree', function () {
-
+describe("Minimum Spanning Tree", function () {
   /**
    * @param {Graph} graph - Undirected graph.
    * @return {number}
@@ -21,7 +19,7 @@ describe('Minimum Spanning Tree', function () {
       depthFirstSearch(graph, origin, {
         enterVertex: function (vertex) {
           seen[vertex] = true;
-        }
+        },
       });
     };
 
@@ -34,7 +32,6 @@ describe('Minimum Spanning Tree', function () {
     });
     return count;
   };
-
 
   /**
    * Test whether graph is a valid (undirected) forest.
@@ -50,16 +47,14 @@ describe('Minimum Spanning Tree', function () {
     }
     var numberOfEdges = 0;
     graph.vertices.forEach(function (vertex) {
-      graph.neighbors(vertex).filter(
-        function (neighbor) {
-          if (vertex <= neighbor) {
-            numberOfEdges++;
-          }
-        });
+      graph.neighbors(vertex).filter(function (neighbor) {
+        if (vertex <= neighbor) {
+          numberOfEdges++;
+        }
+      });
     });
     return graph.vertices.size == numberOfEdges + connectivity;
   };
-
 
   /**
    * Test whether two graphs share the same vertex set.
@@ -83,7 +78,6 @@ describe('Minimum Spanning Tree', function () {
     return span;
   };
 
-
   /**
    * Sum up graph edge weights.
    *
@@ -102,7 +96,6 @@ describe('Minimum Spanning Tree', function () {
     return noEdges ? null : graph.directed ? total : total / 2;
   };
 
-
   /**
    * Test whether one graph is the minimum spanning forest of the other.
    *
@@ -112,17 +105,22 @@ describe('Minimum Spanning Tree', function () {
    * @param {number} [connectivity=1]
    * @return {boolean}
    */
-  var isMinimumSpanningForest = function (suspect, graph,
-                                          minimumCost, connectivity) {
+  var isMinimumSpanningForest = function (
+    suspect,
+    graph,
+    minimumCost,
+    connectivity
+  ) {
     assert(!graph.directed);
-    return isForest(suspect, connectivity || 1) &&
+    return (
+      isForest(suspect, connectivity || 1) &&
       spans(suspect, graph) &&
-      graphCost(suspect) === minimumCost;
+      graphCost(suspect) === minimumCost
+    );
   };
 
-
   var testMstAlgorithm = function (mst) {
-    it('should find a minimum spanning tree', function () {
+    it("should find a minimum spanning tree", function () {
       var graph = new Graph(false);
       graph.addEdge(1, 2, 1);
       graph.addEdge(1, 4, 2);
@@ -160,40 +158,38 @@ describe('Minimum Spanning Tree', function () {
       assert(isMinimumSpanningForest(mst(graph), graph, -100));
     });
 
-    it('should find a minimum spaning forest if the graph is not connected',
-       function () {
-          var graph = new Graph(false);
-          graph.addVertex(1);
-          graph.addVertex(2);
-          graph.addVertex(3);
-          assert(isMinimumSpanningForest(mst(graph), graph, null, 3));
+    it("should find a minimum spaning forest if the graph is not connected", function () {
+      var graph = new Graph(false);
+      graph.addVertex(1);
+      graph.addVertex(2);
+      graph.addVertex(3);
+      assert(isMinimumSpanningForest(mst(graph), graph, null, 3));
 
-          graph.addEdge(1, 2, 2);
-          assert(isMinimumSpanningForest(mst(graph), graph, 2, 2));
+      graph.addEdge(1, 2, 2);
+      assert(isMinimumSpanningForest(mst(graph), graph, 2, 2));
 
-          graph.addEdge(1, 3, 1);
-          graph.addEdge(2, 3, -1);
-          assert(isMinimumSpanningForest(mst(graph), graph, 0, 1));
+      graph.addEdge(1, 3, 1);
+      graph.addEdge(2, 3, -1);
+      assert(isMinimumSpanningForest(mst(graph), graph, 0, 1));
 
-          graph.addVertex(4);
-          assert(isMinimumSpanningForest(mst(graph), graph, 0, 2));
+      graph.addVertex(4);
+      assert(isMinimumSpanningForest(mst(graph), graph, 0, 2));
 
-          graph.addEdge(5, 6, 1);
-          assert(isMinimumSpanningForest(mst(graph), graph, 1, 3));
+      graph.addEdge(5, 6, 1);
+      assert(isMinimumSpanningForest(mst(graph), graph, 1, 3));
 
-          graph.addEdge(5, 4, -100);
-          graph.addEdge(6, 4, -100);
-          assert(isMinimumSpanningForest(mst(graph), graph, -200, 2));
-        });
+      graph.addEdge(5, 4, -100);
+      graph.addEdge(6, 4, -100);
+      assert(isMinimumSpanningForest(mst(graph), graph, -200, 2));
+    });
 
-    it('should throw an error if the graph is directed', function () {
+    it("should throw an error if the graph is directed", function () {
       var directedGraph = new Graph(true);
-      directedGraph.addEdge('Rock', 'Hard Place');
+      directedGraph.addEdge("Rock", "Hard Place");
       assert.throws(mst.bind(null, directedGraph));
     });
   };
 
-
-  describe('#Kruskal\'s Algorithm', testMstAlgorithm.bind(null, kruskal));
-  describe('#Prim\'s Algorithm', testMstAlgorithm.bind(null, prim));
+  describe("#Kruskal's Algorithm", testMstAlgorithm.bind(null, kruskal));
+  describe("#Prim's Algorithm", testMstAlgorithm.bind(null, prim));
 });

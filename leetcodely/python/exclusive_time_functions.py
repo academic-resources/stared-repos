@@ -9,7 +9,7 @@ starts from the very beginning of time 0. "0:end:0" means function 0 ends to the
 Exclusive time of a function is defined as the time spent within this function, the time spent by calling other 
 functions should not be considered as this function's exclusive time. You should return the exclusive time of each 
 function sorted by their function id."""
-#TODO: Doesn't provide exclusive time, current logic supports total time
+# TODO: Doesn't provide exclusive time, current logic supports total time
 
 
 class Solution(object):
@@ -23,9 +23,9 @@ class Solution(object):
         stack = []
         curr_time = 0
         for log in logs:
-            split = log.split(':')
+            split = log.split(":")
             f, action, timestamp = int(split[0]), split[1], int(split[2])
-            if action == 'start':
+            if action == "start":
                 if len(stack) > 0:
                     id = stack[-1]
                     res[id] += timestamp - curr_time - 1
@@ -38,10 +38,6 @@ class Solution(object):
         return res
 
 
-
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.exclusiveTime(2, ["0:start:0", "1:start:2", "1:end:5", "0:end:6"]))
-

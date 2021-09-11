@@ -2,6 +2,7 @@
 
 import pytest
 
+
 class DB:
     def __init__(self):
         self.intransaction = []
@@ -31,5 +32,6 @@ class TestClass:
     def test_method2(self, db):
         assert db.intransaction == ["test_method2"]
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     pytest.main([__file__])

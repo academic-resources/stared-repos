@@ -35,62 +35,62 @@ from waymo_open_dataset.protos import metrics_pb2
 
 
 class WODDetectionEvaluator(object):
-  """WOD detection evaluation metric class."""
+    """WOD detection evaluation metric class."""
 
-  def __init__(self, config=None):
-    """Constructs WOD detection evaluation class.
+    def __init__(self, config=None):
+        """Constructs WOD detection evaluation class.
 
     Args:
       config: The metrics config defined in protos/metrics.proto.
     """
-    if config is None:
-      config = self._get_default_config()
-    self._config = config
+        if config is None:
+            config = self._get_default_config()
+        self._config = config
 
-    # These are the keys in the metric_dict returned by evaluate.
-    self._metric_names = [
-        'average_precision',
-        'average_precision_ha_weighted',
-        'precision_recall',
-        'precision_recall_ha_weighted',
-        'breakdown',
-    ]
-    self._breakdown_names = config_util.get_breakdown_names_from_config(config)
+        # These are the keys in the metric_dict returned by evaluate.
+        self._metric_names = [
+            "average_precision",
+            "average_precision_ha_weighted",
+            "precision_recall",
+            "precision_recall_ha_weighted",
+            "breakdown",
+        ]
+        self._breakdown_names = config_util.get_breakdown_names_from_config(config)
 
-    self._required_prediction_fields = [
-        'prediction_frame_id',
-        'prediction_bbox',
-        'prediction_type',
-        'prediction_score',
-        'prediction_overlap_nlz',
-    ]
+        self._required_prediction_fields = [
+            "prediction_frame_id",
+            "prediction_bbox",
+            "prediction_type",
+            "prediction_score",
+            "prediction_overlap_nlz",
+        ]
 
-    self._required_groundtruth_fields = [
-        'ground_truth_frame_id',
-        'ground_truth_bbox',
-        'ground_truth_type',
-        'ground_truth_difficulty',
-    ]
-    self.reset_states()
+        self._required_groundtruth_fields = [
+            "ground_truth_frame_id",
+            "ground_truth_bbox",
+            "ground_truth_type",
+            "ground_truth_difficulty",
+        ]
+        self.reset_states()
 
-  @property
-  def name(self):
-    return 'wod_metric'
+    @property
+    def name(self):
+        return "wod_metric"
 
-  def reset_states(self):
-    """Resets internal states for a fresh run."""
-    self._predictions = {}
-    self._groundtruths = {}
+    def reset_states(self):
+        """Resets internal states for a fresh run."""
+        self._predictions = {}
+        self._groundtruths = {}
 
-  def result(self):
-    """Evaluates detection results, and reset_states."""
-    metric_dict = self.evaluate()
-    # Cleans up the internal variables in order for a fresh eval next time.
-    self.reset_states()
-    return metric_dict
+    def result(self):
+        """Evaluates detection results, and reset_states."""
+        metric_dict = self.evaluate()
+        # Cleans up the internal variables in order for a fresh eval next time.
+        self.reset_states()
+        return metric_dict
 
-  def evaluate(self):
-    """Evaluates with detections from all images with WOD API.
+    def evaluate(self):
+        """Evaluates with detections from all images with WOD API.
 
     Returns:
       metric_dict: dictionary to float numpy array representing the wod
@@ -101,33 +101,40 @@ class WODDetectionEvaluator(object):
         - precision_recall_ha_weighted
         - breakdown
     """
-    metric_dict = py_metrics_ops.detection_metrics(
-        prediction_bbox=tf.concat(self._predictions['prediction_bbox'], axis=0),
-        prediction_type=tf.concat(self._predictions['prediction_type'], axis=0),
-        prediction_score=tf.concat(
-            self._predictions['prediction_score'], axis=0),
-        prediction_frame_id=tf.concat(
-            self._predictions['prediction_frame_id'], axis=0),
-        prediction_overlap_nlz=tf.concat(
-            self._predictions['prediction_overlap_nlz'], axis=0),
-        ground_truth_bbox=tf.concat(
-            self._groundtruths['ground_truth_bbox'], axis=0),
-        ground_truth_type=tf.concat(
-            self._groundtruths['ground_truth_type'], axis=0),
-        ground_truth_frame_id=tf.concat(
-            self._groundtruths['ground_truth_frame_id'], axis=0),
-        ground_truth_difficulty=tf.concat(
-            self._groundtruths['ground_truth_difficulty'], axis=0),
-        config=self._config.SerializeToString(),
-        ground_truth_speed=(tf.concat(
-            self._groundtruths['ground_truth_speed'],
-            axis=0) if 'ground_truth_speed' in self._groundtruths else None),
-    )
+        metric_dict = py_metrics_ops.detection_metrics(
+            prediction_bbox=tf.concat(self._predictions["prediction_bbox"], axis=0),
+            prediction_type=tf.concat(self._predictions["prediction_type"], axis=0),
+            prediction_score=tf.concat(self._predictions["prediction_score"], axis=0),
+            prediction_frame_id=tf.concat(
+                self._predictions["prediction_frame_id"], axis=0
+            ),
+            prediction_overlap_nlz=tf.concat(
+                self._predictions["prediction_overlap_nlz"], axis=0
+            ),
+            ground_truth_bbox=tf.concat(
+                self._groundtruths["ground_truth_bbox"], axis=0
+            ),
+            ground_truth_type=tf.concat(
+                self._groundtruths["ground_truth_type"], axis=0
+            ),
+            ground_truth_frame_id=tf.concat(
+                self._groundtruths["ground_truth_frame_id"], axis=0
+            ),
+            ground_truth_difficulty=tf.concat(
+                self._groundtruths["ground_truth_difficulty"], axis=0
+            ),
+            config=self._config.SerializeToString(),
+            ground_truth_speed=(
+                tf.concat(self._groundtruths["ground_truth_speed"], axis=0)
+                if "ground_truth_speed" in self._groundtruths
+                else None
+            ),
+        )
 
-    return metric_dict
+        return metric_dict
 
-  def update_state(self, groundtruths, predictions):
-    """Update and aggregate detection results and groundtruth data.
+    def update_state(self, groundtruths, predictions):
+        """Update and aggregate detection results and groundtruth data.
 
     Notation:
       * M: number of predicted boxes.
@@ -173,55 +180,57 @@ class WODDetectionEvaluator(object):
       ValueError: if the required prediction or groundtruth fields are not
         present in the incoming `predictions` or `groundtruths`.
     """
-    # Append predictions.
-    for k in self._required_prediction_fields:
-      if k not in predictions:
-        raise ValueError(
-            'Missing the required key `{}` in predictions!'.format(k))
-    for k, v in six.iteritems(predictions):
-      if k not in self._predictions:
-        self._predictions[k] = [v]
-      else:
-        self._predictions[k].append(v)
+        # Append predictions.
+        for k in self._required_prediction_fields:
+            if k not in predictions:
+                raise ValueError(
+                    "Missing the required key `{}` in predictions!".format(k)
+                )
+        for k, v in six.iteritems(predictions):
+            if k not in self._predictions:
+                self._predictions[k] = [v]
+            else:
+                self._predictions[k].append(v)
 
-    # Append groundtruths.
-    for k in self._required_groundtruth_fields:
-      if k not in groundtruths:
-        raise ValueError(
-            'Missing the required key `{}` in groundtruths!'.format(k))
-    for k, v in six.iteritems(groundtruths):
-      if k not in self._groundtruths:
-        self._groundtruths[k] = [v]
-      else:
-        self._groundtruths[k].append(v)
+        # Append groundtruths.
+        for k in self._required_groundtruth_fields:
+            if k not in groundtruths:
+                raise ValueError(
+                    "Missing the required key `{}` in groundtruths!".format(k)
+                )
+        for k, v in six.iteritems(groundtruths):
+            if k not in self._groundtruths:
+                self._groundtruths[k] = [v]
+            else:
+                self._groundtruths[k].append(v)
 
-  def _get_default_config(self):
-    """Returns the default Config proto for detection.
+    def _get_default_config(self):
+        """Returns the default Config proto for detection.
 
     This is the python version of the GetConfig() function in
     metrics/tools/compute_detection_metrics_main.cc
     """
-    config = metrics_pb2.Config()
+        config = metrics_pb2.Config()
 
-    config.breakdown_generator_ids.append(breakdown_pb2.Breakdown.OBJECT_TYPE)
-    difficulty = config.difficulties.add()
-    difficulty.levels.append(label_pb2.Label.LEVEL_1)
-    difficulty.levels.append(label_pb2.Label.LEVEL_2)
-    config.breakdown_generator_ids.append(breakdown_pb2.Breakdown.RANGE)
-    difficulty = config.difficulties.add()
-    difficulty.levels.append(label_pb2.Label.LEVEL_1)
-    difficulty.levels.append(label_pb2.Label.LEVEL_2)
+        config.breakdown_generator_ids.append(breakdown_pb2.Breakdown.OBJECT_TYPE)
+        difficulty = config.difficulties.add()
+        difficulty.levels.append(label_pb2.Label.LEVEL_1)
+        difficulty.levels.append(label_pb2.Label.LEVEL_2)
+        config.breakdown_generator_ids.append(breakdown_pb2.Breakdown.RANGE)
+        difficulty = config.difficulties.add()
+        difficulty.levels.append(label_pb2.Label.LEVEL_1)
+        difficulty.levels.append(label_pb2.Label.LEVEL_2)
 
-    config.matcher_type = metrics_pb2.MatcherProto.TYPE_HUNGARIAN
-    config.iou_thresholds.append(0.0)
-    config.iou_thresholds.append(0.7)
-    config.iou_thresholds.append(0.5)
-    config.iou_thresholds.append(0.5)
-    config.iou_thresholds.append(0.5)
-    config.box_type = label_pb2.Label.Box.TYPE_3D
+        config.matcher_type = metrics_pb2.MatcherProto.TYPE_HUNGARIAN
+        config.iou_thresholds.append(0.0)
+        config.iou_thresholds.append(0.7)
+        config.iou_thresholds.append(0.5)
+        config.iou_thresholds.append(0.5)
+        config.iou_thresholds.append(0.5)
+        config.box_type = label_pb2.Label.Box.TYPE_3D
 
-    for i in range(100):
-      config.score_cutoffs.append(i * 0.01)
-    config.score_cutoffs.append(1.0)
+        for i in range(100):
+            config.score_cutoffs.append(i * 0.01)
+        config.score_cutoffs.append(1.0)
 
-    return config
+        return config

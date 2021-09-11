@@ -10,9 +10,9 @@ You are willing to pay the resulting price of this strategy, but you wish to est
 
 ## Pseudocode
 
-* Assume the candidates are numbered 1 through n.
-* Assume that you are able to, after interviewing candidate i, determine whether candidate i is best candidate you have seen so far.
-* We initialize with a dummy candidate, numbered 0, who is less qualified that any other.
+- Assume the candidates are numbered 1 through n.
+- Assume that you are able to, after interviewing candidate i, determine whether candidate i is best candidate you have seen so far.
+- We initialize with a dummy candidate, numbered 0, who is less qualified that any other.
 
 ```
 HIRE-ASSISTANT(n):
@@ -36,7 +36,7 @@ We can asssume that applicants come in a random order. We assume that we can com
 
 The ordered list [rank(1), ..., rank(n)] is a permutation of the list (1, ..., n). Saying that the applicants come in a random order is equivalent to saying that this list of rank is equally likely to be any of the n! permutations of the numbers 1 through n.
 
-Alternatively, we say that the ranks form a __uniform random permutation__, that is, each of the possible n! permutations appears with equal probability.
+Alternatively, we say that the ranks form a **uniform random permutation**, that is, each of the possible n! permutations appears with equal probability.
 
 ## Randomized Algorithm
 
@@ -97,4 +97,4 @@ ON-LINE_MAXIMUM(k, n):
   return n;
 ```
 
-By probabilistic analysis, we see that we maximize the lower bound on the probability when `ln k = ln n-1 = ln(n/e)`, or equivalently, when `k=n/e`. Thus, if we implement our startegy with __k = n/e__ we succeed in hiring our best-qualified applicant with probability at least `1/e`.
+By probabilistic analysis, we see that we maximize the lower bound on the probability when `ln k = ln n-1 = ln(n/e)`, or equivalently, when `k=n/e`. Thus, if we implement our startegy with **k = n/e** we succeed in hiring our best-qualified applicant with probability at least `1/e`.

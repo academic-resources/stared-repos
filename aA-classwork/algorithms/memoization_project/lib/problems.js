@@ -40,7 +40,7 @@ function minChange(coins, amount, memo = {}) {
   if (amount in memo) return memo[amount];
   if (amount === 0) return 0;
   let numCoins = [];
-  coins.forEach(coin => {
+  coins.forEach((coin) => {
     if (coin <= amount) {
       numCoins.push(minChange(coins, amount - coin, memo) + 1);
     }
@@ -51,5 +51,5 @@ function minChange(coins, amount, memo = {}) {
 
 module.exports = {
   lucasNumberMemo,
-  minChange
+  minChange,
 };

@@ -40,8 +40,10 @@ class RandomizedSet(object):
             return False
         swap_index = self.map[val]
         self.map[self.store[self.curr_index - 1]] = swap_index
-        self.store[swap_index], self.store[self.curr_index - 1] = self.store[self.curr_index - 1], self.store[
-            swap_index]
+        self.store[swap_index], self.store[self.curr_index - 1] = (
+            self.store[self.curr_index - 1],
+            self.store[swap_index],
+        )
         self.store.pop()
         self.curr_index -= 1
         self.map.pop(val)
@@ -52,5 +54,5 @@ class RandomizedSet(object):
         Get a random element from the set.
         :rtype: int
         """
-        index = random.randint(0, self.curr_index -1)
+        index = random.randint(0, self.curr_index - 1)
         return self.store[index]

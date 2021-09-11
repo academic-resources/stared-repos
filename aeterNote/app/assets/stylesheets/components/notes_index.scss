@@ -8,7 +8,6 @@
   border-right: 2px solid $EvernoteMediumLightGray;
 
   .notes-header {
-
     height: 99px;
     display: flex;
     flex-direction: column;
@@ -30,7 +29,7 @@
       align-items: flex-end;
       border-bottom: 1px solid $EvernoteMediumGray;
 
-      p{
+      p {
         margin: 10px 25px;
         font-family: $sans-serif;
         color: $EvernoteMediumGray;
@@ -54,7 +53,7 @@
   }
 
   .notes-ul {
-    display:block;
+    display: block;
     height: calc(100vh - 124px);
     overflow-y: scroll;
   }
@@ -70,7 +69,7 @@
     overflow: hidden;
     padding-bottom: 20px;
 
-    h5{
+    h5 {
       display: flex;
       justify-content: space-between;
       margin: 0;
@@ -89,7 +88,6 @@
           height: 30px;
           width: 30px;
 
-
           img {
             margin: 5px;
             height: 20px;
@@ -100,16 +98,14 @@
         .button-note:hover {
           border: 2px solid white;
           border-radius: 50%;
-          transition: border .5s;
+          transition: border 0.5s;
         }
       }
-
     }
-    .note-content-container{
+    .note-content-container {
       padding: 0 20px;
       height: 50px;
       overflow: hidden;
-
 
       .note-content {
         position: relative;
@@ -124,7 +120,6 @@
         // height: 40px;
       }
     }
-
   }
 
   .bottom-border {
@@ -145,8 +140,6 @@
     }
     .button-note {
       border: 2px solid $EvernoteGreen;
-
     }
-
   }
 }

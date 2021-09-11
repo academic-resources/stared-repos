@@ -9,6 +9,7 @@ import os
 import time
 import unittest
 import logging.config
+
 logging.config.fileConfig("pyspider/logging.conf")
 
 import shutil
@@ -19,21 +20,23 @@ from pyspider.libs.utils import run_in_thread
 
 
 class TestProcessor(unittest.TestCase):
-    resultdb_path = './data/tests/result.db'
+    resultdb_path = "./data/tests/result.db"
 
     @classmethod
     def setUpClass(self):
-        shutil.rmtree('./data/tests/', ignore_errors=True)
-        os.makedirs('./data/tests/')
+        shutil.rmtree("./data/tests/", ignore_errors=True)
+        os.makedirs("./data/tests/")
 
         def get_resultdb():
             return resultdb.ResultDB(self.resultdb_path)
+
         self.resultdb = get_resultdb()
         self.inqueue = Queue(10)
 
         def run_result_worker():
             self.result_worker = ResultWorker(get_resultdb(), self.inqueue)
             self.result_worker.run()
+
         self.process = run_in_thread(run_result_worker)
         time.sleep(1)
 
@@ -43,53 +46,45 @@ class TestProcessor(unittest.TestCase):
             self.result_worker.quit()
             self.process.join(2)
         assert not self.process.is_alive()
-        shutil.rmtree('./data/tests/', ignore_errors=True)
+        shutil.rmtree("./data/tests/", ignore_errors=True)
 
     def test_10_bad_result(self):
-        self.inqueue.put(({'project': 'test_project'}, {}))
+        self.inqueue.put(({"project": "test_project"}, {}))
         self.resultdb._list_project()
         self.assertEqual(len(self.resultdb.projects), 0)
-        self.assertEqual(self.resultdb.count('test_project'), 0)
+        self.assertEqual(self.resultdb.count("test_project"), 0)
 
     def test_10_bad_result_2(self):
-        self.inqueue.put(({'project': 'test_project'}, {'a': 'b'}))
+        self.inqueue.put(({"project": "test_project"}, {"a": "b"}))
         self.resultdb._list_project()
         self.assertEqual(len(self.resultdb.projects), 0)
-        self.assertEqual(self.resultdb.count('test_project'), 0)
+        self.assertEqual(self.resultdb.count("test_project"), 0)
 
     def test_20_insert_result(self):
-        data = {
-            'a': 'b'
-        }
-        self.inqueue.put(({
-            'project': 'test_project',
-            'taskid': 'id1',
-            'url': 'url1'
-        }, data))
+        data = {"a": "b"}
+        self.inqueue.put(
+            ({"project": "test_project", "taskid": "id1", "url": "url1"}, data)
+        )
         time.sleep(0.5)
         self.resultdb._list_project()
         self.assertEqual(len(self.resultdb.projects), 1)
-        self.assertEqual(self.resultdb.count('test_project'), 1)
+        self.assertEqual(self.resultdb.count("test_project"), 1)
 
-        result = self.resultdb.get('test_project', 'id1')
-        self.assertEqual(result['result'], data)
+        result = self.resultdb.get("test_project", "id1")
+        self.assertEqual(result["result"], data)
 
     def test_30_overwrite(self):
-        self.inqueue.put(({
-            'project': 'test_project',
-            'taskid': 'id1',
-            'url': 'url1'
-        }, "abc"))
+        self.inqueue.put(
+            ({"project": "test_project", "taskid": "id1", "url": "url1"}, "abc")
+        )
         time.sleep(0.1)
-        result = self.resultdb.get('test_project', 'id1')
-        self.assertEqual(result['result'], "abc")
+        result = self.resultdb.get("test_project", "id1")
+        self.assertEqual(result["result"], "abc")
 
     def test_40_insert_list(self):
-        self.inqueue.put(({
-            'project': 'test_project',
-            'taskid': 'id2',
-            'url': 'url1'
-        }, ['a', 'b']))
+        self.inqueue.put(
+            ({"project": "test_project", "taskid": "id2", "url": "url1"}, ["a", "b"])
+        )
         time.sleep(0.1)
-        result = self.resultdb.get('test_project', 'id2')
-        self.assertEqual(result['result'], ['a', 'b'])
+        result = self.resultdb.get("test_project", "id2")
+        self.assertEqual(result["result"], ["a", "b"])

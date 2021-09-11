@@ -1,4 +1,3 @@
-
 # Painting Tool
 
 # imported necessary library
@@ -11,38 +10,93 @@ import tkinter.messagebox as mbox
 class Paint(object):
 
     DEFAULT_PEN_SIZE = 5.0
-    DEFAULT_COLOR = 'black'
+    DEFAULT_COLOR = "black"
 
     # init method defined
     def __init__(self):
         self.root = Tk()
 
         # button created for PEN
-        self.pen_button = Button(self.root, text='PEN', command=self.use_pen,font=("Arial", 20), bg = "light green", fg = "blue", borderwidth=3, relief="raised")
+        self.pen_button = Button(
+            self.root,
+            text="PEN",
+            command=self.use_pen,
+            font=("Arial", 20),
+            bg="light green",
+            fg="blue",
+            borderwidth=3,
+            relief="raised",
+        )
         self.pen_button.grid(row=0, column=0)
 
         # button created for BRUSH
-        self.brush_button = Button(self.root, text='BRUSH', command=self.use_brush,font=("Arial", 20), bg = "light green", fg = "blue", borderwidth=3, relief="raised")
+        self.brush_button = Button(
+            self.root,
+            text="BRUSH",
+            command=self.use_brush,
+            font=("Arial", 20),
+            bg="light green",
+            fg="blue",
+            borderwidth=3,
+            relief="raised",
+        )
         self.brush_button.grid(row=0, column=1)
 
         # button created for COLOR
-        self.color_button = Button(self.root, text='COLOR', command=self.choose_color,font=("Arial", 20), bg = "light green", fg = "blue", borderwidth=3, relief="raised")
+        self.color_button = Button(
+            self.root,
+            text="COLOR",
+            command=self.choose_color,
+            font=("Arial", 20),
+            bg="light green",
+            fg="blue",
+            borderwidth=3,
+            relief="raised",
+        )
         self.color_button.grid(row=0, column=2)
 
         # button created for ERASER
-        self.eraser_button = Button(self.root, text='ERASER', command=self.use_eraser,font=("Arial", 20), bg = "light green", fg = "blue", borderwidth=3, relief="raised")
+        self.eraser_button = Button(
+            self.root,
+            text="ERASER",
+            command=self.use_eraser,
+            font=("Arial", 20),
+            bg="light green",
+            fg="blue",
+            borderwidth=3,
+            relief="raised",
+        )
         self.eraser_button.grid(row=0, column=3)
 
         # created a scale from 1 to 10
-        self.choose_size_button = Scale(self.root, from_=1, to=10, orient=HORIZONTAL,width = 20,font=("Arial", 20), bg = "yellow", fg = "blue", borderwidth=3)
+        self.choose_size_button = Scale(
+            self.root,
+            from_=1,
+            to=10,
+            orient=HORIZONTAL,
+            width=20,
+            font=("Arial", 20),
+            bg="yellow",
+            fg="blue",
+            borderwidth=3,
+        )
         self.choose_size_button.grid(row=0, column=4)
 
         # button created for EXIT
-        self.exit_button = Button(self.root, text='EXIT', command=self.exit_win, font=("Arial", 20),bg="red", fg="blue", borderwidth=3, relief="raised")
+        self.exit_button = Button(
+            self.root,
+            text="EXIT",
+            command=self.exit_win,
+            font=("Arial", 20),
+            bg="red",
+            fg="blue",
+            borderwidth=3,
+            relief="raised",
+        )
         self.exit_button.grid(row=0, column=5)
 
         # created a drawing area
-        self.c = Canvas(self.root, bg='white', width=1000, height=600)
+        self.c = Canvas(self.root, bg="white", width=1000, height=600)
         self.c.grid(row=1, columnspan=7)
 
         self.root.title("Painting Tool")
@@ -62,8 +116,8 @@ class Paint(object):
         self.color = self.DEFAULT_COLOR
         self.eraser_on = False
         self.active_button = self.pen_button
-        self.c.bind('<B1-Motion>', self.paint)
-        self.c.bind('<ButtonRelease-1>', self.reset)
+        self.c.bind("<B1-Motion>", self.paint)
+        self.c.bind("<ButtonRelease-1>", self.reset)
 
     # function for pen
     def use_pen(self):
@@ -91,11 +145,19 @@ class Paint(object):
     # function for painting
     def paint(self, event):
         self.line_width = self.choose_size_button.get()
-        paint_color = 'white' if self.eraser_on else self.color
+        paint_color = "white" if self.eraser_on else self.color
         if self.old_x and self.old_y:
-            self.c.create_line(self.old_x, self.old_y, event.x, event.y,
-                               width=self.line_width, fill=paint_color,
-                               capstyle=ROUND, smooth=TRUE, splinesteps=36)
+            self.c.create_line(
+                self.old_x,
+                self.old_y,
+                event.x,
+                event.y,
+                width=self.line_width,
+                fill=paint_color,
+                capstyle=ROUND,
+                smooth=TRUE,
+                splinesteps=36,
+            )
         self.old_x = event.x
         self.old_y = event.y
 
@@ -104,5 +166,5 @@ class Paint(object):
 
 
 # main funtion
-if __name__ == '__main__':
+if __name__ == "__main__":
     Paint()

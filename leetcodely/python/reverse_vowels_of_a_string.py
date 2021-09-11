@@ -9,7 +9,7 @@ class Solution(object):
         """
         if not s or len(s) == 0:
             return None
-        vowels = set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'])
+        vowels = set(["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"])
         index_list = []
         vowel_list = []
         for i, c in enumerate(s):
@@ -20,9 +20,9 @@ class Solution(object):
         l = list(s)
         for i in range(len(index_list)):
             l[index_list[i]] = vowel_list[i]
-        return ''.join(l)
+        return "".join(l)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.reverseVowels("hello"))

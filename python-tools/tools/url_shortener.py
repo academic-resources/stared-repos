@@ -15,6 +15,6 @@ def url_shortener(url):
     """
     url = url.strip()
     if not parse.urlparse(url).scheme:
-        url = 'http://' + url
-    query_url = 'http://tinyurl.com/api-create.php?url={}'.format(url)
+        url = "http://" + url
+    query_url = "http://tinyurl.com/api-create.php?url={}".format(url)
     return requests.get(query_url).text

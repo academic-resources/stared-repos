@@ -35,6 +35,6 @@ class Solution(object):
         return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.searchMatrix([[-1], [-1]], 0))

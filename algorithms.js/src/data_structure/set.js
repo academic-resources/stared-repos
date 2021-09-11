@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var HashTable = require('./hash_table');
+var HashTable = require("./hash_table");
 
 /**
  * Typical representation of a mathematical set
@@ -11,10 +11,10 @@ var HashSet = function () {
   this._elements = new HashTable(arguments.length);
   this.add.apply(this, arguments);
 
-  Object.defineProperty(this, 'size', {
+  Object.defineProperty(this, "size", {
     get: function () {
       return this._elements.size;
-    }
+    },
   });
 };
 

@@ -36,11 +36,11 @@ curl -d "HELLO WORLD" -X POST http://localhost:9999
 lsof -i tcp:<port> 
 """
 
-class Server:
 
+class Server:
     def __init__(self):
 
-        self.host = '127.0.0.1'
+        self.host = "127.0.0.1"
         self.port = 9999
 
         # define recv_bufsize, so we can really receive and cut off on each incoming event
@@ -49,11 +49,11 @@ class Server:
         self.print_lock = threading.Lock()
 
     def threaded(self, conn):
-        
+
         while True:
 
-            clientMessage = str(conn.recv(self.recv_bufsize), encoding='utf-8')
-            print ("thread id :", threading.current_thread().name)
+            clientMessage = str(conn.recv(self.recv_bufsize), encoding="utf-8")
+            print("thread id :", threading.current_thread().name)
             self.print_lock.release()
 
             break
@@ -81,7 +81,7 @@ class Server:
             self.print_lock.acquire()
             start_new_thread(self.threaded, (conn,))
 
-            clientMessage = str(conn.recv(self.recv_bufsize), encoding='utf-8')
+            clientMessage = str(conn.recv(self.recv_bufsize), encoding="utf-8")
             print(clientMessage)
 
             # save to file
@@ -91,11 +91,12 @@ class Server:
             "a" - Append - will append to the end of the file
             "w" - Write - will overwrite any existing content
             """
-            with open('output.txt', 'a') as f:
+            with open("output.txt", "a") as f:
                 f.write(clientMessage)
 
         server.close()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     s = Server()
     s.run()

@@ -2,7 +2,7 @@
 import pyttsx3
 import PyPDF2
 
-pdf = open("Andriy_Burkov.pdf", 'rb')
+pdf = open("Andriy_Burkov.pdf", "rb")
 
 pdfreader = PyPDF2.PdfFileReader(pdf, strict=False)
 

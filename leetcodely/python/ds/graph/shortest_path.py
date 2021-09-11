@@ -37,7 +37,7 @@ def shortest_path(graph, source, destination):
         return list(reversed(path))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     graph = Graph(directed=False)
     graph.add_edge(1, 2)
     graph.add_edge(2, 3)

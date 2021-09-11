@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const { commerce } = require('faker');
+const { commerce } = require("faker");
 
 function random100() {
   return Math.floor(Math.random() * 100) + 1;
@@ -8,10 +8,10 @@ function random100() {
 
 function randomImage() {
   const images = [
-    '/images/pokemon_berry.svg',
-    '/images/pokemon_egg.svg',
-    '/images/pokemon_potion.svg',
-    '/images/pokemon_super_potion.svg',
+    "/images/pokemon_berry.svg",
+    "/images/pokemon_egg.svg",
+    "/images/pokemon_potion.svg",
+    "/images/pokemon_super_potion.svg",
   ];
   const index = Math.floor(Math.random() * images.length);
   return images[index];
@@ -35,10 +35,10 @@ function* generateItems() {
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Items', [...generateItems()]);
+    return queryInterface.bulkInsert("Items", [...generateItems()]);
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Items');
-  }
+    return queryInterface.bulkDelete("Items");
+  },
 };

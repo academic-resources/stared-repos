@@ -19,7 +19,10 @@ class SplitTableMixin(object):
 
     @property
     def projects(self):
-        if time.time() - getattr(self, '_last_update_projects', 0) > self.UPDATE_PROJECTS_TIME:
+        if (
+            time.time() - getattr(self, "_last_update_projects", 0)
+            > self.UPDATE_PROJECTS_TIME
+        ):
             self._list_project()
         return self._projects
 
@@ -33,12 +36,12 @@ class SplitTableMixin(object):
         if self.collection_prefix:
             prefix = "%s." % self.collection_prefix
         else:
-            prefix = ''
+            prefix = ""
         for each in self.database.collection_names():
-            if each.startswith('system.'):
+            if each.startswith("system."):
                 continue
             if each.startswith(prefix):
-                self.projects.add(each[len(prefix):])
+                self.projects.add(each[len(prefix) :])
 
     def drop(self, project):
         if project not in self.projects:

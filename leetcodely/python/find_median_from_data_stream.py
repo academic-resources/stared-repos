@@ -2,14 +2,13 @@ import heapq
 
 
 class MedianFinder:
-
     def __init__(self):
         """
         initialize your data structure here.
         """
         self.max_heap = []
         self.min_heap = []
-        self.median = float('inf')
+        self.median = float("inf")
 
     def addNum(self, num: int) -> None:
         if num < self.median:
@@ -39,6 +38,7 @@ class MedianFinder:
                 self.median = -1 * self.max_heap[0]
             else:
                 self.median = self.min_heap[0]
+
 
 # Your MedianFinder object will be instantiated and called as such:
 # obj = MedianFinder()

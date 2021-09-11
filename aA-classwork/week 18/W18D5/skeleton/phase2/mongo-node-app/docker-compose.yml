@@ -1,4 +1,4 @@
-version: '3.3'
+version: "3.3"
 
 services:
   app:
@@ -17,7 +17,7 @@ services:
     networks:
       nodemernapp:
         aliases:
-          - 'mongo_db'
+          - "mongo_db"
 
 networks:
   nodemernapp:

@@ -1,58 +1,55 @@
 .main-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .left-nav > ul,
 .right-nav > ul {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .left-nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .left-nav > ul > li {
-    font-family: $sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 12px;
-    padding: 10px;
-    cursor: pointer;
+  font-family: $sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .right-nav > ul > li {
-    font-family: $sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 12px;
-    margin-right: 2px;
+  font-family: $sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  margin-right: 2px;
 }
 
 .right-nav > ul > li:last-of-type {
-
 }
 
 .left-nav > ul > li:hover,
 .right-nav > ul > li:last-of-type:hover {
-    background-color: $lightest-gray;
-    padding: 10px;
+  background-color: $lightest-gray;
+  padding: 10px;
 }
 
 .left-nav span {
-    margin: 5px;
+  margin: 5px;
 }
 
-
 .right-nav i {
-    font-size: 18px;
-    // padding: 5px;
+  font-size: 18px;
+  // padding: 5px;
 }
 
 .gear-icon {
-    padding: 10px;
+  padding: 10px;
 }
-

@@ -1,4 +1,3 @@
-
 # Camera Application
 
 # imported necessary library
@@ -21,17 +20,41 @@ class CameraApp:
         self.window.resizable(1, 1)
         Label(self.window, width=1000, height=600, bg="light yellow").place(x=0, y=320)
         # self.topLabel = Label(self.window, text = "CAMERA" , font=("Arial", 40),fg="magenta", bg="light green")
-        self.TakePhoto_b = Button(self.window, text="Take a Shot", font=("Arial", 20), bg="light green", fg = "blue", relief='raised',command=self.TakePhoto)
-        self.see_b = Button(self.window, text="SEE THIS", font=("Arial", 20), bg="orange", fg = "blue", relief='raised',command=self.see_this)
+        self.TakePhoto_b = Button(
+            self.window,
+            text="Take a Shot",
+            font=("Arial", 20),
+            bg="light green",
+            fg="blue",
+            relief="raised",
+            command=self.TakePhoto,
+        )
+        self.see_b = Button(
+            self.window,
+            text="SEE THIS",
+            font=("Arial", 20),
+            bg="orange",
+            fg="blue",
+            relief="raised",
+            command=self.see_this,
+        )
 
         # self.prev_b = Button(self.window, text="PREVIEW", font=("Arial", 20), bg="orange", fg = "blue", relief='raised',command=self.prev_img)
-        self.exit_b = Button(self.window, text="EXIT", font=("Arial", 20), bg="red", fg = "blue", relief='raised',command=self.exit_win)
+        self.exit_b = Button(
+            self.window,
+            text="EXIT",
+            font=("Arial", 20),
+            bg="red",
+            fg="blue",
+            relief="raised",
+            command=self.exit_win,
+        )
         self.ImageLabel = Label(self.window, width=1000, height=500, bg="light yellow")
         self.ImageLabel.place(x=0, y=0)
         self.TakePhoto_b.place(x=150, y=560)
         # self.prev_b.place(x=440, y=560)
         self.see_b.place(x=440, y=560)
-        self.exit_b.place(x = 750, y = 560)
+        self.exit_b.place(x=750, y=560)
         # self.topLabel.place(x = 250, y = 20)
         self.take_picture = False
         self.PictureTaken = False
@@ -70,7 +93,10 @@ class CameraApp:
 
     # method to show how camera works
     def see_this(self):
-        mbox.showinfo("Details", "When you click on Take a Shot, It will show a message of taking image.\n\nWhen we click on OK, it will ask user to save at any location in local system.\n\nAfter saving, it will show message, that File Saved Successfully.\n\nAfter that when user click on Take Again button, it willl give a message og reconfiguring camera, and clicking on the OK will start the camera and user can take the shot again.")
+        mbox.showinfo(
+            "Details",
+            "When you click on Take a Shot, It will show a message of taking image.\n\nWhen we click on OK, it will ask user to save at any location in local system.\n\nAfter saving, it will show message, that File Saved Successfully.\n\nAfter that when user click on Take Again button, it willl give a message og reconfiguring camera, and clicking on the OK will start the camera and user can take the shot again.",
+        )
 
     # method defined to take the photo
     def TakePhoto(self):
@@ -111,11 +137,13 @@ class CameraApp:
                     # print("Your camera died")
                     # mbox.showinfo("Status","Your camera died")
 
-                    CaptureFrame.save('myimage.png')
+                    CaptureFrame.save("myimage.png")
 
-                    img = cv2.imread('myimage.png')
+                    img = cv2.imread("myimage.png")
                     edge = Image.fromarray(img)
-                    filename = filedialog.asksaveasfile(mode='w', defaultextension=".jpg")
+                    filename = filedialog.asksaveasfile(
+                        mode="w", defaultextension=".jpg"
+                    )
                     if not filename:
                         mbox.showinfo("Success", "Image not saved!")
                         break
@@ -126,10 +154,12 @@ class CameraApp:
                     self.TakePhoto_b.configure(text="Take Again")
                     self.PictureTaken = True
 
+
 # function defined for exiting the window
 def exit_win1():
     if mbox.askokcancel("Exit", "Do you want to exit?"):
         root.destroy()
+
 
 root = Tk()
 App = CameraApp(root)

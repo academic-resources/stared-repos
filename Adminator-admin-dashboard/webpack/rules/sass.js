@@ -8,16 +8,13 @@
  * + @Exporting Module
  */
 
-
 // ---------------------
 // @Loading Dependencies
 // ---------------------
 
-const
-  manifest          = require('../manifest'),
-  path              = require('path'),
-  cssNext           = require('postcss-preset-env');
-
+const manifest = require("../manifest"),
+  path = require("path"),
+  cssNext = require("postcss-preset-env");
 
 // ---------------
 // @Common Loaders
@@ -25,34 +22,30 @@ const
 
 const loaders = [
   {
-    loader: 'css-loader',
+    loader: "css-loader",
     options: {
-      sourceMap : manifest.IS_DEVELOPMENT,
+      sourceMap: manifest.IS_DEVELOPMENT,
       // minimize  : manifest.IS_PRODUCTION,
     },
   },
   {
-    loader: 'postcss-loader',
+    loader: "postcss-loader",
     options: {
       sourceMap: manifest.IS_DEVELOPMENT,
       postcssOptions: {
-        plugins: [
-          [
-            cssNext(),
-          ],
-        ],
+        plugins: [[cssNext()]],
       },
     },
   },
   {
-    loader: 'sass-loader',
+    loader: "sass-loader",
     options: {
       sourceMap: manifest.IS_DEVELOPMENT,
       sassOptions: {
         includePaths: [
-          path.join('../../', 'node_modules'),
-          path.join(manifest.paths.src, 'assets', 'styles'),
-          path.join(manifest.paths.src, ''),
+          path.join("../../", "node_modules"),
+          path.join(manifest.paths.src, "assets", "styles"),
+          path.join(manifest.paths.src, ""),
         ],
       },
     },
@@ -61,9 +54,11 @@ const loaders = [
 
 const rule = {
   test: /\.scss$/,
-  use: [{
-    loader: 'style-loader',
-  }].concat(loaders),
+  use: [
+    {
+      loader: "style-loader",
+    },
+  ].concat(loaders),
 };
 
 // -----------------

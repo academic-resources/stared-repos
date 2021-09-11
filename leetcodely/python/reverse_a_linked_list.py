@@ -7,6 +7,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution(object):
     def reverseList(self, head):
         """

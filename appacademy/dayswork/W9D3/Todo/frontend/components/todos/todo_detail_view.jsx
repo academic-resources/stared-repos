@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const TodoDetailView = ({ todo, removeTodo }) => {
   return (
@@ -7,7 +7,7 @@ const TodoDetailView = ({ todo, removeTodo }) => {
       <p>{todo.body}</p>
       <button onClick={() => removeTodo(todo)}>X</button>
     </div>
-  )
-}
+  );
+};
 
-export default TodoDetailView
+export default TodoDetailView;

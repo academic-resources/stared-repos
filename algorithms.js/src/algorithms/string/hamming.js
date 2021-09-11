@@ -6,11 +6,11 @@
  * into the other." - https://en.wikipedia.org/wiki/Hamming_distance
  *
  */
-'use strict';
+"use strict";
 
 var hamming = function (a, b) {
   if (a.length != b.length) {
-    throw new Error('Strings must be equal in length');
+    throw new Error("Strings must be equal in length");
   }
 
   var dist = 0;

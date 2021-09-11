@@ -31,8 +31,8 @@ def update_list():
         todolist.delete(0, "end")
     for task in tasks:
         todolist.insert(
-            "end",
-            "[" + task[0] + "] Time left: " + str(task[1]) + " secondes")
+            "end", "[" + task[0] + "] Time left: " + str(task[1]) + " secondes"
+        )
 
 
 def time_passed(task):
@@ -50,7 +50,7 @@ def real_time():
     update_list()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # application
     app = tkinter.Tk()
     app.geometry("480x680")
@@ -62,36 +62,38 @@ if __name__ == '__main__':
     frame.pack()
 
     # widgets
-    label = tkinter.Label(app,
-                          text="Enter work to do:",
-                          wraplength=200,
-                          justify=tkinter.LEFT)
-    label_hour = tkinter.Label(app,
-                               text="Enter time (secondes)",
-                               wraplength=200,
-                               justify=tkinter.LEFT)
+    label = tkinter.Label(
+        app, text="Enter work to do:", wraplength=200, justify=tkinter.LEFT
+    )
+    label_hour = tkinter.Label(
+        app, text="Enter time (secondes)", wraplength=200, justify=tkinter.LEFT
+    )
     todo = tkinter.Entry(app, width=30)
     time = tkinter.Entry(app, width=15)
-    send = tkinter.Button(app,
-                          text='Add task',
-                          fg="#ffffff",
-                          bg='#6186AC',
-                          height=3,
-                          width=30,
-                          command=get_entry)
-    quit = tkinter.Button(app,
-                          text='Exit',
-                          fg="#ffffff",
-                          bg='#EB6464',
-                          height=3,
-                          width=30,
-                          command=app.destroy)
+    send = tkinter.Button(
+        app,
+        text="Add task",
+        fg="#ffffff",
+        bg="#6186AC",
+        height=3,
+        width=30,
+        command=get_entry,
+    )
+    quit = tkinter.Button(
+        app,
+        text="Exit",
+        fg="#ffffff",
+        bg="#EB6464",
+        height=3,
+        width=30,
+        command=app.destroy,
+    )
     todolist = tkinter.Listbox(app)
     if tasks != "":
         real_time()
 
     # binding
-    app.bind('<Return>', get_entry)
+    app.bind("<Return>", get_entry)
 
     # widgets placement
     label.place(x=0, y=10, width=200, height=25)

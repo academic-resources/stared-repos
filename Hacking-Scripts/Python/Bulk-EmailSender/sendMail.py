@@ -22,7 +22,7 @@ password = input("your password : ").strip()
 
 # using pandas and openpyxl for reading from email.xlsx  and setting up smtp server
 e = pd.read_excel("email.xlsx")
-emails = e['Emails'].values
+emails = e["Emails"].values
 server = smtplib.SMTP("smtp.gmail.com", 587)
 server.starttls()
 try:

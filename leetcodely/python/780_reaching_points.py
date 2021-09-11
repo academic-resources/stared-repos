@@ -30,9 +30,11 @@ class Solution(object):
             return True
         if sx > tx and sy > ty:
             return False
-        return self.reachingPoints(sx + sy, sy, tx, ty) or self.reachingPoints(sx, sx + sy, tx, ty)
+        return self.reachingPoints(sx + sy, sy, tx, ty) or self.reachingPoints(
+            sx, sx + sy, tx, ty
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.reachingPoints(1, 1, 3, 5))

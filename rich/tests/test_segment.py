@@ -109,10 +109,7 @@ def test_strip_links():
 
 
 def test_remove_color():
-    segments = [
-        Segment("foo", Style(bold=True, color="red")),
-        Segment("bar", None),
-    ]
+    segments = [Segment("foo", Style(bold=True, color="red")), Segment("bar", None)]
     assert list(Segment.remove_color(segments)) == [
         Segment("foo", Style(bold=True)),
         Segment("bar", None),
@@ -139,10 +136,7 @@ def test_segments_renderable():
 def test_divide():
     bold = Style(bold=True)
     italic = Style(italic=True)
-    segments = [
-        Segment("Hello", bold),
-        Segment(" World!", italic),
-    ]
+    segments = [Segment("Hello", bold), Segment(" World!", italic)]
 
     assert list(Segment.divide(segments, [])) == []
     assert list(Segment.divide([], [1])) == [[]]
@@ -169,19 +163,16 @@ def test_divide():
 def test_divide_emoji():
     bold = Style(bold=True)
     italic = Style(italic=True)
-    segments = [
-        Segment("Hello", bold),
-        Segment("💩💩💩", italic),
-    ]
+    segments = [Segment("Hello", bold), Segment("💩💩💩", italic)]
 
     assert list(Segment.divide(segments, [7])) == [
-        [Segment("Hello", bold), Segment("💩", italic)],
+        [Segment("Hello", bold), Segment("💩", italic)]
     ]
     assert list(Segment.divide(segments, [8])) == [
-        [Segment("Hello", bold), Segment("💩 ", italic)],
+        [Segment("Hello", bold), Segment("💩 ", italic)]
     ]
     assert list(Segment.divide(segments, [9])) == [
-        [Segment("Hello", bold), Segment("💩💩", italic)],
+        [Segment("Hello", bold), Segment("💩💩", italic)]
     ]
     assert list(Segment.divide(segments, [8, 11])) == [
         [Segment("Hello", bold), Segment("💩 ", italic)],
@@ -197,23 +188,11 @@ def test_divide_edge():
     segments = [Segment("foo"), Segment("bar"), Segment("baz")]
     result = list(Segment.divide(segments, [1, 3, 9]))
     print(result)
-    assert result == [
-        [Segment("f")],
-        [Segment("oo")],
-        [Segment("bar"), Segment("baz")],
-    ]
+    assert result == [[Segment("f")], [Segment("oo")], [Segment("bar"), Segment("baz")]]
 
 
 def test_divide_edge_2():
-    segments = [
-        Segment("╭─"),
-        Segment(
-            "────── Placeholder ───────",
-        ),
-        Segment(
-            "─╮",
-        ),
-    ]
+    segments = [Segment("╭─"), Segment("────── Placeholder ───────"), Segment("─╮")]
     result = list(Segment.divide(segments, [30, 60]))
     expected = [segments, []]
     print(repr(result))

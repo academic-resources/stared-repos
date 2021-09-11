@@ -4,20 +4,20 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 
-form{
+form {
   width: 60%;
   margin: auto;
 }
-form > .header{
+form > .header {
   background-color: #157ffc;
-  color: #FFF;
+  color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
-  padding: .25rem;
-  margin-bottom: .5rem;
+  padding: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 form label {
@@ -25,6 +25,6 @@ form label {
   font-weight: bold;
 }
 
-form .actions{
+form .actions {
   text-align: right;
 }

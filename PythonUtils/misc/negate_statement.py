@@ -2,7 +2,7 @@ import spacy
 
 from pattern import en
 
-MODALS = {'will', 'shall'}
+MODALS = {"will", "shall"}
 
 
 def main():
@@ -47,10 +47,10 @@ def negate(token, morph_features):
     :return: the negated string or None if failed to negate
     """
     verb = token.text
-    tense = morph_features.get('Tense', None)
+    tense = morph_features.get("Tense", None)
     person = morph_features.get("Person", 3)
     number = {"sing": en.SG, "plur": en.PL}.get(morph_features.get("Number", "sing"))
-    auxes = [t for t in token.lefts if t.dep_ == 'aux' or t.lemma_ in {"be", "have"}]
+    auxes = [t for t in token.lefts if t.dep_ == "aux" or t.lemma_ in {"be", "have"}]
 
     # ing: add not after the have/be verb or future: add "not" after the modal
     if (token.tag_ == "VBG" and len(auxes) > 0) or is_future_tense(token):
@@ -64,17 +64,13 @@ def negate(token, morph_features):
             return " ".join((verb, "not"))
 
         else:
-            aux = en.conjugate("do",
-                               tense=aux_tense,
-                               person=person,
-                               number=number,
-                               parse=True)
+            aux = en.conjugate(
+                "do", tense=aux_tense, person=person, number=number, parse=True
+            )
 
-            verb = en.conjugate(verb,
-                                tense=en.INFINITIVE,
-                                person=person,
-                                number=number,
-                                parse=True)
+            verb = en.conjugate(
+                verb, tense=en.INFINITIVE, person=person, number=number, parse=True
+            )
 
             return " ".join((aux, "not", verb))
 
@@ -88,8 +84,10 @@ def is_future_tense(token):
     :param token: SpaCy token
     :return: Is this verb with a future tense?
     """
-    return token.tag_ == 'VB' and any([t.text in MODALS and t.dep_ == 'aux' for t in token.lefts])
+    return token.tag_ == "VB" and any(
+        [t.text in MODALS and t.dep_ == "aux" for t in token.lefts]
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

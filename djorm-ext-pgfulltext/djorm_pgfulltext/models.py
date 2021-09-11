@@ -86,13 +86,15 @@ class SearchManagerMixIn(object):
     https://docs.djangoproject.com/en/1.4/howto/initial-data/#providing-initial-sql-data
     """
 
-    def __init__(self,
-                 fields=None,
-                 search_field='search_index',
-                 config='pg_catalog.english',
-                 auto_update_search_field=False):
+    def __init__(
+        self,
+        fields=None,
+        search_field="search_index",
+        config="pg_catalog.english",
+        auto_update_search_field=False,
+    ):
         self.search_field = search_field
-        self.default_weight = 'D'
+        self.default_weight = "D"
         self.config = config
         self.auto_update_search_field = auto_update_search_field
         self._fields = fields
@@ -100,25 +102,40 @@ class SearchManagerMixIn(object):
         super(SearchManagerMixIn, self).__init__()
 
     def contribute_to_class(self, cls, name):
-        '''
+        """
         Called automatically by Django when setting up the model class.
-        '''
+        """
         if not cls._meta.abstract:
             # Attach this manager as _fts_manager in the model class.
-            if not getattr(cls, '_fts_manager', None):
+            if not getattr(cls, "_fts_manager", None):
                 cls._fts_manager = self
 
             # Add 'update_search_field' instance method, that calls manager's update_search_field.
-            if not getattr(cls, 'update_search_field', None):
-                def update_search_field(self, search_field=None, fields=None, using=None, config=None, extra=None):
+            if not getattr(cls, "update_search_field", None):
+
+                def update_search_field(
+                    self,
+                    search_field=None,
+                    fields=None,
+                    using=None,
+                    config=None,
+                    extra=None,
+                ):
                     self._fts_manager.update_search_field(
-                        pk=self.pk, search_field=search_field, fields=fields, using=using, config=config, extra=extra
+                        pk=self.pk,
+                        search_field=search_field,
+                        fields=fields,
+                        using=using,
+                        config=config,
+                        extra=extra,
                     )
 
-                setattr(cls, 'update_search_field', update_search_field)
+                setattr(cls, "update_search_field", update_search_field)
 
             if self.auto_update_search_field:
-                models.signals.post_save.connect(auto_update_search_field_handler, sender=cls)
+                models.signals.post_save.connect(
+                    auto_update_search_field_handler, sender=cls
+                )
 
         super(SearchManagerMixIn, self).contribute_to_class(cls, name)
 
@@ -128,7 +145,15 @@ class SearchManagerMixIn(object):
     def search(self, *args, **kwargs):
         return self.get_queryset().search(*args, **kwargs)
 
-    def update_search_field(self, pk=None, search_field=None, fields=None, config=None, using=None, extra=None):
+    def update_search_field(
+        self,
+        pk=None,
+        search_field=None,
+        fields=None,
+        config=None,
+        using=None,
+        extra=None,
+    ):
         """
         Update the search_field of one instance, or a list of instances, or
         all instances in the table (pk is one key, a list of keys or none).
@@ -158,7 +183,7 @@ class SearchManagerMixIn(object):
         connection = connections[using]
         qn = connection.ops.quote_name
 
-        where_sql = ''
+        where_sql = ""
         params = []
         if pk is not None:
             if isinstance(pk, (list, tuple)):
@@ -168,15 +193,17 @@ class SearchManagerMixIn(object):
 
             where_sql = "WHERE %s IN (%s)" % (
                 qn(self.model._meta.pk.column),
-                ','.join(repeat("%s", len(params)))
+                ",".join(repeat("%s", len(params))),
             )
 
-        search_vector = self._get_search_vector(config, using, fields=fields, extra=extra)
+        search_vector = self._get_search_vector(
+            config, using, fields=fields, extra=extra
+        )
         sql = "UPDATE %s SET %s = %s %s;" % (
             qn(self.model._meta.db_table),
             qn(search_field),
             search_vector or "''",
-            where_sql
+            where_sql,
         )
 
         with atomic():
@@ -184,8 +211,11 @@ class SearchManagerMixIn(object):
             cursor.execute(sql, params)
 
     def _find_text_fields(self):
-        fields = [f for f in self.model._meta.fields
-                  if isinstance(f, (models.CharField, models.TextField))]
+        fields = [
+            f
+            for f in self.model._meta.fields
+            if isinstance(f, (models.CharField, models.TextField))
+        ]
 
         return [(f.name, None) for f in fields]
 
@@ -204,11 +234,15 @@ class SearchManagerMixIn(object):
                 parsed_fields.update([(x, None) for x in fields])
 
             # Does not support field.attname.
-            field_names = set(field.name for field in self.model._meta.fields if not field.primary_key)
+            field_names = set(
+                field.name for field in self.model._meta.fields if not field.primary_key
+            )
             non_model_fields = set(x[0] for x in parsed_fields).difference(field_names)
             if non_model_fields:
-                raise ValueError("The following fields do not exist in this"
-                                 " model: {0}".format(", ".join(x for x in non_model_fields)))
+                raise ValueError(
+                    "The following fields do not exist in this"
+                    " model: {0}".format(", ".join(x for x in non_model_fields))
+                )
         else:
             parsed_fields.update(self._find_text_fields())
 
@@ -227,11 +261,19 @@ class SearchManagerMixIn(object):
         for config in configs:
             for field_name, weight in vector_fields:
                 search_vector.append(
-                    self._get_vector_for_field(field_name, weight=weight, config=config, using=using, extra=extra)
+                    self._get_vector_for_field(
+                        field_name,
+                        weight=weight,
+                        config=config,
+                        using=using,
+                        extra=extra,
+                    )
                 )
-        return ' || '.join(search_vector)
+        return " || ".join(search_vector)
 
-    def _get_vector_for_field(self, field_name, weight=None, config=None, using=None, extra=None):
+    def _get_vector_for_field(
+        self, field_name, weight=None, config=None, using=None, extra=None
+    ):
         if not weight:
             weight = self.default_weight
 
@@ -245,8 +287,10 @@ class SearchManagerMixIn(object):
 
         ret = None
 
-        if hasattr(self.model, '_convert_field_to_db'):
-            ret = self.model._convert_field_to_db(field, weight, config, using, extra=extra)
+        if hasattr(self.model, "_convert_field_to_db"):
+            ret = self.model._convert_field_to_db(
+                field, weight, config, using, extra=extra
+            )
 
         if ret is None:
             ret = self._convert_field_to_db(field, weight, config, using, extra=extra)
@@ -258,8 +302,12 @@ class SearchManagerMixIn(object):
         connection = connections[using]
         qn = connection.ops.quote_name
 
-        return "setweight(to_tsvector('%s', coalesce(%s.%s, '')), '%s')" % \
-               (config, qn(field.model._meta.db_table), qn(field.column), weight)
+        return "setweight(to_tsvector('%s', coalesce(%s.%s, '')), '%s')" % (
+            config,
+            qn(field.model._meta.db_table),
+            qn(field.column),
+            weight,
+        )
 
 
 class SearchQuerySet(QuerySet):
@@ -271,10 +319,20 @@ class SearchQuerySet(QuerySet):
     def db(self):
         return self._db or self.manager.db
 
-    def search(self, query, rank_field=None, rank_function='ts_rank', config=None,
-               rank_normalization=32, raw=False, using=None, fields=None,
-               headline_field=None, headline_document=None):
-        '''
+    def search(
+        self,
+        query,
+        rank_field=None,
+        rank_function="ts_rank",
+        config=None,
+        rank_normalization=32,
+        raw=False,
+        using=None,
+        fields=None,
+        headline_field=None,
+        headline_document=None,
+    ):
+        """
         Convert query with to_tsquery or plainto_tsquery, depending on raw is
         `True` or `False`, and return a QuerySet with the filter.
 
@@ -296,7 +354,7 @@ class SearchQuerySet(QuerySet):
 
         Search headlines are explained here:
         http://www.postgresql.org/docs/9.1/static/textsearch-controls.html#TEXTSEARCH-HEADLINE
-        '''
+        """
 
         if not config:
             config = self.manager.config
@@ -311,20 +369,20 @@ class SearchQuerySet(QuerySet):
 
         if query:
             function = "to_tsquery" if raw else "plainto_tsquery"
-            ts_query = smart_text(
-                "%s('%s', %s)" % (function, config, adapt(query))
-            )
+            ts_query = smart_text("%s('%s', %s)" % (function, config, adapt(query)))
 
             full_search_field = "%s.%s" % (
                 qn(self.model._meta.db_table),
-                qn(self.manager.search_field)
+                qn(self.manager.search_field),
             )
 
             # if fields is passed, obtain a vector expression with
             # these fields. In other case, intent use of search_field if
             # exists.
             if fields:
-                search_vector = self.manager._get_search_vector(config, using, fields=fields)
+                search_vector = self.manager._get_search_vector(
+                    config, using, fields=fields
+                )
             else:
                 if not self.manager.search_field:
                     raise ValueError("search_field is not specified")
@@ -335,19 +393,19 @@ class SearchQuerySet(QuerySet):
             select_dict, order = {}, []
 
             if rank_field:
-                select_dict[rank_field] = '%s(%s, %s, %d)' % (
+                select_dict[rank_field] = "%s(%s, %s, %d)" % (
                     rank_function,
                     search_vector,
                     ts_query,
-                    rank_normalization
+                    rank_normalization,
                 )
-                order = ['-%s' % (rank_field,)]
+                order = ["-%s" % (rank_field,)]
 
             if headline_field is not None and headline_document is not None:
                 select_dict[headline_field] = "ts_headline('%s', %s, %s)" % (
                     config,
                     headline_document,
-                    ts_query
+                    ts_query,
                 )
 
             qs = qs.extra(select=select_dict, where=[where], order_by=order)

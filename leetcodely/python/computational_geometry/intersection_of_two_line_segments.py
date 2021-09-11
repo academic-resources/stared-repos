@@ -28,7 +28,12 @@ class Solution:
 
     # Given 3 points the function checks if q lies in the line segment pr
     def lies_on_segment(self, p, q, r):
-        if q.x <= max(p.x, r.x) and q.x >= min(p.x, r.x) and q.y <= max(p.y, r.y) and q.y >= min(p.y, r.y):
+        if (
+            q.x <= max(p.x, r.x)
+            and q.x >= min(p.x, r.x)
+            and q.y <= max(p.y, r.y)
+            and q.y >= min(p.y, r.y)
+        ):
             return True
         return False
 
@@ -39,7 +44,7 @@ class Point:
         self.y = y
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.intersect(Point(1, 1), Point(10, 1), Point(1, 2), Point(10, 2)))
     print(solution.intersect(Point(10, 0), Point(0, 10), Point(0, 0), Point(10, 10)))

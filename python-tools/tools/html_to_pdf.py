@@ -2,7 +2,7 @@
 import pdfkit
 
 
-def html_to_pdf(input, output, type='string'):
+def html_to_pdf(input, output, type="string"):
     """Convert HTML/webpage to PDF. For linux, install: sudo apt-get install wkhtmltopdf.
 
     Args:
@@ -11,9 +11,9 @@ def html_to_pdf(input, output, type='string'):
         type (str): Types can be 'string', 'url' or 'file'.
 
     """
-    if type == 'url':
+    if type == "url":
         pdfkit.from_url(input, output)
-    elif type == 'file':
+    elif type == "file":
         pdfkit.from_file(input, output)
     else:
         pdfkit.from_string(input, output)

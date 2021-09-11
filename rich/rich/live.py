@@ -255,11 +255,7 @@ class Live(JupyterMixin, RenderHook):
                     if self._alt_screen
                     else self._live_render.position_cursor()
                 )
-                renderables = [
-                    reset,
-                    *renderables,
-                    self._live_render,
-                ]
+                renderables = [reset, *renderables, self._live_render]
         elif (
             not self._started and not self.transient
         ):  # if it is finished render the final output for files or dumb_terminals

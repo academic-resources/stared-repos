@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var Queue = require('./queue');
+var Queue = require("./queue");
 
 /**
  * Stack (LIFO) using a Linked List as basis

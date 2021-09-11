@@ -5,15 +5,15 @@ from .categories import seed_categories, undo_categories
 from .folders import seed_folders, undo_folders
 from .file_types import seed_file_types, undo_file_types
 
-seed_commands = AppGroup('seed')
+seed_commands = AppGroup("seed")
 
 
-@seed_commands.command('file_types')
+@seed_commands.command("file_types")
 def seed():
     seed_file_types()
 
 
-@seed_commands.command('all')
+@seed_commands.command("all")
 def seed():
     seed_users()
     seed_tags()
@@ -22,7 +22,7 @@ def seed():
     seed_file_types()
 
 
-@seed_commands.command('undo')
+@seed_commands.command("undo")
 def undo():
     undo_users()
     undo_tags()

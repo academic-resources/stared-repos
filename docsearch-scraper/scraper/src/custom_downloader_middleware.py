@@ -25,17 +25,14 @@ class CustomDownloaderMiddleware:
 
         print("Getting " + request.url + " from selenium")
 
-        self.driver.get(unquote_plus(
-            request.url))  # Decode url otherwise firefox is not happy. Ex /#%21/ => /#!/%21
+        self.driver.get(
+            unquote_plus(request.url)
+        )  # Decode url otherwise firefox is not happy. Ex /#%21/ => /#!/%21
         time.sleep(spider.js_wait)
-        body = self.driver.page_source.encode('utf-8')
+        body = self.driver.page_source.encode("utf-8")
         url = self.driver.current_url
 
-        return HtmlResponse(
-            url=url,
-            body=body,
-            encoding='utf8'
-        )
+        return HtmlResponse(url=url, body=body, encoding="utf8")
 
     def process_response(self, request, response, spider):
         # Since scrappy use start_urls and stop_urls before creating the request
@@ -47,7 +44,7 @@ class CustomDownloaderMiddleware:
             url_without_params = o.scheme + "://" + o.netloc + o.path
             response = response.replace(url=url_without_params)
 
-        if response.url == request.url + '#':
+        if response.url == request.url + "#":
             response = response.replace(url=request.url)
 
         return response

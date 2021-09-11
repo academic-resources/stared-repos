@@ -14,7 +14,7 @@
 def findWord(arr):
     check = {}
     for a in arr:
-        t = a.split('>')
+        t = a.split(">")
         check[t[0]] = t[1]
     start = None
     for k, v in check.items():
@@ -39,6 +39,7 @@ def findWord(arr):
             break
     return result
 
+
 print(findWord(["I>N", "A>I", "P>A", "S>P"]))
-print(findWord(["P>E","E>R","R>U"]))
+print(findWord(["P>E", "E>R", "R>U"]))
 print(findWord(["R>T", "A>L", "P>O", "O>R", "G>A", "T>U", "U>G"]))

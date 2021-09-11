@@ -1,5 +1,3 @@
-
-
 import abc
 import urllib.parse
 import urllib.request
@@ -22,18 +20,18 @@ class ResourceContentFetcher(metaclass=abc.ABCMeta):
     """
     Define the interface (Implementor) for implementation classes that help fetch content.
     """
-    
+
     @abc.abstractmethod
     def fetch(path):
         pass
-        
+
 
 class URLFetcher(ResourceContentFetcher):
     """
     Implement the Implementor interface and define its concrete
     implementation.
     """
-    
+
     def fetch(self, path):
         # path is an URL
         req = urllib.request.Request(path)
@@ -41,8 +39,8 @@ class URLFetcher(ResourceContentFetcher):
             if response.code == 200:
                 the_page = response.read()
                 print(the_page)
-                        
-                
+
+
 class LocalFileFetcher(ResourceContentFetcher):
     """
     Implement the Implementor interface and define its concrete
@@ -53,21 +51,19 @@ class LocalFileFetcher(ResourceContentFetcher):
         # path is the filepath to a text file
         with open(path) as f:
             print(f.read())
-        
-       
+
+
 def main():
     url_fetcher = URLFetcher()
     iface = ResourceContent(url_fetcher)
-    iface.show_content('http://python.org')
+    iface.show_content("http://python.org")
 
-    print('===================')
-    
+    print("===================")
+
     localfs_fetcher = LocalFileFetcher()
     iface = ResourceContent(localfs_fetcher)
-    iface.show_content('file.txt')
+    iface.show_content("file.txt")
 
-    
+
 if __name__ == "__main__":
     main()
-
-    

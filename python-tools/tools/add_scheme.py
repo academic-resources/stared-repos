@@ -14,5 +14,5 @@ def add_scheme(url):
     """
     url = url.strip()
     if not parse.urlparse(url).scheme:
-        url = 'http://' + url
+        url = "http://" + url
     return url

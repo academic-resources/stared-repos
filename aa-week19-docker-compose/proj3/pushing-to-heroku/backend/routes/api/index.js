@@ -1,6 +1,6 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const routes = ['players', 'session', 'pokemon'];
+const routes = ["players", "session", "pokemon"];
 
 for (let route of routes) {
   router.use(`/${route}`, require(`./${route}`));

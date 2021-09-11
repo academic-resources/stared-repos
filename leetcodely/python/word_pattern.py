@@ -21,6 +21,5 @@ class Solution:
             return False
         check = {pattern[0]: arr[0]}
         for i in range(1, len(str)):
-            if pattern[i] == pattern[i-1]:
+            if pattern[i] == pattern[i - 1]:
                 pass
-

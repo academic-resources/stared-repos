@@ -12,8 +12,10 @@ from typing import Tuple, Union
 try:
     from skytools._chashtext import hashtext_new, hashtext_old
 except ImportError:
+
     def hashtext_old(v: Union[bytes, str]) -> int:
         return hashtext_old_py(v)
+
     def hashtext_new(v: Union[bytes, str]) -> int:
         return hashtext_new_py(v)
 
@@ -21,12 +23,12 @@ except ImportError:
 __all__ = ("hashtext_old", "hashtext_new")
 
 # pad for last partial block
-PADDING = b'\0' * 12
+PADDING = b"\0" * 12
 
 
 def uint32(x: int) -> int:
     """python does not have 32 bit integer so we need this hack to produce uint32 after bit operations"""
-    return x & 0xffffffff
+    return x & 0xFFFFFFFF
 
 
 #
@@ -60,7 +62,7 @@ def hashtext_old_py(k: Union[bytes, str]) -> int:
 
     remain = len(k)
     pos = 0
-    a = b = 0x9e3779b9
+    a = b = 0x9E3779B9
     c = 3923095
 
     # handle most of the key
@@ -134,7 +136,7 @@ def hashtext_new_py(k: Union[bytes, str]) -> int:
         k = k.encode()
     remain = len(k)
     pos = 0
-    a = b = c = 0x9e3779b9 + len(k) + 3923095
+    a = b = c = 0x9E3779B9 + len(k) + 3923095
 
     # handle most of the key
     while remain >= 12:
@@ -145,7 +147,7 @@ def hashtext_new_py(k: Union[bytes, str]) -> int:
 
     # handle the last 11 bytes
     a2, b2, c2 = FMT_NEW.unpack_from(k[pos:] + PADDING, 0)
-    if sys.byteorder == 'little':
+    if sys.byteorder == "little":
         c2 = c2 << 8
     a, b, c = final_new(a + a2, b + b2, c + c2)
 
@@ -154,4 +156,3 @@ def hashtext_new_py(k: Union[bytes, str]) -> int:
         c = -0x100000000 + c
 
     return int(c)
-

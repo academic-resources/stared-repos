@@ -24,7 +24,7 @@ def taskdb_migrating(project, from_connection, to_connection):
     t.drop(project)
     for status in range(1, 5):
         for task in f.load_tasks(status, project=project):
-            t.insert(project, task['taskid'], task)
+            t.insert(project, task["taskid"], task)
 
 
 def resultdb_migrating(project, from_connection, to_connection):
@@ -33,13 +33,13 @@ def resultdb_migrating(project, from_connection, to_connection):
     t = connect_database(to_connection)
     t.drop(project)
     for result in f.select(project):
-        t.save(project, result['taskid'], result['url'], result['result'])
+        t.save(project, result["taskid"], result["url"], result["result"])
 
 
 @click.command()
-@click.option('--pool', default=10, help='cocurrent worker size.')
-@click.argument('from_connection', required=1)
-@click.argument('to_connection', required=1)
+@click.option("--pool", default=10, help="cocurrent worker size.")
+@click.argument("from_connection", required=1)
+@click.argument("to_connection", required=1)
 def migrate(pool, from_connection, to_connection):
     """
     Migrate tool for pyspider
@@ -50,20 +50,22 @@ def migrate(pool, from_connection, to_connection):
     if isinstance(f, ProjectDB):
         for each in f.get_all():
             each = unicode_obj(each)
-            logging.info("projectdb: %s", each['name'])
-            t.drop(each['name'])
-            t.insert(each['name'], each)
+            logging.info("projectdb: %s", each["name"])
+            t.drop(each["name"])
+            t.insert(each["name"], each)
     elif isinstance(f, TaskDB):
         pool = Pool(pool)
         pool.map(
             lambda x, f=from_connection, t=to_connection: taskdb_migrating(x, f, t),
-            f.projects)
+            f.projects,
+        )
     elif isinstance(f, ResultDB):
         pool = Pool(pool)
         pool.map(
             lambda x, f=from_connection, t=to_connection: resultdb_migrating(x, f, t),
-            f.projects)
+            f.projects,
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     migrate()

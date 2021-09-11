@@ -18,7 +18,9 @@ import networkapi.buyersguide.validators
 
 
 def create_default_categories(apps, schema_editor):
-    BuyersGuideProductCategory = apps.get_model("buyersguide", "BuyersGuideProductCategory")
+    BuyersGuideProductCategory = apps.get_model(
+        "buyersguide", "BuyersGuideProductCategory"
+    )
     categories = [
         "Toys & Games",
         "Smart Home",
@@ -41,221 +43,734 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='BooleanProductVote',
+            name="BooleanProductVote",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('votes', models.IntegerField(default=0)),
-                ('attribute', models.CharField(max_length=100, validators=[networkapi.buyersguide.validators.ValueListValidator(valid_values=['confidence'])])),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("votes", models.IntegerField(default=0)),
+                (
+                    "attribute",
+                    models.CharField(
+                        max_length=100,
+                        validators=[
+                            networkapi.buyersguide.validators.ValueListValidator(
+                                valid_values=["confidence"]
+                            )
+                        ],
+                    ),
+                ),
+            ],
+            options={"abstract": False},
+        ),
+        migrations.CreateModel(
+            name="BuyersGuideProductCategory",
+            fields=[
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                (
+                    "description",
+                    models.TextField(
+                        blank=True,
+                        help_text="Description of the product category. Max. 300 characters.",
+                        max_length=300,
+                    ),
+                ),
+                (
+                    "featured",
+                    models.BooleanField(
+                        default=False,
+                        help_text="Featured category will appear first on Buyer's Guide site nav",
+                    ),
+                ),
+                (
+                    "hidden",
+                    models.BooleanField(
+                        default=False,
+                        help_text="Hidden categories will not appear in the Buyer's Guide site nav at all",
+                    ),
+                ),
+                (
+                    "slug",
+                    models.SlugField(
+                        blank=True,
+                        help_text="A URL-friendly version of the product name. This is an auto-generated field.",
+                    ),
+                ),
             ],
             options={
-                'abstract': False,
+                "verbose_name": "Buyers Guide Product Category",
+                "verbose_name_plural": "Buyers Guide Product Categories",
             },
         ),
         migrations.CreateModel(
-            name='BuyersGuideProductCategory',
+            name="Product",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('description', models.TextField(blank=True, help_text='Description of the product category. Max. 300 characters.', max_length=300)),
-                ('featured', models.BooleanField(default=False, help_text="Featured category will appear first on Buyer's Guide site nav")),
-                ('hidden', models.BooleanField(default=False, help_text="Hidden categories will not appear in the Buyer's Guide site nav at all")),
-                ('slug', models.SlugField(blank=True, help_text='A URL-friendly version of the product name. This is an auto-generated field.')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "draft",
+                    models.BooleanField(
+                        default=True,
+                        help_text="When checked, this product will only show for CMS-authenticated users",
+                    ),
+                ),
+                (
+                    "adult_content",
+                    models.BooleanField(
+                        default=False,
+                        help_text="When checked, product thumbnail will appear blurred as well as have an 18+ badge on it",
+                    ),
+                ),
+                (
+                    "review_date",
+                    models.DateField(help_text="Review date of this product"),
+                ),
+                (
+                    "name",
+                    models.CharField(
+                        blank=True, help_text="Name of Product", max_length=100
+                    ),
+                ),
+                (
+                    "slug",
+                    models.CharField(
+                        blank=True,
+                        default=None,
+                        editable=False,
+                        help_text="slug used in urls",
+                        max_length=256,
+                    ),
+                ),
+                (
+                    "company",
+                    models.CharField(
+                        blank=True, help_text="Name of Company", max_length=100
+                    ),
+                ),
+                (
+                    "blurb",
+                    models.TextField(
+                        blank=True,
+                        help_text="Description of the product",
+                        max_length=5000,
+                    ),
+                ),
+                (
+                    "url",
+                    models.URLField(
+                        blank=True,
+                        help_text="Link to this product page",
+                        max_length=2048,
+                    ),
+                ),
+                (
+                    "price",
+                    models.CharField(blank=True, help_text="Price", max_length=100),
+                ),
+                (
+                    "image",
+                    models.FileField(
+                        blank=True,
+                        help_text="Image representing this product",
+                        max_length=2048,
+                        upload_to=networkapi.buyersguide.pagemodels.get_product_image_upload_path.get_product_image_upload_path,
+                    ),
+                ),
+                (
+                    "cloudinary_image",
+                    cloudinary.models.CloudinaryField(
+                        blank=True,
+                        help_text="Image representing this product - hosted on Cloudinary",
+                        max_length=255,
+                        verbose_name="image",
+                    ),
+                ),
+                (
+                    "meets_minimum_security_standards",
+                    models.BooleanField(
+                        help_text="Does this product meet minimum security standards?",
+                        null=True,
+                    ),
+                ),
+                (
+                    "uses_encryption",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Does the product use encryption?"
+                    ),
+                ),
+                (
+                    "uses_encryption_helptext",
+                    models.TextField(blank=True, max_length=5000),
+                ),
+                (
+                    "security_updates",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Security updates?"
+                    ),
+                ),
+                (
+                    "security_updates_helptext",
+                    models.TextField(blank=True, max_length=5000),
+                ),
+                ("strong_password", networkapi.buyersguide.fields.ExtendedYesNoField()),
+                (
+                    "strong_password_helptext",
+                    models.TextField(blank=True, max_length=5000),
+                ),
+                (
+                    "manage_vulnerabilities",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Manages security vulnerabilities?"
+                    ),
+                ),
+                (
+                    "manage_vulnerabilities_helptext",
+                    models.TextField(blank=True, max_length=5000),
+                ),
+                (
+                    "privacy_policy",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Does this product have a privacy policy?"
+                    ),
+                ),
+                (
+                    "privacy_policy_helptext",
+                    models.TextField(blank=True, max_length=5000),
+                ),
+                (
+                    "share_data",
+                    models.BooleanField(
+                        help_text="Does the maker share data with other companies?",
+                        null=True,
+                    ),
+                ),
+                ("share_data_helptext", models.TextField(blank=True, max_length=5000)),
+                (
+                    "how_does_it_share",
+                    models.CharField(
+                        blank=True,
+                        help_text="How does this product handle data?",
+                        max_length=5000,
+                    ),
+                ),
+                (
+                    "user_friendly_privacy_policy",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Does this product have a user-friendly privacy policy?"
+                    ),
+                ),
+                (
+                    "user_friendly_privacy_policy_helptext",
+                    models.TextField(blank=True, max_length=5000),
+                ),
+                (
+                    "worst_case",
+                    models.CharField(
+                        blank=True,
+                        help_text="What's the worst thing that could happen by using this product?",
+                        max_length=5000,
+                    ),
+                ),
+                (
+                    "phone_number",
+                    models.CharField(
+                        blank=True, help_text="Phone Number", max_length=100
+                    ),
+                ),
+                (
+                    "live_chat",
+                    models.CharField(blank=True, help_text="Live Chat", max_length=100),
+                ),
+                (
+                    "email",
+                    models.CharField(blank=True, help_text="Email", max_length=100),
+                ),
+                (
+                    "twitter",
+                    models.CharField(
+                        blank=True, help_text="Twitter username", max_length=100
+                    ),
+                ),
+                (
+                    "product_category",
+                    models.ManyToManyField(
+                        blank=True,
+                        related_name="pniproduct",
+                        to="buyersguide.BuyersGuideProductCategory",
+                    ),
+                ),
+                (
+                    "related_products",
+                    models.ManyToManyField(
+                        blank=True,
+                        related_name="related_pniproduct",
+                        to="buyersguide.Product",
+                    ),
+                ),
             ],
-            options={
-                'verbose_name': 'Buyers Guide Product Category',
-                'verbose_name_plural': 'Buyers Guide Product Categories',
-            },
+            options={"ordering": ["id"]},
         ),
         migrations.CreateModel(
-            name='Product',
+            name="RangeProductVote",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('draft', models.BooleanField(default=True, help_text='When checked, this product will only show for CMS-authenticated users')),
-                ('adult_content', models.BooleanField(default=False, help_text='When checked, product thumbnail will appear blurred as well as have an 18+ badge on it')),
-                ('review_date', models.DateField(help_text='Review date of this product')),
-                ('name', models.CharField(blank=True, help_text='Name of Product', max_length=100)),
-                ('slug', models.CharField(blank=True, default=None, editable=False, help_text='slug used in urls', max_length=256)),
-                ('company', models.CharField(blank=True, help_text='Name of Company', max_length=100)),
-                ('blurb', models.TextField(blank=True, help_text='Description of the product', max_length=5000)),
-                ('url', models.URLField(blank=True, help_text='Link to this product page', max_length=2048)),
-                ('price', models.CharField(blank=True, help_text='Price', max_length=100)),
-                ('image', models.FileField(blank=True, help_text='Image representing this product', max_length=2048, upload_to=networkapi.buyersguide.pagemodels.get_product_image_upload_path.get_product_image_upload_path)),
-                ('cloudinary_image', cloudinary.models.CloudinaryField(blank=True, help_text='Image representing this product - hosted on Cloudinary', max_length=255, verbose_name='image')),
-                ('meets_minimum_security_standards', models.BooleanField(help_text='Does this product meet minimum security standards?', null=True)),
-                ('uses_encryption', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Does the product use encryption?')),
-                ('uses_encryption_helptext', models.TextField(blank=True, max_length=5000)),
-                ('security_updates', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Security updates?')),
-                ('security_updates_helptext', models.TextField(blank=True, max_length=5000)),
-                ('strong_password', networkapi.buyersguide.fields.ExtendedYesNoField()),
-                ('strong_password_helptext', models.TextField(blank=True, max_length=5000)),
-                ('manage_vulnerabilities', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Manages security vulnerabilities?')),
-                ('manage_vulnerabilities_helptext', models.TextField(blank=True, max_length=5000)),
-                ('privacy_policy', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Does this product have a privacy policy?')),
-                ('privacy_policy_helptext', models.TextField(blank=True, max_length=5000)),
-                ('share_data', models.BooleanField(help_text='Does the maker share data with other companies?', null=True)),
-                ('share_data_helptext', models.TextField(blank=True, max_length=5000)),
-                ('how_does_it_share', models.CharField(blank=True, help_text='How does this product handle data?', max_length=5000)),
-                ('user_friendly_privacy_policy', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Does this product have a user-friendly privacy policy?')),
-                ('user_friendly_privacy_policy_helptext', models.TextField(blank=True, max_length=5000)),
-                ('worst_case', models.CharField(blank=True, help_text="What's the worst thing that could happen by using this product?", max_length=5000)),
-                ('phone_number', models.CharField(blank=True, help_text='Phone Number', max_length=100)),
-                ('live_chat', models.CharField(blank=True, help_text='Live Chat', max_length=100)),
-                ('email', models.CharField(blank=True, help_text='Email', max_length=100)),
-                ('twitter', models.CharField(blank=True, help_text='Twitter username', max_length=100)),
-                ('product_category', models.ManyToManyField(blank=True, related_name='pniproduct', to='buyersguide.BuyersGuideProductCategory')),
-                ('related_products', models.ManyToManyField(blank=True, related_name='related_pniproduct', to='buyersguide.Product')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("votes", models.IntegerField(default=0)),
+                (
+                    "attribute",
+                    models.CharField(
+                        max_length=100,
+                        validators=[
+                            networkapi.buyersguide.validators.ValueListValidator(
+                                valid_values=["creepiness"]
+                            )
+                        ],
+                    ),
+                ),
+                (
+                    "average",
+                    models.IntegerField(
+                        validators=[
+                            django.core.validators.MinValueValidator(1),
+                            django.core.validators.MaxValueValidator(100),
+                        ]
+                    ),
+                ),
+                (
+                    "product",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="range_product_votes",
+                        to="buyersguide.Product",
+                    ),
+                ),
             ],
-            options={
-                'ordering': ['id'],
-            },
+            options={"abstract": False},
         ),
         migrations.CreateModel(
-            name='RangeProductVote',
+            name="Update",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('votes', models.IntegerField(default=0)),
-                ('attribute', models.CharField(max_length=100, validators=[networkapi.buyersguide.validators.ValueListValidator(valid_values=['creepiness'])])),
-                ('average', models.IntegerField(validators=[django.core.validators.MinValueValidator(1), django.core.validators.MaxValueValidator(100)])),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='range_product_votes', to='buyersguide.Product')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "source",
+                    models.URLField(help_text="Link to source", max_length=2048),
+                ),
+                ("title", models.CharField(max_length=256)),
+                ("author", models.CharField(blank=True, max_length=256)),
+                (
+                    "featured",
+                    models.BooleanField(
+                        default=False,
+                        help_text="feature this update at the top of the list?",
+                    ),
+                ),
+                ("snippet", models.TextField(blank=True, max_length=5000)),
             ],
-            options={
-                'abstract': False,
-            },
         ),
         migrations.CreateModel(
-            name='Update',
+            name="GeneralProduct",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('source', models.URLField(help_text='Link to source', max_length=2048)),
-                ('title', models.CharField(max_length=256)),
-                ('author', models.CharField(blank=True, max_length=256)),
-                ('featured', models.BooleanField(default=False, help_text='feature this update at the top of the list?')),
-                ('snippet', models.TextField(blank=True, max_length=5000)),
+                (
+                    "product_ptr",
+                    models.OneToOneField(
+                        auto_created=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        parent_link=True,
+                        primary_key=True,
+                        serialize=False,
+                        to="buyersguide.Product",
+                    ),
+                ),
+                (
+                    "camera_device",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Does this device have or access a camera?"
+                    ),
+                ),
+                (
+                    "camera_app",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Does the app have or access a camera?"
+                    ),
+                ),
+                (
+                    "microphone_device",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Does this Device have or access a microphone?"
+                    ),
+                ),
+                (
+                    "microphone_app",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Does this app have or access a microphone?"
+                    ),
+                ),
+                (
+                    "location_device",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Does this product access your location?"
+                    ),
+                ),
+                (
+                    "location_app",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Does this app access your location?"
+                    ),
+                ),
+                (
+                    "delete_data",
+                    models.BooleanField(
+                        help_text="Can you request data be deleted?", null=True
+                    ),
+                ),
+                ("delete_data_helptext", models.TextField(blank=True, max_length=5000)),
+                (
+                    "parental_controls",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Are there rules for children?", null=True
+                    ),
+                ),
+                ("child_rules_helptext", models.TextField(blank=True, max_length=5000)),
+                (
+                    "collects_biometrics",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Does this product collect biometric data?"
+                    ),
+                ),
+                (
+                    "collects_biometrics_helptext",
+                    models.TextField(blank=True, max_length=5000),
+                ),
             ],
+            options={"abstract": False},
+            bases=("buyersguide.product",),
         ),
         migrations.CreateModel(
-            name='GeneralProduct',
+            name="SoftwareProduct",
             fields=[
-                ('product_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='buyersguide.Product')),
-                ('camera_device', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Does this device have or access a camera?')),
-                ('camera_app', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Does the app have or access a camera?')),
-                ('microphone_device', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Does this Device have or access a microphone?')),
-                ('microphone_app', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Does this app have or access a microphone?')),
-                ('location_device', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Does this product access your location?')),
-                ('location_app', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Does this app access your location?')),
-                ('delete_data', models.BooleanField(help_text='Can you request data be deleted?', null=True)),
-                ('delete_data_helptext', models.TextField(blank=True, max_length=5000)),
-                ('parental_controls', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Are there rules for children?', null=True)),
-                ('child_rules_helptext', models.TextField(blank=True, max_length=5000)),
-                ('collects_biometrics', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Does this product collect biometric data?')),
-                ('collects_biometrics_helptext', models.TextField(blank=True, max_length=5000)),
+                (
+                    "product_ptr",
+                    models.OneToOneField(
+                        auto_created=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        parent_link=True,
+                        primary_key=True,
+                        serialize=False,
+                        to="buyersguide.Product",
+                    ),
+                ),
+                (
+                    "handles_recordings_how",
+                    models.TextField(
+                        blank=True,
+                        help_text="How does this software handle your recordings",
+                        max_length=5000,
+                    ),
+                ),
+                (
+                    "recording_alert",
+                    networkapi.buyersguide.fields.ExtendedYesNoField(
+                        help_text="Alerts when calls are being recorded?", null=True
+                    ),
+                ),
+                (
+                    "recording_alert_helptext",
+                    models.TextField(blank=True, max_length=5000),
+                ),
+                (
+                    "signup_with_email",
+                    models.BooleanField(
+                        help_text="Email required to sign up?", null=True
+                    ),
+                ),
+                (
+                    "signup_with_phone",
+                    models.BooleanField(
+                        help_text="Phone number required to sign up?", null=True
+                    ),
+                ),
+                (
+                    "signup_with_third_party",
+                    models.BooleanField(
+                        help_text="Third Party account required to sign up?", null=True
+                    ),
+                ),
+                (
+                    "signup_methods_helptext",
+                    models.TextField(
+                        blank=True,
+                        help_text="Describe the kind of contact information requirements for signing up for this product",
+                        max_length=5000,
+                    ),
+                ),
+                (
+                    "medical_privacy_compliant",
+                    models.BooleanField(
+                        help_text="Compliant with US medical privacy laws?", null=True
+                    ),
+                ),
+                (
+                    "medical_privacy_compliant_helptext",
+                    models.TextField(blank=True, max_length=5000),
+                ),
+                ("host_controls", models.TextField(blank=True, max_length=5000)),
+                (
+                    "easy_to_learn_and_use",
+                    models.BooleanField(
+                        help_text="Is it easy to learn & use the features?", null=True
+                    ),
+                ),
+                (
+                    "easy_to_learn_and_use_helptext",
+                    models.TextField(blank=True, max_length=5000),
+                ),
             ],
-            options={
-                'abstract': False,
-            },
-            bases=('buyersguide.product',),
+            options={"abstract": False},
+            bases=("buyersguide.product",),
         ),
         migrations.CreateModel(
-            name='SoftwareProduct',
+            name="RangeVoteBreakdown",
             fields=[
-                ('product_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='buyersguide.Product')),
-                ('handles_recordings_how', models.TextField(blank=True, help_text='How does this software handle your recordings', max_length=5000)),
-                ('recording_alert', networkapi.buyersguide.fields.ExtendedYesNoField(help_text='Alerts when calls are being recorded?', null=True)),
-                ('recording_alert_helptext', models.TextField(blank=True, max_length=5000)),
-                ('signup_with_email', models.BooleanField(help_text='Email required to sign up?', null=True)),
-                ('signup_with_phone', models.BooleanField(help_text='Phone number required to sign up?', null=True)),
-                ('signup_with_third_party', models.BooleanField(help_text='Third Party account required to sign up?', null=True)),
-                ('signup_methods_helptext', models.TextField(blank=True, help_text='Describe the kind of contact information requirements for signing up for this product', max_length=5000)),
-                ('medical_privacy_compliant', models.BooleanField(help_text='Compliant with US medical privacy laws?', null=True)),
-                ('medical_privacy_compliant_helptext', models.TextField(blank=True, max_length=5000)),
-                ('host_controls', models.TextField(blank=True, max_length=5000)),
-                ('easy_to_learn_and_use', models.BooleanField(help_text='Is it easy to learn & use the features?', null=True)),
-                ('easy_to_learn_and_use_helptext', models.TextField(blank=True, max_length=5000)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("count", models.IntegerField(default=0)),
+                (
+                    "bucket",
+                    models.IntegerField(
+                        validators=[
+                            networkapi.buyersguide.validators.ValueListValidator(
+                                valid_values=[0, 1, 2, 3, 4]
+                            )
+                        ]
+                    ),
+                ),
+                (
+                    "product_vote",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="buyersguide.RangeProductVote",
+                    ),
+                ),
             ],
-            options={
-                'abstract': False,
-            },
-            bases=('buyersguide.product',),
+            options={"abstract": False},
         ),
         migrations.CreateModel(
-            name='RangeVoteBreakdown',
+            name="RangeVote",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('count', models.IntegerField(default=0)),
-                ('bucket', models.IntegerField(validators=[networkapi.buyersguide.validators.ValueListValidator(valid_values=[0, 1, 2, 3, 4])])),
-                ('product_vote', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='buyersguide.RangeProductVote')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                (
+                    "attribute",
+                    models.CharField(
+                        max_length=100,
+                        validators=[
+                            networkapi.buyersguide.validators.ValueListValidator(
+                                valid_values=["creepiness"]
+                            )
+                        ],
+                    ),
+                ),
+                (
+                    "value",
+                    models.IntegerField(
+                        validators=[
+                            django.core.validators.MinValueValidator(1),
+                            django.core.validators.MaxValueValidator(100),
+                        ]
+                    ),
+                ),
+                (
+                    "product",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="buyersguide.Product",
+                    ),
+                ),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False},
         ),
         migrations.CreateModel(
-            name='RangeVote',
+            name="ProductPrivacyPolicyLink",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('attribute', models.CharField(max_length=100, validators=[networkapi.buyersguide.validators.ValueListValidator(valid_values=['creepiness'])])),
-                ('value', models.IntegerField(validators=[django.core.validators.MinValueValidator(1), django.core.validators.MaxValueValidator(100)])),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='buyersguide.Product')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "sort_order",
+                    models.IntegerField(blank=True, editable=False, null=True),
+                ),
+                (
+                    "label",
+                    models.CharField(
+                        help_text="Label for this link on the product page",
+                        max_length=500,
+                    ),
+                ),
+                (
+                    "url",
+                    models.URLField(
+                        blank=True, help_text="Privacy policy URL", max_length=2048
+                    ),
+                ),
+                (
+                    "product",
+                    modelcluster.fields.ParentalKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="privacy_policy_links",
+                        to="buyersguide.Product",
+                    ),
+                ),
             ],
             options={
-                'abstract': False,
-            },
-        ),
-        migrations.CreateModel(
-            name='ProductPrivacyPolicyLink',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('sort_order', models.IntegerField(blank=True, editable=False, null=True)),
-                ('label', models.CharField(help_text='Label for this link on the product page', max_length=500)),
-                ('url', models.URLField(blank=True, help_text='Privacy policy URL', max_length=2048)),
-                ('product', modelcluster.fields.ParentalKey(on_delete=django.db.models.deletion.CASCADE, related_name='privacy_policy_links', to='buyersguide.Product')),
-            ],
-            options={
-                'verbose_name': 'Buyers Guide Product Privacy Policy link',
-                'verbose_name_plural': 'Buyers Guide Product Privacy Policy links',
+                "verbose_name": "Buyers Guide Product Privacy Policy link",
+                "verbose_name_plural": "Buyers Guide Product Privacy Policy links",
             },
         ),
         migrations.AddField(
-            model_name='product',
-            name='updates',
-            field=models.ManyToManyField(blank=True, related_name='pniproduct', to='buyersguide.Update'),
+            model_name="product",
+            name="updates",
+            field=models.ManyToManyField(
+                blank=True, related_name="pniproduct", to="buyersguide.Update"
+            ),
         ),
         migrations.CreateModel(
-            name='BooleanVoteBreakdown',
+            name="BooleanVoteBreakdown",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('count', models.IntegerField(default=0)),
-                ('bucket', models.IntegerField(validators=[networkapi.buyersguide.validators.ValueListValidator(valid_values=[0, 1])])),
-                ('product_vote', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='buyersguide.BooleanProductVote')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("count", models.IntegerField(default=0)),
+                (
+                    "bucket",
+                    models.IntegerField(
+                        validators=[
+                            networkapi.buyersguide.validators.ValueListValidator(
+                                valid_values=[0, 1]
+                            )
+                        ]
+                    ),
+                ),
+                (
+                    "product_vote",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="buyersguide.BooleanProductVote",
+                    ),
+                ),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False},
         ),
         migrations.CreateModel(
-            name='BooleanVote',
+            name="BooleanVote",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('attribute', models.CharField(max_length=100, validators=[networkapi.buyersguide.validators.ValueListValidator(valid_values=['confidence'])])),
-                ('value', models.BooleanField()),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='buyersguide.Product')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                (
+                    "attribute",
+                    models.CharField(
+                        max_length=100,
+                        validators=[
+                            networkapi.buyersguide.validators.ValueListValidator(
+                                valid_values=["confidence"]
+                            )
+                        ],
+                    ),
+                ),
+                ("value", models.BooleanField()),
+                (
+                    "product",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="buyersguide.Product",
+                    ),
+                ),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False},
         ),
         migrations.AddField(
-            model_name='booleanproductvote',
-            name='product',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='boolean_product_votes', to='buyersguide.Product'),
+            model_name="booleanproductvote",
+            name="product",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="boolean_product_votes",
+                to="buyersguide.Product",
+            ),
         ),
-
         migrations.RunPython(create_default_categories),
     ]

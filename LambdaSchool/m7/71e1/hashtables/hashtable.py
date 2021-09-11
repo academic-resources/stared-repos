@@ -2,6 +2,7 @@ class HashTableEntry:
     """
     Linked List hash table key/value pair
     """
+
     def __init__(self, key, value):
         self.key = key
         self.value = value
@@ -43,7 +44,6 @@ class HashTable:
         self.length = len(self.storage)
         return self.length
 
-
     def get_load_factor(self):
         """
         Return the load factor for this hash table.
@@ -63,7 +63,7 @@ class HashTable:
             self.resize(self, self.capacity * 2)
         elif load_factor < 0.2:
             # automatically rehash the table to half its previous size, down to a minimum of 8 slots.
-            self.resize(self, self.capacity/2)
+            self.resize(self, self.capacity / 2)
 
     def fnv1(self, key):
         """
@@ -89,11 +89,10 @@ class HashTable:
         kByte = key.encode()
 
         for byte in kByte:
-            hash = hash**byte
+            hash = hash ** byte
             hash = hash * FNV_prime
 
-        return hash 
-
+        return hash
 
     def djb2(self, key):
         """
@@ -139,8 +138,6 @@ class HashTable:
 
         return new_node
 
-
-
     def delete(self, key):
         """
         Remove the value stored with the given key.
@@ -150,25 +147,23 @@ class HashTable:
         # get tree head
         current_node = self.head
 
-        # if tree head exists 
+        # if tree head exists
         if current_node:
-            
-            # while it exists change to none, else change to next 
+
+            # while it exists change to none, else change to next
             while current_node:
-                # if its key matches submitted key, change to none 
+                # if its key matches submitted key, change to none
                 if current_node.key == key:
                     current_node.key = None
-                # else change to next node 
+                # else change to next node
                 else:
                     current_node = current_node.next
 
-        # if tree head nonexistent, tell user 
+        # if tree head nonexistent, tell user
         else:
-            print('No keys found for that value.')
+            print("No keys found for that value.")
 
         return None
-            
-
 
     def get(self, key):
         """
@@ -177,10 +172,10 @@ class HashTable:
         Implement this.
         """
 
-        # get tree head 
+        # get tree head
         current_node = self.head
 
-        # if it exists 
+        # if it exists
         if current_node:
 
             # while it exists return its value, else change to next
@@ -192,11 +187,9 @@ class HashTable:
 
         # if tree head nonexistent, tell user
         else:
-            print('No keys found for that value.')
+            print("No keys found for that value.")
 
         return None
-
-
 
     def resize(self, new_capacity):
         """
@@ -205,19 +198,19 @@ class HashTable:
         Implement this.
         """
 
-        # set next storage capacity 
+        # set next storage capacity
         next_storage = [None] * new_capacity
 
-        # for each node in storage right now 
+        # for each node in storage right now
         for current_node in self.storage:
-            # if the current one exists 
+            # if the current one exists
             if current_node:
                 # get hashed index of current node[0]
                 key_hashed = self.hash_index(current_node[0])
                 # use hashed key as index in next storage & set as current node
                 next_storage[key_hashed] = current_node
 
-        # set current storage to next storage  
+        # set current storage to next storage
         self.storage = next_storage
 
 

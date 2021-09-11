@@ -9,4 +9,4 @@ def decimal_to_hexadecimal(dec):
         str: Return hexadecimal value.
 
     """
-    return format(dec, '02x').upper()
+    return format(dec, "02x").upper()

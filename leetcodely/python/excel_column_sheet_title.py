@@ -20,12 +20,12 @@ class Solution(object):
         """
         result = []
         while n > 0:
-            result.append(chr((n-1) % 26 + ord('A')))
+            result.append(chr((n - 1) % 26 + ord("A")))
             print(result)
             n = (n - 1) // 26
-        return ''.join(reversed(result))
+        return "".join(reversed(result))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.convertToTitle(562))

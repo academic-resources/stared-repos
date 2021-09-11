@@ -3,6 +3,7 @@
 import unittest
 from portfolio2 import Portfolio
 
+
 class PortfolioTestCase(unittest.TestCase):
     """Base class for all Portfolio tests."""
 
@@ -43,7 +44,7 @@ class PortfolioSellTest(PortfolioTestCase):
         self.assertCostEqual(p, 6450)
 
     def test_not_enough(self):
-        p = Portfolio()             # Didn't I just do this?
+        p = Portfolio()  # Didn't I just do this?
         p.buy("MSFT", 100, 27.0)
         p.buy("DELL", 100, 17.0)
         p.buy("ORCL", 100, 34.0)
@@ -51,7 +52,7 @@ class PortfolioSellTest(PortfolioTestCase):
             p.sell("MSFT", 200)
 
     def test_dont_own_it(self):
-        p = Portfolio()             # What, again!?!?
+        p = Portfolio()  # What, again!?!?
         p.buy("MSFT", 100, 27.0)
         p.buy("DELL", 100, 17.0)
         p.buy("ORCL", 100, 34.0)

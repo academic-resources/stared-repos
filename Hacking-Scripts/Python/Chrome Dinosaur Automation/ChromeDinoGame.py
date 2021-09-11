@@ -28,6 +28,6 @@ if __name__ == "__main__":
     print("The game is starting in 2 seconds...")
     time.sleep(2)
     while True:
-        image = ImageGrab.grab().convert('L')
+        image = ImageGrab.grab().convert("L")
         data = image.load()
         collision(data)

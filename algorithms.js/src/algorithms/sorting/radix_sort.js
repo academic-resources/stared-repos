@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Sorts an array of objects according to their 'key' property
@@ -13,8 +13,7 @@
  */
 var radixSort = function (array) {
   var max = maximumKey(array);
-  var digitsMax = (max === 0 ? 1 :
-    1 + Math.floor(Math.log(max) / Math.log(10))); // log base 10
+  var digitsMax = max === 0 ? 1 : 1 + Math.floor(Math.log(max) / Math.log(10)); // log base 10
 
   for (var i = 0; i < digitsMax; i++) {
     array = auxiliaryCountingSort(array, i);

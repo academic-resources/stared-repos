@@ -42,6 +42,7 @@ import scipy.spatial.distance
 
 # --------------------
 
+
 class DTW:
     """The results of an alignment operation.
 
@@ -71,13 +72,15 @@ function.
   ``x`` and ``y`` arguments, the query and reference timeseries.
 
 """
-    
+
     def __init__(self, obj):
         self.__dict__.update(obj)  # Convert dict to object
 
     def __repr__(self):
-        s = "DTW alignment object of size (query x reference): {:d} x {:d}".format(self.N, self.M)
-        return (s)
+        s = "DTW alignment object of size (query x reference): {:d} x {:d}".format(
+            self.N, self.M
+        )
+        return s
 
     def plot(self, type="alignment", **kwargs):
         # IMPORT_RDOCSTRING plot.dtw
@@ -127,15 +130,18 @@ plot_type :
 # --------------------
 
 
-def dtw(x, y=None,
-        dist_method="euclidean",
-        step_pattern="symmetric2",
-        window_type=None,
-        window_args={},
-        keep_internals=False,
-        distance_only=False,
-        open_end=False,
-        open_begin=False):
+def dtw(
+    x,
+    y=None,
+    dist_method="euclidean",
+    step_pattern="symmetric2",
+    window_type=None,
+    window_args={},
+    keep_internals=False,
+    distance_only=False,
+    open_end=False,
+    open_begin=False,
+):
     """Compute Dynamic Time Warp and find optimal alignment between two time
 series.
 
@@ -349,7 +355,6 @@ Asymmetric: visiting 1 is required twice
 
 """
 
-
     if y is None:
         x = numpy.array(x)
         if len(x.shape) != 2:
@@ -373,7 +378,8 @@ Asymmetric: visiting 1 is required twice
     if open_begin:
         if norm != "N":
             _error(
-                "Open-begin requires step patterns with 'N' normalization (e.g. asymmetric, or R-J types (c)). See Tormene et al.")
+                "Open-begin requires step patterns with 'N' normalization (e.g. asymmetric, or R-J types (c)). See Tormene et al."
+            )
         lm = numpy.vstack([numpy.zeros((1, lm.shape[1])), lm])  # prepend null row
         np = n + 1
         precm = numpy.full_like(lm, numpy.nan, dtype=numpy.double)
@@ -382,11 +388,13 @@ Asymmetric: visiting 1 is required twice
         precm = None
         np = n
 
-    gcm = _globalCostMatrix(lm,
-                            step_pattern=step_pattern,
-                            window_function=wfun,
-                            seed=precm,
-                            win_args=window_args)
+    gcm = _globalCostMatrix(
+        lm,
+        step_pattern=step_pattern,
+        window_function=wfun,
+        seed=precm,
+        win_args=window_args,
+    )
     gcm = DTW(gcm)  # turn into an object, use dot to access properties
 
     gcm.N = n
@@ -463,13 +471,13 @@ def _canonicalizeWindowFunction(window_type):
         "none": noWindow,
         "sakoechiba": sakoeChibaWindow,
         "itakura": itakuraWindow,
-        "slantedband": slantedBandWindow
+        "slantedband": slantedBandWindow,
     }.get(window_type, lambda: _error("Window function undefined"))
 
 
 def _canonicalizeStepPattern(s):
     """Return object by string"""
-    if hasattr(s,"mx"):
+    if hasattr(s, "mx"):
         return s
     else:
         return getattr(sys.modules["dtw.stepPattern"], s)

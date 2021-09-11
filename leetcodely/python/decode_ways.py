@@ -17,23 +17,23 @@ class Solution(object):
         :rtype: int
         """
 
-        if s == '' or s == '0':
+        if s == "" or s == "0":
             return 0
         elif len(s) == 1:
             return 1
         memo = [0 for _ in range(len(s) + 1)]
         memo[0] = 1
-        memo[1] = 1 if s[0] != '0' else 0
-        for i in range(2, len(s)+1):
-            single = int(s[i-1:i])
-            double = int(s[i-2:i])
+        memo[1] = 1 if s[0] != "0" else 0
+        for i in range(2, len(s) + 1):
+            single = int(s[i - 1 : i])
+            double = int(s[i - 2 : i])
             if 0 < single <= 9:
-                memo[i] += memo[i-1]
+                memo[i] += memo[i - 1]
             if 9 < double <= 26:
-                memo[i] += memo[i-2]
+                memo[i] += memo[i - 2]
         return memo[-1]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.numDecodings('1221'))
+    print(solution.numDecodings("1221"))

@@ -1,29 +1,29 @@
-import React from 'react';
-import { Mutation } from 'react-apollo';
-import Mutations from '../../graphql/mutations';
+import React from "react";
+import { Mutation } from "react-apollo";
+import Mutations from "../../graphql/mutations";
 const { NEW_EMBLEM } = Mutations;
 
 class EmblemCreate extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: '' };
+    this.state = { name: "" };
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
-    return e => this.setState({ [field]: e.target.value });
+    return (e) => this.setState({ [field]: e.target.value });
   }
 
   handleSubmit(e, newEmblem) {
     const { name } = this.state;
     e.preventDefault();
     newEmblem({
-      variables: { name: name }
-    }).then(data => {
+      variables: { name: name },
+    }).then((data) => {
       this.setState({
-        name: '',
-        message: `New emblem "${name}" created`
+        name: "",
+        message: `New emblem "${name}" created`,
       });
     });
   }
@@ -37,14 +37,14 @@ class EmblemCreate extends React.Component {
         {(newEmblem, { data }) => {
           return (
             <div>
-              <form onSubmit={e => this.handleSubmit(e, newEmblem)}>
+              <form onSubmit={(e) => this.handleSubmit(e, newEmblem)}>
                 <input
-                  type='text'
-                  placeholder='Name'
+                  type="text"
+                  placeholder="Name"
                   value={this.state.name}
-                  onChange={this.update('name')}
+                  onChange={this.update("name")}
                 />
-                <button type='submit'>Create Emblem</button>
+                <button type="submit">Create Emblem</button>
               </form>
               <p>{this.state.message}</p>
             </div>

@@ -4,9 +4,12 @@ import collections
 import operator
 from itertools import islice
 
+
 def crack_Caesar():
     # import string file
-    with open("E:\\projects\\LambdaSchool\\m7\\71a1\\applications\\crack_caesar\\ciphertext.txt") as f:
+    with open(
+        "E:\\projects\\LambdaSchool\\m7\\71a1\\applications\\crack_caesar\\ciphertext.txt"
+    ) as f:
         string_to_crack = f.read()
     # set up frequency analysis dictionary
     frequency_dictionary = {
@@ -35,7 +38,7 @@ def crack_Caesar():
         "Q": 0.17,
         "J": 0.07,
         "X": 0.07,
-        "Z": 0.03
+        "Z": 0.03,
     }
 
     frequency_dictionary_alpha = {
@@ -64,58 +67,59 @@ def crack_Caesar():
         "W": 3.08,
         "X": 0.07,
         "Y": 2.02,
-        "Z": 0.03
+        "Z": 0.03,
     }
-    
+
     # cycle through each letter of the imported string
     replaced_string = string_to_crack
-    letters_only = ''.join(filter(str.isalpha, replaced_string))
+    letters_only = "".join(filter(str.isalpha, replaced_string))
     frequency_denominator = len(letters_only)
     # calculate frequency analysis of each letter
     calculated_frequency_dictionary = {}
     for letter in replaced_string:
         current_letter_frequency = replaced_string.count(letter)
-        current_frequency = ((current_letter_frequency / frequency_denominator) * 100)
-        if letter == 'W':
-            current_frequency = (round(current_frequency, 2)) + .01
-        if letter == 'O':
+        current_frequency = (current_letter_frequency / frequency_denominator) * 100
+        if letter == "W":
+            current_frequency = (round(current_frequency, 2)) + 0.01
+        if letter == "O":
             current_frequency = 3.08
         else:
             current_frequency = round(current_frequency, 2)
         calculated_frequency_dictionary.update({letter: current_frequency})
 
-    del calculated_frequency_dictionary['\n']
+    del calculated_frequency_dictionary["\n"]
     del calculated_frequency_dictionary["'"]
-    del calculated_frequency_dictionary['.']
+    del calculated_frequency_dictionary["."]
     del calculated_frequency_dictionary['"']
-    del calculated_frequency_dictionary[';']
-    del calculated_frequency_dictionary[':']
-    del calculated_frequency_dictionary['-']
-    del calculated_frequency_dictionary['?']
-    del calculated_frequency_dictionary['!']
-    del calculated_frequency_dictionary['(']
-    del calculated_frequency_dictionary[')']
-    del calculated_frequency_dictionary['1']
-    del calculated_frequency_dictionary[',']
-    del calculated_frequency_dictionary[' ']
+    del calculated_frequency_dictionary[";"]
+    del calculated_frequency_dictionary[":"]
+    del calculated_frequency_dictionary["-"]
+    del calculated_frequency_dictionary["?"]
+    del calculated_frequency_dictionary["!"]
+    del calculated_frequency_dictionary["("]
+    del calculated_frequency_dictionary[")"]
+    del calculated_frequency_dictionary["1"]
+    del calculated_frequency_dictionary[","]
+    del calculated_frequency_dictionary[" "]
 
     values_ordered_wcd = sorted(
-        calculated_frequency_dictionary.items(), key=operator.itemgetter(0))
-    ordered_wc_dictionary = collections.OrderedDict(sorted(
-        values_ordered_wcd, key=operator.itemgetter(1), reverse=True))
+        calculated_frequency_dictionary.items(), key=operator.itemgetter(0)
+    )
+    ordered_wc_dictionary = collections.OrderedDict(
+        sorted(values_ordered_wcd, key=operator.itemgetter(1), reverse=True)
+    )
     # calculated_frequency_dictionary = {k: ordered_wc_dictionary[k] for k in list(ordered_wc_dictionary)[:26]}
     print("ordered WC dictionary = " + str(ordered_wc_dictionary))
-    print('------------------------')
+    print("------------------------")
     print("frequency dict = " + str(frequency_dictionary))
-    print('------------------------')
+    print("------------------------")
     # ordered_cfd = collections.OrderedDict(sorted(calculated_frequency_dictionary, key=operator.itemgetter(1), reverse=True))
     # based on calculations:
-        # match actual frequency to calculated frequency and
-        # replace letter where they match
+    # match actual frequency to calculated frequency and
+    # replace letter where they match
     for letter in replaced_string:
         current_letter_frequency = replaced_string.count(letter)
-        current_frequency = (
-            (current_letter_frequency / frequency_denominator) * 100)
+        current_frequency = (current_letter_frequency / frequency_denominator) * 100
         current_frequency = round(current_frequency, 2)
     matches = []
     for keyC, valueC in ordered_wc_dictionary.items():
@@ -123,21 +127,21 @@ def crack_Caesar():
             if value == valueC:
                 # print(f'CIPHERED:  {key}   |   DECIPHERED:  {keyC}   |   FREQUENCIES:  {value} {valueC}')
                 letter_to_match = key
-                if keyC == 'T':
-                    matched_letter = 'J'
+                if keyC == "T":
+                    matched_letter = "J"
                     matches.append((keyC, matched_letter))
-                elif keyC == 'L':
-                    matched_letter = 'X'
+                elif keyC == "L":
+                    matched_letter = "X"
                     matches.append((keyC, matched_letter))
                 else:
                     matched_letter = keyC
                     matches.append((keyC, key))
                 # replaced_string = replaced_string.replace(keyC, key)
 
-    print('------------------------')
+    print("------------------------")
     matches_set = set(matches)
-    print('matches set = ' + str(matches_set))
-    print('------------------')
+    print("matches set = " + str(matches_set))
+    print("------------------")
     final_string = ""
     replaced_list = list(replaced_string)
     for x in range(0, len(replaced_list)):
@@ -149,13 +153,14 @@ def crack_Caesar():
                 # print(replaced_string[x], key[0], letter_to_replace_with)
                 replaced_list[x] = letter_to_replace_with
                 break
-    print('------------------')
-    replaced_string = ''.join(replaced_list)
+    print("------------------")
+    replaced_string = "".join(replaced_list)
     print(string_to_crack[0:200])
-    print('------------------')
+    print("------------------")
     # return replaced string
     print(replaced_string[0:200])
-    print('------------------')
+    print("------------------")
     return replaced_string
+
 
 crack_Caesar()

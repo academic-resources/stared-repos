@@ -140,7 +140,7 @@ Naming:
 ```js
 // naming for Sass
 // naming for CSS
-;[name].module.scss[name].module.css
+[name].module.scss[name].module.css;
 ```
 
 ```css
@@ -216,42 +216,42 @@ Asabeneh@DESKTOP-KGC1AKC MINGW64 ~/Desktop/30-days-of-react$ yarn add axios
 ```
 
 ```js
-import React, { Component } from 'react'
+import React, { Component } from "react";
 // axios is a package which
 // send requests to a server to fetch data
-import axios from 'axios'
-import ReactDOM from 'react-dom'
+import axios from "axios";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   state = {
     data: [],
-  }
+  };
   componentDidMount() {
-    const API_URL = 'https://restcountries.eu/rest/v2/all'
+    const API_URL = "https://restcountries.eu/rest/v2/all";
     axios
       .get(API_URL)
       .then((response) => {
         this.setState({
           data: response.data,
-        })
+        });
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 
   renderCountries = () => {
     return this.state.data.map((country) => {
       const languageOrLanguages =
-        country.languages.length > 1 ? 'Langauges' : 'Language'
+        country.languages.length > 1 ? "Langauges" : "Language";
       const formatLanguages = country.languages
         .map(({ name }) => name)
-        .join(', ')
+        .join(", ");
       return (
         <div>
           <div>
-            {' '}
-            <img src={country.flag} alt={country.name} />{' '}
+            {" "}
+            <img src={country.flag} alt={country.name} />{" "}
           </div>
           <div>
             <h1>{country.name}</h1>
@@ -262,24 +262,24 @@ class App extends Component {
             <p>Population: {country.population}</p>
           </div>
         </div>
-      )
-    })
-  }
+      );
+    });
+  };
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>Fetching Data Using Axios</h1>
         <div>
           <p>There are {this.state.data.length} countries in the api</p>
-          <div className='countries-wrapper'>{this.renderCountries()}</div>
+          <div className="countries-wrapper">{this.renderCountries()}</div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 We can use axios with await and async functions. In order to implement await and async we need to have separate function outside the componentDidMount. If we implement await and async the error has to be handled by try and catch.
@@ -301,15 +301,15 @@ Asabeneh@DESKTOP-KGC1AKC MINGW64 ~/Desktop/30-days-of-react$ yarn add react-icon
 ```
 
 ```js
-import React, { Component } from 'react'
-import axios from 'axios'
-import ReactDOM from 'react-dom'
-import moment from 'moment'
+import React, { Component } from "react";
+import axios from "axios";
+import ReactDOM from "react-dom";
+import moment from "moment";
 import {
   TiSocialLinkedinCircular,
   TiSocialGithubCircular,
   TiSocialTwitterCircular,
-} from 'react-icons/ti'
+} from "react-icons/ti";
 
 const Footer = () => (
   <footer>
@@ -323,21 +323,21 @@ const Footer = () => (
       <small> Copyright &copy; {new Date().getFullYear()} </small>
     </div>
   </footer>
-)
+);
 
 class App extends Component {
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>Welcome to the world of Icons</h1>
         <Footer />
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ### moment
@@ -349,24 +349,24 @@ npm install moment
 ```
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>How to use moment</h1>
-        <p>This challenge was started {moment('2020-10-01').fromNow()}</p>
-        <p>The challenge will be over in {moment('2020-10-30').fromNow()}</p>
-        <p>Today is {moment(new Date()).format('MMMM DD, YYYY HH:mm')}</p>
+        <p>This challenge was started {moment("2020-10-01").fromNow()}</p>
+        <p>The challenge will be over in {moment("2020-10-30").fromNow()}</p>
+        <p>Today is {moment(new Date()).format("MMMM DD, YYYY HH:mm")}</p>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ### styled-components
@@ -374,25 +374,25 @@ ReactDOM.render(<App />, rootElement)
 It uses a tagged template literals to style a component. It removes the mapping between components and styles. This means that when you're defining your styles, you're actually creating a normal React component, that has your styles attached to it.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import styled from 'styled-components'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import styled from "styled-components";
 
 const Title = styled.h1`
   font-size: 70px;
   font-weight: 300;
-`
+`;
 const Header = styled.header`
   background-color: #61dbfb;
   padding: 25;
   padding: 10px;
   margin: 0;
-`
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <Header>
           <div>
             <Title>30 Days Of React</Title>
@@ -403,12 +403,12 @@ class App extends Component {
           </div>
         </Header>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ### reactstrap

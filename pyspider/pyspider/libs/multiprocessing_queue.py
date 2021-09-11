@@ -7,6 +7,7 @@ from multiprocessing.queues import Queue as BaseQueue
 # The SharedCounter and Queue classes come from:
 # https://github.com/vterron/lemon/commit/9ca6b4b
 
+
 class SharedCounter(object):
     """ A synchronized shared counter.
     The locking done by multiprocessing.Value ensures that only a single
@@ -20,7 +21,7 @@ class SharedCounter(object):
     """
 
     def __init__(self, n=0):
-        self.count = multiprocessing.Value('i', n)
+        self.count = multiprocessing.Value("i", n)
 
     def increment(self, n=1):
         """ Increment the counter by n (default = 1) """
@@ -44,6 +45,7 @@ class MultiProcessingQueue(BaseQueue):
     being raised, but also allows us to implement a reliable version of both
     qsize() and empty().
     """
+
     def __init__(self, *args, **kwargs):
         super(MultiProcessingQueue, self).__init__(*args, **kwargs)
         self.size = SharedCounter(0)
@@ -62,12 +64,17 @@ class MultiProcessingQueue(BaseQueue):
         return self.size.value
 
 
-if platform.system() == 'Darwin':
-    if hasattr(multiprocessing, 'get_context'):  # for py34
+if platform.system() == "Darwin":
+    if hasattr(multiprocessing, "get_context"):  # for py34
+
         def Queue(maxsize=0):
             return MultiProcessingQueue(maxsize, ctx=multiprocessing.get_context())
+
     else:
+
         def Queue(maxsize=0):
             return MultiProcessingQueue(maxsize)
+
+
 else:
     from multiprocessing import Queue  # flake8: noqa

@@ -2,7 +2,7 @@
 from gtts import gTTS
 
 
-def text_to_speech_online(text, lang='en'):
+def text_to_speech_online(text, lang="en"):
     """Convert text to speech using Google Translate’s and save in mp3. Need an internet connection.
 
     Args:

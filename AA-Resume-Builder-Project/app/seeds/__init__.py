@@ -1,6 +1,9 @@
 from flask.cli import AppGroup
 from .users import seed_users, undo_users
-from .template_default_tags import seed_template_default_tags, undo_template_default_tags
+from .template_default_tags import (
+    seed_template_default_tags,
+    undo_template_default_tags,
+)
 from .resumes import seed_resumes, undo_resumes
 from .styles import seed_styles, undo_styles
 from .fields import seed_fields, undo_fields
@@ -13,10 +16,10 @@ from .resume_fields import seed_resume_fields, undo_resume_fields
 
 # Creates a seed group to hold our commands
 # So we can type `flask seed --help`
-seed_commands = AppGroup('seed')
+seed_commands = AppGroup("seed")
 
 # Creates the `flask seed all` command
-@seed_commands.command('all')
+@seed_commands.command("all")
 def seed():
     seed_users()
     seed_styles()
@@ -30,11 +33,11 @@ def seed():
     seed_template_fields()
     seed_resume_fields()
 
-
     # Add other seed functions here
 
+
 # Creates the `flask seed undo` command
-@seed_commands.command('undo')
+@seed_commands.command("undo")
 def undo():
     undo_users()
     undo_template_default_tags()

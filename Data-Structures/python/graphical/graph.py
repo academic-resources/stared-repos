@@ -1,12 +1,13 @@
 class Node:
     def __init__(self, data):
         self.data = data
-        self.edges = [];
+        self.edges = []
+
 
 # Graphical Data Structure, composed of nodes(vertices), connections(edges) and costs to traverse those connections
 class Graph:
     def __init__(self):
-        self.vertexes = [];
+        self.vertexes = []
 
     # Adds a vertex to the list
     def addVertex(self):

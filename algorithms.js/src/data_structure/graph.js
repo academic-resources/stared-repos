@@ -1,20 +1,20 @@
-'use strict';
+"use strict";
 
-var HashSet = require('./set');
+var HashSet = require("./set");
 
 /**
  * Adjacency list representation of a graph
  * @param {bool} directed
  */
 function Graph(directed) {
-  this.directed = (directed === undefined ? true : !!directed);
+  this.directed = directed === undefined ? true : !!directed;
   this.adjList = Object.create(null);
   this.vertices = new HashSet();
 }
 
 // Normalize vertex labels as strings
 var _ = function (v) {
-  return '' + v;
+  return "" + v;
 };
 
 Graph.prototype.addVertex = function (v) {
@@ -30,7 +30,7 @@ Graph.prototype.addEdge = function (a, b, w) {
   a = _(a);
   b = _(b);
   // If no weight is assigned to the edge, 1 is the default
-  w = (w === undefined ? 1 : w);
+  w = w === undefined ? 1 : w;
 
   if (!this.adjList[a]) this.addVertex(a);
   if (!this.adjList[b]) this.addVertex(b);

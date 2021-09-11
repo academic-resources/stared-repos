@@ -17,12 +17,12 @@ const mutation = new GraphQLObjectType({
         // the arguments required for this mutation
         name: { type: GraphQLString },
         type: { type: GraphQLString },
-        description: { type: GraphQLString }
+        description: { type: GraphQLString },
       },
       // here we are just destructing our arguments
       resolve(_, { name, type, description }) {
         return new God({ name, type, description }).save();
-      }
+      },
     },
     deleteGod: {
       // we just specify the type we are mutating - in the case of making
@@ -34,8 +34,8 @@ const mutation = new GraphQLObjectType({
       },
       // here we are just destructing our arguments
       resolve(_, { id }) {
-        return God.findById(id).remove()
-      }
+        return God.findById(id).remove();
+      },
     },
     updateGod: {
       type: GodType,
@@ -43,7 +43,7 @@ const mutation = new GraphQLObjectType({
         id: { type: GraphQLID },
         name: { type: GraphQLString },
         type: { type: GraphQLString },
-        description: { type: GraphQLString }
+        description: { type: GraphQLString },
       },
       resolve(parentValue, { id, name, type, description }) {
         const updateObj = {};
@@ -53,23 +53,28 @@ const mutation = new GraphQLObjectType({
         if (type) updateObj.type = type;
         if (description) updateObj.description = description;
 
-        return God.findOneAndUpdate({ _id: id }, { $set: updateObj }, { new: true }, (err, god) => {
-          return god;
-        });
-      }
+        return God.findOneAndUpdate(
+          { _id: id },
+          { $set: updateObj },
+          { new: true },
+          (err, god) => {
+            return god;
+          }
+        );
+      },
     },
     addGodRelative: {
       type: GodType,
       args: {
         godId: { type: GraphQLID },
         relativeId: { type: GraphQLID },
-        relationship: { type: GraphQLString }
+        relationship: { type: GraphQLString },
       },
       resolve(parentValue, { godId, relativeId, relationship }) {
         return God.addRelative(godId, relativeId, relationship);
-      }
+      },
     },
-  }
+  },
 });
 
 module.exports = mutation;

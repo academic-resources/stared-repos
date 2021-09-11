@@ -4,16 +4,15 @@
 //     }
 // }
 
-
 // // function print (ele) {
 //     //     console.log(ele);
-//     // } 
-    
+//     // }
+
 //     // array.myEach(print)
-    
+
 // Array.prototype.myMap = function (callback) {
 //   const mapped = [];
-  
+
 //   function myEachCB (el) {
 //       mapped.push(callback(el));
 //   }
@@ -23,26 +22,24 @@
 //   //   mapped.push(this);
 //   // }
 // }
-    
+
 // function double (ele) {
 //     return ele * 2;
 // }
-    
+
 // console.log(array.myMap(double));
 
 // Array.prototype.myReduce = function (callback, initialValue) {
 
 //   let accum = 0;
-  
+
 //   debugger
-  
+
 //   return accum;
 // }
 
-
-
 // Array.prototype.myReduce = function (callback, initialValue = this[0]) {
-  
+
 // }
 
 // [1,2,3,4].myInject (function(acc, el) {

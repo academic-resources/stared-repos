@@ -1,5 +1,5 @@
 module.exports = {
-        twoNumberSum: `function twoNumberSum(array, targetSum) {
+  twoNumberSum: `function twoNumberSum(array, targetSum) {
                 const hash = {}
             for(let number of array){
                     if(hash[number]){
@@ -10,8 +10,8 @@ module.exports = {
             return []
     }
         twoNumberSum([1,2,3,4,5], 5)
-       ` ,
-        mergeSort: `function split(wholeArray){
+       `,
+  mergeSort: `function split(wholeArray){
                 const result = [];
                 const midPoint = Math.floor(wholeArray.length / 2);
                 if (wholeArray.length === 0){
@@ -68,8 +68,8 @@ module.exports = {
     }
         const array = [10,9,8,7,6,5,4,3,2,1]
         mergeSort(array)
-       ` ,
-        binarySearch: `function binarySearch(array, target) {
+       `,
+  binarySearch: `function binarySearch(array, target) {
                 let left = 0;
                 let right = array.length - 1
                 while (left <= right) {
@@ -85,8 +85,8 @@ module.exports = {
             return -1
     }
         binarySearch([1,2,3,4,5,6,7,8,9,10], 7)
-       ` ,
-        threeLargest: `function findThreeLargestNumbers(array) {
+       `,
+  threeLargest: `function findThreeLargestNumbers(array) {
                 const nums = [Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY]
                 for (let i = 0; i < array.length; i++) {
                     let num = array[i]
@@ -103,8 +103,8 @@ module.exports = {
             return nums
     }
         findThreeLargestNumbers([100,101, 1000, 10000, 1000000])
-      `  ,
-        fibonacci: `function getNthFib(n, cache = {}) {
+      `,
+  fibonacci: `function getNthFib(n, cache = {}) {
                 // Write your code here.
                 if (n === 1) return 0;
                 if (n === 2) return 1;
@@ -113,8 +113,8 @@ module.exports = {
                 return cache[n]
         }
         getNthFib(10)
-       ` ,
-        threeNumberSum: `function threeNumberSum(array, targetSum) {
+       `,
+  threeNumberSum: `function threeNumberSum(array, targetSum) {
                 array = array.sort((a, b) => a > b)
                 const triplets = []
                 for (let i = 0; i < array.length - 1; i++) {
@@ -135,8 +135,8 @@ module.exports = {
             return triplets
     }
         threeNumberSum([1,2,3,4,5,6,7,8,9,10], 10)
-       ` ,
-        ceasarCypher: `function caesarCipherEncryptor(string, key) {
+       `,
+  ceasarCypher: `function caesarCipherEncryptor(string, key) {
                 const encryptedLetters = 'abcdefghijklmnopqrstuvwxyz'.split('')
                 .reduce((acc, letter, i, self) => {
                         let idx = (i + key) % 26
@@ -151,7 +151,7 @@ module.exports = {
     }
         caesarCipherEncryptor('hello', 1)
         `,
-        bubbleSort: `function bubbleSort(array) {
+  bubbleSort: `function bubbleSort(array) {
                 let swapped = false
                 for (let i = 0; i < array.length-1; i++) {
                     if (array[i] > array[i + 1]) {
@@ -167,8 +167,8 @@ module.exports = {
                 arr[j] = temp
         }
         bubbleSort([5,4,3,2,1])
-       ` ,
-        fourNumberSum: `function fourNumberSum(array, targetSum) {
+       `,
+  fourNumberSum: `function fourNumberSum(array, targetSum) {
                 const allPairSums = {}
             const quadruplets = []
             for (let i = 1; i < array.length; i++) {
@@ -194,7 +194,7 @@ module.exports = {
     }
         fourNumberSum([1,2,3,4,5,6,7,8,9,10, 0,0,0], 10)
         `,
-        stack: `class MinMaxStack {
+  stack: `class MinMaxStack {
                 constructor() {
                     this.mins = []
                     this.maxes = []
@@ -249,8 +249,8 @@ module.exports = {
       stack.push(6);
         
         [stack.pop(), stack.pop(), stack.pop()]
-      ` ,
-        kadanes: `function kadanesAlgorithm(array) {
+      `,
+  kadanes: `function kadanesAlgorithm(array) {
                   let max = -Infinity
                   let maxAtCurrent = 0
                   for(let i = 0; i < array.length; i++){
@@ -266,7 +266,7 @@ module.exports = {
       }
           kadanesAlgorithm([1,2,3,4,5])
           `,
-        deepAccessor: `function access(obj){
+  deepAccessor: `function access(obj){
                 return obj[obj.name * obj[obj.x]]
         }
             const object = {
@@ -276,8 +276,8 @@ module.exports = {
                 '60': 'FOUND'
         }
             access(object)
-    `    ,
-        BST: `class BST {
+    `,
+  BST: `class BST {
                 constructor(value) {
                   this.value = value;
                   this.left = null;
@@ -306,7 +306,7 @@ module.exports = {
         .insert(204).insert(205).insert(203).insert(550).insert(501).insert(500).insert(502).insert(700).insert(999).insert(600).insert(545).insert(549).insert(542)
 
 `,
-        riverSizes: `function riverSizes(matrix, rivers = []) {
+  riverSizes: `function riverSizes(matrix, rivers = []) {
                 for (let i = 0; i < matrix.length; i++) {
                     for (let j = 0; j < matrix[i].length; j++) {
                         let riverlen = getContinuation(matrix, i, j)
@@ -338,7 +338,7 @@ module.exports = {
       ]
         const rivers = [];
         riverSizes(matrix, rivers)`,
-        inPlaceMergeSort: `
+  inPlaceMergeSort: `
         function merge(arr, start, mid, end) {
                 let start2 = mid + 1
                 if (arr[mid] <= arr[start2]) return
@@ -371,9 +371,9 @@ module.exports = {
         const array = [20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
         mergeSort(array, 0, array.length - 1)
     `,
-        parenthesized: `
+  parenthesized: `
     const arr  = parseInt('5');
 
     (1+1)
-    `
-}
+    `,
+};

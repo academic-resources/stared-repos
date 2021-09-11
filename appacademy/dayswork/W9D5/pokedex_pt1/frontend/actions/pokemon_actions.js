@@ -1,17 +1,17 @@
-import * as APIUtil from '../util/api_util'
-export const RECEIVE_ALL_POKEMON = 'RECEIVE_ALL_POKEMON'
+import * as APIUtil from "../util/api_util";
+export const RECEIVE_ALL_POKEMON = "RECEIVE_ALL_POKEMON";
 
-export const receiveAllPokemon = pokemon => {
+export const receiveAllPokemon = (pokemon) => {
   return {
     type: RECEIVE_ALL_POKEMON,
-    pokemon
-  }
-}
+    pokemon,
+  };
+};
 
 export const requestAllPokemon = () => {
-  return dispatch => {
-    APIUtil.fetchAllPokemon().then(pokemon => {
-      dispatch(receiveAllPokemon(pokemon))
-    })
-  }
-}
+  return (dispatch) => {
+    APIUtil.fetchAllPokemon().then((pokemon) => {
+      dispatch(receiveAllPokemon(pokemon));
+    });
+  };
+};

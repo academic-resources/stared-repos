@@ -34,17 +34,48 @@ class Solution(object):
 
     def get_live_neighbors(self, r, c, row, col, grid):
         if r - 1 >= 0 and r + 1 < row and c - 1 >= 0 and c + 1 < col:
-            return grid[r - 1][c - 1] + grid[r - 1][c] + grid[r - 1][c + 1] + grid[r][c + 1] + grid[r + 1][c + 1] + \
-                   grid[r + 1][c] + \
-                   grid[r + 1][c - 1] + grid[r][c - 1]
+            return (
+                grid[r - 1][c - 1]
+                + grid[r - 1][c]
+                + grid[r - 1][c + 1]
+                + grid[r][c + 1]
+                + grid[r + 1][c + 1]
+                + grid[r + 1][c]
+                + grid[r + 1][c - 1]
+                + grid[r][c - 1]
+            )
         elif r - 1 < 0 and r + 1 < row and c - 1 >= 0 and c + 1 < col:
-            return grid[r][c + 1] + grid[r + 1][c + 1] + grid[r + 1][c] + grid[r + 1][c - 1] + grid[r][c - 1]
+            return (
+                grid[r][c + 1]
+                + grid[r + 1][c + 1]
+                + grid[r + 1][c]
+                + grid[r + 1][c - 1]
+                + grid[r][c - 1]
+            )
         elif r - 1 >= 0 and r + 1 >= row and c - 1 >= 0 and c + 1 < col:
-            return grid[r - 1][c - 1] + grid[r - 1][c] + grid[r - 1][c + 1] + grid[r][c + 1] + grid[r][c - 1]
+            return (
+                grid[r - 1][c - 1]
+                + grid[r - 1][c]
+                + grid[r - 1][c + 1]
+                + grid[r][c + 1]
+                + grid[r][c - 1]
+            )
         elif r - 1 >= 0 and r + 1 < row and c - 1 < 0 and c + 1 < col:
-            return grid[r - 1][c] + grid[r - 1][c + 1] + grid[r][c + 1] + grid[r + 1][c + 1] + grid[r + 1][c]
+            return (
+                grid[r - 1][c]
+                + grid[r - 1][c + 1]
+                + grid[r][c + 1]
+                + grid[r + 1][c + 1]
+                + grid[r + 1][c]
+            )
         elif r - 1 >= 0 and r + 1 < row and c - 1 < 0 and c + 1 >= col:
-            return grid[r - 1][c - 1] + grid[r - 1][c] + grid[r + 1][c] + grid[r + 1][c - 1] + grid[r][c - 1]
+            return (
+                grid[r - 1][c - 1]
+                + grid[r - 1][c]
+                + grid[r + 1][c]
+                + grid[r + 1][c - 1]
+                + grid[r][c - 1]
+            )
         elif r - 1 < 0 and r + 1 < row and c - 1 < 0 and c + 1 < col:
             return grid[r][c + 1] + grid[r + 1][c + 1] + grid[r + 1][c]
         elif r - 1 >= 0 and r + 1 >= row and c - 1 >= 0 and c + 1 >= col:
@@ -57,11 +88,3 @@ class Solution(object):
             return grid[r][c + 1]
         else:
             return 0
-
-
-
-
-
-
-
-

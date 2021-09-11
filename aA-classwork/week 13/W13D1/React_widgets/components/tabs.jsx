@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 
 class Tabs extends React.Component {
   constructor(props) {
@@ -12,12 +11,12 @@ class Tabs extends React.Component {
 
   selectedArticle(i) {
     if (i === this.state.index) {
-      return <article>{this.props.tabs[this.state.index].content}</article>
+      return <article>{this.props.tabs[this.state.index].content}</article>;
     }
   }
 
   updateIdx(i) {
-    this.setState({ index: i })
+    this.setState({ index: i });
   }
 
   render() {
@@ -26,25 +25,20 @@ class Tabs extends React.Component {
         <div key={i} className="tab">
           <h1 onClick={() => this.updateIdx(i)}>{obj.title}</h1>
         </div>
-      )
+      );
     });
 
     const content = this.props.tabs.map((obj, i) => {
-      return (
-        <article>{this.selectedArticle(i)}</article>
-      )
-    });  
-    
-    
+      return <article>{this.selectedArticle(i)}</article>;
+    });
+
     return (
       <div className="tabs-group">
         <div className="headers">{tabs}</div>
         <div className="content">{content}</div>
       </div>
-    )
+    );
   }
 }
 
-export default Tabs
-
-
+export default Tabs;

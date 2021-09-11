@@ -5,6 +5,7 @@ from geopy.geocoders import Photon
 from geopy.distance import geodesic
 from .utils import get_geo, get_center_coordinates, get_zoom
 import folium
+
 # Create your views here.
 
 
@@ -15,9 +16,9 @@ def calculate_distance_view(request):
 
     obj = get_object_or_404(Measurement, id=1)
     form = MeasurementModelForm(request.POST or None)
-    geolocator = Photon(user_agent='measurements')
+    geolocator = Photon(user_agent="measurements")
 
-    ip = '152.57.78.174'
+    ip = "152.57.78.174"
     country, city, lat, lon = get_geo(ip)
     location = geolocator.geocode(city)
 
@@ -27,20 +28,24 @@ def calculate_distance_view(request):
     pointA = (l_lat, l_lon)
 
     # initial folium map
-    m = folium.Map(width=800,
-                   height=500,
-                   location=get_center_coordinates(l_lat, l_lon),
-                   zoom_start=8)
+    m = folium.Map(
+        width=800,
+        height=500,
+        location=get_center_coordinates(l_lat, l_lon),
+        zoom_start=8,
+    )
     # location marker
-    folium.Marker([l_lat, l_lon],
-                  tooltip='click here for more',
-                  popup=city['city'],
-                  icon=folium.Icon(color='purple', icon='home')).add_to(m)
+    folium.Marker(
+        [l_lat, l_lon],
+        tooltip="click here for more",
+        popup=city["city"],
+        icon=folium.Icon(color="purple", icon="home"),
+    ).add_to(m)
     # destination marker)).add_to(m)
 
     if form.is_valid():
         instance = form.save(commit=False)
-        destination_ = form.cleaned_data.get('destination')
+        destination_ = form.cleaned_data.get("destination")
         destination = geolocator.geocode(destination_)
 
         # destination coordinates
@@ -51,26 +56,29 @@ def calculate_distance_view(request):
         distance = round(geodesic(pointA, pointB).km, 2)
 
         # folium map modification
-        m = folium.Map(width=800,
-                       height=500,
-                       location=get_center_coordinates(l_lat, l_lon, d_lat,
-                                                       d_lon),
-                       zoom_start=get_zoom(distance))
+        m = folium.Map(
+            width=800,
+            height=500,
+            location=get_center_coordinates(l_lat, l_lon, d_lat, d_lon),
+            zoom_start=get_zoom(distance),
+        )
         # location marker
-        folium.Marker([l_lat, l_lon],
-                      tooltip='click here for more',
-                      popup=city['city'],
-                      icon=folium.Icon(color='purple', icon='home')).add_to(m)
+        folium.Marker(
+            [l_lat, l_lon],
+            tooltip="click here for more",
+            popup=city["city"],
+            icon=folium.Icon(color="purple", icon="home"),
+        ).add_to(m)
         # destination marker
-        folium.Marker([d_lat, d_lon],
-                      tooltip='click here for more',
-                      popup=destination,
-                      icon=folium.Icon(color='red', icon='cloud')).add_to(m)
+        folium.Marker(
+            [d_lat, d_lon],
+            tooltip="click here for more",
+            popup=destination,
+            icon=folium.Icon(color="red", icon="cloud"),
+        ).add_to(m)
 
         # draw the line between location and destination
-        line = folium.PolyLine(locations=[pointA, pointB],
-                               weight=5,
-                               color='blue')
+        line = folium.PolyLine(locations=[pointA, pointB], weight=5, color="blue")
         m.add_child(line)
 
         instance.location = location
@@ -79,11 +87,6 @@ def calculate_distance_view(request):
 
     m = m._repr_html_()
 
-    context = {
-        'distance': distance,
-        'destination': destination,
-        'form': form,
-        'map': m,
-    }
+    context = {"distance": distance, "destination": destination, "form": form, "map": m}
 
-    return render(request, 'measurements/main.html', context)
+    return render(request, "measurements/main.html", context)

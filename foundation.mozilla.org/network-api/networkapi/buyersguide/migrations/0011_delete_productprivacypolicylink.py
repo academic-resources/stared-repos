@@ -5,12 +5,6 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('buyersguide', '0010_auto_20210324_1752'),
-    ]
+    dependencies = [("buyersguide", "0010_auto_20210324_1752")]
 
-    operations = [
-        migrations.DeleteModel(
-            name='ProductPrivacyPolicyLink',
-        ),
-    ]
+    operations = [migrations.DeleteModel(name="ProductPrivacyPolicyLink")]

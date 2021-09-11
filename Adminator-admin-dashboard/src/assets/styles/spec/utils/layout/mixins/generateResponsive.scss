@@ -4,11 +4,10 @@
 
 // Mixin used to generate responsive suffixes for classes (i.e. m-10@sm+).
 
-
 @mixin generateResponsive() {
   @each $breakpoint in $breakpoints {
-    $breakpointAlias     : nth($breakpoint, 1) !global;
-    $breakpointCondition : nth($breakpoint, 2);
+    $breakpointAlias: nth($breakpoint, 1) !global;
+    $breakpointCondition: nth($breakpoint, 2);
 
     @include mediaQueryCondition($breakpointAlias) {
       @content;

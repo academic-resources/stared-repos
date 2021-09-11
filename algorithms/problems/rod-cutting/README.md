@@ -46,7 +46,7 @@ CUT-ROD(p, n) // O(2^n)
 
 Having observed that a naive recursive solution is inefficient because it solves the same subproblems repeatedly, we arrange for each subproblem to be solved _only once_, saving its solution. If we need to refer to this subproblem's solution again later, we can just look it up, rather than recompute it.
 
-Dynamic programming thus __uses additional memory to save computation time__.
+Dynamic programming thus **uses additional memory to save computation time**.
 
 ```
 MEMOIZED-CUT-ROD(p, n) // Theta(n^2)

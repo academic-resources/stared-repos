@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import LogoutButton from './auth/LogoutButton';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import LogoutButton from "./auth/LogoutButton";
 
 export default function Navbar({ setAuthenticated, authenticated }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -28,7 +28,10 @@ export default function Navbar({ setAuthenticated, authenticated }) {
             </button>
           </div>
           <div
-            className={'lg:flex flex-grow items-center' + (navbarOpen ? ' flex' : ' hidden')}
+            className={
+              "lg:flex flex-grow items-center" +
+              (navbarOpen ? " flex" : " hidden")
+            }
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">

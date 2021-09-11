@@ -3,6 +3,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 class SingleLinkedList:
     def __init__(self):
         self.length = 0
@@ -51,7 +52,7 @@ class SingleLinkedList:
         return False
 
     def deleteAllNodes(self, data):
-        if(self.length == 0):
+        if self.length == 0:
             return
         curNode = self.head
         while self.head.data == data:
@@ -73,7 +74,6 @@ class SingleLinkedList:
 
         return deleted
 
-
     def isEmpty(self):
         return True if self.length == 0 else False
 
@@ -89,8 +89,8 @@ class SingleLinkedList:
         return curNode
 
     def getNextNode(self, node):
-        if(isinstance(node, Node)):
-            return node.next;
+        if isinstance(node, Node):
+            return node.next
         return False
 
     def printList(self):
@@ -98,6 +98,7 @@ class SingleLinkedList:
         while curNode != None:
             print(curNode.data)
             curNode = curNode.next
+
 
 sLL = SingleLinkedList()
 # sLL.appendNode(1)

@@ -1,91 +1,91 @@
 .masthead {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border-bottom: 2px solid black;
-	border-top: 1px solid $light-gray;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid black;
+  border-top: 1px solid $light-gray;
+  position: relative;
 }
 
 h1 {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	font-family: $serif;
-	font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: $serif;
+  font-size: 30px;
 }
 
 .language-nav {
-	display: flex;
-	position: absolute;
-	top: -15px;
-	left: calc(50% - (177.78px/2));
-	background: white;
-	border: 1px solid $light-gray;
-	border-bottom: none;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+  display: flex;
+  position: absolute;
+  top: -15px;
+  left: calc(50% - (177.78px / 2));
+  background: white;
+  border: 1px solid $light-gray;
+  border-bottom: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .language-nav a {
-	margin: 0 5px;
-	text-transform: uppercase;
-	font-family: $sans-serif;
-	font-size: 10px;
-	color: $dark-gray;
+  margin: 0 5px;
+  text-transform: uppercase;
+  font-family: $sans-serif;
+  font-size: 10px;
+  color: $dark-gray;
 }
 
 img {
-	width: 50%;
+  width: 50%;
 }
 
 .language-nav li:first-of-type a {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .language-nav ul {
-	display: flex;
+  display: flex;
 }
 
 .logo {
-	max-width: 400px;
-	margin-top: 10px;
+  max-width: 400px;
+  margin-top: 10px;
 }
 
 .masthead-links {
-	display: flex;
-	font-family: $sans-serif;
-	font-size: 11px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+  display: flex;
+  font-family: $sans-serif;
+  font-size: 11px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .masthead-links li {
-	margin-left: 10px;
-	// border-right: 1px solid $light-gray;
+  margin-left: 10px;
+  // border-right: 1px solid $light-gray;
 }
 
 .masthead-links button {
-	background: none;
-	padding: 0px;
-	color: #000;
-	font-weight: normal;
-	border: none;
+  background: none;
+  padding: 0px;
+  color: #000;
+  font-weight: normal;
+  border: none;
 }
 
 .masthead-links button:hover {
-	background-color: $lightest-gray;
+  background-color: $lightest-gray;
 }
 
 .masthead-links a,
-.masthead-links button, 
+.masthead-links button,
 .masthead-links time {
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 .masthead-links i {
-	margin-right: 5px;
+  margin-right: 5px;
 }
 
 .masthead-links strong {
-	color: green;
+  color: green;
 }

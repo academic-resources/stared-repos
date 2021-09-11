@@ -375,10 +375,7 @@ class Syntax(JupyterMixin):
         _get_theme_style = self._theme.get_style_for_token
         try:
             lexer = get_lexer_by_name(
-                self.lexer_name,
-                stripnl=False,
-                ensurenl=True,
-                tabsize=self.tab_size,
+                self.lexer_name, stripnl=False, ensurenl=True, tabsize=self.tab_size
             )
         except ClassNotFound:
             text.append(code)
@@ -619,11 +616,7 @@ if __name__ == "__main__":  # pragma: no cover
     parser = argparse.ArgumentParser(
         description="Render syntax to the console with Rich"
     )
-    parser.add_argument(
-        "path",
-        metavar="PATH",
-        help="path to file, or - for stdin",
-    )
+    parser.add_argument("path", metavar="PATH", help="path to file, or - for stdin")
     parser.add_argument(
         "-c",
         "--force-color",
@@ -682,11 +675,7 @@ if __name__ == "__main__":  # pragma: no cover
         help="Override background color",
     )
     parser.add_argument(
-        "-x",
-        "--lexer",
-        default="default",
-        dest="lexer_name",
-        help="Lexer name",
+        "-x", "--lexer", default="default", dest="lexer_name", help="Lexer name"
     )
     args = parser.parse_args()
 

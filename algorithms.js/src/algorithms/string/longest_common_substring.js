@@ -2,7 +2,7 @@
  * Implementation of longest common substring
  */
 
-'use strict';
+"use strict";
 
 /**
  * Implementation via dynamic programming
@@ -36,7 +36,7 @@ var longestCommonSubstring = function (s1, s2) {
     }
   }
 
-  var lcs = '';
+  var lcs = "";
   if (lcsLength) {
     lcs = s1.substring(lcsPosition.i - lcsLength, lcsPosition.i);
   }

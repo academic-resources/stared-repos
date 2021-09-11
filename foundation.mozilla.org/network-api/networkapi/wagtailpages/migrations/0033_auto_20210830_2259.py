@@ -7,19 +7,29 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('wagtailimages', '0023_add_choose_permissions'),
-        ('wagtailpages', '0032_auto_20210826_1919'),
+        ("wagtailimages", "0023_add_choose_permissions"),
+        ("wagtailpages", "0032_auto_20210826_1919"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='blogpagecategory',
-            name='share_description',
-            field=models.TextField(blank=True, help_text='Optional description that will apear when category page is shared. If not set, will default to "intro" text.'),
+            model_name="blogpagecategory",
+            name="share_description",
+            field=models.TextField(
+                blank=True,
+                help_text='Optional description that will apear when category page is shared. If not set, will default to "intro" text.',
+            ),
         ),
         migrations.AddField(
-            model_name='blogpagecategory',
-            name='share_image',
-            field=models.ForeignKey(blank=True, help_text='Optional image that will apear when category page is shared.', null=True, on_delete=django.db.models.deletion.SET_NULL, to='wagtailimages.image', verbose_name='Share Image'),
+            model_name="blogpagecategory",
+            name="share_image",
+            field=models.ForeignKey(
+                blank=True,
+                help_text="Optional image that will apear when category page is shared.",
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="wagtailimages.image",
+                verbose_name="Share Image",
+            ),
         ),
     ]

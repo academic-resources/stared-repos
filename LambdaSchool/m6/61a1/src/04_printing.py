@@ -16,4 +16,3 @@ print('x is {0}, y is {1}, z is "{2}"'.format(x, y, z))
 
 # Finally, print the same thing using an f-string
 print(f'x is {x}, y is {y}, z is "{z}"')
-

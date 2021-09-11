@@ -12,7 +12,9 @@ def json_to_yaml(json_file, yaml_file):
 
     """
     with open(json_file) as f:
-        with open(yaml_file, 'w') as f1:
+        with open(yaml_file, "w") as f1:
             json_data = json.loads(f.read())
             converted_json_data = json.dumps(json_data)
-            f1.write(yaml.dump(yaml.load(converted_json_data), default_flow_style=False))
+            f1.write(
+                yaml.dump(yaml.load(converted_json_data), default_flow_style=False)
+            )

@@ -29,7 +29,7 @@ class Solution(object):
         return max_len
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.maxDistToClosest([1, 0, 0, 0, 1, 0, 1]))
     print(solution.maxDistToClosest([1, 0, 0, 0]))

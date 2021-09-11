@@ -30,9 +30,13 @@ class Solution(object):
             levels.setdefault(curr_node.dist, []).append(curr_node.tree_node.val)
 
             if curr_node.tree_node.left is not None:
-                queue.appendleft(ColumnNode(curr_node.tree_node.left, curr_node.dist - 1))
+                queue.appendleft(
+                    ColumnNode(curr_node.tree_node.left, curr_node.dist - 1)
+                )
             if curr_node.tree_node.right is not None:
-                queue.appendleft(ColumnNode(curr_node.tree_node.right, curr_node.dist + 1))
+                queue.appendleft(
+                    ColumnNode(curr_node.tree_node.right, curr_node.dist + 1)
+                )
         res = []
         d = collections.OrderedDict(sorted(levels.items()))
         for k, v in d.items():
@@ -45,7 +49,6 @@ class ColumnNode:
         self.tree_node = tree_node
         self.dist = dist
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     treeNode = TreeNode()
-
-

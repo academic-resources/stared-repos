@@ -21,11 +21,12 @@ class Solution(object):
         results = []
         for i in range(len(s)):
             if s[i] in p_map:
-                checker = dict(collections.Counter(s[i:i+len(p)]))
+                checker = dict(collections.Counter(s[i : i + len(p)]))
                 if checker == p_map:
                     results.append(i)
         return results
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.findAnagrams('cbaebabacd', 'abc'))
+    print(solution.findAnagrams("cbaebabacd", "abc"))

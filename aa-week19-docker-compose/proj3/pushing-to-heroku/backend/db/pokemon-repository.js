@@ -1,5 +1,5 @@
-const { commerce } = require('faker');
-const { Pokemon } = require('./models');
+const { commerce } = require("faker");
+const { Pokemon } = require("./models");
 
 function random100() {
   return Math.floor(Math.random() * 100) + 1;
@@ -7,10 +7,10 @@ function random100() {
 
 function randomImage() {
   const images = [
-    '/images/pokemon_berry.svg',
-    '/images/pokemon_egg.svg',
-    '/images/pokemon_potion.svg',
-    '/images/pokemon_super_potion.svg',
+    "/images/pokemon_berry.svg",
+    "/images/pokemon_egg.svg",
+    "/images/pokemon_potion.svg",
+    "/images/pokemon_super_potion.svg",
   ];
   const index = Math.floor(Math.random() * images.length);
   return images[index];
@@ -30,19 +30,19 @@ function* generateItems() {
 async function create(details, owner) {
   details.playerId = owner.id;
   details.items = [...generateItems()];
-  const pokemon = await Pokemon.create(details, { include: [ 'items' ] });
+  const pokemon = await Pokemon.create(details, { include: ["items"] });
   return pokemon.id;
 }
 
 async function list() {
   return await Pokemon.findAll({
-    attributes: [ 'imageUrl', 'name', 'updatedAt', 'id' ],
+    attributes: ["imageUrl", "name", "updatedAt", "id"],
   });
 }
 
 async function one(id) {
   const pokemon = await Pokemon.findByPk(id, {
-    include: [ 'items', 'player' ]
+    include: ["items", "player"],
   });
 
   return {
@@ -53,7 +53,7 @@ async function one(id) {
     name: pokemon.name,
     type: pokemon.type,
     moves: [...pokemon.moves],
-    items: pokemon.items.map(item => {
+    items: pokemon.items.map((item) => {
       return {
         name: item.name,
         price: item.price,

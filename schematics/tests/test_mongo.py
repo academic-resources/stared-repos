@@ -14,7 +14,7 @@ def test_to_native():
     assert oid.to_native(str(FAKE_OID)) == FAKE_OID
 
     with pytest.raises(ConversionError):
-        oid.to_native('foo')
+        oid.to_native("foo")
 
 
 def test_to_primitive():
@@ -31,4 +31,4 @@ def test_validate_id():
     assert oid.validate_id(str(FAKE_OID)) is True
 
     with pytest.raises(ValidationError):
-        oid.validate_id('foo')
+        oid.validate_id("foo")

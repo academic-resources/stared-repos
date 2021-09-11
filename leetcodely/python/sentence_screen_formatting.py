@@ -8,7 +8,8 @@ Note:
     Length of each word is greater than 0 and won't exceed 10.
     1 ≤ rows, cols ≤ 20,000.
 """
-#TODO: Debug edge cases
+# TODO: Debug edge cases
+
 
 class Solution:
     def wordsTyping(self, sentence, rows, cols):
@@ -42,6 +43,6 @@ class Solution:
         return count
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.wordsTyping(["f","p","a"], 8, 7))
+    print(solution.wordsTyping(["f", "p", "a"], 8, 7))

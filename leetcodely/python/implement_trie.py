@@ -3,7 +3,6 @@ from collections import defaultdict
 
 
 class Trie(object):
-
     def __init__(self):
         """
         Initialize your data structure here.

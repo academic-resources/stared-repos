@@ -33,6 +33,6 @@ class Solution(object):
         return -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.peakIndexInMountainArray([3, 4, 5, 1]))

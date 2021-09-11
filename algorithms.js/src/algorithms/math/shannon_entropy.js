@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Calculate Shannon Entropy of an array
@@ -19,9 +19,11 @@ var shannonEntropy = function (arr) {
   });
 
   // calulate the shannon entropy of the array
-  return probs.reduce(function (e, p) {
-    return e - p * Math.log(p);
-  }, 0) * Math.LOG2E;
+  return (
+    probs.reduce(function (e, p) {
+      return e - p * Math.log(p);
+    }, 0) * Math.LOG2E
+  );
 };
 
 module.exports = shannonEntropy;

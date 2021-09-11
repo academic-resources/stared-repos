@@ -1,1 +1,1 @@
-print({x for x in 'abracadabra' if x not in 'abc'})
+print({x for x in "abracadabra" if x not in "abc"})

@@ -14,12 +14,12 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        longest = ''
+        longest = ""
         for i in range(2 * len(s)):
             left = i // 2
             right = i // 2 + i % 2
             while left >= 0 and right < len(s) and s[left] == s[right]:
-                sub = s[left:right + 1]
+                sub = s[left : right + 1]
                 if len(sub) > len(longest):
                     longest = sub
                 left -= 1
@@ -27,6 +27,6 @@ class Solution(object):
         return longest
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.longestPalindrome('babad'))
+    print(solution.longestPalindrome("babad"))

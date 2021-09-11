@@ -2,9 +2,9 @@
 
 ## Overview
 
-*Sliding Window Log* algorithms solves the major issue if *fixed window counter* that allows more requests to go through at the edges of a window.
+_Sliding Window Log_ algorithms solves the major issue if _fixed window counter_ that allows more requests to go through at the edges of a window.
 
-* It **keeps track of request timestamps**. Timestamp data is usually kept in cache, such as sorted sets of Redis. **When a new request comes in, remove all the outdated timestamps and add timestamp of the new request to the log**. Outdated timestamps are defined as those older than the start of the current time window. If the log size is the same or lower than the allowed count, a request is accepted. Otherwise, it is rejected.
+- It **keeps track of request timestamps**. Timestamp data is usually kept in cache, such as sorted sets of Redis. **When a new request comes in, remove all the outdated timestamps and add timestamp of the new request to the log**. Outdated timestamps are defined as those older than the start of the current time window. If the log size is the same or lower than the allowed count, a request is accepted. Otherwise, it is rejected.
 
 ### Example
 

@@ -20,6 +20,7 @@ class Solution:
             count[node.val] += 1
             dfs(node.left)
             dfs(node.right)
+
         count = collections.Counter()
         dfs(root)
         max_val = max(count.values())

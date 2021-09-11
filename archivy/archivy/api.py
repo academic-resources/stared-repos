@@ -53,9 +53,7 @@ def create_bookmark():
     bookmark.process_bookmark_url()
     bookmark_id = bookmark.insert()
     if bookmark_id:
-        return jsonify(
-            bookmark_id=bookmark_id,
-        )
+        return jsonify(bookmark_id=bookmark_id)
     return Response(status=400)
 
 
@@ -141,9 +139,7 @@ def update_dataobj_frontmatter(dataobj_id):
     - **title**: the new title of the dataobj.
     """
 
-    new_frontmatter = {
-        "title": request.json.get("title"),
-    }
+    new_frontmatter = {"title": request.json.get("title")}
 
     try:
         data.update_item_frontmatter(dataobj_id, new_frontmatter)

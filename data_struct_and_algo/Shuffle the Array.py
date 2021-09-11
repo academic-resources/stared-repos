@@ -3,8 +3,8 @@ def shuffle(nums, n):
     temp = []
     temp_new = []
     while i <= 2 * n:
-        if (i % 2 == 1):
-            if (i == 1):
+        if i % 2 == 1:
+            if i == 1:
                 temp.append(i)
             else:
                 temp.append(i - int(i / 2))

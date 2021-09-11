@@ -3,6 +3,7 @@
 import unittest
 from portfolio2 import Portfolio
 
+
 class PortfolioTestCase(unittest.TestCase):
     """Base class for all Portfolio tests."""
 

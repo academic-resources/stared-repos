@@ -7,8 +7,6 @@ from django import forms
 
 class SendToDeviceWidgetForm(forms.Form):
     email = forms.EmailField(max_length=100, required=False)
-    platform = forms.ChoiceField(choices=(
-        ('ios', 'ios'),
-        ('android', 'android'),
-        ('all', 'all'),
-    ), required=False)
+    platform = forms.ChoiceField(
+        choices=(("ios", "ios"), ("android", "android"), ("all", "all")), required=False
+    )

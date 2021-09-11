@@ -18,28 +18,28 @@ class TestSelectorsExclude:
     def test_selectors_exclude_set_override_default(self):
         """ Default `selectors_exclude` should be override when set in the config """
         # When
-        c = config({
-            'selectors_exclude': ['.test']
-        })
+        c = config({"selectors_exclude": [".test"]})
 
         # When
         actual = ConfigLoader(c)
 
         # Then
-        assert actual.selectors_exclude == ['.test']
+        assert actual.selectors_exclude == [".test"]
 
     def test_selectors_exclude_is_not_mandatory(self):
         """ Allow not passing selectors_exclude """
         # Given
-        conf = config({
-            'allowed_domains': 'allowed_domains',
-            'api_key': 'api_key',
-            'app_id': 'app_id',
-            'index_name': 'index_name',
-            'selectors': [],
-            'start_urls': ['http://www.starturl.com/'],
-            'stop_urls': ['http://www.stopurl.com/']
-        })
+        conf = config(
+            {
+                "allowed_domains": "allowed_domains",
+                "api_key": "api_key",
+                "app_id": "app_id",
+                "index_name": "index_name",
+                "selectors": [],
+                "start_urls": ["http://www.starturl.com/"],
+                "stop_urls": ["http://www.stopurl.com/"],
+            }
+        )
 
         # When
         actual = ConfigLoader(conf)

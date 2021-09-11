@@ -1,52 +1,52 @@
-const expect = require('expect')
-const request = require('supertest')
-const { init } = require('..')
-const funcs = require('../../runners/js/execute/tests/funcs')
+const expect = require("expect");
+const request = require("supertest");
+const { init } = require("..");
+const funcs = require("../../runners/js/execute/tests/funcs");
 
 let agent;
 before(async () => {
-    const { server, database } = await init
-    agent = request.agent(server)
-    await database.collection('sessions').drop().catch(e => { })
-    return;
-})
+  const { server, database } = await init;
+  agent = request.agent(server);
+  await database
+    .collection("sessions")
+    .drop()
+    .catch((e) => {});
+  return;
+});
 
-
-describe('SERVER', function () {
-    this.timeout(20000)
-    it('should return 200', done => {
-        agent
-            .get('/')
-            .expect(200)
-            .end(done)
-    })
-    it('Posting javascript code returns results', done => {
-        agent
-            .post('/execute')
-            .send({
-                language: 'javascript',
-                code: `
+describe("SERVER", function () {
+  this.timeout(20000);
+  it("should return 200", (done) => {
+    agent.get("/").expect(200).end(done);
+  });
+  it("Posting javascript code returns results", (done) => {
+    agent
+      .post("/execute")
+      .send({
+        language: "javascript",
+        code: `
                 class MyClass{
                     constructor(){
                         this.value = 5
                     }
                 }   
                 const result = new MyClass();         
-            `})
-            .expect(200)
-            .expect(({ body }) => {
-                expect(Array.isArray(body.steps)).toBe(true)
-                expect(typeof body.objects).toBe('object')
-                expect(typeof body.types).toBe('object')
-            })
-            .end(done)
-    })
-    it.only('Posting python code returns results', done => {
-        agent
-            .post('/execute')
-            .send({
-                language: 'python',
-                code: `
+            `,
+      })
+      .expect(200)
+      .expect(({ body }) => {
+        expect(Array.isArray(body.steps)).toBe(true);
+        expect(typeof body.objects).toBe("object");
+        expect(typeof body.types).toBe("object");
+      })
+      .end(done);
+  });
+  it.only("Posting python code returns results", (done) => {
+    agent
+      .post("/execute")
+      .send({
+        language: "python",
+        code: `
 
 class Solution(object):
     def __init__(self):
@@ -84,42 +84,42 @@ class Solution(object):
 Solution().pacificAtlantic(
     [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]
 )
-                        `
-            })
-            .expect(200)
-            .expect(({ body }) => {
-                require('fs').writeFileSync('executed.json', JSON.stringify(body))
-                expect(Array.isArray(body.steps)).toBe(true)
-                expect(typeof body.objects).toBe('object')
-                expect(typeof body.types).toBe('object')
-            })
-            .end(done)
-    })
-    it('can handle multiple concurrent requests', async () => {
+                        `,
+      })
+      .expect(200)
+      .expect(({ body }) => {
+        require("fs").writeFileSync("executed.json", JSON.stringify(body));
+        expect(Array.isArray(body.steps)).toBe(true);
+        expect(typeof body.objects).toBe("object");
+        expect(typeof body.types).toBe("object");
+      })
+      .end(done);
+  });
+  it("can handle multiple concurrent requests", async () => {
+    const responses = [];
+    const start = Date.now();
+    for (const name in funcs) {
+      responses.push(
+        agent.post("/execute").send({
+          language: "javascript",
+          code: funcs[name],
+        })
+      );
+    }
 
-        const responses = []
-        const start = Date.now()
-        for (const name in funcs) {
-            responses.push(agent
-                .post('/execute')
-                .send({
-                    language: 'javascript',
-                    code: funcs[name]
-                })
-            )
-        }
-
-        const results = await Promise.all(responses)
-        const end = Date.now()
-        for (const res of results) {
-            const { body } = res
-            expect(Array.isArray(body.steps)).toBe(true)
-            expect(typeof body.objects).toBe('object')
-            expect(typeof body.types).toBe('object')
-            console.log((body.runtime));
-        }
-        console.log((end - start) / results.reduce((a, v) => a + v.body.steps.length, 0) / results.length);
-    })
-
-
-})
+    const results = await Promise.all(responses);
+    const end = Date.now();
+    for (const res of results) {
+      const { body } = res;
+      expect(Array.isArray(body.steps)).toBe(true);
+      expect(typeof body.objects).toBe("object");
+      expect(typeof body.types).toBe("object");
+      console.log(body.runtime);
+    }
+    console.log(
+      (end - start) /
+        results.reduce((a, v) => a + v.body.steps.length, 0) /
+        results.length
+    );
+  });
+});

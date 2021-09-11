@@ -20,8 +20,7 @@ class HashTable:
                 next_slot = self.rehash(hash_value, len(self.slots))
 
                 while (
-                    self.slots[next_slot] is not None and
-                    self.slots[next_slot] != key
+                    self.slots[next_slot] is not None and self.slots[next_slot] != key
                 ):
                     next_slot = self.rehash(next_slot, len(self.slots))
 

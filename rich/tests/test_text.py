@@ -485,11 +485,7 @@ def test_print(print_text, result):
 
 @pytest.mark.parametrize(
     "print_text,result",
-    [
-        (("."), ".X"),
-        ((".", "."), "..X"),
-        (("Hello", "World", "!"), "HelloWorld!X"),
-    ],
+    [(("."), ".X"), ((".", "."), "..X"), (("Hello", "World", "!"), "HelloWorld!X")],
 )
 def test_print_sep_end(print_text, result):
     console = Console(record=True, file=StringIO())
@@ -590,11 +586,7 @@ def test_truncate_ellipsis(input, count, expected):
 
 @pytest.mark.parametrize(
     "input, count, expected",
-    [
-        ("Hello", 5, "Hello"),
-        ("Hello", 10, "Hello     "),
-        ("Hello", 3, "He…"),
-    ],
+    [("Hello", 5, "Hello"), ("Hello", 10, "Hello     "), ("Hello", 3, "He…")],
 )
 def test_truncate_ellipsis_pad(input, count, expected):
     text = Text(input)

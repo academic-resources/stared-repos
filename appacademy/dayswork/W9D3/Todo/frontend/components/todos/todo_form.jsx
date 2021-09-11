@@ -1,44 +1,44 @@
-import React from 'react'
-import { uniqueId } from '../../util/util'
+import React from "react";
+import { uniqueId } from "../../util/util";
 
 class TodoForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      title: '',
-      body: ''
-    }
-    this.updateTitle = this.updateTitle.bind(this)
-    this.handleSave = this.handleSave.bind(this)
-    this.updateBody = this.updateBody.bind(this)
+      title: "",
+      body: "",
+    };
+    this.updateTitle = this.updateTitle.bind(this);
+    this.handleSave = this.handleSave.bind(this);
+    this.updateBody = this.updateBody.bind(this);
   }
 
   handleSave(e) {
-    e.preventDefault()
+    e.preventDefault();
     const todo = {
       id: uniqueId(),
       title: this.state.title,
       body: this.state.body,
-      done: false
-    }
-    const { receiveTodo } = this.props
-    receiveTodo(todo)
+      done: false,
+    };
+    const { receiveTodo } = this.props;
+    receiveTodo(todo);
     this.setState({
-      title: '',
-      body: ''
-    })
+      title: "",
+      body: "",
+    });
   }
 
   updateTitle(e) {
     this.setState({
-      title: e.currentTarget.value
-    })
+      title: e.currentTarget.value,
+    });
   }
 
   updateBody(e) {
     this.setState({
-      body: e.currentTarget.value
-    })
+      body: e.currentTarget.value,
+    });
   }
 
   render() {
@@ -66,8 +66,8 @@ class TodoForm extends React.Component {
           Create Todo!
         </button>
       </form>
-    )
+    );
   }
 }
 
-export default TodoForm
+export default TodoForm;

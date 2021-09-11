@@ -1,11 +1,13 @@
 names = []
 phone_numbers = []
-num=int(input())
+num = int(input())
 
 
 for i in range(num):
     name = input("Name: ")
-    phone_number = input("Phone Number: ") # for convert to int => int(input("Phone Number: "))
+    phone_number = input(
+        "Phone Number: "
+    )  # for convert to int => int(input("Phone Number: "))
 
     names.append(name)
     phone_numbers.append(phone_number)

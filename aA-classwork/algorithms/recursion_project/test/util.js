@@ -9,5 +9,5 @@ const catchStackOverflow = (fn, ...args) => {
 };
 
 module.exports = {
-  catchStackOverflow
+  catchStackOverflow,
 };

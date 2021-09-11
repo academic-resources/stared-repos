@@ -23,7 +23,7 @@ class Solution(object):
         for k, v in freq_map.items():
             reverse_map.setdefault(v, []).append(k)
         ordered = collections.OrderedDict(sorted(reverse_map.items(), reverse=True))
-        res = ''
+        res = ""
         for k, v in ordered.items():
             for item in v:
                 res += self.get_k_occurences(item, k)
@@ -31,9 +31,9 @@ class Solution(object):
         return res
 
     def get_k_occurences(self, c, k):
-        return ''.join([c for _ in range(k)])
+        return "".join([c for _ in range(k)])
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.frequencySort('Aabb'))
-
+    print(solution.frequencySort("Aabb"))

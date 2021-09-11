@@ -1,4 +1,3 @@
-
 # In Python, a dict key can be any immutable type, including a tuple.
 
 cache = {}
@@ -6,6 +5,7 @@ cache = {}
 
 def check_cache(string):
     cache.get(string)
+
 
 def expensive_seq(x, y, z):
     if x <= 0:
@@ -42,16 +42,15 @@ def expensive_seq(x, y, z):
         else:
             seq3out = expensive_seq(prevX3, nextY3, nextZ3)
             cache.update({str((prevX3, nextY3, nextZ3)): seq3out})
-            
+
         total_seq = seq1out + seq2out + seq3out
 
     return total_seq
 
 
-
 if __name__ == "__main__":
     for i in range(10):
-        x = expensive_seq(i*2, i*3, i*4)
+        x = expensive_seq(i * 2, i * 3, i * 4)
         print(f"{i*2} {i*3} {i*4} = {x}")
 
     print(expensive_seq(150, 400, 800))

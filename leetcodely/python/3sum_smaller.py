@@ -24,6 +24,6 @@ class Solution(object):
         return count
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.threeSumSmaller([0, 0, 0], 0))

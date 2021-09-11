@@ -21,11 +21,15 @@ import re
 from typing import List, Sequence
 
 __all__ = (
-    'natsort_key', 'natsort', 'natsorted',
-    'natsort_key_icase', 'natsort_icase', 'natsorted_icase'
+    "natsort_key",
+    "natsort",
+    "natsorted",
+    "natsort_key_icase",
+    "natsort_icase",
+    "natsorted_icase",
 )
 
-_rc = re.compile(r'\d+|\D+', re.A)
+_rc = re.compile(r"\d+|\D+", re.A)
 
 
 def natsort_key(s: str) -> str:
@@ -45,15 +49,15 @@ def natsort_key(s: str) -> str:
             key_append(frag)
             key_append("\1")
         elif frag < "1":
-            nzeros = len(frag) - len(frag.lstrip('0'))
+            nzeros = len(frag) - len(frag.lstrip("0"))
             mag = str(nzeros)
-            mag = str(10**len(mag) - nzeros)
-            key_append(chr(0x5B - len(mag)))    # Z, Y, X, ...
+            mag = str(10 ** len(mag) - nzeros)
+            key_append(chr(0x5B - len(mag)))  # Z, Y, X, ...
             key_append(mag)
             key_append(frag)
         elif frag < ":":
             mag = str(len(frag))
-            key_append(chr(0x60 + len(mag)))    # a, b, c, ...
+            key_append(chr(0x60 + len(mag)))  # a, b, c, ...
             key_append(mag)
             key_append(frag)
         else:
@@ -78,6 +82,7 @@ def natsorted(lst: Sequence[str]) -> List[str]:
 
 # case-insensitive api
 
+
 def natsort_key_icase(s: str) -> str:
     """Split string to numeric and non-numeric fragments."""
     return natsort_key(s.lower())
@@ -92,4 +97,3 @@ def natsorted_icase(lst: Sequence[str]) -> List[str]:
     """Return copy of list, sorted in natural order, case-sensitive.
     """
     return sorted(lst, key=natsort_key_icase)
-

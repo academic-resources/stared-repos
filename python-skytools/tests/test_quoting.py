@@ -10,20 +10,25 @@ import skytools._cquoting
 import skytools._pyquoting
 import skytools.psycopgwrapper
 from skytools.quoting import (
-    json_decode, json_encode, make_pgarray,
-    quote_fqident, unescape_copy, unquote_fqident,
+    json_decode,
+    json_encode,
+    make_pgarray,
+    quote_fqident,
+    unescape_copy,
+    unquote_fqident,
 )
 
 
 class fake_cursor:
     """create a DictCursor row"""
-    index = {'id': 0, 'data': 1}
-    description = ['x', 'x']
+
+    index = {"id": 0, "data": 1}
+    description = ["x", "x"]
 
 
 dbrow = psycopg2.extras.DictRow(fake_cursor())
-dbrow[0] = '123'
-dbrow[1] = 'value'
+dbrow[0] = "123"
+dbrow[1] = "value"
 
 
 def try_func(qfunc, data_list):
@@ -47,7 +52,7 @@ def test_quote_literal():
         [1, "'1'"],
         [True, "'True'"],
         [Decimal(1), "'1'"],
-        [u'qwe', "'qwe'"]
+        [u"qwe", "'qwe'"],
     ]
     try_func(skytools._cquoting.quote_literal, sql_literal)
     try_func(skytools._pyquoting.quote_literal, sql_literal)
@@ -65,16 +70,16 @@ qliterals_common = [
     (r"""E'a\n\t\a\b\0\z\'b'""", "a\n\t\x07\x08\x00z'b"),
     (r"""$$$$""", r""),
     (r"""$$qw$e$z$$""", r"qw$e$z"),
-    (r"""$qq$$aa$$$'"\\$qq$""", '$aa$$$\'"\\\\'),
-    (u"'qwe'", 'qwe'),
+    (r"""$qq$$aa$$$'"\\$qq$""", "$aa$$$'\"\\\\"),
+    (u"'qwe'", "qwe"),
 ]
 
 bad_dol_literals = [
-    ('$$', '$$'),
-    #('$$q', '$$q'),
-    ('$$q$', '$$q$'),
-    ('$q$q$', '$q$q$'),
-    ('$q$q$x$', '$q$q$x$'),
+    ("$$", "$$"),
+    # ('$$q', '$$q'),
+    ("$$q$", "$$q$"),
+    ("$q$q$", "$q$q$"),
+    ("$q$q$x$", "$q$q$x$"),
 ]
 
 
@@ -140,46 +145,47 @@ def test_quote_bytea_raw():
 
 def test_quote_bytea_raw_fail():
     with pytest.raises(TypeError):
-        skytools._pyquoting.quote_bytea_raw(u'qwe')
-    #assert_raises(TypeError, skytools._cquoting.quote_bytea_raw, u'qwe')
-    #assert_raises(TypeError, skytools.quote_bytea_raw, 'qwe')
+        skytools._pyquoting.quote_bytea_raw(u"qwe")
+    # assert_raises(TypeError, skytools._cquoting.quote_bytea_raw, u'qwe')
+    # assert_raises(TypeError, skytools.quote_bytea_raw, 'qwe')
 
 
 def test_quote_ident():
     sql_ident = [
-        ['', '""'],
+        ["", '""'],
         ["a'\t\\\"b", '"a\'\t\\""b"'],
-        ['abc_19', 'abc_19'],
-        ['from', '"from"'],
-        ['0foo', '"0foo"'],
-        ['mixCase', '"mixCase"'],
-        [u'utf', 'utf'],
+        ["abc_19", "abc_19"],
+        ["from", '"from"'],
+        ["0foo", '"0foo"'],
+        ["mixCase", '"mixCase"'],
+        [u"utf", "utf"],
     ]
     try_func(skytools.quote_ident, sql_ident)
 
 
 def test_fqident():
-    assert quote_fqident('tbl') == 'public.tbl'
-    assert quote_fqident('Baz.Foo.Bar') == '"Baz"."Foo.Bar"'
+    assert quote_fqident("tbl") == "public.tbl"
+    assert quote_fqident("Baz.Foo.Bar") == '"Baz"."Foo.Bar"'
 
 
 def _sort_urlenc(func):
     def wrapper(data):
         res = func(data)
-        return '&'.join(sorted(res.split('&')))
+        return "&".join(sorted(res.split("&")))
+
     return wrapper
 
 
 def test_db_urlencode():
     t_urlenc = [
         [{}, ""],
-        [{'a': 1}, "a=1"],
-        [{'a': None}, "a"],
-        [{'qwe': 1, u'zz': u"qwe"}, 'qwe=1&zz=qwe'],
-        [{'qwe': 1, u'zz': u"qwe"}, 'qwe=1&zz=qwe'],
-        [{'a': '\000%&'}, "a=%00%25%26"],
-        [dbrow, 'data=value&id=123'],
-        [{'a': Decimal("1")}, "a=1"],
+        [{"a": 1}, "a=1"],
+        [{"a": None}, "a"],
+        [{"qwe": 1, u"zz": u"qwe"}, "qwe=1&zz=qwe"],
+        [{"qwe": 1, u"zz": u"qwe"}, "qwe=1&zz=qwe"],
+        [{"a": "\000%&"}, "a=%00%25%26"],
+        [dbrow, "data=value&id=123"],
+        [{"a": Decimal("1")}, "a=1"],
     ]
     try_func(_sort_urlenc(skytools._cquoting.db_urlencode), t_urlenc)
     try_func(_sort_urlenc(skytools._pyquoting.db_urlencode), t_urlenc)
@@ -189,11 +195,11 @@ def test_db_urlencode():
 def test_db_urldecode():
     t_urldec = [
         ["", {}],
-        ["a=b&c", {'a': 'b', 'c': None}],
-        ["&&b=f&&", {'b': 'f'}],
-        [u"abc=qwe", {'abc': 'qwe'}],
-        ["b=", {'b': ''}],
-        ["b=%00%45", {'b': '\x00E'}],
+        ["a=b&c", {"a": "b", "c": None}],
+        ["&&b=f&&", {"b": "f"}],
+        [u"abc=qwe", {"abc": "qwe"}],
+        ["b=", {"b": ""}],
+        ["b=%00%45", {"b": "\x00E"}],
     ]
     try_func(skytools._cquoting.db_urldecode, t_urldec)
     try_func(skytools._pyquoting.db_urldecode, t_urldec)
@@ -249,21 +255,21 @@ def test_quote_statement():
 def test_quote_json():
     json_string_vals = [
         [None, "null"],
-        ['', '""'],
-        [u'xx', '"xx"'],
+        ["", '""'],
+        [u"xx", '"xx"'],
         ['qwe"qwe\t', '"qwe\\"qwe\\t"'],
-        ['\x01', '"\\u0001"'],
+        ["\x01", '"\\u0001"'],
     ]
     try_func(skytools.quote_json, json_string_vals)
 
 
 def test_unquote_ident():
     idents = [
-        ['qwe', 'qwe'],
-        [u'qwe', 'qwe'],
-        ['"qwe"', 'qwe'],
+        ["qwe", "qwe"],
+        [u"qwe", "qwe"],
+        ['"qwe"', "qwe"],
         ['"q""w\\\\e"', 'q"w\\\\e'],
-        ['Foo', 'foo'],
+        ["Foo", "foo"],
         ['"Wei "" rd"', 'Wei " rd'],
     ]
     try_func(skytools.unquote_ident, idents)
@@ -275,31 +281,30 @@ def test_unquote_ident_fail():
 
 
 def test_unescape_copy():
-    assert unescape_copy(r'baz\tfo\'o') == "baz\tfo'o"
-    assert unescape_copy(r'\N') is None
+    assert unescape_copy(r"baz\tfo\'o") == "baz\tfo'o"
+    assert unescape_copy(r"\N") is None
 
 
 def test_unquote_fqident():
-    assert unquote_fqident('Foo') == 'foo'
+    assert unquote_fqident("Foo") == "foo"
     assert unquote_fqident('"Foo"."Bar "" z"') == 'Foo.Bar " z'
 
 
 def test_json_encode():
-    assert json_encode({'a': 1}) == '{"a": 1}'
-    assert json_encode('a') == '"a"'
-    assert json_encode(['a']) == '["a"]'
+    assert json_encode({"a": 1}) == '{"a": 1}'
+    assert json_encode("a") == '"a"'
+    assert json_encode(["a"]) == '["a"]'
     assert json_encode(a=1) == '{"a": 1}'
 
 
 def test_json_decode():
-    assert json_decode('[1]') == [1]
+    assert json_decode("[1]") == [1]
 
 
 def test_make_pgarray():
-    assert make_pgarray([]) == '{}'
-    assert make_pgarray(['foo_3', 1, '', None]) == '{foo_3,1,"",NULL}'
+    assert make_pgarray([]) == "{}"
+    assert make_pgarray(["foo_3", 1, "", None]) == '{foo_3,1,"",NULL}'
 
-    res = make_pgarray([None, ',', '\\', "'", '"', "{", "}", '_'])
+    res = make_pgarray([None, ",", "\\", "'", '"', "{", "}", "_"])
     exp = '{NULL,",","\\\\","\'","\\"","{","}",_}'
     assert res == exp
-

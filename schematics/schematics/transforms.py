@@ -8,9 +8,10 @@ from six import iteritems
 from .exceptions import ConversionError, ModelConversionError, ValidationError
 
 try:
-    basestring #PY2
+    basestring  # PY2
 except NameError:
-    basestring = str #PY3
+    basestring = str  # PY3
+
 
 def _list_or_string(lors):
     if lors is None:
@@ -19,18 +20,28 @@ def _list_or_string(lors):
         return [lors]
     return list(lors)
 
+
 try:
-    unicode #PY2
+    unicode  # PY2
 except:
     import codecs
-    unicode = str #PY3
+
+    unicode = str  # PY3
 
 ###
 # Transform Loops
 ###
 
-def import_loop(cls, instance_or_dict, field_converter, context=None,
-                partial=False, strict=False, mapping=None):
+
+def import_loop(
+    cls,
+    instance_or_dict,
+    field_converter,
+    context=None,
+    partial=False,
+    strict=False,
+    mapping=None,
+):
     """
     The import loop is designed to take untrusted data and convert it into the
     native types, as described in ``cls``.  It does this by calling
@@ -56,7 +67,7 @@ def import_loop(cls, instance_or_dict, field_converter, context=None,
     is_dict = isinstance(instance_or_dict, dict)
     is_cls = isinstance(instance_or_dict, cls)
     if not is_cls and not is_dict:
-        error_msg = 'Model conversion requires a model or dict'
+        error_msg = "Model conversion requires a model or dict"
         raise ModelConversionError(error_msg)
     if mapping is None:
         mapping = {}
@@ -65,10 +76,10 @@ def import_loop(cls, instance_or_dict, field_converter, context=None,
 
     # Determine all acceptable field input names
     all_fields = set(cls._fields) ^ set(cls._serializables)
-    for field_name, field, in iteritems(cls._fields):
-        if hasattr(field, 'serialized_name'):
+    for field_name, field in iteritems(cls._fields):
+        if hasattr(field, "serialized_name"):
             all_fields.add(field.serialized_name)
-        if hasattr(field, 'deserialize_from'):
+        if hasattr(field, "deserialize_from"):
             all_fields.update(set(_list_or_string(field.deserialize_from)))
         if field_name in mapping:
             all_fields.update(set(_list_or_string(mapping[field_name])))
@@ -77,7 +88,7 @@ def import_loop(cls, instance_or_dict, field_converter, context=None,
     rogue_fields = set(instance_or_dict) - set(all_fields)
     if strict and len(rogue_fields) > 0:
         for field in rogue_fields:
-            errors[field] = 'Rogue field'
+            errors[field] = "Rogue field"
 
     for field_name, field in iteritems(cls._fields):
         serialized_field_name = field.serialized_name or field_name
@@ -98,10 +109,10 @@ def import_loop(cls, instance_or_dict, field_converter, context=None,
         try:
             if raw_value is None:
                 if field.required and not partial:
-                    errors[serialized_field_name] = [field.messages['required']]
+                    errors[serialized_field_name] = [field.messages["required"]]
             else:
                 try:
-                    mapping_by_model = mapping.get('model_mapping', {})
+                    mapping_by_model = mapping.get("model_mapping", {})
                     model_mapping = mapping_by_model.get(field_name, {})
                     raw_value = field_converter(field, raw_value, mapping=model_mapping)
                 except Exception:
@@ -120,8 +131,14 @@ def import_loop(cls, instance_or_dict, field_converter, context=None,
     return data
 
 
-def export_loop(cls, instance_or_dict, field_converter,
-                role=None, raise_error_on_role=False, print_none=False):
+def export_loop(
+    cls,
+    instance_or_dict,
+    field_converter,
+    role=None,
+    raise_error_on_role=False,
+    print_none=False,
+):
     """
     The export_loop function is intended to be a general loop definition that
     can be used for any form of data shaping, such as application of roles or
@@ -149,7 +166,7 @@ def export_loop(cls, instance_or_dict, field_converter,
 
     # Translate `role` into `gottago` function
     gottago = wholelist()
-    if hasattr(cls, '_options') and role in cls._options.roles:
+    if hasattr(cls, "_options") and role in cls._options.roles:
         gottago = cls._options.roles[role]
     elif role and raise_error_on_role:
         error_msg = u'%s Model has no role "%s"'
@@ -166,10 +183,10 @@ def export_loop(cls, instance_or_dict, field_converter,
 
         # Value found, apply transformation and store it
         elif value is not None:
-            if hasattr(field, 'export_loop'):
-                shaped = field.export_loop(value, field_converter,
-                                           role=role,
-                                           print_none=print_none)
+            if hasattr(field, "export_loop"):
+                shaped = field.export_loop(
+                    value, field_converter, role=role, print_none=print_none
+                )
             else:
                 shaped = field_converter(field, value)
 
@@ -207,11 +224,12 @@ def atoms(cls, instance_or_dict):
         expectionation for this structure is that it implements a ``dict``
         interface.
     """
-    all_fields = itertools.chain(iteritems(cls._fields),
-                                 iteritems(cls._serializables))
+    all_fields = itertools.chain(iteritems(cls._fields), iteritems(cls._serializables))
 
-    return ((field_name, field, instance_or_dict[field_name])
-            for field_name, field in all_fields)
+    return (
+        (field_name, field, instance_or_dict[field_name])
+        for field_name, field in all_fields
+    )
 
 
 def allow_none(cls, field):
@@ -236,6 +254,7 @@ def allow_none(cls, field):
 ###
 # Field Filtering
 ###
+
 
 class Role(collections.Set):
 
@@ -270,15 +289,19 @@ class Role(collections.Set):
 
     def __eq__(self, other):
         print(dir(self.function))
-        return (self.function.__name__ == other.function.__name__ and
-                self.fields == other.fields)
+        return (
+            self.function.__name__ == other.function.__name__
+            and self.fields == other.fields
+        )
 
     def __str__(self):
-        return '%s(%s)' % (self.function.__name__,
-                           ', '.join("'%s'" % f for f in self.fields))
+        return "%s(%s)" % (
+            self.function.__name__,
+            ", ".join("'%s'" % f for f in self.fields),
+        )
 
     def __repr__(self):
-        return '<Role %s>' % str(self)
+        return "<Role %s>" % str(self)
 
     # edit role fields
     def __add__(self, other):
@@ -379,30 +402,43 @@ def blacklist(*field_list):
 ###
 
 
-def convert(cls, instance_or_dict, context=None, partial=True, strict=False,
-            mapping=None):
+def convert(
+    cls, instance_or_dict, context=None, partial=True, strict=False, mapping=None
+):
     def field_converter(field, value, mapping=None):
         try:
             return field.to_native(value, mapping=mapping)
         except Exception:
             return field.to_native(value)
-#   field_converter = lambda field, value: field.to_native(value)
-    data = import_loop(cls, instance_or_dict, field_converter, context=context,
-                       partial=partial, strict=strict, mapping=mapping)
+
+    #   field_converter = lambda field, value: field.to_native(value)
+    data = import_loop(
+        cls,
+        instance_or_dict,
+        field_converter,
+        context=context,
+        partial=partial,
+        strict=strict,
+        mapping=mapping,
+    )
     return data
 
 
-def to_native(cls, instance_or_dict, role=None, raise_error_on_role=True,
-              context=None):
-    field_converter = lambda field, value: field.to_native(value,
-                                                           context=context)
-    data = export_loop(cls, instance_or_dict, field_converter,
-                       role=role, raise_error_on_role=raise_error_on_role)
+def to_native(cls, instance_or_dict, role=None, raise_error_on_role=True, context=None):
+    field_converter = lambda field, value: field.to_native(value, context=context)
+    data = export_loop(
+        cls,
+        instance_or_dict,
+        field_converter,
+        role=role,
+        raise_error_on_role=raise_error_on_role,
+    )
     return data
 
 
-def to_primitive(cls, instance_or_dict, role=None, raise_error_on_role=True,
-                 context=None):
+def to_primitive(
+    cls, instance_or_dict, role=None, raise_error_on_role=True, context=None
+):
     """
     Implements serialization as a mechanism to convert ``Model`` instances into
     dictionaries keyed by field_names with the converted data as the values.
@@ -423,17 +459,19 @@ def to_primitive(cls, instance_or_dict, role=None, raise_error_on_role=True,
         This parameter enforces strict behavior which requires substructures
         to have the same role definition as their parent structures.
     """
-    field_converter = lambda field, value: field.to_primitive(value,
-                                                              context=context)
-    data = export_loop(cls, instance_or_dict, field_converter,
-                       role=role, raise_error_on_role=raise_error_on_role)
+    field_converter = lambda field, value: field.to_primitive(value, context=context)
+    data = export_loop(
+        cls,
+        instance_or_dict,
+        field_converter,
+        role=role,
+        raise_error_on_role=raise_error_on_role,
+    )
     return data
 
 
-def serialize(cls, instance_or_dict, role=None, raise_error_on_role=True,
-              context=None):
-    return to_primitive(cls, instance_or_dict, role, raise_error_on_role,
-                        context)
+def serialize(cls, instance_or_dict, role=None, raise_error_on_role=True, context=None):
+    return to_primitive(cls, instance_or_dict, role, raise_error_on_role, context)
 
 
 EMPTY_LIST = "[]"
@@ -530,8 +568,15 @@ def flatten_to_dict(instance_or_dict, prefix=None, ignore_none=True):
     return flat_dict
 
 
-def flatten(cls, instance_or_dict, role=None, raise_error_on_role=True,
-            ignore_none=True, prefix=None, context=None):
+def flatten(
+    cls,
+    instance_or_dict,
+    role=None,
+    raise_error_on_role=True,
+    ignore_none=True,
+    prefix=None,
+    context=None,
+):
     """
     Produces a flat dictionary representation of the model.  Flat, in this
     context, means there is only one level to the dictionary.  Multiple layers
@@ -570,11 +615,11 @@ def flatten(cls, instance_or_dict, role=None, raise_error_on_role=True,
         This puts a prefix in front of the field names during flattening.
         Default: None
     """
-    field_converter = lambda field, value: field.to_primitive(value,
-                                                              context=context)
+    field_converter = lambda field, value: field.to_primitive(value, context=context)
 
-    data = export_loop(cls, instance_or_dict, field_converter,
-                       role=role, print_none=True)
+    data = export_loop(
+        cls, instance_or_dict, field_converter, role=role, print_none=True
+    )
 
     flattened = flatten_to_dict(data, prefix=prefix, ignore_none=ignore_none)
 

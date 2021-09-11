@@ -9,28 +9,21 @@ from wagtail.snippets.models import register_snippet
 
 @register_snippet
 class BlogPageCategory(TranslatableMixin, models.Model):
-    name = models.CharField(
-        max_length=50
-    )
+    name = models.CharField(max_length=50)
 
-    intro = RichTextField(
-        features=[
-            'bold', 'italic', 'link',
-        ],
-        blank=True,
-    )
+    intro = RichTextField(features=["bold", "italic", "link"], blank=True)
     share_description = models.TextField(
         blank=True,
-        help_text='Optional description that will apear when category page is shared. '
-                  'If not set, will default to "intro" text.'
+        help_text="Optional description that will apear when category page is shared. "
+        'If not set, will default to "intro" text.',
     )
     share_image = models.ForeignKey(
-        'wagtailimages.Image',
+        "wagtailimages.Image",
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        verbose_name='Share Image',
-        help_text='Optional image that will apear when category page is shared.',
+        verbose_name="Share Image",
+        help_text="Optional image that will apear when category page is shared.",
     )
 
     panels = [
@@ -54,7 +47,7 @@ class BlogPageCategory(TranslatableMixin, models.Model):
         """
         choices = [(cat.name, cat.name) for cat in BlogPageCategory.objects.all()]
         choices.sort(key=lambda c: c[1])
-        choices.insert(0, ('All', 'All'))
+        choices.insert(0, ("All", "All"))
         return choices
 
     @property

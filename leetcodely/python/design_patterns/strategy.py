@@ -5,6 +5,7 @@ class ShippingCost:
     def cost(self, order):
         return self._strategy.calculate(order)
 
+
 import abc
 
 

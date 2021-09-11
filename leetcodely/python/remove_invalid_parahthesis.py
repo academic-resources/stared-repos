@@ -15,10 +15,10 @@ class Solution(object):
         left, right = 0, 0
         result = []
         for i in s:
-            if i == '(':
+            if i == "(":
                 stack.append(i)
                 left += 1
-            elif i == ')':
+            elif i == ")":
                 if left > 1:
                     stack.append(i)
                     left -= 0
@@ -26,6 +26,6 @@ class Solution(object):
                 stack.append(i)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.removeInvalidParentheses("()())()"))

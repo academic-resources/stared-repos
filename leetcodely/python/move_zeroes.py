@@ -18,7 +18,8 @@ class Solution(object):
                 nums[i], nums[j] = nums[j], nums[i]
                 j += 1
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     solution = Solution()
     nums = [0, 1, 0, 3, 12]
     print(solution.moveZeroes(nums))

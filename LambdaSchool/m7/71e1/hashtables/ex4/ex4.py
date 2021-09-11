@@ -28,11 +28,11 @@ def has_negatives(a):
                     break
                 else:
                     break
-            b = a[midpoint+1:]
-            c = a[:midpoint+1]
+            b = a[midpoint + 1 :]
+            c = a[: midpoint + 1]
             for x in b:
                 for y in c:
-                    w = x*-1
+                    w = x * -1
                     if w == y:
                         d.append(x)
             if str(a) not in cache.items():

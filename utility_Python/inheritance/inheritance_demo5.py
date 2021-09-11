@@ -5,14 +5,16 @@ class BaseFunc:
         self.c = 0
 
     def plus(self, x, y):
-        print (x + y)
+        print(x + y)
 
     def minus(self, x, y):
-        print (x - y)
+        print(x - y)
+
 
 class WorkFunc_a(BaseFunc):
     def __init__(self):
         pass
+
 
 # test
 my_work_func_a = WorkFunc_a()

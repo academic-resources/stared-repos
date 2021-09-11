@@ -1,12 +1,15 @@
 # https://zhuanlan.zhihu.com/p/45535784
 
+
 def outer(func):
     @functools.wraps(func)
     def inner(*args, **kwargs):
         print(f"before...")
         func(*args, **kwargs)
         print("after...")
+
     return inner
+
 
 @outer
 def add(a, b):
@@ -15,4 +18,5 @@ def add(a, b):
     """
     print(a + b)
 
-add(1,2)
+
+add(1, 2)

@@ -11,6 +11,7 @@
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
 <small> Second Edition: July, 2021</small>
 </sub>
+
 </div>
 
 [<< Day 22](../22_Day_Web_scraping/22_web_scraping.md) | [Day 24 >>](../24_Day_Statistics/24_statistics.md)
@@ -36,12 +37,14 @@ Inside the 30DaysOfPython folder create a flask_project folder.
 After installing the virtualenv package go to your project folder and create a virtual env by writing:
 
 For Mac/Linux:
+
 ```sh
 asabeneh@Asabeneh:~/Desktop/30DaysOfPython/flask_project\$ virtualenv venv
 
 ```
 
 For Windows:
+
 ```sh
 C:\Users\User\Documents\30DaysOfPython\flask_project>python -m venv venv
 ```
@@ -56,17 +59,21 @@ venv/
 Let us activate the virtual environment by writing the following command at our project folder.
 
 For Mac/Linux:
+
 ```sh
 asabeneh@Asabeneh:~/Desktop/30DaysOfPython/flask_project$ source venv/bin/activate
 ```
-Activation of the virtual environment in Windows may very on Windows Power shell and git bash. 
+
+Activation of the virtual environment in Windows may very on Windows Power shell and git bash.
 
 For Windows Power Shell:
+
 ```sh
 C:\Users\User\Documents\30DaysOfPython\flask_project> venv\Scripts\activate
 ```
 
 For Windows Git bash:
+
 ```sh
 C:\Users\User\Documents\30DaysOfPython\flask_project> venv\Scripts\. activate
 ```

@@ -1,8 +1,21 @@
 from util import Stack, Queue, Graph
 import random
 
+
 class Player:
-    def __init__(self, current_room, shortest_path=[], lowest_moves=2000, current_path=[], possible_rooms_current_path=None, current_traversal=None, last_direction=None, last_room=None, unvisited_rooms=None, number_rooms_in_world=None):
+    def __init__(
+        self,
+        current_room,
+        shortest_path=[],
+        lowest_moves=2000,
+        current_path=[],
+        possible_rooms_current_path=None,
+        current_traversal=None,
+        last_direction=None,
+        last_room=None,
+        unvisited_rooms=None,
+        number_rooms_in_world=None,
+    ):
         self.current_room = current_room
         self.shortest_path = shortest_path
         self.lowest_moves = lowest_moves
@@ -18,7 +31,7 @@ class Player:
         next_room = self.current_room.get_room_in_direction(direction)
         if next_room is not None:
             self.current_room = next_room
-            if (show_rooms):
+            if show_rooms:
                 next_room.print_room_description(self)
         else:
             print("You cannot move in that direction.")
@@ -46,7 +59,10 @@ class Player:
                 # for each direction in the last room's adjacent rooms
                 for direction in self.possible_rooms_current_path[self.last_room]:
                     # if that direction = current room, append to new path
-                    if self.possible_rooms_current_path[self.last_room][direction] == room:
+                    if (
+                        self.possible_rooms_current_path[self.last_room][direction]
+                        == room
+                    ):
                         new_path.append(direction)
         # return new path
         return new_path
@@ -99,7 +115,7 @@ class Player:
         self.current_path.append(direction)
         # then travel in that direction
         self.travel(direction)
-        
+
     # process for when there are no unvisited rooms
     def process_no_unvisited(self):
         # return shortest path to unexplored room
@@ -125,10 +141,13 @@ class Player:
     # if last room exists, run this function:
     def last_room_exists(self):
         # set last room to current room's last direction in possible rooms
-        self.possible_rooms_current_path[self.current_room.id][self.go_in_reverse_direction(
-            self.last_direction)] = self.last_room
+        self.possible_rooms_current_path[self.current_room.id][
+            self.go_in_reverse_direction(self.last_direction)
+        ] = self.last_room
         # find its last direction in possible rooms and set that to current room
-        self.possible_rooms_current_path[self.last_room][self.last_direction] = self.current_room.id
+        self.possible_rooms_current_path[self.last_room][
+            self.last_direction
+        ] = self.current_room.id
 
     # create potential traversal path
     def new_traversal_path(self):
@@ -155,7 +174,9 @@ class Player:
             self.unvisited_rooms = list()
 
             # for each direction of current room in possible rooms, if unexplored, append to unvisited
-            for direction, room in self.possible_rooms_current_path[self.current_room.id].items():
+            for direction, room in self.possible_rooms_current_path[
+                self.current_room.id
+            ].items():
                 if room == "?":
                     self.unvisited_rooms.append(direction)
 

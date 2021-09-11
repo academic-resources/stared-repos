@@ -4,6 +4,7 @@ right to left for the next level and alternate between)."""
 
 from collections import deque, defaultdict
 
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -70,7 +71,7 @@ class Solution(object):
         return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     bst = BST()
     bst.add(9)
     bst.add(3)

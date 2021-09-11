@@ -22,48 +22,48 @@
 
 class Node {
   constructor(value) {
-    this.value = value
-    this.next = null
+    this.value = value;
+    this.next = null;
   }
 }
 
 class Queue {
   constructor() {
-    this.front = null
-    this.back = null
-    this.length = 0
+    this.front = null;
+    this.back = null;
+    this.length = 0;
   }
 
   enqueue(value) {
-    const node = new Node(value)
-    if (this.back) this.back.next = node
-    this.back = node
-    this.length++
-    if (this.length === 1) this.front = this.back
-    return this.length
+    const node = new Node(value);
+    if (this.back) this.back.next = node;
+    this.back = node;
+    this.length++;
+    if (this.length === 1) this.front = this.back;
+    return this.length;
   }
 
   dequeue() {
-    if (this.length === 0) return null
-    const nodeVal = this.front.value
-    this.length--
+    if (this.length === 0) return null;
+    const nodeVal = this.front.value;
+    this.length--;
 
     if (this.length === 1) {
-      this.front = this.back
+      this.front = this.back;
     } else if (this.length === 0) {
-      this.front = null
-      this.back = null
+      this.front = null;
+      this.back = null;
     } else {
-      this.front = this.front.next
+      this.front = this.front.next;
     }
 
-    return nodeVal
+    return nodeVal;
   }
 
   size() {
-    return this.length
+    return this.length;
   }
 }
 
-exports.Node = Node
-exports.Queue = Queue
+exports.Node = Node;
+exports.Queue = Queue;

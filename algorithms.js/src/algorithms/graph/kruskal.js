@@ -1,8 +1,7 @@
-'use strict';
+"use strict";
 
-var DisjointSetForest = require('../../data_structure/disjoint_set_forest'),
-    Graph = require('../../data_structure/graph');
-
+var DisjointSetForest = require("../../data_structure/disjoint_set_forest"),
+  Graph = require("../../data_structure/graph");
 
 /**
  * Kruskal's minimum spanning tree (forest) algorithm.
@@ -14,7 +13,7 @@ var DisjointSetForest = require('../../data_structure/disjoint_set_forest'),
  */
 var kruskal = function (graph) {
   if (graph.directed) {
-    throw new Error('Can\'t build MST of a directed graph.');
+    throw new Error("Can't build MST of a directed graph.");
   }
 
   var connectedComponents = new DisjointSetForest();
@@ -28,23 +27,24 @@ var kruskal = function (graph) {
       if (vertex < neighbor) {
         edges.push({
           ends: [vertex, neighbor],
-          weight: graph.edge(vertex, neighbor)
+          weight: graph.edge(vertex, neighbor),
         });
       }
     });
   });
 
-  edges.sort(function (a, b) {
-    return a.weight - b.weight;
-  }).forEach(function (edge) {
-    if (!connectedComponents.sameSubset(edge.ends[0], edge.ends[1])) {
-      mst.addEdge(edge.ends[0], edge.ends[1], edge.weight);
-      connectedComponents.merge(edge.ends[0], edge.ends[1]);
-    }
-  });
+  edges
+    .sort(function (a, b) {
+      return a.weight - b.weight;
+    })
+    .forEach(function (edge) {
+      if (!connectedComponents.sameSubset(edge.ends[0], edge.ends[1])) {
+        mst.addEdge(edge.ends[0], edge.ends[1], edge.weight);
+        connectedComponents.merge(edge.ends[0], edge.ends[1]);
+      }
+    });
 
   return mst;
 };
-
 
 module.exports = kruskal;

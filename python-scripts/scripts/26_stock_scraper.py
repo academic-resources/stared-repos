@@ -20,13 +20,13 @@ def get_stocks(url):
 
 def output_data(data_dict):
     for industry in data_dict:
-        print('\n'+industry)
-        print('-'*len(industry))
+        print("\n" + industry)
+        print("-" * len(industry))
         for ticker in data_dict[industry]:
             print(ticker)
 
 
-if __name__ == '__main__':
-    url = 'http://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
+if __name__ == "__main__":
+    url = "http://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
     scraped_data = get_stocks(url)
     output_data(scraped_data)

@@ -5,19 +5,19 @@ import time
 import random
 import pyjokes
 
-class Game:
 
+class Game:
     def __init__(self):
         self.w = 750
         self.h = 500
         self.reset = True
         self.active = False
-        self.input_text = ''
-        self.word = ''
+        self.input_text = ""
+        self.word = ""
         self.time_start = 0
         self.total_time = 0
-        self.accuracy = '0%'
-        self.results = 'Time:0 Accuracy:0 % WPM:0 '
+        self.accuracy = "0%"
+        self.results = "Time:0 Accuracy:0 % WPM:0 "
         self.wpm = 0
         self.end = False
         self.HEAD_C = (6, 185, 191)
@@ -25,19 +25,19 @@ class Game:
         self.RESULT_C = (7, 217, 122)
 
         pygame.init()
-        self.open_img = pygame.image.load('images/open.jpg')
+        self.open_img = pygame.image.load("images/open.jpg")
         self.open_img = pygame.transform.scale(self.open_img, (self.w, self.h))
 
-        self.bg = pygame.image.load('images/background.jpg')
+        self.bg = pygame.image.load("images/background.jpg")
         self.bg = pygame.transform.scale(self.bg, (750, 500))
 
         self.screen = pygame.display.set_mode((self.w, self.h))
-        pygame.display.set_caption('Typing Speed Test')
+        pygame.display.set_caption("Typing Speed Test")
 
     def draw_text(self, screen, msg, y, fsize, color):
         font = pygame.font.Font(None, fsize)
         text = font.render(msg, 1, color)
-        text_rect = text.get_rect(center=(self.w/2, y))
+        text_rect = text.get_rect(center=(self.w / 2, y))
         screen.blit(text, text_rect)
         pygame.display.update()
 
@@ -47,12 +47,12 @@ class Game:
             return sentence
 
     def show_results(self, screen):
-        if(not self.end):
+        if not self.end:
 
-            #Calculate time
+            # Calculate time
             self.total_time = time.time() - self.time_start
 
-            #Calculate accuracy
+            # Calculate accuracy
             count = 0
             for i, c in enumerate(self.word):
                 try:
@@ -60,21 +60,29 @@ class Game:
                         count += 1
                 except:
                     pass
-            self.accuracy = count/len(self.word)*100
+            self.accuracy = count / len(self.word) * 100
 
-            #Calculate words per minute
-            self.wpm = len(self.input_text)*60/(5*self.total_time)
+            # Calculate words per minute
+            self.wpm = len(self.input_text) * 60 / (5 * self.total_time)
             self.end = True
             print(self.total_time)
 
-            self.results = 'Time: '+str(round(self.total_time)) + " secs  WPM:  " + str(round(self.wpm)) + '   Accuracy: ' +str(round(self.accuracy)) + "%"
+            self.results = (
+                "Time: "
+                + str(round(self.total_time))
+                + " secs  WPM:  "
+                + str(round(self.wpm))
+                + "   Accuracy: "
+                + str(round(self.accuracy))
+                + "%"
+            )
 
             # draw icon image
-            self.time_img = pygame.image.load('images/icon.png')
+            self.time_img = pygame.image.load("images/icon.png")
             self.time_img = pygame.transform.scale(self.time_img, (150, 150))
 
-            #screen.blit(self.time_img, (80,320))
-            screen.blit(self.time_img, (self.w/2-75, self.h-140))
+            # screen.blit(self.time_img, (80,320))
+            screen.blit(self.time_img, (self.w / 2 - 75, self.h - 140))
             self.draw_text(screen, "Reset", self.h - 70, 26, (109, 248, 252))
 
             print(self.results)
@@ -84,7 +92,7 @@ class Game:
         self.reset_game()
 
         self.running = True
-        while(self.running):
+        while self.running:
             clock = pygame.time.Clock()
             self.screen.fill((0, 0, 0), (50, 250, 650, 50))
             pygame.draw.rect(self.screen, self.HEAD_C, (50, 250, 650, 50), 2)
@@ -99,12 +107,12 @@ class Game:
                 elif event.type == pygame.MOUSEBUTTONUP:
                     x, y = pygame.mouse.get_pos()
                     # position of input box
-                    if(x >= 50 and x <= 650 and y >= 250 and y <= 300):
+                    if x >= 50 and x <= 650 and y >= 250 and y <= 300:
                         self.active = True
-                        self.input_text = ''
+                        self.input_text = ""
                         self.time_start = time.time()
-                     # position of reset box
-                    if(x >= 310 and x <= 510 and y >= 390 and self.end):
+                    # position of reset box
+                    if x >= 310 and x <= 510 and y >= 390 and self.end:
                         self.reset_game()
                         x, y = pygame.mouse.get_pos()
                 elif event.type == pygame.KEYDOWN:
@@ -114,7 +122,8 @@ class Game:
                             self.show_results(self.screen)
                             print(self.results)
                             self.draw_text(
-                                self.screen, self.results, 350, 28, self.RESULT_C)
+                                self.screen, self.results, 350, 28, self.RESULT_C
+                            )
                             self.end = True
 
                         elif event.key == pygame.K_BACKSPACE:
@@ -135,18 +144,18 @@ class Game:
         time.sleep(1)
         self.reset = False
         self.end = False
-        self.input_text = ''
-        self.word = ''
+        self.input_text = ""
+        self.word = ""
         self.time_start = 0
         self.total_time = 0
         self.wpm = 0
 
         # Get random sentence
         self.word = self.get_sentence()
-        if (not self.word):
+        if not self.word:
             self.reset_game()
 
-        #drawing heading
+        # drawing heading
         self.screen.fill((0, 0, 0))
         self.screen.blit(self.bg, (0, 0))
         msg = "Typing Speed Test"

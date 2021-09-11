@@ -50,7 +50,7 @@ function sumArray(array) {
 // reverseString("internet")    // => "tenretni"
 // reverseString("friends")     // => "sdneirf"
 function reverseString(str) {
-  if (!str.length) return '';
+  if (!str.length) return "";
   return reverseString(str.slice(1)) + str[0];
 }
 
@@ -110,7 +110,7 @@ function pow(base, exponent) {
 function flatten(data) {
   if (!(data instanceof Array)) return [data];
   let result = [];
-  data.forEach(el => {
+  data.forEach((el) => {
     let flattened = flatten(el);
     result.push(...flattened);
   });
@@ -193,5 +193,5 @@ module.exports = {
   pow,
   flatten,
   fileFinder,
-  pathFinder
+  pathFinder,
 };

@@ -1,5 +1,6 @@
 # https://realpython.com/python-interface/
 
+
 class InformalParserInterface:
     def load_data_source(self, path: str, file_name: str) -> str:
         """Load in the file for extracting text."""
@@ -9,9 +10,11 @@ class InformalParserInterface:
         """Extract text from the currently loaded file."""
         pass
 
-# pdf 
+
+# pdf
 class PdfParser(InformalParserInterface):
     """Extract text from a PDF"""
+
     def load_data_source(self, path: str, file_name: str) -> str:
         """Overrides InformalParserInterface.load_data_source()"""
         pass
@@ -20,9 +23,11 @@ class PdfParser(InformalParserInterface):
         """Overrides InformalParserInterface.extract_text()"""
         pass
 
+
 # email
 class EmlParser(InformalParserInterface):
     """Extract text from an email"""
+
     def load_data_source(self, path: str, file_name: str) -> str:
         """Overrides InformalParserInterface.load_data_source()"""
         pass

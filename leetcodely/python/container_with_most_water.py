@@ -23,6 +23,6 @@ class Solution(object):
         return water
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.maxArea([1, 1]))

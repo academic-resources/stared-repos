@@ -6,7 +6,6 @@ import numpy
 
 
 def timeit(method):
-
     def timed(*args, **kw):
         ts = time.time()
 

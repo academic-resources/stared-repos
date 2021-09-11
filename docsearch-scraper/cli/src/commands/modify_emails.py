@@ -17,9 +17,18 @@ def _ensure_configs_private():
     if not path.isdir("private"):
         import subprocess as sp
 
-        sp.call(["git", "clone", "--depth", "1", "--branch", "master",
-                 "git@github.com:algolia/docsearch-configs-private.git",
-                 "private"])
+        sp.call(
+            [
+                "git",
+                "clone",
+                "--depth",
+                "1",
+                "--branch",
+                "master",
+                "git@github.com:algolia/docsearch-configs-private.git",
+                "private",
+            ]
+        )
     os.chdir(old_dir)
     return p
 
@@ -32,8 +41,12 @@ class UpdateEmails(AbstractCommand):
         return "Add or update contact emails"
 
     def get_options(self):
-        return [{"name": "configs...",
-                 "description": "name of the docsearch you want to update contact emails"}]
+        return [
+            {
+                "name": "configs...",
+                "description": "name of the docsearch you want to update contact emails",
+            }
+        ]
 
     def run(self, args):
         from deployer.src.emails import add
@@ -51,8 +64,12 @@ class DeleteEmails(AbstractCommand):
         return "Delete contact emails"
 
     def get_options(self):
-        return [{"name": "configs...",
-                 "description": "name of the docsearch you want to delete contact emails"}]
+        return [
+            {
+                "name": "configs...",
+                "description": "name of the docsearch you want to delete contact emails",
+            }
+        ]
 
     def run(self, args):
         from deployer.src.emails import delete

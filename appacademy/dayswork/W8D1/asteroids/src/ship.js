@@ -6,26 +6,30 @@ const Bullet = require("./bullet");
 Util.inherits(Ship, MovingObject);
 
 function Ship(pos, game) {
-  this.velocity = [0,0];
-  MovingObject.call(this, { pos: pos, vel: this.velocity, color: Ship.COLOR, radius: Ship.RADIUS, game: game });
+  this.velocity = [0, 0];
+  MovingObject.call(this, {
+    pos: pos,
+    vel: this.velocity,
+    color: Ship.COLOR,
+    radius: Ship.RADIUS,
+    game: game,
+  });
 }
 
-Ship.prototype.relocate = function() {
+Ship.prototype.relocate = function () {
   this.position = this.game.randomPosition();
-  this.velocity = [0,0];
+  this.velocity = [0, 0];
 };
 
-Ship.prototype.power = function(impulse) {
+Ship.prototype.power = function (impulse) {
   const [dx, dy] = impulse;
   this.velocity[0] += dx;
   this.velocity[1] += dy;
-}
+};
 
-Ship.prototype.fireBullet = function() {
-    
-    const new_bullet = new Bullet(this.game);
-    this.game.add(new_bullet);
-    
+Ship.prototype.fireBullet = function () {
+  const new_bullet = new Bullet(this.game);
+  this.game.add(new_bullet);
 };
 
 Ship.RADIUS = 10;

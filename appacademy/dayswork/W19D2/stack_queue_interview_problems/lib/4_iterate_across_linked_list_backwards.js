@@ -28,84 +28,84 @@
 
 class Node {
   constructor(value) {
-    this.value = value
-    this.next = null
+    this.value = value;
+    this.next = null;
   }
 }
 
 class Stack {
   constructor() {
-    this.top = null
-    this.bottom = null
-    this.length = 0
+    this.top = null;
+    this.bottom = null;
+    this.length = 0;
   }
 
   push(val) {
-    let node
+    let node;
 
-    if (typeof val === 'object') {
-      node = new Node(val.value)
+    if (typeof val === "object") {
+      node = new Node(val.value);
     } else {
-      node = new Node(val)
+      node = new Node(val);
     }
 
     if (!this.top) {
-      this.top = node
-      this.bottom = node
+      this.top = node;
+      this.bottom = node;
     } else {
-      const temp = this.top
-      this.top = node
-      this.top.next = temp
+      const temp = this.top;
+      this.top = node;
+      this.top.next = temp;
     }
-    return ++this.length
+    return ++this.length;
   }
 
   pop() {
     if (!this.top) {
-      return null
+      return null;
     }
 
-    const temp = this.top
+    const temp = this.top;
     if (this.top === this.bottom) {
-      this.bottom = null
+      this.bottom = null;
     }
-    this.top = this.top.next
-    this.length--
+    this.top = this.top.next;
+    this.length--;
 
-    return temp
+    return temp;
   }
 
   size() {
-    return this.length
+    return this.length;
   }
 }
 
 function iterateAcrossLinkedListBackwards(linkedList) {
-  if (!linkedList.length) return ''
-  const stack = new Stack()
+  if (!linkedList.length) return "";
+  const stack = new Stack();
 
-  let node = linkedList.head
-  stack.push(node)
+  let node = linkedList.head;
+  stack.push(node);
 
   while (node.next) {
-    node = node.next
-    stack.push(node)
+    node = node.next;
+    stack.push(node);
   }
 
-  let output = []
+  let output = [];
 
   while (stack.size()) {
-    output.push(stack.pop().value)
+    output.push(stack.pop().value);
   }
 
   return output
-    .map(e => {
-      if (e === null) return 'null'
-      if (e === undefined) return 'undefined'
-      if (e === false) return 'false'
-      return e
+    .map((e) => {
+      if (e === null) return "null";
+      if (e === undefined) return "undefined";
+      if (e === false) return "false";
+      return e;
     })
-    .join(' -> ')
+    .join(" -> ");
 }
 
-exports.iterateAcrossLinkedListBackwards = iterateAcrossLinkedListBackwards
+exports.iterateAcrossLinkedListBackwards = iterateAcrossLinkedListBackwards;

@@ -83,10 +83,7 @@ Examples
             if numpy.isfinite(m[ii, jj]):
                 continue
 
-            if not wf(ii, jj,
-                      query_size=N,
-                      reference_size=M,
-                      **d.windowArgs):
+            if not wf(ii, jj, query_size=N, reference_size=M, **d.windowArgs):
                 m[ii, jj] = 0
                 continue
 

@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 export default {
   DELETE_GOD: gql`
@@ -33,5 +33,5 @@ export default {
         coordinates
       }
     }
-  `
+  `,
 };

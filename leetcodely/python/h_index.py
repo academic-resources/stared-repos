@@ -8,6 +8,7 @@ the remaining two with no more than 3 citations each, his h-index is 3.
 
 Note: If there are several possible values for h, the maximum one is taken as the h-index."""
 
+
 class Solution(object):
     def hIndex(self, citations):
         """

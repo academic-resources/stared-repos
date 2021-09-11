@@ -13,7 +13,7 @@ function Game() {
 /**
  * Flips the current turn to the opposite color.
  */
-Game.prototype._flipTurn = function() {
+Game.prototype._flipTurn = function () {
   this.turn = this.turn == "black" ? "white" : "black";
 };
 
@@ -23,14 +23,14 @@ let rlInterface;
 /**
  * Creates a readline interface and starts the run loop.
  */
-Game.prototype.play = function() {
+Game.prototype.play = function () {
   rlInterface = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
-    terminal: false
+    terminal: false,
   });
 
-  this.runLoop(function() {
+  this.runLoop(function () {
     rlInterface.close();
     rlInterface = null;
   });
@@ -40,7 +40,7 @@ Game.prototype.play = function() {
  * Gets the next move from the current player and
  * attempts to make the play.
  */
-Game.prototype.playTurn = function(callback) {
+Game.prototype.playTurn = function (callback) {
   this.board.print();
   rlInterface.question(
     `${this.turn}, where do you want to move?`,
@@ -64,7 +64,7 @@ Game.prototype.playTurn = function(callback) {
 /**
  * Continues game play, switching turns, until the game is over.
  */
-Game.prototype.runLoop = function(overCallback) {
+Game.prototype.runLoop = function (overCallback) {
   if (this.board.isOver()) {
     console.log("The game is over!");
     overCallback();

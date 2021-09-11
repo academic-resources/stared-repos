@@ -1,36 +1,34 @@
-import React from 'react';
+import React from "react";
 
 class Weather extends React.Component {
-
   componentDidMount() {
-    navigator.geolocation.getCurrentPosition(function(pos) {
-    var xmlhttp = new XMLHttpRequest();
-    console.log(pos);
-    xmlhttp.open("GET", `http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={7b8ddd009f73a79dd0de6fdfa101ac20}`)
-    xmlhttp.onreadystatechange = function () {
-      if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
-        if (xmlhttp.status == 200) {
-          document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
-          console.dir(xmlhttp.response)
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      var xmlhttp = new XMLHttpRequest();
+      console.log(pos);
+      xmlhttp.open(
+        "GET",
+        `http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={7b8ddd009f73a79dd0de6fdfa101ac20}`
+      );
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+          // XMLHttpRequest.DONE == 4
+          if (xmlhttp.status == 200) {
+            document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+            console.dir(xmlhttp.response);
+          } else if (xmlhttp.status == 400) {
+            alert("There was an error 400");
+          } else {
+            alert("something else other than 200 was returned");
+          }
         }
-        else if (xmlhttp.status == 400) {
-          alert('There was an error 400');
-        }
-        else {
-          alert('something else other than 200 was returned');
-        }
-      }
-    }
-  })
+      };
+    });
   }
 
   render() {
-    return (<div></div>)
-    
+    return <div></div>;
   }
 }
-
-
 
 export default Weather;
 

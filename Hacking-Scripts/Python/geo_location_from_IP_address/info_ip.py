@@ -6,8 +6,9 @@ ip = input(
 )
 
 resp = urllib.request.urlopen(
-    "http://www.ip-api.com/json/" + ip +
-    "?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query"
+    "http://www.ip-api.com/json/"
+    + ip
+    + "?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query"
 ).read()
 resp_dic = json.loads(resp)
 

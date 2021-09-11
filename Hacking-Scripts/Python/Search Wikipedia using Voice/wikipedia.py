@@ -1,9 +1,11 @@
 # pip install pyttsx3
-import pyttsx3 
+import pyttsx3
+
 # pip install SpeechRecognition
-import speech_recognition as sr  
+import speech_recognition as sr
+
 # pip install wikipedia
-import wikipedia  
+import wikipedia
 
 # creating object
 engine = pyttsx3.init()
@@ -12,6 +14,7 @@ engine = pyttsx3.init()
 def fun_talk(audio):
     engine.say(audio)
     engine.runAndWait()
+
 
 # function for taking the questions/queries using voice commands and recognizing them
 def get_command():
@@ -24,7 +27,7 @@ def get_command():
 
         try:
             print("Recognizing...")
-            command = rec.recognize_google(audio, language='en-in')
+            command = rec.recognize_google(audio, language="en-in")
             print(f"You said: {command}\n")
 
         except Exception as e:
@@ -35,25 +38,25 @@ def get_command():
         return command
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     # taking the query input in the form of voice command from the user using the get_command function
     query = get_command().lower()
 
     try:
         # checking if it contains the word 'wikipedia'
-        if 'wikipedia' in query:
-            fun_talk('Searching Wikipedia')
+        if "wikipedia" in query:
+            fun_talk("Searching Wikipedia")
             query = query.replace("wikipedia", "")
-            
+
             # searching query on wikipedia and getting the results
             results = wikipedia.summary(query, sentences=5)
             fun_talk("According to Wikipedia")
             print(results)
             fun_talk(results)
         else:
-            print("Try again..\nFor example, say \"india country wikipedia\"")
-            fun_talk("Try again..\nFor example, say \"india country wikipedia\"")
+            print('Try again..\nFor example, say "india country wikipedia"')
+            fun_talk('Try again..\nFor example, say "india country wikipedia"')
 
     except Exception as e:
         print("There is something wrong. Try again please..")

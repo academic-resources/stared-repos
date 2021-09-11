@@ -25,14 +25,25 @@ path4:    2 3   1 2   0 2   1 1    0 1
 
 class WordFinder:
     def __init__(self):
-        self.neighbors = [[-1, -1], [0, -1], [1, -1], [-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1]]
+        self.neighbors = [
+            [-1, -1],
+            [0, -1],
+            [1, -1],
+            [-1, 0],
+            [1, 0],
+            [-1, 1],
+            [0, 1],
+            [1, 1],
+        ]
 
     def find_all_paths(self, grid, word):
         count = 0
         for i in range(len(grid)):
             for j in range(len(grid[i])):
                 if grid[i][j] == word[0]:
-                    visited = [[False for _ in range(len(grid[0]))] for _ in range(len(grid))]
+                    visited = [
+                        [False for _ in range(len(grid[0]))] for _ in range(len(grid))
+                    ]
                     result = []
                     self.helper(grid, i, j, visited, word, 0, result, [])
                     count += len(result)
@@ -48,15 +59,28 @@ class WordFinder:
         for adj in adjacent:
             if 0 <= adj[0] < len(grid) and 0 <= adj[1] < len(grid[0]):
                 if not visited[adj[0]][adj[1]]:
-                    if index + 1 < len(word) and grid[adj[0]][adj[1]] == word[index + 1]:
+                    if (
+                        index + 1 < len(word)
+                        and grid[adj[0]][adj[1]] == word[index + 1]
+                    ):
                         visited[adj[0]][adj[1]] = True
                         curr.append(grid[adj[0]][adj[1]])
-                        self.helper(grid, adj[0], adj[1], visited, word, index + 1, result, curr)
+                        self.helper(
+                            grid, adj[0], adj[1], visited, word, index + 1, result, curr
+                        )
                         visited[adj[0]][adj[1]] = False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     word_finder = WordFinder()
-    print(word_finder.find_all_paths(
-        [['s', 't', 'a', 'r'], ['a', 'r', 't', 'y'], ['x', 'k', 'c', 's'], ['t', 'r', 'a', 'p']],
-        "start"))
+    print(
+        word_finder.find_all_paths(
+            [
+                ["s", "t", "a", "r"],
+                ["a", "r", "t", "y"],
+                ["x", "k", "c", "s"],
+                ["t", "r", "a", "p"],
+            ],
+            "start",
+        )
+    )

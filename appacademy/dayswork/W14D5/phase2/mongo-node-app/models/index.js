@@ -1,3 +1,3 @@
-module.exports = function(app){
-  require('./user');
+module.exports = function (app) {
+  require("./user");
 };

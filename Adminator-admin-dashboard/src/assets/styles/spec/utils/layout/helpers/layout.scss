@@ -20,21 +20,45 @@ $responsive: true;
 // @Display
 // ---------------------------------------------------------
 
-.d-b          { display: block !important; }
-.d-ib         { display: inline-block !important; }
-.d-i          { display: inline !important; }
-.d-tb         { display: table !important; }
-.d-tbc        { display: table-cell !important; }
-.d-n          { display: none !important; }
+.d-b {
+  display: block !important;
+}
+.d-ib {
+  display: inline-block !important;
+}
+.d-i {
+  display: inline !important;
+}
+.d-tb {
+  display: table !important;
+}
+.d-tbc {
+  display: table-cell !important;
+}
+.d-n {
+  display: none !important;
+}
 
 @if ($responsive == true) {
   @include generateResponsive() {
-    .d-b\@#{$breakpointAlias}      { display: block !important; }
-    .d-ib\@#{$breakpointAlias}     { display: inline-block !important; }
-    .d-i\@#{$breakpointAlias}      { display: inline !important; }
-    .d-tb\@#{$breakpointAlias}     { display: table !important; }
-    .d-tbc\@#{$breakpointAlias}    { display: table-cell !important; }
-    .d-n\@#{$breakpointAlias}      { display: none !important; }
+    .d-b\@#{$breakpointAlias} {
+      display: block !important;
+    }
+    .d-ib\@#{$breakpointAlias} {
+      display: inline-block !important;
+    }
+    .d-i\@#{$breakpointAlias} {
+      display: inline !important;
+    }
+    .d-tb\@#{$breakpointAlias} {
+      display: table !important;
+    }
+    .d-tbc\@#{$breakpointAlias} {
+      display: table-cell !important;
+    }
+    .d-n\@#{$breakpointAlias} {
+      display: none !important;
+    }
   }
 }
 
@@ -42,29 +66,65 @@ $responsive: true;
 // @Overflow
 // ---------------------------------------------------------
 
-.ov-h         { overflow: hidden !important; }
-.ov-a         { overflow: auto !important; }
-.ov-s         { overflow: scroll !important; }
+.ov-h {
+  overflow: hidden !important;
+}
+.ov-a {
+  overflow: auto !important;
+}
+.ov-s {
+  overflow: scroll !important;
+}
 
-.ovY-h        { overflow-y: hidden !important; }
-.ovX-h        { overflow-x: hidden !important; }
-.ovY-a        { overflow-y: auto !important; }
-.ovX-a        { overflow-x: auto !important; }
-.ovY-s        { overflow-y: scroll !important; }
-.ovX-s        { overflow-x: scroll !important; }
+.ovY-h {
+  overflow-y: hidden !important;
+}
+.ovX-h {
+  overflow-x: hidden !important;
+}
+.ovY-a {
+  overflow-y: auto !important;
+}
+.ovX-a {
+  overflow-x: auto !important;
+}
+.ovY-s {
+  overflow-y: scroll !important;
+}
+.ovX-s {
+  overflow-x: scroll !important;
+}
 
 @if ($responsive == true) {
   @include generateResponsive() {
-    .ov-h\@#{$breakpointAlias}     { overflow: hidden !important; }
-    .ov-a\@#{$breakpointAlias}     { overflow: auto !important; }
-    .ov-s\@#{$breakpointAlias}     { overflow: scroll !important; }
+    .ov-h\@#{$breakpointAlias} {
+      overflow: hidden !important;
+    }
+    .ov-a\@#{$breakpointAlias} {
+      overflow: auto !important;
+    }
+    .ov-s\@#{$breakpointAlias} {
+      overflow: scroll !important;
+    }
 
-    .ovY-h\@#{$breakpointAlias}    { overflow-y: hidden !important; }
-    .ovX-h\@#{$breakpointAlias}    { overflow-x: hidden !important; }
-    .ovY-a\@#{$breakpointAlias}    { overflow-y: auto !important; }
-    .ovX-a\@#{$breakpointAlias}    { overflow-x: auto !important; }
-    .ovY-s\@#{$breakpointAlias}    { overflow-y: scroll !important; }
-    .ovX-s\@#{$breakpointAlias}    { overflow-x: scroll !important; }
+    .ovY-h\@#{$breakpointAlias} {
+      overflow-y: hidden !important;
+    }
+    .ovX-h\@#{$breakpointAlias} {
+      overflow-x: hidden !important;
+    }
+    .ovY-a\@#{$breakpointAlias} {
+      overflow-y: auto !important;
+    }
+    .ovX-a\@#{$breakpointAlias} {
+      overflow-x: auto !important;
+    }
+    .ovY-s\@#{$breakpointAlias} {
+      overflow-y: scroll !important;
+    }
+    .ovX-s\@#{$breakpointAlias} {
+      overflow-x: scroll !important;
+    }
   }
 }
 
@@ -72,15 +132,27 @@ $responsive: true;
 // @Float
 // ---------------------------------------------------------
 
-.fl-l         { float: left !important; }
-.fl-r         { float: right !important; }
-.fl-n         { float: none !important; }
+.fl-l {
+  float: left !important;
+}
+.fl-r {
+  float: right !important;
+}
+.fl-n {
+  float: none !important;
+}
 
 @if ($responsive == true) {
   @include generateResponsive() {
-    .fl-l\@#{$breakpointAlias}     { float: left !important; }
-    .fl-r\@#{$breakpointAlias}     { float: right !important; }
-    .fl-n\@#{$breakpointAlias}     { float: none !important; }
+    .fl-l\@#{$breakpointAlias} {
+      float: left !important;
+    }
+    .fl-r\@#{$breakpointAlias} {
+      float: right !important;
+    }
+    .fl-n\@#{$breakpointAlias} {
+      float: none !important;
+    }
   }
 }
 
@@ -88,15 +160,27 @@ $responsive: true;
 // @Vertical Align
 // ---------------------------------------------------------
 
-.va-t         { vertical-align: top !important; }
-.va-m         { vertical-align: middle !important; }
-.va-b         { vertical-align: bottom !important; }
+.va-t {
+  vertical-align: top !important;
+}
+.va-m {
+  vertical-align: middle !important;
+}
+.va-b {
+  vertical-align: bottom !important;
+}
 
 @if ($responsive == true) {
   @include generateResponsive() {
-    .va-t\@#{$breakpointAlias}     { vertical-align: top !important; }
-    .va-m\@#{$breakpointAlias}     { vertical-align: middle !important; }
-    .va-b\@#{$breakpointAlias}     { vertical-align: bottom !important; }
+    .va-t\@#{$breakpointAlias} {
+      vertical-align: top !important;
+    }
+    .va-m\@#{$breakpointAlias} {
+      vertical-align: middle !important;
+    }
+    .va-b\@#{$breakpointAlias} {
+      vertical-align: bottom !important;
+    }
   }
 }
 
@@ -104,19 +188,39 @@ $responsive: true;
 // @Position
 // ---------------------------------------------------------
 
-.pos-s        { position: static !important; }
-.pos-st       { position: sticky !important; }
-.pos-r        { position: relative !important; }
-.pos-a        { position: absolute !important; }
-.pos-f        { position: fixed !important; }
+.pos-s {
+  position: static !important;
+}
+.pos-st {
+  position: sticky !important;
+}
+.pos-r {
+  position: relative !important;
+}
+.pos-a {
+  position: absolute !important;
+}
+.pos-f {
+  position: fixed !important;
+}
 
 @if ($responsive == true) {
   @include generateResponsive() {
-    .pos-s\@#{$breakpointAlias}    { position: static !important; }
-    .pos-st\@#{$breakpointAlias}   { position: sticky !important; }
-    .pos-r\@#{$breakpointAlias}    { position: relative !important; }
-    .pos-a\@#{$breakpointAlias}    { position: absolute !important; }
-    .pos-f\@#{$breakpointAlias}    { position: fixed !important; }
+    .pos-s\@#{$breakpointAlias} {
+      position: static !important;
+    }
+    .pos-st\@#{$breakpointAlias} {
+      position: sticky !important;
+    }
+    .pos-r\@#{$breakpointAlias} {
+      position: relative !important;
+    }
+    .pos-a\@#{$breakpointAlias} {
+      position: absolute !important;
+    }
+    .pos-f\@#{$breakpointAlias} {
+      position: fixed !important;
+    }
   }
 }
 
@@ -125,11 +229,15 @@ $responsive: true;
 // ---------------------------------------------------------
 
 @for $i from 0 through 9 {
-  .z-#{$i} { z-index: ($i * 1000) !important; }
+  .z-#{$i} {
+    z-index: ($i * 1000) !important;
+  }
 
   @if ($responsive == true) {
     @include generateResponsive() {
-      .z-#{$i}\@#{$breakpointAlias} { z-index: ($i * 1000) !important; }
+      .z-#{$i}\@#{$breakpointAlias} {
+        z-index: ($i * 1000) !important;
+      }
     }
   }
 }

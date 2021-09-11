@@ -15,8 +15,8 @@ from pyspider.database.basedb import BaseDB
 
 
 class ResultDB(SQLiteMixin, SplitTableMixin, BaseResultDB, BaseDB):
-    __tablename__ = 'resultdb'
-    placeholder = '?'
+    __tablename__ = "resultdb"
+    placeholder = "?"
 
     def __init__(self, path):
         self.path = path
@@ -25,23 +25,26 @@ class ResultDB(SQLiteMixin, SplitTableMixin, BaseResultDB, BaseDB):
         self._list_project()
 
     def _create_project(self, project):
-        assert re.match(r'^\w+$', project) is not None
+        assert re.match(r"^\w+$", project) is not None
         tablename = self._tablename(project)
-        self._execute('''CREATE TABLE IF NOT EXISTS `%s` (
+        self._execute(
+            """CREATE TABLE IF NOT EXISTS `%s` (
                 taskid PRIMARY KEY,
                 url,
                 result,
                 updatetime
-                )''' % tablename)
+                )"""
+            % tablename
+        )
 
     def _parse(self, data):
-        if 'result' in data:
-            data['result'] = json.loads(data['result'])
+        if "result" in data:
+            data["result"] = json.loads(data["result"])
         return data
 
     def _stringify(self, data):
-        if 'result' in data:
-            data['result'] = json.dumps(data['result'])
+        if "result" in data:
+            data["result"] = json.dumps(data["result"])
         return data
 
     def save(self, project, taskid, url, result):
@@ -50,10 +53,10 @@ class ResultDB(SQLiteMixin, SplitTableMixin, BaseResultDB, BaseDB):
             self._create_project(project)
             self._list_project()
         obj = {
-            'taskid': taskid,
-            'url': url,
-            'result': result,
-            'updatetime': time.time(),
+            "taskid": taskid,
+            "url": url,
+            "result": result,
+            "updatetime": time.time(),
         }
         return self._replace(tablename, **self._stringify(obj))
 
@@ -64,8 +67,9 @@ class ResultDB(SQLiteMixin, SplitTableMixin, BaseResultDB, BaseDB):
             return
         tablename = self._tablename(project)
 
-        for task in self._select2dic(tablename, what=fields, order='updatetime DESC',
-                                     offset=offset, limit=limit):
+        for task in self._select2dic(
+            tablename, what=fields, order="updatetime DESC", offset=offset, limit=limit
+        ):
             yield self._parse(task)
 
     def count(self, project):
@@ -74,7 +78,9 @@ class ResultDB(SQLiteMixin, SplitTableMixin, BaseResultDB, BaseDB):
         if project not in self.projects:
             return 0
         tablename = self._tablename(project)
-        for count, in self._execute("SELECT count(1) FROM %s" % self.escape(tablename)):
+        for (count,) in self._execute(
+            "SELECT count(1) FROM %s" % self.escape(tablename)
+        ):
             return count
 
     def get(self, project, taskid, fields=None):
@@ -84,6 +90,7 @@ class ResultDB(SQLiteMixin, SplitTableMixin, BaseResultDB, BaseDB):
             return
         tablename = self._tablename(project)
         where = "`taskid` = %s" % self.placeholder
-        for task in self._select2dic(tablename, what=fields,
-                                     where=where, where_values=(taskid, )):
+        for task in self._select2dic(
+            tablename, what=fields, where=where, where_values=(taskid,)
+        ):
             return self._parse(task)

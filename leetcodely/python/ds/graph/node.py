@@ -25,4 +25,4 @@ class Node:
         return hash((self.id, self.value))
 
     def __repr__(self):
-        return '{}'.format(self.value)
+        return "{}".format(self.value)

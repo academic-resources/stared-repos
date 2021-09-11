@@ -48,13 +48,14 @@ class PortfolioSellTest(unittest.TestCase):
             self.p.sell("IBM", 1)
 
 
-#(((fake)))
+# (((fake)))
 # A simple fake for requests that implements only one method,
 # and is only good for one request.  You can make this much
 # more complex for your own needs.
 class FakeRequests:
     def get(self, url):
-        return SimpleNamespace(text='\nIBM,,,140\nHPQ,,,32\n')
+        return SimpleNamespace(text="\nIBM,,,140\nHPQ,,,32\n")
+
 
 class PortfolioValueTest(unittest.TestCase):
     def setUp(self):
@@ -72,4 +73,6 @@ class PortfolioValueTest(unittest.TestCase):
     def tearDown(self):
         # Restore the real requests.
         portfolio3.requests = self.old_requests
-#(((end)))
+
+
+# (((end)))

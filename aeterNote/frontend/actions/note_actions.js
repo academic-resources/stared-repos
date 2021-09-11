@@ -1,76 +1,76 @@
 import * as APIUtil from "../util/note_api_util";
 
-export const RECEIVE_NOTES = 'RECEIVE_NOTES';
-export const RECEIVE_NOTE = 'RECEIVE_NOTE';
-export const REMOVE_NOTE = 'REMOVE_NOTE';
-export const RECEIVE_NOTE_ERRORS = 'RECEIVE_NOTE_ERRORS';
-export const REMOVE_NOTE_ERRORS = 'REMOVE_NOTE_ERRORS';
+export const RECEIVE_NOTES = "RECEIVE_NOTES";
+export const RECEIVE_NOTE = "RECEIVE_NOTE";
+export const REMOVE_NOTE = "REMOVE_NOTE";
+export const RECEIVE_NOTE_ERRORS = "RECEIVE_NOTE_ERRORS";
+export const REMOVE_NOTE_ERRORS = "REMOVE_NOTE_ERRORS";
 
-const receiveNotes = notes => {
+const receiveNotes = (notes) => {
   return {
     type: RECEIVE_NOTES,
-    notes
+    notes,
   };
 };
 
-const receiveNote = note => {
+const receiveNote = (note) => {
   return {
     type: RECEIVE_NOTE,
-    note
+    note,
   };
 };
 
-const removeNote = noteId => {
+const removeNote = (noteId) => {
   return {
     type: REMOVE_NOTE,
-    noteId
+    noteId,
   };
 };
 
-const receiveNoteErrors = errors => {
+const receiveNoteErrors = (errors) => {
   return {
     type: RECEIVE_NOTE_ERRORS,
-    errors
+    errors,
   };
 };
 
 export const removeNoteErrors = () => {
   return {
-    type: REMOVE_NOTE_ERRORS
+    type: REMOVE_NOTE_ERRORS,
   };
 };
 
-export const fetchNotes = () => dispatch => {
+export const fetchNotes = () => (dispatch) => {
   return APIUtil.fetchNotes().then(
-      notes => dispatch(receiveNotes(notes)),
-      errors => dispatch(receiveNoteErrors(errors.responseJSON))
-    );
+    (notes) => dispatch(receiveNotes(notes)),
+    (errors) => dispatch(receiveNoteErrors(errors.responseJSON))
+  );
 };
 
-export const fetchNote = id => dispatch => {
+export const fetchNote = (id) => (dispatch) => {
   return APIUtil.fetchNote(id).then(
-      note => dispatch(receiveNote(note)),
-      errors => dispatch(receiveNoteErrors(errors.responseJSON))
-    );
+    (note) => dispatch(receiveNote(note)),
+    (errors) => dispatch(receiveNoteErrors(errors.responseJSON))
+  );
 };
 
-export const createNote = note => dispatch => {
+export const createNote = (note) => (dispatch) => {
   return APIUtil.createNote(note).then(
-      newNote => dispatch(receiveNote(newNote)),
-      errors => dispatch(receiveNoteErrors(errors.responseJSON))
-    );
+    (newNote) => dispatch(receiveNote(newNote)),
+    (errors) => dispatch(receiveNoteErrors(errors.responseJSON))
+  );
 };
 
-export const updateNote = note => dispatch => {
+export const updateNote = (note) => (dispatch) => {
   return APIUtil.updateNote(note).then(
-      newNote => dispatch(receiveNote(newNote)),
-      errors => dispatch(receiveNoteErrors(errors.responseJSON))
-    );
+    (newNote) => dispatch(receiveNote(newNote)),
+    (errors) => dispatch(receiveNoteErrors(errors.responseJSON))
+  );
 };
 
-export const deleteNote = noteId => dispatch => {
+export const deleteNote = (noteId) => (dispatch) => {
   return APIUtil.deleteNote(noteId).then(
-      note => dispatch(removeNote(noteId)),
-      errors => dispatch(receiveNoteErrors(errors.responseJSON))
-    );
+    (note) => dispatch(removeNote(noteId)),
+    (errors) => dispatch(receiveNoteErrors(errors.responseJSON))
+  );
 };

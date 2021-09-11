@@ -39,5 +39,5 @@ languages = {
     "lt": "lithuanian",
     "id": "indonesian",
     "fa": "persian",
-    "lv": "latvian"
+    "lv": "latvian",
 }

@@ -1,31 +1,31 @@
-'use strict';
+"use strict";
 
-var radixSort = require('../../..').Sorting.radixSort,
-    assert = require('assert');
+var radixSort = require("../../..").Sorting.radixSort,
+  assert = require("assert");
 
 var firstObject = {
-  someProperty: 'The',
-  key: 88541234132
+  someProperty: "The",
+  key: 88541234132,
 };
 
 var secondObject = {
-  someProperty: 'winter',
-  key: 90071992540992
+  someProperty: "winter",
+  key: 90071992540992,
 };
 
 var thirdObject = {
-  someProperty: 'is',
-  key: 0
+  someProperty: "is",
+  key: 0,
 };
 
 var fourthObject = {
-  someProperty: 'coming',
+  someProperty: "coming",
   key: 65234567,
-  anotherProperty: '!'
+  anotherProperty: "!",
 };
 
-describe('Radix Sort', function () {
-  it('should sort the given array', function () {
+describe("Radix Sort", function () {
+  it("should sort the given array", function () {
     var sorted = radixSort([
       thirdObject,
       fourthObject,
@@ -34,7 +34,7 @@ describe('Radix Sort', function () {
       secondObject,
       firstObject,
       firstObject,
-      fourthObject
+      fourthObject,
     ]);
 
     // Asserts that the array is truly sorted
@@ -46,12 +46,12 @@ describe('Radix Sort', function () {
       firstObject,
       firstObject,
       secondObject,
-      secondObject
+      secondObject,
     ]);
 
     assert.deepEqual(radixSort([thirdObject, thirdObject]), [
-        thirdObject,
-        thirdObject
-      ]);
+      thirdObject,
+      thirdObject,
+    ]);
   });
 });

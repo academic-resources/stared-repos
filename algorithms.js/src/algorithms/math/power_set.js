@@ -2,13 +2,12 @@
  * Iterative and recursive implementations of power set
  */
 
-'use strict';
+"use strict";
 
 /**
  * Iterative power set calculation
  */
 var powerSetIterative = function (array) {
-
   if (array.length === 0) {
     return [];
   }
@@ -21,11 +20,9 @@ var powerSetIterative = function (array) {
   }
 
   for (i = 0; i < Math.pow(2, array.length); i++) {
-
     powerSet.push([]);
 
     for (var j = 0; j < array.length; j++) {
-
       if (i % Math.pow(2, j) === 0) {
         cache[j] = !cache[j];
       }
@@ -33,7 +30,6 @@ var powerSetIterative = function (array) {
       if (cache[j]) {
         powerSet[i].push(array[j]);
       }
-
     }
   }
 
@@ -46,11 +42,9 @@ var powerSetIterative = function (array) {
 var powerSetRecursive = function (array) {
   if (array.length === 0) {
     return [];
-  }
-  else if (array.length == 1) {
-    return [ [], [ array[0] ] ];
-  }
-  else {
+  } else if (array.length == 1) {
+    return [[], [array[0]]];
+  } else {
     var powerSet = [];
     var firstElem = array[0];
 
@@ -58,7 +52,7 @@ var powerSetRecursive = function (array) {
 
     powerSetRecursive(array).forEach(function (elem) {
       powerSet.push(elem);
-      var withFirstElem = [ firstElem ];
+      var withFirstElem = [firstElem];
       withFirstElem.push.apply(withFirstElem, elem);
       powerSet.push(withFirstElem);
     });

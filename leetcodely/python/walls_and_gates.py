@@ -43,7 +43,10 @@ class Solution(object):
             if curr[0] - 1 >= 0 and rooms[curr[0] - 1][curr[1]] == 2147483647:
                 rooms[curr[0] - 1][curr[1]] = rooms[curr[0]][curr[1]] + 1
                 queue.appendleft((curr[0] - 1, curr[1]))
-            if curr[1] + 1 < len(rooms[curr[0]]) and rooms[curr[0]][curr[1] + 1] == 2147483647:
+            if (
+                curr[1] + 1 < len(rooms[curr[0]])
+                and rooms[curr[0]][curr[1] + 1] == 2147483647
+            ):
                 rooms[curr[0]][curr[1] + 1] = rooms[curr[0]][curr[1]] + 1
                 queue.appendleft((curr[0], curr[1] + 1))
             if curr[1] - 1 >= 0 and rooms[curr[0]][curr[1] - 1] == 2147483647:
@@ -53,9 +56,13 @@ class Solution(object):
         print(rooms)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    solution.wallsAndGates([[2147483647, -1, 0, 2147483647],
-                            [2147483647, 2147483647, 2147483647, -1],
-                            [2147483647, -1, 2147483647, -1],
-                            [0, -1, 2147483647, 2147483647]])
+    solution.wallsAndGates(
+        [
+            [2147483647, -1, 0, 2147483647],
+            [2147483647, 2147483647, 2147483647, -1],
+            [2147483647, -1, 2147483647, -1],
+            [0, -1, 2147483647, 2147483647],
+        ]
+    )

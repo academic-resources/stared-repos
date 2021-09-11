@@ -27,10 +27,9 @@ from waymo_open_dataset.protos import metrics_pb2
 
 
 class ConfigUtilTest(unittest.TestCase):
-
-  def _build_config(self):
-    config = metrics_pb2.Config()
-    config_text = """
+    def _build_config(self):
+        config = metrics_pb2.Config()
+        config_text = """
     num_desired_score_cutoffs: 11
     breakdown_generator_ids: OBJECT_TYPE
     breakdown_generator_ids: ONE_SHARD
@@ -56,17 +55,17 @@ class ConfigUtilTest(unittest.TestCase):
     iou_thresholds: 0.5
     box_type: TYPE_3D
     """
-    text_format.Merge(config_text, config)
-    return config
+        text_format.Merge(config_text, config)
+        return config
 
-  def test_get_breakdown_names_from_config(self):
-    config = self._build_config()
-    clif_names = config_util.GetBreakdownNamesFromConfig(config)
-    py_names = config_util_py.get_breakdown_names_from_config(config)
-    self.assertEqual(len(clif_names), len(py_names))
-    for a, b in zip(clif_names, py_names):
-      self.assertEqual(a, b)
+    def test_get_breakdown_names_from_config(self):
+        config = self._build_config()
+        clif_names = config_util.GetBreakdownNamesFromConfig(config)
+        py_names = config_util_py.get_breakdown_names_from_config(config)
+        self.assertEqual(len(clif_names), len(py_names))
+        for a, b in zip(clif_names, py_names):
+            self.assertEqual(a, b)
 
 
-if __name__ == '__main__':
-  unittest.main()
+if __name__ == "__main__":
+    unittest.main()

@@ -8,7 +8,7 @@ from django.db import models
 
 
 class Command(BaseCommand):
-    help = 'Update search fields'
+    help = "Update search fields"
     args = "appname [model]"
 
     def handle(self, app=None, model=None, **options):
@@ -37,7 +37,9 @@ class Command(BaseCommand):
 
         # get models only with search managers
 
-        app_models_for_process = [x for x in app_models if getattr(x, '_fts_manager', None)]
+        app_models_for_process = [
+            x for x in app_models if getattr(x, "_fts_manager", None)
+        ]
 
         if not app_models_for_process:
             raise CommandError("There is no models for processing.")
@@ -45,6 +47,6 @@ class Command(BaseCommand):
         # processing
 
         for m in app_models_for_process:
-            print("Processing model %s..." % m, end='')
+            print("Processing model %s..." % m, end="")
             m._fts_manager.update_search_field()
             print("Done")

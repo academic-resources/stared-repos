@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const ItemDetail = ({ item }) => {
   return (
@@ -20,7 +20,7 @@ const ItemDetail = ({ item }) => {
         <img src={item.image_url} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ItemDetail
+export default ItemDetail;

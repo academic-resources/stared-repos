@@ -3,22 +3,22 @@ from .db import db
 
 
 class File(db.Model):
-    __tablename__ = 'files'
+    __tablename__ = "files"
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     content = db.Column(db.Text(), nullable=True)
     s3_url = db.Column(db.String(255), nullable=True)
-    folder_id = db.Column(db.Integer,
-                          db.ForeignKey('folders.id',
-                                        onupdate="CASCADE",
-                                        ondelete="CASCADE"),
-                          nullable=False)
-    file_type_id = db.Column(db.Integer,
-                             db.ForeignKey('file_type.id',
-                                           onupdate="CASCADE",
-                                           ondelete="CASCADE"),
-                             nullable=True)
+    folder_id = db.Column(
+        db.Integer,
+        db.ForeignKey("folders.id", onupdate="CASCADE", ondelete="CASCADE"),
+        nullable=False,
+    )
+    file_type_id = db.Column(
+        db.Integer,
+        db.ForeignKey("file_type.id", onupdate="CASCADE", ondelete="CASCADE"),
+        nullable=True,
+    )
 
     created_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)

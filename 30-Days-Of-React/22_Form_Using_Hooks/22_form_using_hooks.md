@@ -87,34 +87,34 @@ So far used class based components to use state and to get data from controlled 
 The input element has many attributes such as value, name, id, placeholder, type and event handler. In addition, we can link a label and an input field using an id of input field and htmlFor of the label.If label and input are linked it will focus the input when we click on label. Look at the example give below.
 
 ```js
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
 const App = (props) => {
   // initial state and method to update state
-  const [firstName, setFirstName] = useState('')
+  const [firstName, setFirstName] = useState("");
   const handleChange = (e) => {
-    const value = e.target.value
-    setFirstName(value)
-  }
+    const value = e.target.value;
+    setFirstName(value);
+  };
   return (
-    <div className='App'>
-      <label htmlFor='firstName'>First Name: </label>
+    <div className="App">
+      <label htmlFor="firstName">First Name: </label>
       <input
-        type='text'
-        id='firstName'
-        name='firstName'
-        placeholder='First Name'
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="First Name"
         value={firstName}
         onChange={handleChange}
       />
       <h1>{firstName}</h1>
     </div>
-  )
-}
+  );
+};
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 We usually use form to handle user information. Let us move to form section and make use the form element.
@@ -126,88 +126,88 @@ In this section we will develop a small form which collect user information. Our
 As you can see we have four fields, if you we create a separate method to update all the fields we will have method for updating(firstName, lastName, country and title) instead let's have one method which can update all.
 
 ```js
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
 const App = (props) => {
   const initialState = {
-    firstName: '',
-    lastName: '',
-    country: '',
-    title: '',
-  }
-  const [formData, setData] = useState(initialState)
+    firstName: "",
+    lastName: "",
+    country: "",
+    title: "",
+  };
+  const [formData, setData] = useState(initialState);
 
   const onChange = (e) => {
-    const { name, value } = e.target
-    setData({ ...formData, [name]: value })
-  }
+    const { name, value } = e.target;
+    setData({ ...formData, [name]: value });
+  };
   const onSubmit = (e) => {
     /* 
      e.preventDefault()
       stops the default behavior of form element
      specifically refreshing of page
      */
-    e.preventDefault()
+    e.preventDefault();
 
     /*
      the is the place where we connect backend api 
      to send the data to the database
      */
-    console.log(formData)
-  }
+    console.log(formData);
+  };
 
   // accessing the state value by destrutcturing the state
-  const { firstName, lastName, title, country } = formData
+  const { firstName, lastName, title, country } = formData;
   return (
-    <div className='App'>
+    <div className="App">
       <h3>Add Student</h3>
       <form onSubmit={onSubmit}>
         <div>
           <input
-            type='text'
-            name='firstName'
-            placeholder='First Name'
+            type="text"
+            name="firstName"
+            placeholder="First Name"
             value={firstName}
             onChange={onChange}
           />
         </div>
         <div>
           <input
-            type='text'
-            name='lastName'
-            placeholder='Last Name'
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
             value={lastName}
             onChange={onChange}
           />
         </div>
         <div>
           <input
-            type='text'
-            name='country'
-            placeholder='Country'
+            type="text"
+            name="country"
+            placeholder="Country"
             value={country}
             onChange={onChange}
           />
         </div>
         <div>
           <input
-            type='text'
-            name='title'
-            placeholder='Title'
+            type="text"
+            name="title"
+            placeholder="Title"
             value={title}
             onChange={onChange}
           />
         </div>
 
-        <button class='btn btn-success'>Submit</button>
+        <button class="btn btn-success">Submit</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 The above form handles only text types but do have different input field types. Let's do another form which handle all the different input field types.
@@ -216,62 +216,62 @@ The above form handles only text types but do have different input field types. 
 
 ```js
 // index.js
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
 const options = [
   {
-    value: '',
-    label: '-- Select Country--',
+    value: "",
+    label: "-- Select Country--",
   },
   {
-    value: 'Finland',
-    label: 'Finland',
+    value: "Finland",
+    label: "Finland",
   },
   {
-    value: 'Sweden',
-    label: 'Sweden',
+    value: "Sweden",
+    label: "Sweden",
   },
   {
-    value: 'Norway',
-    label: 'Norway',
+    value: "Norway",
+    label: "Norway",
   },
   {
-    value: 'Denmark',
-    label: 'Denmark',
+    value: "Denmark",
+    label: "Denmark",
   },
-]
+];
 
 // mapping the options to list(array) of JSX options
 
 const selectOptions = options.map(({ value, label }) => (
   <option key={label} value={value}>
-    {' '}
+    {" "}
     {label}
   </option>
-))
+));
 
 const App = (props) => {
   const initialState = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    title: '',
-    country: '',
-    tel: '',
-    dateOfBirth: '',
-    favoriteColor: '',
-    weight: '',
-    gender: '',
-    file: '',
-    bio: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    title: "",
+    country: "",
+    tel: "",
+    dateOfBirth: "",
+    favoriteColor: "",
+    weight: "",
+    gender: "",
+    file: "",
+    bio: "",
     skills: {
       html: false,
       css: false,
       javascript: false,
     },
-  }
-  const [formData, setFormData] = useState(initialState)
+  };
+  const [formData, setFormData] = useState(initialState);
 
   const onChange = (e) => {
     /*
@@ -280,29 +280,29 @@ const App = (props) => {
     const name = e.target.name
     const value = e.target.value
     */
-    const { name, value, type, checked } = e.target
+    const { name, value, type, checked } = e.target;
     /*
     [variablename] we can make a value stored in a certain variable could be a key for an object, in this case a key for the state
     */
 
-    if (type === 'checkbox') {
+    if (type === "checkbox") {
       setFormData({
         ...formData,
         skills: { ...formData.skills, [name]: checked },
-      })
-    } else if (type === 'file') {
-      setFormData({ ...formData, [name]: e.target.files[0] })
+      });
+    } else if (type === "file") {
+      setFormData({ ...formData, [name]: e.target.files[0] });
     } else {
-      setFormData({ ...formData, [name]: value })
+      setFormData({ ...formData, [name]: value });
     }
-  }
+  };
   const onSubmit = (e) => {
     /*
      e.preventDefault()
      stops the default behavior of form element
      specifically refreshing of page
     */
-    e.preventDefault()
+    e.preventDefault();
     const {
       firstName,
       lastName,
@@ -317,13 +317,13 @@ const App = (props) => {
       bio,
       file,
       skills,
-    } = formData
+    } = formData;
 
-    const formattedSkills = []
+    const formattedSkills = [];
     for (const key in skills) {
-      console.log(key)
+      console.log(key);
       if (skills[key]) {
-        formattedSkills.push(key.toUpperCase())
+        formattedSkills.push(key.toUpperCase());
       }
     }
     const data = {
@@ -340,13 +340,13 @@ const App = (props) => {
       bio,
       file,
       skills: formattedSkills,
-    }
+    };
     /*
      the is the place where we connect backend api 
      to send the data to the database
      */
-    console.log(data)
-  }
+    console.log(data);
+  };
 
   // accessing the state value by destrutcturing the state
   const {
@@ -361,109 +361,109 @@ const App = (props) => {
     weight,
     gender,
     bio,
-  } = formData
+  } = formData;
   return (
-    <div className='App'>
+    <div className="App">
       <h3>Add Student</h3>
       <form onSubmit={onSubmit}>
-        <div className='row'>
-          <div className='form-group'>
-            <label htmlFor='firstName'>First Name </label>
+        <div className="row">
+          <div className="form-group">
+            <label htmlFor="firstName">First Name </label>
             <input
-              type='text'
-              id='firstName'
-              name='firstName'
+              type="text"
+              id="firstName"
+              name="firstName"
               value={firstName}
               onChange={onChange}
-              placeholder='First Name'
+              placeholder="First Name"
             />
           </div>
-          <div className='form-group'>
-            <label htmlFor='lastName'>Last Name </label>
+          <div className="form-group">
+            <label htmlFor="lastName">Last Name </label>
             <input
-              type='text'
-              id='lastName'
-              name='lastName'
+              type="text"
+              id="lastName"
+              name="lastName"
               value={lastName}
               onChange={onChange}
-              placeholder='Last Name'
+              placeholder="Last Name"
             />
           </div>
-          <div className='form-group'>
-            <label htmlFor='title'>Title </label>
+          <div className="form-group">
+            <label htmlFor="title">Title </label>
             <input
-              type='text'
-              id='title'
-              name='title'
-              placeholder='Title'
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Title"
               value={title}
               onChange={onChange}
             />
           </div>
-          <div className='form-group'>
-            <label htmlFor='email'>Email </label>
+          <div className="form-group">
+            <label htmlFor="email">Email </label>
             <input
-              type='email'
-              id='email'
-              name='email'
+              type="email"
+              id="email"
+              name="email"
               value={email}
               onChange={onChange}
-              placeholder='Email'
+              placeholder="Email"
             />
           </div>
         </div>
 
-        <div className='form-group'>
-          <label htmlFor='tel'>Telephone </label>
+        <div className="form-group">
+          <label htmlFor="tel">Telephone </label>
           <input
-            type='tel'
-            id='tel'
-            name='tel'
+            type="tel"
+            id="tel"
+            name="tel"
             value={tel}
             onChange={onChange}
-            placeholder='Tel'
+            placeholder="Tel"
           />
         </div>
 
-        <div className='form-group'>
-          <label htmlFor='dateOfBirth'>Date of birth </label>
+        <div className="form-group">
+          <label htmlFor="dateOfBirth">Date of birth </label>
           <input
-            type='date'
-            id='dateOfBirth'
-            name='dateOfBirth'
+            type="date"
+            id="dateOfBirth"
+            name="dateOfBirth"
             value={dateOfBirth}
             onChange={onChange}
-            placeholder='Date of Birth'
+            placeholder="Date of Birth"
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='favoriteColor'>Favorite Color</label>
+        <div className="form-group">
+          <label htmlFor="favoriteColor">Favorite Color</label>
           <input
-            type='color'
-            id='color'
-            name='favoriteColor'
+            type="color"
+            id="color"
+            name="favoriteColor"
             value={favoriteColor}
             onChange={onChange}
-            placeholder='Favorite Color'
+            placeholder="Favorite Color"
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='weight'>Weight </label>
+        <div className="form-group">
+          <label htmlFor="weight">Weight </label>
           <input
-            type='number'
-            id='weight'
-            name='weight'
+            type="number"
+            id="weight"
+            name="weight"
             value={weight}
             onChange={onChange}
-            placeholder='Weight in Kg'
+            placeholder="Weight in Kg"
           />
         </div>
         <div>
-          <label htmlFor='country'>Country</label> <br />
+          <label htmlFor="country">Country</label> <br />
           <select
-            name='country'
+            name="country"
             onChange={onChange}
-            id='country'
+            id="country"
             value={country}
           >
             {selectOptions}
@@ -474,85 +474,85 @@ const App = (props) => {
           <p>Gender</p>
           <div>
             <input
-              type='radio'
-              id='female'
-              name='gender'
-              value='Female'
+              type="radio"
+              id="female"
+              name="gender"
+              value="Female"
               onChange={onChange}
-              checked={gender === 'Female'}
+              checked={gender === "Female"}
             />
-            <label htmlFor='female'>Female</label>
+            <label htmlFor="female">Female</label>
           </div>
           <div>
             <input
-              id='male'
-              type='radio'
-              name='gender'
-              value='Male'
+              id="male"
+              type="radio"
+              name="gender"
+              value="Male"
               onChange={onChange}
-              checked={gender === 'Male'}
+              checked={gender === "Male"}
             />
-            <label htmlFor='male'>Male</label>
+            <label htmlFor="male">Male</label>
           </div>
           <div>
             <input
-              id='other'
-              type='radio'
-              name='gender'
-              value='Other'
+              id="other"
+              type="radio"
+              name="gender"
+              value="Other"
               onChange={onChange}
-              checked={gender === 'Other'}
+              checked={gender === "Other"}
             />
-            <label htmlFor='other'>Other</label>
+            <label htmlFor="other">Other</label>
           </div>
         </div>
 
         <div>
           <p>Select your skills</p>
           <div>
-            <input type='checkbox' id='html' name='html' onChange={onChange} />
-            <label htmlFor='html'>HTML</label>
+            <input type="checkbox" id="html" name="html" onChange={onChange} />
+            <label htmlFor="html">HTML</label>
           </div>
           <div>
-            <input type='checkbox' id='css' name='css' onChange={onChange} />
-            <label htmlFor='css'>CSS</label>
+            <input type="checkbox" id="css" name="css" onChange={onChange} />
+            <label htmlFor="css">CSS</label>
           </div>
           <div>
             <input
-              type='checkbox'
-              id='javascript'
-              name='javascript'
+              type="checkbox"
+              id="javascript"
+              name="javascript"
               onChange={onChange}
             />
-            <label htmlFor='javascript'>JavaScript</label>
+            <label htmlFor="javascript">JavaScript</label>
           </div>
         </div>
         <div>
-          <label htmlFor='bio'>Bio</label> <br />
+          <label htmlFor="bio">Bio</label> <br />
           <textarea
-            id='bio'
-            name='bio'
+            id="bio"
+            name="bio"
             value={bio}
             onChange={onChange}
-            cols='120'
-            rows='10'
-            placeholder='Write about yourself ...'
+            cols="120"
+            rows="10"
+            placeholder="Write about yourself ..."
           />
         </div>
 
         <div>
-          <input type='file' name='file' onChange={onChange} />
+          <input type="file" name="file" onChange={onChange} />
         </div>
         <div>
           <button>Submit</button>
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ## Form Validation
@@ -573,55 +573,55 @@ In the following snippet of code, a validation has been implemented the first fi
 
 ```js
 // index.js
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
 const options = [
   {
-    value: '',
-    label: '-- Select Country--',
+    value: "",
+    label: "-- Select Country--",
   },
   {
-    value: 'Finland',
-    label: 'Finland',
+    value: "Finland",
+    label: "Finland",
   },
   {
-    value: 'Sweden',
-    label: 'Sweden',
+    value: "Sweden",
+    label: "Sweden",
   },
   {
-    value: 'Norway',
-    label: 'Norway',
+    value: "Norway",
+    label: "Norway",
   },
   {
-    value: 'Denmark',
-    label: 'Denmark',
+    value: "Denmark",
+    label: "Denmark",
   },
-]
+];
 
 // mapping the options to list(array) of JSX options
 
 const selectOptions = options.map(({ value, label }) => (
   <option key={label} value={value}>
-    {' '}
+    {" "}
     {label}
   </option>
-))
+));
 
 const App = (props) => {
   const initialState = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    title: '',
-    country: '',
-    tel: '',
-    dateOfBirth: '',
-    favoriteColor: '',
-    weight: '',
-    gender: '',
-    file: '',
-    bio: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    title: "",
+    country: "",
+    tel: "",
+    dateOfBirth: "",
+    favoriteColor: "",
+    weight: "",
+    gender: "",
+    file: "",
+    bio: "",
     skills: {
       html: false,
       css: false,
@@ -631,8 +631,8 @@ const App = (props) => {
       firstName: false,
       lastName: false,
     },
-  }
-  const [formData, setFormData] = useState(initialState)
+  };
+  const [formData, setFormData] = useState(initialState);
 
   const onChange = (e) => {
     /*
@@ -641,29 +641,29 @@ const App = (props) => {
     const name = e.target.name
     const value = e.target.value
     */
-    const { name, value, type, checked } = e.target
+    const { name, value, type, checked } = e.target;
     /*
     [variablename] we can make a value stored in a certain variable could be a key for an object, in this case a key for the state
     */
 
-    if (type === 'checkbox') {
+    if (type === "checkbox") {
       setFormData({
         ...formData,
         skills: { ...formData.skills, [name]: checked },
-      })
-    } else if (type === 'file') {
-      setFormData({ ...formData, [name]: e.target.files[0] })
+      });
+    } else if (type === "file") {
+      setFormData({ ...formData, [name]: e.target.files[0] });
     } else {
-      setFormData({ ...formData, [name]: value })
+      setFormData({ ...formData, [name]: value });
     }
-  }
+  };
   const onSubmit = (e) => {
     /*
      e.preventDefault()
      stops the default behavior of form element
      specifically refreshing of page
     */
-    e.preventDefault()
+    e.preventDefault();
     const {
       firstName,
       lastName,
@@ -678,13 +678,13 @@ const App = (props) => {
       bio,
       file,
       skills,
-    } = formData
+    } = formData;
 
-    const formattedSkills = []
+    const formattedSkills = [];
     for (const key in skills) {
-      console.log(key)
+      console.log(key);
       if (skills[key]) {
-        formattedSkills.push(key.toUpperCase())
+        formattedSkills.push(key.toUpperCase());
       }
     }
     const data = {
@@ -701,31 +701,34 @@ const App = (props) => {
       bio,
       file,
       skills: formattedSkills,
-    }
+    };
     /*
      the is the place where we connect backend api 
      to send the data to the database
      */
-    console.log(data)
-  }
+    console.log(data);
+  };
   const onBlur = (e) => {
-    const { name } = e.target
-    setFormData({ ...formData, touched: { ...formData.touched, [name]: true } })
-  }
+    const { name } = e.target;
+    setFormData({
+      ...formData,
+      touched: { ...formData.touched, [name]: true },
+    });
+  };
   const validate = () => {
     // Object to collect error feedback and to display on the form
     const errors = {
-      firstName: '',
-    }
+      firstName: "",
+    };
 
     if (
       (formData.touched.firstName && formData.firstName.length < 3) ||
       (formData.touched.firstName && formData.firstName.length > 12)
     ) {
-      errors.firstName = 'First name must be between 2 and 12'
+      errors.firstName = "First name must be between 2 and 12";
     }
-    return errors
-  }
+    return errors;
+  };
 
   // accessing the state value by destrutcturing the state
   const {
@@ -740,115 +743,115 @@ const App = (props) => {
     weight,
     gender,
     bio,
-  } = formData
+  } = formData;
 
-  const errors = validate()
+  const errors = validate();
 
   return (
-    <div className='App'>
+    <div className="App">
       <h3>Add Student</h3>
       <form onSubmit={onSubmit}>
-        <div className='row'>
-          <div className='form-group'>
-            <label htmlFor='firstName'>First Name </label>
+        <div className="row">
+          <div className="form-group">
+            <label htmlFor="firstName">First Name </label>
             <input
-              type='text'
-              id='firstName'
-              name='firstName'
+              type="text"
+              id="firstName"
+              name="firstName"
               value={firstName}
               onChange={onChange}
               onBlur={onBlur}
-              placeholder='First Name'
+              placeholder="First Name"
             />
             <br />
             {errors.firstName && <small>{errors.firstName}</small>}
           </div>
-          <div className='form-group'>
-            <label htmlFor='lastName'>Last Name </label>
+          <div className="form-group">
+            <label htmlFor="lastName">Last Name </label>
             <input
-              type='text'
-              id='lastName'
-              name='lastName'
+              type="text"
+              id="lastName"
+              name="lastName"
               value={lastName}
               onChange={onChange}
-              placeholder='Last Name'
+              placeholder="Last Name"
             />
           </div>
-          <div className='form-group'>
-            <label htmlFor='title'>Title </label>
+          <div className="form-group">
+            <label htmlFor="title">Title </label>
             <input
-              type='text'
-              id='title'
-              name='title'
-              placeholder='Title'
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Title"
               value={title}
               onChange={onChange}
             />
           </div>
-          <div className='form-group'>
-            <label htmlFor='email'>Email </label>
+          <div className="form-group">
+            <label htmlFor="email">Email </label>
             <input
-              type='email'
-              id='email'
-              name='email'
+              type="email"
+              id="email"
+              name="email"
               value={email}
               onChange={onChange}
-              placeholder='Email'
+              placeholder="Email"
             />
           </div>
         </div>
 
-        <div className='form-group'>
-          <label htmlFor='tel'>Telephone </label>
+        <div className="form-group">
+          <label htmlFor="tel">Telephone </label>
           <input
-            type='tel'
-            id='tel'
-            name='tel'
+            type="tel"
+            id="tel"
+            name="tel"
             value={tel}
             onChange={onChange}
-            placeholder='Tel'
+            placeholder="Tel"
           />
         </div>
 
-        <div className='form-group'>
-          <label htmlFor='dateOfBirth'>Date of birth </label>
+        <div className="form-group">
+          <label htmlFor="dateOfBirth">Date of birth </label>
           <input
-            type='date'
-            id='dateOfBirth'
-            name='dateOfBirth'
+            type="date"
+            id="dateOfBirth"
+            name="dateOfBirth"
             value={dateOfBirth}
             onChange={onChange}
-            placeholder='Date of Birth'
+            placeholder="Date of Birth"
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='favoriteColor'>Favorite Color</label>
+        <div className="form-group">
+          <label htmlFor="favoriteColor">Favorite Color</label>
           <input
-            type='color'
-            id='color'
-            name='favoriteColor'
+            type="color"
+            id="color"
+            name="favoriteColor"
             value={favoriteColor}
             onChange={onChange}
-            placeholder='Favorite Color'
+            placeholder="Favorite Color"
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='weight'>Weight </label>
+        <div className="form-group">
+          <label htmlFor="weight">Weight </label>
           <input
-            type='number'
-            id='weight'
-            name='weight'
+            type="number"
+            id="weight"
+            name="weight"
             value={weight}
             onChange={onChange}
-            placeholder='Weight in Kg'
+            placeholder="Weight in Kg"
           />
         </div>
         <div>
-          <label htmlFor='country'>Country</label> <br />
+          <label htmlFor="country">Country</label> <br />
           <select
-            name='country'
+            name="country"
             onChange={onChange}
-            id='country'
+            id="country"
             value={country}
           >
             {selectOptions}
@@ -859,85 +862,85 @@ const App = (props) => {
           <p>Gender</p>
           <div>
             <input
-              type='radio'
-              id='female'
-              name='gender'
-              value='Female'
+              type="radio"
+              id="female"
+              name="gender"
+              value="Female"
               onChange={onChange}
-              checked={gender === 'Female'}
+              checked={gender === "Female"}
             />
-            <label htmlFor='female'>Female</label>
+            <label htmlFor="female">Female</label>
           </div>
           <div>
             <input
-              id='male'
-              type='radio'
-              name='gender'
-              value='Male'
+              id="male"
+              type="radio"
+              name="gender"
+              value="Male"
               onChange={onChange}
-              checked={gender === 'Male'}
+              checked={gender === "Male"}
             />
-            <label htmlFor='male'>Male</label>
+            <label htmlFor="male">Male</label>
           </div>
           <div>
             <input
-              id='other'
-              type='radio'
-              name='gender'
-              value='Other'
+              id="other"
+              type="radio"
+              name="gender"
+              value="Other"
               onChange={onChange}
-              checked={gender === 'Other'}
+              checked={gender === "Other"}
             />
-            <label htmlFor='other'>Other</label>
+            <label htmlFor="other">Other</label>
           </div>
         </div>
 
         <div>
           <p>Select your skills</p>
           <div>
-            <input type='checkbox' id='html' name='html' onChange={onChange} />
-            <label htmlFor='html'>HTML</label>
+            <input type="checkbox" id="html" name="html" onChange={onChange} />
+            <label htmlFor="html">HTML</label>
           </div>
           <div>
-            <input type='checkbox' id='css' name='css' onChange={onChange} />
-            <label htmlFor='css'>CSS</label>
+            <input type="checkbox" id="css" name="css" onChange={onChange} />
+            <label htmlFor="css">CSS</label>
           </div>
           <div>
             <input
-              type='checkbox'
-              id='javascript'
-              name='javascript'
+              type="checkbox"
+              id="javascript"
+              name="javascript"
               onChange={onChange}
             />
-            <label htmlFor='javascript'>JavaScript</label>
+            <label htmlFor="javascript">JavaScript</label>
           </div>
         </div>
         <div>
-          <label htmlFor='bio'>Bio</label> <br />
+          <label htmlFor="bio">Bio</label> <br />
           <textarea
-            id='bio'
-            name='bio'
+            id="bio"
+            name="bio"
             value={bio}
             onChange={onChange}
-            cols='120'
-            rows='10'
-            placeholder='Write about yourself ...'
+            cols="120"
+            rows="10"
+            placeholder="Write about yourself ..."
           />
         </div>
 
         <div>
-          <input type='file' name='file' onChange={onChange} />
+          <input type="file" name="file" onChange={onChange} />
         </div>
         <div>
           <button>Submit</button>
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 # Exercises

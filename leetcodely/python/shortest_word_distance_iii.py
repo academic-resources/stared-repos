@@ -9,6 +9,7 @@ Given word1 = “makes”, word2 = “coding”, return 1.
 Given word1 = "makes", word2 = "makes", return 3."""
 import sys
 
+
 class Solution(object):
     def shortestWordDistance(self, words, word1, word2):
         """
@@ -32,7 +33,7 @@ class Solution(object):
     def min_distance_in_a_sorted_list(self, lst):
         curr = sys.maxsize
         for i in range(1, len(lst)):
-            curr = min(curr, lst[i] - lst[i-1])
+            curr = min(curr, lst[i] - lst[i - 1])
         return curr
 
     def min_distance_between_two_sorted_lists(self, lst1, lst2):
@@ -45,6 +46,11 @@ class Solution(object):
                 j += 1
         return curr
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.shortestWordDistance(["practice", "makes", "perfect", "coding", "makes"], 'makes', 'makes'))
+    print(
+        solution.shortestWordDistance(
+            ["practice", "makes", "perfect", "coding", "makes"], "makes", "makes"
+        )
+    )

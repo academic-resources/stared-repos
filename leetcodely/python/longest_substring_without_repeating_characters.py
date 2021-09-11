@@ -27,7 +27,6 @@ class Solution(object):
 
 
 class TestSolution(unittest.TestCase):
-
     def test_one(self):
         self.assertEqual(Solution().lengthOfLongestSubstring("abcabcbb"), 3)
 
@@ -44,5 +43,5 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(Solution().lengthOfLongestSubstring("dvdf"), 3)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

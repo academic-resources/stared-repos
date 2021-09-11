@@ -2,7 +2,7 @@
  * Implementation of longest common subsequence
  */
 
-'use strict';
+"use strict";
 
 /**
  * Implementation via dynamic programming
@@ -31,7 +31,7 @@ var longestCommonSubsequence = function (s1, s2) {
   // Build LCS from cache
   i = s1.length;
   j = s2.length;
-  var lcs = '';
+  var lcs = "";
 
   while (cache[i][j] !== 0) {
     if (s1[i - 1] === s2[j - 1]) {

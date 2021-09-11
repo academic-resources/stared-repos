@@ -8,22 +8,46 @@ from ..utils import get_content_related_by_tag
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('wagtailpages', '0014_auto_20210722_2145'),
-    ]
+    dependencies = [("wagtailpages", "0014_auto_20210722_2145")]
 
     operations = [
         migrations.CreateModel(
-            name='RelatedBlogPosts',
+            name="RelatedBlogPosts",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('sort_order', models.IntegerField(blank=True, editable=False, null=True)),
-                ('page', modelcluster.fields.ParentalKey(on_delete=django.db.models.deletion.CASCADE, related_name='related_posts', to='wagtailpages.BlogPage')),
-                ('related_post', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='wagtailpages.BlogPage')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "sort_order",
+                    models.IntegerField(blank=True, editable=False, null=True),
+                ),
+                (
+                    "page",
+                    modelcluster.fields.ParentalKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="related_posts",
+                        to="wagtailpages.BlogPage",
+                    ),
+                ),
+                (
+                    "related_post",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to="wagtailpages.BlogPage",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Related blog posts',
-                'verbose_name_plural': 'Related blog posts',
+                "verbose_name": "Related blog posts",
+                "verbose_name_plural": "Related blog posts",
             },
-        ),
+        )
     ]

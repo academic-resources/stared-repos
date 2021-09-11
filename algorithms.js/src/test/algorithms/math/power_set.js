@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var math = require('../../..').Math,
-    powerSet = math.powerSet,
-    assert = require('assert');
+var math = require("../../..").Math,
+  powerSet = math.powerSet,
+  assert = require("assert");
 
 function testArrayEqual(a, b) {
   var arrayEqual = true;
@@ -24,9 +24,9 @@ function testArrayInArray(a, b) {
   return arrayInArray;
 }
 
-describe('Power set', function () {
-  describe('#iterative()', function () {
-    it('should return the right elements of power set', function () {
+describe("Power set", function () {
+  describe("#iterative()", function () {
+    it("should return the right elements of power set", function () {
       var zeroElementTest = powerSet([]);
       assert(zeroElementTest.length === 0);
 
@@ -72,12 +72,11 @@ describe('Power set', function () {
       assert(testArrayInArray([1, 2, 3], fourElementTest));
       assert(testArrayInArray([0, 1, 2, 3], fourElementTest));
       assert(fourElementTest.length === 16);
-
     });
   });
 
-  describe('#recursive()', function () {
-    it('should return the right elements of power set', function () {
+  describe("#recursive()", function () {
+    it("should return the right elements of power set", function () {
       var zeroElementTest = powerSet.recursive([]);
       assert(zeroElementTest.length === 0);
 

@@ -36,6 +36,6 @@ class Solution:
             return bigger.peek()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.find_median_of_data_stream([12, 9, 17, 13, 21, 3, 22, 14]))

@@ -2,5 +2,5 @@
 # (try doing the same thing in the JS console and see what it outputs)
 
 # YOUR CODE HERE
-request = 2**65536
+request = 2 ** 65536
 print(request)

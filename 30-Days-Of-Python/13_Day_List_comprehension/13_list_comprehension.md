@@ -78,7 +78,6 @@ print(numbers)                             # [(0, 0), (1, 1), (2, 4), (3, 9), (4
 
 List comprehension can be combined with if expression
 
-
 ```py
 # Generating even numbers
 even_numbers = [i for i in range(21) if i % 2 == 0]  # to generate even numbers list in range 0 to 21
@@ -147,7 +146,7 @@ def power(x):
 
 cube = power(2)(3)   # function power now need 2 arguments to run, in separate rounded brackets
 print(cube)          # 8
-two_power_of_five = power(2)(5) 
+two_power_of_five = power(2)(5)
 print(two_power_of_five)  # 32
 ```
 

@@ -8,7 +8,9 @@ from django.urls import reverse
 
 from wagtail.admin.menu import MenuItem
 from wagtail.admin.rich_text.editors.draftail import features as draftail_features
-from wagtail.admin.rich_text.converters.html_to_contentstate import InlineStyleElementHandler
+from wagtail.admin.rich_text.converters.html_to_contentstate import (
+    InlineStyleElementHandler,
+)
 from wagtail.core import hooks
 from wagtail.core.utils import find_available_slug
 from networkapi.wagtailpages.pagemodels.products import BuyersGuidePage, ProductPage
@@ -17,12 +19,16 @@ from networkapi.wagtailpages.pagemodels.products import BuyersGuidePage, Product
 # so that locale creation creates the locale entry but does not try to sync 1300+ pages as
 # part of the same web request.
 from django.db.models.signals import post_save
-from wagtail_localize.models import LocaleSynchronization, sync_trees_on_locale_sync_save
+from wagtail_localize.models import (
+    LocaleSynchronization,
+    sync_trees_on_locale_sync_save,
+)
+
 post_save.disconnect(sync_trees_on_locale_sync_save, sender=LocaleSynchronization)
 
 
 # Extended rich text features for our site
-@hooks.register('register_rich_text_features')
+@hooks.register("register_rich_text_features")
 def register_large_feature(features):
     """
     Registering the 'large' Draftail feature which
@@ -31,8 +37,8 @@ def register_large_feature(features):
     """
 
     # 1. Set up variables for use below
-    feature_name = 'large'
-    type_ = 'LARGE'
+    feature_name = "large"
+    type_ = "LARGE"
 
     # 2. Set up a dictionary to pass to Draftail to configure
     # how it handles this feature in its toolbar.
@@ -41,19 +47,15 @@ def register_large_feature(features):
     # In this case, I am adding similar formatting to what
     # the CSS will do to that 'small-caption' class in the template
     control = {
-        'type': type_,
-        'label': 'L',
-        'description': 'Large body text',
-        'style': {
-            'font-size': '125%'
-        }
+        "type": type_,
+        "label": "L",
+        "description": "Large body text",
+        "style": {"font-size": "125%"},
     }
 
     # 3. Call register_editor_plugin to register the configuration for Draftail.
     features.register_editor_plugin(
-        'draftail',
-        feature_name,
-        draftail_features.InlineStyleFeature(control)
+        "draftail", feature_name, draftail_features.InlineStyleFeature(control)
     )
 
     # 4.configure the content transform from the DB to the editor and back.
@@ -61,39 +63,32 @@ def register_large_feature(features):
     # The "From" version uses a CSS selector to find spans with a class of 'body-large'
     # The "To" version adds a span with a class of 'body-large' surrounding the selected text
     db_conversion = {
-        'from_database_format': {
-            'span[class="body-large"]':
-                InlineStyleElementHandler(type_)
+        "from_database_format": {
+            'span[class="body-large"]': InlineStyleElementHandler(type_)
         },
-        'to_database_format': {
-            'style_map': {type_: 'span class="body-large"'}
-        },
+        "to_database_format": {"style_map": {type_: 'span class="body-large"'}},
     }
 
     # 5. Call register_converter_rule to register the content transformation conversion.
-    features.register_converter_rule(
-        'contentstate',
-        feature_name,
-        db_conversion
-    )
+    features.register_converter_rule("contentstate", feature_name, db_conversion)
 
     # 6. (optional) Add the feature to the default features list to make it available
     # on rich text fields that do not specify an explicit 'features' list
-    features.default_features.append('large')
+    features.default_features.append("large")
 
 
 # Ensure that pages in the PageChooserPanel listings are ordered on most-recent-ness
-@hooks.register('construct_page_chooser_queryset')
+@hooks.register("construct_page_chooser_queryset")
 def order_pages_in_chooser(pages, request):
     # Change listings in the "page chooser" modal:
     if "choose-page" in request.path:
-        return pages.order_by('-first_published_at')
+        return pages.order_by("-first_published_at")
 
     # Don't change search results (shown in ./admin/pages/search)
     return pages
 
 
-@hooks.register('before_delete_page')
+@hooks.register("before_delete_page")
 def before_delete_page(request, page):
     """Delete PNI votes when a product is deleted."""
     if isinstance(page, ProductPage) and page.votes:
@@ -101,9 +96,9 @@ def before_delete_page(request, page):
         page.votes.delete()
 
 
-@hooks.register('after_delete_page')
-@hooks.register('after_publish_page')
-@hooks.register('after_unpublish_page')
+@hooks.register("after_delete_page")
+@hooks.register("after_publish_page")
+@hooks.register("after_unpublish_page")
 def manage_pni_cache(request, page):
     if isinstance(page, ProductPage) or isinstance(page, BuyersGuidePage):
         # Clear all of our Django-based cache.
@@ -112,13 +107,11 @@ def manage_pni_cache(request, page):
         cache.clear()
 
 
-@hooks.register('after_publish_page')
+@hooks.register("after_publish_page")
 def sync_localized_slugs(request, page):
     for translation in page.get_translations():
         translation.slug = find_available_slug(
-            translation.get_parent(),
-            page.slug,
-            ignore_page_id=translation.id
+            translation.get_parent(), page.slug, ignore_page_id=translation.id
         )
 
         if translation.alias_of_id is not None:
@@ -133,9 +126,9 @@ def sync_localized_slugs(request, page):
             translation.save_revision().publish()
 
 
-@hooks.register('after_delete_page')
-@hooks.register('after_publish_page')
-@hooks.register('after_unpublish_page')
+@hooks.register("after_delete_page")
+@hooks.register("after_publish_page")
+@hooks.register("after_unpublish_page")
 def manage_index_pages_cache(request, page):
     """
       TODO: remove this check and associated caching when we switch over to
@@ -143,7 +136,7 @@ def manage_index_pages_cache(request, page):
     """
     parent = page.get_parent().specific
 
-    if hasattr(parent, 'clear_index_page_cache'):
+    if hasattr(parent, "clear_index_page_cache"):
         parent.clear_index_page_cache()
 
 
@@ -154,9 +147,9 @@ def global_admin_js():
     return f'<script src="{max_length_js}"></script>'
 
 
-@hooks.register('insert_global_admin_css')
+@hooks.register("insert_global_admin_css")
 def global_admin_css():
-    max_length_css = static('wagtailadmin/css/max-length-field.css')
+    max_length_css = static("wagtailadmin/css/max-length-field.css")
     return f'<link rel="stylesheet" href="{max_length_css}">'
 
 
@@ -165,9 +158,12 @@ class HowToWagtailMenuItem(MenuItem):
         return True
 
 
-@hooks.register('register_admin_menu_item')
+@hooks.register("register_admin_menu_item")
 def register_howto_menu_item():
     return HowToWagtailMenuItem(
-        'How Do I Wagtail', reverse('how-do-i-wagtail'),
-        name='howdoIwagtail', classnames='icon icon-help', order=900
+        "How Do I Wagtail",
+        reverse("how-do-i-wagtail"),
+        name="howdoIwagtail",
+        classnames="icon icon-help",
+        order=900,
     )

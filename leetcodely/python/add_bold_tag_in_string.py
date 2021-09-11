@@ -23,9 +23,9 @@ class Solution(object):
 
         def merge_intervals(intervals):
             i = 0
-            while i < len(intervals) -1:
+            while i < len(intervals) - 1:
                 s1, e1 = intervals[i]
-                s2, e2 = intervals[i+1]
+                s2, e2 = intervals[i + 1]
                 if e1 < s2:
                     i += 1
                 else:
@@ -39,4 +39,5 @@ class Solution(object):
                 start, end = intervals[i]
                 s = s[:start] + "<b>" + s[start:end] + "</b>" + s[end:]
             return s
+
         return create_string(s, merge_intervals(find(s, dict)))

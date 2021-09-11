@@ -50,20 +50,23 @@ if not PY2:
     from urllib.parse import urlencode
     from urllib.request import urlopen
     from urllib.error import HTTPError
+
     print_bytes = lambda s: sys.stdout.buffer.write(s)
 else:
     from urllib import urlencode
     from urllib2 import HTTPError, urlopen
+
     print_bytes = lambda s: sys.stdout.write(s)
 
 
 # Namespaces
-ATOM = '{http://www.w3.org/2005/Atom}'
-ARXIV = '{http://arxiv.org/schemas/atom}'
+ATOM = "{http://www.w3.org/2005/Atom}"
+ARXIV = "{http://arxiv.org/schemas/atom}"
 
 # regular expressions to check if arxiv id is valid
-NEW_STYLE = re.compile(r'^\d{4}\.\d{4,}(v\d+)?$')
-OLD_STYLE = re.compile(r"""(?x)
+NEW_STYLE = re.compile(r"^\d{4}\.\d{4,}(v\d+)?$")
+OLD_STYLE = re.compile(
+    r"""(?x)
 ^(
    math-ph
   |hep-ph
@@ -93,7 +96,8 @@ OLD_STYLE = re.compile(r"""(?x)
   |math
       (\.(AG|AT|AP|CT|CA|CO|AC|CV|DG|DS|FA|GM|GN|GT|GR|HO|IT|KT|LO|MP|MG
       |NT|NA|OA|OC|PR|QA|RT|RA|SP|ST|SG))?
-)/\d{7}(v\d+)?$""")
+)/\d{7}(v\d+)?$"""
+)
 
 
 def is_valid(arxiv_id):
@@ -115,25 +119,26 @@ class Reference(object):
     Instantiate using Reference(entry_xml). Note entry_xml should be
     an ElementTree.Element object.
     """
+
     def __init__(self, entry_xml):
         self.xml = entry_xml
-        self.url = self._field_text('id')
+        self.url = self._field_text("id")
         self.id = self._id()
         self.authors = self._authors()
-        self.title = self._field_text('title')
+        self.title = self._field_text("title")
         if len(self.id) == 0 or len(self.authors) == 0 or len(self.title) == 0:
             raise NotFoundError("No such publication", self.id)
-        self.summary = self._field_text('summary')
+        self.summary = self._field_text("summary")
         self.category = self._category()
         self.year, self.month = self._published()
-        self.updated = self._field_text('updated')
-        self.bare_id = self.id[:self.id.rfind('v')]
-        self.note = self._field_text('journal_ref', namespace=ARXIV)
-        self.doi = self._field_text('doi', namespace=ARXIV)
+        self.updated = self._field_text("updated")
+        self.bare_id = self.id[: self.id.rfind("v")]
+        self.note = self._field_text("journal_ref", namespace=ARXIV)
+        self.doi = self._field_text("doi", namespace=ARXIV)
 
     def _authors(self):
         """Extracts author names from xml."""
-        xml_list = self.xml.findall(ATOM + 'author/' + ATOM + 'name')
+        xml_list = self.xml.findall(ATOM + "author/" + ATOM + "name")
         return [field.text for field in xml_list]
 
     def _field_text(self, id, namespace=ATOM):
@@ -146,27 +151,39 @@ class Reference(object):
     def _category(self):
         """Get category"""
         try:
-            return self.xml.find(ARXIV + 'primary_category').attrib['term']
+            return self.xml.find(ARXIV + "primary_category").attrib["term"]
         except:
             return ""
 
     def _id(self):
         """Get arxiv id"""
         try:
-            id_url = self._field_text('id')
-            return id_url[id_url.find('/abs/') + 5:]
+            id_url = self._field_text("id")
+            return id_url[id_url.find("/abs/") + 5 :]
         except:
             return ""
 
     def _published(self):
         """Get published date"""
-        published = self._field_text('published')
+        published = self._field_text("published")
         if len(published) < 7:
             return "", ""
         y, m = published[:4], published[5:7]
         try:
-            m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
-                 "Aug", "Sep", "Oct", "Nov", "Dec"][int(m) - 1]
+            m = [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+            ][int(m) - 1]
         except:
             pass
         return y, m
@@ -175,19 +192,20 @@ class Reference(object):
         """BibTex string of the reference."""
 
         lines = ["@article{" + self.id]
-        for k, v in [("Author", " and ".join(self.authors)),
-                    ("Title", self.title),
-                    ("Eprint", self.id),
-                    ("DOI", self.doi),
-                    ("ArchivePrefix", "arXiv"),
-                    ("PrimaryClass", self.category),
-                    ("Abstract", self.summary),
-                    ("Year", self.year),
-                    ("Month", self.month),
-                    ("Note", self.note),
-                    ("Url", self.url),
-                    ("File", self.id + ".pdf"),
-                    ]:
+        for k, v in [
+            ("Author", " and ".join(self.authors)),
+            ("Title", self.title),
+            ("Eprint", self.id),
+            ("DOI", self.doi),
+            ("ArchivePrefix", "arXiv"),
+            ("PrimaryClass", self.category),
+            ("Abstract", self.summary),
+            ("Year", self.year),
+            ("Month", self.month),
+            ("Note", self.note),
+            ("Url", self.url),
+            ("File", self.id + ".pdf"),
+        ]:
             if len(v):
                 lines.append("%-13s = {%s}" % (k, v))
 
@@ -196,21 +214,23 @@ class Reference(object):
 
 class ReferenceErrorInfo(object):
     """Contains information about a reference error"""
+
     def __init__(self, message, id):
         self.message = message
         self.id = id
-        self.bare_id = id[:id.rfind('v')]
+        self.bare_id = id[: id.rfind("v")]
         # mark it as really old, so it gets superseded if possible
-        self.updated = '0'
+        self.updated = "0"
 
     def bibtex(self):
         """BibTeX comment explaining error"""
-        return "@comment{%(id)s: %(message)s}" % \
-                {'id': self.id, 'message': self.message}
+        return "@comment{%(id)s: %(message)s}" % {
+            "id": self.id,
+            "message": self.message,
+        }
 
     def __str__(self):
-        return "Error: %(message)s (%(id)s)" % \
-                {'id': self.id, 'message': self.message}
+        return "Error: %(message)s (%(id)s)" % {"id": self.id, "message": self.message}
 
 
 def arxiv2bib(id_list):
@@ -228,10 +248,7 @@ def arxiv2bib(id_list):
 
 def arxiv_request(ids):
     """Sends a request to the arxiv API."""
-    q = urlencode([
-         ("id_list", ",".join(ids)),
-         ("max_results", len(ids))
-         ])
+    q = urlencode([("id_list", ",".join(ids)), ("max_results", len(ids))])
     xml = urlopen("http://export.arxiv.org/api/query?" + q)
     # xml.read() returns bytes, but ElementTree.fromstring decodes
     # to unicode when needed (python2) or string (python3)
@@ -269,7 +286,7 @@ def arxiv2bib_dict(id_list):
 
         try:
             id = entries[0].find(ATOM + "summary").text.split()[-1]
-            del(ids[ids.index(id)])
+            del ids[ids.index(id)]
         except:
             raise FatalError("Unable to parse an error returned by arXiv.org.")
 
@@ -314,16 +331,17 @@ class Cli(object):
             bib = arxiv2bib(self.args.id)
         except HTTPError as error:
             if error.getcode() == 403:
-                raise FatalError("""\
+                raise FatalError(
+                    """\
     403 Forbidden error. This usually happens when you make many
     rapid fire requests in a row. If you continue to do this, arXiv.org may
     interpret your requests as a denial of service attack.
 
     For more information, see http://arxiv.org/help/robots.
-    """)
+    """
+                )
             else:
-                raise FatalError(
-                  "HTTP Connection Error: {0}".format(error.getcode()))
+                raise FatalError("HTTP Connection Error: {0}".format(error.getcode()))
 
         self.create_output(bib)
         self.code = self.tally_errors(bib)
@@ -348,10 +366,9 @@ class Cli(object):
         try:
             print(output_string)
         except UnicodeEncodeError:
-            print_bytes((output_string + os.linesep).encode('utf-8'))
+            print_bytes((output_string + os.linesep).encode("utf-8"))
             if self.args.verbose:
-                self.messages.append(
-                  'Could not use system encoding; using utf-8')
+                self.messages.append("Could not use system encoding; using utf-8")
 
     def tally_errors(self, bib):
         """calculate error code"""
@@ -359,8 +376,9 @@ class Cli(object):
             self.messages.append("No successful matches")
             return 2
         elif self.error_count > 0:
-            self.messages.append("%s of %s matched succesfully" %
-              (len(bib) - self.error_count, len(bib)))
+            self.messages.append(
+                "%s of %s matched succesfully" % (len(bib) - self.error_count, len(bib))
+            )
             return 1
         else:
             return 0
@@ -379,20 +397,31 @@ class Cli(object):
             sys.exit("Cannot load required module 'argparse'")
 
         parser = argparse.ArgumentParser(
-          description="Get the BibTeX for each arXiv id.",
-          epilog="""\
+            description="Get the BibTeX for each arXiv id.",
+            epilog="""\
     Returns 0 on success, 1 on partial failure, 2 on total failure.
     Valid BibTeX is written to stdout, error messages to stderr.
     If no arguments are given, ids are read from stdin, one per line.""",
-          formatter_class=argparse.RawDescriptionHelpFormatter)
-        parser.add_argument('id', metavar='arxiv_id', nargs="*",
-          help="arxiv identifier, such as 1201.1213")
-        parser.add_argument('-c', '--comments', action='store_true',
-          help="Include @comment fields with error details")
-        parser.add_argument('-q', '--quiet', action='store_true',
-          help="Display fewer error messages")
-        parser.add_argument('-v', '--verbose', action="store_true",
-          help="Display more error messages")
+            formatter_class=argparse.RawDescriptionHelpFormatter,
+        )
+        parser.add_argument(
+            "id",
+            metavar="arxiv_id",
+            nargs="*",
+            help="arxiv identifier, such as 1201.1213",
+        )
+        parser.add_argument(
+            "-c",
+            "--comments",
+            action="store_true",
+            help="Include @comment fields with error details",
+        )
+        parser.add_argument(
+            "-q", "--quiet", action="store_true", help="Display fewer error messages"
+        )
+        parser.add_argument(
+            "-v", "--verbose", action="store_true", help="Display more error messages"
+        )
         return parser.parse_args(args)
 
 

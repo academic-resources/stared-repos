@@ -1,2 +1,2 @@
-import MainPage from "./MainPage"
-export default MainPage
+import MainPage from "./MainPage";
+export default MainPage;

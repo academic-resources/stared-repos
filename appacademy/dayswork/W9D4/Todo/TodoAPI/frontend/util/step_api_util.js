@@ -1,30 +1,30 @@
 export const fetchSteps = (todo_id) => {
   return $.ajax({
-    method: 'GET',
-    url: `/api/todos/${todo_id}/steps`
-  })
-}
+    method: "GET",
+    url: `/api/todos/${todo_id}/steps`,
+  });
+};
 
 export const createStep = (step) => {
   return $.ajax({
-    method: 'POST',
+    method: "POST",
     url: `/api/todos/${step.todo_id}/steps`,
-    data: { step }
-  })
-}
+    data: { step },
+  });
+};
 
-export const updateStep = step => {
+export const updateStep = (step) => {
   return $.ajax({
-    method: 'PATCH',
+    method: "PATCH",
     url: `/api/steps/${step.id}`,
-    data: { step }
-  })
-}
+    data: { step },
+  });
+};
 
-export const removeStep = step => {
+export const removeStep = (step) => {
   return $.ajax({
-    method: 'DELETE',
+    method: "DELETE",
     url: `/api/steps/${step.id}`,
-    data: { step }
-  })
-}
+    data: { step },
+  });
+};

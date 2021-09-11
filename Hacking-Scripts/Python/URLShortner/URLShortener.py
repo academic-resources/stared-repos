@@ -14,7 +14,7 @@ window.resizable(False, False)  # not resizable in x and y
 window.title("URL Shortener")
 
 # swoc logo
-p1 = PhotoImage(file='images/swoc-logo.png')
+p1 = PhotoImage(file="images/swoc-logo.png")
 window.iconphoto(False, p1)
 
 # url entry
@@ -24,11 +24,9 @@ url_input.grid(row=1, column=2, pady=6)
 # label shortened url
 str_url = StringVar(window)
 
-shortened_url = Label(window,
-                      textvariable=str_url,
-                      font=("TimesNewRoman", "16"),
-                      fg="#fff",
-                      bg="#1abc9c")
+shortened_url = Label(
+    window, textvariable=str_url, font=("TimesNewRoman", "16"), fg="#fff", bg="#1abc9c"
+)
 shortened_url.grid(row=3, column=2, pady=6)
 
 
@@ -42,12 +40,14 @@ def copy_short_url():
 
 
 # Copy short url button
-copy_btn = Button(window,
-                  text="Copy",
-                  bg="#34495e",
-                  fg="#fff",
-                  font=("TimesNewRoman", "12"),
-                  command=copy_short_url)
+copy_btn = Button(
+    window,
+    text="Copy",
+    bg="#34495e",
+    fg="#fff",
+    font=("TimesNewRoman", "12"),
+    command=copy_short_url,
+)
 copy_btn.grid(row=3, column=3, pady=6, padx=10)
 
 
@@ -64,15 +64,17 @@ def short_url():
 
 
 # click button to short url
-btn = Button(window,
-             text="Shorten Url",
-             padx=8,
-             pady=4,
-             bg="#2ecc71",
-             fg="#fff",
-             font=("TimesNewRoman", "16"),
-             activebackground="#16a085",
-             command=short_url)
+btn = Button(
+    window,
+    text="Shorten Url",
+    padx=8,
+    pady=4,
+    bg="#2ecc71",
+    fg="#fff",
+    font=("TimesNewRoman", "16"),
+    activebackground="#16a085",
+    command=short_url,
+)
 btn.grid(row=2, column=2, pady=6)
 
 window.mainloop()

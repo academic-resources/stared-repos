@@ -24,6 +24,6 @@ class Solution:
         return max_len
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.longestConsecutive([100, 4, 200, 1, 3, 2]))

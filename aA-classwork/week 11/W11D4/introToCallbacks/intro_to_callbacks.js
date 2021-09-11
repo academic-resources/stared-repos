@@ -8,12 +8,12 @@ class Clock {
     this.seconds = currentTime.getSeconds();
     // 3. Call printTime.
     this.printTime();
-    // 4. Schedule the tick at 1 second intervals.  
-    setInterval(this._tick.bind(this), 1000); 
+    // 4. Schedule the tick at 1 second intervals.
+    setInterval(this._tick.bind(this), 1000);
     //setInterval is calling function style, the context is global
     //this is not the clock instance; it is global
-  };
-  
+  }
+
   printTime() {
     // Format the time in HH:MM:SS
     // Use console.log to print it.
@@ -30,7 +30,7 @@ class Clock {
         this.minutes = 0;
         this.hour++;
       }
-    } 
+    }
     this.printTime();
     this.seconds++; // "this" is global here if called function style
   }

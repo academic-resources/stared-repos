@@ -54,12 +54,12 @@ class Node:
         self.value = value
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     hashmap = HashMap()
     hashmap.put(2, 12)
     print(hashmap.get(2))
-    hashmap.put('asd', 13)
+    hashmap.put("asd", 13)
     hashmap.put(2, 11)
     print(hashmap.get(2))
-    print(hashmap.get('asd'))
-    print(hashmap.get('ade'))
+    print(hashmap.get("asd"))
+    print(hashmap.get("ade"))

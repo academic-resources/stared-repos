@@ -12,7 +12,7 @@ const PokemonBrowser = () => {
     // console.log(pokemon.length)
     if (pokemon.length === 0) loadPokemon();
   }, [loadPokemon, pokemon.length]);
-  
+
   if (!pokemon) return null;
 
   return (
@@ -22,10 +22,12 @@ const PokemonBrowser = () => {
           return (
             <NavLink key={poke.name} to={`/pokemon/${poke.id}`}>
               <div className="nav-entry">
-                <div className="nav-entry-image"
+                <div
+                  className="nav-entry-image"
                   style={{
-                    backgroundImage: `url('${imageUrl}${poke.imageUrl}')`
-                  }} />
+                    backgroundImage: `url('${imageUrl}${poke.imageUrl}')`,
+                  }}
+                />
                 <h1>{poke.name}</h1>
               </div>
             </NavLink>

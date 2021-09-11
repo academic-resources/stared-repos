@@ -1,7 +1,7 @@
-# python 3 
+# python 3
 
 import numpy as np
-import pandas as pd 
+import pandas as pd
 import datetime as dt
 import time
 import json
@@ -10,11 +10,12 @@ from shapely.geometry import shape, Point
 
 # help function
 
-def combine_lng_lat(lng,lat):
-    return str([float(lng),float(lat)])
-    
 
-def fetch_hz_name(geojson,lng_lat):
+def combine_lng_lat(lng, lat):
+    return str([float(lng), float(lat)])
+
+
+def fetch_hz_name(geojson, lng_lat):
     """
     --- argument  ---
     
@@ -24,21 +25,20 @@ def fetch_hz_name(geojson,lng_lat):
     --- argument  ---
     """
     # open hz geojson file and retrun as dict (python json object)
-    with open('ldn_hz.geo.json') as f:
+    with open("ldn_hz.geo.json") as f:
         js = json.load(f)
-    # get point lon & lat 
+    # get point lon & lat
     point = Point(float(lng_lat[0]), float(lng_lat[1]))
     # loop over all hz in the dict
-    for feature in js['features']:
-        polygon = shape(feature['geometry'])
+    for feature in js["features"]:
+        polygon = shape(feature["geometry"])
         if polygon.contains(point):
-            print ('Found containing polygon:', feature['properties'])
+            print("Found containing polygon:", feature["properties"])
         else:
-            print ('none')
+            print("none")
 
-            
-            
-def fetch_hz_name_(geojson,lat,lon):
+
+def fetch_hz_name_(geojson, lat, lon):
     """
     --- argument  ---
     
@@ -50,20 +50,19 @@ def fetch_hz_name_(geojson,lat,lon):
     # open hz geojson file and retrun as dict (python json object)
     with open(geojson) as f:
         js = json.load(f)
-    # get point lon & lat 
+    # get point lon & lat
     point = Point(float(lat), float(lon))
-    print (point)
+    print(point)
     # loop over all hz in the dict
-    for feature in js['features']:
-        polygon = shape(feature['geometry'])
+    for feature in js["features"]:
+        polygon = shape(feature["geometry"])
         if polygon.contains(point):
-            print ('Found containing polygon:', feature['properties'])
-            return str(feature['properties']['Name'])
+            print("Found containing polygon:", feature["properties"])
+            return str(feature["properties"]["Name"])
         else:
-            print ('none')
+            print("none")
             pass
-        
-        
+
 
 """
 

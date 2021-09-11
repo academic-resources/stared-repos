@@ -24,14 +24,14 @@ class Solution:
                 return
             if right >= left:
                 if left != 0:
-                    _helper(left - 1, right, path + '(')
+                    _helper(left - 1, right, path + "(")
                 if right != 0:
-                    _helper(left, right - 1, path + ')')
+                    _helper(left, right - 1, path + ")")
 
         _helper(n - 1, n, "(")
         return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.generateParenthesis(2))

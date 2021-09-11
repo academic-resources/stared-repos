@@ -3,7 +3,6 @@ queens which do not attack each other. """
 
 
 class Solution:
-
     def findNQueens(self, n: int) -> list:
         grid = [[0 for _ in range(n)] for _ in range(n)]
         solved = self.helper(n, 0, grid)
@@ -41,6 +40,6 @@ class Solution:
         return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.findNQueens(4))

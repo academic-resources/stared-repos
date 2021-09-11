@@ -1,13 +1,13 @@
 from collections import Counter
 
-def solution(S, T):
 
+def solution(S, T):
     def oneDel(self, s, t):
 
         longer = s if len(s) > len(t) else t
         shorter = s if longer == t else t
         for i in range(len(longer)):
-            reduced = longer[:i] + longer[i + 1:]
+            reduced = longer[:i] + longer[i + 1 :]
             if reduced == shorter:
                 return True
         return False

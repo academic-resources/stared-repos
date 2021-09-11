@@ -1,5 +1,7 @@
-p, a, input {
-  font-family: 'Raleway', sans-serif;
+p,
+a,
+input {
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
 }
 
@@ -7,10 +9,10 @@ p {
   color: #fff;
 }
 
-a, input[type='submit'] {
-
+a,
+input[type="submit"] {
   &:hover {
-    transition: .5s;
+    transition: 0.5s;
     color: white;
   }
 }
@@ -44,8 +46,11 @@ input[type="submit"] {
   }
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Bungee Inline', cursive;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bungee Inline", cursive;
 }
 
 body {
@@ -68,7 +73,7 @@ body {
   .main-logo {
     font-size: 75px;
     margin-bottom: 30px;
-    color: #FDDB61;
+    color: #fddb61;
   }
 
   nav {
@@ -88,7 +93,7 @@ body {
 
 .page-header {
   font-size: 40px;
-  color: #39BAAC;
+  color: #39baac;
   margin-bottom: 30px;
 }
 

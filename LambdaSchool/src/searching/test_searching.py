@@ -22,5 +22,5 @@ class SearchingTests(unittest.TestCase):
         self.assertEqual(binary_search(arr2, 0), -1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -82,7 +82,7 @@ class OrderedDict(dict):
 
     def __setitem__(self, key, item):
         if key not in self:
-            if hasattr(self, '_keys'):
+            if hasattr(self, "_keys"):
                 self._keys.append(key)
             else:
                 self._keys = [key]
@@ -129,7 +129,7 @@ class OrderedDict(dict):
 
     def popitem(self):
         if not self._keys:
-            raise KeyError('popitem(): dictionary is empty')
+            raise KeyError("popitem(): dictionary is empty")
         return self._keys[0], self.pop(self._keys[0])
 
     def setdefault(self, key, default=None):
@@ -147,7 +147,7 @@ class OrderedDict(dict):
             else:
                 sources.append(iter(args[0]))
         elif args:
-            raise TypeError('expected at most one positional argument')
+            raise TypeError("expected at most one positional argument")
         if kwargs:
             sources.append(iteritems(kwargs))
         for iterable in sources:
@@ -171,7 +171,7 @@ class OrderedDict(dict):
             self._keys.reverse()
 
     def __repr__(self):
-        return '%s(%r)' % (type(self).__name__, self.items())
+        return "%s(%r)" % (type(self).__name__, self.items())
 
     __copy__ = copy
     __iter__ = iterkeys

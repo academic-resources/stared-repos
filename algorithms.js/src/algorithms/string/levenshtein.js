@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Calculates the edit distance between two strings
@@ -38,8 +38,7 @@ var levenshtein = function (a, b) {
           editDistance[i - 1][j - 1], // if we replace a[i] by b[j]
           editDistance[i - 1][j], // if we delete the char from a
           editDistance[i][j - 1] // if we add the char from b
-        ) +
-        (a[i - 1] != b[j - 1] ? 1 : 0);
+        ) + (a[i - 1] != b[j - 1] ? 1 : 0);
     }
   }
 

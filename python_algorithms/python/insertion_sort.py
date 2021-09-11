@@ -25,6 +25,6 @@ def insertion_sort(array):
 
 
 array = [10, 0, 8]
-print(f'Sorting array {array}')
+print(f"Sorting array {array}")
 insertion_sort(array)
 print(array)

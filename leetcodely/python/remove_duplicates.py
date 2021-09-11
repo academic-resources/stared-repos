@@ -30,7 +30,6 @@ class Solution(object):
         return count
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.removeDuplicates([1, 1, 2, 2, 2, 3]))
-

@@ -22,7 +22,7 @@ from waymo_open_dataset.metrics.python import config_util_py as config_util
 
 
 def _update(name, update, init_shape, dtype):
-  """Updates variable 'name' by concatenating 'update'.
+    """Updates variable 'name' by concatenating 'update'.
 
   Args:
     name: Variable name.
@@ -34,28 +34,31 @@ def _update(name, update, init_shape, dtype):
     v: the variable ref.
     v_assign: tensor that hold the new value of the variable after the update.
   """
-  with tf.compat.v1.variable_scope(
-      'detection_metrics', reuse=tf.compat.v1.AUTO_REUSE):
-    initializer = lambda: tf.constant([], shape=init_shape, dtype=dtype)
-    v = tf.compat.v1.get_local_variable(
-        name,
-        dtype=dtype,
-        collections=[
-            tf.compat.v1.GraphKeys.LOCAL_VARIABLES,
-            tf.compat.v1.GraphKeys.METRIC_VARIABLES
-        ],
-        # init_shape is required to pass the shape inference check.
-        initializer=initializer,
-        validate_shape=False)
-    shape = tf.concat([[-1], tf.shape(input=update)[1:]], axis=0)
-    v_reshape = tf.reshape(v.value(), shape)
-    v_assign = tf.compat.v1.assign(
-        v, tf.concat([v_reshape, update], axis=0), validate_shape=False)
-  return v, v_assign
+    with tf.compat.v1.variable_scope(
+        "detection_metrics", reuse=tf.compat.v1.AUTO_REUSE
+    ):
+        initializer = lambda: tf.constant([], shape=init_shape, dtype=dtype)
+        v = tf.compat.v1.get_local_variable(
+            name,
+            dtype=dtype,
+            collections=[
+                tf.compat.v1.GraphKeys.LOCAL_VARIABLES,
+                tf.compat.v1.GraphKeys.METRIC_VARIABLES,
+            ],
+            # init_shape is required to pass the shape inference check.
+            initializer=initializer,
+            validate_shape=False,
+        )
+        shape = tf.concat([[-1], tf.shape(input=update)[1:]], axis=0)
+        v_reshape = tf.reshape(v.value(), shape)
+        v_assign = tf.compat.v1.assign(
+            v, tf.concat([v_reshape, update], axis=0), validate_shape=False
+        )
+    return v, v_assign
 
 
 def _get_box_dof(box_type):
-  """Gets the desired number of box degree of freedom for a box type.
+    """Gets the desired number of box degree of freedom for a box type.
 
   Args:
     box_type: The type of the box.
@@ -63,13 +66,13 @@ def _get_box_dof(box_type):
   Returns:
     The desired degrees of freedom for the box type.
   """
-  if box_type == label_pb2.Label.Box.Type.Value('TYPE_3D'):
-    return 7
-  if box_type == label_pb2.Label.Box.Type.Value('TYPE_2D'):
-    return 5
-  if box_type == label_pb2.Label.Box.Type.Value('TYPE_AA_2D'):
-    return 4
-  return -1
+    if box_type == label_pb2.Label.Box.Type.Value("TYPE_3D"):
+        return 7
+    if box_type == label_pb2.Label.Box.Type.Value("TYPE_2D"):
+        return 5
+    if box_type == label_pb2.Label.Box.Type.Value("TYPE_AA_2D"):
+        return 4
+    return -1
 
 
 def get_detection_metric_ops(
@@ -87,7 +90,7 @@ def get_detection_metric_ops(
     recall_at_precision=None,
     name_filter=None,
 ):
-  """Returns dict of metric name to tuples of `(value_op, update_op)`.
+    """Returns dict of metric name to tuples of `(value_op, update_op)`.
 
   Each update_op accumulates the prediction and ground truth tensors to its
   corresponding tf variables. Each value_op computes detection metrics on all
@@ -129,59 +132,66 @@ def get_detection_metric_ops(
   Returns:
     A dictionary of metric names to tuple of value_op and update_op.
   """
-  if ground_truth_speed is None:
-    num_gt_boxes = tf.shape(ground_truth_bbox)[0]
-    ground_truth_speed = tf.zeros((num_gt_boxes, 2), tf.float32)
+    if ground_truth_speed is None:
+        num_gt_boxes = tf.shape(ground_truth_bbox)[0]
+        ground_truth_speed = tf.zeros((num_gt_boxes, 2), tf.float32)
 
-  eval_dict = {
-      'prediction_frame_id': (prediction_frame_id, [0], tf.int64),
-      'prediction_bbox':
-          (prediction_bbox, [0, _get_box_dof(config.box_type)], tf.float32),
-      'prediction_type': (prediction_type, [0], tf.uint8),
-      'prediction_score': (prediction_score, [0], tf.float32),
-      'prediction_overlap_nlz': (prediction_overlap_nlz, [0], tf.bool),
-      'ground_truth_frame_id': (ground_truth_frame_id, [0], tf.int64),
-      'ground_truth_bbox':
-          (ground_truth_bbox, [0, _get_box_dof(config.box_type)], tf.float32),
-      'ground_truth_type': (ground_truth_type, [0], tf.uint8),
-      'ground_truth_difficulty': (ground_truth_difficulty, [0], tf.uint8),
-      'ground_truth_speed': (ground_truth_speed, [0, 2], tf.float32),
-  }
+    eval_dict = {
+        "prediction_frame_id": (prediction_frame_id, [0], tf.int64),
+        "prediction_bbox": (
+            prediction_bbox,
+            [0, _get_box_dof(config.box_type)],
+            tf.float32,
+        ),
+        "prediction_type": (prediction_type, [0], tf.uint8),
+        "prediction_score": (prediction_score, [0], tf.float32),
+        "prediction_overlap_nlz": (prediction_overlap_nlz, [0], tf.bool),
+        "ground_truth_frame_id": (ground_truth_frame_id, [0], tf.int64),
+        "ground_truth_bbox": (
+            ground_truth_bbox,
+            [0, _get_box_dof(config.box_type)],
+            tf.float32,
+        ),
+        "ground_truth_type": (ground_truth_type, [0], tf.uint8),
+        "ground_truth_difficulty": (ground_truth_difficulty, [0], tf.uint8),
+        "ground_truth_speed": (ground_truth_speed, [0, 2], tf.float32),
+    }
 
-  variable_and_update_ops = {}
-  for name, value in eval_dict.items():
-    update, init_shape, dtype = value
-    variable_and_update_ops[name] = _update(name, update, init_shape, dtype)
+    variable_and_update_ops = {}
+    for name, value in eval_dict.items():
+        update, init_shape, dtype = value
+        variable_and_update_ops[name] = _update(name, update, init_shape, dtype)
 
-  update_ops = [value[1] for value in variable_and_update_ops.values()]
-  update_op = tf.group(update_ops)
-  variable_map = {
-      name: value[0] for name, value in variable_and_update_ops.items()
-  }
+    update_ops = [value[1] for value in variable_and_update_ops.values()]
+    update_op = tf.group(update_ops)
+    variable_map = {name: value[0] for name, value in variable_and_update_ops.items()}
 
-  config_str = config.SerializeToString()
-  ap, aph, pr, _, _ = py_metrics_ops.detection_metrics(
-      config=config_str, **variable_map)
-  breakdown_names = config_util.get_breakdown_names_from_config(config)
-  metric_ops = {}
-  update_op_added = False
-  for i, name in enumerate(breakdown_names):
-    if name_filter is not None and name_filter not in name:
-      continue
-    if not update_op_added:
-      metric_ops['{}/AP'.format(name)] = (ap[i], update_op)
-      update_op_added = True
-    else:
-      # Set update_op to be an no-op just in case if anyone runs update_ops in
-      # multiple session.run()s.
-      metric_ops['{}/AP'.format(name)] = (ap[i], tf.constant([]))
-    metric_ops['{}/APH'.format(name)] = (aph[i], tf.constant([]))
-    if recall_at_precision is not None:
-      precision_i_mask = pr[i, :, 0] > recall_at_precision
-      recall_i = tf.reduce_max(
-          tf.where(precision_i_mask, pr[i, :, 1], tf.zeros_like(pr[i, :, 1])))
-      metric_ops['{}/Recall@{}'.format(name,
-                                       recall_at_precision)] = (recall_i,
-                                                                tf.constant([]))
+    config_str = config.SerializeToString()
+    ap, aph, pr, _, _ = py_metrics_ops.detection_metrics(
+        config=config_str, **variable_map
+    )
+    breakdown_names = config_util.get_breakdown_names_from_config(config)
+    metric_ops = {}
+    update_op_added = False
+    for i, name in enumerate(breakdown_names):
+        if name_filter is not None and name_filter not in name:
+            continue
+        if not update_op_added:
+            metric_ops["{}/AP".format(name)] = (ap[i], update_op)
+            update_op_added = True
+        else:
+            # Set update_op to be an no-op just in case if anyone runs update_ops in
+            # multiple session.run()s.
+            metric_ops["{}/AP".format(name)] = (ap[i], tf.constant([]))
+        metric_ops["{}/APH".format(name)] = (aph[i], tf.constant([]))
+        if recall_at_precision is not None:
+            precision_i_mask = pr[i, :, 0] > recall_at_precision
+            recall_i = tf.reduce_max(
+                tf.where(precision_i_mask, pr[i, :, 1], tf.zeros_like(pr[i, :, 1]))
+            )
+            metric_ops["{}/Recall@{}".format(name, recall_at_precision)] = (
+                recall_i,
+                tf.constant([]),
+            )
 
-  return metric_ops
+    return metric_ops

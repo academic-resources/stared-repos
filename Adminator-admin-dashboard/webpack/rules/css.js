@@ -10,15 +10,12 @@
  * + @Exporting Module
  */
 
-
 // ---------------------
 // @Loading Dependencies
 // ---------------------
 
-const
-  manifest          = require('../manifest'),
-  ExtractTextPlugin = require('mini-css-extract-plugin');
-
+const manifest = require("../manifest"),
+  ExtractTextPlugin = require("mini-css-extract-plugin");
 
 // ---------------
 // @Common Loaders
@@ -28,15 +25,14 @@ let rule = {};
 
 const loaders = [
   {
-    loader: 'css-loader',
+    loader: "css-loader",
     options: {
-      sourceMap : manifest.IS_DEVELOPMENT,
+      sourceMap: manifest.IS_DEVELOPMENT,
       // minimize  : manifest.IS_PRODUCTION,
       importLoaders: 1,
     },
   },
 ];
-
 
 // ---------------------------
 // @Merging Production Loaders
@@ -52,7 +48,6 @@ if (manifest.IS_PRODUCTION) {
   };
 }
 
-
 // ----------------------------
 // @Merging Development Loaders
 // ----------------------------
@@ -60,12 +55,13 @@ if (manifest.IS_PRODUCTION) {
 if (manifest.IS_DEVELOPMENT) {
   rule = {
     test: /\.css$/,
-    use: [{
-      loader: 'style-loader',
-    }].concat(loaders),
+    use: [
+      {
+        loader: "style-loader",
+      },
+    ].concat(loaders),
   };
 }
-
 
 // -----------------
 // @Exporting Module

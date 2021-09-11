@@ -12,9 +12,9 @@ class Solution(object):
         """
         stack = []
         for c in s:
-            if c == '(' or c == '{' or c == '[':
+            if c == "(" or c == "{" or c == "[":
                 stack.append(c)
-            elif c == ')' or c == '}' or c == ']':
+            elif c == ")" or c == "}" or c == "]":
                 if len(stack) > 0 and self.match(stack[-1], c):
                     stack.pop()
                 else:
@@ -22,15 +22,15 @@ class Solution(object):
         return len(stack) == 0
 
     def match(self, c, t):
-        if c == '(' and t == ')':
+        if c == "(" and t == ")":
             return True
-        if c == '{' and t == '}':
+        if c == "{" and t == "}":
             return True
-        if c == '[' and t == ']':
+        if c == "[" and t == "]":
             return True
         return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.isValid('()[]{}'))
+    print(solution.isValid("()[]{}"))

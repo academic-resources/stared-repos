@@ -4,8 +4,7 @@ from app.models import db, User
 
 def seed_users():
 
-    demo = User(username='Demo', email='demo@aa.io',
-                password='password')
+    demo = User(username="Demo", email="demo@aa.io", password="password")
 
     db.session.add(demo)
 
@@ -13,5 +12,5 @@ def seed_users():
 
 
 def undo_users():
-    db.session.execute('TRUNCATE users CASCADE;')
+    db.session.execute("TRUNCATE users CASCADE;")
     db.session.commit()

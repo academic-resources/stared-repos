@@ -8,6 +8,7 @@ Now, given 3 things - start, end, bank, your task is to determine what is the mi
 mutate from "start" to "end". If there is no such a mutation, return -1.
 """
 
+
 class Solution(object):
     def minMutation(self, start, end, bank):
         """
@@ -18,13 +19,21 @@ class Solution(object):
         """
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.minMutation("AACCGGTT", "AAACGGTA", ["AACCGGTA", "AACCGCTA", "AAACGGTA"]))
+    print(
+        solution.minMutation(
+            "AACCGGTT", "AAACGGTA", ["AACCGGTA", "AACCGCTA", "AAACGGTA"]
+        )
+    )
     print(solution.minMutation("AACCGGTT", "AACCGGTA", ["AACCGGTA"]))
-    print(solution.minMutation("AACCTTGG", "AATTCCGG", ["AATTCCGG","AACCTGGG","AACCCCGG","AACCTACC"]))
-    print(solution.minMutation("AAAAACCC", "AACCCCCC", ["AAAACCCC","AAACCCCC","AACCCCCC"]))
-    
-
-
-
+    print(
+        solution.minMutation(
+            "AACCTTGG", "AATTCCGG", ["AATTCCGG", "AACCTGGG", "AACCCCGG", "AACCTACC"]
+        )
+    )
+    print(
+        solution.minMutation(
+            "AAAAACCC", "AACCCCCC", ["AAAACCCC", "AAACCCCC", "AACCCCCC"]
+        )
+    )

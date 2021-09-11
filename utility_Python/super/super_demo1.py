@@ -3,7 +3,8 @@ class User:
         self.email = email
 
     def sign_in(self):
-        print ("logged in")
+        print("logged in")
+
 
 class Wizard(User):
     def __init__(self, name, power, email):
@@ -16,7 +17,8 @@ class Wizard(User):
         self.power = power
 
     def attack(self):
-        print ("attack with power = {}".format(self.power))
+        print("attack with power = {}".format(self.power))
+
 
 class Knight(User):
     def __init__(self, name, power, email):
@@ -29,9 +31,10 @@ class Knight(User):
         self.power = power
 
     def attack(self):
-        print ("attack with power = {}".format(self.power))
+        print("attack with power = {}".format(self.power))
+
 
 wizard1 = Wizard("jim", "100", "xxx@gmail.com")
-print (wizard1.email)
+print(wizard1.email)
 knight1 = Knight("tom", "999", "yyy@gmail.com")
-print (knight1.email)
+print(knight1.email)

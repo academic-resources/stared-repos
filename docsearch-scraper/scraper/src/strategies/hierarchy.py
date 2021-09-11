@@ -20,11 +20,11 @@ class Hierarchy:
         hierarchy_radio = {}
         is_found = False
         for level in reversed(levels):
-            if level == 'content':
+            if level == "content":
                 continue
 
             value = hierarchy[level]
-            if is_found is False and value is not None and current_level != 'content':
+            if is_found is False and value is not None and current_level != "content":
                 is_found = True
                 hierarchy_radio[level] = value
                 continue

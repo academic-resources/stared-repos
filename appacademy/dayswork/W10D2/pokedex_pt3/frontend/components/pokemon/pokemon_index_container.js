@@ -1,21 +1,18 @@
-import { connect } from 'react-redux'
-import { selectAllPokemon } from '../../reducers/selectors'
-import PokemonIndex from './pokemon_index'
-import { requestAllPokemon } from '../../actions/pokemon_actions'
+import { connect } from "react-redux";
+import { selectAllPokemon } from "../../reducers/selectors";
+import PokemonIndex from "./pokemon_index";
+import { requestAllPokemon } from "../../actions/pokemon_actions";
 
-const mstp = state => {
+const mstp = (state) => {
   return {
-    pokemon: selectAllPokemon(state)
-  }
-}
+    pokemon: selectAllPokemon(state),
+  };
+};
 
-const mdtp = dispatch => {
+const mdtp = (dispatch) => {
   return {
-    requestAllPokemon: () => dispatch(requestAllPokemon())
-  }
-}
+    requestAllPokemon: () => dispatch(requestAllPokemon()),
+  };
+};
 
-export default connect(
-  mstp,
-  mdtp
-)(PokemonIndex)
+export default connect(mstp, mdtp)(PokemonIndex);

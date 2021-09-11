@@ -7,10 +7,11 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
-  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small>Second Edition: July, 2021</small>
-  </sub>
+<sub>Author:
+<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
+<small>Second Edition: July, 2021</small>
+</sub>
+
 </div>
 </div>
 
@@ -99,7 +100,7 @@ Werkzeug==0.16.0
 (env) asabeneh@Asabeneh:~/Desktop/python_for_web$
 ```
 
-We created a project director named python_for_web. Inside the project we created a virtual environment *venv* which could be any name but I prefer to call it _venv_. Then we activated the virtual environment. We used pip freeze to check the installed packages in the project directory. The result of pip freeze was empty because a package was not installed yet.
+We created a project director named python*for_web. Inside the project we created a virtual environment *venv* which could be any name but I prefer to call it \_venv*. Then we activated the virtual environment. We used pip freeze to check the installed packages in the project directory. The result of pip freeze was empty because a package was not installed yet.
 
 Now, let's create app.py file in the project directory and write the following code. The app.py file will be the main file in the project. The following code has flask module, os module.
 
@@ -159,7 +160,7 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=port)
 ```
 
-Now, we added the about route in the above code. How about if we want to render an HTML file instead of string? It is possible to render HTML file using the function *render_templae*. Let us create a folder called templates and create home.html and about.html in the project directory. Let us also import the *render_template* function from flask.
+Now, we added the about route in the above code. How about if we want to render an HTML file instead of string? It is possible to render HTML file using the function _render_templae_. Let us create a folder called templates and create home.html and about.html in the project directory. Let us also import the _render_template_ function from flask.
 
 ### Creating templates
 
@@ -290,10 +291,10 @@ home.html
       <li><a href="/about">About</a></li>
     </ul>
     <h1>Welcome to {{name}}</h1>
-     <ul>
-    {% for tech in techs %}
+    <ul>
+      {% for tech in techs %}
       <li>{{tech}}</li>
-    {% endfor %}
+      {% endfor %}
     </ul>
   </body>
 </html>
@@ -328,7 +329,7 @@ After we create the layout we will import to every file.
 
 #### Serving Static File
 
-Create a static folder in your project directory. Inside the static folder create CSS or styles folder and create a CSS stylesheet. We use the *url_for* module to serve the static file. 
+Create a static folder in your project directory. Inside the static folder create CSS or styles folder and create a CSS stylesheet. We use the _url_for_ module to serve the static file.
 
 layout.html
 
@@ -374,9 +375,7 @@ layout.html
         </ul>
       </div>
     </header>
-    <main>
-      {% block content %} {% endblock %}
-    </main>
+    <main>{% block content %} {% endblock %}</main>
   </body>
 </html>
 ```
@@ -569,7 +568,6 @@ After this step you will get an application like [this](http://thirdaysofpython-
 ## Exercises: Day 26
 
 1. You will build [this application](https://thirtydaysofpython-v1-final.herokuapp.com/). Only the text analyser part is left
-
 
 🎉 CONGRATULATIONS ! 🎉
 

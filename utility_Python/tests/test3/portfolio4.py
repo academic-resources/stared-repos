@@ -21,6 +21,7 @@ class Portfolio:
     21263.0
 
     """
+
     def __init__(self):
         # A list of lists: [[name, shares, price], ...]
         self.stocks = []
@@ -68,7 +69,7 @@ class Portfolio:
         url += self.SUFFIX
         data = requests.get(url).text
         lines = data.splitlines()[1:]
-        return { row[0]: float(row[3]) for row in csv.reader(lines) }
+        return {row[0]: float(row[3]) for row in csv.reader(lines)}
 
     # Second: with the IO as a separate method.
 
@@ -82,7 +83,7 @@ class Portfolio:
         url += self.SUFFIX
         data = text_from_url(url)
         lines = data.splitlines()[1:]
-        return { row[0]: float(row[3]) for row in csv.reader(lines) }
+        return {row[0]: float(row[3]) for row in csv.reader(lines)}
 
     # Third: with dependency injection.
 
@@ -96,7 +97,7 @@ class Portfolio:
         url += self.SUFFIX
         data = text_from_url(url)
         lines = data.splitlines()[1:]
-        return { row[0]: float(row[3]) for row in csv.reader(lines) }
+        return {row[0]: float(row[3]) for row in csv.reader(lines)}
 
     # Fourth: separate methods for each phase.
 

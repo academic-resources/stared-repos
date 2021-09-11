@@ -19,12 +19,10 @@ for i in range(pdf.getNumPages()):
 # Encrypting by the password
 owner_Password = input("Enter Password for OWNER: ")
 user_Password = input("Enter Password for USER: ")
-write_Obj.encrypt(user_pwd=user_Password,
-                  owner_pwd=owner_Password,
-                  use_128bit=True)
+write_Obj.encrypt(user_pwd=user_Password, owner_pwd=owner_Password, use_128bit=True)
 
 # Naming and creating the encrypted PDF
 new_PDF_Name_Input = input("Enter new ENCRYPTED PDF name: ")
-new_PDF_Name = new_PDF_Name_Input + '.pdf'
-encrypted_PDF = open(new_PDF_Name, 'wb')
+new_PDF_Name = new_PDF_Name_Input + ".pdf"
+encrypted_PDF = open(new_PDF_Name, "wb")
 write_Obj.write(encrypted_PDF)

@@ -2,21 +2,17 @@ from random import choice
 
 from wagtail.images.models import Image
 
-from networkapi.wagtailpages.models import (
-    PartnerLogos,
-)
+from networkapi.wagtailpages.models import PartnerLogos
 
-from networkapi.utility.faker.helpers import (
-    reseed,
-    get_homepage
-)
+from networkapi.utility.faker.helpers import reseed, get_homepage
 
 from faker import Faker  # note: NOT from factory, but from faker. Different Faker!
+
 faker = Faker()
 
 
 def generate(seed):
-    print('Generating Partner Logos')
+    print("Generating Partner Logos")
 
     home_page = get_homepage()
 

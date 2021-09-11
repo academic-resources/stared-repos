@@ -37,13 +37,13 @@ time.sleep(1)
 request_highlighter = RequestHighlighter()
 
 console.log(
-    request_highlighter("HTTP GET /foo/bar/baz/egg.html 200 [0.57, 127.0.0.1:59076]"),
+    request_highlighter("HTTP GET /foo/bar/baz/egg.html 200 [0.57, 127.0.0.1:59076]")
 )
 
 console.log(
     request_highlighter(
         "HTTP GET /foo/bar/baz/background.jpg 200 [0.57, 127.0.0.1:59076]"
-    ),
+    )
 )
 
 

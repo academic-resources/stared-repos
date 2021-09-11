@@ -5,7 +5,7 @@ import global_sandbox
 import json
 
 funcs = {
-    'friends': '''
+    "friends": """
 class Solution:
     def findCircleNum(self, M) -> int:
         N = len(M)
@@ -34,17 +34,15 @@ class Solution:
 Solution().findCircleNum([[1,1],[1,1]])
 
 
-    ''',
-
-
-    'loop': '''
+    """,
+    "loop": """
 
 for a,b, (c,d) in [[1,2, [3,4]]]:
     a + b + c + d
 
 
-    ''',
-    'assignments': '''
+    """,
+    "assignments": """
 
 def g():
     a = 1
@@ -58,33 +56,33 @@ def g():
 
 
 g()
-''',
-    'func': '''
+""",
+    "func": """
 class K:
     def func(self,a,b,c=5,*d):
         self = 5
         return self
 K().func(1,2,3,4,5,6)
-''',
-    'class': '''
+""",
+    "class": """
 class S:
     z = 1
     def __init__(self):
         1 + 1
-''',
-    'generator': '''
+""",
+    "generator": """
 (a): int = 1
 
 a += 1+1
 # b = f"sin({a})"
-''',
-    'lambda': '''
+""",
+    "lambda": """
 
 a = lambda x,y,*z : x + y + sum(z)
 
 a(1,2,3,4,5,6,7,8,9,10)
-''',
-    'DNA': '''
+""",
+    "DNA": """
 
 def findRepeatedDnaSequences(s: str):
         seen = {}
@@ -101,8 +99,8 @@ def findRepeatedDnaSequences(s: str):
 
         return output
 findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT")
-''',
-    'PA': '''
+""",
+    "PA": """
 
 class Solution(object):
     def __init__(self):
@@ -143,23 +141,22 @@ class Solution(object):
 Solution().pacificAtlantic(
     [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]
 )
-''',
-    'tuple': '''
+""",
+    "tuple": """
 a = (1,[])
-''',
-    'import': '''
+""",
+    "import": """
 
 from bisect import insort
 
 arr = [1,2,4,5]
 
 insort(arr, 3)
-''',
-    'f': '''
+""",
+    "f": """
 a = globals()
-''',
-
-    'comprehensions': '''
+""",
+    "comprehensions": """
 
 
 arr = [[(i,j) for i in range(2)] for j in range(5)]
@@ -167,28 +164,26 @@ arr = [[(i,j) for i in range(2)] for j in range(5)]
 
 z = [(a,b) for line in arr if 1+1 if 1 for (a,b) in line]
 
-''',
-
-    'generator': '''
+""",
+    "generator": """
 
 a = (num ** 2 for num in range(10))
-''',
-
-    'arr': '''
+""",
+    "arr": """
 a = [i for i in range(1,21)]
 
 a[-5]
 
 del a[19:10:-2]
-''',
-    'set': '''
+""",
+    "set": """
 s = {1,2}
 s2 = {3,4,5}
 
 s2 |= s
 
-''',
-    'counter': '''
+""",
+    "counter": """
 
 import collections
 c = collections.Counter('abc')
@@ -196,23 +191,22 @@ c = collections.Counter('abc')
 a = None
 
 
-''',
-    'ordereddict': '''
+""",
+    "ordereddict": """
 from collections import OrderedDict
 
 d = OrderedDict()
 
 for i,c in enumerate('abcde'):
     d[i] = c
-''',
-    'createclass': '''
+""",
+    "createclass": """
 from collections import namedtuple
 
 Point = namedtuple('Point', ['x', 'y'])
 
-''',
-
-    'deque': '''
+""",
+    "deque": """
 from collections import deque
 
 
@@ -241,15 +235,14 @@ q.rotate(31)
 
 while q:
     q.pop()
-''',
-
-    'viz': '''
+""",
+    "viz": """
 from viz import BTree
 
 tree = BTree.create([1,2,3])
 
-''',
-    'delete_var': '''
+""",
+    "delete_var": """
 
 x = 3
 y = 4
@@ -257,15 +250,15 @@ z = 5
 
 del (x,(y,z))
 
-''',
-    'heapq': '''
+""",
+    "heapq": """
 
 import heapq
 
 x = heapq.heapify([1,2,3,4,5])
 
-''',
-    'default': '''
+""",
+    "default": """
 
 from collections import deque
 python = deque('PYTHON')
@@ -276,8 +269,8 @@ for char in 'IS':
     arr.append(char)
 
 cool = [c for c in 'COOL']
-''',
-    'defaultdict': '''
+""",
+    "defaultdict": """
 from collections import defaultdict
 import bisect
 class Solution:
@@ -305,15 +298,14 @@ source = "abc"
 target = "abcbc"
 Solution().shortestWay(source,target)
 
-''',
-    'custom': '''
+""",
+    "custom": """
 a = [1,2]
 
 
 
 a *= 1
-'''
-
+""",
 }
 
 
@@ -327,7 +319,7 @@ for name, code in funcs.items():
 
         _name, imports = inp
         runner = Runner(_name, code)
-        open('transpiled.py', "w+").write(transpiled)
+        open("transpiled.py", "w+").write(transpiled)
 
         exec(transpiled, global_sandbox.create(_name, runner, imports))
         print(f"✔ {name}")

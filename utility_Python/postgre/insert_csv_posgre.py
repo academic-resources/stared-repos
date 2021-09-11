@@ -1,9 +1,10 @@
-# python 3 
-import csv 
+# python 3
+import csv
 import psycopg2
 
+
 def main():
-    with open('example.csv') as f:
+    with open("example.csv") as f:
         """
         example.csv : 
 
@@ -28,9 +29,10 @@ def main():
     for row in rows:
         cur.execute("INSERT INTO users VALUES (%s, %s, %s, %s)", row)
     conn.commit()
-    cur.execute('SELECT * FROM users')
+    cur.execute("SELECT * FROM users")
     users = cur.fetchall()
     conn.close()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

@@ -40,27 +40,27 @@
 // Let's code!
 // -----------
 function linkedListIntersection(list1, list2) {
-  if (list1.length === 0 || list2.length === 0) return null
+  if (list1.length === 0 || list2.length === 0) return null;
 
-  let longerList, shorterList
+  let longerList, shorterList;
   if (list1.length > list2.length) {
-    longerList = list1
-    shorterList = list2
+    longerList = list1;
+    shorterList = list2;
   } else {
-    longerList = list2
-    shorterList = list1
+    longerList = list2;
+    shorterList = list1;
   }
-  let nodeInShorter = shorterList.head
+  let nodeInShorter = shorterList.head;
   while (nodeInShorter) {
-    let nodeInLonger = longerList.head
+    let nodeInLonger = longerList.head;
     while (nodeInLonger) {
-      if (nodeInLonger === nodeInShorter) return nodeInLonger
-      nodeInLonger = nodeInLonger.next
+      if (nodeInLonger === nodeInShorter) return nodeInLonger;
+      nodeInLonger = nodeInLonger.next;
     }
-    nodeInShorter = nodeInShorter.next
+    nodeInShorter = nodeInShorter.next;
   }
 
-  return null
+  return null;
 }
 
 // ----------------------------------------
@@ -68,57 +68,57 @@ function linkedListIntersection(list1, list2) {
 // ----------------------------------------
 class Node {
   constructor(val) {
-    this.value = val
-    this.next = null
+    this.value = val;
+    this.next = null;
   }
 }
 
 class LinkedList {
   constructor() {
-    this.head = null
-    this.tail = null
-    this.length = 0
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
   }
 
   addToTail(val) {
-    const newNode = new Node(val)
+    const newNode = new Node(val);
 
     if (!this.head) {
-      this.head = newNode
+      this.head = newNode;
     } else {
-      this.tail.next = newNode
+      this.tail.next = newNode;
     }
 
-    this.tail = newNode
-    this.length++
-    return this
+    this.tail = newNode;
+    this.length++;
+    return this;
   }
 
   get(index) {
-    if (index < 0 || index >= this.length) return null
-    let counter = 0
-    let current = this.head
+    if (index < 0 || index >= this.length) return null;
+    let counter = 0;
+    let current = this.head;
     while (counter !== index) {
-      current = current.next
-      counter++
+      current = current.next;
+      counter++;
     }
-    return current
+    return current;
   }
 }
 
 // --------------------------------------
 // Helper For Testing Only - Do Not Edit!
 // --------------------------------------
-var stringify = function(list) {
-  var result = []
+var stringify = function (list) {
+  var result = [];
   while (list !== null) {
-    result.push(list.value)
-    list = list.next
+    result.push(list.value);
+    list = list.next;
   }
-  return result.join('')
-}
+  return result.join("");
+};
 
-exports.Node = Node
-exports.LinkedList = LinkedList
-exports.linkedListIntersection = linkedListIntersection
-exports.stringify = stringify
+exports.Node = Node;
+exports.LinkedList = LinkedList;
+exports.linkedListIntersection = linkedListIntersection;
+exports.stringify = stringify;

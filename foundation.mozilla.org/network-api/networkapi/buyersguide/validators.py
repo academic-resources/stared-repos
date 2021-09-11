@@ -10,7 +10,7 @@ class ValueListValidator:
 
     def __call__(self, value):
         if value not in self.valid_values:
-            raise ValidationError(f'{value} is not a permitted attribute')
+            raise ValidationError(f"{value} is not a permitted attribute")
 
     def __eq__(self, other):
         return self.valid_values == other.valid_values

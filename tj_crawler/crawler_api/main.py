@@ -7,11 +7,11 @@ from crawler_api.models.response import LegalProcessDetailResponse, Message
 from crawler_api.session import HttpAsyncSession
 
 app = FastAPI(
-    title='Legal Process Crawler',
+    title="Legal Process Crawler",
     description=(
-        'It is a simple API to get legal process detail on TJAL or TJMS website '
-        'and convert the search result HTML to JSON'
-    )
+        "It is a simple API to get legal process detail on TJAL or TJMS website "
+        "and convert the search result HTML to JSON"
+    ),
 )
 
 
@@ -31,12 +31,11 @@ async def shutdown_event():
 @app.post(
     "/legal-process",
     response_model=LegalProcessDetailResponse,
-    description='Get Legal Process detail',
-    responses={404: {"model": Message}}
+    description="Get Legal Process detail",
+    responses={404: {"model": Message}},
 )
 async def show_legal_process_detail(
-        legal_process: LegalProcess,
-        session: HttpAsyncSession = Depends(http_async_session)
+    legal_process: LegalProcess, session: HttpAsyncSession = Depends(http_async_session)
 ) -> LegalProcessDetailResponse:
     try:
         crawler = COURTS[legal_process.court](session)

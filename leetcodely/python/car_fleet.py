@@ -20,6 +20,6 @@ class Solution(object):
         """
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.carFleet(12, [10, 8, 0, 5, 3], [2, 4, 1, 1, 3]))

@@ -1,9 +1,9 @@
-import React from 'react'
-import { NavLink, Route } from 'react-router-dom'
-import Blue from './blue'
-import Green from './green'
-import Red from './red'
-import Violet from './violet'
+import React from "react";
+import { NavLink, Route } from "react-router-dom";
+import Blue from "./blue";
+import Green from "./green";
+import Red from "./red";
+import Violet from "./violet";
 
 class Rainbow extends React.Component {
   render() {
@@ -22,8 +22,8 @@ class Rainbow extends React.Component {
           <Route path="/violet" component={Violet} />
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Rainbow
+export default Rainbow;

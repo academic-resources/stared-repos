@@ -14,7 +14,7 @@ bg_grid_color = {
     256: "green",
     512: "#00FFFF",
     1024: "#856ff8",
-    2048: "pink"
+    2048: "pink",
 }
 # assigning colours for the number
 number_colour = {
@@ -28,7 +28,7 @@ number_colour = {
     256: "light blue",
     512: "red",
     1024: "#00FFFF",
-    2048: "magenta"
+    2048: "magenta",
 }
 
 
@@ -37,10 +37,9 @@ class Game(tkinter.Frame):
     def __init__(self):
         tkinter.Frame.__init__(self)
         self.grid()
-        self.master.title('2048')
+        self.master.title("2048")
 
-        self.mainGrid = tkinter.Frame(
-            self, bg="grey", bd=3, width=400, height=400)
+        self.mainGrid = tkinter.Frame(self, bg="grey", bd=3, width=400, height=400)
         self.mainGrid.grid(pady=(100, 0))
         self.make_grid()
         self.begin_game()
@@ -60,10 +59,8 @@ class Game(tkinter.Frame):
             row = []
             for j in range(4):
                 cell_frame = tkinter.Frame(
-                    self.mainGrid,
-                    bg="azure4",
-                    width=100,
-                    height=100)
+                    self.mainGrid, bg="azure4", width=100, height=100
+                )
                 cell_frame.grid(row=i, column=j, padx=5, pady=5)
                 cell_number = tkinter.Label(self.mainGrid, bg="azure4")
                 cell_number.grid(row=i, column=j)
@@ -74,11 +71,7 @@ class Game(tkinter.Frame):
         # Displaying the score
         score_frame = tkinter.Frame(self)
         score_frame.place(relx=0.5, y=45, anchor="center")
-        tkinter.Label(
-            score_frame,
-            text="Score"
-        ).grid(
-            row=0)
+        tkinter.Label(score_frame, text="Score").grid(row=0)
         self.score_label = tkinter.Label(score_frame, text="0")
         self.score_label.grid(row=1)
 
@@ -93,19 +86,17 @@ class Game(tkinter.Frame):
         self.matrix[row][column] = 2
         self.cells[row][column]["frame"].configure(bg=bg_grid_color[2])
         self.cells[row][column]["value"].configure(
-            bg=bg_grid_color[2],
-            fg=number_colour[2],
-            text="2")
-        while (self.matrix[row][column] != 0):
+            bg=bg_grid_color[2], fg=number_colour[2], text="2"
+        )
+        while self.matrix[row][column] != 0:
             row = random.randint(0, 3)
             col = random.randint(0, 3)
         # changing their bg colour and displaying the value
         self.matrix[row][column] = 2
         self.cells[row][column]["frame"].configure(bg=bg_grid_color[2])
         self.cells[row][column]["value"].configure(
-            bg=bg_grid_color[2],
-            fg=number_colour[2],
-            text="2")
+            bg=bg_grid_color[2], fg=number_colour[2], text="2"
+        )
 
         self.score = 0
 
@@ -115,7 +106,7 @@ class Game(tkinter.Frame):
         for i in range(4):
             pos = 0
             for j in range(4):
-                if (self.matrix[i][j] != 0):
+                if self.matrix[i][j] != 0:
                     filled_box_matrix[i][pos] = self.matrix[i][j]
                     pos += 1
         self.matrix = filled_box_matrix
@@ -124,7 +115,10 @@ class Game(tkinter.Frame):
         # combining values in 2 grids if they have the same value
         for i in range(4):
             for j in range(3):
-                if (self.matrix[i][j] != 0 and self.matrix[i][j] == self.matrix[i][j + 1]):
+                if (
+                    self.matrix[i][j] != 0
+                    and self.matrix[i][j] == self.matrix[i][j + 1]
+                ):
                     self.matrix[i][j] *= 2
                     self.matrix[i][j + 1] = 0
                     self.score += self.matrix[i][j]
@@ -151,7 +145,7 @@ class Game(tkinter.Frame):
     def new_tile(self):
         row = random.randint(0, 3)
         column = random.randint(0, 3)
-        while (self.matrix[row][column] != 0):
+        while self.matrix[row][column] != 0:
             row = random.randint(0, 3)
             column = random.randint(0, 3)
         self.matrix[row][column] = random.choice([2, 4])
@@ -161,7 +155,7 @@ class Game(tkinter.Frame):
         for i in range(4):
             for j in range(4):
                 cell_value = self.matrix[i][j]
-                if (cell_value == 0):
+                if cell_value == 0:
                     self.cells[i][j]["frame"].configure(bg="azure4")
                     self.cells[i][j]["value"].configure(bg="azure4", text=" ")
                 else:
@@ -169,7 +163,8 @@ class Game(tkinter.Frame):
                     self.cells[i][j]["value"].configure(
                         bg=bg_grid_color[cell_value],
                         fg=number_colour[cell_value],
-                        text=str(cell_value))
+                        text=str(cell_value),
+                    )
         self.score_label.configure(text=self.score)
         self.update_idletasks()
 
@@ -236,8 +231,14 @@ class Game(tkinter.Frame):
     def check_end(self):
         if any(2048 in row for row in self.matrix):
             messagebox.showinfo("YOU WIN", "your score is {}".format(self.score))
-        elif not any(0 in row for row in self.matrix) and not self.hori_possible() and not self.verti_possible():
-            messagebox.showinfo("YOU LOOSE", "your final score is {}".format(self.score))
+        elif (
+            not any(0 in row for row in self.matrix)
+            and not self.hori_possible()
+            and not self.verti_possible()
+        ):
+            messagebox.showinfo(
+                "YOU LOOSE", "your final score is {}".format(self.score)
+            )
 
 
 Game()

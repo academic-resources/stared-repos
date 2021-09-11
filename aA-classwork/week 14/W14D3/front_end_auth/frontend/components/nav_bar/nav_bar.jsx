@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default ({ currentUser, logout }) => {
   const display = currentUser ? (
@@ -16,12 +16,12 @@ export default ({ currentUser, logout }) => {
         Log In
       </Link>
     </div>
-  )
+  );
 
   return (
     <header className="nav-bar">
       <h1 className="logo">BLUEBIRD</h1>
       <div>{display}</div>
     </header>
-  )
-}
+  );
+};

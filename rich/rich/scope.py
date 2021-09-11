@@ -60,10 +60,7 @@ def render_scope(
             ),
         )
     return Panel.fit(
-        items_table,
-        title=title,
-        border_style="scope.border",
-        padding=(0, 1),
+        items_table, title=title, border_style="scope.border", padding=(0, 1)
     )
 
 

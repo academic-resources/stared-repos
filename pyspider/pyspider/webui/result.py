@@ -13,42 +13,46 @@ from .app import app
 from pyspider.libs import result_dump
 
 
-@app.route('/results')
+@app.route("/results")
 def result():
-    resultdb = app.config['resultdb']
-    project = request.args.get('project')
-    offset = int(request.args.get('offset', 0))
-    limit = int(request.args.get('limit', 20))
+    resultdb = app.config["resultdb"]
+    project = request.args.get("project")
+    offset = int(request.args.get("offset", 0))
+    limit = int(request.args.get("limit", 20))
 
     count = resultdb.count(project)
     results = list(resultdb.select(project, offset=offset, limit=limit))
 
     return render_template(
-        "result.html", count=count, results=results,
+        "result.html",
+        count=count,
+        results=results,
         result_formater=result_dump.result_formater,
-        project=project, offset=offset, limit=limit, json=json
+        project=project,
+        offset=offset,
+        limit=limit,
+        json=json,
     )
 
 
-@app.route('/results/dump/<project>.<_format>')
+@app.route("/results/dump/<project>.<_format>")
 def dump_result(project, _format):
-    resultdb = app.config['resultdb']
+    resultdb = app.config["resultdb"]
     # force update project list
-    resultdb.get(project, 'any')
+    resultdb.get(project, "any")
     if project not in resultdb.projects:
         return "no such project.", 404
 
-    offset = int(request.args.get('offset', 0)) or None
-    limit = int(request.args.get('limit', 0)) or None
+    offset = int(request.args.get("offset", 0)) or None
+    limit = int(request.args.get("limit", 0)) or None
     results = resultdb.select(project, offset=offset, limit=limit)
 
-    if _format == 'json':
-        valid = request.args.get('style', 'rows') == 'full'
-        return Response(result_dump.dump_as_json(results, valid),
-                        mimetype='application/json')
-    elif _format == 'txt':
-        return Response(result_dump.dump_as_txt(results),
-                        mimetype='text/plain')
-    elif _format == 'csv':
-        return Response(result_dump.dump_as_csv(results),
-                        mimetype='text/csv')
+    if _format == "json":
+        valid = request.args.get("style", "rows") == "full"
+        return Response(
+            result_dump.dump_as_json(results, valid), mimetype="application/json"
+        )
+    elif _format == "txt":
+        return Response(result_dump.dump_as_txt(results), mimetype="text/plain")
+    elif _format == "csv":
+        return Response(result_dump.dump_as_csv(results), mimetype="text/csv")

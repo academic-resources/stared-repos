@@ -11,7 +11,10 @@ class Solution(object):
         :rtype: int
         """
 
-        left_max, right_max = [0 for _ in range(len(height))], [0 for _ in range(len(height))]
+        left_max, right_max = (
+            [0 for _ in range(len(height))],
+            [0 for _ in range(len(height))],
+        )
         left_max[0], right_max[-1] = 0, 0
         max_left, max_right = height[0], height[-1]
         for i in range(1, len(height)):
@@ -28,10 +31,6 @@ class Solution(object):
         return total
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))
-
-
-
-

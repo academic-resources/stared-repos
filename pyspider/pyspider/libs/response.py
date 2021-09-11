@@ -20,9 +20,20 @@ from pyspider.libs import utils
 
 
 class Response(object):
-
-    def __init__(self, status_code=None, url=None, orig_url=None, headers=CaseInsensitiveDict(),
-                 content='', cookies=None, error=None, traceback=None, save=None, js_script_result=None, time=0):
+    def __init__(
+        self,
+        status_code=None,
+        url=None,
+        orig_url=None,
+        headers=CaseInsensitiveDict(),
+        content="",
+        cookies=None,
+        error=None,
+        traceback=None,
+        save=None,
+        js_script_result=None,
+        time=0,
+    ):
         if cookies is None:
             cookies = {}
         self.status_code = status_code
@@ -38,7 +49,7 @@ class Response(object):
         self.time = time
 
     def __repr__(self):
-        return u'<Response [%d]>' % self.status_code
+        return u"<Response [%d]>" % self.status_code
 
     def __bool__(self):
         """Returns true if `status_code` is 200 and no error"""
@@ -65,24 +76,24 @@ class Response(object):
         if Response.encoding is None, encoding will be guessed
         by header or content or chardet if available.
         """
-        if hasattr(self, '_encoding'):
+        if hasattr(self, "_encoding"):
             return self._encoding
 
         # content is unicode
         if isinstance(self.content, six.text_type):
-            return 'unicode'
+            return "unicode"
 
         # Try charset from content-type or content
         encoding = get_encoding(self.headers, self.content)
 
         # Fallback to auto-detected encoding.
         if not encoding and chardet is not None:
-            encoding = chardet.detect(self.content[:600])['encoding']
+            encoding = chardet.detect(self.content[:600])["encoding"]
 
-        if encoding and encoding.lower() == 'gb2312':
-            encoding = 'gb18030'
+        if encoding and encoding.lower() == "gb2312":
+            encoding = "gb18030"
 
-        self._encoding = encoding or 'utf-8'
+        self._encoding = encoding or "utf-8"
         return self._encoding
 
     @encoding.setter
@@ -102,10 +113,10 @@ class Response(object):
         if Response.encoding is None and chardet module is available, encoding
         will be guessed.
         """
-        if hasattr(self, '_text') and self._text:
+        if hasattr(self, "_text") and self._text:
             return self._text
         if not self.content:
-            return u''
+            return u""
         if isinstance(self.content, six.text_type):
             return self.content
 
@@ -114,13 +125,13 @@ class Response(object):
 
         # Decode unicode from given encoding.
         try:
-            content = self.content.decode(encoding, 'replace')
+            content = self.content.decode(encoding, "replace")
         except LookupError:
             # A LookupError is raised if the encoding was not found which could
             # indicate a misspelling or similar mistake.
             #
             # So we try blindly encoding.
-            content = self.content.decode('utf-8', 'replace')
+            content = self.content.decode("utf-8", "replace")
 
         self._text = content
         return content
@@ -128,7 +139,7 @@ class Response(object):
     @property
     def json(self):
         """Returns the json-encoded content of the response, if any."""
-        if hasattr(self, '_json'):
+        if hasattr(self, "_json"):
             return self._json
         try:
             self._json = json.loads(self.text or self.content)
@@ -139,7 +150,7 @@ class Response(object):
     @property
     def doc(self):
         """Returns a PyQuery object of the response's content"""
-        if hasattr(self, '_doc'):
+        if hasattr(self, "_doc"):
             return self._doc
         elements = self.etree
         doc = self._doc = PyQuery(elements)
@@ -149,7 +160,7 @@ class Response(object):
     @property
     def etree(self):
         """Returns a lxml object of the response's content that can be selected by xpath"""
-        if not hasattr(self, '_elements'):
+        if not hasattr(self, "_elements"):
             try:
                 parser = lxml.html.HTMLParser(encoding=self.encoding)
                 self._elements = lxml.html.fromstring(self.content, parser=parser)
@@ -169,14 +180,22 @@ class Response(object):
             return
         elif self.error:
             if self.traceback:
-                six.reraise(Exception, Exception(self.error), Traceback.from_string(self.traceback).as_traceback())
+                six.reraise(
+                    Exception,
+                    Exception(self.error),
+                    Traceback.from_string(self.traceback).as_traceback(),
+                )
             http_error = HTTPError(self.error)
-        elif (self.status_code >= 300) and (self.status_code < 400) and not allow_redirects:
-            http_error = HTTPError('%s Redirection' % (self.status_code))
+        elif (
+            (self.status_code >= 300)
+            and (self.status_code < 400)
+            and not allow_redirects
+        ):
+            http_error = HTTPError("%s Redirection" % (self.status_code))
         elif (self.status_code >= 400) and (self.status_code < 500):
-            http_error = HTTPError('%s Client Error' % (self.status_code))
+            http_error = HTTPError("%s Client Error" % (self.status_code))
         elif (self.status_code >= 500) and (self.status_code < 600):
-            http_error = HTTPError('%s Server Error' % (self.status_code))
+            http_error = HTTPError("%s Server Error" % (self.status_code))
         else:
             return
 
@@ -193,17 +212,17 @@ class Response(object):
 
 def rebuild_response(r):
     response = Response(
-        status_code=r.get('status_code', 599),
-        url=r.get('url', ''),
-        headers=CaseInsensitiveDict(r.get('headers', {})),
-        content=r.get('content', ''),
-        cookies=r.get('cookies', {}),
-        error=r.get('error'),
-        traceback=r.get('traceback'),
-        time=r.get('time', 0),
-        orig_url=r.get('orig_url', r.get('url', '')),
-        js_script_result=r.get('js_script_result'),
-        save=r.get('save'),
+        status_code=r.get("status_code", 599),
+        url=r.get("url", ""),
+        headers=CaseInsensitiveDict(r.get("headers", {})),
+        content=r.get("content", ""),
+        cookies=r.get("cookies", {}),
+        error=r.get("error"),
+        traceback=r.get("traceback"),
+        time=r.get("time", 0),
+        orig_url=r.get("orig_url", r.get("url", "")),
+        js_script_result=r.get("js_script_result"),
+        save=r.get("save"),
     )
     return response
 
@@ -212,23 +231,25 @@ def get_encoding(headers, content):
     """Get encoding from request headers or page head."""
     encoding = None
 
-    content_type = headers.get('content-type')
+    content_type = headers.get("content-type")
     if content_type:
         _, params = cgi.parse_header(content_type)
-        if 'charset' in params:
-            encoding = params['charset'].strip("'\"")
+        if "charset" in params:
+            encoding = params["charset"].strip("'\"")
 
     if not encoding:
         content = utils.pretty_unicode(content[:1000]) if six.PY3 else content
 
-        charset_re = re.compile(r'<meta.*?charset=["\']*(.+?)["\'>]',
-                                flags=re.I)
-        pragma_re = re.compile(r'<meta.*?content=["\']*;?charset=(.+?)["\'>]',
-                               flags=re.I)
+        charset_re = re.compile(r'<meta.*?charset=["\']*(.+?)["\'>]', flags=re.I)
+        pragma_re = re.compile(
+            r'<meta.*?content=["\']*;?charset=(.+?)["\'>]', flags=re.I
+        )
         xml_re = re.compile(r'^<\?xml.*?encoding=["\']*(.+?)["\'>]')
-        encoding = (charset_re.findall(content) +
-                    pragma_re.findall(content) +
-                    xml_re.findall(content))
+        encoding = (
+            charset_re.findall(content)
+            + pragma_re.findall(content)
+            + xml_re.findall(content)
+        )
         encoding = encoding and encoding[0] or None
 
     return encoding

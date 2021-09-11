@@ -9,19 +9,22 @@ from typing import Optional, Union
 try:
     import fcntl
 except ImportError:
-    fcntl = None    # type: ignore
+    fcntl = None  # type: ignore
 
 from .basetypes import FileDescriptorLike
 
-__all__ = (
-    'set_tcp_keepalive', 'set_nonblocking', 'set_cloexec',
-)
+__all__ = ("set_tcp_keepalive", "set_nonblocking", "set_cloexec")
 
 SocketLike = Union[socket.socket, FileDescriptorLike]
 
 
-def set_tcp_keepalive(fd: SocketLike, keepalive: bool = True, tcp_keepidle: int = 4 *
-                      60, tcp_keepcnt: int = 4, tcp_keepintvl: int = 15) -> None:
+def set_tcp_keepalive(
+    fd: SocketLike,
+    keepalive: bool = True,
+    tcp_keepidle: int = 4 * 60,
+    tcp_keepcnt: int = 4,
+    tcp_keepintvl: int = 15,
+) -> None:
     """Turn on TCP keepalive.  The fd can be either numeric or socket
     object with 'fileno' method.
 
@@ -34,7 +37,7 @@ def set_tcp_keepalive(fd: SocketLike, keepalive: bool = True, tcp_keepidle: int 
     """
 
     # usable on this OS?
-    if not hasattr(socket, 'SO_KEEPALIVE') or not hasattr(socket, 'fromfd'):
+    if not hasattr(socket, "SO_KEEPALIVE") or not hasattr(socket, "fromfd"):
         return
 
     # need socket object
@@ -46,7 +49,7 @@ def set_tcp_keepalive(fd: SocketLike, keepalive: bool = True, tcp_keepidle: int 
         s = socket.fromfd(fd, socket.AF_INET, socket.SOCK_STREAM)
 
     # skip if unix socket
-    if getattr(socket, 'AF_UNIX', None):
+    if getattr(socket, "AF_UNIX", None):
         if not isinstance(s.getsockname(), tuple):
             return
 
@@ -59,12 +62,12 @@ def set_tcp_keepalive(fd: SocketLike, keepalive: bool = True, tcp_keepidle: int 
     s.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
 
     # detect available options
-    TCP_KEEPCNT = getattr(socket, 'TCP_KEEPCNT', None)
-    TCP_KEEPINTVL = getattr(socket, 'TCP_KEEPINTVL', None)
-    TCP_KEEPIDLE = getattr(socket, 'TCP_KEEPIDLE', None)
-    TCP_KEEPALIVE = getattr(socket, 'TCP_KEEPALIVE', None)
-    SIO_KEEPALIVE_VALS = getattr(socket, 'SIO_KEEPALIVE_VALS', None)
-    if TCP_KEEPIDLE is None and TCP_KEEPALIVE is None and sys.platform == 'darwin':
+    TCP_KEEPCNT = getattr(socket, "TCP_KEEPCNT", None)
+    TCP_KEEPINTVL = getattr(socket, "TCP_KEEPINTVL", None)
+    TCP_KEEPIDLE = getattr(socket, "TCP_KEEPIDLE", None)
+    TCP_KEEPALIVE = getattr(socket, "TCP_KEEPALIVE", None)
+    SIO_KEEPALIVE_VALS = getattr(socket, "SIO_KEEPALIVE_VALS", None)
+    if TCP_KEEPIDLE is None and TCP_KEEPALIVE is None and sys.platform == "darwin":
         TCP_KEEPALIVE = 0x10
 
     # configure
@@ -77,7 +80,11 @@ def set_tcp_keepalive(fd: SocketLike, keepalive: bool = True, tcp_keepidle: int 
     elif TCP_KEEPALIVE is not None:
         s.setsockopt(socket.IPPROTO_TCP, TCP_KEEPALIVE, tcp_keepidle)
     elif SIO_KEEPALIVE_VALS is not None and fcntl:
-        fcntl.ioctl(s.fileno(), SIO_KEEPALIVE_VALS, (1, tcp_keepidle * 1000, tcp_keepintvl * 1000))  # type: ignore
+        fcntl.ioctl(
+            s.fileno(),
+            SIO_KEEPALIVE_VALS,
+            (1, tcp_keepidle * 1000, tcp_keepintvl * 1000),
+        )  # type: ignore
 
 
 def set_nonblocking(fd: SocketLike, onoff: Optional[bool] = True):
@@ -123,4 +130,3 @@ def set_cloexec(fd: SocketLike, onoff: Optional[bool] = True) -> bool:
         flags &= ~fcntl.FD_CLOEXEC
     fcntl.fcntl(fd, fcntl.F_SETFD, flags)
     return onoff
-

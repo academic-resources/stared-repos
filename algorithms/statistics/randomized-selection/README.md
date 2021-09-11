@@ -1,6 +1,6 @@
 # Randomized Selection
 
-Expected running time of __Theta(n)__ assuming that elements are distinct.
+Expected running time of **Theta(n)** assuming that elements are distinct.
 
 ```
 RANDOMIZED-SLECT(A, p, r, i)

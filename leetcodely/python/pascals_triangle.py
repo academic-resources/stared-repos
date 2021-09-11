@@ -9,6 +9,7 @@ Return
  [1,4,6,4,1]
 ]"""
 
+
 class Solution:
     def generate(self, numRows):
         """
@@ -18,7 +19,7 @@ class Solution:
         result = []
         for i in range(numRows):
             curr = []
-            for j in range(i+1):
+            for j in range(i + 1):
                 element = self.combination(i, j)
                 curr.append(element)
             result.append(curr)
@@ -26,15 +27,15 @@ class Solution:
 
     def combination(self, row, item):
         if item > row:
-            raise ValueError('Item cannot be greater than row')
+            raise ValueError("Item cannot be greater than row")
         a, b, c = self.factorial(row), self.factorial(row - item), self.factorial(item)
-        return a//(b*c)
+        return a // (b * c)
 
     def factorial(self, num):
         if num == 0 or num == 1:
             return 1
         if num <= 0:
-            raise ValueError('Factorial cannot be calculated for negative numbers')
+            raise ValueError("Factorial cannot be calculated for negative numbers")
         res = 1
         while num >= 1:
             res *= num
@@ -42,6 +43,6 @@ class Solution:
         return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.generate(5))

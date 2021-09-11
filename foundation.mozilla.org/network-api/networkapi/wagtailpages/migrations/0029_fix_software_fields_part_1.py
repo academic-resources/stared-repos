@@ -11,45 +11,49 @@ def update_software_product_fields(apps, schema_editor):
     # values True/False become the string values 'tru'/'fal'.
 
     for product in SoftwareProductPage.objects.all():
-        if product.easy_to_learn_and_use == 'tru':
-            product.easy_to_learn_and_use = 'Yes'
+        if product.easy_to_learn_and_use == "tru":
+            product.easy_to_learn_and_use = "Yes"
 
-        if product.easy_to_learn_and_use == 'fal':
-            product.easy_to_learn_and_use = 'No'
+        if product.easy_to_learn_and_use == "fal":
+            product.easy_to_learn_and_use = "No"
 
         if product.easy_to_learn_and_use == None:
-            product.easy_to_learn_and_use = 'U'
+            product.easy_to_learn_and_use = "U"
 
-        if product.medical_privacy_compliant == 'tru':
-            product.medical_privacy_compliant = 'Yes'
+        if product.medical_privacy_compliant == "tru":
+            product.medical_privacy_compliant = "Yes"
 
-        if product.medical_privacy_compliant == 'fal':
-            product.medical_privacy_compliant = 'No'
+        if product.medical_privacy_compliant == "fal":
+            product.medical_privacy_compliant = "No"
 
         if product.medical_privacy_compliant == None:
-            product.medical_privacy_compliant = 'U'
+            product.medical_privacy_compliant = "U"
 
         product.save()
 
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('wagtailpages', '0028_translation_mixin_migration_for_cta_models'),
-    ]
+    dependencies = [("wagtailpages", "0028_translation_mixin_migration_for_cta_models")]
 
     operations = [
         migrations.AlterField(
-            model_name='softwareproductpage',
-            name='easy_to_learn_and_use',
-            field=networkapi.wagtailpages.fields.ExtendedBoolean(help_text='Is it easy to learn & use the features?', null=True, default='U'),
+            model_name="softwareproductpage",
+            name="easy_to_learn_and_use",
+            field=networkapi.wagtailpages.fields.ExtendedBoolean(
+                help_text="Is it easy to learn & use the features?",
+                null=True,
+                default="U",
+            ),
         ),
         migrations.AlterField(
-            model_name='softwareproductpage',
-            name='medical_privacy_compliant',
-            field=networkapi.wagtailpages.fields.ExtendedBoolean(help_text='Compliant with US medical privacy laws?', null=True, default='U'),
+            model_name="softwareproductpage",
+            name="medical_privacy_compliant",
+            field=networkapi.wagtailpages.fields.ExtendedBoolean(
+                help_text="Compliant with US medical privacy laws?",
+                null=True,
+                default="U",
+            ),
         ),
-        migrations.RunPython(
-            code=update_software_product_fields
-        ),
+        migrations.RunPython(code=update_software_product_fields),
     ]

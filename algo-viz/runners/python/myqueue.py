@@ -1,20 +1,20 @@
-
 import threading
 from collections import deque
 from myheapq import heappush, heappop
 from time import monotonic as time
+
 try:
     from _queue import SimpleQueue
 except Exception:
     SimpleQueue = None
 
-__all__ = ['Empty', 'Full', 'Queue',
-           'PriorityQueue', 'LifoQueue', 'SimpleQueue']
+__all__ = ["Empty", "Full", "Queue", "PriorityQueue", "LifoQueue", "SimpleQueue"]
 
 
 try:
     from _queue import Empty
 except Exception:
+
     class Empty(Exception):
         pass
 
@@ -43,7 +43,7 @@ class Queue:
             unfinished = self.unfinished_tasks - 1
             if unfinished <= 0:
                 if unfinished < 0:
-                    raise ValueError('task_done() called too many times')
+                    raise ValueError("task_done() called too many times")
                 self.all_tasks_done.notify_all()
             self.unfinished_tasks = unfinished
 
@@ -134,7 +134,6 @@ class Queue:
 
 
 class PriorityQueue(Queue):
-
     def _init(self, maxsize):
         self.queue = []
 
@@ -149,7 +148,6 @@ class PriorityQueue(Queue):
 
 
 class LifoQueue(Queue):
-
     def _init(self, maxsize):
         self.queue = []
 
@@ -164,7 +162,6 @@ class LifoQueue(Queue):
 
 
 class _PySimpleQueue:
-
     def __init__(self):
         self._queue = deque()
         self._count = threading.Semaphore(0)
@@ -197,6 +194,6 @@ class _PySimpleQueue:
         return len(self._queue)
 
 
-_PySimpleQueue.__name__ = 'SimpleQueue'
+_PySimpleQueue.__name__ = "SimpleQueue"
 if SimpleQueue is None:
     SimpleQueue = _PySimpleQueue

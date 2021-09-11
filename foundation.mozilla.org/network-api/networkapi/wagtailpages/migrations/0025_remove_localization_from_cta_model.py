@@ -5,21 +5,10 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('wagtailpages', '0024_translation_mixin_migration'),
-    ]
+    dependencies = [("wagtailpages", "0024_translation_mixin_migration")]
 
     operations = [
-        migrations.AlterUniqueTogether(
-            name='cta',
-            unique_together=set(),
-        ),
-        migrations.RemoveField(
-            model_name='cta',
-            name='locale',
-        ),
-        migrations.RemoveField(
-            model_name='cta',
-            name='translation_key',
-        ),
+        migrations.AlterUniqueTogether(name="cta", unique_together=set()),
+        migrations.RemoveField(model_name="cta", name="locale"),
+        migrations.RemoveField(model_name="cta", name="translation_key"),
     ]

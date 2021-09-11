@@ -13,11 +13,17 @@ class RunConfigDocker(AbstractCommand):
         return super(RunConfigDocker, self).get_usage() + " config"
 
     def get_options(self):
-        return [{"name": "config",
-                 "description": "path to the config to run from the remote docker image"},
-                {"name": "from_local_code",
-                 "description": "use the local code to run the crawl",
-                 "optional": False}]
+        return [
+            {
+                "name": "config",
+                "description": "path to the config to run from the remote docker image",
+            },
+            {
+                "name": "from_local_code",
+                "description": "use the local code to run the crawl",
+                "optional": False,
+            },
+        ]
 
     @staticmethod
     def from_local_code_parse(args):
@@ -36,7 +42,8 @@ class RunConfigDocker(AbstractCommand):
             config = f.read()
         else:
             raise ValueError(
-                "Config option: {} is not a path to a file".format(args[0]))
+                "Config option: {} is not a path to a file".format(args[0])
+            )
 
         from_local_code = self.get_option("from_local_code", args)
 
@@ -64,10 +71,6 @@ class RunConfigDocker(AbstractCommand):
             run_command.append("-v")
             run_command.append(os.getcwd() + "/scraper/src:/root/src")
 
-        run_command = run_command + ["--name",
-                                     container_name,
-                                     "-t",
-                                     image_name,
-                                     "bash"]
+        run_command = run_command + ["--name", container_name, "-t", image_name, "bash"]
 
         return self.exec_shell_command(run_command)

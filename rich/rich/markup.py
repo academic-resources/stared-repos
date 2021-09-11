@@ -10,10 +10,7 @@ from .emoji import EmojiVariant
 from ._emoji_replace import _emoji_replace
 
 
-RE_TAGS = re.compile(
-    r"""((\\*)\[([a-z#\/@].*?)\])""",
-    re.VERBOSE,
-)
+RE_TAGS = re.compile(r"""((\\*)\[([a-z#\/@].*?)\])""", re.VERBOSE)
 
 RE_HANDLER = re.compile(r"^([\w\.]*?)(\(.*?\))?$")
 

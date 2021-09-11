@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:
@@ -9,14 +8,13 @@
 import time
 from pyspider.libs.base_handler import BaseHandler, catch_status_code_error, every
 
+
 class IgnoreHandler(object):
     pass
 
+
 class TestHandler(BaseHandler):
-    retry_delay = {
-        1: 10,
-        '': -1
-    }
+    retry_delay = {1: 10, "": -1}
 
     def hello(self):
         return "hello world!"
@@ -28,30 +26,30 @@ class TestHandler(BaseHandler):
         return response.save
 
     def echo_task(self, response, task):
-        return task['project']
+        return task["project"]
 
     @catch_status_code_error
     def catch_status_code(self, response):
         return response.status_code
 
     def raise_exception(self):
-        print('print')
+        print("print")
         logger.info("info")
         logger.warning("warning")
         logger.error("error")
-        raise Exception('exception')
+        raise Exception("exception")
 
     def add_task(self, response):
-        self.crawl('http://www.google.com', callback='echo', params={'wd': u'中文'})
-        self.send_message('some_project', {'some': 'message'})
+        self.crawl("http://www.google.com", callback="echo", params={"wd": u"中文"})
+        self.send_message("some_project", {"some": "message"})
 
     @every
     def on_cronjob1(self, response):
-        logger.info('on_cronjob1')
+        logger.info("on_cronjob1")
 
     @every(seconds=10)
     def on_cronjob2(self, response):
-        logger.info('on_cronjob2')
+        logger.info("on_cronjob2")
 
     def generator(self, response):
         yield "a"
@@ -59,4 +57,3 @@ class TestHandler(BaseHandler):
 
     def sleep(self, response):
         time.sleep(response.save)
-

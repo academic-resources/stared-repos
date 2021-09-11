@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Euclidean algorithm to calculate the Greatest Common Divisor (GCD)
@@ -33,7 +33,6 @@ var gcdDivisionBased = function (a, b) {
  * @return Number
  */
 var gcdBinaryIterative = function (a, b) {
-
   // GCD(0,b) == b; GCD(a,0) == a, GCD(0,0) == 0
   if (a === 0) {
     return b;
@@ -74,7 +73,7 @@ var gcdBinaryIterative = function (a, b) {
       a = tmp;
     }
 
-    b -= a;  // Here b >= a
+    b -= a; // Here b >= a
   } while (b !== 0);
 
   // restore common factors of 2

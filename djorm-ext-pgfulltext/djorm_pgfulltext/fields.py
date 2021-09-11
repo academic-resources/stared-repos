@@ -13,22 +13,21 @@ from djorm_pgfulltext.utils import adapt
 
 
 class VectorField(models.Field):
-
     def __init__(self, *args, **kwargs):
-        kwargs['default'] = ''
-        kwargs['editable'] = False
-        kwargs['serialize'] = False
+        kwargs["default"] = ""
+        kwargs["editable"] = False
+        kwargs["serialize"] = False
         super(VectorField, self).__init__(*args, **kwargs)
 
     def deconstruct(self):
         name, path, args, kwargs = super(VectorField, self).deconstruct()
-        del kwargs['default']
-        del kwargs['editable']
-        del kwargs['serialize']
+        del kwargs["default"]
+        del kwargs["editable"]
+        del kwargs["serialize"]
         return name, path, args, kwargs
 
     def db_type(self, *args, **kwargs):
-        return 'tsvector'
+        return "tsvector"
 
     # def get_prep_lookup(self, lookup_type, value):
     #     if hasattr(value, 'prepare'):
@@ -43,9 +42,13 @@ class VectorField(models.Field):
     def get_prep_value(self, value):
         return value
 
+
 try:
     from south.modelsinspector import add_introspection_rules
-    add_introspection_rules(rules=[], patterns=['djorm_pgfulltext\.fields\.VectorField'])
+
+    add_introspection_rules(
+        rules=[], patterns=["djorm_pgfulltext\.fields\.VectorField"]
+    )
 except ImportError:
     pass
 
@@ -62,14 +65,13 @@ if django.VERSION >= (1, 7):
         return [x + ":*" for x in quotes(wordlist)]
 
     def negative(wordlist):
-        return ['!' + x for x in startswith(wordlist)]
+        return ["!" + x for x in startswith(wordlist)]
 
     class TSConfig(object):
         def __init__(self, name):
             self.name = name
 
     class FullTextLookupBase(Lookup):
-
         def as_sql(self, qn, connection):
             lhs, lhs_params = qn.compile(self.lhs)
             rhs, rhs_params = self.process_rhs(qn, connection)
@@ -80,11 +82,11 @@ if django.VERSION >= (1, 7):
             if type(rhs_params[0]) == TSConfig:
                 ts = rhs_params[0]
                 ts_name = ts.name
-                cmd = '%s @@ to_tsquery(%%s::regconfig, %%s)' % lhs
+                cmd = "%s @@ to_tsquery(%%s::regconfig, %%s)" % lhs
 
                 rest = (ts_name, " & ".join(self.transform.__call__(rhs_params[1:])))
             else:
-                cmd = '%s @@ to_tsquery(%%s)' % lhs
+                cmd = "%s @@ to_tsquery(%%s)" % lhs
                 rest = (" & ".join(self.transform.__call__(rhs_params)),)
 
             return cmd, rest
@@ -119,7 +121,8 @@ if django.VERSION >= (1, 7):
             ts_query('french', '''Le Foobar'' & ''Le Baz''')
 
         """
-        lookup_name = 'ft'
+
+        lookup_name = "ft"
 
         def transform(self, *args):
             return quotes(*args)
@@ -134,7 +137,8 @@ if django.VERSION >= (1, 7):
 
             ts_query('Foobar:* & Baz:* & Quux:*')
         """
-        lookup_name = 'ft_startswith'
+
+        lookup_name = "ft_startswith"
 
         def transform(self, *args):
             return startswith(*args)
@@ -149,7 +153,8 @@ if django.VERSION >= (1, 7):
 
             ts_query('!Foobar:* & !Baz:* & !Quux:*')
         """
-        lookup_name = 'ft_not_startswith'
+
+        lookup_name = "ft_not_startswith"
 
         def transform(self, *args):
             return negative(*args)

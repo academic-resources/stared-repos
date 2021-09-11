@@ -17,27 +17,27 @@ class Stack:
 
     def pop(self):
         if self.size == 0:
-            raise ValueError('Popping off an empty stack!')
+            raise ValueError("Popping off an empty stack!")
         item = self.top.val
         self.top = self.top.next
         return item
 
     def peek(self):
         if self.size == 0:
-            raise ValueError('Peeking into an empty stack!')
+            raise ValueError("Peeking into an empty stack!")
         return self.top.val
 
     def __str__(self):
         curr = self.top
-        s = '['
+        s = "["
         while curr:
             if curr.next:
                 s += str(curr.val)
-                s += '->'
+                s += "->"
             else:
                 s += str(curr.val)
             curr = curr.next
-        s += ']'
+        s += "]"
         return s
 
 
@@ -47,7 +47,7 @@ class Node:
         self.next = None
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     stack = Stack()
     stack.push(12)
     stack.push(13)

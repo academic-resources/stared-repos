@@ -1,4 +1,3 @@
-
 import logging
 
 import skytools
@@ -16,4 +15,3 @@ def test_skylog():
     log.trace("tracemsg")
 
     assert not log.isEnabledFor(logging.TRACE)
-

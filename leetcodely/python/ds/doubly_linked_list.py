@@ -43,11 +43,11 @@ class DoublyLinkedList:
         return curr.val
 
     def __str__(self):
-        s = '['
+        s = "["
         for item in self:
             s += str(item)
-            s += ', '
-        s += ']'
+            s += ", "
+        s += "]"
         return s
 
 
@@ -58,7 +58,7 @@ class ListNode:
         self.next = None
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     p = DoublyLinkedList()
     p.add(12)
     p.add(13)

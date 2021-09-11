@@ -13,5 +13,5 @@ def merge_pdfs(input_pdfs, output_pdf):
     pdf_merger = PdfFileMerger()
     for path in input_pdfs:
         pdf_merger.append(path)
-    with open(output_pdf, 'wb') as fileobj:
+    with open(output_pdf, "wb") as fileobj:
         pdf_merger.write(fileobj)

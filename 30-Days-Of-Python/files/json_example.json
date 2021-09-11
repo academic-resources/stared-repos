@@ -1,10 +1,6 @@
 {
-    "name": "Asabeneh",
-    "country": "Finland",
-    "city": "Helsinki",
-    "skills": [
-        "JavaScrip",
-        "React",
-        "Python"
-    ]
+  "name": "Asabeneh",
+  "country": "Finland",
+  "city": "Helsinki",
+  "skills": ["JavaScrip", "React", "Python"]
 }

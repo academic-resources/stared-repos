@@ -9,7 +9,7 @@ from collections import defaultdict
 logger = logging.getLogger(__name__)
 
 
-STOP_WORDS_FILENAME = 'data/stop_words.txt'
+STOP_WORDS_FILENAME = "data/stop_words.txt"
 
 
 class Indexable(object):
@@ -37,11 +37,10 @@ class Indexable(object):
             self.words_count[word] += 1
 
     def __repr__(self):
-        return ' '.join(self.words_count.keys()[:10])
+        return " ".join(self.words_count.keys()[:10])
 
     def __eq__(self, other):
-        return (isinstance(other, self.__class__)
-                and self.__dict__ == other.__dict__)
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
 
     def __ne__(self, other):
         return not self.__eq__(other)
@@ -91,12 +90,14 @@ class IndexableResult(object):
         self.indexable = indexable
 
     def __repr__(self):
-        return 'score: %f, indexable: %s' % (self.score, self.indexable)
+        return "score: %f, indexable: %s" % (self.score, self.indexable)
 
     def __eq__(self, other):
-        return (isinstance(other, self.__class__)
-                and abs(self.score - other.score) < 0.0001
-                and self.indexable == other.indexable)
+        return (
+            isinstance(other, self.__class__)
+            and abs(self.score - other.score) < 0.0001
+            and self.indexable == other.indexable
+        )
 
     def __ne__(self, other):
         return not self.__eq__(other)
@@ -171,10 +172,10 @@ class TfidfRank(object):
         n_docs = len(objects)
         ft_matrix = sp.lil_matrix((n_docs, n_terms), dtype=np.dtype(float))
 
-        logger.info('Vocabulary assembled with terms count %s', n_terms)
+        logger.info("Vocabulary assembled with terms count %s", n_terms)
 
         # compute idf
-        logger.info('Starting tf computation...')
+        logger.info("Starting tf computation...")
         for index, indexable in enumerate(objects):
             for word in indexable.words_generator(self.stop_words):
                 word_index_in_vocabulary = self.vocabulary[word]
@@ -182,7 +183,7 @@ class TfidfRank(object):
                 ft_matrix[index, word_index_in_vocabulary] = doc_word_count
         self.ft_matrix = ft_matrix.tocsc()
 
-        logger.info('Starting tf-idf computation...')
+        logger.info("Starting tf-idf computation...")
         # compute idf with smoothing
         df = np.diff(self.ft_matrix.indptr) + self.smoothing
         n_docs_smooth = n_docs + self.smoothing
@@ -202,11 +203,14 @@ class TfidfRank(object):
         n_nzeros = np.where(norm > 0)
         norm[n_nzeros] = 1.0 / np.sqrt(norm[n_nzeros])
         norm = np.array(norm).T[0]
-        sptools.csr_scale_rows(self.tf_idf_matrix.shape[0],
-                                      self.tf_idf_matrix.shape[1],
-                                      self.tf_idf_matrix.indptr,
-                                      self.tf_idf_matrix.indices,
-                                      self.tf_idf_matrix.data, norm)
+        sptools.csr_scale_rows(
+            self.tf_idf_matrix.shape[0],
+            self.tf_idf_matrix.shape[1],
+            self.tf_idf_matrix.indptr,
+            self.tf_idf_matrix.indices,
+            self.tf_idf_matrix.data,
+            norm,
+        )
 
     def __build_vocabulary(self, objects):
         """Build vocabulary with indexable objects.
@@ -365,7 +369,7 @@ class SearchEngine(object):
         all indexed objects twice, but can be improved easily with generators.
 
         """
-        logger.info('Start search engine (Indexing | Ranking)...')
+        logger.info("Start search engine (Indexing | Ranking)...")
         self.index.build_index(self.objects)
         self.rank.build_rank(self.objects)
 

@@ -38,6 +38,7 @@ import random
 
 class Excuses(callbacks.Plugin):
     """Use the command excuse."""
+
     def __init__(self, irc):
         super(Excuses, self).__init__(irc)
         self.url = "http://example.com/~repouser/excuses.txt"
@@ -49,9 +50,11 @@ class Excuses(callbacks.Plugin):
 
         Returns a random excuse."""
         if (not self.excuses) or (self.last_update + 3600 > time.time()):
-            self.excuses = utils.web.getUrl(self.url).split('\n')[:-1]
+            self.excuses = utils.web.getUrl(self.url).split("\n")[:-1]
             self.last_update = time.time()
         irc.reply(random.choice(self.excuses))
+
     excuse = wrap(excuse)
+
 
 Class = Excuses

@@ -10,7 +10,7 @@ conn = sqlite3.connect(sys.argv[1])
 cur = conn.cursor()
 data = cur.execute("SELECT * FROM {0}".format(sys.argv[2]))
 
-with open('output.csv', 'wb') as f:
+with open("output.csv", "wb") as f:
     writer = csv.writer(f)
     writer.writerows(data)
 

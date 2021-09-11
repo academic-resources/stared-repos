@@ -3,7 +3,6 @@ from collections import deque
 
 
 class MovingAverage(object):
-
     def __init__(self, size):
         """
         Initialize your data structure here.
@@ -33,7 +32,7 @@ class MovingAverage(object):
             return self.total / self.size
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     m = MovingAverage(3)
     print(m.next(1))
     print(m.next(10))

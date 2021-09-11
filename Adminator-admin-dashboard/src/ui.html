@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>UI Elements</title>
     <style>
       #loader {
@@ -21,8 +24,6 @@
         visibility: hidden;
       }
 
-
-
       .spinner {
         width: 40px;
         height: 40px;
@@ -31,14 +32,16 @@
         left: calc(50% - 20px);
         background-color: #333;
         border-radius: 100%;
-        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-        animation: sk-scaleout 1.0s infinite ease-in-out;
+        -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+        animation: sk-scaleout 1s infinite ease-in-out;
       }
 
       @-webkit-keyframes sk-scaleout {
-        0% { -webkit-transform: scale(0) }
+        0% {
+          -webkit-transform: scale(0);
+        }
         100% {
-          -webkit-transform: scale(1.0);
+          -webkit-transform: scale(1);
           opacity: 0;
         }
       }
@@ -47,9 +50,10 @@
         0% {
           -webkit-transform: scale(0);
           transform: scale(0);
-        } 100% {
-          -webkit-transform: scale(1.0);
-          transform: scale(1.0);
+        }
+        100% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
           opacity: 0;
         }
       }
@@ -72,15 +76,15 @@
 
     <!-- @Page Loader -->
     <!-- =================================================== -->
-    <div id='loader'>
+    <div id="loader">
       <div class="spinner"></div>
     </div>
 
     <script>
-      window.addEventListener('load', function load() {
-        const loader = document.getElementById('loader');
-        setTimeout(function() {
-          loader.classList.add('fadeOut');
+      window.addEventListener("load", function load() {
+        const loader = document.getElementById("loader");
+        setTimeout(function () {
+          loader.classList.add("fadeOut");
         }, 300);
       });
     </script>
@@ -99,7 +103,7 @@
                   <div class="peers ai-c fxw-nw">
                     <div class="peer">
                       <div class="logo">
-                        <img src="assets/static/images/logo.png" alt="">
+                        <img src="assets/static/images/logo.png" alt="" />
                       </div>
                     </div>
                     <div class="peer peer-greed">
@@ -129,7 +133,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="email.html">
+              <a class="sidebar-link" href="email.html">
                 <span class="icon-holder">
                   <i class="c-brown-500 ti-email"></i>
                 </span>
@@ -137,7 +141,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="compose.html">
+              <a class="sidebar-link" href="compose.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-share"></i>
                 </span>
@@ -145,7 +149,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="calendar.html">
+              <a class="sidebar-link" href="calendar.html">
                 <span class="icon-holder">
                   <i class="c-deep-orange-500 ti-calendar"></i>
                 </span>
@@ -153,7 +157,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="chat.html">
+              <a class="sidebar-link" href="chat.html">
                 <span class="icon-holder">
                   <i class="c-deep-purple-500 ti-comment-alt"></i>
                 </span>
@@ -161,7 +165,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="charts.html">
+              <a class="sidebar-link" href="charts.html">
                 <span class="icon-holder">
                   <i class="c-indigo-500 ti-bar-chart"></i>
                 </span>
@@ -169,7 +173,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="forms.html">
+              <a class="sidebar-link" href="forms.html">
                 <span class="icon-holder">
                   <i class="c-light-blue-500 ti-pencil"></i>
                 </span>
@@ -179,8 +183,8 @@
             <li class="nav-item dropdown">
               <a class="sidebar-link" href="ui.html">
                 <span class="icon-holder">
-                    <i class="c-pink-500 ti-palette"></i>
-                  </span>
+                  <i class="c-pink-500 ti-palette"></i>
+                </span>
                 <span class="title">UI Elements</span>
               </a>
             </li>
@@ -196,22 +200,24 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class='sidebar-link' href="basic-table.html">Basic Table</a>
+                  <a class="sidebar-link" href="basic-table.html"
+                    >Basic Table</a
+                  >
                 </li>
                 <li>
-                  <a class='sidebar-link' href="datatable.html">Data Table</a>
+                  <a class="sidebar-link" href="datatable.html">Data Table</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
-                    <i class="c-purple-500 ti-map"></i>
-                  </span>
+                  <i class="c-purple-500 ti-map"></i>
+                </span>
                 <span class="title">Maps</span>
                 <span class="arrow">
-                    <i class="ti-angle-right"></i>
-                  </span>
+                  <i class="ti-angle-right"></i>
+                </span>
               </a>
               <ul class="dropdown-menu">
                 <li>
@@ -225,28 +231,28 @@
             <li class="nav-item dropdown">
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
-                    <i class="c-red-500 ti-files"></i>
-                  </span>
+                  <i class="c-red-500 ti-files"></i>
+                </span>
                 <span class="title">Pages</span>
                 <span class="arrow">
-                    <i class="ti-angle-right"></i>
-                  </span>
+                  <i class="ti-angle-right"></i>
+                </span>
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class='sidebar-link' href="blank.html">Blank</a>
-                </li>                 
-                <li>
-                  <a class='sidebar-link' href="404.html">404</a>
+                  <a class="sidebar-link" href="blank.html">Blank</a>
                 </li>
                 <li>
-                  <a class='sidebar-link' href="500.html">500</a>
+                  <a class="sidebar-link" href="404.html">404</a>
                 </li>
                 <li>
-                  <a class='sidebar-link' href="signin.html">Sign In</a>
+                  <a class="sidebar-link" href="500.html">500</a>
                 </li>
                 <li>
-                  <a class='sidebar-link' href="signup.html">Sign Up</a>
+                  <a class="sidebar-link" href="signin.html">Sign In</a>
+                </li>
+                <li>
+                  <a class="sidebar-link" href="signup.html">Sign Up</a>
                 </li>
               </ul>
             </li>
@@ -295,24 +301,39 @@
           <div class="header-container">
             <ul class="nav-left">
               <li>
-                <a id='sidebar-toggle' class="sidebar-toggle" href="javascript:void(0);">
+                <a
+                  id="sidebar-toggle"
+                  class="sidebar-toggle"
+                  href="javascript:void(0);"
+                >
                   <i class="ti-menu"></i>
                 </a>
               </li>
               <li class="search-box">
-                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
+                <a
+                  class="search-toggle no-pdd-right"
+                  href="javascript:void(0);"
+                >
                   <i class="search-icon ti-search pdd-right-10"></i>
                   <i class="search-icon-close ti-close pdd-right-10"></i>
                 </a>
               </li>
               <li class="search-input">
-                <input class="form-control" type="text" placeholder="Search...">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Search..."
+                />
               </li>
             </ul>
             <ul class="nav-right">
               <li class="notifications dropdown">
                 <span class="counter bgc-red">3</span>
-                <a href="" class="dropdown-toggle no-after" data-bs-toggle="dropdown">
+                <a
+                  href=""
+                  class="dropdown-toggle no-after"
+                  data-bs-toggle="dropdown"
+                >
                   <i class="ti-bell"></i>
                 </a>
 
@@ -324,14 +345,31 @@
                   <li>
                     <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
                       <li>
-                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                        <a
+                          href=""
+                          class="
+                            peers
+                            fxw-nw
+                            td-n
+                            p-20
+                            bdB
+                            c-grey-800
+                            cH-blue
+                            bgcH-grey-100
+                          "
+                        >
                           <div class="peer mR-15">
-                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
+                            <img
+                              class="w-3r bdrs-50p"
+                              src="https://randomuser.me/api/portraits/men/1.jpg"
+                              alt=""
+                            />
                           </div>
                           <div class="peer peer-greed">
                             <span>
                               <span class="fw-500">John Doe</span>
-                              <span class="c-grey-600">liked your <span class="text-dark">post</span>
+                              <span class="c-grey-600"
+                                >liked your <span class="text-dark">post</span>
                               </span>
                             </span>
                             <p class="m-0">
@@ -341,14 +379,32 @@
                         </a>
                       </li>
                       <li>
-                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                        <a
+                          href=""
+                          class="
+                            peers
+                            fxw-nw
+                            td-n
+                            p-20
+                            bdB
+                            c-grey-800
+                            cH-blue
+                            bgcH-grey-100
+                          "
+                        >
                           <div class="peer mR-15">
-                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/2.jpg" alt="">
+                            <img
+                              class="w-3r bdrs-50p"
+                              src="https://randomuser.me/api/portraits/men/2.jpg"
+                              alt=""
+                            />
                           </div>
                           <div class="peer peer-greed">
                             <span>
                               <span class="fw-500">Moo Doe</span>
-                              <span class="c-grey-600">liked your <span class="text-dark">cover image</span>
+                              <span class="c-grey-600"
+                                >liked your
+                                <span class="text-dark">cover image</span>
                               </span>
                             </span>
                             <p class="m-0">
@@ -358,14 +414,32 @@
                         </a>
                       </li>
                       <li>
-                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                        <a
+                          href=""
+                          class="
+                            peers
+                            fxw-nw
+                            td-n
+                            p-20
+                            bdB
+                            c-grey-800
+                            cH-blue
+                            bgcH-grey-100
+                          "
+                        >
                           <div class="peer mR-15">
-                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+                            <img
+                              class="w-3r bdrs-50p"
+                              src="https://randomuser.me/api/portraits/men/3.jpg"
+                              alt=""
+                            />
                           </div>
                           <div class="peer peer-greed">
                             <span>
                               <span class="fw-500">Lee Doe</span>
-                              <span class="c-grey-600">commented on your <span class="text-dark">video</span>
+                              <span class="c-grey-600"
+                                >commented on your
+                                <span class="text-dark">video</span>
                               </span>
                             </span>
                             <p class="m-0">
@@ -378,14 +452,21 @@
                   </li>
                   <li class="pX-20 pY-15 ta-c bdT">
                     <span>
-                      <a href="" class="c-grey-600 cH-blue fsz-sm td-n">View All Notifications <i class="ti-angle-right fsz-xs mL-10"></i></a>
+                      <a href="" class="c-grey-600 cH-blue fsz-sm td-n"
+                        >View All Notifications
+                        <i class="ti-angle-right fsz-xs mL-10"></i
+                      ></a>
                     </span>
                   </li>
                 </ul>
               </li>
               <li class="notifications dropdown">
                 <span class="counter bgc-blue">3</span>
-                <a href="" class="dropdown-toggle no-after" data-bs-toggle="dropdown">
+                <a
+                  href=""
+                  class="dropdown-toggle no-after"
+                  data-bs-toggle="dropdown"
+                >
                   <i class="ti-email"></i>
                 </a>
 
@@ -397,9 +478,25 @@
                   <li>
                     <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
                       <li>
-                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                        <a
+                          href=""
+                          class="
+                            peers
+                            fxw-nw
+                            td-n
+                            p-20
+                            bdB
+                            c-grey-800
+                            cH-blue
+                            bgcH-grey-100
+                          "
+                        >
                           <div class="peer mR-15">
-                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
+                            <img
+                              class="w-3r bdrs-50p"
+                              src="https://randomuser.me/api/portraits/men/1.jpg"
+                              alt=""
+                            />
                           </div>
                           <div class="peer peer-greed">
                             <div>
@@ -412,16 +509,33 @@
                                 </div>
                               </div>
                               <span class="c-grey-600 fsz-sm">
-                                Want to create your own customized data generator for your app...
+                                Want to create your own customized data
+                                generator for your app...
                               </span>
                             </div>
                           </div>
                         </a>
                       </li>
                       <li>
-                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                        <a
+                          href=""
+                          class="
+                            peers
+                            fxw-nw
+                            td-n
+                            p-20
+                            bdB
+                            c-grey-800
+                            cH-blue
+                            bgcH-grey-100
+                          "
+                        >
                           <div class="peer mR-15">
-                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/2.jpg" alt="">
+                            <img
+                              class="w-3r bdrs-50p"
+                              src="https://randomuser.me/api/portraits/men/2.jpg"
+                              alt=""
+                            />
                           </div>
                           <div class="peer peer-greed">
                             <div>
@@ -434,16 +548,33 @@
                                 </div>
                               </div>
                               <span class="c-grey-600 fsz-sm">
-                                Want to create your own customized data generator for your app...
+                                Want to create your own customized data
+                                generator for your app...
                               </span>
                             </div>
                           </div>
                         </a>
                       </li>
                       <li>
-                        <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                        <a
+                          href=""
+                          class="
+                            peers
+                            fxw-nw
+                            td-n
+                            p-20
+                            bdB
+                            c-grey-800
+                            cH-blue
+                            bgcH-grey-100
+                          "
+                        >
                           <div class="peer mR-15">
-                            <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+                            <img
+                              class="w-3r bdrs-50p"
+                              src="https://randomuser.me/api/portraits/men/3.jpg"
+                              alt=""
+                            />
                           </div>
                           <div class="peer peer-greed">
                             <div>
@@ -456,7 +587,8 @@
                                 </div>
                               </div>
                               <span class="c-grey-600 fsz-sm">
-                                Want to create your own customized data generator for your app...
+                                Want to create your own customized data
+                                generator for your app...
                               </span>
                             </div>
                           </div>
@@ -466,15 +598,28 @@
                   </li>
                   <li class="pX-20 pY-15 ta-c bdT">
                     <span>
-                      <a href="email.html" class="c-grey-600 cH-blue fsz-sm td-n">View All Email <i class="fs-xs ti-angle-right mL-10"></i></a>
+                      <a
+                        href="email.html"
+                        class="c-grey-600 cH-blue fsz-sm td-n"
+                        >View All Email
+                        <i class="fs-xs ti-angle-right mL-10"></i
+                      ></a>
                     </span>
                   </li>
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="" class="dropdown-toggle no-after peers fxw-nw ai-c lh-1" data-bs-toggle="dropdown">
+                <a
+                  href=""
+                  class="dropdown-toggle no-after peers fxw-nw ai-c lh-1"
+                  data-bs-toggle="dropdown"
+                >
                   <div class="peer mR-10">
-                    <img class="w-2r bdrs-50p" src="https://randomuser.me/api/portraits/men/10.jpg" alt="">
+                    <img
+                      class="w-2r bdrs-50p"
+                      src="https://randomuser.me/api/portraits/men/10.jpg"
+                      alt=""
+                    />
                   </div>
                   <div class="peer">
                     <span class="fsz-sm c-grey-900">John Doe</span>
@@ -494,7 +639,10 @@
                     </a>
                   </li>
                   <li>
-                    <a href="email.html" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                    <a
+                      href="email.html"
+                      class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"
+                    >
                       <i class="ti-email mR-10"></i>
                       <span>Messages</span>
                     </a>
@@ -513,8 +661,8 @@
         </div>
 
         <!-- ### $App Screen Content ### -->
-        <main class='main-content bgc-grey-100'>
-          <div id='mainContent'>
+        <main class="main-content bgc-grey-100">
+          <div id="mainContent">
             <div class="row gap-20 masonry pos-r">
               <h4 class="c-grey-900">UI Elements</h4>
               <div class="masonry-sizer col-md-6"></div>
@@ -555,72 +703,178 @@
                   <div class="mT-30">
                     <div class="gap-10 peers">
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-primary btn-color">Primary</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-primary btn-color"
+                        >
+                          Primary
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-secondary btn-color">Secondary</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-secondary btn-color"
+                        >
+                          Secondary
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-success btn-color">Success</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-success btn-color"
+                        >
+                          Success
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-danger btn-color">Danger</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-danger btn-color"
+                        >
+                          Danger
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-warning">Warning</button>
+                        <button type="button" class="btn cur-p btn-warning">
+                          Warning
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-info btn-color">Info</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-info btn-color"
+                        >
+                          Info
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-light">Light</button>
+                        <button type="button" class="btn cur-p btn-light">
+                          Light
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-dark btn-color">Dark</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-dark btn-color"
+                        >
+                          Dark
+                        </button>
                       </div>
                     </div>
 
                     <div class="w-100 gap-10 peers mY-20">
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-outline-primary">Primary</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-outline-primary"
+                        >
+                          Primary
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-outline-secondary">Secondary</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-outline-secondary"
+                        >
+                          Secondary
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-outline-success">Success</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-outline-success"
+                        >
+                          Success
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-outline-danger">Danger</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-outline-danger"
+                        >
+                          Danger
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-outline-warning">Warning</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-outline-warning"
+                        >
+                          Warning
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-outline-info">Info</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-outline-info"
+                        >
+                          Info
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-outline-light">Light</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-outline-light"
+                        >
+                          Light
+                        </button>
                       </div>
                       <div class="peer">
-                        <button type="button" class="btn cur-p btn-outline-dark">Dark</button>
+                        <button
+                          type="button"
+                          class="btn cur-p btn-outline-dark"
+                        >
+                          Dark
+                        </button>
                       </div>
                     </div>
 
-                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                      <div class="btn-group me-2" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-success btn-color">1</button>
-                        <button type="button" class="btn btn-success btn-color">2</button>
-                        <button type="button" class="btn btn-success btn-color">3</button>
-                        <button type="button" class="btn btn-success btn-color">4</button>
+                    <div
+                      class="btn-toolbar"
+                      role="toolbar"
+                      aria-label="Toolbar with button groups"
+                    >
+                      <div
+                        class="btn-group me-2"
+                        role="group"
+                        aria-label="First group"
+                      >
+                        <button type="button" class="btn btn-success btn-color">
+                          1
+                        </button>
+                        <button type="button" class="btn btn-success btn-color">
+                          2
+                        </button>
+                        <button type="button" class="btn btn-success btn-color">
+                          3
+                        </button>
+                        <button type="button" class="btn btn-success btn-color">
+                          4
+                        </button>
                       </div>
-                      <div class="btn-group me-2" role="group" aria-label="Second group">
-                        <button type="button" class="btn btn-success btn-color">5</button>
-                        <button type="button" class="btn btn-success btn-color">6</button>
-                        <button type="button" class="btn btn-success btn-color">7</button>
+                      <div
+                        class="btn-group me-2"
+                        role="group"
+                        aria-label="Second group"
+                      >
+                        <button type="button" class="btn btn-success btn-color">
+                          5
+                        </button>
+                        <button type="button" class="btn btn-success btn-color">
+                          6
+                        </button>
+                        <button type="button" class="btn btn-success btn-color">
+                          7
+                        </button>
                       </div>
-                      <div class="btn-group" role="group" aria-label="Third group">
-                        <button type="button" class="btn btn-success btn-color">8</button>
+                      <div
+                        class="btn-group"
+                        role="group"
+                        aria-label="Third group"
+                      >
+                        <button type="button" class="btn btn-success btn-color">
+                          8
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -631,26 +885,51 @@
                   <h6 class="c-grey-900">Dropdowns</h6>
                   <div class="mT-30">
                     <div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
                         Dropdown button
                       </button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
                       </div>
                     </div>
 
                     <!-- Example split danger button -->
                     <div class="btn-group mT-20">
-                      <button type="button" class="btn btn-danger btn-color">Action</button>
-                      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <button type="button" class="btn btn-danger btn-color">
+                        Action
+                      </button>
+                      <button
+                        type="button"
+                        class="
+                          btn btn-danger
+                          dropdown-toggle dropdown-toggle-split
+                        "
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
                         <span class="sr-only">Toggle Dropdown</span>
                       </button>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Separated link</a>
                       </div>
@@ -663,13 +942,29 @@
                   <h6 class="c-grey-900">List Group</h6>
                   <div class="mT-30">
                     <div class="list-group">
-                      <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                      <a
+                        href="#"
+                        class="list-group-item list-group-item-action active"
+                        aria-current="true"
+                      >
                         The current link item
                       </a>
-                      <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-                      <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-                      <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-                      <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
+                      <a href="#" class="list-group-item list-group-item-action"
+                        >A second link item</a
+                      >
+                      <a href="#" class="list-group-item list-group-item-action"
+                        >A third link item</a
+                      >
+                      <a href="#" class="list-group-item list-group-item-action"
+                        >A fourth link item</a
+                      >
+                      <a
+                        href="#"
+                        class="list-group-item list-group-item-action disabled"
+                        tabindex="-1"
+                        aria-disabled="true"
+                        >A disabled link item</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -678,29 +973,53 @@
                 <div class="bgc-white p-20 bd">
                   <h6 class="c-grey-900">Modal</h6>
                   <div class="mT-30">
-                  <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary btn-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                  </button>
+                    <!-- Button trigger modal -->
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-color"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      Launch demo modal
+                    </button>
 
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          ...
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                              Modal title
+                            </h5>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">...</div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Save changes
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
                   </div>
                 </div>
               </div>
@@ -708,7 +1027,15 @@
                 <div class="bgc-white p-20 bd">
                   <h6 class="c-grey-900">Popover</h6>
                   <div class="mT-30">
-                    <button type="button" class="btn btn-lg btn-danger btn-color" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+                    <button
+                      type="button"
+                      class="btn btn-lg btn-danger btn-color"
+                      data-bs-toggle="popover"
+                      title="Popover title"
+                      data-bs-content="And here's some amazing content. It's very engaging. Right?"
+                    >
+                      Click to toggle popover
+                    </button>
                   </div>
                 </div>
               </div>
@@ -720,34 +1047,78 @@
                     <div class="layers">
                       <div class="layer w-100">
                         <h5 class="mB-5">100k</h5>
-                        <small class="fw-600 c-grey-700">Visitors From USA</small>
+                        <small class="fw-600 c-grey-700"
+                          >Visitors From USA</small
+                        >
                         <span class="pull-right c-grey-600 fsz-sm">50%</span>
                         <div class="progress mT-10">
-                          <div class="progress-bar bgc-deep-purple-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;"> <span class="sr-only">50% Complete</span></div>
+                          <div
+                            class="progress-bar bgc-deep-purple-500"
+                            role="progressbar"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            style="width: 50%"
+                          >
+                            <span class="sr-only">50% Complete</span>
+                          </div>
                         </div>
                       </div>
                       <div class="layer w-100 mT-15">
                         <h5 class="mB-5">1M</h5>
-                        <small class="fw-600 c-grey-700">Visitors From Europe</small>
+                        <small class="fw-600 c-grey-700"
+                          >Visitors From Europe</small
+                        >
                         <span class="pull-right c-grey-600 fsz-sm">80%</span>
                         <div class="progress mT-10">
-                          <div class="progress-bar bgc-green-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%;"> <span class="sr-only">80% Complete</span></div>
+                          <div
+                            class="progress-bar bgc-green-500"
+                            role="progressbar"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            style="width: 80%"
+                          >
+                            <span class="sr-only">80% Complete</span>
+                          </div>
                         </div>
                       </div>
                       <div class="layer w-100 mT-15">
                         <h5 class="mB-5">450k</h5>
-                        <small class="fw-600 c-grey-700">Visitors From Australia</small>
+                        <small class="fw-600 c-grey-700"
+                          >Visitors From Australia</small
+                        >
                         <span class="pull-right c-grey-600 fsz-sm">40%</span>
                         <div class="progress mT-10">
-                          <div class="progress-bar bgc-light-blue-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:40%;"> <span class="sr-only">40% Complete</span></div>
+                          <div
+                            class="progress-bar bgc-light-blue-500"
+                            role="progressbar"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            style="width: 40%"
+                          >
+                            <span class="sr-only">40% Complete</span>
+                          </div>
                         </div>
                       </div>
                       <div class="layer w-100 mT-15">
                         <h5 class="mB-5">1B</h5>
-                        <small class="fw-600 c-grey-700">Visitors From India</small>
+                        <small class="fw-600 c-grey-700"
+                          >Visitors From India</small
+                        >
                         <span class="pull-right c-grey-600 fsz-sm">90%</span>
                         <div class="progress mT-10">
-                          <div class="progress-bar bgc-blue-grey-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:90%;"> <span class="sr-only">90% Complete</span></div>
+                          <div
+                            class="progress-bar bgc-blue-grey-500"
+                            role="progressbar"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            style="width: 90%"
+                          >
+                            <span class="sr-only">90% Complete</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -758,16 +1129,40 @@
                 <div class="bgc-white p-20 bd">
                   <h6 class="c-grey-900">Tootips</h6>
                   <div class="mT-30">
-                    <button type="button" class="btn btn-primary btn-color" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-color"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Tooltip on top"
+                    >
                       Tooltip on top
                     </button>
-                    <button type="button" class="btn btn-secondary btn-color" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+                    <button
+                      type="button"
+                      class="btn btn-secondary btn-color"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="right"
+                      title="Tooltip on right"
+                    >
                       Tooltip on right
                     </button>
-                    <button type="button" class="btn btn-success btn-color" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+                    <button
+                      type="button"
+                      class="btn btn-success btn-color"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      title="Tooltip on bottom"
+                    >
                       Tooltip on bottom
                     </button>
-                    <button type="button" class="btn btn-danger btn-color" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+                    <button
+                      type="button"
+                      class="btn btn-danger btn-color"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="left"
+                      title="Tooltip on left"
+                    >
                       Tooltip on left
                     </button>
                   </div>
@@ -779,7 +1174,12 @@
 
         <!-- ### $App Screen Footer ### -->
         <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
-          <span>Copyright © 2021 Designed by <a href="https://colorlib.com" target='_blank' title="Colorlib">Colorlib</a>. All rights reserved.</span>
+          <span
+            >Copyright © 2021 Designed by
+            <a href="https://colorlib.com" target="_blank" title="Colorlib"
+              >Colorlib</a
+            >. All rights reserved.</span
+          >
         </footer>
       </div>
     </div>

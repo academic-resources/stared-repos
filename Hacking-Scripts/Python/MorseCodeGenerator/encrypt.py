@@ -14,8 +14,7 @@ def encrypt(msg, MORSE_CODE_DICTIONARY):
         for j in i:
             if j.upper() not in li1:
                 EncryptedMessage.clear()
-                EncryptedMessage.append(
-                    'CAN NOT BE TRANSLATED TO MORSE CODE!!')
+                EncryptedMessage.append("CAN NOT BE TRANSLATED TO MORSE CODE!!")
                 return EncryptedMessage
             MorseWord = MorseWord + MORSE_CODE_DICTIONARY[j.upper()]
             MorseWord = MorseWord + " "
@@ -29,10 +28,10 @@ def MakeSound(EncryptedMessage):
         for j in i:
             LetterList = j.split(" ")
             for k in LetterList:
-                if k == '.':
+                if k == ".":
                     winsound.Beep(2500, 400)
                     # time.sleep(0.001)
-                elif k == '-':
+                elif k == "-":
                     winsound.Beep(2500, 800)
                     # time.sleep(0.001)
             time.sleep(1.5)
@@ -41,49 +40,49 @@ def MakeSound(EncryptedMessage):
 
 if __name__ == "__main__":
     MORSE_CODE_DICT = {
-        'A': '.-',
-        'B': '-...',
-        'C': '-.-.',
-        'D': '-..',
-        'E': '.',
-        'F': '..-.',
-        'G': '--.',
-        'H': '....',
-        'I': '..',
-        'J': '.---',
-        'K': '-.-',
-        'L': '.-..',
-        'M': '--',
-        'N': '-.',
-        'O': '---',
-        'P': '.--.',
-        'Q': '--.-',
-        'R': '.-.',
-        'S': '...',
-        'T': '-',
-        'U': '..-',
-        'V': '...-',
-        'W': '.--',
-        'X': '-..-',
-        'Y': '-.--',
-        'Z': '--..',
-        '1': '.----',
-        '2': '..---',
-        '3': '...--',
-        '4': '....-',
-        '5': '.....',
-        '6': '-....',
-        '7': '--...',
-        '8': '---..',
-        '9': '----.',
-        '0': '-----',
-        ', ': '--..--',
-        '.': '.-.-.-',
-        '?': '..--..',
-        '/': '-..-.',
-        '-': '-....-',
-        '(': '-.--.',
-        ')': '-.--.-'
+        "A": ".-",
+        "B": "-...",
+        "C": "-.-.",
+        "D": "-..",
+        "E": ".",
+        "F": "..-.",
+        "G": "--.",
+        "H": "....",
+        "I": "..",
+        "J": ".---",
+        "K": "-.-",
+        "L": ".-..",
+        "M": "--",
+        "N": "-.",
+        "O": "---",
+        "P": ".--.",
+        "Q": "--.-",
+        "R": ".-.",
+        "S": "...",
+        "T": "-",
+        "U": "..-",
+        "V": "...-",
+        "W": ".--",
+        "X": "-..-",
+        "Y": "-.--",
+        "Z": "--..",
+        "1": ".----",
+        "2": "..---",
+        "3": "...--",
+        "4": "....-",
+        "5": ".....",
+        "6": "-....",
+        "7": "--...",
+        "8": "---..",
+        "9": "----.",
+        "0": "-----",
+        ", ": "--..--",
+        ".": ".-.-.-",
+        "?": "..--..",
+        "/": "-..-.",
+        "-": "-....-",
+        "(": "-.--.",
+        ")": "-.--.-",
     }
-    e = encrypt('', MORSE_CODE_DICT)
+    e = encrypt("", MORSE_CODE_DICT)
     MakeSound(e)

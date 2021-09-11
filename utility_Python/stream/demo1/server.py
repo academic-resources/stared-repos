@@ -21,11 +21,12 @@ curl -d "param1=value1&param2=value2" -X POST http://localhost:9999
 curl -d "123123" -X POST http://localhost:9999
 curl -d "HELLO WORLD" -X POST http://localhost:9999
 """
-class Server:
 
+
+class Server:
     def __init__(self):
 
-        self.host = '127.0.0.1'
+        self.host = "127.0.0.1"
         self.port = 9999
 
     def read_endpoint(self):
@@ -36,14 +37,15 @@ class Server:
 
         while True:
             conn, addr = server.accept()
-            clientMessage = str(conn.recv(1024), encoding='utf-8')
-            print('Client message is:', clientMessage)
+            clientMessage = str(conn.recv(1024), encoding="utf-8")
+            print("Client message is:", clientMessage)
 
             # save to file
-            with open('output.txt', 'a') as f:
+            with open("output.txt", "a") as f:
                 f.write(clientMessage)
         f.close()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     s = Server()
     s.read_endpoint()

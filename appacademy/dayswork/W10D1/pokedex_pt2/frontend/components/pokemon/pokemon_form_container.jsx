@@ -1,11 +1,11 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { createPokemon } from '../../actions/pokemon_actions'
+import React from "react";
+import { connect } from "react-redux";
+import { createPokemon } from "../../actions/pokemon_actions";
 
-const mdtp = dispatch => {
+const mdtp = (dispatch) => {
   return {
-    createPokemon: poke => dispatch(createPokemon(poke))
-  }
-}
+    createPokemon: (poke) => dispatch(createPokemon(poke)),
+  };
+};
 
-export default connect(null, mdtp)(PokemonForm)
+export default connect(null, mdtp)(PokemonForm);

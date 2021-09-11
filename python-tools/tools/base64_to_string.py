@@ -10,6 +10,6 @@ def base64_to_string(input, output):
         output (str): Text file.
 
     """
-    with open(input, 'rb') as f:
-        with open(output, 'w') as f1:
-            f1.write(base64.b64decode(f.read()).decode('utf-8'))
+    with open(input, "rb") as f:
+        with open(output, "w") as f1:
+            f1.write(base64.b64decode(f.read()).decode("utf-8"))

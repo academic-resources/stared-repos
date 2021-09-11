@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var LinkedList = require('./linked_list');
+var LinkedList = require("./linked_list");
 
 /**
  * Queue (FIFO) using a Linked List as basis
@@ -8,10 +8,10 @@ var LinkedList = require('./linked_list');
 function Queue() {
   this._elements = new LinkedList();
 
-  Object.defineProperty(this, 'length', {
+  Object.defineProperty(this, "length", {
     get: function () {
       return this._elements.length;
-    }.bind(this)
+    }.bind(this),
   });
 }
 
@@ -31,7 +31,7 @@ Queue.prototype.push = function (e) {
  */
 Queue.prototype.pop = function () {
   if (this.isEmpty()) {
-    throw new Error('Empty queue');
+    throw new Error("Empty queue");
   }
   var e = this._elements.get(0);
   this._elements.del(0);
@@ -40,7 +40,7 @@ Queue.prototype.pop = function () {
 
 Queue.prototype.peek = function () {
   if (this.isEmpty()) {
-    throw new Error('Empty queue');
+    throw new Error("Empty queue");
   }
 
   return this._elements.get(0);

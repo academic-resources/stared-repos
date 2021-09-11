@@ -10,23 +10,22 @@
 
 .board {
   display: flex;
-
 }
 
 .tile {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    border: 5px solid gray;
-    background: white;
-    border-style: outset;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 5px solid gray;
+  background: white;
+  border-style: outset;
 }
 
 .explored {
-    border-style: inset;
-    border: 5px solid gray;
-    background: lightgray;
+  border-style: inset;
+  border: 5px solid gray;
+  background: lightgray;
 }

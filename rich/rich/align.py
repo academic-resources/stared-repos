@@ -244,9 +244,7 @@ class VerticalCenter(JupyterMixin):
     """
 
     def __init__(
-        self,
-        renderable: "RenderableType",
-        style: Optional[StyleType] = None,
+        self, renderable: "RenderableType", style: Optional[StyleType] = None
     ) -> None:
         self.renderable = renderable
         self.style = style

@@ -9,15 +9,14 @@ NUM_CONTENT_AUTHORS = 10
 
 
 class ContentAuthorFactory(DjangoModelFactory):
-
     class Meta:
         model = ContentAuthor
 
-    name = Faker('name')
+    name = Faker("name")
 
 
 def generate(seed):
     reseed(seed)
 
-    print('Generating Content Authors')
+    print("Generating Content Authors")
     generate_fake_data(ContentAuthorFactory, NUM_CONTENT_AUTHORS)

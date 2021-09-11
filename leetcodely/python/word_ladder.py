@@ -23,15 +23,15 @@ class Solution(object):
         """
         queue = collections.deque()
         queue.appendleft(beginWord)
-        queue.appendleft('#')
+        queue.appendleft("#")
         count = 0
         visited = {}
 
         while len(queue) > 0:
             word = queue.pop()
-            if word == '#':
+            if word == "#":
                 if len(queue) > 0:
-                    queue.appendleft('#')
+                    queue.appendleft("#")
                     count += 1
             elif word == endWord:
                 return count + 1
@@ -55,7 +55,8 @@ class Solution(object):
         return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.ladderLength('hit', 'cog', ["hot", "dot", "dog", "lot", "log", "cog"]))
-
+    print(
+        solution.ladderLength("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"])
+    )

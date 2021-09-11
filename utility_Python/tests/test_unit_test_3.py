@@ -10,11 +10,13 @@ import pytest
 # Mock requests to control its behavior
 requests = Mock()
 
+
 def get_holidays():
-    r = requests.get('http://localhost/api/holidays')
+    r = requests.get("http://localhost/api/holidays")
     if r.status_code == 200:
         return r.json()
     return None
+
 
 class TestCalendar(unittest.TestCase):
     def test_get_holidays_timeout(self):
@@ -24,5 +26,6 @@ class TestCalendar(unittest.TestCase):
         with self.assertRaises(Timeout):
             get_holidays()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

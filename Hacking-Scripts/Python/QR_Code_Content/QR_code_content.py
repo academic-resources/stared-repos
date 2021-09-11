@@ -19,7 +19,7 @@ def webcamCap(inputD):
 
         for code in decode(img):
             # Data in  code
-            ans = code.data.decode('utf-8')
+            ans = code.data.decode("utf-8")
             # Coordinates of polygon over the QR code
             points = np.array([code.polygon], np.int32)
             points = points.reshape((-1, 1, 2))
@@ -27,8 +27,15 @@ def webcamCap(inputD):
 
             # points for rectangle
             pts2 = code.rect
-            cv2.putText(img, ans, (pts2[0], pts2[1]),
-                        cv2.FONT_HERSHEY_PLAIN, 1.5, (255, 0, 255), thickness=2)
+            cv2.putText(
+                img,
+                ans,
+                (pts2[0], pts2[1]),
+                cv2.FONT_HERSHEY_PLAIN,
+                1.5,
+                (255, 0, 255),
+                thickness=2,
+            )
 
         cv2.imshow("Result ", img)
         if cv2.waitKey(20) & 0xFF == ord("c"):
@@ -40,7 +47,7 @@ def webcamCap(inputD):
 def imgCap(img):
     ans = ""
 
-    img = (cv2.imread(img))
+    img = cv2.imread(img)
 
     ans = decode(img)[0].data.decode("utf-8")
     stats = decode(img)[0]
@@ -51,8 +58,15 @@ def imgCap(img):
 
     # points for rectangle
     pts2 = stats.rect
-    cv2.putText(img, ans, (pts2[0], pts2[1]),
-                cv2.FONT_HERSHEY_PLAIN, 1.5, (255, 0, 255), thickness=2)
+    cv2.putText(
+        img,
+        ans,
+        (pts2[0], pts2[1]),
+        cv2.FONT_HERSHEY_PLAIN,
+        1.5,
+        (255, 0, 255),
+        thickness=2,
+    )
     while True:
         cv2.imshow("Result ", img)
         if cv2.waitKey(20) & 0xFF == ord("c"):

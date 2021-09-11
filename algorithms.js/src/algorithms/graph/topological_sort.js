@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var Stack = require('../../data_structure/stack'),
-    depthFirstSearch = require('../../algorithms/graph/depth_first_search');
+var Stack = require("../../data_structure/stack"),
+  depthFirstSearch = require("../../algorithms/graph/depth_first_search");
 
 /**
  * Sorts the edges of the DAG topologically
@@ -33,7 +33,7 @@ var topologicalSort = function (graph) {
         },
         leaveVertex: function (node) {
           stack.push(node);
-        }
+        },
       });
     }
   });

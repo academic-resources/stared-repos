@@ -31,5 +31,3 @@ class Solution:
                 if len(queue) > 0:
                     curr.right = queue.pop()
                 curr = curr.right
-
-

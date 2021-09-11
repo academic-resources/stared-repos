@@ -251,8 +251,7 @@ class Layout:
             for child in layout._children:
                 recurse(
                     tree.add(
-                        summary(child),
-                        guide_style=f"layout.tree.{child.splitter.name}",
+                        summary(child), guide_style=f"layout.tree.{child.splitter.name}"
                     ),
                     child,
                 )

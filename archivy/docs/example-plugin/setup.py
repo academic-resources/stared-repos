@@ -12,9 +12,7 @@ setup(
     ),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    classifiers=[
-        "Programming Language :: Python :: 3",
-    ],
+    classifiers=["Programming Language :: Python :: 3"],
     packages=find_packages(),
     entry_points="""
         [archivy.plugins]

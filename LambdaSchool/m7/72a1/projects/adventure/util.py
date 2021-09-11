@@ -1,4 +1,4 @@
-class Queue():
+class Queue:
     def __init__(self):
         self.queue = []
 
@@ -15,7 +15,7 @@ class Queue():
         return len(self.queue)
 
 
-class Stack():
+class Stack:
     def __init__(self):
         self.stack = []
 
@@ -31,12 +31,13 @@ class Stack():
     def size(self):
         return len(self.stack)
 
+
 class Graph:
     def __init__(self):
         self.map = {}
         self.visited = set()
         self.prev_room = 0
-        self.prev_direction = ''
+        self.prev_direction = ""
         self.current_room = 0
         self.traversalPath = []
         self.moves = 0

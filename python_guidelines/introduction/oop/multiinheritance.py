@@ -1,13 +1,16 @@
 class A:
     def whoami(self):
-        print('A')
+        print("A")
+
 
 class B:
     def whoami(self):
-        print('B')
+        print("B")
+
 
 class C(A, B):
     pass
+
 
 c = C()
 c.whoami()

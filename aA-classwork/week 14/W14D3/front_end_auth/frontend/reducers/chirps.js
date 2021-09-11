@@ -1,4 +1,4 @@
-import { RECEIVE_CHIRPS, RECEIVE_SINGLE_CHIRP } from '../actions/chirps';
+import { RECEIVE_CHIRPS, RECEIVE_SINGLE_CHIRP } from "../actions/chirps";
 
 export default (state = {}, action) => {
   Object.freeze(state);

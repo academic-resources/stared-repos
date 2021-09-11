@@ -1,7 +1,7 @@
-const partyHeader = document.getElementById('party')
+const partyHeader = document.getElementById("party");
 
 export const htmlGenerator = (string, htmlElement) => {
-  htmlElement.innerHTML = '<p>' + string + '</p>'
-}
+  htmlElement.innerHTML = "<p>" + string + "</p>";
+};
 
-htmlGenerator('Party Time.', partyHeader)
+htmlGenerator("Party Time.", partyHeader);

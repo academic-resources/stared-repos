@@ -1,23 +1,23 @@
-'use strict';
+"use strict";
 
-const { types } = require('../models/pokemonTypes');
+const { types } = require("../models/pokemonTypes");
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Pokemons', {
+    return queryInterface.createTable("Pokemons", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       attack: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       defense: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       imageUrl: {
         allowNull: false,
@@ -40,23 +40,23 @@ module.exports = {
         allowNull: false,
         references: {
           model: {
-            tableName: 'Players',
+            tableName: "Players",
           },
         },
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Pokemons');
-  }
+    return queryInterface.dropTable("Pokemons");
+  },
 };

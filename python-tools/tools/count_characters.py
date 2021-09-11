@@ -11,4 +11,4 @@ def count_characters(file):
     """
     with open(file) as f:
         lines = f.readlines()
-    return len(''.join([l for l in lines]))
+    return len("".join([l for l in lines]))

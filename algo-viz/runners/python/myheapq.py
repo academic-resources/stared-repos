@@ -1,12 +1,18 @@
-
-
-__all__ = ['heappush', 'heappop', 'heapify', 'heapreplace', 'merge',
-           'nlargest', 'nsmallest', 'heappushpop']
+__all__ = [
+    "heappush",
+    "heappop",
+    "heapify",
+    "heapreplace",
+    "merge",
+    "nlargest",
+    "nsmallest",
+    "heappushpop",
+]
 
 
 def heappush(heap, item):
     heap.append(item)
-    _siftdown(heap, 0, len(heap)-1)
+    _siftdown(heap, 0, len(heap) - 1)
 
 
 def heappop(heap):
@@ -37,7 +43,7 @@ def heappushpop(heap, item):
 def heapify(x):
     n = len(x)
 
-    for i in reversed(range(n//2)):
+    for i in reversed(range(n // 2)):
         _siftup(x, i)
 
 
@@ -60,7 +66,7 @@ def _heapreplace_max(heap, item):
 
 def _heapify_max(x):
     n = len(x)
-    for i in reversed(range(n//2)):
+    for i in reversed(range(n // 2)):
         _siftup_max(x, i)
 
 
@@ -82,21 +88,21 @@ def _siftup(heap, pos):
     endpos = len(heap)
     startpos = pos
     newitem = heap[pos]
-    childpos = 2*pos + 1
+    childpos = 2 * pos + 1
     while childpos < endpos:
         rightpos = childpos + 1
         if rightpos < endpos and not heap[childpos] < heap[rightpos]:
             childpos = rightpos
         heap[pos] = heap[childpos]
         pos = childpos
-        childpos = 2*pos + 1
+        childpos = 2 * pos + 1
 
     heap[pos] = newitem
     _siftdown(heap, startpos, pos)
 
 
 def _siftdown_max(heap, startpos, pos):
-    'Maxheap variant of _siftdown'
+    "Maxheap variant of _siftdown"
     newitem = heap[pos]
 
     while pos > startpos:
@@ -111,18 +117,18 @@ def _siftdown_max(heap, startpos, pos):
 
 
 def _siftup_max(heap, pos):
-    'Maxheap variant of _siftup'
+    "Maxheap variant of _siftup"
     endpos = len(heap)
     startpos = pos
     newitem = heap[pos]
-    childpos = 2*pos + 1
+    childpos = 2 * pos + 1
     while childpos < endpos:
         rightpos = childpos + 1
         if rightpos < endpos and not heap[rightpos] < heap[childpos]:
             childpos = rightpos
         heap[pos] = heap[childpos]
         pos = childpos
-        childpos = 2*pos + 1
+        childpos = 2 * pos + 1
 
     heap[pos] = newitem
     _siftdown_max(heap, startpos, pos)
@@ -316,4 +322,5 @@ def nlargest(n, iterable, key=None):
 if __name__ == "__main__":
 
     import doctest
+
     print(doctest.testmod())

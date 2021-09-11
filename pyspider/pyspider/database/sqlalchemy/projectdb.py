@@ -17,28 +17,32 @@ from .sqlalchemybase import result2dict
 
 
 class ProjectDB(BaseProjectDB):
-    __tablename__ = 'projectdb'
+    __tablename__ = "projectdb"
 
     def __init__(self, url):
-        self.table = Table(self.__tablename__, MetaData(),
-                           Column('name', String(64), primary_key=True),
-                           Column('group', String(64)),
-                           Column('status', String(16)),
-                           Column('script', Text),
-                           Column('comments', String(1024)),
-                           Column('rate', Float(11)),
-                           Column('burst', Float(11)),
-                           Column('updatetime', Float(32)),
-                           mysql_engine='InnoDB',
-                           mysql_charset='utf8'
-                           )
+        self.table = Table(
+            self.__tablename__,
+            MetaData(),
+            Column("name", String(64), primary_key=True),
+            Column("group", String(64)),
+            Column("status", String(16)),
+            Column("script", Text),
+            Column("comments", String(1024)),
+            Column("rate", Float(11)),
+            Column("burst", Float(11)),
+            Column("updatetime", Float(32)),
+            mysql_engine="InnoDB",
+            mysql_charset="utf8",
+        )
 
         self.url = make_url(url)
         if self.url.database:
             database = self.url.database
             self.url.database = None
             try:
-                engine = create_engine(self.url, convert_unicode=True, pool_recycle=3600)
+                engine = create_engine(
+                    self.url, convert_unicode=True, pool_recycle=3600
+                )
                 conn = engine.connect()
                 conn.execute("commit")
                 conn.execute("CREATE DATABASE %s" % database)
@@ -58,40 +62,49 @@ class ProjectDB(BaseProjectDB):
 
     def insert(self, name, obj={}):
         obj = dict(obj)
-        obj['name'] = name
-        obj['updatetime'] = time.time()
-        return self.engine.execute(self.table.insert()
-                                   .values(**self._stringify(obj)))
+        obj["name"] = name
+        obj["updatetime"] = time.time()
+        return self.engine.execute(self.table.insert().values(**self._stringify(obj)))
 
     def update(self, name, obj={}, **kwargs):
         obj = dict(obj)
         obj.update(kwargs)
-        obj['updatetime'] = time.time()
-        return self.engine.execute(self.table.update()
-                                   .where(self.table.c.name == name)
-                                   .values(**self._stringify(obj)))
+        obj["updatetime"] = time.time()
+        return self.engine.execute(
+            self.table.update()
+            .where(self.table.c.name == name)
+            .values(**self._stringify(obj))
+        )
 
     def get_all(self, fields=None):
-        columns = [getattr(self.table.c, f, f) for f in fields] if fields else self.table.c
-        for task in self.engine.execute(self.table.select()
-                                        .with_only_columns(columns)):
+        columns = (
+            [getattr(self.table.c, f, f) for f in fields] if fields else self.table.c
+        )
+        for task in self.engine.execute(self.table.select().with_only_columns(columns)):
             yield self._parse(result2dict(columns, task))
 
     def get(self, name, fields=None):
-        columns = [getattr(self.table.c, f, f) for f in fields] if fields else self.table.c
-        for task in self.engine.execute(self.table.select()
-                                        .where(self.table.c.name == name)
-                                        .limit(1)
-                                        .with_only_columns(columns)):
+        columns = (
+            [getattr(self.table.c, f, f) for f in fields] if fields else self.table.c
+        )
+        for task in self.engine.execute(
+            self.table.select()
+            .where(self.table.c.name == name)
+            .limit(1)
+            .with_only_columns(columns)
+        ):
             return self._parse(result2dict(columns, task))
 
     def drop(self, name):
-        return self.engine.execute(self.table.delete()
-                                   .where(self.table.c.name == name))
+        return self.engine.execute(self.table.delete().where(self.table.c.name == name))
 
     def check_update(self, timestamp, fields=None):
-        columns = [getattr(self.table.c, f, f) for f in fields] if fields else self.table.c
-        for task in self.engine.execute(self.table.select()
-                                        .with_only_columns(columns)
-                                        .where(self.table.c.updatetime >= timestamp)):
+        columns = (
+            [getattr(self.table.c, f, f) for f in fields] if fields else self.table.c
+        )
+        for task in self.engine.execute(
+            self.table.select()
+            .with_only_columns(columns)
+            .where(self.table.c.updatetime >= timestamp)
+        ):
             yield self._parse(result2dict(columns, task))

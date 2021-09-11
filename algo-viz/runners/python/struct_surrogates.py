@@ -1,5 +1,3 @@
-
-
 class DequeSurrogate:
     def __init__(self, values=[]):
         self.front = None
@@ -142,7 +140,7 @@ class DequeSurrogate:
         DequeSurrogate.remove_node(self, node)
 
 
-DequeSurrogate.__name__ = 'collections.deque'
+DequeSurrogate.__name__ = "collections.deque"
 
 
 class DequeSurrogateBlock:
@@ -152,4 +150,4 @@ class DequeSurrogateBlock:
         self.prev = prev
 
 
-DequeSurrogateBlock.__name__ = 'collections.deque.block'
+DequeSurrogateBlock.__name__ = "collections.deque.block"

@@ -1,11 +1,11 @@
-'''
+"""
 If we assume the shadow of a building is of the same height as the building(ignoring the angle of the sun) calculate
 the total area under shadow of overlapping buildings.
 
 Example:
 Input: An array of building objects
 Output: Calculate the total area under the shadow
-'''
+"""
 
 import heapq
 
@@ -57,7 +57,7 @@ def _find_key_points(buildings):
 def _find_area_of_polygon_defined_by_keypoints(keypoints):
     total = 0
     for i in range(1, len(keypoints)):
-        prev, curr = keypoints[i-1], keypoints[i]
+        prev, curr = keypoints[i - 1], keypoints[i]
         x = curr[0] - prev[0]
         y = prev[1]
         area = x * y
@@ -74,5 +74,5 @@ class TestComputeShadow(unittest.TestCase):
         self.assertEqual(compute_area_of_shadow(buildings), 63)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

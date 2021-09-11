@@ -1,14 +1,17 @@
 from django.core.management.base import BaseCommand
 
-from networkapi.wagtailpages.pagemodels.products import ProductUpdates, Update as NewUpdate
+from networkapi.wagtailpages.pagemodels.products import (
+    ProductUpdates,
+    Update as NewUpdate,
+)
 from networkapi.buyersguide.pagemodels.product_update import Update as OldUpdate
 
 
 class Command(BaseCommand):
-    help = '''
+    help = """
         Copies the old BuyersGuide Update data to the Wagtailpages Update model and
         updates the Orderable data in ProductUpdates
-    '''
+    """
 
     def handle(self, *args, **options):
         all_old_products = OldUpdate.objects.all()
@@ -37,8 +40,13 @@ class Command(BaseCommand):
             # the `new_update` object from object.
             related_product_updates = ProductUpdates.objects.filter(update=old_update)
             total_related_product_updates = related_product_updates.count()
-            print("\tLooking for ProductUpdates to update. Found:", total_related_product_updates)
+            print(
+                "\tLooking for ProductUpdates to update. Found:",
+                total_related_product_updates,
+            )
             for product_update in related_product_updates:
-                print(f"\tUpdating related product {i+1} out of {total_related_product_updates}")
+                print(
+                    f"\tUpdating related product {i+1} out of {total_related_product_updates}"
+                )
                 product_update.update_new = new_update
                 product_update.save()

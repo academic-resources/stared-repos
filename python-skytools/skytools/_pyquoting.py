@@ -8,8 +8,12 @@ from typing import Any, Dict, Mapping, Match, Optional
 from urllib.parse import quote_plus, unquote_plus  # noqa
 
 __all__ = (
-    "quote_literal", "quote_copy", "quote_bytea_raw",
-    "db_urlencode", "db_urldecode", "unescape",
+    "quote_literal",
+    "quote_copy",
+    "quote_bytea_raw",
+    "db_urlencode",
+    "db_urldecode",
+    "unescape",
     "unquote_literal",
 )
 
@@ -17,6 +21,7 @@ __all__ = (
 #
 # SQL quoting
 #
+
 
 def quote_literal(s: Any) -> str:
     r"""Quote a literal value for SQL.
@@ -75,13 +80,14 @@ def quote_bytea_raw(s: bytes) -> str:
             elif i == ord("\\"):
                 _bytea_map[c] = "\\\\"
             else:
-                _bytea_map[c] = '%c' % i
+                _bytea_map[c] = "%c" % i
     return "".join([_bytea_map[b] for b in s])
 
 
 #
 # Database specific urlencode and urldecode.
 #
+
 
 def db_urlencode(dict_val: Mapping[str, Any]) -> str:
     """Database specific urlencode.
@@ -97,9 +103,9 @@ def db_urlencode(dict_val: Mapping[str, Any]) -> str:
         if v is None:
             elem = quote_plus(str(k))
         else:
-            elem = quote_plus(str(k)) + '=' + quote_plus(str(v))
+            elem = quote_plus(str(k)) + "=" + quote_plus(str(v))
         elem_list.append(elem)
-    return '&'.join(elem_list)
+    return "&".join(elem_list)
 
 
 def db_urldecode(qs: str) -> Dict[str, Optional[str]]:
@@ -112,10 +118,10 @@ def db_urldecode(qs: str) -> Dict[str, Optional[str]]:
     """
 
     res: Dict[str, Optional[str]] = {}
-    for elem in qs.split('&'):
+    for elem in qs.split("&"):
         if not elem:
             continue
-        pair = elem.split('=', 1)
+        pair = elem.split("=", 1)
         name = unquote_plus(pair[0])
         if len(pair) == 1:
             res[name] = None
@@ -131,21 +137,21 @@ def db_urldecode(qs: str) -> Dict[str, Optional[str]]:
 _esc_re = r"\\([0-7]{1,3}|.)"
 _esc_rc = re.compile(_esc_re)
 _esc_map = {
-    't': '\t',
-    'n': '\n',
-    'r': '\r',
-    'a': '\a',
-    'b': '\b',
+    "t": "\t",
+    "n": "\n",
+    "r": "\r",
+    "a": "\a",
+    "b": "\b",
     "'": "'",
     '"': '"',
-    '\\': '\\',
+    "\\": "\\",
 }
 
 
 def _sub_unescape_c(m: Match) -> str:
     """unescape single escape seq."""
     v = m.group(1)
-    if (len(v) == 1) and (v < '0' or v > '7'):
+    if (len(v) == 1) and (v < "0" or v > "7"):
         try:
             return _esc_map[v]
         except KeyError:
@@ -170,7 +176,7 @@ def _sub_unescape_sqlext(m: Match) -> str:
     if m.group() == "''":
         return "'"
     v = m.group(1)
-    if (len(v) == 1) and (v < '0' or v > '7'):
+    if (len(v) == 1) and (v < "0" or v > "7"):
         try:
             return _esc_map[v]
         except KeyError:
@@ -191,18 +197,17 @@ def unquote_literal(val: str, stdstr: bool = False) -> Optional[str]:
             return val[1:-1].replace("''", "'")
         else:
             return _esql_rc.sub(_sub_unescape_sqlext, val[1:-1])
-    elif len(val) > 2 and val[0] in ('E', 'e') and val[1] == "'" and val[-1] == "'":
+    elif len(val) > 2 and val[0] in ("E", "e") and val[1] == "'" and val[-1] == "'":
         return _esql_rc.sub(_sub_unescape_sqlext, val[2:-1])
-    elif len(val) >= 2 and val[0] == '$' and val[-1] == '$':
-        p1 = val.find('$', 1)
-        p2 = val.rfind('$', 1, -1)
+    elif len(val) >= 2 and val[0] == "$" and val[-1] == "$":
+        p1 = val.find("$", 1)
+        p2 = val.rfind("$", 1, -1)
         if p1 > 0 and p2 > p1:
-            t1 = val[:p1 + 1]
+            t1 = val[: p1 + 1]
             t2 = val[p2:]
             if t1 == t2:
-                return val[len(t1):-len(t1)]
+                return val[len(t1) : -len(t1)]
         raise ValueError("Bad dollar-quoted string")
     elif val.lower() == "null":
         return None
     return val
-

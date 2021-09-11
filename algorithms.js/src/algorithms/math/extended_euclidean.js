@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Extended Euclidean algorithm to calculate the solve of
@@ -11,9 +11,12 @@
  * @return {Number, Number}
  */
 var extEuclid = function (a, b) {
-  var s = 0, oldS = 1;
-  var t = 1, oldT = 0;
-  var r = b, oldR = a;
+  var s = 0,
+    oldS = 1;
+  var t = 1,
+    oldT = 0;
+  var r = b,
+    oldR = a;
   var quotient, temp;
   while (r !== 0) {
     quotient = Math.floor(oldR / r);
@@ -33,7 +36,7 @@ var extEuclid = function (a, b) {
 
   return {
     x: oldS,
-    y: oldT
+    y: oldT,
   };
 };
 

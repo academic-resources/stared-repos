@@ -145,11 +145,7 @@ class Heading(TextElement):
         text.justify = "center"
         if self.level == 1:
             # Draw a border around h1s
-            yield Panel(
-                text,
-                box=box.DOUBLE,
-                style="markdown.h1.border",
-            )
+            yield Panel(text, box=box.DOUBLE, style="markdown.h1.border")
         else:
             # Styled text for h2 and beyond
             if self.level == 2:
@@ -538,9 +534,7 @@ if __name__ == "__main__":  # pragma: no cover
         description="Render Markdown to the console with Rich"
     )
     parser.add_argument(
-        "path",
-        metavar="PATH",
-        help="path to markdown file, or - for stdin",
+        "path", metavar="PATH", help="path to markdown file, or - for stdin"
     )
     parser.add_argument(
         "-c",

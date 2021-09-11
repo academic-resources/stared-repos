@@ -59,40 +59,40 @@ Rendering or putting React component into the DOM is called mounting. The follow
 When we have been making a class-based component we used a built-in render method and it is required in all class-based components but other methods are optional. See the order of execution of the different methods by running the following snippet of codes.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     this.state = {
-      firstName: '',
-    }
+      firstName: "",
+    };
   }
 
   static getDerivedStateFromProps(props, state) {
     console.log(
-      'I am getDerivedStateFromProps and I will be the second to run.'
-    )
-    return null
+      "I am getDerivedStateFromProps and I will be the second to run."
+    );
+    return null;
   }
   componentDidMount() {
-    console.log('I am componentDidMount and I will be last to run.')
+    console.log("I am componentDidMount and I will be last to run.");
   }
 
   render() {
-    console.log('I am render and I will be the third to run.')
+    console.log("I am render and I will be the third to run.");
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ### Contructor
@@ -104,30 +104,30 @@ In class we use constructor parameter to inherit from parents and in React to th
 Look at the snippet of code about constructor and state.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     this.state = {
-      firstName: '',
-    }
+      firstName: "",
+    };
   }
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
         <h2>The constructor is the first to Run</h2>
         <p>Author:{this.state.firstName}</p>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ### getDerivedStateFromPros
@@ -135,45 +135,45 @@ ReactDOM.render(<App />, rootElement)
 As we can understand from the name, this method derives a state from props. The getDerivedStateFromProps() method is called right before rendering the component in the DOM. This the right place to set the state object based on the initial props.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 const User = ({ firstName }) => (
   <div>
     <h1>{firstName}</h1>
   </div>
-)
+);
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     // we can write state inside or outside the constructor
     // if is written outside the constructor it does not need the keyword this
     this.state = {
-      firstName: 'John',
-    }
+      firstName: "John",
+    };
   }
   static getDerivedStateFromProps(props, state) {
     console.log(
-      'I am getDerivedStateFromProps and I will be the second to run.'
-    )
-    return { firstName: props.firstName }
+      "I am getDerivedStateFromProps and I will be the second to run."
+    );
+    return { firstName: props.firstName };
   }
 
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
         <h3>getDerivedStateFromProps</h3>
         <User firstName={this.state.firstName} />
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App firstName='Asabeneh' />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App firstName="Asabeneh" />, rootElement);
 ```
 
 ### Render
@@ -181,40 +181,40 @@ ReactDOM.render(<App firstName='Asabeneh' />, rootElement)
 The render method is a required method when we create a class-based component. The render method is where we return JSX. The render methods render whenever there is change in state. Do not set your state inside render method.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 const User = ({ firstName }) => (
   <div>
     <h1>{firstName}</h1>
   </div>
-)
+);
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     // we can write state inside or outside the constructor
     // if is written outside the constructor it does not need the keyword this
     this.state = {
-      firstName: 'John',
-    }
+      firstName: "John",
+    };
   }
   render() {
     // Never do this
     // Do not reset inside the render method, create a method to reset the state
 
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
         <h3>Render method</h3>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App firstName='Asabeneh' />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App firstName="Asabeneh" />, rootElement);
 ```
 
 ### ComponentDidMount
@@ -222,88 +222,88 @@ ReactDOM.render(<App firstName='Asabeneh' />, rootElement)
 As we can understand the name of the method that this method called after component is render. This a place place to setting time interval and calling API. Look at the following setTimeout implementation in componentDidMount method.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     this.state = {
-      firstName: 'John',
-    }
+      firstName: "John",
+    };
   }
   componentDidMount() {
-    console.log('I am componentDidMount and I will be last to run.')
+    console.log("I am componentDidMount and I will be last to run.");
     // after 3 seconds it resets the state
     setTimeout(() => {
       this.setState({
-        firstName: 'Asabeneh',
-      })
-    }, 3000)
+        firstName: "Asabeneh",
+      });
+    }, 3000);
   }
 
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
         <h2>componentDidMount Method</h2>
         {this.state.firstName}
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 In the above snippet of code, we saw how to implement setTimeout inside a componentDidMount method. In next example, we will implement an API call using fetch.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     this.state = {
-      firstName: 'John',
+      firstName: "John",
       data: [],
-    }
+    };
   }
 
   componentDidMount() {
-    console.log('I am componentDidMount and I will be last to run.')
-    const API_URL = 'https://restcountries.eu/rest/v2/all'
+    console.log("I am componentDidMount and I will be last to run.");
+    const API_URL = "https://restcountries.eu/rest/v2/all";
     fetch(API_URL)
       .then((response) => {
-        return response.json()
+        return response.json();
       })
       .then((data) => {
-        console.log(data)
+        console.log(data);
         this.setState({
           data,
-        })
+        });
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
 
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
         <h1>Calling API</h1>
         <div>
           <p>There are {this.state.data.length} countries in the api</p>
-          <div className='countries-wrapper'>
+          <div className="countries-wrapper">
             {this.state.data.map((country) => (
               <div>
                 <div>
-                  {' '}
-                  <img src={country.flag} alt={country.name} />{' '}
+                  {" "}
+                  <img src={country.flag} alt={country.name} />{" "}
                 </div>
                 <div>
                   <h1>{country.name}</h1>
@@ -315,80 +315,80 @@ class App extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 Sometimes it is better to have a separate method to render the data. See the example below:
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     this.state = {
-      firstName: 'John',
+      firstName: "John",
       data: [],
-    }
+    };
   }
 
   componentDidMount() {
-    console.log('I am componentDidMount and I will be last to run.')
-    const API_URL = 'https://restcountries.eu/rest/v2/all'
+    console.log("I am componentDidMount and I will be last to run.");
+    const API_URL = "https://restcountries.eu/rest/v2/all";
     fetch(API_URL)
       .then((response) => {
-        return response.json()
+        return response.json();
       })
       .then((data) => {
-        console.log(data)
+        console.log(data);
         this.setState({
           data,
-        })
+        });
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
   renderCountries = () => {
     return this.state.data.map((country) => {
       return (
         <div>
           <div>
-            {' '}
-            <img src={country.flag} alt={country.name} />{' '}
+            {" "}
+            <img src={country.flag} alt={country.name} />{" "}
           </div>
           <div>
             <h1>{country.name}</h1>
             <p>Population: {country.population}</p>
           </div>
         </div>
-      )
-    })
-  }
+      );
+    });
+  };
 
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
         <h1>Calling API</h1>
         <div>
           <p>There are {this.state.data.length} countries in the api</p>
-          <div className='countries-wrapper'>{this.renderCountries()}</div>
+          <div className="countries-wrapper">{this.renderCountries()}</div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ## Updating
@@ -412,84 +412,84 @@ The shouldComponentUpdate() built-in life cycle method should return a boolean. 
 If the method does not return true the application will never update. This can be used for instance to block use when it reaches to a certain point(game, subscription) or may be to block a certain user.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     this.state = {
-      firstName: 'John',
+      firstName: "John",
       data: [],
-    }
+    };
   }
 
   shouldComponentUpdate(nexProps, nextState) {
-    console.log(nextProps, nextState)
+    console.log(nextProps, nextState);
     // if the return is true, the application will never update.
-    return true
+    return true;
   }
 
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 For instance, if we want to stop doing challenge after 30 days we can increment the day from 1 to 30 and we can block the application at day 30.
 Look the example.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     this.state = {
-      firstName: 'John',
+      firstName: "John",
       day: 1,
-    }
+    };
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState)
-    console.log(nextState.day)
+    console.log(nextProps, nextState);
+    console.log(nextState.day);
     if (nextState.day > 31) {
-      return false
+      return false;
     } else {
-      return true
+      return true;
     }
   }
   // the doChallenge increment the day by one
   doChallenge = () => {
     this.setState({
       day: this.state.day + 1,
-    })
-  }
+    });
+  };
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
         <button onClick={this.doChallenge}>Do Challenge</button>
         <p>Challenge: Day {this.state.day}</p>
         {this.state.congratulate && <h2>{this.state.congratulate}</h2>}
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ### render
@@ -501,89 +501,89 @@ As we have mentioned it on the mounting phase of the component, the render() met
 The componentDidUpdate method takes two parameters: the prevProps and prevState. It is called after the component is updated in the DOM.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     this.state = {
-      firstName: 'John',
+      firstName: "John",
       data: [],
-    }
+    };
   }
   componentDidUpdate(prevProps, prevState) {
-    console.log(prevState, prevProps)
+    console.log(prevState, prevProps);
   }
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 Let's use the above two life cycle methods together.
 
 ```js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   constructor(props) {
-    super(props)
-    console.log('I am  the constructor and  I will be the first to run.')
+    super(props);
+    console.log("I am  the constructor and  I will be the first to run.");
     this.state = {
       day: 1,
-      congratulate: '',
-    }
+      congratulate: "",
+    };
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState)
-    console.log(nextState.day)
+    console.log(nextProps, nextState);
+    console.log(nextState.day);
     if (nextState.day > 31) {
-      return false
+      return false;
     } else {
-      return true
+      return true;
     }
   }
 
   doChallenge = () => {
     this.setState({
       day: this.state.day + 1,
-    })
-  }
+    });
+  };
   componentDidUpdate(prevProps, prevState) {
     if (prevState.day == 30) {
       this.setState({
-        congratulate: 'Congratulations,Challenge has been completed',
-      })
+        congratulate: "Congratulations,Challenge has been completed",
+      });
     }
-    console.log(prevState, prevProps)
+    console.log(prevState, prevProps);
   }
 
   render() {
     return (
-      <div className='App'>
+      <div className="App">
         <h1>React Component Life Cycle</h1>
         <h1>Calling API</h1>
         <button onClick={this.doChallenge}>Do Challenge</button>
         <p>Challenge: Day {this.state.day}</p>
         {this.state.congratulate && <h2>{this.state.congratulate}</h2>}
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ## Unmounting

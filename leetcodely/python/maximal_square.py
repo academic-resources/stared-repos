@@ -34,13 +34,23 @@ class Solution(object):
         max_size = 0
         for i in range(1, len(matrix)):
             for j in range(1, len(matrix[i])):
-                if matrix[i-1][j-1] == '1':
-                    memo[i][j] = min(memo[i - 1][j - 1], memo[i - 1][j], memo[i][j - 1]) + 1
+                if matrix[i - 1][j - 1] == "1":
+                    memo[i][j] = (
+                        min(memo[i - 1][j - 1], memo[i - 1][j], memo[i][j - 1]) + 1
+                    )
                     max_size = max(max_size, memo[i][j])
         return max_size * max_size
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.maximalSquare([['1', '0', '1', '0', '0'], ['1', '0', '1', '1', '1'], ['1', '1', '1', '1', '1'],
-                                  ['1', '0', '0', '1', '0']]))
+    print(
+        solution.maximalSquare(
+            [
+                ["1", "0", "1", "0", "0"],
+                ["1", "0", "1", "1", "1"],
+                ["1", "1", "1", "1", "1"],
+                ["1", "0", "0", "1", "0"],
+            ]
+        )
+    )

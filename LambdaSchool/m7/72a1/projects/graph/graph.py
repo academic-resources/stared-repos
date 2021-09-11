@@ -1,8 +1,10 @@
 from util import Queue, Stack
 
+
 class Graph:
 
     """Represent a graph as a dictionary of vertices mapping labels to edges."""
+
     def __init__(self):
         self.vertices = {}
 
@@ -39,12 +41,12 @@ class Graph:
         # loop through each vertex in vertices
         for vertex in self.vertices:
             # if it's not current and it's one of current's children:
-                # print and add to visited string
+            # print and add to visited string
             if vertex != current_vertex and (vertex - current_vertex == 1):
                 print(str(vertex))
                 visited_vertices = visited_vertices + ", " + str(vertex)
                 current_vertex += 1
-        # return visited string 
+        # return visited string
         return visited_vertices
 
     def dft(self, current_vertex):
@@ -76,7 +78,7 @@ class Graph:
 
         # Write a function within your Graph class that takes takes a starting node as an argument, then performs DFT. Your function should print the resulting nodes in the order they were visited. Note that there are multiple valid paths that may be printed.
         # {1: 2, 2: 3, 3: 5, 4: 6, 5: 3, 6: 3, 7: 6}
-        
+
         if current_vertex not in visited_vertices:
             # print starting/current vertex
             print(current_vertex)
@@ -100,7 +102,7 @@ class Graph:
         # adds current vertex to traversed path and visited path
         traversed_path.append(current_vertex)
         visited_vertices.append(current_vertex)
-        # loop while traversing path not empty 
+        # loop while traversing path not empty
         while traversing_path.size():
             edges = self.get_neighbors(current_vertex)
             # removes current item from queue
@@ -127,14 +129,14 @@ class Graph:
                             traversed_path.append(subsubedge)
                             return traversed_path
                         # if destination is in neighbor's neighbors:
-                            # add both neighbor and neighbor's neighbor to path and return path
+                        # add both neighbor and neighbor's neighbor to path and return path
                         if destination_vertex in subsubsubedges:
                             traversed_path.append(subsubedge)
                             traversed_path.append(destination_vertex)
                             return traversed_path
         # return path
         return traversed_path
-            
+
     def dfs(self, current_vertex, destination_vertex):
         # Write a function within your Graph class that takes takes a starting node and a destination node as an argument, then performs DFS. Your function should return a valid path (not necessarily the shortest) from the start node to the destination node. Note that there are multiple valid paths.
 
@@ -148,7 +150,7 @@ class Graph:
         while traversing_path.size() > 0:
             # get current path list
             traversed_path = traversing_path.pop()
-            # get current vertex in current list 
+            # get current vertex in current list
             vertex = traversed_path[-1]
             # if current vertex unvisited, do the following
             if vertex not in visited_vertices:
@@ -166,7 +168,13 @@ class Graph:
         # return path
         return traversed_path
 
-    def dfs_recursive(self, current_vertex, destination_vertex, visited_vertices=None, traversed_path=None):
+    def dfs_recursive(
+        self,
+        current_vertex,
+        destination_vertex,
+        visited_vertices=None,
+        traversed_path=None,
+    ):
         # Write a function within your Graph class that takes takes a starting node and a destination node as an argument, then performs DFS using recursion.  Your function should return a valid path (not necessarily the shortest) from the start node to the destination node.  Note that there are multiple valid paths.
 
         # recursive, so need to only assign visited/path if non-existent
@@ -187,14 +195,14 @@ class Graph:
             # if neighbor is unvisited, recursively run
             if neighbor not in visited_vertices:
                 recursive_path = self.dfs_recursive(
-                    neighbor, destination_vertex, visited_vertices, traversed_path)
+                    neighbor, destination_vertex, visited_vertices, traversed_path
+                )
                 # when it exists, return the recursive path
                 if recursive_path:
                     return recursive_path
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     graph = Graph()  # Instantiate your graph
     # https://github.com/LambdaSchool/Graphs/blob/master/objectives/breadth-first-search/img/bfs-visit-order.png
     graph.add_vertex(1)
@@ -216,13 +224,13 @@ if __name__ == '__main__':
     graph.add_edge(4, 6)
     graph.add_edge(0, 4)
 
-    '''
+    """
     Should print:
         {1: {2}, 2: {3, 4}, 3: {5}, 4: {6, 7}, 5: {3}, 6: {3}, 7: {1, 6}}
-    '''
+    """
     print(graph.vertices)
 
-    '''
+    """
     Valid BFT paths:
         1, 2, 3, 4, 5, 6, 7
         1, 2, 3, 4, 5, 7, 6
@@ -236,31 +244,30 @@ if __name__ == '__main__':
         1, 2, 4, 3, 6, 5, 7
         1, 2, 4, 3, 7, 6, 5
         1, 2, 4, 3, 7, 5, 6
-    '''
+    """
     graph.bft(1)
 
-    '''
+    """
     Valid DFT paths:
         1, 2, 3, 5, 4, 6, 7
         1, 2, 3, 5, 4, 7, 6
         1, 2, 4, 7, 6, 3, 5
         1, 2, 4, 6, 3, 5, 7
-    '''
+    """
 
     graph.dft(1)
     graph.dft_recursive(1)
 
-
-    '''
+    """
     Valid BFS path:
         [1, 2, 4, 6]
-    '''
+    """
     print(graph.bfs(1, 6))
 
-    '''
+    """
     Valid DFS paths:
         [1, 2, 4, 6]
         [1, 2, 4, 7, 6]
-    '''
+    """
     print(graph.dfs(1, 6))
     print(graph.dfs_recursive(1, 6))

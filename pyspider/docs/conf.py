@@ -9,16 +9,16 @@ import sys
 from unittest.mock import MagicMock
 from recommonmark.parser import CommonMarkParser
 
+
 class Mock(MagicMock):
     @classmethod
     def __getattr__(cls, name):
-            return Mock()
+        return Mock()
 
-MOCK_MODULES = ['pycurl', 'lxml', 'psycopg2']
+
+MOCK_MODULES = ["pycurl", "lxml", "psycopg2"]
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
-source_parsers = {
-        '.md': CommonMarkParser,
-}
+source_parsers = {".md": CommonMarkParser}
 
-source_suffix = ['.rst', '.md']
+source_suffix = [".rst", ".md"]

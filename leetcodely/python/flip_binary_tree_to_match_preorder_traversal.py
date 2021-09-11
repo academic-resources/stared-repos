@@ -29,6 +29,7 @@ class Solution:
                 else:
                     dfs(p.left)
                     dfs(p.right)
+
         dfs(root)
         if self.flipped and self.flipped[0] == -1:
             self.flipped = [-1]

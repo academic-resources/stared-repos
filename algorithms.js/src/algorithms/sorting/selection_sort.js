@@ -1,5 +1,5 @@
-'use strict';
-var Comparator = require('../../util/comparator');
+"use strict";
+var Comparator = require("../../util/comparator");
 /**
  * Selection sort algorithm O(n^2)
  */

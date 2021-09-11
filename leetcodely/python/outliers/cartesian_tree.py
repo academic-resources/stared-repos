@@ -5,11 +5,13 @@
 
 import sys
 
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution:
     def buildTree(self, arr):
@@ -31,4 +33,3 @@ class Solution:
             if v < min_val:
                 min_index, min_val = i, v
         return min_index
-

@@ -21,6 +21,6 @@ class Solution(object):
         return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.isStrobogrammatic('2'))
+    print(solution.isStrobogrammatic("2"))

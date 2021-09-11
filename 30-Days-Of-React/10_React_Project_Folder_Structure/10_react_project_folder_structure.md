@@ -53,13 +53,13 @@ The index.js is your getaway to connect the component with index.html.
 ```js
 // src/index.js
 // index.js
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
-const App = () => <h1>Welcome to 30 Days Of React</h1>
+const App = () => <h1>Welcome to 30 Days Of React</h1>;
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 In the above snippet of code, we have the App component. Let's create the App component to its own file, App.js
@@ -97,12 +97,12 @@ Now, let's import the App component from the App.js file to index.js.
 
 ```js
 // index.js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { App } from './App'
+import React from "react";
+import ReactDOM from "react-dom";
+import { App } from "./App";
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 We saw a named export and now let's implement it with default export. We can do it in two ways but it is recommended to use the second way if we are exporting components because sometimes we may bind a component with another higher order component.
@@ -136,38 +136,38 @@ If a component is exported as default we do not need curly bracket during import
 
 ```js
 // index.js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 If you remember, we created the following components so far and we have been putting them together. It is not easy to work like this. Now we will move them all components to a separate file.
 
 ```js
 // index.js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import asabenehImage from './images'
-import { countriesData } from './data/countries'
+import React from "react";
+import ReactDOM from "react-dom";
+import asabenehImage from "./images";
+import { countriesData } from "./data/countries";
 
 // Header component
 class Header extends React.Component {
   render() {
-    console.log(this.props.data)
+    console.log(this.props.data);
     const {
       welcome,
       title,
       subtitle,
       author: { firstName, lastName },
       date,
-    } = this.props.data
+    } = this.props.data;
 
     return (
       <header>
-        <div className='header-wrapper'>
+        <div className="header-wrapper">
           <h1>{welcome}</h1>
           <h2>{title}</h2>
           <h3>{subtitle}</h3>
@@ -177,7 +177,7 @@ class Header extends React.Component {
           <small>{date}</small>
         </div>
       </header>
-    )
+    );
   }
 }
 
@@ -191,20 +191,20 @@ const Country = ({
         {capital}
       </>
     ) : (
-      ''
-    )
-  const formatLanguage = languages.length > 1 ? `Languages` : `Language`
+      ""
+    );
+  const formatLanguage = languages.length > 1 ? `Languages` : `Language`;
   return (
-    <div className='country'>
-      <div className='country_flag'>
+    <div className="country">
+      <div className="country_flag">
         <img src={flag} alt={name} />
       </div>
-      <h3 className='country_name'>{name.toUpperCase()}</h3>
-      <div class='country_text'>
+      <h3 className="country_name">{name.toUpperCase()}</h3>
+      <div class="country_text">
         <p>{formatedCapital}</p>
         <p>
           <span>{formatLanguage}: </span>
-          {languages.join(', ')}
+          {languages.join(", ")}
         </p>
         <p>
           <span>Population: </span>
@@ -216,60 +216,60 @@ const Country = ({
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 // User Card Component
 const UserCard = () => (
-  <div className='user-card'>
-    <img src={asabenehImage} alt='asabeneh image' />
+  <div className="user-card">
+    <img src={asabenehImage} alt="asabeneh image" />
     <h2>Asabeneh Yetayeh</h2>
   </div>
-)
+);
 
 // Hexadecimal color generator
 const hexaColor = () => {
-  let str = '0123456789abcdef'
-  let color = ''
+  let str = "0123456789abcdef";
+  let color = "";
   for (let i = 0; i < 6; i++) {
-    let index = Math.floor(Math.random() * str.length)
-    color += str[index]
+    let index = Math.floor(Math.random() * str.length);
+    color += str[index];
   }
-  return '#' + color
-}
+  return "#" + color;
+};
 
-const HexaColor = () => <div>{hexaColor()}</div>
+const HexaColor = () => <div>{hexaColor()}</div>;
 
 const Message = ({ message }) => (
   <div>
     <h1>{message}</h1>
   </div>
-)
+);
 const Login = () => (
   <div>
     <h3>Please Login</h3>
   </div>
-)
+);
 const Welcome = (props) => (
   <div>
     <h1>Welcome to 30 Days Of React</h1>
   </div>
-)
+);
 
 // A button component
 const Button = ({ text, onClick, style }) => (
   <button style={style} onClick={onClick}>
     {text}
   </button>
-)
+);
 
 // TechList Component
 // class base component
 class TechList extends React.Component {
   render() {
-    const { techs } = this.props
-    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
-    return techsFormatted
+    const { techs } = this.props;
+    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>);
+    return techsFormatted;
   }
 }
 
@@ -277,20 +277,14 @@ class TechList extends React.Component {
 // Class Component
 class Main extends React.Component {
   render() {
-    const {
-      techs,
-      greetPeople,
-      handleTime,
-      loggedIn,
-      handleLogin,
-      message,
-    } = this.props
-    console.log(message)
+    const { techs, greetPeople, handleTime, loggedIn, handleLogin, message } =
+      this.props;
+    console.log(message);
 
-    const status = loggedIn ? <Welcome /> : <Login />
+    const status = loggedIn ? <Welcome /> : <Login />;
     return (
       <main>
-        <div className='main-wrapper'>
+        <div className="main-wrapper">
           <p>Prerequisite to get started react.js:</p>
           <ul>
             <TechList techs={this.props.techs} />
@@ -300,12 +294,12 @@ class Main extends React.Component {
           )}
           <div>
             <Button
-              text='Show Time'
+              text="Show Time"
               onClick={handleTime}
               style={buttonStyles}
-            />{' '}
+            />{" "}
             <Button
-              text='Greet People'
+              text="Greet People"
               onClick={greetPeople}
               style={buttonStyles}
             />
@@ -313,7 +307,7 @@ class Main extends React.Component {
           </div>
           <div style={{ margin: 30 }}>
             <Button
-              text={loggedIn ? 'Logout' : 'Login'}
+              text={loggedIn ? "Logout" : "Login"}
               style={buttonStyles}
               onClick={handleLogin}
             />
@@ -323,96 +317,96 @@ class Main extends React.Component {
           <Message message={message} />
         </div>
       </main>
-    )
+    );
   }
 }
 
 // CSS styles in JavaScript Object
 const buttonStyles = {
-  backgroundColor: '#61dbfb',
+  backgroundColor: "#61dbfb",
   padding: 10,
-  border: 'none',
+  border: "none",
   borderRadius: 5,
   margin: 3,
-  cursor: 'pointer',
+  cursor: "pointer",
   fontSize: 22,
-  color: 'white',
-  margin: '0 auto',
-}
+  color: "white",
+  margin: "0 auto",
+};
 
 // Footer Component
 // Class component
 class Footer extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
       <footer>
-        <div className='footer-wrapper'>
+        <div className="footer-wrapper">
           <p>Copyright {this.props.date.getFullYear()}</p>
         </div>
       </footer>
-    )
+    );
   }
 }
 
 class App extends React.Component {
   state = {
     loggedIn: false,
-    techs: ['HTML', 'CSS', 'JS'],
-    message: 'Click show time or Greet people to change me',
-  }
+    techs: ["HTML", "CSS", "JS"],
+    message: "Click show time or Greet people to change me",
+  };
   handleLogin = () => {
     this.setState({
       loggedIn: !this.state.loggedIn,
-    })
-  }
+    });
+  };
   showDate = (time) => {
     const months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December',
-    ]
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
 
-    const month = months[time.getMonth()].slice(0, 3)
-    const year = time.getFullYear()
-    const date = time.getDate()
-    return `${month} ${date}, ${year}`
-  }
+    const month = months[time.getMonth()].slice(0, 3);
+    const year = time.getFullYear();
+    const date = time.getDate();
+    return `${month} ${date}, ${year}`;
+  };
   handleTime = () => {
-    let message = this.showDate(new Date())
-    this.setState({ message })
-  }
+    let message = this.showDate(new Date());
+    this.setState({ message });
+  };
   greetPeople = () => {
-    let message = 'Welcome to 30 Days Of React Challenge, 2020'
-    this.setState({ message })
-  }
+    let message = "Welcome to 30 Days Of React Challenge, 2020";
+    this.setState({ message });
+  };
 
   render() {
     const data = {
-      welcome: '30 Days Of React',
-      title: 'Getting Started React',
-      subtitle: 'JavaScript Library',
+      welcome: "30 Days Of React",
+      title: "Getting Started React",
+      subtitle: "JavaScript Library",
       author: {
-        firstName: 'Asabeneh',
-        lastName: 'Yetayeh',
+        firstName: "Asabeneh",
+        lastName: "Yetayeh",
       },
-      date: 'Oct 9, 2020',
-    }
-    const techs = ['HTML', 'CSS', 'JavaScript']
+      date: "Oct 9, 2020",
+    };
+    const techs = ["HTML", "CSS", "JavaScript"];
 
     return (
-      <div className='app'>
+      <div className="app">
         {this.state.backgroundColor}
         <Header data={data} />
 
@@ -427,12 +421,12 @@ class App extends React.Component {
 
         <Footer date={new Date()} />
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ## Components Folder
@@ -474,12 +468,12 @@ Let's create components directory inside src and inside components let's create 
 
 ```js
 // src/components/header/Header.js
-import React from 'react'
+import React from "react";
 
 const Header = (props) => {
   return (
     <header>
-      <div className='header-wrapper'>
+      <div className="header-wrapper">
         <h1>{welcome}</h1>
         <h2>{title}</h2>
         <h3>{subtitle}</h3>
@@ -489,10 +483,10 @@ const Header = (props) => {
         <small>{date}</small>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 ```
 
 Similar to the Header let's move all the components to their respective files.
@@ -503,7 +497,7 @@ All the CSS files on index.html will moved into styles folder and after that eac
 Fragments are a way to avoid unnecessary parent element in JSX. Let's implement a fragment. We import fragment from react module. As you can see below, we imported React and fragment together by use a comma separation.
 
 ```js
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
 const Skills = () => {
   return (
@@ -512,21 +506,21 @@ const Skills = () => {
       <li>CSS</li>
       <li>JavaScript</li>
     </Fragment>
-  )
-}
+  );
+};
 const RequiredSkills = () => {
   return (
     <ul>
       <Skills />
     </ul>
-  )
-}
+  );
+};
 ```
 
 It is also possible to just extract the fragment module from React as shown below.
 
 ```js
-import React from 'react'
+import React from "react";
 
 const Skills = () => {
   return (
@@ -535,22 +529,22 @@ const Skills = () => {
       <li>CSS</li>
       <li>JavaScript</li>
     </React.Fragment>
-  )
-}
+  );
+};
 
 const RequiredSkills = () => {
   return (
     <ul>
       <Skills />
     </ul>
-  )
-}
+  );
+};
 ```
 
 In latest version of Reacts it also possible to write without extracting or importing using this signs(<> </>)
 
 ```js
-import React from 'react'
+import React from "react";
 
 // Recommended
 const Skills = () => {
@@ -560,39 +554,39 @@ const Skills = () => {
       <li>CSS</li>
       <li>JavaScript</li>
     </>
-  )
-}
+  );
+};
 
 const RequiredSkills = () => {
   return (
     <ul>
       <Skills />
     </ul>
-  )
-}
+  );
+};
 ```
 
 When we make a class-based component we have been using React.Component instead we can just import the component and the code will look more clean. Let's see an example.
 
 ```js
-import React from 'react'
+import React from "react";
 
 // without importing the Component
 // Not recommended
 class App extends React.Component {
   render() {
-    return <h1> 30 Days of React </h1>
+    return <h1> 30 Days of React </h1>;
   }
 }
 ```
 
 ```js
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 // This is recommended
 class App extends Component {
   render() {
-    return <h1> 30 Days of React </h1>
+    return <h1> 30 Days of React </h1>;
   }
 }
 ```
@@ -605,7 +599,7 @@ Well done. Time to do some exercises for your brain and muscles.
 
 1. What is the importance of React Folder Structure and File Naming
 2. How do you export file
-3. How do you  import file
+3. How do you import file
 4. Make a component of module and export it as named or default export
 5. Make a component or module and import it
 6. Change all the components you have to different folder structure

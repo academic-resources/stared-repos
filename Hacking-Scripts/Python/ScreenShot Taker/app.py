@@ -4,9 +4,9 @@ from tkinter import filedialog
 
 while True:
     try:
-        if keyboard.is_pressed('p'):
+        if keyboard.is_pressed("p"):
             screenshots = pyautogui.screenshot()
-            file_path = filedialog.asksaveasfilename(defaultextension='.png')
+            file_path = filedialog.asksaveasfilename(defaultextension=".png")
             screenshots.save(file_path)
             break
         else:

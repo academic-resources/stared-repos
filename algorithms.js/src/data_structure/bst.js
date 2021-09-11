@@ -1,5 +1,5 @@
-'use strict';
-var Comparator = require('../util/comparator');
+"use strict";
+var Comparator = require("../util/comparator");
 
 /**
  * Binary Search Tree
@@ -15,8 +15,10 @@ function BST(compareFn) {
   /**
    * Read-only property for the size of the tree
    */
-  Object.defineProperty(this, 'size', {
-    get: function () { return this._size; }.bind(this)
+  Object.defineProperty(this, "size", {
+    get: function () {
+      return this._size;
+    }.bind(this),
   });
 }
 
@@ -45,7 +47,7 @@ BST.prototype.insert = function (value, parent) {
     parent = this.root;
   }
 
-  var child = this._comparator.lessThan(value, parent.value) ? 'left' : 'right';
+  var child = this._comparator.lessThan(value, parent.value) ? "left" : "right";
   if (parent[child]) {
     this.insert(value, parent[child]);
   } else {
@@ -62,14 +64,12 @@ BST.prototype.contains = function (e) {
 };
 
 BST.prototype._find = function (e, root) {
-
   if (!root) {
     if (this.root) root = this.root;
     else return false;
   }
 
-  if (root.value === e)
-    return root;
+  if (root.value === e) return root;
 
   if (this._comparator.lessThan(e, root.value))
     return root.left && this._find(e, root.left);
@@ -84,9 +84,8 @@ BST.prototype._find = function (e, root) {
 BST.prototype._replaceNodeInParent = function (currNode, newNode) {
   var parent = currNode.parent;
   if (parent) {
-    parent[currNode === parent.left ? 'left' : 'right'] = newNode;
-    if (newNode)
-      newNode.parent = parent;
+    parent[currNode === parent.left ? "left" : "right"] = newNode;
+    if (newNode) newNode.parent = parent;
   } else {
     this.root = newNode;
   }
@@ -109,7 +108,7 @@ BST.prototype._findMin = function (root) {
 BST.prototype.remove = function (e) {
   var node = this._find(e);
   if (!node) {
-    throw new Error('Item not found in the tree');
+    throw new Error("Item not found in the tree");
   }
 
   if (node.left && node.right) {

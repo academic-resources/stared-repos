@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
-html, body, input, textarea, button, a {
-  font-family: 'Open Sans';
+html,
+body,
+input,
+textarea,
+button,
+a {
+  font-family: "Open Sans";
   font-size: 16px;
 }
 
@@ -9,9 +14,9 @@ button {
   border: 0;
   background: none;
   font-weight: 700;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   text-transform: uppercase;
-  transition: background-color .25s, color .25s;
+  transition: background-color 0.25s, color 0.25s;
 }
 
 button:hover {
@@ -38,12 +43,12 @@ h1 {
 
 input {
   border: 0;
-  border-bottom: 2px solid #CCC;
+  border-bottom: 2px solid #ccc;
   box-sizing: border-box;
   display: block;
   margin-bottom: 2em;
   outline: 0;
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   width: 100%;
 }
 
@@ -92,7 +97,7 @@ td.centered {
 
 .nav-entry-image {
   background-size: contain;
-  border: 4px solid #DFDFDF;
+  border: 4px solid #dfdfdf;
   border-radius: 60px;
   height: 60px;
   margin-right: 15px;

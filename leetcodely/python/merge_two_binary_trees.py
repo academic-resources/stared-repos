@@ -39,6 +39,3 @@ class Solution(object):
             else:
                 stack.append([current[0].right, current[1].right])
         return t1
-
-
-

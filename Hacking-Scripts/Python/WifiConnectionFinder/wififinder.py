@@ -1,7 +1,8 @@
 import subprocess  # to know more about subprocess please refer readme file where i have explained the details about it
-wififinalData = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles'])
-finalData = wififinalData.decode('utf-8', errors="backslashreplace")
-finalData = finalData.split('\n')
+
+wififinalData = subprocess.check_output(["netsh", "wlan", "show", "profiles"])
+finalData = wififinalData.decode("utf-8", errors="backslashreplace")
+finalData = finalData.split("\n")
 allWifiName = []
 for i in finalData:
     if "All User Profile" in i:

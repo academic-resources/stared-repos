@@ -2,7 +2,7 @@ import functools
 
 # Example 2le 1
 
-l = [1,3,5,6,2]
+l = [1, 3, 5, 6, 2]
 
 print("The sum of the list element is: ", end="")
 print(functools.reduce(lambda a, b: a + b, l))

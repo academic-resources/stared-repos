@@ -1,17 +1,17 @@
-'use strict';
+"use strict";
 
 /**
-  * Binary Search finds elements in sorted arrays in logarithmic
-  * time (O(lg n))
-  *
-  * @param Array
-  * @param Number|String
-  *
-  * @return Boolean
-  */
+ * Binary Search finds elements in sorted arrays in logarithmic
+ * time (O(lg n))
+ *
+ * @param Array
+ * @param Number|String
+ *
+ * @return Boolean
+ */
 var binarySearch = function (sortedArray, element) {
   var init = 0,
-      end = sortedArray.length - 1;
+    end = sortedArray.length - 1;
 
   while (end >= init) {
     var m = ((end - init) >> 1) + init;

@@ -1,5 +1,5 @@
-import React from 'react'
-import StepList from '../steps/step_list'
+import React from "react";
+import StepList from "../steps/step_list";
 
 const TodoDetailView = ({ todo, removeTodo }) => {
   return (
@@ -9,7 +9,7 @@ const TodoDetailView = ({ todo, removeTodo }) => {
       <StepList todo_id={todo.id} />
       <button onClick={() => removeTodo(todo)}>X</button>
     </div>
-  )
-}
+  );
+};
 
-export default TodoDetailView
+export default TodoDetailView;

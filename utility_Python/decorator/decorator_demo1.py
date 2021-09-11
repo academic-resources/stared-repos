@@ -1,20 +1,24 @@
-# 1) Decorator demo 
+# 1) Decorator demo
 def my_decorator(func):
     def wrap_func():
-        print ("********")
+        print("********")
         func()
-        print ("********")
+        print("********")
+
     return wrap_func
+
 
 # decotate hello with my_decorator
 @my_decorator
 def hello():
-    print ("helooooooooooo") 
+    print("helooooooooooo")
+
 
 # decotate bye with my_decorator
 @my_decorator
 def bye():
-    print ("see ya later") 
+    print("see ya later")
+
 
 hello()
 bye()
@@ -32,14 +36,19 @@ i.e. :
          def func()
      
 """
+
+
 def hello():
-    print ("helooooooooooo") 
+    print("helooooooooooo")
+
 
 hello2 = my_decorator(hello)
 hello2()
 
+
 def bye():
-    print ("see ya later") 
+    print("see ya later")
+
 
 bye2 = my_decorator(bye)
 bye2()

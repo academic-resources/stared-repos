@@ -1,10 +1,10 @@
-function sum () {
+function sum() {
   let result = 0;
   for (let i = 0; i < arguments.length; i++) {
-    result += arguments[i]; 
+    result += arguments[i];
   }
   console.log(result);
-  
+
   return result;
 }
 
@@ -21,7 +21,7 @@ function sum2(...args) {
 
 // console.log(sum2(1, 2, 3, 4));
 
-Function.prototype.myBind = function(ctx) {
+Function.prototype.myBind = function (ctx) {
   let bindArgs = [].slice.call(arguments, 1);
   let that = this;
   return function () {
@@ -30,15 +30,15 @@ Function.prototype.myBind = function(ctx) {
   };
 };
 
-Function.prototype.myBind2 = function(ctx, ...args) {
+Function.prototype.myBind2 = function (ctx, ...args) {
   return (...callArgs) => {
     return this.apply(ctx, args.concat(callArgs));
   };
 };
 
-function curriedSum (numArgs) {
+function curriedSum(numArgs) {
   let numbers = [];
-  return function _curriedSum (num) {
+  return function _curriedSum(num) {
     numbers.push(num);
     if (numbers.length === numArgs) {
       let sum = 0;
@@ -60,7 +60,7 @@ Function.prototype.curry = function (numArgs) {
   const that = this;
   let argsArray = [];
   console.log(numArgs);
-  return function _curry (arg) {
+  return function _curry(arg) {
     argsArray.push(arg);
     if (argsArray.length === numArgs) {
       return that(...argsArray);
@@ -82,7 +82,6 @@ Function.prototype.curry2 = function (numArgs) {
     }
   };
 };
-
 
 // const sumCurry = sum.curry(4);
 // let x = sumCurry(5);

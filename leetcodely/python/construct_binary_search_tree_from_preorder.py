@@ -5,6 +5,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
     def bstFromPreorder(self, preorder: [int]) -> TreeNode:
         root = TreeNode(preorder[0])
@@ -19,4 +20,3 @@ class Solution:
                 last.right = TreeNode(item)
                 stack.append(last.right)
         return root
-

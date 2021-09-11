@@ -16,8 +16,8 @@ def get_geolocation(url):
     """
     url = url.strip()
     if not parse.urlparse(url).scheme:
-        url = 'http://' + url
+        url = "http://" + url
     parsed = parse.urlparse(url)
-    resp = request.urlopen('http://ip-api.com/json/{}'.format(parsed.netloc))
-    data = resp.read().decode('utf-8')
+    resp = request.urlopen("http://ip-api.com/json/{}".format(parsed.netloc))
+    data = resp.read().decode("utf-8")
     return json.loads(data)

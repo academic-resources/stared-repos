@@ -5,6 +5,7 @@ from python.ds.binary_search_tree import BinarySearchTree
 
 # Definition for a binary tree node.
 
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -25,17 +26,25 @@ class Solution(object):
             if not root:
                 return
             if root.left:
-                closest = root.val if abs(root.val - target) <= abs(closest - target) else closest
+                closest = (
+                    root.val
+                    if abs(root.val - target) <= abs(closest - target)
+                    else closest
+                )
                 helper(root.left, target, closest)
             if root.right:
-                closest = root.val if abs(root.val - target) <= abs(closest - target) else closest
+                closest = (
+                    root.val
+                    if abs(root.val - target) <= abs(closest - target)
+                    else closest
+                )
                 helper(root.left, target, closest)
 
         helper(root, target, closest)
         return closest
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     bst = BinarySearchTree()
     bst.insert(1)
     bst.insert(2)

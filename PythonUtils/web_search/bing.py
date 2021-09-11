@@ -20,12 +20,12 @@ def search(query):
     for i in range(MAX_PAGES):
 
         # Generate the query for the next page
-        query = query.replace(' ', '%20')
+        query = query.replace(" ", "%20")
         first = i * 10 + 1
-        url = 'http://www.bing.com/search?q=%s&first=%d' % (query, first)
+        url = "http://www.bing.com/search?q=%s&first=%d" % (query, first)
 
-        user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
-        headers = {'User-Agent' : user_agent}
+        user_agent = "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)"
+        headers = {"User-Agent": user_agent}
 
         try:
             req = urllib.request.Request(url, None, headers)
@@ -38,7 +38,7 @@ def search(query):
             break
 
         # Get the search results, clean the HTML and fix encoding issues
-        snippets = [x.find('p') for x in soup.findAll('li', { 'class' : 'b_algo' })]
+        snippets = [x.find("p") for x in soup.findAll("li", {"class": "b_algo"})]
         results.extend(map(clean_html, snippets))
 
     return results
@@ -50,7 +50,7 @@ def clean_html(text):
     :param text: the html text
     :return: the clean text
     """
-    text = re.sub(r'<.*?>', '', str(text))
-    text = re.sub(r'[\x80-\xff]', '', text)
+    text = re.sub(r"<.*?>", "", str(text))
+    text = re.sub(r"[\x80-\xff]", "", text)
     text = unescape(text)
     return text

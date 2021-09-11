@@ -11,8 +11,8 @@ class Solution(object):
         if n <= 0:
             return []
         if n == 1:
-            return ['0', '1', '8']
-        base_list = ['11', '69', '96', '88', '00']
+            return ["0", "1", "8"]
+        base_list = ["11", "69", "96", "88", "00"]
 
         # if n <= 0:
         #     return []

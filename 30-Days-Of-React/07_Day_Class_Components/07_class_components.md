@@ -42,7 +42,7 @@ class Component {
 // This how we make class based components by inheriting from the parent
 class Child extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 }
 ```
@@ -52,13 +52,13 @@ Functional React component
 ```js
 // index.js
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 // Header Component
 // Functional component
 const Header = () => (
   <header>
-    <div className='header-wrapper'>
+    <div className="header-wrapper">
       <h1>Welcome to 30 Days Of React</h1>
       <h2>Getting Started React</h2>
       <h3>JavaScript Library</h3>
@@ -66,9 +66,9 @@ const Header = () => (
       <small>Oct 6, 2020</small>
     </div>
   </header>
-)
-const rootElement = document.getElementById('root')
-ReactDOM.render(<Header />, rootElement)
+);
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Header />, rootElement);
 ```
 
 Class based React component is a child of React.Component and it has a built-in render method and it may have a constructor.
@@ -76,15 +76,15 @@ Class based React component is a child of React.Component and it has a built-in 
 ```js
 //index.js
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
 // class based component
 class Header extends React.Component {
   render() {
     return (
       <header>
-        <div className='header-wrapper'>
+        <div className="header-wrapper">
           <h1>Welcome to 30 Days Of React</h1>
           <h2>Getting Started React</h2>
           <h3>JavaScript Library</h3>
@@ -92,12 +92,12 @@ class Header extends React.Component {
           <small>Oct 7, 2020</small>
         </div>
       </header>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<Header />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Header />, rootElement);
 ```
 
 Let's see the above component with a constructor
@@ -105,19 +105,19 @@ Let's see the above component with a constructor
 ```js
 //index.js
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
 // class base component
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     // the code inside the constructor run before any other code
   }
   render() {
     return (
       <header>
-        <div className='header-wrapper'>
+        <div className="header-wrapper">
           <h1>Welcome to 30 Days Of React</h1>
           <h2>Getting Started React</h2>
           <h3>JavaScript Library</h3>
@@ -125,11 +125,11 @@ class Header extends React.Component {
           <small>Oct 7, 2020</small>
         </div>
       </header>
-    )
+    );
   }
 }
-const rootElement = document.getElementById('root')
-ReactDOM.render(<Header />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Header />, rootElement);
 ```
 
 Let's change all the functional component to class based components
@@ -138,21 +138,21 @@ Let's change all the functional component to class based components
 // TechList Component
 // functional component
 const TechList = () => {
-  const techs = ['HTML', 'CSS', 'JavaScript']
-  const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
-  return techsFormatted
-}
+  const techs = ["HTML", "CSS", "JavaScript"];
+  const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>);
+  return techsFormatted;
+};
 
 // TechList Component
 // class base component
 class TechList extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
-    const techs = ['HTML', 'CSS', 'JavaScript']
-    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
-    return techsFormatted
+    const techs = ["HTML", "CSS", "JavaScript"];
+    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>);
+    return techsFormatted;
   }
 }
 
@@ -160,32 +160,32 @@ class TechList extends React.Component {
 // Functional Component
 const Main = () => (
   <main>
-    <div className='main-wrapper'>
+    <div className="main-wrapper">
       <p>Prerequisite to get started react.js:</p>
       <ul>
         <TechList />
       </ul>
     </div>
   </main>
-)
+);
 
 // Main Component
 // Class Component
 class Main extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
       <main>
-        <div className='main-wrapper'>
+        <div className="main-wrapper">
           <p>Prerequisite to get started react.js:</p>
           <ul>
             <TechList />
           </ul>
         </div>
       </main>
-    )
+    );
   }
 }
 
@@ -193,53 +193,53 @@ class Main extends React.Component {
 // Functional component
 const Footer = () => (
   <footer>
-    <div className='footer-wrapper'>
+    <div className="footer-wrapper">
       <p>Copyright 2020</p>
     </div>
   </footer>
-)
+);
 
 // Footer Component
 // Class component
 class Footer extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
       <footer>
-        <div className='footer-wrapper'>
+        <div className="footer-wrapper">
           <p>Copyright 2020</p>
         </div>
       </footer>
-    )
+    );
   }
 }
 
 // The App, or the parent or the container component
 // Functional Component
 const App = () => (
-  <div className='app'>
+  <div className="app">
     <Header />
     <Main />
     <Footer />
   </div>
-)
+);
 
 // The App, or the parent or the container component
 // Class Component
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
-      <div className='app'>
+      <div className="app">
         <Header />
         <Main />
         <Footer />
       </div>
-    )
+    );
   }
 }
 ```
@@ -249,19 +249,19 @@ Let's put all the class based components together in one file.
 ```js
 //index.js
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
 // class base component
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     // the code inside the constructor run before any other code
   }
   render() {
     return (
       <header>
-        <div className='header-wrapper'>
+        <div className="header-wrapper">
           <h1>Welcome to 30 Days Of React</h1>
           <h2>Getting Started React</h2>
           <h3>JavaScript Library</h3>
@@ -269,7 +269,7 @@ class Header extends React.Component {
           <small>Oct 7, 2020</small>
         </div>
       </header>
-    )
+    );
   }
 }
 
@@ -277,12 +277,12 @@ class Header extends React.Component {
 // class base component
 class TechList extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
-    const techs = ['HTML', 'CSS', 'JavaScript']
-    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
-    return techsFormatted
+    const techs = ["HTML", "CSS", "JavaScript"];
+    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>);
+    return techsFormatted;
   }
 }
 
@@ -290,19 +290,19 @@ class TechList extends React.Component {
 // Class Component
 class Main extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
       <main>
-        <div className='main-wrapper'>
+        <div className="main-wrapper">
           <p>Prerequisite to get started react.js:</p>
           <ul>
             <TechList />
           </ul>
         </div>
       </main>
-    )
+    );
   }
 }
 
@@ -310,16 +310,16 @@ class Main extends React.Component {
 // Class component
 class Footer extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
       <footer>
-        <div className='footer-wrapper'>
+        <div className="footer-wrapper">
           <p>Copyright 2020</p>
         </div>
       </footer>
-    )
+    );
   }
 }
 
@@ -327,21 +327,21 @@ class Footer extends React.Component {
 // Class Component
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
-      <div className='app'>
+      <div className="app">
         <Header />
         <Main />
         <Footer />
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ## Accessing props in Class components
@@ -351,19 +351,19 @@ We stated that props is a means to send data from on component to another or we 
 ```js
 // index.js
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
 // class based component
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     // the code inside the constructor run before any other code
   }
   render() {
     return (
       <header>
-        <div className='header-wrapper'>
+        <div className="header-wrapper">
           <h1>{this.props.data.welcome}</h1>
           <h2>{this.props.data.title}</h2>
           <h3>
@@ -372,30 +372,30 @@ class Header extends React.Component {
           <small>{this.props.data.date}</small>
         </div>
       </header>
-    )
+    );
   }
 }
 const App = () => {
   const data = {
-    welcome: 'Welcome to 30 Days Of React',
-    title: 'Getting Started React',
-    subtitle: 'JavaScript Library',
+    welcome: "Welcome to 30 Days Of React",
+    title: "Getting Started React",
+    subtitle: "JavaScript Library",
     author: {
-      firstName: 'Asabeneh',
-      lastName: 'Yetayeh',
+      firstName: "Asabeneh",
+      lastName: "Yetayeh",
     },
-    date: 'Oct 7, 2020',
-  }
+    date: "Oct 7, 2020",
+  };
 
   return (
-    <div className='app'>
+    <div className="app">
       <Header data={data} />
     </div>
-  )
-}
+  );
+};
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 As you can see in the above example, to get the data out from props we have write _props.data_ every time. We can avoid this repetition using destructuring.
@@ -403,28 +403,28 @@ As you can see in the above example, to get the data out from props we have writ
 ```js
 // index.js
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
 // class based component
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     // the code inside the constructor run before any other code
   }
   render() {
-    console.log(this.props.data)
+    console.log(this.props.data);
     const {
       welcome,
       title,
       subtitle,
       author: { firstName, lastName },
       date,
-    } = this.props.data
+    } = this.props.data;
 
     return (
       <header>
-        <div className='header-wrapper'>
+        <div className="header-wrapper">
           <h1>{welcome}</h1>
           <h2>{title}</h2>
           <h3>{subtitle}</h3>
@@ -434,30 +434,30 @@ class Header extends React.Component {
           <small>{date}</small>
         </div>
       </header>
-    )
+    );
   }
 }
 const App = () => {
   const data = {
-    welcome: 'Welcome to 30 Days Of React',
-    title: 'Getting Started React',
-    subtitle: 'JavaScript Library',
+    welcome: "Welcome to 30 Days Of React",
+    title: "Getting Started React",
+    subtitle: "JavaScript Library",
     author: {
-      firstName: 'Asabeneh',
-      lastName: 'Yetayeh',
+      firstName: "Asabeneh",
+      lastName: "Yetayeh",
     },
-    date: 'Oct 6, 2020',
-  }
+    date: "Oct 6, 2020",
+  };
 
   return (
-    <div className='app'>
+    <div className="app">
       <Header data={data} />
     </div>
-  )
-}
+  );
+};
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 As you can see, the above code cleaner than the previous. Now, let's clean all the components we have and put all together.
@@ -465,28 +465,28 @@ As you can see, the above code cleaner than the previous. Now, let's clean all t
 ```js
 // index.js
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
 // class based component
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     // the code inside the constructor run before any other code
   }
   render() {
-    console.log(this.props.data)
+    console.log(this.props.data);
     const {
       welcome,
       title,
       subtitle,
       author: { firstName, lastName },
       date,
-    } = this.props.data
+    } = this.props.data;
 
     return (
       <header>
-        <div className='header-wrapper'>
+        <div className="header-wrapper">
           <h1>{welcome}</h1>
           <h2>{title}</h2>
           <h3>{subtitle}</h3>
@@ -496,7 +496,7 @@ class Header extends React.Component {
           <small>{date}</small>
         </div>
       </header>
-    )
+    );
   }
 }
 
@@ -504,12 +504,12 @@ class Header extends React.Component {
 // class base component
 class TechList extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
-    const { techs } = this.props
-    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
-    return techsFormatted
+    const { techs } = this.props;
+    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>);
+    return techsFormatted;
   }
 }
 
@@ -517,19 +517,19 @@ class TechList extends React.Component {
 // Class Component
 class Main extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
       <main>
-        <div className='main-wrapper'>
+        <div className="main-wrapper">
           <p>Prerequisite to get started react.js:</p>
           <ul>
             <TechList techs={this.props.techs} />
           </ul>
         </div>
       </main>
-    )
+    );
   }
 }
 
@@ -537,45 +537,45 @@ class Main extends React.Component {
 // Class component
 class Footer extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
       <footer>
-        <div className='footer-wrapper'>
+        <div className="footer-wrapper">
           <p>Copyright {this.props.date.getFullYear()}</p>
         </div>
       </footer>
-    )
+    );
   }
 }
 
 class App extends React.Component {
   render() {
     const data = {
-      welcome: 'Welcome to 30 Days Of React',
-      title: 'Getting Started React',
-      subtitle: 'JavaScript Library',
+      welcome: "Welcome to 30 Days Of React",
+      title: "Getting Started React",
+      subtitle: "JavaScript Library",
       author: {
-        firstName: 'Asabeneh',
-        lastName: 'Yetayeh',
+        firstName: "Asabeneh",
+        lastName: "Yetayeh",
       },
-      date: 'Oct 7, 2020',
-    }
-    const techs = ['HTML', 'CSS', 'JavaScript']
+      date: "Oct 7, 2020",
+    };
+    const techs = ["HTML", "CSS", "JavaScript"];
 
     return (
-      <div className='app'>
+      <div className="app">
         <Header data={data} />
         <Main techs={techs} />
         <Footer date={new Date()} />
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 ## Methods in Class based component
@@ -587,18 +587,18 @@ Let's add a method on this component.
 ```js
 //index.js
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
 // class based component
 class Header extends React.Component {
   greetPeople = () => {
-    alert('Welcome to 30 Days Of React Challenge, 2020')
-  }
+    alert("Welcome to 30 Days Of React Challenge, 2020");
+  };
   render() {
     return (
       <header>
-        <div className='header-wrapper'>
+        <div className="header-wrapper">
           <h1>Welcome to 30 Days Of React</h1>
           <h2>Getting Started React</h2>
           <h3>JavaScript Library</h3>
@@ -607,12 +607,12 @@ class Header extends React.Component {
           <button onClick={this.greetPeople}> Greet </button>
         </div>
       </header>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<Header />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Header />, rootElement);
 ```
 
 The invoking or calling of the method triggers when the event occurs. Therefore, whenever you pass a method to an event listener do not invoke the method.
@@ -622,61 +622,61 @@ Now, let's the code we had add all the necessary methods.
 ```js
 // index.js
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import asabenehImage from './images/asabeneh.jpg'
+import React from "react";
+import ReactDOM from "react-dom";
+import asabenehImage from "./images/asabeneh.jpg";
 
 // Fuction to show month date year
 
 // User Card Component
 const UserCard = ({ user: { firstName, lastName, image } }) => (
-  <div className='user-card'>
+  <div className="user-card">
     <img src={image} alt={firstName} />
     <h2>
       {firstName}
       {lastName}
     </h2>
   </div>
-)
+);
 
 // A button component
 const Button = ({ text, onClick, style }) => (
   <button style={style} onClick={onClick}>
     {text}
   </button>
-)
+);
 
 // CSS styles in JavaScript Object
 const buttonStyles = {
-  backgroundColor: '#61dbfb',
+  backgroundColor: "#61dbfb",
   padding: 10,
-  border: 'none',
+  border: "none",
   borderRadius: 5,
   margin: 3,
-  cursor: 'pointer',
+  cursor: "pointer",
   fontSize: 18,
-  color: 'white',
-}
+  color: "white",
+};
 
 // class based component
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     // the code inside the constructor run before any other code
   }
   render() {
-    console.log(this.props.data)
+    console.log(this.props.data);
     const {
       welcome,
       title,
       subtitle,
       author: { firstName, lastName },
       date,
-    } = this.props.data
+    } = this.props.data;
 
     return (
       <header>
-        <div className='header-wrapper'>
+        <div className="header-wrapper">
           <h1>{welcome}</h1>
           <h2>{title}</h2>
           <h3>{subtitle}</h3>
@@ -686,7 +686,7 @@ class Header extends React.Component {
           <small>{date}</small>
         </div>
       </header>
-    )
+    );
   }
 }
 
@@ -694,12 +694,12 @@ class Header extends React.Component {
 // class base component
 class TechList extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
-    const { techs } = this.props
-    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
-    return techsFormatted
+    const { techs } = this.props;
+    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>);
+    return techsFormatted;
   }
 }
 
@@ -707,30 +707,30 @@ class TechList extends React.Component {
 // Class Component
 class Main extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
       <main>
-        <div className='main-wrapper'>
+        <div className="main-wrapper">
           <p>Prerequisite to get started react.js:</p>
           <ul>
             <TechList techs={this.props.techs} />
           </ul>
           <UserCard user={this.props.user} />
           <Button
-            text='Greet People'
+            text="Greet People"
             onClick={this.props.greetPeople}
             style={buttonStyles}
           />
           <Button
-            text='Show Time'
+            text="Show Time"
             onClick={this.props.handleTime}
             style={buttonStyles}
           />
         </div>
       </main>
-    )
+    );
   }
 }
 
@@ -738,65 +738,65 @@ class Main extends React.Component {
 // Class component
 class Footer extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
       <footer>
-        <div className='footer-wrapper'>
+        <div className="footer-wrapper">
           <p>Copyright {this.props.date.getFullYear()}</p>
         </div>
       </footer>
-    )
+    );
   }
 }
 
 class App extends React.Component {
   showDate = (time) => {
     const months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December',
-    ]
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
 
-    const month = months[time.getMonth()].slice(0, 3)
-    const year = time.getFullYear()
-    const date = time.getDate()
-    return ` ${month} ${date}, ${year}`
-  }
+    const month = months[time.getMonth()].slice(0, 3);
+    const year = time.getFullYear();
+    const date = time.getDate();
+    return ` ${month} ${date}, ${year}`;
+  };
   handleTime = () => {
-    alert(this.showDate(new Date()))
-  }
+    alert(this.showDate(new Date()));
+  };
   greetPeople = () => {
-    alert('Welcome to 30 Days Of React Challenge, 2020')
-  }
+    alert("Welcome to 30 Days Of React Challenge, 2020");
+  };
   render() {
     const data = {
-      welcome: 'Welcome to 30 Days Of React',
-      title: 'Getting Started React',
-      subtitle: 'JavaScript Library',
+      welcome: "Welcome to 30 Days Of React",
+      title: "Getting Started React",
+      subtitle: "JavaScript Library",
       author: {
-        firstName: 'Asabeneh',
-        lastName: 'Yetayeh',
+        firstName: "Asabeneh",
+        lastName: "Yetayeh",
       },
-      date: 'Oct 7, 2020',
-    }
-    const techs = ['HTML', 'CSS', 'JavaScript']
+      date: "Oct 7, 2020",
+    };
+    const techs = ["HTML", "CSS", "JavaScript"];
 
     // copying the author from data object to user variable using spread operator
-    const user = { ...data.author, image: asabenehImage }
+    const user = { ...data.author, image: asabenehImage };
 
     return (
-      <div className='app'>
+      <div className="app">
         <Header data={data} />
         <Main
           user={user}
@@ -807,12 +807,12 @@ class App extends React.Component {
 
         <Footer date={new Date()} />
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 ```
 
 Most of the time the container or the parent component can be written as class component and others as functional or presentational components. Data usually flows from parent components to child component and it is unidirectional. However, the latest version of react can allow us to write every component in our application only with functional components. This was impossible in previous versions.

@@ -3,6 +3,7 @@
 If there isn't one, return 0 instead."""
 import sys
 
+
 class Solution(object):
     def maxSubArrayLen(self, nums, k):
         """
@@ -17,7 +18,7 @@ class Solution(object):
             total += cumulative_sum[i]
             cumulative_sum[i] = total
 
-        i, j = 0, len(nums)-1
+        i, j = 0, len(nums) - 1
         while i < j:
             curr = nums[j] - nums[i]
             if curr < k:

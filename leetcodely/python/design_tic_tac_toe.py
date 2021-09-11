@@ -13,7 +13,7 @@ class TicTacToe(object):
         :type n: int
         """
         self.size = n
-        self.board = [['_' for _ in range(n)] for _ in range(n)]
+        self.board = [["_" for _ in range(n)] for _ in range(n)]
 
     def move(self, row, col, player):
         """
@@ -30,10 +30,14 @@ class TicTacToe(object):
         :type player: int
         :rtype: int
         """
-        char = 'X' if player == 1 else '0'
+        char = "X" if player == 1 else "0"
         self.board[row][col] = char
-        if self.row_check(char, col) or self.col_check(char, row) or self.right_diagonal_check(
-                char) or self.left_diagonal_check(char):
+        if (
+            self.row_check(char, col)
+            or self.col_check(char, row)
+            or self.right_diagonal_check(char)
+            or self.left_diagonal_check(char)
+        ):
             return player
         return 0
 
@@ -52,27 +56,26 @@ class TicTacToe(object):
     def right_diagonal_check(self, char):
         j = 0
         for i in range(self.size):
-                if self.board[i][j] != char:
-                    return False
-                j += 1
+            if self.board[i][j] != char:
+                return False
+            j += 1
         return True
 
     def left_diagonal_check(self, char):
-        i = self.size -1
+        i = self.size - 1
         for j in range(self.size):
             if self.board[i][j] != char:
                 return False
             i -= 1
         return True
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     t = TicTacToe(2)
-    #t.move(2)
-    print(t.move(0,1,1))
-    print(t.move(1,1,2))
-    print(t.move(1,0,1))
-
-
+    # t.move(2)
+    print(t.move(0, 1, 1))
+    print(t.move(1, 1, 2))
+    print(t.move(1, 0, 1))
 
 
 # Your TicTacToe object will be instantiated and called as such:

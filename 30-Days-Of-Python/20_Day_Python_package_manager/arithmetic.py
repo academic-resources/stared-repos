@@ -6,7 +6,7 @@ def add_numbers(*args):
 
 
 def subtract(a, b):
-    return (a - b)
+    return a - b
 
 
 def multiple(a, b):

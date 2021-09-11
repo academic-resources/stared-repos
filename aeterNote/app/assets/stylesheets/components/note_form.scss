@@ -3,14 +3,12 @@
 }
 
 .hide-notebook-form {
-  display:none;
+  display: none;
 }
 
 .hide-delete-warning {
   display: none;
 }
-
-
 
 .form-modal {
   top: 0;
@@ -22,8 +20,6 @@
   background-color: rgba(255, 255, 255, 0.9);
   // display: flex;
   // flex-direction: column;
-
-
 
   .container {
     margin-top: 180px;
@@ -123,20 +119,15 @@
       padding: 0;
     }
 
-
     .notebook-cancel {
       color: $EvernoteDarkGray;
       border: 1px solid $EvernoteMediumGray;
       border-radius: 5px;
       background-color: $EvernoteMediumLightGray;
       margin-right: 4px;
-
-
     }
     .notebook-cancel:hover {
-
       background-color: $EvernoteMediumGray;
-
     }
 
     .notebook-submit {
@@ -150,7 +141,6 @@
     .notebook-submit:hover {
       background-color: $EvernoteHoverGreen;
     }
-
   }
 }
 

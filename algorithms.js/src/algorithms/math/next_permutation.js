@@ -1,7 +1,6 @@
-'use strict';
+"use strict";
 
-var Comparator = require('../../util/comparator');
-
+var Comparator = require("../../util/comparator");
 
 /**
  * Narayana's algorithm computes the subsequent permutation
@@ -39,13 +38,12 @@ var nextPermutation = function (array, compareFn) {
   array[successor] = pivotValue;
 
   // Reverse the descending part.
-  for (var left = pivot, right = array.length; ++left < --right;) {
+  for (var left = pivot, right = array.length; ++left < --right; ) {
     var temp = array[left];
     array[left] = array[right];
     array[right] = temp;
   }
   return true;
 };
-
 
 module.exports = nextPermutation;

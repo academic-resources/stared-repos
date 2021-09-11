@@ -14,7 +14,7 @@ class Interval(object):
         self.end = e
 
     def __repr__(self):
-        return '[' + str(self.start) + ', ' + str(self.end) + ']'
+        return "[" + str(self.start) + ", " + str(self.end) + "]"
 
 
 class Solution(object):
@@ -40,6 +40,10 @@ class Solution(object):
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.merge([Interval(1, 3), Interval(2, 6), Interval(8, 10), Interval(15, 18)]))
+    print(
+        solution.merge(
+            [Interval(1, 3), Interval(2, 6), Interval(8, 10), Interval(15, 18)]
+        )
+    )

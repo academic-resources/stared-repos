@@ -21,5 +21,3 @@ class Solution(object):
         if not right:
             return left
         return root
-
-

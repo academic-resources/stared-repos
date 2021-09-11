@@ -5,13 +5,14 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('buyersguide', '0007_auto_20201210_1827'),
-    ]
+    dependencies = [("buyersguide", "0007_auto_20201210_1827")]
 
     operations = [
         migrations.AlterModelOptions(
-            name='update',
-            options={'verbose_name': 'Buyers Guide Product Update', 'verbose_name_plural': 'Buyers Guide Product Updates'},
-        ),
+            name="update",
+            options={
+                "verbose_name": "Buyers Guide Product Update",
+                "verbose_name_plural": "Buyers Guide Product Updates",
+            },
+        )
     ]

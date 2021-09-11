@@ -13,7 +13,8 @@ The read function may be called multiple times."""
 # @param buf, a list of characters
 # @return an integer
 def read4(buf):
-     pass
+    pass
+
 
 class Solution(object):
     def read(self, buf, n):

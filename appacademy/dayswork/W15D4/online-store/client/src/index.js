@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import * as serviceWorker from "./serviceWorker";
 
 import ApolloClient from "apollo-client";
 import { InMemoryCache } from "apollo-cache-inmemory";
@@ -10,18 +10,18 @@ import { ApolloProvider } from "react-apollo";
 import { onError } from "apollo-link-error";
 import { ApolloLink } from "apollo-link";
 
-import { VERIFY_USER } from './graphql/mutations'
+import { VERIFY_USER } from "./graphql/mutations";
 
 const cache = new InMemoryCache({
-  dataIdFromObject: object => object._id || null
+  dataIdFromObject: (object) => object._id || null,
 });
 
 const httpLink = createHttpLink({
   uri: "http://localhost:5000/graphql",
-    headers: {
+  headers: {
     // pass our token into the header of each request
-    authorization: localStorage.getItem("auth-token")
-  }
+    authorization: localStorage.getItem("auth-token"),
+  },
 });
 
 const errorLink = onError(({ graphQLErrors }) => {
@@ -34,15 +34,15 @@ const client = new ApolloClient({
   onError: ({ networkError, graphQLErrors }) => {
     console.log("graphQLErrors", graphQLErrors);
     console.log("networkError", networkError);
-  }
+  },
 });
 
 const token = localStorage.getItem("auth-token");
 
 cache.writeData({
   data: {
-    isLoggedIn: Boolean(token)
-  }
+    isLoggedIn: Boolean(token),
+  },
 });
 
 if (token) {
@@ -51,8 +51,8 @@ if (token) {
     .then(({ data }) => {
       cache.writeData({
         data: {
-          isLoggedIn: data.verifyUser.loggedIn
-        }
+          isLoggedIn: data.verifyUser.loggedIn,
+        },
       });
     });
 }

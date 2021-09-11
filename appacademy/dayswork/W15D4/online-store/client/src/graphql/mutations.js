@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import gql from "graphql-tag";
 
 export const LOGIN_USER = gql`
   mutation LoginUser($email: String!, $password: String!) {
@@ -6,7 +6,7 @@ export const LOGIN_USER = gql`
       token
       loggedIn
     }
-}
+  }
 `;
 
 export const REGISTER = gql`
@@ -26,13 +26,13 @@ export const VERIFY_USER = gql`
   }
 `;
 
-export const CREATE_PRODUCT = gql `
-    mutation NewProduct($name: String!, $description: String!, $category: ID!){
-        newProduct(name: $name, description: $description, category: $category){
-            _id
-            name
-            description
-            weight
-        }
+export const CREATE_PRODUCT = gql`
+  mutation NewProduct($name: String!, $description: String!, $category: ID!) {
+    newProduct(name: $name, description: $description, category: $category) {
+      _id
+      name
+      description
+      weight
+    }
   }
 `;

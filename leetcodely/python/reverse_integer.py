@@ -8,7 +8,7 @@ class Solution(object):
         :rtype: int
         """
 
-        if str(x)[0] == '-':
+        if str(x)[0] == "-":
             res = -int(str(x)[1:][::-1])
         else:
             res = int(str(x)[::-1])
@@ -19,6 +19,6 @@ class Solution(object):
             return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.reverse(-123))

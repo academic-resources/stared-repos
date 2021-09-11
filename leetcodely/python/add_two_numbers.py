@@ -32,7 +32,3 @@ class Solution(object):
             p.next = ListNode(val)
             p = p.next
         return root.next
-
-
-
-

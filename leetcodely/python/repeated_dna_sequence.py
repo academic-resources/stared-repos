@@ -18,10 +18,10 @@ class Solution(object):
         """
         if not s or len(s) < 10:
             return []
-        sequence_map = collections.Counter([s[i:i+10] for i in range(len(s))])
+        sequence_map = collections.Counter([s[i : i + 10] for i in range(len(s))])
         return [k for k, v in sequence_map.items() if v > 1]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.findRepeatedDnaSequences("AAAAAAAAAAA"))

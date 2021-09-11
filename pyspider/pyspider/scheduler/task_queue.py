@@ -17,7 +17,7 @@ except ImportError:
 from .token_bucket import Bucket
 from six.moves import queue as Queue
 
-logger = logging.getLogger('scheduler')
+logger = logging.getLogger("scheduler")
 
 try:
     cmp
@@ -39,7 +39,7 @@ class AtomInt(object):
 
 
 class InQueueTask(DictMixin):
-    __slots__ = ('taskid', 'priority', 'exetime', 'sequence')
+    __slots__ = ("taskid", "priority", "exetime", "sequence")
     __getitem__ = lambda *x: getattr(*x)
     __setitem__ = lambda *x: setattr(*x)
     __iter__ = lambda self: iter(self.__slots__)
@@ -67,11 +67,11 @@ class InQueueTask(DictMixin):
 
 
 class PriorityTaskQueue(Queue.Queue):
-    '''
+    """
     TaskQueue
 
     Same taskid items will been merged
-    '''
+    """
 
     def _init(self, maxsize):
         self.queue = []
@@ -129,9 +129,10 @@ class PriorityTaskQueue(Queue.Queue):
 
 
 class TaskQueue(object):
-    '''
+    """
     task queue for scheduler, have a priority queue and a time queue for delayed tasks
-    '''
+    """
+
     processing_timeout = 10 * 60
 
     def __init__(self, rate=0, burst=0):
@@ -158,18 +159,22 @@ class TaskQueue(object):
         self.bucket.burst = value
 
     def check_update(self):
-        '''
+        """
         Check time queue and processing queue
 
         put tasks to priority queue when execute time arrived or process timeout
-        '''
+        """
         self._check_time_queue()
         self._check_processing()
 
     def _check_time_queue(self):
         now = time.time()
         self.mutex.acquire()
-        while self.time_queue.qsize() and self.time_queue.top and self.time_queue.top.exetime < now:
+        while (
+            self.time_queue.qsize()
+            and self.time_queue.top
+            and self.time_queue.top.exetime < now
+        ):
             task = self.time_queue.get_nowait()  # type: InQueueTask
             task.exetime = 0
             self.priority_queue.put(task)
@@ -178,7 +183,11 @@ class TaskQueue(object):
     def _check_processing(self):
         now = time.time()
         self.mutex.acquire()
-        while self.processing.qsize() and self.processing.top and self.processing.top.exetime < now:
+        while (
+            self.processing.qsize()
+            and self.processing.top
+            and self.processing.top.exetime < now
+        ):
             task = self.processing.get_nowait()
             if task.taskid is None:
                 continue
@@ -225,7 +234,7 @@ class TaskQueue(object):
         self.mutex.release()
 
     def get(self):
-        '''Get a task from queue when bucket available'''
+        """Get a task from queue when bucket available"""
         if self.bucket.get() < 1:
             return None
         now = time.time()
@@ -242,7 +251,7 @@ class TaskQueue(object):
         return task.taskid
 
     def done(self, taskid):
-        '''Mark task done'''
+        """Mark task done"""
         if taskid in self.processing:
             self.mutex.acquire()
             if taskid in self.processing:
@@ -267,12 +276,16 @@ class TaskQueue(object):
         return True
 
     def size(self):
-        return self.priority_queue.qsize() + self.time_queue.qsize() + self.processing.qsize()
+        return (
+            self.priority_queue.qsize()
+            + self.time_queue.qsize()
+            + self.processing.qsize()
+        )
 
     def is_processing(self, taskid):
-        '''
+        """
         return True if taskid is in processing
-        '''
+        """
         return taskid in self.processing and self.processing[taskid].taskid
 
     def __len__(self):
@@ -286,17 +299,17 @@ class TaskQueue(object):
         return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     task_queue = TaskQueue()
     task_queue.processing_timeout = 0.1
-    task_queue.put('a3', 3, time.time() + 0.1)
-    task_queue.put('a1', 1)
-    task_queue.put('a2', 2)
-    assert task_queue.get() == 'a2'
+    task_queue.put("a3", 3, time.time() + 0.1)
+    task_queue.put("a1", 1)
+    task_queue.put("a2", 2)
+    assert task_queue.get() == "a2"
     time.sleep(0.1)
     task_queue._check_time_queue()
-    assert task_queue.get() == 'a3'
-    assert task_queue.get() == 'a1'
+    assert task_queue.get() == "a3"
+    assert task_queue.get() == "a1"
     task_queue._check_processing()
-    assert task_queue.get() == 'a2'
+    assert task_queue.get() == "a2"
     assert len(task_queue) == 0

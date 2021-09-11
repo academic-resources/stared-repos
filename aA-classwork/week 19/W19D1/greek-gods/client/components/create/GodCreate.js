@@ -1,20 +1,20 @@
-import React from 'react';
-import { Mutation } from 'react-apollo';
-import Mutations from '../../graphql/mutations';
+import React from "react";
+import { Mutation } from "react-apollo";
+import Mutations from "../../graphql/mutations";
 const { NEW_GOD } = Mutations;
-import Queries from '../../graphql/queries';
+import Queries from "../../graphql/queries";
 const { FETCH_GODS } = Queries;
 
 class GodCreate extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: '', type: 'god', description: '', message: '' };
+    this.state = { name: "", type: "god", description: "", message: "" };
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
-    return e => this.setState({ [field]: e.target.value });
+    return (e) => this.setState({ [field]: e.target.value });
   }
 
   handleSubmit(e, newGod) {
@@ -24,25 +24,20 @@ class GodCreate extends React.Component {
       variables: {
         name: name,
         type: type,
-        description: description
-      }
-    }).then(data => {
+        description: description,
+      },
+    }).then((data) => {
       console.log(data);
       this.setState({
         message: `New god "${name}" created successfully`,
-        name: '',
-        type: 'god',
-        description: ''
+        name: "",
+        type: "god",
+        description: "",
       });
     });
   }
 
-  updateCache(
-    cache,
-    {
-      data: { newGod }
-    }
-  ) {
+  updateCache(cache, { data: { newGod } }) {
     let gods;
     try {
       gods = cache.readQuery({ query: FETCH_GODS });
@@ -54,7 +49,7 @@ class GodCreate extends React.Component {
 
       cache.writeQuery({
         query: FETCH_GODS,
-        data: { gods: godArray.concat(newGod) }
+        data: { gods: godArray.concat(newGod) },
       });
     }
   }
@@ -68,24 +63,24 @@ class GodCreate extends React.Component {
         {(newGod, { data }) => {
           return (
             <div>
-              <form onSubmit={e => this.handleSubmit(e, newGod)}>
+              <form onSubmit={(e) => this.handleSubmit(e, newGod)}>
                 <input
-                  type='text'
+                  type="text"
                   value={this.state.name}
-                  placeholder='Name'
-                  onChange={this.update('name')}
+                  placeholder="Name"
+                  onChange={this.update("name")}
                 />
                 <textarea
-                  onChange={this.update('description')}
+                  onChange={this.update("description")}
                   value={this.state.description}
-                  placeholder='Description'
+                  placeholder="Description"
                 />
 
-                <select onChange={this.update('type')}>
-                  <option value='god'>God</option>
-                  <option value='goddess'>Goddess</option>
+                <select onChange={this.update("type")}>
+                  <option value="god">God</option>
+                  <option value="goddess">Goddess</option>
                 </select>
-                <button type='submit'>Create</button>
+                <button type="submit">Create</button>
               </form>
               <p>{this.state.message}</p>
             </div>

@@ -64,9 +64,9 @@ f = open('./files/reading_file_example.txt')
 print(f) # <_io.TextIOWrapper name='./files/reading_file_example.txt' mode='r' encoding='UTF-8'>
 ```
 
-As you can see in the example above, I printed the opened file and it gave  some information about it. Opened file has different reading methods: _read()_, _readline_, _readlines_. An opened file has to be closed with _close()_ method.
+As you can see in the example above, I printed the opened file and it gave some information about it. Opened file has different reading methods: _read()_, _readline_, _readlines_. An opened file has to be closed with _close()_ method.
 
-- _read()_: read the whole text as string. If we want to limit the number of characters we want to read, we can limit it by passing int value to the *read(number)* method.
+- _read()_: read the whole text as string. If we want to limit the number of characters we want to read, we can limit it by passing int value to the _read(number)_ method.
 
 ```py
 f = open('./files/reading_file_example.txt')

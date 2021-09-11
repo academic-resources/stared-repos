@@ -1,11 +1,11 @@
-import { RECEIVE_BENCHES } from '../actions/bench_action'
+import { RECEIVE_BENCHES } from "../actions/bench_action";
 
 export default (state = {}, action) => {
-  Object.freeze(state)
-  switch(action.type) {
+  Object.freeze(state);
+  switch (action.type) {
     case RECEIVE_BENCHES:
-      return action.benches
+      return action.benches;
     default:
-      return state
+      return state;
   }
-}
+};

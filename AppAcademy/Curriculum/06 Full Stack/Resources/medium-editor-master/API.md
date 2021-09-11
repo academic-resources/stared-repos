@@ -217,15 +217,13 @@ Attaches a listener for the specified custom event name.
 
 1. _**data** (`Event` | `object`)_
 
-
-    * For most custom events, this will be the browser's native `Event` object for the event that triggered the custom event to fire.
-    * For some custom events, this will be an object containing information describing the event (depending on which custom event it is)
+    - For most custom events, this will be the browser's native `Event` object for the event that triggered the custom event to fire.
+    - For some custom events, this will be an object containing information describing the event (depending on which custom event it is)
 
 2. _**editable** (`HTMLElement`)_
 
-
-    * A reference to the contenteditable container element that this custom event corresponds to.  This is especially useful for instances where one instance of MediumEditor contains multiple elements, or there are multiple instances of MediumEditor on the page.
-    * For example, when `blur` fires, this argument will be the `<div contenteditable=true></div>` element that is about to receive focus.
+    - A reference to the contenteditable container element that this custom event corresponds to. This is especially useful for instances where one instance of MediumEditor contains multiple elements, or there are multiple instances of MediumEditor on the page.
+    - For example, when `blur` fires, this argument will be the `<div contenteditable=true></div>` element that is about to receive focus.
 
 ---
 

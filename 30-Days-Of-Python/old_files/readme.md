@@ -9,7 +9,7 @@
 🧳 [Part 7: Day 19 - 21](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/readme19-21.md)  
 🧳 [Part 8: Day 22 - 24](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/readme22-24.md)  
 🧳 [Part 9: Day 25 - 27](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/readme25-27.md)  
-🧳 [Part 10: Day 28 - 30](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/readme28-30.md) 
+🧳 [Part 10: Day 28 - 30](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/readme28-30.md)
 
 ---
 
@@ -351,7 +351,7 @@ print(type((9.8, 3.14, 2.7)))    # Tuple
 
 ![Running python script](./images/running_python_script.png)
 
-🌕  You are amazing. You have just completed day 1 challenge and you are in your way to greatness. Now do some exercises for your brain and for your muscle.
+🌕 You are amazing. You have just completed day 1 challenge and you are in your way to greatness. Now do some exercises for your brain and for your muscle.
 
 ## 💻 Exercises - Day 1
 
@@ -378,7 +378,7 @@ print(type((9.8, 3.14, 2.7)))    # Tuple
    - Your name
    - Your family name
    - Your country
-5. Create a folder name day_1 inside 30DaysOfPython folder. Inside day_1 folder, create a file python file helloword.py and repeat question 1, 2, 3 and 4. Remember to use _print()_ when you are working on a python file. Navigate to the directory where you saved your file, and run it.
+5. Create a folder name day*1 inside 30DaysOfPython folder. Inside day_1 folder, create a file python file helloword.py and repeat question 1, 2, 3 and 4. Remember to use \_print()* when you are working on a python file. Navigate to the directory where you saved your file, and run it.
 
 # 📘 Day 2
 
@@ -592,16 +592,16 @@ print(first_name_to_list)            # ['A', 's', 'a', 'b', 'e', 'n', 'e', 'h']
 Numbers are python data types.
 
 1. Integers: Integer(negative, zero and positive) numbers
-    Example:
-        ... -3, -2, -1, 0, 1, 2, 3 ...
+   Example:
+   ... -3, -2, -1, 0, 1, 2, 3 ...
 
 2. Floating Numbers(Decimal numbers)
-    Example:
-        ... -3.5, -2.25, -1.0, 0.0, 1.1, 2.2, 3.5 ...
+   Example:
+   ... -3.5, -2.25, -1.0, 0.0, 1.1, 2.2, 3.5 ...
 
 3. Complex Numbers
-    Example:
-        1 + j, 2 + 4j, 1 - 1j
+   Example:
+   1 + j, 2 + 4j, 1 - 1j
 
 ## 💻 Exercises - Day 2
 
@@ -622,13 +622,13 @@ Numbers are python data types.
 15. Using the _len()_ built-in function find the length of your first name
 16. Compare the length of your first name and your last name
 17. Declare 5 as num_one and 4 as num_two
-    1. Add num_one and num_two and assign the value to a variable _total_
-    2. Subtract num_two from num_one and assign the value to a variable _diff_
-    3. Multiply num_two and num_one and assign the value to a variable _product_
-    4. Divide num_one by num_two and assign the value to a variable _division_
-    5. Use modulus division to find num_two divided by num_one and assign the value to a variable _remainder_
-    6. Calculate num_one the power of num_two and assign the value to a variable _exp_
-    7. Find floor division of num_one by num_two and assign the value to a variable _floor_division_
+    1. Add num*one and num_two and assign the value to a variable \_total*
+    2. Subtract num*two from num_one and assign the value to a variable \_diff*
+    3. Multiply num*two and num_one and assign the value to a variable \_product*
+    4. Divide num*one by num_two and assign the value to a variable \_division*
+    5. Use modulus division to find num*two divided by num_one and assign the value to a variable \_remainder*
+    6. Calculate num*one the power of num_two and assign the value to a variable \_exp*
+    7. Find floor division of num*one by num_two and assign the value to a variable \_floor_division*
 18. The radius of a circle is 30 meters.
     1. Calculate the area of a circle and assign the value to a variable _area_of_circle_
     2. Calculate the circumference of a circle and assign the value to a variable _circum_of_circle_

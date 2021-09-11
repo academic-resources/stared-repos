@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, { useContext } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { PrivateRoute } from './routesUtil';
-import LoginPanel from './LoginPanel';
-import PokemonBrowser from './PokemonBrowser';
-import { PokemonContext } from './PokemonContext';
+import { PrivateRoute } from "./routesUtil";
+import LoginPanel from "./LoginPanel";
+import PokemonBrowser from "./PokemonBrowser";
+import { PokemonContext } from "./PokemonContext";
 
 const App = () => {
   const { needLogin } = useContext(PokemonContext);
@@ -21,6 +21,6 @@ const App = () => {
       </Switch>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

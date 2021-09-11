@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var math = require('../../..').Math,
-    fib = math.fibonacci,
-    assert = require('assert');
+var math = require("../../..").Math,
+  fib = math.fibonacci,
+  assert = require("assert");
 
 var testFibonacciSequence = function (fib) {
   assert.equal(0, fib(0));
@@ -20,35 +20,34 @@ var testFibonacciSequence = function (fib) {
   assert.equal(144, fib(12));
 };
 
-describe('Fibonacci', function () {
-  describe('#exponential()', function () {
-    it('should return the right value for fibonacci sequence', function () {
+describe("Fibonacci", function () {
+  describe("#exponential()", function () {
+    it("should return the right value for fibonacci sequence", function () {
       testFibonacciSequence(fib.exponential);
     });
   });
 
-  describe('#linear()', function () {
-    it('should return the right value for fibonacci sequence', function () {
+  describe("#linear()", function () {
+    it("should return the right value for fibonacci sequence", function () {
       testFibonacciSequence(fib);
     });
   });
 
-  describe('#withMemoization()', function () {
-    it('should return the right value for fibonacci sequence', function () {
+  describe("#withMemoization()", function () {
+    it("should return the right value for fibonacci sequence", function () {
       testFibonacciSequence(fib.withMemoization);
     });
   });
 
-  describe('#direct()', function () {
-    it('should return the right value for fibonacci sequence', function () {
+  describe("#direct()", function () {
+    it("should return the right value for fibonacci sequence", function () {
       testFibonacciSequence(fib.direct);
     });
   });
 
-  describe('#logarithmic()', function () {
-    it('should return the right value for fibonacci sequence', function () {
+  describe("#logarithmic()", function () {
+    it("should return the right value for fibonacci sequence", function () {
       testFibonacciSequence(fib.logarithmic);
     });
   });
 });
-

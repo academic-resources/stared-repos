@@ -12,7 +12,7 @@ class Solution(object):
         :type pairs: List[List[int]]
         :rtype: int
         """
-        sorted_pairs = sorted(pairs, key= lambda x:x[1])
+        sorted_pairs = sorted(pairs, key=lambda x: x[1])
         if len(sorted_pairs) == 0:
             return 0
         curr = sorted_pairs[0][1]
@@ -24,8 +24,6 @@ class Solution(object):
         return chain_len
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.findLongestChain([[1, 2], [2, 3], [3, 4]]))
-
-

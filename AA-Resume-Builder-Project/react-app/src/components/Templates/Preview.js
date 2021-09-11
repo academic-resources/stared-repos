@@ -129,7 +129,8 @@ const Preview = ({
           className={`bg-white ${
             currentStyle ? currentStyle[1] : "text-black-1000"
           } ${currentStyle ? currentStyle[0] : "font-mono"} p-2 h-auto`}
-          id="resume-to-save">
+          id="resume-to-save"
+        >
           {Object.keys(sections).map((section) => {
             return (
               <ResumeSection
@@ -172,9 +173,10 @@ const Preview = ({
             updateCurrentTemplate({
               name: template_name,
               fields: template,
-            }),
+            })
           )
-        }>
+        }
+      >
         <div className="flex flex-col rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out w-11/12">
           <div className="flex flex-col items-center space-y-3 underline px-6 py-3 bg-accentLight rounded-t-lg">
             <h2 className="flex items-center text-lg">{template_name}</h2>

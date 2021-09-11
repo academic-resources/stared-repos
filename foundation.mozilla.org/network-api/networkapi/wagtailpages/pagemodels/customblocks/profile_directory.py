@@ -20,13 +20,13 @@ class ProfileDirectory(LatestProfileList):
 
     filter_values = blocks.CharBlock(
         required=True,
-        default='2019,2018,2017,2016,2015,2014,2013',
-        help_text='Example: 2019,2018,2017,2016,2015,2014,2013'
+        default="2019,2018,2017,2016,2015,2014,2013",
+        help_text="Example: 2019,2018,2017,2016,2015,2014,2013",
     )
 
     def get_context(self, value, parent_context=None):
-        pulse_api = settings.FRONTEND['PULSE_API_DOMAIN']
-        filter_values = value['filter_values']
+        pulse_api = settings.FRONTEND["PULSE_API_DOMAIN"]
+        filter_values = value["filter_values"]
         years = filter_values.split(",")
         initial_year = years[0]
 
@@ -35,13 +35,15 @@ class ProfileDirectory(LatestProfileList):
             parent_context=parent_context,
             no_limit=True,
             initial_year=initial_year,
-            ordering='custom_name'
+            ordering="custom_name",
         )
 
-        context['filters'] = years
-        context['api_endpoint'] = f"{pulse_api}/api/pulse/v2/profiles/?ordering=custom_name&is_active=true&format=json"
+        context["filters"] = years
+        context[
+            "api_endpoint"
+        ] = f"{pulse_api}/api/pulse/v2/profiles/?ordering=custom_name&is_active=true&format=json"
         return context
 
     class Meta:
-        template = 'wagtailpages/blocks/profile_directory.html'
-        icon = 'group'
+        template = "wagtailpages/blocks/profile_directory.html"
+        icon = "group"

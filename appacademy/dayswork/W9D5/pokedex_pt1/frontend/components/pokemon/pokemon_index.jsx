@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
 class PokemonIndex extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    return <h1>This is where we left off!!</h1>
+    return <h1>This is where we left off!!</h1>;
   }
 }
 
-export default PokemonIndex
+export default PokemonIndex;

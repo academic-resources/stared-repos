@@ -31,17 +31,15 @@ def _backtrack(gcm):
 
     # Drop null deltas
     dir = gcm.stepPattern.mx
-    dir = dir[numpy.bitwise_or(dir[:, 1] != 0,
-                               dir[:, 2] != 0), :]
+    dir = dir[numpy.bitwise_or(dir[:, 1] != 0, dir[:, 2] != 0), :]
 
     # Split by 1st column
     npat = gcm.stepPattern.get_n_patterns()
     stepsCache = dict()
     for q in range(1, npat + 1):
         tmp = dir[dir[:, 0] == q,]
-        stepsCache[q] = numpy.array(tmp[:, [1, 2]],
-                                    dtype=int)
-        stepsCache[q] = numpy.flip(stepsCache[q],0)
+        stepsCache[q] = numpy.array(tmp[:, [1, 2]], dtype=int)
+        stepsCache[q] = numpy.flip(stepsCache[q], 0)
 
     # Mapping lists
     iis = [i]
@@ -51,12 +49,14 @@ def _backtrack(gcm):
     ss = []
 
     while True:
-        if i == 0 and j == 0: break
+        if i == 0 and j == 0:
+            break
 
         # Direction taken, 1-based
         s = gcm.directionMatrix[i, j]
 
-        if s == _INT_MIN: break  # int nan in R
+        if s == _INT_MIN:
+            break  # int nan in R
 
         # undo the steps
         ss.insert(0, s)
@@ -73,10 +73,12 @@ def _backtrack(gcm):
         iis.insert(0, i)
         jjs.insert(0, j)
 
-    out = {'index1': numpy.array(ii),
-           'index2': numpy.array(jj),
-           'index1s': numpy.array(iis),
-           'index2s': numpy.array(jjs),
-           'stepsTaken': numpy.array(ss)}
+    out = {
+        "index1": numpy.array(ii),
+        "index2": numpy.array(jj),
+        "index1s": numpy.array(iis),
+        "index2s": numpy.array(jjs),
+        "stepsTaken": numpy.array(ss),
+    }
 
-    return (out)
+    return out

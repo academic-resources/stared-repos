@@ -5,7 +5,7 @@ try:
     import re
 
 except ImportError:
-    print('Some modules are not installed! ')
+    print("Some modules are not installed! ")
     print("try\t\tpip install requests bs4 smtplib")
 
 global URL
@@ -13,18 +13,18 @@ global URL
 
 # enable "allow less secured apps" on your gmail for recieving emails
 def send_mail(URL, sender_email, password, recievers_email, Price):
-    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server = smtplib.SMTP("smtp.gmail.com", 587)
     # The client sends this command to the SMTP server to identify itself and initiate the SMTP conversation.
     server.ehlo()
     server.starttls()  # encrypts the connnection
 
     server.login(sender_email, password)
-    subject = 'Price fell down!'
-    body = 'Check the amazon link ' + URL
+    subject = "Price fell down!"
+    body = "Check the amazon link " + URL
     msg = f"Subject: {subject}\n\n{body}"
     server.sendmail(sender_email, recievers_email, msg)
 
-    print('email has been sent')
+    print("email has been sent")
     server.quit()
 
 
@@ -33,14 +33,20 @@ def information(soup, URL, sender_email, password, recievers_email, Price):
     title = soup.find(id="productTitle").getText().strip()
     print("\nProduct\t:\n\t", title, "\n")
     # price1 = soup.find(id="priceblock_ourprice").getText()
-    price = soup.find(id="priceblock_ourprice").get_text().replace(
-        ',', '').replace('₹', '').replace(' ', '').strip()
+    price = (
+        soup.find(id="priceblock_ourprice")
+        .get_text()
+        .replace(",", "")
+        .replace("₹", "")
+        .replace(" ", "")
+        .strip()
+    )
     print("Current price\t:\t", price)
     # print(price)
     # using regex to convert into float so we can compare with expected price
     #
     print("Price you expect\t:\t", Price)
-    if (float(price) < float(Price)):
+    if float(price) < float(Price):
         print("YEAH price has fallen!! email will be sent")
         send_mail(URL, sender_email, password, recievers_email, Price)
     else:
@@ -61,11 +67,12 @@ def entry():
     ).strip()
     password = input("\n[+] your password\t>>\t").strip()
     recievers_email = input(
-        "\n[+]  email will be recievedd on this account\t>>\t").strip()
+        "\n[+]  email will be recievedd on this account\t>>\t"
+    ).strip()
     page = requests.get(URL, headers=headers)
 
-    soup = BeautifulSoup(page.content, 'html.parser')
-    Price = Price1.replace(',', '').replace(' ', '').strip()
+    soup = BeautifulSoup(page.content, "html.parser")
+    Price = Price1.replace(",", "").replace(" ", "").strip()
 
     # print(soup.prettify)
     try:

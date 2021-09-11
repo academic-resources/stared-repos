@@ -16,8 +16,7 @@ all_spinners = Columns(
 )
 
 with Live(
-    Panel(all_spinners, title="Spinners", border_style="blue"),
-    refresh_per_second=20,
+    Panel(all_spinners, title="Spinners", border_style="blue"), refresh_per_second=20
 ) as live:
     while True:
         sleep(0.1)

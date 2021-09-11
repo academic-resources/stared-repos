@@ -14,11 +14,11 @@ class Solution:
 
         for i in range(1, len(memo)):
             for j in range(1, len(memo[0])):
-                memo[i][j] = memo[i-1][j] + memo[i][j-1]
+                memo[i][j] = memo[i - 1][j] + memo[i][j - 1]
 
         return memo[-1][-1]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.numPaths(2, 3))

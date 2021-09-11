@@ -3,14 +3,14 @@ class Solution:
         res = []
         outer = 0
         for c in S:
-            if c == '(' and outer > 0:
+            if c == "(" and outer > 0:
                 res.append(c)
                 outer += 1
-            elif c == '(' and outer == 0:
+            elif c == "(" and outer == 0:
                 outer += 1
-            elif c == ')' and outer > 1:
+            elif c == ")" and outer > 1:
                 res.append(c)
                 outer -= 1
-            elif c == ')' and outer <= 1:
+            elif c == ")" and outer <= 1:
                 outer -= 1
-        return ''.join(res)
+        return "".join(res)

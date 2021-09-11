@@ -43,7 +43,7 @@ A dictionary is a collection of unordered, modifiable(mutable) paired (key: valu
 
 ### Creating a Dictionary
 
-To create a dictionary we use curly brackets, {} or the *dict()* built-in function.
+To create a dictionary we use curly brackets, {} or the _dict()_ built-in function.
 
 ```py
 # syntax
@@ -135,6 +135,7 @@ print(person['city'])       # Error
 ```
 
 Accessing an item by key name raises an error if the key does not exist. To avoid this error first we have to check if a key exist or we can use the _get_ method. The get method returns None, which is a NoneType object data type, if the key does not exist.
+
 ```py
 person = {
     'first_name':'Asabeneh',
@@ -321,11 +322,11 @@ values = dct.values()
 print(values)     # dict_values(['value1', 'value2', 'value3', 'value4'])
 ```
 
-🌕 You are astonishing. Now, you are super charged with the power of dictionaries. You have just completed day 8 challenges and you are 8 steps a head in to your way to greatness. Now do some exercises for your brain and  muscles.
+🌕 You are astonishing. Now, you are super charged with the power of dictionaries. You have just completed day 8 challenges and you are 8 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
 
 ## 💻 Exercises: Day 8
 
-1. Create  an empty dictionary called dog
+1. Create an empty dictionary called dog
 2. Add name, color, breed, legs, age to the dog dictionary
 3. Create a student dictionary and add first_name, last_name, gender, age, marital status, skills, country, city and address as keys for the dictionary
 4. Get the length of the student dictionary

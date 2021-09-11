@@ -99,8 +99,7 @@ def create_user_open(
     """
     if not settings.USERS_OPEN_REGISTRATION:
         raise HTTPException(
-            status_code=403,
-            detail="Open user registration is forbidden on this server",
+            status_code=403, detail="Open user registration is forbidden on this server"
         )
     user = crud.user.get_by_email(db, email=email)
     if user:

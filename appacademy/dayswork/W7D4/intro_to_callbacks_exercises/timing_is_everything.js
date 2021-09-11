@@ -1,12 +1,14 @@
 class Clock {
   constructor() {
-
     const now = new Date();
     const dayStart = new Date(
-        now.getFullYear(),
-        now.getMonth(),
-        now.getDate(),
-        0, 0, 0)
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate(),
+      0,
+      0,
+      0
+    );
     this.time = (now.getTime() - dayStart.getTime()) / 1000;
 
     this.calculateTimeParts();
@@ -18,7 +20,7 @@ class Clock {
     // 1. Create a Date object.
     // 2. Store the hours, minutes, and seconds.
     // 3. Call printTime.
-    // 4. Schedule the tick at 1 second intervals.  
+    // 4. Schedule the tick at 1 second intervals.
   }
 
   calculateTimeParts() {
@@ -34,18 +36,16 @@ class Clock {
   }
 
   updateAndPrint() {
-      this.time += 1;
-      this.calculateTimeParts();
-      this.printTime();
-    }
-    
-    _tick() {
-    setInterval(this.updateAndPrint.bind(this), 1000)
+    this.time += 1;
+    this.calculateTimeParts();
+    this.printTime();
+  }
+
+  _tick() {
+    setInterval(this.updateAndPrint.bind(this), 1000);
     // 1. Increment the time by one second.
     // 2. Call printTime.
   }
 }
 
 const clock = new Clock();
-
-

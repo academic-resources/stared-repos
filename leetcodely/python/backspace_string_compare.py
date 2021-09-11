@@ -13,7 +13,7 @@ class Solution(object):
         def next_char(s):
             bs = 0
             for c in s[::-1]:
-                if c == '#':
+                if c == "#":
                     bs += 1
                 elif bs > 0:
                     bs -= 1
@@ -24,7 +24,7 @@ class Solution(object):
         _T = next_char(T)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.backspaceCompare("ab#c", "ad#c"))
     print(solution.backspaceCompare("ab##", "c#d#"))

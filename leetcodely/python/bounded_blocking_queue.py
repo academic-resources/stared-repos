@@ -3,7 +3,6 @@ import threading
 
 
 class BoundedBlockingQueue(object):
-
     def __init__(self, capacity: int):
         self.queue = deque()
         self.capacity = capacity

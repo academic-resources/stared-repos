@@ -1,10 +1,8 @@
-'use strict';
-
+"use strict";
 
 var multiplicationOperator = function (a, b) {
   return a * b;
 };
-
 
 /**
  * Raise value to a positive integer power by repeated squaring.
@@ -23,15 +21,14 @@ var fastPower = function (base, power, mul, identity) {
     identity = 1;
   }
   if (power < 0 || Math.floor(power) != power) {
-    throw new Error('Power must be a positive integer or zero.');
+    throw new Error("Power must be a positive integer or zero.");
   }
 
   // If the power is zero, identity value must be given (or set by default).
   if (!power) {
     if (identity === undefined) {
-      throw new Error('The power is zero, but identity value not set.');
-    }
-    else {
+      throw new Error("The power is zero, but identity value not set.");
+    } else {
       return identity;
     }
   }
@@ -39,7 +36,7 @@ var fastPower = function (base, power, mul, identity) {
   // Iterative form of the algorithm avoids checking the same thing twice.
   var result;
   var multiplyBy = function (value) {
-    result = (result === undefined) ? value : mul(result, value);
+    result = result === undefined ? value : mul(result, value);
   };
   for (var factor = base; power; power >>>= 1, factor = mul(factor, factor)) {
     if (power & 1) {
@@ -48,6 +45,5 @@ var fastPower = function (base, power, mul, identity) {
   }
   return result;
 };
-
 
 module.exports = fastPower;

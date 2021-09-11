@@ -1,46 +1,46 @@
-import React from "react"
-import { withRouter } from "react-router-dom"
+import React from "react";
+import { withRouter } from "react-router-dom";
 
 class PokemonForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       name: "",
       image_url: "",
       poke_type: "select",
       attack: "0",
       defense: "0",
-      moves: []
-    }
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.updateMoves = this.updateMoves.bind(this)
+      moves: [],
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateMoves = this.updateMoves.bind(this);
   }
 
   update(property) {
-    return e => this.setState({ [property]: e.target.value })
+    return (e) => this.setState({ [property]: e.target.value });
   }
 
   updateMoves(index) {
-    return e => {
+    return (e) => {
       // debugger
-      this.state.moves[index] = e.target.value
-      this.setState({ moves: this.state.moves })
-    }
+      this.state.moves[index] = e.target.value;
+      this.setState({ moves: this.state.moves });
+    };
   }
 
   handleSubmit(e) {
-    e.preventDefault()
-    this.props.createPokemon(this.state).then(newPokemon => {
+    e.preventDefault();
+    this.props.createPokemon(this.state).then((newPokemon) => {
       // debugger
-      this.props.history.push(`pokemon/${Object.keys(newPokemon)[0]}`)
-    })
+      this.props.history.push(`pokemon/${Object.keys(newPokemon)[0]}`);
+    });
   }
 
   displayErrors() {
     if (this.props.errors) {
-      return this.props.errors.map(error => {
-        return <li key={error}>{error}</li>
-      })
+      return this.props.errors.map((error) => {
+        return <li key={error}>{error}</li>;
+      });
     }
   }
 
@@ -61,8 +61,8 @@ class PokemonForm extends React.Component {
       "poison",
       "ground",
       "rock",
-      "steel"
-    ]
+      "steel",
+    ];
 
     return (
       <div>
@@ -90,7 +90,7 @@ class PokemonForm extends React.Component {
                 <option key={i} value={type}>
                   {type}
                 </option>
-              )
+              );
             })}
           </select>
 
@@ -121,8 +121,8 @@ class PokemonForm extends React.Component {
           <button>Create Pokemon</button>
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default withRouter(PokemonForm)
+export default withRouter(PokemonForm);

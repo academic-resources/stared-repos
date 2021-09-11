@@ -27,10 +27,10 @@ async def test_stop_http_async_session(http_async_session):
 
 def test_call_http_async_session(http_async_session):
     http_async_session.session = Mock()
-    http_async_session().get(url='test')
-    http_async_session.session.get.assert_called_once_with(url='test')
+    http_async_session().get(url="test")
+    http_async_session.session.get.assert_called_once_with(url="test")
 
 
 def test_assert_error_for_invalid_session_call_http_async_session(http_async_session):
     with pytest.raises(AssertionError):
-        http_async_session().get(url='test')
+        http_async_session().get(url="test")

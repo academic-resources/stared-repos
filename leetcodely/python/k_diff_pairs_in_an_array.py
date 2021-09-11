@@ -10,7 +10,9 @@ class Pair:
         self.second = second
 
     def __eq__(self, other):
-        return (self.first == other.first and self.second == other.second) or (self.first == other.second and self.second == other.first)
+        return (self.first == other.first and self.second == other.second) or (
+            self.first == other.second and self.second == other.first
+        )
 
     def __hash__(self):
         return hash((self.first, self.second))
@@ -27,10 +29,10 @@ class Solution(object):
         for i in range(len(nums)):
             for j in range(i, len(nums)):
                 if nums[j] - nums[i] == k:
-                    res.add(Pair(nums[i], nums[i-1]))
+                    res.add(Pair(nums[i], nums[i - 1]))
         return len(res)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.findPairs([3, 1, 4, 1, 5], 2))

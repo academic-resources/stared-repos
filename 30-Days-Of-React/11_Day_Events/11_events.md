@@ -51,8 +51,8 @@ Event handling in HTML
     <button>onclick="greetPeople()">Greet People</button>
     <script>
       const greetPeople = () => {
-        alert('Welcome to 30 Days Of React Challenge')
-      }
+        alert("Welcome to 30 Days Of React Challenge");
+      };
     </script>
   </body>
 </html>
@@ -61,25 +61,25 @@ Event handling in HTML
 In React, it is slightly different
 
 ```js
-import React from 'react'
+import React from "react";
 // if it is functional components
 const App = () => {
   const greetPeople = () => {
-    alert('Welcome to 30 Days Of React Challenge')
-  }
-  return <button onClick={greetPeople}> </button>
-}
+    alert("Welcome to 30 Days Of React Challenge");
+  };
+  return <button onClick={greetPeople}> </button>;
+};
 ```
 
 ```js
-import React, { Component } from 'react'
+import React, { Component } from "react";
 // if it is functional components
 class App extends Component {
   greetPeople = () => {
-    alert('Welcome to 30 Days Of React Challenge')
-  }
+    alert("Welcome to 30 Days Of React Challenge");
+  };
   render() {
-    return <button onClick={this.greetPeople}> </button>
+    return <button onClick={this.greetPeople}> </button>;
   }
 }
 ```
@@ -97,18 +97,18 @@ Plain HTML
 However, in React it could be as follows:
 
 ```js
-import React, { Component } from 'react'
+import React, { Component } from "react";
 // if it is functional components
 class App extends Component {
   handleClick = () => {
-    alert('Welcome to 30 Days Of React Challenge')
-  }
+    alert("Welcome to 30 Days Of React Challenge");
+  };
   render() {
     return (
-      <a href='#' onClick={this.handleClick}>
+      <a href="#" onClick={this.handleClick}>
         Click me
       </a>
-    )
+    );
   }
 }
 ```
@@ -120,33 +120,33 @@ Let's implement some more mouse and keyboard events.
 
 ```js
 // index.js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   state = {
-    firstName: '',
-    message: '',
-    key: '',
-  }
+    firstName: "",
+    message: "",
+    key: "",
+  };
   handleClick = (e) => {
     // e gives an event object
     // check the value of e using console.log(e)
     this.setState({
-      message: 'Welcome to the world of events',
-    })
-  }
+      message: "Welcome to the world of events",
+    });
+  };
   // triggered whenever the mouse moves
   handleMouseMove = (e) => {
-    this.setState({ message: 'mouse is moving' })
-  }
+    this.setState({ message: "mouse is moving" });
+  };
   // to get value when an input field changes a value
   handleChange = (e) => {
     this.setState({
       firstName: e.target.value,
       message: e.target.value,
-    })
-  }
+    });
+  };
 
   // to get keyboard key code when an input field is pressed
   // it works with input and textarea
@@ -154,18 +154,18 @@ class App extends Component {
     this.setState({
       message:
         `${e.target.value} has been pressed and the keycode is` + e.charCode,
-    })
-  }
+    });
+  };
   // Blurring happens when a mouse leave an input field
   handleBlur = (e) => {
-    this.setState({ message: 'Input field has been blurred' })
-  }
+    this.setState({ message: "Input field has been blurred" });
+  };
   // This event triggers during a text copy
   handleCopy = (e) => {
     this.setState({
-      message: 'Using 30 Days Of React for commercial purpose is not allowed',
-    })
-  }
+      message: "Using 30 Days Of React for commercial purpose is not allowed",
+    });
+  };
   render() {
     return (
       <div>
@@ -178,35 +178,35 @@ class App extends Component {
         </p>
 
         <p>{this.state.message}</p>
-        <label htmlFor=''> Test for onKeyPress Event: </label>
-        <input type='text' onKeyPress={this.handleKeyPress} />
+        <label htmlFor=""> Test for onKeyPress Event: </label>
+        <input type="text" onKeyPress={this.handleKeyPress} />
         <br />
 
-        <label htmlFor=''> Test for onBlur Event: </label>
-        <input type='text' onBlur={this.handleBlur} />
+        <label htmlFor=""> Test for onBlur Event: </label>
+        <input type="text" onBlur={this.handleBlur} />
 
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor='firstName'>First Name: </label>
+            <label htmlFor="firstName">First Name: </label>
             <input
               onChange={this.handleChange}
-              name='firstName'
+              name="firstName"
               value={this.state.value}
             />
           </div>
 
           <div>
-            <input type='submit' value='Submit' />
+            <input type="submit" value="Submit" />
           </div>
         </form>
       </div>
-    )
+    );
   }
 }
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById("root");
 // we render the JSX element using the ReactDOM package
-ReactDOM.render(<App />, rootElement)
+ReactDOM.render(<App />, rootElement);
 ```
 
 # Exercises

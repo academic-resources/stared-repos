@@ -1,26 +1,26 @@
 import os
 
-api_key_prod = os.environ.get('API_KEY_PROD', '')
+api_key_prod = os.environ.get("API_KEY_PROD", "")
 
-slack_hook = os.environ.get('SLACK_HOOK', '')
+slack_hook = os.environ.get("SLACK_HOOK", "")
 
 
 def confirm(message="Confirm"):
     from builtins import input
 
-    prompt = message + ' [y/n]:\n'
+    prompt = message + " [y/n]:\n"
 
     while True:
         ans = input(prompt)
 
-        if ans not in ['y', 'Y', 'n', 'N']:
-            print('please enter y or n.')
+        if ans not in ["y", "Y", "n", "N"]:
+            print("please enter y or n.")
             continue
 
-        if ans == 'y' or ans == 'Y':
+        if ans == "y" or ans == "Y":
             return True
 
-        if ans == 'n' or ans == 'N':
+        if ans == "n" or ans == "N":
             return False
 
 
@@ -37,8 +37,9 @@ def make_custom_get_request(url):
     return requests.get(url)
 
 
-def make_request(endpoint, type=None, data=None, username=None, password=None,
-                 json_request=False):
+def make_request(
+    endpoint, type=None, data=None, username=None, password=None, json_request=False
+):
     import requests
 
     if "://" not in endpoint:
@@ -54,51 +55,40 @@ def make_request(endpoint, type=None, data=None, username=None, password=None,
     if data and not isinstance(data, dict):
         raise ValueError(data + " must be a dict ")
 
-    if type == 'POST':
+    if type == "POST":
         if json_request:
-            r = requests.post(endpoint,
-                              auth=(username, password),
-                              json=data)
+            r = requests.post(endpoint, auth=(username, password), json=data)
         else:
-            r = requests.post(endpoint,
-                              auth=(username, password),
-                              data=data)
+            r = requests.post(endpoint, auth=(username, password), data=data)
 
         if r.status_code // 100 != 2:
-            print('ISSUE for POST request : {} with params: {}'.format(endpoint,
-                data))
+            print("ISSUE for POST request : {} with params: {}".format(endpoint, data))
             print(r.text)
         return r
 
-    if type == 'DELETE':
-        r = requests.delete(endpoint,
-                            auth=(username, password))
+    if type == "DELETE":
+        r = requests.delete(endpoint, auth=(username, password))
 
         if r.status_code not in success_codes:
-            print('ISSUE for DELETE request : {} with params: {}'.format(endpoint,
-                                                                       data))
+            print(
+                "ISSUE for DELETE request : {} with params: {}".format(endpoint, data)
+            )
         return r
 
-    if type == 'PUT':
-        r = requests.put(endpoint,
-                         auth=(username, password),
-                         data=data)
+    if type == "PUT":
+        r = requests.put(endpoint, auth=(username, password), data=data)
         print(r.status_code)
         if r.status_code // 100 != 2:
-            print('ISSUE for PUT request : {} with params: {}'.format(endpoint,
-                data))
+            print("ISSUE for PUT request : {} with params: {}".format(endpoint, data))
         return r
 
     if data != None:
-        r = requests.get(endpoint,
-                         auth=(username, password),
-                         params=data)
+        r = requests.get(endpoint, auth=(username, password), params=data)
     else:
-        r = requests.get(endpoint,
-                         auth=(username, password))
+        r = requests.get(endpoint, auth=(username, password))
 
     if r.status_code // 100 != 2:
-        print('ISSUE for GET request : {} with params: {}'.format(endpoint, data))
+        print("ISSUE for GET request : {} with params: {}".format(endpoint, data))
 
     if json_request:
         r.json()
@@ -107,22 +97,25 @@ def make_request(endpoint, type=None, data=None, username=None, password=None,
 
 
 def send_slack_notif(reports):
-    if slack_hook == '':
+    if slack_hook == "":
         raise ValueError("NO SLACK_HOOK")
 
     from slacker import Slacker
 
     slack = Slacker(None, slack_hook)
 
-    slack.incomingwebhook.post({
-        "text": "",
-        "channel": "#notif-docsearch",
-        "username": "Deployer",
-        "icon_emoji": ":rocket:",
-        "attachments": reports
-    })
+    slack.incomingwebhook.post(
+        {
+            "text": "",
+            "channel": "#notif-docsearch",
+            "username": "Deployer",
+            "icon_emoji": ":rocket:",
+            "attachments": reports,
+        }
+    )
 
 
 def check_output_decoded(command, cwd=None):
     from subprocess import check_output
+
     return check_output(command, cwd=cwd).decode()

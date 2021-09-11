@@ -18,6 +18,7 @@ fileToSend = "the file you want to send"
 username = "your email"
 password = "your password"
 
+
 def gmail_file_text():
 
     msg = MIMEMultipart()
@@ -26,7 +27,7 @@ def gmail_file_text():
     msg["Subject"] = "THIS IS AUTO-MAIL SENDING TEST"
     msg.preamble = "help I cannot send an attachment to save my life"
     text = "HI HI GOOD DAY \n bot "
-    part1 = MIMEText(text, 'plain')
+    part1 = MIMEText(text, "plain")
     msg.attach(part1)
 
     ctype, encoding = mimetypes.guess_type(fileToSend)
@@ -59,6 +60,6 @@ def gmail_file_text():
 
     server = smtplib.SMTP("smtp.gmail.com:587")
     server.starttls()
-    server.login(username,password)
+    server.login(username, password)
     server.sendmail(emailfrom, emailto, msg.as_string())
     server.quit()

@@ -7,14 +7,12 @@ class GameView {
   }
 
   start() {
-    setInterval( () => {
+    setInterval(() => {
       this.game.step();
     }, 20);
   }
 
-  bindKeyHandlers() {
-    
-  }
+  bindKeyHandlers() {}
 }
 
 module.exports = GameView;

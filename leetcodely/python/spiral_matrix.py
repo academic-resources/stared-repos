@@ -38,11 +38,12 @@ class Solution(object):
                 result.append(matrix[i][col_begin])
             col_begin += 1
             traverse(row_begin, col_begin, row_end, col_end)
+
         traverse(0, 0, len(matrix) - 1, len(matrix[0]) - 1)
 
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.spiralOrder([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]))

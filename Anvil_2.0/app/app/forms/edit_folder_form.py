@@ -4,5 +4,5 @@ from wtforms.validators import DataRequired
 
 
 class EditFolderForm(FlaskForm):
-    name = StringField('name', validators=[DataRequired()])
-    category = IntegerField('category_id', validators=[DataRequired()])
+    name = StringField("name", validators=[DataRequired()])
+    category = IntegerField("category_id", validators=[DataRequired()])

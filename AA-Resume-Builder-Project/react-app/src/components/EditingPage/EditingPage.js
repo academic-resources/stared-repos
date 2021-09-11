@@ -15,13 +15,13 @@ const EditingPage = () => {
   const history = useHistory();
 
   const current_template_object = useSelector((state) =>
-    state ? state.template.current : null,
+    state ? state.template.current : null
   );
   const current_resume = useSelector((state) =>
-    state ? state.resume.resume : null,
+    state ? state.resume.resume : null
   );
   const styles = useSelector((state) =>
-    state.template.styles ? state.template.styles : null,
+    state.template.styles ? state.template.styles : null
   );
   const user_id = useSelector((state) => state.user.id);
 
@@ -122,7 +122,7 @@ const EditingPage = () => {
         : [rightNow];
 
     await dispatch(saveResumes(resumeData)).then(() =>
-      history.push("/resumes"),
+      history.push("/resumes")
     );
   };
 
@@ -167,7 +167,8 @@ const EditingPage = () => {
                   value={selectedStyle}
                   onChange={(e) => {
                     setSelectedStyle(e.target.value);
-                  }}>
+                  }}
+                >
                   {Object.keys(styles).map((styleId) => (
                     <option key={styleId} value={parseInt(styleId, 10)}>
                       {styles[styleId]}
@@ -177,12 +178,14 @@ const EditingPage = () => {
               </div>
               <button
                 className="focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-accentLight hover:bg-accentDark hover:shadow-lg"
-                onClick={saveResume}>
+                onClick={saveResume}
+              >
                 Save Resume
               </button>
               <button
                 className="focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-accentLight hover:bg-accentDark hover:shadow-lg"
-                onClick={saveAsPDF}>
+                onClick={saveAsPDF}
+              >
                 Download as PDF
               </button>
             </div>
@@ -239,7 +242,8 @@ const EditingPage = () => {
                   value={selectedStyle}
                   onChange={(e) => {
                     setSelectedStyle(e.target.value);
-                  }}>
+                  }}
+                >
                   {Object.keys(styles).map((styleId) => (
                     <option key={styleId} value={parseInt(styleId, 10)}>
                       {styles[styleId]}
@@ -249,12 +253,14 @@ const EditingPage = () => {
               </div>
               <button
                 className="focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-accentLight hover:bg-accentDark hover:shadow-lg"
-                onClick={saveResume}>
+                onClick={saveResume}
+              >
                 Save Resume
               </button>
               <button
                 className="focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-accentLight hover:bg-accentDark hover:shadow-lg"
-                onClick={saveAsPDF}>
+                onClick={saveAsPDF}
+              >
                 Download as PDF
               </button>
             </div>

@@ -4,8 +4,9 @@
 
 The **ts_parser** module is the modified default text search parser from
 PostgreSQL 9.6. The differences are:
-* **ts_parser** gives unbroken words by underscore character
-* **ts_parser** gives unbroken words with numbers and letters by hyphen character
+
+- **ts_parser** gives unbroken words by underscore character
+- **ts_parser** gives unbroken words with numbers and letters by hyphen character
 
 For example:
 

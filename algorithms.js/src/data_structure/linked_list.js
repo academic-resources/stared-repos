@@ -1,19 +1,18 @@
-'use strict';
+"use strict";
 
 /**
  * Doubly-linked list
  */
 function LinkedList() {
-
   this._length = 0;
   this.head = null;
   this.tail = null;
 
   // Read-only length property
-  Object.defineProperty(this, 'length', {
+  Object.defineProperty(this, "length", {
     get: function () {
       return this._length;
-    }.bind(this)
+    }.bind(this),
   });
 }
 
@@ -43,14 +42,13 @@ LinkedList.prototype.isEmpty = function () {
  */
 LinkedList.prototype.add = function (n, index) {
   if (index > this.length || index < 0) {
-    throw new Error('Index out of bounds');
+    throw new Error("Index out of bounds");
   }
 
   var node = new Node(n);
 
   if (index !== undefined && index < this.length) {
-    var prevNode,
-        nextNode;
+    var prevNode, nextNode;
 
     if (index === 0) {
       // Insert in the beginning
@@ -96,7 +94,7 @@ LinkedList.prototype.get = function (index) {
  */
 LinkedList.prototype.getNode = function (index) {
   if (index >= this.length || index < 0) {
-    throw new Error('Index out of bounds');
+    throw new Error("Index out of bounds");
   }
 
   var node = this.head;
@@ -114,7 +112,7 @@ LinkedList.prototype.getNode = function (index) {
  */
 LinkedList.prototype.del = function (index) {
   if (index >= this.length || index < 0) {
-    throw new Error('Index out of bounds');
+    throw new Error("Index out of bounds");
   }
 
   this.delNode(this.getNode(index));

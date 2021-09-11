@@ -36,7 +36,7 @@ class Solution(object):
         return [v for v in dic.values()]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     bst = BinarySearchTree()
     bst.insert(3)
     bst.insert(9)

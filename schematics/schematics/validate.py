@@ -37,8 +37,14 @@ def validate(cls, instance_or_dict, partial=False, strict=False, context=None):
 
     # Loop across fields and coerce values
     try:
-        data = import_loop(cls, instance_or_dict, field_converter,
-                           context=context, partial=partial, strict=strict)
+        data = import_loop(
+            cls,
+            instance_or_dict,
+            field_converter,
+            context=context,
+            partial=partial,
+            strict=strict,
+        )
     except ModelConversionError as mce:
         errors = mce.messages
 
@@ -103,9 +109,9 @@ def _check_for_unknown_fields(cls, data):
         Errors of the fields that were not present in ``cls``.
     """
     errors = {}
-    fields = set(getattr(cls, '_initial', {})) | set(data)
+    fields = set(getattr(cls, "_initial", {})) | set(data)
     rogues_found = fields - set(cls._fields)
     if rogues_found:
         for field_name in rogues_found:
-            errors[field_name] = [u'%s is an illegal field.' % field_name]
+            errors[field_name] = [u"%s is an illegal field." % field_name]
     return errors

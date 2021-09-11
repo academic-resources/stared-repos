@@ -1,5 +1,4 @@
 class BinarySearchTree:
-
     def __init__(self):
         self.root = None
         self.size = 0
@@ -32,7 +31,6 @@ class BinarySearchTree:
             return True
 
     def delete(self, key):
-
         def _delete(root, key):
             if not root:
                 return
@@ -50,6 +48,7 @@ class BinarySearchTree:
                     root.val = p.val
                     root.right = _delete(root.right, p.val)
             return root
+
         return _delete(self.root, key)
 
 
@@ -60,7 +59,7 @@ class TreeNode:
         self.right = None
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     bst = BinarySearchTree()
     bst.insert(12)
     bst.insert(9)

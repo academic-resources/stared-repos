@@ -3,6 +3,7 @@
 Valid operators are +, -, *, /. Each operand may be an integer or another expression."""
 import collections
 
+
 class Solution(object):
     def evalRPN(self, tokens):
         """
@@ -16,11 +17,11 @@ class Solution(object):
             else:
                 curr = stack.pop()
                 prev = stack.pop()
-                if item == '+':
+                if item == "+":
                     total = prev + curr
-                elif item == '-':
+                elif item == "-":
                     total = prev - curr
-                elif item == '*':
+                elif item == "*":
                     total = prev * curr
                 else:
                     total = prev // curr
@@ -28,9 +29,13 @@ class Solution(object):
         return stack.pop()
 
     def is_number(self, item):
-        return item.isdigit() or item.replace('-', '').isdigit()
+        return item.isdigit() or item.replace("-", "").isdigit()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
+    print(
+        solution.evalRPN(
+            ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
+        )
+    )

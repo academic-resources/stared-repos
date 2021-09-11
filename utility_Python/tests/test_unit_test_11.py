@@ -13,16 +13,15 @@ from sqlalchemy.exc import DatabaseError
 
 
 class TestMyFunc(unittest.TestCase):
-
     def test_get_db_conn(self):
-        with patch('my_db_utils.sqlalchemy') as mock_sqlalchemy:
+        with patch("my_db_utils.sqlalchemy") as mock_sqlalchemy:
             mock_sqlalchemy.create_engine.side_effect = DatabaseError
             mock_sqlalchemy.get_conn.return_value = "db_conn"
             get_db_conn()
-            
+
             mock_sqlalchemy.create_engine.assert_called_once()
             assert mock_sqlalchemy.get_conn() == "db_conn"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

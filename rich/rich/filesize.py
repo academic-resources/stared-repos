@@ -34,10 +34,7 @@ def _to_str(
         if size < unit:
             break
     return "{:,.{precision}f}{separator}{}".format(
-        (base * size / unit),
-        suffix,
-        precision=precision,
-        separator=separator,
+        (base * size / unit), suffix, precision=precision, separator=separator
     )
 
 
@@ -51,10 +48,7 @@ def pick_unit_and_suffix(size: int, suffixes: List[str], base: int) -> Tuple[int
 
 
 def decimal(
-    size: int,
-    *,
-    precision: Optional[int] = 1,
-    separator: Optional[str] = " ",
+    size: int, *, precision: Optional[int] = 1, separator: Optional[str] = " "
 ) -> str:
     """Convert a filesize in to a string (powers of 1000, SI prefixes).
 

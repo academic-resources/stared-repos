@@ -3,34 +3,34 @@
 [Lecture Notes](#Lecture-Notes)  
 a. [Additional Resources](#Additional-Resources)  
 b. [What is Big O](#What-is-Big-O)  
-c. [O(n)](#O(n))  
-d. [O(1)](#O(1))  
-e. [O(n^2)](#O(n^2))  
+c. [O(n)](<#O(n)>)  
+d. [O(1)](<#O(1)>)  
+e. [O(n^2)](<#O(n^2)>)  
 f. [Memoization](#Memoization)  
 g. [Fibonacci Numbers](#Fibonacci-Numbers)  
 h. [Space Complexity](#Space-Complexity)  
-i. [O(log n)](#O(log-n))  
+i. [O(log n)](<#O(log-n)>)  
 j. [Determining Big O](#Determining-Big-O)  
-k. [The 3 Main Rules of Big O](#The-3-Main-Rules-of-Big-O)  
+k. [The 3 Main Rules of Big O](#The-3-Main-Rules-of-Big-O)
 
 <br>
 <br>
 
-If you found these notes helpful and want to show appreciation to the author, [coffee donations](buymeacoff.ee/G1stPBuYU) are much loved.  
+If you found these notes helpful and want to show appreciation to the author, [coffee donations](buymeacoff.ee/G1stPBuYU) are much loved.
 
 ## Additional Resources
 
-[Computing Big O Notes - Lambda](https://github.com/LambdaSchool/CS-Wiki/wiki/Computing-Big-O)  
+[Computing Big O Notes - Lambda](https://github.com/LambdaSchool/CS-Wiki/wiki/Computing-Big-O)
 
-These notes are based off of [Beej's previous recording for CS13](https://www.youtube.com/watch?v=btgmegU676g&feature=youtu.be), which condenses the usual 4 hours of lecture down to 3.   
+These notes are based off of [Beej's previous recording for CS13](https://www.youtube.com/watch?v=btgmegU676g&feature=youtu.be), which condenses the usual 4 hours of lecture down to 3.
 
-The notes also pull from [this simple overview of Big O Notation](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)  
+The notes also pull from [this simple overview of Big O Notation](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)
 
-[Another explanation](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/) 
+[Another explanation](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)
 
-[Big O Breakdown of Data Structures and Sorting Algorithms](https://bigocheatsheet.io)  
+[Big O Breakdown of Data Structures and Sorting Algorithms](https://bigocheatsheet.io)
 
-** Also included in this repo is a copy of Grokking's Algorithms in PDF format. `Big O Notation` begins on page 10.  
+\*\* Also included in this repo is a copy of Grokking's Algorithms in PDF format. `Big O Notation` begins on page 10.
 
 <br>
 <br>
@@ -39,9 +39,9 @@ The notes also pull from [this simple overview of Big O Notation](https://justin
 
 ## What is Big O
 
-Big O Notation is a way to determine how efficient a function is, based on run time and space requirements. It evaluates based on the _worst_ case scenario of the function. 
+Big O Notation is a way to determine how efficient a function is, based on run time and space requirements. It evaluates based on the _worst_ case scenario of the function.
 
-Big O Notation is a good indicator of how well an algorithm will scale.  
+Big O Notation is a good indicator of how well an algorithm will scale.
 
 Even if the function might run efficiently in some instances (small item list), it will evaluate based on the worst possible set of inputs. That does not mean an algorithm can't or shouldn't be used in some scenarios - it's just important to consider, especially when building for scale.
 
@@ -100,17 +100,16 @@ def is_none(item):
 
 <br>
 
-No matter how many inputs are in `item` that we give this function, the run time will always be the same - the time it takes to return `None`. 
+No matter how many inputs are in `item` that we give this function, the run time will always be the same - the time it takes to return `None`.
 
 It cannot run faster, but it also cannot run slower. Constant time is considered the best case scenario for a function because it cannot grow despite the complexity of the inputs.
-
 
 <br>
 <br>
 
 ## O(n^2)
 
-`O(n^2)`, called `Order of n squared`, indicates that for every input item (n), we have to do that number squared (n^2 or n*n) operations. This is still considered proportional to the size of the input data set, just squared.
+`O(n^2)`, called `Order of n squared`, indicates that for every input item (n), we have to do that number squared (n^2 or n\*n) operations. This is still considered proportional to the size of the input data set, just squared.
 
 As you can imagine, that run time can become very slow, very quickly. If there are only 2 inputs, that would mean 4 operations. But if we have just 8 inputs, that's already 64 operations being computed.
 
@@ -137,7 +136,7 @@ This function matches each item within the_list with every other item in the_lis
 
 O(n^2) taps into Combinatorics (the mathematical study of combinations of things and counting) - but not every algorithm does, despite the common conception that most do.
 
-[Learn more about Combinatorics](https://en.wikipedia.org/wiki/Combinatorics)  
+[Learn more about Combinatorics](https://en.wikipedia.org/wiki/Combinatorics)
 
 Discrete Math is the basis of a lot of Computer Science (if you're looking for further learning). Algebra, geometry and trigonometry are common if you're planning to go into graphics. If you like 3D graphics, Linear Algebra is a good field of additional study too.
 
@@ -166,7 +165,6 @@ If a database is being frequently queried for one or two types of input, and the
 
 [Further reading](https://codeburst.io/understanding-memoization-in-3-minutes-2e58daf33a19)
 
-
 <br>
 <br>
 
@@ -174,15 +172,15 @@ If a database is being frequently queried for one or two types of input, and the
 
 We can practice solving using dynamic programming techniques with the Fibonacci sequence.
 
-[Learn more](https://en.wikipedia.org/wiki/Fibonacci_number)  
+[Learn more](https://en.wikipedia.org/wiki/Fibonacci_number)
 
 In math, the Fibonacci sequence is numbers in order, where each number is the sum of the two preceding one, starting from 0 and 1.
 
->F0 = 0  
->F1 = 1  
->F2 = 1 (0 + 1)  
->F3 = 2 (1 + 1)  
->F4 = 3 (2 + 1)  
+> F0 = 0  
+> F1 = 1  
+> F2 = 1 (0 + 1)  
+> F3 = 2 (1 + 1)  
+> F4 = 3 (2 + 1)
 
 And so on.
 
@@ -208,10 +206,10 @@ So let's define the function and call it recursively:
 def fib(n):
     if n == 0:
         return 0
-    
+
     if n == 1:
         return 1
-    
+
     return fib(n-1) + fib(n-2)
 
 for i in range(10):
@@ -226,7 +224,7 @@ Recursive solutions work and can make sense. But if we try to run it for range(3
 
 [Go in depth on Fibonacci](http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibmaths.html)
 
-This is an example of... 
+This is an example of...
 
 <br>
 
@@ -242,7 +240,7 @@ The basic solution could also be called a "naive" solution - it's simple and bru
 
 <br>
 
-So how can we improve the Fibonacci sequence? 
+So how can we improve the Fibonacci sequence?
 
 First, let's consider why our current solution is not ideal. If we want to find fib(8), the function is recursively trying to solve:
 
@@ -265,7 +263,7 @@ Instead, we could use a memoization (top down) solution, as well as an iterative
 
 If we store values that were previously calculated in a table, we can instead just reference that memory in the table for duplicate calls. This uses a cache.
 
-For our memoization (top down) solution, we'll initialize a cache that will store calculated Fibonacci numbers. We'll start with the two base cases of 0 and 1. 
+For our memoization (top down) solution, we'll initialize a cache that will store calculated Fibonacci numbers. We'll start with the two base cases of 0 and 1.
 
 Then in our fib() function, if n is not currently in the cache, we'll calculate it and store it. If it is in there, we'll simply return the existing stored result.
 
@@ -388,7 +386,6 @@ If two algorithms are the same time complexity and memory usage is also importan
 
 <br>
 
-
 `** Keep in mind:` when solving an algorithm problem (or whiteboard problem), finding _any_ solution is the first and more important step. Optimizing is the next step. If you're struggling to find an "elegant" or "optimized" solution, simply brute force first. Then openly find ways to optimize. Pre-mature optimization is not always ideal or necessary, as it typically increases the complexity of the code which makes it difficult to maintain and prone to bugs. Not every problem is worth those issues.
 
 For example, if we knew we'd never need to find fib() greater than input 4, then optimizing is unnecessary. If we think it would grow to fib(100), then that's a great reason to optimize.
@@ -398,12 +395,11 @@ For example, if we knew we'd never need to find fib() greater than input 4, then
 <br>
 <br>
 
-
 ## O(log n)
 
-`O(log n)`, called `log time`, indicates a logarithmic run time function, of log base 2 (so, sometimes seen as O(log2n) ). 
+`O(log n)`, called `log time`, indicates a logarithmic run time function, of log base 2 (so, sometimes seen as O(log2n) ).
 
-If we have n elements, it will take the log of n * inputs to run the calculations - it will take logn of time units. If we have 1 unit, that will take (roughly) 0 time units to run. If it were linear (O(n)), 10 units would take 10 times units - but with O(log n), 10 units would only take 3 time units. At 100 units, it will take only 6 time units.
+If we have n elements, it will take the log of n \* inputs to run the calculations - it will take logn of time units. If we have 1 unit, that will take (roughly) 0 time units to run. If it were linear (O(n)), 10 units would take 10 times units - but with O(log n), 10 units would only take 3 time units. At 100 units, it will take only 6 time units.
 
 Essentially, with log n, the choice of which next element to perform an action on is broken into a few possibilities, but only one is chosen. Typically, if each step involves _halving_ the remaining number of units, that indicates O(log n).
 
@@ -425,7 +421,6 @@ Because the number of inputs is halved repeatedly, doubling the size of the inpu
 
 [Read more on O(log n)](https://hackernoon.com/what-does-the-time-complexity-o-log-n-actually-mean-45f94bb5bfbf)
 
-
 If we were searching a phone book and used this example, what is the run time?
 
 <br>
@@ -445,14 +440,13 @@ print(name_in_phonebook("Beej"))
 
 <br>
 
-This example is O(n) - it's linear time. The run time will scale with the size of the phone book. While some names will be found faster than others (like Aaron, which is at the start of the list), we still calculate Big O  based on the _worst_ case scenario, or Big Theta based on the _average_ case scenario. 
+This example is O(n) - it's linear time. The run time will scale with the size of the phone book. While some names will be found faster than others (like Aaron, which is at the start of the list), we still calculate Big O based on the _worst_ case scenario, or Big Theta based on the _average_ case scenario.
 
 On _average_, this search will take roughly half the number of inputs in time units. In the _worst case_, it will take as long as the number of inputs in time units. So, for our Big O evaluation, this runs with linear time.
 
 Remember, Big Theta evaluation would also depend on if this function is being given an ordered list or not. If the list was not alphabetized, that may change the _average_ time it takes to find the name.
 
 <br>
-
 
 We could optimize this if we know the list is organized by using binary search, to search the ordered list the same way a person would, by splitting the phone book into segments to narrow down our items as we search. By cutting the space in half each time, we would have an algorithm that is O(log n).
 
@@ -466,7 +460,7 @@ Since we're looping through the index of existing letters, it's still O(n) becau
 
 Although that method has two loops, they aren't _nested_. It's simply one loop that follows once the logic of the first loop is completed.
 
-*But wait - isn't that actually O(2n)?*
+_But wait - isn't that actually O(2n)?_
 
 If O(n) of the first loop + O(n) of the second loop, wouldn't that equate to O(2n)?
 
@@ -499,8 +493,7 @@ Because O(n) is slower than O(log n), and Big O evaluates based on the _worst_ c
 
 O(n) will dominate the shape of the graphed line, because its larger time complexity dominates the overall time complexity of this algorithm. So we would consider it O(n) despite it including an O(log n) process too.
 
-
->In short: When adding different Big O notations, evaluate based on the one that has the worst time complexity, aka the one whose time output will affect the overall run time the most.  
+> In short: When adding different Big O notations, evaluate based on the one that has the worst time complexity, aka the one whose time output will affect the overall run time the most.
 
 <br>
 
@@ -567,7 +560,7 @@ But it doesn't _exactly_ fit any of the other Big O Notations we've discussed ei
 
 <br>
 
-Just because our time complexity doesn't appear on the Big O complexity  graph, doesn't mean it doesn't exist. The graph shows the most common ones, but any could exist within the graph as well.
+Just because our time complexity doesn't appear on the Big O complexity graph, doesn't mean it doesn't exist. The graph shows the most common ones, but any could exist within the graph as well.
 
 For example, an accurate description of this square root algorithm might be `O(sqrt(n))` which is a valid time complexity. It's a square root of n process. As n increases, the amount of time it takes to process this algorithm will increase by the square root of n.
 
@@ -577,7 +570,7 @@ As a programmer, when you write an algorithm like this, mentally you should be c
 
 Just because it has a for loop does not mean it is O(n) - it's _how_ the loop processes that matters for the time complexity.
 
---------------------------------------------------
+---
 
 Let's try another one.
 
@@ -629,14 +622,13 @@ s: 100, i count: 5, j count: 25
 
 <br>
 
-Showing that the algorithm does in fact loop through n^2 times (5 * 5 = 25, and the j loop runs 25 times).
+Showing that the algorithm does in fact loop through n^2 times (5 \* 5 = 25, and the j loop runs 25 times).
 
 When you see a nested loop, it's important to always stay alert to the problem that `O(n^2)` can become slow very quickly. If the expected inputs will be large, that's a good case for optimization.
 
 _Keep in mind, not *all* nested loops are O(n^2) though._
 
-
---------------------------------------------------------
+---
 
 If we modify the previous loop to:
 
@@ -696,8 +688,7 @@ If this algorithm were still O(n^2), the `j count` would be 625.
 
 `O(n) * O(sqrt(n))` = `O(n * sqrt(n))` = `O(n sqrt n)`
 
-> O(n) * O(sqrt(n)) = O(n * sqrt(n)) = `O(n sqrt n)`  
-
+> O(n) _ O(sqrt(n)) = O(n _ sqrt(n)) = `O(n sqrt n)`
 
 <br>
 
@@ -729,12 +720,12 @@ The second loop runs `for j in range(2*n)` which gives it `O(2*n)`.
 <br>
 
 The first loop runs `for i in range(n)` which gives it O(n).
-The second loop runs `for j in range(2*n)` which gives it O(2*n).
+The second loop runs `for j in range(2*n)` which gives it O(2\*n).
 But it's also a nested for loop which means the time complexity is O(n^2) because the inner loop is not being limited.
 
 <br>
 
-n * 2n in this algorithm equates to 2 * n^2, or two times n squared.
+n _ 2n in this algorithm equates to 2 _ n^2, or two times n squared.
 
 Again we can expanded it out and print counters to see exactly how many times each loop runs:
 
@@ -771,12 +762,11 @@ s: 450, i count: 5, j count: 50
 
 > n = 5  
 > n^2 = 25  
-> 2 * n^2 = 50  
+> 2 \* n^2 = 50
 
-This algorithm does in fact have the time complexity of `O(2 * n^2)`, as shown by the final loop count of 50, the exact output expected of O(2 * n^2) when the input is 5.
+This algorithm does in fact have the time complexity of `O(2 * n^2)`, as shown by the final loop count of 50, the exact output expected of O(2 \* n^2) when the input is 5.
 
-
->But remember that constants in Big O are dropped, so we would simplify this to O(n^2) process.  
+> But remember that constants in Big O are dropped, so we would simplify this to O(n^2) process.
 
 <br>
 
@@ -784,17 +774,14 @@ Despite this version taking twice as long as the simplified version, the _shape 
 
 Constants don't change the _shape_ of the curve, only how steep it is. There is no number you can multiply n^2 by to change how the line bends, so although there are better and worse case scenarios _within_ O(n^2) type algorithms, they are evaluated as equal in time complexity.
 
-
 <br>
 <br>
 
 ## The 3 Main Rules of Big O
 
-
-> 1. Discard the constant  
-> 2. The bigger Big O Notation dominates (less efficient wins)  
-> 3. We're interested in what happens with large values of `n` because some processes can be deceptively efficient with small values, but that doesn't account for scalability.  
-
+> 1. Discard the constant
+> 2. The bigger Big O Notation dominates (less efficient wins)
+> 3. We're interested in what happens with large values of `n` because some processes can be deceptively efficient with small values, but that doesn't account for scalability.
 
 For our last example, let's try to figure out how many times each loop runs _without_ running the algorithm first:
 
@@ -826,7 +813,7 @@ If we break this apart line by line, we can determine the time complexity of eac
 
 Because all these loops are nested, we would multiply them together:
 
-> O(1) * O(n) * O(15) = `O(n)`  
+> O(1) _ O(n) _ O(15) = `O(n)`
 
 Despite two nested loops, this algorithm has a linear run time of `O(n)`.
 
@@ -843,7 +830,7 @@ def bogey(array):
 
     print(array[1])
     midpoint = len(array) // 2
-    
+
     for i in range(0, midpoint):
         print(array[i])
 
@@ -852,7 +839,6 @@ def bogey(array):
 ```
 
 <br>
-
 
 `len(array) // 2` is integer division that says the length of the array divided by two.
 
@@ -876,10 +862,10 @@ Let's break it down, line by line:
 
 When we combine these:
 
-> O(1) + O(1) + ( O(n) * O(1) ) + ( O(1) * O(1) )  
+> O(1) + O(1) + ( O(n) _ O(1) ) + ( O(1) _ O(1) )
 
 Which combines down to:
 
-> O(1) + O(1) + O(n) + O(1) = `O(n)`  
+> O(1) + O(1) + O(n) + O(1) = `O(n)`
 
 Again, this algorithm evaluates down to a linear time complexity O(n).

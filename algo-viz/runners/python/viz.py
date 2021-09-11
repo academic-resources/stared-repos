@@ -8,18 +8,20 @@ class BTree:
         self.right = None
 
     @staticmethod
-    def create(elems, method='in_order'):
+    def create(elems, method="in_order"):
         if type(elems.__wrapped__) != list:
             raise Exception(
-                f'viz.BTree.create: elems must be a list. Got {type(elems.__wrapped__)}')
+                f"viz.BTree.create: elems must be a list. Got {type(elems.__wrapped__)}"
+            )
         if not elems:
             return None
-        if method != 'in_order' and method != 'binary':
+        if method != "in_order" and method != "binary":
             raise Exception(
-                f'Viz.BTree.create: Method must be "in_order" or "binary". Received f{method}')
+                f'Viz.BTree.create: Method must be "in_order" or "binary". Received f{method}'
+            )
         elems = elems.__wrapped__
 
-        if method == 'in_order':
+        if method == "in_order":
             tree = BTree(elems[0])
             dq = deque([tree])
             cur, nxt = None, None
@@ -43,7 +45,8 @@ class BTree:
                                 cur.right = nxt
                     index += 2
             return tree
-        if method == 'binary':
+        if method == "binary":
+
             def helper(elems, left, right):
                 if left >= right:
                     return None
@@ -65,7 +68,8 @@ class SLL:
     def create(elems):
         if type(elems.__wrapped__) != list:
             raise Exception(
-                f'viz.SLL.create: elems must be a list. Got {type(elems.__wrapped__)}')
+                f"viz.SLL.create: elems must be a list. Got {type(elems.__wrapped__)}"
+            )
 
         if not elems:
             return None

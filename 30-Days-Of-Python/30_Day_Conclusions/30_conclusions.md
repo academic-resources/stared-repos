@@ -8,7 +8,6 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  
 <sub>Author:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
 <small>Second Edition: July, 2021</small>
@@ -26,7 +25,7 @@
 
 ## Conclusions
 
-In the process of preparing this material I  have learned quite a lot and you have inspired me to do more. Congratulations for making it to this level. If you have done all the exercise and the projects, now you are capable to go to  a data analysis, data science, machine learning or web development paths. [Support the author for more educational materials](https://www.paypal.com/paypalme/asabeneh).
+In the process of preparing this material I have learned quite a lot and you have inspired me to do more. Congratulations for making it to this level. If you have done all the exercise and the projects, now you are capable to go to a data analysis, data science, machine learning or web development paths. [Support the author for more educational materials](https://www.paypal.com/paypalme/asabeneh).
 
 GIVE FEEDBACK:
 http://thirtydayofpython-api.herokuapp.com/feedback

@@ -9,7 +9,7 @@ lowercase_letters = uppercase_letters.lower()
 digits = "0123456789"
 symbols = "@#$%^&*(){}[]./\?-_"
 
-# setting the values to true that we want to use in our passwords 
+# setting the values to true that we want to use in our passwords
 # if true means we want to use that otherwise not
 upper = True
 lower = True
@@ -33,7 +33,7 @@ if special_char:
 pass_length = 15
 no_of_passwords = 10
 
-# with the help of for loop, generating passwords 
+# with the help of for loop, generating passwords
 for i in range(no_of_passwords):
     password = "".join(random.sample(all_chars, pass_length))
     print(password)

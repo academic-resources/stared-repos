@@ -4,27 +4,16 @@ from ex5 import finder
 
 
 class TestEx2(unittest.TestCase):
-
     def test_small(self):
-        files = [
-            '/bin/foo',
-            '/bin/bar',
-            '/usr/bin/baz'
-        ]
-        queries = [
-            "foo",
-            "qux",
-            "baz"
-        ]
+        files = ["/bin/foo", "/bin/bar", "/usr/bin/baz"]
+        queries = ["foo", "qux", "baz"]
         result = finder(files, queries)
-        self.assertTrue(result == ['/bin/foo', '/usr/bin/baz'])
+        self.assertTrue(result == ["/bin/foo", "/usr/bin/baz"])
 
-        queries = [
-            "qux"
-        ]
+        queries = ["qux"]
         result = finder(files, queries)
         self.assertTrue(result == [])
-        '''
+        """
     def test_large(self):
         files = []
 
@@ -53,7 +42,8 @@ class TestEx2(unittest.TestCase):
             '/dir256/file256', '/dir3490/dirb3490/file3490',
             '/dir3490/file3490', '/dir8192/dirb8192/file8192',
             '/dir8192/file8192'])
-    '''       
+    """
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

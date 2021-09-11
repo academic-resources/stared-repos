@@ -7,6 +7,7 @@
 
 import base64
 from flask import Response
+
 try:
     import flask_login as login
 except ImportError:
@@ -18,7 +19,6 @@ login_manager.init_app(app)
 
 
 class AnonymousUser(login.AnonymousUserMixin):
-
     def is_anonymous(self):
         return True
 
@@ -33,16 +33,16 @@ class AnonymousUser(login.AnonymousUserMixin):
 
 
 class User(login.UserMixin):
-
     def __init__(self, id, password):
         self.id = id
         self.password = password
 
     def is_authenticated(self):
-        if not app.config.get('webui_username'):
+        if not app.config.get("webui_username"):
             return True
-        if self.id == app.config.get('webui_username') \
-                and self.password == app.config.get('webui_password'):
+        if self.id == app.config.get(
+            "webui_username"
+        ) and self.password == app.config.get("webui_password"):
             return True
         return False
 
@@ -55,23 +55,25 @@ login_manager.anonymous_user = AnonymousUser
 
 @login_manager.request_loader
 def load_user_from_request(request):
-    api_key = request.headers.get('Authorization')
+    api_key = request.headers.get("Authorization")
     if api_key:
-        api_key = api_key[len("Basic "):]
+        api_key = api_key[len("Basic ") :]
         try:
-            api_key = base64.b64decode(api_key).decode('utf8')
+            api_key = base64.b64decode(api_key).decode("utf8")
             return User(*api_key.split(":", 1))
         except Exception as e:
-            app.logger.error('wrong api key: %r, %r', api_key, e)
+            app.logger.error("wrong api key: %r, %r", api_key, e)
             return None
     return None
+
+
 app.login_response = Response(
-    "need auth.", 401, {'WWW-Authenticate': 'Basic realm="Login Required"'}
+    "need auth.", 401, {"WWW-Authenticate": 'Basic realm="Login Required"'}
 )
 
 
 @app.before_request
 def before_request():
-    if app.config.get('need_auth', False):
+    if app.config.get("need_auth", False):
         if not login.current_user.is_active():
             return app.login_response

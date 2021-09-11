@@ -6,7 +6,7 @@ from pdfminer.pdfpage import PDFPage
 from pdfminer.layout import LAParams
 
 
-def convert_pdf(input_file, format='text', codec='utf-8'):
+def convert_pdf(input_file, format="text", codec="utf-8"):
     """Convert PDF file to text or html.
 
     Args:
@@ -21,16 +21,14 @@ def convert_pdf(input_file, format='text', codec='utf-8'):
     manager = PDFResourceManager()
     output = BytesIO()
     laparams = LAParams()
-    if format == 'text':
+    if format == "text":
         converter = TextConverter(manager, output, codec=codec, laparams=laparams)
-    elif format == 'html':
+    elif format == "html":
         converter = HTMLConverter(manager, output, codec=codec, laparams=laparams)
 
-    with open(input_file, 'rb') as f1:
+    with open(input_file, "rb") as f1:
         interpreter = PDFPageInterpreter(manager, converter)
-        for page in PDFPage.get_pages(f1,
-                                      caching=True,
-                                      check_extractable=True):
+        for page in PDFPage.get_pages(f1, caching=True, check_extractable=True):
             interpreter.process_page(page)
 
         converter.close()

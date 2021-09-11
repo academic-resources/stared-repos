@@ -19,5 +19,5 @@ def seed_file_types():
 
 
 def undo_file_types():
-    db.session.execute('TRUNCATE file_types CASCADE;')
+    db.session.execute("TRUNCATE file_types CASCADE;")
     db.session.commit()

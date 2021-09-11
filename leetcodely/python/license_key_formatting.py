@@ -13,11 +13,11 @@ class Solution:
         :type K: int
         :rtype: str
         """
-        chars = ''.join(S.split('-')).upper()[::-1]
-        return '-'.join([chars[i:i + K] for i in range(0, len(chars), K)])[::-1]
+        chars = "".join(S.split("-")).upper()[::-1]
+        return "-".join([chars[i : i + K] for i in range(0, len(chars), K)])[::-1]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.licenseKeyFormatting("5F3Z-2e-9-w", 4))
     print(solution.licenseKeyFormatting("2-5g-3-J", 2))

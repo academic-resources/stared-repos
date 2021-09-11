@@ -1,5 +1,4 @@
 class StringBuilder:
-
     def __init__(self):
         self.store = []
         self.size = 0
@@ -9,8 +8,7 @@ class StringBuilder:
         self.size += len(item)
 
     def build(self):
-        return ''.join(self.store)
+        return "".join(self.store)
 
     def __len__(self):
         return self.size
-

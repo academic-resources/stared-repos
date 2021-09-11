@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
 const PokemonIndexItem = ({ pokemon }) => {
   return (
@@ -10,7 +10,7 @@ const PokemonIndexItem = ({ pokemon }) => {
         <img src={pokemon.image_url} alt="pokemon" width="30" />
       </Link>
     </li>
-  )
-}
+  );
+};
 
-export default PokemonIndexItem
+export default PokemonIndexItem;

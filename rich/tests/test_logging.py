@@ -23,10 +23,7 @@ logging.basicConfig(
 log = logging.getLogger("rich")
 
 
-skip_win = pytest.mark.skipif(
-    os.name == "nt",
-    reason="rendered differently on windows",
-)
+skip_win = pytest.mark.skipif(os.name == "nt", reason="rendered differently on windows")
 
 
 @skip_win

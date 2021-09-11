@@ -1,4 +1,3 @@
-
 .modalbg {
   position: absolute;
   float: left;
@@ -7,24 +6,22 @@
   right: 0;
   left: 0;
   bottom: 0;
-  transition-delay: .4s;
-
+  transition-delay: 0.4s;
 }
-
 
 .hide-modal-bg {
   display: none;
-  animation: fadeout .4s;
+  animation: fadeout 0.4s;
   background-color: none;
 }
 
 .reveal-modal-bg {
-  animation: fadein .4s;
-  background-color: rgba(255, 255, 255, 0.90);
+  animation: fadein 0.4s;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .notebooks {
-  position:absolute;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: -500px;
@@ -34,8 +31,6 @@
   width: 457px;
   border-right: 3px solid $EvernoteMediumLightGray;
   background-color: #fff;
-
-
 
   header {
     display: flex;
@@ -62,28 +57,24 @@
       img {
       }
     }
-
   }
 
   .notebooks-ul {
-    display:block;
+    display: block;
     z-index: 1;
     height: calc(100vh - 100px);
     overflow-y: scroll;
   }
-
-
 }
-.reveal-notebook{
-  animation: slidein .7s;
+.reveal-notebook {
+  animation: slidein 0.7s;
   left: 71px;
 }
 
 .hide-notebook {
-  animation: slideout .7s;
+  animation: slideout 0.7s;
   left: -500px;
   // visibility: hidden;
-
 }
 
 .notebook-item {
@@ -93,8 +84,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-
-  h5{
+  h5 {
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -113,7 +103,6 @@
         height: 30px;
         width: 30px;
 
-
         img {
           margin: auto;
           height: 20px;
@@ -124,10 +113,9 @@
       .button-notebook:hover {
         border: 2px solid white;
         border-radius: 50%;
-        transition: border .5s;
+        transition: border 0.5s;
       }
     }
-
   }
 
   p {
@@ -138,7 +126,6 @@
     color: $EvernoteMediumDarkGray;
     margin: 5px 20px;
   }
-
 }
 
 .bottom-border {
@@ -151,14 +138,13 @@
 li.notebook-item:hover {
   background-color: $EvernoteGreen;
   cursor: pointer;
-  h5, p {
+  h5,
+  p {
     color: #fff;
   }
   .button-notebook {
     border: 2px solid $EvernoteGreen;
-
   }
-
 }
 
 .hide-notebook {

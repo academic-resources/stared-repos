@@ -10,8 +10,6 @@
 
   align-content: flex-start;
 
-
-
   .logout-button {
     position: fixed;
     bottom: 0px;
@@ -25,9 +23,8 @@
     border-top: 2px solid $EvernoteMediumLightGray;
     text-align: center;
     margin: auto;
-
   }
-  .logout-button:hover{
+  .logout-button:hover {
     color: #fff;
     background-color: $EvernoteGreen;
     border-color: $EvernoteGreen;
@@ -36,9 +33,9 @@
   .nav-logo {
     height: 65px;
     width: 65px;
-    background: image_url('aeterNote_logo_lightbulb.png');
+    background: image_url("aeterNote_logo_lightbulb.png");
     background-size: 100%;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: center center;
     margin-left: auto;
     margin-right: auto;
@@ -52,7 +49,7 @@
       width: 35px;
       background-color: #fff;
       border: 1px solid $EvernoteMediumGray;
-      background: image-url('notebook_green.png');
+      background: image-url("notebook_green.png");
       background-size: 65%;
       background-repeat: no-repeat;
       background-position: center center;
@@ -62,16 +59,14 @@
 
     .notebooks-button:hover {
       cursor: pointer;
-
     }
-
 
     .note-index-button {
       height: 35px;
       width: 35px;
       background-color: #fff;
       border: 1px solid $EvernoteMediumGray;
-      background: image-url('green_note.png');
+      background: image-url("green_note.png");
       background-size: 65%;
       background-repeat: no-repeat;
       background-position: center center;
@@ -88,7 +83,7 @@
       width: 35px;
       background-color: #fff;
       border: 1px solid $EvernoteMediumGray;
-      background: image-url('green_plus.png');
+      background: image-url("green_plus.png");
       background-size: 65%;
       background-repeat: no-repeat;
       background-position: center center;
@@ -105,7 +100,7 @@
       width: 35px;
       background-color: #fff;
       border: 1px solid $EvernoteMediumGray;
-      background: image-url('green_tag.png');
+      background: image-url("green_tag.png");
       background-size: 80%;
       background-repeat: no-repeat;
       background-position: center center;
@@ -123,9 +118,8 @@
     }
 
     .side-nav-button:hover {
-      transition: border-color .4s;
+      transition: border-color 0.4s;
       border-color: $EvernoteGreen;
     }
   }
-
 }

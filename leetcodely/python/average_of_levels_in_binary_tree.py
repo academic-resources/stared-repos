@@ -4,6 +4,7 @@ import collections
 
 # Definition for a binary tree node.
 
+
 class BST:
     def __init__(self):
         self.root = None
@@ -29,6 +30,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 # TODO: Giving a different result on the onlin editor
 class Solution(object):
     def averageOfLevels(self, root):
@@ -37,7 +39,7 @@ class Solution(object):
         :rtype: List[float]
         """
         queue = collections.deque()
-        delimiter = '#'
+        delimiter = "#"
 
         queue.appendleft(root)
         queue.appendleft(delimiter)
@@ -47,11 +49,11 @@ class Solution(object):
             curr = queue.pop()
             if curr == delimiter:
                 if len(queue) != 0:
-                    res.append(curr_total/curr_count)
+                    res.append(curr_total / curr_count)
                     queue.appendleft(delimiter)
                     curr_count, curr_total = 0, 0
                 else:
-                    res.append(curr_total/curr_count)
+                    res.append(curr_total / curr_count)
                 continue
             curr_total += curr.val
             curr_count += 1
@@ -61,7 +63,8 @@ class Solution(object):
                 queue.appendleft(curr.right)
         return res
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     bst = BST()
     bst.insert(3)
     bst.insert(9)

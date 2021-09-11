@@ -6,7 +6,6 @@ It is possible that several messages arrive roughly at the same time."""
 
 
 class Logger(object):
-
     def __init__(self):
         """
         Initialize your data structure here.

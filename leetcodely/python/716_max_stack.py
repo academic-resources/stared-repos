@@ -9,7 +9,6 @@ only remove the top-most one."""
 
 
 class MaxStack:
-
     def __init__(self):
         """
         initialize your data structure here.

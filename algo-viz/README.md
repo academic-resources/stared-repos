@@ -8,48 +8,45 @@
 
 A tutorial is available within the application.
 
-### The application will take user code and execute it to transform it into a visualization of the involved data structures and expressions. 
-
+### The application will take user code and execute it to transform it into a visualization of the involved data structures and expressions.
 
 ## Table of Contents
-* [The Runner](#How-it-works)
-    * [Accepting Code](#Accepting-Code)
-    * [Transforming Code](#Transforming-Code)
-    * [Running the Code](#Running-the-Code)
-* [The Visualizer](#Visualizing-the-algorithm)
-    * [Technologies](#The-technologies)
-    * [State Management](#State-management)
-        * [The iterator](#The-iterator)
-        * ['state'](#scoping-variables-and-the-callstack)
-        * [structures](#structures)
-    * [View Rendering](#View-Rendering)
-* [Security Measures](#Security-Measures)
-* [Architecture and Scaling](#Architecture-and-Scaling)
 
+- [The Runner](#How-it-works)
+  - [Accepting Code](#Accepting-Code)
+  - [Transforming Code](#Transforming-Code)
+  - [Running the Code](#Running-the-Code)
+- [The Visualizer](#Visualizing-the-algorithm)
+  - [Technologies](#The-technologies)
+  - [State Management](#State-management)
+    - [The iterator](#The-iterator)
+    - ['state'](#scoping-variables-and-the-callstack)
+    - [structures](#structures)
+  - [View Rendering](#View-Rendering)
+- [Security Measures](#Security-Measures)
+- [Architecture and Scaling](#Architecture-and-Scaling)
 
 ![data structures](https://res.cloudinary.com/omarjuice/image/upload/v1566855817/algo-viz-tutorial/builtins.png)
 ![recursion](https://res.cloudinary.com/omarjuice/image/upload/v1566930111/algo-viz-tutorial/nthFib.png)
 
-
 ## How it works
+
 The functionality can be broken down into high level steps.
 
-* Accept user code
-* Transform it into something that can be read
-* Run the code *safely* and create a set of declarative instructions that can be used to reproduce the values and data structures from the code
-* Return the instructions and use them to create a visualization
-
+- Accept user code
+- Transform it into something that can be read
+- Run the code _safely_ and create a set of declarative instructions that can be used to reproduce the values and data structures from the code
+- Return the instructions and use them to create a visualization
 
 ### Accepting code
 
 This was rather simple. I opted for Microsoft's Monaco Editor for its smooth feel, versatility, and familiarity with most developers. The code can be written in the editor and submitted to be run.
 
-
 ### Transforming code
 
 "Something that can be read" is quite vague. What we really need is to transform your code into code that will allow the values inside it to be extracted from the code. How do we do that?
 
-Babel is a JS to JS transpiler that gives us the power to do exactly this. It is most popularly used with Webpack in front-end JavaScript to transform code from more recent ECMAScript standards to be compatible with older standards. 
+Babel is a JS to JS transpiler that gives us the power to do exactly this. It is most popularly used with Webpack in front-end JavaScript to transform code from more recent ECMAScript standards to be compatible with older standards.
 
 For our purposes, we need to be able to interact with it programatically, in Node.js. Luckily, it is quite straightforward to use Babel this way.
 
@@ -64,13 +61,12 @@ Here is an example of the output:
 
 ### Running the code
 
-Running the transpiled code is quite straighforward. An object with the aforementioned function is instantiated in the global scope and extracts the metadata and values as the code executes. 
+Running the transpiled code is quite straighforward. An object with the aforementioned function is instantiated in the global scope and extracts the metadata and values as the code executes.
 
 There is just one problem. What do we do about data structures?
 
 First of all, they can have nesting and circularity, which is not possible to convert to JSON to send to the client.
 So we traverse the structure recursively and normalize it, generating unique ids for each object. The code that does this can be found [here](https://github.com/omarjuice/algo-viz/blob/master/runner/execute/utils/stringify.js)
-
 
 They are also mutable and the code that mutates them may not be visible in the user code (The Array.prototype.sort() for example. We could make the runner aware that this function was executed, but we can't know what is actually happening).
 
@@ -88,14 +84,15 @@ Option 3 turned out very nicely. At first, while traversing and normalizing obje
 
 After using Mobx extensively on the front end, I decided to borrow its observable creation pattern, using ES6 proxies, to do it in a cleaner way. Now the code is very clean. Essentially, it works by intercepting all objects and returning their virtualized versions back into the user code. The user code cannot know the difference without using some particular function in the Node inspect utility API. The code for that can be found [here](https://github.com/omarjuice/algo-viz/blob/master/runner/execute/utils/virtualize.js)
 
-
 ### Visualizing the algorithm
 
 #### The technologies
+
 The data, which includes the steps, objects, and types from the user's code, is returned to the client side.
-Now, creating a visualization is a matter of performant state management and view rendering. To that end, I chose to treat the view layer as just a wrapper over the underlying state system that just reacts to state changes. React was perfect for this purpose. 
+Now, creating a visualization is a matter of performant state management and view rendering. To that end, I chose to treat the view layer as just a wrapper over the underlying state system that just reacts to state changes. React was perfect for this purpose.
 
 For state management, I chose [Mobx](https://github.com/mobxjs/mobx) for the following reasons:
+
 1. It allows for deeply nested state
 2. Its observable pattern, which allows for mutations of state, works perfectly with the reactive programming paradigm. This made state management just a matter of writing the underlying algorithm.
 3. It allows for the use of data structures. Not only does the state management make extensive use of JavaScript's builtin Map and Set, but it also uses a heap based algorithm for structure management as well. It was easy to bake the heap directly into state without much configuration.
@@ -105,6 +102,7 @@ The entire client side code is also written in TypeScript. I wanted this project
 Lastly, I imported parts of [Bulma CSS](https://github.com/jgthms/bulma) for responsive layout because it is flexible, has good browser compatibility, and why reinvent the wheel?
 
 #### State Management
+
 This turned out to be extremely complex. In fact, there is more code related to state management than actually rendering the elements related to the visualization. The most important pieces of state are:
 
 1. The iterator
@@ -112,14 +110,17 @@ This turned out to be extremely complex. In fact, there is more code related to 
 3. Structures (objects) management
 
 #### The iterator
+
 The iterator controls what step in the visualization the state is currently on. This is where the user(developer!) has control.
 Users can play and pause the code. Doing this will make the iterator begin iterating through the steps at a set interval. The iterator also makes sure that rendering is complete for a particular step before executing the next one. The speed of the iterator can be customized. Even the speeds of individual step types (CALL, DECLARATION, GET, etc.) can be customized. When paused, the iterator can be controlled one step at a time (next or previous). That means that, yes, the execution CAN be viewed in reverse. The iterator passes the details of the current step to the 'state' management(#2 above) and the structures management.
 
 #### Scoping, Variables, and the Callstack
+
 It was difficult to come up with a name for something that encompasses so many things. You might ask "Well, why didn't you break those things out into different pieces of state?" To answer that, this piece of state is esentially responsible for the callstack and which scopes are active, and thereby which variables are visualized for that particular step. This is important not only for displaying the exact values of variables, but for determining which objects show up on the screen (only objects with variable bindings accessible by the currently executing scope will be visible). The callstack, scope chain, and active identifiers are deeply connected and inseparable. To manage them, 'state' uses a simple stack-based algorithm that can be executed in reverse. A stack-based algorithm was perfect for, well, managing a bunch of stacks...
 
 #### structures
-This is responsible for executing changes to objects. The step types GET, SET, and DELETE, are managed by this piece of state. 
+
+This is responsible for executing changes to objects. The step types GET, SET, and DELETE, are managed by this piece of state.
 The premise is simple, execute those steps on those objects, and let mobx-react react to the changes. The difficulty, and probably the most difficult thing on the client side, was figuring out how to manage object to object relations. From a UX perspective, it would be nice, for example, if a Binary Tree's child nodes were rendered as they were actually its children, instead of just pointers. Or, its nice when matrices actually look like such, instead of an array of pointers.
 
 For that part of the algorithm, I used a modified priority queue algorithm to keep track of which object has which children. It takes into account assignment precendence (which parent was the first parent of a particular object), and an _affinity_
@@ -127,17 +128,18 @@ which determines how strong certain parent-child relationships are. For example,
 
 This piece of state is also responsible for keeping track of the locations of all objects on the screen. This is used primarily to render pointers.
 
-
 #### View Rendering
+
 Because view rendering is so dynamic, I largely opted for inline styling. Still, there are globally applied styles. In the near future, I may remove the CSS file altogether for uniformity and clarity. Animations are primarily done with simple CSS transitions. While I love the power and flexibility offered by JS animations, they often hinder performance by blocking the event loop. Most of the colors on the screen, such as that of your code, the callstack, structures, value types, etc. are all customizeable. In addition, users can toggle most parts of the screen on/off.
 
 Regarding rendering custom structures (Binary Tree, Linked List, anything under the sun), users must be explicit about how structures are rendered. The interface that handles this allows one to define children, pointers, display key, and specify exactly how many children a structure has. The tutorial goes into detail on this.
 
-
 ### Security measures
+
 The current security configuration relies on containerization. When code is send to be run, the server spins up a container (with Docker). The container has limited access to memory and CPU and privileges. Inside the container is where both the transpilation and execution processes happen. The container writes the result or errors to a data volume that is shared with the host. For JavaScript specifically, the transpiled code runs in an instance Node's Virtual Machine module. Efforts will be made to use a similar configuration with other languages.
 
 This configuration is secure to a great extent. However, nothing is ever totally secure. Upon scaling, greater security can be acheived by opting to make the code running function a dedicated microservice. That way, the code can be run on entirely different machines.
 
 ### Architecture and Scaling
+
 _To be done_

@@ -1,26 +1,23 @@
 .top-nav {
-
   height: 95px;
   width: 100%;
   border-bottom: 1px solid #eee;
   position: fixed;
   background-color: #fff;
 
-  .nav-elements{
+  .nav-elements {
     margin: auto;
     align-self: center;
     display: flex;
     justify-content: space-between;
     height: 100%;
     max-width: 1200px;
-
   }
 
   .logo {
     margin-left: 40px;
     display: flex;
     img {
-
       display: inline;
       height: 45px;
       width: 60px;
@@ -57,7 +54,6 @@
       margin: 10px;
       border: 2px solid $EvernoteMediumLightGray;
       border-radius: 5px;
-
     }
     button:hover {
       color: #fff;
@@ -65,7 +61,6 @@
       border-color: $EvernoteGreen;
     }
   }
-
 }
 
 .foot-nav {
@@ -78,7 +73,7 @@
   background-color: #fff;
   padding-bottom: 40px;
 
-  .foot-nav-elements{
+  .foot-nav-elements {
     margin: auto;
     align-self: center;
     display: flex;
@@ -86,7 +81,8 @@
     height: 100%;
     max-width: 1200px;
 
-    .quotes, .external-links {
+    .quotes,
+    .external-links {
       display: flex;
     }
 
@@ -105,7 +101,7 @@
       align-self: center;
       font-size: 18px;
       color: $EvernoteGreen;
-      padding: 5px
+      padding: 5px;
     }
 
     p {
@@ -123,7 +119,5 @@
     .translation {
       font-family: $sans-serif;
     }
-
   }
-
 }

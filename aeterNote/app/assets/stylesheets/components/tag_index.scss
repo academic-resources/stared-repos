@@ -1,4 +1,3 @@
-
 .tagmodalbg {
   position: absolute;
   float: left;
@@ -7,24 +6,22 @@
   right: 0;
   left: 0;
   bottom: 0;
-  transition-delay: .4s;
-
+  transition-delay: 0.4s;
 }
 
 .hide-tag-modal-bg {
   display: none;
-  animation: fadeout .4s;
+  animation: fadeout 0.4s;
   background-color: none;
 }
 
 .reveal-tag-modal-bg {
-  animation: fadein .4s;
-  background-color: rgba(255, 255, 255, 0.90);
+  animation: fadein 0.4s;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-
 .tags {
-  position:absolute;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: -500px;
@@ -34,8 +31,6 @@
   width: 457px;
   border-right: 3px solid $EvernoteMediumLightGray;
   background-color: #fff;
-
-
 
   header {
     display: flex;
@@ -62,28 +57,24 @@
       img {
       }
     }
-
   }
 
   .tags-ul {
-    display:block;
+    display: block;
     z-index: 1;
     height: calc(100vh - 100px);
     overflow-y: scroll;
   }
-
-
 }
-.reveal-tag-index{
-  animation: slidein .7s;
+.reveal-tag-index {
+  animation: slidein 0.7s;
   left: 71px;
 }
 
 .hide-notebook {
-  animation: slideout .7s;
+  animation: slideout 0.7s;
   left: -500px;
   // visibility: hidden;
-
 }
 
 .tag-item {
@@ -94,8 +85,6 @@
   align-content: left;
   margin: 60px 45px;
 
-
-
   .tag-description {
     height: 25px;
     display: flex;
@@ -104,18 +93,16 @@
     border-radius: 3px;
     padding: 0 10px;
     background-color: $EvernoteSuperLightGray;
-    .tag-label{
+    .tag-label {
       margin: 0;
       font-family: $sans-serif;
       font-size: 12px;
       color: black;
       font-weight: 300;
       letter-spacing: 1px;
-
-
     }
 
-    .tag-count{
+    .tag-count {
       letter-spacing: 0.75px;
       font-weight: 400;
       font-size: 12px;
@@ -125,8 +112,6 @@
     }
   }
 
-
-
   .tag-item-buttons {
     display: flex;
     justify-content: space-between;
@@ -134,46 +119,39 @@
     .button-tag {
       height: 25px;
       width: 25px;
-      background: image-url('white_trash_can.png');
+      background: image-url("white_trash_can.png");
       background-size: 25%;
       background-repeat: no-repeat;
       background-position: center center;
       margin: auto;
-
     }
-
   }
-
-
-
 }
-
-
 
 .tag-item:hover {
   background-color: #fff;
   cursor: pointer;
-  .tag-description{
-    transition: background-color .4s;
+  .tag-description {
+    transition: background-color 0.4s;
     background-color: $EvernoteGreen;
 
-    .tag-count, .tag-label {
-      transition: color .4s;
+    .tag-count,
+    .tag-label {
+      transition: color 0.4s;
       color: #fff;
     }
   }
 
   .button-tag {
-    transition: background .4s;
+    transition: background 0.4s;
     height: 25px;
     width: 25px;
-    background: image_url('trash_gray.png');
+    background: image_url("trash_gray.png");
     background-size: 85%;
     background-repeat: no-repeat;
     background-position: center center;
     margin: auto;
   }
-
 }
 
 // .hide-tag-index {

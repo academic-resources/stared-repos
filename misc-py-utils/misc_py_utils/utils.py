@@ -1,6 +1,6 @@
 import pathlib
 
-from collections import OrderedDict,defaultdict, namedtuple
+from collections import OrderedDict, defaultdict, namedtuple
 from functools import partial, wraps
 from pprint import PrettyPrinter as pprint
 

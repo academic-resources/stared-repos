@@ -27,30 +27,30 @@ class Codec:
 
         def _serialize(node):
             if not node:
-                tree_list.append('#')
+                tree_list.append("#")
                 return
             tree_list.append(node.val)
             _serialize(node.left)
             _serialize(node.right)
+
         _serialize(root)
-        return ','.join(map(str, tree_list))
+        return ",".join(map(str, tree_list))
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
         :type data: str
         :rtype: TreeNode
         """
-        tree_list = data.split(',')
+        tree_list = data.split(",")
         itr = iter(tree_list)
 
         def _deserialize(it):
             v = next(it, None)
-            if not v or v == '#':
+            if not v or v == "#":
                 return None
             p = TreeNode(v)
             p.left = _deserialize(it)
             p.right = _deserialize(it)
             return p
+
         return _deserialize(itr)
-
-

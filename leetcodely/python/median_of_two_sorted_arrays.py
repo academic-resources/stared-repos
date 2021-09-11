@@ -23,7 +23,9 @@ class Solution(object):
 
             if max_left_x <= min_right_y and max_left_y <= min_right_x:
                 if (x + y) % 2 == 0:
-                    return (max(max_left_x, max_left_y) + min(min_right_x, min_right_y)) / 2
+                    return (
+                        max(max_left_x, max_left_y) + min(min_right_x, min_right_y)
+                    ) / 2
                 else:
                     return max(max_left_x, max_left_y)
             elif max_left_x > min_right_y:
@@ -33,7 +35,7 @@ class Solution(object):
         raise ValueError("Input arrays were not sorted.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     arr1 = [1, 3]
     arr2 = [2]
     solution = Solution()

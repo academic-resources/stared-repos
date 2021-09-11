@@ -48,11 +48,11 @@ class WSGIXMLRPCApplication(object):
     def handler(self, environ, start_response):
         """XMLRPC service for windmill browser core to communicate with"""
 
-        if environ['REQUEST_METHOD'] == 'POST':
+        if environ["REQUEST_METHOD"] == "POST":
             return self.handle_POST(environ, start_response)
         else:
-            start_response("400 Bad request", [('Content-Type', 'text/plain')])
-            return ['']
+            start_response("400 Bad request", [("Content-Type", "text/plain")])
+            return [""]
 
     def handle_POST(self, environ, start_response):
         """Handles the HTTP POST request.
@@ -69,8 +69,8 @@ class WSGIXMLRPCApplication(object):
             # socket.read(); around the 10 or 15Mb mark, some platforms
             # begin to have problems (bug #792570).
 
-            length = int(environ['CONTENT_LENGTH'])
-            data = environ['wsgi.input'].read(length)
+            length = int(environ["CONTENT_LENGTH"])
+            data = environ["wsgi.input"].read(length)
 
             # In previous versions of SimpleXMLRPCServer, _dispatch
             # could be overridden in this class, instead of in
@@ -78,17 +78,20 @@ class WSGIXMLRPCApplication(object):
             # check to see if a subclass implements _dispatch and
             # using that method if present.
             response = self.dispatcher._marshaled_dispatch(
-                data, getattr(self.dispatcher, '_dispatch', None)
+                data, getattr(self.dispatcher, "_dispatch", None)
             )
-            response += b'\n'
+            response += b"\n"
         except Exception as e:  # This should only happen if the module is buggy
             # internal error, report as HTTP server error
             logger.exception(e)
-            start_response("500 Server error", [('Content-Type', 'text/plain')])
+            start_response("500 Server error", [("Content-Type", "text/plain")])
             return []
         else:
             # got a valid XML RPC response
-            start_response("200 OK", [('Content-Type', 'text/xml'), ('Content-Length', str(len(response)),)])
+            start_response(
+                "200 OK",
+                [("Content-Type", "text/xml"), ("Content-Length", str(len(response)))],
+            )
             return [response]
 
     def __call__(self, environ, start_response):

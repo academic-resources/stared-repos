@@ -9,7 +9,7 @@ def count_vowels(text):
         int: Return number of vowels in a text.
 
     """
-    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowels = ["a", "e", "i", "o", "u"]
     count = 0
     for i in vowels:
         count += text.lower().count(i)

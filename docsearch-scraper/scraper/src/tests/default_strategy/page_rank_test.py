@@ -8,77 +8,76 @@ class TestPageRank:
         # Given
         strategy = get_strategy()
 
-        strategy.dom = lxml.html.fromstring("""
+        strategy.dom = lxml.html.fromstring(
+            """
         <html><body>
          <h1>Foo</h1>
         </body></html>
-        """)
+        """
+        )
 
         # When
         actual = strategy.get_records_from_dom()
 
         # Then
-        assert actual[0]['weight']['page_rank'] == 0
+        assert actual[0]["weight"]["page_rank"] == 0
 
     def test_positive_page_rank(self):
         # Given
-        strategy = get_strategy({
-            'start_urls': [{
-                'url': 'http://foo.bar/api',
-                'page_rank': 1
-            }]
-        })
+        strategy = get_strategy(
+            {"start_urls": [{"url": "http://foo.bar/api", "page_rank": 1}]}
+        )
 
-        strategy.dom = lxml.html.fromstring("""
+        strategy.dom = lxml.html.fromstring(
+            """
         <html><body>
          <h1>Foo</h1>
         </body></html>
-        """)
+        """
+        )
 
         # When
         actual = strategy.get_records_from_dom("http://foo.bar/api")
 
         # Then
-        assert actual[0]['weight']['page_rank'] == 1
+        assert actual[0]["weight"]["page_rank"] == 1
 
     def test_positive_sub_page_page_rank(self):
         # Given
-        strategy = get_strategy({
-            'start_urls': [{
-                'url': 'http://foo.bar/api',
-                'page_rank': 1
-            }]
-        })
+        strategy = get_strategy(
+            {"start_urls": [{"url": "http://foo.bar/api", "page_rank": 1}]}
+        )
 
-        strategy.dom = lxml.html.fromstring("""
+        strategy.dom = lxml.html.fromstring(
+            """
         <html><body>
          <h1>Foo</h1>
         </body></html>
-        """)
+        """
+        )
 
         # When
         actual = strategy.get_records_from_dom("http://foo.bar/api/test")
 
         # Then
-        assert actual[0]['weight']['page_rank'] == 1
+        assert actual[0]["weight"]["page_rank"] == 1
 
     def test_negative_page_rank(self):
         # Given
-        strategy = get_strategy({
-            'start_urls': [{
-                'url': 'http://foo.bar/api',
-                'page_rank': -1
-            }]
-        })
+        strategy = get_strategy(
+            {"start_urls": [{"url": "http://foo.bar/api", "page_rank": -1}]}
+        )
 
-        strategy.dom = lxml.html.fromstring("""
+        strategy.dom = lxml.html.fromstring(
+            """
         <html><body>
          <h1>Foo</h1>
         </body></html>
-        """)
+        """
+        )
 
         # When
         actual = strategy.get_records_from_dom("http://foo.bar/api/test")
 
         # Then
-        assert actual[0]['weight']['page_rank'] == -1
+        assert actual[0]["weight"]["page_rank"] == -1

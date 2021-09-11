@@ -8,7 +8,6 @@ def selection_sort(arr):
         # (hint, can do in 3 loc)
         # Your code here
 
-
         # TO-DO: swap
         # Your code here
 
@@ -19,13 +18,11 @@ def selection_sort(arr):
 def bubble_sort(arr):
     # Your code here
 
-
     return arr
 
 
 # STRETCH: implement the Count Sort function below
 def count_sort(arr, maximum=-1):
     # Your code here
-
 
     return arr

@@ -1,4 +1,3 @@
-
 import os
 import signal
 import sys
@@ -16,7 +15,7 @@ TEST_DB = os.environ.get("TEST_DB")
 
 
 def checklog(log, word):
-    with open(log, 'r') as f:
+    with open(log, "r") as f:
         return word in f.read()
 
 
@@ -25,6 +24,7 @@ class Runner:
         self.logfile = logfile
         self.word = word
         self.sleep = sleep
+
     def run(self):
         with open(self.logfile, "a") as f:
             f.write(self.word + "\n")
@@ -156,4 +156,3 @@ def test_get_database(capsys):
     s.start()
     res = capsys.readouterr()
     assert "OK" in res.out
-

@@ -2,6 +2,7 @@
 
 import sys
 
+
 class CPU:
     """Main CPU class."""
 
@@ -46,18 +47,18 @@ class CPU:
         self.bt[self.jne] = self.cpu_jne
         self.bt[self.addi] = self.cpu_addi
 
-    def cpu_prn(self, operand_a, operand_b): 
-        print(f'{self.register[operand_a]}')
+    def cpu_prn(self, operand_a, operand_b):
+        print(f"{self.register[operand_a]}")
         self.program_counter += 2
 
-    def cpu_ldi(self, operand_a, operand_b): 
+    def cpu_ldi(self, operand_a, operand_b):
         self.register[operand_a] = operand_b
         self.program_counter += 3
 
     def cpu_push(self, operand_a, operand_b):
         ram_index = self.register[7]
         self.ram[ram_index] = self.register[operand_a]
-        self.register[7] -= 1  
+        self.register[7] -= 1
         self.program_counter += 2
 
     def cpu_pop(self, operand_a, operand_b):
@@ -95,8 +96,8 @@ class CPU:
             self.program_counter += 2
 
     def cpu_addi(self, operand_a, operand_b):
-        pc1 = self.program_counter+1
-        pc2 = self.program_counter+2
+        pc1 = self.program_counter + 1
+        pc2 = self.program_counter + 2
         i_register = self.ram_read(pc1)
         immediate_value = self.ram_read(pc2)
         self.register[i_register] = immediate_value
@@ -119,7 +120,7 @@ class CPU:
         self.program_counter += 3
 
     def cpu_cmp(self, operand_a, operand_b):
-        self.alu('CMP', operand_a, operand_b)
+        self.alu("CMP", operand_a, operand_b)
 
     def ram_read(self, address_to_read):
         return self.ram[address_to_read]
@@ -162,15 +163,19 @@ class CPU:
         """
         pc1 = self.program_counter + 1
         pc2 = self.program_counter + 2
-        print(f"TRACE: %02X | %02X %02X %02X |" % (
-            self.program_counter,
-            self.ram_read(self.program_counter),
-            self.ram_read(pc1),
-            self.ram_read(pc2)
-        ), end='')
+        print(
+            f"TRACE: %02X | %02X %02X %02X |"
+            % (
+                self.program_counter,
+                self.ram_read(self.program_counter),
+                self.ram_read(pc1),
+                self.ram_read(pc2),
+            ),
+            end="",
+        )
 
         for i in range(8):
-            print(" %02X" % self.register[i], end='')
+            print(" %02X" % self.register[i], end="")
         print()
 
     def load(self):
@@ -188,9 +193,9 @@ class CPU:
                 for single_line in opened_file:
                     x = single_line.split("#", 1)[0]
 
-                    if x.strip() == '':
+                    if x.strip() == "":
                         continue
-                    x = '0b' + x
+                    x = "0b" + x
                     self.ram[address] = int(x, 2)
                     address += 1
 

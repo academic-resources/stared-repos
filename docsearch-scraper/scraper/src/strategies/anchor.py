@@ -1,16 +1,14 @@
-
-
 class Anchor:
     def __init__(self):
         pass
 
     @staticmethod
     def _get_anchor_string_from_element(element):
-        return element.get('name', element.get('id'))
+        return element.get("name", element.get("id"))
 
     @staticmethod
     def _is_valid_anchor(anchor):
-        return anchor is not None and not anchor.startswith('__') and anchor != ''
+        return anchor is not None and not anchor.startswith("__") and anchor != ""
 
     @staticmethod
     def get_anchor(element):
@@ -27,7 +25,7 @@ class Anchor:
             return anchor
 
         # Check on child
-        children = element.cssselect('[name],[id]')
+        children = element.cssselect("[name],[id]")
         if len(children) > 0:
             anchor = Anchor._get_anchor_string_from_element(children[-1])
             if Anchor._is_valid_anchor(anchor):

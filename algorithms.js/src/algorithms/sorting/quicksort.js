@@ -1,12 +1,11 @@
-'use strict';
-var Comparator = require('../../util/comparator');
+"use strict";
+var Comparator = require("../../util/comparator");
 
 /**
  * Quicksort recursively sorts parts of the array in
  * O(n.lg n)
  */
 var quicksortInit = function (array, comparatorFn) {
-
   var comparator = new Comparator(comparatorFn);
 
   return (function quicksort(array, lo, hi) {

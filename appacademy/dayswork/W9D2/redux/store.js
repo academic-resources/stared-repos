@@ -1,24 +1,24 @@
 class Store {
-    constructor(rootReducer) {
-        this.rootReducer = rootReducer
-        this.state = {}
-        this.subscriptions = []
-    }
+  constructor(rootReducer) {
+    this.rootReducer = rootReducer;
+    this.state = {};
+    this.subscriptions = [];
+  }
 
-    getState() {
-        const copy = Object.assign({}, this.state)
-        return copy
-    }
+  getState() {
+    const copy = Object.assign({}, this.state);
+    return copy;
+  }
 
-    subscribe(callback) {
-        this.subscriptions.push(callback)
-    }
+  subscribe(callback) {
+    this.subscriptions.push(callback);
+  }
 
-    dispatch(action) {
-      const newState = this.rootReducer(this.state, action, this.subscriptions)
-      
-      this.state = Object.assign(this.state, newState);
-    }
+  dispatch(action) {
+    const newState = this.rootReducer(this.state, action, this.subscriptions);
+
+    this.state = Object.assign(this.state, newState);
+  }
 }
 
-export default Store
+export default Store;

@@ -7,10 +7,10 @@
 # def fib(n):
 #     if n == 0:
 #         return 0
-    
+
 #     if n == 1:
 #         return 1
-    
+
 #     return fib(n-1) + fib(n-2)
 
 # for i in range(10):
@@ -40,6 +40,7 @@
 # Iterative (bottom up) solution
 # O(n) time complexity, O(1) space complexity
 
+
 def fib_iter(n):
 
     if n == 0:
@@ -51,7 +52,7 @@ def fib_iter(n):
     p0 = 0
     p1 = 1
 
-    for i in range(n-1):
+    for i in range(n - 1):
         next_val = p0 + p1
 
         p0 = p1
@@ -59,7 +60,6 @@ def fib_iter(n):
 
     return next_val
 
+
 for i in range(10):
-    print(f'{i}: {fib_iter(i)}')
-
-
+    print(f"{i}: {fib_iter(i)}")

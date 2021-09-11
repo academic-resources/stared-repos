@@ -15,7 +15,7 @@ class HeapTests(unittest.TestCase):
         self.heap.insert(1)
         self.heap.insert(9)
         self.heap.insert(9)
-        self.heap.insert(5) 
+        self.heap.insert(5)
         self.assertEqual(self.heap.storage, [10, 9, 9, 6, 1, 8, 9, 5])
 
     def test_default_get_priority_works(self):
@@ -77,7 +77,7 @@ class HeapTests(unittest.TestCase):
         self.heap.insert(1)
         self.heap.insert(9)
         self.heap.insert(9)
-        self.heap.insert(5) 
+        self.heap.insert(5)
         self.assertEqual(self.heap.storage, [1, 5, 9, 6, 8, 10, 9, 9])
 
     def test_custom_get_priority_works(self):
@@ -148,5 +148,5 @@ class HeapTests(unittest.TestCase):
         self.assertTrue(self.heap._sift_down.called)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

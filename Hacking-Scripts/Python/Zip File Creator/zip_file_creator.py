@@ -1,13 +1,13 @@
-#required module-pip install zipfile36
+# required module-pip install zipfile36
 from zipfile import ZipFile
 
-#opening file ...
-z = ZipFile("sample.zip", 'w')
+# opening file ...
+z = ZipFile("sample.zip", "w")
 
-#passing files to zip files..
+# passing files to zip files..
 z.write("ex.py")
 
 z.write("text.txt")
 
-#closing files...
+# closing files...
 z.close()

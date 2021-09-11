@@ -12,27 +12,26 @@ class Solution(object):
         :type equation: str
         :rtype: str
         """
+
         def evaluate(expr):
             coeff, const = 0, 0
-            groups = expr.split('+')
+            groups = expr.split("+")
             for group in groups:
-                terms = group.split('-') if '-' in group else [group]
+                terms = group.split("-") if "-" in group else [group]
                 negate = 1
                 for term in terms:
                     if term:
-                        if term[-1] == 'x':
+                        if term[-1] == "x":
                             coeff += negate * (int(term[:-1]) if term[:-1] else 1)
                         else:
                             const += negate * int(term)
                     negate = -1
             return coeff, const
-        left, right = equation.split('=')
+
+        left, right = equation.split("=")
         coeff_left, const_left = evaluate(left)
         coeff_right, const_right = evaluate(right)
 
         if coeff_left == coeff_right:
             return "Infinite Solutions" if const_left == const_right else "No Solutions"
-        return 'x=' + str((const_right - const_left)// (coeff_right - coeff_left))
-
-
-
+        return "x=" + str((const_right - const_left) // (coeff_right - coeff_left))

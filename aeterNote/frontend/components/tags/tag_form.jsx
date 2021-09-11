@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 class TagForm extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      label: this.props.label
+      label: this.props.label,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -14,60 +14,61 @@ class TagForm extends React.Component {
   }
 
   componentWillReceiveProps() {
-    this.setState({ label: '' });
+    this.setState({ label: "" });
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const tag = Object.assign({}, this.state);
-    this.props.processForm(tag).then(
-      newTag => this.props.updateTagFormModal()
-    );
+    this.props
+      .processForm(tag)
+      .then((newTag) => this.props.updateTagFormModal());
   }
 
   update(field) {
-    return e => this.setState({[field]: e.target.value});
+    return (e) => this.setState({ [field]: e.target.value });
   }
 
-  render () {
+  render() {
     const { reveal } = this.props;
     const { updateTagFormModal } = this.props;
-    return(
-      <div className={`form-modal ${reveal}`} >
-        <div className='container'>
-          <img className='plus-logo'src={window.staticImages.grayTagPlus}/>
+    return (
+      <div className={`form-modal ${reveal}`}>
+        <div className="container">
+          <img className="plus-logo" src={window.staticImages.grayTagPlus} />
           <h3>
             {`${this.props.formType.toUpperCase()} TAG`}
-            <div className='bottom-border'/>
+            <div className="bottom-border" />
           </h3>
-          <form
-            className='notebook-form'
-            onSubmit={this.handleSubmit}>
-
-            <ul className='errors'>
-              {
-                this.props.errors.map((error, i) => (
-                  <li key={i}>{error}</li>
-                ))
-              }
+          <form className="notebook-form" onSubmit={this.handleSubmit}>
+            <ul className="errors">
+              {this.props.errors.map((error, i) => (
+                <li key={i}>{error}</li>
+              ))}
             </ul>
 
             <input
               className="title"
-              type='text'
+              type="text"
               placeholder="Label your tag"
               value={this.state.label}
-              onChange={this.update('label')}/>
-            <div className='form-buttons'>
-              <button className='notebook-button notebook-cancel' onClick={(e) => {
+              onChange={this.update("label")}
+            />
+            <div className="form-buttons">
+              <button
+                className="notebook-button notebook-cancel"
+                onClick={(e) => {
                   e.preventDefault();
                   updateTagFormModal();
-                }}>
+                }}
+              >
                 Cancel
               </button>
-              <input className='notebook-button notebook-submit'
-                type='submit'
-                value={`${this.props.formType}`}/>
+              <input
+                className="notebook-button notebook-submit"
+                type="submit"
+                value={`${this.props.formType}`}
+              />
             </div>
           </form>
         </div>

@@ -28,26 +28,19 @@ def maxDifference(arr):
 def schedule(tasks, cooldown):
     res = [tasks[0]]
     for i in range(1, len(tasks)):
-        j, k = 0, i+1
+        j, k = 0, i + 1
         while j < cooldown and k < len(tasks):
             if tasks[k] != tasks[i]:
                 res.append(tasks[k])
             else:
-                res.append('.')
+                res.append(".")
             k += 1
             j += 1
-    return ''.join(res)
+    return "".join(res)
 
 
-if __name__ == '__main__':
-    print(schedule('aba', 2))
-    print(schedule('abca', 2))
-    print(schedule('aabb', 2))
-    print(schedule('acbab', 2))
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    print(schedule("aba", 2))
+    print(schedule("abca", 2))
+    print(schedule("aabb", 2))
+    print(schedule("acbab", 2))

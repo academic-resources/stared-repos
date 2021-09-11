@@ -1,16 +1,16 @@
 # M-ary tree
 
-* Overview
-* Unbounded Branching
-* Types
-* Design & Implementation
-  * Arrays
-  * Pointer-based
-  * Unbounded branching
+- Overview
+- Unbounded Branching
+- Types
+- Design & Implementation
+  - Arrays
+  - Pointer-based
+  - Unbounded branching
 
 ## Overview
 
-In *graph theory*, an *M-ary tree* (also known as *K-ary* or *K-way* tree) is a rooted tree in which each node has no more than $m$ children.
+In _graph theory_, an _M-ary tree_ (also known as _K-ary_ or _K-way_ tree) is a rooted tree in which each node has no more than $m$ children.
 
 ![](2021-07-09-22-02-38.png)
 
@@ -18,17 +18,17 @@ In *graph theory*, an *M-ary tree* (also known as *K-ary* or *K-way* tree) is a 
 
 ## Types
 
-* **Full**: Each node has either 0 or $m$ children.
+- **Full**: Each node has either 0 or $m$ children.
 
-* **Complete**: Every level, *except possible the last* is completely filled, and all nodes in the last level are as far left as possible. It is maximally space efficient.
+- **Complete**: Every level, _except possible the last_ is completely filled, and all nodes in the last level are as far left as possible. It is maximally space efficient.
 
-* **Perfect**: Full m-ary tree in which all *leaf nodes* are at the same depth.
+- **Perfect**: Full m-ary tree in which all _leaf nodes_ are at the same depth.
 
 ## Design & Implementation
 
 ### Arrays
 
-Stored in *breadth-first* order as an implicit data structure in arrays, and if the tree is a *complete tree*, this method wastes no space.
+Stored in _breadth-first_ order as an implicit data structure in arrays, and if the tree is a _complete tree_, this method wastes no space.
 
 ![](2021-07-09-22-08-18.png)
 

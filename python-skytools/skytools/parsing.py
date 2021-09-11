@@ -7,10 +7,17 @@ from typing import Iterator, List, Optional, Sequence, Tuple
 import skytools
 
 __all__ = (
-    "parse_pgarray", "parse_logtriga_sql", "parse_tabbed_table",
-    "parse_statements", 'sql_tokenizer', 'parse_sqltriga_sql',
-    "parse_acl", "dedent", "hsize_to_bytes",
-    "parse_connect_string", "merge_connect_string",
+    "parse_pgarray",
+    "parse_logtriga_sql",
+    "parse_tabbed_table",
+    "parse_statements",
+    "sql_tokenizer",
+    "parse_sqltriga_sql",
+    "parse_acl",
+    "dedent",
+    "hsize_to_bytes",
+    "parse_connect_string",
+    "merge_connect_string",
 )
 
 _rc_listelem = re.compile(r'( [^,"}]+ | ["] ( [^"\\]+ | [\\]. )* ["] )', re.X)
@@ -21,13 +28,13 @@ def parse_pgarray(array: Optional[str]) -> Optional[List[Optional[str]]]:
     """
     if array is None:
         return None
-    if not array or array[0] not in ("{", "[") or array[-1] != '}':
+    if not array or array[0] not in ("{", "[") or array[-1] != "}":
         raise ValueError("bad array format: must be surrounded with {}")
     res = []
     pos = 1
     # skip optional dimensions descriptor "[a,b]={...}"
     if array[0] == "[":
-        pos = array.find('{') + 1
+        pos = array.find("{") + 1
         if pos < 1:
             raise ValueError("bad array format 2: must be surrounded with {}")
     while True:
@@ -50,7 +57,10 @@ def parse_pgarray(array: Optional[str]) -> Optional[List[Optional[str]]]:
         elif array[pos2] != ",":
             raise ValueError("bad array format: expected ,} got " + repr(array[pos2]))
     if pos < len(array) - 1:
-        raise ValueError("bad array format: failed to parse completely (pos=%d len=%d)" % (pos, len(array)))
+        raise ValueError(
+            "bad array format: failed to parse completely (pos=%d len=%d)"
+            % (pos, len(array))
+        )
     return res
 
 
@@ -58,9 +68,12 @@ def parse_pgarray(array: Optional[str]) -> Optional[List[Optional[str]]]:
 # parse logtriga partial sql
 #
 
+
 class _logtriga_parser:
     """Parses logtriga/sqltriga partial SQL to values."""
+
     pklist = None
+
     def tokenizer(self, sql):
         """Token generator."""
         for ___typ, tok in sql_tokenizer(sql, ignore_whitespace=True):
@@ -160,13 +173,17 @@ class _logtriga_parser:
         except StopIteration:
             pass
         # last sanity check
-        if (len(fields) + len(key_fields) == 0 or
-            len(fields) != len(values) or
-                len(key_fields) != len(key_values)):
+        if (
+            len(fields) + len(key_fields) == 0
+            or len(fields) != len(values)
+            or len(key_fields) != len(key_values)
+        ):
             raise ValueError("syntax error, fields do not match values")
         if splitkeys:
-            return (self._create_dbdict(key_fields, key_values),
-                    self._create_dbdict(fields, values))
+            return (
+                self._create_dbdict(key_fields, key_values),
+                self._create_dbdict(fields, values),
+            )
         return self._create_dbdict(fields + key_fields, values + key_values)
 
 
@@ -237,15 +254,24 @@ _base_sql_fq = r"%s | %s" % (_fqident, _base_sql)
 _base_sql = r"%s | %s" % (_ident, _base_sql)
 
 _std_sql = r"""(?: (?P<str> [E] %s | %s ) | %s )""" % (_extstr, _stdstr, _base_sql)
-_std_sql_fq = r"""(?: (?P<str> [E] %s | %s ) | %s )""" % (_extstr, _stdstr, _base_sql_fq)
+_std_sql_fq = r"""(?: (?P<str> [E] %s | %s ) | %s )""" % (
+    _extstr,
+    _stdstr,
+    _base_sql_fq,
+)
 _ext_sql = r"""(?: (?P<str> [E]? %s ) | %s )""" % (_extstr, _base_sql)
 _ext_sql_fq = r"""(?: (?P<str> [E]? %s ) | %s )""" % (_extstr, _base_sql_fq)
 _std_sql_rc = _ext_sql_rc = None
 _std_sql_fq_rc = _ext_sql_fq_rc = None
 
 
-def sql_tokenizer(sql, standard_quoting=False, ignore_whitespace=False,
-                  fqident=False, show_location=False):
+def sql_tokenizer(
+    sql,
+    standard_quoting=False,
+    ignore_whitespace=False,
+    fqident=False,
+    show_location=False,
+):
     r"""Parser SQL to tokens.
 
     Iterator, returns (toktype, tokstr) tuples.
@@ -322,13 +348,16 @@ def parse_statements(sql: str, standard_quoting: bool = False) -> Iterator[str]:
 
 
 _acl_name = r'(?: [0-9a-z_]+ | " (?: [^"]+ | "" )* " )'
-_acl_re = r'''
+_acl_re = r"""
     \s* (?: group \s+ | user \s+ )?
     (?P<tgt> %s )?
     (?P<perm> = [a-z*]*  )?
     (?P<owner> / %s )?
     \s* $
-    ''' % (_acl_name, _acl_name)
+    """ % (
+    _acl_name,
+    _acl_name,
+)
 _acl_rc = None
 
 
@@ -343,9 +372,9 @@ def parse_acl(acl: str) -> Optional[Tuple[str, str, str]]:
     if not m:
         return None
 
-    target = m.group('tgt')
-    perm = m.group('perm')
-    owner = m.group('owner')
+    target = m.group("tgt")
+    perm = m.group("perm")
+    owner = m.group("owner")
 
     if target:
         target = skytools.unquote_ident(target)
@@ -375,13 +404,13 @@ def dedent(doc: str) -> str:
             if not ln:
                 continue
             wslen = len(ln) - len(ln.lstrip())
-            pfx = ln[: wslen]
+            pfx = ln[:wslen]
         if pfx:
             if ln.startswith(pfx):
-                ln = ln[len(pfx):]
+                ln = ln[len(pfx) :]
         res.append(ln)
-    res.append('')
-    return '\n'.join(res)
+    res.append("")
+    return "\n".join(res)
 
 
 def hsize_to_bytes(input_str: str) -> int:
@@ -391,7 +420,7 @@ def hsize_to_bytes(input_str: str) -> int:
     m = re.match(r"^([0-9]+) *([KMGTPEZY]?)B?$", input_str.strip(), re.IGNORECASE)
     if not m:
         raise ValueError("cannot parse: %s" % input_str)
-    units = ['', 'K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y']
+    units = ["", "K", "M", "G", "T", "P", "E", "Z", "Y"]
     nbytes = int(m.group(1)) * 1024 ** units.index(m.group(2).upper())
     return nbytes
 
@@ -420,7 +449,7 @@ def parse_connect_string(cstr: str) -> List[Tuple[str, str]]:
     while pos < len(cstr):
         m = _cstr_rc.match(cstr, pos)
         if not m:
-            raise ValueError('Invalid connect string')
+            raise ValueError("Invalid connect string")
         pos = m.end()
         k = m.group(1)
         v = m.group(2)
@@ -440,9 +469,8 @@ def merge_connect_string(cstr_arg_list: Sequence[Tuple[str, str]]) -> str:
     buf = []
     for k, v in cstr_arg_list:
         if not v or _cstr_badval_rc.search(v):
-            v = v.replace('\\', r'\\')
+            v = v.replace("\\", r"\\")
             v = v.replace("'", r"\'")
             v = "'" + v + "'"
         buf.append("%s=%s" % (k, v))
-    return ' '.join(buf)
-
+    return " ".join(buf)

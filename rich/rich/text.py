@@ -368,10 +368,7 @@ class Text(JupyterMixin):
         return copy_self
 
     def stylize(
-        self,
-        style: Union[str, Style],
-        start: int = 0,
-        end: Optional[int] = None,
+        self, style: Union[str, Style], start: int = 0, end: Optional[int] = None
     ) -> None:
         """Apply a style to the text, or a portion of the text.
 
@@ -985,12 +982,7 @@ class Text(JupyterMixin):
         overflow = self.overflow
         _Text = Text
         new_lines = Lines(
-            _Text(
-                text[start:end],
-                style=style,
-                justify=justify,
-                overflow=overflow,
-            )
+            _Text(text[start:end], style=style, justify=justify, overflow=overflow)
             for start, end in line_ranges
         )
         if not self._spans:

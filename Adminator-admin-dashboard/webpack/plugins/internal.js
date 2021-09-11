@@ -10,22 +10,18 @@
  * + @Exporting Module
  */
 
-
 // ---------------------
 // @Loading Dependencies
 // ---------------------
 
-const
-  manifest = require('../manifest'),
-  webpack  = require('webpack');
-
+const manifest = require("../manifest"),
+  webpack = require("webpack");
 
 // ---------------
 // @Common Plugins
 // ---------------
 
-const
-  plugins  = [];
+const plugins = [];
 
 plugins.push(
   // new webpack.DefinePlugin({
@@ -33,7 +29,6 @@ plugins.push(
   //     NODE_ENV: JSON.stringify(manifest.NODE_ENV),
   //   },
   // }),
-
 
   // new webpack.optimize.CommonsChunkPlugin({
   //   name: 'vendor',
@@ -45,13 +40,12 @@ plugins.push(
   // }),
 
   new webpack.ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    'window.jQuery': 'jquery',
+    $: "jquery",
+    jQuery: "jquery",
+    "window.jQuery": "jquery",
     // Popper: ['popper.js', 'default'],
   })
 );
-
 
 // ---------------------------
 // @Merging Production Plugins
@@ -81,7 +75,6 @@ plugins.push(
 //   );
 // }
 
-
 // ----------------------------
 // @Merging Development Plugins
 // ----------------------------
@@ -93,7 +86,6 @@ if (manifest.IS_DEVELOPMENT) {
     new webpack.HotModuleReplacementPlugin()
   );
 }
-
 
 // -----------------
 // @Exporting Module

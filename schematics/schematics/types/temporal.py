@@ -4,8 +4,8 @@ try:
     from dateutil.tz import tzutc, tzlocal
 except ImportError:  # pragma: no cover
     raise ImportError(
-        'Using the datetime fields requires the dateutil library. '
-        'You can obtain dateutil from http://labix.org/python-dateutil'
+        "Using the datetime fields requires the dateutil library. "
+        "You can obtain dateutil from http://labix.org/python-dateutil"
     )
 
 from .base import DateTimeType

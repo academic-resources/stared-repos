@@ -6,8 +6,9 @@ class Node:
         self.children = children
 """
 
+
 class Solution:
-    def preorder(self, root: 'Node') -> List[int]:
+    def preorder(self, root: "Node") -> List[int]:
         def _helper(p, lst):
             if not p:
                 return

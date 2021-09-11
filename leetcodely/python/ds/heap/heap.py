@@ -36,7 +36,7 @@ class MaxHeap(MinHeap):
         return self.heap.pop()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     min_heap = MinHeap()
     min_heap.push(12)
     min_heap.push(3)

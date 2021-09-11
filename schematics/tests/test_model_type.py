@@ -16,7 +16,7 @@ def test_simple_embedded_models():
 
     r = repr(Player.location)
     assert r.startswith("<schematics.types.compound.ModelType object at 0x")
-    #assert r.endswith("for <class 'tests.test_model_type.Location'>>") #this assertion not compatible with PY3
+    # assert r.endswith("for <class 'tests.test_model_type.Location'>>") #this assertion not compatible with PY3
 
     p = Player(dict(id=1, location={"country_code": "US"}))
 
@@ -57,14 +57,7 @@ def test_simple_embedded_model_is_none_within_listtype():
         id = StringType()
         questions = ListType(ModelType(Question))
 
-    question_pack = QuestionPack({
-        "id": "1",
-        "questions": [
-            {
-                "id": "1",
-            },
-        ]
-    })
+    question_pack = QuestionPack({"id": "1", "questions": [{"id": "1"}]})
 
     assert question_pack.questions[0].resources is None
 
@@ -77,8 +70,8 @@ def test_raises_validation_error_on_init_with_partial_submodel():
     class Card(Model):
         user = ModelType(User)
 
-    u = User({'name': 'Arthur'})
-    c = Card({'user': u})
+    u = User({"name": "Arthur"})
+    c = Card({"user": u})
 
     with pytest.raises(ValidationError):
         c.validate()
@@ -91,7 +84,7 @@ def test_model_type():
     class Card(Model):
         user = ModelType(User)
 
-    c = Card({"user": {'name': u'Doggy'}})
+    c = Card({"user": {"name": u"Doggy"}})
     assert isinstance(c.user, User)
     assert c.user.name == "Doggy"
 
@@ -123,11 +116,7 @@ def test_default_value_when_embedded_model():
 
         question = ModelType(Question)
 
-    pack = QuestionPack({
-        "question": {
-            "question_id": 1
-        }
-    })
+    pack = QuestionPack({"question": {"question_id": 1}})
 
     assert pack.question.question_id == "1"
     assert pack.question.type == "text"
@@ -144,12 +133,12 @@ def test_export_loop_with_subclassed_model():
         title = StringType()
         asset = ModelType(Asset)
 
-    asset = S3Asset({'bucket_name': 'assets_bucket', 'file_name': 'bar'})
+    asset = S3Asset({"bucket_name": "assets_bucket", "file_name": "bar"})
 
-    product = Product({'title': 'baz', 'asset': asset})
+    product = Product({"title": "baz", "asset": asset})
 
     primitive = product.to_primitive()
-    assert 'bucket_name' in primitive['asset']
+    assert "bucket_name" in primitive["asset"]
 
     native = product.to_native()
-    assert 'bucket_name' in native['asset']
+    assert "bucket_name" in native["asset"]

@@ -31,8 +31,7 @@ def print_command_help(command, no_ansi=False):
 
     options = command.get_options()
     options = sorted(options, key=lambda x: x["name"])
-    options = options + [
-        {"name": "--help", "description": "Display help message"}]
+    options = options + [{"name": "--help", "description": "Display help message"}]
 
     longest_option = 0
     for option in options:
@@ -40,8 +39,14 @@ def print_command_help(command, no_ansi=False):
 
     for option in options:
         nb_spaces = longest_option + 2 - len(option["name"])
-        printer("  " + get_color(1) + option["name"] + get_color() + (
-            " " * nb_spaces) + option["description"])
+        printer(
+            "  "
+            + get_color(1)
+            + option["name"]
+            + get_color()
+            + (" " * nb_spaces)
+            + option["description"]
+        )
 
     printer("")
     printer("Help:", 2)

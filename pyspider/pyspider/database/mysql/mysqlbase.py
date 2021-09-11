@@ -17,7 +17,7 @@ class MySQLMixin(object):
         try:
             if self.conn.unread_result:
                 self.conn.get_rows()
-                if hasattr(self.conn, 'free_result'):
+                if hasattr(self.conn, "free_result"):
                     self.conn.free_result()
             return self.conn.cursor()
         except (mysql.connector.OperationalError, mysql.connector.InterfaceError):
@@ -31,14 +31,16 @@ class SplitTableMixin(object):
 
     def _tablename(self, project):
         if self.__tablename__:
-            return '%s_%s' % (self.__tablename__, project)
+            return "%s_%s" % (self.__tablename__, project)
         else:
             return project
 
     @property
     def projects(self):
-        if time.time() - getattr(self, '_last_update_projects', 0) \
-                > self.UPDATE_PROJECTS_TIME:
+        if (
+            time.time() - getattr(self, "_last_update_projects", 0)
+            > self.UPDATE_PROJECTS_TIME
+        ):
             self._list_project()
         return self._projects
 
@@ -50,12 +52,12 @@ class SplitTableMixin(object):
         self._last_update_projects = time.time()
         self.projects = set()
         if self.__tablename__:
-            prefix = '%s_' % self.__tablename__
+            prefix = "%s_" % self.__tablename__
         else:
-            prefix = ''
-        for project, in self._execute('show tables;'):
+            prefix = ""
+        for (project,) in self._execute("show tables;"):
             if project.startswith(prefix):
-                project = project[len(prefix):]
+                project = project[len(prefix) :]
                 self.projects.add(project)
 
     def drop(self, project):

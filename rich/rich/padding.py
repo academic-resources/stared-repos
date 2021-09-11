@@ -1,12 +1,7 @@
 from typing import cast, List, Optional, Tuple, TYPE_CHECKING, Union
 
 if TYPE_CHECKING:
-    from .console import (
-        Console,
-        ConsoleOptions,
-        RenderableType,
-        RenderResult,
-    )
+    from .console import Console, ConsoleOptions, RenderableType, RenderResult
 from .jupyter import JupyterMixin
 from .measure import Measurement
 from .style import Style

@@ -19,18 +19,18 @@ from notebook import notebookapp
 
 
 def main(_):
-  instance = notebookapp.NotebookApp.instance()
-  instance.open_browser = False
-  instance.ip = "0.0.0.0"
-  instance.port = 8888
-  instance.port_retries = 0
-  instance.allow_origin_pat = "https://colab\\.[^.]+\\.google.com"
-  instance.allow_root = True
-  instance.token = ""
-  instance.disable_check_xsrf = True
-  instance.initialize()
-  instance.start()
+    instance = notebookapp.NotebookApp.instance()
+    instance.open_browser = False
+    instance.ip = "0.0.0.0"
+    instance.port = 8888
+    instance.port_retries = 0
+    instance.allow_origin_pat = "https://colab\\.[^.]+\\.google.com"
+    instance.allow_root = True
+    instance.token = ""
+    instance.disable_check_xsrf = True
+    instance.initialize()
+    instance.start()
 
 
 if __name__ == "__main__":
-  app.run(main)
+    app.run(main)

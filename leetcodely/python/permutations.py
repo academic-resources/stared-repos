@@ -18,10 +18,10 @@ class Solution(object):
             return
         for i in range(start, len(nums)):
             nums[i], nums[start] = nums[start], nums[i]
-            self.helper(nums, start+1, results)
+            self.helper(nums, start + 1, results)
             nums[i], nums[start] = nums[start], nums[i]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.permute([1, 2, 3]))

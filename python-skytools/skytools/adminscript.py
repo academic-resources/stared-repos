@@ -13,7 +13,7 @@ import skytools
 
 from .basetypes import Connection, DictRow, ExecuteParams
 
-__all__ = ['AdminScript']
+__all__ = ["AdminScript"]
 
 
 class AdminScript(skytools.DBScript):
@@ -23,6 +23,7 @@ class AdminScript(skytools.DBScript):
     name.  If class method 'cmd_' + arg exists, it is called,
     otherwise error is given.
     """
+
     commands_without_pidfile: Sequence[str] = ()
 
     def __init__(self, service_name: str, args: Sequence[str]):
@@ -49,9 +50,9 @@ class AdminScript(skytools.DBScript):
         cmdargs = self.args[2:]
 
         # find function
-        fname = "cmd_" + cmd.replace('-', '_')
+        fname = "cmd_" + cmd.replace("-", "_")
         if not hasattr(self, fname):
-            self.log.error('bad subcommand, see --help for usage')
+            self.log.error("bad subcommand, see --help for usage")
             sys.exit(1)
         fn = getattr(self, fname)
 
@@ -62,8 +63,13 @@ class AdminScript(skytools.DBScript):
             helpstr = ""
             if n_args:
                 helpstr = ": " + " ".join(args[1:])
-            self.log.error("command '%s' got %d args, but expects %d%s",
-                           cmd, len(cmdargs), n_args, helpstr)
+            self.log.error(
+                "command '%s' got %d args, but expects %d%s",
+                cmd,
+                len(cmdargs),
+                n_args,
+                helpstr,
+            )
             sys.exit(1)
 
         # run command
@@ -104,13 +110,13 @@ class AdminScript(skytools.DBScript):
                 widths[i] = widths[i] > rlen and widths[i] or rlen
         widths = [w + 2 for w in widths]
 
-        fmt = '%%-%ds' * (len(widths) - 1) + '%%s'
+        fmt = "%%-%ds" * (len(widths) - 1) + "%%s"
         fmt = fmt % tuple(widths[:-1])
         if desc:
             print(desc)
         print(fmt % tuple(fields))
-        print(fmt % tuple('-' * (w - 2) for w in widths))
-        #print(fmt % tuple(['-'*15] * len(fields)))
+        print(fmt % tuple("-" * (w - 2) for w in widths))
+        # print(fmt % tuple(['-'*15] * len(fields)))
         for row in rows:
             vals = []
             for field in fields:
@@ -119,7 +125,7 @@ class AdminScript(skytools.DBScript):
                     val = fieldfmt[field](val)
                 vals.append(val)
             print(fmt % tuple(vals))
-        print('\n')
+        print("\n")
         return 1
 
     def exec_stmt(self, db: Connection, sql: str, args: ExecuteParams) -> None:
@@ -129,7 +135,9 @@ class AdminScript(skytools.DBScript):
         curs.execute(sql, args)
         db.commit()
 
-    def exec_query(self, db: Connection, sql: str, args: ExecuteParams) -> Sequence[DictRow]:
+    def exec_query(
+        self, db: Connection, sql: str, args: ExecuteParams
+    ) -> Sequence[DictRow]:
         """Run regular query SQL on db."""
         self.log.debug("exec_query: %s", skytools.quote_statement(sql, args))
         curs = db.cursor()
@@ -137,4 +145,3 @@ class AdminScript(skytools.DBScript):
         res = curs.fetchall()
         db.commit()
         return res
-

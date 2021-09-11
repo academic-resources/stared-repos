@@ -103,7 +103,7 @@ print(p)
 
 ### Class Constructor
 
-In the examples above, we have created an object from the Person class. However, a class without a constructor is not really useful in real applications. Let us use constructor function to make our class more useful. Like the constructor function in Java or JavaScript, Python has also a built-in **__init__**() constructor function. The **__init__** constructor function has self parameter which is a reference to the current instance of the class
+In the examples above, we have created an object from the Person class. However, a class without a constructor is not really useful in real applications. Let us use constructor function to make our class more useful. Like the constructor function in Java or JavaScript, Python has also a built-in ****init****() constructor function. The ****init**** constructor function has self parameter which is a reference to the current instance of the class
 **Examples:**
 
 ```py
@@ -280,8 +280,8 @@ Lidiya Teklemariam is 28 years old. He lives in Espoo, Finland.
 ['Organizing', 'Marketing', 'Digital Marketing']
 ```
 
-We did not call the **__init__**() constructor in the child class. If we didn't call it then we can still access all the properties from the parent. But if we do call the constructor we can access the parent properties by calling _super_.  
-We can add a new method to the child or we can override the parent class methods by creating the same method name in the child class. When we add the **__init__**() function, the child class will no longer inherit the parent's **__init__**() function.
+We did not call the ****init****() constructor in the child class. If we didn't call it then we can still access all the properties from the parent. But if we do call the constructor we can access the parent properties by calling _super_.  
+We can add a new method to the child or we can override the parent class methods by creating the same method name in the child class. When we add the ****init****() function, the child class will no longer inherit the parent's ****init****() function.
 
 ### Overriding parent method
 
@@ -318,7 +318,7 @@ Lidiya Teklemariam is 28 years old. She lives in Espoo, Finland.
 
 We can use super() built-in function or the parent name Person to automatically inherit the methods and properties from its parent. In the example above we override the parent method. The child method has a different feature, it can identify, if the gender is male or female and assign the proper pronoun(He/She).
 
-🌕 Now, you are fully charged with a super power of programming.  Now do some exercises for your brain and muscles.
+🌕 Now, you are fully charged with a super power of programming. Now do some exercises for your brain and muscles.
 
 ## 💻 Exercises: Day 21
 
@@ -363,7 +363,6 @@ Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34
 1. Create a class called PersonAccount. It has firstname, lastname, incomes, expenses properties and it has total_income, total_expense, account_info, add_income, add_expense and account_balance methods. Incomes is a set of incomes and its description. The same goes for expenses.
 
 ### Exercises: Level 3
-
 
 🎉 CONGRATULATIONS ! 🎉
 

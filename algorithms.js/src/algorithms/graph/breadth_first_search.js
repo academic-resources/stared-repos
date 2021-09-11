@@ -1,7 +1,6 @@
-'use strict';
+"use strict";
 
-var Queue = require('../../data_structure/queue');
-
+var Queue = require("../../data_structure/queue");
 
 /**
  * @typedef {Object} Callbacks
@@ -14,7 +13,6 @@ var Queue = require('../../data_structure/queue');
  * @param {function(vertex: *)} leaveVertex - Called when BFS leaves the vertex.
  */
 
-
 /**
  * Fill in missing callbacks.
  *
@@ -26,22 +24,23 @@ var Queue = require('../../data_structure/queue');
 var normalizeCallbacks = function (callbacks, seenVertices) {
   callbacks = callbacks || {};
 
-  callbacks.allowTraversal = callbacks.allowTraversal || (function () {
-    var seen = seenVertices.reduce(function (seen, vertex) {
-      seen[vertex] = true;
-      return seen;
-    }, {});
+  callbacks.allowTraversal =
+    callbacks.allowTraversal ||
+    (function () {
+      var seen = seenVertices.reduce(function (seen, vertex) {
+        seen[vertex] = true;
+        return seen;
+      }, {});
 
-    return function (vertex, neighbor) {
-      if (!seen[neighbor]) {
-        seen[neighbor] = true;
-        return true;
-      }
-      else {
-        return false;
-      }
-    };
-  }());
+      return function (vertex, neighbor) {
+        if (!seen[neighbor]) {
+          seen[neighbor] = true;
+          return true;
+        } else {
+          return false;
+        }
+      };
+    })();
 
   var noop = function () {};
   callbacks.onTraversal = callbacks.onTraversal || noop;
@@ -50,7 +49,6 @@ var normalizeCallbacks = function (callbacks, seenVertices) {
 
   return callbacks;
 };
-
 
 /**
  * Run Breadth-First Search from a start vertex.
@@ -80,6 +78,5 @@ var breadthFirstSearch = function (graph, startVertex, callbacks) {
     callbacks.leaveVertex(vertex);
   }
 };
-
 
 module.exports = breadthFirstSearch;

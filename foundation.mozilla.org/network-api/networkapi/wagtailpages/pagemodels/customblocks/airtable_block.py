@@ -11,5 +11,5 @@ class AirTableBlock(blocks.StructBlock):
     )
 
     class Meta:
-        icon = 'placeholder'
-        template = 'wagtailpages/blocks/airtable_block.html'
+        icon = "placeholder"
+        template = "wagtailpages/blocks/airtable_block.html"

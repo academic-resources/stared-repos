@@ -7,31 +7,56 @@ import wagtail.search.index
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('wagtailpages', '0003_publicationpage_intro'),
-    ]
+    dependencies = [("wagtailpages", "0003_publicationpage_intro")]
 
     operations = [
         migrations.CreateModel(
-            name='Update',
+            name="Update",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('source', models.URLField(help_text='Link to source', max_length=2048)),
-                ('title', models.CharField(max_length=256)),
-                ('author', models.CharField(blank=True, max_length=256)),
-                ('featured', models.BooleanField(default=False, help_text='feature this update at the top of the list?')),
-                ('snippet', models.TextField(blank=True, max_length=5000)),
-                ('created_date', models.DateField(auto_now_add=True, help_text='The date this product was created')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "source",
+                    models.URLField(help_text="Link to source", max_length=2048),
+                ),
+                ("title", models.CharField(max_length=256)),
+                ("author", models.CharField(blank=True, max_length=256)),
+                (
+                    "featured",
+                    models.BooleanField(
+                        default=False,
+                        help_text="feature this update at the top of the list?",
+                    ),
+                ),
+                ("snippet", models.TextField(blank=True, max_length=5000)),
+                (
+                    "created_date",
+                    models.DateField(
+                        auto_now_add=True, help_text="The date this product was created"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Buyers Guide Product Update',
-                'verbose_name_plural': 'Buyers Guide Product Updates',
+                "verbose_name": "Buyers Guide Product Update",
+                "verbose_name_plural": "Buyers Guide Product Updates",
             },
             bases=(wagtail.search.index.Indexed, models.Model),
         ),
         migrations.AddField(
-            model_name='productupdates',
-            name='update_new',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='wagtailpages.Update'),
+            model_name="productupdates",
+            name="update_new",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="+",
+                to="wagtailpages.Update",
+            ),
         ),
     ]

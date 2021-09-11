@@ -1,6 +1,7 @@
 # Create a class to hold a city location. Call the class "City". It should have
 # fields for name, lat and lon (representing latitude and longitude).
 
+
 class City:
     def __init__(self, name, lat, lon):
         self.name = name
@@ -8,13 +9,13 @@ class City:
         self.lon = lon
 
     def __str__(self):
-        return '%s, %s, %s' % (self.name, self.lat, self.lon)
+        return "%s, %s, %s" % (self.name, self.lat, self.lon)
 
 
 # We have a collection of US cities with population over 750,000 stored in the
 # file "cities.csv". (CSV stands for "comma-separated values".)
 #
-# In the body of the `cityreader` function, use Python's built-in "csv" module 
+# In the body of the `cityreader` function, use Python's built-in "csv" module
 # to read this file so that each record is imported into a City instance. Then
 # return the list with all the City instances from the function.
 # Google "python 3 csv" for references and use your Google-fu for other examples.
@@ -27,28 +28,32 @@ cities = []
 import csv
 from csv import DictReader
 
+
 def cityreader(cities=[]):
-  # TODO Implement the functionality to read from the 'cities.csv' file
-  # For each city record, create a new City instance and add it to the 
-  # `cities` list
-  with open('E:/projects/lambdaschool/m6/61c1/src/cityreader/cities.csv', newline='') as csvfile:
-    # citiescsvreader = csv.reader(csvfile, delimiter=',')
-    citiescsvreader = DictReader(csvfile)
-    # header = next(citiescsvreader)
-    # Check file as empty
-    # if header != None:
-    for row in citiescsvreader:
-          city = City(row['city'], float(row['lat']), float(row['lng']))
-          cities.append(city)    
-    return cities
+    # TODO Implement the functionality to read from the 'cities.csv' file
+    # For each city record, create a new City instance and add it to the
+    # `cities` list
+    with open(
+        "E:/projects/lambdaschool/m6/61c1/src/cityreader/cities.csv", newline=""
+    ) as csvfile:
+        # citiescsvreader = csv.reader(csvfile, delimiter=',')
+        citiescsvreader = DictReader(csvfile)
+        # header = next(citiescsvreader)
+        # Check file as empty
+        # if header != None:
+        for row in citiescsvreader:
+            city = City(row["city"], float(row["lat"]), float(row["lng"]))
+            cities.append(city)
+        return cities
+
 
 cityreader(cities)
 
-'''
+"""
 citiescsvreader = DictReader(read_obj)
 for row in csvfile:
         print(row['Id'], row['Name'])
-'''
+"""
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
@@ -57,10 +62,10 @@ for c in cities:
 # STRETCH GOAL!
 #
 # Allow the user to input two points, each specified by latitude and longitude.
-# These points form the corners of a lat/lon square. Pass these latitude and 
+# These points form the corners of a lat/lon square. Pass these latitude and
 # longitude values as parameters to the `cityreader_stretch` function, along
 # with the `cities` list that holds all the City instances from the `cityreader`
-# function. This function should output all the cities that fall within the 
+# function. This function should output all the cities that fall within the
 # coordinate square.
 #
 # Be aware that the user could specify either a lower-left/upper-right pair of
@@ -85,33 +90,34 @@ for c in cities:
 
 # TODO Get latitude and longitude values from the user
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
-  # within will hold the cities that fall within the specified region
-  within = []
-  # Ensure that the lat and lon values are all floats
-  if not isinstance(lat1, float):
+    # within will hold the cities that fall within the specified region
+    within = []
+    # Ensure that the lat and lon values are all floats
+    if not isinstance(lat1, float):
         lat1 = float(lat1)
-  if not isinstance(lat2, float):
+    if not isinstance(lat2, float):
         lat2 = float(lat2)
-  if not isinstance(lon1, float):
+    if not isinstance(lon1, float):
         lon1 = float(lon1)
-  if not isinstance(lon2, float):
+    if not isinstance(lon2, float):
         lon2 = float(lon2)
-  # for each item in cities
-  for city in cities:
-      # if lat is between lat1 and lat2
-      if (lat1 <= city.lat <= lat2) or (lat2 <= city.lat <= lat1):
+    # for each item in cities
+    for city in cities:
+        # if lat is between lat1 and lat2
+        if (lat1 <= city.lat <= lat2) or (lat2 <= city.lat <= lat1):
             # AND if lng is between lon1 and lon2
             if (lon1 <= city.lon <= lon2) or (lon2 <= city.lon <= lon1):
-              # append to within
-              within.append(city)
-  # Go through each city and check to see if it falls within 
-  # the specified coordinates.
+                # append to within
+                within.append(city)
+    # Go through each city and check to see if it falls within
+    # the specified coordinates.
 
-  return within
-  
-print('-----------------STRETCH-------------------------')
+    return within
+
+
+print("-----------------STRETCH-------------------------")
 print(cityreader_stretch(32, -120, 45, -100, cities))
 within = cityreader_stretch(45, -100, 32, -120, cities)
 for c in within:
     print(c)
-print('------------------------------------------')
+print("------------------------------------------")

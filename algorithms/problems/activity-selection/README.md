@@ -2,7 +2,7 @@
 
 The problem of scheduling sveral competing activities that require exclusive use of a common resource, with a goal of selecting a maximum-size set of mutually compatible activities.
 
-Suppose we have a set `S = {a1, a2, ..., an}` of `n` proposed __activities__ that wish to use a resource. Each activity `ai` has a __start time__ `si` and a __finish time__ `fi`, where `0 <= si < fi < infinity`. If selected, activity `ai` takes place during hald-open time interval `[si, fi)`. Activities `ai` and `aj` are __compatible__ if th eintervals `[si, fi)` and `[sj, fj)` do not overlap. That is, if `si >= fj` or `sj >= fi`.
+Suppose we have a set `S = {a1, a2, ..., an}` of `n` proposed **activities** that wish to use a resource. Each activity `ai` has a **start time** `si` and a **finish time** `fi`, where `0 <= si < fi < infinity`. If selected, activity `ai` takes place during hald-open time interval `[si, fi)`. Activities `ai` and `aj` are **compatible** if th eintervals `[si, fi)` and `[sj, fj)` do not overlap. That is, if `si >= fj` or `sj >= fi`.
 
 We assume that the activities are sorted in monotonically increasing order of finishing time:
 
@@ -24,8 +24,8 @@ Let's denote `Sij` the set of activities that start after activity `ai` finishes
 
 Suppose that we wish to find a maximum set of mutually compatibile activities in `Sij`, and suppose further than such a maximum set is `Aij`, which includes some activity `ak`. By including `ak` in an optimal solution, we are left with two subproblems:
 
-* Finding mutually compatible activities in set `Sik`.
-* Finding mutually compatible activities in set `Skj`.
+- Finding mutually compatible activities in set `Sik`.
+- Finding mutually compatible activities in set `Skj`.
 
 Let `Aik = Aij ^ Sik` and `Akj = Aij ^ Skj`, so that `Aik` contains activities in `Aij` that finish before `ak` starts and `Akj` contains activities in `Aij` that start after `ak` finishes.
 
@@ -64,9 +64,9 @@ Let `Sk = { ai in S : si > fk}` be the set of activities that start after activi
 
 ### Proving intuition correct
 
-__Theorem__: consider any nonempty subproblem `SK`, and let `am` be an activity in `Sk` with the earliest finish time. Then `am` is included in some maximum-size subset of mutually compatible activities of `Sk`.
+**Theorem**: consider any nonempty subproblem `SK`, and let `am` be an activity in `Sk` with the earliest finish time. Then `am` is included in some maximum-size subset of mutually compatible activities of `Sk`.
 
-__Proof__: Let `Ak` be a maximum-size subset of mutually compatible activities in `Sk`, and let `aj` be an activity in `Ak` with the earliest finish time. If `aj = am`, we are done, since we have shown that `am` is in some maximum-size subset of mutually compatible activities of `Sk`.
+**Proof**: Let `Ak` be a maximum-size subset of mutually compatible activities in `Sk`, and let `aj` be an activity in `Ak` with the earliest finish time. If `aj = am`, we are done, since we have shown that `am` is in some maximum-size subset of mutually compatible activities of `Sk`.
 
 If `aj != am`, let the set `A'k = Ak - {aj} U {am}` be `Ak` but substituting `am` for `ak`. The activities in `A'k` are disjoint, which follos because the activities in `Ak` are disjoint, `aj` is the first activity in `Ak` to finish, and `fm <= fj`. Since `|A'j| = |Ak|` we conclude that `A'k` is a maximum-size subset of mutually compatible activities of `Sk`, and it includes `am`.
 

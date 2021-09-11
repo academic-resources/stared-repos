@@ -84,10 +84,7 @@ class Control:
                     abs(x),
                 )
             if y:
-                yield (
-                    control.CURSOR_DOWN if y > 0 else control.CURSOR_UP,
-                    abs(y),
-                )
+                yield (control.CURSOR_DOWN if y > 0 else control.CURSOR_UP, abs(y))
 
         control = cls(*get_codes())
         return control
@@ -107,10 +104,7 @@ class Control:
         return (
             cls(
                 (ControlType.CURSOR_MOVE_TO_COLUMN, x),
-                (
-                    ControlType.CURSOR_DOWN if y > 0 else ControlType.CURSOR_UP,
-                    abs(y),
-                ),
+                (ControlType.CURSOR_DOWN if y > 0 else ControlType.CURSOR_UP, abs(y)),
             )
             if y
             else cls((ControlType.CURSOR_MOVE_TO_COLUMN, x))

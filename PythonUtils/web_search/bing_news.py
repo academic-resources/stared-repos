@@ -18,17 +18,22 @@ def search(query_words, max_pages=MAX_PAGES):
     """
     threads = []
     results = {}
-    query = '"' + '"+"'.join(query_words).replace(' ', '%20') + '"'
+    query = '"' + '"+"'.join(query_words).replace(" ", "%20") + '"'
 
     # Run every MAX_THREADS in parallel
     runs = int(math.ceil(max_pages / MAX_THREADS))
 
     for run_index in range(runs):
-        for page_index in range(run_index * MAX_THREADS, min((run_index + 1) * MAX_THREADS, max_pages)):
+        for page_index in range(
+            run_index * MAX_THREADS, min((run_index + 1) * MAX_THREADS, max_pages)
+        ):
 
             # Generate the query for the next page
             first = page_index * 10 + 1
-            url = 'http://www.bing.com/news/search?setmkt=en-US&q=%s&first=%d' % (query, first)
+            url = "http://www.bing.com/news/search?setmkt=en-US&q=%s&first=%d" % (
+                query,
+                first,
+            )
 
             # Create a new search thread and start it
             curr_url_reader = URLReader()
@@ -56,33 +61,36 @@ def clean_html(html):
     soup = BeautifulSoup(html)
 
     # Remove style, image, links and script tags
-    for tag in ['script', 'style', 'a', 'image']:
+    for tag in ["script", "style", "a", "image"]:
         [s.extract() for s in soup(tag)]
 
     # Get text
-    text = ''.join(soup.findAll(text=True))
+    text = "".join(soup.findAll(text=True))
 
     # Space between escape characters
-    text = re.sub('&', ' &', text)
-    text = re.sub(';', '; ', text)
+    text = re.sub("&", " &", text)
+    text = re.sub(";", "; ", text)
 
     # Encoding
-    text = re.sub(r'(\\u[0-9A-Fa-f]+)', lambda matchobj: chr(int(matchobj.group(0)[2:], 16)), str(text))
-    text = re.sub(r'[\x80-\xff]', '', text)
+    text = re.sub(
+        r"(\\u[0-9A-Fa-f]+)",
+        lambda matchobj: chr(int(matchobj.group(0)[2:], 16)),
+        str(text),
+    )
+    text = re.sub(r"[\x80-\xff]", "", text)
 
     # Remove tags and escape characters
-    text = re.sub(r'<.*?>', '', text)
+    text = re.sub(r"<.*?>", "", text)
     text = HTMLParser().unescape(text)
 
     # Multiple spaces
-    text = re.sub('\n+', '\n', text)
-    text = re.sub('\s+', ' ', text).strip()
+    text = re.sub("\n+", "\n", text)
+    text = re.sub("\s+", " ", text).strip()
 
     return text
 
 
 class URLReader(urllib.request.HTTPHandler):
-
     def http_response(self, request, response):
         """
         Callback function to read the page content
@@ -97,10 +105,18 @@ class URLReader(urllib.request.HTTPHandler):
 
         # Get the snippets and titles with timestamps
         # format: <div class="newsitem item cardcommon" url="[URL]">
-        captions = [x.find('div', { 'class' : 'caption' })
-                    for x in soup.findAll('div', { 'class' : 'news-card newsitem cardcommon' })]
+        captions = [
+            x.find("div", {"class": "caption"})
+            for x in soup.findAll("div", {"class": "news-card newsitem cardcommon"})
+        ]
 
-        results = [(caption.find('div', { 'class' : 'snippet' }), caption.find('a', { 'class' : 'title' })) for caption in captions]
+        results = [
+            (
+                caption.find("div", {"class": "snippet"}),
+                caption.find("a", {"class": "title"}),
+            )
+            for caption in captions
+        ]
 
         if len(results) > 0:
             snippets, titles = zip(*results)
@@ -109,4 +125,3 @@ class URLReader(urllib.request.HTTPHandler):
             self.results = titles + snippets
 
         return response
-    

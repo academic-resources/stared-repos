@@ -1,34 +1,36 @@
 # B-Trees
 
-* Overview
-* Definition
-* The height of a B-tree
-* Basic Operations
-  * Search
-  * Create
-  * Insert
-  * Delete
+- Overview
+- Definition
+- The height of a B-tree
+- Basic Operations
+  - Search
+  - Create
+  - Insert
+  - Delete
 
 ## Overview
 
-*B-trees* are **balanced search trees** designed to work well on disks or other direct-access secondary stovage devices. B-trees are similar to *red-black trees*, but they are better at **minimizing disk I/O operations**. Many database systems use B-trees, or variants of it, to store information.
+_B-trees_ are **balanced search trees** designed to work well on disks or other direct-access secondary stovage devices. B-trees are similar to _red-black trees_, but they are better at **minimizing disk I/O operations**. Many database systems use B-trees, or variants of it, to store information.
 
 ![](2021-08-07-23-35-20.png)
+
 > A B-tree whose keys are the consonants of English. An internal node `x` containing `x.n` keys has `x.n + 1` children. All leaves are at the same depth in the tree. The lightly shaded nodes are examined in a search for the letter R.
 
-* B-trees differ from red-black trees in that B-tree **nodes may have many children**. That is, the *"branching factor"* of a B-tree can be quite large, although it usually depends on characteristics of the disk unit tested.
+- B-trees differ from red-black trees in that B-tree **nodes may have many children**. That is, the _"branching factor"_ of a B-tree can be quite large, although it usually depends on characteristics of the disk unit tested.
 
-* B-trees are similar to red-black trees in that **every n-node B-tree has height $O(lg n)$**. Therefore, we can also use B-trees to implement many dynamic-set operations in time $O(lg n)$.
+- B-trees are similar to red-black trees in that **every n-node B-tree has height $O(lg n)$**. Therefore, we can also use B-trees to implement many dynamic-set operations in time $O(lg n)$.
 
-* The keys in node `x` serve as diving points separating the range of keys handled by `x` into `x.n + 1` subranges, each handled by one child of `x`. When searching for a key in a B-tree, we make an `(x.n + 1)`-way decision based on comparisons with the `x.n` keys stored at node `x`.
+- The keys in node `x` serve as diving points separating the range of keys handled by `x` into `x.n + 1` subranges, each handled by one child of `x`. When searching for a key in a B-tree, we make an `(x.n + 1)`-way decision based on comparisons with the `x.n` keys stored at node `x`.
 
 ## Definition
 
 ![](2021-08-08-00-48-20.png)
 
-A *B-tree* `T` is a rooted tree (whose root is `T.root`) having the following properties:
+A _B-tree_ `T` is a rooted tree (whose root is `T.root`) having the following properties:
 
 1. Every node `x` has the following attributes:
+
    1. `x.n`, the number of keys currently stored in node `x`.
    2. the `x.n` keys themselves, stored in nondecreasing order, so that $x.key_1 \leq x.key_n \leq ... \leq x.key_{x.n}$
    3. `x.leaf`, a boolean value that is `TRUE` only if `x` is a leaf.
@@ -61,9 +63,9 @@ The procedures are all "one-pass" algorithms that proceed downward from the root
 
 In these procedures, we adopt **two conventions**:
 
-* The root of the B-tree is always in main memory, so that we never need to perform a *DISK-READ* on the root; we do have to perform a *DISK-WRITE* of the root, however, whenever the root node is changed.
+- The root of the B-tree is always in main memory, so that we never need to perform a _DISK-READ_ on the root; we do have to perform a _DISK-WRITE_ of the root, however, whenever the root node is changed.
 
-* Any nodes that are passed as parameters must already have had a *DISK-READ* operation performed on them.
+- Any nodes that are passed as parameters must already have had a _DISK-READ_ operation performed on them.
 
 ### Search $O(log_t n)$
 
@@ -91,9 +93,9 @@ B-TREE-SEARCH(x, k) {
 
 ### Create Empty $O(1)$
 
-> *B-TREE-CREATE* requires $O(1)$ disk operations and $O(1)$ CPU time.
+> _B-TREE-CREATE_ requires $O(1)$ disk operations and $O(1)$ CPU time.
 
-To build a B-tree $T$, we first use *B-TREE-CREATE* to create an empty root node and then call *B-TREE-INSERT* to add new keys. Both of these procedures use an auxiliariy procedure *ALLOCATE-NODE*, which allocates one disk page to be used as a new node in $O(1)$ time. We can assume that a node created by *ALLOCATE-NODE* requires no *DISK-READ*, since there is as yet no useful information stored on the disk for that node.
+To build a B-tree $T$, we first use _B-TREE-CREATE_ to create an empty root node and then call _B-TREE-INSERT_ to add new keys. Both of these procedures use an auxiliariy procedure _ALLOCATE-NODE_, which allocates one disk page to be used as a new node in $O(1)$ time. We can assume that a node created by _ALLOCATE-NODE_ requires no _DISK-READ_, since there is as yet no useful information stored on the disk for that node.
 
 ```
 B-TREE-CREATE(T)
@@ -127,7 +129,7 @@ B-TREE-INSERT(T, k) {
 
 B-TREE-INSERT-NONFULL(x, k) {
    i = x.n
-   
+
    if x.leaf
       // If x is leaf, then insert key k into x
       while i >= 1 and k < x.key_i
@@ -152,7 +154,7 @@ B-TREE-INSERT-NONFULL(x, k) {
          if k > x.key_i
             // Determine which of the two new children is the correct one to descend to
             i = i + 1
-      
+
       // Recurses to insert k into the appropriate subtree
       B-TREE-INSERT-NONFULL(x.c_i, k)
 }
@@ -160,9 +162,9 @@ B-TREE-INSERT-NONFULL(x, k) {
 
 #### Splitting a Node $\Theta(t)$
 
-The procedure *B-TREE-SPLIT-CHILD* takes as input a *nonfull* internal node $x$, and an index *i* such that $x.c_i$ is a *full* child of $x$. The procedure then splits this child in two and adjusts $x$ so that it has an additional child.
+The procedure _B-TREE-SPLIT-CHILD_ takes as input a _nonfull_ internal node $x$, and an index _i_ such that $x.c_i$ is a _full_ child of $x$. The procedure then splits this child in two and adjusts $x$ so that it has an additional child.
 
-To split a full root, we will first make the root a child of a new empty root node, so that we can use *B-TREE-SPLIT-CHILD*. The tree thus **grows in height by one**; splitting is the **only means by which the tree grows**.
+To split a full root, we will first make the root a child of a new empty root node, so that we can use _B-TREE-SPLIT-CHILD_. The tree thus **grows in height by one**; splitting is the **only means by which the tree grows**.
 
 ![](2021-08-10-20-35-30.png)
 
@@ -180,7 +182,7 @@ B-TREE-SPLIT-CHILD(x, i) {
 
    for j = 1 to t-1
       z.key_j = y.key_(j+t)
-   
+
    if not y.leaf
       for j = 1 to t
          z.c_j = y.c_(j+t)
@@ -200,18 +202,18 @@ B-TREE-SPLIT-CHILD(x, i) {
 
 ### Delete a key $O(th) = O(t log_t n)$
 
-> It involves only $O(h)$ disk operatiosn for a B-tree of height $h$, since only $O(1)$ calls to *DISK-READ* and *DISK-WRITE* are made between recursive invocations of the procedure
+> It involves only $O(h)$ disk operatiosn for a B-tree of height $h$, since only $O(1)$ calls to _DISK-READ_ and _DISK-WRITE_ are made between recursive invocations of the procedure
 
 When we delete a key from an internal node, we will have to rearrange the node's children. As in insertion, we must guard against deletion producing a tree whose structure violates the B-tree properties. For the case of deletion, we must ensure that a node doesn't get too small during deletion (except that the root is allowed to have fewer than the minimum number t-1 of keys). A simmple approach to deletion might have to back up if a node, along path to where the key to deleted is, has the minimum number of keys.
 
-The procedure *B-TREE-DELETE* deletes the key $k$ from the subtree rooted at $x$. We design this procedure to **guarantee that whenever it calls itself recursively on a node $x$, the number of keys in $x$ is at least the minimum degree $t$**. Note that this condition requires one more key than the minimum required by the usual B-tree conditions, so that sometimes a key may have to be moved into a child node before recursion descends to that child. **This strengthened condition allows us to delete a key from the tree in one downward pass** without having to "Back up" (with one exception).
+The procedure _B-TREE-DELETE_ deletes the key $k$ from the subtree rooted at $x$. We design this procedure to **guarantee that whenever it calls itself recursively on a node $x$, the number of keys in $x$ is at least the minimum degree $t$**. Note that this condition requires one more key than the minimum required by the usual B-tree conditions, so that sometimes a key may have to be moved into a child node before recursion descends to that child. **This strengthened condition allows us to delete a key from the tree in one downward pass** without having to "Back up" (with one exception).
 
 You should interpret the following specification for deletion from a B-tree with the understanding that if the root node $x$ ever becomes an internal node having no keys (cases 2c and 3b), then we delete $x$, and $x$'s only child $x.c_1$ becomes the new root of the tree, decreasing the height of the tree by one and preserving the property that the root of the tree contains at least one key (unless the tree is empty).
 
 1. If the key $k$ is in node $x$ and $x$ is a leaf, delete the key $k$ from $x$. This
 
 2. If the key $k$ is in node $x$ and $x$ is an internal node, do the following:
-   
+
    a. If the child $y$ that preceds $k$ in node $x$ has at least $t$ keys, then find the predecessor $k'$ of $k$ in the subtree rooted at $y$. Recursively delete $k'$, and replace $k$ by $k'$ in $x$.
 
    b. If $y$ has fewer than $t$ keys, then, symmetrically, examine the child $z$ that follows $k$ in node $x$. If $z$ has at least $t$ keys, then find the successor $k'$ of $k$ in the subtree rooted at $z$. Recursively delete $k'$, and replace $k$ by $k'$ in $x$.

@@ -18,8 +18,7 @@ with open("README.rst") as f:
 
 # use only stable abi
 abi3_options = dict(
-    define_macros=[('Py_LIMITED_API', '0x03050000')],
-    py_limited_api=True,
+    define_macros=[("Py_LIMITED_API", "0x03050000")], py_limited_api=True
 )
 
 # run actual setup
@@ -34,7 +33,7 @@ setup(
     maintainer_email="markokr@gmail.com",
     packages=["skytools"],
     package_data={"skytools": ["py.typed", "_chashtext.pyi", "_cquoting.pyi"]},
-    ext_modules = [
+    ext_modules=[
         Extension("skytools._cquoting", ["modules/cquoting.c"], **abi3_options),
         Extension("skytools._chashtext", ["modules/hashtext.c"], **abi3_options),
     ],
@@ -53,4 +52,3 @@ setup(
         "Topic :: Utilities",
     ],
 )
-

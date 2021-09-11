@@ -1,19 +1,19 @@
 function breadthFirstArray(root) {
-  let output = []
+  let output = [];
 
-  let queue = [root]
+  let queue = [root];
   while (queue.length) {
-    let node = queue.shift()
+    let node = queue.shift();
 
-    output.push(node.val)
+    output.push(node.val);
 
-    if (node.left) queue.push(node.left)
-    if (node.right) queue.push(node.right)
+    if (node.left) queue.push(node.left);
+    if (node.right) queue.push(node.right);
   }
 
-  return output
+  return output;
 }
 
 module.exports = {
-  breadthFirstArray
-}
+  breadthFirstArray,
+};

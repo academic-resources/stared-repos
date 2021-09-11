@@ -3,17 +3,17 @@
 # Let's say we're given an alphabetically-sorted list of words that has been rotated at a single point. It might look something like this:
 
 words = [
-    'ptolemaic',
-    'retrograde',
-    'supplant',
-    'undulate',
-    'xenoepist',
-    'asymptote', # <-- rotates here!
-    'babka',
-    'banoffee',
-    'engender',
-    'karpatka',
-    'othellolagkage',
+    "ptolemaic",
+    "retrograde",
+    "supplant",
+    "undulate",
+    "xenoepist",
+    "asymptote",  # <-- rotates here!
+    "babka",
+    "banoffee",
+    "engender",
+    "karpatka",
+    "othellolagkage",
 ]
 
 

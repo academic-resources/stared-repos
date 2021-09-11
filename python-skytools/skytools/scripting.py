@@ -21,14 +21,13 @@ from .basetypes import Connection, Runnable
 
 try:
     import skytools.installer_config
+
     default_skylog = skytools.installer_config.skylog
 except ImportError:
     default_skylog = 0
 
 
-__all__ = (
-    'BaseScript', 'UsageError', 'daemonize', 'DBScript',
-)
+__all__ = ("BaseScript", "UsageError", "daemonize", "DBScript")
 
 
 class UsageError(Exception):
@@ -38,6 +37,7 @@ class UsageError(Exception):
 #
 # daemon mode
 #
+
 
 def daemonize():
     """Turn the process into daemon.
@@ -65,6 +65,7 @@ def daemonize():
 #
 # Pidfile locking+cleanup & daemonization combined
 #
+
 
 def run_single_process(runnable: Runnable, daemon: bool, pidfile: Optional[str]):
     """Run runnable class, possibly daemonized, locked on pidfile."""
@@ -107,7 +108,13 @@ _log_config_done: int = 0
 _log_init_done: Dict[str, int] = {}
 
 
-def _init_log(job_name: str, service_name: str, cf: skytools.Config, log_level: int, is_daemon: bool):
+def _init_log(
+    job_name: str,
+    service_name: str,
+    cf: skytools.Config,
+    log_level: int,
+    is_daemon: bool,
+):
     """Logging setup happens here."""
     global _log_config_done
 
@@ -119,23 +126,24 @@ def _init_log(job_name: str, service_name: str, cf: skytools.Config, log_level: 
     if not is_daemon and use_skylog == 1:
         # pylint gets spooked by it's own stdout wrapper and refuses to shut down
         # about it.  'noqa' tells prospector to ignore all warnings here.
-        if sys.stdout.isatty():   # noqa
+        if sys.stdout.isatty():  # noqa
             use_skylog = 0
 
     # load logging config if needed
     if use_skylog and not _log_config_done:
         # python logging.config braindamage:
         # cannot specify external classess without such hack
-        logging.skylog = skytools.skylog    # type: ignore
+        logging.skylog = skytools.skylog  # type: ignore
         skytools.skylog.set_service_name(service_name, job_name)
 
         # load general config
-        flist = cf.getlist('skylog_locations',
-                           ['skylog.ini', '~/.skylog.ini', '/etc/skylog.ini'])
+        flist = cf.getlist(
+            "skylog_locations", ["skylog.ini", "~/.skylog.ini", "/etc/skylog.ini"]
+        )
         for fn in flist:
             fn = os.path.expanduser(fn)
             if os.path.isfile(fn):
-                defs = {'job_name': job_name, 'service_name': service_name}
+                defs = {"job_name": job_name, "service_name": service_name}
                 logging.config.fileConfig(fn, defs, False)
                 got_skylog = 1
                 break
@@ -155,30 +163,29 @@ def _init_log(job_name: str, service_name: str, cf: skytools.Config, log_level: 
     root.setLevel(log_level)
 
     # compatibility: specify ini file in script config
-    def_fmt = '%(asctime)s %(process)s %(levelname)s %(message)s'
-    def_datefmt = ''  # None
+    def_fmt = "%(asctime)s %(process)s %(levelname)s %(message)s"
+    def_datefmt = ""  # None
     logfile = cf.getfile("logfile", "")
     if logfile:
-        fstr = cf.get('logfmt_file', def_fmt)
-        fstr_date = cf.get('logdatefmt_file', def_datefmt)
+        fstr = cf.get("logfmt_file", def_fmt)
+        fstr_date = cf.get("logdatefmt_file", def_datefmt)
         if log_level < logging.INFO:
-            fstr = cf.get('logfmt_file_verbose', fstr)
-            fstr_date = cf.get('logdatefmt_file_verbose', fstr_date)
+            fstr = cf.get("logfmt_file_verbose", fstr)
+            fstr_date = cf.get("logdatefmt_file_verbose", fstr_date)
         fmt = logging.Formatter(fstr, fstr_date)
-        size = cf.getint('log_size', 10 * 1024 * 1024)
-        num = cf.getint('log_count', 3)
-        file_hdlr = logging.handlers.RotatingFileHandler(
-            logfile, 'a', size, num)
+        size = cf.getint("log_size", 10 * 1024 * 1024)
+        num = cf.getint("log_count", 3)
+        file_hdlr = logging.handlers.RotatingFileHandler(logfile, "a", size, num)
         file_hdlr.setFormatter(fmt)
         root.addHandler(file_hdlr)
 
     # if skylog.ini is disabled or not available, log at least to stderr
     if not got_skylog:
-        fstr = cf.get('logfmt_console', def_fmt)
-        fstr_date = cf.get('logdatefmt_console', def_datefmt)
+        fstr = cf.get("logfmt_console", def_fmt)
+        fstr_date = cf.get("logdatefmt_console", def_datefmt)
         if log_level < logging.INFO:
-            fstr = cf.get('logfmt_console_verbose', fstr)
-            fstr_date = cf.get('logdatefmt_console_verbose', fstr_date)
+            fstr = cf.get("logfmt_console_verbose", fstr)
+            fstr_date = cf.get("logdatefmt_console_verbose", fstr_date)
         stream_hdlr = logging.StreamHandler()
         fmt = logging.Formatter(fstr, fstr_date)
         stream_hdlr.setFormatter(fmt)
@@ -222,6 +229,7 @@ class BaseScript:
         # how many seconds to sleep after catching a exception
         #exception_sleep = 20
     """
+
     service_name: str
     job_name: str
     cf: "skytools.Config"
@@ -247,7 +255,7 @@ class BaseScript:
     work_state: int = 1
 
     # setup logger here, this allows override by subclass
-    log = logging.getLogger('skytools.BaseScript')
+    log = logging.getLogger("skytools.BaseScript")
 
     # start time
     started: int = 0
@@ -295,7 +303,7 @@ class BaseScript:
         self.cf_override = {}
         if self.options.set:
             for a in self.options.set:
-                k, v = a.split('=', 1)
+                k, v = a.split("=", 1)
                 self.cf_override[k.strip()] = v.strip()
 
         if self.options.ini:
@@ -306,7 +314,9 @@ class BaseScript:
         self.reload()
 
         # init logging
-        _init_log(self.job_name, self.service_name, self.cf, self.log_level, self.go_daemon)
+        _init_log(
+            self.job_name, self.service_name, self.cf, self.log_level, self.go_daemon
+        )
 
         # send signal, if needed
         if self.options.cmd == "kill":
@@ -328,10 +338,10 @@ class BaseScript:
 
     def print_version(self):
         service = self.service_name
-        ver = getattr(self, '__version__', None)
+        ver = getattr(self, "__version__", None)
         if ver:
-            service += ' version %s' % ver
-        print('%s, Skytools version %s' % (service, getattr(skytools, '__version__')))
+            service += " version %s" % ver
+        print("%s, Skytools version %s" % (service, getattr(skytools, "__version__")))
 
     def print_ini(self):
         """Prints out ini file from doc string of the script of default for dbscript
@@ -357,34 +367,34 @@ class BaseScript:
 
     def _print_ini_frag(self, doc):
         # use last '::' block as config template
-        pos = doc and doc.rfind('::\n') or -1
+        pos = doc and doc.rfind("::\n") or -1
         if pos < 0:
             return
-        doc = doc[pos + 2:].rstrip()
+        doc = doc[pos + 2 :].rstrip()
         doc = skytools.dedent(doc)
 
         # merge overrided options into output
         for ln in doc.splitlines():
-            vals = ln.split('=', 1)
+            vals = ln.split("=", 1)
             if len(vals) != 2:
                 print(ln)
                 continue
 
             k = vals[0].strip()
             v = vals[1].strip()
-            if k and k[0] == '#':
+            if k and k[0] == "#":
                 print(ln)
                 k = k[1:]
                 if k in self.cf_override:
-                    print('%s = %s' % (k, self.cf_override[k]))
+                    print("%s = %s" % (k, self.cf_override[k]))
             elif k in self.cf_override:
                 if v:
-                    print('#' + ln)
-                print('%s = %s' % (k, self.cf_override[k]))
+                    print("#" + ln)
+                print("%s = %s" % (k, self.cf_override[k]))
             else:
                 print(ln)
 
-        print('')
+        print("")
 
     def load_config(self):
         """Loads and returns skytools.Config instance.
@@ -397,11 +407,16 @@ class BaseScript:
             print("need config file, use --help for help.")
             sys.exit(1)
         conf_file = self.args[0]
-        return skytools.Config(self.service_name, conf_file,
-                               user_defs=self.cf_defaults,
-                               override=self.cf_override)
+        return skytools.Config(
+            self.service_name,
+            conf_file,
+            user_defs=self.cf_defaults,
+            override=self.cf_override,
+        )
 
-    def init_optparse(self, parser: Optional[optparse.OptionParser] = None) -> optparse.OptionParser:
+    def init_optparse(
+        self, parser: Optional[optparse.OptionParser] = None
+    ) -> optparse.OptionParser:
         """Initialize a OptionParser() instance that will be used to
         parse command line arguments.
 
@@ -420,35 +435,55 @@ class BaseScript:
             p.set_usage("%prog [options] INI")
 
         # generic options
-        p.add_option("-q", "--quiet", action="store_true",
-                     help="log only errors and warnings")
-        p.add_option("-v", "--verbose", action="count",
-                     help="log verbosely")
-        p.add_option("-d", "--daemon", action="store_true",
-                     help="go background")
-        p.add_option("-V", "--version", action="store_true",
-                     help="print version info and exit")
-        p.add_option("", "--ini", action="store_true",
-                     help="display sample ini file")
-        p.add_option("", "--set", action="append",
-                     help="override config setting (--set 'PARAM=VAL')")
+        p.add_option(
+            "-q", "--quiet", action="store_true", help="log only errors and warnings"
+        )
+        p.add_option("-v", "--verbose", action="count", help="log verbosely")
+        p.add_option("-d", "--daemon", action="store_true", help="go background")
+        p.add_option(
+            "-V", "--version", action="store_true", help="print version info and exit"
+        )
+        p.add_option("", "--ini", action="store_true", help="display sample ini file")
+        p.add_option(
+            "",
+            "--set",
+            action="append",
+            help="override config setting (--set 'PARAM=VAL')",
+        )
 
         # control options
-        g = optparse.OptionGroup(p, 'control running process')
-        g.add_option("-r", "--reload",
-                     action="store_const", const="reload", dest="cmd",
-                     help="reload config (send SIGHUP)")
-        g.add_option("-s", "--stop",
-                     action="store_const", const="stop", dest="cmd",
-                     help="stop program safely (send SIGINT)")
-        g.add_option("-k", "--kill",
-                     action="store_const", const="kill", dest="cmd",
-                     help="kill program immediately (send SIGTERM)")
+        g = optparse.OptionGroup(p, "control running process")
+        g.add_option(
+            "-r",
+            "--reload",
+            action="store_const",
+            const="reload",
+            dest="cmd",
+            help="reload config (send SIGHUP)",
+        )
+        g.add_option(
+            "-s",
+            "--stop",
+            action="store_const",
+            const="stop",
+            dest="cmd",
+            help="stop program safely (send SIGINT)",
+        )
+        g.add_option(
+            "-k",
+            "--kill",
+            action="store_const",
+            const="kill",
+            dest="cmd",
+            help="kill program immediately (send SIGTERM)",
+        )
         p.add_option_group(g)
 
         return p
 
-    def init_argparse(self, parser: Optional[argparse.ArgumentParser] = None) -> argparse.ArgumentParser:
+    def init_argparse(
+        self, parser: Optional[argparse.ArgumentParser] = None
+    ) -> argparse.ArgumentParser:
         """Initialize a ArgumentParser() instance that will be used to
         parse command line arguments.
 
@@ -466,31 +501,46 @@ class BaseScript:
             p = argparse.ArgumentParser()
 
         # generic options
-        p.add_argument("-q", "--quiet", action="store_true",
-                       help="log only errors and warnings")
-        p.add_argument("-v", "--verbose", action="count",
-                       help="log verbosely")
-        p.add_argument("-d", "--daemon", action="store_true",
-                       help="go background")
-        p.add_argument("-V", "--version", action="store_true",
-                       help="print version info and exit")
-        p.add_argument("--ini", action="store_true",
-                       help="display sample ini file")
-        p.add_argument("--set", action="append",
-                       help="override config setting (--set 'PARAM=VAL')")
+        p.add_argument(
+            "-q", "--quiet", action="store_true", help="log only errors and warnings"
+        )
+        p.add_argument("-v", "--verbose", action="count", help="log verbosely")
+        p.add_argument("-d", "--daemon", action="store_true", help="go background")
+        p.add_argument(
+            "-V", "--version", action="store_true", help="print version info and exit"
+        )
+        p.add_argument("--ini", action="store_true", help="display sample ini file")
+        p.add_argument(
+            "--set", action="append", help="override config setting (--set 'PARAM=VAL')"
+        )
         p.add_argument("args", nargs="*")
 
         # control options
-        g = p.add_argument_group('control running process')
-        g.add_argument("-r", "--reload",
-                       action="store_const", const="reload", dest="cmd",
-                       help="reload config (send SIGHUP)")
-        g.add_argument("-s", "--stop",
-                       action="store_const", const="stop", dest="cmd",
-                       help="stop program safely (send SIGINT)")
-        g.add_argument("-k", "--kill",
-                       action="store_const", const="kill", dest="cmd",
-                       help="kill program immediately (send SIGTERM)")
+        g = p.add_argument_group("control running process")
+        g.add_argument(
+            "-r",
+            "--reload",
+            action="store_const",
+            const="reload",
+            dest="cmd",
+            help="reload config (send SIGHUP)",
+        )
+        g.add_argument(
+            "-s",
+            "--stop",
+            action="store_const",
+            const="stop",
+            dest="cmd",
+            help="stop program safely (send SIGINT)",
+        )
+        g.add_argument(
+            "-k",
+            "--kill",
+            action="store_const",
+            const="kill",
+            dest="cmd",
+            help="kill program immediately (send SIGTERM)",
+        )
 
         return p
 
@@ -536,7 +586,7 @@ class BaseScript:
             self.cf.reload()
             self.log.info("Config reloaded")
         self.job_name = self.cf.get("job_name")
-        self.pidfile = self.cf.getfile("pidfile", '')
+        self.pidfile = self.cf.getfile("pidfile", "")
         self.loop_delay = self.cf.getfloat("loop_delay", self.loop_delay)
         self.exception_sleep = self.cf.getfloat("exception_sleep", 20)
         self.exception_quiet = self.cf.getlist("exception_quiet", [])
@@ -548,6 +598,7 @@ class BaseScript:
         self.need_reload = 1
 
     last_sigint = 0
+
     def hook_sigint(self, sig, frame):
         "Internal SIGINT handler.  Minimal code here."
         self.stop()
@@ -634,11 +685,15 @@ class BaseScript:
         return state
 
     last_func_fail = None
+
     def run_func_safely(self, func, prefer_looping=False):
         "Run users work function, safely."
         try:
             r = func()
-            if self.last_func_fail and time.time() > self.last_func_fail + self.exception_reset:
+            if (
+                self.last_func_fail
+                and time.time() > self.last_func_fail + self.exception_reset
+            ):
                 self.last_func_fail = None
             # set exception count to 0 after success
             self.exception_count = 0
@@ -701,8 +756,14 @@ class BaseScript:
         self.sleep(self.exception_sleep)
 
     def _is_quiet_exception(self, ex):
-        return ((self.exception_quiet == ["ALL"] or ex.__class__.__name__ in self.exception_quiet)
-                and self.last_func_fail and time.time() < self.last_func_fail + self.exception_grace)
+        return (
+            (
+                self.exception_quiet == ["ALL"]
+                or ex.__class__.__name__ in self.exception_quiet
+            )
+            and self.last_func_fail
+            and time.time() < self.last_func_fail + self.exception_grace
+        )
 
     def exception_hook(self, det, emsg):
         """Called on after exception processing.
@@ -735,9 +796,9 @@ class BaseScript:
         self.started = time.time()
 
         # set signals
-        if hasattr(signal, 'SIGHUP'):
+        if hasattr(signal, "SIGHUP"):
             signal.signal(signal.SIGHUP, self.hook_sighup)
-        if hasattr(signal, 'SIGINT'):
+        if hasattr(signal, "SIGINT"):
             signal.signal(signal.SIGINT, self.hook_sigint)
 
     def shutdown(self):
@@ -749,7 +810,7 @@ class BaseScript:
         pass
 
     # define some aliases (short-cuts / backward compatibility cruft)
-    stat_add = stat_put                 # Old, deprecated function.
+    stat_add = stat_put  # Old, deprecated function.
     stat_inc = stat_increase
 
 
@@ -806,20 +867,27 @@ class DBScript(BaseScript):
         """Add extra profile info to connect string.
         """
         if profile:
-            extra = self.cf.get("%s_extra_connstr" % profile, '')
+            extra = self.cf.get("%s_extra_connstr" % profile, "")
             if extra:
-                connstr += ' ' + extra
+                connstr += " " + extra
         return connstr
 
-    def get_database(self, dbname, autocommit=0, isolation_level=-1,
-                     cache=None, connstr=None, profile=None):
+    def get_database(
+        self,
+        dbname,
+        autocommit=0,
+        isolation_level=-1,
+        cache=None,
+        connstr=None,
+        profile=None,
+    ):
         """Load cached database connection.
 
         User must not store it permanently somewhere,
         as all connections will be invalidated on reset.
         """
 
-        max_age = self.cf.getint('connection_lifetime', DEF_CONN_AGE)
+        max_age = self.cf.getint("connection_lifetime", DEF_CONN_AGE)
 
         if not cache:
             cache = dbname
@@ -828,21 +896,21 @@ class DBScript(BaseScript):
         defs = self._db_defaults.get(cache, {})
         params.update(defs)
         if isolation_level >= 0:
-            params['isolation_level'] = isolation_level
+            params["isolation_level"] = isolation_level
         elif autocommit:
-            params['isolation_level'] = 0
-        elif params.get('autocommit', 0):
-            params['isolation_level'] = 0
-        elif 'isolation_level' not in params:
-            params['isolation_level'] = skytools.I_READ_COMMITTED
+            params["isolation_level"] = 0
+        elif params.get("autocommit", 0):
+            params["isolation_level"] = 0
+        elif "isolation_level" not in params:
+            params["isolation_level"] = skytools.I_READ_COMMITTED
 
-        if 'max_age' not in params:
-            params['max_age'] = max_age
+        if "max_age" not in params:
+            params["max_age"] = max_age
 
         if cache in self.db_cache:
             dbc = self.db_cache[cache]
             if connstr is None:
-                connstr = self.cf.get(dbname, '')
+                connstr = self.cf.get(dbname, "")
             if connstr:
                 connstr = self.add_connect_string_profile(connstr, profile)
                 dbc.check_connstr(connstr)
@@ -853,19 +921,21 @@ class DBScript(BaseScript):
 
             # connstr might contain password, it is not a good idea to log it
             filtered_connstr = connstr
-            pos = connstr.lower().find('password')
+            pos = connstr.lower().find("password")
             if pos >= 0:
-                filtered_connstr = connstr[:pos] + ' [...]'
+                filtered_connstr = connstr[:pos] + " [...]"
 
             self.log.debug("Connect '%s' to '%s'", cache, filtered_connstr)
-            dbc = DBCachedConn(cache, connstr, params['max_age'], setup_func=self.connection_hook)
+            dbc = DBCachedConn(
+                cache, connstr, params["max_age"], setup_func=self.connection_hook
+            )
             self.db_cache[cache] = dbc
 
         clist = []
         if cache in self._listen_map:
             clist = self._listen_map[cache]
 
-        return dbc.get_connection(params['isolation_level'], clist)
+        return dbc.get_connection(params["isolation_level"], clist)
 
     def close_database(self, dbname):
         """Explicitly close a cached connection.
@@ -895,17 +965,20 @@ class DBScript(BaseScript):
 
     def exception_hook(self, d, emsg):
         """Log database and query details from exception."""
-        curs = getattr(d, 'cursor', None)
-        conn = getattr(curs, 'connection', None)
+        curs = getattr(d, "cursor", None)
+        conn = getattr(curs, "connection", None)
         if conn:
             # db connection
-            sql = getattr(curs, 'query', None) or '?'
+            sql = getattr(curs, "query", None) or "?"
             if isinstance(sql, bytes):
-                sql = sql.decode('utf8')
+                sql = sql.decode("utf8")
             if len(sql) > 200:  # avoid logging londiste huge batched queries
                 sql = sql[:60] + " ..."
             lm = "Job %s got error on connection: %s.   Query: %s" % (
-                self.job_name, emsg, sql)
+                self.job_name,
+                emsg,
+                sql,
+            )
             if self._is_quiet_exception(d):
                 self.log.warning(lm)
             else:
@@ -928,7 +1001,7 @@ class DBScript(BaseScript):
             return super().sleep(secs)
 
         try:
-            if hasattr(select, 'poll'):
+            if hasattr(select, "poll"):
                 p = select.poll()
                 for fd in fdlist:
                     p.register(fd, select.POLLIN)
@@ -936,7 +1009,7 @@ class DBScript(BaseScript):
             else:
                 select.select(fdlist, [], [], secs)
         except select.error:
-            self.log.info('wait canceled')
+            self.log.info("wait canceled")
         return None
 
     def _exec_cmd(self, curs, sql, args, quiet=False, prefix=None):
@@ -952,8 +1025,8 @@ class DBScript(BaseScript):
         rows = curs.fetchall()
         for row in rows:
             try:
-                code = row['ret_code']
-                msg = row['ret_note']
+                code = row["ret_code"]
+                msg = row["ret_note"]
             except KeyError:
                 self.log.error("Query does not conform to exec_cmd API:")
                 self.log.error("SQL: %s", skytools.quote_statement(sql, args))
@@ -980,7 +1053,9 @@ class DBScript(BaseScript):
         ok = True
         rows = []
         for a in extra_list:
-            (tmp_ok, tmp_rows) = self._exec_cmd(curs, sql, baseargs + [a], quiet, prefix)
+            (tmp_ok, tmp_rows) = self._exec_cmd(
+                curs, sql, baseargs + [a], quiet, prefix
+            )
             if not tmp_ok:
                 ok = False
             rows += tmp_rows
@@ -988,7 +1063,7 @@ class DBScript(BaseScript):
 
     def exec_cmd(self, db_or_curs, q, args, commit=True, quiet=False, prefix=None):
         """Run SQL on db with code/value error handling."""
-        if hasattr(db_or_curs, 'cursor'):
+        if hasattr(db_or_curs, "cursor"):
             db = db_or_curs
             curs = db.cursor()
         else:
@@ -1007,10 +1082,18 @@ class DBScript(BaseScript):
             # error is already logged
             sys.exit(1)
 
-    def exec_cmd_many(self, db_or_curs, sql, baseargs, extra_list,
-                      commit=True, quiet=False, prefix=None):
+    def exec_cmd_many(
+        self,
+        db_or_curs,
+        sql,
+        baseargs,
+        extra_list,
+        commit=True,
+        quiet=False,
+        prefix=None,
+    ):
         """Run SQL on db multiple times."""
-        if hasattr(db_or_curs, 'cursor'):
+        if hasattr(db_or_curs, "cursor"):
             db = db_or_curs
             curs = db.cursor()
         else:
@@ -1050,16 +1133,24 @@ class DBScript(BaseScript):
                         self.get_database(dbname, autocommit=1)
                     dbc = self.db_cache[dbname]
                     if dbc.isolation_level != skytools.I_AUTOCOMMIT:
-                        raise skytools.UsageError("execute_with_retry: autocommit required")
+                        raise skytools.UsageError(
+                            "execute_with_retry: autocommit required"
+                        )
                 else:
                     dbc.reset()
                 curs = dbc.get_connection(dbc.isolation_level).cursor()
                 curs.execute(stmt, args)
                 break
             except elist as e:
-                if not sql_retry or tried >= sql_retry_max_count or time.time() - stime >= sql_retry_max_time:
+                if (
+                    not sql_retry
+                    or tried >= sql_retry_max_count
+                    or time.time() - stime >= sql_retry_max_time
+                ):
                     raise
-                self.log.info("Job %s got error on connection %s: %s", self.job_name, dbname, e)
+                self.log.info(
+                    "Job %s got error on connection %s: %s", self.job_name, dbname, e
+                )
             except BaseException:
                 raise
             # y = a + bx , apply cap
@@ -1086,14 +1177,14 @@ class DBScript(BaseScript):
         if channel not in clist:
             clist.append(channel)
 
-    def unlisten(self, dbname, channel='*'):
+    def unlisten(self, dbname, channel="*"):
         """Stop connection for listening on specific event channel.
 
         Listening will stop on next .get_database() call.
         """
         if dbname not in self._listen_map:
             return
-        if channel == '*':
+        if channel == "*":
             del self._listen_map[dbname]
             return
         clist = self._listen_map[dbname]
@@ -1105,7 +1196,16 @@ class DBScript(BaseScript):
 
 class DBCachedConn:
     """Cache a db connection."""
-    def __init__(self, name, loc, max_age=DEF_CONN_AGE, verbose=False, setup_func=None, channels=()):
+
+    def __init__(
+        self,
+        name,
+        loc,
+        max_age=DEF_CONN_AGE,
+        verbose=False,
+        setup_func=None,
+        channels=(),
+    ):
         self.name = name
         self.loc = loc
         self.conn = None
@@ -1161,7 +1261,7 @@ class DBCachedConn:
     def refresh(self):
         if not self.conn:
             return
-        #for row in self.conn.notifies():
+        # for row in self.conn.notifies():
         #    if row[0].lower() == "reload":
         #        self.reset()
         #        return
@@ -1190,4 +1290,3 @@ class DBCachedConn:
         """
         if self.loc != connstr:
             self.reset()
-

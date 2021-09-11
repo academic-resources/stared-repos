@@ -6,10 +6,11 @@ from transpile import transform
 from astunparse import unparse
 import global_sandbox
 import json
-ENV = os.getenv('ENV')
-FILENAME = os.getenv('FILENAME')
-VOL = os.getenv('VOLUME')
-DATA_VERSION = os.getenv('DATA_VERSION')
+
+ENV = os.getenv("ENV")
+FILENAME = os.getenv("FILENAME")
+VOL = os.getenv("VOLUME")
+DATA_VERSION = os.getenv("DATA_VERSION")
 
 
 def type_override(obj):
@@ -20,7 +21,7 @@ def type_override(obj):
 
 
 def execute():
-    code = open(f'{VOL}/{FILENAME}', 'r').read()
+    code = open(f"{VOL}/{FILENAME}", "r").read()
 
     inp = ["", {}]
 
@@ -32,7 +33,7 @@ def execute():
     except TokenError as tok_e:
         raise tok_e
     except Exception as e:
-        raise Exception('TranspilerError: ' + str(e))
+        raise Exception("TranspilerError: " + str(e))
 
     _name, imports = inp
 
@@ -44,27 +45,24 @@ def execute():
     try:
         exec(transpiled, global_sandbox.create(_name, runner, imports))
     except Exception as e:
-        runner.steps.append({
-            'type': 'ERROR',
-            'error': str(e)
-        })
+        runner.steps.append({"type": "ERROR", "error": str(e)})
     runtime = int((time() - start) * 1000)
 
     return json.dumps(
         {
-            'steps': runner.steps,
-            'objects': runner.objects,
-            'types': runner.types,
-            'objectIndex': runner.objectIndex,
-            'version': 1,
-            'runtime': runtime,
-            'code': code
+            "steps": runner.steps,
+            "objects": runner.objects,
+            "types": runner.types,
+            "objectIndex": runner.objectIndex,
+            "version": 1,
+            "runtime": runtime,
+            "code": code,
         }
     )
 
 
 try:
     data = execute()
-    open(f'{VOL}/{FILENAME}', 'w+').write(data)
+    open(f"{VOL}/{FILENAME}", "w+").write(data)
 except Exception as e:
-    open(f'{VOL}/{FILENAME}', 'w+').write(str(e))
+    open(f"{VOL}/{FILENAME}", "w+").write(str(e))

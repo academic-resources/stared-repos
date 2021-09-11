@@ -1,5 +1,5 @@
-'use strict';
-var Comparator = require('../../util/comparator');
+"use strict";
+var Comparator = require("../../util/comparator");
 
 /**
  * Merge sort
@@ -22,8 +22,8 @@ var mergeSortInit = function (a, compareFn) {
 
 var merge = function (a, b, comparator) {
   var i = 0,
-      j = 0,
-      result = [];
+    j = 0,
+    result = [];
 
   while (i < a.length && j < b.length) {
     result.push(comparator.lessThan(a[i], b[j]) ? a[i++] : b[j++]);
@@ -31,7 +31,7 @@ var merge = function (a, b, comparator) {
 
   // Concats the elements from the sub-array
   // that has not been included yet
-  return result.concat((i < a.length ? a.slice(i) : b.slice(j)));
+  return result.concat(i < a.length ? a.slice(i) : b.slice(j));
 };
 
 module.exports = mergeSortInit;

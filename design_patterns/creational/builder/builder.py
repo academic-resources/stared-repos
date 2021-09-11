@@ -1,36 +1,39 @@
 from abc import ABC, abstractstaticmethod
 
+
 class RTFReader:
     """ Director """
+
     __builder = None
 
     def SetBuilder(self, builder):
-       self.__builder = builder
+        self.__builder = builder
 
     def ParseRTF(self, body):
         for token in body:
-            if token == 'CHAR':
-               self.__builder.ConvertCharacter(token)
-            if token == 'FONT':
-               self.__builder.ConvertFontChange(token)
-            if token == 'PARA':
-               self.__builder.ConvertParagraph()
+            if token == "CHAR":
+                self.__builder.ConvertCharacter(token)
+            if token == "FONT":
+                self.__builder.ConvertFontChange(token)
+            if token == "PARA":
+                self.__builder.ConvertParagraph()
 
 
 class TextConverter(ABC):
-  """ Builder Interface"""
+    """ Builder Interface"""
 
-  @abstractstaticmethod
-  def ConvertCharacter(self, char):
-      pass
+    @abstractstaticmethod
+    def ConvertCharacter(self, char):
+        pass
 
-  @abstractstaticmethod
-  def ConvertFontChange(self, Font):
-      pass
+    @abstractstaticmethod
+    def ConvertFontChange(self, Font):
+        pass
 
-  @abstractstaticmethod
-  def ConvertParagraph(self):
-      pass
+    @abstractstaticmethod
+    def ConvertParagraph(self):
+        pass
+
 
 class ASCIIConverter(TextConverter):
     """
@@ -50,6 +53,7 @@ class ASCIIConverter(TextConverter):
     def GetASCIIText(self):
         print("ASCII representation")
 
+
 class TeXConverter(TextConverter):
     """
     TeX Concrete Builder
@@ -66,6 +70,7 @@ class TeXConverter(TextConverter):
 
     def GetTeXText(self):
         print("TeX representation")
+
 
 class TextWidgetConverter(TextConverter):
     """
@@ -89,7 +94,7 @@ def clientCode():
     """
     Client code executed as example
     """
-    demoTokens = ['CHAR', 'FONT', 'PARA']
+    demoTokens = ["CHAR", "FONT", "PARA"]
 
     rtfReader = RTFReader()
     asciiConverter = ASCIIConverter()
@@ -104,6 +109,7 @@ def clientCode():
 
     rtfReader.SetBuilder(textWidgetConverter)
     textWidgetText = rtfReader.ParseRTF(demoTokens)
+
 
 if __name__ == "__main__":
     clientCode()

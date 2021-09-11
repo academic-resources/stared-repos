@@ -17,7 +17,7 @@ def count_words(text):
         if char not in string.punctuation:
             output.append(char)
 
-    output = (''.join(output)).split()
+    output = ("".join(output)).split()
 
     my_dict = {}
     for word in output:

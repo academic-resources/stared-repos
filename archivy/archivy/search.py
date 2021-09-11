@@ -61,12 +61,7 @@ def query_es_index(query, strict=False):
             },
             "highlight": {
                 "fragment_size": 0,
-                "fields": {
-                    "content": {
-                        "pre_tags": "==",
-                        "post_tags": "==",
-                    }
-                },
+                "fields": {"content": {"pre_tags": "==", "post_tags": "=="}},
             },
         },
     )

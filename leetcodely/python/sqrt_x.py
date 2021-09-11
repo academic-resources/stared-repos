@@ -20,6 +20,6 @@ class Solution:
         return low
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.mySqrt(9))

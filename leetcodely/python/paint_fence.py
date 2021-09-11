@@ -3,6 +3,7 @@
 You have to paint all the posts such that no more than two adjacent fence posts have the same color.
 Return the total number of ways you can paint the fence."""
 
+
 class Solution(object):
     def numWays(self, n, k):
         """
@@ -10,4 +11,3 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-

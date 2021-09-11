@@ -11,6 +11,7 @@ import sys
 
 # Definition for a binary tree node.
 
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -30,6 +31,8 @@ class Solution(object):
                 return True
             if root.val <= floor or root.val >= ceiling:
                 return False
-            return _helper(root.left, floor, root.val) and _helper(root.right, root.val, ceiling)
+            return _helper(root.left, floor, root.val) and _helper(
+                root.right, root.val, ceiling
+            )
 
         return _helper(root, -sys.maxsize, sys.maxsize)

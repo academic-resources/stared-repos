@@ -22,11 +22,11 @@ class Solution(object):
         memo[0] = True
         for i in range(1, len(s) + 1):
             for w in wordDict:
-                if memo[i - len(w)] and s[i - len(w):i] == w:
+                if memo[i - len(w)] and s[i - len(w) : i] == w:
                     memo[i] = True
         return memo[-1]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
-    print(solution.wordBreak('applepieapple', ['apple', 'pie']))
+    print(solution.wordBreak("applepieapple", ["apple", "pie"]))

@@ -5,16 +5,9 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('buyersguide', '0008_auto_20210126_1943'),
-    ]
+    dependencies = [("buyersguide", "0008_auto_20210126_1943")]
 
     operations = [
-        migrations.RemoveField(
-            model_name='product',
-            name='product_category',
-        ),
-        migrations.DeleteModel(
-            name='BuyersGuideProductCategory',
-        ),
+        migrations.RemoveField(model_name="product", name="product_category"),
+        migrations.DeleteModel(name="BuyersGuideProductCategory"),
     ]

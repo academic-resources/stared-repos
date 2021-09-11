@@ -4,16 +4,17 @@ from app.models import Note_Tag, db
 from sqlalchemy import and_
 import json
 
-note_tag_routes = Blueprint('note_tags', __name__)
+note_tag_routes = Blueprint("note_tags", __name__)
 
 
-@note_tag_routes.route('/', methods=['POST'], strict_slashes=False)
+@note_tag_routes.route("/", methods=["POST"], strict_slashes=False)
 @login_required
 def addTagToNote(noteid):
     req_data = json.loads(request.data)
-    tag_id = req_data['tagid']
+    tag_id = req_data["tagid"]
     note_tag = Note_Tag.query.filter(
-        and_(Note_Tag.note_id == noteid, Note_Tag.tag_id == tag_id)).first()
+        and_(Note_Tag.note_id == noteid, Note_Tag.tag_id == tag_id)
+    ).first()
     if note_tag is None:
         new_note_tag = Note_Tag(tag_id=tag_id, note_id=noteid)
         db.session.add(new_note_tag)
@@ -23,11 +24,12 @@ def addTagToNote(noteid):
         return note_tag.to_dict()
 
 
-@note_tag_routes.route('/<int:tagid>', methods=['DELETE'], strict_slashes=False)
+@note_tag_routes.route("/<int:tagid>", methods=["DELETE"], strict_slashes=False)
 @login_required
 def removeTagFromNote(noteid, tagid):
     notetag = Note_Tag.query.filter(
-        and_(Note_Tag.tag_id == tagid, Note_Tag.note_id == noteid)).one()
+        and_(Note_Tag.tag_id == tagid, Note_Tag.note_id == noteid)
+    ).one()
     db.session.delete(notetag)
     db.session.commit()
     return notetag.to_dict()

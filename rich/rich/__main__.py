@@ -4,13 +4,7 @@ from time import process_time
 
 from rich import box
 from rich.color import Color
-from rich.console import (
-    Console,
-    ConsoleOptions,
-    Group,
-    RenderResult,
-    RenderableType,
-)
+from rich.console import Console, ConsoleOptions, Group, RenderResult, RenderableType
 from rich.markdown import Markdown
 from rich.measure import Measurement
 from rich.pretty import Pretty
@@ -50,11 +44,7 @@ def make_test_card() -> Table:
     table.add_column("Demonstration")
 
     color_table = Table(
-        box=None,
-        expand=False,
-        show_header=False,
-        show_edge=False,
-        pad_edge=False,
+        box=None, expand=False, show_header=False, show_edge=False, pad_edge=False
     )
     color_table.add_row(
         # "[bold yellow]256[/] colors or [bold green]16.7 million[/] colors [blue](if supported by your terminal)[/].",
@@ -122,16 +112,10 @@ def make_test_card() -> Table:
     example_table.add_column("[green]Date", style="green", no_wrap=True)
     example_table.add_column("[blue]Title", style="blue")
     example_table.add_column(
-        "[cyan]Production Budget",
-        style="cyan",
-        justify="right",
-        no_wrap=True,
+        "[cyan]Production Budget", style="cyan", justify="right", no_wrap=True
     )
     example_table.add_column(
-        "[magenta]Box Office",
-        style="magenta",
-        justify="right",
-        no_wrap=True,
+        "[magenta]Box Office", style="magenta", justify="right", no_wrap=True
     )
     example_table.add_row(
         "Dec 20, 2019",
@@ -140,10 +124,7 @@ def make_test_card() -> Table:
         "$375,126,118",
     )
     example_table.add_row(
-        "May 25, 2018",
-        "[b]Solo[/]: A Star Wars Story",
-        "$275,000,000",
-        "$393,151,347",
+        "May 25, 2018", "[b]Solo[/]: A Star Wars Story", "$275,000,000", "$393,151,347"
     )
     example_table.add_row(
         "Dec 15, 2017",
@@ -174,14 +155,7 @@ def iter_last(values: Iterable[T]) -> Iterable[Tuple[bool, T]]:
     yield True, previous_value'''
 
     pretty_data = {
-        "foo": [
-            3.1427,
-            (
-                "Paul Atreides",
-                "Vladimir Harkonnen",
-                "Thufir Hawat",
-            ),
-        ],
+        "foo": [3.1427, ("Paul Atreides", "Vladimir Harkonnen", "Thufir Hawat")],
         "atomic": (False, True, None),
     }
     table.add_row(
@@ -215,10 +189,7 @@ Supports much of the *markdown*, __syntax__!
 
 if __name__ == "__main__":  # pragma: no cover
 
-    console = Console(
-        file=io.StringIO(),
-        force_terminal=True,
-    )
+    console = Console(file=io.StringIO(), force_terminal=True)
     test_card = make_test_card()
 
     # Print once to warm cache

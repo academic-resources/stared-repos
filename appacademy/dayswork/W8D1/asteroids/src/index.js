@@ -7,7 +7,7 @@ const Asteroid = require("./asteroid.js");
 const Game = require("./game.js");
 const GameView = require("./game_view.js");
 
-console.log('Webpack is working');
+console.log("Webpack is working");
 
 window.MovingObject = MovingObject;
 window.Asteroid = Asteroid;
@@ -20,6 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.ctx = ctx;
 
   let gv = new GameView(ctx);
-  
+
   gv.start();
 });

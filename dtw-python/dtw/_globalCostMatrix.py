@@ -3,11 +3,7 @@ from dtw.window import noWindow
 from dtw._dtw_utils import _computeCM_wrapper
 
 
-def _globalCostMatrix(lm,
-                      step_pattern,
-                      window_function,
-                      seed,
-                      win_args):
+def _globalCostMatrix(lm, step_pattern, window_function, seed, win_args):
     ITYPE = numpy.int32
 
     wm = numpy.full_like(lm, True, dtype=ITYPE)
@@ -15,10 +11,9 @@ def _globalCostMatrix(lm,
     if window_function != noWindow:  # for performance
         for i in range(n):
             for j in range(m):
-                wm[i, j] = window_function(i, j,
-                                           query_size=n,
-                                           reference_size=m,
-                                           **win_args)
+                wm[i, j] = window_function(
+                    i, j, query_size=n, reference_size=m, **win_args
+                )
 
     nsteps = numpy.array([step_pattern.get_n_rows()], dtype=ITYPE)
 
@@ -31,18 +26,15 @@ def _globalCostMatrix(lm,
         cm[0, 0] = lm[0, 0]
 
     # All input arguments
-    out = _computeCM_wrapper(wm,
-                             lm,
-                             nsteps,
-                             dir,
-                             cm)
+    out = _computeCM_wrapper(wm, lm, nsteps, dir, cm)
 
-    out['stepPattern'] = step_pattern;
+    out["stepPattern"] = step_pattern
     return out
 
 
 def _test_computeCM2(TS=5):
     import numpy as np
+
     ITYPE = np.int32
 
     twm = np.ones((TS, TS), dtype=ITYPE)
@@ -54,15 +46,13 @@ def _test_computeCM2(TS=5):
 
     tnstepsp = np.array([6], dtype=ITYPE)
 
-    tdir = np.array((1, 1, 2, 2, 3, 3, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, -1, 1, -1, 1, -1, 1),
-                    dtype=np.double)
+    tdir = np.array(
+        (1, 1, 2, 2, 3, 3, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, -1, 1, -1, 1, -1, 1),
+        dtype=np.double,
+    )
 
     tcm = np.full_like(tlm, np.nan, dtype=np.double)
     tcm[0, 0] = tlm[0, 0]
 
-    out = _computeCM_wrapper(twm,
-                             tlm,
-                             tnstepsp,
-                             tdir,
-                             tcm)
+    out = _computeCM_wrapper(twm, tlm, tnstepsp, tdir, tcm)
     return out

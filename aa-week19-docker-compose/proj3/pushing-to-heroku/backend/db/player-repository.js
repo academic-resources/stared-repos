@@ -1,10 +1,16 @@
-const { Player } = require('./models');
+const { Player } = require("./models");
 
 class NullPlayer {
-  isValid() { return false; }
+  isValid() {
+    return false;
+  }
   setPassword() {}
-  isValidPassword() { return false; }
-  toSafeObject() { return {}; }
+  isValidPassword() {
+    return false;
+  }
+  toSafeObject() {
+    return {};
+  }
 }
 
 async function create(details) {

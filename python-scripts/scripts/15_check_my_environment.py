@@ -22,6 +22,7 @@ if __name__ == "__main__":
 
 import os
 import sys
+
 ENVIRONMENT = "development"
 CONFIGFILE = None
 
@@ -31,14 +32,17 @@ def get_config_file():
     return {
         "development": "{}/../config/development.cfg".format(directory),
         "staging": "{}/../config/staging.cfg".format(directory),
-        "production": "{}/../config/production.cfg".format(directory)
+        "production": "{}/../config/production.cfg".format(directory),
     }.get(ENVIRONMENT, None)
+
 
 CONFIGFILE = get_config_file()
 
 if CONFIGFILE is None:
-    sys.exit("Configuration error! Unknown environment set. \
-              Edit config.py and set appropriate environment")
+    sys.exit(
+        "Configuration error! Unknown environment set. \
+              Edit config.py and set appropriate environment"
+    )
 print("Config file: {}".format(CONFIGFILE))
 if not os.path.exists(CONFIGFILE):
     sys.exit("Configuration error! Config file does not exist")

@@ -66,82 +66,82 @@
 // -----------
 class Node {
   constructor(val) {
-    this.value = val
-    this.next = null
+    this.value = val;
+    this.next = null;
   }
 }
 
 class MinMaxStack {
   constructor() {
-    this.top = null
-    this.bottom = null
-    this.length = 0
-    this.maxValues = []
-    this.minValues = []
+    this.top = null;
+    this.bottom = null;
+    this.length = 0;
+    this.maxValues = [];
+    this.minValues = [];
   }
 
   push(val) {
-    const node = new Node(val)
+    const node = new Node(val);
 
     if (
       this.minValues.length === 0 ||
       node.value <= this.minValues[this.minValues.length - 1].value
     ) {
-      this.minValues.push(node)
+      this.minValues.push(node);
     }
 
     if (
       this.maxValues.length === 0 ||
       node.value >= this.maxValues[this.maxValues.length - 1].value
     ) {
-      this.maxValues.push(node)
+      this.maxValues.push(node);
     }
 
     if (!this.top) {
-      this.top = node
-      this.bottom = node
+      this.top = node;
+      this.bottom = node;
     } else {
-      const temp = this.top
-      this.top = node
-      this.top.next = temp
+      const temp = this.top;
+      this.top = node;
+      this.top.next = temp;
     }
-    return ++this.length
+    return ++this.length;
   }
 
   pop() {
     if (!this.top) {
-      return null
+      return null;
     }
 
     if (this.top === this.maxValues[this.maxValues.length - 1]) {
-      this.maxValues.pop()
+      this.maxValues.pop();
     }
 
     if (this.top === this.minValues[this.minValues.length - 1]) {
-      this.minValues.pop()
+      this.minValues.pop();
     }
 
-    const temp = this.top
+    const temp = this.top;
     if (this.top === this.bottom) {
-      this.bottom = null
+      this.bottom = null;
     }
-    this.top = this.top.next
-    this.length--
-    return temp
+    this.top = this.top.next;
+    this.length--;
+    return temp;
   }
 
   size() {
-    return this.length
+    return this.length;
   }
 
   min() {
-    return this.minValues[this.minValues.length - 1] || null
+    return this.minValues[this.minValues.length - 1] || null;
   }
 
   max() {
-    return this.maxValues[this.maxValues.length - 1] || null
+    return this.maxValues[this.maxValues.length - 1] || null;
   }
 }
 
-exports.Node = Node
-exports.MinMaxStack = MinMaxStack
+exports.Node = Node;
+exports.MinMaxStack = MinMaxStack;

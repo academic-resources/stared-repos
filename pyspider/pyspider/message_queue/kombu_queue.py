@@ -13,8 +13,8 @@ from kombu.exceptions import ChannelError
 from six.moves import queue as BaseQueue
 
 
-register('umsgpack', umsgpack.packb, umsgpack.unpackb, 'application/x-msgpack')
-enable_insecure_serializers(['umsgpack'])
+register("umsgpack", umsgpack.packb, umsgpack.unpackb, "application/x-msgpack")
+enable_insecure_serializers(["umsgpack"])
 
 
 class KombuQueue(object):
@@ -38,7 +38,9 @@ class KombuQueue(object):
         """
         self.name = name
         self.conn = Connection(url)
-        self.queue = self.conn.SimpleQueue(self.name, no_ack=True, serializer='umsgpack')
+        self.queue = self.conn.SimpleQueue(
+            self.name, no_ack=True, serializer="umsgpack"
+        )
 
         self.maxsize = maxsize
         self.lazy_limit = lazy_limit

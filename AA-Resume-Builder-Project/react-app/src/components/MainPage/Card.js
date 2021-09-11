@@ -1,5 +1,5 @@
-import React from 'react';
-import CardContainer from './CardContainer';
+import React from "react";
+import CardContainer from "./CardContainer";
 
 const Card = ({ title, tags, button }) => {
   // if (!tags) {

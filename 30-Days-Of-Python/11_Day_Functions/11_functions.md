@@ -48,7 +48,7 @@ A function is a reusable block of code or programming statements designed to per
 
 ### Declaring and Calling a Function
 
-When we make a function, we call it declaring a function. When we start using the it,  we call it *calling* or *invoking* a function. Function can be declared with or without parameters.
+When we make a function, we call it declaring a function. When we start using the it, we call it _calling_ or _invoking_ a function. Function can be declared with or without parameters.
 
 ```py
 # syntax
@@ -225,7 +225,7 @@ print(add_two_numbers(num2 = 3, num1 = 2)) # Order does not matter
 If we do not return a value with a function, then our function is returning _None_ by default. To return a value with a function we use the keyword _return_ followed by the variable we are returning. We can return any kind of data types from a function.
 
 - Returning a string:
-**Example:**
+  **Example:**
 
 ```py
 def print_name(firstname):
@@ -262,7 +262,7 @@ print('Age: ', calculate_age(2019, 1819))
 def is_even (n):
     if n % 2 == 0:
         print('even')
-        return True    # return stops further execution of the function, similar to break 
+        return True    # return stops further execution of the function, similar to break
     return False
 print(is_even(10)) # True
 print(is_even(7)) # False
@@ -345,7 +345,7 @@ function_name(param1, param2, param3,..)
 def sum_all_nums(*nums):
     total = 0
     for num in nums:
-        total += num     # same as total = total + num 
+        total += num     # same as total = total + num
     return total
 print(sum_all_nums(2, 3, 5)) # 10
 ```
@@ -371,7 +371,7 @@ def do_something(f, x):
 print(do_something(square_number, 3)) # 27
 ```
 
-🌕 You achieved quite a lot so far.  Keep going! You have just completed day 11 challenges and you are 11 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 You achieved quite a lot so far. Keep going! You have just completed day 11 challenges and you are 11 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
 
 ## 💻 Exercises: Day 11
 

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import CardContainer from './CardContainer.js';
+import React, { useEffect, useState } from "react";
+import CardContainer from "./CardContainer.js";
 // import Carousel from './Carousel.js';
-import * as resumeActions from '../../store/resume';
-import { getTemplates, updateCurrentTemplate } from '../../store/template';
-import './MainPage.css';
-import { useDispatch, useSelector } from 'react-redux';
+import * as resumeActions from "../../store/resume";
+import { getTemplates, updateCurrentTemplate } from "../../store/template";
+import "./MainPage.css";
+import { useDispatch, useSelector } from "react-redux";
 
 const MainPage = () => {
   const dispatch = useDispatch();

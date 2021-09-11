@@ -26,13 +26,19 @@ class Solution(object):
 
         for i in range(len(grid)):
             for j in range(len(grid[j])):
-                if grid[i][j] == 'a' or grid[i][j] == 'b' or grid[i][j] == 'c' or grid[i][j] == 'd' or grid[i][
-                    j] == 'e' or grid[i][j] == 'f':
+                if (
+                    grid[i][j] == "a"
+                    or grid[i][j] == "b"
+                    or grid[i][j] == "c"
+                    or grid[i][j] == "d"
+                    or grid[i][j] == "e"
+                    or grid[i][j] == "f"
+                ):
                     total.add(grid[i][j])
 
         for i in range(len(grid)):
             for j in range(len(grid[j])):
-                if grid[i][j] == '@':
+                if grid[i][j] == "@":
                     queue.appendleft((i, j))
                     break
 
@@ -40,6 +46,6 @@ class Solution(object):
             pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solution = Solution()
     print(solution.shortestPathAllKeys(["@.a.#", "###.#", "b.A.B"]))

@@ -1,7 +1,7 @@
 import unittest
 import sys
 
-sys.path.append('lib')
+sys.path.append("lib")
 from book import BookInventory
 
 
@@ -14,7 +14,7 @@ class BookInventoryTests(unittest.TestCase):
         """
         Setup inventory that will be subjected to the tests.
         """
-        self.inventory = BookInventory('./tests/test_title_author.tab.txt')
+        self.inventory = BookInventory("./tests/test_title_author.tab.txt")
 
     def test_inventory_data_loading(self):
         """
@@ -30,5 +30,5 @@ class BookInventoryTests(unittest.TestCase):
         self.assertEqual(self.inventory.books_count(), 10)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

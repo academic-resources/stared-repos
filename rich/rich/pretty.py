@@ -773,14 +773,7 @@ if __name__ == "__main__":  # pragma: no cover
             list, {"crumble": ["apple", "rhubarb", "butter", "sugar", "flour"]}
         ),
         "counter": Counter(
-            [
-                "apple",
-                "orange",
-                "pear",
-                "kumquat",
-                "kumquat",
-                "durian" * 100,
-            ]
+            ["apple", "orange", "pear", "kumquat", "kumquat", "durian" * 100]
         ),
         "atomic": (False, True, None),
         "Broken": BrokenRepr(),

@@ -7,12 +7,13 @@ from pyspider.libs.base_handler import *
 
 
 class Handler(BaseHandler):
-    crawl_config = {
-    }
+    crawl_config = {}
 
     @every(minutes=24 * 60)
     def on_start(self):
-        self.crawl('http://127.0.0.1:14887/pyspider/test.html', callback=self.index_page)
+        self.crawl(
+            "http://127.0.0.1:14887/pyspider/test.html", callback=self.index_page
+        )
 
     @config(age=10 * 24 * 60 * 60)
     def index_page(self, response):
@@ -21,7 +22,4 @@ class Handler(BaseHandler):
 
     @config(priority=2)
     def detail_page(self, response):
-        return {
-            "url": response.url,
-            "title": response.doc('title').text(),
-        }
+        return {"url": response.url, "title": response.doc("title").text()}
