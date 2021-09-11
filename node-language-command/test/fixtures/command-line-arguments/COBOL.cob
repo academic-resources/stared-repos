@@ -1,0 +1,18 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. COMMAND-LINE-ARGUMENTS.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  ARG                PIC X(50) VALUE SPACES.
+       01  I                  PIC S9(4) BINARY.
+
+       PROCEDURE DIVISION.
+         ACCEPT ARG FROM ARGUMENT-VALUE.
+
+         PERFORM VARYING I FROM LENGTH OF ARG BY -1
+                   UNTIL I LESS THAN 1 OR ARG(I:1) NOT = ' '
+         END-PERFORM
+
+         DISPLAY ARG(1:I).
+
+         STOP RUN.

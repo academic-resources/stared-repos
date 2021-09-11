@@ -1,0 +1,1 @@
+println(argv(0))
