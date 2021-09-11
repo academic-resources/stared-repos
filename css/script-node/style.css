@@ -1,0 +1,62 @@
+body { 
+	width:100%;
+	height:100%;
+	margin: 0; 
+	padding: 0;
+	background-image: radial-gradient(50% 50%, rgba(248,249,243,1), rgba(93,93,93,0.60));
+}
+
+html, body, #editor { 
+	width:100%;
+	height:100%;
+}
+
+/* mysterious pre */
+body > pre { display: none } 
+
+.left, .right { height: 100%; overflow: visible; display: block; float: left; position: relative; width: 50%; }
+/* codemirror */
+.CodeMirror { 
+	font-size:16px; 
+/*	overflow-x: auto; 
+	overflow-y: hidden;
+	height:auto;
+*/
+	min-height:100%;
+}
+.CodeMirror-scroll{
+	overflow:hidden;
+}
+@media all and (max-width: 800px) { .CodeMirror { font-size: 14px !important; } }
+
+
+.editorBox{
+	width:87%;
+	height:100%;
+	margin:0;
+	overflow-y:hidden;
+	box-sizing:border-box;
+}
+
+.editor{
+	width:100%;
+	float:left;
+	background:rgba(245,245,245,.75);
+	overflow-y:hidden
+}
+
+.right{
+	display:none;
+	width:33%;
+	float:right;
+	background:rgba(240,240,240,0);
+	height:100%;
+}
+
+.right pre:not(empty){
+}
+
+.errorLine, .errorLine2.CodeMirror-linebackground { background: rgba(215, 20, 30, .3); }
+.highlightLine{
+	background:rgba(20, 215, 30, .3);
+}

@@ -1,0 +1,39 @@
+
+.cm-s-mistakes .cm-keyword {color: #00f;}
+.cm-s-mistakes .cm-atom {color: darkred;}
+.cm-s-mistakes .cm-number {color: rgba(176,7,9,1);font-weight:bold;}
+.cm-s-mistakes .cm-def {color: #20f;}
+.cm-s-mistakes .cm-variable {color: #111;}
+.cm-s-mistakes .cm-variable-2 {color: #00f;}
+.cm-s-mistakes .cm-variable-3 {color: #00f;}
+.cm-s-mistakes .cm-property {color: rgab(33, 133, 66, 1 );}
+.cm-s-mistakes .cm-operator {color: #111;}
+.cm-s-mistakes .cm-comment {color: rgab(33, 133, 66, .667 ); font-style:italic}
+.cm-s-mistakes .cm-string {color: rgba(9,176,8,1);}
+.cm-s-mistakes .cm-string-2 {color: rgba(9,176,8,.75);}
+.cm-s-mistakes .cm-meta {color: #555;}
+.cm-s-mistakes .cm-error {color: #f00;}
+.cm-s-mistakes .cm-qualifier {color: #555;}
+.cm-s-mistakes .cm-builtin {color: #30a;}
+.cm-s-mistakes .cm-bracket {color: #997;}
+.cm-s-mistakes .cm-tag {color: #170;}
+.cm-s-mistakes .cm-attribute {color: #00c;}
+.cm-s-mistakes .cm-header {color: blue;}
+.cm-s-mistakes .cm-quote {color: #090;}
+.cm-s-mistakes .cm-hr {color: #999;}
+.cm-s-mistakes .cm-link {color: #00c;}
+
+.cm-negative {color: #d44;}
+.cm-positive {color: #292;}
+.cm-header, .cm-strong {font-weight: bold;}
+.cm-em {font-style: italic;}
+.cm-link {text-decoration: underline;}
+
+.CodeMirror-gutter{
+	width:42px;
+	border-right:1px solid rgba(10,10,10,.3);
+}
+.CodeMirror-linenumber{
+	text-align:center;
+	font-size:90%;
+}
