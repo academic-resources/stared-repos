@@ -1,0 +1,18 @@
+#N canvas 759 71 630 394 10;
+#X obj 15 105 dynamicTW;
+#X msg 46 61 bang;
+#X obj 48 37 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 90 10 adc~;
+#X obj 143 67 fiddle~;
+#X obj 180 103 env~;
+#X obj 136 130 dbtorms;
+#X obj 99 253 dynamicTW;
+#X obj 105 215 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 2 5 0;
+#X connect 5 0 6 0;
+#X connect 8 0 7 0;

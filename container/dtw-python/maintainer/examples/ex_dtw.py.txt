@@ -1,0 +1,75 @@
+
+
+>>> import numpy as np
+>>> from dtw import *
+
+A noisy sine wave as query
+
+>>> idx = np.linspace(0,6.28,num=100)
+>>> query = np.sin(idx) + np.random.uniform(size=100)/10.0
+
+A cosine is for reference; sin and cos are offset by 25 samples
+
+>>> reference = np.cos(idx)
+
+Find the best match
+
+>>> alignment = dtw(query,reference)
+
+Display the mapping, AKA warping function - may be multiple-valued
+Equivalent to: plot(alignment,type="alignment")
+
+>>> import matplotlib.pyplot as plt;
+... plt.plot(alignment.index1, alignment.index2)	# doctest: +SKIP
+
+
+Partial alignments are allowed.
+
+>>> alignmentOBE = dtw(query[44:88], reference,
+...                      keep_internals=True,
+...                      step_pattern=asymmetric,
+...                      open_end=True,open_begin=True)
+
+>>> alignmentOBE.plot(type="twoway",offset=1)		# doctest: +SKIP
+
+
+Subsetting allows warping and unwarping of
+timeseries according to the warping curve. 
+See first example below.
+
+Most useful: plot the warped query along with reference 
+>>> plt.plot(reference);
+... plt.plot(alignment.index2,query[alignment.index1])	# doctest: +SKIP
+
+Plot the (unwarped) query and the inverse-warped reference
+>>> plt.plot(query)					# doctest: +SKIP
+... plt.plot(alignment.index1,reference[alignment.index2]) 
+
+
+
+
+
+
+
+
+A hand-checkable example
+
+>>> ldist = np.ones((6,6))		      # Matrix of ones
+>>> ldist[1,:] = 0; ldist[:,4] = 0;           # Mark a clear path of zeroes
+>>> ldist[1,4] = .01;		              # Forcely cut the corner
+
+>>> ds = dtw(ldist);			      # DTW with user-supplied local
+
+>>> da = dtw(ldist,step_pattern=asymmetric)   # Also compute the asymmetric 
+
+Symmetric: alignment follows the low-distance marked path
+>>> plt.plot(ds.index1,ds.index2)	      # doctest: +SKIP
+
+Asymmetric: visiting 1 is required twice
+>>> plt.plot(da.index1,da.index2,'ro')	      # doctest: +SKIP	
+
+>>> ds.distance
+2.0
+>>> da.distance
+2.0
+

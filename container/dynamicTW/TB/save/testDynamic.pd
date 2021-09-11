@@ -1,0 +1,14 @@
+#N canvas 840 554 450 300 10;
+#X obj 140 99 adc~;
+#X obj 161 149 fiddle~;
+#X obj 216 200 env;
+#X obj 227 243 dbtorms;
+#X obj 261 67 dynamicTW;
+#X msg 264 29 bang;
+#X obj 263 -8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 1 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;

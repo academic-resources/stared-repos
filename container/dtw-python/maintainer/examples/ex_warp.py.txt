@@ -1,0 +1,43 @@
+>>> from dtw import *
+>>> import numpy as np
+
+Default test data
+
+>>> (query, reference) = dtw_test_data.sin_cos()
+
+>>> alignment = dtw(query,reference);
+
+
+>>> wq = warp(alignment,index_reference=False)
+>>> wt = warp(alignment,index_reference=True)
+
+
+>>> import matplotlib.pyplot as plt;		# doctest: +SKIP
+... plt.plot(reference);
+... plt.plot(query[wq]); 
+... plt.gca().set_title("Warping query")
+
+>>> import matplotlib.pyplot as plt;		# doctest: +SKIP
+... plt.plot(query);
+... plt.plot(reference[wt]); 
+... plt.gca().set_title("Warping reference")
+
+
+
+
+
+
+Asymmetric step makes it "natural" to warp
+the reference, because every query index has
+exactly one image (q->t is a function)
+
+>>> alignment = dtw(query,reference,step_pattern=asymmetric)
+>>> wt = warp(alignment,index_reference=True);
+
+
+>>> plt.plot(query, "b-")               	# doctest: +SKIP
+... plt.plot(reference[wt], "ok", facecolors='none')
+
+
+
+

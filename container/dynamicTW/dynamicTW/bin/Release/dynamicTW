@@ -1,0 +1,20 @@
+EXPORTS
+    _nm__s_float @1 DATA
+    arr_position @2 DATA
+    checkStorage @3
+    dtw_free @4
+    dtw_genMatrix @5
+    dtw_onBangMsg @6
+    dtw_onSet_A @7
+    dtw_onSet_B @8
+    dynamicTW_new @9
+    dynamicTW_setup @10
+    fileReader1 @11
+    fileReader2 @12
+    leastCostPath @13
+    recording_array @14 DATA
+    replaceSignal2 @15
+    reverseArray @16
+    saveValue @17 DATA
+    signalMatch @18
+    triggerGlobal @19 DATA
