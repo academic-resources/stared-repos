@@ -1,0 +1,34 @@
+{
+  "name": "util-each",
+  "version": "1.0.1",
+  "description": "Iterate over an object, array or string",
+  "main": "each.js",
+  "scripts": {
+    "test": "istanbul cover _mocha -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/each.git"
+  },
+  "keywords": [
+    "each",
+    "iterate",
+    "object",
+    "string",
+    "array"
+  ],
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/each/issues"
+  },
+  "homepage": "https://github.com/blakeembrey/each",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.3.0"
+  }
+}
