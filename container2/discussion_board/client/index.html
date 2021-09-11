@@ -1,0 +1,29 @@
+<meta name="viewport" content="width=device-width, initial-scale=1"><!--proper rendering and touch zooming (mobile first)-->
+<html ng-app="myApp">
+	<head>
+		<title ng-bind="title">App</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.min.js"></script>
+		<script src="app.js"></script>
+		<script src="factories/userFactory.js"></script>
+		<script src="factories/dashboardFactory.js"></script>
+		<script src="factories/commentsFactory.js"></script>
+		<script src="factories/topicFactory.js"></script>
+		<script src="factories/postsFactory.js"></script>
+		<script src="controllers/usersControl.js"></script>
+		<script src="controllers/dashboardController.js"></script>
+		<script src="controllers/profileController.js"></script>
+		<script src="controllers/topicController.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+		<link rel="stylesheet" href="./stylesheets/main.css">
+	</head>
+	<body>
+		<!--grid system of up to 12 columns-->
+		<div class ="col-sm-12">
+			<!--<h1>Working</h1>-->
+			<div ng-view></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="container" id="user" ng-controller="profileController">
+	<div class="row" id="user-nav">
+		<div class="col-sm-4 col-sm-offset-8">
+			<a href="#/dashboard" class="btn btn-link">DashBoard</a> <a href="#/logout" class="btn btn-link">Logout</a>
+		</div>
+		<div class="col-sm-12" ng-repeat="user in userdata">
+			<h3>Username: <span ng-bind="user.username"></span></h3>
+			<h4>Posted...</h4>
+			<ul>
+				<li><span ng-bind='user.topics'></span> Topic</li>
+				<li><span ng-bind='user.posts'></span> Posts</li>
+				<li><span ng-bind='user.comments'></span> Comment</li>
+			</ul>
+		</div>
+	</div>
+</div>
