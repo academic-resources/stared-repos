@@ -1,0 +1,9 @@
+.share__container{
+  height: 80vh;
+ display:flex;
+ justify-content: center;
+  align-items: center;
+width: 100%;
+padding: 20px 20px;
+background-color: white;
+}

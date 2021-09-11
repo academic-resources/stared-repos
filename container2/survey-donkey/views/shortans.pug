@@ -1,0 +1,24 @@
+extends layout.pug
+
+block append head
+        script(src="/scripts/shortans.js" type="application/javascript")
+block content
+    link(rel="stylesheet" type="text/css" href="/styles/shortans.css")
+    div(class="has-background-light")
+        div(class="notification is-danger is-medium mt-2 box")
+            button(class="delete")
+            p(class="has-text-centered") This page contains anonymous responses!!! Browse at your own risk...
+        section(class="section")
+            div(class="box has-text-centered")
+                h2(class="title") #{questionText}
+                a(class="button is-primary is-light is-medium" href=`/surveys/${survey.id}`) back to #{survey.name}
+            input(id="_csrfToken" type="hidden" value=token)
+            each shortans in resShortans
+                div(class="columns")
+                    div(class="column is-one-fifth")
+                    div(class="column is-three-fifths")
+                        div(class="box")
+                            h2(class="title has-text-centered my-4 has-text-left is-italic has-text-weight-light") "#{shortans.questionResponseValue}" - Anon User
+                            p(class="has-text-left") #{JSON.stringify(shortans.createdAt).slice(1,11)}
+                    div(class="column is-one-fifth")
+        include footer.pug

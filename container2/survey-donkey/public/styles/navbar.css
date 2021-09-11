@@ -1,0 +1,130 @@
+/* .header-nav__container {
+    background-color: #00bf6f;
+    color: #FFFFFF;
+    padding: 4px;
+    line-height: 20px;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  } */
+
+  .surveyDonkey_logo{
+    cursor: pointer;
+
+    text-decoration: none;
+    font-family: 'PT Sans';
+    color: #00bf6f;
+    font-size: 25px;
+    margin: 15px 10px;
+  }
+
+.splash-nav__container {
+
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 4px;
+    line-height: 20px;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+}
+
+.surveyDonkey_logo_container {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    padding: 0px 0px 0px 100px
+}
+.signUpAndLogIn_container{
+    display:  flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 27vw;
+    right: 0;
+    padding: 10px 75px 0px 5px
+}
+
+.donkeyLogo{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+
+}
+.surveyDonkey_signup, .createSurvey, #squareSignup, .logout, #squareLogin{
+    color: #333E48;
+    padding: 10px 16px;
+border-radius: 2px;
+line-height: 16px;
+text-decoration: none;
+font-family: National2,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 13px;
+font-weight: 500;
+background-color: transparent;
+border-width: 2px;
+border-style: solid;
+border: 2px solid #333E48;
+cursor: pointer;
+background-color: white;
+}
+
+.surveyDonkey_signup_container{
+    display: flex;
+    color: #333E48;
+    border-color: #fff;
+    background-color: #fff;
+    flex-grow: .5;
+
+}
+
+.surveyDonkey_login{
+    text-decoration: none;
+    color: #333E48;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 3;
+    
+}
+.myName{
+    color: white;
+}
+ #greenNavBar{
+     background-color: #00bf6f;
+ }
+ .dashContainer{
+     display: flex;
+     align-items: center;
+     width: 50%;
+ }
+ .dashDash, .dashMySurveys{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+
+ }
+
+ .dashboardLinksContainer {
+     display: flex;
+     width: 25%;
+     justify-content: space-around;
+
+ }
+
+.meLogout {
+display: flex;
+
+flex-grow: .5;
+}
+
+.ifMySurveys{
+display:flex;
+width: 300px;
+justify-content: space-around;
+align-items: center;
+}

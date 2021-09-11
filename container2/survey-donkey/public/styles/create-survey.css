@@ -1,0 +1,226 @@
+.hidden {
+    display: none
+}
+
+.survey-preview-question-container:hover{
+    background-color:		#CCCCFF
+}
+
+.option-container:not(.hidden){
+    display: flex;
+    width: 900px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: contain;
+    background-size: cover;
+}
+    /* background-image: url("https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/09/08/728883-donkey-thinkstock.jpg"); */
+/* https://resources.stuff.co.nz/content/dam/images/1/d/j/n/y/n/image.related.StuffLandscapeSixteenByNine.710x400.1dv0jr.png/1472616897810.jpg */
+/* https://miro.medium.com/max/3200/1*bghxE43xMrnkqmaD2dK77A.jpeg */
+/* https://smartwatermagazine.com/sites/default/files/styles/thumbnail-1180x647/public/margaret-kenya-brooke-donkeys.jpg?itok=TGh199YB */
+.draggable.dragging{
+    opacity: .99;
+}
+
+#free-response-text-box{
+    color: white;
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+#scroll-response-box{
+    color:white;
+}
+
+.radio-label{
+    margin-left: 10px;
+}
+
+#content{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#back-to-top{
+    position: sticky;
+    top:16em;
+    width: 170px;
+    margin-left: 10px;
+}
+
+#publish-survey-form{
+    position: sticky;
+    top:13em;
+}
+
+#save-survey{
+    width: 170px;
+    position: sticky;
+    margin-left: 10px;
+    top:10em;
+}
+
+#side-buttons{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 4em
+}
+
+#title-and-button-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#publish-delete-buttons{
+    display: flex;
+    display: flex;
+    flex-direction: row;
+}
+
+#delete-survey-top{
+    margin-left:10px;
+}
+
+#publish-survey-top{
+    margin-left:10px;
+}
+
+#question-type{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+input{
+    padding:5px
+}
+
+#survey-form{
+    width: 900px;
+    height: auto;
+    transition-delay: .1s;
+    transition-duration: .1s;
+    transition-property: height;
+}
+
+/* html{
+    background-color:#C8C8C8;
+} */
+
+#main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.radio-button-holder{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 800px;
+}
+
+.scroll-option{
+    margin-right: 30px
+}
+
+.new-option-text{
+    width: 500px;
+}
+
+#new-question-button{
+    width: 900px
+}
+#survey-preview-title {
+    color: #00BF6F
+}
+
+.edit-button-holder {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.question-input {
+    width:600px;
+}
+
+#question-main-prompt-form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px
+}
+
+#bottom-buffer {
+    height: 300px;
+    display: block;
+    background: hsl(0, 0%, 96%);
+}
+
+.newQuestionContainer {
+    display:flex;
+}
+
+.question-text-and-button-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:860px
+}
+
+.survey-preview-question-container {
+    margin-bottom: 20px;
+    transition-delay: 0s;
+    transition-duration: .1s;
+    transition-property: background-color;
+    cursor: grab;
+}
+
+.dragging{
+    cursor: grabbing;
+}
+
+.survey-preview-question-option {
+    width: 600px;
+    justify-self: center;
+    margin-left: 35px;
+    overflow: scroll;
+}
+
+.survey-preview-question-text {
+    width: 510px;
+    overflow: scroll;
+}
+
+#multiple-choice-container {
+    margin-top: 10px;
+}
+
+.new-option-text {
+    margin: 10px;
+    margin-top: 0px;
+}
+
+#button-holder{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+}
+
+#accept-changes-button{
+    margin-right: 10px;
+}
+
+#save-question{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#delete-survey{
+    margin-left: 10px;
+}
