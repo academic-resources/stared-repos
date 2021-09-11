@@ -1,0 +1,8 @@
+@import './components/Section/Section.css';
+@import './components/Box/Box.css';
+
+body {
+	box-sizing: border-box;
+	min-width: 300px;
+	margin: 0;
+}

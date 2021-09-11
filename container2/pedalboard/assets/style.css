@@ -1,0 +1,598 @@
+/* Reset */
+body {
+  margin: 0;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+blockquote,
+pre,
+ol,
+ul,
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  border: none;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+aside,
+main,
+nav {
+  display: block;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+iframe {
+  border: none;
+}
+
+li {
+    list-style: none;
+}
+
+ul,
+ol,
+p {
+    margin: 0;
+}
+
+button {
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+}
+
+a {
+    color: inherit;
+}
+
+/* Global */
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font: 400 100%/1.625 'Barlow', sans-serif;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #222;
+    display: flex;
+    color: #FFF;
+}
+
+/* Starter */
+.starter {
+    text-align: center;
+    transition: 800ms opacity;
+    padding: 20px 0;
+    font-size: 1.125em;
+}
+
+body:not(.loading) .starter {
+    opacity: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.starter:after {
+    content: '';
+    position: absolute;
+    background: url('/assets/bg.png') center no-repeat;
+    background-size: contain;
+    filter: blur(30px);
+    opacity: 0.5;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.starter button {
+    background: linear-gradient(#89acaa, #4d6168);
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    margin: 0 5px 2rem;
+    transition: 300ms transform;
+}
+
+.starter button:hover {
+    transform: scale(1.02);
+}
+
+.starter button:first-of-type {
+    background: linear-gradient(#FF5722, #eca438);
+}
+
+@media screen and (min-width: 40em) {
+    .starter button {
+        padding: 1rem 2.5rem;
+    }
+}
+
+/* Pedals */
+.pedalboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.pedalboard:empty {
+    display: none;
+}
+
+.pedal {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    margin: 40px 10px;
+    flex-basis: 220px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    text-shadow: -0.05em 0.05em rgba(0, 0, 0, 0.2);
+    min-height: 424px;
+}
+
+.pedal:after {
+    content: attr(data-type);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+.pedal__controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 280px;
+    flex: 1;
+}
+
+.pedal__controls > * {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: calc(50% - 20px);
+}
+
+.pedal__controls label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.pedal__controls input,
+.pedal__on-off input {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px;
+    width: 1px; 
+    margin: -1px;
+    padding: 0;
+    border: 0; 
+}
+
+.pedal__knob {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: #FFF;
+    border: 1px solid #BBB;
+    position: relative;
+
+    transform: rotate(calc(var(--percentage, 0) * 1deg))
+}
+
+.pedal__knob:after {
+    content: '';
+    position: absolute;
+    height: 40%;
+    width: 2px;
+    background: #888;
+    left: 50%;
+    top: 10%;
+    margin: 0 0 0 -1px;
+    transform-origin: 50% 100%;
+    transform: rotate(-150deg);
+}
+
+.pedal__on-off {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 60px);
+}
+
+.pedal__button {
+    -webkit-tap-highlight-color: transparent;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: #FFF;
+    box-shadow: inset 0 0 0 10px #DDD;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 200%;
+    border: 1px solid #BBB;
+    display: block;
+    cursor: pointer;
+}
+
+.pedal__button[data-label][aria-label] {
+    overflow: visible;
+    white-space: normal;
+    text-indent: 0;
+    margin-top: 1rem;
+    position: relative;
+    outline: none;
+}
+
+.pedal__button[data-label][aria-label]:before {
+    content: attr(aria-label);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 0.7em;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    margin-bottom: 0.25rem;
+    transform: translateX(-50%);
+}
+
+.pedal__led {
+    --pedal-led: rgba(255, 255, 255, 0.4);
+    width: 25px;
+    height: 25px;
+    background: var(--pedal-led);
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 1.5rem 0 1rem;
+}
+
+.pedal__led[data-state="recording"],
+.pedal__on-off input:checked ~ .pedal__led {
+    --pedal-led: red;
+    box-shadow: 0 0 20px 2px var(--pedal-led);
+}
+
+.pedal__led[data-state="overdubbing"] {
+    --pedal-led: rgb(223, 190, 46);
+    box-shadow: 0 0 20px 2px var(--pedal-led);
+}
+
+.pedal__led[data-state="playing"] {
+    --pedal-led: rgb(48, 177, 59);
+    box-shadow: 0 0 20px 2px var(--pedal-led);
+}
+
+.pedal__double-button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pedal h2 {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+}
+
+.pedal__jack {
+    position: absolute;
+    left: 25%;
+    bottom: 100%;
+    width: 40px;
+    height: 20px;
+    background: linear-gradient(to left, rgba(192, 192, 192, 0.2), rgba(121, 121, 121, 0.2));
+    transform: translateX(-50%);
+    box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.pedal__jack + .pedal__jack {
+    left: 75%;
+}
+
+/* Pedal styles */
+.pedal--chorus {
+    background: linear-gradient(#4bccc8, #9fd6e8);
+}
+
+.pedal--boost {
+    background: linear-gradient(#FF5722, #eca438);
+}
+
+.pedal--tremolo {
+    background: linear-gradient(#673AB7, #460b50);
+}
+
+.pedal--harmonic-tremolo {
+    background: linear-gradient(#6d522a, #2f2e2c);
+}
+
+.pedal--multihead-delay {
+    background: #000;
+    flex-basis: 700px;
+}
+
+.pedal--multihead-delay ul {
+    max-width: 100%;
+}
+
+.pedal--delay {
+    background: linear-gradient(#bfe0df, #6d8790);
+}
+
+.pedal--reverb {
+    background: linear-gradient(#e689d1, #ab6e4a);
+}
+
+.pedal--wah {
+    background: linear-gradient(#222, rgb(32, 33, 41));
+}
+
+.pedal--compressor {
+    background: linear-gradient(#84b75a, rgb(47, 129, 154));
+}
+
+.pedal--overdrive {
+    background: linear-gradient(#a23642, rgb(202, 80, 137));
+}
+
+.pedal--looper {
+    background: linear-gradient(#36a248, rgb(45, 76, 59));
+}
+
+.pedal--looper .pedal__on-off {
+    /* display: none; */
+}
+
+.cassette {
+    order: -1;
+    align-self: flex-start;
+    justify-self: flex-start;
+    background: #333;
+    border-radius: 25px;
+    height: 50px;
+    width: calc(100% - 40px);
+    margin: 0 20px 20px;
+    position: relative;
+}
+
+.cassette__head {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 100%;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+    animation: 2s spin linear infinite;
+}
+
+.cassette__head:after {
+    content: '';
+    background: #FFF;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+}
+
+.cassette__window + .cassette__head {
+    animation-duration: 3.6s;
+}
+
+.cassette__head + .cassette__head {
+    left: auto;
+    right: 5px;
+}
+
+.cassette__window {
+    width: 70px;
+    height: 40px;
+    top: 5px;
+    background: #FFF;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    position: absolute;
+    border-radius: 3px;
+}
+
+.cassette__window:before,
+.cassette__window:after {
+    height: 80px;
+    width: 80px;
+    top: 50%;
+    margin-top: -40px;
+    background: #222;
+    position: absolute;
+    left: -55px;
+    content: '';
+    border-radius: 100% 95%;
+    animation: 2s spin linear infinite;
+}
+
+.cassette__window:after {
+    left: auto;
+    right: -70px;
+}
+
+/* Error */
+.error {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    width: calc(100% - 2rem);
+    max-width: 400px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* Toggle */
+
+.pedal-toggle-label {
+    padding-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.pedal-toggle-label:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: linear-gradient(#efefef, #dfdfdf);
+    border-radius: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+:checked + .pedal-toggle-label:before {
+    box-shadow: 0 0 5px 0 red;
+    background: red;
+}
+
+/* Multihead delay */
+
+.pedal--multihead-delay ul > * {
+    flex-basis: calc(25% - 10px);
+}
+
+.pedal--multihead-delay .pedal__controls {
+    flex-direction: column;
+}
+
+.delay-head {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.sub-pedal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    position: relative;
+    padding: 20px 5px 5px 5px;
+    margin: 0 5px;
+    min-width: 200px;
+    flex: 1;
+    background: var(--sub-pedal-background);
+    border-radius: 5px;
+}
+
+.sub-pedal:before {
+    content: attr(data-type);
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+.sub-pedal:not(:last-child):after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 8px;
+    border-color: transparent transparent transparent var(--sub-pedal-background);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sub-pedal > * {
+    margin: 0.5rem;
+}
+
+.sub-pedal .pedal__knob {
+    width: 50px;
+    height: 50px;
+}
+
+.sub-pedal-delay {
+    --sub-pedal-background: #175772;
+}
+
+.sub-pedal-chorus {
+    --sub-pedal-background: #39A0C7;
+}
+
+.sub-pedal-eq {
+    --sub-pedal-background: #7E8A89;
+}
+
+.sub-pedal-mix {
+    --sub-pedal-background: #ACB5B8;
+}

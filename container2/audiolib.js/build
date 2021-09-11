@@ -1,0 +1,85 @@
+#!/usr/bin/env node
+/*jshint undef:true asi:true */
+/*global require:false, console:false, process:false */
+
+/* vim: set filetype=javascript */
+
+var paramon = require('paramon')
+var buildTools = require('./dependencies/build-scripts/')
+
+var DEBUG = console.error.bind(console)
+
+if (process.argv.length < 3) {
+	process.argv.push('--help')
+}
+
+var args = paramon.readFormat(process.argv, {
+	name: 'build',
+	usage: 'command [options]',
+
+	params:	[
+		{
+			name: 'debug',
+			args: ['--debug', '-d'],
+			desc: 'Run in debug mode (more verbose error messages).',
+			maxParams: 0
+		},
+		{
+			name: 'update',
+			args: ['update', '-u'],
+			desc: 'Update target (wrappers).',
+			minParams: 1,
+			maxParams: -1
+		},
+		{
+			name: 'config',
+			args: ['config', '-c'],
+			desc: 'Modify or review config settings.',
+			minParams: 1,
+			maxParams: -1
+		}
+	]
+})
+
+if (!args.debug) process.on('uncaughtException', function (e) {
+	DEBUG(e.toString())
+	process.exit(1)
+})
+
+args['$!stray'].forEach(function (e) {
+	DEBUG('Unknown build command "' + e + '".')
+	process.exit()
+})
+
+if (args.config) {
+	if (args.config.length > 1) {
+		buildTools.config[args.config[0]] = args.config.slice(1).join(' ')
+		buildTools.saveConfig()
+	}
+
+	DEBUG(buildTools.config[args.config[0]])
+
+	process.exit()
+}
+
+if (args.update) {
+	args.update.forEach(function (e) {
+		var k
+
+		e = e.toLowerCase()
+
+		if (e === 'all') {
+			for (k in buildTools.updatables) {
+				if (buildTools.updatables.hasOwnProperty(k)) {
+					buildTools.updatables[k]()
+				}
+			}
+		} else if (e in buildTools.updatables) {
+			buildTools.updatables[e]()
+		} else {
+			throw 'Unknown update target "' + e + '".'
+		}
+	})
+
+	process.exit()
+}

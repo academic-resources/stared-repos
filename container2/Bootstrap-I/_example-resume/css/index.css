@@ -1,0 +1,25 @@
+.container {
+  max-width: 900px;
+}
+nav {
+  padding: 20px 0;
+}
+nav a {
+  color: black;
+}
+.jumbotron {
+  background: offwhite;
+}
+.jumbotron .btn {
+  background: gray;
+  border: 1px solid white;
+}
+.table-row {
+  margin-top: 20px;
+}
+.footer {
+  margin-top: 20px;
+  padding: 20px 0;
+  background: gray;
+  color: white;
+}

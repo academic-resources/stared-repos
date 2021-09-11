@@ -1,0 +1,19 @@
+.app-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+.header-wrapper {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 600px;
+  position: absolute;
+  bottom: 20px;
+}
+span.logo {
+  font-family: 'Pacifico';
+  font-size: 3em;
+}

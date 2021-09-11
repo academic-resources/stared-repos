@@ -1,0 +1,72 @@
+li {
+  border-bottom: thin solid #fff;
+  height: 120px;
+  padding: 10px 0 10px 0;
+  list-style: none;
+}
+.friend-wrapper {
+  height: 120px;
+  width: 400px;
+  margin: 2px 0 0 0;
+  position: relative;
+  float: left;
+}
+.thumbnail {
+  position: relative;
+  border: 0;
+  border-radius: 50%;
+  float: left;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  margin: 10px 0 0 0;
+  padding: 0;
+  z-index: 0;
+}
+.hover-btn {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  border: 0;
+  border-radius: 50%;
+  float: left;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  margin: 10px 0 0 0;
+  padding: 0;
+  z-index: 1;
+}
+svg.hover-btn- {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  z-index: 1;
+}
+#show {
+  display: block;
+}
+#hide {
+  display: none;
+}
+img {
+  height: 100%;
+}
+span.friend-name {
+  border-bottom: thin dotted #333;
+  color: #333;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.75em;
+  position: absolute;
+  left: 20px;
+  top: 0;
+}
+span.info {
+  color: #666;
+  font-size: 0.85em;
+  font-weight: 300;
+  line-height: 1.75em;
+  position: absolute;
+  left: 20px;
+  bottom: 7px;
+}

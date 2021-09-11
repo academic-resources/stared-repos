@@ -1,0 +1,17 @@
+{
+  "name": "delay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assets/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sergey --watch",
+    "start": "sergey"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sergey": "0.0.6"
+  }
+}

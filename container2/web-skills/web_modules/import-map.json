@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "firebase/app/dist/index.esm.js": "./firebase/app/dist/index.esm.js",
+    "firebase/auth/dist/index.esm.js": "./firebase/auth/dist/index.esm.js",
+    "firebase/firestore/dist/index.esm.js": "./firebase/firestore/dist/index.esm.js",
+    "lit-element": "./lit-element.js",
+    "lit-html": "./lit-html.js",
+    "lit-html/directives/repeat.js": "./lit-html/directives/repeat.js",
+    "web-dialog": "./web-dialog.js"
+  }
+}

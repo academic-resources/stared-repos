@@ -1,0 +1,36 @@
+{
+  "name": "express-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "babel-node": "babel-node --presets env,stage-1",
+    "build": "babel src -d dist",
+    "coverage": "jest --collectCoverageFrom=src/__tests__/*.test.js --coverage",
+    "jest": "jest --runInBand src/__tests__/*.test.js",
+    "lint": "eslint src/**",
+    "start": "nodemon --exec npm run babel-node -- src/server.js",
+    "test": "npm run lint && npm run jest"
+  },
+  "author": "Frank Faustino",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "helmet": "^3.12.1",
+    "mongoose": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^5.0.1",
+    "jest": "^23.3.0",
+    "nodemon": "^1.17.5",
+    "supertest": "^3.1.0"
+  }
+}

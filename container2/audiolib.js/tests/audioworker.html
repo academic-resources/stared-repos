@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../lib/audiolib.js"></script>
+		<script type="unknown" id="audio-worker">
+var osc;
+
+var dev = Sink();
+
+Sink.on('audioprocess', function (buffer, ch) {
+	osc.append(buffer, ch);
+});
+
+dev.on('ready', function () {
+	osc = audioLib.Oscillator(dev.sampleRate);
+});
+
+		</script>
+		<script>
+(function(){
+
+window.onload = function(){
+	var worker = audioLib.AudioWorker(document.querySelector('#audio-worker'), true);
+
+	worker.onmessage = function (e) {
+		console.log(e.data);
+	};
+
+	setTimeout(function(){
+		worker.inject(function(){
+			postMessage(audioLib.version + !!dev);
+		});
+	}, 2000);
+};
+
+}());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

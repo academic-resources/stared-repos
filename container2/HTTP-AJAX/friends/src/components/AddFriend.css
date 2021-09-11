@@ -1,0 +1,44 @@
+.input-wrapper {
+  margin: 10px 0 150px 0;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 600px;
+}
+span.add-a-friend {
+  background-color: #fff;
+  color: #333;
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 100;
+  vertical-align: middle;
+}
+input {
+  border: none;
+  height: 18px;
+  box-shadow: 1px 1px 3px 0px #DDDDDD;
+}
+input.input-name {
+  margin: 0 0 0 30px;
+}
+input::-webkit-input-placeholder {
+  color: #333;
+  font-family: inherit;
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 100;
+}
+button {
+  bottom: 11px;
+  background: none;
+  border: none;
+  height: 18px;
+  width: 18px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+svg {
+  height: 18px;
+  width: 18px;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "full-text-search",
+  "version": "0.0.16",
+  "description": "A pure in JS written full text search with an easy to use API.",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "files": ["index.js", "test/"],
+  "dependencies": {
+    "debug": "*",
+    "jsonfile" : "2.0.0",
+    "merge": "1.2.0"
+  },
+  "devDependecies":{
+    "mocha": "*"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zacaria/node-full-text-search"
+  },
+  "keywords": [
+    "full",
+    "text",
+    "search",
+    "light",
+    "fast"
+  ],
+  "author": "Zacaria",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zacaria/node-full-text-search/issues"
+  },
+  "homepage": "https://github.com/Zacaria/node-full-text-search"
+}
