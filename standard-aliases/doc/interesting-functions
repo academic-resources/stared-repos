@@ -1,0 +1,84 @@
+# LESS #
+Print or display text in pager.
+
+# LS #
+List or display directory contents in pager using short listing format.
+
+# TREE #
+Print directory structure.
+
+# FILES #
+Copy directories safely.
+Move directories safely.
+Delete directories safely.
+Create directory and descend into.
+Backup file.
+
+# ECHO #
+Print text.
+
+# RUN IN BACKGROUND #
+Run command in background.
+
+# BASICS #
+Print file contents.
+Print exit code of last command.
+Exit bash shell.
+Open file with default app.
+Open new terminal with same working directory.
+Make file executable or create new bash or python script.
+
+# TEXT EDITORS #
+Edit file with vim.
+View file in vim.
+
+# SUDO #
+Execute last command as super user.
+Edit file with vim as super user.
+
+# SEARCH #
+Print or display with pager lines containing pattern.
+Print or display with pager lines containing pattern in working and subdirectories.
+Locate files on filesystem containing pattern in their names.
+
+# ARCHIVES #
+Extract archive of any type.
+
+# SYSTEM INFORMATION #
+Print available disk space in simplified form.
+Print disk space occupied by file or folder.
+
+# MISC #
+Change hue of color blue in linux terminal.
+
+# PACKAGE MANAGEMENT #
+Install package.
+
+# PACKAGE INFORMATION #
+Print version of package or version of installed commands package.
+
+# PACKAGE SEARCH #
+Describe package or command or find available packages with part of name or available packages that provide command.
+
+# GIT #
+Print short repository status.
+Display log of commits.
+Display changes between commits.
+Add files to repository.
+
+# GITHUB #
+Clone github project.
+
+# NETWORK #
+Print internal ip.
+Ping gateway and google.
+Print ssh port status of local devices and ping google.
+
+# WIRELESS #
+Reset wireless device.
+
+# INTERNET #
+Start default browser in background.
+
+
+

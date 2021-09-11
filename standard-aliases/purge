@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Usage: purge 
+# Deletes ~/.standard_aliases directory and users
+# configuration file ~/.standardrc.
+
+# Stops execution if any command fails.
+set -eo pipefail
+
+./uninstall
+rm -f ~/.standardrc
+echo "Standard Aliased successfully purged."
