@@ -1,0 +1,3 @@
+There are a lot more files in this folder than I would normally include in a folder for notes on a book, but the majority of them are the result of mathematical notation I couldn't accomplish through the use of markdown alone. That being said, if you would like to check out the notes for Chapter 1, please open [Chapter 1 Notes](./Chapter_1.md). If you'd like to look at the exercises from Chapter 1, please click [here](./Exercises.md) to view the exercises.
+
+Due to the amount of time it took to transcribe the formulae into Markdown, it's highly probable that this will be the only chapter where I type out all the different exercises provided in the book.
