@@ -1,0 +1,35 @@
+[
+  {
+    "id": "paciello",
+    "url": "https://developer.paciellogroup.com/blog/2017/07/short-note-on-aria-label-aria-labelledby-and-aria-describedby/",
+    "tags": [
+      "accessibility"
+    ],
+    "title": "Short note on aria-label, aria-labelledby, and aria-describedby",
+    "description": "Be careful when you use the aria-label, aria-labelledby, and aria-describedby attributes, because they do not work consistently with all HTML elements. This is a short note on when (and when not) to u",
+    "date": "2018-07-18T08:46:02.000Z",
+    "image": "/short-note-on-aria-label-aria-labelledby-and-aria-describedby.png",
+    "processed": true
+  },
+  {
+    "id": "paciello2",
+    "url": "https://developer.paciellogroup.com/blog/2018/09/describing-aria-describedby/",
+    "tags": [
+      "accessibility"
+    ],
+    "title": "Describing aria-describedby",
+    "description": "A well-designed user interface (UI) should clearly identify important content and controls. Often people correlate this to using prominent visual cues to help guide individuals through a task or point",
+    "date": "2018-11-27T13:07:56.000Z",
+    "image": "/describing-aria-describedby.png",
+    "processed": true
+  },
+  {
+    "id": "mdn",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute",
+    "title": "Using the aria-describedby attribute",
+    "description": "The aria-describedby attribute is used to indicate the IDs of the elements that describe the object. It is used to establish a relationship between widgets or groups and text that described them. This is very similar to aria-labelledby: a label describes the essence of an object, while a description…",
+    "date": "2019-03-23T19:16:44.431Z",
+    "image": "/using-the-aria-describedby-attribute.png",
+    "processed": true
+  }
+]

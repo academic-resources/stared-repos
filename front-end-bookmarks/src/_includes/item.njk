@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+{% from "partials/macros.njk"import linklist, bookmark with context %}
+
+<h1 class="h2">{{ title }}</h1>
+
+{% if definition %}
+  <blockquote>
+    {{ definition.text | safe }}
+  <cite><a href="{{ definition.cite.url }}"> {{ definition.cite.text }}</a></cite>
+  </blockquote>
+{% endif %}
+
+{% if links %}
+  <h2 class="h3"><span>Links about <code>{{ title }}</code></span></h2>
+
+<ol class="bookmarks">
+  {% for entry in entries[tags[0]][links] %}
+    {{ bookmark(entry)}}
+  {% endfor %}
+  </ol>
+{% endif %}
+
+{% if related %}
+  <h2 class="h3"><span>This might be interesting as well</span></h2>
+
+  {% for entry in related %}
+    {{ bookmark(entry)}}
+  {% endfor %}
+{% endif %}
+
+{{ content | safe }}
+
+{{linklist(title="Explore other pages", url="", list="entry", limit=4, randomize=true)}}

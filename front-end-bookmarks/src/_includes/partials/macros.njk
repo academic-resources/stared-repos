@@ -1,0 +1,102 @@
+{% macro linklist (title, url, list, limit = 1000, randomize = false, sort="alpha", viewAll = false) %}
+<div class="links">
+  {% if title %}
+    <h2 class="h3">
+      {% if url %} 
+        <a href="/{{ url }}">{{ title }}</a>
+      {% else %}
+        <span>{{ title }}</span>
+      {% endif %}
+    </h2>
+  {% endif %}
+   
+  <ul class="link-list">
+  {% set pages = collections[list] %}
+
+
+  {% if sort == "alpha" %}
+    {% set pages = pages | sortAlpha | reverse %}
+  {% endif %}
+
+  {% if randomize %}
+    {% set pages = pages | random %}
+  {% endif %}
+
+  {% for page in pages | sort(url) | reverse | head(limit) %}
+    <li class="link-list__item card">
+      <a href="{{ page.url }}" class="card__link" rel="noopener">{{ page.data.title }}</a>
+      <p class="card__desc">{{ page.data.short_desc }}</p>
+      <ul class="tags">
+        {% set tags = page.data.tags %}
+        {% for tag in tags %}
+          {% if not "entry" in tag %}
+            <li class="tags__tag">
+              <a href="/{{ tags[0] }}/{% if tag !==tags[0] %}{{ tag }}{% endif %}" class="tags__link  tags__link--{{ tag }}">
+                {{ tag }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+  </ul>
+
+  {% if viewAll %}
+    <a href="/{{ url }}" class="u-fw-b">View all {{ title }}</a>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro bookmark (entry) %}
+
+  {% if '.' in entry %}
+    {% set parts = entry | split('.') %}
+    {% set file =  entries[parts[0]][parts[1]] %}
+    {% set entry = file | filterById(parts[2]) %}
+  {% endif %}
+
+  <li class="bookmark card">
+    <div>
+      <h3 class="h3 card__heading">
+        <a href="{{entry.url}}" class="card__link" rel="noopener">
+          {{entry.title | safe }}
+        </a>
+      </h3>
+
+      {% if entry.date %}
+        <p class="bookmark__meta"> posted on
+            <time datetime="{{ entry.date | machineDate }}">{{ entry.date | readableDate }}</time>
+            {% if entry.author %}by {{entry.author}}{% endif %}
+          </p>
+      {% endif %}
+
+      {% if entry.description %}
+        <p class="card__desc">{{ entry.description | safe }}</p>
+      {% endif %}
+
+      {% if entry.tags %}
+        <div class="tag-container">
+          Tags: 
+          <ul class="tags">
+            {% for tag in entry.tags %}
+              <li class="tags__tag">
+                <a href="/tags/{{tag}}" class="tags__link tags__link--{{tag}}">
+                  {{tag}}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+
+    {% set image = '/assets/img/blank.jpg' %}
+
+    {% if entry.image %}
+      {% set image = '/images' + entry.image %}
+    {% endif %}
+
+    <img src="{{ image }}" class="bookmark__img" alt="" width="320" loading="lazy">
+  </li>
+{% endmacro %}

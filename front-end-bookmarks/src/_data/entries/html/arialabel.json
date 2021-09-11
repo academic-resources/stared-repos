@@ -1,0 +1,23 @@
+[
+  {
+    "id": "paciello",
+    "url": "https://developer.paciellogroup.com/blog/2017/07/short-note-on-aria-label-aria-labelledby-and-aria-describedby/",
+    "tags": [
+      "accessibility"
+    ],
+    "title": "Short note on aria-label, aria-labelledby, and aria-describedby",
+    "description": "Be careful when you use the aria-label, aria-labelledby, and aria-describedby attributes, because they do not work consistently with all HTML elements. This is a short note on when (and when not) to u",
+    "date": "2018-07-18T08:46:02.000Z",
+    "image": "/short-note-on-aria-label-aria-labelledby-and-aria-describedby.png",
+    "processed": true
+  },
+  {
+    "id": "mdn",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute",
+    "title": "Using the aria-label attribute",
+    "description": "The aria-label attribute is used to define a string that labels the current element. Use it in cases where a text label is not visible on the screen. If there is visible text labeling the element, use aria-labelledby instead.",
+    "date": "2020-02-17T00:25:15.649Z",
+    "image": "/using-the-aria-label-attribute.png",
+    "processed": true
+  }
+]

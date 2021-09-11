@@ -1,0 +1,19 @@
+---
+title: HTML
+short_desc: Articles and talks about HTML elements and attributes.
+layout: overview.njk
+permalink: html/index.html
+tags:
+  - nav
+date: 2020-01-01
+changefreq: weekly
+sm_img: sm_html.jpg
+---
+{% import "partials/macros.njk" as macros with context %}
+
+<p>
+  Articles and talks about HTML elements and attributes.
+</p>
+
+{{macros.linklist(title="Elements", url="html/elements", list="elements")}}
+{{macros.linklist(title="Attributes", url="html/attributes", list="attributes")}}

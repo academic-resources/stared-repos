@@ -1,0 +1,100 @@
+body {
+  font-size: 2rem;
+  margin: 3rem;
+  max-width: 80rem;
+}
+
+.logo {
+  padding: 1.5rem 2rem;
+}
+
+.logo__img{
+  height: 6rem;
+  width: 4.252rem;
+}
+
+h1, .h1 {
+  font-size: 5rem;
+}
+
+.h2, .h3 {
+  margin-bottom: 1rem;
+}
+
+/* HEADER */
+.site-header {
+  margin-bottom: 4rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+/* NAV */
+
+.nav {
+  margin-bottom: 2rem;
+}
+
+.nav__items > * + * {
+  margin-left: 1rem;
+}
+
+.nav__link {
+  padding: 1rem 2rem 0.4rem;
+  font-size: 2.6rem;
+}
+
+
+/* Search */
+
+.jump {
+  margin-top: 1rem;
+}
+
+.jump__input {
+  max-width: 42rem;
+  padding: 1.3rem 1.4rem;
+}
+
+/* link list */
+
+.link-list {
+  margin-top: 2rem;
+  grid-gap: 1rem;
+}
+
+.bookmarks {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem; */
+}
+
+.bookmarks > * + * {
+  margin-top: 1rem;
+}
+
+.bookmark {
+  flex-direction: row-reverse;
+  padding: 2rem;
+}
+
+.bookmark__img {
+  margin: 0 2rem 0 0;
+  width: 25rem;
+  height: 14rem;
+}
+
+
+.card__desc {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.tag-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  gap: 0.7rem;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js {{ page_class}}" itemscope itemtype="http://schema.org/WebPage">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{% if title %}{{ title }} - {%endif%}{{ project.site_title }}</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#34527b">
+    <meta name="msapplication-TileColor" content="#34527b">
+    <meta name="theme-color" content="#34527b">
+
+    {% set description = short_desc or project.site_description %}
+    {% set image = sm_img or 'sm_general.jpg' %}
+    <!-- Search Engine -->
+    <meta name="description" content="{{ description }}">
+    <meta name="image" content="{{ project.site_url }}/assets/img/{{ image }}">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="{{ project.site_title }}{% if title %} - {{ title }}{%endif%}">
+    <meta itemprop="description" content="{{ description }}">
+    <meta itemprop="image" content="{{ project.site_url }}/assets/img/{{ image }}">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ project.site_title }}{% if title %} - {{ title }}{%endif%}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:site" content="@mmatuzo">
+    <meta name="twitter:creator" content="@mmatuzo">
+    <meta name="twitter:image:src" content="{{ project.site_url }}/assets/img/{{ image }}">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta property="og:title" content="{{ project.site_title }}{% if title %} - {{ title }}{%endif%}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ project.site_url }}/assets/img/{{ image }}">
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ project.site_title }}{% if title %} - {{ title }}{%endif%}">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="{{ project.site_url }}{{ page.url }}">
+
+    {% if project.env == 'production' %}
+      <link rel="stylesheet" href="/assets/css/style.min.css" />
+      <link rel="stylesheet" href="/assets/css/style_medium.min.css" media="(min-width: 768px)"/>
+    {% else %}
+      <link rel="stylesheet" href="/assets/css/prism.css" />
+      <link rel="stylesheet" href="/assets/css/style.css" />
+      <link rel="stylesheet" href="/assets/css/style_medium.css" media="(min-width: 768px)"/>
+    {% endif %}
+
+      <link rel="stylesheet" href="/assets/css/print.css" media="print" />
+
+</head>
+<body>
+  <header class="site-header">
+    <a href="#content" class="skip-link">Skip to Content</a>
+    <div class="title">
+      <a href="/" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" class="logo__img" height="60" width="43" viewBox="0 0 415.18 585.73" focusable="false" aria-labelledby="logo_title">
+        <title id="logo_title">Homepage</title>
+        <path d="M416.81,586.73V162h0V133.82q0-24.61-4.54-43.83-3.45-14.46-10.36-22.89-9.06-11.22-26.12-17.59t-55.28-6.37q-5,0-9.93.21h-7.34q-25.49,0-36.17-4.31T251.2,26.4Q246,18.09,246,1.47H172q-.44,16.18-5.18,24.72T151.45,39.25q-10.57,4.53-35.63,4.54c-3.31,0-6.55-.08-9.71-.22q-7.77-.43-15.55-.43-35.19,0-52.79,7.55T11,76q-9.18,17.7-9.18,59.8V162h0V587.2h70V587H72L210,405,345.94,586.93v.27h70.87V587H417ZM242.1,341.66H178L71.78,489.74V163q0-21.15,3.67-28.16t12.52-10q8.86-3,38-3,32.39,0,47.18-5t22-12q7.23-7,13.93-21.48,6,13.89,11.87,20,7.78,8,20.52,12.37,16.62,5.86,45.66,6.08t35.52,1.74q11.86,2.79,17.6,9.55t5.72,20.3V162h-.05V487.33Z" transform="translate(-1.82 -1.47)"/>
+      </svg>
+      </a>
+      {% if page.url === '/' %}
+        <h1 class="h1">{{ project.site_title }}</h1>
+      {% else %}
+        <div class="h1">{{ project.site_title }}</div>
+      {% endif %}
+    </div>
+
+    <nav class="nav">
+      <ol class="nav__items">
+        {% for item in collections.nav %}
+          <li class="nav__item"><a href="{{ item.url }}" class="nav__link {% if item.url in page.url %}nav__link--active{% endif %}">
+            {{ item.data.title }}
+          </a></li>
+        {% endfor %}
+      </ol>
+    </nav>
+
+    {% if page.url == '/' %}
+    <p>
+      A collection of articles and talks about HTML, CSS, and JS,  grouped by <a href="/html/elements/">elements</a>, <a href="/html/attributes/">attributes</a>, <a href="/css/properties/">properties</a>, <a href="/css/selectors/">selectors</a>, <a href="/js/methods/">methods</a>, and <a href="/js/expressions/">expressions</a>.
+    </p>
+    {% endif %}
+    <form class="jump" action="https://duckduckgo.com/" method="GET">
+      <div class="combo-box js-combo-box">
+        <label for="search" class="jump__label">Jump to page</label>
+
+        <div class="combo-box__controls">
+          <input id="search" name="q" value="site:www.frontendbookmarks.com " class="combo-box__input js-pl-icon-filter-keywords" type="text" role="combobox" aria-autocomplete="both" autocomplete="off" aria-expanded="false" aria-controls="lb" aria-haspopup="true" placeholder="e.g. title, article, last-child">
+          <button class="combo-box__btn" type="button" id="cb1-button" aria-label="Open" tabindex="-1">
+            ▼ <span class="u-visually-hidden">Show options</span>
+          </button>
+        </div>
+
+        <ul class="combo-box__list" id="lb" role="listbox" aria-label="Icons" tabindex="-1" hidden>
+          {% for collection in collections.entriesSorted %}
+            {% set id = collection.data.title_save or collection.data.title | slugStrict %}
+            <li data-combo-url="{{ collection.url }}" id="{{ id }}" role="option" class="combo-box__item">{{ collection.data.title }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </form>
+  </header>
+
+  <main class="site-content" id="content">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    built with <a href="https://www.11ty.dev/" rel="noopener">eleventy</a> and ❤️ in Vienna by <a href="https://twitter.com/mmatuzo" rel="noopener">@mmatuzo</a><br>
+    <a href="https://github.com/matuzo/front-end-bookmarks">Github</a>, <a href="https://github.com/matuzo/front-end-bookmarks/#contributing">Contributing</a>
+  </footer>
+  
+    <script src="/assets/js/focus-visible.js" defer></script>
+  {% if project.env == 'development' %}
+    <script src="/assets/js/search.js" async type="module"></script>
+  {% else %}
+    <script src="/assets/js/scripts.min.js" async type="module"></script>
+  {% endif %}
+</body>
+</html>
