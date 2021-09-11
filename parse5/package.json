@@ -1,0 +1,37 @@
+{
+    "name": "parse5-build-scripts",
+    "private": true,
+    "devDependencies": {
+        "dedent": "^0.7.0",
+        "eslint": "^4.19.1",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-prettier": "^2.6.0",
+        "husky": "^0.14.3",
+        "lerna": "^3.1.0",
+        "lint-staged": "^7.2.0",
+        "mocha": "^5.1.1",
+        "prettier": "^1.12.0",
+        "r2": "^2.0.1"
+    },
+    "scripts": {
+        "bootstrap": "lerna bootstrap",
+        "lint": "eslint .",
+        "unit-tests": "mocha --ui exports --reporter progress --timeout 20000 packages/**/test/*.test.js",
+        "test": "npm run lint && npm run unit-tests",
+        "generate-feedback-tests": "node scripts/generate-parser-feedback-test test/data/html5lib-tests/tree-construction/*.dat test/data/tree-construction-regression/*.dat",
+        "generate-named-entity-data": "node scripts/generate-named-entity-data",
+        "bench-perf": "cd bench && npm install && node perf/index.js",
+        "bench-memory-named-entities": "cd bench && npm install && node memory/named-entity-data.js",
+        "bench-memory-sax": "cd bench && npm install && node memory/sax-parser.js",
+        "postinstall": "npm run bootstrap",
+        "preversion": "npm test",
+        "precommit": "lint-staged",
+        "publish": "lerna publish"
+    },
+    "lint-staged": {
+        "*.{js,json}": [
+            "prettier --write",
+            "git add"
+        ]
+    }
+}
