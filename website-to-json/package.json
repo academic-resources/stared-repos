@@ -1,0 +1,43 @@
+{
+  "name": "website-to-json",
+  "version": "1.0.22",
+  "description": "Converts all websites to JSON data",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "bin": {
+    "website-to-json": "./bin/index.js",
+    "wtj": "./bin/index.js"
+  },
+  "keywords": [
+    "JSON",
+    "API",
+    "extracting",
+    "scraping",
+    "data-mining",
+    "cheerio",
+    "nightmare",
+    "scrapy"
+  ],
+  "author": "Matt Rzepa <mrzepa89@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "cheerio": "^0.22.0",
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "extract-data-from-text": "^1.0.1",
+    "lodash": "^4.17.2",
+    "node-horseman": "^3.2.0",
+    "request": "^2.81.0",
+    "should": "^11.1.1",
+    "sinon": "^1.17.6",
+    "string": "^3.3.3",
+    "trim": "0.0.1",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "nock": "^9.0.9"
+  }
+}
