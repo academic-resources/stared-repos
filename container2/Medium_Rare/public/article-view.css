@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap");
+
+.articleContainer {
+  width: 900px;
+  margin: auto;
+}
+
+.articleTitle {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 62px;
+  width: 900px;
+}
+
+.articleAuthor {
+  display: flex;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+.articleBody {
+  font-size: 21px;
+  font-family: "Noto Serif JP", serif;
+}
+
+.articleClaps {
+  font-size: 20px;
+}
+
+.articleAuthor img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 15px 0 15px 5px;
+}
+
+.authorName {
+  margin: auto;
+  margin-left: 10px;
+  width: 50%;
+}

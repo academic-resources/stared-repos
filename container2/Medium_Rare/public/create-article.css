@@ -1,0 +1,76 @@
+.form-container {
+  width: 1000px;
+  margin: auto;
+}
+
+.create-article-form textarea {
+  border: none;
+  outline: none;
+}
+
+#storyTitle {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 62px;
+  max-height: 12vh;
+  width: 1000px;
+}
+
+.storyBtn {
+  background-color: rgba(3, 168, 124, 1);
+  width: 63.17px;
+  height: 25px;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  transition-duration: 0.4s;
+  position: absolute;
+  margin-top: 28px;
+  margin-left: -80px;
+}
+
+.storyBtn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+#storyText {
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vh;
+  width: 1000px;
+}
+
+.cursor {
+  position: relative;
+}
+.cursor i {
+  position: absolute;
+  margin-top: -70px;
+  margin-left: -5px;
+  width: 1px;
+  height: 36px;
+  background-color: gray;
+  left: 5px;
+  top: 10%;
+  animation-name: blink;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.cursor textarea:focus + i {
+  display: none;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

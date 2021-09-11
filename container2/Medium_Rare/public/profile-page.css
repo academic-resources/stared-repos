@@ -1,0 +1,119 @@
+.pParticle {
+  color: grey;
+  font-size: 0.75rem;
+  margin: 1rem 0;
+}
+.pParticlesContainer {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  width: 600px;
+  position: absolute;
+  left: 400px;
+}
+.pPbanner {
+  background-image: url("https://i.pinimg.com/564x/7d/e8/56/7de856a50c141494ab6709e74cbd1633.jpg");
+  width: 100%;
+  height: 270px;
+  grid-area: a;
+  display: flex;
+}
+.pPbannerContent {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 200px 0 200px;
+}
+.pPbio {
+  color: grey;
+  padding: 1rem 0;
+  overflow-y: hidden;
+  height: 80px;
+}
+.pPclaps,
+.pPdate {
+  font-family: "Noto Sans JP", "Courier New", Courier, monospace;
+  font-size: 0.75rem;
+  color: lightgrey;
+}
+.pPdate {
+  overflow: hidden;
+  width: 6rem;
+  height: 1rem;
+}
+
+/* .pPfollowButtonContainer {
+    padding: 0.5rem;
+} */
+.pPfollowers {
+  font-family: "Noto Sans JP", "Courier New", Courier, monospace;
+  font-size: 0.8rem;
+  color: grey;
+  padding: 0.5rem 0 0 0;
+}
+.pPkanye {
+  border-radius: 50%;
+  opacity: 1;
+  height: 160px;
+  width: 160px;
+  margin: 5px;
+}
+.pPlink {
+  font-family: "Noto Sans JP", "Courier New", Courier, monospace;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #413f3f;
+  font-weight: normal;
+}
+.pPpictureContainer {
+  grid-area: z;
+  /* border: 1px solid orange; */
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  margin-left: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 2rem 0;
+}
+.pPprofileContainer {
+  grid-area: x;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+.pPprofile {
+  /* border: 1px solid white; */
+  padding: 0 2rem 0;
+}
+.pPoutermost {
+  display: grid;
+  grid-template-areas:
+    "a a a"
+    "b b b";
+}
+.pPreadMore {
+  color: grey;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+.pPsubBanner {
+  grid-area: b;
+  position: relative;
+}
+.pPtitle {
+  font-family: "Noto Sans JP", "Courier New", Courier, monospace;
+  font-size: 2rem;
+  color: #6b7a41;
+  margin: 0;
+  padding: 2rem 0 0.75rem 0;
+}
+.pPuserName {
+  font-size: 3rem;
+  font-family: "Noto Sans JP", "Courier New", Courier, monospace;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}

@@ -1,0 +1,40 @@
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: auto;
+}
+
+.create-user-form {
+  margin-top: 50px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+}
+
+.create-user-form button {
+  width: 100px;
+  height: 33px;
+  margin: auto;
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  transition-duration: 0.4s;
+  margin-right: 5px;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.signUpButtons button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.form-container img {
+  width: 400px;
+  margin-top: 20px;
+}

@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+  include includes/navigation
+  include includes/scripts
+  body
+    if article
+    div.articleContainer
+      div.articleTitle= article.title
+      div.articleClaps= article.claps
+        button.clapButton clap
+      div.articleAuthor
+        img.authorImg(src="https://i.pinimg.com/736x/33/32/6d/33326dcddbf15c56d631e374b62338dc.jpg")
+        div.authorName= user.userName
+          button.followButton Follow
+      div.articleBody= article.body
+        each comment in comments
+          div
+            div= comment.User.userName
+            div= comment.comment
+
+
+      a(href=`comments/${article.id}/`)
+          div Tell us what you think!
+      button(id="leave-a-comment") Comment

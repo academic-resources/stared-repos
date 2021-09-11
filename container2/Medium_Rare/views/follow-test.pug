@@ -1,0 +1,8 @@
+extends layout.pug
+
+block content
+  body
+    include includes/navigation
+    h1= author.userName
+    button.follow-button(type="button") Follow #{author.userName}
+  script(src="/js/create-follow.js")
