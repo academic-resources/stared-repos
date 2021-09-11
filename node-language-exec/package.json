@@ -1,0 +1,36 @@
+{
+  "name": "language-exec",
+  "version": "1.0.0",
+  "description": "Execute a file in any programming language.",
+  "main": "language-exec.js",
+  "scripts": {
+    "test": "istanbul cover _mocha -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/node-language-exec.git"
+  },
+  "keywords": [
+    "language",
+    "exec",
+    "process"
+  ],
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/node-language-exec/issues"
+  },
+  "homepage": "https://github.com/blakeembrey/node-language-exec",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.3.0"
+  },
+  "dependencies": {
+    "language-command": "^1.0.0",
+    "xtend": "^4.0.0"
+  }
+}
