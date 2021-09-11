@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../Sort-Test-Helper/sort-test-helper.js"></script>
+    <script src="MaxHeap.js"></script>
+    <script src="heapSort.js"></script>
+    <script src="../03-Sorting-Advance/quickSortV3.js"></script>
+
+    <script>
+        var helper = new Helper();
+        var test = new Tester();
+        var execute = function(){
+            var arr = helper.generateRandomArray(1000000, 0, 1000000);
+            var arr_copy = arr.slice();
+            var arr_copy_1 = arr.slice();
+            var arr_copy_2 = arr.slice();
+            var arr_copy_3 = arr.slice();
+            var arr_copy_4 = arr.slice();
+
+
+            test.testSortV2("Heap Sort naive", heapSort, arr, MaxHeap);
+            test.testSortV2("Heap Sort ", heapSortV2, arr, MaxHeapV2);
+//            test.testSort("Merge Sort", mergeSort, arr, 500000);
+//            test.testSort("Merge Sort V1", mergeSortV1, arr_copy, 500000);
+//            test.testSort("Merge Sort V2", mergeSortBU, arr_copy_1, 500000);
+//            test.testSort("Quick Sort", quickSort, arr_copy_2, 500000);
+//            test.testSort("Quick Sort 双路排序法", quickSortV2, arr_copy_3, 500000 );
+            test.testSort("Quick Sort 三路排序法", quickSortV3, arr_copy_4, 1000000 );
+
+//            console.log("reverse pairs test (Using mergesort idea) : " + reversePair([4, 5, 8, 9, 1, 10, 2, 3]));
+        };
+    </script>
+</head>
+<body onload="execute()">
+</body>
+</html>

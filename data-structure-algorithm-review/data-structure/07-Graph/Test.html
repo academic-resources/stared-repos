@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="DenseGraph.js"></script>
+    <script src="SparseGraph.js"></script>
+    <script src="ReadGraph.js"></script>
+    <script src="Component.js"></script>
+    <script src="Path.js"></script>
+    <script src="ShortestPath.js"></script>
+    <script>
+        function execute() {
+//            var N = 20, M = 100;
+
+            //Sparse Graph
+//            var g1 = new SparseGraph(N, false);
+//            for(var i = 0; i < M; i++){
+//                var a = parseInt(Math.random() * N);
+//                var b = parseInt(Math.random() * N);
+//                g1.addEdge(a, b);
+//            }
+//
+//            for(var v = 0; v < N; v++){
+//                var str = v + " : ";
+//                var adj = new AdjIterator(g1, v);
+//                for(var w = adj.begin(); !adj.end(); w = adj.next()){
+//                    str += w + " ";
+//                }
+//                console.log(str);
+//            }
+//
+//            //Dense Graph
+//            var g2 = new DenseGraph(N, false);
+//            for(var i = 0; i < M; i++){
+//                var a = parseInt(Math.random() * N);
+//                var b = parseInt(Math.random() * N);
+//                g2.addEdge(a, b);
+//            }
+//
+//            for(var v = 0; v < N; v++){
+//                var str = v + " : ";
+//                var adj = new AdjIteratorDense(g2, v);
+//                for(var w = adj.begin(); !adj.end(); w = adj.next()){
+//                    if(w !== -1){
+//                        str += w + " ";
+//                    }
+//                }
+//                console.log(str);
+//            }
+//        }
+
+            document.getElementById('files').addEventListener('change', readFile, false);
+
+        }
+
+    </script>
+</head>
+<body onload="execute()">
+    <input type="file" id="files" name="files"/>
+
+</body>
+</html>
