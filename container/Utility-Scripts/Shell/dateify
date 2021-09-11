@@ -1,0 +1,12 @@
+#!/bin/bash
+for f in `[[ $1 ]] && ([[ -d $1 ]] && echo $1/* || echo $1) || echo ./*`; do
+	if [[ -d "$f" ]] || [[ "$(basename "$f")" =~ ^20[0-9]{6}_ ]]; then
+		continue
+	elif [[ "$f" =~ 20[0-9]{6}_ ]]; then
+		newName="$(dirname "$f")"/`echo "$(basename "$f")"|sed 's/\(.*\)\(20[0-9]\{6\}_\)\(.*\)/\2\1\3/g'`
+		mv "$f" "$newName"
+	else
+		newName="$(dirname "$f")"/`ls -alF --time-style=+%Y%m%d "$f"|awk '{print $6}'`_"$(basename "$f")"
+		mv "$f" "$newName"
+	fi
+done

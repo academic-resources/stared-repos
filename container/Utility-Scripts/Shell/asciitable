@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "┌-------------┐"
+printf '|%3s|%3s|%5s|\n' "dec" "hex" "char"
+echo "├-------------┤"
+for i in {1..255}; do
+	printf '|%3s' $i
+	printf '|%3s' `printf '%x' $i`
+	#printf '|%5s' `printf \\$(printf "%o" $i)`
+	#printf '|%c' `printf '%o' $i`
+	printf '|%5s' "`perl -e "printf '%c', $i;"`"
+	echo "|"
+done
+echo "└-------------┘"

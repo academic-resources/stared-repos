@@ -1,0 +1,8 @@
+#!/bin/bash
+for x in $*; do
+	for c in `echo $x|grep -o .`; do
+		printf %x "'$c"
+		echo -n " "
+	done
+	echo
+done
