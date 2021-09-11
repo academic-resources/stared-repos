@@ -1,0 +1,148 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='plugins/font-awesome/css/font-awesome.css')}}">
+{% endblock %}
+
+{% block title %}
+    {{ config.data.site_title}}
+{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img class="profile" src="{{url_for('static', filename='images/profile.png')}}" alt="" />
+                <h1 class="name"> {{ config.data.name }} </h1>
+                <h3 class="tagline">{{ config.data.tagline }}</h3>
+            </div><!--//profile-container-->
+            
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto:{{ config.data.email }}">{{ config.data.email }}</a></li>
+                    <li class="phone"><i class="fa fa-phone"></i>{{ config.data.phone }}</li>
+                    <li class="website"><i class="fa fa-globe"></i><a href={{ config.data.website }} target="_blank">{{ config.data.website }}</a></li>
+                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://{{ config.data.linkedin }}" target="_blank">{{ config.data.linkedin }}</a></li>
+                    <li class="github"><i class="fa fa-github"></i><a href="https://{{ config.data.github }}" target="_blank">{{ config.data.github}}</a></li>
+                    <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/{{ config.data.twitter }}" target="_blank">{{ config.data.twitter }}</a></li>
+                </ul>
+            </div><!--//contact-container-->
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Education</h2>
+                {% for ed in config.data.education %}
+                <div class="item">
+                    <h4 class="degree">{{ed[0]}}</h4>
+                    <h5 class="meta">{{ed[1]}}</h5>
+                    <div class="time">{{ed[2]}}</div>
+                </div><!--//item-->
+                {% endfor %}
+            </div><!--//education-container-->
+            
+            <div class="languages-container container-block">
+                <h2 class="container-block-title">Languages</h2>
+                <ul class="list-unstyled interests-list">
+                    {% for lang in config.data.languages %}
+                    <li>{{lang[0]}}<span class="lang-desc">{{lang[1]}}</span></li>
+                    {% endfor %}
+                </ul>
+            </div><!--//interests-->
+            
+            <div class="interests-container container-block">
+                <h2 class="container-block-title">Interests</h2>
+                <ul class="list-unstyled interests-list">
+                    {% for interest in config.data.interests %}
+                    <li>{{interest}}</li>
+                    {% endfor %}
+                </ul>
+            </div><!--//interests-->
+            
+        </div><!--//sidebar-wrapper-->
+        
+        <div class="main-wrapper">
+            
+            <section class="section summary-section">
+                <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
+                <div class="summary">
+                    {% autoescape false %}
+                    {{ config.data.summary }}
+                    {% endautoescape %}
+                </div><!--//summary-->
+            </section><!--//section-->
+            
+            <section class="section experiences-section">
+                <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
+                
+                {% for job in config.data.experience %}
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">{{job[0]}}</h3>
+                            <div class="time">{{job[1]}}</div>
+                        </div><!--//upper-row-->
+                        <div class="company">{{job[2]}}</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        {% autoescape false %}
+                        {{job[3]}}  
+                        {% endautoescape %}
+                    </div><!--//details-->
+                </div><!--//item-->
+                {% endfor %}
+                
+                
+            </section><!--//section-->
+            
+            <section class="section projects-section">
+                <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
+                <div class="intro"> 
+                        {% autoescape false %}
+                        {{ config.data.project_intro }} 
+                        {% endautoescape %}
+                </div><!--//intro-->
+
+                {% for project in config.data.projects %}
+                <div class="item">
+                    <span class="project-title"><a href="{{project[2]}}" target="_blank">{{project[0]}}</a></span> - 
+                    <span class="project-tagline">{{project[1]}}</span>
+                </div><!--//item-->
+                {% endfor %}
+            
+            <section class="skills-section section">
+                <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
+                <div class="skillset">        
+                    {% for skill in config.data.skills %}
+                    <div class="item">
+                        <h3 class="level-title">{{skill[0]}}</h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="{{skill[1]}}">
+                            </div>                                      
+                        </div><!--//level-bar-->                                 
+                    </div><!--//item-->
+                    {% endfor %}
+                    
+                </div>  
+            </section><!--//skills-section-->
+            
+        </div><!--//main-body-->
+    </div>
+<footer class="footer">
+        <div class="text-center">
+                <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+                <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+    </footer>
+
+{% block scripts %}
+<script src="{{bootstrap_find_resource('jquery.js', cdn='jquery')}}"></script>
+<script src="{{bootstrap_find_resource('js/bootstrap.js', cdn='bootstrap')}}"></script>
+<script src="{{url_for('static', filename='js/main.js')}}"></script>
+{%- endblock scripts %}
+    
+{% endblock body %}

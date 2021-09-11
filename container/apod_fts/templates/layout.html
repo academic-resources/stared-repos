@@ -1,0 +1,36 @@
+<!doctype html>
+<title>Astronomy Picture of the Day (APOD)</title>
+<script type=text/javascript src="{{ url_for('static', filename='jquery-3.1.1.slim.min.js') }}"></script>
+<script type=text/javascript src="{{ url_for('static', filename='prism.js') }}"></script>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='prism.css') }}">
+<div class=page>
+  <h1><a href="{{ url_for('show_entries') }}">Astronomy Picture of the Day (APOD)</a></h1>
+  <a id="github_ref" href="https://github.com/postgrespro/apod_fts">
+    <img src="{{ url_for('static', filename='github.png') }}">
+  </a>
+
+  <div class=search>
+    <form name="search" method="GET" action="{{ url_for('search') }}">
+      <input type="text" name="pattern" value="{{ pattern }}"></input>
+      <input type="submit" value="Search"></input>
+      <div class=search_type>
+        <div><b>Order by:</b></div>
+        <div>
+          <div>
+            <input type="radio" name="order" value="rank" {% if order == 'rank' or order is not defined %}checked{% endif %}>By rank</input>
+            <select name="rank_func">
+              <option value="ts_rank" {% if rank_func == 'ts_rank' %}selected{% endif %}>ts_rank()</option>
+              <option value="ts_rank_cd" {% if rank_func == 'ts_rank_cd' %}selected{% endif %}>ts_rank_cd()</option>
+              <option value="ts_score" {% if rank_func == 'ts_score' %}selected{% endif %}>ts_score()</option>
+            </select>
+          </div>
+          <input type="radio" name="order" value="date" {% if order == 'date' %}checked{% endif %}>By date</input>
+        </div>
+        <br>
+        <input type="checkbox" name="faceted" {% if faceted == 'on' %}checked{% endif %}>Faceted search</input>
+      </div>
+    </form>
+  </div>
+  {% block body %}{% endblock %}
+</div>

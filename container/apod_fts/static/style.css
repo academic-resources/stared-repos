@@ -1,0 +1,33 @@
+body            { font-family: sans-serif; background: #eee; }
+a, h1, h2       { color: #377ba8; }
+h1, h2          { font-family: 'Georgia', serif; margin: 0; }
+h1              { border-bottom: 2px solid #eee; }
+h2              { font-size: 1.2em; }
+h1 a            { text-decoration: none; }
+
+.page           { margin: 2em auto; width: 55em; border: 5px solid #ccc;
+                  padding: 0.8em; background: white; position: relative;}
+#github_ref     { position: absolute; top: 0.8em; right: 0.8em; }
+
+.entries        { list-style: none; margin: 0; padding: 0; }
+.entries li     { margin: 0.8em 1.2em; }
+.entries li h2  { margin-left: -1em; }
+.add-entry      { font-size: 0.9em; border-bottom: 1px solid #ccc; }
+.add-entry dl   { font-weight: bold; }
+.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
+                  margin-bottom: 1em; background: #fafafa; }
+.flash          { background: #cee5F5; padding: 0.5em;
+                  border: 1px solid #aacbe2; }
+.error          { background: #f0d6d6; padding: 0.5em; }
+
+.search         { margin: 1em auto; }
+.search input[type=text] { width: 35em; }
+.search_type    { margin: 0.5em auto; font-size: 0.8em; }
+
+.search_type > div { display: inline-block; vertical-align: top; }
+
+#query_text     { border: 2px solid #ccc; margin: 0.8em auto;
+                  padding: 0.4em; background: #eee;
+                  font-family: monospace; }
+
+.faceted        { margin: 0.8em 2em; }

@@ -1,0 +1,55 @@
+
+name: Building and Pushing Archivy Container to DockerHub on manual workflow dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to deploy to Dockerhub
+        required: true
+      version_commit:
+        description: Commit of the version
+        required: true
+
+jobs:
+  dockerBuildPush:
+    name: Build and push image with release version tag
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout files from repository
+        uses: actions/checkout@v2
+        with:
+          repository: archivy/archivy-docker
+
+      - name: Setting variables
+        if: success()
+        run: |
+          date -u +'%Y-%m-%dT%H:%M:%SZ' > TIMESTAMP
+          echo "${{ github.event.inputs.version_commit }}" | cut -c1-8 > SHORT_SHA
+          echo "${{ github.event.inputs.version }}" > VERSION
+          echo "uzayg" > DOCKER_USERNAME
+          echo "docker.io/uzayg/archivy" > DOCKER_IMAGE
+
+      - name: Set up Docker Buildx
+        if: success()
+        uses: docker/setup-buildx-action@v1.0.2
+        with:
+          install: true
+          version: latest
+
+      - name: Docker login
+        if: success()
+        env:
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_ACCESS_TOKEN }}
+        run: |
+          echo "${DOCKER_PASSWORD}" | docker login --username "$( cat DOCKER_USERNAME )" --password-stdin docker.io
+
+      - name: Build and push with Docker Buildx
+        if: success()
+        run: |
+          docker build \
+            --output type=image,name="$( cat DOCKER_IMAGE )",push=true \
+            --build-arg VERSION="$( cat VERSION )" --build-arg BUILD_DATE="$( cat TIMESTAMP )" \
+            --build-arg VCS_REF="$( cat SHORT_SHA )" \
+            --tag "$( cat DOCKER_IMAGE ):$( cat VERSION )" \
+            --file ./Dockerfile .

@@ -1,0 +1,165 @@
+body, html, #root, .app{
+    height: 100%;
+    width: 100%;
+    background-color: #0b1423;
+    overflow: hidden
+}
+
+
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+
+.user-code{
+    font-family: 'Source Code Pro', monospace;
+    height: 50vh;
+    overflow: scroll;
+    position: relative;
+    z-index: 0;
+}
+.highlight{
+    font-weight: 800;
+    box-shadow: 0px 1px 0px  gray
+}
+.tab{
+    padding-left:10px;
+    padding-right:10px; 
+}
+.textarea{
+    font-size: .75rem !important
+}
+.call-stack{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+
+.iterator-control{
+    height: 5vh;
+    margin-left: 5px;
+}
+.identifiers{
+    height: 100% !important
+}
+
+.values-container{
+    height: 37.5vh
+}
+.step-view{
+    height: 10px;
+    margin-bottom: 10%;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+}
+
+.structs > .column{
+ max-height: 77.5vh;
+ overflow: scroll;
+}
+.array-struct{
+    
+
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: left top, left top, right bottom, right bottom;
+   
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    /* overflow-y: scroll; */
+    /* overflow-x: auto; */
+   
+}
+.array-struct.pointed{
+    box-shadow:
+    0 0 5px 2.5px #fff;
+}
+.array-struct > .array-line{
+    display: flex;
+
+}
+.array-line > .array-struct{
+    z-index: 1
+}
+
+.array-val{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    z-index: 2;
+
+}
+.array-val svg{
+    position: relative;
+    z-index: 5
+}
+
+
+.array-line{
+    display: block
+}
+
+.hash-struct{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.hash-val .columns .column.is-full{
+    padding-top: 0px !important;
+    padding-bottom:  0px !important
+    
+}
+
+.val-display{
+    animation: pop-in 250ms
+}
+.structs{
+    z-index: 2;
+}
+.settings-tabs{
+    height: 2rem !important
+}
+.struct-settings-panel, .color-settings-panel{
+    max-height: 50vh;
+}
+
+.invalid-screen-width{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+.invalid-screen-width .oops{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.modal-card{
+    animation: pop-in 250ms;
+}
+
+
+@keyframes pop-in{
+    0%{
+        transform: scale(0)
+    }
+    90%{
+        transform: scale(1.1)
+    }
+    100%{
+        transform: scale(1)
+    }
+}

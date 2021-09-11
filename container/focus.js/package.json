@@ -1,0 +1,42 @@
+{
+  "name": "focus.js",
+  "version": "0.0.1",
+  "description": "A simple JavaScript library built for zooming in on images.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./test/es6/route.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spiderpig86/focus.js.git"
+  },
+  "keywords": [
+    "focus",
+    "js",
+    "zooming",
+    "images",
+    "zoom"
+  ],
+  "author": "Stanley Lim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Spiderpig86/focus.js/issues"
+  },
+  "homepage": "https://github.com/Spiderpig86/focus.js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "compression-webpack-plugin": "^1.1.3",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-size": "^3.0.0",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^2.0.0",
+    "webpack": "^3.10.0"
+  }
+}

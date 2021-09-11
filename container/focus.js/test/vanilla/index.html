@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>focus.js Test</title>
+        <link href='https://unpkg.com/cirrus-ui' rel='stylesheet' />
+        <link href='../../dist/styles/focus.min.css' rel='stylesheet'/>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+        <style>
+            body {
+                background: #eee
+            }
+            a {
+                color: #222;
+                font-weight: 400;
+            }
+            figure {
+                min-height: 300px;
+            }
+            #title {
+                letter-spacing: 1rem;
+            }
+            .nav-right .nav-item {
+                padding: 0 1rem;
+            }
+            footer {
+                padding: 50px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header unselectable">
+            <div class="header-brand">
+                <div class="nav-item nav-btn" id="header-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="header-nav" id="header-menu">
+                <div class="nav-left">
+                    <div class="nav-item u-text-center uppercase">
+                        <a href="#" class="font-bold">
+                            Work
+                        </a>
+                    </div>
+                    <div class="nav-item u-text-center uppercase">
+                        <a href="#">
+                            Contact
+                        </a>
+                    </div>
+                    <div class="nav-item u-text-center uppercase">
+                        <a href="#">
+                            About
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-center">
+                    <div class="nav-item u-text-center uppercase">
+                        <h5>JD</h5>
+                    </div>
+                </div>
+                
+                <div class="nav-right">
+                    <div class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-behance"></i>
+                        </span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-dribbble"></i>
+                        </span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="icon">
+                            <i class="fa fa-instagram"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="content">
+            <space class="large"></space>
+            <h5 id="title" class="uppercase u-text-center">Work</h5>
+            <space class="large"></space>
+            <div class="row">
+                <div class="col-6">
+                    <figure class='focus-img smoother' style='background-image: url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=2560&q=100");'></figure>
+                </div>
+                <div class="col-6">
+                    <figure class='focus-img smoother' style='background-image: url("https://images.unsplash.com/photo-1455459182396-ae46100617cb?auto=format&fit=crop&w=2560&q=100");'></figure>
+                </div>
+            </div>
+            <div class="r">
+                <figure class='focus-img smoother' style='background-image: url("https://images.unsplash.com/photo-1502899576159-f224dc2349fa?auto=format&fit=crop&w=2560&q=100"); height: 500px'></figure>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <figure class='focus-img smoother' style='background-image: url("https://images.unsplash.com/photo-1493134799591-2c9eed26201a?auto=format&fit=crop&w=2560&q=100");'></figure>
+                </div>
+                <div class="col-6">
+                    <figure class='focus-img smoother' style='background-image: url("https://images.unsplash.com/photo-1502514276381-1ea51dfe201c?auto=format&fit=crop&w=2560&q=100");'></figure>
+                </div>
+            </div>
+        </div>
+
+        <space class="x-large"></space>
+        
+        <div class="content">
+            <h5 id="title" class="uppercase u-text-center">Cursors</h5>
+            <p>Customize the cursor used for Focus components. Note that grab events will be supported in the future, hence the inclusion of <code>cursor-grab</code>.</p>
+            <div class="row">
+                <div class="col-4">
+                    <figure class='fig focus-img smoother cursor-arrow' style='background-image: url("https://source.unsplash.com/category/nature/1024x768");'>
+                    </figure>
+                    <figcaption class='fig-caption u-text-center'><code>cursor-arrow</code></figcaption>
+                </div>
+                <div class="col-4">
+                    <figure class='fig focus-img smoother cursor-grab' style='background-image: url("https://source.unsplash.com/category/nature/1024x768");'>
+                    </figure>
+                    <figcaption class='fig-caption u-text-center'><code>cursor-grab</code></figcaption>
+                </div>
+                <div class="col-4">
+                    <figure class='fig focus-img smoother cursor-crosshair' style='background-image: url("https://source.unsplash.com/category/nature/1024x768");'>
+                        
+                    </figure>
+                    <figcaption class='fig-caption u-text-center'><code>cursor-crosshair</code></figcaption>
+                </div>
+            </div>
+        </div>
+        
+        <script src='../../dist/vanilla/focus.min.js'></script>
+        <script src="https://use.fontawesome.com/a696b91557.js"></script>
+        <script>
+            Focus.init({
+                elementID: '',
+                zoomFactor: '250%'
+            });
+        </script>
+    </body>
+
+    <footer>
+        <div class="u-text-center">
+            <h6 class="white uppercase">&lt; John Doe &gt;</h6>
+            <p>Images from the talented photographers of Unsplash.</p>
+            <p>Portfolio powered by <a href="https://github.com/Spiderpig86/focus.js" target="_blank" class="u u-LR">focus.js</a></p>
+        </div>
+    </footer>
+</html>
