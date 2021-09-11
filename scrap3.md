@@ -1,12 +1,4 @@
- 1. https://github.com/waldyrious/cheat.sh
-git clone ttps://github.com/waldyrious/crocks
-git clone ttps://github.com/waldyrious/learnGitBranching
-git clone ttps://github.com/waldyrious/docsify
-git clone ttps://github.com/dandavison/calc-II
-git clone ttps://github.com/dandavison/pocket
-git clone ttps://github.com/dandavison/bin
-git clone ttps://github.com/gf3/dotfiles
-git clone ttps://github.com/paulmillr/dotfiles
+
 git clone https://github.com/mathiasbynens/dotfiles
 git clone https://github.com/fireship-io/3.1-firebase-basics
 git clone https://github.com/cwilso/WebMIDIAPIShim
