@@ -1,0 +1,24 @@
+{
+  "name": "numerical",
+  "version": "0.2.4",
+  "description": "gives yr numbers math helpers",
+  "main": "numbers.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/nhq/numerical/git"
+  },
+  "keywords": [
+    "numbers",
+    "math",
+    "functional",
+    "scheme"
+  ],
+  "author": "Johnny Honestly <mostmodernist@gmail.com> (http://johnnyscript.us/)",
+  "license": "MIT"
+}
