@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+  h3= attraction.attractionName
+  h4: em at #{attraction.park.parkName}
+  div(class='py-4')
+    p Proceed with deleting this attraction?
+  div
+    form(action=`/attraction/delete/${attraction.id}` method='post')
+      input(type='hidden' name='_csrf' value=csrfToken)
+      button(class='btn btn-danger' type='submit') Delete Attraction
+      a(class='btn btn-warning ml-2' href=`/attraction/${attraction.id}` role='button') Cancel

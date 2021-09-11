@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+  h3= attraction.attractionName
+  h4: em at #{attraction.park.parkName}
+  div
+    ul
+      li= `Theme: ${attraction.theme}`
+      li= `Opened: ${attraction.opened}`
+      li= `Riders per Vehicle: ${attraction.ridersPerVehicle}`
+  div(class='py-4')
+      a(class='btn btn-primary' href=`/attraction/edit/${attraction.id}` role='button') Edit
+      a(class='btn btn-danger ml-2' href=`/attraction/delete/${attraction.id}` role='button') Delete
+      a(class='btn btn-warning ml-2' href=`/park/${attraction.parkId}` role='button') Return to Park Details
