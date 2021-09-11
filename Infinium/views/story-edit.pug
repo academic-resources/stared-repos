@@ -1,0 +1,31 @@
+extends layout
+include utils
+
+block head_trailer
+  link(rel='stylesheet' href='/stylesheets/story-edit.css')
+  script(src="/javascripts/story-edit.js" type="module" async defer)
+
+block content
+  #story-editor.story-editor
+    +validationErrorSummary(errors)
+    form#story-edit-form.story-edit-form(action=formAction, method='post', autocomplete='off')
+      input(type='hidden' name='_csrf' value=csrfToken)
+      input.story-edit-title(type='text', value=title, name='title', placeholder='Your story\'s title (max. 100 characters)', maxlength=100)
+      textarea.story-edit-draft(name='draft', placeholder='Tell your story...') #{draft}
+  if (contextControls === 'story-edit-with-publish')
+    #story-publisher.story-publisher(class=`${publiserMode ? '' : 'hide'}`)
+      .story-publisher-close: img(src='/images/x-men.png')
+      form#story-publish-form.story-publish-form(action=`${formAction}/publish`, method='post')
+        +validationErrorSummary(publishErrors)
+        input(type='hidden' name='_csrf' value=csrfToken)
+        input.story-publish-draft(type='hidden' name='draft' value=draft)
+        .story-publish-image-wrapper= `Enter in the input a URL to a high-quality image for your story to make it more inviting to readers.`
+          img.story-publish-image.hide(src=imageLink)
+        .story-publish-input-wrapper
+          label.story-publish-label(for='story-publish-image-path') Image URL (optional)
+          input#story-publish-image-path.story-publish-image-path(type='text', value=imageLink, name='imageLink', placeholder='Optional URL to image (max. 255 characters)', maxlength=255)
+          label.story-publish-label(for='story-publish-title') Title
+          input#story-publish-title.story-publish-title(type='text', value=title, name='title', placeholder='Your story\'s title (max. 100 characters)', maxlength=100)
+          label.story-publish-label(for='story-publish-subtitle') Subtitle (optional)
+          input#story-publish-subtitle.story-publish-subtitle(type='text', value=subtitle, name='subtitle', placeholder='Optional subtitle (max. 100 characters)', maxlength=100)
+          button.story-publish-now.rainbow-button(type='submit' form='story-publish-form') Publish now

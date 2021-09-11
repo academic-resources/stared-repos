@@ -1,0 +1,23 @@
+.dropdown
+  a(href="" class="icons_image_holder")
+    if (locals.user.avatar)
+      img(src=`${locals.user.avatar}`, alt="User image" class="icons_image")
+    else
+      img(src=`/images/ET.jpg` alt="Default user image" class="icons_image" )
+  div(class="dropdown_content" id="myDropdown")
+    .header_mini
+      if (locals.user.avatar)
+        img(src=`${locals.user.avatar}`, alt="User image" class="icons_image")
+      else
+        img(src=`/images/ET.jpg` alt="Default user image" class="icons_image" )
+      .naming_info
+        a(href=`/users/${locals.user.id}` class="naming_info_list1")= locals.user.username
+        a(href=`/users/${locals.user.id}` class="naming_info_list2") @#{locals.user.username}
+    a(href="/") Home
+    a(href="/stories/new-story") New Story
+    a(href=`/users/${locals.user.id}/stories`) Stories
+      //-//TODO include ability to change password?
+      //- a(href="#") Settings
+    a.dropdown-logout(href="/users/logout") Sign out
+    //- form is submitted via javascript by the anchor above
+    form#dropdown-logout(action="/users/logout" method="post")

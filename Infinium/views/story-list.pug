@@ -1,0 +1,51 @@
+extends layout
+
+mixin story-list(story, finalUrl, storySet)
+  li.story
+    a.story-list-title(href=`/users/${story.userId}/stories/${story.hexId}${finalUrl}`)
+      h3= story.title
+    if (story.subtitle)
+      .story-list-subtitle= story.subtitle
+    .story-info
+      if (!storySet)
+        .story-author By #[a(href=`/users/${story.authorId}`) #{story.author}] - &nbsp;
+      .story-date= `${(finalUrl === '/draft' ? 'Last edited ' : 'Published ') + story.date}`
+      if (storySet)
+        .story-options-wrapper
+          .story-options-dropdown ^
+          .story-options.hide
+            a(href=`/users/${story.userId}/stories/${story.hexId}/draft`) Edit
+            a.delete-story(href=`/users/${story.userId}/stories/${story.hexId}`) Delete
+
+
+append head
+  script(src="/javascripts/users-own-stories.js" type="module" defer)
+  link(rel='stylesheet' href='/stylesheets/story-list.css')
+
+block content
+    .title-wrapper
+      h2.page-title= title
+      if (locals.authenticated)
+        a.rainbow-button(href="/stories/new-story") New Story
+    .stories-container
+      if (storySet)
+        .tab-controls
+          if (drafts)
+            .tab-drafts.tab.active Drafts &nbsp;#{drafts.length}
+          if (published)
+            .tab-published.tab(class=`${!drafts ? 'active' :''}`) Published &nbsp;#{published.length}
+      if (storySet && drafts)
+        #drafts.story-tab
+          ul.draft-list.story-list
+            each story in drafts
+              +story-list(story, '/draft', storySet)
+      if (storySet && published)
+        #published.story-tab(class=`${!drafts ? '' :'hide'}`)
+          ul.published-list.story-list
+            each story in published
+              +story-list(story, '', storySet)
+      else
+        .story-list
+        ul.published-list.story-list
+          each story in stories
+            +story-list(story, '', storySet)
