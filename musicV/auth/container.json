@@ -1,0 +1,9 @@
+{
+	"id": "auth",
+	"type": "wedeploy/auth",
+	"env": {
+		"WEDEPLOY_AUTH_FACEBOOK": "true",
+        "WEDEPLOY_AUTH_FACEBOOK_CLIENT_ID": "1209604419094908",
+        "WEDEPLOY_AUTH_FACEBOOK_CLIENT_SECRET": "a050fed61c6d66ddb7e47a87321b816b"
+	}
+}
