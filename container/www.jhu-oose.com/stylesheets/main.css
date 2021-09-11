@@ -1,0 +1,415 @@
+@font-face {
+  font-family: "Charter";
+  font-weight: normal;
+  font-style: normal;
+  src: url("charter_regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Charter";
+  font-weight: normal;
+  font-style: italic;
+  src: url("charter_italic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Charter";
+  font-weight: bold;
+  font-style: normal;
+  src: url("charter_bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Charter";
+  font-weight: bold;
+  font-style: italic;
+  src: url("charter_bold_italic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Iosevka Term Slab";
+  font-weight: normal;
+  font-style: normal;
+  src: url("iosevka-term-slab-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Iosevka Term Slab";
+  font-weight: normal;
+  font-style: italic;
+  src: url("iosevka-term-slab-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Iosevka Term Slab";
+  font-weight: bold;
+  font-style: normal;
+  src: url("iosevka-term-slab-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Iosevka Term Slab";
+  font-weight: bold;
+  font-style: italic;
+  src: url("iosevka-term-slab-bolditalic.woff") format("woff");
+}
+
+body {
+  font-family: "Charter", "Georgia", serif;
+  line-height: 1.5;
+  max-width: 600px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+a {
+  color: black;
+}
+
+mark {
+  background-color: #dfdfdf;
+}
+
+h1,
+h2 {
+  line-height: 1.25;
+  margin-top: 2rem;
+}
+
+header h1 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: italic;
+}
+
+h1 + h2 {
+  margin-top: 1rem;
+}
+
+figure {
+  margin: 2rem 0;
+}
+
+figure > *,
+figure img {
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+video,
+audio {
+  width: 100%;
+}
+
+summary {
+  cursor: pointer;
+}
+
+pre,
+code,
+input,
+textarea,
+button,
+button:active,
+.button {
+  font-family: "Iosevka Term Slab", "Courier New", monospace;
+}
+
+pre,
+input,
+textarea,
+button,
+button:active,
+.button {
+  font-size: 0.875rem;
+}
+
+pre,
+input,
+textarea,
+button,
+button:active,
+.button,
+fieldset {
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+}
+
+pre {
+  overflow: auto;
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+}
+
+input,
+textarea,
+button,
+button:active,
+.button {
+  color: black;
+  background-color: transparent;
+  line-height: 1.5;
+  max-width: 100%;
+  padding: 0.25rem;
+  resize: none;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+button,
+button:active,
+.button {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* $ rougify style github >> stylesheets/main.css */
+
+.highlight table td {
+  padding: 5px;
+}
+.highlight table pre {
+  margin: 0;
+}
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #999999;
+  font-weight: bold;
+}
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .c,
+.highlight .ch,
+.highlight .cd,
+.highlight .cpf {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+.highlight .ge {
+  color: #000000;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .kc {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kd {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .k,
+.highlight .kv {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .mf {
+  color: #009999;
+}
+.highlight .mh {
+  color: #009999;
+}
+.highlight .il {
+  color: #009999;
+}
+.highlight .mi {
+  color: #009999;
+}
+.highlight .mo {
+  color: #009999;
+}
+.highlight .m,
+.highlight .mb,
+.highlight .mx {
+  color: #009999;
+}
+.highlight .sb {
+  color: #d14;
+}
+.highlight .sc {
+  color: #d14;
+}
+.highlight .sd {
+  color: #d14;
+}
+.highlight .s2 {
+  color: #d14;
+}
+.highlight .se {
+  color: #d14;
+}
+.highlight .sh {
+  color: #d14;
+}
+.highlight .si {
+  color: #d14;
+}
+.highlight .sx {
+  color: #d14;
+}
+.highlight .sr {
+  color: #009926;
+}
+.highlight .s1 {
+  color: #d14;
+}
+.highlight .ss {
+  color: #990073;
+}
+.highlight .s,
+.highlight .sa,
+.highlight .dl {
+  color: #d14;
+}
+.highlight .na {
+  color: #008080;
+}
+.highlight .bp {
+  color: #999999;
+}
+.highlight .nb {
+  color: #0086b3;
+}
+.highlight .nc {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #008080;
+}
+.highlight .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+.highlight .ni {
+  color: #800080;
+}
+.highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nf,
+.highlight .fm {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nl {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nn {
+  color: #555555;
+}
+.highlight .nt {
+  color: #000080;
+}
+.highlight .vc {
+  color: #008080;
+}
+.highlight .vg {
+  color: #008080;
+}
+.highlight .vi {
+  color: #008080;
+}
+.highlight .nv,
+.highlight .vm {
+  color: #008080;
+}
+.highlight .ow {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .o {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .w {
+  color: #bbbbbb;
+}
