@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>
+      Web Audio 1.0 Implementation report
+    </title>
+    <style type="text/css">
+        a {
+          text-decoration: none
+        }
+        a:hover {
+          text-decoration: underline; 
+          background: #FE9 
+        }
+                        
+        #ua h3::before { 
+          content: ""; 
+          background-size: 1.2em 1.2em;
+          background-repeat: no-repeat;
+          display: inline-block;
+          width: 2.2em; 
+          height: 1.2em;
+         }
+        #webkit::before { 
+          background-image: url('images/safari-logo.png'); 
+        }
+        #blink::before {
+          background-image: url('images/chrome-logo.png')
+        }
+        #gecko::before {
+          background-image: url('images/firefox-logo.png')
+        }
+        #edge::before {
+          background-image: url('images/edge-logo.png')
+        }
+    </style>
+    <link href="https://www.w3.org/StyleSheets/TR/base.css" media="screen"
+    type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="head">
+      <a href="https://www.w3.org/"><img alt="W3C" src=
+      "https://www.w3.org/Icons/WWW/w3c_home"></a>
+      <h1>
+        Web Audio API 1.0 Implementation Report
+      </h1>
+      <h2>
+        2021-Feb-16
+      </h2>
+      <hr>
+    </div>
+    <div class="main">
+      <p>
+        This report documents the overall implementation status and
+        detailed test results for Web Audio API 1.0. [<a href=
+        "http://caniuse.com/#feat=audio-api">CanIUse WebAudio</a>].
+      </p>
+      <section id="ua">
+        <h2 id="UserAgents">
+          User Agents
+        </h2>
+        <h3 id="webkit">
+          Safari
+        </h3>
+        <p>
+          Safari 6 on OSX, and Safari on iOS6 onwards, <a href=
+          "https://developer.apple.com/library/iad/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/PlayingandSynthesizingSounds/PlayingandSynthesizingSounds.html">
+          support the Web Audio API</a>. It has a <a href=
+          "https://bugs.webkit.org/enter_bug.cgi?product=WebKit&amp;component=Web%20Audio">
+          bugtracker</a>.
+        </p>
+        <p>
+          WebKit was one of the earliest implementations,
+          initially behind a vendor prefix.
+          From September 2020, <a href="https://webkit.org/blog/11294/release-notes-for-safari-technology-preview-113/">Safari
+          Technical Preview 113</a> included improved Web Audio support and these improvements have now
+          taken the implementation to an excellent level.
+        </p>
+        <h3 id="blink">
+          Blink
+        </h3>
+        <p>
+          Chrome supports Web Audio API from version 10 on, with -webkit
+          prefix, and from version 34 onwards <a href=
+          "https://developers.google.com/web/updates/2014/07/Web-Audio-Changes-in-m36">
+          unprefixed</a>. Chrome for Android supports Web Audio API from
+          version 49 on.
+        </p>
+        <p>
+          Opera supports Web Audio API from version 15 on, with -webkit prefix,
+          and from version 22 onwards unprefixed.
+        </p>
+        <p>
+          The Blink implementation postdates the Webkit/Blink split, and should
+          be considered a separate implementation. Blink has a <a href=
+          "https://bugs.chromium.org/p/chromium/issues/list?can=2&amp;q=webaudio&amp;x=m&amp;y=releaseblock&amp;cells=ids">
+          bugtracker</a>. The overall implementation level is excellent.
+        </p>
+        <h3 id="gecko">
+          Firefox
+        </h3>
+        <p>
+          Firefox supports Web Audio API from version 15 on, with -webkit
+          prefix, and from <a href=
+          "https://platform-status.mozilla.org/#webaudio">version 23 onwards
+          unprefixed</a>. Gecko has a <a href=
+          "https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&amp;component=Web%20Audio">
+          bugtracker</a>. The overall implementation level is very good.
+        </p>
+        <h3 id="edge">
+          Edge
+        </h3>
+        <p>
+          Edge supports Web Audio API <a href=
+          "https://msdn.microsoft.com/en-us/library/dn985708%28v=vs.85%29.aspx">
+          from version 12 (build 10240) on</a>, unprefixed.
+        </p>
+        <p>
+          More recent Edge releases have switched from EdgeHTML to the Blink engine,
+          and so no longer count as an independent implementation.
+        </p>
+        <!-- See Paul Adenot's implementation survey for the degree of separation between these code bases
+                        http://padenot.github.io/web-audio-perf/#the-different-implementations
+                          -->
+      </section>
+      <h2 id="tests">
+        Tests
+      </h2>
+      <p>
+        Perhaps the best indication of implementation status is the <a href=
+        "https://wpt.fyi/results/webaudio/idlharness.https.window.html?label=experimental&amp;label=master&amp;aligned">
+        IDL test</a> for WebAudio consisting of 1126 tests:
+      </p>
+      <table>
+        <tr>
+          <th>
+            Browser
+          </th>
+          <th>
+            Version
+          </th>
+          <th>
+            Passes
+          </th>
+          <th>
+            Fails
+          </th>
+        </tr>
+        <tr>
+          <td>
+            Safari
+          </td>
+          <td>
+            123 preview, macOS 10.15
+          </td>
+          <td>
+            1115
+          </td>
+          <td>
+            11
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Chrome
+          </td>
+          <td>
+            91, Linux 20.04
+          </td>
+          <td>
+            1115
+          </td>
+          <td>
+            11
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Firefox
+          </td>
+          <td>
+            89, Linux 20.04
+          </td>
+          <td>
+            1092
+          </td>
+          <td>
+            34
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Edge
+          </td>
+          <td>
+            91, Windows 10.0
+          </td>
+          <td>
+            1115
+          </td>
+          <td>
+            11
+          </td>
+        </tr>
+      </table>
+      <p>
+        These results indicates that Chrome is missing
+      </p>
+      <ul>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#mediastreamtrackaudiosourcenode">
+          <code>MediaStreamTrackSourceNode</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audiocontext-outputlatency">
+          <code>AudioContext.outputLatency</code></a>
+        </li>
+      </ul>
+      <p>
+        Firefox is missing
+      </p>
+      <ul>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-suspend">
+          <code>OfflineAudioContext.suspend()</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-resume">
+          <code>OfflineAudioContext.resume()</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-resume">
+          <code>AudioParam.automationRate</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audioparam-cancelandholdattime">
+          <code>AudioParam.cancelAndHoldAtTime</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audiolistener-positionx">
+          <code>AudioListener.positionX</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audiolistener-positiony">
+          <code>AudioListener.positionY</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audiolistener-positionz">
+          <code>AudioListener.positionZ</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audiolistener-forwardx">
+          <code>AudioListener.forwardX</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audiolistener-forwardy">
+          <code>AudioListener.forwardY</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audiolistener-forwardz">
+          <code>AudioListener.forwardZ</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audiolistener-upx"><code>
+          AudioListener.upX</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audiolistener-upy"><code>
+          AudioListener.upY</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#dom-audiolistener-upz"><code>
+          AudioListener.upZ</code></a>
+        </li>
+        <li>
+          <a href=
+          "https://webaudio.github.io/web-audio-api/#audioprocessingevent">AudioProcessingEvent
+          constructor</a>, But the <a href=
+          "https://webaudio.github.io/web-audio-api/#audioprocessingevent">AudioProcessingEvent</a>
+          API itself is deprecated.
+        </li>
+      </ul>
+      <p>
+        In addition, there are currently <a href=
+        "https://github.com/web-platform-tests/wpt/tree/master/webaudio">about
+        6500 WebAudio API tests on WPT</a> that tests the functionality of the
+        API. The <a href=
+        "https://wpt.fyi/results/webaudio?complete=true">wpt.fyi results</a>
+        are summarized below:
+      </p>
+      <table>
+        <tr>
+          <th>
+            Browser
+          </th>
+          <th>
+            Version
+          </th>
+          <th>
+            Passes
+          </th>
+          <th>
+            Fails
+          </th>
+        </tr>
+        <tr>
+          <td>
+            Safari
+          </td>
+          <td>
+            123 preview, macOS 10.15
+          </td>
+          <td>
+            6478
+          </td>
+          <td>
+            87
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Chrome
+          </td>
+          <td>
+            91, Linux 20.04
+          </td>
+          <td>
+            6571
+          </td>
+          <td>
+            46
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Firefox
+          </td>
+          <td>
+            89, Linux 20.04
+          </td>
+          <td>
+            5705
+          </td>
+          <td>
+            410
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Edge
+          </td>
+          <td>
+            91, Windows 10.0
+          </td>
+          <td>
+            6570
+          </td>
+          <td>
+            47
+          </td>
+        </tr>
+      </table>
+      <p>
+        The <a href="test-report.html">test report</a> has further details on
+        the failed tests with possible explanations on the status of the
+        failures.
+      </p>
+    </div>
+  </body>
+</html>
+      </p>
+      <hr>
+      <address>
+        Chris Lilley
+      </address>
+      <address>
+        Raymond Toy
+      </address>
+    </div>
+  </body>
+</html>

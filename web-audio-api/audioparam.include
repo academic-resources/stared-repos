@@ -1,0 +1,26 @@
+<div class="audioparam-info">
+<table>
+	<thead>
+		<tr>
+			<th scope="col">Parameter
+			<th scope="col">Value
+			<th scope="col">Notes
+	<tbody>
+		<tr>
+			<td>{{AudioParam/defaultValue}}
+			<td>[DEFAULT]
+			<td>[DEFAULT-NOTES?]
+		<tr>
+			<td>{{AudioParam/minValue}}
+			<td>[MIN]
+			<td>[MIN-NOTES?]
+		<tr>
+			<td>{{AudioParam/maxValue}}
+			<td>[MAX]
+			<td>[MAX-NOTES?]
+		<tr>
+			<td>{{AudioParam/automationRate}}
+			<td>[RATE]
+			<td>[RATE-NOTES?]
+</table>
+</div>

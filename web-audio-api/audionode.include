@@ -1,0 +1,34 @@
+<div class="node-info">
+<table>
+	<thead>
+		<tr>
+			<th scope="col">Property
+			<th scope="col">Value
+			<th scope="col">Notes
+	<tbody>
+		<tr>
+			<td>{{AudioNode/numberOfInputs}}
+			<td>[NOI]
+			<td>[NOI-NOTES?]
+		<tr>
+			<td>{{AudioNode/numberOfOutputs}}
+			<td>[NOO]
+			<td>[NOO-NOTES?]
+		<tr>
+			<td>{{AudioNode/channelCount}}
+			<td>[CC]
+			<td>[CC-NOTES?]
+		<tr>
+			<td>{{AudioNode/channelCountMode}}
+			<td>"{{ChannelCountMode/[CC-MODE]}}"
+			<td>[CC-MODE-NOTES?]
+		<tr>
+			<td>{{AudioNode/channelInterpretation}}
+			<td>"{{ChannelInterpretation/[CC-INTERP]}}"
+			<td>[CC-INTERP-NOTES?]
+		<tr>
+			<td><a>tail-time</a>
+			<td>[TAIL-TIME]
+			<td>[TAIL-TIME-NOTES?]
+</table>
+</div>
