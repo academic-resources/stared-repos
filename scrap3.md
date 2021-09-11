@@ -496,15 +496,3 @@ git clone  https://github.com/trekhleb/javascript-algorithms
 git clone  https://github.com/Theodeus/tuna
 git clone  https://github.com/rserota/wad
 git clone  https://github.com/wannesm/dtaidistance
-git clone  https://github.com/hvianna/audioMotion.js
-git clone  https://github.com/freeCodeCamp/freeCodeCamp
-git clone  https://github.com/Rafase282/My-FreeCodeCamp-Code
-git clone  https://github.com/myogeshchavan97/github-file-search-react
-git clone  https://github.com/JS-Challenges/recursion-prompts
-git clone  https://github.com/MichaelThompson312/EvernoteClone
-git clone  https://github.com/BCrawfordScott/aeterNote
-git clone  https://github.com/portexe/evernote-clone
-git clone  https://github.com/jm-riley/fakebook
-git clone  https://github.com/jamesurobertson/git-flow
-git clone  https://github.com/talcs/simpledtw
-git clone  https://github.com/cbellei/DTW

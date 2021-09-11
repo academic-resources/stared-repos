@@ -1,0 +1,64 @@
+
+
+
+.notes-main {
+  display: flex;
+  min-width: 825px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  .nav-bar {}
+
+
+
+
+      .note-show-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: $sans-serif;
+        font-size: 24px;
+        align-items: center;
+        margin: auto;
+        padding-bottom: 100px;
+        margin-top: 25px;
+        height: 100vh;
+
+        .logo {
+          display: inline;
+          height: 65px;
+          width: 80px;
+          margin: 20px;
+        }
+
+        article {
+          width: 300px;
+          display: inline;
+          text-align: center;
+
+          p:first-of-type{
+            font-family: $serif;
+          }
+
+          p:nth-of-type(2){
+            font-size: 18px;
+            font-family: $serif;
+            color: $EvernoteDarkGray;
+            padding-top: 5px;
+          }
+
+          p:last-of-type{
+            padding-top: 10px;
+          }
+        }
+
+
+      }
+
+
+}

@@ -1,0 +1,159 @@
+.modal-holder {
+  min-height: 100vh;
+}
+
+.hide-notebook-form {
+  display:none;
+}
+
+.hide-delete-warning {
+  display: none;
+}
+
+
+
+.form-modal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 15;
+  background-color: rgba(255, 255, 255, 0.9);
+  // display: flex;
+  // flex-direction: column;
+
+
+
+  .container {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $sans-serif;
+
+    .plus-logo {
+      height: 37px;
+      width: 37px;
+      margin-bottom: 7px;
+    }
+
+    h3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 13.5px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      color: $EvernoteMediumDarkGray;
+
+      .bottom-border {
+        margin-top: 14px;
+        width: 80%;
+        border-bottom: 1px solid $EvernoteMediumGray;
+      }
+    }
+
+    .errors {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        margin: auto;
+        text-align: center;
+        color: $EvernoteErrorRed;
+        width: 200px;
+        background-color: $EvernoteErrorPink;
+        padding: 0px 15px 5px 15px;
+        border-left: 1px solid $EvernoteErrorRed;
+        border-right: 1px solid $EvernoteErrorRed;
+        border-radius: 5px;
+        opacity: 0.65;
+      }
+      li:first-of-type {
+        padding-top: 5px;
+        border-top: 1px solid $EvernoteErrorRed;
+      }
+
+      li:last-of-type {
+        border-bottom: 1px solid $EvernoteErrorRed;
+        margin-bottom: 10px;
+      }
+    }
+
+    .notebook-form {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .delete-script {
+        margin-top: 0;
+        font-family: $serif;
+        font-size: 32px;
+        margin-bottom: 80px;
+        font-weight: 100;
+        color: $EvernoteDarkGray;
+
+        .delete-title {
+          font-weight: 400;
+        }
+      }
+    }
+    .title {
+      width: 300px;
+      height: 44px;
+      text-align: center;
+      font-family: $serif;
+      font-size: 32px;
+      color: $EvernoteGreen;
+      font-weight: 200;
+      margin-bottom: 85px;
+    }
+
+    .title::placeholder {
+      color: $EvernoteMediumGray;
+    }
+
+    .notebook-button {
+      width: 195px;
+      height: 30px;
+      font-size: 13.5px;
+      text-align: center;
+      padding: 0;
+    }
+
+
+    .notebook-cancel {
+      color: $EvernoteDarkGray;
+      border: 1px solid $EvernoteMediumGray;
+      border-radius: 5px;
+      background-color: $EvernoteMediumLightGray;
+      margin-right: 4px;
+
+
+    }
+    .notebook-cancel:hover {
+
+      background-color: $EvernoteMediumGray;
+
+    }
+
+    .notebook-submit {
+      color: #fff;
+      background-color: $EvernoteGreen;
+      border: 1px solid $EvernoteGreen;
+      border-radius: 5px;
+      margin-left: 4px;
+    }
+
+    .notebook-submit:hover {
+      background-color: $EvernoteHoverGreen;
+    }
+
+  }
+}
+
+.hide-tag-form {
+  display: none;
+}

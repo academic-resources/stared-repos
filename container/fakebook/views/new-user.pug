@@ -1,0 +1,9 @@
+extends layout.pug
+block content
+  h1 register for a new account
+  form(method='post' action='/users')
+    input(type="hidden" name="_csrf" value=csrfToken)
+    input(type='text' name='username' placeholder='enter your username')
+    input(type='email' name='email' placeholder='enter your email')
+    input(type='password' name='password' placeholder='enter your password')
+    input(type='submit' value='sign up')

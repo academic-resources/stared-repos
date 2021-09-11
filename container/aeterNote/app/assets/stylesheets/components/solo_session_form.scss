@@ -1,0 +1,80 @@
+
+.solo-session-bg {
+  min-height: 900px;
+  height: 100vh;
+  background-color: $EvernoteSuperLightGray;
+}
+
+
+.solo-session {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+
+  img {
+    margin-top: 50px;
+    height: 65px;
+    width: 80px;
+  }
+
+  .greeting {
+    padding: 10px 5px;
+  }
+  .solo-session-template{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 15px 15px 15px;
+    border: 1px solid $EvernoteMediumGray;
+    border-radius: 5px;
+    margin-top: 10px;
+
+    p {
+      padding: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      display: inline;
+      font-family: $sans-serif;
+      align-self: center;
+      font-size: 15px;
+      margin: 10px;
+      border: 2px solid $EvernoteGreen;
+      border-radius: 5px;
+      background-color: $EvernoteGreen;
+      color: #fff;
+      transition: background-color 0.5s ease;
+
+    }
+    button:hover {
+      background-color: $EvernoteHoverGreen;
+      border-color: $EvernoteHoverGreen;
+    }
+  }
+
+  p {
+    font-family: $serif;
+    font-weight: normal;
+    color: $EvernoteDarkGray;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  a {
+    padding: 10px 15px 10px 15px;
+    background-color: #fff;
+    border: 1px solid $EvernoteMediumGray;
+    border-radius: 5px;
+    font-family: $sans-serif;
+    color: $EvernoteDarkGray;
+  }
+
+  a:hover {
+    background-color: $EvernoteGreen;
+    border-color: $EvernoteGreen;
+    color: #fff;
+  }
+}

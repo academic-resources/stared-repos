@@ -1,0 +1,131 @@
+.side-nav {
+  bottom: 0;
+  flex: none;
+  background-color: $EvernoteSuperLightGray;
+  width: 70px;
+  border-right: 1px solid $EvernoteMediumLightGray;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+
+  align-content: flex-start;
+
+
+
+  .logout-button {
+    position: fixed;
+    bottom: 0px;
+    height: 65px;
+    width: inherit;
+    // padding: px 0px;
+    font-family: $sans-serif;
+    align-self: center;
+    font-size: 15px;
+    color: $EvernoteDarkGray;
+    border-top: 2px solid $EvernoteMediumLightGray;
+    text-align: center;
+    margin: auto;
+
+  }
+  .logout-button:hover{
+    color: #fff;
+    background-color: $EvernoteGreen;
+    border-color: $EvernoteGreen;
+  }
+
+  .nav-logo {
+    height: 65px;
+    width: 65px;
+    background: image_url('aeterNote_logo_lightbulb.png');
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+  }
+
+  .note-buttons {
+    margin-top: 45px;
+    .notebooks-button {
+      height: 35px;
+      width: 35px;
+      background-color: #fff;
+      border: 1px solid $EvernoteMediumGray;
+      background: image-url('notebook_green.png');
+      background-size: 65%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .notebooks-button:hover {
+      cursor: pointer;
+
+    }
+
+
+    .note-index-button {
+      height: 35px;
+      width: 35px;
+      background-color: #fff;
+      border: 1px solid $EvernoteMediumGray;
+      background: image-url('green_note.png');
+      background-size: 65%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .note-index-button:hover {
+      cursor: pointer;
+    }
+
+    .note-new-button {
+      height: 35px;
+      width: 35px;
+      background-color: #fff;
+      border: 1px solid $EvernoteMediumGray;
+      background: image-url('green_plus.png');
+      background-size: 65%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .note-new-button:hover {
+      cursor: pointer;
+    }
+
+    .tag-index-button {
+      height: 35px;
+      width: 35px;
+      background-color: #fff;
+      border: 1px solid $EvernoteMediumGray;
+      background: image-url('green_tag.png');
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .tag-index-button:hover {
+      cursor: pointer;
+    }
+
+    .side-nav-button {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .side-nav-button:hover {
+      transition: border-color .4s;
+      border-color: $EvernoteGreen;
+    }
+  }
+
+}

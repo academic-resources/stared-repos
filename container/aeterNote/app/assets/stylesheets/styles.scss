@@ -1,0 +1,80 @@
+$EvernoteGreen: #57BF60;
+$EvernoteHoverGreen: #48A041;
+$EvernoteDarkGray: #7F7F82;
+$EvernoteMediumGray: #D9D9D9;
+$EvernoteMediumLightGray: #ECECEC;
+$EvernoteSuperLightGray: #F8F8F8;
+$EvernoteErrorRed: #BA2A26;
+$EvernoteErrorPink: #F8D0D1;
+$EvernoteInputBlue: #EEF2F3;
+$EvernoteElephantGray: #807F83;
+$EvernoteMediumDarkGray: #A6A6A6;
+$EvernoteOffBlack: #383D41;
+
+$serif: 'Roboto Slab', serif;
+$sans-serif: 'Raleway', sans-serif;
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadein {
+  0% {
+
+    opacity: 0;
+  }
+  100%{
+
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 100%
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes slidein {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 71px;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    left: 71px;
+  }
+  100% {
+    left: -500px;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1.0
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}

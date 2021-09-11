@@ -1,0 +1,166 @@
+
+.modalbg {
+  position: absolute;
+  float: left;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition-delay: .4s;
+
+}
+
+
+.hide-modal-bg {
+  display: none;
+  animation: fadeout .4s;
+  background-color: none;
+}
+
+.reveal-modal-bg {
+  animation: fadein .4s;
+  background-color: rgba(255, 255, 255, 0.90);
+}
+
+.notebooks {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: -500px;
+  float: left;
+  z-index: 5;
+  flex: none;
+  width: 457px;
+  border-right: 3px solid $EvernoteMediumLightGray;
+  background-color: #fff;
+
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-top: 17px;
+    display: flex;
+    border-bottom: 1px solid $EvernoteMediumLightGray;
+    h3 {
+      box-sizing: border-box;
+      padding: 0px 24px 0px;
+      height: 106px;
+      margin: 0;
+      font-size: 21px;
+      font-family: $sans-serif;
+      font-weight: 300;
+      color: $EvernoteElephantGray;
+      letter-spacing: 3px;
+    }
+    button {
+      margin-right: 24px;
+      height: 25px;
+      width: 25px;
+      img {
+      }
+    }
+
+  }
+
+  .notebooks-ul {
+    display:block;
+    z-index: 1;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+  }
+
+
+}
+.reveal-notebook{
+  animation: slidein .7s;
+  left: 71px;
+}
+
+.hide-notebook {
+  animation: slideout .7s;
+  left: -500px;
+  // visibility: hidden;
+
+}
+
+.notebook-item {
+  // width: 95%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  h5{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 20px 0 20px;
+    font-family: $serif;
+    font-size: 16px;
+    color: black;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+
+    .notebook-item-buttons {
+      display: flex;
+      justify-content: space-between;
+
+      .button-notebook {
+        height: 30px;
+        width: 30px;
+
+
+        img {
+          margin: auto;
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      .button-notebook:hover {
+        border: 2px solid white;
+        border-radius: 50%;
+        transition: border .5s;
+      }
+    }
+
+  }
+
+  p {
+    letter-spacing: 0.75px;
+    font-weight: 400;
+    font-size: 11px;
+    font-family: $sans-serif;
+    color: $EvernoteMediumDarkGray;
+    margin: 5px 20px;
+  }
+
+}
+
+.bottom-border {
+  margin: auto;
+  // align-self: center;
+  width: 95%;
+  border-bottom: 1px solid $EvernoteMediumLightGray;
+}
+
+li.notebook-item:hover {
+  background-color: $EvernoteGreen;
+  cursor: pointer;
+  h5, p {
+    color: #fff;
+  }
+  .button-notebook {
+    border: 2px solid $EvernoteGreen;
+
+  }
+
+}
+
+.hide-notebook {
+  animation: slideout 2.5s;
+}

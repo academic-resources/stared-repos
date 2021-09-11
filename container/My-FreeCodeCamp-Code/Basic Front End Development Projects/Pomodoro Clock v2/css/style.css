@@ -1,0 +1,30 @@
+h1, p, .row {
+  text-align: center;
+  font-size: 130%;
+  font-family: cursive, sans-serif;
+}
+section {
+  min-height: 90vh;
+  padding-top: 1px;
+  color: #fff;
+  bottom: 10px;
+}
+footer {
+  background-color: black;
+  color: gray;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  position: relative;
+  text-align: center;
+}
+body {
+  position: relative;
+  background-color: #ACECF7;
+}
+.top-row {
+  margin-top: 50px
+}
+.bottom {
+  margin-bottom: 25px;
+}

@@ -1,0 +1,152 @@
+.notes-index {
+  top: 0;
+  bottom: 0;
+  width: 348px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid $EvernoteMediumLightGray;
+
+  .notes-header {
+
+    height: 99px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $EvernoteMediumLightGray;
+
+    h3 {
+      text-align: Left;
+      margin: 23px 25px;
+      color: $EvernoteDarkGray;
+      font-family: $sans-serif;
+      font-size: 22px;
+      letter-spacing: 2px;
+      font-weight: 200;
+    }
+    .note-count-options {
+      height: 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid $EvernoteMediumGray;
+
+      p{
+        margin: 10px 25px;
+        font-family: $sans-serif;
+        color: $EvernoteMediumGray;
+      }
+
+      .sort-options {
+        margin: 10px 15px;
+        font-family: $sans-serif;
+        color: $EvernoteElephantGray;
+        img {
+          display: inline;
+          height: 8px;
+          width: 8px;
+        }
+      }
+
+      .sort-options:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .notes-ul {
+    display:block;
+    height: calc(100vh - 124px);
+    overflow-y: scroll;
+  }
+
+  .note-item {
+    z-index: 1;
+    // width: 95%;
+    box-sizing: border-box;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 20px;
+
+    h5{
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 10px 20px 0 20px;
+      font-family: $serif;
+      font-size: 16px;
+      color: black;
+      font-weight: 200;
+      letter-spacing: 0.5px;
+
+      .note-item-buttons {
+        display: flex;
+        justify-content: space-between;
+
+        .button-note {
+          height: 30px;
+          width: 30px;
+
+
+          img {
+            margin: 5px;
+            height: 20px;
+            width: 20px;
+          }
+        }
+
+        .button-note:hover {
+          border: 2px solid white;
+          border-radius: 50%;
+          transition: border .5s;
+        }
+      }
+
+    }
+    .note-content-container{
+      padding: 0 20px;
+      height: 50px;
+      overflow: hidden;
+
+
+      .note-content {
+        position: relative;
+        box-sizing: border-box;
+        letter-spacing: 0.75px;
+        font-weight: 400;
+        font-size: 11px;
+        font-family: $sans-serif;
+        color: $EvernoteMediumDarkGray;
+        word-wrap: break-word;
+        overflow: hidden;
+        // height: 40px;
+      }
+    }
+
+  }
+
+  .bottom-border {
+    margin: auto;
+    // align-self: center;
+    width: 95%;
+    border-bottom: 1px solid $EvernoteMediumLightGray;
+  }
+
+  .note-item:hover {
+    background-color: $EvernoteGreen;
+    cursor: pointer;
+    h5 {
+      color: #fff;
+    }
+    .note-content {
+      color: #fff;
+    }
+    .button-note {
+      border: 2px solid $EvernoteGreen;
+
+    }
+
+  }
+}

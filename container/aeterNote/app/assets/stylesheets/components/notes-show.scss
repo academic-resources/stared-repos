@@ -1,0 +1,230 @@
+
+
+.note-new-edit {
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .note-show {
+    display: flex;
+    flex-direction:column;
+    align-content:center;
+    width: 100%;
+
+    .action-tools {
+      width: 100%;
+      display: flex;
+      align-self: flex-start;
+      margin-bottom: 15px;
+      align-items: center;
+      .delete-note-trash {
+        height: 35px;
+        width: 35px;
+        background-color: #fff;
+        border: 2px solid #fff;
+        background: image-url('trash_gray.png');
+        background-size: 65%;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        border-radius: 50%;
+      }
+
+      .delete-note-trash:hover {
+        height: 35px;
+        width: 35px;
+        background-color: #fff;
+        cursor: pointer;
+        background: image-url('trash_can_green.png');
+        background-size: 65%;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        border-radius: 50%;
+        transition: border .35s;
+
+      }
+
+      .notebook-select {
+        position: relative;
+        color: $EvernoteElephantGray;
+        vertical-align: middle;
+        box-sizing: border-box;
+        padding: 2px 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        margin-left: 20px;
+        border: 1px solid $EvernoteMediumGray;
+        img {
+          margin-left: 4px;
+          display: inline;
+          height: 8px;
+          width: 8px;
+        }
+      }
+
+      .notebook-select:hover {
+        background-color: $EvernoteMediumGray;
+        cursor: pointer;
+      }
+    }
+
+    .title-save {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      width: 100%;
+      align-self: center;
+      border-top: 1px solid $EvernoteMediumGray;
+
+      .note-title-edit {
+
+        width: 300px;
+        height: 40px;
+        font-family: $serif;
+        font-size: 28px;
+        color: $EvernoteGreen;
+        font-weight: 200;
+      }
+
+      .note-title-edit::placeholder {
+        color: $EvernoteMediumGray;
+      }
+
+      .save-button {
+        font-size: 16px;
+        color: #fff;
+        border: 1px solid $EvernoteGreen;
+        border-radius: 5px;
+        background-color: $EvernoteGreen;
+        height: 40px;
+        width: 100px;
+        padding: 0 10px;
+        text-align: center;
+
+      }
+      .save-button:hover {
+        cursor: pointer;
+        background-color: $EvernoteHoverGreen;
+
+      }
+    }
+  }
+}
+
+
+
+
+.quill {
+  width: calc(100vw - 480px);
+  min-width: 800px;
+  align-self: center;
+  .ql-toolbar {
+    border: none;
+    border-bottom: 1px solid $EvernoteMediumGray;
+  }
+
+  .ql-container {
+    border: none;
+    height: calc(100vh - 190px);
+    overflow: auto;
+  }
+}
+
+.note-errors {
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  left: 800px;
+  z-index:10;
+  font-size: 18px;
+
+  li {
+    margin: auto;
+    text-align: center;
+    color: $EvernoteErrorRed;
+    width: 300px;
+    background-color: $EvernoteErrorPink;
+    padding: 0px 15px 10px 15px;
+    border-left: 1px solid $EvernoteErrorRed;
+    border-right: 1px solid $EvernoteErrorRed;
+  }
+
+  li:first-of-type {
+    padding-top: 10px;
+    border-top: 1px solid $EvernoteErrorRed;
+
+  }
+
+  li:last-of-type {
+    border-bottom: 1px solid $EvernoteErrorRed;
+
+  }
+
+}
+
+.flash {
+  animation: flash 5s;
+  transition: visibility 5s;
+  visibility: hidden;
+}
+
+.tags-taggings {
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+  .tag-list-label {
+    display: inline;
+    font-size: 18px;
+    color: $EvernoteElephantGray;
+    margin: 0 10px 0 35px;
+  }
+}
+
+.tags-list {
+  display: flex;
+  width: 200px;
+  overflow-x: auto;
+  border: 2px solid $EvernoteMediumLightGray;
+  border-radius: 3px;
+  padding: 5px 10px;
+
+  .tagged {
+    font-size: 10px;
+    font-family: $sans-serif;
+    color: #fff;
+    background-color: $EvernoteGreen;
+    border: 1px solid $EvernoteGreen;
+    border-radius: 3px;
+    padding: 3px 5px;
+    margin: 0 5px;
+  }
+  .untagged {
+    font-size: 10px;
+    font-family: $sans-serif;
+    color: $EvernoteElephantGray;
+    background-color: $EvernoteMediumLightGray;
+    border: 1px solid $EvernoteElephantGray;
+    border-radius: 3px;
+    padding: 3px 5px;
+    margin: 0 5px;
+  }
+
+  .tagged:hover {
+    transition: all .4s;
+    background-color: $EvernoteHoverGreen;
+    border-color: $EvernoteHoverGreen;
+    cursor: pointer;
+  }
+
+  .untagged:hover {
+    transition: all .4s;
+    background-color: $EvernoteGreen;
+    border-color: $EvernoteGreen;
+    color: #fff;
+    cursor: pointer;
+  }
+}

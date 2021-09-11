@@ -1,0 +1,17 @@
+# == Schema Information
+#
+# Table name: tags
+#
+#  id         :integer          not null, primary key
+#  label      :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  label: MyString
+
+two:
+  label: MyString
