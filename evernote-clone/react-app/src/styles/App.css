@@ -1,0 +1,38 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Editor Styles */
+.quill {
+    height: calc(100vh - 164px);
+    white-space: nowrap;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.ql-container {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.ql-editor {
+    font-family: inherit;
+    font-size: inherit;
+    overflow-y: scroll;
+}
+
+/* Sidebar styles */
+.MuiListItem-root.Mui-selected {
+    background-color: #d4d8e8 !important;
+}
+
+.notebooks-link:link {
+    color: darkgrey !important;
+    text-decoration: none !important;
+}
+
+.notebooks-link:visited {
+    color: darkgrey;
+} 
