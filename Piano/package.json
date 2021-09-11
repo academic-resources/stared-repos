@@ -1,0 +1,62 @@
+{
+	"name": "@tonejs/piano",
+	"version": "0.2.0",
+	"description": "Web Audio instrument using Salamander Grand Piano samples",
+	"repository": {
+	  "url": "https://github.com/tambien/Piano"
+	},
+	"main": "build/Piano.js",
+	"module": "build/esm/Piano.js",
+	"types": "build/esm/Piano.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"prepare": "npm run build",
+		"increment": "npm version v$(semver --increment $(npm show @tonejs/piano version)) --git-tag-version=false --allow-same-version",
+		"lint": "tslint --project tsconfig.json --fix",
+		"test": "karma start test/karma.conf.js",
+		"watch": "tsc --watch"
+	},
+	"files": [
+		"README.md",
+		"LICENSE",
+		"build",
+		"src",
+		"scripts"
+	],
+	"author": "Yotam Mann",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/chai": "^4.2.11",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^12.6.2",
+		"chai": "^4.2.0",
+		"karma": "^5.0.2",
+		"karma-chrome-launcher": "^3.1.0",
+		"karma-mocha": "^2.0.0",
+		"karma-typescript": "^5.0.2",
+		"mocha": "^7.1.1",
+		"npm-run-all": "^4.1.5",
+		"semver": "^5.5.0",
+		"static-server": "^2.2.1",
+		"tone": "^14.6.1",
+		"ts-loader": "^7.0.1",
+		"tslint": "^5.18.0",
+		"typescript": "^3.8.3",
+		"webmidi": "^2.5.1",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11"
+	},
+	"peerDependencies": {
+		"tone": "^14.6.1",
+		"webmidi": "^2.5.1"
+	},
+	"keywords": [
+		"Web Audio",
+		"Tone.js",
+		"Piano",
+		"Sampler"
+	],
+	"dependencies": {
+		"tslib": "^1.11.1"
+	}
+}

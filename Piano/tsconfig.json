@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"outDir": "./build",
+		"target": "es6",
+		"module": "es6",
+		"moduleResolution": "node",
+		"sourceMap": false,
+		"declaration": true,
+		"baseUrl": "./"
+	},
+	"include": [
+		"./src"
+	]
+}
