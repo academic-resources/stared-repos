@@ -1,0 +1,58 @@
+{% load wagtailimages_tags wagtailcore_tags %}
+<div class="container">
+  {% comment %}
+    This first .row is the white "top" to the Table of Contents section.
+    It will disappear for non-desktop views.
+    This is somewhat of an HTML display "hack"
+  {% endcomment %}
+  <div class="row d-lg-flex justify-content-center no-gutters d-none">
+    <div class="col-lg-8 bg-white mt-minus-50"></div>
+  </div>
+  <div class="row">
+    {% if page.intro_notes %}
+      <div class="col-lg-8 offset-lg-2">
+        <div class="pt-lg-0 pt-5 px-lg-4">
+          {{ page.intro_notes|richtext }}
+        </div>
+      </div>
+    {% endif %}
+    <div class="pt-4 {% if not page.notes %}pb-4 pb-md-5{% endif %} col-lg-8 offset-lg-2 justify-content-center publication-container">
+      <div class="row mb-5">
+        <div class="col">
+          <h2 class="px-lg-4 px-0">{{ page.contents_title }}</h2>
+        </div>
+        <div class="col-12">
+          {% for child_page in child_pages %}
+            {% with child=child_page.child.localized %}
+            <div class="row publication-row pt-3 pb-3 d-flex align-items-center">
+              <div class="col-sm-1 d-md-block d-none">&nbsp;</div>
+              <div class="col-auto">
+                <div class="publication-chapter-number publication-chapter-number--small"
+                  {% with toc_image=child.specific.toc_thumbnail_image %}
+                  {% if toc_image %}
+                  {% image toc_image fill-256x256 as thumbnail %}
+                  style='background-image: url("{{ thumbnail.url }}")'
+                  {% endif %}
+                  {% endwith %}
+                >
+                </div>
+              </div>
+              <div class="col-sm col-8 d-flex align-items-center">
+                <h3 class="publication-chapter-title publication-chapter-title--small my-0">
+                  <a href="{{ child.url }}" class="d-block">
+                    {{ child.title }} {% if child.has_unpublished_changes %}🐣{% endif %}
+                  </a>
+                </h3>
+              </div>
+              <div class="col-sm-1 d-md-block d-none">&nbsp;</div>
+            </div>
+            {% endwith %}
+            {% if not forloop.last %}
+              <hr/>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

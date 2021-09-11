@@ -1,0 +1,69 @@
+{% extends "pages/base.html" %}
+{% load wagtailcore_tags wagtailimages_tags homepage_tags card_tags wagtailmetadata_tags custom_image_tags i18n static %}
+
+
+{% block ga_identifier %}
+  <meta name="google-site-verification" content="xuTYNuCtTC9SLIkAUtmUY9Wce5RDJofc4z4fMprPYUk" />
+  <meta name="ga-identifier" content="UA-87658599-15">
+  <meta name="gtm-identifier" content="GTM-5TFTDCX">
+{% endblock %}
+
+
+{% block bodyclass %}mozfest{% endblock %}
+
+
+{% block page_title %}
+    {% blocktrans %}Mozilla Festival{% endblocktrans %}{% if page.specifics.seo_title %} - {{ page.specifics.seo_title }}{% else %} - {{ page.title }}{% endif %}
+{% endblock %}
+
+
+{% block body_id %}mozfest-{% block mozfest_body_id %}home{% endblock %}{% endblock %}
+
+
+{% block primary_nav %}
+    {% include "partials/primary_mozfest_nav.html" with background="simple-background" %}
+{% endblock %}
+
+
+{% block hero_guts %}
+  {% include "partials/primary_heroguts.html" with root=root page=page %}
+{% endblock %}
+
+
+{% block content %}
+  {% block secondary_nav %}{% endblock %}
+
+      {% if page.signup != None %}
+
+        {# Use a two-column layout #}
+        <div class="container">
+          <div class="row">
+            <div class="cms mozfest-content two-col mb-5">
+              {% include "partials/streamfield.html" with twocolumn=True %}
+            </div>
+            {% block cta %}{% include "partials/signup.html" %}{% endblock %}
+          </div>
+        </div>
+      {% else %}
+
+        {# Single column layout #}
+        <div class="cms mozfest-content mb-3 {% if page.use_wide_template %} wide {% endif %}">
+          {% include "partials/streamfield.html" %}
+        </div>
+
+      {% endif %}
+
+{% endblock %}
+
+
+{% block footer_block %}
+  {% include "../partials/mozfest_footer.html" %}
+{% endblock %}
+
+
+{% block script_bundle %}
+  <script src="{% url "javascript-catalog" %}"></script>
+  {# This uses the mofo main.js for now, to make sure "things work" until we (maybe never?) create a separate bundle #}
+  <script src="{% static "_js/main.compiled.js" %}"></script>
+  <script src="{% static "_js/mozfest.compiled.js" %}"></script>
+{% endblock %}
