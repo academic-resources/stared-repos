@@ -1,0 +1,38 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+{% extends 'base-protocol.html' %}
+
+{% block page_title %}{{ ftl('newsletters-put-more-fox-in-your-inbox') }}{% endblock page_title %}
+{% block page_desc %}{{ ftl('newsletters-see-where-the-web-can-take') }}{% endblock %}
+
+{% block body_class %}{{ super() }} newsletter-mozilla{% endblock %}
+
+{% block page_css %}
+  {{ css_bundle('newsletter-firefox') }}
+{% endblock %}
+
+{% block js %}
+  {{ js_bundle('newsletter') }}
+{% endblock %}
+
+{% block site_header %}{% endblock %}
+
+{% block content %}
+<main role="main">
+  <div class="section-intro">
+    <div class="mzp-l-content"></div>
+  </div>
+
+  <section class="section-subscribe">
+    <header class="mzp-l-content mzp-t-firefox">
+      <h1 class="page-title">{{ self.page_title() }}</h1>
+      <h2 class="section-title">{{ self.page_desc() }}</h2>
+    </header>
+    <div class="mzp-l-content mzp-t-content-sm">
+      {{ email_newsletter_form(include_title=False, spinner_color='#3a304b', button_class='mzp-t-product mzp-t-lg') }}
+    </div>
+  </section>
+</main>
+{% endblock %}

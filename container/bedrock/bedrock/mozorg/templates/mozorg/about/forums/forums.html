@@ -1,0 +1,50 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "mozorg/about-base.html" %}
+
+{% block page_title %}{{ _('Forums') }}{% endblock %}
+{% set body_id = "about-forums" %}
+
+{% block page_css %}
+  {{ css_bundle('about-forums') }}
+{% endblock %}
+
+{% block article %}
+<h1 class="mzp-c-article-title">{{ self.page_title() }}</h1>
+
+<section class="lead-content">
+
+  <p>
+  {{ _('Mozilla provides discussion forums to enable communication among the Mozilla community.') }}
+  {{ _('As of April 2021 some of our forums have changed to provide a better experience for our community.') }}
+  {{ _('See our current options below.') }}
+  </p>
+
+  <p>
+    {{ _('Please note that participants in all forums and methods of communicating are expected to adhere to the <a href="%s">Community Participation Guidelines</a>.')|format(url('mozorg.about.governance.policies.participation')) }}
+  </p>
+
+</section>
+
+<h2 id="discourse">{{ _('Web & Email Forums (Discourse)') }}</h2>
+
+<p>
+{{ _('We invite you to participate in discussions across all topics related to the project and our development efforts at <a href="%(discourse_url)s">Mozilla’s Discourse server</a>.')|format(discourse_url='https://discourse.mozilla.org/') }}
+{{ _('If you prefer to participate via email, you can subscribe to topics you are interested via the website, and then email them directly.')}}
+</p>
+
+<h2 id="chat">{{ _('Realtime Chat') }}</h2>
+
+<p>
+{{ _('You can talk to people in the community in real time by logging on <a href="%(chat_url)s">Mozilla’s chat server</a>.')|format(chat_url='https://wiki.mozilla.org/Matrix') }}
+</p>
+
+<h2 id="support">{{ _('Product Support') }}</h2>
+
+<p>
+{{ _('If you are looking for technical support for our products please visit our <a href="%(sumo_url)s">support site</a>.')|format(sumo_url='https://support.mozilla.org/')}}
+</p>
+
+{% endblock %}

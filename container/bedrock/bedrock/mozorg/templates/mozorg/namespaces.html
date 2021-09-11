@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Mozilla XML Namespace</title>
+
+    {% block page_css %}
+      {{ css_bundle('namespaces') }}
+    {% endblock %}
+</head>
+<body>
+<section>
+    <h1>Mozilla XML Namespace</h1>
+    <h2>{{ standard }}</h2>
+    <dl>
+        <dt>Namespace</dt>
+        <dd><code>{{ namespace }}</code></dd>
+        <dt>Documentation</dt>
+        <dd><a href="{{ docs }}">{{ docs }}</a></dd>
+    </dl>
+    {% if slug == 'xul' %}
+        <p class="xul">
+            There is no data.<br/>There is only XUL!</p>
+    {% endif %}
+</section>
+</body>
+</html>

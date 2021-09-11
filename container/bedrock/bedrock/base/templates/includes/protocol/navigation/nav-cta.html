@@ -1,0 +1,28 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% if not hide_nav_cta %}
+  <div class="c-navigation-shoulder">
+    {% if not custom_nav_cta %}
+      {% if not hide_nav_download_button %}
+        {{ download_firefox_thanks(alt_copy=ftl('download-button-download-firefox'), dom_id='protocol-nav-download-firefox', button_class='mzp-t-secondary mzp-t-md', download_location='nav') }}
+      {% endif %}
+      {% if not hide_nav_get_vpn_button %}
+      <div class="c-navigation-fxa-cta-container">
+        <a
+          href="{{ url('products.vpn.landing') }}#pricing"
+          class="mzp-c-button mzp-t-product mzp-t-secondary mzp-t-md"
+          data-cta-text="Get Mozilla VPN"
+          data-cta-type="button"
+          data-cta-position="navigation"
+        >
+          {{ ftl('navigation-v2-get-mozilla-vpn') }}
+        </a>
+      </div>
+      {% endif %}
+    {% else %}
+      {{ custom_nav_cta }}
+    {% endif %}
+  </div>
+{% endif %}

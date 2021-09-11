@@ -1,0 +1,127 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+  # License, v. 2.0. If a copy of the MPL was not distributed with this
+  # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+{% extends "firefox/base/base-protocol.html" %}
+
+{% from "macros-protocol.html" import split with context %}
+
+{% block page_title %}{{ ftl('firefox-faq') }}{% endblock %}
+{% block page_desc %}{{ ftl('whether-you-searched-privacy') }}{% endblock %}
+
+{% block page_css %}
+  {{ css_bundle('firefox-faq') }}
+{% endblock %}
+
+{% block sub_navigation %}
+  {% if ftl_has_messages('sub-navigation-firefox', 'sub-navigation-what-is-a-browser', 'sub-navigation-browsing-history') %}
+    <nav class="c-sub-navigation">
+      <div class="mzp-l-content">
+        <div class="c-sub-navigation-content">
+          <h2 class="c-sub-navigation-title">
+            <a href="{{ url('firefox') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Firefox">
+              <img class="c-sub-navigation-icon" src="{{ static('protocol/img/logos/firefox/logo-sm.png') }}" width="24" height="24" alt="">
+             {{ ftl('sub-navigation-firefox') }}
+            </a>
+          </h2>
+          <ul class="c-sub-navigation-list">
+            <li class="c-sub-navigation-item">
+              <a href="{{ url('firefox.browsers.what-is-a-browser') }}" data-link-type="nav" data-link-position="subnav" data-link-name="What Is a Browser?">{{ ftl('sub-navigation-what-is-a-browser') }}</a>
+            </li>
+            <li class="c-sub-navigation-item"><a href="{{ url('firefox.browsers.browser-history') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Browser History">{{ ftl('sub-navigation-browser-history') }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% call split (
+      block_class='mzp-l-split-center-on-sm-md',
+      body_class='split-faq-body',
+      image_url='img/firefox/browsers/quantum/browser.jpg',
+      include_highres_image=True,
+      media_after=True
+  ) %}
+  <div class="mzp-c-logo mzp-t-logo-lg mzp-t-product-firefox faq-firefox-logo"></div>
+  <h1 class="mzp-u-title-xl">{{ ftl('firefox-faq')}}</h1>
+  <p>{{ ftl('whether-you-searched-independant') }}</p>
+  {{ download_firefox_thanks() }}
+  {% endcall %}
+
+  <section class="mzp-l-content mzp-t-content-md">
+    <ul class="faq-list">
+      <li>
+        <h2>{{ ftl('what-is-firefox') }}</h2>
+        <p>{{ ftl('the-firefox-browser',
+              url=url('firefox.browsers.index'),
+              url2=url('firefox.products.index')) }}</p>
+      </li>
+      <li>
+        <h2>{{ ftl('how-do-i') }}</h2>
+        <p>{{ ftl('you-can-easily',
+              url=url('firefox.new'),
+              url2=url('firefox.windows'),
+              url3=url('firefox.mac'),
+              url4=url('firefox.linux'),
+              url5=url('firefox.mobile.index')
+              )}}</p>
+      </li>
+      <li>
+        <h2>{{ ftl('is-firefox-free') }}</h2>
+        <p>{{ ftl('yep-the-firefox') }}</p>
+        <small>{{ ftl('related-questions-free') }}</small>
+      </li>
+      <li>
+        <h2>{{ ftl('is-chrome-better') }}</h2>
+        <p>{{ ftl('no-we-dont') }}</p>
+        <p>{{ ftl('see-how-firefox', url=url('firefox.browsers.compare.chrome')) }}</p>
+        <small>{{ ftl('related-questions-better') }}</small>
+      </li>
+      <li>
+        <h2>{{ ftl('is-firefox-safe-download') }}</h2>
+        <p>{{ ftl('protecting-your-privacy', url=url('firefox.new')) }}</p>
+      </li>
+      <li>
+        <h2>{{ ftl('is-firefox-safe') }}</h2>
+        <p>{{ ftl('not-only-is', url=url('firefox.privacy.products')) }}</p>
+        <small>{{ ftl('related-questions-safe') }}</small>
+      </li>
+      <li>
+        <h2>{{ ftl('does-firefox-sell') }}</h2>
+        <p>{{ ftl('nope-never-have', url=url('firefox.privacy.index')) }}</p>
+      </li>
+      <li>
+        <h2>{{ ftl('why-is-firefox') }}</h2>
+        <p>{{ ftl('firefox-isnt-slow') }}</p>
+      </li>
+      <li>
+        <h2>{{ ftl('is-firefox-chromium') }}</h2>
+        <p>{{ ftl('firefox-is-not') }}</p>
+      </li>
+      <li>
+        <h2>{{ ftl('does-firefox-use') }}</h2>
+        <p>{{ ftl('firefoxs-default-search',
+              url='https://support.mozilla.org/kb/change-your-default-search-settings-firefox/?utm_source=www.mozilla.org-firefox-faq&amp;utm_medium=referral&amp;utm_campaign=seo') }}</p>
+      </li>
+      <li>
+        <h2>{{ ftl('does-firefox-have') }}</h2>
+        <p>{{ ftl('firefox-does-not',
+              url='https://fpn.firefox.com/?utm_source=www.mozilla.org-firefox-faq&amp;utm_medium=referral&amp;utm_campaign=seo',
+              url2=url('products.vpn.landing')) }}</p>
+        <small>{{ ftl('related-questions-ip') }}</small>
+      </li>
+      <li>
+        <h2>{{ ftl('who-owns-firefox') }}</h2>
+        <p>{{ ftl('firefox-is-made', url='https://foundation.mozilla.org/?utm_source=www.mozilla.org-firefox-faq&amp;utm_medium=referral&amp;utm_campaign=seo', url2=url('foundation.moco')) }}</p>
+        <small>{{ ftl('related-questions-who') }}</small>
+      </li>
+    </ul>
+    {{ download_firefox_thanks() }}
+  </section>
+
+{% if LANG == 'en-US' %}
+{% include '/firefox/includes/structured-data-firefox-faq.html' %}
+{% endif %}
+{% endblock %}
