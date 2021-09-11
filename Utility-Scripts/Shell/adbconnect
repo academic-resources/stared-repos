@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+adb kill-server
+sleep 2
+adb tcpip 5555
+sleep 2
+ip=`adb shell ip -f inet addr show wlan0 | grep -o 'inet [^/]*' | cut -f2- -d " "` 
+adb connect $ip
+sleep 3
+adb devices

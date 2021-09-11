@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+fn=quotes.txt
+sed -n $(awk "END{ print $RANDOM%NR+1}" $fn)p $fn | cowsay | lolcat
+
+
+
+
+
+
+
