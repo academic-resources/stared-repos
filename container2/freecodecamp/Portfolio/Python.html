@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tools (Python/Maya) Programming</title>
+	<meta name="description" content="Bakari Holmes Tools projects">
+	<link rel="stylesheet" href="nav.css">
+	<link rel="stylesheet" href="portfolio.css">
+
+</head>
+<body id="top">
+
+<div id="wrapper">
+<div id="header">
+<!-- h1 stands for heading 1 -->
+<h1>Bakari Holmes - Tools Programming projects</h1>
+<h2><em> Physicist, Software Developer, Gamer, Teacher, Musician</em></h2>
+<hr>
+</div>
+<!-- Relative Links -->
+<ul id="nav">
+    <li>
+        <a href="index.html">Home/Bio</a>
+    </li>
+
+    <li>
+        <a href="skills.html">Skills</a>
+    </li>
+    <li>
+        <a href="projects.html">Programming Projects</a>
+
+        <ul>
+            <li><a href="games.html">Games I've Worked On</a></li>
+            <li><a href="physics.html">Physics Programming</a></li>
+			<li><a href="graphics.html">Graphics Programming</a></li>
+			<li><a href="javascript.html" target="_blank">JavaScript Programming</a></li>
+			<li><a href="Python.html">Tools (Python/Maya) Programming </a></li>
+            <li><a href="unity.html">Unity/C# Games</a></li>
+            <li><a href="ds.html">Data Structures</a></li>
+            <li><a href="othercpp.html">Other C++ examples</a></li>
+			<li><a href="java.html">Java/Android</a></li>
+			<li><a href="web.html">HTML/CSS</a></li>
+			<li><a href="ios.html">iOS Apps</a></li>
+        </ul>
+
+    </li>
+    <li>
+        <a href="robots.html">Robotics and Engineering</a>
+        <ul>
+            <li><a href="http://www.sjhspltw.org" target="_blank" title="Visit the site for the groundbreaking STEM program Bakari spearheaded">Project Lead the Way (STEM)</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="contact.html">Contact</a>
+
+        <ul>
+            <li><a href="mailto:bholmes@cogswell.edu?Subject=Request%20Information">Software Engineering</a></li>
+            <li><a href="mailto:vocaljazz32@gmail.com?Subject=Request%20Information">Music</a></li>
+			<li><a href="https://sites.google.com/site/sjhspltw1/" target="_blank" title="Visit Bakari's tutoring website">Tutoring</a></li>
+			<li><a href="https://www.linkedin.com/pub/bakari-holmes/22/837/999" target="_blank" title="Visit Bakari's LinkedIn profile">LinkedIn</a></li>
+
+        </ul>
+    </li>
+</ul>
+<div id="content">
+
+<h3>Script for copying keyframes from one rig to another</h3>
+<h3>This is designed to copy an existing animation
+	from one rig to another and make the process easier
+	with a simple UI </h3>
+<h3>Makes use of Python and Maya's DAG</h3>
+<h3>This script should be run from Maya's script console window</h3>
+<pre>
+	<code>
+import maya.cmds as mc
+import functools
+import maya.mel as mm
+import pprint
+
+class AnimCopyWindow(object):
+    #@classmethod
+    def showUI(cls):
+        win = cls()
+        win.create()
+        return win
+    def __init__(self):
+        self.window = "Animation Copy Tool"
+        self.title = "Animation Copier"
+        self.size = (546,350)
+   
+    def pasteTheseKeys(self, *args):
+        self.offsetVal = mc.intFieldGrp(self.int_offset, q=True, value1=True)
+        self.selObj_pasteKeys = mc.ls(sl=True)
+        
+        for objectQuant in self.selObj_pasteKeys:
+            print objectQuant
+            self.ct = mc.currentTime(query = True)
+            self.t = self.ct + self.offsetVal
+            mc.currentTime(self.t)
+           # mc.selectKey(selObj_pasteKeys[objectQuant])
+            mc.pasteKey(time=(self.t,self.t), f=(1.0,1.0), option="merge", copies=1, to=0, fo=0, vo=0)
+
+    def closeBtnCmd(self,*args):
+        mc.deleteUI(self.window,window=True)
+        
+    def create(self):
+        # check to see if window exists already
+        if mc.window(self.window,exists=True): 
+            mc.deleteUI(self.window,window=True)
+            
+        self.window = mc.window(self.window, title=self.title,widthHeight=self.size,menuBar=True)
+        self.copyAnim = mc.window(title="Transfer Animation Tool", backgroundColor=[0.3,0.3,0.3],sizeable=False,resizeToFitChildren=True)
+        #set the layout for UI
+        mc.columnLayout(adjustableColumn=True)
+        self.tx_src = mc.textFieldGrp(label="Source Object", editable=False, text=sel[0])
+        self.int_offset = mc.intFieldGrp(label="Frame Offset Amount", value1=0)
+        #add paste animation button
+        self.btn1 = mc.button(label="PASTE ANIMATION", command=self.pasteTheseKeys, bgc=[0.1,0.1,0.5])
+
+        #add close button window
+        self.btn2 = mc.button(label="CLOSE WINDOW", command=self.closeBtnCmd, bgc=[0.2,0.2,0.2])
+    
+    
+        mc.showWindow()
+
+        #################################
+        #####end of class definition#####
+        #################################
+        
+def AnimationCopyTool_57():
+    def keys_as_dictionary(channel):
+        """return a dictionay of times:values for <channel>"""
+        keys = mc.keyframe(channel, q=True, tc=True) or []
+        values = mc.keyframe(channel, q=True, vc=True) or []
+        return dict(zip(keys, values))
+
+    def channels():
+        """return a dictionary of <plug>:<channel_dict> for each animated plug selected"""
+        keys = mc.keyframe(sl=True, n=True, q=True)
+        result = {}
+
+        for k in keys:
+            plugs = mc.listConnections(k, p=True)[0]
+            result[plugs]= keys_as_dictionary(k)
+        return result
+
+    #store selected object info
+    sel = mc.ls(selection=True)
+
+    if (len(sel) != 1):
+        mm.eval("warning Must select one animated object;")
+
+    else:
+        mc.copyKey()
+        win = AnimCopyWindow()
+        win.create()
+
+        pprint.pprint(channels())
+	</code>
+</pre>
+
+</div>
+
+<div id="footer">
+
+
+<p>Copyright &copy; 2015 Bakari Holmes<br>
+		<a href="index.html">Home</a> |
+		<a href="games.html">Games</a> |
+		<a href="skills.html">Personal Info/Skills</a> |
+		<a href="contact.html">Contact</a> |
+	</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Physics Programming</title>
+	<meta name="description" content="Bakari Holmes physics engine">
+	<link rel="stylesheet" href="nav.css">
+	<link rel="stylesheet" href="portfolio.css">
+
+</head>
+<body id="top">
+
+<div id="wrapper">
+<div id="header">
+<!-- h1 stands for heading 1 -->
+<h1>Bakari Holmes - Physics Programming projects</h1>
+<h2><em> Physicist, Software Developer, Gamer, Teacher, Musician</em></h2>
+<hr>
+</div>
+<!-- Relative Links -->
+<ul id="nav">
+    <li>
+        <a href="index.html">Home/Bio</a>
+    </li>
+
+    <li>
+        <a href="skills.html">Skills</a>
+    </li>
+    <li>
+        <a href="projects.html">Programming Projects</a>
+
+        <ul>
+            <li><a href="games.html">Games I've Worked On</a></li>
+            <li><a href="physics.html">Physics Programming</a></li>
+			<li><a href="graphics.html">Graphics Programming</a></li>
+			<li><a href="javascript.html" target="_blank">JavaScript Programming</a></li>
+			<li><a href="Python.html">Tools (Python/Maya) Programming </a></li>
+            <li><a href="unity.html">Unity/C# Games</a></li>
+            <li><a href="ds.html">Data Structures</a></li>
+            <li><a href="othercpp.html">Other C++ examples</a></li>
+			<li><a href="java.html">Java/Android</a></li>
+			<li><a href="web.html">HTML/CSS</a></li>
+			<li><a href="ios.html">iOS Apps</a></li>
+        </ul>
+
+    </li>
+    <li>
+        <a href="robots.html">Robotics and Engineering</a>
+        <ul>
+            <li><a href="http://www.sjhspltw.org" target="_blank" title="Visit the site for the groundbreaking STEM program Bakari spearheaded">Project Lead the Way (STEM)</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="contact.html">Contact</a>
+
+        <ul>
+            <li><a href="mailto:bholmes@cogswell.edu?Subject=Request%20Information">Software Engineering</a></li>
+            <li><a href="mailto:vocaljazz32@gmail.com?Subject=Request%20Information">Music</a></li>
+			<li><a href="https://sites.google.com/site/sjhspltw1/" target="_blank" title="Visit Bakari's tutoring website">Tutoring</a></li>
+			<li><a href="https://www.linkedin.com/pub/bakari-holmes/22/837/999" target="_blank" title="Visit Bakari's LinkedIn profile">LinkedIn</a></li>
+
+        </ul>
+    </li>
+</ul>
+<div id="content">
+
+<h3>Code samples for Bakari's Physics Simulation (with partners Alec Tyre and Dustin Bayer)</h3>
+<h3>Makes use of the Cyclone Physics Library and SDL for graphics rendering</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rvlavcx7S1w" frameborder="0" allowfullscreen></iframe>
+
+<pre>
+	<code>
+
+// main .cpp
+#include "Game.h"
+#include <thread>
+
+bool alive = true;
+
+void call_from_thread() {
+	while (alive)
+	{
+		std::cout << "Running..." << std::endl;
+	}
+
+}
+
+int main(int argc, char* argv[]) 
+{
+	//Alec was here
+
+	// Create the game object
+	Game* game = new Game();
+
+	std::thread t1(call_from_thread);
+
+	// Initialize and run the game
+	if (game->Init()) {
+		game->Run();
+	}
+
+	// Clean up
+	delete game;
+	alive = false;
+	t1.join();
+	return 0;
+}
+-------------------------------------------------
+// Level.cpp
+#include "Level.h"
+#include <iostream>
+#include <ctime>
+
+
+Level::Level(SDL_Renderer* renderer, int SCREEN_WIDTH, int SCREEN_HEIGHT) : resolver(maxContacts * 8)  {
+
+	this->renderer = renderer;
+	this->SCREEN_WIDTH = SCREEN_WIDTH;
+	this->SCREEN_HEIGHT = SCREEN_HEIGHT;
+
+	SDL_Surface* surface = IMG_Load("Images/background.png");
+	background = SDL_CreateTextureFromSurface(renderer, surface);
+	SDL_FreeSurface(surface);
+
+	rigidballs = std::vector<shared_ptr<RigidBall>>();
+
+	this->random = Random();
+
+	cData.contactArray = contacts;
+
+	//Demo stuff
+	int staticBallCount = 23;
+	float ballSpacer = 40;
+
+	for (int i = 0; i < staticBallCount; i++)
+	{
+		AddStaticBall(new Vector3(random.randomReal(0, SCREEN_WIDTH), random.randomReal(0, SCREEN_HEIGHT),0));
+	}
+}
+
+Level::~Level() {
+
+	SDL_DestroyTexture(background);
+}
+
+
+void Level::Update(float deltaTime, bool mouseDown) {
+
+	KillOutOfBoundsObjects();
+
+	UpdateObjects(deltaTime);
+
+	generateContacts();
+
+	resolver.resolveContacts(
+		cData.contactArray,
+		cData.contactCount,
+		deltaTime);
+
+	if (mouseDown)
+	{
+		AddBall(new Vector3(40, 40, 0), new Vector3(50, 0, 0), new Vector3(0, 30, 0));
+	}
+}
+
+void Level::KillOutOfBoundsObjects() {
+
+	Vector3 position;
+	shared_ptr<RigidBall> object;
+
+	for (int i = 0; i < rigidballs.size(); i++)
+	{
+		object = rigidballs[i];
+		object->body->getPosition(&position );
+
+		if ( position.y > SCREEN_HEIGHT + object->radius )
+		{
+			RemoveBall(object);
+			i--;
+		}
+	}
+}
+
+void Level::UpdateObjects(real deltaTime) {
+
+	for each (shared_ptr<RigidBall> object in rigidballs)
+	{
+		object->body->integrate(0.1);
+		object->calculateInternals();
+	}
+}
+
+void Level::generateContacts() {
+	// Set up the collision data structure
+	cData.reset(maxContacts);
+	cData.friction = (real)0.5;
+	//cData.restitution = (real)0.9;
+	cData.tolerance = (real)0.1;
+
+	shared_ptr<RigidBall> object;
+	shared_ptr<RigidBall> otherObject;
+
+	int numberOfObjects = rigidballs.size();
+
+	for (int i = 0; i < numberOfObjects - 1; i++)
+	{
+		object = rigidballs[i];
+
+		for (int n = i + 1; n < numberOfObjects; n++)
+		{
+			otherObject = rigidballs[n];
+
+			cData.restitution = object->restitution * otherObject->restitution;
+
+			CollisionDetector::sphereAndSphere(*object, *otherObject, &cData);
+		}
+	}
+}
+
+void Level::Render() {
+	SDL_Rect rect;
+	rect.x = 0;
+	rect.y = 0;
+	rect.w = 1280;
+	rect.h = 900;
+	SDL_RenderCopy(renderer, background, 0, &rect);
+
+	RenderObjects();
+}
+
+void Level::RenderObjects() {
+
+	for each (shared_ptr<RigidBall> object in rigidballs)
+	{
+		object->Render();
+	}
+}
+
+void Level::AddBall(Vector3* position, Vector3* velocity, Vector3* acceleration) {
+
+	shared_ptr<RigidBall> newBall(new RigidBall(renderer));
+	
+	//newBall->body->setPosition(*position);
+	//newBall->body->setVelocity(*velocity);
+
+	newBall->body->setPosition(*new Vector3(random.randomReal(0,SCREEN_WIDTH), 0, 0));
+
+	newBall->restitution = random.randomReal(0, 1);
+
+	newBall->body->setMass(random.randomReal(1, 100));
+
+	newBall->body->setAcceleration(*acceleration);
+
+	newBall->radius = random.randomReal(10, 40);
+
+	rigidballs.push_back(newBall);
+}
+
+void Level::AddStaticBall(Vector3* position) {
+
+	shared_ptr<RigidBall> newBall(new RigidBall(renderer));
+
+	newBall->body->setPosition(*position);
+	newBall->body->setMass(REAL_MAX);
+
+	newBall->radius = random.randomReal(10, 40);
+
+	rigidballs.push_back(newBall);
+}
+
+void Level::RemoveBall(shared_ptr<RigidBall> ball) {
+
+	for (vector<shared_ptr<RigidBall>>::iterator i = rigidballs.begin(); i != rigidballs.end(); ++i)
+	{
+		if (*i == ball)
+		{
+			rigidballs.erase(i);
+			break;
+		}
+	}
+}	
+------------------------------------------	
+	
+#ifndef _BAKARIPHYSICSPLUS_CORE_H
+#define _BAKARIPHYSICSPLUS_CORE_H
+
+#include "precision.h"
+
+namespace BakariPhysicsPlus {
+	/**
+	* Holds a vector in 3 dimensions.  Four data members are allocated
+	* to ensure alignment in an array.
+	*/
+	class Vector3
+	{
+	public:
+		real x; // value along the x-axis
+
+		real y; // value along the y-axis
+
+		real z; // value along the z-axis
+
+	private:
+		/** Padding to ensure four word alignment **/
+		real pad;
+		
+	public:
+		/** Default constructor creates a zero vector */
+		Vector3() : x(0), y(0), z(0) {}
+
+		/** The explicit constructor creates a vector with the given components. */
+		Vector3(const real x, const real y, const real z)
+			: x(x), y(y), z(z) {}
+
+		/** Zeroes all the components of a vector */
+		void clear()
+		{
+			x = y = z = 0;
+		}
+
+		/** Flips all the components of the vector */
+		void invert()
+		{
+			x = -x;
+			y = -y;
+			z = -z;
+		}
+
+		/** Gets the magnitude of this vector */
+		real magnitude() const
+		{
+			return sqrtf(x*x + y*y + z*z); // use precision?
+		}
+
+		/** Gets the squared magnitude of this vector */
+
+		real squareMagnitude() const
+		{
+			return x*x + y*y + z*z;
+		}
+
+		/** Turns a non-zero vector into a vector of unit length */
+
+		void normalize()
+		{
+			real l = magnitude();
+			if (l > 0)
+			{
+				(*this) *= ((real)1)/l; // overload operator!!!!
+			}
+		}
+
+		// Multiplies this vector by the given scalar
+		void operator*=(const real value)
+		{
+			x *= value;
+			y *= value;
+			z *= value;
+		}
+
+		// Returns a copy of the vector scaled by the given value
+		Vector3 operator*(const real value) const
+		{
+			return Vector3(x*value, y*value, z*value);
+		}
+
+		// Adds the given vector to this vector
+		void operator+=(const Vector3 &amp;v)
+		{
+			x += v.x;
+			y += v.y;
+			z += v.z;
+		}
+
+		// Returns the value of the given vector added to this
+		Vector3 operator+(const Vector3 &amp;v) const
+		{
+			return Vector3(x+v.x, y+v.y, z+v.z);
+		}
+
+		// Subtracts the given vector from this vector
+		void operator-=(Vector3 &amp;v)
+		{
+			x -= v.x;
+			y -= v.y;
+			z -= v.z;
+		}
+
+		// Returns the value of the given vector subtracted from this
+		Vector3 operator-(const Vector3 &amp;v) const
+		{
+			return Vector3(x-v.x, y-v.y, z-v.z);
+		}
+
+		// Adds the given vector to this, scaled by the given amount
+		void addScaledVector(const Vector3&amp; vector, real scale)
+		{
+			x += vector.x * scale;
+			y += vector.y * scale;
+			z += vector.z * scale;
+		}
+
+		// calculates and returns the component-wise product of this vector
+		// with the given vector
+		Vector3 componentProduct(const Vector3 &amp;vector) const
+		{
+			return Vector3(x*vector.x, y*vector.y, z*vector.z);
+		}
+
+		// Performs a component-wise product with the given vector 
+		// and sets this vector to its result
+		void componentProductUpdate(const Vector3 &amp;vector)
+		{
+			x *= vector.x;
+			y *= vector.y;
+			z *= vector.z;
+		}
+
+		// Calculates and returns the scalar(dot) product of 
+		// this vector with the given vector
+		real scalarProduct(const Vector3 &amp;vector) const
+		{
+			return (x*vector.x + y*vector.y + z*vector.z);
+		}
+
+		// Calculates and returns the scalar(dot) product of 
+		// this vector with the given vector
+		real operator*(const Vector3 &amp;vector) const
+		{
+			return (x*vector.x + y*vector.y + z*vector.z);
+		}
+
+		// Calculates and returns the vector(cross) product of 
+		// this vector with the given vector
+		Vector3 vectorProduct(const Vector3 &amp;vector) const
+		{
+			return Vector3(y*vector.z - z*vector.y, z*vector.x - x*vector.z, 
+				x*vector.y - y*vector.x);
+		}
+
+		// Updates this vector to be the vector product of it's 
+		// current value and the given vector
+		void operator %=(const Vector3 &amp;vector)
+		{
+			*this = vectorProduct(vector);
+		}
+
+		// Calculates and returns the vector product of 
+		// this vector with the given vector
+		Vector3 operator%(const Vector3 &amp;vector) const
+		{
+			return Vector3(y*vector.z - z*vector.y, z*vector.x - x*vector.z, 
+				x*vector.y - y*vector.x);
+		}
+
+		void makeOrthonormalBasis(Vector3 *a, Vector3 *b, Vector3 *c)
+		{
+			a->normalize();
+			(*c) = (*a) % (*b); // Vector (cross) product
+			if (c->squareMagnitude() == 0.0) return; // Generate error?
+			c->normalize();
+			(*b) = (*c) % (*a);
+		}
+
+
+	};
+}
+#endif // !_CORE_H
+
+------------------------------------------
+#ifndef _PARTICLE_H
+#define _PARTICLE_H
+#include "core.h"
+
+/* This file includes definitions for the particle class which can be used in place
+** in place of rigid bodies for simpler simulations.
+*/
+
+
+namespace BakariPhysicsPlus 
+{
+	class Particle
+	{
+	protected:
+		// Holds the linear position of the particle in world space.
+		Vector3 position;
+
+		// Holds the linear velocity of the particle in world space.
+		Vector3 velocity;
+
+		/* Holds the accumulated force to be applied at the next
+		** simulation iteration only.  This value is zeroed at each
+		** integration step. */
+		Vector3 forceAccum;
+
+		/* Holds the acceleration of the particle.  This can be used to set the 
+		** acceleration due to gravity
+		** (it's primary use), or any other constant acceleration.
+		*/
+		Vector3 acceleration;
+
+		/* Holds the amount of damping that is applied to linear motion.
+		** This value is needed due to remove energy due to numerical
+		** instabilities in the processor that performs the calculations.
+		*/
+		real damping;
+
+		/* Holds the inverse of the mass of the particle.  It is more useful
+		** to hold the inverse mass because integration (updating) is simpler,
+		** and because in real-time simulation it is more useful to have objects 
+		** infinite mass (immovable) than zero mass (completely unstable
+		** in numerical simulation.
+		*/
+		real inverseMass;
+
+		
+	public:
+		/* Integrates(updates) the particle forward in time by the given
+		** amount.  This function uses a Newton-Euler integration method, which is
+		** a linear approximation to the correct integral.  For this reason it
+		** may be inaccurate in some cases.
+		*/
+		void integrate(real duration);
+		/*@}*/
+
+
+        /**
+         * @name Accessor Functions for the Particle's State
+         *
+         * These functions provide access to the particle's
+         * characteristics or state.
+         */
+        /*@{*/
+
+        /**
+         * Sets the mass of the particle.
+         *
+         * @param mass The new mass of the body. This may not be zero.
+         * Small masses can produce unstable rigid bodies under
+         * simulation.
+         *
+         * @warning This invalidates internal data for the particle.
+         * Either an integration function, or the calculateInternals
+         * function should be called before trying to get any settings
+         * from the particle.
+         */
+        void setMass(const real mass);
+
+        /**
+         * Gets the mass of the particle.
+         *
+         * @return The current mass of the particle.
+         */
+        real getMass() const;
+
+        /**
+         * Sets the inverse mass of the particle.
+         *
+         * @param inverseMass The new inverse mass of the body. This
+         * may be zero, for a body with infinite mass
+         * (i.e. unmovable).
+         *
+         * @warning This invalidates internal data for the particle.
+         * Either an integration function, or the calculateInternals
+         * function should be called before trying to get any settings
+         * from the particle.
+         */
+        void setInverseMass(const real inverseMass);
+
+        /**
+         * Gets the inverse mass of the particle.
+         *
+         * @return The current inverse mass of the particle.
+         */
+        real getInverseMass() const;
+
+        /**
+         * Returns true if the mass of the particle is not-infinite.
+         */
+        bool hasFiniteMass() const;
+
+        /**
+         * Sets both the damping of the particle.
+         */
+        void setDamping(const real damping);
+
+        /**
+         * Gets the current damping value.
+         */
+        real getDamping() const;
+
+        /**
+         * Sets the position of the particle.
+         *
+         * @param position The new position of the particle.
+         */
+        void setPosition(const Vector3 &amp;position);
+
+        /**
+         * Sets the position of the particle by component.
+         *
+         * @param x The x coordinate of the new position of the rigid
+         * body.
+         *
+         * @param y The y coordinate of the new position of the rigid
+         * body.
+         *
+         * @param z The z coordinate of the new position of the rigid
+         * body.
+         */
+        void setPosition(const real x, const real y, const real z);
+
+        /**
+         * Fills the given vector with the position of the particle.
+         *
+         * @param position A pointer to a vector into which to write
+         * the position.
+         */
+        void getPosition(Vector3 *position) const;
+
+        /**
+         * Gets the position of the particle.
+         *
+         * @return The position of the particle.
+         */
+        Vector3 getPosition() const;
+
+        /**
+         * Sets the velocity of the particle.
+         *
+         * @param velocity The new velocity of the particle.
+         */
+        void setVelocity(const Vector3 &amp;velocity);
+
+        /**
+         * Sets the velocity of the particle by component.
+         *
+         * @param x The x coordinate of the new velocity of the rigid
+         * body.
+         *
+         * @param y The y coordinate of the new velocity of the rigid
+         * body.
+         *
+         * @param z The z coordinate of the new velocity of the rigid
+         * body.
+         */
+        void setVelocity(const real x, const real y, const real z);
+
+        /**
+         * Fills the given vector with the velocity of the particle.
+         *
+         * @param velocity A pointer to a vector into which to write
+         * the velocity. The velocity is given in world local space.
+         */
+        void getVelocity(Vector3 *velocity) const;
+
+        /**
+         * Gets the velocity of the particle.
+         *
+         * @return The velocity of the particle. The velocity is
+         * given in world local space.
+         */
+        Vector3 getVelocity() const;
+
+        /**
+         * Sets the constant acceleration of the particle.
+         *
+         * @param acceleration The new acceleration of the particle.
+         */
+        void setAcceleration(const Vector3 &amp;acceleration);
+
+        /**
+         * Sets the constant acceleration of the particle by component.
+         *
+         * @param x The x coordinate of the new acceleration of the rigid
+         * body.
+         *
+         * @param y The y coordinate of the new acceleration of the rigid
+         * body.
+         *
+         * @param z The z coordinate of the new acceleration of the rigid
+         * body.
+         */
+        void setAcceleration(const real x, const real y, const real z);
+
+        /**
+         * Fills the given vector with the acceleration of the particle.
+         *
+         * @param acceleration A pointer to a vector into which to write
+         * the acceleration. The acceleration is given in world local space.
+         */
+        void getAcceleration(Vector3 *acceleration) const;
+
+        /**
+         * Gets the acceleration of the particle.
+         *
+         * @return The acceleration of the particle. The acceleration is
+         * given in world local space.
+         */
+        Vector3 getAcceleration() const;
+
+        /*@}*/
+
+        /**
+         * @name Force Set-up Functions
+         *
+         * These functions set up forces to apply to the
+         * particle.
+         */
+        /*@{*/
+		
+		/*
+		** Clears the forces applied to the particle.  This will be
+		** called automatically after each integration step.
+		*/
+		void clearAccumulator();
+		/*
+        ** Adds the given force to the particle, to be applied at the
+        ** next iteration only.
+        **
+        ** @param force The force to apply.
+        **/
+        void addForce(const Vector3 &amp;force);
+
+	};
+}
+
+ 
+
+#endif
+
+	</code>
+</pre>
+
+</div>
+
+<div id="footer">
+
+
+<p>Copyright &copy; 2015 Bakari Holmes<br>
+		<a href="index.html">Home</a> |
+		<a href="games.html">Games</a> |
+		<a href="skills.html">Personal Info/Skills</a> |
+		<a href="contact.html">Contact</a> |
+	</p>
+</div>
+</div>
+</body>
+</html>

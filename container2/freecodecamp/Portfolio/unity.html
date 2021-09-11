@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Unity/C# Games</title>
+	<meta name="description" content="Games made in Unity, C#">
+	<link rel="stylesheet" href="nav.css">
+	<link rel="stylesheet" href="portfolio.css">
+
+</head>
+<body id="top">
+
+<div id="wrapper">
+<div id="header">
+<!-- h1 stands for heading 1 -->
+<h1>Bakari Holmes - Unity and C#</h1>
+<h2><strong>Bakari Holmes:</strong><em> Physicist, Software Developer, Gamer, Teacher, Musician</em></h2>
+<hr>
+</div>
+<!-- Relative Links -->
+<ul id="nav">
+    <li>
+        <a href="index.html">Home/Bio</a>
+    </li>
+
+    <li>
+        <a href="skills.html">Skills</a>
+    </li>
+    <li>
+        <a href="projects.html">Programming Projects</a>
+
+        <ul>
+            <li><a href="games.html">Games I've Worked On</a></li>
+            <li><a href="physics.html">Physics Programming</a></li>
+			<li><a href="graphics.html">Graphics Programming</a></li>
+			<li><a href="javascript.html" target="_blank">JavaScript Programming</a></li>
+			<li><a href="Python.html">Tools (Python/Maya) Programming </a></li>
+            <li><a href="unity.html">Unity/C# Games</a></li>
+            <li><a href="ds.html">Data Structures</a></li>
+            <li><a href="othercpp.html">Other C++ examples</a></li>
+			<li><a href="java.html">Java/Android</a></li>
+			<li><a href="web.html">HTML/CSS</a></li>
+			<li><a href="ios.html">iOS Apps</a></li>
+        </ul>
+
+    </li>
+    <li>
+        <a href="robots.html">Robotics and Engineering</a>
+        <ul>
+            <li><a href="http://www.sjhspltw.org" target="_blank" title="Visit the site for the groundbreaking STEM program Bakari spearheaded">Project Lead the Way (STEM)</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="contact.html">Contact</a>
+
+        <ul>
+            <li><a href="mailto:bholmes@cogswell.edu?Subject=Request%20Information">Software Engineering</a></li>
+            <li><a href="mailto:vocaljazz32@gmail.com?Subject=Request%20Information">Music</a></li>
+			<li><a href="https://sites.google.com/site/sjhspltw1/" target="_blank" title="Visit Bakari's tutoring website">Tutoring</a></li>
+			<li><a href="https://www.linkedin.com/pub/bakari-holmes/22/837/999" target="_blank" title="Visit Bakari's LinkedIn profile">LinkedIn</a></li>
+
+        </ul>
+    </li>
+</ul>
+<div id="content">
+<a href="Space_Shooter/Space_Shooter.html" target="_blank" title="Play Space Shooter in the Web Browser">Click here to play Space Shooter</a>
+
+<h3>Code samples for Space Shooter</h3>
+
+<p>Click here for professional Unity/C# <a href="games.html">games I've worked on</a>.</p>
+<pre>
+	<code>
+-----------------------------------------------
+// Player Controller Script
+
+using UnityEngine;
+using System.Collections;
+
+[System.Serializable]
+public class Boundary
+{
+	public float xMin, xMax, zMin, zMax;
+}
+
+public class PlayerController : MonoBehaviour 
+{
+	public float speed;
+	public float tilt;
+	public Boundary boundary;
+
+	public GameObject shot;
+	public Transform shotSpawn;
+	public float fireRate;
+
+	private float nextFire;
+
+	void Update ()
+	{
+		if (Input.GetButton ("Fire1") && Time.time > nextFire) 
+		{
+			nextFire = Time.time + fireRate;
+//			GameObject clone = 
+			Instantiate(shot, shotSpawn.position, shotSpawn.rotation); //as GameObject;
+			audio.Play ();
+		}
+	}
+
+	void FixedUpdate()
+	{
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
+
+		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		rigidbody.velocity = movement * speed;
+
+		rigidbody.position = new Vector3 
+		(
+				Mathf.Clamp (rigidbody.position.x, boundary.xMin, boundary.xMax),
+				0.0f,
+				Mathf.Clamp (rigidbody.position.z, boundary.zMin, boundary.zMax)
+		);
+		rigidbody.rotation = Quaternion.Euler (0.0f, 0.0f, rigidbody.velocity.x * -tilt);
+	}
+}
+-------------------------------------------------------------------
+// Game Controller Script
+
+using UnityEngine;
+using System.Collections;
+
+public class GameController : MonoBehaviour
+{
+	public GameObject hazard;
+	public Vector3 spawnValues;
+	public int hazardCount;
+	public float spawnWait;
+	public float startWait;
+	public float waveWait;
+	public GUIText scoreText;
+	public GUIText restartText;
+	public GUIText gameOverText;
+	
+	private bool gameOver;
+	private bool restart;
+	private int score;
+
+	void Start()
+	{
+		gameOver = false;
+		restart = false;
+		restartText.text = "";
+		gameOverText.text = "";
+		score = 0;
+		UpdateScore ();
+		StartCoroutine (SpawnWaves ());
+	}
+
+	void Update()
+	{
+		if (restart) 
+		{
+			if (Input.GetKeyDown (KeyCode.R))
+			{
+				Application.LoadLevel (Application.loadedLevel);
+			}
+		}
+	}
+
+	IEnumerator SpawnWaves ()
+	{
+		yield return new WaitForSeconds (startWait);
+		while(true)
+		{
+			for(int i = 0; i &lt; hazardCount; i++)
+			{
+				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, 
+					spawnValues.x), spawnValues.y, spawnValues.z);
+				Quaternion spawnRotation = Quaternion.identity;
+				Instantiate (hazard, spawnPosition, spawnRotation);
+				yield return new WaitForSeconds (spawnWait);
+			}
+			yield return new WaitForSeconds (waveWait);
+
+			if (gameOver)
+			{
+				restartText.text = "Press 'R' to Restart";
+				restart = true;
+				break;
+			}
+		}
+	}
+
+	public void AddScore (int newScoreValue)
+	{
+		score += newScoreValue;
+		UpdateScore ();
+	}
+
+	void UpdateScore ()
+	{
+		scoreText.text = "Score: " + score;
+	}
+
+	public void GameOver()
+	{
+		gameOverText.text = "Game Over";
+		gameOver = true;
+	}
+}
+------------------------------------------------------------
+
+	</code>
+</pre>
+
+
+</div>
+
+<div id="footer">
+
+
+<p>Copyright &copy; 2015 Bakari Holmes<br>
+		<a href="index.html">Home</a> |
+		<a href="games.html">Games</a> |
+		<a href="skills.html">Personal Info/Skills</a> |
+		<a href="contact.html">Contact</a> |
+	</p>
+</div>
+</div>
+</body>
+</html>

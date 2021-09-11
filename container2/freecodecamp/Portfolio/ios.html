@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>iOS Apps</title>
+	<meta name="description" content="Bakari Holmes Graphics projects">
+	<link rel="stylesheet" href="nav.css">
+	<link rel="stylesheet" href="portfolio.css">
+
+</head>
+<body id="top">
+
+<div id="wrapper">
+<div id="header">
+<!-- h1 stands for heading 1 -->
+<h1>Bakari Holmes - iOS Programming Projects</h1>
+<h2><em> Physicist, Software Developer, Gamer, Teacher, Musician</em></h2>
+<hr>
+</div>
+<!-- Relative Links -->
+<ul id="nav">
+    <li>
+        <a href="index.html">Home/Bio</a>
+    </li>
+
+    <li>
+        <a href="skills.html">Skills</a>
+    </li>
+    <li>
+        <a href="projects.html">Programming Projects</a>
+
+        <ul>
+            <li><a href="games.html">Games I've Worked On</a></li>
+            <li><a href="physics.html">Physics Programming</a></li>
+			<li><a href="graphics.html">Graphics Programming</a></li>
+			<li><a href="javascript.html" target="_blank">JavaScript Programming</a></li>
+			<li><a href="Python.html">Tools (Python/Maya) Programming </a></li>
+            <li><a href="unity.html">Unity/C# Games</a></li>
+            <li><a href="ds.html">Data Structures</a></li>
+            <li><a href="othercpp.html">Other C++ examples</a></li>
+			<li><a href="java.html">Java/Android</a></li>
+			<li><a href="web.html">HTML/CSS</a></li>
+			<li><a href="ios.html">iOS Apps</a></li>
+        </ul>
+
+    </li>
+    <li>
+        <a href="robots.html">Robotics and Engineering</a>
+        <ul>
+            <li><a href="http://www.sjhspltw.org" target="_blank" title="Visit the site for the groundbreaking STEM program Bakari spearheaded">Project Lead the Way (STEM)</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="contact.html">Contact</a>
+
+        <ul>
+            <li><a href="mailto:bholmes@cogswell.edu?Subject=Request%20Information">Software Engineering</a></li>
+            <li><a href="mailto:vocaljazz32@gmail.com?Subject=Request%20Information">Music</a></li>
+			<li><a href="https://sites.google.com/site/sjhspltw1/" target="_blank" title="Visit Bakari's tutoring website">Tutoring</a></li>
+			<li><a href="https://www.linkedin.com/pub/bakari-holmes/22/837/999" target="_blank" title="Visit Bakari's LinkedIn profile">LinkedIn</a></li>
+
+        </ul>
+    </li>
+</ul>
+<div id="content">
+
+<h3>Code samples for Bakari's iOS tic-tac-toe trivia app</h3>
+
+
+<pre>
+	<code>
+//
+//  QuizViewController.m
+//  Quiz
+//
+//  Created by Bakari Holmes on 6/12/14.
+//  Copyright (c) 2014 Bakari Holmes. All rights reserved.
+//
+
+#import "QuizViewController.h"
+
+@interface QuizViewController ()
+
+@property (nonatomic) int currentQuestionIndex;
+
+@property (nonatomic, copy) NSArray *questions;
+@property (nonatomic, copy) NSArray *answers;
+
+@property (nonatomic, weak) IBOutlet UILabel *questionLabel;
+@property (nonatomic, weak) IBOutlet UILabel *answerLabel;
+
+@end
+
+@implementation QuizViewController
+
+- (instancetype) initWithNibName:(NSString *)nibNameOrNil
+                          bundle:(NSBundle *)nibBundleOrNil
+{
+    // Call the init method imp[lemented by the superclass
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        // Create two arrays filled with questions and answers
+        // and make the pointers point to them
+        
+        self.questions = @[@"From what is cognac made?",
+                           @"What is 7+7?",
+                           @"What is the capital of Vermont?",
+						   @"What is Ayinde's middle name?", 
+						   @"What is Kai's favorite food?", 
+						   @"What is a dung beetle's favorite food?", 
+						   @"Do clowns spray water in your face?"];
+        
+        self.answers = @[@"Grapes",
+                         @"14",
+                         @"Montpelier", @"James", @"Bacon", @"Dung", @"Who knows? I've never met a clown!"];
+    }
+    
+    // Return the address of the new object
+    return self;
+}
+
+- (IBAction)showQuestion:(id)sender
+{
+    // Step to the next question
+    self.currentQuestionIndex++;
+    
+    // Am I past the last question?
+    if (self.currentQuestionIndex == [self.questions count]) {
+        
+        // Go back to the first question
+        self.currentQuestionIndex = 0;
+    }
+    
+    // Get the string at that index in the questions array
+    NSString *question = self.questions[self.currentQuestionIndex];
+    
+    // Display the string in the question label
+    self.questionLabel.text = question;
+    
+    // Reset the answer label
+    self.answerLabel.text = @"???";
+}
+
+- (IBAction)showAnswer:(id)sender
+{
+    // What is the answer to the current question?
+    NSString *answer = self.answers[self.currentQuestionIndex];
+    
+    // Display it in the answer label
+    self.answerLabel.text = answer;
+}
+
+@end
+------------------------------------------------------------------------
+//
+//  BAHViewController.m
+//  TicTacTotalDomination
+//
+//  Created by Bakari Holmes on 8/27/14.
+//  Copyright (c) 2014 Bakari Holmes. All rights reserved.
+//
+
+#import "BAHViewController.h"
+
+@interface BAHViewController ()
+@property (strong, nonatomic) NSMutableArray *collision;
+@end
+
+@implementation BAHViewController
+
+/* -(int)preventCollision
+{
+    int collisionState = _collision[_state];
+    if (_collision[_state] == 0)
+    {
+        _collision[_state] = 1;
+    }
+    
+    return collisionState;
+} */
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    _ImageList = [@[_Image1, _Image2, _Image3, _Image4, _Image5, _Image6, _Image7, _Image8, _Image9 ]mutableCopy];
+    _ButtonList = [@[_Button1, _Button2, _Button3, _Button4, _Button5, _Button6, _Button7, _Button8, _Button9 ]mutableCopy];
+    
+   // _collision = [[NSMutableArray alloc] init
+    
+    _player = 1;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)buttonClick:(id)sender {
+    for (int i = 0; i < _ButtonList.count; i++)
+    {
+        id button = _ButtonList[i];
+        
+        if (button == sender)
+        {
+            //UIImageView *imagechar = _ImageList[i];
+            //imagechar.image = [UIImage imageNamed:@"X"];
+            _state = i;
+           /* if (!preventCollision())
+            {
+                [self performSegueWithIdentifier:@"quiz_segue" sender:self];
+            } */
+            [self performSegueWithIdentifier:@"quiz_segue" sender:self];
+            break;
+        }
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"quiz_segue"])
+    {
+        _QuizView = [segue destinationViewController];
+        _QuizView.delegate = self;
+    }
+}
+
+- (void)placeO
+{
+    UIImageView *imagechar = _ImageList[_state];
+    imagechar.image = [UIImage imageNamed:@"O"];
+    self.player = 2;
+   
+}
+
+- (void)placeX
+{
+    UIImageView *imagechar = _ImageList[_state];
+    imagechar.image = [UIImage imageNamed:@"X"];
+    self.player = 1;
+}
+
+- (int)getPlayer
+{
+     NSLog(@"Blah blah");
+    return _player;
+}
+@end
+
+
+	</code>
+</pre>
+
+</div>
+
+<div id="footer">
+
+
+<p>Copyright &copy; 2015 Bakari Holmes<br>
+		<a href="index.html">Home</a> |
+		<a href="games.html">Games</a> |
+		<a href="skills.html">Personal Info/Skills</a> |
+		<a href="contact.html">Contact</a> |
+	</p>
+</div>
+</div>
+</body>
+</html>

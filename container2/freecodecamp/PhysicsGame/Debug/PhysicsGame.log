@@ -1,0 +1,30 @@
+﻿Build started 2/12/2016 10:01:05 PM.
+     1>Project "C:\Users\bholmes\Documents\Visual Studio 2013\Projects\PhysicsProject\PhysicsGame\PhysicsGame.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\bholmes\Documents\Visual Studio 2013\Projects\PhysicsProject\Debug\PhysicsGame.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\bholmes\Documents\Visual Studio 2013\Projects\PhysicsProject\Debug\PhysicsGame.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\bholmes\Documents\Visual Studio 2013\Projects\PhysicsProject\Debug\PhysicsGame.lib" /MACHINE:X86 Debug\Ball.obj
+         Debug\DrawableObject.obj
+         Debug\Game.obj
+         Debug\Level.obj
+         Debug\main.obj
+         Debug\body.obj
+         Debug\collide_coarse.obj
+         Debug\collide_fine.obj
+         Debug\contacts.obj
+         Debug\core.obj
+         Debug\fgen.obj
+         Debug\joints.obj
+         Debug\particle.obj
+         Debug\pcontacts.obj
+         Debug\pfgen.obj
+         Debug\plinks.obj
+         Debug\pworld.obj
+         Debug\random.obj
+         Debug\world.obj
+         Debug\RigidBall.obj
+         Debug\Timer.obj
+         PhysicsGame.vcxproj -> C:\Users\bholmes\Documents\Visual Studio 2013\Projects\PhysicsProject\Debug\PhysicsGame.exe
+     1>Done Building Project "C:\Users\bholmes\Documents\Visual Studio 2013\Projects\PhysicsProject\PhysicsGame\PhysicsGame.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.64

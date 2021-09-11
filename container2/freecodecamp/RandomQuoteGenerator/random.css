@@ -1,0 +1,61 @@
+body{
+  background-color:black;
+  margin-bottom:5%;
+  margin-top:1%;
+}
+
+h1 {
+  color:silver;
+  font-family:"times new roman";
+  font-size:50px;
+}
+
+p {
+  color:silver;
+  font-family:"times new roman";
+  font-style:italic;
+  font-size:20px;
+}
+img {
+  padding:10px;
+}
+
+.btn {
+  border-radius:10%;
+  background-color:silver;
+  border-color:white;
+  border-style:solid;
+  font-family:"times new roman";
+}
+
+.btnTwt {
+  border-radius:10%;
+  background-color:silver;
+  border-color:white;
+  border-style:solid;
+  font-family:"times new roman";
+  padding:5px;
+}
+
+.quotes {
+  background-color:silver;
+  width:33%;
+  margin-right:auto;
+  margin-left:auto;
+  border-color:white;
+  border-style:solid;
+  border-radius:5px;
+  margin-top:15px;
+  margin-bottom:10px;
+  padding:10px;
+  height:auto;
+}
+
+.quote  {
+  font-size:30px;
+}
+
+.author {
+  font-size:20px;
+  font-style:italic;
+}

@@ -1,0 +1,17 @@
+﻿Build started 6/22/2014 6:51:12 PM.
+     1>Project "C:\Users\bholmes\Documents\Visual Studio 2012\Projects\dungeon_game\dungeon_game\dungeon_game.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt DGame.cpp main_dungeon1.cpp
+         DGame.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         main_dungeon1.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\bholmes\Documents\Visual Studio 2012\Projects\dungeon_game\Debug\dungeon_game.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\bholmes\Documents\Visual Studio 2012\Projects\dungeon_game\Debug\dungeon_game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\bholmes\Documents\Visual Studio 2012\Projects\dungeon_game\Debug\dungeon_game.lib" /MACHINE:X86 Debug\DGame.obj
+         Debug\main_dungeon1.obj
+         dungeon_game.vcxproj -> C:\Users\bholmes\Documents\Visual Studio 2012\Projects\dungeon_game\Debug\dungeon_game.exe
+     1>Done Building Project "C:\Users\bholmes\Documents\Visual Studio 2012\Projects\dungeon_game\dungeon_game\dungeon_game.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.00
