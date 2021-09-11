@@ -3,17 +3,17 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // Create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
-    window.Mozilla.run = function(callback) {
+    window.Mozilla.run = function (callback) {
         var isModernBrowser = window.site && window.site.isModernBrowser;
 
-        if (isModernBrowser && typeof callback === 'function') {
+        if (isModernBrowser && typeof callback === "function") {
             callback();
         }
     };

@@ -1,14 +1,17 @@
 # Using Plank on Multiple Monitors
+
 I have a [new machine setup script](../new-machine-setup)
 
 In there, I borrowed some code from [notanimposter](https://gist.github.com/notanimposter/952ec7aefad1825ee9a30cbbbc4a6453) and made some modifications to auto-detect the second monitor:
 
 ## Create a new shell script
+
 ```bash
 touch plank-create && chmod +x plank-create && pico plank-create
 ```
 
 Script content:
+
 ```bash
 #!/bin/bash
 
@@ -41,6 +44,7 @@ killall plank
 
 - Save it
 - Run it:
+
 ```bash
 ./plank-create
 ```

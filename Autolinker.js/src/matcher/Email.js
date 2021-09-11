@@ -7,8 +7,7 @@
  *
  * See this class's superclass ({@link Autolinker.matcher.Matcher}) for more details.
  */
-Autolinker.matcher.Email = Autolinker.Util.extend( Autolinker.matcher.Matcher, {
-
+Autolinker.matcher.Email = Autolinker.Util.extend(Autolinker.matcher.Matcher, {
 	/**
 	 * The regular expression to match email addresses. Example match:
 	 *
@@ -17,45 +16,57 @@ Autolinker.matcher.Email = Autolinker.Util.extend( Autolinker.matcher.Matcher, {
 	 * @private
 	 * @property {RegExp} matcherRegex
 	 */
-	matcherRegex : (function() {
+	matcherRegex: (function () {
 		var alphaNumericChars = Autolinker.RegexLib.alphaNumericCharsStr,
-			specialCharacters = '!#$%&\'*+\\-\\/=?^_`{|}~',
+			specialCharacters = "!#$%&'*+\\-\\/=?^_`{|}~",
 			restrictedSpecialCharacters = '\\s"(),:;<>@\\[\\]',
 			validCharacters = alphaNumericChars + specialCharacters,
 			validRestrictedCharacters = validCharacters + restrictedSpecialCharacters,
-		    emailRegex = new RegExp( '(?:[' + validCharacters + '](?:[' + validCharacters + ']|\\.(?!\\.|@))*|\\"[' + validRestrictedCharacters + '.]+\\")@'),
+			emailRegex = new RegExp(
+				"(?:[" +
+					validCharacters +
+					"](?:[" +
+					validCharacters +
+					']|\\.(?!\\.|@))*|\\"[' +
+					validRestrictedCharacters +
+					'.]+\\")@'
+			),
 			getDomainNameStr = Autolinker.RegexLib.getDomainNameStr,
-			tldRegex = Autolinker.tldRegex;  // match our known top level domains (TLDs)
+			tldRegex = Autolinker.tldRegex; // match our known top level domains (TLDs)
 
-		return new RegExp( [
-			emailRegex.source,
-			getDomainNameStr(1),
-			'\\.', tldRegex.source   // '.com', '.net', etc
-		].join( "" ), 'gi' );
-	} )(),
-
+		return new RegExp(
+			[
+				emailRegex.source,
+				getDomainNameStr(1),
+				"\\.",
+				tldRegex.source, // '.com', '.net', etc
+			].join(""),
+			"gi"
+		);
+	})(),
 
 	/**
 	 * @inheritdoc
 	 */
-	parseMatches : function( text ) {
+	parseMatches: function (text) {
 		var matcherRegex = this.matcherRegex,
-		    tagBuilder = this.tagBuilder,
-		    matches = [],
-		    match;
+			tagBuilder = this.tagBuilder,
+			matches = [],
+			match;
 
-		while( ( match = matcherRegex.exec( text ) ) !== null ) {
-			var matchedText = match[ 0 ];
+		while ((match = matcherRegex.exec(text)) !== null) {
+			var matchedText = match[0];
 
-			matches.push( new Autolinker.match.Email( {
-				tagBuilder  : tagBuilder,
-				matchedText : matchedText,
-				offset      : match.index,
-				email       : matchedText
-			} ) );
+			matches.push(
+				new Autolinker.match.Email({
+					tagBuilder: tagBuilder,
+					matchedText: matchedText,
+					offset: match.index,
+					email: matchedText,
+				})
+			);
 		}
 
 		return matches;
-	}
-
-} );
+	},
+});

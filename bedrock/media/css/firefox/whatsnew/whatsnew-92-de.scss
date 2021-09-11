@@ -2,14 +2,13 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/notification-bar';
-@import '../../../protocol/css/templates/multi-column';
-@import 'includes/header';
-
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/notification-bar";
+@import "../../../protocol/css/templates/multi-column";
+@import "includes/header";
 
 //* -------------------------------------------------------------------------- */
 // Main content
@@ -25,7 +24,7 @@ $image-path: '/media/protocol/img';
 
 .wnp-main-title {
     @include text-title-md;
-    color: get-theme('title-text-color');
+    color: get-theme("title-text-color");
 }
 
 .wnp-main-tagline {
@@ -52,7 +51,6 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Utilities (link to release notes)
 .c-utilities {
@@ -61,7 +59,6 @@ $image-path: '/media/protocol/img';
     padding-bottom: $layout-xl;
     text-align: center;
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Footer overrides
@@ -89,27 +86,25 @@ $image-path: '/media/protocol/img';
 
 .c-footer-list-social li {
     a.twitter {
-        background-image: url('/media/protocol/img/icons/social/twitter/black.svg');
+        background-image: url("/media/protocol/img/icons/social/twitter/black.svg");
     }
 
     a.instagram {
-        background-image: url('/media/protocol/img/icons/social/instagram/black.svg');
+        background-image: url("/media/protocol/img/icons/social/instagram/black.svg");
     }
 
     a.youtube {
-        background-image: url('/media/protocol/img/icons/social/youtube/black.svg');
+        background-image: url("/media/protocol/img/icons/social/youtube/black.svg");
     }
 }
 
 .c-footer-primary-logo a {
-    background-image: url('/media/protocol/img/logos/mozilla/logo-word-hor.svg');
+    background-image: url("/media/protocol/img/logos/mozilla/logo-word-hor.svg");
 }
-
 
 //* -------------------------------------------------------------------------- */
 // For dark mode
 @media (prefers-color-scheme: dark) {
-
     html,
     .content-wrapper {
         background: $color-dark-gray-60;
@@ -120,7 +115,7 @@ $image-path: '/media/protocol/img';
     .wnp-footer-title,
     .mzp-c-card-title,
     .mzp-c-card-desc {
-        color: get-theme('title-text-color-inverse');
+        color: get-theme("title-text-color-inverse");
     }
 
     .c-utilities {
@@ -150,19 +145,19 @@ $image-path: '/media/protocol/img';
 
     .c-footer-list-social li {
         a.twitter {
-            background-image: url('/media/protocol/img/icons/social/twitter/white.svg');
+            background-image: url("/media/protocol/img/icons/social/twitter/white.svg");
         }
 
         a.instagram {
-            background-image: url('/media/protocol/img/icons/social/instagram/white.svg');
+            background-image: url("/media/protocol/img/icons/social/instagram/white.svg");
         }
 
         a.youtube {
-            background-image: url('/media/protocol/img/icons/social/youtube/white.svg');
+            background-image: url("/media/protocol/img/icons/social/youtube/white.svg");
         }
     }
 
     .c-footer-primary-logo a {
-        background-image: url('/media/protocol/img/logos/mozilla/logo-word-hor-white.svg');
+        background-image: url("/media/protocol/img/logos/mozilla/logo-word-hor-white.svg");
     }
 }

@@ -9,30 +9,21 @@
     "Firefox Developer Edition",
     "Firefox Developer Edition Browser"
   ],
-  "offers":
-  {
+  "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
-  "OperatingSystem": [
-    "macOS",
-    "Windows",
-    "Linux",
-    "iOS",
-    "Android"
-  ],
+  "OperatingSystem": ["macOS", "Windows", "Linux", "iOS", "Android"],
   "applicationCategory": "Browser",
   "applicationSuite": "Firefox",
-  "author":
-  {
+  "author": {
     "@type": "Organization",
     "@id": "{{ structured_data_id('organization') }}",
     "name": "Mozilla Corporation"
   },
   "releaseNotes": "{% filter absolute_url %}{{ url('firefox.notes', channel='developer') }}{% endfilter %}",
-  "isPartOf":
-  {
+  "isPartOf": {
     "@id": "{{ structured_data_id('firefoxbrowser') }}",
     "url": "{% filter absolute_url %}{{ url('firefox.new') }}{% endfilter %}",
     "name": "Firefox Browser"

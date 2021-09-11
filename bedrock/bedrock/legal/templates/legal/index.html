@@ -1,20 +1,14 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
-
-{% extends "base-article.html" %}
-
-{% block page_title %}{{ ftl('legal-legal') }}{% endblock %}
-
-{% block page_css %}
-  {{ css_bundle('legal') }}
-{% endblock %}
-
-{% block body_class %}mzp-t-mozilla{% endblock %}
-
-{% block side_nav %}
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. -#} {% extends
+"base-article.html" %} {% block page_title %}{{ ftl('legal-legal') }}{% endblock
+%} {% block page_css %} {{ css_bundle('legal') }} {% endblock %} {% block
+body_class %}mzp-t-mozilla{% endblock %} {% block side_nav %}
 <nav class="mzp-c-sidemenu">
-  <section class="mzp-c-sidemenu-summary mzp-js-toggle" aria-controls="sidebar-menu">
+  <section
+    class="mzp-c-sidemenu-summary mzp-js-toggle"
+    aria-controls="sidebar-menu"
+  >
     <h3 class="mzp-c-sidemenu-label">{{ self.page_title() }}</h3>
     <ul>
       <li class="mzp-is-current">{{ self.page_title() }}</li>
@@ -23,15 +17,23 @@
 
   <section class="mzp-c-sidemenu-main" id="sidebar-menu">
     <ul>
-      <li class="mzp-is-current"><a href="{{ url('legal.index') }}">{{ self.page_title() }}</a></li>
-      <li>
-        <a href="{{ url('mozorg.contribute') }}">{{ ftl('legal-get-involved') }}</a>
+      <li class="mzp-is-current">
+        <a href="{{ url('legal.index') }}">{{ self.page_title() }}</a>
       </li>
       <li>
-        <a href="{{ url('legal.fraud-report') }} ">{{ ftl('legal-protect-the-fox') }}</a>
+        <a href="{{ url('mozorg.contribute') }}"
+          >{{ ftl('legal-get-involved') }}</a
+        >
       </li>
       <li>
-        <a href="{{ url('legal.report-infringement') }}">{{ ftl('legal-takedown-requests') }}</a>
+        <a href="{{ url('legal.fraud-report') }} "
+          >{{ ftl('legal-protect-the-fox') }}</a
+        >
+      </li>
+      <li>
+        <a href="{{ url('legal.report-infringement') }}"
+          >{{ ftl('legal-takedown-requests') }}</a
+        >
       </li>
       {% if LANG == 'de' %}
       <li>
@@ -41,9 +43,7 @@
     </ul>
   </section>
 </nav>
-{% endblock %}
-
-{% block article %}
+{% endblock %} {% block article %}
 <h1 class="mzp-c-article-title">{{ self.page_title() }}</h1>
 <p>{{ ftl('legal-special-thanks-to-all-of-you') }}</p>
 
@@ -51,13 +51,19 @@
 
 <ul class="mzp-u-list-styled">
   <li>
-    <a href="{{ url('legal.terms.mozilla') }}">{{ ftl('legal-our-websites') }}</a>
+    <a href="{{ url('legal.terms.mozilla') }}"
+      >{{ ftl('legal-our-websites') }}</a
+    >
   </li>
   <li>
-    <a href="{{ url('legal.terms.services') }}">{{ ftl('legal-firefox-services') }}</a>
+    <a href="{{ url('legal.terms.services') }}"
+      >{{ ftl('legal-firefox-services') }}</a
+    >
   </li>
   <li>
-    <a href="{{ url('legal.terms.betterweb') }}">{{ ftl('legal-firefox-better-web') }}</a>
+    <a href="{{ url('legal.terms.betterweb') }}"
+      >{{ ftl('legal-firefox-better-web') }}</a
+    >
   </li>
   <li>
     <a href="https://webmaker.org/#/legal">{{ ftl('legal-webmaker') }}</a>
@@ -67,10 +73,14 @@
 <h2>{{ ftl('legal-privacy-trademarks') }}</h2>
 <ul class="mzp-u-list-styled">
   <li>
-    <a href="{{ url('privacy') }}">{{ ftl('legal-privacy-notices-and-policy') }}</a>
+    <a href="{{ url('privacy') }}"
+      >{{ ftl('legal-privacy-notices-and-policy') }}</a
+    >
   </li>
   <li>
-    <a href="{{ url('foundation.trademarks.policy' ) }}">{{ _('Mozilla Trademark Guidelines') }}</a>
+    <a href="{{ url('foundation.trademarks.policy' ) }}"
+      >{{ _('Mozilla Trademark Guidelines') }}</a
+    >
   </li>
 </ul>
 
@@ -80,31 +90,23 @@
     <a href="{{ url('legal.terms.firefox') }}">{{ ftl('legal-firefox') }}</a>
   </li>
   <li>
-    <a href="{{ url('legal.terms.thunderbird') }}">{{ ftl('legal-thunderbird') }}</a>
+    <a href="{{ url('legal.terms.thunderbird') }}"
+      >{{ ftl('legal-thunderbird') }}</a
+    >
   </li>
 </ul>
-{% endblock %}
-
-{% block email_form %}
+{% endblock %} {% block email_form %}
 <aside class="mzp-l-content">
   <div class="mzp-c-newsletter">
     <div class="mzp-c-newsletter-image">
       {{ high_res_img('img/home/2018/newsletter-graphic.png', {'alt': ''}) }}
     </div>
     <div class="newsletter-content">
-      {% if LANG.startswith('en-') %}
-      {{ email_newsletter_form(
-            title='Love the Web?',
-            desc='Get the Mozilla newsletter and help us keep it open and free.') }}
-      {% else %}
-      {{ email_newsletter_form() }}
-      {% endif %}
+      {% if LANG.startswith('en-') %} {{ email_newsletter_form( title='Love the
+      Web?', desc='Get the Mozilla newsletter and help us keep it open and
+      free.') }} {% else %} {{ email_newsletter_form() }} {% endif %}
     </div>
   </div>
 </aside>
-{% endblock %}
-
-{% block site_js %}
-  {{ super() }}
-  {{ js_bundle('legal') }}
-{% endblock %}
+{% endblock %} {% block site_js %} {{ super() }} {{ js_bundle('legal') }} {%
+endblock %}

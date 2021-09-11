@@ -2,16 +2,16 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/includes/fonts/metropolis';
-@import '../../../protocol/css/components/billboard';
-@import '../../../protocol/css/components/call-out';
-@import '../../../protocol/css/components/modal';
-@import '../../../protocol/css/components/newsletter-form';
-@import '../../../protocol/css/templates/card-layout';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/includes/fonts/metropolis";
+@import "../../../protocol/css/components/billboard";
+@import "../../../protocol/css/components/call-out";
+@import "../../../protocol/css/components/modal";
+@import "../../../protocol/css/components/newsletter-form";
+@import "../../../protocol/css/templates/card-layout";
 
 .main-page-heading {
     @include visually-hidden;
@@ -20,7 +20,6 @@ $image-path: '/media/protocol/img';
 .mozilla-content {
     margin-top: $spacing-lg;
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Primary CTA (page top)
@@ -86,7 +85,7 @@ h4 {
 
 @media #{$mq-lg} {
     .c-primary-cta {
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
         position: relative;
 
         .c-primary-cta-wrapper {
@@ -100,18 +99,20 @@ h4 {
     }
 
     .download-firefox-primary-cta {
-        background-image: url('/media/img/home/2018/browser.png'), url('/media/img/home/2018/bg-primary.svg');
+        background-image: url("/media/img/home/2018/browser.png"),
+            url("/media/img/home/2018/bg-primary.svg");
         background-size: 400px 278px, auto;
         background-position: calc(50vw + 34px) 60px, calc(50vw - 41px) -78px;
         background-repeat: no-repeat;
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/home/2018/browser-high-res.png'), url('/media/img/home/2018/bg-primary.svg');
+            background-image: url("/media/img/home/2018/browser-high-res.png"),
+                url("/media/img/home/2018/bg-primary.svg");
         }
     }
 
     .fxaccount-primary-cta {
-        @include at2x('/media/img/home/2018/home.jpg', 815px, 362px);
+        @include at2x("/media/img/home/2018/home.jpg", 815px, 362px);
         background-position: 50vw 0;
         background-repeat: no-repeat;
     }
@@ -139,7 +140,6 @@ h4 {
     }
 }
 
-
 /* -------------------------------------------------------------------------- */
 // Custom card styles for lazy-loaded images.
 
@@ -153,7 +153,6 @@ h4 {
         opacity: 0;
     }
 }
-
 
 /* -------------------------------------------------------------------------- */
 // Pocket highlights section.
@@ -188,7 +187,6 @@ h4 {
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Secondary Download CTA (page bottom)
 
@@ -206,7 +204,11 @@ h4 {
 }
 
 .c-secondary-cta-title {
-    @include at2x('#{$image-path}/logos/firefox/browser/logo-sm.png', 40px, 40px);
+    @include at2x(
+        "#{$image-path}/logos/firefox/browser/logo-sm.png",
+        40px,
+        40px
+    );
     @include text-title-md;
     background-position: center 35px;
     background-repeat: no-repeat;
@@ -221,8 +223,9 @@ h4 {
 
 @media #{$mq-lg} {
     .c-secondary-cta {
-        @include bidi(((text-align, left, right),));
-        background-image: url('/media/img/home/2018/shield.svg'), url('/media/img/home/2018/bg-secondary.svg');
+        @include bidi(((text-align, left, right)));
+        background-image: url("/media/img/home/2018/shield.svg"),
+            url("/media/img/home/2018/bg-secondary.svg");
         background-position: calc(50vw + 100px) 120px, 50vw 0;
         background-repeat: no-repeat;
         padding: $layout-xs 0 $layout-sm 0;
@@ -242,11 +245,8 @@ h4 {
     }
 }
 
-
-
 //* -------------------------------------------------------------------------- */
 // Secondary FxA CTA (page bottom)
-
 
 .fxaccount-secondary-cta.mzp-t-dark {
     background-color: $color-ink-80;
@@ -254,7 +254,7 @@ h4 {
 
 .fxaccount-secondary-cta.mzp-t-product-firefox {
     .mzp-c-call-out-content {
-        @include at2x('#{$image-path}/logos/firefox/logo-md.png', 64px, 64px);
+        @include at2x("#{$image-path}/logos/firefox/logo-md.png", 64px, 64px);
     }
 
     .mzp-c-call-out-title {
@@ -283,7 +283,7 @@ h4 {
         height: 100%;
         left: 0;
         position: absolute;
-        top:0;
+        top: 0;
         width: 100%;
     }
 }

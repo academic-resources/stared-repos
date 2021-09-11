@@ -5,6 +5,7 @@ There's a lot of custom cursors for Linux-based distros on sites like [Opendeskt
 The following instructions are for distros using Gnome desktop.
 
 1. First, make sure you've extracted the theme and inside the theme-name folder, a **cursor.theme** file exists, in the following format:
+
 ```text
 [Icon Theme]
 Name=nameoftheme
@@ -13,11 +14,13 @@ Name=nameoftheme
 2. Then, put the theme somewhere, I added `themename` to `~/.local/share/icons`
 
 3. As sudo or root, run the following (adjust path/filename of **themename** to suit):
+
 ```bash
 update-alternatives --install /usr/share/icons/default/index.theme x-cursor-theme /home/angela/.local/share/icons/themename/cursor.theme 10
 ```
 
 4. Run update-alternatives again, to show a list of available cursor themes:
+
 ```bash
 update-alternatives --config x-cursor-theme
 ```

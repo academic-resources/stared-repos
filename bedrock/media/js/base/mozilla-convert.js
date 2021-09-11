@@ -3,16 +3,16 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // Create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
     var Convert = {};
 
-    Convert.onLoaded = function(callback) {
+    Convert.onLoaded = function (callback) {
         var timeout;
         var pollRetry = 0;
 
@@ -26,7 +26,7 @@ if (typeof window.Mozilla === 'undefined') {
         function checkHasLoaded() {
             if (window.convert) {
                 clearTimeout(timeout);
-                window.convert.$(document).ready(function() {
+                window.convert.$(document).ready(function () {
                     callback(window.convert);
                 });
             } else {
@@ -43,18 +43,23 @@ if (typeof window.Mozilla === 'undefined') {
         checkHasLoaded();
     };
 
-    Convert.getCurrentExperiment = function(convert) {
+    Convert.getCurrentExperiment = function (convert) {
         /**
          * The following code relies on an object constructed by
          * a third-party, so let's use a safety net.
          */
         try {
-            var refObject = convert['data']['experiments'];
+            var refObject = convert["data"]["experiments"];
             var key;
 
             // Get the variation key
-            for (key in convert['currentData']['experiments']) {
-                if (!Object.prototype.hasOwnProperty.call(convert['currentData']['experiments'], key)) {
+            for (key in convert["currentData"]["experiments"]) {
+                if (
+                    !Object.prototype.hasOwnProperty.call(
+                        convert["currentData"]["experiments"],
+                        key
+                    )
+                ) {
                     continue;
                 }
             }
@@ -64,31 +69,41 @@ if (typeof window.Mozilla === 'undefined') {
              * Then get the experiment name and variation name.
              */
             if (key) {
-                var currentExperiment = convert['currentData']['experiments'][key];
-                var curExperimentName = refObject[key] && refObject[key].n ? refObject[key].n : null;
-                var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : null;
+                var currentExperiment =
+                    convert["currentData"]["experiments"][key];
+                var curExperimentName =
+                    refObject[key] && refObject[key].n
+                        ? refObject[key].n
+                        : null;
+                var curVariant = currentExperiment["variation_name"]
+                    ? currentExperiment["variation_name"]
+                    : null;
 
                 if (curExperimentName && curVariant) {
-                    var reg = new RegExp('^[0-9]+$');
+                    var reg = new RegExp("^[0-9]+$");
 
                     var data = {
-                        experimentName: curExperimentName.replace('Test #', ''),
-                        experimentVariation: curVariant.replace('Var #', '')
+                        experimentName: curExperimentName.replace("Test #", ""),
+                        experimentVariation: curVariant.replace("Var #", ""),
                     };
 
-                    if (reg.test(data.experimentName) && reg.test(data.experimentVariation)) {
+                    if (
+                        reg.test(data.experimentName) &&
+                        reg.test(data.experimentVariation)
+                    ) {
                         return data;
                     }
 
-                    throw new Error('Mozilla.Convert.getCurrentExperiment: data was malformed');
+                    throw new Error(
+                        "Mozilla.Convert.getCurrentExperiment: data was malformed"
+                    );
                 }
             }
 
             return false;
-
-        } catch(e) {
+        } catch (e) {
             // log errors thrown in the console to make debugging easier.
-            if ('console' in window && typeof console.error === 'function') {
+            if ("console" in window && typeof console.error === "function") {
                 console.error(e);
             }
             return false;
@@ -96,5 +111,4 @@ if (typeof window.Mozilla === 'undefined') {
     };
 
     window.Mozilla.Convert = Convert;
-
 })();

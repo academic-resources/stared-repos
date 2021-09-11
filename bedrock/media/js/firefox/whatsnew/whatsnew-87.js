@@ -7,28 +7,34 @@
 
 // YouTube API hook has to be in global scope
 function onYouTubeIframeAPIReady() {
-    'use strict';
+    "use strict";
 
     // Play the video only once the API is ready.
     if (Mozilla.pipVideoPlay.videoId) {
-        Mozilla.pipVideoPlay(Mozilla.pipVideoPlay.playerId, Mozilla.pipVideoPlay.videoId, Mozilla.pipVideoPlay.videoTitle);
+        Mozilla.pipVideoPlay(
+            Mozilla.pipVideoPlay.playerId,
+            Mozilla.pipVideoPlay.videoId,
+            Mozilla.pipVideoPlay.videoTitle
+        );
     }
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
-    var src = 'https://www.youtube.com/iframe_api';
+    var src = "https://www.youtube.com/iframe_api";
 
     function loadScript() {
-        var tag = document.createElement('script');
+        var tag = document.createElement("script");
         tag.src = src;
-        var firstScriptTag = document.getElementsByTagName('script')[0];
+        var firstScriptTag = document.getElementsByTagName("script")[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     }
 
     function isScriptLoaded() {
-        return document.querySelector('script[src="' + src + '"]') ? true : false;
+        return document.querySelector('script[src="' + src + '"]')
+            ? true
+            : false;
     }
 
     function playVideo(playerId, videoId, videoTitle) {
@@ -41,9 +47,9 @@ function onYouTubeIframeAPIReady() {
                 rel: 0, // do not show related videos on end.
             },
             events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
+                onReady: onPlayerReady,
+                onStateChange: onPlayerStateChange,
+            },
         });
 
         function onPlayerReady(event) {
@@ -53,23 +59,23 @@ function onYouTubeIframeAPIReady() {
         function onPlayerStateChange(event) {
             var state;
 
-            switch(event.data) {
-            case YT.PlayerState.PLAYING:
-                state = 'video play';
-                break;
-            case YT.PlayerState.PAUSED:
-                state = 'video paused';
-                break;
-            case YT.PlayerState.ENDED:
-                state = 'video complete';
-                break;
+            switch (event.data) {
+                case YT.PlayerState.PLAYING:
+                    state = "video play";
+                    break;
+                case YT.PlayerState.PAUSED:
+                    state = "video paused";
+                    break;
+                case YT.PlayerState.ENDED:
+                    state = "video complete";
+                    break;
             }
 
             if (state) {
                 window.dataLayer.push({
-                    'event': 'video-interaction',
-                    'videoTitle': videoTitle,
-                    'interaction': state
+                    event: "video-interaction",
+                    videoTitle: videoTitle,
+                    interaction: state,
                 });
             }
         }
@@ -85,26 +91,36 @@ function onYouTubeIframeAPIReady() {
     }
 
     function init() {
-        var videoLinks = document.querySelectorAll('.js-video-play');
-        var tryButton = document.getElementById('try-button');
+        var videoLinks = document.querySelectorAll(".js-video-play");
+        var tryButton = document.getElementById("try-button");
 
-        tryButton.addEventListener('click', function(e) {
-            Mozilla.pipVideoPlay.playerId = 'player1';
-            Mozilla.pipVideoPlay.videoId = tryButton.getAttribute('data-id');
-            Mozilla.pipVideoPlay.videoTitle = tryButton.getAttribute('data-video-title');
+        tryButton.addEventListener("click", function (e) {
+            Mozilla.pipVideoPlay.playerId = "player1";
+            Mozilla.pipVideoPlay.videoId = tryButton.getAttribute("data-id");
+            Mozilla.pipVideoPlay.videoTitle =
+                tryButton.getAttribute("data-video-title");
             e.preventDefault();
-            this.setAttribute('disabled', '');
-            initVideoPlayer(Mozilla.pipVideoPlay.playerId, Mozilla.pipVideoPlay.videoId, Mozilla.pipVideoPlay.videoTitle);
+            this.setAttribute("disabled", "");
+            initVideoPlayer(
+                Mozilla.pipVideoPlay.playerId,
+                Mozilla.pipVideoPlay.videoId,
+                Mozilla.pipVideoPlay.videoTitle
+            );
         });
 
         for (var i = 0; i < videoLinks.length; i++) {
-            videoLinks[i].setAttribute('role', 'button');
-            videoLinks[i].addEventListener('click', function(e) {
-                Mozilla.pipVideoPlay.playerId = this.getAttribute('id');
-                Mozilla.pipVideoPlay.videoId = this.getAttribute('data-id');
-                Mozilla.pipVideoPlay.videoTitle = this.getAttribute('data-video-title');
+            videoLinks[i].setAttribute("role", "button");
+            videoLinks[i].addEventListener("click", function (e) {
+                Mozilla.pipVideoPlay.playerId = this.getAttribute("id");
+                Mozilla.pipVideoPlay.videoId = this.getAttribute("data-id");
+                Mozilla.pipVideoPlay.videoTitle =
+                    this.getAttribute("data-video-title");
                 e.preventDefault();
-                initVideoPlayer(Mozilla.pipVideoPlay.playerId, Mozilla.pipVideoPlay.videoId, Mozilla.pipVideoPlay.videoTitle);
+                initVideoPlayer(
+                    Mozilla.pipVideoPlay.playerId,
+                    Mozilla.pipVideoPlay.videoId,
+                    Mozilla.pipVideoPlay.videoTitle
+                );
             });
         }
     }

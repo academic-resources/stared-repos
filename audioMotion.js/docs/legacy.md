@@ -22,7 +22,7 @@ Playlists themselves are also plain text files, containing one song per line. Fi
 The [Extended M3U](https://en.wikipedia.org/wiki/M3U#Extended_M3U) #EXTINF directive is also supported to provide track information (artist and song name).
 
 You can use a music player software that supports M3U playlists, like [foobar2000](https://www.foobar2000.org/) or [VLC](https://www.videolan.org/vlc/), to arrange your songs more easily and generate the playlist.
-On foobar2000, as of version 1.4.1, EXTM3U support can be enabled via *Preferences* > *Advanced* > *Tools* > *Write EXTM3U playlists*.
+On foobar2000, as of version 1.4.1, EXTM3U support can be enabled via _Preferences_ > _Advanced_ > _Tools_ > _Write EXTM3U playlists_.
 
 Make sure playlist entries do not contain absolute paths or drive letters - all paths should be relative to the location of the playlist file itself.
 And remember all files must be located below your mapped "music" folder so audioMotion can read them.

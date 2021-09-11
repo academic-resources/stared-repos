@@ -4,9 +4,9 @@
 
 // eslint-disable-next-line
 
-(function(){
-    'use strict';
-    var backLink = document.getElementById('go-back');
+(function () {
+    "use strict";
+    var backLink = document.getElementById("go-back");
 
     // Issue 9642
     if (!backLink) {
@@ -15,10 +15,10 @@
 
     // Hides back button if there is no previous page to go back to.
     if (window.history.length > 1) {
-        backLink.classList.remove('hide-back');
+        backLink.classList.remove("hide-back");
     }
 
-    backLink.addEventListener('click', function(){
+    backLink.addEventListener("click", function () {
         window.history.back();
     });
-}());
+})();

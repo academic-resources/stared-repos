@@ -2,21 +2,19 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../../protocol/css/includes/lib';
-@import '../../../../protocol/css/components/emphasis-box';
-@import '../../../../protocol/css/components/notification-bar';
-@import '../../../../protocol/css/components/zap';
-@import '../../../../protocol/css/templates/card-layout';
-
+@import "../../../../protocol/css/includes/lib";
+@import "../../../../protocol/css/components/emphasis-box";
+@import "../../../../protocol/css/components/notification-bar";
+@import "../../../../protocol/css/components/zap";
+@import "../../../../protocol/css/templates/card-layout";
 
 // --------------------------------------------------------------------------
 // Protocol over-rides
 // https://github.com/mozilla/protocol/issues/345
 // https://github.com/mozilla/protocol/issues/536
-
 
 // xs
 $v-grid-xs: $layout-md;
@@ -85,10 +83,9 @@ main {
 
     .mzp-c-card {
         @media #{$mq-sm} {
-            @include bidi((
-                (margin-left, 0, $h-grid-xs),
-                (margin-right, $h-grid-xs, 0),
-            ));
+            @include bidi(
+                ((margin-left, 0, $h-grid-xs), (margin-right, $h-grid-xs, 0))
+            );
             width: calc(50% - (#{$h-grid-xs} / 2));
 
             &:nth-child(even) {
@@ -98,10 +95,9 @@ main {
         }
 
         @media #{$mq-md} {
-            @include bidi((
-                (margin-left, 0, $h-grid-md),
-                (margin-right, $h-grid-md, 0),
-            ));
+            @include bidi(
+                ((margin-left, 0, $h-grid-md), (margin-right, $h-grid-md, 0))
+            );
             width: calc(50% - (#{$h-grid-md} / 2));
         }
 
@@ -109,14 +105,16 @@ main {
             width: calc(33.3% - (#{$h-grid-lg} - (#{$h-grid-lg} / 3)));
 
             &:nth-child(even) {
-                @include bidi((
-                    (margin-left, 0, $h-grid-lg),
-                    (margin-right, $h-grid-lg, 0),
-                ));
+                @include bidi(
+                    (
+                        (margin-left, 0, $h-grid-lg),
+                        (margin-right, $h-grid-lg, 0)
+                    )
+                );
             }
 
             &:nth-child(3n) {
-                @include bidi(((margin-right, 0, margin-left, 0),));
+                @include bidi(((margin-right, 0, margin-left, 0)));
             }
         }
     }
@@ -127,13 +125,16 @@ main {
     display: none;
 }
 
-
 // --------------------------------------------------------------------------
 // logo
 
 .c-logo {
-    @include at2x('/media/protocol/img/logos/firefox/browser/logo-sm.png', auto, 64px);
-    @include bidi(((background-position, top left, top right),));
+    @include at2x(
+        "/media/protocol/img/logos/firefox/browser/logo-sm.png",
+        auto,
+        64px
+    );
+    @include bidi(((background-position, top left, top right)));
     @include image-replaced;
     background-repeat: no-repeat;
     display: block;
@@ -173,7 +174,6 @@ main {
         margin-bottom: 0;
     }
 }
-
 
 // --------------------------------------------------------------------------
 

@@ -2,12 +2,12 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/modal';
-@import '../../protocol/css/components/inline-list';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/modal";
+@import "../../protocol/css/components/inline-list";
 
 //* -------------------------------------------------------------------------- */
 // Smooth Scroll
@@ -47,21 +47,22 @@ html {
     text-align: center;
 
     @media #{$mq-md} {
-        @include bidi((
-            (float, right, left),
-            (text-align, left, right),
-        ));
+        @include bidi(((float, right, left), (text-align, left, right)));
         margin: 0;
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Page hero
 
 .mzp-c-hero {
     .welcome-page4 & {
-        background: $color-orange-70 radial-gradient(circle at 60% 100%, $color-yellow-50 5%, $color-orange-70 94%);
+        background: $color-orange-70
+            radial-gradient(
+                circle at 60% 100%,
+                $color-yellow-50 5%,
+                $color-orange-70 94%
+            );
     }
 
     .welcome-page9 & {
@@ -141,7 +142,7 @@ html {
 
     .welcome-page8 & {
         strong {
-            @include zap('/media/protocol/img/zaps/zap-10.svg');
+            @include zap("/media/protocol/img/zaps/zap-10.svg");
         }
     }
 
@@ -228,11 +229,13 @@ html {
     }
 
     &.t-adjacent-image {
-        @include bidi((
-            (padding-left, $layout-xl, 0),
-            (padding-right, 0, $layout-xl),
-            (text-align, left, right),
-        ));
+        @include bidi(
+            (
+                (padding-left, $layout-xl, 0),
+                (padding-right, 0, $layout-xl),
+                (text-align, left, right)
+            )
+        );
         position: relative;
 
         & + & {
@@ -241,10 +244,7 @@ html {
         }
 
         .c-picto-block-image {
-            @include bidi((
-                (left, 0, auto),
-                (right, auto, 0)
-            ));
+            @include bidi(((left, 0, auto), (right, auto, 0)));
             display: block;
             margin: 0;
             max-width: $layout-md;
@@ -300,7 +300,6 @@ html {
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Dark theme
 
@@ -313,7 +312,6 @@ html {
         color: $color-white;
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 //  Modal
@@ -342,7 +340,7 @@ html {
         @include image-replaced;
         background-position: center;
         background-repeat: no-repeat;
-        content: '';
+        content: "";
         height: $layout-lg;
         left: 50%;
         margin-left: -($layout-lg/2);
@@ -351,11 +349,19 @@ html {
         width: $layout-lg;
 
         .welcome-page5 & {
-            @include at2x('/media/protocol/img/logos/firefox/lockwise/logo-lg.png', auto, 100%);
+            @include at2x(
+                "/media/protocol/img/logos/firefox/lockwise/logo-lg.png",
+                auto,
+                100%
+            );
         }
 
         .welcome-page6 & {
-            @include at2x('/media/protocol/img/logos/firefox/browser/logo-lg.png', auto, 100%);
+            @include at2x(
+                "/media/protocol/img/logos/firefox/browser/logo-lg.png",
+                auto,
+                100%
+            );
         }
     }
 }
@@ -409,7 +415,6 @@ html {
     .mzp-c-modal-window {
         padding: $layout-xs;
     }
-
 }
 
 @media #{$mq-md} {
@@ -423,7 +428,6 @@ html {
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 //  Send to Device overrides

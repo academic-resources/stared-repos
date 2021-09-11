@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - 'master'
+      - "master"
     paths:
-      - 'archivy/**'
-      - '.github/workflows/build-docker-on-push-master.yml'
+      - "archivy/**"
+      - ".github/workflows/build-docker-on-push-master.yml"
 
 jobs:
   dockerBuildPush:

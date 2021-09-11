@@ -5,33 +5,34 @@
  Portions based on http://blog.gospodarets.com/native_smooth_scrolling/
 */
 
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-Mozilla.smoothScroll = (function() {
-    'use strict';
+Mozilla.smoothScroll = (function () {
+    "use strict";
 
     var _smoothScroll;
 
-    var _init = function(unitTest) {
+    var _init = function (unitTest) {
         var hasSmoothScroll;
 
         // try to use native smooth scrolling
         if (unitTest) {
-            hasSmoothScroll = (unitTest === 'native') ? true : false;
+            hasSmoothScroll = unitTest === "native" ? true : false;
         } else {
-            hasSmoothScroll = 'scrollBehavior' in document.documentElement.style;
+            hasSmoothScroll =
+                "scrollBehavior" in document.documentElement.style;
         }
 
         // use native smooth scrolling
         if (hasSmoothScroll) {
-            _smoothScroll = function(opts) {
+            _smoothScroll = function (opts) {
                 window.scrollTo(opts);
             };
-        // default to regular ol' jump scrolling
+            // default to regular ol' jump scrolling
         } else {
-            _smoothScroll = function(opts) {
+            _smoothScroll = function (opts) {
                 window.scrollTo(opts.top, opts.left);
             };
         }
@@ -45,16 +46,16 @@ Mozilla.smoothScroll = (function() {
 
     At least one of the two axes (top, left) should be specified.
     */
-    return function(userOpts) {
+    return function (userOpts) {
         // set up defaults
         var opts = {
-            behavior: userOpts.behavior || 'smooth',
+            behavior: userOpts.behavior || "smooth",
             top: userOpts.top || 0,
-            left: userOpts.left || 0
+            left: userOpts.left || 0,
         };
 
         // lazy load behavior detection
-        if (typeof _smoothScroll !== 'function' || userOpts.unitTest) {
+        if (typeof _smoothScroll !== "function" || userOpts.unitTest) {
             _init(userOpts.unitTest);
         }
 

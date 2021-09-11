@@ -2,15 +2,15 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/feature-card';
-@import '../../../protocol/css/components/picto';
-@import '../../../protocol/css/components/section-heading';
-@import '../../../protocol/css/components/split';
-@import '../../../protocol/css/templates/multi-column';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/feature-card";
+@import "../../../protocol/css/components/picto";
+@import "../../../protocol/css/components/section-heading";
+@import "../../../protocol/css/components/split";
+@import "../../../protocol/css/templates/multi-column";
 
 .c-hero {
     .c-hero-icon {

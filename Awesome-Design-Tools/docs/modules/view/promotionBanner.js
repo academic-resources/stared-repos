@@ -1,14 +1,18 @@
 const PromotionBanner = (modifier) => `
-    <a class="promotion-banner ${modifier.className}" href="${modifier.link.href}">
+    <a class="promotion-banner ${modifier.className}" href="${
+  modifier.link.href
+}">
         <div class="promotion-banner__logo ${modifier.logo}">
             ${
-               modifier.hasImage ? `
+              modifier.hasImage
+                ? `
                     <img src="https://flawlessapp.io/images/designtools/porkbun/porkbun-logo.png"
                         srcset="https://flawlessapp.io/images/designtools/porkbun/porkbun-logo@2x.png 2x,
                         https://flawlessapp.io/images/designtools/porkbun/porkbun-logo@3x.png 3x"
                         class="porkbun-logo"
                     >
-               ` : ``
+               `
+                : ``
             }
         </div>
         <div class="promotion-banner__main">
@@ -26,15 +30,19 @@ const PromotionBanner = (modifier) => `
 `;
 
 const createSponsorsBanner = ({ document }, modifier, bannerParents) => {
-    const banner = document.createElement('div');
-    banner.classList.add('promotion-banner-wrapper');
-    banner.innerHTML = PromotionBanner(modifier);
+  const banner = document.createElement("div");
+  banner.classList.add("promotion-banner-wrapper");
+  banner.innerHTML = PromotionBanner(modifier);
 
-    try {
-        bannerParents.map(parent => document.querySelector(parent) && document.querySelector(parent).appendChild(banner.cloneNode(true)));
-    } catch(err) {
-        console.log(err);
-    } 
-}
+  try {
+    bannerParents.map(
+      (parent) =>
+        document.querySelector(parent) &&
+        document.querySelector(parent).appendChild(banner.cloneNode(true))
+    );
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 module.exports = createSponsorsBanner;

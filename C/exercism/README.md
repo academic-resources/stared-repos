@@ -2,12 +2,12 @@
 
 This directory contains some sample solutions for **exercism.io**
 
-### Overview 
+### Overview
 
 In this directory you will find (in the right order):
-* hello-world
-* isogram
-* acronym
-* word-count
-* rna-transcription
 
+- hello-world
+- isogram
+- acronym
+- word-count
+- rna-transcription

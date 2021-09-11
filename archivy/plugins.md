@@ -2,9 +2,7 @@
 
 Plugins are a newly introduced method to add extensions to the archivy cli and web interface. It relies on the extremely useful [click-plugins](https://github.com/click-contrib/click-plugins) package that is loaded through pip and the [click-web](https://github.com/click-contrib/click-plugins) which has been modified and whose can be found in `archivy/click_web/`, some of the tests, templates and static files.
 
-
 To help you understand the way the plugin system works, we're going to build our own plugin that allows users to sync content from `pocket`. We'll even deploy it to Pypi so that other people can install it.
-
 
 Prerequisites: A python and pip installation with archivy.
 
@@ -86,7 +84,6 @@ The code below does a few things:
 - We create a new command from that group, what's important here is the `with app.app_context` part. We need to run our code inside the archivy `app_context` to be able to call some of the archivy methods. If you call archivy methods in your plugins, it might fail if you don't include this part.
 - Then we just have our command code.
 
-
 ```python
 import click
 from archivy.extensions import get_db
@@ -105,7 +102,6 @@ def auth(api_key):
 		# ...
 ```
 
-
 We also added some other commands, but we'll skip them for brevity and you can check out the source code [here](https://github.com/archivy/archivy_pocket).
 
 Now you just need to do `pip install .` in the main directory and you'll have access to the commands. Check it out by running `archivy --help`.
@@ -117,7 +113,6 @@ Now you just need to do `pip install .` in the main directory and you'll have ac
 This is a short overview. Check out [this website](https://packaging.python.org/) for more info.
 
 This section is inspired by [this](https://packaging.python.org/tutorials/packaging-projects/#installing-your-newly-uploaded-package).
-
 
 Make sure the required utilities are installed:
 
@@ -133,7 +128,6 @@ python3 setup.py sdist bdist_wheel
 
 Now you need to create an account on [Pypi](https://pypi.org). Then go [here](https://pypi.org/manage/account/#api-tokens) and create a new API token; don’t limit its scope to a particular project, since you are creating a new project.
 
-
 Once you've saved your token, install `twine`, the program that will take care of the upload:
 
 ```python
@@ -145,4 +139,3 @@ And you can finally upload your code! The username you should enter is `__token_
 ```python
 python3 -m twine upload dist/*
 ```
-

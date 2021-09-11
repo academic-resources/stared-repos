@@ -5,11 +5,8 @@
   "url": "https://support.mozilla.org/{{ LANG }}/kb/get-started-firefox-lite",
   "name": "Firefox Lite",
   "image": "{% filter absolute_url %}{{ static('protocol/img/logos/firefox/browser/logo-lg-high-res.png') }}{% endfilter %}",
-  "sameAs": [
-    "{{ settings.GOOGLE_PLAY_FIREFOX_LITE_LINK }}"
-  ],
-  "offers":
-  {
+  "sameAs": ["{{ settings.GOOGLE_PLAY_FIREFOX_LITE_LINK }}"],
+  "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
@@ -17,19 +14,16 @@
   "OperatingSystem": "Android",
   "applicationCategory": "Browser",
   "applicationSuite": "Firefox",
-  "author":
-  {
+  "author": {
     "@type": "Organization",
     "@id": "{{ structured_data_id('organization') }}",
     "name": "Mozilla Corporation"
   },
-  "softwareHelp":
-  {
+  "softwareHelp": {
     "@type": "Webpage",
     "url": "https://support.mozilla.org/{{ LANG }}/products/firefox-lite"
   },
-  "isPartOf":
-  {
+  "isPartOf": {
     "@id": "{{ structured_data_id('firefoxbrowser') }}",
     "url": "{% filter absolute_url %}{{ url('firefox.new') }}{% endfilter %}",
     "name": "Firefox Browser"

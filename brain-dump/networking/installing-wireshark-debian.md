@@ -5,11 +5,13 @@ apt install wireshark
 ```
 
 You shouldn't run Wireshark as root or sudo, so give your user elevate permissions to Wireshark, by adding them to the `wireshark` group (some feature components of Wireshark require elevation)
+
 ```bash
 usermod -a -G wireshark angela
 ```
 
 Adjust `dumpcap` permissions, so your user (`wireshark` group members) have capability to capture packets on your network card
+
 ```bash
 chgrp wireshark /usr/bin/dumpcap
 chmod 750 /usr/bin/dumpcap

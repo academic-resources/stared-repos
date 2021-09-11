@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const can = document.getElementById("mycanvas");
   const dimension = 500;
   const two_pi_radians = 2 * Math.PI;

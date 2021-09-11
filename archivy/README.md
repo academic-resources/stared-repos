@@ -1,6 +1,5 @@
 ![logo](docs/img/logo.png)
 
-
 # Archivy
 
 Archivy is a self-hostable knowledge repository that allows you to preserve content in your own personal, searchable and extensible wiki.
@@ -12,11 +11,10 @@ Features:
 - Authentication for hosting the service on a server
 - Plugin system to publish and write extensions to archivy
 - [Git integration](https://github.com/archivy/archivy-git)
-- Everything is a file! For ease of access and editing, all the content is stored in extended markdown files with yaml front matter. This format supports footnotes, LaTeX math rendering, syntax highlighting and more. 
-- Powerful and advanced search. 
+- Everything is a file! For ease of access and editing, all the content is stored in extended markdown files with yaml front matter. This format supports footnotes, LaTeX math rendering, syntax highlighting and more.
+- Powerful and advanced search.
 - Image upload
 - Backend API for flexibility and user enhancements.
-
 
 [demo video](https://www.uzpg.me/assets/images/archivy.mov)
 
@@ -28,7 +26,6 @@ Upcoming:
 - Multi User System with permission setup.
 
 ## Quickstart
-
 
 Install archivy with `pip install archivy`. Other installations methods are listed [here](https://archivy.github.io/install), including Docker.
 
@@ -50,6 +47,6 @@ See the [official docs](https://archivy.github.io) for information on other inst
 
 Archivy is dedicated to building **open and quality knowledge base software** through collaboration and community discussion.
 
-To get news and updates on Archivy and its development, you can [watch the archivy repository](https://github.com/archivy/archivy) or follow [@uzpg_ on Twitter](https://twitter.com/uzpg_).
+To get news and updates on Archivy and its development, you can [watch the archivy repository](https://github.com/archivy/archivy) or follow [@uzpg\_ on Twitter](https://twitter.com/uzpg_).
 
 You can interact with us through the [issue board](https://github.com/archivy/archivy/issues) and the more casual [discord server](https://discord.gg/uQsqyxB).

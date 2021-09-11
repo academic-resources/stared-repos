@@ -1,11 +1,14 @@
 # Wireshark an Android Device
+
 Running a tcpdump with Wireshark and Android is dead simple and requires no apps, aside from Wireshark and ADB / Android Debug Bridge.
 
 This assumes the following:
+
 - ADB is installed
 - Wireshark is installed
 
 Setup:
+
 1. Connect the Android device via USB
 2. Run `adb devices` in your PC's terminal
 3. Open Wireshark
@@ -20,6 +23,7 @@ Double-click the selection, or click the shark fin at the top of the window to s
 Easy.
 
 When you're done, kill the ADB server:
+
 ```bash
 adb kill-server
 ```

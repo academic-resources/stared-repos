@@ -2,16 +2,15 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/split';
-@import 'includes/engage';
-@import 'includes/features';
-@import 'includes/gallery-grid';
-@import 'includes/highlights';
-@import 'includes/intro';
-@import 'includes/newsletter';
-@import 'includes/performance';
-
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/split";
+@import "includes/engage";
+@import "includes/features";
+@import "includes/gallery-grid";
+@import "includes/highlights";
+@import "includes/intro";
+@import "includes/newsletter";
+@import "includes/performance";
 
 //*------------------------------------------------------------------*/
 // Title and subtitles for entire page
@@ -42,7 +41,6 @@
 
 @media #{$mq-md} {
     .c-subtitle {
-
         .t-features & {
             margin-bottom: $layout-xl;
 
@@ -58,7 +56,6 @@
 
 .t-highlights,
 .t-features {
-
     &.mzp-l-content {
         padding-top: $layout-md;
         padding-bottom: $layout-sm;

@@ -7,12 +7,14 @@
 1. Star this repo 😉
 1. Go to your repository
 1. Add the following section to your **README.md** file, you can give whatever title you want. Just make sure that you use `<!-- BLOG-POST-LIST:START --><!-- BLOG-POST-LIST:END -->` in your readme. The workflow will replace this comment with the actual blog post list:
+
    ```markdown
    # Blog posts
 
    <!-- BLOG-POST-LIST:START -->
    <!-- BLOG-POST-LIST:END -->
    ```
+
 1. Create a folder named `.github` and create a `workflows` folder inside it, if it doesn't exist.
 1. Create a new file named `blog-post-workflow.yml` with the following contents inside the workflows folder:
 
@@ -77,13 +79,16 @@ The following configuration allows you to show your latest StackOverflow activit
 
 1. Follow the steps mentioned in the [how to use](#how-to-use) section.
 1. Add the following section to your **README.md** file, you can give whatever title you want. Just make sure that you use `<!-- STACKOVERFLOW:START --><!-- STACKOVERFLOW:END -->` in your readme. The workflow will replace this comment with the actual StackOverflow activity:
+
    ```markdown
    # StackOverflow Activity
 
    <!-- STACKOVERFLOW:START -->
    <!-- STACKOVERFLOW:END -->
    ```
+
 1. Create `stack-overflow-workflow.yml` in your `workflows` folder with the following contents, replace **4214976** with your StackOverflow [user ID](https://meta.stackexchange.com/questions/98771/what-is-my-user-id/111130#111130):
+
    ```yaml
    name: Latest stack overflow activity
    on:

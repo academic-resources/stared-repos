@@ -2,13 +2,12 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/split';
-@import '../../protocol/css/components/logos/wordmark';
-@import '../../protocol/css/components/logos/wordmark-product-firefox';
-
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/split";
+@import "../../protocol/css/components/logos/wordmark";
+@import "../../protocol/css/components/logos/wordmark-product-firefox";
 
 .mzp-c-split {
     overflow-x: hidden;
@@ -16,7 +15,6 @@ $image-path: '/media/protocol/img';
 }
 
 .mzp-c-split-container {
-
     @media #{$mq-lg} {
         box-sizing: content-box;
     }
@@ -34,16 +32,15 @@ $image-path: '/media/protocol/img';
     position: relative;
     z-index: 1;
 
-
     @media #{$mq-lg} {
         &:before {
-            background-image: url('/media/img/firefox/switch/bg.svg');
+            background-image: url("/media/img/firefox/switch/bg.svg");
             background-position: 300px bottom 100px left;
             background-size: auto 100%;
             background-repeat: no-repeat;
             bottom: 0;
             top: -160px;
-            content: '';
+            content: "";
             display: block;
             left: -50px;
             right: 0;
@@ -84,7 +81,7 @@ $image-path: '/media/protocol/img';
         @include font-size(42px);
         align-items: center;
         background-color: $color-violet-50;
-        background-image: url('/media/img/firefox/switch/one.svg');
+        background-image: url("/media/img/firefox/switch/one.svg");
         background-size: 1.8em auto;
         background-position: center center;
         background-repeat: no-repeat;
@@ -101,11 +98,11 @@ $image-path: '/media/protocol/img';
     }
 
     &:nth-child(2):before {
-        background-image: url('/media/img/firefox/switch/two.svg');
+        background-image: url("/media/img/firefox/switch/two.svg");
     }
 
     &:nth-child(3):before {
-        background-image: url('/media/img/firefox/switch/three.svg');
+        background-image: url("/media/img/firefox/switch/three.svg");
     }
 }
 
@@ -124,16 +121,16 @@ $image-path: '/media/protocol/img';
 }
 
 .c-share-options li a {
-    @include bidi(((padding-left, 24px + $spacing-sm, padding-right, 0),));
+    @include bidi(((padding-left, 24px + $spacing-sm, padding-right, 0)));
     display: inline-block;
     position: relative;
 
     &:before {
-        @include bidi(((left, 0, right, auto),));
-        background-image: url('/media/img/logos/social/social-icon-sprite-dark.svg');
+        @include bidi(((left, 0, right, auto)));
+        background-image: url("/media/img/logos/social/social-icon-sprite-dark.svg");
         background-size: 24px auto;
         background-repeat: no-repeat;
-        content: '';
+        content: "";
         display: inline-block;
         height: 22px;
         width: 24px;
@@ -152,13 +149,14 @@ $image-path: '/media/protocol/img';
         }
 
         @media #{$mq-md} {
-            @include bidi(((padding-left, 18px + $spacing-sm, padding-right, 0),));
+            @include bidi(
+                ((padding-left, 18px + $spacing-sm, padding-right, 0))
+            );
 
             &:before {
                 background-position: 0 -81px;
                 width: 18px;
             }
-
         }
     }
 
@@ -168,7 +166,6 @@ $image-path: '/media/protocol/img';
 }
 
 @media #{$mq-md} {
-
     @supports (display: grid) {
         .c-share-options {
             margin: $layout-sm 0;

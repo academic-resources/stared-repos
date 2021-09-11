@@ -3,15 +3,14 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function(Mozilla) {
-    'use strict';
+(function (Mozilla) {
+    "use strict";
 
     // initialize send to device widget
     var form = new Mozilla.SendToDevice();
     form.init();
-
 })(window.Mozilla);

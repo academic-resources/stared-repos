@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../../protocol/css/includes/lib';
+@import "../../../protocol/css/includes/lib";
 
 .c-footer {
     @include font-base;
@@ -75,11 +75,11 @@
         }
 
         .c-footer-primary-logo a {
-            background-image: url('#{$image-path}/logos/mozilla/logo-word-hor-white.svg');
+            background-image: url("#{$image-path}/logos/mozilla/logo-word-hor-white.svg");
         }
 
         .c-footer-list-social li a {
-            opacity: .75;
+            opacity: 0.75;
 
             &:hover,
             &:focus,
@@ -88,20 +88,19 @@
             }
 
             &.twitter {
-                background-image: url('#{$image-path}/icons/social/twitter/white.svg');
+                background-image: url("#{$image-path}/icons/social/twitter/white.svg");
             }
 
             &.instagram {
-                background-image: url('#{$image-path}/icons/social/instagram/white.svg');
+                background-image: url("#{$image-path}/icons/social/instagram/white.svg");
             }
 
             &.youtube {
-                background-image: url('#{$image-path}/icons/social/youtube/white.svg');
+                background-image: url("#{$image-path}/icons/social/youtube/white.svg");
             }
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Footer primary section, contains logo and sections with links
@@ -124,7 +123,8 @@
     margin-bottom: $layout-xs;
 
     a {
-        background: url('#{$image-path}/logos/mozilla/logo-word-hor.svg') no-repeat;
+        background: url("#{$image-path}/logos/mozilla/logo-word-hor.svg")
+            no-repeat;
         @include background-size(100px, 32px);
         @include image-replaced;
         display: inline-block;
@@ -133,14 +133,15 @@
     }
 
     @media #{$mq-md} {
-        @include bidi((
-            (float, left, right),
-            (margin-right, $layout-md, 0),
-            (margin-left, 0, $layout-md),
-        ));
+        @include bidi(
+            (
+                (float, left, right),
+                (margin-right, $layout-md, 0),
+                (margin-left, 0, $layout-md)
+            )
+        );
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Footer section containing list and heading
@@ -184,16 +185,20 @@
     }
 
     @media (min-width: #{$screen-sm}) and (max-width: #{$screen-lg - 1px}) {
-        @include bidi(((float, left, right),));
+        @include bidi(((float, left, right)));
         @include grid-half;
 
         &:nth-child(odd) {
-            @include bidi(((clear, left, right),));
-            @include bidi(((padding, 0 ($layout-md / 2) 0 0, 0 0 0 ($layout-md / 2)),));
+            @include bidi(((clear, left, right)));
+            @include bidi(
+                ((padding, 0 ($layout-md / 2) 0 0, 0 0 0 ($layout-md / 2)))
+            );
         }
 
         &:nth-child(even) {
-            @include bidi(((padding, 0 0 0 ($layout-md / 2), 0 ($layout-md / 2) 0 0),));
+            @include bidi(
+                ((padding, 0 0 0 ($layout-md / 2), 0 ($layout-md / 2) 0 0))
+            );
         }
     }
 }
@@ -201,24 +206,31 @@
 @media #{$mq-lg} {
     .c-footer-section,
     .c-footer-section-social {
-        @include bidi(((float, left, right),));
+        @include bidi(((float, left, right)));
         padding: 0 ($layout-md / 2);
 
         &:first-child {
-            @include bidi(((padding, 0 ($layout-md / 2) 0 0, 0 0 0 ($layout-md / 2)),));
+            @include bidi(
+                ((padding, 0 ($layout-md / 2) 0 0, 0 0 0 ($layout-md / 2)))
+            );
         }
 
         &:last-child {
-            @include bidi(((padding, 0 0 0 ($layout-md / 2), 0 ($layout-md / 2) 0 0),));
+            @include bidi(
+                ((padding, 0 0 0 ($layout-md / 2), 0 ($layout-md / 2) 0 0))
+            );
         }
     }
 
     @for $cols from 2 through 6 {
         $width: 100% / $cols;
         // http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
-        .c-footer-section:first-child:nth-last-child(n+#{$cols}),
-        .c-footer-section:first-child:nth-last-child(n+#{$cols}) ~ .c-footer-section:nth-child(1n-1) {
-            width: calc(#{$width} - (#{$layout-md} - (#{$layout-md} / #{$cols})));
+        .c-footer-section:first-child:nth-last-child(n + #{$cols}),
+        .c-footer-section:first-child:nth-last-child(n + #{$cols})
+            ~ .c-footer-section:nth-child(1n-1) {
+            width: calc(
+                #{$width} - (#{$layout-md} - (#{$layout-md} / #{$cols}))
+            );
         }
     }
 }
@@ -228,7 +240,7 @@
     & button {
         @include font-base;
         @include text-body-md;
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
         background-color: transparent;
         border: 0;
         color: inherit;
@@ -248,9 +260,9 @@
         button:before {
             background: $url-image-arrow-down-form top left no-repeat;
             @include background-size(24px, 24px);
-            @include bidi(((right, 8px, left, auto),));
+            @include bidi(((right, 8px, left, auto)));
             @include transition(transform 100ms ease-in-out);
-            content: '';
+            content: "";
             height: 24px;
             margin-top: -12px;
             position: absolute;
@@ -258,7 +270,7 @@
             width: 24px;
         }
 
-        button[aria-expanded=true]:before {
+        button[aria-expanded="true"]:before {
             @include transform(rotate(180deg));
         }
     }
@@ -295,7 +307,6 @@
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Footer secondary contains langauge selector, social icons, legal, and license
 
@@ -312,7 +323,7 @@
     margin-bottom: $spacing-lg;
 
     @media #{$mq-md} {
-        @include bidi(((float, right, left),));
+        @include bidi(((float, right, left)));
     }
 }
 
@@ -322,14 +333,14 @@
 .c-footer-section-social .c-footer-heading {
     @include text-body-sm;
     font-weight: normal;
-    margin-top: .2em;
+    margin-top: 0.2em;
 }
 
 .c-footer-list-social {
     margin-bottom: $layout-xs;
 
     li {
-        @include bidi(((margin, 0 $spacing-md 0 0, 0 0 0 $spacing-md),));
+        @include bidi(((margin, 0 $spacing-md 0 0, 0 0 0 $spacing-md)));
         display: inline-block;
         vertical-align: bottom;
 
@@ -340,20 +351,20 @@
             border-bottom: 1px solid transparent;
             display: block;
             height: 20px;
-            opacity: .5;
+            opacity: 0.5;
             padding-bottom: 2px;
             width: 20px;
 
             &.twitter {
-                background-image: url('#{$image-path}/icons/social/twitter/black.svg');
+                background-image: url("#{$image-path}/icons/social/twitter/black.svg");
             }
 
             &.instagram {
-                background-image: url('#{$image-path}/icons/social/instagram/black.svg');
+                background-image: url("#{$image-path}/icons/social/instagram/black.svg");
             }
 
             &.youtube {
-                background-image: url('#{$image-path}/icons/social/youtube/black.svg');
+                background-image: url("#{$image-path}/icons/social/youtube/black.svg");
             }
 
             &:hover,
@@ -368,30 +379,41 @@
         margin-bottom: $layout-sm;
 
         li {
-            @include bidi((
-                (padding, 0 $spacing-lg $spacing-sm 0, 0 0 $spacing-sm $spacing-lg),
-                (margin, 0 , 0),
-            ));
+            @include bidi(
+                (
+                    (
+                        padding,
+                        0 $spacing-lg $spacing-sm 0,
+                        0 0 $spacing-sm $spacing-lg
+                    ),
+                    (margin, 0, 0)
+                )
+            );
         }
     }
 }
-
-
 
 //* -------------------------------------------------------------------------- */
 // Footer license and terms
 
 .c-footer-legal {
     li {
-        @include bidi(((padding, 0 $spacing-lg $spacing-md 0, 0 0 $spacing-md $spacing-lg),));
+        @include bidi(
+            (
+                (
+                    padding,
+                    0 $spacing-lg $spacing-md 0,
+                    0 0 $spacing-md $spacing-lg
+                )
+            )
+        );
         display: inline-block;
 
         &:last-child {
-            @include bidi(((padding-right, 0, padding-left, 0),));
+            @include bidi(((padding-right, 0, padding-left, 0)));
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Footer license
@@ -400,18 +422,17 @@
     margin-bottom: $spacing-xl;
 
     @media #{$mq-md} {
-        @include bidi(((clear, left, right),));
+        @include bidi(((clear, left, right)));
         max-width: 66%; // don't overlap language picker
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Footer license
 
 .c-footer-terms {
     @media #{$mq-md} {
-        @include bidi(((float, left, right),));
+        @include bidi(((float, left, right)));
         padding-top: $spacing-xs;
         max-width: 66%; // don't overlap language picker
     }

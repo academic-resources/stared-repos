@@ -2,18 +2,17 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/includes/forms/lib';
-@import '../../../protocol/css/components/inline-list';
-@import '../../../protocol/css/components/notification-bar';
-@import '../../../protocol/css/components/picto';
-@import '../../../protocol/css/components/split';
-@import '../../../protocol/css/templates/multi-column';
-@import 'includes/header';
-
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/includes/forms/lib";
+@import "../../../protocol/css/components/inline-list";
+@import "../../../protocol/css/components/notification-bar";
+@import "../../../protocol/css/components/picto";
+@import "../../../protocol/css/components/split";
+@import "../../../protocol/css/templates/multi-column";
+@import "includes/header";
 
 //* -------------------------------------------------------------------------- */
 // Main content
@@ -29,7 +28,7 @@ $image-path: '/media/protocol/img';
 
 .wnp-main-heading {
     @include text-title-md;
-    color: get-theme('title-text-color');
+    color: get-theme("title-text-color");
     margin-left: auto;
     margin-right: auto;
     max-width: 750px;
@@ -59,7 +58,7 @@ $image-path: '/media/protocol/img';
 
     .c-availability-heading {
         @include text-title-xs;
-        margin: 0 auto .5em;
+        margin: 0 auto 0.5em;
         max-width: 18em;
         text-align: center;
     }
@@ -73,7 +72,7 @@ $image-path: '/media/protocol/img';
 
     @media #{$mq-md} {
         .mzp-c-split-body {
-            @include bidi(((text-align, left, right),));
+            @include bidi(((text-align, left, right)));
         }
     }
 }
@@ -101,7 +100,6 @@ $image-path: '/media/protocol/img';
 //* -------------------------------------------------------------------------- */
 // For dark mode
 @media (prefers-color-scheme: dark) {
-
     html,
     .content-wrapper {
         background: $color-dark-gray-60;
@@ -124,7 +122,7 @@ $image-path: '/media/protocol/img';
     }
 
     .wnp-main-heading {
-        color: get-theme('title-text-color-inverse');
+        color: get-theme("title-text-color-inverse");
     }
 
     .c-utilities a {
@@ -143,12 +141,12 @@ $image-path: '/media/protocol/img';
     .mzp-c-picto .mzp-c-picto-heading,
     .c-availability-heading,
     .c-press-logos-heading {
-        color: get-theme('title-text-color-inverse');
+        color: get-theme("title-text-color-inverse");
     }
 
     .c-availability {
         .mzp-c-button.mzp-t-product.mzp-t-secondary {
-            background-color: rgba($color-white, .3);
+            background-color: rgba($color-white, 0.3);
             border-color: transparent;
             color: $color-white;
 
@@ -195,19 +193,19 @@ $image-path: '/media/protocol/img';
 
     .c-footer-list-social li {
         a.twitter {
-            background-image: url('/media/protocol/img/icons/social/twitter/white.svg');
+            background-image: url("/media/protocol/img/icons/social/twitter/white.svg");
         }
 
         a.instagram {
-            background-image: url('/media/protocol/img/icons/social/instagram/white.svg');
+            background-image: url("/media/protocol/img/icons/social/instagram/white.svg");
         }
 
         a.youtube {
-            background-image: url('/media/protocol/img/icons/social/youtube/white.svg');
+            background-image: url("/media/protocol/img/icons/social/youtube/white.svg");
         }
     }
 
     .c-footer-primary-logo a {
-        background-image: url('/media/protocol/img/logos/mozilla/logo-word-hor-white.svg');
+        background-image: url("/media/protocol/img/logos/mozilla/logo-word-hor-white.svg");
     }
 }

@@ -2,16 +2,16 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
-$brand-theme: 'firefox';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
+$brand-theme: "firefox";
 
 @import "../../../protocol/css/includes/lib";
-@import '../../../protocol/css/templates/multi-column';
+@import "../../../protocol/css/templates/multi-column";
 @import "../../../protocol/css/components/split";
 @import "../../../protocol/css/components/call-out";
 @import "../../../protocol/css/components/picto";
-@import '../../../protocol/css/components/logos/logo-product-firefox';
+@import "../../../protocol/css/components/logos/logo-product-firefox";
 
 // -------------------------------------------------------------------------- //
 // Page Hero
@@ -84,7 +84,7 @@ $brand-theme: 'firefox';
     }
 
     li {
-        @include bidi(((padding-left, 3em, padding-right, 3em),));
+        @include bidi(((padding-left, 3em, padding-right, 3em)));
         margin-bottom: $spacing-lg;
         position: relative;
 
@@ -93,7 +93,7 @@ $brand-theme: 'firefox';
         }
 
         &:before {
-            @include bidi(((left, 0, right, 0),));
+            @include bidi(((left, 0, right, 0)));
             border-radius: 100%;
             border: 3px solid $color-marketing-gray-80;
             content: counter(step-counter);

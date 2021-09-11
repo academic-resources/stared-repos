@@ -1,21 +1,21 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. -#} {% from
+"products/vpn/includes/macros.html" import vpn_content_block with context %} {%
+call vpn_content_block( class_name='vpn-footer-subscribe' ) %}
+<div class="js-vpn-scroll-to-pricing">
+  <a
+    class="mzp-c-button mzp-t-xl"
+    href="#pricing"
+    data-cta-type="button"
+    data-cta-text="Scroll to pricing"
+    data-cta-position="secondary"
+  >
+    {{ ftl('vpn-shared-subscribe-link') }}
+  </a>
 
-{% from "products/vpn/includes/macros.html" import vpn_content_block with context %}
+  <p class="guarantee-copy">{{ ftl('vpn-shared-money-back-guarantee') }}</p>
+</div>
 
-{% call vpn_content_block(
-  class_name='vpn-footer-subscribe'
-) %}
-  <div class="js-vpn-scroll-to-pricing">
-    <a class="mzp-c-button mzp-t-xl" href="#pricing" data-cta-type="button" data-cta-text="Scroll to pricing" data-cta-position="secondary">
-      {{ ftl('vpn-shared-subscribe-link') }}
-    </a>
-
-    <p class="guarantee-copy">
-      {{ ftl('vpn-shared-money-back-guarantee') }}
-    </p>
-  </div>
-
-  <div class="js-target-footer-cta"></div>
+<div class="js-target-footer-cta"></div>
 {% endcall %}

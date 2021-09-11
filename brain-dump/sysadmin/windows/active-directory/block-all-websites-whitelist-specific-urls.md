@@ -1,12 +1,15 @@
 # Block All Websites, Except those Whitelisted Firefox GPO
+
 Using [Firefox GPO Templates](https://github.com/mozilla/policy-templates)
 
 My notes are based on a **Computer** policy, it may be applicable for User-based policies, but not tested.
 
 ## GPO Policy
+
 Blacklist policy:
 
 - Path:
+
   ```powershell
   Computer Configuration / Policies / Administrative Templates / Mozilla / Firefox / Blocked websites
   ```
@@ -16,9 +19,10 @@ Blacklist policy:
   <all_urls>
   ```
 
-
 Whitelist policy:
+
 - Path:
+
   ```powershell
   Computer Configuration / Policies / Administrative Templates / Mozilla / Firefox / Exceptions to blocked websites
   ```

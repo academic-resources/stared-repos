@@ -2,19 +2,18 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
-@import '../../../../protocol/css/includes/lib';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
+@import "../../../../protocol/css/includes/lib";
 
-@import '../../../../protocol/css/components/emphasis-box';
-@import '../../../../protocol/css/components/modal';
-@import '../../../../protocol/css/components/notification-bar';
-@import '../../../../protocol/css/components/section-heading';
-@import '../../../../protocol/css/components/zap';
-@import '../../../../protocol/css/templates/card-layout';
-@import '../../../protocol/components/sub-navigation';
-@import '../../sticky-promo';
-
+@import "../../../../protocol/css/components/emphasis-box";
+@import "../../../../protocol/css/components/modal";
+@import "../../../../protocol/css/components/notification-bar";
+@import "../../../../protocol/css/components/section-heading";
+@import "../../../../protocol/css/components/zap";
+@import "../../../../protocol/css/templates/card-layout";
+@import "../../../protocol/components/sub-navigation";
+@import "../../sticky-promo";
 
 // --------------------------------------------------------------------------
 // Protocol over-rides
@@ -51,7 +50,9 @@ main {
     background-color: $color-white; // for IE6
     color: $color-dark-gray-30;
 
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
         color: $color-marketing-gray-99;
         margin-bottom: $spacing-md;
     }
@@ -87,18 +88,18 @@ main {
         padding-left: $h-grid-lg;
         padding-right: $h-grid-lg;
     }
-
 }
 
 // button container
 
 .mzp-c-button-download-container {
-    .main-download & { // target main to avoid conflicting with nav
+    .main-download & {
+        // target main to avoid conflicting with nav
         margin-bottom: 0;
     }
 
     .t-intro & {
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
     }
 
     .t-features &,
@@ -106,7 +107,6 @@ main {
         display: block;
     }
 }
-
 
 // cta link
 
@@ -150,10 +150,9 @@ button.mzp-c-cta-link {
 
     .mzp-c-card {
         @media #{$mq-sm} {
-            @include bidi((
-                (margin-left, 0, $h-grid-xs),
-                (margin-right, $h-grid-xs, 0),
-            ));
+            @include bidi(
+                ((margin-left, 0, $h-grid-xs), (margin-right, $h-grid-xs, 0))
+            );
             width: calc(50% - (#{$h-grid-xs} / 2));
 
             &:nth-child(even) {
@@ -163,10 +162,9 @@ button.mzp-c-cta-link {
         }
 
         @media #{$mq-md} {
-            @include bidi((
-                (margin-left, 0, $h-grid-md),
-                (margin-right, $h-grid-md, 0),
-            ));
+            @include bidi(
+                ((margin-left, 0, $h-grid-md), (margin-right, $h-grid-md, 0))
+            );
             width: calc(50% - (#{$h-grid-md} / 2));
 
             &:nth-child(even) {
@@ -179,14 +177,16 @@ button.mzp-c-cta-link {
             width: calc(33.3% - (#{$h-grid-lg} - (#{$h-grid-lg} / 3)));
 
             &:nth-child(even) {
-                @include bidi((
-                    (margin-left, 0, $h-grid-lg),
-                    (margin-right, $h-grid-lg, 0),
-                ));
+                @include bidi(
+                    (
+                        (margin-left, 0, $h-grid-lg),
+                        (margin-right, $h-grid-lg, 0)
+                    )
+                );
             }
 
             &:nth-child(3n) {
-                @include bidi(((margin-right, 0, margin-left, 0),));
+                @include bidi(((margin-right, 0, margin-left, 0)));
             }
         }
     }
@@ -197,36 +197,37 @@ button.mzp-c-cta-link {
         max-width: 100%;
 
         @media #{$mq-sm} {
-            @include bidi((
-                (margin-left, 0, $h-grid-xs),
-                (margin-right, $h-grid-xs, 0),
-            ));
+            @include bidi(
+                ((margin-left, 0, $h-grid-xs), (margin-right, $h-grid-xs, 0))
+            );
             width: calc(50% - (#{$h-grid-xs} - (#{$h-grid-xs} / 2)));
 
-            main &:nth-child(2n) { // bump the specificity so later media queries don't over write it
+            main &:nth-child(2n) {
+                // bump the specificity so later media queries don't over write it
                 margin-left: 0;
                 margin-right: 0;
             }
         }
 
         @media #{$mq-md} {
-            @include bidi((
-                (margin-left, 0, $h-grid-md),
-                (margin-right, $h-grid-md, 0),
-            ));
+            @include bidi(
+                ((margin-left, 0, $h-grid-md), (margin-right, $h-grid-md, 0))
+            );
             width: calc(50% - (#{$h-grid-md} - (#{$h-grid-md} / 2)));
         }
 
         @media #{$mq-lg} {
-            @include bidi((
-                (float, left, right),
-                (margin-left, 0, $h-grid-lg),
-                (margin-right, $h-grid-lg, 0),
-            ));
+            @include bidi(
+                (
+                    (float, left, right),
+                    (margin-left, 0, $h-grid-lg),
+                    (margin-right, $h-grid-lg, 0)
+                )
+            );
             width: calc(50% - (#{$h-grid-lg} - (#{$h-grid-lg} / 2)));
 
-            &:nth-child(2n+1) {
-                @include bidi(((clear, left, right),));
+            &:nth-child(2n + 1) {
+                @include bidi(((clear, left, right)));
             }
         }
     }
@@ -269,7 +270,6 @@ button.mzp-c-cta-link {
     @include visually-hidden();
 }
 
-
 // --------------------------------------------------------------------------
 // section titles
 
@@ -277,14 +277,17 @@ button.mzp-c-cta-link {
     @include text-title-md;
 }
 
-
 // --------------------------------------------------------------------------
 // logos
 
 .c-logo.t-browser-word-hor-xs,
 .c-logo.t-browser-word-hor-white-xs {
-    @include at2x('/media/protocol/img/logos/firefox/browser/logo-word-hor-xs.png', auto, 40px);
-    @include bidi(((background-position, top left, top right),));
+    @include at2x(
+        "/media/protocol/img/logos/firefox/browser/logo-word-hor-xs.png",
+        auto,
+        40px
+    );
+    @include bidi(((background-position, top left, top right)));
     @include image-replaced;
     background-repeat: no-repeat;
     height: 48px; // for IE8
@@ -307,13 +310,16 @@ button.mzp-c-cta-link {
 
 // logo in mobile banner
 .c-logo.t-browser-word-hor-white-xs {
-    @include at2x('/media/protocol/img/logos/firefox/browser/logo-word-hor-white-sm.png', auto, 40px);
+    @include at2x(
+        "/media/protocol/img/logos/firefox/browser/logo-word-hor-white-sm.png",
+        auto,
+        40px
+    );
 
     @media #{$mq-md} {
         background-size: auto 48px;
     }
 }
-
 
 // --------------------------------------------------------------------------
 // trio
@@ -371,7 +377,6 @@ button.mzp-c-cta-link {
         }
     }
 }
-
 
 // --------------------------------------------------------------------------
 // Blocks
@@ -449,7 +454,7 @@ button.mzp-c-cta-link {
 @media #{$mq-md} {
     .c-block-body {
         @include border-box;
-        @include bidi(((float, left, right),));
+        @include bidi(((float, left, right)));
         width: 50%;
         padding: 0 ($h-grid-lg / 2);
 
@@ -462,18 +467,18 @@ button.mzp-c-cta-link {
         }
 
         .l-reversed & {
-            @include bidi(((float, right, left),));
+            @include bidi(((float, right, left)));
         }
     }
 
     .c-block-media {
         @include border-box;
-        @include bidi(((float, right, left),));
+        @include bidi(((float, right, left)));
         width: 50%;
         padding: 0 ($h-grid-lg / 2);
 
         .l-reversed & {
-            @include bidi(((float, left, right),));
+            @include bidi(((float, left, right)));
         }
     }
 }
@@ -482,7 +487,7 @@ button.mzp-c-cta-link {
 // side by side layout, grid based
 
 @media #{$mq-md} {
-    @supports (display:grid) {
+    @supports (display: grid) {
         .c-block-container {
             // grid is all start/end based we don't need bidi declarations for RTL support \o/
             display: grid;
@@ -497,7 +502,8 @@ button.mzp-c-cta-link {
 
         .c-block-body,
         .c-block-media {
-            .c-block-container & { // extra specificitly to over-ride the styles that make the float fall-back work
+            .c-block-container & {
+                // extra specificitly to over-ride the styles that make the float fall-back work
                 float: none;
                 min-width: 0; //because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
                 padding: 0;
@@ -538,7 +544,7 @@ button.mzp-c-cta-link {
     }
 
     @media #{$mq-md} {
-        @supports ( display:grid ) {
+        @supports (display: grid) {
             &.l-media-constrain-height {
                 height: 100%;
                 justify-self: auto !important; /* stylelint-disable-line declaration-no-important */
@@ -552,7 +558,7 @@ button.mzp-c-cta-link {
                     top: 0;
                     width: auto;
 
-                    [dir='rtl'] &,
+                    [dir="rtl"] &,
                     .l-reversed & {
                         left: auto;
                         right: 0;
@@ -576,14 +582,16 @@ button.mzp-c-cta-link {
 
     @media #{$mq-md} {
         .l-h-start {
-            @include bidi(((text-align, left, right),));
+            @include bidi(((text-align, left, right)));
             justify-self: start;
 
             .c-block-media-img {
-                @include bidi((
-                    (margin-right, auto, margin-left, 0),
-                    (margin-left, 0, margin-right, 0),
-                ));
+                @include bidi(
+                    (
+                        (margin-right, auto, margin-left, 0),
+                        (margin-left, 0, margin-right, 0)
+                    )
+                );
             }
         }
 
@@ -595,7 +603,7 @@ button.mzp-c-cta-link {
                 margin: 0 auto;
             }
 
-            @supports(display:grid) {
+            @supports (display: grid) {
                 &.l-media-constrain-height .c-block-media-img {
                     left: 50%;
                     transform: translateX(-50%);
@@ -607,13 +615,15 @@ button.mzp-c-cta-link {
             justify-self: end;
 
             .c-block-media-img {
-                @include bidi((
-                    (margin-left, auto, margin-right, 0),
-                    (margin-right, 0, margin-left, 0),
-                ));
+                @include bidi(
+                    (
+                        (margin-left, auto, margin-right, 0),
+                        (margin-right, 0, margin-left, 0)
+                    )
+                );
             }
 
-            @supports(display:grid) {
+            @supports (display: grid) {
                 &.l-media-constrain-height .c-block-media-img {
                     right: 0;
                     left: auto;
@@ -623,8 +633,7 @@ button.mzp-c-cta-link {
     }
 
     // vertical alignment only browsers with grid support
-    @supports(display:grid) {
-
+    @supports (display: grid) {
         .l-v-start {
             align-self: start;
         }
@@ -652,12 +661,10 @@ button.mzp-c-cta-link {
     }
 }
 
-
 // --------------------------------------------------------------------------
 // intro banner
 
 .t-intro {
-
     &.c-block {
         @include text-body-md;
         padding-top: $layout-sm;
@@ -672,7 +679,7 @@ button.mzp-c-cta-link {
         max-width: $content-xl + $layout-xl * 2;
     }
 
-    [lang=ar] & h2 {
+    [lang="ar"] & h2 {
         @include font-size(40px);
     }
 
@@ -718,7 +725,7 @@ button.mzp-c-cta-link {
 }
 
 .noodle-browser {
-    @include at2x('/media/img/firefox/new/desktop/hero-mr1.png', 514px, 371px);
+    @include at2x("/media/img/firefox/new/desktop/hero-mr1.png", 514px, 371px);
     background-color: $color-light-gray-10;
     border-radius: 4px;
     box-shadow: $box-shadow-md;
@@ -851,7 +858,6 @@ button.mzp-c-cta-link {
     }
 }
 
-
 // --------------------------------------------------------------------------
 // releases
 
@@ -860,8 +866,8 @@ button.mzp-c-cta-link {
     max-width: $content-xl + $layout-xl * 2;
 
     &:before {
-        background-image: url('/media/img/firefox/new/desktop/release-noodles.svg');
-        content: '';
+        background-image: url("/media/img/firefox/new/desktop/release-noodles.svg");
+        content: "";
         display: block;
         height: 212px;
         left: 0;
@@ -891,7 +897,6 @@ button.mzp-c-cta-link {
     text-align: center;
 }
 
-
 // --------------------------------------------------------------------------
 // highlights
 // includes t-compare, t-block, t-everone, and t-devices block components
@@ -901,7 +906,7 @@ button.mzp-c-cta-link {
         margin-bottom: $spacing-xl;
     }
 
-    @supports(display:grid) {
+    @supports (display: grid) {
         @media #{$mq-lg} {
             .c-block-body {
                 max-width: ($content-lg - $h-grid-lg) / 2;
@@ -927,8 +932,8 @@ button.mzp-c-cta-link {
 }
 
 .t-compare .c-block-media-img {
-    @include bidi(((background-position, top left, top right),));
-    background-image: url('/media/img/firefox/new/desktop/comparison-noodles-mr1.svg');
+    @include bidi(((background-position, top left, top right)));
+    background-image: url("/media/img/firefox/new/desktop/comparison-noodles-mr1.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -993,17 +998,24 @@ button.mzp-c-cta-link {
     th,
     td {
         @include text-body-sm;
-        @include bidi((
-            (border-left, 1px solid $color-marketing-gray-20, border-right, 0),
-            (text-align, center, center), // needs higher specificity for RTL
-        ));
+        @include bidi(
+            (
+                (
+                    border-left,
+                    1px solid $color-marketing-gray-20,
+                    border-right,
+                    0
+                ),
+                (text-align, center, center),
+                er, center), // needs higher specif
+            )
+        );
         border-top: 1px solid $color-marketing-gray-20;
         font-weight: normal;
         padding: $spacing-xs;
 
-
         &:first-child {
-            @include bidi(((border-left-width, 0, border-right-width, 1px),));
+            @include bidi(((border-left-width, 0, border-right-width, 1px)));
             text-align: start;
         }
 
@@ -1013,7 +1025,6 @@ button.mzp-c-cta-link {
     }
 
     tbody {
-
         td {
             width: 64px; // need fixed width to avoid content moving when switching tabs
         }
@@ -1023,7 +1034,7 @@ button.mzp-c-cta-link {
         }
     }
 
-    tr > *:nth-child(1n+4) {
+    tr > *:nth-child(1n + 4) {
         // hide all columns after Chrome
         display: none;
     }
@@ -1059,7 +1070,7 @@ button.mzp-c-cta-link {
         outline: none;
     }
 
-    &[aria-pressed=true] {
+    &[aria-pressed="true"] {
         border-bottom-color: $color-link;
         font-weight: bold;
     }
@@ -1094,18 +1105,22 @@ button.mzp-c-cta-link {
     margin-right: $spacing-md;
 }
 
-
 // --------------------------------------------------------------------------
 
 .t-features {
     background-color: $color-light-gray-10;
     background-repeat: no-repeat;
-    background-position: 80% 63%, // C
-                         top left, // V
-                         bottom 10% right, // circle
-                         bottom left calc(50vw - 600px), // circle
-                         bottom 30% left, // oval
-                         top right;
+    background-position: 80% 63%,
+        // C
+        top left,
+        // V
+        bottom 10% right,
+        // circle
+        bottom left calc(50vw - 600px),
+        // circle
+        bottom 30% left,
+        // oval
+        top right;
     margin-bottom: $v-grid-xs;
     margin-top: $v-grid-xs;
 
@@ -1120,12 +1135,12 @@ button.mzp-c-cta-link {
     }
 
     .loaded & {
-        background-image: url('/media/img/firefox/new/desktop/features/one.svg'),
-                          url('/media/img/firefox/new/desktop/features/two.svg'),
-                          url('/media/img/firefox/new/desktop/features/oval-one.svg'),
-                          url('/media/img/firefox/new/desktop/features/oval-two.svg'),
-                          url('/media/img/firefox/new/desktop/features/rect-one.svg'),
-                          url('/media/img/firefox/new/desktop/features/rect-two.svg');
+        background-image: url("/media/img/firefox/new/desktop/features/one.svg"),
+            url("/media/img/firefox/new/desktop/features/two.svg"),
+            url("/media/img/firefox/new/desktop/features/oval-one.svg"),
+            url("/media/img/firefox/new/desktop/features/oval-two.svg"),
+            url("/media/img/firefox/new/desktop/features/rect-one.svg"),
+            url("/media/img/firefox/new/desktop/features/rect-two.svg");
     }
 
     img {
@@ -1133,11 +1148,10 @@ button.mzp-c-cta-link {
     }
 
     .mzp-u-list-styled {
-        @include bidi(((margin-left, $spacing-md, margin-right, 0),));
+        @include bidi(((margin-left, $spacing-md, margin-right, 0)));
         margin-bottom: 0;
     }
 }
-
 
 // --------------------------------------------------------------------------
 // customization
@@ -1165,7 +1179,7 @@ button.mzp-c-cta-link {
 }
 
 .c-screenshot {
-    @include bidi(((left, 0, right, auto),));
+    @include bidi(((left, 0, right, auto)));
     @include border-box;
     margin: 0 auto;
     display: block;
@@ -1199,7 +1213,6 @@ button.mzp-c-cta-link {
 // --------------------------------------------------------------------------
 
 .t-company {
-
     img {
         margin: 0 auto $spacing-xl;
         width: $content-xs;
@@ -1245,7 +1258,6 @@ button.mzp-c-cta-link {
     }
 }
 
-
 // --------------------------------------------------------------------------
 
 .t-discover {
@@ -1265,7 +1277,6 @@ button.mzp-c-cta-link {
     }
 }
 
-
 // --------------------------------------------------------------------------
 
 .c-support {
@@ -1276,7 +1287,6 @@ button.mzp-c-cta-link {
     padding: $spacing-lg;
     text-align: center;
 }
-
 
 // --------------------------------------------------------------------------
 // mobile
@@ -1294,42 +1304,31 @@ button.mzp-c-cta-link {
 .c-mobile {
     @include light-links;
     background-color: $color-violet-70;
-    background-position: bottom -120px right 10px,
-                         top right -200px,
-                         bottom -100px left 20px,
-                         top 100px left -50px,
-                         bottom right -500px,
-                         top 15% left 100px;
+    background-position: bottom -120px right 10px, top right -200px,
+        bottom -100px left 20px, top 100px left -50px, bottom right -500px,
+        top 15% left 100px;
     background-repeat: no-repeat;
     color: $color-white;
     position: relative;
     overflow-x: hidden;
 
     @media #{$mq-md} {
-        background-position: bottom left 120px,
-                             top right,
-                             bottom left 20px,
-                             top 100px left,
-                             bottom right,
-                             top 15% center;
+        background-position: bottom left 120px, top right, bottom left 20px,
+            top 100px left, bottom right, top 15% center;
     }
 
     @media #{$mq-lg} {
-        background-position: bottom left 100px,
-                             top right,
-                             bottom left 40%,
-                             top 100px left,
-                             bottom right,
-                             top 15% center;
+        background-position: bottom left 100px, top right, bottom left 40%,
+            top 100px left, bottom right, top 15% center;
     }
 
     .loaded & {
-        background-image: url('/media/img/firefox/new/desktop/mobile/circle-bottom.svg'),
-                          url('/media/img/firefox/new/desktop/mobile/circle-top-right.svg'),
-                          url('/media/img/firefox/new/desktop/mobile/oval-bottom.svg'),
-                          url('/media/img/firefox/new/desktop/mobile/oval-left.svg'),
-                          url('/media/img/firefox/new/desktop/mobile/elbow-bottom-right.svg'),
-                          url('/media/img/firefox/new/desktop/mobile/elbow.svg');
+        background-image: url("/media/img/firefox/new/desktop/mobile/circle-bottom.svg"),
+            url("/media/img/firefox/new/desktop/mobile/circle-top-right.svg"),
+            url("/media/img/firefox/new/desktop/mobile/oval-bottom.svg"),
+            url("/media/img/firefox/new/desktop/mobile/oval-left.svg"),
+            url("/media/img/firefox/new/desktop/mobile/elbow-bottom-right.svg"),
+            url("/media/img/firefox/new/desktop/mobile/elbow.svg");
     }
 
     h2 {
@@ -1342,15 +1341,17 @@ button.mzp-c-cta-link {
 
     @media #{$mq-sm} {
         &:after {
-            @include bidi((
-                (left, 60%, right, auto),
-                (margin-left, $h-grid-xs / 2, margin-left, 0),
-            ));
+            @include bidi(
+                (
+                    (left, 60%, right, auto),
+                    (margin-left, $h-grid-xs / 2, margin-left, 0)
+                )
+            );
             background-position: top center;
             background-repeat: no-repeat;
             border-radius: $border-radius-sm;
             bottom: $layout-lg;
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             top: $layout-lg;
@@ -1358,16 +1359,22 @@ button.mzp-c-cta-link {
 
             &,
             .android & {
-                @include at2x('/media/img/firefox/new/desktop/android.png', contain);
+                @include at2x(
+                    "/media/img/firefox/new/desktop/android.png",
+                    contain
+                );
             }
 
             .ios & {
-                @include at2x('/media/img/firefox/new/desktop/ios.png', contain);
+                @include at2x(
+                    "/media/img/firefox/new/desktop/ios.png",
+                    contain
+                );
             }
         }
 
         .c-mobile-text {
-            @include bidi(((padding-right, $h-grid-xs / 2, padding-left, 0),));
+            @include bidi(((padding-right, $h-grid-xs / 2, padding-left, 0)));
             @include border-box;
             max-width: 60%;
         }
@@ -1375,32 +1382,34 @@ button.mzp-c-cta-link {
 
     @media #{$mq-md} {
         &:after {
-            @include bidi((
-                (left, 50%, right, auto),
-                (margin-left, $h-grid-md / 2, margin-right, 0),
-            ));
+            @include bidi(
+                (
+                    (left, 50%, right, auto),
+                    (margin-left, $h-grid-md / 2, margin-right, 0)
+                )
+            );
         }
 
         .c-mobile-text {
-            @include bidi(((padding-right, $h-grid-md / 2, padding-left, 0),));
+            @include bidi(((padding-right, $h-grid-md / 2, padding-left, 0)));
             max-width: 50%;
         }
     }
 
     @media #{$mq-lg} {
         &:after {
-            @include bidi(((margin-left, $h-grid-lg / 2, margin-right, 0),));
+            @include bidi(((margin-left, $h-grid-lg / 2, margin-right, 0)));
         }
 
         .c-mobile-text {
-            @include bidi(((padding-right, $h-grid-lg / 2, padding-left, 0),));
+            @include bidi(((padding-right, $h-grid-lg / 2, padding-left, 0)));
         }
     }
 }
 
 .c-desktop a {
     @include text-title-xs;
-    background-image: url('/media/img/firefox/new/desktop/mobile-arrow.svg');
+    background-image: url("/media/img/firefox/new/desktop/mobile-arrow.svg");
     background-position: bottom center;
     background-repeat: no-repeat;
     color: $color-purple-50;
@@ -1410,7 +1419,6 @@ button.mzp-c-cta-link {
     text-align: center;
     text-decoration: none;
 }
-
 
 // --------------------------------------------------------------------------
 // scroll animation
@@ -1439,8 +1447,6 @@ button.mzp-c-cta-link {
         }
     }
 }
-
-
 
 // --------------------------------------------------------------------------
 //  Join Firefox modal
@@ -1481,7 +1487,6 @@ button.mzp-c-cta-link {
  * https://github.com/mozilla/protocol/issues/358
  */
 .mzp-c-modal {
-
     .mzp-c-modal-window > .mzp-c-modal-inner {
         background: transparent;
         padding: $spacing-xl 0 0;
@@ -1493,7 +1498,7 @@ button.mzp-c-cta-link {
     }
 
     .mzp-c-modal-close {
-        @include bidi(((right, 0, left, auto),));
+        @include bidi(((right, 0, left, auto)));
     }
 }
 

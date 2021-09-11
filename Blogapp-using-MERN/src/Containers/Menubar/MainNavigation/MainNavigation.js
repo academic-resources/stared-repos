@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Backdrop from '../Backdrop/Backdrop';
-import MainHeader from '../Mainheader/Mainheader'
-import NavLinks from '../Navlinks/NavLinks'
-import SideDrawer from '../SideDrawer/SideDrawer';
-import './MainNavigation.css';
-import img from '../../../assets/asset-1.png'
-import SocialMediaHorizontal from '../../SocialMedia.js/SocialMediaHorizontal/SocialMediaHorizontal';
-const MainNavigation = props => {
-  let attachedClasses = ['SideDrawer', 'Close'];
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Backdrop from "../Backdrop/Backdrop";
+import MainHeader from "../Mainheader/Mainheader";
+import NavLinks from "../Navlinks/NavLinks";
+import SideDrawer from "../SideDrawer/SideDrawer";
+import "./MainNavigation.css";
+import img from "../../../assets/asset-1.png";
+import SocialMediaHorizontal from "../../SocialMedia.js/SocialMediaHorizontal/SocialMediaHorizontal";
+const MainNavigation = (props) => {
+  let attachedClasses = ["SideDrawer", "Close"];
 
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
   if (drawerIsOpen) {
-    attachedClasses = ['SideDrawer', 'Open'];
+    attachedClasses = ["SideDrawer", "Open"];
   }
   const openDrawer = () => {
     setDrawerIsOpen(true);
@@ -27,21 +27,20 @@ const MainNavigation = props => {
     <React.Fragment>
       {drawerIsOpen && <Backdrop onClick={closeDrawer} />}
 
-      <div className={attachedClasses.join(' ')}>
-        {(
-          <SideDrawer open={drawerIsOpen} closed={closeDrawer} >
+      <div className={attachedClasses.join(" ")}>
+        {
+          <SideDrawer open={drawerIsOpen} closed={closeDrawer}>
             <h3 className="text-left mt-2 pl-4">BlogBook</h3>
             <hr />
-            <nav className="main-navigation__drawer-nav" >
+            <nav className="main-navigation__drawer-nav">
               <img src={img} alt="logo" />
               <div className="mobile">
                 <SocialMediaHorizontal />
               </div>
               <NavLinks />
-
             </nav>
           </SideDrawer>
-        )}
+        }
       </div>
       <MainHeader>
         <button className="main-navigation__menu-btn" onClick={openDrawer}>

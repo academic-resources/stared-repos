@@ -1,8 +1,6 @@
+There are many great tools out there to create your knowledge base.
 
-There are many great tools out there to create your knowledge base. 
-
-
-So why should you use Archivy? 
+So why should you use Archivy?
 
 Here are the ingredients that make Archivy stand out (of course many tools have other interesting components / focuses, and you should pick the one that resonates with what you want):
 
@@ -12,5 +10,4 @@ Here are the ingredients that make Archivy stand out (of course many tools have 
 - Archivy supports several [options for its search](setup-search.md), including Elasticsearch. This tool might be considered overkill for one's knowledge base, but as your knowledge base grows also with content from other data sources and automation, it can become a large amount of data. Elasticsearch provides very high quality search on this information at a swift speed and the other alternative [ripgrep](https://github.com/BurntSushi/ripgrep) is much lighter while still reacting well to large amounts of data.
 
 [^1]: https://beepb00p.xyz/hpi.html is an intriguing tool on this topic.
-
 [^2]: See [this thread](https://github.com/archivy/archivy/issues/13) if you have any tools in mind for this.

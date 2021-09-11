@@ -2,14 +2,14 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/newsletter-form';
-@import '../../protocol/css/components/picto';
-@import '../../protocol/css/templates/multi-column';
-@import '../../protocol/css/templates/card-layout';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/newsletter-form";
+@import "../../protocol/css/components/picto";
+@import "../../protocol/css/templates/multi-column";
+@import "../../protocol/css/templates/card-layout";
 
 /* -------------------------------------------------------------------------- */
 // Custom container width
@@ -95,17 +95,17 @@ $image-path: '/media/protocol/img';
 
 // foundational technology
 #moss-foundational-technology .header-image {
-    background-image: url('/media/img/mozorg/moss/header-foundational-technology.svg');
+    background-image: url("/media/img/mozorg/moss/header-foundational-technology.svg");
 }
 
 // mission partners
 #moss-mission-partners .header-image {
-    background-image: url('/media/img/mozorg/moss/header-mission-partners.svg');
+    background-image: url("/media/img/mozorg/moss/header-mission-partners.svg");
 }
 
 // secure open source
 #moss-secure-open-source .header-image {
-    background-image: url('/media/img/mozorg/moss/header-secure-open-source.svg');
+    background-image: url("/media/img/mozorg/moss/header-secure-open-source.svg");
 }
 
 /* -------------------------------------------------------------------------- */
@@ -119,7 +119,7 @@ $image-path: '/media/protocol/img';
 // Picto cards
 
 // Vertically align buttons in moss tracks lists.
-@supports(display: flex) {
+@supports (display: flex) {
     @media #{$mq-md} {
         .moss-tracks-list {
             display: flex;
@@ -155,7 +155,7 @@ $image-path: '/media/protocol/img';
 
         li {
             @include grid-third;
-            @include bidi(((float, left, right),));
+            @include bidi(((float, left, right)));
             padding: 0 $spacing-md;
         }
     }
@@ -173,7 +173,7 @@ $image-path: '/media/protocol/img';
 
         li {
             @include grid-half;
-            @include bidi(((float, left, right),));
+            @include bidi(((float, left, right)));
             padding: 0 $spacing-md;
         }
     }

@@ -84,12 +84,11 @@ procedure binary search index(list, target, low, high)
 end procedure binary search index
 ```
 
-
-* Clone the project from
+- Clone the project from
   https://github.com/appacademy-starters/algorithms-binary-search-starter.
-* `cd` into the project folder
-* `npm install` to install dependencies in the project root directory
-* `npm test` to run the specs
-* You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
   the `/lib/binary_search.js` that implements the Binary Search and Binary
   Search Index.

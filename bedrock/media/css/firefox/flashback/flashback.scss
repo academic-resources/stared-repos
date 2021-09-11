@@ -2,8 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
 @import "../../../protocol/css/includes/lib";
 
@@ -94,7 +94,6 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 .t-panda {
     background-color: $color-pink-80;
     color: $color-white;
@@ -104,7 +103,7 @@ $image-path: '/media/protocol/img';
     }
 
     .mzp-l-content:before {
-        content: '✨';
+        content: "✨";
         position: absolute;
         top: 10px;
         left: 0;
@@ -115,7 +114,6 @@ $image-path: '/media/protocol/img';
 
 @media #{$mq-lg} {
     .t-panda {
-
         .mzp-l-content:before {
             font-size: 300px;
         }

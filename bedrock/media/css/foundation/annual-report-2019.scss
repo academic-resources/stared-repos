@@ -2,22 +2,22 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/card';
-@import '../../protocol/css/templates/card-layout';
-@import '../../protocol/css/components/feature-card';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/card";
+@import "../../protocol/css/templates/card-layout";
+@import "../../protocol/css/components/feature-card";
 @import "../../protocol/css/components/hero";
-@import '../../protocol/css/components/modal';
-@import '../../protocol/css/components/split';
-
+@import "../../protocol/css/components/modal";
+@import "../../protocol/css/components/split";
 
 //* -------------------------------------------------------------------------- */
 // Hero image & banner heading
 .c-hero-banner {
-    background: url('/media/img/foundation/annualreport/2019/pixel-mobile-bg.svg') right center no-repeat;
+    background: url("/media/img/foundation/annualreport/2019/pixel-mobile-bg.svg")
+        right center no-repeat;
     background-size: contain;
     margin-bottom: $spacing-lg;
     padding-top: $spacing-lg;
@@ -27,7 +27,7 @@ $image-path: '/media/protocol/img';
         color: $color-black;
         display: inline-block;
         font-weight: bold;
-        line-height: .7;
+        line-height: 0.7;
         padding: 0;
     }
 
@@ -60,7 +60,7 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-md} {
-        background-image: url('/media/img/foundation/annualreport/2019/pixel-bg.svg');
+        background-image: url("/media/img/foundation/annualreport/2019/pixel-bg.svg");
         background-position: right center;
         background-size: auto 100%;
         padding-top: $spacing-2xl;
@@ -110,7 +110,6 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Content sections
 .c-intro-section {
@@ -145,19 +144,18 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-lg} {
-
         .c-copy-wrapper {
             @include clearfix;
             margin: 0 auto;
             width: 90%;
 
             header {
-                @include bidi(((float, left, right),));
+                @include bidi(((float, left, right)));
                 width: 30%;
             }
 
             .c-copy {
-                @include bidi(((float, right, left),));
+                @include bidi(((float, right, left)));
                 width: 65%;
             }
         }
@@ -180,7 +178,6 @@ $image-path: '/media/protocol/img';
     background: $color-marketing-gray-20;
     padding: $spacing-2xl $spacing-lg $spacing-lg;
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Page footer
@@ -233,12 +230,11 @@ $image-path: '/media/protocol/img';
             flex: 1;
 
             &:first-child a {
-                @include bidi(((margin-right, 10px, margin-left, 0),));
-
+                @include bidi(((margin-right, 10px, margin-left, 0)));
             }
 
             &:last-child a {
-                @include bidi(((margin-left, 10px, margin-right, 0),));
+                @include bidi(((margin-left, 10px, margin-right, 0)));
             }
         }
     }
@@ -254,16 +250,15 @@ $image-path: '/media/protocol/img';
     opacity: 0;
 }
 
-
 // Hide enhanced content if JS isn't available
 .no-js-hidden {
-    .no-js  & {
+    .no-js & {
         @include hidden;
     }
 }
 
 .js-modal-content {
-    .js  & {
+    .js & {
         @include hidden;
     }
 
@@ -312,7 +307,8 @@ $image-path: '/media/protocol/img';
 
     &::after {
         content: " ";
-        background: url('/media/img/foundation/annualreport/2019/pixel-small-bg.svg') center center no-repeat;
+        background: url("/media/img/foundation/annualreport/2019/pixel-small-bg.svg")
+            center center no-repeat;
         background-size: contain;
         width: 66px;
         height: 66px;
@@ -431,7 +427,7 @@ $image-path: '/media/protocol/img';
 }
 
 .c-modal-button-next,
-.c-modal-button-prev,  {
+.c-modal-button-prev {
     @extend .mzp-c-modal-button-close;
 }
 
@@ -443,7 +439,10 @@ $image-path: '/media/protocol/img';
 
 .c-section-intro-bg {
     @media #{$mq-lg} {
-        background: url('/media/img/foundation/annualreport/2019/moz_site_som_fighting_for_people_left.svg') left center no-repeat, url('/media/img/foundation/annualreport/2019/moz_site_som_fighting_for_people_right.svg') right center no-repeat;
+        background: url("/media/img/foundation/annualreport/2019/moz_site_som_fighting_for_people_left.svg")
+                left center no-repeat,
+            url("/media/img/foundation/annualreport/2019/moz_site_som_fighting_for_people_right.svg")
+                right center no-repeat;
         background-size: auto 100%;
     }
 }
@@ -502,13 +501,12 @@ $image-path: '/media/protocol/img';
 
         &:hover {
             background-color: $color-white;
-       }
+        }
     }
 }
 
 // Split content
 .mzp-c-split-container {
-
     .mzp-c-split-body {
         margin-top: $spacing-md;
         padding: 0;
@@ -520,14 +518,12 @@ $image-path: '/media/protocol/img';
         }
 
         p {
-            margin : 0;
+            margin: 0;
         }
     }
-
 }
 
 .mzp-c-split-media {
-
     @media #{$mq-md} {
         max-width: $content-md;
     }
@@ -535,7 +531,6 @@ $image-path: '/media/protocol/img';
     @media #{$mq-lg} {
         max-width: $content-max;
     }
-
 }
 
 .c-report-pdfs {
@@ -593,14 +588,19 @@ $image-path: '/media/protocol/img';
     }
 
     .mzp-c-card-image {
-        @include bidi((
-            (float, right, left),
-            (margin, 0 0 $spacing-md $spacing-lg, 0 $spacing-lg $spacing-md 0),
-        ));
+        @include bidi(
+            (
+                (float, right, left),
+                (
+                    margin,
+                    0 0 $spacing-md $spacing-lg,
+                    0 $spacing-lg $spacing-md 0
+                )
+            )
+        );
         max-width: 100%;
     }
 }
-
 
 .c-leadership-article-title {
     margin-top: -$spacing-2xl;
@@ -620,7 +620,7 @@ $image-path: '/media/protocol/img';
 }
 
 .leadership {
-    .mzp-c-card-media-wrapper  {
+    .mzp-c-card-media-wrapper {
         background-color: transparent;
     }
 }

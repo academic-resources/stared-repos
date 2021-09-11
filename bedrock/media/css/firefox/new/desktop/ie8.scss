@@ -2,11 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../../protocol/css/includes/lib';
-@import '../../../protocol/components/navigation-ie';
+@import "../../../../protocol/css/includes/lib";
+@import "../../../protocol/components/navigation-ie";
 
 $h-grid-lg: 80px;
 
@@ -18,7 +18,8 @@ $h-grid-lg: 80px;
 }
 
 .c-noodles {
-    background: url('/media/img/firefox/new/desktop/ie8/browser-mr1.jpg') no-repeat top center;
+    background: url("/media/img/firefox/new/desktop/ie8/browser-mr1.jpg")
+        no-repeat top center;
 }
 
 .c-screenshot {
@@ -38,7 +39,7 @@ $h-grid-lg: 80px;
 
 .c-block-body {
     @include border-box;
-    @include bidi(((float, left, right),));
+    @include bidi(((float, left, right)));
     padding: 0 ($h-grid-lg / 2);
     width: 50%;
 
@@ -51,18 +52,18 @@ $h-grid-lg: 80px;
     }
 
     .l-reversed & {
-        @include bidi(((float, right, left),));
+        @include bidi(((float, right, left)));
     }
 }
 
 .c-block-media {
     @include border-box;
-    @include bidi(((float, right, left),));
+    @include bidi(((float, right, left)));
     padding: 0 ($h-grid-lg / 2);
     width: 50%;
 
     .l-reversed & {
-        @include bidi(((float, left, right),));
+        @include bidi(((float, left, right)));
     }
 }
 

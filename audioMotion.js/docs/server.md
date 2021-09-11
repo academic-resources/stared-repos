@@ -1,9 +1,10 @@
 # Server modes
 
 audioMotion can run in three different server scenarios:
-+ serverless, in [local file mode](#local-file-mode) with limited capabilites;
-+ using its own [custom file server](#custom-file-server) (preferred);
-+ from a [standard web server](#standard-web-server) like Apache, Lighttpd or Nginx.
+
+- serverless, in [local file mode](#local-file-mode) with limited capabilites;
+- using its own [custom file server](#custom-file-server) (preferred);
+- from a [standard web server](#standard-web-server) like Apache, Lighttpd or Nginx.
 
 ## Local file mode
 
@@ -63,10 +64,9 @@ This is an alternative way to play music stored, for example, in older [NAS](htt
 
 Just copy the contents of the `public` folder to your server and make the necessary configurations:
 
-* Assign a dedicated listening port to audioMotion so it can be accessed at the server's root, e.g., `http://192.168.0.32:8000` and not in a subdirectory like `http://192.168.0.32/audioMotion`;
-* Directory listing must be enabled for the file explorer to work;
-* All media files must be located under a main folder, mapped to the `/music` URL at the web server.
-
+- Assign a dedicated listening port to audioMotion so it can be accessed at the server's root, e.g., `http://192.168.0.32:8000` and not in a subdirectory like `http://192.168.0.32/audioMotion`;
+- Directory listing must be enabled for the file explorer to work;
+- All media files must be located under a main folder, mapped to the `/music` URL at the web server.
 
 ### Configuration tips:
 
@@ -98,7 +98,7 @@ Alias "/music" "/mnt/HD/HD_a2/MUSIC"
 
 **Nginx:**
 
-*To do...*
+_To do..._
 
 ### Apache web server with Docker
 

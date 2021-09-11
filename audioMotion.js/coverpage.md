@@ -1,4 +1,3 @@
-
 # audioMotion
 
 > A high-resolution real-time spectrum analyzer and music player written in JavaScript

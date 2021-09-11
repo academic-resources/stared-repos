@@ -2,8 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../../protocol/css/includes/lib';
-
+@import "../../../protocol/css/includes/lib";
 
 $icon-size-sm: 24px;
 $icon-size-md: 32px;
@@ -46,12 +45,14 @@ $icon-size-md: 32px;
 
     .c-menu-item-head,
     .c-menu-item-link {
-        @include bidi(((padding-left, $icon-size-sm + $spacing-md, padding-right, 0),));
+        @include bidi(
+            ((padding-left, $icon-size-sm + $spacing-md, padding-right, 0))
+        );
         position: relative;
         word-break: break-word;
 
         .c-menu-item-icon {
-            @include bidi(((left, 0, right, auto),));
+            @include bidi(((left, 0, right, auto)));
             height: $icon-size-sm;
             margin: 0;
             position: absolute;
@@ -100,11 +101,20 @@ $icon-size-md: 32px;
         &.mzp-has-icon {
             .c-menu-item-head,
             .c-menu-item-link {
-                @include bidi(((padding-left, $spacing-sm + $icon-size-sm + $spacing-md, padding-right, 0),));
+                @include bidi(
+                    (
+                        (
+                            padding-left,
+                            $spacing-sm + $icon-size-sm + $spacing-md,
+                            padding-right,
+                            0
+                        )
+                    )
+                );
                 position: relative;
 
                 .c-menu-item-icon {
-                    @include bidi(((left, $spacing-sm, right, auto),));
+                    @include bidi(((left, $spacing-sm, right, auto)));
                     height: $icon-size-sm;
                     margin: 0;
                     position: absolute;
@@ -133,10 +143,19 @@ $icon-size-md: 32px;
             .c-menu-item-head,
             .c-menu-item-link {
                 padding: $spacing-md;
-                @include bidi(((padding-left, $spacing-md + $icon-size-md + $spacing-md, padding-right, 0),));
+                @include bidi(
+                    (
+                        (
+                            padding-left,
+                            $spacing-md + $icon-size-md + $spacing-md,
+                            padding-right,
+                            0
+                        )
+                    )
+                );
 
                 .c-menu-item-icon {
-                    @include bidi(((left, $spacing-md, right, auto),));
+                    @include bidi(((left, $spacing-md, right, auto)));
                     height: $icon-size-md;
                     width: $icon-size-md;
                     top: $spacing-md;
@@ -171,11 +190,13 @@ $icon-size-md: 32px;
     }
 }
 
-.c-menu-item-link[href^="https://hubs.mozilla.com"] .c-menu-item-icon {
+.c-menu-item-link[href^="https://hubs.mozilla.com"] .c-menu-item-icon
+{
     transition: width 150ms ease, height 150ms ease;
     z-index: 100;
 }
 
-.c-menu-item-link[href^="https://hubs.mozilla.com"]:hover .c-menu-item-icon {
+.c-menu-item-link[href^="https://hubs.mozilla.com"]:hover .c-menu-item-icon
+{
     animation: duckroll 23s ease-in-out 23s forwards;
 }

@@ -83,7 +83,7 @@ $image-path: "/media/protocol/img";
 
     // Force space for the YouTube's iframe
     &::after {
-        content: '';
+        content: "";
         display: block;
         padding-top: 56.25%; // 16:9 aspect ratio
     }

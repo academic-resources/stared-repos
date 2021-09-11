@@ -3,227 +3,286 @@
  * Sinon docs: http://sinonjs.org/docs/
  */
 
-describe('mozilla-fxa.js', function() {
-    'use strict';
+describe("mozilla-fxa.js", function () {
+    "use strict";
 
-    describe('FxaState.applyStateToBody', function() {
-
-        beforeEach(function() {
-            document.body.classList.add('js', 'state-fxa-default');
+    describe("FxaState.applyStateToBody", function () {
+        beforeEach(function () {
+            document.body.classList.add("js", "state-fxa-default");
         });
 
-        afterEach(function() {
-            document.body.classList.remove('js', 'state-fxa-default');
+        afterEach(function () {
+            document.body.classList.remove("js", "state-fxa-default");
         });
 
-        it('should add the supplied value to the body class list', function() {
-            Mozilla.FxaState.applyStateToBody('state-fxa-android');
-            expect(document.body.classList.contains('state-fxa-android')).toBeTruthy();
+        it("should add the supplied value to the body class list", function () {
+            Mozilla.FxaState.applyStateToBody("state-fxa-android");
+            expect(
+                document.body.classList.contains("state-fxa-android")
+            ).toBeTruthy();
         });
 
-        it('should remove state-default from the body class list', function() {
-            Mozilla.FxaState.applyStateToBody('state-fxa-android');
-            expect(document.body.classList.contains('state-fxa-default')).toBeFalsy();
+        it("should remove state-default from the body class list", function () {
+            Mozilla.FxaState.applyStateToBody("state-fxa-android");
+            expect(
+                document.body.classList.contains("state-fxa-default")
+            ).toBeFalsy();
         });
     });
 
-    describe('FxaState.getStateClassAndDo', function() {
-
-        it('should fire the callback function with a stateClass', function() {
-            var callback1 = jasmine.createSpy('callback1');
+    describe("FxaState.getStateClassAndDo", function () {
+        it("should fire the callback function with a stateClass", function () {
+            var callback1 = jasmine.createSpy("callback1");
 
             // mock details, isFirefoxiOS, and getFxaDetails
             var details = {
-                'firefox': false,
-                'legacy': false,
-                'mobile': false,
-                'setup': false,
-                'desktopDevices': false,
-                'mobileDevices': false
+                firefox: false,
+                legacy: false,
+                mobile: false,
+                setup: false,
+                desktopDevices: false,
+                mobileDevices: false,
             };
 
-            spyOn(Mozilla.Client, 'getFxaDetails').and.callFake(function(callback) {
+            spyOn(Mozilla.Client, "getFxaDetails").and.callFake(function (
+                callback
+            ) {
                 callback(details);
             });
 
             // call getStateClassAndDo and pass in the callback
             Mozilla.FxaState.getStateClassAndDo(callback1);
             // check callback was called with expected stateClass
-            expect(callback1).toHaveBeenCalledWith('state-fxa-not-fx');
+            expect(callback1).toHaveBeenCalledWith("state-fxa-not-fx");
         });
     });
 
-    describe('FxaState.convertFxaDetailsToStateAndDo', function() {
-        beforeEach(function() {
+    describe("FxaState.convertFxaDetailsToStateAndDo", function () {
+        beforeEach(function () {
             // mock
             Mozilla.Client.isFirefoxiOS = false;
             // watch
-            spyOn(Mozilla.FxaState, 'applyStateToBody');
+            spyOn(Mozilla.FxaState, "applyStateToBody");
         });
 
         // not Firefox
-        it('should set the appropriate body class when not firefox', function() {
+        it("should set the appropriate body class when not firefox", function () {
             var details = {
-                'firefox': false,
-                'legacy': false,
-                'mobile': false,
-                'setup': false,
-                'desktopDevices': false,
-                'mobileDevices': false
+                firefox: false,
+                legacy: false,
+                mobile: false,
+                setup: false,
+                desktopDevices: false,
+                mobileDevices: false,
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-not-fx');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-not-fx"
+            );
         });
 
         // Firefox Android
-        it('should set the appropriate body class when Firefox Android', function() {
+        it("should set the appropriate body class when Firefox Android", function () {
             var details = {
-                'firefox': true,
-                'legacy': false,
-                'mobile': 'android',
-                'setup': false,
-                'desktopDevices': false,
-                'mobileDevices': false
+                firefox: true,
+                legacy: false,
+                mobile: "android",
+                setup: false,
+                desktopDevices: false,
+                mobileDevices: false,
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-android');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-android"
+            );
         });
 
         // Firefox iOS
-        it('should set the appropriate body class when Firefox iOS', function() {
+        it("should set the appropriate body class when Firefox iOS", function () {
             var details = {
-                'firefox': true,
-                'legacy': false,
-                'mobile': 'ios',
-                'setup': false,
-                'desktopDevices': false,
-                'mobileDevices': false
+                firefox: true,
+                legacy: false,
+                mobile: "ios",
+                setup: false,
+                desktopDevices: false,
+                mobileDevices: false,
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-ios');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-ios"
+            );
         });
 
         // Firefox < 29
-        it('should set the appropriate body class when pre UITour Firefox', function() {
+        it("should set the appropriate body class when pre UITour Firefox", function () {
             var details = {
-                'firefox': true,
-                'legacy': true,
-                'mobile': false,
-                'setup': false,
-                'desktopDevices': false,
-                'mobileDevices': false
+                firefox: true,
+                legacy: true,
+                mobile: false,
+                setup: false,
+                desktopDevices: false,
+                mobileDevices: false,
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-unsupported');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-unsupported"
+            );
         });
 
         // Firefox < FxALastSupported, logged out
-        it('should set the appropriate body class when Legacy Firefox', function() {
+        it("should set the appropriate body class when Legacy Firefox", function () {
             var details = {
-                'firefox': true,
-                'legacy': true,
-                'mobile': false,
-                'setup': false,
-                'desktopDevices': false,
-                'mobileDevices': false
+                firefox: true,
+                legacy: true,
+                mobile: false,
+                setup: false,
+                desktopDevices: false,
+                mobileDevices: false,
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-unsupported');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-unsupported"
+            );
         });
 
         // Firefox < FxALastSupported, logged out
-        it('should set the appropriate body class when Legacy Firefox logged out', function() {
+        it("should set the appropriate body class when Legacy Firefox logged out", function () {
             var details = {
-                'firefox': true,
-                'legacy': true,
-                'mobile': false,
-                'setup': false,
-                'desktopDevices': false,
-                'mobileDevices': false
+                firefox: true,
+                legacy: true,
+                mobile: false,
+                setup: false,
+                desktopDevices: false,
+                mobileDevices: false,
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-unsupported');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-unsupported"
+            );
         });
 
         // Firefox Desktop < FxALastSupported, logged in
-        it('should set the appropriate body class when Legacy Firefox logged in', function() {
+        it("should set the appropriate body class when Legacy Firefox logged in", function () {
             var details = {
-                'firefox': true,
-                'legacy': true,
-                'mobile': false,
-                'setup': true,
-                'desktopDevices': 'unknown',
-                'mobileDevices': 'unknown'
+                firefox: true,
+                legacy: true,
+                mobile: false,
+                setup: true,
+                desktopDevices: "unknown",
+                mobileDevices: "unknown",
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-unsupported');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-unsupported"
+            );
         });
 
         // Firefox Desktop < 50, logged out
-        it('should set the appropriate body class when Firefox pre device count logged out', function() {
+        it("should set the appropriate body class when Firefox pre device count logged out", function () {
             var details = {
-                'firefox': true,
-                'legacy': false,
-                'mobile': false,
-                'setup': false,
-                'desktopDevices': false,
-                'mobileDevices': false
+                firefox: true,
+                legacy: false,
+                mobile: false,
+                setup: false,
+                desktopDevices: false,
+                mobileDevices: false,
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-supported-signed-out');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-supported-signed-out"
+            );
         });
 
         // Firefox Desktop < 50, logged in
-        it('should set the appropriate body class when Firefox pre device count logged in', function() {
+        it("should set the appropriate body class when Firefox pre device count logged in", function () {
             var details = {
-                'firefox': true,
-                'legacy': false,
-                'mobile': false,
-                'setup': true,
-                'desktopDevices': 'unknown',
-                'mobileDevices': 'unknown'
+                firefox: true,
+                legacy: false,
+                mobile: false,
+                setup: true,
+                desktopDevices: "unknown",
+                mobileDevices: "unknown",
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-supported-signed-in');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-supported-signed-in"
+            );
         });
 
         // Firefox Desktop Current, logged out
-        it('should set the appropriate body class when Current Firefox Desktop logged out', function() {
+        it("should set the appropriate body class when Current Firefox Desktop logged out", function () {
             var details = {
-                'firefox': true,
-                'legacy': false,
-                'mobile': false,
-                'setup': false,
-                'desktopDevices': false,
-                'mobileDevices': false
+                firefox: true,
+                legacy: false,
+                mobile: false,
+                setup: false,
+                desktopDevices: false,
+                mobileDevices: false,
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-supported-signed-out');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-supported-signed-out"
+            );
         });
 
         // Firefox Desktop Current, logged in
-        it('should set the appropriate body class when Current Firefox Desktop logged in', function() {
+        it("should set the appropriate body class when Current Firefox Desktop logged in", function () {
             var details = {
-                'firefox': true,
-                'legacy': false,
-                'mobile': false,
-                'setup': true,
-                'desktopDevices': 2,
-                'mobileDevices': 1
+                firefox: true,
+                legacy: false,
+                mobile: false,
+                setup: true,
+                desktopDevices: 2,
+                mobileDevices: 1,
             };
 
-            Mozilla.FxaState.convertFxaDetailsToStateAndDo(details, Mozilla.FxaState.applyStateToBody);
-            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith('state-fxa-supported-signed-in');
+            Mozilla.FxaState.convertFxaDetailsToStateAndDo(
+                details,
+                Mozilla.FxaState.applyStateToBody
+            );
+            expect(Mozilla.FxaState.applyStateToBody).toHaveBeenCalledWith(
+                "state-fxa-supported-signed-in"
+            );
         });
     });
 });

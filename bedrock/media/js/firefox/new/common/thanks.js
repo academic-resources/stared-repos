@@ -3,12 +3,12 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // Create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function(Mozilla) {
-    'use strict';
+(function (Mozilla) {
+    "use strict";
 
     var DownloadThanks = {};
 
@@ -17,8 +17,8 @@ if (typeof window.Mozilla === 'undefined') {
      * @param {String} platform
      * @returns {Boolean}
      */
-    DownloadThanks.shouldAutoDownload = function(platform) {
-        var supportedPlatforms = ['windows', 'osx', 'linux', 'android', 'ios'];
+    DownloadThanks.shouldAutoDownload = function (platform) {
+        var supportedPlatforms = ["windows", "osx", "linux", "android", "ios"];
 
         if (supportedPlatforms.indexOf(platform) !== -1) {
             return true;
@@ -32,36 +32,36 @@ if (typeof window.Mozilla === 'undefined') {
      * @param {Object} window.site
      * @returns {String} download url
      */
-    DownloadThanks.getDownloadURL = function(site) {
-        var prefix = 'thanks-download-button-';
+    DownloadThanks.getDownloadURL = function (site) {
+        var prefix = "thanks-download-button-";
         var link;
         var url;
 
-        switch(site.platform) {
-        case 'windows':
-            link = document.getElementById(prefix + 'win');
-            break;
-        case 'osx':
-            link = document.getElementById(prefix + 'osx');
-            break;
-        case 'linux':
-            if (site.isARM) {
-                // Linux ARM users get SUMO install instructions.
-                link = null;
-            } else if (site.archSize === 64) {
-                // Detect 64bit / 32bit builds for Linux.
-                link = document.getElementById(prefix + 'linux64');
-            } else {
-                link = document.getElementById(prefix + 'linux');
-            }
+        switch (site.platform) {
+            case "windows":
+                link = document.getElementById(prefix + "win");
+                break;
+            case "osx":
+                link = document.getElementById(prefix + "osx");
+                break;
+            case "linux":
+                if (site.isARM) {
+                    // Linux ARM users get SUMO install instructions.
+                    link = null;
+                } else if (site.archSize === 64) {
+                    // Detect 64bit / 32bit builds for Linux.
+                    link = document.getElementById(prefix + "linux64");
+                } else {
+                    link = document.getElementById(prefix + "linux");
+                }
 
-            break;
-        case 'android':
-            link = document.getElementById(prefix + 'android');
-            break;
-        case 'ios':
-            link = document.getElementById(prefix + 'ios');
-            break;
+                break;
+            case "android":
+                link = document.getElementById(prefix + "android");
+                break;
+            case "ios":
+                link = document.getElementById(prefix + "ios");
+                break;
         }
 
         if (link && link.href) {
@@ -72,5 +72,4 @@ if (typeof window.Mozilla === 'undefined') {
     };
 
     Mozilla.DownloadThanks = DownloadThanks;
-
 })(window.Mozilla);

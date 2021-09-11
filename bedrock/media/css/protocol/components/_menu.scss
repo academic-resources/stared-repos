@@ -2,13 +2,13 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../../protocol/css/includes/lib';
+@import "../../../protocol/css/includes/lib";
 
 @mixin highlighted {
     &:after {
         background: $color-black;
         bottom: -1px;
-        content: '';
+        content: "";
         height: 3px;
         left: 0;
         position: absolute;
@@ -30,7 +30,12 @@
 // Menu top navigation
 
 .c-menu {
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         @include font-base;
     }
 
@@ -83,9 +88,9 @@
         &:before {
             background: $url-image-arrow-down-form top left no-repeat;
             @include background-size(20px, 20px);
-            @include bidi(((right, 8px, left, auto),));
+            @include bidi(((right, 8px, left, auto)));
             @include transition(transform 100ms ease-in-out);
-            content: '';
+            content: "";
             height: 20px;
             margin-top: -8px;
             position: absolute;
@@ -94,7 +99,7 @@
         }
     }
 
-    @supports(display: flex) {
+    @supports (display: flex) {
         .c-menu-title {
             align-items: center;
             display: flex;
@@ -102,7 +107,7 @@
     }
 
     @media #{$mq-md} {
-        @include bidi(((float, left, right),));
+        @include bidi(((float, left, right)));
         border-top: 0;
         display: inline-block;
 
@@ -120,12 +125,12 @@
         }
 
         &.mzp-has-drop-down .c-menu-panel {
-            @include bidi(((left, 0, auto), (right, auto, 0),));
+            @include bidi(((left, 0, auto), (right, auto, 0)));
         }
 
         // Offset the dropdown to the other side for items 4 and up
-        &:nth-child(n+4).mzp-has-drop-down .c-menu-panel {
-            @include bidi(((left, auto, 0), (right, 0, auto),));
+        &:nth-child(n + 4).mzp-has-drop-down .c-menu-panel {
+            @include bidi(((left, auto, 0), (right, 0, auto)));
         }
     }
 
@@ -138,7 +143,6 @@
 
 // Basic hover interactions with JavaScript disabled or not supported..
 .c-menu.mzp-is-basic .c-menu-category {
-
     .c-menu-title:before {
         display: none;
     }
@@ -192,7 +196,9 @@
         &.mzp-is-animated {
             .c-menu-panel,
             .c-menu-title:after {
-                @include animation(mzp-a-fade-in 80ms ease-in 0ms 1 normal both);
+                @include animation(
+                    mzp-a-fade-in 80ms ease-in 0ms 1 normal both
+                );
             }
         }
 
@@ -210,7 +216,6 @@
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Menu panel
@@ -269,8 +274,8 @@
             @include clearfix;
             position: relative;
 
-            @supports (display:grid) {
-                &> ul {
+            @supports (display: grid) {
+                & > ul {
                     display: grid;
                     grid-auto-flow: row;
                     grid-template-columns: repeat(2, 1fr);
@@ -314,12 +319,10 @@
 
         // Close button is only visible when focused, for keyboard users
         .c-menu-button-close {
-            @include bidi((
-                (right, auto, -12px),
-                (left, -12px, auto),
-            ));
+            @include bidi(((right, auto, -12px), (left, -12px, auto)));
             @include image-replaced;
-            background: $color-white url('#{$image-path}/icons/close.svg') center center no-repeat;
+            background: $color-white url("#{$image-path}/icons/close.svg")
+                center center no-repeat;
             @include background-size(20px, 20px);
             border-radius: $border-radius-sm;
             border: none;
@@ -344,13 +347,13 @@
             @include clearfix;
             position: relative;
 
-            &> ul {
+            & > ul {
                 margin: 0;
             }
 
             // Undo the grid so items stack in one column on mid-size screens
-            @supports (display:grid) {
-                &> ul {
+            @supports (display: grid) {
+                & > ul {
                     display: block;
                 }
             }
@@ -370,8 +373,8 @@
             @include clearfix;
             position: relative;
 
-            @supports (display:grid) {
-                &> ul {
+            @supports (display: grid) {
+                & > ul {
                     display: grid;
                     grid-auto-flow: row;
                     grid-template-columns: repeat(2, 1fr);
@@ -399,7 +402,6 @@
             }
         }
     }
-
 }
 
 .c-menu.mzp-is-basic .c-menu-panel {

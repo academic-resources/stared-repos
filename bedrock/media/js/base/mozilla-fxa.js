@@ -6,55 +6,57 @@
 // adds classes to the body to indicate state of fxaccount
 
 // Create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function(Mozilla) {
-    'use strict';
+(function (Mozilla) {
+    "use strict";
 
     var FxaState = {
-        body: document.getElementsByTagName('body')[0],
-        defaultStateClass : 'state-fxa-default', // only present if added manually to page in HTML
+        body: document.getElementsByTagName("body")[0],
+        defaultStateClass: "state-fxa-default", // only present if added manually to page in HTML
     };
 
-    FxaState.getStateClassAndDo = function(callback) {
-        Mozilla.Client.getFxaDetails(function(details) {
+    FxaState.getStateClassAndDo = function (callback) {
+        Mozilla.Client.getFxaDetails(function (details) {
             FxaState.convertFxaDetailsToStateAndDo(details, callback);
         });
     };
 
-    FxaState.convertFxaDetailsToStateAndDo = function(details, callback) {
-        var stateClass = '';
+    FxaState.convertFxaDetailsToStateAndDo = function (details, callback) {
+        var stateClass = "";
 
         if (details.firefox) {
             if (details.legacy) {
-                stateClass = 'state-fxa-unsupported';
+                stateClass = "state-fxa-unsupported";
             } else if (details.mobile) {
-                if (details.mobile === 'ios') {
-                    stateClass = 'state-fxa-ios';
+                if (details.mobile === "ios") {
+                    stateClass = "state-fxa-ios";
                 } else {
-                    stateClass = 'state-fxa-android';
+                    stateClass = "state-fxa-android";
                 }
             } else {
                 // Query param `signed-in=true` is used for integration testing and demo review only.
-                if (details.setup || window.location.search.indexOf('signed-in=true') !== -1) {
-                    stateClass = 'state-fxa-supported-signed-in';
+                if (
+                    details.setup ||
+                    window.location.search.indexOf("signed-in=true") !== -1
+                ) {
+                    stateClass = "state-fxa-supported-signed-in";
                 } else {
-                    stateClass = 'state-fxa-supported-signed-out';
+                    stateClass = "state-fxa-supported-signed-out";
                 }
             }
         } else {
-            stateClass = 'state-fxa-not-fx';
+            stateClass = "state-fxa-not-fx";
         }
         callback(stateClass);
     };
 
-    FxaState.applyStateToBody = function(stateClass) {
+    FxaState.applyStateToBody = function (stateClass) {
         FxaState.body.classList.remove(FxaState.defaultStateClass);
         FxaState.body.classList.add(stateClass);
     };
 
     Mozilla.FxaState = FxaState;
-
 })(window.Mozilla);

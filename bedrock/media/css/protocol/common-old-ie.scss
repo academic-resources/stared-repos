@@ -5,16 +5,16 @@
 // This style sheet is served exclusively to Internet Explorer 8 and older.
 // Old versions get this minimal style while IE9 and up recieve more advanced styling.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/base/elements';
-@import '../../protocol/css/components/button';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/base/elements";
+@import "../../protocol/css/components/button";
 
-@import 'components/navigation-ie';
-@import 'components/sub-navigation';
-@import 'components/download-button-ie';
+@import "components/navigation-ie";
+@import "components/sub-navigation";
+@import "components/download-button-ie";
 
 // An arbitrary container for translatable strings to use in scripts
 #strings {
@@ -49,7 +49,10 @@ label {
     display: none !important; /* stylelint-disable-line declaration-no-important */
 }
 
-header, main, section, footer {
+header,
+main,
+section,
+footer {
     display: block;
 }
 
@@ -68,7 +71,12 @@ header, main, section, footer {
     background: $color-ink-80;
     color: $color-white;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         color: $color-white;
     }
 }

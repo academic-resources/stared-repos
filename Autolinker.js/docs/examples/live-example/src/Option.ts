@@ -3,12 +3,10 @@
 /*global $ */
 
 namespace LiveExample {
-
 	export interface OptionCfg {
 		name: string;
 		description: string;
 	}
-
 
 	/**
 	 * @abstract
@@ -17,7 +15,6 @@ namespace LiveExample {
 	 * Base class for options that can be modified in the live example.
 	 */
 	export abstract class Option {
-
 		/**
 		 * @cfg {String} name
 		 *
@@ -32,7 +29,6 @@ namespace LiveExample {
 		 *
 		 * The description to display for the option.
 		 */
-
 
 		protected optionName: string;
 		protected optionDescription: string;
@@ -62,42 +58,40 @@ namespace LiveExample {
 		 */
 		private changeCallbacks: Function[];
 
-
 		/**
 		 * @constructor
 		 * @param {OptionCfg} cfg The configuration options for this class,
 		 *   specified in an Object (map).
 		 */
-		constructor( cfg: OptionCfg ) {
+		constructor(cfg: OptionCfg) {
 			this.optionName = cfg.name;
 			this.optionDescription = cfg.description;
 
-			this.containerId = 'option-' + this.optionName.replace( /\./g, '-' );  // ex: 'truncate.length' -> 'trunctate-length'
-			this.$containerEl = $( '#' + this.containerId );
+			this.containerId = "option-" + this.optionName.replace(/\./g, "-"); // ex: 'truncate.length' -> 'trunctate-length'
+			this.$containerEl = $("#" + this.containerId);
 
 			this.changeCallbacks = [];
 		}
-
 
 		/**
 		 * @protected
 		 * @return {String}
 		 */
 		protected getApiDocAnchor(): string {
-			return `<a href="${ this.getApiDocLink() }" target="autolinkerDocs">${ this.optionName }</a>`;
+			return `<a href="${this.getApiDocLink()}" target="autolinkerDocs">${
+				this.optionName
+			}</a>`;
 		}
-
 
 		/**
 		 * @protected
 		 * @return {String}
 		 */
 		protected getApiDocLink(): string {
-			let configName: string = this.optionName.match( /[^.]+/ )[ 0 ];  // ex: 'urls.schemeMatches' -> 'urls'
+			let configName: string = this.optionName.match(/[^.]+/)[0]; // ex: 'urls.schemeMatches' -> 'urls'
 
 			return `http://gregjacobs.github.io/Autolinker.js/api/#!/api/Autolinker-cfg-${configName}`;
 		}
-
 
 		/**
 		 * Retrieves the value for the option.
@@ -107,18 +101,16 @@ namespace LiveExample {
 		 */
 		abstract getValue(): any;
 
-
 		/**
 		 * Registers a callback to call when the option is changed.
 		 *
 		 * @param {Function} callbackFn
 		 * @chainable
 		 */
-		public onChange( callbackFn: Function ): Option {
-			this.changeCallbacks.push( callbackFn );
+		public onChange(callbackFn: Function): Option {
+			this.changeCallbacks.push(callbackFn);
 			return this;
 		}
-
 
 		/**
 		 * Calls all 'change' callbacks as a result of the option being changed.
@@ -126,9 +118,7 @@ namespace LiveExample {
 		 * @protected
 		 */
 		protected fireChange() {
-			this.changeCallbacks.forEach( cb => cb() );  // call all 'change' callbacks
+			this.changeCallbacks.forEach((cb) => cb()); // call all 'change' callbacks
 		}
-
 	}
-
 }

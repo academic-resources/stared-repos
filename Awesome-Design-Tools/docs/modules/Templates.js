@@ -1,16 +1,16 @@
-const getCssFile = require('./helpers/getCssFile');
-const CONFIG = require('./config/tools');
+const getCssFile = require("./helpers/getCssFile");
+const CONFIG = require("./config/tools");
 
-const normalizeCss = getCssFile('normalize');
-const mainCss = getCssFile('design-tools-style');
+const normalizeCss = getCssFile("normalize");
+const mainCss = getCssFile("design-tools-style");
 const {
-    promoFlawlessFeedbackBanner__title,
-    promoFlawlessFeedbackBanner__description,
-    promoFlawlessFeedbackBanner__link,
+  promoFlawlessFeedbackBanner__title,
+  promoFlawlessFeedbackBanner__description,
+  promoFlawlessFeedbackBanner__link,
 } = CONFIG;
 
 const Templates = {
-    analytics: `
+  analytics: `
         <!-- Google Analytics -->
         <script>
             window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -33,7 +33,7 @@ const Templates = {
             fbq('track', 'PageView');
         </script>
     `,
-    promoFlawlessFeedbackBanner: `
+  promoFlawlessFeedbackBanner: `
         <div class="promo-banner__logo promo-banner--flawless-feedback__logo"></div>
         <div class="promo-banner__description promo-banner--flawless-feedback__description">
             <h3>${promoFlawlessFeedbackBanner__title}</h3>
@@ -43,23 +43,23 @@ const Templates = {
             class="promo-banner__button promo-banner--flawless-feedback__button"
             href="${promoFlawlessFeedbackBanner__link}">Request Access</div>
     `,
-    createIcons: (favicon) => `
-        <link rel="icon" type="image/png" href="${favicon['196']}" sizes="196x196">
-        <link rel="icon" type="image/png" href="${favicon['160']}" sizes="160x160">
-        <link rel="icon" type="image/png" href="${favicon['96']}" sizes="96x96">
-        <link rel="icon" type="image/png" href="${favicon['16']}" sizes="16x16">
-        <link rel="icon" type="image/png" href="${favicon['32']}" sizes="32x32">
-        <link rel="apple-touch-icon" sizes="57x57" href="${favicon['57']}">
-        <link rel="apple-touch-icon" sizes="114x114" href="${favicon['114']}">
-        <link rel="apple-touch-icon" sizes="72x72" href="${favicon['72']}">
-        <link rel="apple-touch-icon" sizes="144x144" href="${favicon['144']}">
-        <link rel="apple-touch-icon" sizes="60x60" href="${favicon['60']}">
-        <link rel="apple-touch-icon" sizes="120x120" href="${favicon['120']}">
-        <link rel="apple-touch-icon" sizes="76x76" href="${favicon['76']}">
-        <link rel="apple-touch-icon" sizes="152x152" href="${favicon['152']}">
+  createIcons: (favicon) => `
+        <link rel="icon" type="image/png" href="${favicon["196"]}" sizes="196x196">
+        <link rel="icon" type="image/png" href="${favicon["160"]}" sizes="160x160">
+        <link rel="icon" type="image/png" href="${favicon["96"]}" sizes="96x96">
+        <link rel="icon" type="image/png" href="${favicon["16"]}" sizes="16x16">
+        <link rel="icon" type="image/png" href="${favicon["32"]}" sizes="32x32">
+        <link rel="apple-touch-icon" sizes="57x57" href="${favicon["57"]}">
+        <link rel="apple-touch-icon" sizes="114x114" href="${favicon["114"]}">
+        <link rel="apple-touch-icon" sizes="72x72" href="${favicon["72"]}">
+        <link rel="apple-touch-icon" sizes="144x144" href="${favicon["144"]}">
+        <link rel="apple-touch-icon" sizes="60x60" href="${favicon["60"]}">
+        <link rel="apple-touch-icon" sizes="120x120" href="${favicon["120"]}">
+        <link rel="apple-touch-icon" sizes="76x76" href="${favicon["76"]}">
+        <link rel="apple-touch-icon" sizes="152x152" href="${favicon["152"]}">
     `,
-    createTitle: (title) => `<title>${title}</title>`,
-    createMeta: (meta) => `
+  createTitle: (title) => `<title>${title}</title>`,
+  createMeta: (meta) => `
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="${meta.themeColor}">
@@ -84,14 +84,14 @@ const Templates = {
         <meta name="fb:admins" content="1685880598347240">
         <meta name="og:type" content="website">
     `,
-    fonts: `
+  fonts: `
         <link href="https://fonts.googleapis.com/css?family=Lato:700|Montserrat:400,600i,700|Pacifico&display=swap" rel="stylesheet">
     `,
-    styleExternal: `
+  styleExternal: `
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/design-tools-style.css">
     `,
-    styleInner: `
+  styleInner: `
         <style>
             ${normalizeCss}
             ${mainCss}

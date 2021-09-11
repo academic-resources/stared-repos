@@ -2,22 +2,22 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
-$brand-theme: 'firefox';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
+$brand-theme: "firefox";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/logos/wordmark';
-@import '../../../protocol/css/components/logos/wordmark-product-firefox';
-@import '../../../protocol/css/templates/multi-column';
-@import '../../../protocol/css/components/emphasis-box';
-@import '../../../protocol/css/components/split';
-@import '../../../protocol/css/components/call-out';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/logos/wordmark";
+@import "../../../protocol/css/components/logos/wordmark-product-firefox";
+@import "../../../protocol/css/templates/multi-column";
+@import "../../../protocol/css/components/emphasis-box";
+@import "../../../protocol/css/components/split";
+@import "../../../protocol/css/components/call-out";
 
 //* -------------------------------------------------------------------------- */
 
 // not yet recognized as valid by style lint, so we abstract it
-$mq-reduced-motion: 'screen and (prefers-reduced-motion: reduce)';
+$mq-reduced-motion: "screen and (prefers-reduced-motion: reduce)";
 
 main .mzp-l-content {
     max-width: 400px;
@@ -26,7 +26,6 @@ main .mzp-l-content {
         max-width: $content-max;
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 //  Download buttons
@@ -71,7 +70,6 @@ main .mzp-l-content {
 .ios .mobile-download-buttons .android-apk {
     display: none;
 }
-
 
 // very basic styling for no-JS visitors
 .no-js {
@@ -155,8 +153,16 @@ main .mzp-l-content {
 @media #{$mq-md} {
     .c-hero-bg-image {
         @include background-size(1200px 275px);
-        background-image: url('/media/img/firefox/mobile/img-mobile-noodles.svg');
-        @include bidi(((background-position, (top left calc(60vw + #{$spacing-md})), (top right calc(60vw + #{$spacing-md}))),));
+        background-image: url("/media/img/firefox/mobile/img-mobile-noodles.svg");
+        @include bidi(
+            (
+                (
+                    background-position,
+                    (top left calc(60vw + #{$spacing-md})),
+                    (top right calc(60vw + #{$spacing-md}))
+                )
+            )
+        );
         background-repeat: no-repeat;
         background-size: contain;
         min-height: 560px;
@@ -174,7 +180,7 @@ main .mzp-l-content {
         }
 
         .c-hero-body {
-            @include bidi(((text-align, left, right),));
+            @include bidi(((text-align, left, right)));
             margin-bottom: 0;
 
             h2 {
@@ -229,20 +235,19 @@ main .mzp-l-content {
     }
 
     h3 {
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
         @include text-title-xs;
         color: $color-white;
         margin-top: $spacing-2xl;
     }
 
     p {
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
         margin-top: $spacing-xl;
     }
 }
 
 @media #{$mq-md} {
-
     .t-private {
         h2 {
             margin-top: $layout-lg;
@@ -254,17 +259,14 @@ main .mzp-l-content {
     }
 
     .c-private-cols {
-        @include bidi(((left, $layout-lg / 2, right, auto),));
+        @include bidi(((left, $layout-lg / 2, right, auto)));
         margin: 0 auto;
         max-width: 600px + ($layout-lg * 2);
         position: relative;
     }
 
     .c-private-col {
-        @include bidi((
-            (float, left, right),
-            (text-align, left, right),
-        ));
+        @include bidi(((float, left, right), (text-align, left, right)));
         @include border-box;
         width: 50%;
         padding: 0 ($layout-lg / 2);
@@ -289,13 +291,13 @@ main .mzp-l-content {
     }
 
     @media #{$mq-md} {
-        .mzp-c-split-container  {
+        .mzp-c-split-container {
             max-width: $content-md;
         }
     }
 
     @media #{$mq-lg} {
-        .mzp-c-split-container  {
+        .mzp-c-split-container {
             max-width: $content-max;
         }
     }
@@ -312,7 +314,7 @@ main .mzp-l-content {
 }
 
 .t-android-only {
-    .mzp-c-split  {
+    .mzp-c-split {
         padding-bottom: 0;
     }
 
@@ -324,7 +326,9 @@ main .mzp-l-content {
     img {
         animation: custom 6s infinite step-end;
         background-color: $color-yellow-20;
-        background-image: url('/media/img/firefox/mobile/protocol/extend-key.svg'), url('/media/img/firefox/mobile/protocol/extend-eye.svg'), url('/media/img/firefox/mobile/protocol/extend-star.svg');
+        background-image: url("/media/img/firefox/mobile/protocol/extend-key.svg"),
+            url("/media/img/firefox/mobile/protocol/extend-eye.svg"),
+            url("/media/img/firefox/mobile/protocol/extend-star.svg");
         background-position: 50% 75%, 500px 500px, 500px 500px;
         background-repeat: no-repeat;
         max-width: 245px;
@@ -341,15 +345,17 @@ main .mzp-l-content {
 .t-theme {
     margin-bottom: $layout-xl;
 
-     img {
-         background-image: url('/media/img/firefox/mobile/protocol/theme-yellow.svg'), url('/media/img/firefox/mobile/protocol/theme-pink.svg'), url('/media/img/firefox/mobile/protocol/theme-violet.svg');
-     }
+    img {
+        background-image: url("/media/img/firefox/mobile/protocol/theme-yellow.svg"),
+            url("/media/img/firefox/mobile/protocol/theme-pink.svg"),
+            url("/media/img/firefox/mobile/protocol/theme-violet.svg");
+    }
 
-     @media #{$mq-lg} {
+    @media #{$mq-lg} {
         .mzp-c-split-body {
             justify-self: end;
         }
-     }
+    }
 }
 
 @media #{$mq-reduced-motion} {
@@ -387,7 +393,6 @@ main .mzp-l-content {
         padding-bottom: $layout-lg;
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 //  Send to Device overrides

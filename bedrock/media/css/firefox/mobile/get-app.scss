@@ -2,11 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-
+@import "../../../protocol/css/includes/lib";
 
 //* -------------------------------------------------------------------------- */
 //  Main page heading
@@ -15,7 +14,11 @@ main {
     text-align: center;
 
     h1 {
-        @include at2x('/media/protocol/img/logos/firefox/browser/logo-sm.png', 64px, 64px);
+        @include at2x(
+            "/media/protocol/img/logos/firefox/browser/logo-sm.png",
+            64px,
+            64px
+        );
         @include text-title-md;
         background-position: top center;
         background-repeat: no-repeat;

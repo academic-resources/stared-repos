@@ -1,19 +1,18 @@
-# Code style convention  
+# Code style convention
 
-Please orient on this guide before you sent a pull request.  
+Please orient on this guide before you sent a pull request.
 
 ---
 
-## User-interface  
+## User-interface
 
 Please write a simple user interface for your programs. Not a blinking cursor!  
 What does the program do?  
-What want the program an user informations?  
+What want the program an user informations?
 
 ---
 
-## Code style conventions  
+## Code style conventions
 
 See [here](https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html)  
-Don't push all code in one line!  
-
+Don't push all code in one line!

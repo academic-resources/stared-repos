@@ -30,8 +30,7 @@
  *
  * See the {@link Autolinker} class for more details on using the {@link Autolinker#replaceFn replaceFn}.
  */
-Autolinker.match.Match = Autolinker.Util.extend( Object, {
-
+Autolinker.match.Match = Autolinker.Util.extend(Object, {
 	/**
 	 * @cfg {Autolinker.AnchorTagBuilder} tagBuilder (required)
 	 *
@@ -51,17 +50,16 @@ Autolinker.match.Match = Autolinker.Util.extend( Object, {
 	 * The offset of where the match was made in the input string.
 	 */
 
-
 	/**
 	 * @constructor
 	 * @param {Object} cfg The configuration properties for the Match
 	 *   instance, specified in an Object (map).
 	 */
-	constructor : function( cfg ) {
+	constructor: function (cfg) {
 		// @if DEBUG
-		if( cfg.tagBuilder == null ) throw new Error( '`tagBuilder` cfg required' );
-		if( cfg.matchedText == null ) throw new Error( '`matchedText` cfg required' );
-		if( cfg.offset == null ) throw new Error( '`offset` cfg required' );
+		if (cfg.tagBuilder == null) throw new Error("`tagBuilder` cfg required");
+		if (cfg.matchedText == null) throw new Error("`matchedText` cfg required");
+		if (cfg.offset == null) throw new Error("`offset` cfg required");
 		// @endif
 
 		this.tagBuilder = cfg.tagBuilder;
@@ -69,25 +67,22 @@ Autolinker.match.Match = Autolinker.Util.extend( Object, {
 		this.offset = cfg.offset;
 	},
 
-
 	/**
 	 * Returns a string name for the type of match that this class represents.
 	 *
 	 * @abstract
 	 * @return {String}
 	 */
-	getType : Autolinker.Util.abstractMethod,
-
+	getType: Autolinker.Util.abstractMethod,
 
 	/**
 	 * Returns the original text that was matched.
 	 *
 	 * @return {String}
 	 */
-	getMatchedText : function() {
+	getMatchedText: function () {
 		return this.matchedText;
 	},
-
 
 	/**
 	 * Sets the {@link #offset} of where the match was made in the input string.
@@ -101,10 +96,9 @@ Autolinker.match.Match = Autolinker.Util.extend( Object, {
 	 *
 	 * @param {Number} offset
 	 */
-	setOffset : function( offset ) {
+	setOffset: function (offset) {
 		this.offset = offset;
 	},
-
 
 	/**
 	 * Returns the offset of where the match was made in the input string. This
@@ -112,10 +106,9 @@ Autolinker.match.Match = Autolinker.Util.extend( Object, {
 	 *
 	 * @return {Number}
 	 */
-	getOffset : function() {
+	getOffset: function () {
 		return this.offset;
 	},
-
 
 	/**
 	 * Returns the anchor href that should be generated for the match.
@@ -123,8 +116,7 @@ Autolinker.match.Match = Autolinker.Util.extend( Object, {
 	 * @abstract
 	 * @return {String}
 	 */
-	getAnchorHref : Autolinker.Util.abstractMethod,
-
+	getAnchorHref: Autolinker.Util.abstractMethod,
 
 	/**
 	 * Returns the anchor text that should be generated for the match.
@@ -132,8 +124,7 @@ Autolinker.match.Match = Autolinker.Util.extend( Object, {
 	 * @abstract
 	 * @return {String}
 	 */
-	getAnchorText : Autolinker.Util.abstractMethod,
-
+	getAnchorText: Autolinker.Util.abstractMethod,
 
 	/**
 	 * Returns the CSS class suffix(es) for this match.
@@ -156,10 +147,9 @@ Autolinker.match.Match = Autolinker.Util.extend( Object, {
 	 *
 	 * @return {String[]}
 	 */
-	getCssClassSuffixes : function() {
-		return [ this.getType() ];
+	getCssClassSuffixes: function () {
+		return [this.getType()];
 	},
-
 
 	/**
 	 * Builds and returns an {@link Autolinker.HtmlTag} instance based on the
@@ -176,8 +166,7 @@ Autolinker.match.Match = Autolinker.Util.extend( Object, {
 	 *
 	 *     tag.toAnchorString();  // <a href="http://google.com" class="cordova-link" target="_system">Google</a>
 	 */
-	buildTag : function() {
-		return this.tagBuilder.build( this );
-	}
-
-} );
+	buildTag: function () {
+		return this.tagBuilder.build(this);
+	},
+});

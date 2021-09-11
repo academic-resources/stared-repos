@@ -12,7 +12,9 @@ body {
     text-align: justify;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-variant: small-caps;
 }
 
@@ -44,15 +46,15 @@ code {
 }
 
 em {
-    background: #FEFD80;
-    border: 30px solid #FEFD80;
+    background: #fefd80;
+    border: 30px solid #fefd80;
     float: left;
     font-style: normal;
     line-height: 1.25em;
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top:-10px;
+    margin-top: -10px;
 }
 
 dt {

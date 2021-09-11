@@ -1,168 +1,144 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
-
-{% from "macros-protocol.html" import card with context %}
-
-{% extends 'newsletter/base.html' %}
-
-{# "noindex" pages should not have the canonical or hreflang tags: bug 1442331 #}
-{% block canonical_urls %}<meta name="robots" content="noindex,follow">{% endblock %}
-
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. #} {% from "macros-protocol.html"
+import card with context %} {% extends 'newsletter/base.html' %} {# "noindex"
+pages should not have the canonical or hreflang tags: bug 1442331 #} {% block
+canonical_urls %}<meta name="robots" content="noindex,follow" />{% endblock %}
 {% block content %}
-  <main role="main">
-    <div class="mzp-l-content">
-      {% block messages %}
-        {% if messages %}
-          {% for message in messages %}
-            <div class="mzp-c-notification-bar mzp-t-success {% if message.tags %}{{ message.tags }}{% endif %}">
-              <p>{{ message }}</p>
-            </div>
-          {% endfor %}
-        {% endif %}
-      {% endblock %}
+<main role="main">
+  <div class="mzp-l-content">
+    {% block messages %} {% if messages %} {% for message in messages %}
+    <div
+      class="mzp-c-notification-bar mzp-t-success {% if message.tags %}{{ message.tags }}{% endif %}"
+    >
+      <p>{{ message }}</p>
     </div>
+    {% endfor %} {% endif %} {% endblock %}
+  </div>
 
-    {% if unsubscribed_all %}  {# user requested to unsub all #}
-      <div class="mzp-l-content mzp-t-content-md">
-        <section class="c-updated-block">
-          <header class="c-updated-block-header">
-            <h1>{{ ftl('newsletters-youve-been-unsubscribed') }}</h1>
-            <h2>{{ ftl('newsletters-were-sorry-to-see-you-go') }}</h2>
-          </header>
+  {% if unsubscribed_all %} {# user requested to unsub all #}
+  <div class="mzp-l-content mzp-t-content-md">
+    <section class="c-updated-block">
+      <header class="c-updated-block-header">
+        <h1>{{ ftl('newsletters-youve-been-unsubscribed') }}</h1>
+        <h2>{{ ftl('newsletters-were-sorry-to-see-you-go') }}</h2>
+      </header>
 
-          <form action="{{ url('newsletter.updated') }}" method="post" class="c-updated-block-content c-updated-form">
-            <input type="hidden" name="unsub" value="2" />
-            <input type="hidden" name="token" value="{{ token }}" />
-            <h4>{{ ftl('newsletters-would-you-mind-telling-us') }}</h4>
-            {% for i, reason in reasons %}
-              <label>
-                <input type="checkbox" id="unsub{{ i }}" name="reason{{ i }}">
-                {{ reason }}
-              </label>
-            {% endfor %}
-            <label>
-              <input type="checkbox" id="unsub99" name="reason-text-p">
-              {{ ftl('newsletters-other') }}<br>
-              <textarea cols="35" rows="3" name="reason-text"></textarea>
-            </label>
-            <div class="mzp-c-button-container mzp-l-align-center">
-              <input type="submit" value="{{ ftl('newsletters-submit') }}" class="mzp-c-button" name="feedback" />
-            </div>
-          </form>
-        </section>
+      <form
+        action="{{ url('newsletter.updated') }}"
+        method="post"
+        class="c-updated-block-content c-updated-form"
+      >
+        <input type="hidden" name="unsub" value="2" />
+        <input type="hidden" name="token" value="{{ token }}" />
+        <h4>{{ ftl('newsletters-would-you-mind-telling-us') }}</h4>
+        {% for i, reason in reasons %}
+        <label>
+          <input type="checkbox" id="unsub{{ i }}" name="reason{{ i }}" />
+          {{ reason }}
+        </label>
+        {% endfor %}
+        <label>
+          <input type="checkbox" id="unsub99" name="reason-text-p" />
+          {{ ftl('newsletters-other') }}<br />
+          <textarea cols="35" rows="3" name="reason-text"></textarea>
+        </label>
+        <div class="mzp-c-button-container mzp-l-align-center">
+          <input
+            type="submit"
+            value="{{ ftl('newsletters-submit') }}"
+            class="mzp-c-button"
+            name="feedback"
+          />
+        </div>
+      </form>
+    </section>
+  </div>
+  {% elif reasons_submitted %}
+  <div class="mzp-l-content mzp-t-content-md">
+    <section class="c-updated-block">
+      <header class="c-updated-block-header">
+        <h1>{{ ftl('newsletters-youve-been-unsubscribed') }}</h1>
+        <h2>{{ ftl('newsletters-were-sorry-to-see-you-go') }}</h2>
+        <p>{{ ftl('newsletters-thanks-for-telling-us-why') }}</p>
+      </header>
+    </section>
+  </div>
+  {% else %}
+  <div class="mzp-l-content">
+    <section class="c-updated-block">
+      {% if ftl_has_messages('newsletters-consider-it-done',
+      'newsletters-back-to-email-preferences',
+      'newsletters-here-are-a-few-things') %}
+      <header class="c-updated-block-header">
+        <h1>{{ ftl('newsletters-consider-it-done') }}</h1>
+
+        <p class="c-updated-back-link">
+          <a href="#" class="back-button hide-from-legacy-ie"
+            >{{ ftl('newsletters-back-to-email-preferences') }}</a
+          >
+        </p>
+      </header>
+
+      <section class="c-updated-block-content">
+        <h2 class="c-updated-block-header">
+          {{ ftl('newsletters-here-are-a-few-things') }}
+        </h2>
+
+        <div class="mzp-l-card-third">
+          {{ card( title=ftl('newsletters-take-your-privacy'), ga_title='Take
+          your privacy with you', desc=ftl('newsletters-travel-the-internet'),
+          cta=ftl('newsletters-download-the-app'),
+          image_url='img/newsletter/confirm/mobile.png',
+          aspect_ratio='mzp-has-aspect-16-9',
+          link_url=url('firefox.mobile.index'), )}} {{ card(
+          title=ftl('newsletters-check-for-data-breaches'), ga_title='Check for
+          data breaches', desc=ftl('newsletters-firefox-monitor-is-a-free'),
+          cta=ftl('newsletters-sign-in-to-monitor'),
+          image_url='img/newsletter/confirm/monitor.png',
+          aspect_ratio='mzp-has-aspect-16-9',
+          link_url='https://monitor.firefox.com/', )}} {{ card(
+          title=ftl('newsletters-meet-our-parent-brand'), ga_title='Meet our
+          parent brand', desc=ftl('newsletters-mozilla-the-non-for-profit'),
+          cta=ftl('ui-learn-more'),
+          image_url='img/newsletter/confirm/mozilla.png',
+          aspect_ratio='mzp-has-aspect-16-9',
+          link_url=url('mozorg.about.index'), )}}
+        </div>
+      </section>
+      {% else %}
+      <h2 class="c-updated-block-header">
+        {{ ftl('newsletters-while-here-why-not-check') }}
+      </h2>
+
+      <div class="mzp-l-card-third">
+        <div class="mzp-l-card-third">
+          {{ card( title=ftl('newsletters-get-up-and-go'), ga_title='Get up and
+          go', desc=ftl('newsletters-its-your-web-anywhere-you'),
+          cta=ftl('newsletters-get-firefox-for-mobile'),
+          image_url='img/newsletter/confirm/mobile.png',
+          aspect_ratio='mzp-has-aspect-16-9',
+          link_url=url('firefox.mobile.index'), )}} {{ card(
+          title=ftl('newsletters-added-extras'), ga_title='Added extras',
+          desc=ftl('newsletters-make-firefox-do-more-with'),
+          cta=ftl('newsletters-find-out-how'),
+          image_url='img/newsletter/confirm/addons.png',
+          aspect_ratio='mzp-has-aspect-16-9',
+          link_url='https://addons.mozilla.org/', )}} {{ card(
+          title=ftl('newsletters-about-us'), ga_title='About us',
+          desc=ftl('newsletters-whats-mozilla-all-about'),
+          cta=ftl('newsletters-were-glad-you-asked'),
+          image_url='img/newsletter/confirm/mozilla.png',
+          aspect_ratio='mzp-has-aspect-16-9',
+          link_url=url('mozorg.about.index'), )}}
+        </div>
       </div>
-    {% elif reasons_submitted %}
-      <div class="mzp-l-content mzp-t-content-md">
-        <section class="c-updated-block">
-          <header class="c-updated-block-header">
-            <h1>{{ ftl('newsletters-youve-been-unsubscribed') }}</h1>
-            <h2>{{ ftl('newsletters-were-sorry-to-see-you-go') }}</h2>
-            <p>{{ ftl('newsletters-thanks-for-telling-us-why') }}</p>
-          </header>
-        </section>
-      </div>
-    {% else %}
-      <div class="mzp-l-content">
-        <section class="c-updated-block">
-          {% if ftl_has_messages('newsletters-consider-it-done',
-                                 'newsletters-back-to-email-preferences',
-                                 'newsletters-here-are-a-few-things') %}
-            <header class="c-updated-block-header">
-              <h1>{{ ftl('newsletters-consider-it-done') }}</h1>
-
-              <p class="c-updated-back-link">
-                <a href="#" class="back-button hide-from-legacy-ie">{{ ftl('newsletters-back-to-email-preferences') }}</a>
-              </p>
-            </header>
-
-            <section class="c-updated-block-content">
-              <h2 class="c-updated-block-header">
-                {{ ftl('newsletters-here-are-a-few-things') }}
-              </h2>
-
-              <div class="mzp-l-card-third">
-                {{ card(
-                  title=ftl('newsletters-take-your-privacy'),
-                  ga_title='Take your privacy with you',
-                  desc=ftl('newsletters-travel-the-internet'),
-                  cta=ftl('newsletters-download-the-app'),
-                  image_url='img/newsletter/confirm/mobile.png',
-                  aspect_ratio='mzp-has-aspect-16-9',
-                  link_url=url('firefox.mobile.index'),
-                )}}
-
-                {{ card(
-                  title=ftl('newsletters-check-for-data-breaches'),
-                  ga_title='Check for data breaches',
-                  desc=ftl('newsletters-firefox-monitor-is-a-free'),
-                  cta=ftl('newsletters-sign-in-to-monitor'),
-                  image_url='img/newsletter/confirm/monitor.png',
-                  aspect_ratio='mzp-has-aspect-16-9',
-                  link_url='https://monitor.firefox.com/',
-                )}}
-
-                {{ card(
-                  title=ftl('newsletters-meet-our-parent-brand'),
-                  ga_title='Meet our parent brand',
-                  desc=ftl('newsletters-mozilla-the-non-for-profit'),
-                  cta=ftl('ui-learn-more'),
-                  image_url='img/newsletter/confirm/mozilla.png',
-                  aspect_ratio='mzp-has-aspect-16-9',
-                  link_url=url('mozorg.about.index'),
-                )}}
-              </div>
-            </section>
-          {% else %}
-            <h2 class="c-updated-block-header">{{ ftl('newsletters-while-here-why-not-check') }}</h2>
-
-            <div class="mzp-l-card-third">
-              <div class="mzp-l-card-third">
-                {{ card(
-                  title=ftl('newsletters-get-up-and-go'),
-                  ga_title='Get up and go',
-                  desc=ftl('newsletters-its-your-web-anywhere-you'),
-                  cta=ftl('newsletters-get-firefox-for-mobile'),
-                  image_url='img/newsletter/confirm/mobile.png',
-                  aspect_ratio='mzp-has-aspect-16-9',
-                  link_url=url('firefox.mobile.index'),
-                )}}
-
-                {{ card(
-                  title=ftl('newsletters-added-extras'),
-                  ga_title='Added extras',
-                  desc=ftl('newsletters-make-firefox-do-more-with'),
-                  cta=ftl('newsletters-find-out-how'),
-                  image_url='img/newsletter/confirm/addons.png',
-                  aspect_ratio='mzp-has-aspect-16-9',
-                  link_url='https://addons.mozilla.org/',
-                )}}
-
-                {{ card(
-                  title=ftl('newsletters-about-us'),
-                  ga_title='About us',
-                  desc=ftl('newsletters-whats-mozilla-all-about'),
-                  cta=ftl('newsletters-were-glad-you-asked'),
-                  image_url='img/newsletter/confirm/mozilla.png',
-                  aspect_ratio='mzp-has-aspect-16-9',
-                  link_url=url('mozorg.about.index'),
-                )}}
-              </div>
-            </div>
-          {% endif %}
-        </section>
-      </div>
-    {% endif %}
-  </main>
-{% endblock %}
-
-{# Don't display the footer if there is a token present. bug 1247446 #}
-{% block site_footer %}
-  {% if not token %}
-    {{ super() }}
+      {% endif %}
+    </section>
+  </div>
   {% endif %}
-{% endblock %}
-
-{% block js %}
-  {{ js_bundle('newsletter-confirm') }}
-{% endblock %}
+</main>
+{% endblock %} {# Don't display the footer if there is a token present. bug
+1247446 #} {% block site_footer %} {% if not token %} {{ super() }} {% endif %}
+{% endblock %} {% block js %} {{ js_bundle('newsletter-confirm') }} {% endblock
+%}

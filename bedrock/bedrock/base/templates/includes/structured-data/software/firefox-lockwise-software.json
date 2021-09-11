@@ -11,27 +11,20 @@
     "{{ play_store_url('lockwise')|safe }}",
     "{{ app_store_url('lockwise') }}"
   ],
-  "offers":
-  {
+  "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
-  "OperatingSystem": [
-    "Browser",
-    "iOS",
-    "Android"
-  ],
+  "OperatingSystem": ["Browser", "iOS", "Android"],
   "applicationCategory": "SecurityApplication",
   "applicationSuite": "Firefox",
-  "author":
-  {
+  "author": {
     "@type": "Organization",
     "@id": "{{ structured_data_id('organization') }}",
     "name": "Mozilla Corporation"
   },
-  "softwareHelp":
-  {
+  "softwareHelp": {
     "@type": "Webpage",
     "url": "https://support.mozilla.org/{{ LANG }}/products/firefox-lockwise"
   }

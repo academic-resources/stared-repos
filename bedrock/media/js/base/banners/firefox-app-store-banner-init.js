@@ -7,19 +7,22 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 // Create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
     function onLoad() {
-        window.Mozilla.Banner.init('firefox-app-store-banner', true);
+        window.Mozilla.Banner.init("firefox-app-store-banner", true);
     }
 
-    if (window.Mozilla.run && window.site && (window.site.platform === 'android' || window.site.platform === 'ios')) {
+    if (
+        window.Mozilla.run &&
+        window.site &&
+        (window.site.platform === "android" || window.site.platform === "ios")
+    ) {
         window.Mozilla.run(onLoad);
     }
-
 })();

@@ -3,47 +3,46 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 (function (Mozilla) {
-    'use strict';
+    "use strict";
     /* update dataLayer with experiment info */
     var href = window.location.href;
 
     var initTrafficCop = function () {
-        if (href.indexOf('v=') !== -1) {
-            if (href.indexOf('v=text') !== -1) {
+        if (href.indexOf("v=") !== -1) {
+            if (href.indexOf("v=text") !== -1) {
                 window.dataLayer.push({
-                    'data-ex-variant': 'experiment-hvt-visual-text',
-                    'data-ex-name': 'experiment-hvt-visual'
+                    "data-ex-variant": "experiment-hvt-visual-text",
+                    "data-ex-name": "experiment-hvt-visual",
                 });
-            } else if (href.indexOf('v=image') !== -1) {
+            } else if (href.indexOf("v=image") !== -1) {
                 window.dataLayer.push({
-                    'data-ex-variant': 'experiment-hvt-visual-image',
-                    'data-ex-name': 'experiment-hvt-visual'
+                    "data-ex-variant": "experiment-hvt-visual-image",
+                    "data-ex-name": "experiment-hvt-visual",
                 });
-            } else if (href.indexOf('v=animation') !== -1) {
+            } else if (href.indexOf("v=animation") !== -1) {
                 window.dataLayer.push({
-                    'data-ex-variant': 'experiment-hvt-visual-animation',
-                    'data-ex-name': 'experiment-hvt-visual'
+                    "data-ex-variant": "experiment-hvt-visual-animation",
+                    "data-ex-name": "experiment-hvt-visual",
                 });
-            } else if (href.indexOf('v=header-text') !== -1) {
+            } else if (href.indexOf("v=header-text") !== -1) {
                 window.dataLayer.push({
-                    'data-ex-variant': 'experiment-hvt-visual-header-text',
-                    'data-ex-name': 'experiment-hvt-visual'
+                    "data-ex-variant": "experiment-hvt-visual-header-text",
+                    "data-ex-name": "experiment-hvt-visual",
                 });
             }
         } else if (Mozilla.TrafficCop) {
             var cop = new Mozilla.TrafficCop({
-                id: 'welcome8_experiment_hvt_visual',
+                id: "welcome8_experiment_hvt_visual",
                 cookieExpires: 0,
                 variations: {
-                    'v=text': 3,
-                    'v=image': 3,
-                    'v=animation': 3,
-                    'v=header-text': 3,
-                }
+                    "v=text": 3,
+                    "v=image": 3,
+                    "v=animation": 3,
+                    "v=header-text": 3,
+                },
             });
             cop.init();
         }
     };
     initTrafficCop();
-
 })(window.Mozilla);

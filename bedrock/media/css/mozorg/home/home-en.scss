@@ -2,20 +2,20 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/includes/fonts/metropolis';
-@import '../../../protocol/css/components/billboard';
-@import '../../../protocol/css/components/call-out';
-@import '../../../protocol/css/components/modal';
-@import '../../../protocol/css/components/newsletter-form';
-@import '../../../protocol/css/components/split';
-@import '../../../protocol/css/components/logos/wordmark';
-@import '../../../protocol/css/components/logos/wordmark-product-vpn';
-@import '../../../protocol/css/components/logos/wordmark-product-pocket';
-@import '../../../protocol/css/templates/card-layout';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/includes/fonts/metropolis";
+@import "../../../protocol/css/components/billboard";
+@import "../../../protocol/css/components/call-out";
+@import "../../../protocol/css/components/modal";
+@import "../../../protocol/css/components/newsletter-form";
+@import "../../../protocol/css/components/split";
+@import "../../../protocol/css/components/logos/wordmark";
+@import "../../../protocol/css/components/logos/wordmark-product-vpn";
+@import "../../../protocol/css/components/logos/wordmark-product-pocket";
+@import "../../../protocol/css/templates/card-layout";
 
 .main-page-heading {
     @include visually-hidden;
@@ -61,12 +61,10 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 /* -------------------------------------------------------------------------- */
 // Pocket highlights section.
 
 .pocket {
-
     .mzp-l-content {
         padding-top: 0;
         padding-bottom: 0;
@@ -98,7 +96,6 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Secondary Download CTA (page bottom)
 
@@ -116,7 +113,11 @@ $image-path: '/media/protocol/img';
 }
 
 .c-secondary-cta-title {
-    @include at2x('#{$image-path}/logos/firefox/browser/logo-sm.png', 40px, 40px);
+    @include at2x(
+        "#{$image-path}/logos/firefox/browser/logo-sm.png",
+        40px,
+        40px
+    );
     @include text-title-sm;
     background-position: center 35px;
     background-repeat: no-repeat;
@@ -131,8 +132,9 @@ $image-path: '/media/protocol/img';
 
 @media #{$mq-lg} {
     .c-secondary-cta {
-        @include bidi(((text-align, left, right),));
-        background-image: url('/media/img/home/2018/shield.svg'), url('/media/img/home/2018/bg-secondary.svg');
+        @include bidi(((text-align, left, right)));
+        background-image: url("/media/img/home/2018/shield.svg"),
+            url("/media/img/home/2018/bg-secondary.svg");
         background-position: calc(50vw + 100px) 120px, 50vw 0;
         background-repeat: no-repeat;
         padding: $layout-xs 0 $layout-sm 0;
@@ -154,20 +156,16 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
-
 //* -------------------------------------------------------------------------- */
 // Secondary FxA CTA (page bottom)
-
 
 .fxaccount-secondary-cta.mzp-t-dark {
     background-color: $color-ink-80;
 }
 
 .fxaccount-secondary-cta.mzp-t-product-firefox {
-
     .mzp-c-call-out-content {
-        @include at2x('#{$image-path}/logos/firefox/logo-md.png', 64px, 64px);
+        @include at2x("#{$image-path}/logos/firefox/logo-md.png", 64px, 64px);
     }
 
     .mzp-c-call-out-title {
@@ -196,7 +194,7 @@ $image-path: '/media/protocol/img';
         height: 100%;
         left: 0;
         position: absolute;
-        top:0;
+        top: 0;
         width: 100%;
     }
 }

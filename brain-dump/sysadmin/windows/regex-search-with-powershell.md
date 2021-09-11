@@ -8,6 +8,7 @@ payment
 ```
 
 Run the following in a Powershell terminal:
+
 ```powershell
 Get-Content .\current.log | Select-String -Pattern (Get-Content .\findthis.txt) > results.txt
 ```

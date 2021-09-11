@@ -1,12 +1,12 @@
-const graphql = require('graphql')
-const { GraphQLObjectType, GraphQLID, GraphQLString } = graphql
-const mongoose = require('mongoose')
+const graphql = require("graphql");
+const { GraphQLObjectType, GraphQLID, GraphQLString } = graphql;
+const mongoose = require("mongoose");
 
-const ToyType = require('./toy_type')
-const Dog = mongoose.model('dog')
+const ToyType = require("./toy_type");
+const Dog = mongoose.model("dog");
 
 const DogType = new GraphQLObjectType({
-  name: 'DogType',
+  name: "DogType",
   fields: {
     _id: { type: GraphQLID },
     name: { type: GraphQLString },
@@ -15,11 +15,11 @@ const DogType = new GraphQLObjectType({
       type: ToyType,
       resolve(parentValue) {
         return Dog.findById(parentValue._id)
-          .populate('toys')
-          .then(dog => dog['toys'])
-      }
-    }
-  }
-})
+          .populate("toys")
+          .then((dog) => dog["toys"]);
+      },
+    },
+  },
+});
 
-module.exports = DogType
+module.exports = DogType;

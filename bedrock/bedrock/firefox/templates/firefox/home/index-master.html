@@ -1,277 +1,427 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
-
-{% extends "firefox/base/base-protocol.html" %}
-
-{% from "macros-protocol.html" import call_out, call_out_compact, split with context %}
-
-{% set show_firefox_app_store_banner = switch('firefox-app-store-banner') %}
-
-{% block page_title %}{{ ftl('firefox-home-firefox-protect-your') }}{% endblock %}
-
-{# Bug 1438302 Avoid duplicate content for en-CA and en-GB pages. #}
-{% if LANG == 'en-CA' %}
-  {% set title_suffix = ' — ' ~ ftl('firefox-home-mozilla') ~ ' (CA)' %}
-{% elif LANG == 'en-GB' %}
-  {% set title_suffix = ' — ' ~ ftl('firefox-home-mozilla') ~ ' (UK)' %}
-{% else %}
-  {% set title_suffix = ' — ' ~ ftl('firefox-home-mozilla') %}
-{% endif %}
-{% block page_title_suffix %}{{ title_suffix }}{% endblock %}
-
-{% block page_desc %}{{ ftl('firefox-home-firefox-is-more-than') }}{% endblock %}
-{% block page_image %}{{ static('img/firefox/template/page-image-master.jpg') }}{% endblock %}
-{% block page_favicon %}{{ static('img/favicons/firefox/favicon.ico') }}{% endblock %}
-{% block page_favicon_large %}{{ static('img/favicons/firefox/favicon-196x196.png') }}{% endblock %}
-{% block page_ios_icon %}{{ static('img/favicons/firefox/apple-touch-icon.png') }}{% endblock %}
-
-{% block page_css %}
-  {{ css_bundle('firefox-master') }}
-
-  {% if switch('eu-mr1-banner', ['de', 'fr']) %}
-    {{ css_bundle('eu-mr1-banner') }}
-  {% elif show_firefox_app_store_banner %}
-    {{ css_bundle('firefox-app-store-banner') }}
-  {% endif %}
-{% endblock %}
-
-{% block extrahead %}
-  <!--[if IE 9]>
-    {{ css_bundle('firefox-home-ie9') }}
-  <![endif]-->
-{% endblock %}
-
-{% block body_id %}firefox-master{% endblock %}
-
-{% set referrals = '?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=firefox-home' %}
-
-{% block sub_navigation %}
-{% if ftl_has_messages('sub-navigation-firefox', 'sub-navigation-faq', 'sub-navigation-learn-more') %}
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. #} {% extends
+"firefox/base/base-protocol.html" %} {% from "macros-protocol.html" import
+call_out, call_out_compact, split with context %} {% set
+show_firefox_app_store_banner = switch('firefox-app-store-banner') %} {% block
+page_title %}{{ ftl('firefox-home-firefox-protect-your') }}{% endblock %} {# Bug
+1438302 Avoid duplicate content for en-CA and en-GB pages. #} {% if LANG ==
+'en-CA' %} {% set title_suffix = ' — ' ~ ftl('firefox-home-mozilla') ~ ' (CA)'
+%} {% elif LANG == 'en-GB' %} {% set title_suffix = ' — ' ~
+ftl('firefox-home-mozilla') ~ ' (UK)' %} {% else %} {% set title_suffix = ' — '
+~ ftl('firefox-home-mozilla') %} {% endif %} {% block page_title_suffix %}{{
+title_suffix }}{% endblock %} {% block page_desc %}{{
+ftl('firefox-home-firefox-is-more-than') }}{% endblock %} {% block page_image
+%}{{ static('img/firefox/template/page-image-master.jpg') }}{% endblock %} {%
+block page_favicon %}{{ static('img/favicons/firefox/favicon.ico') }}{% endblock
+%} {% block page_favicon_large %}{{
+static('img/favicons/firefox/favicon-196x196.png') }}{% endblock %} {% block
+page_ios_icon %}{{ static('img/favicons/firefox/apple-touch-icon.png') }}{%
+endblock %} {% block page_css %} {{ css_bundle('firefox-master') }} {% if
+switch('eu-mr1-banner', ['de', 'fr']) %} {{ css_bundle('eu-mr1-banner') }} {%
+elif show_firefox_app_store_banner %} {{ css_bundle('firefox-app-store-banner')
+}} {% endif %} {% endblock %} {% block extrahead %}
+<!--[if IE 9]> {{ css_bundle('firefox-home-ie9') }} <![endif]-->
+{% endblock %} {% block body_id %}firefox-master{% endblock %} {% set referrals
+= '?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=firefox-home' %}
+{% block sub_navigation %} {% if ftl_has_messages('sub-navigation-firefox',
+'sub-navigation-faq', 'sub-navigation-learn-more') %}
 <nav class="c-sub-navigation">
   <div class="mzp-l-content">
     <div class="c-sub-navigation-content">
       <h2 class="c-sub-navigation-title">
-        <img class="c-sub-navigation-icon" src="{{ static('protocol/img/logos/firefox/logo-sm.png') }}" width="24" height="24" alt="">
+        <img
+          class="c-sub-navigation-icon"
+          src="{{ static('protocol/img/logos/firefox/logo-sm.png') }}"
+          width="24"
+          height="24"
+          alt=""
+        />
         {{ ftl('sub-navigation-firefox') }}
       </h2>
       <ul class="c-sub-navigation-list">
-        <li class="c-sub-navigation-item"><a href="{{ url('firefox.faq') }}" data-link-type="nav" data-link-position="subnav" data-link-name="FAQ">{{ ftl('sub-navigation-faq') }}</a></li>
-        <li class="c-sub-navigation-item"><a href="{{ url('firefox.more') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Learn More">{{ ftl('sub-navigation-learn-more') }}</a></li>
+        <li class="c-sub-navigation-item">
+          <a
+            href="{{ url('firefox.faq') }}"
+            data-link-type="nav"
+            data-link-position="subnav"
+            data-link-name="FAQ"
+            >{{ ftl('sub-navigation-faq') }}</a
+          >
+        </li>
+        <li class="c-sub-navigation-item">
+          <a
+            href="{{ url('firefox.more') }}"
+            data-link-type="nav"
+            data-link-position="subnav"
+            data-link-name="Learn More"
+            >{{ ftl('sub-navigation-learn-more') }}</a
+          >
+        </li>
       </ul>
     </div>
   </div>
 </nav>
-{% endif %}
-{% endblock %}
-
-{% block page_banner %}
-  {% if switch('eu-mr1-banner', ['de', 'fr']) %}
-    {% include 'includes/banners/mr1/eu-banner.html' %}
-  {% elif show_firefox_app_store_banner %}
-    {% include 'includes/banners/mobile/firefox-app-store.html' %}
-  {% endif %}
-{% endblock %}
-
+{% endif %} {% endblock %} {% block page_banner %} {% if switch('eu-mr1-banner',
+['de', 'fr']) %} {% include 'includes/banners/mr1/eu-banner.html' %} {% elif
+show_firefox_app_store_banner %} {% include
+'includes/banners/mobile/firefox-app-store.html' %} {% endif %} {% endblock %}
 {% block content %}
 <main role="main" class="firefox-home">
-    <div class="c-lead">
-      <div class="mzp-l-content">
-        <h1 class="c-lead-title">{{ ftl('firefox-home-the-browser-is-just') }}</h1>
-      </div>
+  <div class="c-lead">
+    <div class="mzp-l-content">
+      <h1 class="c-lead-title">
+        {{ ftl('firefox-home-the-browser-is-just') }}
+      </h1>
     </div>
+  </div>
 
-    <div class="c-showcase">
-      <div class="mzp-l-content">
-        <h2 class="c-showcase-title">{{ ftl('firefox-home-meet-our-family-of') }}</h2>
+  <div class="c-showcase">
+    <div class="mzp-l-content">
+      <h2 class="c-showcase-title">
+        {{ ftl('firefox-home-meet-our-family-of') }}
+      </h2>
+      <ul class="c-showcase-list">
+        <li>
+          <a
+            class="mzp-c-cta-link"
+            href="{{ url('firefox.browsers.index') }}"
+            data-cta-type="link"
+            data-cta-text="Browsers"
+          >
+            <img
+              alt=""
+              src="{{ static('protocol/img/logos/firefox/browser/logo-md.png') }}"
+              height="40"
+              width="40"
+            /><br />
+            {{ ftl('firefox-home-browsers') }}
+          </a>
+        </li>
+        <li>
+          <a
+            class="mzp-c-cta-link"
+            href="https://monitor.firefox.com{{ referrals }}"
+            rel="external noopener"
+            data-cta-type="link"
+            data-cta-text="Monitor"
+          >
+            <img
+              alt=""
+              src="{{ static('protocol/img/logos/firefox/monitor/logo-md.png') }}"
+              height="40"
+              width="40"
+            /><br />
+            {{ ftl('firefox-home-monitor') }}
+          </a>
+        </li>
+        <li>
+          <a
+            class="mzp-c-cta-link"
+            href="{{ url('products.vpn.landing') }}"
+            data-cta-type="link"
+            data-cta-text="Mozilla VPN"
+          >
+            <img
+              alt=""
+              src="{{ static('protocol/img/logos/mozilla/vpn/logo.svg') }}"
+              height="40"
+              width="40"
+            /><br />
+            {{ ftl('firefox-home-mozilla-vpn') }}
+          </a>
+        </li>
+        <li>
+          <a
+            class="mzp-c-cta-link"
+            href="https://getpocket.com/firefox_learnmore/{{ referrals }}"
+            rel="external noopener"
+            data-cta-type="link"
+            data-cta-text="Pocket"
+          >
+            <img
+              alt=""
+              src="{{ static('img/logos/pocket/logo.svg') }}"
+              height="40"
+              width="40"
+            /><br />
+            {{ ftl('firefox-home-pocket') }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  {% call split( image_url='img/firefox/home/master/browsers-mr1.jpg',
+  include_highres_image=True, block_class='t-browsers mzp-t-split-nospace',
+  media_class='mzp-l-split-h-center', media_after=True ) %}
+  <div class="mzp-c-wordmark mzp-t-wordmark-md mzp-t-product-firefox">
+    <h3>{{ ftl('firefox-home-firefox-browser') }}</h3>
+  </div>
+  <h4>{{ ftl('firefox-home-get-trackers-off') }}</h4>
+  <div
+    id="test-menu-browsers-wrapper"
+    class="mzp-c-menu-list mzp-t-cta mzp-t-download"
+  >
+    <h5 class="mzp-c-menu-list-title">
+      {{ ftl('firefox-home-download-the-browser') }}
+    </h5>
+    <ul class="mzp-c-menu-list-list" id="menu-browsers">
+      {# Old IE users need to click a download button, the JS on the thank you
+      page doesn't get them the right download if we send them there directly #}
+      <!--[if IE]>
+        <li class="mzp-c-menu-list-item menu-desktop">
+          <a
+            href="{{ url('firefox.new') }}"
+            data-cta-type="link"
+            data-cta-text="Firefox Desktop"
+            >{{ ftl('firefox-home-desktop') }}</a
+          >
+        </li>
+      <![endif]-->
+      <!--[if !IE]><!-->
+      {# Download link should be locale neutral see issue 7982 #}
+      <li class="mzp-c-menu-list-item menu-desktop">
+        <a
+          href="/firefox/download/thanks/"
+          data-link-type="Desktop"
+          data-download-os="Desktop"
+          data-download-version="standard"
+          data-link-name="Trackers"
+          >{{ ftl('firefox-home-desktop') }}</a
+        >
+      </li>
+      <!--<![endif]-->
+      <li class="mzp-c-menu-list-item menu-android">
+        <a
+          href="{{ firefox_adjust_url('android', 'firefox_home') }}"
+          rel="external noopener"
+          data-link-type="download"
+          data-display-name="Android"
+          data-download-version="android"
+          data-download-os="Android"
+          data-link-name="Trackers"
+        >
+          {{ ftl('firefox-home-android') }}</a
+        >
+      </li>
+      <li class="mzp-c-menu-list-item menu-ios">
+        <a
+          href="{{ firefox_adjust_url('ios', 'firefox_home') }}"
+          rel="external noopener"
+          data-link-type="download"
+          data-display-name="iOS"
+          data-download-version="ios"
+          data-download-os="iOS"
+          data-link-name="Trackers"
+          >{{ ftl('firefox-home-ios') }}</a
+        >
+      </li>
+    </ul>
+  </div>
+  <p id="test-fbc" class="js-fx-only">
+    <a
+      class="mzp-c-cta-link"
+      href="https://addons.mozilla.org/firefox/addon/facebook-container/{{ referrals }}"
+      >{{ ftl('firefox-home-get-the-facebook-container') }}</a
+    >
+  </p>
+  {% endcall %} {% call split(
+  image_url='img/firefox/home/master/monitor-mr1.svg', block_class='t-monitor
+  mzp-l-split-reversed mzp-t-split-nospace', media_class='mzp-l-split-h-center',
+  media_after=True ) %}
+  <div class="mzp-c-wordmark mzp-t-wordmark-md mzp-t-product-monitor">
+    <h3>{{ ftl('firefox-home-firefox-monitor') }}</h3>
+  </div>
+  <h4>{{ ftl('firefox-home-know-when-hackers-strike') }}</h4>
+  <a
+    class="mzp-c-cta-link"
+    href="{{ 'https://monitor.firefox.com/' + referrals }}"
+    data-link-name="Monitor"
+    data-link-type="link"
+    >{{ ftl('firefox-home-start-getting-breach') }}</a
+  >
+  {% endcall %} {% if ftl_has_messages('firefox-home-protection-for-your-whole')
+  %} {% call split( image_url='img/firefox/home/master/vpn.svg',
+  block_class='t-mozvpn mzp-t-split-nospace',
+  media_class='mzp-l-split-h-center', media_after=True ) %}
+  <div class="mzp-c-wordmark mzp-t-wordmark-md mzp-t-product-vpn">
+    <h3>{{ ftl('firefox-home-mozilla-vpn') }}</h3>
+  </div>
+  <h4>{{ ftl('firefox-home-protection-for-your-whole') }}</h4>
+  <p>
+    <a
+      class="mzp-c-cta-link"
+      href="{{ url('products.vpn.landing') }}"
+      data-cta-type="link"
+      data-cta-text="Get Mozilla VPN"
+      data-link-name="Mozilla VPN"
+      >{{ ftl('firefox-home-get-mozilla-vpn') }}</a
+    >
+  </p>
+  {% endcall %} {% endif %}
+
+  <div class="t-promise">
+    {% call split( block_class='mzp-l-split-reversed mzp-t-split-nospace', ) %}
+    <div>
+      <h3 class="mzp-has-zap-8">
+        {{ ftl('firefox-home-get-the-respect-you') }}
+      </h3>
+      <p>{{ ftl('firefox-home-every-single-firefox') }}</p>
+      <a
+        class="mzp-c-cta-link"
+        href="{{ url('firefox.privacy.index') }}"
+        data-link-name="Promise"
+        data-link-type="link"
+        >{{ ftl('ui-learn-more') }}</a
+      >
+    </div>
+    {% endcall %}
+  </div>
+
+  {% call split( image_url='img/firefox/home/master/pocket-mr1.svg',
+  block_class='t-pocket mzp-t-split-nospace',
+  media_class='mzp-l-split-h-center', media_after=True ) %}
+  <div class="mzp-c-wordmark mzp-t-wordmark-md mzp-t-product-pocket">
+    <h3>{{ ftl('firefox-home-pocket') }}</h3>
+  </div>
+  <h4>{{ ftl('firefox-home-trade-clickbait-for') }}</h4>
+  <div class="mzp-c-menu-list mzp-t-cta mzp-t-download">
+    <h5 class="mzp-c-menu-list-title">
+      {{ ftl('firefox-home-download-the-app') }}
+    </h5>
+    <ul class="mzp-c-menu-list-list" id="menu-pocket">
+      <li class="mzp-c-menu-list-item">
+        <a
+          href="{{ pocket_adjust_url('android', 'firefox-home') }}"
+          rel="external noopener"
+          data-cta-type="link"
+          data-cta-text="Download Pocket for Android"
+          data-link-name="Pocket"
+        >
+          {{ ftl('firefox-home-android') }}</a
+        >
+      </li>
+      <li class="mzp-c-menu-list-item">
+        <a
+          href="{{ pocket_adjust_url('ios', 'firefox-home') }}"
+          rel="external noopener"
+          data-cta-type="link"
+          data-cta-text="Download Pocket for iOS"
+          data-link-name="Pocket"
+          >{{ ftl('firefox-home-ios') }}</a
+        >
+      </li>
+    </ul>
+  </div>
+  <p>
+    <a
+      class="mzp-c-cta-link"
+      href="https://getpocket.com/signup/{{ referrals }}"
+      rel="external noopener"
+      data-cta-type="link"
+      data-cta-text="Download for iOS"
+      data-link-name="Pocket"
+      >{{ ftl('firefox-home-learn-more-about-pocket') }}</a
+    >
+  </p>
+  {% endcall %}
+
+  <div class="c-end mzp-t-dark">
+    <div class="mzp-l-content">
+      <div class="c-showcase t-small">
         <ul class="c-showcase-list">
           <li>
-            <a class="mzp-c-cta-link" href="{{ url('firefox.browsers.index') }}" data-cta-type="link" data-cta-text="Browsers">
-              <img alt="" src="{{ static('protocol/img/logos/firefox/browser/logo-md.png') }}" height="40" width="40"><br>
+            <a
+              class="mzp-c-cta-link"
+              href="{{ url('firefox.browsers.index') }}"
+              data-cta-type="link"
+              data-cta-text="Browsers"
+            >
+              <img
+                alt=""
+                src="{{ static('protocol/img/logos/firefox/browser/logo-md.png') }}"
+                height="40"
+                width="40"
+              /><br />
               {{ ftl('firefox-home-browsers') }}
             </a>
           </li>
           <li>
-            <a class="mzp-c-cta-link" href="https://monitor.firefox.com{{ referrals }}" rel="external noopener" data-cta-type="link" data-cta-text="Monitor">
-              <img alt="" src="{{ static('protocol/img/logos/firefox/monitor/logo-md.png') }}" height="40" width="40"><br>
+            <a
+              class="mzp-c-cta-link"
+              href="https://monitor.firefox.com{{ referrals }}"
+              rel="external noopener"
+              data-cta-type="link"
+              data-cta-text="Monitor"
+            >
+              <img
+                alt=""
+                src="{{ static('protocol/img/logos/firefox/monitor/logo-md.png') }}"
+                height="40"
+                width="40"
+              /><br />
               {{ ftl('firefox-home-monitor') }}
             </a>
           </li>
           <li>
-            <a class="mzp-c-cta-link" href="{{ url('products.vpn.landing') }}" data-cta-type="link" data-cta-text="Mozilla VPN">
-              <img alt="" src="{{ static('protocol/img/logos/mozilla/vpn/logo.svg') }}" height="40" width="40"><br>
+            <a
+              class="mzp-c-cta-link"
+              href="{{ url('products.vpn.landing') }}"
+              data-cta-type="link"
+              data-cta-text="Mozilla VPN"
+            >
+              <img
+                alt=""
+                src="{{ static('protocol/img/logos/mozilla/vpn/logo-flat-white.svg') }}"
+                height="40"
+                width="40"
+              /><br />
               {{ ftl('firefox-home-mozilla-vpn') }}
             </a>
           </li>
           <li>
-            <a class="mzp-c-cta-link" href="https://getpocket.com/firefox_learnmore/{{ referrals }}" rel="external noopener" data-cta-type="link" data-cta-text="Pocket">
-              <img alt="" src="{{ static('img/logos/pocket/logo.svg') }}" height="40" width="40"><br>
+            <a
+              class="mzp-c-cta-link"
+              href="https://getpocket.com{{ referrals }}"
+              rel="external noopener"
+              data-cta-type="link"
+              data-cta-text="Pocket"
+            >
+              <img
+                alt=""
+                src="{{ static('img/logos/pocket/logo.svg') }}"
+                height="40"
+                width="40"
+              /><br />
               {{ ftl('firefox-home-pocket') }}
             </a>
           </li>
         </ul>
       </div>
+      <h2 class="c-end-title">{{ ftl('firefox-home-one-login-all-your') }}</h2>
+      <div class="mzp-c-button-download-container">
+        {{ fxa_button( entrypoint='mozilla.org-firefox_home',
+        button_text=ftl('firefox-home-join-firefox'),
+        optional_parameters={'utm_campaign': 'firefox-home', 'utm_content':
+        'secondary-join-firefox'}, optional_attributes={'data-cta-text': 'Join
+        Firefox', 'data-cta-type': 'fxa-sync', 'data-cta-position': 'secondary'}
+        ) }}
+        <small class="mzp-c-button-download-privacy-link">
+          <a href="{{ url('firefox.accounts') }}"
+            >{{ ftl('firefox-home-learn-more-about-joining') }}</a
+          >
+        </small>
+      </div>
     </div>
-
-    {% call split(
-      image_url='img/firefox/home/master/browsers-mr1.jpg',
-      include_highres_image=True,
-      block_class='t-browsers mzp-t-split-nospace',
-      media_class='mzp-l-split-h-center',
-      media_after=True
-    ) %}
-      <div class="mzp-c-wordmark mzp-t-wordmark-md mzp-t-product-firefox">
-        <h3>{{ ftl('firefox-home-firefox-browser') }}</h3>
-      </div>
-      <h4>{{ ftl('firefox-home-get-trackers-off') }}</h4>
-      <div id="test-menu-browsers-wrapper" class="mzp-c-menu-list mzp-t-cta mzp-t-download">
-        <h5 class="mzp-c-menu-list-title">{{ ftl('firefox-home-download-the-browser') }}</h5>
-        <ul class="mzp-c-menu-list-list" id="menu-browsers">
-          {# Old IE users need to click a download button, the JS on the thank you page doesn't get them the right download if we send them there directly #}
-          <!--[if IE]>
-            <li class="mzp-c-menu-list-item menu-desktop"><a href="{{ url('firefox.new') }}" data-cta-type="link" data-cta-text="Firefox Desktop">{{ ftl('firefox-home-desktop') }}</a></li>
-          <![endif]-->
-          <!--[if !IE]><!-->
-            {# Download link should be locale neutral see issue 7982 #}
-            <li class="mzp-c-menu-list-item menu-desktop"><a href="/firefox/download/thanks/" data-link-type="Desktop" data-download-os="Desktop" data-download-version="standard" data-link-name="Trackers">{{ ftl('firefox-home-desktop') }}</a></li>
-          <!--<![endif]-->
-          <li class="mzp-c-menu-list-item menu-android"><a href="{{ firefox_adjust_url('android', 'firefox_home') }}" rel="external noopener" data-link-type="download" data-display-name="Android" data-download-version="android" data-download-os="Android" data-link-name="Trackers"> {{ ftl('firefox-home-android') }}</a></li>
-          <li class="mzp-c-menu-list-item menu-ios"><a href="{{ firefox_adjust_url('ios', 'firefox_home') }}" rel="external noopener" data-link-type="download" data-display-name="iOS" data-download-version="ios" data-download-os="iOS" data-link-name="Trackers">{{ ftl('firefox-home-ios') }}</a></li>
-        </ul>
-      </div>
-      <p id="test-fbc" class="js-fx-only"><a class="mzp-c-cta-link" href="https://addons.mozilla.org/firefox/addon/facebook-container/{{ referrals }}">{{ ftl('firefox-home-get-the-facebook-container') }}</a></p>
-    {% endcall %}
-
-    {% call split(
-      image_url='img/firefox/home/master/monitor-mr1.svg',
-      block_class='t-monitor mzp-l-split-reversed mzp-t-split-nospace',
-      media_class='mzp-l-split-h-center',
-      media_after=True
-    ) %}
-      <div class="mzp-c-wordmark mzp-t-wordmark-md mzp-t-product-monitor">
-        <h3>{{ ftl('firefox-home-firefox-monitor') }}</h3>
-      </div>
-      <h4>{{ ftl('firefox-home-know-when-hackers-strike') }}</h4>
-      <a class="mzp-c-cta-link" href="{{ 'https://monitor.firefox.com/' + referrals }}" data-link-name="Monitor" data-link-type="link">{{ ftl('firefox-home-start-getting-breach') }}</a>
-    {% endcall %}
-
-  {% if ftl_has_messages('firefox-home-protection-for-your-whole') %}
-    {% call split(
-        image_url='img/firefox/home/master/vpn.svg',
-        block_class='t-mozvpn mzp-t-split-nospace',
-        media_class='mzp-l-split-h-center',
-        media_after=True
-    ) %}
-      <div class="mzp-c-wordmark mzp-t-wordmark-md mzp-t-product-vpn">
-        <h3>{{ ftl('firefox-home-mozilla-vpn') }}</h3>
-      </div>
-      <h4>{{ ftl('firefox-home-protection-for-your-whole') }}</h4>
-      <p><a class="mzp-c-cta-link" href="{{ url('products.vpn.landing') }}" data-cta-type="link" data-cta-text="Get Mozilla VPN" data-link-name="Mozilla VPN">{{ ftl('firefox-home-get-mozilla-vpn') }}</a></p>
-    {% endcall %}
-  {% endif %}
-
-  <div class="t-promise">
-    {% call split(
-      block_class='mzp-l-split-reversed mzp-t-split-nospace',
-    ) %}
-      <div>
-        <h3 class="mzp-has-zap-8">{{ ftl('firefox-home-get-the-respect-you') }}</h3>
-        <p>{{ ftl('firefox-home-every-single-firefox') }}</p>
-        <a class="mzp-c-cta-link" href="{{ url('firefox.privacy.index') }}" data-link-name="Promise" data-link-type="link">{{ ftl('ui-learn-more') }}</a>
-      </div>
-    {% endcall %}
   </div>
-
-    {% call split(
-      image_url='img/firefox/home/master/pocket-mr1.svg',
-      block_class='t-pocket mzp-t-split-nospace',
-      media_class='mzp-l-split-h-center',
-      media_after=True
-    ) %}
-    <div class="mzp-c-wordmark mzp-t-wordmark-md mzp-t-product-pocket">
-      <h3>{{ ftl('firefox-home-pocket') }}</h3>
-    </div>
-    <h4>{{ ftl('firefox-home-trade-clickbait-for') }}</h4>
-      <div class="mzp-c-menu-list mzp-t-cta mzp-t-download">
-        <h5 class="mzp-c-menu-list-title">{{ ftl('firefox-home-download-the-app') }}</h5>
-        <ul class="mzp-c-menu-list-list" id="menu-pocket">
-          <li class="mzp-c-menu-list-item"><a href="{{ pocket_adjust_url('android', 'firefox-home') }}" rel="external noopener" data-cta-type="link" data-cta-text="Download Pocket for Android" data-link-name="Pocket"> {{ ftl('firefox-home-android') }}</a></li>
-          <li class="mzp-c-menu-list-item"><a href="{{ pocket_adjust_url('ios', 'firefox-home') }}" rel="external noopener" data-cta-type="link" data-cta-text="Download Pocket for iOS" data-link-name="Pocket">{{ ftl('firefox-home-ios') }}</a></li>
-        </ul>
-      </div>
-      <p><a class="mzp-c-cta-link" href="https://getpocket.com/signup/{{ referrals }}" rel="external noopener" data-cta-type="link" data-cta-text="Download for iOS" data-link-name="Pocket">{{ ftl('firefox-home-learn-more-about-pocket') }}</a></p>
-    {% endcall %}
-
-    <div class="c-end mzp-t-dark">
-      <div class="mzp-l-content">
-        <div class="c-showcase t-small">
-            <ul class="c-showcase-list">
-              <li>
-                <a class="mzp-c-cta-link" href="{{ url('firefox.browsers.index') }}" data-cta-type="link" data-cta-text="Browsers">
-                  <img alt="" src="{{ static('protocol/img/logos/firefox/browser/logo-md.png') }}" height="40" width="40"><br>
-                  {{ ftl('firefox-home-browsers') }}
-                </a>
-              </li>
-              <li>
-                <a class="mzp-c-cta-link" href="https://monitor.firefox.com{{ referrals }}" rel="external noopener" data-cta-type="link" data-cta-text="Monitor">
-                  <img alt="" src="{{ static('protocol/img/logos/firefox/monitor/logo-md.png') }}" height="40" width="40"><br>
-                  {{ ftl('firefox-home-monitor') }}
-                </a>
-              </li>
-              <li>
-                <a class="mzp-c-cta-link" href="{{ url('products.vpn.landing') }}" data-cta-type="link" data-cta-text="Mozilla VPN">
-                  <img alt="" src="{{ static('protocol/img/logos/mozilla/vpn/logo-flat-white.svg') }}" height="40" width="40"><br>
-                  {{ ftl('firefox-home-mozilla-vpn') }}
-                </a>
-              </li>
-              <li>
-                <a class="mzp-c-cta-link" href="https://getpocket.com{{ referrals }}" rel="external noopener" data-cta-type="link" data-cta-text="Pocket">
-                  <img alt="" src="{{ static('img/logos/pocket/logo.svg') }}" height="40" width="40"><br>
-                  {{ ftl('firefox-home-pocket') }}
-                </a>
-              </li>
-            </ul>
-        </div>
-        <h2 class="c-end-title">{{ ftl('firefox-home-one-login-all-your') }}</h2>
-        <div class="mzp-c-button-download-container">
-          {{ fxa_button(
-            entrypoint='mozilla.org-firefox_home',
-            button_text=ftl('firefox-home-join-firefox'),
-            optional_parameters={'utm_campaign': 'firefox-home', 'utm_content': 'secondary-join-firefox'},
-            optional_attributes={'data-cta-text': 'Join Firefox', 'data-cta-type': 'fxa-sync', 'data-cta-position': 'secondary'}
-          ) }}
-          <small class="mzp-c-button-download-privacy-link">
-            <a href="{{ url('firefox.accounts') }}">{{ ftl('firefox-home-learn-more-about-joining') }}</a>
-          </small>
-        </div>
-
-      </div>
-    </div>
-
 </main>
-{% endblock %}
-
-{% block sticky_promo %}
-  {% include '/includes/sticky-promo.html' %}
-{% endblock %}
-
-{% block js %}
-  {{ js_bundle('firefox-master') }}
-
-  {% if switch('eu-mr1-banner', ['de', 'fr']) %}
-    {{ js_bundle('eu-mr1-banner') }}
-  {% elif show_firefox_app_store_banner %}
-    {{ js_bundle('firefox-app-store-banner') }}
-  {% endif %}
-{% endblock %}
-
-{% block structured_data %}
-  {
-    "@context": "https://schema.org/",
-    "@graph": [
-      {% include 'includes/structured-data/software/firefox-browser-software.json' %}
-      ,
-      {% include 'includes/structured-data/software/firefox-monitor-software.json' %}
-    ]
-  }
+{% endblock %} {% block sticky_promo %} {% include '/includes/sticky-promo.html'
+%} {% endblock %} {% block js %} {{ js_bundle('firefox-master') }} {% if
+switch('eu-mr1-banner', ['de', 'fr']) %} {{ js_bundle('eu-mr1-banner') }} {%
+elif show_firefox_app_store_banner %} {{ js_bundle('firefox-app-store-banner')
+}} {% endif %} {% endblock %} {% block structured_data %} { "@context":
+"https://schema.org/", "@graph": [ {% include
+'includes/structured-data/software/firefox-browser-software.json' %} , {%
+include 'includes/structured-data/software/firefox-monitor-software.json' %} ] }
 {% endblock %}

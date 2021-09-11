@@ -75,15 +75,18 @@ class GithubPlugin {
 
     repos.forEach((repo) => {
       const name = _.get(repo, "name");
-      const { name: message, url, tagName, updatedAt, isPrerelease } = _.get(
-        repo,
-        "releases.nodes[0]"
-      );
+      const {
+        name: message,
+        url,
+        tagName,
+        updatedAt,
+        isPrerelease,
+      } = _.get(repo, "releases.nodes[0]");
       const date = new Date(updatedAt);
 
-      content += `- <a href='${url}' target='_blank'>${name}@${tagName}${isPrerelease ? `<sup>pre-release</sup>` : ""}</a> - ${getDate(
-        date
-      )}
+      content += `- <a href='${url}' target='_blank'>${name}@${tagName}${
+        isPrerelease ? `<sup>pre-release</sup>` : ""
+      }</a> - ${getDate(date)}
 ${message ? `  <br/> ${message}\n` : ""}`;
     });
 

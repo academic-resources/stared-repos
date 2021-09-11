@@ -2,11 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-
+@import "../../../protocol/css/includes/lib";
 
 // Firefox MR1 promo
 
@@ -77,7 +76,7 @@ $image-path: '/media/protocol/img';
 }
 
 .c-fxpromo-caption {
-    @include bidi(((text-align, right, left),));
+    @include bidi(((text-align, right, left)));
     @include text-body-sm;
     margin-top: $spacing-sm;
     position: relative;
@@ -85,7 +84,7 @@ $image-path: '/media/protocol/img';
 
     a:link,
     a:visited {
-        color: get-theme('body-text-color');
+        color: get-theme("body-text-color");
     }
 }
 
@@ -100,17 +99,28 @@ $image-path: '/media/protocol/img';
     }
 
     .c-fxpromo-content {
-        @include bidi(((padding-right, get-theme('h-grid-md'), padding-left, get-theme('h-grid-md')),));
+        @include bidi(
+            (
+                (
+                    padding-right,
+                    get-theme("h-grid-md"),
+                    padding-left,
+                    get-theme("h-grid-md")
+                )
+            )
+        );
         flex: 1 1 0;
         position: relative;
         z-index: 12;
     }
 
     .c-fxpromo-title {
-        @include bidi((
-            (text-align, left, right),
-            (margin-left, -$spacing-xs, margin-right, -$spacing-xs),
-        ));
+        @include bidi(
+            (
+                (text-align, left, right),
+                (margin-left, -$spacing-xs, margin-right, -$spacing-xs)
+            )
+        );
         @include text-title-lg;
         margin-top: $layout-lg;
     }
@@ -125,7 +135,7 @@ $image-path: '/media/protocol/img';
     }
 
     .c-fxpromo-altcta {
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
         margin: 0;
     }
 
@@ -136,7 +146,16 @@ $image-path: '/media/protocol/img';
 
 @media #{$mq-lg} {
     .c-fxpromo-content {
-        @include bidi(((padding-right, get-theme('h-grid-lg'), padding-left, get-theme('h-grid-lg')),));
+        @include bidi(
+            (
+                (
+                    padding-right,
+                    get-theme("h-grid-lg"),
+                    padding-left,
+                    get-theme("h-grid-lg")
+                )
+            )
+        );
     }
 
     .c-fxpromo-title {
@@ -151,12 +170,21 @@ $image-path: '/media/protocol/img';
 
 @media #{$mq-xl} {
     .c-fxpromo-content {
-        @include bidi(((padding-right, get-theme('h-grid-xl'), padding-left, get-theme('h-grid-xl')),));
+        @include bidi(
+            (
+                (
+                    padding-right,
+                    get-theme("h-grid-xl"),
+                    padding-left,
+                    get-theme("h-grid-xl")
+                )
+            )
+        );
     }
 
-    [lang^='en'] .c-fxpromo-lalo .c-fxpromo-title,
-    [lang^='en'] .c-fxpromo-soraya .c-fxpromo-title,
-    [lang^='en'] .c-fxpromo-ryan .c-fxpromo-title {
+    [lang^="en"] .c-fxpromo-lalo .c-fxpromo-title,
+    [lang^="en"] .c-fxpromo-soraya .c-fxpromo-title,
+    [lang^="en"] .c-fxpromo-ryan .c-fxpromo-title {
         @include font-size(96px);
     }
 
@@ -291,32 +319,63 @@ $image-path: '/media/protocol/img';
 
 // Animations
 @keyframes pill-one {
-    0%, 100% { transform: rotate(-15deg) translate(5px, -10px); }
-    50% { transform: rotate(-25deg) translate(-20px, 10px); }
+    0%,
+    100% {
+        transform: rotate(-15deg) translate(5px, -10px);
+    }
+    50% {
+        transform: rotate(-25deg) translate(-20px, 10px);
+    }
 }
 
 @keyframes hollow-pill-one {
-    0%, 100% { transform: rotate(42deg) translate(-5px, 10px); }
-    50% { transform: rotate(48deg) translate(8px, -8px); }
+    0%,
+    100% {
+        transform: rotate(42deg) translate(-5px, 10px);
+    }
+    50% {
+        transform: rotate(48deg) translate(8px, -8px);
+    }
 }
 
 @keyframes pill-two {
-    0%, 100% { transform: rotate(40deg) translate(5px, -10px); }
-    50% { transform: rotate(36deg) translate(-20px, 10px); }
+    0%,
+    100% {
+        transform: rotate(40deg) translate(5px, -10px);
+    }
+    50% {
+        transform: rotate(36deg) translate(-20px, 10px);
+    }
 }
 
 @keyframes hollow-pill-two {
-    0%, 100% { transform: rotate(106deg) translate(-5px, 10px); }
-    50% { transform: rotate(115deg) translate(5px, -8px); }
+    0%,
+    100% {
+        transform: rotate(106deg) translate(-5px, 10px);
+    }
+    50% {
+        transform: rotate(115deg) translate(5px, -8px);
+    }
 }
 
 @keyframes spot {
-    0%, 100% { transform: translate(0, 0); }
-    33% { transform: translate(5px, -30px); }
-    66% { transform: translate(-5px, 10px); }
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    33% {
+        transform: translate(5px, -30px);
+    }
+    66% {
+        transform: translate(-5px, 10px);
+    }
 }
 
 @keyframes circle {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

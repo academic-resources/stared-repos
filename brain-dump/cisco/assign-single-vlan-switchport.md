@@ -1,4 +1,5 @@
 # Assign a Single VLAN to a Switchport
+
 To assign multiple VLANs one port, use [trunks](reconfigure-switchport.md).
 
 ```bash

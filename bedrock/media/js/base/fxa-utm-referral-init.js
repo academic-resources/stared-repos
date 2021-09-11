@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 (function () {
-    'use strict';
+    "use strict";
 
     var urlParams = new window._SearchParams();
 

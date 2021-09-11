@@ -2,12 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
-@import '../../../../protocol/css/includes/lib';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
+@import "../../../../protocol/css/includes/lib";
 
-@import '../../../../protocol/css/components/call-out';
-
+@import "../../../../protocol/css/components/call-out";
 
 //* ====================================================================== */
 //  Conditional State Hooks
@@ -26,13 +25,12 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 //* ====================================================================== */
 //  Yandex content
 
 .t-yandex {
     .noodle-browser {
-        @include at2x('/media/img/firefox/new/yandex/yandex.jpg', 500px, 358);
+        @include at2x("/media/img/firefox/new/yandex/yandex.jpg", 500px, 358);
         height: 358px;
         top: 0;
         width: 500px;
@@ -44,14 +42,17 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-lg} {
-
         .t-intro .c-noodles {
             height: 441px;
             width: 617px;
         }
 
         .noodle-browser {
-            @include at2x('/media/img/firefox/new/yandex/yandex.jpg', 617px, 441px);
+            @include at2x(
+                "/media/img/firefox/new/yandex/yandex.jpg",
+                617px,
+                441px
+            );
             height: 441px;
             width: 617px;
         }
@@ -60,6 +61,5 @@ $image-path: '/media/protocol/img';
             margin-top: $layout-sm;
             margin-bottom: $layout-sm;
         }
-
     }
 }

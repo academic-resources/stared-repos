@@ -108,35 +108,44 @@
  * @param {Object} [cfg] The configuration options for the Autolinker instance,
  *   specified in an Object (map).
  */
-var Autolinker = function( cfg ) {
+var Autolinker = function (cfg) {
 	cfg = cfg || {};
 
 	this.version = Autolinker.version;
 
-	this.urls = this.normalizeUrlsCfg( cfg.urls );
-	this.email = typeof cfg.email === 'boolean' ? cfg.email : true;
-	this.phone = typeof cfg.phone === 'boolean' ? cfg.phone : true;
+	this.urls = this.normalizeUrlsCfg(cfg.urls);
+	this.email = typeof cfg.email === "boolean" ? cfg.email : true;
+	this.phone = typeof cfg.phone === "boolean" ? cfg.phone : true;
 	this.hashtag = cfg.hashtag || false;
 	this.mention = cfg.mention || false;
-	this.newWindow = typeof cfg.newWindow === 'boolean' ? cfg.newWindow : true;
-	this.stripPrefix = this.normalizeStripPrefixCfg( cfg.stripPrefix );
-	this.stripTrailingSlash = typeof cfg.stripTrailingSlash === 'boolean' ? cfg.stripTrailingSlash : true;
-	this.decodePercentEncoding = typeof cfg.decodePercentEncoding === 'boolean' ? cfg.decodePercentEncoding : true;
+	this.newWindow = typeof cfg.newWindow === "boolean" ? cfg.newWindow : true;
+	this.stripPrefix = this.normalizeStripPrefixCfg(cfg.stripPrefix);
+	this.stripTrailingSlash =
+		typeof cfg.stripTrailingSlash === "boolean" ? cfg.stripTrailingSlash : true;
+	this.decodePercentEncoding =
+		typeof cfg.decodePercentEncoding === "boolean"
+			? cfg.decodePercentEncoding
+			: true;
 
 	// Validate the value of the `mention` cfg
 	var mention = this.mention;
-	if( mention !== false && mention !== 'twitter' && mention !== 'instagram' ) {
-		throw new Error( "invalid `mention` cfg - see docs" );
+	if (mention !== false && mention !== "twitter" && mention !== "instagram") {
+		throw new Error("invalid `mention` cfg - see docs");
 	}
 
 	// Validate the value of the `hashtag` cfg
 	var hashtag = this.hashtag;
-	if( hashtag !== false && hashtag !== 'twitter' && hashtag !== 'facebook' && hashtag !== 'instagram' ) {
-		throw new Error( "invalid `hashtag` cfg - see docs" );
+	if (
+		hashtag !== false &&
+		hashtag !== "twitter" &&
+		hashtag !== "facebook" &&
+		hashtag !== "instagram"
+	) {
+		throw new Error("invalid `hashtag` cfg - see docs");
 	}
 
-	this.truncate = this.normalizeTruncateCfg( cfg.truncate );
-	this.className = cfg.className || '';
+	this.truncate = this.normalizeTruncateCfg(cfg.truncate);
+	this.className = cfg.className || "";
 	this.replaceFn = cfg.replaceFn || null;
 	this.context = cfg.context || this;
 
@@ -144,8 +153,6 @@ var Autolinker = function( cfg ) {
 	this.matchers = null;
 	this.tagBuilder = null;
 };
-
-
 
 /**
  * Automatically links URLs, Email addresses, Phone Numbers, Twitter handles,
@@ -169,12 +176,10 @@ var Autolinker = function( cfg ) {
  *   example call.
  * @return {String} The HTML text, with matches automatically linked.
  */
-Autolinker.link = function( textOrHtml, options ) {
-	var autolinker = new Autolinker( options );
-	return autolinker.link( textOrHtml );
+Autolinker.link = function (textOrHtml, options) {
+	var autolinker = new Autolinker(options);
+	return autolinker.link(textOrHtml);
 };
-
-
 
 /**
  * Parses the input `textOrHtml` looking for URLs, email addresses, phone
@@ -209,11 +214,10 @@ Autolinker.link = function( textOrHtml, options ) {
  * @return {Autolinker.match.Match[]} The array of Matches found in the
  *   given input `textOrHtml`.
  */
-Autolinker.parse = function( textOrHtml, options ) {
-	var autolinker = new Autolinker( options );
-	return autolinker.parse( textOrHtml );
+Autolinker.parse = function (textOrHtml, options) {
+	var autolinker = new Autolinker(options);
+	return autolinker.parse(textOrHtml);
 };
-
 
 /**
  * @static
@@ -223,11 +227,10 @@ Autolinker.parse = function( textOrHtml, options ) {
  *
  * Ex: 0.25.1
  */
-Autolinker.version = '/* @echo VERSION */';
-
+Autolinker.version = "/* @echo VERSION */";
 
 Autolinker.prototype = {
-	constructor : Autolinker,  // fix constructor property
+	constructor: Autolinker, // fix constructor property
 
 	/**
 	 * @cfg {Boolean/Object} [urls]
@@ -455,7 +458,6 @@ Autolinker.prototype = {
 	 * Defaults to this Autolinker instance.
 	 */
 
-
 	/**
 	 * @property {String} version (readonly)
 	 *
@@ -491,7 +493,6 @@ Autolinker.prototype = {
 	 * Note: this is lazily instantiated in the {@link #getTagBuilder} method.
 	 */
 
-
 	/**
 	 * Normalizes the {@link #urls} config into an Object with 3 properties:
 	 * `schemeMatches`, `wwwMatches`, and `tldMatches`, all Booleans.
@@ -502,21 +503,23 @@ Autolinker.prototype = {
 	 * @param {Boolean/Object} urls
 	 * @return {Object}
 	 */
-	normalizeUrlsCfg : function( urls ) {
-		if( urls == null ) urls = true;  // default to `true`
+	normalizeUrlsCfg: function (urls) {
+		if (urls == null) urls = true; // default to `true`
 
-		if( typeof urls === 'boolean' ) {
+		if (typeof urls === "boolean") {
 			return { schemeMatches: urls, wwwMatches: urls, tldMatches: urls };
-
-		} else {  // object form
+		} else {
+			// object form
 			return {
-				schemeMatches : typeof urls.schemeMatches === 'boolean' ? urls.schemeMatches : true,
-				wwwMatches    : typeof urls.wwwMatches === 'boolean'    ? urls.wwwMatches    : true,
-				tldMatches    : typeof urls.tldMatches === 'boolean'    ? urls.tldMatches    : true
+				schemeMatches:
+					typeof urls.schemeMatches === "boolean" ? urls.schemeMatches : true,
+				wwwMatches:
+					typeof urls.wwwMatches === "boolean" ? urls.wwwMatches : true,
+				tldMatches:
+					typeof urls.tldMatches === "boolean" ? urls.tldMatches : true,
 			};
 		}
 	},
-
 
 	/**
 	 * Normalizes the {@link #stripPrefix} config into an Object with 2
@@ -528,20 +531,20 @@ Autolinker.prototype = {
 	 * @param {Boolean/Object} stripPrefix
 	 * @return {Object}
 	 */
-	normalizeStripPrefixCfg : function( stripPrefix ) {
-		if( stripPrefix == null ) stripPrefix = true;  // default to `true`
+	normalizeStripPrefixCfg: function (stripPrefix) {
+		if (stripPrefix == null) stripPrefix = true; // default to `true`
 
-		if( typeof stripPrefix === 'boolean' ) {
+		if (typeof stripPrefix === "boolean") {
 			return { scheme: stripPrefix, www: stripPrefix };
-
-		} else {  // object form
+		} else {
+			// object form
 			return {
-				scheme : typeof stripPrefix.scheme === 'boolean' ? stripPrefix.scheme : true,
-				www    : typeof stripPrefix.www === 'boolean'    ? stripPrefix.www    : true
+				scheme:
+					typeof stripPrefix.scheme === "boolean" ? stripPrefix.scheme : true,
+				www: typeof stripPrefix.www === "boolean" ? stripPrefix.www : true,
 			};
 		}
 	},
-
 
 	/**
 	 * Normalizes the {@link #truncate} config into an Object with 2 properties:
@@ -553,18 +556,17 @@ Autolinker.prototype = {
 	 * @param {Number/Object} truncate
 	 * @return {Object}
 	 */
-	normalizeTruncateCfg : function( truncate ) {
-		if( typeof truncate === 'number' ) {
-			return { length: truncate, location: 'end' };
-
-		} else {  // object, or undefined/null
-			return Autolinker.Util.defaults( truncate || {}, {
-				length   : Number.POSITIVE_INFINITY,
-				location : 'end'
-			} );
+	normalizeTruncateCfg: function (truncate) {
+		if (typeof truncate === "number") {
+			return { length: truncate, location: "end" };
+		} else {
+			// object, or undefined/null
+			return Autolinker.Util.defaults(truncate || {}, {
+				length: Number.POSITIVE_INFINITY,
+				location: "end",
+			});
 		}
 	},
-
 
 	/**
 	 * Parses the input `textOrHtml` looking for URLs, email addresses, phone
@@ -597,47 +599,48 @@ Autolinker.prototype = {
 	 * @return {Autolinker.match.Match[]} The array of Matches found in the
 	 *   given input `textOrHtml`.
 	 */
-	parse : function( textOrHtml ) {
+	parse: function (textOrHtml) {
 		var htmlParser = this.getHtmlParser(),
-		    htmlNodes = htmlParser.parse( textOrHtml ),
-		    anchorTagStackCount = 0,  // used to only process text around anchor tags, and any inner text/html they may have;
-		    matches = [];
+			htmlNodes = htmlParser.parse(textOrHtml),
+			anchorTagStackCount = 0, // used to only process text around anchor tags, and any inner text/html they may have;
+			matches = [];
 
 		// Find all matches within the `textOrHtml` (but not matches that are
 		// already nested within <a> tags)
-		for( var i = 0, len = htmlNodes.length; i < len; i++ ) {
-			var node = htmlNodes[ i ],
-			    nodeType = node.getType();
+		for (var i = 0, len = htmlNodes.length; i < len; i++) {
+			var node = htmlNodes[i],
+				nodeType = node.getType();
 
-			if( nodeType === 'element' && node.getTagName() === 'a' ) {  // Process HTML anchor element nodes in the input `textOrHtml` to find out when we're within an <a> tag
-				if( !node.isClosing() ) {  // it's the start <a> tag
+			if (nodeType === "element" && node.getTagName() === "a") {
+				// Process HTML anchor element nodes in the input `textOrHtml` to find out when we're within an <a> tag
+				if (!node.isClosing()) {
+					// it's the start <a> tag
 					anchorTagStackCount++;
-				} else {  // it's the end </a> tag
-					anchorTagStackCount = Math.max( anchorTagStackCount - 1, 0 );  // attempt to handle extraneous </a> tags by making sure the stack count never goes below 0
+				} else {
+					// it's the end </a> tag
+					anchorTagStackCount = Math.max(anchorTagStackCount - 1, 0); // attempt to handle extraneous </a> tags by making sure the stack count never goes below 0
 				}
+			} else if (nodeType === "text" && anchorTagStackCount === 0) {
+				// Process text nodes that are not within an <a> tag
+				var textNodeMatches = this.parseText(node.getText(), node.getOffset());
 
-			} else if( nodeType === 'text' && anchorTagStackCount === 0 ) {  // Process text nodes that are not within an <a> tag
-				var textNodeMatches = this.parseText( node.getText(), node.getOffset() );
-
-				matches.push.apply( matches, textNodeMatches );
+				matches.push.apply(matches, textNodeMatches);
 			}
 		}
-
 
 		// After we have found all matches, remove subsequent matches that
 		// overlap with a previous match. This can happen for instance with URLs,
 		// where the url 'google.com/#link' would match '#link' as a hashtag.
-		matches = this.compactMatches( matches );
+		matches = this.compactMatches(matches);
 
 		// And finally, remove matches for match types that have been turned
 		// off. We needed to have all match types turned on initially so that
 		// things like hashtags could be filtered out if they were really just
 		// part of a URL match (for instance, as a named anchor).
-		matches = this.removeUnwantedMatches( matches );
+		matches = this.removeUnwantedMatches(matches);
 
 		return matches;
 	},
-
 
 	/**
 	 * After we have found all matches, we need to remove subsequent matches
@@ -648,34 +651,38 @@ Autolinker.prototype = {
 	 * @param {Autolinker.match.Match[]} matches
 	 * @return {Autolinker.match.Match[]}
 	 */
-	compactMatches : function( matches ) {
+	compactMatches: function (matches) {
 		// First, the matches need to be sorted in order of offset
-		matches.sort( function( a, b ) { return a.getOffset() - b.getOffset(); } );
+		matches.sort(function (a, b) {
+			return a.getOffset() - b.getOffset();
+		});
 
-		for( var i = 0; i < matches.length - 1; i++ ) {
-			var match = matches[ i ],
-					offset = match.getOffset(),
-					matchedTextLength = match.getMatchedText().length,
-			    endIdx = offset + matchedTextLength;
+		for (var i = 0; i < matches.length - 1; i++) {
+			var match = matches[i],
+				offset = match.getOffset(),
+				matchedTextLength = match.getMatchedText().length,
+				endIdx = offset + matchedTextLength;
 
-			if( i + 1 < matches.length ) {
+			if (i + 1 < matches.length) {
 				// Remove subsequent matches that equal offset with current match
-				if( matches[ i + 1 ].getOffset() === offset ) {
-					var removeIdx = matches[ i + 1 ].getMatchedText().length > matchedTextLength ? i : i + 1;
-					matches.splice( removeIdx, 1 );
+				if (matches[i + 1].getOffset() === offset) {
+					var removeIdx =
+						matches[i + 1].getMatchedText().length > matchedTextLength
+							? i
+							: i + 1;
+					matches.splice(removeIdx, 1);
 					continue;
 				}
 
 				// Remove subsequent matches that overlap with the current match
-				if( matches[ i + 1 ].getOffset() <= endIdx ) {
-					matches.splice( i + 1, 1 );
+				if (matches[i + 1].getOffset() <= endIdx) {
+					matches.splice(i + 1, 1);
 				}
 			}
 		}
 
 		return matches;
 	},
-
 
 	/**
 	 * Removes matches for matchers that were turned off in the options. For
@@ -688,26 +695,43 @@ Autolinker.prototype = {
 	 *   removals.
 	 * @return {Autolinker.match.Match[]} The mutated input `matches` array.
 	 */
-	removeUnwantedMatches : function( matches ) {
+	removeUnwantedMatches: function (matches) {
 		var remove = Autolinker.Util.remove;
 
-		if( !this.hashtag ) remove( matches, function( match ) { return match.getType() === 'hashtag'; } );
-		if( !this.email )   remove( matches, function( match ) { return match.getType() === 'email'; } );
-		if( !this.phone )   remove( matches, function( match ) { return match.getType() === 'phone'; } );
-		if( !this.mention ) remove( matches, function( match ) { return match.getType() === 'mention'; } );
-		if( !this.urls.schemeMatches ) {
-			remove( matches, function( m ) { return m.getType() === 'url' && m.getUrlMatchType() === 'scheme'; } );
+		if (!this.hashtag)
+			remove(matches, function (match) {
+				return match.getType() === "hashtag";
+			});
+		if (!this.email)
+			remove(matches, function (match) {
+				return match.getType() === "email";
+			});
+		if (!this.phone)
+			remove(matches, function (match) {
+				return match.getType() === "phone";
+			});
+		if (!this.mention)
+			remove(matches, function (match) {
+				return match.getType() === "mention";
+			});
+		if (!this.urls.schemeMatches) {
+			remove(matches, function (m) {
+				return m.getType() === "url" && m.getUrlMatchType() === "scheme";
+			});
 		}
-		if( !this.urls.wwwMatches ) {
-			remove( matches, function( m ) { return m.getType() === 'url' && m.getUrlMatchType() === 'www'; } );
+		if (!this.urls.wwwMatches) {
+			remove(matches, function (m) {
+				return m.getType() === "url" && m.getUrlMatchType() === "www";
+			});
 		}
-		if( !this.urls.tldMatches ) {
-			remove( matches, function( m ) { return m.getType() === 'url' && m.getUrlMatchType() === 'tld'; } );
+		if (!this.urls.tldMatches) {
+			remove(matches, function (m) {
+				return m.getType() === "url" && m.getUrlMatchType() === "tld";
+			});
 		}
 
 		return matches;
 	},
-
 
 	/**
 	 * Parses the input `text` looking for URLs, email addresses, phone
@@ -730,27 +754,30 @@ Autolinker.prototype = {
 	 * @return {Autolinker.match.Match[]} The array of Matches found in the
 	 *   given input `text`.
 	 */
-	parseText : function( text, offset ) {
+	parseText: function (text, offset) {
 		offset = offset || 0;
 		var matchers = this.getMatchers(),
-		    matches = [];
+			matches = [];
 
-		for( var i = 0, numMatchers = matchers.length; i < numMatchers; i++ ) {
-			var textMatches = matchers[ i ].parseMatches( text );
+		for (var i = 0, numMatchers = matchers.length; i < numMatchers; i++) {
+			var textMatches = matchers[i].parseMatches(text);
 
 			// Correct the offset of each of the matches. They are originally
 			// the offset of the match within the provided text node, but we
 			// need to correct them to be relative to the original HTML input
 			// string (i.e. the one provided to #parse).
-			for( var j = 0, numTextMatches = textMatches.length; j < numTextMatches; j++ ) {
-				textMatches[ j ].setOffset( offset + textMatches[ j ].getOffset() );
+			for (
+				var j = 0, numTextMatches = textMatches.length;
+				j < numTextMatches;
+				j++
+			) {
+				textMatches[j].setOffset(offset + textMatches[j].getOffset());
 			}
 
-			matches.push.apply( matches, textMatches );
+			matches.push.apply(matches, textMatches);
 		}
 		return matches;
 	},
-
 
 	/**
 	 * Automatically links URLs, Email addresses, Phone numbers, Hashtags,
@@ -770,26 +797,27 @@ Autolinker.prototype = {
 	 *   (depending on if the {@link #urls}, {@link #email}, {@link #phone}, {@link #hashtag}, and {@link #mention} options are enabled).
 	 * @return {String} The HTML, with matches automatically linked.
 	 */
-	link : function( textOrHtml ) {
-		if( !textOrHtml ) { return ""; }  // handle `null` and `undefined`
+	link: function (textOrHtml) {
+		if (!textOrHtml) {
+			return "";
+		} // handle `null` and `undefined`
 
-		var matches = this.parse( textOrHtml ),
+		var matches = this.parse(textOrHtml),
 			newHtml = [],
 			lastIndex = 0;
 
-		for( var i = 0, len = matches.length; i < len; i++ ) {
-			var match = matches[ i ];
+		for (var i = 0, len = matches.length; i < len; i++) {
+			var match = matches[i];
 
-			newHtml.push( textOrHtml.substring( lastIndex, match.getOffset() ) );
-			newHtml.push( this.createMatchReturnVal( match ) );
+			newHtml.push(textOrHtml.substring(lastIndex, match.getOffset()));
+			newHtml.push(this.createMatchReturnVal(match));
 
 			lastIndex = match.getOffset() + match.getMatchedText().length;
 		}
-		newHtml.push( textOrHtml.substring( lastIndex ) );  // handle the text after the last match
+		newHtml.push(textOrHtml.substring(lastIndex)); // handle the text after the last match
 
-		return newHtml.join( '' );
+		return newHtml.join("");
 	},
-
 
 	/**
 	 * Creates the return string value for a given match in the input string.
@@ -803,30 +831,27 @@ Autolinker.prototype = {
 	 *   This is usually the anchor tag string, but may be the `matchStr` itself
 	 *   if the match is not to be replaced.
 	 */
-	createMatchReturnVal : function( match ) {
+	createMatchReturnVal: function (match) {
 		// Handle a custom `replaceFn` being provided
 		var replaceFnResult;
-		if( this.replaceFn ) {
-			replaceFnResult = this.replaceFn.call( this.context, match );  // Autolinker instance is the context
+		if (this.replaceFn) {
+			replaceFnResult = this.replaceFn.call(this.context, match); // Autolinker instance is the context
 		}
 
-		if( typeof replaceFnResult === 'string' ) {
-			return replaceFnResult;  // `replaceFn` returned a string, use that
-
-		} else if( replaceFnResult === false ) {
-			return match.getMatchedText();  // no replacement for the match
-
-		} else if( replaceFnResult instanceof Autolinker.HtmlTag ) {
+		if (typeof replaceFnResult === "string") {
+			return replaceFnResult; // `replaceFn` returned a string, use that
+		} else if (replaceFnResult === false) {
+			return match.getMatchedText(); // no replacement for the match
+		} else if (replaceFnResult instanceof Autolinker.HtmlTag) {
 			return replaceFnResult.toAnchorString();
-
-		} else {  // replaceFnResult === true, or no/unknown return value from function
+		} else {
+			// replaceFnResult === true, or no/unknown return value from function
 			// Perform Autolinker's default anchor tag generation
-			var anchorTag = match.buildTag();  // returns an Autolinker.HtmlTag instance
+			var anchorTag = match.buildTag(); // returns an Autolinker.HtmlTag instance
 
 			return anchorTag.toAnchorString();
 		}
 	},
-
 
 	/**
 	 * Lazily instantiates and returns the {@link #htmlParser} instance for this
@@ -835,16 +860,15 @@ Autolinker.prototype = {
 	 * @protected
 	 * @return {Autolinker.htmlParser.HtmlParser}
 	 */
-	getHtmlParser : function() {
+	getHtmlParser: function () {
 		var htmlParser = this.htmlParser;
 
-		if( !htmlParser ) {
+		if (!htmlParser) {
 			htmlParser = this.htmlParser = new Autolinker.htmlParser.HtmlParser();
 		}
 
 		return htmlParser;
 	},
-
 
 	/**
 	 * Lazily instantiates and returns the {@link Autolinker.matcher.Matcher}
@@ -853,26 +877,35 @@ Autolinker.prototype = {
 	 * @protected
 	 * @return {Autolinker.matcher.Matcher[]}
 	 */
-	getMatchers : function() {
-		if( !this.matchers ) {
+	getMatchers: function () {
+		if (!this.matchers) {
 			var matchersNs = Autolinker.matcher,
-			    tagBuilder = this.getTagBuilder();
+				tagBuilder = this.getTagBuilder();
 
 			var matchers = [
-				new matchersNs.Hashtag( { tagBuilder: tagBuilder, serviceName: this.hashtag } ),
-				new matchersNs.Email( { tagBuilder: tagBuilder } ),
-				new matchersNs.Phone( { tagBuilder: tagBuilder } ),
-				new matchersNs.Mention( { tagBuilder: tagBuilder, serviceName: this.mention } ),
-				new matchersNs.Url( { tagBuilder: tagBuilder, stripPrefix: this.stripPrefix, stripTrailingSlash: this.stripTrailingSlash, decodePercentEncoding: this.decodePercentEncoding } )
+				new matchersNs.Hashtag({
+					tagBuilder: tagBuilder,
+					serviceName: this.hashtag,
+				}),
+				new matchersNs.Email({ tagBuilder: tagBuilder }),
+				new matchersNs.Phone({ tagBuilder: tagBuilder }),
+				new matchersNs.Mention({
+					tagBuilder: tagBuilder,
+					serviceName: this.mention,
+				}),
+				new matchersNs.Url({
+					tagBuilder: tagBuilder,
+					stripPrefix: this.stripPrefix,
+					stripTrailingSlash: this.stripTrailingSlash,
+					decodePercentEncoding: this.decodePercentEncoding,
+				}),
 			];
 
-			return ( this.matchers = matchers );
-
+			return (this.matchers = matchers);
 		} else {
 			return this.matchers;
 		}
 	},
-
 
 	/**
 	 * Returns the {@link #tagBuilder} instance for this Autolinker instance, lazily instantiating it
@@ -895,22 +928,20 @@ Autolinker.prototype = {
 	 *
 	 * @return {Autolinker.AnchorTagBuilder}
 	 */
-	getTagBuilder : function() {
+	getTagBuilder: function () {
 		var tagBuilder = this.tagBuilder;
 
-		if( !tagBuilder ) {
-			tagBuilder = this.tagBuilder = new Autolinker.AnchorTagBuilder( {
-				newWindow   : this.newWindow,
-				truncate    : this.truncate,
-				className   : this.className
-			} );
+		if (!tagBuilder) {
+			tagBuilder = this.tagBuilder = new Autolinker.AnchorTagBuilder({
+				newWindow: this.newWindow,
+				truncate: this.truncate,
+				className: this.className,
+			});
 		}
 
 		return tagBuilder;
-	}
-
+	},
 };
-
 
 // Autolinker Namespaces
 

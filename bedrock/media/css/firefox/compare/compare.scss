@@ -4,7 +4,7 @@
 
 @import "../../../protocol/css/includes/lib";
 @import "../../../protocol/css/components/split";
-@import '../../protocol/components/sub-navigation';
+@import "../../protocol/components/sub-navigation";
 
 //* -------------------------------------------------------------------------- */
 // Hero
@@ -176,7 +176,7 @@
 }
 
 .compare-section-conclusion .compare-section-header h2 {
-    margin-bottom: .45em;
+    margin-bottom: 0.45em;
 }
 
 //* -------------------------------------------------------------------------- */
@@ -266,7 +266,6 @@
         }
 
         tr:last-child {
-
             th,
             td {
                 border-bottom: 1px solid $color-marketing-gray-20;
@@ -350,7 +349,8 @@
     margin-top: $layout-lg;
     padding-top: $spacing-lg;
 
-    p, br {
+    p,
+    br {
         margin-bottom: $spacing-sm;
     }
 }

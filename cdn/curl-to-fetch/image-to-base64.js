@@ -18,17 +18,17 @@
 const log = console.log;
 
 function getDataUrl(img) {
-  // Create canvas
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d');
-  // Set width and height
-  canvas.width = img.width;
-  canvas.height = img.height;
-  // Draw the image
-  ctx.drawImage(img, 0, 0);
-  return canvas.toDataURL('image/png');
-  // return canvas.toDataURL('image/webp');
-  // return canvas.toDataURL('image/jpeg');
+    // Create canvas
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    // Set width and height
+    canvas.width = img.width;
+    canvas.height = img.height;
+    // Draw the image
+    ctx.drawImage(img, 0, 0);
+    return canvas.toDataURL("image/png");
+    // return canvas.toDataURL('image/webp');
+    // return canvas.toDataURL('image/jpeg');
 }
 
 // Select the image
@@ -37,7 +37,6 @@ function getDataUrl(img) {
 //   const dataUrl = getDataUrl(event.currentTarget);
 //   console.log(dataUrl);
 // });
-
 
 /*
 
@@ -78,7 +77,6 @@ img.addEventListener('click', function (event) {
 copy(base64Result);
 
 */
-
 
 /*
 

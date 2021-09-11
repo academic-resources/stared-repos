@@ -2,13 +2,15 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
+@import "../../../protocol/css/includes/lib";
 
 #firefox-app-store-banner {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
     position: relative;
     z-index: 1000; //banner shares same z-index as sticky nav.
 
@@ -38,7 +40,7 @@ $image-path: '/media/protocol/img';
     }
 
     .c-banner-icon {
-        @include bidi(((margin-right, $spacing-sm, margin-left, 0),));
+        @include bidi(((margin-right, $spacing-sm, margin-left, 0)));
         border-radius: $border-radius-md;
         display: block;
         height: 57px;
@@ -46,21 +48,21 @@ $image-path: '/media/protocol/img';
     }
 
     .c-banner-button {
-        @include bidi(((margin-left, auto, margin-right, 0),));
+        @include bidi(((margin-left, auto, margin-right, 0)));
         @include text-body-md;
-        background-color: #68A036;
+        background-color: #68a036;
         border-radius: $border-radius-sm;
         color: $color-white;
         padding: $spacing-xs $spacing-md;
         text-decoration: none;
 
-        html[lang^='en'] & {
+        html[lang^="en"] & {
             text-transform: uppercase;
         }
     }
 
     .c-banner-link {
-        @include bidi(((margin-left, auto, margin-right, 0),));
+        @include bidi(((margin-left, auto, margin-right, 0)));
         @include text-body-lg;
         text-decoration: none;
     }
@@ -75,10 +77,14 @@ $image-path: '/media/protocol/img';
     }
 
     .c-banner-title {
-        @include bidi(((padding-right, $spacing-lg, 0), (padding-left, 0, $spacing-lg),));
+        @include bidi(
+            ((padding-right, $spacing-lg, 0), (padding-left, 0, $spacing-lg))
+        );
         @include text-body-md;
         color: $color-black;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+            "Segoe UI Symbol";
         font-weight: 500;
         line-height: 1.2;
         margin: 0;
@@ -96,9 +102,10 @@ $image-path: '/media/protocol/img';
 
     // Close button
     .c-banner-close {
-        @include bidi(((margin-right, $spacing-sm, margin-left, 0),));
+        @include bidi(((margin-right, $spacing-sm, margin-left, 0)));
         @include image-replaced;
-        background: transparent url('#{$image-path}/icons/close.svg') center center no-repeat;
+        background: transparent url("#{$image-path}/icons/close.svg") center
+            center no-repeat;
         @include background-size(15px 15px);
         border: none;
         cursor: pointer;
@@ -111,7 +118,7 @@ $image-path: '/media/protocol/img';
         &:hover,
         &:focus {
             @include transform(scale(1.1));
-            @include transition(transform .1s ease-in-out);
+            @include transition(transform 0.1s ease-in-out);
         }
 
         &:focus {

@@ -1,6 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
-const cors = require('cors');
+const cors = require("cors");
 const { environment } = require("./config");
 const tweetsRouter = require("./routes/tweets");
 const indexRouter = require("./routes/index");

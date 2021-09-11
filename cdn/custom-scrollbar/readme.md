@@ -4,11 +4,7 @@ https://cdn.xgqfrms.xyz/custom-scrollbar/index.html
 
 > all in one
 
-
-
 ```css
-    
-
 @charset "UTF-8";
 
 /* custom-scrollbar demo */
@@ -56,12 +52,13 @@ https://cdn.xgqfrms.xyz/custom-scrollbar/index.html
     margin: 6px;
 }
 
-
 /* Horizontal Scrollbar Styles */
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar:horizontal {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png) 0 2 0 2;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png) 0 2 0 2;
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png)
+        0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png)
+        0 2 0 2;
     border-color: transparent;
     border-width: 0 2px;
     background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background.png);
@@ -77,73 +74,98 @@ https://cdn.xgqfrms.xyz/custom-scrollbar/index.html
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar:horizontal:window-inactive {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png)
+        0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png)
+        0 2 0 2;
     background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-inactive.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal {
     width: 20px;
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png) 0 2 0 2;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png) 0 2 0 2;
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png)
+        0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button.png)
+        0 2 0 2;
     border-color: transparent;
     border-width: 0 2px;
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:decrement {
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background.png);
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background.png);
     background-repeat: no-repeat, repeat-x;
     background-position: 2px 3px, 0 0;
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:decrement:hover {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png) 0 2 0 2;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png) 0 2 0 2;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-hover.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png)
+        0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png)
+        0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-hover.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:decrement:active {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png) 0 2 0 2;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png) 0 2 0 2;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-active.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png)
+        0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png)
+        0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-active.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:decrement:window-inactive {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-inactive.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png)
+        0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png)
+        0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-decrement-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-inactive.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:increment {
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background.png);
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background.png);
     background-repeat: no-repeat, repeat-x;
     background-position: 7px 3px, 0 0;
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:increment:hover {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png) 0 2 0 2;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png) 0 2 0 2;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-hover.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png)
+        0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-hover.png)
+        0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-hover.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:increment:active {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png) 0 2 0 2;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png) 0 2 0 2;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-active.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png)
+        0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-active.png)
+        0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-active.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:horizontal:increment:window-inactive {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png) 0 2 0 2;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-inactive.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png)
+        0 2 0 2;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-inactive.png)
+        0 2 0 2;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-increment-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/horizontal-button-background-inactive.png);
 }
-
 
 /* Vertical Scrollbar Styles */
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar:vertical {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png) 2 0 2 0;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png) 2 0 2 0;
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png)
+        2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png)
+        2 0 2 0;
     border-color: transparent;
     border-width: 2px 0;
     background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background.png);
@@ -159,81 +181,94 @@ https://cdn.xgqfrms.xyz/custom-scrollbar/index.html
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar:vertical:window-inactive {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png)
+        2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png)
+        2 0 2 0;
     background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-inactive.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical {
     height: 20px;
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png) 2 0 2 0;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png) 2 0 2 0;
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png)
+        2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button.png)
+        2 0 2 0;
     border-color: transparent;
     border-width: 2px 0;
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:decrement {
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background.png);
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background.png);
     background-repeat: no-repeat, repeat-y;
     background-position: 3px 3px, 0 0;
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:decrement:hover {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png) 2 0 2 0;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png) 2 0 2 0;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-hover.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png)
+        2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png)
+        2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-hover.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:decrement:active {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png) 2 0 2 0;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png) 2 0 2 0;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-active.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png)
+        2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png)
+        2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-active.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:decrement:window-inactive {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-inactive.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png)
+        2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png)
+        2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-decrement-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-inactive.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:increment {
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background.png);
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background.png);
     background-repeat: no-repeat, repeat-y;
     background-position: 3px 8px, 0 0;
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:increment:hover {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png) 2 0 2 0;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png) 2 0 2 0;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-hover.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png)
+        2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-hover.png)
+        2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-hover.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:increment:active {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png) 2 0 2 0;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png) 2 0 2 0;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-active.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png)
+        2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-active.png)
+        2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-active.png);
 }
 
 [data-demo="scrollbar-box"]::-webkit-scrollbar-button:vertical:increment:window-inactive {
-    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
-    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png) 2 0 2 0;
-    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png), url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-inactive.png);
+    -webkit-border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png)
+        2 0 2 0;
+    border-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-inactive.png)
+        2 0 2 0;
+    background-image: url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-increment-arrow.png),
+        url(https://cdn.xgqfrms.xyz/img/chrome-srollbar/vertical-button-background-inactive.png);
 }
-
-
-
 ```
 
-
-
-***
+---
 
 https://github.com/gildata/RAIO/issues/301
 
 https://github.com/gildata/RAIO/issues/299#issuecomment-363732164
-
-
-
-
-
-

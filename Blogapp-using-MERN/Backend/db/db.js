@@ -1,17 +1,21 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
 
-const url = "your url here"
+const url = "your url here";
 // Connect MongoDB at default port 27017.
-let mong = mongoose.connect(url, {
+let mong = mongoose.connect(
+  url,
+  {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
-}, (err) => {
+    useUnifiedTopology: true,
+  },
+  (err) => {
     if (!err) {
-        console.log('MongoDB Connection Succeeded.')
+      console.log("MongoDB Connection Succeeded.");
     } else {
-        console.log('Error in DB connection: ' + err)
+      console.log("Error in DB connection: " + err);
     }
-});
+  }
+);

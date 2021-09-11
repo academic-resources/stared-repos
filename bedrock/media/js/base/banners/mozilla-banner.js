@@ -3,29 +3,29 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 // Create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
     var _pageBanner;
 
     var Banner = {};
 
-    Banner.setCookie = function(id) {
+    Banner.setCookie = function (id) {
         var date = new Date();
         var cookieDuration = 1 * 24 * 60 * 60 * 1000; // 1 day expiration
         date.setTime(date.getTime() + cookieDuration); // 1 day expiration
-        Mozilla.Cookies.setItem(id, true, date.toUTCString(), '/');
+        Mozilla.Cookies.setItem(id, true, date.toUTCString(), "/");
     };
 
-    Banner.hasCookie = function(id) {
+    Banner.hasCookie = function (id) {
         return Mozilla.Cookies.hasItem(id);
     };
 
-    Banner.close = function() {
+    Banner.close = function () {
         // Remove the banner from the DOM.
         _pageBanner.parentNode.removeChild(_pageBanner);
 
@@ -34,15 +34,15 @@ if (typeof window.Mozilla === 'undefined') {
 
         // Track the event in GA.
         window.dataLayer.push({
-            'event': 'in-page-interaction',
-            'eLabel': 'Banner Dismissal',
-            'data-banner-name': Banner.id,
-            'data-banner-dismissal': '1'
+            event: "in-page-interaction",
+            eLabel: "Banner Dismissal",
+            "data-banner-name": Banner.id,
+            "data-banner-dismissal": "1",
         });
     };
 
-    Banner.show = function(renderAtTopOfPage) {
-        var outerWrapper = document.getElementById('outer-wrapper');
+    Banner.show = function (renderAtTopOfPage) {
+        var outerWrapper = document.getElementById("outer-wrapper");
 
         // if for some reason there's no outer-wrapper on the page, do nothing.
         if (!outerWrapper) {
@@ -60,14 +60,17 @@ if (typeof window.Mozilla === 'undefined') {
         }
 
         // display the banner
-        _pageBanner.classList.add('c-banner-is-visible');
+        _pageBanner.classList.add("c-banner-is-visible");
 
         // wire up close button
-        _pageBanner.querySelector('.c-banner-close').addEventListener('click', Banner.close, false);
+        _pageBanner
+            .querySelector(".c-banner-close")
+            .addEventListener("click", Banner.close, false);
     };
 
-    Banner.init = function(id, renderAtTopOfPage) {
-        var cookiesEnabled = typeof Mozilla.Cookies !== 'undefined' && Mozilla.Cookies.enabled();
+    Banner.init = function (id, renderAtTopOfPage) {
+        var cookiesEnabled =
+            typeof Mozilla.Cookies !== "undefined" && Mozilla.Cookies.enabled();
 
         _pageBanner = document.getElementById(id);
 
@@ -75,7 +78,7 @@ if (typeof window.Mozilla === 'undefined') {
          * If the banner does not exist on a page,
          * or there's not a valid banner ID then do nothing.
          */
-        if (!_pageBanner || typeof id !== 'string') {
+        if (!_pageBanner || typeof id !== "string") {
             return false;
         }
 
@@ -88,5 +91,4 @@ if (typeof window.Mozilla === 'undefined') {
     };
 
     window.Mozilla.Banner = Banner;
-
 })();

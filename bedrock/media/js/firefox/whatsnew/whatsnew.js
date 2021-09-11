@@ -3,18 +3,17 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
-    var sendTo = document.getElementById('send-to-device');
+    var sendTo = document.getElementById("send-to-device");
 
     if (sendTo) {
         var form = new window.Mozilla.SendToDevice();
         form.init();
     }
-
 })();

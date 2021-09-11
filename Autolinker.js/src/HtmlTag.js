@@ -74,8 +74,7 @@
  *     // generated html:
  *     //   Test <button title="Load URL: http://google.com">Load URL: google.com</button>
  */
-Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
-
+Autolinker.HtmlTag = Autolinker.Util.extend(Object, {
 	/**
 	 * @cfg {String} tagName
 	 *
@@ -109,26 +108,23 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * for acronym names.
 	 */
 
-
 	/**
 	 * @protected
 	 * @property {RegExp} whitespaceRegex
 	 *
 	 * Regular expression used to match whitespace in a string of CSS classes.
 	 */
-	whitespaceRegex : /\s+/,
-
+	whitespaceRegex: /\s+/,
 
 	/**
 	 * @constructor
 	 * @param {Object} [cfg] The configuration properties for this class, in an Object (map)
 	 */
-	constructor : function( cfg ) {
-		Autolinker.Util.assign( this, cfg );
+	constructor: function (cfg) {
+		Autolinker.Util.assign(this, cfg);
 
-		this.innerHtml = this.innerHtml || this.innerHTML;  // accept either the camelCased form or the fully capitalized acronym
+		this.innerHtml = this.innerHtml || this.innerHTML; // accept either the camelCased form or the fully capitalized acronym
 	},
-
 
 	/**
 	 * Sets the tag name that will be used to generate the tag with.
@@ -136,21 +132,19 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * @param {String} tagName
 	 * @return {Autolinker.HtmlTag} This HtmlTag instance, so that method calls may be chained.
 	 */
-	setTagName : function( tagName ) {
+	setTagName: function (tagName) {
 		this.tagName = tagName;
 		return this;
 	},
-
 
 	/**
 	 * Retrieves the tag name.
 	 *
 	 * @return {String}
 	 */
-	getTagName : function() {
+	getTagName: function () {
 		return this.tagName || "";
 	},
-
 
 	/**
 	 * Sets an attribute on the HtmlTag.
@@ -159,13 +153,12 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * @param {String} attrValue The attribute value to set.
 	 * @return {Autolinker.HtmlTag} This HtmlTag instance, so that method calls may be chained.
 	 */
-	setAttr : function( attrName, attrValue ) {
+	setAttr: function (attrName, attrValue) {
 		var tagAttrs = this.getAttrs();
-		tagAttrs[ attrName ] = attrValue;
+		tagAttrs[attrName] = attrValue;
 
 		return this;
 	},
-
 
 	/**
 	 * Retrieves an attribute from the HtmlTag. If the attribute does not exist, returns `undefined`.
@@ -173,10 +166,9 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * @param {String} attrName The attribute name to retrieve.
 	 * @return {String} The attribute's value, or `undefined` if it does not exist on the HtmlTag.
 	 */
-	getAttr : function( attrName ) {
-		return this.getAttrs()[ attrName ];
+	getAttr: function (attrName) {
+		return this.getAttrs()[attrName];
 	},
-
 
 	/**
 	 * Sets one or more attributes on the HtmlTag.
@@ -184,23 +176,21 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * @param {Object.<String, String>} attrs A key/value Object (map) of the attributes to set.
 	 * @return {Autolinker.HtmlTag} This HtmlTag instance, so that method calls may be chained.
 	 */
-	setAttrs : function( attrs ) {
+	setAttrs: function (attrs) {
 		var tagAttrs = this.getAttrs();
-		Autolinker.Util.assign( tagAttrs, attrs );
+		Autolinker.Util.assign(tagAttrs, attrs);
 
 		return this;
 	},
-
 
 	/**
 	 * Retrieves the attributes Object (map) for the HtmlTag.
 	 *
 	 * @return {Object.<String, String>} A key/value object of the attributes for the HtmlTag.
 	 */
-	getAttrs : function() {
-		return this.attrs || ( this.attrs = {} );
+	getAttrs: function () {
+		return this.attrs || (this.attrs = {});
 	},
-
 
 	/**
 	 * Sets the provided `cssClass`, overwriting any current CSS classes on the HtmlTag.
@@ -208,10 +198,9 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * @param {String} cssClass One or more space-separated CSS classes to set (overwrite).
 	 * @return {Autolinker.HtmlTag} This HtmlTag instance, so that method calls may be chained.
 	 */
-	setClass : function( cssClass ) {
-		return this.setAttr( 'class', cssClass );
+	setClass: function (cssClass) {
+		return this.setAttr("class", cssClass);
 	},
-
 
 	/**
 	 * Convenience method to add one or more CSS classes to the HtmlTag. Will not add duplicate CSS classes.
@@ -219,24 +208,23 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * @param {String} cssClass One or more space-separated CSS classes to add.
 	 * @return {Autolinker.HtmlTag} This HtmlTag instance, so that method calls may be chained.
 	 */
-	addClass : function( cssClass ) {
+	addClass: function (cssClass) {
 		var classAttr = this.getClass(),
-		    whitespaceRegex = this.whitespaceRegex,
-		    indexOf = Autolinker.Util.indexOf,  // to support IE8 and below
-		    classes = ( !classAttr ) ? [] : classAttr.split( whitespaceRegex ),
-		    newClasses = cssClass.split( whitespaceRegex ),
-		    newClass;
+			whitespaceRegex = this.whitespaceRegex,
+			indexOf = Autolinker.Util.indexOf, // to support IE8 and below
+			classes = !classAttr ? [] : classAttr.split(whitespaceRegex),
+			newClasses = cssClass.split(whitespaceRegex),
+			newClass;
 
-		while( newClass = newClasses.shift() ) {
-			if( indexOf( classes, newClass ) === -1 ) {
-				classes.push( newClass );
+		while ((newClass = newClasses.shift())) {
+			if (indexOf(classes, newClass) === -1) {
+				classes.push(newClass);
 			}
 		}
 
-		this.getAttrs()[ 'class' ] = classes.join( " " );
+		this.getAttrs()["class"] = classes.join(" ");
 		return this;
 	},
-
 
 	/**
 	 * Convenience method to remove one or more CSS classes from the HtmlTag.
@@ -244,25 +232,24 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * @param {String} cssClass One or more space-separated CSS classes to remove.
 	 * @return {Autolinker.HtmlTag} This HtmlTag instance, so that method calls may be chained.
 	 */
-	removeClass : function( cssClass ) {
+	removeClass: function (cssClass) {
 		var classAttr = this.getClass(),
-		    whitespaceRegex = this.whitespaceRegex,
-		    indexOf = Autolinker.Util.indexOf,  // to support IE8 and below
-		    classes = ( !classAttr ) ? [] : classAttr.split( whitespaceRegex ),
-		    removeClasses = cssClass.split( whitespaceRegex ),
-		    removeClass;
+			whitespaceRegex = this.whitespaceRegex,
+			indexOf = Autolinker.Util.indexOf, // to support IE8 and below
+			classes = !classAttr ? [] : classAttr.split(whitespaceRegex),
+			removeClasses = cssClass.split(whitespaceRegex),
+			removeClass;
 
-		while( classes.length && ( removeClass = removeClasses.shift() ) ) {
-			var idx = indexOf( classes, removeClass );
-			if( idx !== -1 ) {
-				classes.splice( idx, 1 );
+		while (classes.length && (removeClass = removeClasses.shift())) {
+			var idx = indexOf(classes, removeClass);
+			if (idx !== -1) {
+				classes.splice(idx, 1);
 			}
 		}
 
-		this.getAttrs()[ 'class' ] = classes.join( " " );
+		this.getAttrs()["class"] = classes.join(" ");
 		return this;
 	},
-
 
 	/**
 	 * Convenience method to retrieve the CSS class(es) for the HtmlTag, which will each be separated by spaces when
@@ -270,10 +257,9 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 *
 	 * @return {String}
 	 */
-	getClass : function() {
-		return this.getAttrs()[ 'class' ] || "";
+	getClass: function () {
+		return this.getAttrs()["class"] || "";
 	},
-
 
 	/**
 	 * Convenience method to check if the tag has a CSS class or not.
@@ -281,10 +267,9 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * @param {String} cssClass The CSS class to check for.
 	 * @return {Boolean} `true` if the HtmlTag has the CSS class, `false` otherwise.
 	 */
-	hasClass : function( cssClass ) {
-		return ( ' ' + this.getClass() + ' ' ).indexOf( ' ' + cssClass + ' ' ) !== -1;
+	hasClass: function (cssClass) {
+		return (" " + this.getClass() + " ").indexOf(" " + cssClass + " ") !== -1;
 	},
-
 
 	/**
 	 * Sets the inner HTML for the tag.
@@ -292,37 +277,43 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * @param {String} html The inner HTML to set.
 	 * @return {Autolinker.HtmlTag} This HtmlTag instance, so that method calls may be chained.
 	 */
-	setInnerHtml : function( html ) {
+	setInnerHtml: function (html) {
 		this.innerHtml = html;
 
 		return this;
 	},
-
 
 	/**
 	 * Retrieves the inner HTML for the tag.
 	 *
 	 * @return {String}
 	 */
-	getInnerHtml : function() {
+	getInnerHtml: function () {
 		return this.innerHtml || "";
 	},
-
 
 	/**
 	 * Override of superclass method used to generate the HTML string for the tag.
 	 *
 	 * @return {String}
 	 */
-	toAnchorString : function() {
+	toAnchorString: function () {
 		var tagName = this.getTagName(),
-		    attrsStr = this.buildAttrsStr();
+			attrsStr = this.buildAttrsStr();
 
-		attrsStr = ( attrsStr ) ? ' ' + attrsStr : '';  // prepend a space if there are actually attributes
+		attrsStr = attrsStr ? " " + attrsStr : ""; // prepend a space if there are actually attributes
 
-		return [ '<', tagName, attrsStr, '>', this.getInnerHtml(), '</', tagName, '>' ].join( "" );
+		return [
+			"<",
+			tagName,
+			attrsStr,
+			">",
+			this.getInnerHtml(),
+			"</",
+			tagName,
+			">",
+		].join("");
 	},
-
 
 	/**
 	 * Support method for {@link #toAnchorString}, returns the string space-separated key="value" pairs, used to populate
@@ -331,18 +322,17 @@ Autolinker.HtmlTag = Autolinker.Util.extend( Object, {
 	 * @protected
 	 * @return {String} Example return: `attr1="value1" attr2="value2"`
 	 */
-	buildAttrsStr : function() {
-		if( !this.attrs ) return "";  // no `attrs` Object (map) has been set, return empty string
+	buildAttrsStr: function () {
+		if (!this.attrs) return ""; // no `attrs` Object (map) has been set, return empty string
 
 		var attrs = this.getAttrs(),
-		    attrsArr = [];
+			attrsArr = [];
 
-		for( var prop in attrs ) {
-			if( attrs.hasOwnProperty( prop ) ) {
-				attrsArr.push( prop + '="' + attrs[ prop ] + '"' );
+		for (var prop in attrs) {
+			if (attrs.hasOwnProperty(prop)) {
+				attrsArr.push(prop + '="' + attrs[prop] + '"');
 			}
 		}
-		return attrsArr.join( " " );
-	}
-
-} );
+		return attrsArr.join(" ");
+	},
+});

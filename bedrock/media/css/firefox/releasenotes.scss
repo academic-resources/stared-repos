@@ -2,15 +2,14 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
-@import '../../protocol/css/includes/lib';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
+@import "../../protocol/css/includes/lib";
 
-@import '../../protocol/css/templates/main-with-sidebar';
-@import '../../protocol/css/components/article';
-@import '../../protocol/css/components/call-out';
-@import '../protocol/components/sub-navigation';
-
+@import "../../protocol/css/templates/main-with-sidebar";
+@import "../../protocol/css/components/article";
+@import "../../protocol/css/components/call-out";
+@import "../protocol/components/sub-navigation";
 
 //* -------------------------------------------------------------------------- */
 // Call out / page header
@@ -30,7 +29,6 @@ $image-path: '/media/protocol/img';
     background: linear-gradient(#000000, #001e44);
 }
 
-
 // old logos
 //  - cannot use at2x mixin here because it will over-ride the background-size,
 //    which we don't want to have to reset here because it's different for
@@ -39,46 +37,46 @@ $image-path: '/media/protocol/img';
 .t-quantum {
     // firefox release
     .mzp-c-call-out.mzp-t-product-firefox .mzp-c-call-out-title {
-        background-image: url('/media/img/firefox/releasenotes/release-quantum.png');
+        background-image: url("/media/img/firefox/releasenotes/release-quantum.png");
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/firefox/releasenotes/release-quantum-high-res.png');
+            background-image: url("/media/img/firefox/releasenotes/release-quantum-high-res.png");
         }
     }
 
     // firefox beta
     .mzp-c-call-out.mzp-t-product-beta .mzp-c-call-out-title {
-        background-image: url('/media/img/firefox/releasenotes/beta-quantum.png');
+        background-image: url("/media/img/firefox/releasenotes/beta-quantum.png");
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/firefox/releasenotes/beta-quantum-high-res.png');
+            background-image: url("/media/img/firefox/releasenotes/beta-quantum-high-res.png");
         }
     }
 
     // firefox nightly
     .mzp-c-call-out.mzp-t-product-nightly .mzp-c-call-out-title {
-        background-image: url('/media/img/firefox/releasenotes/nightly-quantum.png');
+        background-image: url("/media/img/firefox/releasenotes/nightly-quantum.png");
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/firefox/releasenotes/nightly-quantum-high-res.png');
+            background-image: url("/media/img/firefox/releasenotes/nightly-quantum-high-res.png");
         }
     }
 
     // firefox developer edition
     .mzp-c-call-out.mzp-t-product-developer .mzp-c-call-out-title {
-        background-image: url('/media/img/firefox/releasenotes/developer-quantum.png');
+        background-image: url("/media/img/firefox/releasenotes/developer-quantum.png");
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/firefox/releasenotes/developer-quantum-high-res.png');
+            background-image: url("/media/img/firefox/releasenotes/developer-quantum-high-res.png");
         }
     }
 
     // pre-dev edition firefox aurora
     .mzp-c-call-out.mzp-t-product-developer.t-aurora .mzp-c-call-out-title {
-        background-image: url('/media/img/firefox/releasenotes/aurora.png');
+        background-image: url("/media/img/firefox/releasenotes/aurora.png");
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/firefox/releasenotes/aurora-high-res.png');
+            background-image: url("/media/img/firefox/releasenotes/aurora-high-res.png");
         }
     }
 }
@@ -86,46 +84,46 @@ $image-path: '/media/protocol/img';
 .t-pre-quantum {
     // firefox release
     .mzp-c-call-out.mzp-t-product-firefox .mzp-c-call-out-title {
-        background-image: url('/media/img/firefox/releasenotes/firefox-old.png');
+        background-image: url("/media/img/firefox/releasenotes/firefox-old.png");
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/firefox/releasenotes/firefox-old-high-res.png');
+            background-image: url("/media/img/firefox/releasenotes/firefox-old-high-res.png");
         }
     }
 
     // firefox beta
     .mzp-c-call-out.mzp-t-product-beta .mzp-c-call-out-title {
-        background-image: url('/media/img/firefox/releasenotes/beta-old.png');
+        background-image: url("/media/img/firefox/releasenotes/beta-old.png");
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/firefox/releasenotes/beta-old-high-res.png');
+            background-image: url("/media/img/firefox/releasenotes/beta-old-high-res.png");
         }
     }
 
     // firefox nightly
     .mzp-c-call-out.mzp-t-product-nightly .mzp-c-call-out-title {
-        background-image: url('/media/img/firefox/releasenotes/nightly-old.png');
+        background-image: url("/media/img/firefox/releasenotes/nightly-old.png");
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/firefox/releasenotes/nightly-old-high-res.png');
+            background-image: url("/media/img/firefox/releasenotes/nightly-old-high-res.png");
         }
     }
 
     // firefox developer edition
     .mzp-c-call-out.mzp-t-product-developer .mzp-c-call-out-title {
-        background-image: url('/media/img/firefox/releasenotes/developer-old.png');
+        background-image: url("/media/img/firefox/releasenotes/developer-old.png");
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/firefox/releasenotes/developer-old-high-res.png');
+            background-image: url("/media/img/firefox/releasenotes/developer-old-high-res.png");
         }
     }
 
     // pre-dev edition firefox aurora
     .mzp-c-call-out.mzp-t-product-developer.t-aurora .mzp-c-call-out-title {
-        background-image: url('/media/img/firefox/releasenotes/aurora.png');
+        background-image: url("/media/img/firefox/releasenotes/aurora.png");
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/firefox/releasenotes/aurora-high-res.png');
+            background-image: url("/media/img/firefox/releasenotes/aurora-high-res.png");
         }
     }
 }
@@ -140,7 +138,6 @@ $image-path: '/media/protocol/img';
         display: none;
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // secondary navigation
@@ -160,7 +157,6 @@ $image-path: '/media/protocol/img';
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // release notes custom typography
@@ -184,7 +180,7 @@ $image-path: '/media/protocol/img';
         @include font-base;
         @include text-title-2xs;
     }
-     .c-release-date {
+    .c-release-date {
         @include font-base;
         @include text-title-2xs;
     }
@@ -198,7 +194,7 @@ $image-path: '/media/protocol/img';
         // pushes the text down after the big release-version text
         &:before {
             @include text-title-xl;
-            content: '.';
+            content: ".";
             display: block;
             visibility: hidden;
         }
@@ -215,9 +211,9 @@ $image-path: '/media/protocol/img';
     padding-top: $layout-lg;
 
     &:before {
-        content: '';
+        content: "";
         display: block;
-        width: calc(100% - #{ $layout-xs * 2});
+        width: calc(100% - #{$layout-xs * 2});
         height: 2px;
         background-color: $color-marketing-gray-20;
         position: absolute;
@@ -226,12 +222,12 @@ $image-path: '/media/protocol/img';
 
         @media #{$mq-md} {
             left: $layout-lg;
-            width: calc(100% - #{ $layout-lg * 2});
+            width: calc(100% - #{$layout-lg * 2});
         }
 
         @media #{$mq-lg} {
             left: $layout-xl;
-            width: calc(100% - #{ $layout-xl * 2});
+            width: calc(100% - #{$layout-xl * 2});
         }
     }
 }
@@ -264,14 +260,14 @@ $image-path: '/media/protocol/img';
 
         ul,
         ol {
-            @include bidi(((margin-left, $layout-sm, margin-right, 0),));
+            @include bidi(((margin-left, $layout-sm, margin-right, 0)));
         }
 
         ul {
             list-style: disc;
 
             li {
-                margin-bottom: .25em;
+                margin-bottom: 0.25em;
             }
 
             ul {
@@ -289,7 +285,7 @@ $image-path: '/media/protocol/img';
             list-style: decimal;
 
             li {
-                margin-bottom: .25em;
+                margin-bottom: 0.25em;
             }
 
             ol {
@@ -312,7 +308,7 @@ $image-path: '/media/protocol/img';
 }
 
 .bug-id {
-    @include bidi(((text-align, right, left),));
+    @include bidi(((text-align, right, left)));
     display: block;
     margin-bottom: 0;
 
@@ -341,8 +337,8 @@ $image-path: '/media/protocol/img';
     margin-top: 10px;
 
     &:before {
-        content: ' ';
-        background-image: url('/media/img/firefox/releasenotes/mdn-icon.png');
+        content: " ";
+        background-image: url("/media/img/firefox/releasenotes/mdn-icon.png");
         background-repeat: no-repeat;
         background-size: 100%;
         display: inline-block;
@@ -357,7 +353,6 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // all-download link
 
@@ -371,7 +366,6 @@ $image-path: '/media/protocol/img';
         text-align: center;
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Compact call out
@@ -389,7 +383,6 @@ $image-path: '/media/protocol/img';
 .mzp-c-call-out-compact.mzp-t-product-developer {
     background: linear-gradient(#001e44, #002d66);
 }
-
 
 //* -------------------------------------------------------------------------- */
 // more information links at end of page
@@ -413,13 +406,13 @@ $image-path: '/media/protocol/img';
         }
 
         @media #{$mq-md} {
-            @include bidi(((float, left, right),));
-            @include bidi(((padding-left, $layout-md, padding-right, 0),));
+            @include bidi(((float, left, right)));
+            @include bidi(((padding-left, $layout-md, padding-right, 0)));
             margin-top: 0;
             width: calc(#{100% / 3} - (#{$layout-md} - (#{$layout-md} / 3)));
 
             &:first-child {
-                @include bidi(((padding-left, 0, padding-right, 0),));
+                @include bidi(((padding-left, 0, padding-right, 0)));
             }
         }
     }

@@ -3,34 +3,34 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
-    var bios = document.getElementsByClassName('has-bio');
-    var content = document.querySelector('.mzp-u-modal-content');
+    var bios = document.getElementsByClassName("has-bio");
+    var content = document.querySelector(".mzp-u-modal-content");
 
     for (var i = 0; i < bios.length; i++) {
         var bio = bios[i];
-        bio.setAttribute('aria-role', 'button');
+        bio.setAttribute("aria-role", "button");
 
-        bio.addEventListener('click', function(e) {
+        bio.addEventListener("click", function (e) {
             e.preventDefault();
             var modalContent = this.cloneNode(true);
-            modalContent.removeAttribute('id');
-            modalContent.setAttribute('aria-role', 'article');
+            modalContent.removeAttribute("id");
+            modalContent.setAttribute("aria-role", "article");
 
             Mzp.Modal.createModal(e.target, content, {
-                closeText: window.Mozilla.Utils.trans('global-close'),
-                onCreate: function() {
+                closeText: window.Mozilla.Utils.trans("global-close"),
+                onCreate: function () {
                     content.appendChild(modalContent);
                 },
-                onDestroy: function() {
+                onDestroy: function () {
                     modalContent.parentNode.removeChild(modalContent);
-                }
+                },
             });
         });
     }
@@ -39,9 +39,8 @@ if (typeof window.Mozilla === 'undefined') {
     if (window.location.hash) {
         var target = document.getElementById(window.location.hash.substr(1));
 
-        if (target && target.classList.contains('has-bio')) {
+        if (target && target.classList.contains("has-bio")) {
             target.click();
         }
     }
-
 })(window.Mozilla);

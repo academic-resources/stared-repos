@@ -3,12 +3,12 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // Create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
     /**
      * Provide information on the user's browsing environment, including the platform and browser details.
@@ -29,21 +29,21 @@ if (typeof window.Mozilla === 'undefined') {
      * https://docs.telemetry.mozilla.org/datasets/fxa_metrics/attribution.html#service-attribution
      */
     Client.FxaServices = {
-        'amo-web': 'a4907de5fa9d78fc',
-        'fenix-sync': 'a2270f727f45f648',
-        'firefox-addons': '3a1f53aabe17ba32',
-        'firefox-lockwise-android': 'e7ce535d93522896',
-        'firefox-lockwise-ios': '98adfa37698f255b',
-        'firefox-monitor': '802d56ef2a9af9fa',
-        'firefox-notes-android': '7f368c6886429f19',
-        'firefox-notes-desktop': 'a3dbd8c5a6fd93e2',
-        'firefox-screenshots': '5e75409a5a3f096d',
-        'firefox-send-android': '20f7931c9054d833',
-        'firefox-send-web': '1f30e32975ae5112',
-        'fxa-content': 'ea3ca969f8c6bb0d',
-        'mozilla-email-preferences': 'c40f32fd2938f0b6',
-        'pocket-mobile': '7377719276ad44ee',
-        'pocket-web': '749818d3f2e7857f'
+        "amo-web": "a4907de5fa9d78fc",
+        "fenix-sync": "a2270f727f45f648",
+        "firefox-addons": "3a1f53aabe17ba32",
+        "firefox-lockwise-android": "e7ce535d93522896",
+        "firefox-lockwise-ios": "98adfa37698f255b",
+        "firefox-monitor": "802d56ef2a9af9fa",
+        "firefox-notes-android": "7f368c6886429f19",
+        "firefox-notes-desktop": "a3dbd8c5a6fd93e2",
+        "firefox-screenshots": "5e75409a5a3f096d",
+        "firefox-send-android": "20f7931c9054d833",
+        "firefox-send-web": "1f30e32975ae5112",
+        "fxa-content": "ea3ca969f8c6bb0d",
+        "mozilla-email-preferences": "c40f32fd2938f0b6",
+        "pocket-mobile": "7377719276ad44ee",
+        "pocket-web": "749818d3f2e7857f",
     };
 
     /**
@@ -69,7 +69,11 @@ if (typeof window.Mozilla === 'undefined') {
     Client._isFirefoxDesktop = function (ua) {
         ua = ua || navigator.userAgent;
 
-        return /\sFirefox/.test(ua) && !/Mobile|Tablet|Fennec/.test(ua) && !Client._isLikeFirefox(ua);
+        return (
+            /\sFirefox/.test(ua) &&
+            !/Mobile|Tablet|Fennec/.test(ua) &&
+            !Client._isLikeFirefox(ua)
+        );
     };
 
     /**
@@ -108,9 +112,9 @@ if (typeof window.Mozilla === 'undefined') {
      */
     Client._isFirefoxFxOS = function (ua, pf) {
         ua = ua || navigator.userAgent;
-        pf = (pf === '') ? '' : pf || navigator.platform;
+        pf = pf === "" ? "" : pf || navigator.platform;
 
-        return /Firefox/.test(ua) && pf === '';
+        return /Firefox/.test(ua) && pf === "";
     };
 
     /**
@@ -138,7 +142,7 @@ if (typeof window.Mozilla === 'undefined') {
 
         var matches = /Firefox\/(\d+(?:\.\d+){1,2})/.exec(ua);
 
-        return (matches && !Client._isLikeFirefox(ua)) ? matches[1] : '0';
+        return matches && !Client._isLikeFirefox(ua) ? matches[1] : "0";
     };
 
     /**
@@ -168,10 +172,10 @@ if (typeof window.Mozilla === 'undefined') {
 
         // Make sure both latest and user array lengths match.
         while (latestVerArr.length < userVerArr.length) {
-            latestVerArr.push('0');
+            latestVerArr.push("0");
         }
         while (userVerArr.length < latestVerArr.length) {
-            userVerArr.push('0');
+            userVerArr.push("0");
         }
 
         // Only check the major version in non-strict comparison mode.
@@ -214,22 +218,33 @@ if (typeof window.Mozilla === 'undefined') {
 
         var html = document.documentElement;
 
-        if (!html.getAttribute('data-esr-versions') || !html.getAttribute('data-latest-firefox')) {
+        if (
+            !html.getAttribute("data-esr-versions") ||
+            !html.getAttribute("data-latest-firefox")
+        ) {
             return false;
         }
 
-        var versions = isESR ? html.getAttribute('data-esr-versions').split(' ') : [html.getAttribute('data-latest-firefox')];
-        var userVerArr = userVer.match(/^(\d+(?:\.\d+){1,2})/)[1].split('.');
+        var versions = isESR
+            ? html.getAttribute("data-esr-versions").split(" ")
+            : [html.getAttribute("data-latest-firefox")];
+        var userVerArr = userVer.match(/^(\d+(?:\.\d+){1,2})/)[1].split(".");
         var isUpToDate = false;
 
         // Sort product details version so we compare the newer version first
-        versions.sort(function(a, b) { return parseFloat(a) < parseFloat(b); });
+        versions.sort(function (a, b) {
+            return parseFloat(a) < parseFloat(b);
+        });
 
         // Compare each latest version in product details to the user version.
         for (var i = 0; i < versions.length; i++) {
-            var latestVerArr = versions[i].split('.');
+            var latestVerArr = versions[i].split(".");
 
-            isUpToDate = Client._compareVersion(strict, userVerArr, latestVerArr);
+            isUpToDate = Client._compareVersion(
+                strict,
+                userVerArr,
+                latestVerArr
+            );
 
             if (isUpToDate) {
                 break;
@@ -246,12 +261,24 @@ if (typeof window.Mozilla === 'undefined') {
      * @param {String} latestVer - Current latest release version number.
      * @return {Boolean}
      */
-    Client.isFirefoxOutOfDate = function(clientVer, majorVer, latestVer) {
+    Client.isFirefoxOutOfDate = function (clientVer, majorVer, latestVer) {
         var clientVersion = parseInt(clientVer, 10);
-        var latestVersion = typeof latestVer === 'undefined' ? parseInt(document.documentElement.getAttribute('data-latest-firefox'), 10) : parseInt(latestVer, 10);
+        var latestVersion =
+            typeof latestVer === "undefined"
+                ? parseInt(
+                      document.documentElement.getAttribute(
+                          "data-latest-firefox"
+                      ),
+                      10
+                  )
+                : parseInt(latestVer, 10);
         var majorVersions = Math.max(parseInt(majorVer, 10), 1); // majorVersions must be at least 1.
 
-        if (isNaN(latestVersion) || isNaN(clientVersion) || isNaN(majorVersions)) {
+        if (
+            isNaN(latestVersion) ||
+            isNaN(clientVersion) ||
+            isNaN(majorVersions)
+        ) {
             return false;
         }
 
@@ -265,14 +292,29 @@ if (typeof window.Mozilla === 'undefined') {
      * @param {String} latestVer - Current latest release version number.
      * @return {Boolean}
      */
-    Client.isFirefoxURLOutOfDate = function(majorVer, pathName, latestVer) {
-        var path = typeof pathName === 'undefined' ? window.location.pathname : pathName;
-        var urlVersion =  /firefox\/(\d+(?:\.\d+)?\.\da?\d?)/.exec(path);
+    Client.isFirefoxURLOutOfDate = function (majorVer, pathName, latestVer) {
+        var path =
+            typeof pathName === "undefined"
+                ? window.location.pathname
+                : pathName;
+        var urlVersion = /firefox\/(\d+(?:\.\d+)?\.\da?\d?)/.exec(path);
         var version = urlVersion ? parseInt(urlVersion[1], 10) : null;
-        var latestVersion = typeof latestVer === 'undefined' ? parseInt(document.documentElement.getAttribute('data-latest-firefox'), 10) : parseInt(latestVer, 10);
+        var latestVersion =
+            typeof latestVer === "undefined"
+                ? parseInt(
+                      document.documentElement.getAttribute(
+                          "data-latest-firefox"
+                      ),
+                      10
+                  )
+                : parseInt(latestVer, 10);
         var majorVersions = Math.max(parseInt(majorVer, 10), 1); // majorVersions must be at least 1.
 
-        if (version && latestVersion && (version <= latestVersion - majorVersions)) {
+        if (
+            version &&
+            latestVersion &&
+            version <= latestVersion - majorVersions
+        ) {
             return true;
         }
 
@@ -295,37 +337,54 @@ if (typeof window.Mozilla === 'undefined') {
             return;
         }
 
-        var callbackID = Math.random().toString(36).replace(/[^a-z]+/g, '');
+        var callbackID = Math.random()
+            .toString(36)
+            .replace(/[^a-z]+/g, "");
 
         var listener = function (event) {
-            if (!event.detail || !event.detail.data || event.detail.callbackID !== callbackID) {
+            if (
+                !event.detail ||
+                !event.detail.data ||
+                event.detail.callbackID !== callbackID
+            ) {
                 return;
             }
 
             window.clearTimeout(timer);
-            onRetrieved(true, event.detail.data.version, event.detail.data.defaultUpdateChannel, event.detail.data.distribution);
+            onRetrieved(
+                true,
+                event.detail.data.version,
+                event.detail.data.defaultUpdateChannel,
+                event.detail.data.distribution
+            );
         };
 
         var onRetrieved = function (accurate, version, channel, distribution) {
-            document.removeEventListener('mozUITourResponse', listener, false);
+            document.removeEventListener("mozUITourResponse", listener, false);
 
-            var isESR = channel === 'esr';
-            var isUpToDate = Client._isFirefoxUpToDate(accurate, accurate ? isESR : false, version);
-            var details = Client.FirefoxDetails = {
-                'accurate': accurate,
-                'version': version,
-                'channel': channel,
-                'distribution': distribution,
-                'isUpToDate': isUpToDate,
-                'isESR': isESR
-            };
+            var isESR = channel === "esr";
+            var isUpToDate = Client._isFirefoxUpToDate(
+                accurate,
+                accurate ? isESR : false,
+                version
+            );
+            var details = (Client.FirefoxDetails = {
+                accurate: accurate,
+                version: version,
+                channel: channel,
+                distribution: distribution,
+                isUpToDate: isUpToDate,
+                isESR: isESR,
+            });
 
             callback(details);
         };
 
         // Prepare fallback function in case the API doesn't work
         var userVer = Client._getFirefoxVersion();
-        var fallback = function () { onRetrieved(false, userVer, 'release', undefined); };
+        var fallback = function () {
+            onRetrieved(false, userVer, "release", undefined);
+        };
 
         // If Firefox is old or for Android, call the fallback function immediately because the API is not implemented
         if (parseFloat(userVer) < 35 || Client._isFirefoxAndroid()) {
@@ -338,14 +397,16 @@ if (typeof window.Mozilla === 'undefined') {
         var timer = window.setTimeout(fallback, 400);
 
         // Trigger the API
-        document.addEventListener('mozUITourResponse', listener, false);
-        document.dispatchEvent(new CustomEvent('mozUITour', {
-            'bubbles': true,
-            'detail': {
-                'action': 'getConfiguration',
-                'data': { 'configuration': 'appinfo', 'callbackID': callbackID }
-            }
-        }));
+        document.addEventListener("mozUITourResponse", listener, false);
+        document.dispatchEvent(
+            new CustomEvent("mozUITour", {
+                bubbles: true,
+                detail: {
+                    action: "getConfiguration",
+                    data: { configuration: "appinfo", callbackID: callbackID },
+                },
+            })
+        );
     };
 
     /**
@@ -386,34 +447,34 @@ if (typeof window.Mozilla === 'undefined') {
 
         var request = {
             name: null,
-            callback: null
+            callback: null,
         };
 
         // Set up the object with default values of false
         var details = {
-            'firefox': false,
-            'legacy': false,
-            'mobile': false,
-            'setup': false,
-            'browserServices': {
-                'sync': {
-                    'setup': false,
-                    'desktopDevices': false,
-                    'mobileDevices': false,
-                    'totalDevices': false
-                }
-            }
+            firefox: false,
+            legacy: false,
+            mobile: false,
+            setup: false,
+            browserServices: {
+                sync: {
+                    setup: false,
+                    desktopDevices: false,
+                    mobileDevices: false,
+                    totalDevices: false,
+                },
+            },
         };
 
         // Override object values as we get more information
         if (Client._isFirefoxAndroid()) {
             details.firefox = true;
-            details.mobile = 'android';
+            details.mobile = "android";
             returnFxaDetails();
             return;
         } else if (Client._isFirefoxiOS()) {
             details.firefox = true;
-            details.mobile = 'ios';
+            details.mobile = "ios";
             returnFxaDetails();
             return;
         } else if (Client._isFirefoxDesktop()) {
@@ -433,11 +494,17 @@ if (typeof window.Mozilla === 'undefined') {
                 }
 
                 // callbackID to make sure we're responding to our request
-                var callbackID = Math.random().toString(36).replace(/[^a-z]+/g, '');
+                var callbackID = Math.random()
+                    .toString(36)
+                    .replace(/[^a-z]+/g, "");
 
                 // UITour API response event handler for 'sync', checks for callbackID
                 var listenerSync = function (event) {
-                    if (!event.detail || !event.detail.data || event.detail.callbackID !== callbackID) {
+                    if (
+                        !event.detail ||
+                        !event.detail.data ||
+                        event.detail.callbackID !== callbackID
+                    ) {
                         return;
                     }
 
@@ -445,7 +512,11 @@ if (typeof window.Mozilla === 'undefined') {
 
                     // Clear the timeout and remove the event listener.
                     window.clearTimeout(timer);
-                    document.removeEventListener('mozUITourResponse', listenerSync, false);
+                    document.removeEventListener(
+                        "mozUITourResponse",
+                        listenerSync,
+                        false
+                    );
 
                     /**
                      * Account signed-in state
@@ -459,9 +530,24 @@ if (typeof window.Mozilla === 'undefined') {
                      */
                     details.browserServices.sync = {
                         setup: config.setup,
-                        desktopDevices: Object.prototype.hasOwnProperty.call(config, 'desktopDevices') ? config.desktopDevices : 'unknown',
-                        mobileDevices: Object.prototype.hasOwnProperty.call(config, 'mobileDevices') ? config.mobileDevices : 'unknown',
-                        totalDevices: Object.prototype.hasOwnProperty.call(config, 'totalDevices') ? config.totalDevices : 'unknown'
+                        desktopDevices: Object.prototype.hasOwnProperty.call(
+                            config,
+                            "desktopDevices"
+                        )
+                            ? config.desktopDevices
+                            : "unknown",
+                        mobileDevices: Object.prototype.hasOwnProperty.call(
+                            config,
+                            "mobileDevices"
+                        )
+                            ? config.mobileDevices
+                            : "unknown",
+                        totalDevices: Object.prototype.hasOwnProperty.call(
+                            config,
+                            "totalDevices"
+                        )
+                            ? config.totalDevices
+                            : "unknown",
                     };
 
                     returnFxaDetails();
@@ -469,7 +555,11 @@ if (typeof window.Mozilla === 'undefined') {
 
                 // UITour API response event handler for 'fxa', checks for callbackID
                 var listenerFxA = function (event) {
-                    if (!event.detail || !event.detail.data || event.detail.callbackID !== callbackID) {
+                    if (
+                        !event.detail ||
+                        !event.detail.data ||
+                        event.detail.callbackID !== callbackID
+                    ) {
                         return;
                     }
 
@@ -477,7 +567,11 @@ if (typeof window.Mozilla === 'undefined') {
 
                     // Clear the timeout and remove the event listener.
                     window.clearTimeout(timer);
-                    document.removeEventListener('mozUITourResponse', listenerFxA, false);
+                    document.removeEventListener(
+                        "mozUITourResponse",
+                        listenerFxA,
+                        false
+                    );
 
                     // Account signed-in state
                     details.setup = config.setup;
@@ -490,24 +584,33 @@ if (typeof window.Mozilla === 'undefined') {
 
                 // Query Firefox Account signed In stage via 'fxa' config.
                 if (userVer >= 74) {
-                    request.name = 'fxa';
+                    request.name = "fxa";
                     request.callback = listenerFxA;
                 }
                 // UITour supported but client must use legacy 'sync' configuration call.
                 else {
-                    request.name = 'sync';
+                    request.name = "sync";
                     request.callback = listenerSync;
                 }
 
                 // Trigger the UITour API and start listening for the reponse
-                document.addEventListener('mozUITourResponse', request.callback, false);
-                document.dispatchEvent(new CustomEvent('mozUITour', {
-                    'bubbles': true,
-                    'detail': {
-                        'action': 'getConfiguration',
-                        'data': { 'configuration': request.name, 'callbackID': callbackID }
-                    }
-                }));
+                document.addEventListener(
+                    "mozUITourResponse",
+                    request.callback,
+                    false
+                );
+                document.dispatchEvent(
+                    new CustomEvent("mozUITour", {
+                        bubbles: true,
+                        detail: {
+                            action: "getConfiguration",
+                            data: {
+                                configuration: request.name,
+                                callbackID: callbackID,
+                            },
+                        },
+                    })
+                );
             }
         }
 
@@ -521,7 +624,7 @@ if (typeof window.Mozilla === 'undefined') {
         var timer = window.setTimeout(returnFxaDetails, 400);
     };
 
-    Client.getFxaConnections = function(callback) {
+    Client.getFxaConnections = function (callback) {
         // Fire the callback function immediately if FxaDetails are already defined
         if (Client.FxaConnections) {
             callback(Client.FxaConnections);
@@ -530,12 +633,12 @@ if (typeof window.Mozilla === 'undefined') {
 
         // Set up the object with default values of false
         var details = {
-            'setup': false,
-            'unsupported': false,
-            'firefox': false,
-            'numOtherDevices': false,
-            'numDevicesByType': {},
-            'accountServices': {}
+            setup: false,
+            unsupported: false,
+            firefox: false,
+            numOtherDevices: false,
+            numDevicesByType: {},
+            accountServices: {},
         };
 
         var userVer = parseFloat(Client._getFirefoxVersion());
@@ -557,11 +660,17 @@ if (typeof window.Mozilla === 'undefined') {
         }
 
         // callbackID to make sure we're responding to our request
-        var callbackID = Math.random().toString(36).replace(/[^a-z]+/g, '');
+        var callbackID = Math.random()
+            .toString(36)
+            .replace(/[^a-z]+/g, "");
 
         // UITour API response event handler for 'fxaConnections', checks for callbackID
         var listener = function (event) {
-            if (!event.detail || !event.detail.data || event.detail.callbackID !== callbackID) {
+            if (
+                !event.detail ||
+                !event.detail.data ||
+                event.detail.callbackID !== callbackID
+            ) {
                 return;
             }
 
@@ -569,7 +678,7 @@ if (typeof window.Mozilla === 'undefined') {
 
             // Clear the timeout and remove the event listener.
             window.clearTimeout(timer);
-            document.removeEventListener('mozUITourResponse', listener, false);
+            document.removeEventListener("mozUITourResponse", listener, false);
 
             // Account signed-in state
             details.setup = config.setup;
@@ -579,15 +688,27 @@ if (typeof window.Mozilla === 'undefined') {
 
             // Additional devices types (we're mainly interested in mobile and desktop).
             for (var device in config.numDevicesByType) {
-                if (Object.prototype.hasOwnProperty.call(config.numDevicesByType, device)) {
-                    details.numDevicesByType[device] = config.numDevicesByType[device];
+                if (
+                    Object.prototype.hasOwnProperty.call(
+                        config.numDevicesByType,
+                        device
+                    )
+                ) {
+                    details.numDevicesByType[device] =
+                        config.numDevicesByType[device];
                 }
             }
 
             // Account services (recently accessed).
             for (var service in config.accountServices) {
-                if (Object.prototype.hasOwnProperty.call(config.accountServices, service)) {
-                    details.accountServices[service] = config.accountServices[service];
+                if (
+                    Object.prototype.hasOwnProperty.call(
+                        config.accountServices,
+                        service
+                    )
+                ) {
+                    details.accountServices[service] =
+                        config.accountServices[service];
                 }
             }
 
@@ -595,14 +716,19 @@ if (typeof window.Mozilla === 'undefined') {
         };
 
         // Trigger the UITour API and start listening for the reponse
-        document.addEventListener('mozUITourResponse', listener, false);
-        document.dispatchEvent(new CustomEvent('mozUITour', {
-            'bubbles': true,
-            'detail': {
-                'action': 'getConfiguration',
-                'data': { 'configuration': 'fxaConnections', 'callbackID': callbackID }
-            }
-        }));
+        document.addEventListener("mozUITourResponse", listener, false);
+        document.dispatchEvent(
+            new CustomEvent("mozUITour", {
+                bubbles: true,
+                detail: {
+                    action: "getConfiguration",
+                    data: {
+                        configuration: "fxaConnections",
+                        callbackID: callbackID,
+                    },
+                },
+            })
+        );
 
         function returnFxaConnections() {
             window.clearTimeout(timer);
@@ -630,5 +756,4 @@ if (typeof window.Mozilla === 'undefined') {
     Client.isDesktop = !Client.isMobile;
 
     window.Mozilla.Client = Client;
-
 })();

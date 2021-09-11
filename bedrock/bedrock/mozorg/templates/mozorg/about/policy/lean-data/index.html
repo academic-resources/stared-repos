@@ -1,46 +1,41 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
-
-{% from "macros-protocol.html" import split with context %}
-
-{% extends "base-protocol-mozilla.html" %}
-
-{% block page_title %}{{ _('Lean Data Practices') }}{% endblock %}
-
-{% block page_desc %}
-  {{ _('Staying lean and being smart about how you collect data can build trust with your customers, partners, and supporters.') }}
-{% endblock %}
-
-{% block body_id %}lean-data{% endblock %}
-
-{% block page_css %}
-  {{ css_bundle('lean-data') }}
-{% endblock %}
-
-{% block content %}
-{% call split(
-    image_url='img/mozorg/about/lean-data/lean-data-hero.png',
-    include_highres_image=True,
-    block_class='mzp-t-split-nospace',
-    theme_class='mzp-t-background-alt',
-    media_class='mzp-l-split-h-center',
-    media_after=True
-  ) %}
-  <h1 class="mzp-u-title-lg">{{ self.page_title() }}</h1>
-  <p>{{ _('Staying lean and being smart about how you collect data can build trust with your users and ultimately help grow your business.') }}</p>
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. -#} {% from
+"macros-protocol.html" import split with context %} {% extends
+"base-protocol-mozilla.html" %} {% block page_title %}{{ _('Lean Data
+Practices') }}{% endblock %} {% block page_desc %} {{ _('Staying lean and being
+smart about how you collect data can build trust with your customers, partners,
+and supporters.') }} {% endblock %} {% block body_id %}lean-data{% endblock %}
+{% block page_css %} {{ css_bundle('lean-data') }} {% endblock %} {% block
+content %} {% call split(
+image_url='img/mozorg/about/lean-data/lean-data-hero.png',
+include_highres_image=True, block_class='mzp-t-split-nospace',
+theme_class='mzp-t-background-alt', media_class='mzp-l-split-h-center',
+media_after=True ) %}
+<h1 class="mzp-u-title-lg">{{ self.page_title() }}</h1>
+<p>
+  {{ _('Staying lean and being smart about how you collect data can build trust
+  with your users and ultimately help grow your business.') }}
+</p>
 {% endcall %}
 
 <section>
   <div class="mzp-l-content mzp-t-content-lg mzp-l-columns mzp-t-columns-two">
     <div class="l-column">
       <h2 class="c-subsection-title">{{ ('More Trust') }}</h2>
-      <p>{{ _('Your customers, investors, partners, and employees are more likely to use and refer you if they feel they can trust you with their data.') }}</p>
+      <p>
+        {{ _('Your customers, investors, partners, and employees are more likely
+        to use and refer you if they feel they can trust you with their data.')
+        }}
+      </p>
     </div>
 
     <div class="l-column">
       <h2 class="c-subsection-title">{{ _('Less Risk') }}</h2>
-      <p>{{ ('Every additional byte you store increases the chances – and costs – of dealing with hackers, breaches, and surveillance issues.') }}</p>
+      <p>
+        {{ ('Every additional byte you store increases the chances – and costs –
+        of dealing with hackers, breaches, and surveillance issues.') }}
+      </p>
     </div>
   </div>
 </section>
@@ -50,37 +45,55 @@
 
   <div class="mzp-l-card-third">
     <div class="mzp-c-card mzp-has-aspect-1-1">
-      <a class="mzp-c-card-block-link" href="{{ url('mozorg.about.policy.lean-data.stay-lean') }}">
+      <a
+        class="mzp-c-card-block-link"
+        href="{{ url('mozorg.about.policy.lean-data.stay-lean') }}"
+      >
         <div class="mzp-c-card-media-wrapper">
-          {{ high_res_img('img/mozorg/about/lean-data/stay-lean-hero.png', {'alt': '', 'width': '424', 'height': '424'}) }}
+          {{ high_res_img('img/mozorg/about/lean-data/stay-lean-hero.png',
+          {'alt': '', 'width': '424', 'height': '424'}) }}
         </div>
         <div class="mzp-c-card-content">
           <h3 class="mzp-c-card-title">{{ _('Stay Lean') }}</h3>
-          <p class="mzp-c-card-desc">{{ _('Decide if all your data collection delivers value.') }}</p>
+          <p class="mzp-c-card-desc">
+            {{ _('Decide if all your data collection delivers value.') }}
+          </p>
         </div>
       </a>
     </div>
 
     <div class="mzp-c-card mzp-has-aspect-1-1">
-      <a class="mzp-c-card-block-link" href="{{ url('mozorg.about.policy.lean-data.build-security') }}">
+      <a
+        class="mzp-c-card-block-link"
+        href="{{ url('mozorg.about.policy.lean-data.build-security') }}"
+      >
         <div class="mzp-c-card-media-wrapper">
-          {{ high_res_img('img/mozorg/about/lean-data/build-security-hero.png', {'alt': '', 'width': '424', 'height': '424'}) }}
+          {{ high_res_img('img/mozorg/about/lean-data/build-security-hero.png',
+          {'alt': '', 'width': '424', 'height': '424'}) }}
         </div>
         <div class="mzp-c-card-content">
           <h3 class="mzp-c-card-title">{{ _('Build Security') }}</h3>
-          <p class="mzp-c-card-desc">{{ _('Learn how to protect customer data.') }}</p>
+          <p class="mzp-c-card-desc">
+            {{ _('Learn how to protect customer data.') }}
+          </p>
         </div>
       </a>
     </div>
 
     <div class="mzp-c-card mzp-has-aspect-1-1">
-      <a class="mzp-c-card-block-link" href="{{ url('mozorg.about.policy.lean-data.engage-users') }}">
+      <a
+        class="mzp-c-card-block-link"
+        href="{{ url('mozorg.about.policy.lean-data.engage-users') }}"
+      >
         <div class="mzp-c-card-media-wrapper">
-          {{ high_res_img('img/mozorg/about/lean-data/engage-users-hero.png', {'alt': '', 'width': '424', 'height': '424'}) }}
+          {{ high_res_img('img/mozorg/about/lean-data/engage-users-hero.png',
+          {'alt': '', 'width': '424', 'height': '424'}) }}
         </div>
         <div class="mzp-c-card-content">
           <h3 class="mzp-c-card-title">{{ _('Engage Your Users') }}</h3>
-          <p class="mzp-c-card-desc">{{ _('Keep customers informed and empowered.') }}</p>
+          <p class="mzp-c-card-desc">
+            {{ _('Keep customers informed and empowered.') }}
+          </p>
         </div>
       </a>
     </div>
@@ -89,23 +102,26 @@
 
 <section class="mzp-c-call-out">
   <div class="mzp-l-content">
-    <h2 class="mzp-c-call-out-title">{{ _('Drive the conversation in your organization.') }}</h2>
+    <h2 class="mzp-c-call-out-title">
+      {{ _('Drive the conversation in your organization.') }}
+    </h2>
     <p class="mzp-c-call-out-desc">
-    {% trans %}
-      Lean Data works in any sector: business, civil society, government.
-      It can be spearheaded by any department: marketing, advocacy, engineering,
-      product, design, compliance, privacy, legal, customer support. You don’t
-      need a technical degree or a dedicated budget. All you need is a commitment
-      to make data decisions thoughtfully.
-    {% endtrans %}
+      {% trans %} Lean Data works in any sector: business, civil society,
+      government. It can be spearheaded by any department: marketing, advocacy,
+      engineering, product, design, compliance, privacy, legal, customer
+      support. You don’t need a technical degree or a dedicated budget. All you
+      need is a commitment to make data decisions thoughtfully. {% endtrans %}
     </p>
 
     <p class="c-call-out-cta">
-      <a id="contact-button" href="https://docs.google.com/forms/d/191_0cQHpvBAutNRFZSkUjeeHfVRadKPa_v8Ct9x5mDQ/" class="mzp-c-button">{{ _('Contact Us') }}</a>
+      <a
+        id="contact-button"
+        href="https://docs.google.com/forms/d/191_0cQHpvBAutNRFZSkUjeeHfVRadKPa_v8Ct9x5mDQ/"
+        class="mzp-c-button"
+        >{{ _('Contact Us') }}</a
+      >
     </p>
   </div>
 </section>
 
-{% endblock %}
-
-{% block js %}{% endblock %}
+{% endblock %} {% block js %}{% endblock %}

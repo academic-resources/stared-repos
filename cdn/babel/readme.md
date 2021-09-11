@@ -1,5 +1,4 @@
-# babel-standalone & type="text/babel"  
-
+# babel-standalone & type="text/babel"
 
 <!-- babel-standalone & type="text/babel"
 
@@ -8,9 +7,4 @@
     <script src="./hellocomponent.jsx" type="text/babel" ></script>
 -->
 
-
-
-
 babel.min.js
-
-

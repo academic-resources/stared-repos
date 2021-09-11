@@ -14,7 +14,7 @@
 */
 
 // create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
@@ -23,7 +23,7 @@ if (typeof window.Mozilla === 'undefined') {
  * @param selector (string) container for one or more video elements
  */
 Mozilla.VideoPosterHelper = function (selector) {
-    'use strict';
+    "use strict";
 
     this.container = document.querySelector(selector);
 };
@@ -33,7 +33,7 @@ Mozilla.VideoPosterHelper = function (selector) {
  * Else fallback content will be displayed natively by the browser.
  */
 Mozilla.VideoPosterHelper.prototype.init = function () {
-    'use strict';
+    "use strict";
 
     if (this.container && this.supportsVideo()) {
         this.showPoster();
@@ -45,29 +45,29 @@ Mozilla.VideoPosterHelper.prototype.init = function () {
  * Check for HTML5 Video playback support
  */
 Mozilla.VideoPosterHelper.prototype.supportsVideo = function () {
-    'use strict';
+    "use strict";
 
-    return typeof HTMLMediaElement !== 'undefined';
+    return typeof HTMLMediaElement !== "undefined";
 };
 
 /*
  * Add CSS class to container to display .moz-video-button.
  */
 Mozilla.VideoPosterHelper.prototype.showPoster = function () {
-    'use strict';
+    "use strict";
 
-    this.container.classList.add('supports-video');
+    this.container.classList.add("supports-video");
 };
 
 /*
  * Hide the poster image, play the video.
  */
 Mozilla.VideoPosterHelper.prototype.play = function (e) {
-    'use strict';
+    "use strict";
 
     var poster = e.target;
-    var video = this.container.querySelector('video');
-    video.setAttribute('style', 'visibility: visible;');
+    var video = this.container.querySelector("video");
+    video.setAttribute("style", "visibility: visible;");
 
     try {
         if (video && video.readyState && video.readyState > 0) {
@@ -76,30 +76,30 @@ Mozilla.VideoPosterHelper.prototype.play = function (e) {
             video.load();
             video.play();
         }
-    } catch(e) {
+    } catch (e) {
         // fail silently.
     }
 
-    poster.setAttribute('style', 'display: none;');
+    poster.setAttribute("style", "display: none;");
 };
 
 /*
  * Bind click event to container and delegate events to .moz-video-button
  */
 Mozilla.VideoPosterHelper.prototype.bindEvents = function () {
-    'use strict';
+    "use strict";
 
-    this.button = this.container.querySelector('.moz-video-button');
+    this.button = this.container.querySelector(".moz-video-button");
     this.onPlayHandler = Mozilla.VideoPosterHelper.prototype.play.bind(this);
-    this.button.addEventListener('click', this.onPlayHandler, false);
+    this.button.addEventListener("click", this.onPlayHandler, false);
 };
 
 /*
  * Unbind events and hide overlay button
  */
 Mozilla.VideoPosterHelper.prototype.destroy = function () {
-    'use strict';
+    "use strict";
 
-    this.button.removeEventListener('click', this.onPlayHandler, false);
-    this.container.classList.remove('supports-video');
+    this.button.removeEventListener("click", this.onPlayHandler, false);
+    this.container.classList.remove("supports-video");
 };

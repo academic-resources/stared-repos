@@ -11,13 +11,12 @@
  * @param {String} ellipsisChars	 The characters to place within the url, e.g. "...".
  * @return {String} The truncated URL.
  */
-Autolinker.truncate.TruncateSmart = function(url, truncateLen, ellipsisChars){
-
+Autolinker.truncate.TruncateSmart = function (url, truncateLen, ellipsisChars) {
 	var ellipsisLengthBeforeParsing;
 	var ellipsisLength;
 
-	if(ellipsisChars == null) {
-		ellipsisChars = '&hellip;';
+	if (ellipsisChars == null) {
+		ellipsisChars = "&hellip;";
 		ellipsisLength = 3;
 		ellipsisLengthBeforeParsing = 8;
 	} else {
@@ -25,7 +24,8 @@ Autolinker.truncate.TruncateSmart = function(url, truncateLen, ellipsisChars){
 		ellipsisLengthBeforeParsing = ellipsisChars.length;
 	}
 
-	var parse_url = function(url){ // Functionality inspired by PHP function of same name
+	var parse_url = function (url) {
+		// Functionality inspired by PHP function of same name
 		var urlObj = {};
 		var urlSub = url;
 		var match = urlSub.match(/^([a-z]+):\/\//i);
@@ -56,7 +56,7 @@ Autolinker.truncate.TruncateSmart = function(url, truncateLen, ellipsisChars){
 		return urlObj;
 	};
 
-	var buildUrl = function(urlObj){
+	var buildUrl = function (urlObj) {
 		var url = "";
 		if (urlObj.scheme && urlObj.host) {
 			url += urlObj.scheme + "://";
@@ -76,11 +76,11 @@ Autolinker.truncate.TruncateSmart = function(url, truncateLen, ellipsisChars){
 		return url;
 	};
 
-	var buildSegment = function(segment, remainingAvailableLength){
-		var remainingAvailableLengthHalf = remainingAvailableLength/ 2,
-				startOffset = Math.ceil(remainingAvailableLengthHalf),
-				endOffset = (-1)*Math.floor(remainingAvailableLengthHalf),
-				end = "";
+	var buildSegment = function (segment, remainingAvailableLength) {
+		var remainingAvailableLengthHalf = remainingAvailableLength / 2,
+			startOffset = Math.ceil(remainingAvailableLengthHalf),
+			endOffset = -1 * Math.floor(remainingAvailableLengthHalf),
+			end = "";
 		if (endOffset < 0) {
 			end = segment.substr(endOffset);
 		}
@@ -117,9 +117,14 @@ Autolinker.truncate.TruncateSmart = function(url, truncateLen, ellipsisChars){
 	}
 	if (str.length >= availableLength) {
 		if (urlObj.host.length == truncateLen) {
-			return (urlObj.host.substr(0, (truncateLen - ellipsisLength)) + ellipsisChars).substr(0, availableLength + ellipsisLengthBeforeParsing);
+			return (
+				urlObj.host.substr(0, truncateLen - ellipsisLength) + ellipsisChars
+			).substr(0, availableLength + ellipsisLengthBeforeParsing);
 		}
-		return buildSegment(str, availableLength).substr(0, availableLength + ellipsisLengthBeforeParsing);
+		return buildSegment(str, availableLength).substr(
+			0,
+			availableLength + ellipsisLengthBeforeParsing
+		);
 	}
 	var pathAndQuery = "";
 	if (urlObj.path) {
@@ -129,31 +134,36 @@ Autolinker.truncate.TruncateSmart = function(url, truncateLen, ellipsisChars){
 		pathAndQuery += "?" + urlObj.query;
 	}
 	if (pathAndQuery) {
-		if ((str+pathAndQuery).length >= availableLength) {
-			if ((str+pathAndQuery).length == truncateLen) {
+		if ((str + pathAndQuery).length >= availableLength) {
+			if ((str + pathAndQuery).length == truncateLen) {
 				return (str + pathAndQuery).substr(0, truncateLen);
 			}
 			var remainingAvailableLength = availableLength - str.length;
-			return (str + buildSegment(pathAndQuery, remainingAvailableLength)).substr(0, availableLength + ellipsisLengthBeforeParsing);
+			return (
+				str + buildSegment(pathAndQuery, remainingAvailableLength)
+			).substr(0, availableLength + ellipsisLengthBeforeParsing);
 		} else {
 			str += pathAndQuery;
 		}
 	}
 	if (urlObj.fragment) {
-		var fragment = "#"+urlObj.fragment;
-		if ((str+fragment).length >= availableLength) {
-			if ((str+fragment).length == truncateLen) {
+		var fragment = "#" + urlObj.fragment;
+		if ((str + fragment).length >= availableLength) {
+			if ((str + fragment).length == truncateLen) {
 				return (str + fragment).substr(0, truncateLen);
 			}
 			var remainingAvailableLength2 = availableLength - str.length;
-			return (str + buildSegment(fragment, remainingAvailableLength2)).substr(0, availableLength + ellipsisLengthBeforeParsing);
+			return (str + buildSegment(fragment, remainingAvailableLength2)).substr(
+				0,
+				availableLength + ellipsisLengthBeforeParsing
+			);
 		} else {
 			str += fragment;
 		}
 	}
 	if (urlObj.scheme && urlObj.host) {
 		var scheme = urlObj.scheme + "://";
-		if ((str+scheme).length < availableLength) {
+		if ((str + scheme).length < availableLength) {
 			return (scheme + str).substr(0, truncateLen);
 		}
 	}
@@ -162,7 +172,11 @@ Autolinker.truncate.TruncateSmart = function(url, truncateLen, ellipsisChars){
 	}
 	var end = "";
 	if (availableLength > 0) {
-		end = str.substr((-1)*Math.floor(availableLength/2));
+		end = str.substr(-1 * Math.floor(availableLength / 2));
 	}
-	return (str.substr(0, Math.ceil(availableLength/2)) + ellipsisChars + end).substr(0, availableLength + ellipsisLengthBeforeParsing);
+	return (
+		str.substr(0, Math.ceil(availableLength / 2)) +
+		ellipsisChars +
+		end
+	).substr(0, availableLength + ellipsisLengthBeforeParsing);
 };

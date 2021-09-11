@@ -2,18 +2,18 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/emphasis-box';
-@import '../../protocol/css/components/forms/form';
-@import '../../protocol/css/components/forms/field';
-@import '../../protocol/css/components/forms/button-container';
-@import '../../protocol/css/components/hero';
-@import '../../protocol/css/components/newsletter-form';
-@import '../../protocol/css/components/notification-bar';
-@import '../../protocol/css/templates/card-layout';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/emphasis-box";
+@import "../../protocol/css/components/forms/form";
+@import "../../protocol/css/components/forms/field";
+@import "../../protocol/css/components/forms/button-container";
+@import "../../protocol/css/components/hero";
+@import "../../protocol/css/components/newsletter-form";
+@import "../../protocol/css/components/notification-bar";
+@import "../../protocol/css/templates/card-layout";
 
 //* -------------------------------------------------------------------------- */
 // Global styles.
@@ -43,7 +43,6 @@ main {
     padding-bottom: $label-v-spacing;
 }
 
-
 //* -------------------------------------------------------------------------- */
 // newsletter/existing custom styles.
 
@@ -57,12 +56,12 @@ main {
         width: 50%;
 
         &:first-child {
-            border-right: 1px solid rgba(0,0,0,.2);
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
         }
     }
 
     .c-column-content {
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
 
         h2 {
             margin-bottom: $spacing-xl;
@@ -91,7 +90,7 @@ main {
         }
 
         tr {
-            border-bottom: 1px solid rgba(0,0,0,.2);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         }
 
         th {
@@ -104,14 +103,15 @@ main {
             label {
                 @include visually-hidden;
             }
-
         }
 
         tr.indented th {
-            @include bidi((
-                (padding-left, $spacing-xl, 0),
-                (padding-right, 0, $spacing-xl),
-            ));
+            @include bidi(
+                (
+                    (padding-left, $spacing-xl, 0),
+                    (padding-right, 0, $spacing-xl)
+                )
+            );
         }
     }
 }
@@ -154,7 +154,7 @@ main {
         margin-top: $spacing-lg;
 
         a:before {
-            content: '\2190\0020';
+            content: "\2190\0020";
         }
 
         /* only show back link for JS enabled clients */
@@ -198,7 +198,6 @@ main {
 
 //* -------------------------------------------------------------------------- */
 // newsletter/country/ custom styles.
-
 
 #country-newsletter-form {
     select {

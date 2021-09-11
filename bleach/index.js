@@ -4,4 +4,4 @@
  * cam@onswipe.com
  */
 
-module.exports = require('./lib/bleach.js');
+module.exports = require("./lib/bleach.js");

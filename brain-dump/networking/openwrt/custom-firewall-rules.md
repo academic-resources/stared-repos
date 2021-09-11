@@ -1,12 +1,12 @@
 # Custom Firewall Rules for OpenWRT
-If you want to tweak or extend the firewall filtering, you can make changes in the GUI, but they won't be loaded until next reboot of the router.
 
+If you want to tweak or extend the firewall filtering, you can make changes in the GUI, but they won't be loaded until next reboot of the router.
 
 If you use these, be sure to modify the interfaces, like: `-i eth0.2` and the IP ranges to match your topology.
 
 - You can base your rules on:
   - VLAN IP: `-s 192.168.2.0/24`
-or
+    or
   - Interface: `-i eth0.1`
 
 ```bash
@@ -45,7 +45,7 @@ Reboot the firewall by SSHing into the router and running `/etc/init.d/firewall 
 
 **Why you want to SSH in to reboot:**
 
-When I set these rules through the GUI, the page refreshed without any message.  Restarting through SSH will throw explicit error messages if something isn't set correctly.
+When I set these rules through the GUI, the page refreshed without any message. Restarting through SSH will throw explicit error messages if something isn't set correctly.
 
 - SSH into the router
 - Run `/etc/init.d/firewall restart`

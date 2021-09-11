@@ -1,6 +1,6 @@
 name: Doxygen CI
 
-on: 
+on:
   push:
     branches: [master]
 

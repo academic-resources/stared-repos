@@ -2,15 +2,15 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/forms/form';
-@import '../../../protocol/css/components/forms/field';
-@import '../../../protocol/css/components/forms/choice';
-@import '../../../protocol/css/components/forms/status';
-@import '../../../protocol/css/components/forms/set';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/forms/form";
+@import "../../../protocol/css/components/forms/field";
+@import "../../../protocol/css/components/forms/choice";
+@import "../../../protocol/css/components/forms/status";
+@import "../../../protocol/css/components/forms/set";
 
 //* -------------------------------------------------------------------------- */
 // Newsletter Form
@@ -30,7 +30,7 @@ $image-path: '/media/protocol/img';
 .mzp-c-newsletter-form {
     margin: $layout-xl 0;
 
-    input[type='email'],
+    input[type="email"],
     select {
         width: 100%;
     }
@@ -59,23 +59,21 @@ $image-path: '/media/protocol/img';
 }
 
 .vpn-invite-platform-options {
-
     .mzp-u-inline {
         font-weight: normal;
     }
 
-    input[type='checkbox'] {
+    input[type="checkbox"] {
         margin-bottom: $spacing-lg;
     }
 
     @supports (display: grid) {
-
         @media #{$mq-md} {
             display: grid;
             grid-gap: $spacing-xl;
             grid-template-columns: repeat(2, 1fr);
 
-            input[type='checkbox'] {
+            input[type="checkbox"] {
                 margin-bottom: 0;
             }
         }

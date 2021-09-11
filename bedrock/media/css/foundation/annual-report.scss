@@ -2,11 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-
+@import "../../protocol/css/includes/lib";
 
 //* -------------------------------------------------------------------------- */
 // Hero image & banner heading
@@ -64,43 +63,66 @@ $image-path: '/media/protocol/img';
 // 2018
 #annual-2018 {
     .c-banner .c-banner-content {
-        @include at2x('/media/img/foundation/annualreport/2018/som-2018-small.jpg', 760px, 394px);
+        @include at2x(
+            "/media/img/foundation/annualreport/2018/som-2018-small.jpg",
+            760px,
+            394px
+        );
 
         @media #{$mq-md} {
-            @include at2x('/media/img/foundation/annualreport/2018/som-2018-large.jpg', 1250px, 394px);
+            @include at2x(
+                "/media/img/foundation/annualreport/2018/som-2018-large.jpg",
+                1250px,
+                394px
+            );
         }
     }
 }
-
 
 // 2017
 #annual-2017 {
     .c-banner .c-banner-content {
-        @include at2x('/media/img/foundation/annualreport/2017/som-2017-small.jpg', 760px, 394px);
+        @include at2x(
+            "/media/img/foundation/annualreport/2017/som-2017-small.jpg",
+            760px,
+            394px
+        );
 
         @media #{$mq-md} {
-            @include at2x('/media/img/foundation/annualreport/2017/som-2017-large.jpg', 1250px, 394px);
+            @include at2x(
+                "/media/img/foundation/annualreport/2017/som-2017-large.jpg",
+                1250px,
+                394px
+            );
         }
     }
 }
-
 
 // 2016
 #annual-2016 {
     .c-banner .c-banner-content {
-        @include at2x('/media/img/foundation/annualreport/2016/som-2016-mobile.jpg', 760px, 394px);
+        @include at2x(
+            "/media/img/foundation/annualreport/2016/som-2016-mobile.jpg",
+            760px,
+            394px
+        );
 
         @media #{$mq-md} {
-            @include at2x('/media/img/foundation/annualreport/2016/som-2016-desktop.jpg', 1250px, 394px);
+            @include at2x(
+                "/media/img/foundation/annualreport/2016/som-2016-desktop.jpg",
+                1250px,
+                394px
+            );
         }
     }
 }
-
 
 // 2015
 #annual-2015 {
     .c-banner .c-banner-content {
-        @include at2x('/media/img/foundation/annualreport/2015/bg-banner-mobile.jpg');
+        @include at2x(
+            "/media/img/foundation/annualreport/2015/bg-banner-mobile.jpg"
+        );
         @include background-size(auto, 100%);
 
         @media #{$mq-sm} {
@@ -108,16 +130,19 @@ $image-path: '/media/protocol/img';
         }
 
         @media #{$mq-md} {
-            @include at2x('/media/img/foundation/annualreport/2015/bg-banner-desktop.jpg', 100%, auto);
+            @include at2x(
+                "/media/img/foundation/annualreport/2015/bg-banner-desktop.jpg",
+                100%,
+                auto
+            );
         }
     }
 }
-
 
 // 2014
 #annual-2014 {
     .c-banner .c-banner-content {
-        background-image: url('/media/img/foundation/annualreport/2014/bg-banner-mobile.jpg');
+        background-image: url("/media/img/foundation/annualreport/2014/bg-banner-mobile.jpg");
         @include background-size(auto, 100%);
 
         @media #{$mq-sm} {
@@ -125,20 +150,19 @@ $image-path: '/media/protocol/img';
         }
 
         @media #{$mq-md} {
-            background-image: url('/media/img/foundation/annualreport/2014/bg-banner-tablet.jpg');
+            background-image: url("/media/img/foundation/annualreport/2014/bg-banner-tablet.jpg");
         }
 
         @media #{$mq-lg} {
-            background-image: url('/media/img/foundation/annualreport/2014/bg-banner-desktop.jpg');
+            background-image: url("/media/img/foundation/annualreport/2014/bg-banner-desktop.jpg");
         }
     }
 }
-
 
 // 2013
 #annual-2013 {
     .c-banner .c-banner-content {
-        background-image: url('/media/img/foundation/annualreport/2013/bg-banner-mobile.jpg');
+        background-image: url("/media/img/foundation/annualreport/2013/bg-banner-mobile.jpg");
         @include background-size(auto, 100%);
 
         @media #{$mq-sm} {
@@ -146,21 +170,20 @@ $image-path: '/media/protocol/img';
         }
 
         @media #{$mq-md} {
-            background-image: url('/media/img/foundation/annualreport/2013/bg-banner-tablet.jpg');
+            background-image: url("/media/img/foundation/annualreport/2013/bg-banner-tablet.jpg");
         }
 
         @media #{$mq-lg} {
-            background-image: url('/media/img/foundation/annualreport/2013/bg-banner-desktop.jpg');
+            background-image: url("/media/img/foundation/annualreport/2013/bg-banner-desktop.jpg");
         }
     }
 }
-
 
 // 2012
 #annual-2012 {
     .c-banner .c-banner-content {
         @include background-size(auto, 100%);
-        background-image: url('/media/img/foundation/annualreport/2012/bg-banner-mobile.jpg');
+        background-image: url("/media/img/foundation/annualreport/2012/bg-banner-mobile.jpg");
 
         .c-header-container h1 {
             width: 50%;
@@ -168,33 +191,31 @@ $image-path: '/media/protocol/img';
 
         @media #{$mq-sm} {
             @include background-size(auto, 300px);
-            background-image: url('/media/img/foundation/annualreport/2012/bg-banner-tablet.jpg');
+            background-image: url("/media/img/foundation/annualreport/2012/bg-banner-tablet.jpg");
             background-position: top -30px right 0;
             height: 300px;
         }
 
         @media #{$mq-md} {
             @include background-size(auto, 400px);
-            background-image: url('/media/img/foundation/annualreport/2012/bg-banner-desktop.jpg');
+            background-image: url("/media/img/foundation/annualreport/2012/bg-banner-desktop.jpg");
             background-position: top -90px right -160px;
             height: 400px;
         }
 
         @media #{$mq-lg} {
             @include background-size(auto, 400px);
-            background-image: url('/media/img/foundation/annualreport/2012/bg-banner-desktop.jpg');
+            background-image: url("/media/img/foundation/annualreport/2012/bg-banner-desktop.jpg");
             background-position: top -90px right -30px;
             height: 400px;
         }
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Content sections
 
 .c-intro-section {
-
     p {
         @include font-mozilla;
         @include text-title-sm;
@@ -226,19 +247,18 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-lg} {
-
         .c-copy-wrapper {
             @include clearfix;
             margin: 0 auto;
             width: 90%;
 
             header {
-                @include bidi(((float, left, right),));
+                @include bidi(((float, left, right)));
                 width: 30%;
             }
 
             .c-copy {
-                @include bidi(((float, right, left),));
+                @include bidi(((float, right, left)));
                 width: 65%;
             }
         }
@@ -265,11 +285,10 @@ $image-path: '/media/protocol/img';
 .c-media {
     margin: $spacing-lg 0;
 
-    h3  {
+    h3 {
         @include visually-hidden;
     }
 }
-
 
 /* -------------------------------------------------------------------------- */
 // Financial table
@@ -285,7 +304,6 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Page footer
 
@@ -299,7 +317,7 @@ $image-path: '/media/protocol/img';
         margin: $spacing-lg auto;
 
         a {
-            @include transition(background-color .1s ease-in-out);
+            @include transition(background-color 0.1s ease-in-out);
             background-color: $color-link;
             color: $color-white;
             display: block;
@@ -338,12 +356,11 @@ $image-path: '/media/protocol/img';
             flex: 1;
 
             &:first-child a {
-                @include bidi(((margin-right, 10px, margin-left, 0),));
-
+                @include bidi(((margin-right, 10px, margin-left, 0)));
             }
 
             &:last-child a {
-                @include bidi(((margin-left, 10px, margin-right, 0),));
+                @include bidi(((margin-left, 10px, margin-right, 0)));
             }
         }
     }
@@ -352,7 +369,7 @@ $image-path: '/media/protocol/img';
 .c-media {
     margin: $spacing-lg 0;
 
-    h3  {
+    h3 {
         @include visually-hidden;
     }
 }

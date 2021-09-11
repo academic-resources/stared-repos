@@ -1,44 +1,44 @@
-const graphql = require('graphql')
-const { GraphQLObjectType, GraphQLID, GraphQLList, GraphQLNonNull } = graphql
+const graphql = require("graphql");
+const { GraphQLObjectType, GraphQLID, GraphQLList, GraphQLNonNull } = graphql;
 
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-const User = mongoose.model('user')
-const Post = mongoose.model('post')
+const User = mongoose.model("user");
+const Post = mongoose.model("post");
 
-const UserType = require('./user_type')
-const PostType = require('./post_type')
+const UserType = require("./user_type");
+const PostType = require("./post_type");
 
 const RootQuery = new GraphQLObjectType({
-  name: 'RootQueryType',
+  name: "RootQueryType",
   fields: {
     users: {
       type: new GraphQLList(UserType),
       resolve() {
-        return User.find({})
-      }
+        return User.find({});
+      },
     },
     user: {
       type: UserType,
       args: { id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(_, { id }) {
-        return User.findById(id)
-      }
+        return User.findById(id);
+      },
     },
     posts: {
       type: new GraphQLList(PostType),
       resolve() {
-        return Post.find({})
-      }
+        return Post.find({});
+      },
     },
     post: {
       type: PostType,
       args: { id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(_, args) {
-        return Post.findById(args.id)
-      }
-    }
-  }
-})
+        return Post.findById(args.id);
+      },
+    },
+  },
+});
 
-module.exports = RootQuery
+module.exports = RootQuery;

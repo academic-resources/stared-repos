@@ -1,7 +1,7 @@
 const Validator = require("validator");
 const validText = require("./valid_text");
 
-module.exports = function validateInputs(data) { 
+module.exports = function validateInputs(data) {
   data.email = validText(data.email) ? data.email : "";
   data.name = validText(data.name) ? data.name : "";
   data.password = validText(data.password) ? data.password : "";
@@ -23,7 +23,6 @@ module.exports = function validateInputs(data) {
 
   return {
     message: "",
-    isValid: true
+    isValid: true,
   };
-
 };

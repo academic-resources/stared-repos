@@ -1,41 +1,24 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. -#} {% extends
+"firefox/base/base-protocol.html" %} {% block page_title_prefix %}{{
+ftl('firefox-new-download-browser', fallback='firefox-new-download-firefox') }}
+— {% endblock %} {%- block page_title -%}{{ ftl('firefox-new-fast',
+fallback='firefox-new-free-web-browser') }}{%- endblock -%} {# Bug 1438302 Avoid
+duplicate content for en-CA and en-GB pages. #} {%- block page_title_suffix -%}
+{% if LANG == 'en-CA' %} — from Mozilla (CA) {% elif LANG == 'en-GB' %} — from
+Mozilla (UK) {% else %} - {{ ftl('firefox-new-from-mozilla',
+fallback='firefox-new-mozilla') }} {% endif %} {%- endblock -%} {% block
+page_desc %}{{ ftl('firefox-new-desc',
+fallback='firefox-new-faster-page-loading-less-memory') }}{% endblock %} {#-
+This will appear as <meta property="og:title" /> which can be used for social
+share -#} {% block page_og_title %}{{ ftl('firefox-new-download-firefox') }}{%
+endblock %} {#- This will appear as <meta property="og:description" /> which can
+be used for social share -#} {% block page_og_desc %}{{ ftl('firefox-new-desc',
+fallback='firefox-new-faster-page-loading-less-memory') }}{% endblock %} {# All
+stylesheets are loaded in extrahead to serve legacy IE basic styles #} {% block
+extrahead %} {{ css_bundle('protocol-firefox') }}
 
-{% extends "firefox/base/base-protocol.html" %}
-
-{% block page_title_prefix %}{{ ftl('firefox-new-download-browser', fallback='firefox-new-download-firefox') }} — {% endblock %}
-
-{%- block page_title -%}{{ ftl('firefox-new-fast', fallback='firefox-new-free-web-browser') }}{%- endblock -%}
-
-{# Bug 1438302 Avoid duplicate content for en-CA and en-GB pages. #}
-{%- block page_title_suffix -%}
-  {% if LANG == 'en-CA' %}
-    — from Mozilla (CA)
-  {% elif LANG == 'en-GB' %}
-    — from Mozilla (UK)
-  {% else %}
-    - {{ ftl('firefox-new-from-mozilla', fallback='firefox-new-mozilla') }}
-  {% endif %}
-{%- endblock -%}
-
-{% block page_desc %}{{ ftl('firefox-new-desc', fallback='firefox-new-faster-page-loading-less-memory') }}{% endblock %}
-
-{#- This will appear as <meta property="og:title"> which can be used for social share -#}
-{% block page_og_title %}{{ ftl('firefox-new-download-firefox') }}{% endblock %}
-
-{#- This will appear as <meta property="og:description"> which can be used for social share -#}
-{% block page_og_desc %}{{ ftl('firefox-new-desc', fallback='firefox-new-faster-page-loading-less-memory') }}{% endblock %}
-
-{# All stylesheets are loaded in extrahead to serve legacy IE basic styles #}
-{% block extrahead %}
-  {{ css_bundle('protocol-firefox') }}
-
-  <!--[if IE]>
-    {{ css_bundle('firefox_new_ie') }}
-  <![endif]-->
-{% endblock %}
-
-{% block old_ie_styles %}{% endblock %}
-{% block site_css %}{% endblock %}
-{% block page_css %}{% endblock %}
+<!--[if IE]> {{ css_bundle('firefox_new_ie') }} <![endif]-->
+{% endblock %} {% block old_ie_styles %}{% endblock %} {% block site_css %}{%
+endblock %} {% block page_css %}{% endblock %}

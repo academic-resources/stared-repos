@@ -3,12 +3,12 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // Create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
     /**
      * Tracking pixels for /firefox/download/thanks/ download page.
@@ -20,42 +20,42 @@ if (typeof window.Mozilla === 'undefined') {
      */
     var Pixel = {};
 
-    Pixel.getPixelData = function() {
-        return document.getElementById('strings').getAttribute('data-pixels');
+    Pixel.getPixelData = function () {
+        return document.getElementById("strings").getAttribute("data-pixels");
     };
 
-    Pixel.setPixels = function() {
-        var body = document.querySelector('body');
+    Pixel.setPixels = function () {
+        var body = document.querySelector("body");
         var pixels = Pixel.getPixelData();
         var pixel;
 
-        if (typeof pixels !== 'string' || pixels === '') {
+        if (typeof pixels !== "string" || pixels === "") {
             return;
         }
 
         // '::' is a separator for each pixel URL.
-        pixels = pixels.split('::');
+        pixels = pixels.split("::");
 
         for (var i = 0; i < pixels.length; i++) {
-            pixel = document.createElement('img');
+            pixel = document.createElement("img");
             pixel.width = 1;
             pixel.height = 1;
-            pixel.src = pixels[i].replace(/\s/g, '');
+            pixel.src = pixels[i].replace(/\s/g, "");
 
             // Cache bust doubleclick pixel (see issue 9128)
             // https://support.google.com/dcm/answer/2837746?hl=en
-            if (pixels[i].indexOf('ad.doubleclick.net') !== -1) {
-                var axel = Math.random() + '';
+            if (pixels[i].indexOf("ad.doubleclick.net") !== -1) {
+                var axel = Math.random() + "";
                 var num = axel * 10000000000000;
-                pixel.src += ';num=' + num;
+                pixel.src += ";num=" + num;
             }
 
-            pixel.className = 'moz-px';
+            pixel.className = "moz-px";
             body.appendChild(pixel);
         }
     };
 
-    Pixel.init = function() {
+    Pixel.init = function () {
         // Do not set pixels if visitor has DNT enabled.
         if (!Mozilla.dntEnabled()) {
             Pixel.setPixels();

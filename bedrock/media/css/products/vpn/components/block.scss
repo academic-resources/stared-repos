@@ -2,11 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../../protocol/css/includes/lib';
-@import '../includes/lib';
+@import "../../../../protocol/css/includes/lib";
+@import "../includes/lib";
 
 //* -------------------------------------------------------------------------- */
 // Content Block
@@ -27,7 +27,7 @@ $image-path: '/media/protocol/img';
     &:after {
         background: $color-marketing-gray-20;
         border-radius: $border-radius-sm;
-        content: '';
+        content: "";
         display: block;
         height: 100%;
         left: 0;
@@ -68,7 +68,6 @@ $image-path: '/media/protocol/img';
     }
 
     &.t-center {
-
         .vpn-content-block-container {
             text-align: center;
         }
@@ -105,13 +104,13 @@ $image-path: '/media/protocol/img';
             position: relative;
 
             .l-column-first {
-                @include bidi(((float, left, right),));
+                @include bidi(((float, left, right)));
                 width: calc(50% - #{$spacing-xl * 2});
                 margin-bottom: 0;
             }
 
             .l-column-last {
-                @include bidi(((float, right, left),));
+                @include bidi(((float, right, left)));
                 width: calc(50% - #{$spacing-xl * 2});
             }
         }
@@ -137,7 +136,7 @@ $image-path: '/media/protocol/img';
     }
 
     .vpn-content-media-copy {
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
     }
 
     .vpn-content-media-heading {
@@ -168,7 +167,7 @@ $image-path: '/media/protocol/img';
         &:after {
             background: $color-marketing-gray-20;
             border-radius: $border-radius-sm;
-            content: '';
+            content: "";
             display: block;
             height: 100%;
             left: 0;
@@ -210,21 +209,21 @@ $image-path: '/media/protocol/img';
 
         &.vpn-content-media-left-half {
             .vpn-content-media-copy {
-                @include bidi(((float, left, right),));
+                @include bidi(((float, left, right)));
             }
 
             .vpn-content-media-image-container {
-                @include bidi(((float, right, left),));
+                @include bidi(((float, right, left)));
             }
         }
 
         &.vpn-content-media-right-half {
             .vpn-content-media-copy {
-                @include bidi(((float, right, left),));
+                @include bidi(((float, right, left)));
             }
 
             .vpn-content-media-image-container {
-                @include bidi(((float, left, right),));
+                @include bidi(((float, left, right)));
             }
         }
     }
@@ -235,7 +234,7 @@ $image-path: '/media/protocol/img';
         }
     }
 
-    @supports(display: grid) {
+    @supports (display: grid) {
         overflow: visible;
 
         @media #{$mq-md} {
@@ -282,7 +281,6 @@ $image-path: '/media/protocol/img';
             &.vpn-content-media-right-half {
                 grid-template-columns: 1fr 1fr;
             }
-
         }
 
         @media #{$mq-lg} {
@@ -314,7 +312,6 @@ $image-path: '/media/protocol/img';
 }
 
 .vpn-pricing-variable-plans {
-
     .vpn-content-block {
         @include align-items(start);
     }
@@ -356,7 +353,7 @@ $image-path: '/media/protocol/img';
         top: 0;
         width: 100%;
 
-        html[lang^='en'] & {
+        html[lang^="en"] & {
             text-transform: uppercase;
         }
     }
@@ -385,7 +382,6 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-md} {
-
         .vpn-content-block {
             &:after {
                 left: $spacing-lg;
@@ -398,11 +394,12 @@ $image-path: '/media/protocol/img';
             margin-top: $spacing-md;
         }
 
-        @supports(display: grid) {
+        @supports (display: grid) {
             display: grid;
             grid-column-gap: $spacing-xl * 2;
-            grid-template-areas: 'months-12 months-12'
-                                 'months-6 monthly';
+            grid-template-areas:
+                "months-12 months-12"
+                "months-6 monthly";
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
 
@@ -415,7 +412,6 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-lg} {
-
         .vpn-content-block {
             &:after {
                 left: $spacing-md;
@@ -423,16 +419,15 @@ $image-path: '/media/protocol/img';
             }
         }
 
-        @supports(display: grid) {
+        @supports (display: grid) {
             grid-column-gap: $spacing-xl;
-            grid-template-areas: 'months-12 months-6 monthly';
+            grid-template-areas: "months-12 months-6 monthly";
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: none;
         }
     }
 
     @media #{$mq-xl} {
-
         .vpn-content-block {
             &:after {
                 left: $spacing-lg;
@@ -444,7 +439,7 @@ $image-path: '/media/protocol/img';
             display: inline;
         }
 
-        @supports(display: grid) {
+        @supports (display: grid) {
             grid-column-gap: $spacing-xl * 2;
         }
     }

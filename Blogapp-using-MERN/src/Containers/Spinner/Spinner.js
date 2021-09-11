@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export class Spinner extends Component {
   render() {
@@ -6,12 +6,11 @@ export class Spinner extends Component {
       <div className="text-center spinner">
         <div className="spinner-border" role="status">
           <span className="sr-only">Loading...</span>
-
         </div>
         <h4> Please Wait ...</h4>
       </div>
-    )
+    );
   }
 }
 
-export default Spinner
+export default Spinner;

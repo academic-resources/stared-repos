@@ -2,14 +2,14 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/includes/forms/lib';
-@import '../../../protocol/css/templates/main-with-sidebar';
-@import '../../../protocol/css/components/modal';
-@import '../../../protocol/css/components/sidebar-menu';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/includes/forms/lib";
+@import "../../../protocol/css/templates/main-with-sidebar";
+@import "../../../protocol/css/components/modal";
+@import "../../../protocol/css/components/sidebar-menu";
 
 .c-product-select-form {
     @include clearfix;
@@ -32,7 +32,7 @@ $image-path: '/media/protocol/img';
     }
 
     &[data-current="desktop_beta"] {
-       [data-product="desktop_beta"] {
+        [data-product="desktop_beta"] {
             display: block;
         }
     }
@@ -97,8 +97,12 @@ $image-path: '/media/protocol/img';
     margin-bottom: $layout-md;
 
     .c-intro-heading {
-        @include at2x('/media/protocol/img/logos/firefox/browser/logo-sm.png', 64px, 64px);
-        @include bidi(((background-position, top left, top right),));
+        @include at2x(
+            "/media/protocol/img/logos/firefox/browser/logo-sm.png",
+            64px,
+            64px
+        );
+        @include bidi(((background-position, top left, top right)));
         @include text-title-md;
         background-repeat: no-repeat;
         margin-bottom: $spacing-xl;
@@ -106,16 +110,28 @@ $image-path: '/media/protocol/img';
 
         [data-current="desktop_beta"] &,
         [data-current="android_beta"] & {
-            @include at2x('/media/protocol/img/logos/firefox/browser/beta/logo-sm.png', 64px, 64px);
+            @include at2x(
+                "/media/protocol/img/logos/firefox/browser/beta/logo-sm.png",
+                64px,
+                64px
+            );
         }
 
-        [data-current="desktop_developer"] &{
-            @include at2x('/media/protocol/img/logos/firefox/browser/developer/logo-sm.png', 64px, 64px);
+        [data-current="desktop_developer"] & {
+            @include at2x(
+                "/media/protocol/img/logos/firefox/browser/developer/logo-sm.png",
+                64px,
+                64px
+            );
         }
 
         [data-current="desktop_nightly"] &,
         [data-current="android_nightly"] & {
-            @include at2x('/media/protocol/img/logos/firefox/browser/nightly/logo-sm.png', 64px, 64px);
+            @include at2x(
+                "/media/protocol/img/logos/firefox/browser/nightly/logo-sm.png",
+                64px,
+                64px
+            );
         }
     }
 
@@ -124,7 +140,7 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-md} {
-        @include bidi(((float, left, right),));
+        @include bidi(((float, left, right)));
         width: calc(50% - #{$spacing-lg});
     }
 
@@ -134,7 +150,7 @@ $image-path: '/media/protocol/img';
 }
 
 .c-button-help {
-    @include at2x('/media/img/firefox/all/icon-question.png', 21px, 21px);
+    @include at2x("/media/img/firefox/all/icon-question.png", 21px, 21px);
     @include image-replaced;
     background-position: top left;
     background-repeat: no-repeat;
@@ -147,7 +163,8 @@ $image-path: '/media/protocol/img';
 
 .c-get-app {
     @include font-size(14px);
-    background: center right url('/media/img/firefox/all/icon-get.svg') no-repeat;
+    background: center right url("/media/img/firefox/all/icon-get.svg")
+        no-repeat;
     background-size: auto 1em;
     display: inline-block;
     padding-right: 20px;
@@ -158,7 +175,7 @@ $image-path: '/media/protocol/img';
     display: none;
 
     @media #{$mq-md} {
-        @include bidi(((float, right, left),));
+        @include bidi(((float, right, left)));
         margin-bottom: $layout-xl;
         padding-top: 64px + $spacing-lg;
         width: calc(50% - #{$spacing-lg});
@@ -189,7 +206,7 @@ $image-path: '/media/protocol/img';
 }
 
 .c-download-info {
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin-bottom: $layout-sm;
     width: 100%;
 }
@@ -211,7 +228,7 @@ $image-path: '/media/protocol/img';
 }
 
 .c-download {
-    @include bidi (((text-align, right, left),));
+    @include bidi(((text-align, right, left)));
 
     .c-download-error {
         color: $color-red-60;
@@ -235,12 +252,13 @@ $image-path: '/media/protocol/img';
 
 .c-download-button {
     a {
-        display:inline-block;
+        display: inline-block;
     }
 
     a[data-link-type="download"]:focus,
     a[data-link-type="download"]:active {
-        box-shadow: 0 0 0 2px $field-border-color-hover, 0 0 0 4px mix($color-blue-40, $color-white);
+        box-shadow: 0 0 0 2px $field-border-color-hover,
+            0 0 0 4px mix($color-blue-40, $color-white);
         border-radius: 6px;
         background-color: $field-border-color-hover;
     }
@@ -310,11 +328,11 @@ $image-path: '/media/protocol/img';
     }
 
     .c-download-list li {
-        @include bidi(((margin-right, $spacing-sm, margin-left, 0),));
+        @include bidi(((margin-right, $spacing-sm, margin-left, 0)));
         display: inline-block;
 
         &:last-child {
-            @include bidi(((margin-right, 0, margin-left, 0),));
+            @include bidi(((margin-right, 0, margin-left, 0)));
         }
     }
 
@@ -323,13 +341,11 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 // Custom narrow modal style.
 // These should be standardized into a narrow theme.
 // https://github.com/mozilla/protocol/issues/358
 
- .mzp-c-modal.help-modal {
-
+.mzp-c-modal.help-modal {
     .mzp-c-modal-window > .mzp-c-modal-inner {
         background: transparent;
         max-width: 600px;
@@ -342,7 +358,7 @@ $image-path: '/media/protocol/img';
     }
 
     .mzp-c-modal-close {
-        @include bidi(((right, 0, left, auto),));
+        @include bidi(((right, 0, left, auto)));
     }
 }
 

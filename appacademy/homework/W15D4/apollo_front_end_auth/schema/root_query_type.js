@@ -14,29 +14,29 @@ const RootQuery = new GraphQLObjectType({
       type: new GraphQLList(UserType),
       resolve() {
         return User.find({});
-      }
+      },
     },
     user: {
       type: UserType,
       args: { id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(parentValue, { id }) {
         return User.findById(id);
-      }
+      },
     },
     posts: {
       type: new GraphQLList(PostType),
       resolve() {
         return Post.find({});
-      }
+      },
     },
     post: {
       type: PostType,
       args: { id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(parentValue, args) {
         return Post.findById(args.id);
-      }
-    }
-  }
+      },
+    },
+  },
 });
 
 module.exports = RootQuery;

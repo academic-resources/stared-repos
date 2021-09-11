@@ -1,119 +1,135 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
-
-{% extends "firefox/base/base-protocol.html" %}
-
-{% from "macros-protocol.html" import split with context %}
-
-{% block page_title %}{{ ftl('firefox-developer-page-title') }}{% endblock %}
-{% block page_desc %}{{ ftl('firefox-developer-firefox-developer-edition-desc') }}{% endblock %}
-{% block page_image %}{{ static('protocol/img/logos/firefox/browser/developer/og.png') }}{% endblock %}
-{% block page_favicon %}{{ static('img/favicons/firefox/browser/developer/favicon.ico') }}{% endblock %}
-{% block page_favicon_large %}{{ static('img/favicons/firefox/browser/developer/favicon-196x196.png') }}{% endblock %}
-{% block page_ios_icon %}{{ static('img/favicons/firefox/browser/developer/apple-touch-icon.png') }}{% endblock %}
-
-{% block page_css %}
-  {{ css_bundle('firefox_developer') }}
-{% endblock %}
-
-{% block body_id %}firefox-developer{% endblock %}
-{% block body_class %}firefox-developer mzp-t-firefox t-home{% endblock %}
-
-{% block site_header %}
-  {% with hide_nav_download_button=True %}
-    {% include 'includes/protocol/navigation/navigation.html' %}
-  {% endwith %}
-{% endblock %}
-
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. -#} {% extends
+"firefox/base/base-protocol.html" %} {% from "macros-protocol.html" import split
+with context %} {% block page_title %}{{ ftl('firefox-developer-page-title')
+}}{% endblock %} {% block page_desc %}{{
+ftl('firefox-developer-firefox-developer-edition-desc') }}{% endblock %} {%
+block page_image %}{{
+static('protocol/img/logos/firefox/browser/developer/og.png') }}{% endblock %}
+{% block page_favicon %}{{
+static('img/favicons/firefox/browser/developer/favicon.ico') }}{% endblock %} {%
+block page_favicon_large %}{{
+static('img/favicons/firefox/browser/developer/favicon-196x196.png') }}{%
+endblock %} {% block page_ios_icon %}{{
+static('img/favicons/firefox/browser/developer/apple-touch-icon.png') }}{%
+endblock %} {% block page_css %} {{ css_bundle('firefox_developer') }} {%
+endblock %} {% block body_id %}firefox-developer{% endblock %} {% block
+body_class %}firefox-developer mzp-t-firefox t-home{% endblock %} {% block
+site_header %} {% with hide_nav_download_button=True %} {% include
+'includes/protocol/navigation/navigation.html' %} {% endwith %} {% endblock %}
 {% block sub_navigation %}
 <nav class="c-sub-navigation">
   <div class="mzp-l-content">
     <div class="c-sub-navigation-content">
       <h2 class="c-sub-navigation-title">
-        <a href="{{ url('firefox.browsers.index') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Firefox">
-          <img class="c-sub-navigation-icon" src="{{ static('protocol/img/logos/firefox/logo-sm.png') }}" width="24" height="24" alt="">
-         {{ ftl('sub-navigation-firefox') }}
+        <a
+          href="{{ url('firefox.browsers.index') }}"
+          data-link-type="nav"
+          data-link-position="subnav"
+          data-link-name="Firefox"
+        >
+          <img
+            class="c-sub-navigation-icon"
+            src="{{ static('protocol/img/logos/firefox/logo-sm.png') }}"
+            width="24"
+            height="24"
+            alt=""
+          />
+          {{ ftl('sub-navigation-firefox') }}
         </a>
       </h2>
       <ul class="c-sub-navigation-list">
-        <li class="c-sub-navigation-item"><a href="{{ url('firefox.enterprise.index') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Enterprise">{{ ftl('sub-navigation-enterprise') }}</a></li>
-        <li class="c-sub-navigation-item"><a href="{{ url('firefox.channel.desktop') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Nightly and Beta">{{ ftl('sub-navigation-nightly-and-beta') }}</a></li>
-        <li class="c-sub-navigation-item"><a href="{{ url('firefox.all') }}" data-link-type="nav" data-link-position="subnav" data-link-name="All Languages">{{ ftl('sub-navigation-all-languages', fallback='download-button-systems-languages') }}</a></li>
+        <li class="c-sub-navigation-item">
+          <a
+            href="{{ url('firefox.enterprise.index') }}"
+            data-link-type="nav"
+            data-link-position="subnav"
+            data-link-name="Enterprise"
+            >{{ ftl('sub-navigation-enterprise') }}</a
+          >
+        </li>
+        <li class="c-sub-navigation-item">
+          <a
+            href="{{ url('firefox.channel.desktop') }}"
+            data-link-type="nav"
+            data-link-position="subnav"
+            data-link-name="Nightly and Beta"
+            >{{ ftl('sub-navigation-nightly-and-beta') }}</a
+          >
+        </li>
+        <li class="c-sub-navigation-item">
+          <a
+            href="{{ url('firefox.all') }}"
+            data-link-type="nav"
+            data-link-position="subnav"
+            data-link-name="All Languages"
+            >{{ ftl('sub-navigation-all-languages',
+            fallback='download-button-systems-languages') }}</a
+          >
+        </li>
       </ul>
     </div>
   </div>
 </nav>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <main role="main">
   <section class="t-intro">
     <div class="mzp-l-content">
-      {{ high_res_img('protocol/img/logos/firefox/browser/developer/logo-word-hor-lg.png', {'alt': '', 'width': '368', 'height': '68'}) }}
-      <h1 class="intro-title">{{ ftl('firefox-developer-firefox-browser') }}</h1>
-      <p class="intro-tagline">{{ ftl('firefox-developer-welcome-to-your-new-favorite') }}</p>
+      {{
+      high_res_img('protocol/img/logos/firefox/browser/developer/logo-word-hor-lg.png',
+      {'alt': '', 'width': '368', 'height': '68'}) }}
+      <h1 class="intro-title">
+        {{ ftl('firefox-developer-firefox-browser') }}
+      </h1>
+      <p class="intro-tagline">
+        {{ ftl('firefox-developer-welcome-to-your-new-favorite') }}
+      </p>
 
-      {{ download_firefox('alpha', platform='desktop', dom_id='intro-download', download_location='primary cta') }}
+      {{ download_firefox('alpha', platform='desktop', dom_id='intro-download',
+      download_location='primary cta') }}
 
       <p class="intro-feedback-note">
         {{ ftl('firefox-developer-firefox-developer-edition-sends') }}
-        <a href="{{ url('privacy.notices.firefox') }}#pre-release" class="more">{{ ftl('ui-learn-more') }}</a>
+        <a href="{{ url('privacy.notices.firefox') }}#pre-release" class="more"
+          >{{ ftl('ui-learn-more') }}</a
+        >
       </p>
     </div>
     <div class="intro-image">
-      {{ high_res_img('img/firefox/developer/hero-screenshot.png', {'alt': '', 'width': '1200', 'height': '337'}) }}
+      {{ high_res_img('img/firefox/developer/hero-screenshot.png', {'alt': '',
+      'width': '1200', 'height': '337'}) }}
     </div>
   </section>
 
-  {% if ftl_has_messages('firefox-developer-made-for-developers', 'firefox-developer-all-the-latest') %}
-    {% include '/firefox/developer/includes/for-developers.html' %}
-  {% else %}
-    {% include '/firefox/developer/includes/performance.html' %}
-  {% endif %}
-
-  {% include '/firefox/developer/includes/highlights.html' %}
-
-  {% include '/firefox/developer/includes/features.html' %}
+  {% if ftl_has_messages('firefox-developer-made-for-developers',
+  'firefox-developer-all-the-latest') %} {% include
+  '/firefox/developer/includes/for-developers.html' %} {% else %} {% include
+  '/firefox/developer/includes/performance.html' %} {% endif %} {% include
+  '/firefox/developer/includes/highlights.html' %} {% include
+  '/firefox/developer/includes/features.html' %}
 
   <section class="t-engage mzp-t-dark">
-    {% include '/firefox/developer/includes/engage.html' %}
-
-    {% call split(
-      image_url='img/firefox/developer/browser.png',
-      include_highres_image=True,
-      block_class='mzp-l-split-reversed mzp-l-split-center-on-sm-md',
-      media_after=True
-    ) %}
-      <h2>{{ ftl('firefox-developer-download-the-firefox-browser') }}</h2>
-      {{ download_firefox('alpha', platform='desktop', dom_id='footer-download', download_location='footer cta') }}
-    {% endcall %}
+    {% include '/firefox/developer/includes/engage.html' %} {% call split(
+    image_url='img/firefox/developer/browser.png', include_highres_image=True,
+    block_class='mzp-l-split-reversed mzp-l-split-center-on-sm-md',
+    media_after=True ) %}
+    <h2>{{ ftl('firefox-developer-download-the-firefox-browser') }}</h2>
+    {{ download_firefox('alpha', platform='desktop', dom_id='footer-download',
+    download_location='footer cta') }} {% endcall %}
   </section>
   <section class="t-newsletter">
     <div class="mzp-l-content">
-      {% if LANG.startswith('en-') %}
-        {{ email_newsletter_form(
-          'app-dev',
-          title='Get the most out of Firefox Developer Edition',
-          desc='Learn about Dev Edition and subscribe to the Mozilla Developer Newsletter.',
-          button_class='mzp-t-product mzp-t-lg',
-          include_language=False) }}
-      {% else %}
-        {{ email_newsletter_form(
-          spinner_color='#fff',
-          button_class='mzp-c-button mzp-t-product mzp-t-lg') }}
-      {% endif %}
+      {% if LANG.startswith('en-') %} {{ email_newsletter_form( 'app-dev',
+      title='Get the most out of Firefox Developer Edition', desc='Learn about
+      Dev Edition and subscribe to the Mozilla Developer Newsletter.',
+      button_class='mzp-t-product mzp-t-lg', include_language=False) }} {% else
+      %} {{ email_newsletter_form( spinner_color='#fff',
+      button_class='mzp-c-button mzp-t-product mzp-t-lg') }} {% endif %}
     </div>
   </section>
 </main>
-{% endblock %}
-
-{% block email_form %}{% endblock %}
-
-{% block js %}
-  {{ js_bundle('firefox_developer') }}
-{% endblock %}
-
-{% block structured_data %}
-  {% include 'includes/structured-data/software/firefox-developer-software.json' %}
+{% endblock %} {% block email_form %}{% endblock %} {% block js %} {{
+js_bundle('firefox_developer') }} {% endblock %} {% block structured_data %} {%
+include 'includes/structured-data/software/firefox-developer-software.json' %}
 {% endblock %}

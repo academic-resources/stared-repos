@@ -2,16 +2,16 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/hero';
-@import '../../protocol/css/components/picto';
-@import '../protocol/components/sub-navigation';
-@import '../../protocol/css/components/newsletter-form';
-@import '../../protocol/css/components/call-out';
-@import '../../protocol/css/components/emphasis-box';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/hero";
+@import "../../protocol/css/components/picto";
+@import "../protocol/components/sub-navigation";
+@import "../../protocol/css/components/newsletter-form";
+@import "../../protocol/css/components/call-out";
+@import "../../protocol/css/components/emphasis-box";
 
 //* -------------------------------------------------------------------------- */
 // Content
@@ -47,11 +47,12 @@ $image-path: '/media/protocol/img';
         &.mzp-t-product-focus {
             .mzp-c-call-out-content {
                 @include background-size($layout-xl $layout-xl);
-                @include bidi(((padding, 0 0 0 $layout-2xl, 0 $layout-2xl 0 0),));
+                @include bidi(
+                    ((padding, 0 0 0 $layout-2xl, 0 $layout-2xl 0 0))
+                );
             }
         }
     }
-
 }
 
 .l-notes {
@@ -98,12 +99,12 @@ $image-path: '/media/protocol/img';
         padding-top: 0;
         @include font-size(14px);
 
-        input[type=email],
+        input[type="email"],
         select {
             min-width: 0; // https://github.com/mozilla/protocol/issues/607
         }
 
-        label[for=id_email]{
+        label[for="id_email"] {
             @include visually-hidden;
         }
 
@@ -177,7 +178,8 @@ $image-path: '/media/protocol/img';
         .mzp-c-newsletter-form {
             grid-column-gap: $layout-lg;
             padding-left: 84px + $layout-md; // width of icon
-            background: url('/media/img/firefox/developer/mail.svg') top left no-repeat;
+            background: url("/media/img/firefox/developer/mail.svg") top left
+                no-repeat;
         }
     }
 }

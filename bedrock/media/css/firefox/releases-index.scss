@@ -2,10 +2,9 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
-@import '../../protocol/css/includes/lib';
-
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
+@import "../../protocol/css/includes/lib";
 
 .c-logo {
     @include text-title-xs;
@@ -27,30 +26,32 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-lg} {
-        @include bidi((
-            (margin-left, -48px - $spacing-md , margin-right, 0),
-        ));
+        @include bidi(((margin-left, -48px - $spacing-md, margin-right, 0)));
     }
 
     &:before {
-        @include at2x('/media/protocol/img/logos/firefox/browser/logo-sm.png', 40px, 40px);
+        @include at2x(
+            "/media/protocol/img/logos/firefox/browser/logo-sm.png",
+            40px,
+            40px
+        );
         background-repeat: no-repeat;
-        content: '';
+        content: "";
         display: block;
         height: 40px;
         width: 40px;
 
         @media #{$mq-sm} {
-            @include bidi((
-                (float, left, right),
-                (margin-right, $spacing-sm, margin-left, 0),
-            ));
+            @include bidi(
+                (
+                    (float, left, right),
+                    (margin-right, $spacing-sm, margin-left, 0)
+                )
+            );
         }
 
         @media #{$mq-lg} {
-            @include bidi((
-                (margin-right, $spacing-md, margin-left, 0),
-            ));
+            @include bidi(((margin-right, $spacing-md, margin-left, 0)));
             @include background-size(48px 48px);
             height: 48px;
             width: 48px;

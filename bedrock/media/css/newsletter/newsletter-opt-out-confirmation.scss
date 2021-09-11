@@ -2,17 +2,16 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/forms/form';
-@import '../../protocol/css/components/forms/field';
-@import '../../protocol/css/components/forms/button-container';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/forms/form";
+@import "../../protocol/css/components/forms/field";
+@import "../../protocol/css/components/forms/button-container";
 
 /* -------------------------------------------------------------------------- */
 // Common elements
-
 
 main {
     padding: $spacing-lg 0;
@@ -71,7 +70,7 @@ aside {
             a {
                 display: block;
                 @include image-replaced;
-                background-image: url('/media/img/logos/social/social-icon-sprite-dark.svg');
+                background-image: url("/media/img/logos/social/social-icon-sprite-dark.svg");
 
                 &.twitter {
                     background-position: 0 0;

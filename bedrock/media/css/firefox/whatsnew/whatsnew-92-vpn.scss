@@ -2,26 +2,25 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
 $color-vpn-brand-purple: #5340b4;
 $color-vpn-brand-violet: #6a57dc;
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/notification-bar';
-@import '../../../protocol/css/components/picto';
-@import '../../../protocol/css/components/section-heading';
-@import '../../../protocol/css/components/logos/logo';
-@import '../../../protocol/css/components/logos/logo-product-vpn';
-@import '../../../protocol/css/templates/multi-column';
-@import 'includes/header';
-
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/notification-bar";
+@import "../../../protocol/css/components/picto";
+@import "../../../protocol/css/components/section-heading";
+@import "../../../protocol/css/components/logos/logo";
+@import "../../../protocol/css/components/logos/logo-product-vpn";
+@import "../../../protocol/css/templates/multi-column";
+@import "includes/header";
 
 // Override _header.scss since this page doesn't support dark mode
 @media (prefers-color-scheme: dark) {
     .c-page-header-logo-fx {
-        background-image: url($image-path + '/logos/firefox/browser/logo-word-hor-sm.png');
+        background-image: url($image-path + "/logos/firefox/browser/logo-word-hor-sm.png");
     }
 }
 
@@ -58,23 +57,25 @@ $color-vpn-brand-violet: #6a57dc;
     text-align: center;
 }
 
-
 //* -------------------------------------------------------------------------- */
 // VPN Product Feature List
 
 .vpn-feature-list {
-    @include bidi(((text-align, left, right),));
+    @include bidi(((text-align, left, right)));
     @include text-body-lg;
     display: inline-block;
     margin: $spacing-lg auto;
 
     li {
-        @include bidi((
-            (background-position, top 3px left, top 3px right),
-            (padding-left, (18px + $spacing-sm), padding-right, 0),
-        ));
-        background: url('/media/img/products/vpn/common/check-black.svg') no-repeat;
-        margin-bottom: .5em;
+        @include bidi(
+            (
+                (background-position, top 3px left, top 3px right),
+                (padding-left, (18px + $spacing-sm), padding-right, 0)
+            )
+        );
+        background: url("/media/img/products/vpn/common/check-black.svg")
+            no-repeat;
+        margin-bottom: 0.5em;
     }
 
     &.l-columns-two {
@@ -92,14 +93,15 @@ $color-vpn-brand-violet: #6a57dc;
         margin-bottom: 0;
 
         li {
-            @include bidi((
-                (background-position, top 7px left, top 7px right),
-                (padding-left, (18px + $spacing-md), padding-right, 0),
-            ));
+            @include bidi(
+                (
+                    (background-position, top 7px left, top 7px right),
+                    (padding-left, (18px + $spacing-md), padding-right, 0)
+                )
+            );
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Content Block
@@ -120,7 +122,7 @@ $color-vpn-brand-violet: #6a57dc;
     &:after {
         background: $color-marketing-gray-20;
         border-radius: $border-radius-sm;
-        content: '';
+        content: "";
         display: block;
         height: 100%;
         left: 0;
@@ -161,7 +163,6 @@ $color-vpn-brand-violet: #6a57dc;
     }
 
     &.t-center {
-
         .vpn-content-block-container {
             text-align: center;
         }
@@ -198,19 +199,18 @@ $color-vpn-brand-violet: #6a57dc;
             position: relative;
 
             .l-column-first {
-                @include bidi(((float, left, right),));
+                @include bidi(((float, left, right)));
                 width: calc(50% - #{$spacing-xl * 2});
                 margin-bottom: 0;
             }
 
             .l-column-last {
-                @include bidi(((float, right, left),));
+                @include bidi(((float, right, left)));
                 width: calc(50% - #{$spacing-xl * 2});
             }
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Pricing Blocks
@@ -276,7 +276,7 @@ $color-vpn-brand-violet: #6a57dc;
         top: 0;
         width: 100%;
 
-        html[lang^='en'] & {
+        html[lang^="en"] & {
             text-transform: uppercase;
         }
     }
@@ -314,7 +314,6 @@ $color-vpn-brand-violet: #6a57dc;
     }
 
     @media #{$mq-md} {
-
         .vpn-content-block {
             &:after {
                 left: $spacing-lg;
@@ -327,11 +326,12 @@ $color-vpn-brand-violet: #6a57dc;
             margin-top: $spacing-md;
         }
 
-        @supports(display: grid) {
+        @supports (display: grid) {
             display: grid;
             grid-column-gap: $spacing-xl * 2;
-            grid-template-areas: 'months-12 months-12'
-                                 'months-6 monthly';
+            grid-template-areas:
+                "months-12 months-12"
+                "months-6 monthly";
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
 
@@ -344,7 +344,6 @@ $color-vpn-brand-violet: #6a57dc;
     }
 
     @media #{$mq-lg} {
-
         .vpn-content-block {
             &:after {
                 left: $spacing-md;
@@ -352,16 +351,15 @@ $color-vpn-brand-violet: #6a57dc;
             }
         }
 
-        @supports(display: grid) {
+        @supports (display: grid) {
             grid-column-gap: $spacing-xl;
-            grid-template-areas: 'months-12 months-6 monthly';
+            grid-template-areas: "months-12 months-6 monthly";
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: none;
         }
     }
 
     @media #{$mq-xl} {
-
         .vpn-content-block {
             &:after {
                 left: $spacing-lg;
@@ -373,12 +371,11 @@ $color-vpn-brand-violet: #6a57dc;
             display: inline;
         }
 
-        @supports(display: grid) {
+        @supports (display: grid) {
             grid-column-gap: $spacing-xl * 2;
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Utilities (link to release notes)

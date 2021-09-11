@@ -1,10 +1,36 @@
 :root {
 	--accent-color: #b2ff00;
-	--glass-gradient: linear-gradient( to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100% );
-	--glass-gradient-hover: linear-gradient( to bottom, #f2ffd3 0%, #e4f1c5 50%, #d4e1b5 51%, #e9f6ca 100% );
-	--glass-gradient-active: linear-gradient( to bottom, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100% );
-	--metal-gradient: linear-gradient( to right, #7a7a7a, #ededed, #7a7a7a );
-	--audioMotion-gradient: linear-gradient( -45deg, #ffdf43, #fa5476, #c63bf3, #8550ff, #4a68f7, #23d2ff );
+	--glass-gradient: linear-gradient(
+		to bottom,
+		#ffffff 0%,
+		#f1f1f1 50%,
+		#e1e1e1 51%,
+		#f6f6f6 100%
+	);
+	--glass-gradient-hover: linear-gradient(
+		to bottom,
+		#f2ffd3 0%,
+		#e4f1c5 50%,
+		#d4e1b5 51%,
+		#e9f6ca 100%
+	);
+	--glass-gradient-active: linear-gradient(
+		to bottom,
+		#bfd255 0%,
+		#8eb92a 50%,
+		#72aa00 51%,
+		#9ecb2d 100%
+	);
+	--metal-gradient: linear-gradient(to right, #7a7a7a, #ededed, #7a7a7a);
+	--audioMotion-gradient: linear-gradient(
+		-45deg,
+		#ffdf43,
+		#fa5476,
+		#c63bf3,
+		#8550ff,
+		#4a68f7,
+		#23d2ff
+	);
 }
 
 * {
@@ -14,7 +40,8 @@
 
 body {
 	background: var(--metal-gradient);
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	margin: 0;
 }
@@ -52,10 +79,10 @@ header {
 	max-width: 960px;
 }
 header ul:first-child {
-    justify-self: left;
+	justify-self: left;
 }
 header ul:last-child {
-    justify-self: right;
+	justify-self: right;
 }
 
 h1 {
@@ -64,7 +91,7 @@ h1 {
 	color: transparent;
 	font: 32px Orbitron;
 	margin: 0;
-	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 	-webkit-background-clip: text;
 }
 h2 {
@@ -94,7 +121,8 @@ table {
 }
 
 .thin-button {
-	background: linear-gradient( rgba(0,0,0,0.07), rgba(255,255,255,0) ), #eee;
+	background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0)),
+		#eee;
 	border: 1px solid #777;
 	border-radius: 10px;
 	box-shadow: 1px 1px 2px #0008;
@@ -115,8 +143,8 @@ table {
 }
 .thin-button.active {
 	background: #888;
-	border-color: rgba(0,0,0,.2);
-	box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,.3);
+	border-color: rgba(0, 0, 0, 0.2);
+	box-shadow: inset 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
 	color: var(--accent-color);
 	text-shadow: 0 0 6px;
 }
@@ -124,7 +152,7 @@ table {
 	background: #c00;
 	border-radius: 50%;
 	box-shadow: 0 0 4px #f00;
-	content: ' ';
+	content: " ";
 	display: block;
 	height: 1px;
 	padding: 3px;
@@ -148,12 +176,12 @@ table {
 	margin-top: -301px;
 	padding: 10px;
 	position: absolute;
-	transition: margin-top .5s;
+	transition: margin-top 0.5s;
 	width: 700px;
 	z-index: 1;
 }
 .settings.active {
-	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	margin-top: 0;
 }
 
@@ -165,7 +193,7 @@ table {
 }
 .settings-close::before {
 	color: #666;
-	content: '\276e';
+	content: "\276e";
 	display: inline-block;
 	font-size: 18px;
 	transform: rotate(90deg);
@@ -208,7 +236,7 @@ table {
 
 .analyzer {
 	background: #000;
-	height: calc( 100vh - 570px );
+	height: calc(100vh - 570px);
 	min-height: 270px;
 	overflow: hidden;
 }
@@ -355,7 +383,7 @@ div.value {
 }
 
 .player-panel {
-	grid-template-columns: 1fr minmax(350px,1fr) 1fr;
+	grid-template-columns: 1fr minmax(350px, 1fr) 1fr;
 	margin: 10px auto 15px;
 	max-width: 1400px;
 }
@@ -393,8 +421,8 @@ div.value {
 }
 .player-controls .button:not(:last-child):not([data-active="1"]):hover {
 	border-right-width: 1px !important;
-    margin-right: -1px;
-    z-index: 1;
+	margin-right: -1px;
+	z-index: 1;
 }
 
 .help {
@@ -456,7 +484,7 @@ div.value {
 .player-controls .button[data-active="1"],
 .switch-bar .switch[data-active="1"] {
 	background: var(--glass-gradient-active);
-	box-shadow: 1px 1px 1px 0 rgba(0,0,0,.3) inset;
+	box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3) inset;
 	color: #fff;
 	text-shadow: 0 0 6px;
 }
@@ -494,7 +522,7 @@ div.value {
 	top: -50px;
 }
 .button-column .tooltip {
-	left: calc( 100% + 10px );
+	left: calc(100% + 10px);
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -524,16 +552,17 @@ div.value {
 }
 .kbd-table td {
 	border: 1px solid #ddd;
-    padding: 4px;
+	padding: 4px;
 }
 kbd {
 	background-color: #eee;
 	border-radius: 3px;
 	border: 1px solid #b4b4b4;
-	box-shadow: 0 1px 1px rgba(0,0,0,.2),0 2px 0 0 rgba(255,255,255,.7) inset;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+		0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
 	color: #333;
 	display: inline-block;
-	font-family: consolas,"Liberation Mono",courier,monospace;
+	font-family: consolas, "Liberation Mono", courier, monospace;
 	font-size: 12px;
 	font-weight: 700;
 	height: 20px;
@@ -587,10 +616,10 @@ kbd.wide {
 	padding: 0 10px;
 }
 .breadcrumb::before {
-	content: '\f117';
+	content: "\f117";
 	font-family: audioMotion;
 	font-size: 16px;
-	margin-right: .25em;
+	margin-right: 0.25em;
 	vertical-align: middle;
 }
 .breadcrumb li {
@@ -619,7 +648,7 @@ kbd.wide {
 .filelist li {
 	cursor: pointer;
 	line-height: 1.6;
-	padding: 0 .75em;
+	padding: 0 0.75em;
 	white-space: nowrap;
 }
 .filelist li.current {
@@ -639,19 +668,19 @@ kbd.wide {
 	margin-right: 10px;
 }
 .filelist [data-type="dir"]::before {
-	content: '\f116';
+	content: "\f116";
 }
 .filelist [data-path=".."]::before {
-	content: '\f119';
+	content: "\f119";
 }
 .filelist [data-type="mount"]::before {
-	content: '\f115';
+	content: "\f115";
 }
 .filelist [data-type="file"]::before {
-	content: '\f118';
+	content: "\f118";
 }
 .filelist [data-type="list"]::before {
-	content: '\f102';
+	content: "\f102";
 }
 
 #playlist li {
@@ -662,15 +691,15 @@ kbd.wide {
 	display: inline-block;
 	overflow: hidden;
 	vertical-align: text-bottom;
-	width: calc( 100% - 4em );
+	width: calc(100% - 4em);
 }
 #playlist li::after {
 	content: attr(data-duration);
 	position: absolute;
-	right: .75em;
+	right: 0.75em;
 }
 #playlist li.current {
-	padding-left: .25em;
+	padding-left: 0.25em;
 }
 #playlist li.current::before {
 	content: "\25b8"" " attr(data-title);
@@ -680,14 +709,15 @@ kbd.wide {
 	background: #1c231a;
 	bottom: -250px;
 	color: #0b0;
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+		monospace;
 	font-size: 13px;
 	height: 250px;
 	left: 0;
 	line-height: 1.4;
 	position: fixed;
 	right: 0;
-	transition: bottom .5s;
+	transition: bottom 0.5s;
 }
 #console.active {
 	bottom: 0;
@@ -769,10 +799,11 @@ input.slider {
 }
 
 label.slider {
-	background: linear-gradient( rgba(0,0,0,.6), transparent ), rgba(0,0,0,.3);
+	background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
+		rgba(0, 0, 0, 0.3);
 	border-radius: 1.5em;
-	box-shadow:	0 0.07em 0.1em -0.1em rgba(0,0,0,.4) inset,
-				0 0.05em 0.08em -0.01em rgba(255,255,255,.7);
+	box-shadow: 0 0.07em 0.1em -0.1em rgba(0, 0, 0, 0.4) inset,
+		0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 8px;
@@ -788,9 +819,9 @@ label.slider::before {
 	background: url(img/brushed-knob.png);
 	background-size: 100%;
 	border-radius: 50%;
-	box-shadow:	0 0.1em 0.15em -0.05em rgba(255,255,255,.5) inset,
-				0 0.5em 0.3em -0.1em rgba(0,0,0,.25);
-	content: '';
+	box-shadow: 0 0.1em 0.15em -0.05em rgba(255, 255, 255, 0.5) inset,
+		0 0.5em 0.3em -0.1em rgba(0, 0, 0, 0.25);
+	content: "";
 	height: 2em;
 	left: 0.5em;
 	position: absolute;
@@ -800,15 +831,16 @@ label.slider::before {
 }
 
 label.slider::after {
-	content: '';
-	width: .5em;
-	height: .5em;
+	content: "";
+	width: 0.5em;
+	height: 0.5em;
 	left: 6em;
 	border-radius: 50%;
-	background: linear-gradient( rgba(0,0,0,0.07), rgba(255,255,255,0.1) ), #444;
-	box-shadow:	0 0.08em 0.15em -0.1em rgba(0,0,0,.5) inset,
-				0 0.05em 0.08em -0.01em rgba(255,255,255,.7),
-				-7em 0 0 0 var(--accent-color);
+	background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.1)),
+		#444;
+	box-shadow: 0 0.08em 0.15em -0.1em rgba(0, 0, 0, 0.5) inset,
+		0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7),
+		-7em 0 0 0 var(--accent-color);
 	position: absolute;
 	top: 1.25em;
 	transition: 250ms ease-in-out;
@@ -835,10 +867,11 @@ input.slider:checked + .slider::before {
 }
 
 input.slider:checked + .slider::after {
-	background: linear-gradient( rgba(0,0,0,.07), rgba(255,255,255,.1) ), var(--accent-color);
-	box-shadow:	0 0.08em 0.15em -0.1em rgba(0,0,0,.5) inset,
-				0 0.05em 0.08em -0.01em rgba(255,255,255,.7),
-				-7em 0 0 0 rgba(0,0,0,.5);
+	background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.1)),
+		var(--accent-color);
+	box-shadow: 0 0.08em 0.15em -0.1em rgba(0, 0, 0, 0.5) inset,
+		0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7),
+		-7em 0 0 0 rgba(0, 0, 0, 0.5);
 }
 
 input.slider:checked + .slider .slider-on,
@@ -883,7 +916,7 @@ input.slider:not(:checked) + .slider .slider-off {
 
 .modal-close::before {
 	bottom: 0;
-	content: '';
+	content: "";
 	left: 0;
 	position: absolute;
 	right: 0;
@@ -899,7 +932,7 @@ input.slider:not(:checked) + .slider .slider-off {
 	top: 1px;
 }
 .modal-close-internal::before {
-	content: '\2715';
+	content: "\2715";
 }
 .modal-close-internal:hover {
 	background: #c00;
@@ -912,11 +945,9 @@ input.slider:not(:checked) + .slider .slider-off {
 	background: url(img/brushed-knob.png);
 	background-size: 100%;
 	border-radius: 50%;
-	box-shadow: inset -1px 1px 0 0 rgba(255,255,255,0.1),
-		inset 1px -1px 0 0 rgba(17,17,17,0.2),
-		4px 4px 10px 0 #222,
-		0 10px 10px -5px #222,
-		0 0 0 1px #666;
+	box-shadow: inset -1px 1px 0 0 rgba(255, 255, 255, 0.1),
+		inset 1px -1px 0 0 rgba(17, 17, 17, 0.2), 4px 4px 10px 0 #222,
+		0 10px 10px -5px #222, 0 0 0 1px #666;
 	cursor: url(img/icons/mousescroll.png) 16 16, ns-resize;
 	display: inline-block;
 	height: 60px;
@@ -934,11 +965,11 @@ input.slider:not(:checked) + .slider .slider-off {
 	transition: all 200ms ease-in-out;
 }
 .knob::after {
-	content: 'MAX';
+	content: "MAX";
 	right: -1.5em;
 }
 .knob::before {
-	content: 'MIN';
+	content: "MIN";
 	left: -1.5em;
 }
 
@@ -957,7 +988,7 @@ input.slider:not(:checked) + .slider .slider-off {
 .knob .marker {
 	background-color: var(--accent-color);
 	border-radius: 2px;
-	box-shadow: inset 1px -1px 0 0 rgba(17,17,17,.3),
+	box-shadow: inset 1px -1px 0 0 rgba(17, 17, 17, 0.3),
 		0 0 5px 0 var(--accent-color);
 	height: 4px;
 	left: 75%;

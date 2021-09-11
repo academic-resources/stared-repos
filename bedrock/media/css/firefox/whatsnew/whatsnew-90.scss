@@ -2,15 +2,14 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/notification-bar';
-@import '../../../protocol/css/templates/multi-column';
-@import '../../../protocol/css/components/picto';
-@import 'includes/header';
-
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/notification-bar";
+@import "../../../protocol/css/templates/multi-column";
+@import "../../../protocol/css/components/picto";
+@import "includes/header";
 
 //* -------------------------------------------------------------------------- */
 // Main content
@@ -25,7 +24,7 @@ $image-path: '/media/protocol/img';
 
 .wnp-main-title {
     @include text-title-md;
-    color: get-theme('title-text-color');
+    color: get-theme("title-text-color");
 }
 
 .wnp-main-tagline {
@@ -33,7 +32,7 @@ $image-path: '/media/protocol/img';
 
     .inline-icon {
         height: 1em;
-        margin-bottom: -.1em;
+        margin-bottom: -0.1em;
         vertical-align: baseline;
         width: 1em;
     }
@@ -48,7 +47,6 @@ $image-path: '/media/protocol/img';
     margin-top: $spacing-sm;
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Extra content
 
@@ -57,7 +55,7 @@ $image-path: '/media/protocol/img';
     max-width: $content-sm;
 
     @media #{$mq-md} {
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
     }
 }
 
@@ -80,7 +78,6 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Utilities (link to release notes)
 .c-utilities {
@@ -89,7 +86,6 @@ $image-path: '/media/protocol/img';
     padding-bottom: $layout-xl;
     text-align: center;
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Footer overrides
@@ -117,22 +113,21 @@ $image-path: '/media/protocol/img';
 
 .c-footer-list-social li {
     a.twitter {
-        background-image: url('/media/protocol/img/icons/social/twitter/black.svg');
+        background-image: url("/media/protocol/img/icons/social/twitter/black.svg");
     }
 
     a.instagram {
-        background-image: url('/media/protocol/img/icons/social/instagram/black.svg');
+        background-image: url("/media/protocol/img/icons/social/instagram/black.svg");
     }
 
     a.youtube {
-        background-image: url('/media/protocol/img/icons/social/youtube/black.svg');
+        background-image: url("/media/protocol/img/icons/social/youtube/black.svg");
     }
 }
 
 .c-footer-primary-logo a {
-    background-image: url('/media/protocol/img/logos/mozilla/logo-word-hor.svg');
+    background-image: url("/media/protocol/img/logos/mozilla/logo-word-hor.svg");
 }
-
 
 //* -------------------------------------------------------------------------- */
 // For dark mode
@@ -144,7 +139,9 @@ $image-path: '/media/protocol/img';
 
     .wnp-main-image {
         @include border-box;
-        background: transparent url('/media/protocol/img/logos/pocket/logo-word-hor-white.svg') center top no-repeat;
+        background: transparent
+            url("/media/protocol/img/logos/pocket/logo-word-hor-white.svg")
+            center top no-repeat;
         @include background-size(220px, auto);
         display: inline-block;
         height: 60px;
@@ -154,7 +151,9 @@ $image-path: '/media/protocol/img';
 
     .wnp-main-tagline .inline-icon {
         @include border-box;
-        background: transparent url('/media/img/firefox/whatsnew/whatsnew90/pocket-outline-white.svg') center top no-repeat;
+        background: transparent
+            url("/media/img/firefox/whatsnew/whatsnew90/pocket-outline-white.svg")
+            center top no-repeat;
         @include background-size(1em, auto);
         display: inline-block;
         height: 1em;
@@ -165,7 +164,7 @@ $image-path: '/media/protocol/img';
     .wnp-main-title,
     .wnp-footer-title,
     .mzp-c-picto-heading {
-        color: get-theme('title-text-color-inverse');
+        color: get-theme("title-text-color-inverse");
     }
 
     .c-utilities,
@@ -192,20 +191,20 @@ $image-path: '/media/protocol/img';
 
     .c-footer-list-social li {
         a.twitter {
-            background-image: url('/media/protocol/img/icons/social/twitter/white.svg');
+            background-image: url("/media/protocol/img/icons/social/twitter/white.svg");
         }
 
         a.instagram {
-            background-image: url('/media/protocol/img/icons/social/instagram/white.svg');
+            background-image: url("/media/protocol/img/icons/social/instagram/white.svg");
         }
 
         a.youtube {
-            background-image: url('/media/protocol/img/icons/social/youtube/white.svg');
+            background-image: url("/media/protocol/img/icons/social/youtube/white.svg");
         }
     }
 
     .c-footer-primary-logo a {
-        background-image: url('/media/protocol/img/logos/mozilla/logo-word-hor-white.svg');
+        background-image: url("/media/protocol/img/logos/mozilla/logo-word-hor-white.svg");
     }
 
     .mzp-c-picto-image {

@@ -1,4 +1,5 @@
 # Configurations &amp; Customizations
+
 Archive of notes, configuration files &amp; customizations I regularly use across multiple systems.
 
 ### Automated Git Notifications for Remote Backups
@@ -13,16 +14,20 @@ Reject the automated pull if a VPN session is detected:
 
 Find this on the [crontab](sysadmin/crons)
 
-***
+---
 
 ### Bash
+
 .bashrc git branch display in active terminal:
 
 ![bashrc git branch](img/bashrc.png)
 
 Prompt colorization and git branch details.
-***
+
+---
+
 ### Grafana
+
 Grafana dashboards
 ![Grafana board](grafana-prtg/img/grafana-prtg.png)
 Find this on the [grafana-prtg](grafana-prtg)

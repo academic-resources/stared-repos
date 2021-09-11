@@ -2,9 +2,9 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/emphasis-box';
-@import '../protocol/components/fxa-form';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/emphasis-box";
+@import "../protocol/components/fxa-form";
 
 .c-section-title {
     @include text-title-md;
@@ -12,7 +12,6 @@
     margin: 0 auto $layout-xl;
     text-align: center;
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Hero
@@ -49,19 +48,21 @@
     }
 
     @media #{$mq-md} {
-        background: transparent url('/media/img/firefox/accounts/trailhead/accounts-hero-logged-out.svg') right -720px top no-repeat;
+        background: transparent
+            url("/media/img/firefox/accounts/trailhead/accounts-hero-logged-out.svg")
+            right -720px top no-repeat;
         @include background-size(1660px 275px);
 
         .state-fxa-supported-signed-in & {
             @include background-size(2188px 275px);
-            background-image: url('/media/img/firefox/accounts/trailhead/accounts-hero-logged-in.svg');
+            background-image: url("/media/img/firefox/accounts/trailhead/accounts-hero-logged-in.svg");
             background-position: right -960px top -40px;
         }
     }
 
     @media #{$mq-lg} {
         @include background-size(3441px 570px);
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
         background-position: center top;
         min-height: 560px;
 
@@ -73,11 +74,11 @@
 
         .c-accounts-hero-body {
             @include grid-half;
-            @include bidi(((float, left, right),));
+            @include bidi(((float, left, right)));
         }
 
         .c-accounts-hero-title {
-            @include bidi(((background-position, left top, right top),));
+            @include bidi(((background-position, left top, right top)));
             max-width: 12em;
         }
 
@@ -95,8 +96,6 @@
         }
     }
 }
-
-
 
 //* -------------------------------------------------------------------------- */
 // FxA signup form
@@ -120,14 +119,13 @@
     }
 
     @media #{$mq-lg} {
-        @include bidi(((float, right, left),));
+        @include bidi(((float, right, left)));
 
         @supports (display: grid) {
             float: none;
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Products
@@ -188,7 +186,7 @@
 
     @media #{$mq-lg} {
         @supports (display: grid) {
-            @include bidi(((text-align, left, right),));
+            @include bidi(((text-align, left, right)));
             max-width: none;
             margin: 0;
         }
@@ -204,15 +202,27 @@
     height: 50px;
 
     .t-product-firefox & {
-        @include at2x('/media/protocol/img/logos/firefox/browser/logo-word-hor-stack-md.png', 144px, 50px);
+        @include at2x(
+            "/media/protocol/img/logos/firefox/browser/logo-word-hor-stack-md.png",
+            144px,
+            50px
+        );
     }
 
     .t-product-monitor & {
-        @include at2x('/media/protocol/img/logos/firefox/monitor/logo-word-hor-stack-md.png', 138px, 50px);
+        @include at2x(
+            "/media/protocol/img/logos/firefox/monitor/logo-word-hor-stack-md.png",
+            138px,
+            50px
+        );
     }
 
     .t-product-vpn & {
-        @include at2x('/media/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-md.png', 143px, 50px);
+        @include at2x(
+            "/media/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-md.png",
+            143px,
+            50px
+        );
     }
 
     @media #{$mq-md} {
@@ -220,7 +230,7 @@
         margin: 0 0 $spacing-lg;
 
         .t-product-firefox & {
-            @include background-size(184px,  64px);
+            @include background-size(184px, 64px);
         }
 
         .t-product-monitor & {
@@ -234,10 +244,9 @@
 
     @media #{$mq-lg} {
         @supports (display: grid) {
-            @include bidi(((background-position, left top, right top),));
+            @include bidi(((background-position, left top, right top)));
         }
     }
-
 }
 
 .c-product-list-desc {
@@ -252,7 +261,6 @@
     margin: $layout-lg auto;
     text-align: center;
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Value propositions
@@ -279,34 +287,32 @@
     }
 
     &.l-media-left .c-accounts-value-media {
-        @include bidi((
-            (margin-left, -25%, auto),
-            (margin-right, auto, -25%),
-        ));
+        @include bidi(((margin-left, -25%, auto), (margin-right, auto, -25%)));
 
         img {
-            @include bidi((
-                (float, left, right),
-                (margin-left, -10%, auto),
-                (margin-right, auto, -10%),
-                (transform, none, scaleX(-1)),
-            ));
+            @include bidi(
+                (
+                    (float, left, right),
+                    (margin-left, -10%, auto),
+                    (margin-right, auto, -10%),
+                    (transform, none, scaleX(-1))
+                )
+            );
         }
     }
 
     &.l-media-right .c-accounts-value-media {
-        @include bidi((
-            (margin-left, auto, -25%),
-            (margin-right, -25%, auto),
-        ));
+        @include bidi(((margin-left, auto, -25%), (margin-right, -25%, auto)));
 
         img {
-            @include bidi((
-                (float, right, left),
-                (margin-left, auto, -10%),
-                (margin-right, -10%, auto),
-                (transform, none, scaleX(-1)),
-            ));
+            @include bidi(
+                (
+                    (float, right, left),
+                    (margin-left, auto, -10%),
+                    (margin-right, -10%, auto),
+                    (transform, none, scaleX(-1))
+                )
+            );
         }
     }
 
@@ -354,53 +360,59 @@
 
             &.l-media-left {
                 .c-accounts-value-content {
-                    @include bidi((
-                        (padding-left, 0, $layout-lg),
-                        (padding-right, $layout-lg, 0),
-                    ));
+                    @include bidi(
+                        (
+                            (padding-left, 0, $layout-lg),
+                            (padding-right, $layout-lg, 0)
+                        )
+                    );
                     grid-column: 2;
                 }
 
                 .c-accounts-value-media {
-                    @include bidi((
-                        (margin-left, -25%, 0),
-                        (margin-right, 0, -25%),
-                    ));
+                    @include bidi(
+                        ((margin-left, -25%, 0), (margin-right, 0, -25%))
+                    );
                     grid-column: 1;
                     justify-self: end;
 
                     img {
-                        @include bidi((
-                            (float, right, left),
-                            (transform, none, scaleX(-1)),
-                        ));
+                        @include bidi(
+                            (
+                                (float, right, left),
+                                (transform, none, scaleX(-1))
+                            )
+                        );
                     }
                 }
             }
 
             &.l-media-right {
                 .c-accounts-value-content {
-                    @include bidi((
-                        (padding-right, 0, $layout-lg),
-                        (padding-left, $layout-lg, 0),
-                    ));
+                    @include bidi(
+                        (
+                            (padding-right, 0, $layout-lg),
+                            (padding-left, $layout-lg, 0)
+                        )
+                    );
                     grid-column: 1;
                     justify-self: end;
                 }
 
                 .c-accounts-value-media {
-                    @include bidi((
-                        (margin-left, 0, -25%),
-                        (margin-right, -25%, 0),
-                    ));
+                    @include bidi(
+                        ((margin-left, 0, -25%), (margin-right, -25%, 0))
+                    );
                     grid-column: 2;
                     justify-self: start;
 
                     img {
-                        @include bidi((
-                            (float, left, right),
-                            (transform, none, scaleX(-1)),
-                        ));
+                        @include bidi(
+                            (
+                                (float, left, right),
+                                (transform, none, scaleX(-1))
+                            )
+                        );
                     }
                 }
             }
@@ -408,17 +420,21 @@
 
         @media #{$mq-lg} {
             &.l-media-left .c-accounts-value-content {
-                @include bidi((
-                    (padding-left, 0, $layout-xl),
-                    (padding-right, $layout-xl, 0),
-                ));
+                @include bidi(
+                    (
+                        (padding-left, 0, $layout-xl),
+                        (padding-right, $layout-xl, 0)
+                    )
+                );
             }
 
             &.l-media-right .c-accounts-value-content {
-                @include bidi((
-                    (padding-right, 0, $layout-xl),
-                    (padding-left, $layout-xl, 0),
-                ));
+                @include bidi(
+                    (
+                        (padding-right, 0, $layout-xl),
+                        (padding-left, $layout-xl, 0)
+                    )
+                );
             }
         }
     }
@@ -427,7 +443,6 @@
 .c-accounts-value-title {
     @include text-title-md;
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Join the movement
@@ -465,20 +480,22 @@
     text-align: center;
 
     &.t-movement-build {
-        background-image: url('/media/img/firefox/accounts/trailhead/icon-experiments.svg');
+        background-image: url("/media/img/firefox/accounts/trailhead/icon-experiments.svg");
     }
 
     &.t-movement-bigtech {
-        background-image: url('/media/img/firefox/accounts/trailhead/icon-inbox.svg');
+        background-image: url("/media/img/firefox/accounts/trailhead/icon-inbox.svg");
     }
 
     @media #{$mq-md} {
-        @include bidi((
-            (background-position, left $spacing-sm, right $spacing-sm),
-            (padding-left, $layout-lg + 10px, 0),
-            (padding-right, 0, $layout-lg + 10px),
-            (text-align, left, right),
-        ));
+        @include bidi(
+            (
+                (background-position, left $spacing-sm, right $spacing-sm),
+                (padding-left, $layout-lg + 10px, 0),
+                (padding-right, 0, $layout-lg + 10px),
+                (text-align, left, right)
+            )
+        );
         padding-top: 0;
 
         @supports (display: grid) {
@@ -496,11 +513,10 @@
     @include text-body-lg;
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Flip backgrounds for right-to-left languages
 
-[dir='rtl'] {
+[dir="rtl"] {
     .c-accounts-hero {
         background-image: none;
         overflow-x: hidden;
@@ -510,14 +526,13 @@
             z-index: 2;
         }
 
-
         @media #{$mq-md} {
             &:after {
                 @include background-size(1660px 275px);
-                background-image: url('/media/img/firefox/accounts/trailhead/accounts-hero-logged-out.svg');
+                background-image: url("/media/img/firefox/accounts/trailhead/accounts-hero-logged-out.svg");
                 background-position: center top;
                 background-repeat: no-repeat;
-                content: '';
+                content: "";
                 display: block;
                 height: 275px;
                 left: 10%;
@@ -544,7 +559,7 @@
     @media #{$mq-md} {
         .state-fxa-supported-signed-in .c-accounts-hero:after {
             @include background-size(2188px 275px);
-            background-image: url('/media/img/firefox/accounts/trailhead/accounts-hero-logged-in.svg');
+            background-image: url("/media/img/firefox/accounts/trailhead/accounts-hero-logged-in.svg");
             height: 275px;
             margin-left: -1094px;
             width: 2188px;
@@ -560,4 +575,3 @@
         }
     }
 }
-

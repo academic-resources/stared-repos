@@ -2,15 +2,15 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/includes/fonts/metropolis';
-@import '../../protocol/css/components/newsletter-form';
-@import '../../protocol/css/components/split';
-@import '../../protocol/css/components/section-heading';
-@import '../../protocol/css/templates/card-layout';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/includes/fonts/metropolis";
+@import "../../protocol/css/components/newsletter-form";
+@import "../../protocol/css/components/split";
+@import "../../protocol/css/components/section-heading";
+@import "../../protocol/css/templates/card-layout";
 
 .contribute-intro {
     overflow: hidden;
@@ -43,13 +43,12 @@ $image-path: '/media/protocol/img';
     }
 
     .contribute-intro-media-wrapper {
-        @include bidi(((left, -10px, auto),(right, auto, -10px),));
+        @include bidi(((left, -10px, auto), (right, auto, -10px)));
         position: absolute;
         width: 100%;
 
-
         @media #{$mq-lg} {
-            @include bidi(((right, -25px, auto),(left, auto, -25px),));
+            @include bidi(((right, -25px, auto), (left, auto, -25px)));
             left: auto;
             top: $spacing-md;
             width: 50%;
@@ -94,7 +93,7 @@ $image-path: '/media/protocol/img';
     }
 }
 
-@supports (display:flex) {
+@supports (display: flex) {
     .contribute-card-container {
         @media #{$mq-sm} {
             display: flex;
@@ -142,18 +141,22 @@ $image-path: '/media/protocol/img';
 
     @media #{$mq-lg} {
         .contribute-banner-content {
-            @include bidi(((margin-left, 200px, auto),(margin-right, auto, 200px),));
+            @include bidi(
+                ((margin-left, 200px, auto), (margin-right, auto, 200px))
+            );
             width: 60%;
             max-width: 495px;
         }
 
         .contribute-banner-cta {
-            @include bidi(((margin-left, 200px, auto),(margin-right, auto, 200px),));
+            @include bidi(
+                ((margin-left, 200px, auto), (margin-right, auto, 200px))
+            );
         }
     }
 }
 
-@supports (display:flex) {
+@supports (display: flex) {
     @media #{$mq-lg} {
         .contribute-banner {
             align-items: center;
@@ -166,16 +169,23 @@ $image-path: '/media/protocol/img';
         }
 
         .contribute-banner-cta {
-            @include bidi(((margin-left, $layout-xl, auto),(margin-right, auto, $layout-xl),));
+            @include bidi(
+                (
+                    (margin-left, $layout-xl, auto),
+                    (margin-right, auto, $layout-xl)
+                )
+            );
             flex: 1 0 auto;
         }
     }
 }
 
 .contribute-banner-gethelp {
-    background: $color-ink-80 url('/media/img/contribute/contribute-gethelp-banner-bg.jpg') center top no-repeat;
+    background: $color-ink-80
+        url("/media/img/contribute/contribute-gethelp-banner-bg.jpg") center top
+        no-repeat;
     background-size: cover;
-    color: get-theme('body-text-color-inverse');
+    color: get-theme("body-text-color-inverse");
 
     @media #{$mq-lg} {
         margin-bottom: $layout-lg;
@@ -184,7 +194,7 @@ $image-path: '/media/protocol/img';
     .contribute-banner-gethelp-title {
         @include font-firefox;
         @include font-size(24px);
-        color: get-theme('title-text-color-inverse');
+        color: get-theme("title-text-color-inverse");
         position: relative;
 
         @media #{$mq-lg} {
@@ -192,9 +202,9 @@ $image-path: '/media/protocol/img';
         }
 
         &:before {
-            @include bidi(((left, 0, auto),(right, auto, 0),));
-            background-image: url('/media/img/contribute/contribute-banner-gethelp-icon.svg');
-            content: '';
+            @include bidi(((left, 0, auto), (right, auto, 0)));
+            background-image: url("/media/img/contribute/contribute-banner-gethelp-icon.svg");
+            content: "";
             display: block;
             height: 40px;
             position: absolute;
@@ -202,7 +212,7 @@ $image-path: '/media/protocol/img';
             width: 40px;
 
             @media #{$mq-lg} {
-                @include bidi(((left, -80px, auto),(right, auto, -80px),));
+                @include bidi(((left, -80px, auto), (right, auto, -80px)));
                 top: auto;
             }
         }
@@ -210,21 +220,23 @@ $image-path: '/media/protocol/img';
 }
 
 .contribute-banner-problems {
-    @include bidi(((background-position, 15% -10px, 94% -10px),));
-    background-image: url('/media/img/contribute/contribute-problems-bulb.svg');
+    @include bidi(((background-position, 15% -10px, 94% -10px)));
+    background-image: url("/media/img/contribute/contribute-problems-bulb.svg");
     background-repeat: no-repeat;
     background-size: 60px 150px;
 
     @media #{$mq-sm} {
-        @include bidi(((background-position, 8% -10px, 94% -10px),));
+        @include bidi(((background-position, 8% -10px, 94% -10px)));
         background-position: 8% -10px;
         background-size: 50px 150px;
     }
 
     @media #{$mq-lg} {
-        @include bidi(((background-position, (10% -45px, 96% 88%), (90% -45px, 13% 88%)),));
-        background-image: url('/media/img/contribute/contribute-problems-bulb.svg'),
-                          url('/media/img/contribute/contribute-problems-fly.svg');
+        @include bidi(
+            ((background-position, (10% -45px, 96% 88%), (90% -45px, 13% 88%)))
+        );
+        background-image: url("/media/img/contribute/contribute-problems-bulb.svg"),
+            url("/media/img/contribute/contribute-problems-fly.svg");
         background-repeat: no-repeat;
         background-size: 86px 241px, 33%;
         border: 4px solid $color-moz-light-gray;
@@ -232,7 +244,9 @@ $image-path: '/media/protocol/img';
 
     .contribute-banner-problems-title {
         @include font-size(24px);
-        @include bidi(((margin-left, $layout-xl, auto),(margin-right, auto, $layout-xl),));
+        @include bidi(
+            ((margin-left, $layout-xl, auto), (margin-right, auto, $layout-xl))
+        );
 
         span {
             display: inline;
@@ -257,19 +271,19 @@ $image-path: '/media/protocol/img';
 }
 
 .mzp-c-split-media {
-        max-width: $content-max;
+    max-width: $content-max;
 }
 
 .mzp-c-split-body {
-     h2 {
-            @include font-size(24px);
-        }
+    h2 {
+        @include font-size(24px);
+    }
 
-        @media #{$mq-lg} {
-            h2 {
-                @include font-size(48px);
-            }
+    @media #{$mq-lg} {
+        h2 {
+            @include font-size(48px);
         }
+    }
 }
 
 .contribute-mission {
@@ -303,11 +317,19 @@ $image-path: '/media/protocol/img';
     }
 
     .contribute-mission-card {
-        @include bidi(((float, left, right),));
+        @include bidi(((float, left, right)));
         width: 50%;
 
         a {
-            @include bidi(((padding, $spacing-md $spacing-md $spacing-md $spacing-2xl, $spacing-md $spacing-2xl $spacing-md $spacing-md),));
+            @include bidi(
+                (
+                    (
+                        padding,
+                        $spacing-md $spacing-md $spacing-md $spacing-2xl,
+                        $spacing-md $spacing-2xl $spacing-md $spacing-md
+                    )
+                )
+            );
             border: 4px solid transparent;
             color: $color-black;
             display: block;
@@ -331,29 +353,29 @@ $image-path: '/media/protocol/img';
             position: relative;
 
             &::before {
-                @include bidi(((left, -34px, auto),(right, auto, -34px),));
+                @include bidi(((left, -34px, auto), (right, auto, -34px)));
                 background-repeat: no-repeat;
                 background-size: 24px 24px;
-                content: '';
+                content: "";
                 height: 24px;
                 position: absolute;
                 width: 24px;
             }
 
             &.contribute-mission-learn-icon:before {
-                background-image: url('/media/img/contribute/icon/M.svg');
+                background-image: url("/media/img/contribute/icon/M.svg");
             }
 
             &.contribute-mission-event-icon:before {
-                background-image: url('/media/img/contribute/icon/cal.svg');
+                background-image: url("/media/img/contribute/icon/cal.svg");
             }
 
             &.contribute-mission-donate-icon:before {
-                background-image: url('/media/img/contribute/icon/heart.svg');
+                background-image: url("/media/img/contribute/icon/heart.svg");
             }
 
             &.contribute-mission-follow-icon:before {
-                background-image: url('/media/img/contribute/icon/twitter.svg');
+                background-image: url("/media/img/contribute/icon/twitter.svg");
             }
         }
 
@@ -363,7 +385,7 @@ $image-path: '/media/protocol/img';
     }
 }
 
-@supports (display:grid) {
+@supports (display: grid) {
     .contribute-mission {
         .contribute-mission-cards {
             display: grid;

@@ -1,7 +1,7 @@
-import gql from 'graphql-tag'
-import { Query } from 'react-apollo'
-import React from 'react'
-import DogEdit from './DogEdit'
+import gql from "graphql-tag";
+import { Query } from "react-apollo";
+import React from "react";
+import DogEdit from "./DogEdit";
 
 const FETCH_DOG = gql`
   query FetchDog($id: ID!) {
@@ -11,22 +11,22 @@ const FETCH_DOG = gql`
       breed
     }
   }
-`
+`;
 
-const DogDetail = props => (
+const DogDetail = (props) => (
   <Query query={FETCH_DOG} variables={{ id: props.match.params.dogId }}>
     {({ loading, error, data }) => {
-      if (loading) return <div>Loading...</div>
-      if (error) return <div>{error}</div>
+      if (loading) return <div>Loading...</div>;
+      if (error) return <div>{error}</div>;
       return (
         <div>
           <p>{data.dog.name}</p>
           <p>{data.dog.breed}</p>
           <DogEdit dog={data.dog} />
         </div>
-      )
+      );
     }}
   </Query>
-)
+);
 
-export default DogDetail
+export default DogDetail;

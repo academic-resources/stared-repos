@@ -1,12 +1,12 @@
-const graphql = require('graphql')
-const { GraphQLObjectType, GraphQLID, GraphQLString } = graphql
-const mongoose = require('mongoose')
+const graphql = require("graphql");
+const { GraphQLObjectType, GraphQLID, GraphQLString } = graphql;
+const mongoose = require("mongoose");
 
-const UserType = require('./user_type')
-const User = mongoose.model('user')
+const UserType = require("./user_type");
+const User = mongoose.model("user");
 
 const PostType = new GraphQLObjectType({
-  name: 'PostType',
+  name: "PostType",
   fields: {
     id: { type: GraphQLID },
     title: { type: GraphQLString },
@@ -15,11 +15,11 @@ const PostType = new GraphQLObjectType({
       type: UserType,
       resolve(parentValue) {
         return User.findById(parentValue.author)
-          .then(user => user)
-          .catch(err => null)
-      }
-    }
-  }
-})
+          .then((user) => user)
+          .catch((err) => null);
+      },
+    },
+  },
+});
 
-module.exports = PostType
+module.exports = PostType;

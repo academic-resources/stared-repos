@@ -10,22 +10,19 @@
     "https://monitor.firefox.com",
     "https://{{ lang_short() }}.wikipedia.org/wiki/Firefox_Monitor"
   ],
-  "offers":
-  {
+  "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
   "applicationCategory": "SecurityApplication",
   "applicationSuite": "Firefox",
-  "author":
-  {
+  "author": {
     "@type": "Organization",
     "@id": "{{ structured_data_id('organization') }}",
     "name": "Mozilla Corporation"
   },
-  "softwareHelp":
-  {
+  "softwareHelp": {
     "@type": "Webpage",
     "url": "https://support.mozilla.org/{{ LANG }}/kb/firefox-monitor"
   }

@@ -2,21 +2,20 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
 @import "../../../protocol/css/includes/lib";
-@import '../../../protocol/css/components/call-out';
-@import '../../../protocol/css/components/feature-card';
-@import '../../../protocol/css/components/split';
-@import '../../../protocol/css/components/button';
-@import '../../../protocol/css/components/logos/wordmark';
-@import '../../../protocol/css/components/logos/wordmark-product-firefox';
-@import '../../../protocol/css/components/picto';
-@import '../../../protocol/css/templates/multi-column';
-@import '../../protocol/components/custom-menu-list';
-@import '../../protocol/components/sub-navigation';
-
+@import "../../../protocol/css/components/call-out";
+@import "../../../protocol/css/components/feature-card";
+@import "../../../protocol/css/components/split";
+@import "../../../protocol/css/components/button";
+@import "../../../protocol/css/components/logos/wordmark";
+@import "../../../protocol/css/components/logos/wordmark-product-firefox";
+@import "../../../protocol/css/components/picto";
+@import "../../../protocol/css/templates/multi-column";
+@import "../../protocol/components/custom-menu-list";
+@import "../../protocol/components/sub-navigation";
 
 //* -------------------------------------------------------------------------- */
 // Generic Container Styles
@@ -24,7 +23,7 @@ $image-path: '/media/protocol/img';
 .cta-container {
     margin-bottom: 0;
 
-    &> .mzp-c-button-download-container {
+    & > .mzp-c-button-download-container {
         display: inline-block;
     }
 }
@@ -69,8 +68,8 @@ $image-path: '/media/protocol/img';
 .mzp-c-split.t-enterprise {
     // dark colour fallback incase svg image doesn't load/display
     background: $color-ink-80;
-    background-image: url('/media/img/firefox/enterprise/ent-noodles.svg'),
-                      linear-gradient(transparent 550px, #fff 550px, #fff 1000px);
+    background-image: url("/media/img/firefox/enterprise/ent-noodles.svg"),
+        linear-gradient(transparent 550px, #fff 550px, #fff 1000px);
     background-position: bottom left, top center;
     background-repeat: no-repeat, repeat-x;
     background-size: 1221px 680px, 480px 1000px;
@@ -78,37 +77,36 @@ $image-path: '/media/protocol/img';
     min-height: 540px;
     padding-top: $layout-sm;
 
-    html[dir=rtl] & {
+    html[dir="rtl"] & {
         background: $color-ink-80;
         min-height: 0;
     }
 
-   .mzp-c-split-container {
+    .mzp-c-split-container {
         box-sizing: content-box;
         // need extra spacing to prevent clipping with the background image
         padding-bottom: $spacing-xl;
         @media #{$mq-md} {
             padding-bottom: inherit;
         }
-   }
+    }
 
-   .mzp-c-split-body {
-       background-color: $color-ink-80;
-       border-top-right-radius: 100px;
-       margin-bottom: 100px;
-       max-width: 580px;
-       position: relative;
+    .mzp-c-split-body {
+        background-color: $color-ink-80;
+        border-top-right-radius: 100px;
+        margin-bottom: 100px;
+        max-width: 580px;
+        position: relative;
 
-       .mzp-c-split-title {
+        .mzp-c-split-title {
             @include text-title-xl;
             margin-bottom: $spacing-md;
 
-             @media #{$mq-md} {
-               margin-bottom: $spacing-xl;
+            @media #{$mq-md} {
+                margin-bottom: $spacing-xl;
             }
-
-       }
-       .mzp-c-wordmark {
+        }
+        .mzp-c-wordmark {
             margin-left: auto;
             margin-right: auto;
             margin-bottom: $layout-lg;
@@ -116,18 +114,18 @@ $image-path: '/media/protocol/img';
                 margin-left: inherit;
                 margin-right: inherit;
             }
-       }
-       .mzp-c-split-desc {
+        }
+        .mzp-c-split-desc {
             @include text-body-lg;
             margin-bottom: $spacing-md;
 
             @media #{$mq-md} {
                 margin-bottom: $spacing-2xl;
             }
-       }
-   }
+        }
+    }
 
-   .mzp-c-split-image {
+    .mzp-c-split-image {
         display: none;
     }
 
@@ -139,15 +137,15 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-md} {
-        background-image: url('/media/img/firefox/enterprise/ent-noodles-wide.svg'),
-                          linear-gradient(transparent 680px, #fff 680px, #fff 1200px);
+        background-image: url("/media/img/firefox/enterprise/ent-noodles-wide.svg"),
+            linear-gradient(transparent 680px, #fff 680px, #fff 1200px);
         background-position: top center, top center;
         background-repeat: no-repeat, repeat-x, repeat-x;
         background-size: 2560px 793px, 480px 1200px;
         min-height: 793px - $layout-md; // to keep bg image from being cut off
         padding-top: $layout-md;
 
-        html[dir=rtl] & {
+        html[dir="rtl"] & {
             background: $color-ink-80;
             min-height: 0;
         }
@@ -169,35 +167,35 @@ $image-path: '/media/protocol/img';
 
 // Custom Overrides pending https://github.com/mozilla/protocol/issues/382
 .mzp-c-card-picto {
-    @include bidi(((text-align, left, right),));
+    @include bidi(((text-align, left, right)));
     padding-top: 0;
 
     .mzp-c-card-picto-content:before {
-        @include bidi(((left, 0, right, 0),));
+        @include bidi(((left, 0, right, 0)));
         background-color: transparent;
         margin-left: 0;
     }
 
     @media #{$mq-md} {
         .mzp-c-card-picto-content:before {
-            @include bidi(((left, $spacing-lg, right, 0),));
+            @include bidi(((left, $spacing-lg, right, 0)));
         }
     }
 
     &.privacy .mzp-c-card-picto-content:before {
-        background-image: url('/media/img/firefox/enterprise/icon-data-privacy.svg');
+        background-image: url("/media/img/firefox/enterprise/icon-data-privacy.svg");
         height: 53px;
         width: 44px;
     }
 
     &.deploy .mzp-c-card-picto-content:before {
-        background-image: url('/media/img/firefox/enterprise/icon-deploy.svg');
+        background-image: url("/media/img/firefox/enterprise/icon-deploy.svg");
         height: 53px;
         width: 53px;
     }
 
     &.release .mzp-c-card-picto-content:before {
-        background-image: url('/media/img/firefox/enterprise/icon-release.svg');
+        background-image: url("/media/img/firefox/enterprise/icon-release.svg");
         height: 53px;
         width: 49px;
     }
@@ -206,16 +204,16 @@ $image-path: '/media/protocol/img';
 //* -------------------------------------------------------------------------- */
 // Downloads Section
 
-@supports(display: grid) {
+@supports (display: grid) {
     @media #{$mq-md} {
         .enterprise-download-lists {
             display: grid;
             grid-column-gap: $layout-md;
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas:
-                'title-col1    title-col2    title-col3'
-                'list-col1     list-col2     list-col3'
-                'support-col1  support-col2  support-col3';
+                "title-col1    title-col2    title-col3"
+                "list-col1     list-col2     list-col3"
+                "support-col1  support-col2  support-col3";
             margin-bottom: $layout-md;
         }
 
@@ -265,7 +263,6 @@ $image-path: '/media/protocol/img';
                 grid-area: support-col3;
             }
         }
-
     }
 }
 
@@ -274,20 +271,19 @@ $image-path: '/media/protocol/img';
 }
 
 .enterprise-download-title {
-    @include bidi((
-        (padding-left, $layout-lg, 0),
-        (padding-right, 0, $layout-lg),
-    ));
+    @include bidi(
+        ((padding-left, $layout-lg, 0), (padding-right, 0, $layout-lg))
+    );
     @include text-title-sm;
     margin-bottom: $spacing-lg;
     min-height: 48px;
     position: relative;
 
     &:before {
-        @include bidi(((left, 0, right, auto),));
+        @include bidi(((left, 0, right, auto)));
         background-position: center center;
         background-repeat: no-repeat;
-        content: '';
+        content: "";
         display: block;
         height: 48px;
         position: absolute;
@@ -296,17 +292,17 @@ $image-path: '/media/protocol/img';
     }
 
     .platform-win64 &:before {
-        background-image: url('/media/img/firefox/enterprise/icon-win64.svg');
+        background-image: url("/media/img/firefox/enterprise/icon-win64.svg");
         background-size: 39px 40px;
     }
 
     .platform-mac &:before {
-        background-image: url('/media/img/firefox/enterprise/icon-mac.svg');
+        background-image: url("/media/img/firefox/enterprise/icon-mac.svg");
         background-size: 32px 40px;
     }
 
     .platform-win32 &:before {
-        background-image: url('/media/img/firefox/enterprise/icon-win32.svg');
+        background-image: url("/media/img/firefox/enterprise/icon-win32.svg");
         background-size: 39px 40px;
     }
 }
@@ -320,5 +316,3 @@ $image-path: '/media/protocol/img';
 .enterprise-download-subtitle {
     @include text-title-2xs;
 }
-
-

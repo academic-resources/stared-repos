@@ -2,7 +2,6 @@
 
 These steps require [node.js](https://nodejs.org) installed in your computer.
 
-
 ## Building the web app
 
 The source code is read from the [src/](../src) directory and bundled with [webpack](https://webpack.js.org/) to generate the files `audioMotion.js` and `styles.css`
@@ -19,7 +18,6 @@ Build it with:
 ```
 npm run build
 ```
-
 
 ## Creating binaries
 

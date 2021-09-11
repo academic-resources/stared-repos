@@ -17,26 +17,28 @@ $$
 ```
 
 - **Footnotes**:
-	```md
-	What does this describe? [^1]
 
-	[^1]: test foot note.
-	```
+  ```md
+  What does this describe? [^1]
+
+  [^1]: test foot note.
+  ```
 
 - **Tables**:
-	```md
-	| Column 1 | Column 2 |
-	| -------- | -------- |
-	| ...      | ...      |
-	```
+
+  ```md
+  | Column 1 | Column 2 |
+  | -------- | -------- |
+  | ...      | ...      |
+  ```
 
 - **Code blocks with syntax highlighting**:
-	````md
-	```python
-	print("this will be highlighted")
-	x = 1337
-	```
-	````
+  ````md
+  ```python
+  print("this will be highlighted")
+  x = 1337
+  ```
+  ````
 
 There are several ways you can edit content in Archivy.
 

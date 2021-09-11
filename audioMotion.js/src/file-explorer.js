@@ -7,10 +7,10 @@
 var mounts = [],
 	currentPath = [],
 	nodeServer = false,
-	defaultRoot = '/music',
+	defaultRoot = "/music",
 	ui_path,
 	ui_files,
-//	enterDirCallback,
+	//	enterDirCallback,
 	dblClickCallback;
 
 /**
@@ -19,47 +19,50 @@ var mounts = [],
  * @param {object} directory content returned by the node server or parseWebDirectory()
  * @param {number} scrollTop scroll position for the filelist container
  */
-function updateUI( content, scrollTop ) {
-
-	ui_path.innerHTML = '';
-	ui_files.innerHTML = '';
+function updateUI(content, scrollTop) {
+	ui_path.innerHTML = "";
+	ui_files.innerHTML = "";
 
 	// breadcrumbs
-	currentPath.forEach( ( entry, index ) => {
-		if ( entry.dir == '' )
-			entry.dir = 'root';
-		ui_path.innerHTML += `<li data-depth="${ currentPath.length - index - 1 }">${entry.dir}</li> / `;
+	currentPath.forEach((entry, index) => {
+		if (entry.dir == "") entry.dir = "root";
+		ui_path.innerHTML += `<li data-depth="${
+			currentPath.length - index - 1
+		}">${entry.dir}</li> / `;
 	});
 
 	// mounting points
-	mounts.forEach( mount => {
+	mounts.forEach((mount) => {
 		ui_files.innerHTML += `<li data-type="mount" data-path="${mount}">[ ${mount} ]</li>`;
 	});
 
 	// link to parent directory
-	if ( currentPath.length > 1 )
-		ui_files.innerHTML += '<li data-type="dir" data-path="..">[ parent folder ]</li>';
+	if (currentPath.length > 1)
+		ui_files.innerHTML +=
+			'<li data-type="dir" data-path="..">[ parent folder ]</li>';
 
 	// current directory contents
-	if ( content ) {
-		if ( content.dirs ) {
-			content.dirs.forEach( dir => {
+	if (content) {
+		if (content.dirs) {
+			content.dirs.forEach((dir) => {
 				ui_files.innerHTML += `<li data-type="dir" data-path="${dir}">${dir}</li>`;
 			});
 		}
-		if ( content.files ) {
-			content.files.forEach( file => {
-				ui_files.innerHTML += `<li data-type="${ file.match(/\.(m3u|m3u8)$/) !== null ? 'list' : 'file' }" data-path="${file}">${file}</li>`;
+		if (content.files) {
+			content.files.forEach((file) => {
+				ui_files.innerHTML += `<li data-type="${
+					file.match(/\.(m3u|m3u8)$/) !== null ? "list" : "file"
+				}" data-path="${file}">${file}</li>`;
 			});
 		}
-		ui_files.style.backgroundImage = 'linear-gradient( #fff9 0%, #fff9 100% )' + ( content.cover ? `, url('${makePath( content.cover )}')` : '' );
+		ui_files.style.backgroundImage =
+			"linear-gradient( #fff9 0%, #fff9 100% )" +
+			(content.cover ? `, url('${makePath(content.cover)}')` : "");
 	}
 
 	// restore scroll position when returning from subdirectory
-	if ( scrollTop )
-		ui_files.scrollTop = scrollTop;
-	else
-		ui_files.scrollTop = 0;
+	if (scrollTop) ui_files.scrollTop = scrollTop;
+	else ui_files.scrollTop = 0;
 }
 
 /**
@@ -69,44 +72,36 @@ function updateUI( content, scrollTop ) {
  * @param {number} [scrollTop] scrollTop attribute for the filelist container
  * @returns {Promise<boolean>} A promise that resolves to true if the directory change was successful, or false otherwise
  */
-function enterDir( target, scrollTop ) {
-
+function enterDir(target, scrollTop) {
 	var prev, url;
 
-	if ( target !== undefined ) {
-		if ( target == '..' )
-			prev = currentPath.pop();
-		else
-			currentPath.push( { dir: target, scrollTop: ui_files.scrollTop } );
+	if (target !== undefined) {
+		if (target == "..") prev = currentPath.pop();
+		else currentPath.push({ dir: target, scrollTop: ui_files.scrollTop });
 	}
 
-	ui_files.innerHTML = '<li>Loading...</li>';
+	ui_files.innerHTML = "<li>Loading...</li>";
 
 	url = makePath();
 
-	return new Promise( resolve => {
-		fetch( url )
-			.then( response => {
-				if ( response.status == 200 ) {
-					if ( nodeServer )
-						return response.json();
-					else
-						return response.text();
-				}
-				else
-					resolve( false );
+	return new Promise((resolve) => {
+		fetch(url)
+			.then((response) => {
+				if (response.status == 200) {
+					if (nodeServer) return response.json();
+					else return response.text();
+				} else resolve(false);
 			})
-			.then( content => {
-				if ( ! nodeServer )
-					content = parseWebDirectory( content );
-				updateUI( content, scrollTop || ( prev && prev.scrollTop ) );
-//				if ( enterDirCallback )
-//					enterDirCallback( url, content );
-				resolve( true );
+			.then((content) => {
+				if (!nodeServer) content = parseWebDirectory(content);
+				updateUI(content, scrollTop || (prev && prev.scrollTop));
+				//				if ( enterDirCallback )
+				//					enterDirCallback( url, content );
+				resolve(true);
 			})
-			.catch( err => {
-				console.log( `Error accessing directory. ${err}` );
-				resolve( false );
+			.catch((err) => {
+				console.log(`Error accessing directory. ${err}`);
+				resolve(false);
 			});
 	});
 }
@@ -117,42 +112,51 @@ function enterDir( target, scrollTop ) {
  * @param {string}   content HTML body of a web server directory listing
  * @returns {object} folder/cover image, list of directories, list of files
  */
-export function parseWebDirectory( content ) {
-
+export function parseWebDirectory(content) {
 	let files = [],
-		dirs  = [],
-		imgs  = [];
+		dirs = [],
+		imgs = [];
 
 	// helper function
-	const findImg = ( arr, pattern ) => {
-		const regexp = new RegExp( `${pattern}.*\\.(jpg|jpeg|png|gif|bmp)$`, 'i' );
-		return arr.find( el => el.match( regexp ) );
-	}
+	const findImg = (arr, pattern) => {
+		const regexp = new RegExp(
+			`${pattern}.*\\.(jpg|jpeg|png|gif|bmp)$`,
+			"i"
+		);
+		return arr.find((el) => el.match(regexp));
+	};
 
-	const entries = content.match( /href="[^"]*"[^>]*>[^<]*<\/a>/gi ); // locate links
+	const entries = content.match(/href="[^"]*"[^>]*>[^<]*<\/a>/gi); // locate links
 
-	for ( const entry of entries ) {
-		const [ all, uri, file ] = entry.match( /href="([^"]*)"[^>]*>\s*([^<]*)<\/a>/i );
-		if ( uri.substring( uri.length - 1 ) == '/' ) {
-			if ( ! file.match( /parent directory/i ) ) {
-				if ( file.substring( file.length - 1 ) == '/' )
-					dirs.push( file.substring( 0, file.length - 1 ) );
-				else
-					dirs.push( file );
+	for (const entry of entries) {
+		const [all, uri, file] = entry.match(
+			/href="([^"]*)"[^>]*>\s*([^<]*)<\/a>/i
+		);
+		if (uri.substring(uri.length - 1) == "/") {
+			if (!file.match(/parent directory/i)) {
+				if (file.substring(file.length - 1) == "/")
+					dirs.push(file.substring(0, file.length - 1));
+				else dirs.push(file);
 			}
-		}
-		else {
-			if ( file.match( /\.(jpg|jpeg|png|gif|bmp)$/i ) )
-				imgs.push( file );
-			else if ( file.match( /\.(mp3|flac|m4a|aac|ogg|wav|m3u|m3u8)$/i ) )
-				files.push( file );
+		} else {
+			if (file.match(/\.(jpg|jpeg|png|gif|bmp)$/i)) imgs.push(file);
+			else if (file.match(/\.(mp3|flac|m4a|aac|ogg|wav|m3u|m3u8)$/i))
+				files.push(file);
 		}
 	}
 
-	const cover = findImg( imgs, 'cover' ) || findImg( imgs, 'folder' ) || findImg( imgs, 'front' ) || imgs[0];
+	const cover =
+		findImg(imgs, "cover") ||
+		findImg(imgs, "folder") ||
+		findImg(imgs, "front") ||
+		imgs[0];
 	const collator = new Intl.Collator(); // for case-insensitive sorting - https://stackoverflow.com/a/40390844/2370385
 
-	return { cover, dirs: dirs.sort( collator.compare ), files: files.sort( collator.compare ) }
+	return {
+		cover,
+		dirs: dirs.sort(collator.compare),
+		files: files.sort(collator.compare),
+	};
 }
 
 /**
@@ -160,16 +164,15 @@ export function parseWebDirectory( content ) {
  *
  * @param {number} depth  how many levels to climb up
  */
-function resetPath( depth ) {
-
+function resetPath(depth) {
 	var prev;
 
-	while ( depth > 0 ) {
+	while (depth > 0) {
 		prev = currentPath.pop();
 		depth--;
 	}
 
-	enterDir( undefined, prev && prev.scrollTop );
+	enterDir(undefined, prev && prev.scrollTop);
 }
 
 /* ******************* Public functions: ******************* */
@@ -180,18 +183,16 @@ function resetPath( depth ) {
  * @param {string} fileName
  * @returns {string} full path to filename
  */
-export function makePath( fileName ) {
+export function makePath(fileName) {
+	var fullPath = "";
 
-	var fullPath = '';
+	currentPath.forEach((entry) => {
+		fullPath += entry.dir + "/";
+	});
 
-	currentPath.forEach( entry => {
-		fullPath += entry.dir + '/';
-	})
+	if (fileName) fullPath += fileName;
 
-	if ( fileName )
-		fullPath += fileName;
-
-	fullPath = fullPath.replace( /#/g, '%23' ); // replace any '#' character in the filename for its URL-safe code
+	fullPath = fullPath.replace(/#/g, "%23"); // replace any '#' character in the filename for its URL-safe code
 
 	return fullPath;
 }
@@ -202,13 +203,15 @@ export function makePath( fileName ) {
  * @param {string} [selector='li']  optional CSS selector
  * @returns {array} list of music files and playlists only
  */
-export function getFolderContents( selector = 'li' ) {
-
+export function getFolderContents(selector = "li") {
 	var contents = [];
 
-	ui_files.querySelectorAll( selector ).forEach( entry => {
-		if ( ['file', 'list'].includes( entry.dataset.type ) )
-			contents.push( { file: makePath( entry.dataset.path ), type: entry.dataset.type } );
+	ui_files.querySelectorAll(selector).forEach((entry) => {
+		if (["file", "list"].includes(entry.dataset.type))
+			contents.push({
+				file: makePath(entry.dataset.path),
+				type: entry.dataset.type,
+			});
 	});
 	return contents;
 }
@@ -220,82 +223,86 @@ export function getFolderContents( selector = 'li' ) {
  * @param {object} [options]   { dblClick: callback function, rootPath: starting path (defaults to '/music') }
  * @returns {Promise<array>}   A promise with the server status and the filelist's DOM element
  */
-export function create( container, options = {} ) {
-
+export function create(container, options = {}) {
 	var startUpTimer;
 
-	ui_path = document.createElement('ul');
-	ui_path.className = 'breadcrumb';
-	container.append( ui_path );
+	ui_path = document.createElement("ul");
+	ui_path.className = "breadcrumb";
+	container.append(ui_path);
 
-	ui_files = document.createElement('ul');
-	ui_files.className = 'filelist';
-	container.append( ui_files );
+	ui_files = document.createElement("ul");
+	ui_files.className = "filelist";
+	container.append(ui_files);
 
-	startUpTimer = setTimeout( () => {
-		ui_path.innerHTML = 'Waiting for server...';
-	}, 5000 );
+	startUpTimer = setTimeout(() => {
+		ui_path.innerHTML = "Waiting for server...";
+	}, 5000);
 
-	ui_path.innerHTML = 'Initializing... please wait...';
+	ui_path.innerHTML = "Initializing... please wait...";
 
-	ui_path.addEventListener( 'click', function( e ) {
-		if ( e.target && e.target.nodeName == 'LI' ) {
-			resetPath( e.target.dataset.depth );
+	ui_path.addEventListener("click", function (e) {
+		if (e.target && e.target.nodeName == "LI") {
+			resetPath(e.target.dataset.depth);
 		}
 	});
 
-	ui_files.addEventListener( 'click', function( e ) {
-		if ( e.target && e.target.nodeName == 'LI' ) {
-			if ( e.target.dataset.type == 'dir' )
-				enterDir( e.target.dataset.path );
-			else if ( e.target.dataset.type == 'mount' ) {
+	ui_files.addEventListener("click", function (e) {
+		if (e.target && e.target.nodeName == "LI") {
+			if (e.target.dataset.type == "dir") enterDir(e.target.dataset.path);
+			else if (e.target.dataset.type == "mount") {
 				currentPath = [];
-				enterDir( e.target.dataset.path );
+				enterDir(e.target.dataset.path);
 			}
 		}
 	});
 
-	if ( typeof options.dblClick == 'function' )
+	if (typeof options.dblClick == "function")
 		dblClickCallback = options.dblClick;
 
-//	if ( typeof options.onEnterDir == 'function' )
-//		enterDirCallback = options.onEnterDir;
+	//	if ( typeof options.onEnterDir == 'function' )
+	//		enterDirCallback = options.onEnterDir;
 
-	ui_files.addEventListener( 'dblclick', function( e ) {
-		if ( e.target && e.target.nodeName == 'LI' ) {
-			if ( dblClickCallback && ['file','list'].includes( e.target.dataset.type ) )
-				dblClickCallback( makePath( e.target.dataset.path ), e );
+	ui_files.addEventListener("dblclick", function (e) {
+		if (e.target && e.target.nodeName == "LI") {
+			if (
+				dblClickCallback &&
+				["file", "list"].includes(e.target.dataset.type)
+			)
+				dblClickCallback(makePath(e.target.dataset.path), e);
 		}
 	});
 
-	return new Promise( resolve => {
-		fetch( '/serverInfo' )
-			.then( response => {
+	return new Promise((resolve) => {
+		fetch("/serverInfo")
+			.then((response) => {
 				return response.text();
 			})
-			.then( async content => {
-				clearTimeout( startUpTimer );
+			.then(async (content) => {
+				clearTimeout(startUpTimer);
 				let status;
-				if ( content.startsWith('audioMotion') ) {
+				if (content.startsWith("audioMotion")) {
 					nodeServer = true;
 					status = 1;
-				}
-				else { // no response for our custom query, so it's probably running on a standard web server
+				} else {
+					// no response for our custom query, so it's probably running on a standard web server
 					status = 0;
 				}
-				mounts = [ options.rootPath || defaultRoot ];
-				if ( await enterDir( mounts[0] ) === false ) {
+				mounts = [options.rootPath || defaultRoot];
+				if ((await enterDir(mounts[0])) === false) {
 					ui_path.innerHTML = `Cannot access media folder (${mounts[0]}) on server!`;
-					ui_files.innerHTML = '';
+					ui_files.innerHTML = "";
 					status = -1;
 				}
-				resolve([ status, ui_files, status ? content : 'Standard web server' ]);
+				resolve([
+					status,
+					ui_files,
+					status ? content : "Standard web server",
+				]);
 			})
-			.catch( err => {
-				clearTimeout( startUpTimer );
-				ui_path.innerHTML = 'No file server found.';
-				resolve([ -1, ui_files ]);
+			.catch((err) => {
+				clearTimeout(startUpTimer);
+				ui_path.innerHTML = "No file server found.";
+				resolve([-1, ui_files]);
 			});
 	});
-
 }

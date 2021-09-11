@@ -15,14 +15,13 @@
  * {@link Autolinker.matcher.Url UrlMatcher}.
  */
 Autolinker.matcher.UrlMatchValidator = {
-
 	/**
 	 * Regex to test for a full protocol, with the two trailing slashes. Ex: 'http://'
 	 *
 	 * @private
 	 * @property {RegExp} hasFullProtocolRegex
 	 */
-	hasFullProtocolRegex : /^[A-Za-z][-.+A-Za-z0-9]*:\/\//,
+	hasFullProtocolRegex: /^[A-Za-z][-.+A-Za-z0-9]*:\/\//,
 
 	/**
 	 * Regex to find the URI scheme, such as 'mailto:'.
@@ -32,7 +31,7 @@ Autolinker.matcher.UrlMatchValidator = {
 	 * @private
 	 * @property {RegExp} uriSchemeRegex
 	 */
-	uriSchemeRegex : /^[A-Za-z][-.+A-Za-z0-9]*:/,
+	uriSchemeRegex: /^[A-Za-z][-.+A-Za-z0-9]*:/,
 
 	/**
 	 * Regex to determine if at least one word char exists after the protocol (i.e. after the ':')
@@ -40,7 +39,9 @@ Autolinker.matcher.UrlMatchValidator = {
 	 * @private
 	 * @property {RegExp} hasWordCharAfterProtocolRegex
 	 */
-	hasWordCharAfterProtocolRegex : new RegExp(":[^\\s]*?[" + Autolinker.RegexLib.alphaCharsStr + "]"),
+	hasWordCharAfterProtocolRegex: new RegExp(
+		":[^\\s]*?[" + Autolinker.RegexLib.alphaCharsStr + "]"
+	),
 
 	/**
 	 * Regex to determine if the string is a valid IP address
@@ -48,7 +49,8 @@ Autolinker.matcher.UrlMatchValidator = {
 	 * @private
 	 * @property {RegExp} ipRegex
 	 */
-	ipRegex: /[0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?(:[0-9]*)?\/?$/,
+	ipRegex:
+		/[0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?\.[0-9][0-9]?[0-9]?(:[0-9]*)?\/?$/,
 
 	/**
 	 * Determines if a given URL match found by the {@link Autolinker.matcher.Url UrlMatcher}
@@ -75,13 +77,13 @@ Autolinker.matcher.UrlMatchValidator = {
 	 *   processed, or `false` if the match is invalid and/or should just not be
 	 *   processed.
 	 */
-	isValid : function( urlMatch, protocolUrlMatch ) {
-		if(
-			( protocolUrlMatch && !this.isValidUriScheme( protocolUrlMatch ) ) ||
-			this.urlMatchDoesNotHaveProtocolOrDot( urlMatch, protocolUrlMatch ) ||    // At least one period ('.') must exist in the URL match for us to consider it an actual URL, *unless* it was a full protocol match (like 'http://localhost')
-			(this.urlMatchDoesNotHaveAtLeastOneWordChar( urlMatch, protocolUrlMatch ) && // At least one letter character must exist in the domain name after a protocol match. Ex: skip over something like "git:1.0"
-			   !this.isValidIpAddress( urlMatch )) || // Except if it's an IP address
-			this.containsMultipleDots( urlMatch )
+	isValid: function (urlMatch, protocolUrlMatch) {
+		if (
+			(protocolUrlMatch && !this.isValidUriScheme(protocolUrlMatch)) ||
+			this.urlMatchDoesNotHaveProtocolOrDot(urlMatch, protocolUrlMatch) || // At least one period ('.') must exist in the URL match for us to consider it an actual URL, *unless* it was a full protocol match (like 'http://localhost')
+			(this.urlMatchDoesNotHaveAtLeastOneWordChar(urlMatch, protocolUrlMatch) && // At least one letter character must exist in the domain name after a protocol match. Ex: skip over something like "git:1.0"
+				!this.isValidIpAddress(urlMatch)) || // Except if it's an IP address
+			this.containsMultipleDots(urlMatch)
 		) {
 			return false;
 		}
@@ -89,20 +91,21 @@ Autolinker.matcher.UrlMatchValidator = {
 		return true;
 	},
 
-
-	isValidIpAddress : function ( uriSchemeMatch ) {
-		var newRegex = new RegExp(this.hasFullProtocolRegex.source + this.ipRegex.source);
-		var uriScheme = uriSchemeMatch.match( newRegex );
+	isValidIpAddress: function (uriSchemeMatch) {
+		var newRegex = new RegExp(
+			this.hasFullProtocolRegex.source + this.ipRegex.source
+		);
+		var uriScheme = uriSchemeMatch.match(newRegex);
 
 		return uriScheme !== null;
 	},
 
-	containsMultipleDots : function ( urlMatch ) {
+	containsMultipleDots: function (urlMatch) {
 		var stringBeforeSlash = urlMatch;
 		if (this.hasFullProtocolRegex.test(urlMatch)) {
-			stringBeforeSlash = urlMatch.split('://')[1];
+			stringBeforeSlash = urlMatch.split("://")[1];
 		}
-		return stringBeforeSlash.split('/')[0].indexOf("..") > -1;
+		return stringBeforeSlash.split("/")[0].indexOf("..") > -1;
 	},
 
 	/**
@@ -114,12 +117,11 @@ Autolinker.matcher.UrlMatchValidator = {
 	 *   match. Ex: 'http://yahoo.com' or 'mailto:a@a.com'.
 	 * @return {Boolean} `true` if the scheme is a valid one, `false` otherwise.
 	 */
-	isValidUriScheme : function( uriSchemeMatch ) {
-		var uriScheme = uriSchemeMatch.match( this.uriSchemeRegex )[ 0 ].toLowerCase();
+	isValidUriScheme: function (uriSchemeMatch) {
+		var uriScheme = uriSchemeMatch.match(this.uriSchemeRegex)[0].toLowerCase();
 
-		return ( uriScheme !== 'javascript:' && uriScheme !== 'vbscript:' );
+		return uriScheme !== "javascript:" && uriScheme !== "vbscript:";
 	},
-
 
 	/**
 	 * Determines if a URL match does not have either:
@@ -142,10 +144,14 @@ Autolinker.matcher.UrlMatchValidator = {
 	 * @return {Boolean} `true` if the URL match does not have a full protocol,
 	 *   or at least one dot ('.') in a non-full-protocol match.
 	 */
-	urlMatchDoesNotHaveProtocolOrDot : function( urlMatch, protocolUrlMatch ) {
-		return ( !!urlMatch && ( !protocolUrlMatch || !this.hasFullProtocolRegex.test( protocolUrlMatch ) ) && urlMatch.indexOf( '.' ) === -1 );
+	urlMatchDoesNotHaveProtocolOrDot: function (urlMatch, protocolUrlMatch) {
+		return (
+			!!urlMatch &&
+			(!protocolUrlMatch ||
+				!this.hasFullProtocolRegex.test(protocolUrlMatch)) &&
+			urlMatch.indexOf(".") === -1
+		);
 	},
-
 
 	/**
 	 * Determines if a URL match does not have at least one word character after
@@ -164,12 +170,11 @@ Autolinker.matcher.UrlMatchValidator = {
 	 * @return {Boolean} `true` if the URL match does not have at least one word
 	 *   character in it after the protocol, `false` otherwise.
 	 */
-	urlMatchDoesNotHaveAtLeastOneWordChar : function( urlMatch, protocolUrlMatch ) {
-		if( urlMatch && protocolUrlMatch ) {
-			return !this.hasWordCharAfterProtocolRegex.test( urlMatch );
+	urlMatchDoesNotHaveAtLeastOneWordChar: function (urlMatch, protocolUrlMatch) {
+		if (urlMatch && protocolUrlMatch) {
+			return !this.hasWordCharAfterProtocolRegex.test(urlMatch);
 		} else {
 			return false;
 		}
-	}
-
+	},
 };

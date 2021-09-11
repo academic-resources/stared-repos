@@ -2,11 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-
+@import "../../../protocol/css/includes/lib";
 
 //* -------------------------------------------------------------------------- */
 // Navigation styles
@@ -26,7 +25,8 @@ $image-path: '/media/protocol/img';
 
     .c-navigation-logo a {
         @include image-replaced;
-        background: transparent url('/media/img/nav/logo-black.png') center center no-repeat;
+        background: transparent url("/media/img/nav/logo-black.png") center
+            center no-repeat;
         display: block;
         height: 32px;
         width: 112px;
@@ -87,7 +87,7 @@ $image-path: '/media/protocol/img';
     }
 
     .c-menu-title {
-        @include bidi(((margin-right, $spacing-md, margin-left, 0),));
+        @include bidi(((margin-right, $spacing-md, margin-left, 0)));
         display: inline-block;
         *display: inline;
         font-weight: bold;

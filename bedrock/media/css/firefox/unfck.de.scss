@@ -2,13 +2,12 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/hero';
-@import '../../protocol/css/includes/forms/lib';
-
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/hero";
+@import "../../protocol/css/includes/forms/lib";
 
 // --------------------------------------------------------------------------
 // Protocol over-rides
@@ -46,12 +45,15 @@ main {
         }
     }
 
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
         color: $color-white;
         margin-bottom: $spacing-md;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         color: $color-white;
     }
 }
@@ -63,7 +65,7 @@ main {
     &,
     & .mzp-c-card-feature-desc,
     & .mzp-c-hero {
-        background-color: #6E40C8;
+        background-color: #6e40c8;
         color: $color-white;
     }
 
@@ -71,7 +73,8 @@ main {
         background-color: $color-purple-90;
         border-color: $color-purple-90;
         color: $color-green-30;
-        transition: background-color 100ms, box-shadow 100ms, border-color 100ms, color 100ms;
+        transition: background-color 100ms, box-shadow 100ms, border-color 100ms,
+            color 100ms;
 
         &:hover {
             background-color: $color-green-30;
@@ -238,7 +241,7 @@ main {
 
     .c-masthead-logo {
         @include background-size(contain);
-        background-image: url('/media/img/firefox/campaign/unfck/de/unfck-masthead.png');
+        background-image: url("/media/img/firefox/campaign/unfck/de/unfck-masthead.png");
         background-repeat: no-repeat;
         height: 0;
         margin: 0 auto;
@@ -246,7 +249,10 @@ main {
         padding-top: 171 * 100% / 684;
 
         @media #{$mq-md} {
-            @include at2x('/media/img/firefox/campaign/unfck/de/unfck-masthead.png', contain);
+            @include at2x(
+                "/media/img/firefox/campaign/unfck/de/unfck-masthead.png",
+                contain
+            );
         }
     }
 }
@@ -278,27 +284,33 @@ main {
 .c-banner-wrapper.show-default {
     .c-banner {
         @include background-size(contain);
-        background-image: url('/media/img/firefox/campaign/unfck/de/unfck-header.png');
+        background-image: url("/media/img/firefox/campaign/unfck/de/unfck-header.png");
         padding-top: 562 * 100% / 742;
         top: 0;
 
         @media #{$mq-sm} {
-            @include at2x('/media/img/firefox/campaign/unfck/de/unfck-header.png', contain);
+            @include at2x(
+                "/media/img/firefox/campaign/unfck/de/unfck-header.png",
+                contain
+            );
             margin-bottom: 0;
             padding-top: 562 * 100% / 742;
         }
     }
 }
 
-.c-banner-wrapper.show-firefox  {
+.c-banner-wrapper.show-firefox {
     .c-banner {
         @include background-size(contain);
-        background-image: url('/media/img/firefox/campaign/unfck/de/danke.png');
-        max-width:  100%;
+        background-image: url("/media/img/firefox/campaign/unfck/de/danke.png");
+        max-width: 100%;
         padding-top: 439 * 100% / 900;
 
         @media #{$mq-md} {
-            @include at2x('/media/img/firefox/campaign/unfck/de/danke.png', contain);
+            @include at2x(
+                "/media/img/firefox/campaign/unfck/de/danke.png",
+                contain
+            );
         }
     }
 }
@@ -338,26 +350,29 @@ main {
     }
 
     @media #{$mq-xl} {
-
         .mzp-c-hero-body {
             position: relative;
 
             &:before,
             &:after {
-                content: '';
+                content: "";
                 height: 410px;
                 position: absolute;
                 width: 622px;
             }
 
             &:before {
-                background: transparent url('/media/img/firefox/campaign/unfck/de/speckles1.png') left bottom no-repeat;
+                background: transparent
+                    url("/media/img/firefox/campaign/unfck/de/speckles1.png")
+                    left bottom no-repeat;
                 bottom: -170px;
                 left: -800px;
             }
 
             &:after {
-                background: transparent url('/media/img/firefox/campaign/unfck/de/speckles2.png') left bottom no-repeat;
+                background: transparent
+                    url("/media/img/firefox/campaign/unfck/de/speckles2.png")
+                    left bottom no-repeat;
                 bottom: -300px;
                 right: -800px;
             }
@@ -445,7 +460,7 @@ main {
     text-align: center;
 }
 
-@supports (display:grid) {
+@supports (display: grid) {
     .c-item-unfck {
         @include grid-column-gap($h-grid-xs);
         display: grid;
@@ -472,9 +487,8 @@ main {
     .c-item-desc {
         grid-area: desc;
 
-
         p:last-child {
-             margin-bottom: 0;
+            margin-bottom: 0;
         }
     }
 
@@ -554,14 +568,14 @@ main {
     }
 
     &.mozilla {
-        background-image: url('/media/protocol/img/logos/mozilla/logo-word-hor.svg');
+        background-image: url("/media/protocol/img/logos/mozilla/logo-word-hor.svg");
         @include background-size(112px, 32px);
         padding-top: $spacing-xl + 48px;
     }
 
     &.firefox {
         @include background-size(175px, 32px);
-        background-image: url('/media/img/logos/firefox/logo-word-hor-flat.svg');
+        background-image: url("/media/img/logos/firefox/logo-word-hor-flat.svg");
         padding-top: $spacing-xl + 48px;
     }
 }
@@ -571,11 +585,13 @@ main {
         @include clearfix;
 
         .c-half-bucket {
-            @include bidi((
-                (float, left, right),
-                (margin-left, 0, $spacing-xl * 2),
-                (margin-right, $spacing-xl * 2, 0),
-            ));
+            @include bidi(
+                (
+                    (float, left, right),
+                    (margin-left, 0, $spacing-xl * 2),
+                    (margin-right, $spacing-xl * 2, 0)
+                )
+            );
             background-position: top left;
             text-align: left;
             width: calc(50% - (#{$spacing-xl}));
@@ -589,8 +605,8 @@ main {
                 margin-right: 0;
             }
 
-            &:nth-child(2n+1) {
-                @include bidi(((clear, left, right),));
+            &:nth-child(2n + 1) {
+                @include bidi(((clear, left, right)));
             }
         }
     }

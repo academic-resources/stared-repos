@@ -2,17 +2,17 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/emphasis-box';
-@import '../../protocol/components/fxa-form';
-@import '../../../protocol/css/components/logos/wordmark';
-@import '../../../protocol/css/components/logos/wordmark-product-monitor';
-@import '../../../protocol/css/components/logos/wordmark-product-vpn';
-@import '../../../protocol/css/components/logos/wordmark-product-pocket';
-@import '../../../protocol/css/components/logos/wordmark-product-firefox';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/emphasis-box";
+@import "../../protocol/components/fxa-form";
+@import "../../../protocol/css/components/logos/wordmark";
+@import "../../../protocol/css/components/logos/wordmark-product-monitor";
+@import "../../../protocol/css/components/logos/wordmark-product-vpn";
+@import "../../../protocol/css/components/logos/wordmark-product-pocket";
+@import "../../../protocol/css/components/logos/wordmark-product-firefox";
 
 .t-medium .mzp-l-content,
 .t-medium .mzp-c-split-container {
@@ -30,7 +30,7 @@ $image-path: '/media/protocol/img';
         margin: $spacing-md 0;
 
         strong {
-            @include zap('/media/protocol/img/zaps/zap-09.svg');
+            @include zap("/media/protocol/img/zaps/zap-09.svg");
         }
     }
 }
@@ -190,7 +190,6 @@ $image-path: '/media/protocol/img';
 }
 
 .state-firefox-desktop-70 {
-
     .show-firefox-desktop-70 {
         display: block;
     }
@@ -200,7 +199,6 @@ $image-path: '/media/protocol/img';
     }
 
     .privacy-products-etp .mzp-c-card-picto-title {
-
         &:hover,
         &:active,
         &:focus {
@@ -211,7 +209,6 @@ $image-path: '/media/protocol/img';
 }
 
 .state-firefox-desktop-old {
-
     .show-firefox-desktop-old {
         display: block;
     }

@@ -15,29 +15,29 @@ const RootQuery = new GraphQLObjectType({
       type: new GraphQLList(DogType),
       resolve() {
         return Dog.find({});
-      }
+      },
     },
     dog: {
       type: DogType,
       args: { _id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(parentValue, { _id }) {
         return Dog.findById(_id);
-      }
+      },
     },
     toys: {
       type: new GraphQLList(ToyType),
       resolve() {
         return Toy.find({});
-      }
+      },
     },
     toy: {
       type: ToyType,
       args: { _id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(parentValue, args) {
         return Toy.findById(args._id);
-      }
-    }
-  }
+      },
+    },
+  },
 });
 
 module.exports = RootQuery;

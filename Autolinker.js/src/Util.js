@@ -7,14 +7,14 @@
  * A few utility methods for Autolinker.
  */
 Autolinker.Util = {
-
 	/**
 	 * @property {Function} abstractMethod
 	 *
 	 * A function object which represents an abstract method.
 	 */
-	abstractMethod : function() { throw "abstract"; },
-
+	abstractMethod: function () {
+		throw "abstract";
+	},
 
 	/**
 	 * @private
@@ -23,8 +23,7 @@ Autolinker.Util = {
 	 * The regular expression used to trim the leading and trailing whitespace
 	 * from a string.
 	 */
-	trimRegex : /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,
-
+	trimRegex: /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,
 
 	/**
 	 * Assigns (shallow copies) the properties of `src` onto `dest`.
@@ -33,16 +32,15 @@ Autolinker.Util = {
 	 * @param {Object} src The source object.
 	 * @return {Object} The destination object (`dest`)
 	 */
-	assign : function( dest, src ) {
-		for( var prop in src ) {
-			if( src.hasOwnProperty( prop ) ) {
-				dest[ prop ] = src[ prop ];
+	assign: function (dest, src) {
+		for (var prop in src) {
+			if (src.hasOwnProperty(prop)) {
+				dest[prop] = src[prop];
 			}
 		}
 
 		return dest;
 	},
-
 
 	/**
 	 * Assigns (shallow copies) the properties of `src` onto `dest`, if the
@@ -52,16 +50,15 @@ Autolinker.Util = {
 	 * @param {Object} src The source object.
 	 * @return {Object} The destination object (`dest`)
 	 */
-	defaults : function( dest, src ) {
-		for( var prop in src ) {
-			if( src.hasOwnProperty( prop ) && dest[ prop ] === undefined ) {
-				dest[ prop ] = src[ prop ];
+	defaults: function (dest, src) {
+		for (var prop in src) {
+			if (src.hasOwnProperty(prop) && dest[prop] === undefined) {
+				dest[prop] = src[prop];
 			}
 		}
 
 		return dest;
 	},
-
 
 	/**
 	 * Extends `superclass` to create a new subclass, adding the `protoProps` to the new subclass's prototype.
@@ -71,29 +68,30 @@ Autolinker.Util = {
 	 *   special property `constructor`, which will be used as the new subclass's constructor function.
 	 * @return {Function} The new subclass function.
 	 */
-	extend : function( superclass, protoProps ) {
+	extend: function (superclass, protoProps) {
 		var superclassProto = superclass.prototype;
 
-		var F = function() {};
+		var F = function () {};
 		F.prototype = superclassProto;
 
 		var subclass;
-		if( protoProps.hasOwnProperty( 'constructor' ) ) {
+		if (protoProps.hasOwnProperty("constructor")) {
 			subclass = protoProps.constructor;
 		} else {
-			subclass = function() { superclassProto.constructor.apply( this, arguments ); };
+			subclass = function () {
+				superclassProto.constructor.apply(this, arguments);
+			};
 		}
 
-		var subclassProto = subclass.prototype = new F();  // set up prototype chain
-		subclassProto.constructor = subclass;  // fix constructor property
+		var subclassProto = (subclass.prototype = new F()); // set up prototype chain
+		subclassProto.constructor = subclass; // fix constructor property
 		subclassProto.superclass = superclassProto;
 
-		delete protoProps.constructor;  // don't re-assign constructor property to the prototype, since a new function may have been created (`subclass`), which is now already there
-		Autolinker.Util.assign( subclassProto, protoProps );
+		delete protoProps.constructor; // don't re-assign constructor property to the prototype, since a new function may have been created (`subclass`), which is now already there
+		Autolinker.Util.assign(subclassProto, protoProps);
 
 		return subclass;
 	},
-
 
 	/**
 	 * Truncates the `str` at `len - ellipsisChars.length`, and adds the `ellipsisChars` to the
@@ -105,22 +103,21 @@ Autolinker.Util = {
 	 * @param {String} [ellipsisChars=...] The ellipsis character(s) to add to the end of `str`
 	 *   when truncated. Defaults to '...'
 	 */
-	ellipsis : function( str, truncateLen, ellipsisChars ) {
+	ellipsis: function (str, truncateLen, ellipsisChars) {
 		var ellipsisLength;
 
-		if( str.length > truncateLen ) {
-			if(ellipsisChars == null) {
-			  ellipsisChars = '&hellip;';
-			  ellipsisLength = 3;
+		if (str.length > truncateLen) {
+			if (ellipsisChars == null) {
+				ellipsisChars = "&hellip;";
+				ellipsisLength = 3;
 			} else {
-			  ellipsisLength = ellipsisChars.length;
+				ellipsisLength = ellipsisChars.length;
 			}
 
-			str = str.substring( 0, truncateLen - ellipsisLength ) + ellipsisChars;
+			str = str.substring(0, truncateLen - ellipsisLength) + ellipsisChars;
 		}
 		return str;
 	},
-
 
 	/**
 	 * Supports `Array.prototype.indexOf()` functionality for old IE (IE8 and below).
@@ -129,18 +126,16 @@ Autolinker.Util = {
 	 * @param {*} element The element to find in the array, and return the index of.
 	 * @return {Number} The index of the `element`, or -1 if it was not found.
 	 */
-	indexOf : function( arr, element ) {
-		if( Array.prototype.indexOf ) {
-			return arr.indexOf( element );
-
+	indexOf: function (arr, element) {
+		if (Array.prototype.indexOf) {
+			return arr.indexOf(element);
 		} else {
-			for( var i = 0, len = arr.length; i < len; i++ ) {
-				if( arr[ i ] === element ) return i;
+			for (var i = 0, len = arr.length; i < len; i++) {
+				if (arr[i] === element) return i;
 			}
 			return -1;
 		}
 	},
-
 
 	/**
 	 * Removes array elements based on a filtering function. Mutates the input
@@ -156,14 +151,13 @@ Autolinker.Util = {
 	 *   remove an element.
 	 * @return {Array} The mutated input `arr`.
 	 */
-	remove : function( arr, fn ) {
-		for( var i = arr.length - 1; i >= 0; i-- ) {
-			if( fn( arr[ i ] ) === true ) {
-				arr.splice( i, 1 );
+	remove: function (arr, fn) {
+		for (var i = arr.length - 1; i >= 0; i--) {
+			if (fn(arr[i]) === true) {
+				arr.splice(i, 1);
 			}
 		}
 	},
-
 
 	/**
 	 * Performs the functionality of what modern browsers do when `String.prototype.split()` is called
@@ -188,26 +182,26 @@ Autolinker.Util = {
 	 *   to contain capturing parenthesis - it will be assumed that any match has them.
 	 * @return {String[]} The split array of strings, with the splitting character(s) included.
 	 */
-	splitAndCapture : function( str, splitRegex ) {
+	splitAndCapture: function (str, splitRegex) {
 		// @if DEBUG
-		if( !splitRegex.global ) throw new Error( "`splitRegex` must have the 'g' flag set" );
+		if (!splitRegex.global)
+			throw new Error("`splitRegex` must have the 'g' flag set");
 		// @endif
 
 		var result = [],
-		    lastIdx = 0,
-		    match;
+			lastIdx = 0,
+			match;
 
-		while( match = splitRegex.exec( str ) ) {
-			result.push( str.substring( lastIdx, match.index ) );
-			result.push( match[ 0 ] );  // push the splitting char(s)
+		while ((match = splitRegex.exec(str))) {
+			result.push(str.substring(lastIdx, match.index));
+			result.push(match[0]); // push the splitting char(s)
 
-			lastIdx = match.index + match[ 0 ].length;
+			lastIdx = match.index + match[0].length;
 		}
-		result.push( str.substring( lastIdx ) );
+		result.push(str.substring(lastIdx));
 
 		return result;
 	},
-
 
 	/**
 	 * Trims the leading and trailing whitespace from a string.
@@ -215,8 +209,7 @@ Autolinker.Util = {
 	 * @param {String} str The string to trim.
 	 * @return {String}
 	 */
-	trim : function( str ) {
-		return str.replace( this.trimRegex, '' );
-	}
-
+	trim: function (str) {
+		return str.replace(this.trimRegex, "");
+	},
 };

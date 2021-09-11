@@ -1,31 +1,28 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. #} {% extends
+"mozorg/contact/spaces/base.html" %} {% block map %} {{
+map_image('img/contact/osm/spaces/all-large.jpg',
+'img/contact/osm/spaces/all-large-high-res.jpg') }} {% endblock %} {% block
+contact_entry %}
+<div id="entry-container">
+  <section class="entry" id="spaces" data-tab="spaces">
+    <h2>{{ _('Mozilla Spaces') }}</h2>
+    <p>
+      {% trans %} Mozilla Spaces are our offices around the world. They are open
+      environments where Mozillians can work side by side — hacking, coding,
+      designing, researching and creating. They are places for us to meet,
+      collaborate and continue to building a brighter future for the Web. {%
+      endtrans %}
+    </p>
 
-{% extends "mozorg/contact/spaces/base.html" %}
-
-{% block map %}
-  {{ map_image('img/contact/osm/spaces/all-large.jpg', 'img/contact/osm/spaces/all-large-high-res.jpg') }}
-{% endblock %}
-
-{% block contact_entry %}
-  <div id="entry-container">
-    <section class="entry" id="spaces" data-tab="spaces">
-      <h2>{{ _('Mozilla Spaces') }}</h2>
-      <p>
-      {% trans %}
-        Mozilla Spaces are our offices around the world. They are open environments
-        where Mozillians can work side by side — hacking, coding, designing,
-        researching and creating. They are places for us to meet, collaborate and
-        continue to building a brighter future for the Web.
-      {% endtrans %}
-      </p>
-
-      <p><em>
-      {% trans link_sumo='https://support.mozilla.org/' %}
-        Need help with Firefox? <a href="{{ link_sumo }}">Get it on our support site</a>
-      {% endtrans %}
-      </em></p>
-    </section>
-  </div>
+    <p>
+      <em>
+        {% trans link_sumo='https://support.mozilla.org/' %} Need help with
+        Firefox? <a href="{{ link_sumo }}">Get it on our support site</a>
+        {% endtrans %}
+      </em>
+    </p>
+  </section>
+</div>
 {% endblock %}

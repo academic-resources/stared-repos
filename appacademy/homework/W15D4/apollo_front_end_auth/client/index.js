@@ -10,7 +10,7 @@ import App from "./src/components/App";
 
 // set up our Cache for Apollo
 const cache = new InMemoryCache({
-  dataIdFromObject: object => object.id || null
+  dataIdFromObject: (object) => object.id || null,
 });
 
 // set up our client instance with the cache and a uri to know where data
@@ -20,18 +20,18 @@ const client = new ApolloClient({
   cache,
   headers: {
     // pass our token into the header of each request
-    authorization: localStorage.getItem("auth-token")
+    authorization: localStorage.getItem("auth-token"),
   },
   onError: ({ networkError, graphQLErrors }) => {
     console.log("graphQLErrors", graphQLErrors);
     console.log("networkError", networkError);
-  }
+  },
 });
 
 cache.writeData({
   data: {
-    isLoggedIn: Boolean(localStorage.getItem("auth-token"))
-  }
+    isLoggedIn: Boolean(localStorage.getItem("auth-token")),
+  },
 });
 
 // Setup our Apollo Provider so that our entire application

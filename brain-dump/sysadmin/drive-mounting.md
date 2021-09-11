@@ -1,11 +1,13 @@
 # Locating the USB Mount Point in Linux
 
 In a CLI terminal:
+
 ```bash
 mount -v | grep "^/" | awk '{print "\nPartition identifier: " $1  "\n Mountpoint: "  $3}'
 ```
 
 Returns the following:
+
 ```text
 Partition identifier: /dev/sda4
  Mountpoint: /

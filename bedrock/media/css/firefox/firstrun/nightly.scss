@@ -2,15 +2,15 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/picto-card';
-@import '../../../protocol/css/components/picto';
-@import '../../../protocol/css/templates/multi-column';
-@import '../../../protocol/css/components/hero';
-@import '../../../protocol/css/templates/card-layout';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/picto-card";
+@import "../../../protocol/css/components/picto";
+@import "../../../protocol/css/templates/multi-column";
+@import "../../../protocol/css/components/hero";
+@import "../../../protocol/css/templates/card-layout";
 
 main {
     background-color: $color-ink-80;
@@ -22,7 +22,7 @@ main {
     padding-bottom: 0;
 
     .mzp-c-hero-title {
-        background-image: url('#{$image-path}/logos/firefox/browser/nightly/logo-lg-high-res.png');
+        background-image: url("#{$image-path}/logos/firefox/browser/nightly/logo-lg-high-res.png");
     }
 
     @media #{$mq-md} {
@@ -39,7 +39,7 @@ main {
 
     .contribute-title {
         @include text-title-xs;
-        color: get-theme('title-text-color-inverse');
+        color: get-theme("title-text-color-inverse");
         font-weight: normal;
         margin: $spacing-lg auto;
         max-width: 580px;

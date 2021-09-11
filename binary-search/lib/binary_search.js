@@ -1,10 +1,10 @@
 function binarySearch(list, target) {
   let slicePoint;
-  if (list.length === 0 || (list.length === 1 && list[0] !== target)) return false;
+  if (list.length === 0 || (list.length === 1 && list[0] !== target))
+    return false;
   if (list.length % 2 === 0) {
     slicePoint = list.length / 2;
-  }
-  else {
+  } else {
     slicePoint = (list.length - 1) / 2;
   }
 
@@ -13,11 +13,9 @@ function binarySearch(list, target) {
 
   if (target < list[slicePoint]) {
     return binarySearch(left, target);
-  }
-  else if (target > list[slicePoint]) {
+  } else if (target > list[slicePoint]) {
     return binarySearch(right, target);
-  }
-  else {
+  } else {
     return true;
   }
 }
@@ -47,10 +45,8 @@ function binarySearch(list, target) {
 //   }
 // }
 
-
 // console.log(binarySearch([5, 10, 12, 15, 20, 30, 70], 12));
 // console.log(binarySearch([5, 10, 12, 15, 20, 30, 70], 24));
-
 
 // parameter list: a list of sorted value
 // parameter target: the value to search for
@@ -91,11 +87,9 @@ function binarySearchIndex(list, target, low = 0, high = list.length - 1) {
 
   if (target < list[slicePoint]) {
     return binarySearchIndex(list, target, low, slicePoint);
-  }
-  else if (target > list[slicePoint]) {
+  } else if (target > list[slicePoint]) {
     return binarySearchIndex(list, target, slicePoint + 1, high);
-  }
-  else {
+  } else {
     return slicePoint;
   }
 }
@@ -131,8 +125,7 @@ function binarySearchIndex(list, target, low = 0, high = list.length - 1) {
 //   the slice point plus one, and high
 // if neither of those is true, return the slice point
 
-
 module.exports = {
   binarySearch,
-  binarySearchIndex
+  binarySearchIndex,
 };

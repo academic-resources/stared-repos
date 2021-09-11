@@ -1,21 +1,22 @@
-{% extends "security/base.html" %}
-
-{% block page_title %}Mozilla Foundation Security Advisories{% endblock %}
-{% set body_id = "advisories" %}
-
-{% block article %}
-  <header>
-    <h1 class="mzp-c-article-title">Mozilla Foundation Security Advisories</h1>
-  </header>
-  {% include "security/partials/impact_key.html" %}
-
-  {% for group in advisories|groupby('announced')|reverse %}
-    <h2>{{ group.grouper|datetime }}</h2>
-    <ul>
-      {% for advisory in group.list %}
-        <li class="level-item">
-          <a href="{{ advisory.get_absolute_url() }}"><span class="level {{ advisory.impact_class }}">MFSA {{ advisory.id }}</span> {{ advisory.title|safe }}</a></li>
-      {% endfor %}
-    </ul>
+{% extends "security/base.html" %} {% block page_title %}Mozilla Foundation
+Security Advisories{% endblock %} {% set body_id = "advisories" %} {% block
+article %}
+<header>
+  <h1 class="mzp-c-article-title">Mozilla Foundation Security Advisories</h1>
+</header>
+{% include "security/partials/impact_key.html" %} {% for group in
+advisories|groupby('announced')|reverse %}
+<h2>{{ group.grouper|datetime }}</h2>
+<ul>
+  {% for advisory in group.list %}
+  <li class="level-item">
+    <a href="{{ advisory.get_absolute_url() }}"
+      ><span class="level {{ advisory.impact_class }}"
+        >MFSA {{ advisory.id }}</span
+      >
+      {{ advisory.title|safe }}</a
+    >
+  </li>
   {% endfor %}
-{% endblock %}
+</ul>
+{% endfor %} {% endblock %}

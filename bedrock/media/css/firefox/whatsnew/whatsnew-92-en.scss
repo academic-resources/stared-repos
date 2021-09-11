@@ -2,25 +2,23 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/notification-bar';
-@import '../../../protocol/css/components/logos/logo';
-@import '../../../protocol/css/components/logos/logo-product-vpn';
-@import '../../../protocol/css/components/picto';
-@import '../../../protocol/css/templates/multi-column';
-@import 'includes/header';
-
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/notification-bar";
+@import "../../../protocol/css/components/logos/logo";
+@import "../../../protocol/css/components/logos/logo-product-vpn";
+@import "../../../protocol/css/components/picto";
+@import "../../../protocol/css/templates/multi-column";
+@import "includes/header";
 
 // Override _header.scss since this page doesn't support dark mode
 @media (prefers-color-scheme: dark) {
     .c-page-header-logo-fx {
-        background-image: url($image-path + '/logos/firefox/browser/logo-word-hor-sm.png');
+        background-image: url($image-path + "/logos/firefox/browser/logo-word-hor-sm.png");
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Main content
@@ -35,7 +33,7 @@ $image-path: '/media/protocol/img';
 
 .wnp-main-title {
     @include text-title-md;
-    color: get-theme('title-text-color');
+    color: get-theme("title-text-color");
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
@@ -51,7 +49,6 @@ $image-path: '/media/protocol/img';
     margin-left: auto;
     margin-right: auto;
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Utilities (link to release notes)

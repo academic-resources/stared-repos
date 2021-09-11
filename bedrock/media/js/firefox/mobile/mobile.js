@@ -3,21 +3,20 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // create namespace
-if (typeof window.Mozilla === 'undefined') {
+if (typeof window.Mozilla === "undefined") {
     window.Mozilla = {};
 }
 
-(function(Mozilla) {
-    'use strict';
-    var sendToPrimary = document.getElementById('s2d-primary');
-    var sendToSecondary = document.getElementById('s2d-primary');
+(function (Mozilla) {
+    "use strict";
+    var sendToPrimary = document.getElementById("s2d-primary");
+    var sendToSecondary = document.getElementById("s2d-primary");
 
     if (sendToPrimary && sendToSecondary) {
-        var formPrimary = new Mozilla.SendToDevice('s2d-primary');
+        var formPrimary = new Mozilla.SendToDevice("s2d-primary");
         formPrimary.init();
 
-        var formSecondary = new Mozilla.SendToDevice('s2d-secondary');
+        var formSecondary = new Mozilla.SendToDevice("s2d-secondary");
         formSecondary.init();
     }
-
 })(window.Mozilla);

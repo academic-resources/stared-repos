@@ -11,46 +11,57 @@ Commands frequently used in Cisco IOS, so I don't forget them.
 - [Troubleshooting](troubleshooting.md) - Gather info about drops and errors
 
 ## Informational Commands
+
 Bring up a disabled interface
+
 ```bash
 no shut
 ```
+
 Show all registered VLANs (and associated access ports)
+
 ```bash
 show vlan brief
 ```
 
 Show allowed VLANs on a particular trunk port
+
 ```bash
 sh int Gi0/43 trunk
 ```
 
 Return all IPs registered to the switch
+
 ```bash
 show ip interface brief
 ```
 
 If the ports are only VLAN carriers, exclude unneeded stuff:
+
 ```bash
 show ip interface brief | exclude unassigned
 ```
 
 Show port security info
+
 ```bash
 sh port-security address
 ```
 
 Show port security info for a specific switchport
+
 ```bash
 sh port-security int Gi0/2
 ```
 
 Show existing config files / flash memory
+
 ```bash
 show flash
 ```
 
 Device info (IOS version, etc)
+
 ```bash
 show version
 ```

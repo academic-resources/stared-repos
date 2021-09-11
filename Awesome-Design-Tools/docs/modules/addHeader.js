@@ -1,14 +1,14 @@
 const addHeader = (
   { document },
-  title = 'Awesome Design Tools',
+  title = "Awesome Design Tools",
   logo,
   nav,
   isTool = false,
   isPlugin = false,
   isKit = false
 ) => {
-  const header = document.querySelector('.header-top');
-  header.classList.add('header-top--hide-banner');
+  const header = document.querySelector(".header-top");
+  header.classList.add("header-top--hide-banner");
   const { loop } = nav;
 
   const defineProductName = () =>
@@ -35,18 +35,18 @@ const addHeader = (
             </div>
             <nav class="header-top__nav">${loop
               .map(
-                item => `
+                (item) => `
                     <a
                         href=${item.href}
                         class="header-top__nav-item ${item.className} ${
-                  item.isActive ? '-open -active' : ''
+                  item.isActive ? "-open -active" : ""
                 }"
                     >
                         <span>${item.title}</span>
                     </a>
                 `
               )
-              .join(' ')}
+              .join(" ")}
             </nav>
             ${
               isTool

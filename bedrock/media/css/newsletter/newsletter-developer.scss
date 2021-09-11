@@ -2,16 +2,17 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/newsletter-form';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/newsletter-form";
 
 .section-intro {
-    background: url('/media/img/newsletter/developer/8bit_hearts.svg') top 85px center no-repeat,
-                url('/media/img/newsletter/developer/bg_image.png') top center no-repeat,
-                #000;
+    background: url("/media/img/newsletter/developer/8bit_hearts.svg") top 85px
+            center no-repeat,
+        url("/media/img/newsletter/developer/bg_image.png") top center no-repeat,
+        #000;
 
     @include background-size(66px 44px, auto auto);
     min-height: 230px;

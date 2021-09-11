@@ -5,11 +5,11 @@
 /**
  * General DOM ready handler applied to all pages in base template.
  */
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
-    if (typeof Mozilla.Utils !== 'undefined') {
-        Mozilla.Utils.onDocumentReady(function() {
+    if (typeof Mozilla.Utils !== "undefined") {
+        Mozilla.Utils.onDocumentReady(function () {
             var utils = Mozilla.Utils;
 
             utils.initMobileDownloadLinks();
@@ -17,19 +17,24 @@
 
             /* Bug 1264843: In partner distribution of desktop Firefox, switch the
             downloads to corresponding partner build of Firefox for Android. */
-            if (typeof Mozilla.Client !== 'undefined') {
+            if (typeof Mozilla.Client !== "undefined") {
                 var client = Mozilla.Client;
 
                 if (client.isFirefoxDesktop) {
-                    client.getFirefoxDetails(utils.maybeSwitchToChinaRepackImages);
+                    client.getFirefoxDetails(
+                        utils.maybeSwitchToChinaRepackImages
+                    );
                 }
             }
         });
     }
 
     // The `loaded` class is used mostly as a signal for functional tests to run.
-    window.addEventListener('load', function() {
-        document.getElementsByTagName('html')[0].classList.add('loaded');
-    }, false);
-
+    window.addEventListener(
+        "load",
+        function () {
+            document.getElementsByTagName("html")[0].classList.add("loaded");
+        },
+        false
+    );
 })();

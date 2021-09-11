@@ -1,15 +1,15 @@
-@import '../../../../protocol/css/includes/lib';
-@import '../../../../protocol/css/templates/multi-column';
-@import '../../../../protocol/css/components/picto';
+@import "../../../../protocol/css/includes/lib";
+@import "../../../../protocol/css/templates/multi-column";
+@import "../../../../protocol/css/components/picto";
 
-$brand-theme: 'firefox';
+$brand-theme: "firefox";
 
 //*------------------------------------------------------------------*/
 // Engagement
 
 .t-engage {
     background: #010817;
-    background: linear-gradient(#09204D, #010817);
+    background: linear-gradient(#09204d, #010817);
     color: #fff;
     padding-top: $layout-sm;
     padding-bottom: $layout-sm;

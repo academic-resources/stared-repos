@@ -1,18 +1,21 @@
 # Powershell Modules
+
 PS modules are applications written by others, like pip applications in Python or Ruby Gems in Ruby.
 
 Powershell's installation of them is a bit less straight-forward.
 
-
 ## Nuget Errors
+
 Nuget is the package manager for Powershell modules.
 
 Installing a module
+
 ```powershell
 Install-Module [module name]
 ```
 
 Returns:
+
 ```text
 NuGet provider is required to continue
 PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The NuGet
@@ -35,28 +38,33 @@ PackageManagement\Import-PackageProvider : No match was found for the specified 
 It may not say so, but this is probably related to EOL TLS versions.
 
 Check what version is being used by Powershell:
+
 ```powershell
 [Net.ServicePointManager]::SecurityProtocol
 ```
+
 > SSLv3 TLSv1
 
 Change it to TLSv1.2:
+
 ```bash
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 ```
 
 - Hit the up arrow and re-run the command
 
-
 ## Where Powershell Modules are Kept
+
 Usefull if you want to add your own for custom scripts.
 
 Check the environment variable:
+
 ```powershell
 $env:PSModulePath
 ```
 
 Locations:
+
 ```powershell
 C:\Users\<username>\Documents\WindowsPowerShell\Modules
 C:\Program Files\WindowsPowerShell\Modules

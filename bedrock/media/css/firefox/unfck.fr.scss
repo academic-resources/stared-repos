@@ -2,11 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-
+@import "../../protocol/css/includes/lib";
 
 // --------------------------------------------------------------------------
 // Protocol over-rides
@@ -26,7 +25,6 @@ $h-grid-md: 64px;
 $v-grid-lg: 192px / 2;
 $h-grid-lg: 80px;
 
-
 // --------------------------------------------------------------------------
 // Masthead
 
@@ -38,7 +36,7 @@ $h-grid-lg: 80px;
 
         .c-masthead-logo {
             @include background-size(contain);
-            background-image: url('/media/img/firefox/campaign/unfck/fr/unfck-masthead-fr.png');
+            background-image: url("/media/img/firefox/campaign/unfck/fr/unfck-masthead-fr.png");
             background-repeat: no-repeat;
             height: 0;
             margin: 0 auto;
@@ -46,7 +44,10 @@ $h-grid-lg: 80px;
             padding-top: 190 * 100% / 952;
 
             @media #{$mq-md} {
-                @include at2x('/media/img/firefox/campaign/unfck/fr/unfck-masthead-fr.png', contain);
+                @include at2x(
+                    "/media/img/firefox/campaign/unfck/fr/unfck-masthead-fr.png",
+                    contain
+                );
             }
         }
     }
@@ -62,8 +63,12 @@ $h-grid-lg: 80px;
 
     @media #{$mq-lg} {
         &:before {
-            @include at2x('/media/img/firefox/campaign/unfck/fr/speckles-top-left.png', 347px, 300px);
-            content: '';
+            @include at2x(
+                "/media/img/firefox/campaign/unfck/fr/speckles-top-left.png",
+                347px,
+                300px
+            );
+            content: "";
             display: block;
             height: 300px;
             left: -347px;
@@ -73,8 +78,12 @@ $h-grid-lg: 80px;
         }
 
         &:after {
-            @include at2x('/media/img/firefox/campaign/unfck/fr/speckles-top-right.png', 345px, 300px);
-            content: '';
+            @include at2x(
+                "/media/img/firefox/campaign/unfck/fr/speckles-top-right.png",
+                345px,
+                300px
+            );
+            content: "";
             display: block;
             height: 300px;
             position: absolute;
@@ -86,7 +95,7 @@ $h-grid-lg: 80px;
 
     .c-banner-fr {
         @include background-size(contain);
-        background-image: url('/media/img/firefox/campaign/unfck/fr/header.png');
+        background-image: url("/media/img/firefox/campaign/unfck/fr/header.png");
         background-repeat: no-repeat;
         height: 0;
         margin: 0 auto;
@@ -96,10 +105,12 @@ $h-grid-lg: 80px;
         top: 0;
 
         &:after {
-            background: transparent url('/media/img/firefox/campaign/unfck/fr/button-click.gif') left bottom no-repeat;
+            background: transparent
+                url("/media/img/firefox/campaign/unfck/fr/button-click.gif")
+                left bottom no-repeat;
             @include background-size(contain);
             bottom: 8.5%;
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             right: 6.6%;
@@ -109,13 +120,16 @@ $h-grid-lg: 80px;
 
         @media (prefers-reduced-motion) {
             &:after {
-                background-image: url('/media/img/firefox/campaign/unfck/fr/button-click.png');
+                background-image: url("/media/img/firefox/campaign/unfck/fr/button-click.png");
                 bottom: 5%;
             }
         }
 
         @media #{$mq-md} {
-            @include at2x('/media/img/firefox/campaign/unfck/fr/header.png', contain);
+            @include at2x(
+                "/media/img/firefox/campaign/unfck/fr/header.png",
+                contain
+            );
         }
     }
 }
@@ -127,7 +141,7 @@ $h-grid-lg: 80px;
 
     .c-banner-fr {
         @include background-size(contain);
-        background-image: url('/media/img/firefox/campaign/unfck/fr/merci.png');
+        background-image: url("/media/img/firefox/campaign/unfck/fr/merci.png");
         background-repeat: no-repeat;
         height: 0;
         margin: 0 auto $v-grid-md;
@@ -137,7 +151,10 @@ $h-grid-lg: 80px;
         top: 0;
 
         @media #{$mq-md} {
-            @include at2x('/media/img/firefox/campaign/unfck/fr/merci.png', contain);
+            @include at2x(
+                "/media/img/firefox/campaign/unfck/fr/merci.png",
+                contain
+            );
         }
     }
 }
@@ -163,7 +180,6 @@ $h-grid-lg: 80px;
 // GIF backgrounds (display while they are loading)
 
 .c-item-gif {
-
     #contain & {
         background-color: #1a90e8;
     }

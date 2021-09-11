@@ -2,15 +2,17 @@
 
 Homelab install pre-check for vCenter Server Appliance (no TLD for SSO)
 
-
 - Obtain the evaluation ISO from [VMware](https://my.vmware.com/en/group/vmware/evalcenter?p=vsphere-6)
-- In DD-WRT > Services > Services > DNSMASQ > *Additional DNSMasq Options* Box, add:
+- In DD-WRT > Services > Services > DNSMASQ > _Additional DNSMasq Options_ Box, add:
+
 ```bash
 address=/vcenter.local/192.168.1.11
 ```
+
 - Apply and Save
 
 For good measure, on the PC that the image will be mounted to, for install (via root terminal):
+
 ```bash
 echo "192.168.1.11 vcenter.local" >> /etc/hosts
 ```

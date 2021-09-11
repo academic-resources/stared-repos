@@ -1,14 +1,18 @@
 # DD-WRT Ad-blocking Hosts File
+
 Pulls hosts file from [StevenBlack's](https://github.com/StevenBlack/hosts) host file and sets it as a cron on a DD-WRT router.
 
-Under `Services > Services > DNSMasq` set *Additional DNSMasq Options* after ticking *DNSMasq* to Enable
+Under `Services > Services > DNSMasq` set _Additional DNSMasq Options_ after ticking _DNSMasq_ to Enable
+
 ```bash
 addn-hosts=/tmp/blkhosts
 ```
+
 Hit Apply Settings
 
 Under `Administration > Management`
 Add the following startup cron:
+
 ```bash
 0 1 * * * root curl -k -o /tmp/ad-hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 0 1 * * * echo >> fonts.gstatic.com /tmp/ad-hosts

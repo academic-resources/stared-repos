@@ -26,9 +26,12 @@
     "selector-type-no-unknown": true,
     "selector-max-empty-lines": 0,
     "media-feature-name-case": "lower",
-    "media-feature-name-no-unknown": [true, {
-      ignoreMediaFeatureNames: ["min--moz-device-pixel-ratio"]
-    }],
+    "media-feature-name-no-unknown": [
+      true,
+      {
+        "ignoreMediaFeatureNames": ["min--moz-device-pixel-ratio"]
+      }
+    ],
     "comment-no-empty": true,
     "max-nesting-depth": 5,
     "no-invalid-double-slash-comments": true,

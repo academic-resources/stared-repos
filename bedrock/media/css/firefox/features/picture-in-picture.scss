@@ -2,8 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
 @import "../../../protocol/css/includes/lib";
 @import "../../../protocol/css/components/hero";
@@ -66,8 +66,9 @@ $image-path: '/media/protocol/img';
         display: block;
 
         &:after {
-            background: url('/media/img/icons/video-play.svg') top left no-repeat;
-            content: '';
+            background: url("/media/img/icons/video-play.svg") top left
+                no-repeat;
+            content: "";
             height: 100px;
             left: 50%;
             margin: -50px 0 0 -50px;
@@ -88,12 +89,14 @@ $image-path: '/media/protocol/img';
 }
 
 .has-pip-icon strong {
-    @include bidi((
-        (padding-right, 3.25ex, padding-left, 3.25ex),
-        (background-position, right .25ex top, left .25ex top),
-    ));
+    @include bidi(
+        (
+            (padding-right, 3.25ex, padding-left, 3.25ex),
+            (background-position, right 0.25ex top, left 0.25ex top)
+        )
+    );
     @include background-size(2.25ex, 2.25ex);
-    background-image: url('/media/img/firefox/features/pip/pip-icon.svg');
+    background-image: url("/media/img/firefox/features/pip/pip-icon.svg");
     background-repeat: no-repeat;
 }
 

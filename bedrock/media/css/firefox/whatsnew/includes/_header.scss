@@ -2,10 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../../protocol/css/includes/lib';
+@import "../../../../protocol/css/includes/lib";
 
 //* -------------------------------------------------------------------------- */
 // Up-to-date page header
@@ -41,14 +41,16 @@ $image-path: '/media/protocol/img';
 
 .c-page-header-logo-fx {
     @include image-replaced;
-    background: url($image-path + '/logos/firefox/browser/logo-word-hor-sm.png') no-repeat;
+    background: url($image-path + "/logos/firefox/browser/logo-word-hor-sm.png")
+        no-repeat;
     @include background-size(216px, 40px);
     width: 216px;
     height: 40px;
     margin: 0;
 
     @media (prefers-color-scheme: dark) {
-        background: url($image-path + '/logos/firefox/browser/logo-word-hor-white-sm.png') no-repeat;
+        background: url($image-path + "/logos/firefox/browser/logo-word-hor-white-sm.png")
+            no-repeat;
         @include background-size(216px, 40px);
     }
 }

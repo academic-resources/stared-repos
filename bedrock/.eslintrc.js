@@ -1,11 +1,8 @@
 module.exports = {
     env: {
-        'jasmine': true
+        jasmine: true,
     },
-    extends: [
-        '@mozilla-protocol/eslint-config',
-        'plugin:json/recommended'
-    ],
+    extends: ["@mozilla-protocol/eslint-config", "plugin:json/recommended"],
     /**
      * Provide a set of overrides for `gulpfile.js` in the root directory.
      * Ideally we want to extend @mozilla-protocol/eslint-config/index-node,
@@ -14,22 +11,22 @@ module.exports = {
      * */
     overrides: [
         {
-            files: ['gulpfile.js', 'tests/unit/karma.conf.js'],
+            files: ["gulpfile.js", "tests/unit/karma.conf.js"],
             env: {
-                'commonjs': true,
-                'node': true,
-                'es6': true
+                commonjs: true,
+                node: true,
+                es6: true,
             },
             parserOptions: {
-                ecmaVersion: 8
+                ecmaVersion: 8,
             },
             rules: {
-                'strict': ['error', 'global'],
-            }
-        }
+                strict: ["error", "global"],
+            },
+        },
     ],
     globals: {
-        'Mozilla': 'writable',
-        'site': 'writable'
-    }
+        Mozilla: "writable",
+        site: "writable",
+    },
 };

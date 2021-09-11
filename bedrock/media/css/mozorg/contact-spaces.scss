@@ -2,12 +2,12 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/sidebar-menu';
-@import '../../protocol/css/templates/main-with-sidebar';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/sidebar-menu";
+@import "../../protocol/css/templates/main-with-sidebar";
 
 /* -------------------------------------------------------------------------- */
 // Common elements and variables
@@ -16,8 +16,8 @@ $image-path: '/media/protocol/img';
     font-family: FA-Icons-Contact;
     font-style: normal;
     font-weight: normal;
-    src: url('/media/fonts/icons-contact.woff2') format('woff2'),
-         url('/media/fonts/icons-contact.woff') format('woff');
+    src: url("/media/fonts/icons-contact.woff2") format("woff2"),
+        url("/media/fonts/icons-contact.woff") format("woff");
 }
 
 /* -------------------------------------------------------------------------- */
@@ -33,14 +33,11 @@ $image-path: '/media/protocol/img';
         padding: $spacing-2xl 0 $spacing-lg;
 
         .page-title {
-            @include bidi(((float, left, right),));
+            @include bidi(((float, left, right)));
         }
 
         .help {
-            @include bidi((
-                (float, right, left),
-                (text-align, right, left),
-            ));
+            @include bidi(((float, right, left), (text-align, right, left)));
         }
     }
 
@@ -65,7 +62,7 @@ $image-path: '/media/protocol/img';
 
     small {
         @include text-body-xs;
-        @include bidi(((right, 0, left, auto),));
+        @include bidi(((right, 0, left, auto)));
         background: rgba(255, 255, 255, 0.7);
         bottom: 0;
         padding: 0 $spacing-xs;
@@ -94,16 +91,16 @@ $image-path: '/media/protocol/img';
 }
 
 .category-tabs {
-    @include bidi(((text-align, left, right),));
+    @include bidi(((text-align, left, right)));
     @include text-body-sm;
 
     li {
-        @include bidi(((margin, 0 $spacing-xs 0 0, 0 0 0 $spacing-xs),));
+        @include bidi(((margin, 0 $spacing-xs 0 0, 0 0 0 $spacing-xs)));
         display: inline-block;
         position: relative;
 
         &:last-child {
-            @include bidi(((margin, 0, margin, 0),));
+            @include bidi(((margin, 0, margin, 0)));
         }
 
         a {
@@ -124,10 +121,7 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-md} {
-        @include bidi((
-            (left, 0, right, auto),
-            (text-align, center, center),
-        ));
+        @include bidi(((left, 0, right, auto), (text-align, center, center)));
         position: absolute;
         top: -40px;
 
@@ -159,7 +153,7 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-xl} {
-        @include bidi(((left, $spacing-lg, right, auto),));
+        @include bidi(((left, $spacing-lg, right, auto)));
     }
 }
 
@@ -189,32 +183,31 @@ $image-path: '/media/protocol/img';
         }
 
         .adr {
-            @include bidi(((padding-left, $spacing-xl, padding-right, 0),));
-            margin: 0 0 .5em;
+            @include bidi(((padding-left, $spacing-xl, padding-right, 0)));
+            margin: 0 0 0.5em;
             position: relative;
 
             &:before {
-                @include bidi(((left, 0, right, auto),));
+                @include bidi(((left, 0, right, auto)));
                 color: $color-red-60;
-                content: '\e800';
+                content: "\e800";
                 font: 105% FA-Icons-Contact;
                 position: absolute;
-                top: .125em;
+                top: 0.125em;
             }
         }
 
         .extra {
-
             a {
-                @include bidi(((padding-left, $spacing-xl, padding-right, 0),));
+                @include bidi(((padding-left, $spacing-xl, padding-right, 0)));
                 position: relative;
 
                 &:before {
-                    @include bidi(((left, 0, right, auto),));
+                    @include bidi(((left, 0, right, auto)));
                     color: $color-red-60;
                     font: 105% FA-Icons-Contact;
                     position: absolute;
-                    top: .125em;
+                    top: 0.125em;
                 }
             }
         }
@@ -227,12 +220,11 @@ $image-path: '/media/protocol/img';
 }
 
 .entry-space .card {
-
     @media #{$mq-xl} {
-        @include bidi(((padding-left, 480px, padding-right, 0),));
+        @include bidi(((padding-left, 480px, padding-right, 0)));
 
         .feature-img {
-            @include bidi(((left, 0, right, auto),));
+            @include bidi(((left, 0, right, auto)));
             height: 250px;
             position: absolute;
             top: 0;
@@ -242,12 +234,11 @@ $image-path: '/media/protocol/img';
 }
 
 .entry-community .card {
-
     @media #{$mq-lg} {
-        @include bidi(((padding-left, 320px, padding-right, 0),));
+        @include bidi(((padding-left, 320px, padding-right, 0)));
 
         .feature-img {
-            @include bidi(((left, 0, right, auto),));
+            @include bidi(((left, 0, right, auto)));
             position: absolute;
             top: 0;
             width: 300px;
@@ -255,14 +246,14 @@ $image-path: '/media/protocol/img';
     }
 
     @media #{$mq-xl} {
-        @include bidi(((padding-left, 400px, padding-right, 0),));
+        @include bidi(((padding-left, 400px, padding-right, 0)));
 
         h2 {
             max-width: 70%;
         }
 
         .logo {
-            @include bidi(((right, 0, left, auto),));
+            @include bidi(((right, 0, left, auto)));
             position: absolute;
             right: 0;
         }
@@ -274,17 +265,39 @@ $image-path: '/media/protocol/img';
 }
 
 // Icons
-.card .extra a.website:before { content: '\e803'; }
-.card .extra a.email:before { content: '\e806'; }
-.card .extra a.doc:before { content: '\e810'; }
-.card .extra a.book:before { content: '\e80e'; }
-.card .extra a.irc:before { content: '\e811'; }
-.card .extra a.twitter:before { content: '\e809'; }
-.card .extra a.facebook:before { content: '\e802'; }
-.card .extra a.gplus:before { content: '\f0d5'; }
-.card .extra a.instagram:before { content: '\e80a'; }
-.card .extra a.youtube:before { content: '\e80c'; }
-.card .extra a.flickr:before { content: '\e807'; }
+.card .extra a.website:before {
+    content: "\e803";
+}
+.card .extra a.email:before {
+    content: "\e806";
+}
+.card .extra a.doc:before {
+    content: "\e810";
+}
+.card .extra a.book:before {
+    content: "\e80e";
+}
+.card .extra a.irc:before {
+    content: "\e811";
+}
+.card .extra a.twitter:before {
+    content: "\e809";
+}
+.card .extra a.facebook:before {
+    content: "\e802";
+}
+.card .extra a.gplus:before {
+    content: "\f0d5";
+}
+.card .extra a.instagram:before {
+    content: "\e80a";
+}
+.card .extra a.youtube:before {
+    content: "\e80c";
+}
+.card .extra a.flickr:before {
+    content: "\e807";
+}
 
 /* -------------------------------------------------------------------------- */
 // Image & Video media
@@ -308,10 +321,16 @@ $image-path: '/media/protocol/img';
     position: relative;
 
     li {
-        @include bidi((
-            (float, left, right),
-            (margin, 0 $spacing-lg $spacing-lg 0, 0 0 $spacing-lg $spacing-lg),
-        ));
+        @include bidi(
+            (
+                (float, left, right),
+                (
+                    margin,
+                    0 $spacing-lg $spacing-lg 0,
+                    0 0 $spacing-lg $spacing-lg
+                )
+            )
+        );
         max-height: 110px;
         width: calc(50% - #{$spacing-lg});
 
@@ -378,20 +397,20 @@ $image-path: '/media/protocol/img';
         @include clearfix;
 
         ul {
-            @include bidi(((float, left, right),));
+            @include bidi(((float, left, right)));
         }
 
         li {
-            @include bidi(((margin-right, $spacing-sm, margin-left, 0),));
+            @include bidi(((margin-right, $spacing-sm, margin-left, 0)));
             display: inline;
 
             &:last-child {
-                @include bidi(((margin-right, 0, margin-left, 0),));
+                @include bidi(((margin-right, 0, margin-left, 0)));
             }
         }
 
         .meta-contact {
-            @include bidi(((float, right, left),));
+            @include bidi(((float, right, left)));
         }
     }
 }
@@ -405,7 +424,6 @@ $image-path: '/media/protocol/img';
 // Contact links
 
 #contact {
-
     p {
         max-width: 35em;
     }
@@ -421,10 +439,12 @@ $image-path: '/media/protocol/img';
         }
 
         .contact-section {
-            @include bidi((
-                (float, left, right),
-                (margin-right, $spacing-lg, margin-left, 0),
-            ));
+            @include bidi(
+                (
+                    (float, left, right),
+                    (margin-right, $spacing-lg, margin-left, 0)
+                )
+            );
             width: calc(33% - #{$spacing-lg});
         }
 
@@ -436,7 +456,7 @@ $image-path: '/media/protocol/img';
             }
 
             .contact-section {
-                @include bidi(((margin-right, 0, margin-left, 0),));
+                @include bidi(((margin-right, 0, margin-left, 0)));
                 margin-right: 0;
                 width: auto;
             }

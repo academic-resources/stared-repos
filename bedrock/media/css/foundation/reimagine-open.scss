@@ -2,15 +2,16 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/hero';
-
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/hero";
 
 .mzp-c-hero {
-    background: $color-moz-neon-green url('/media/img/foundation/reimagine-open/bg-header.png') left bottom no-repeat;
+    background: $color-moz-neon-green
+        url("/media/img/foundation/reimagine-open/bg-header.png") left bottom
+        no-repeat;
     @include background-size(469px, 195px);
     margin-bottom: $spacing-2xl;
 
@@ -51,36 +52,42 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 // Section I: The Early Internet and the Power of Open
 .section-one {
     background-color: $color-light-gray-10;
 
     .mzp-l-content {
-        background: transparentize($color-light-gray-10, .15);
+        background: transparentize($color-light-gray-10, 0.15);
     }
 
     @media #{$mq-md} {
-        @include at2x('/media/img/foundation/reimagine-open/section-one.jpg', 500px, 750px);
+        @include at2x(
+            "/media/img/foundation/reimagine-open/section-one.jpg",
+            500px,
+            750px
+        );
         background-position: right -60px top;
         background-repeat: no-repeat;
     }
 }
 
-
 // Section II: The Open Internet Comes of Age
 .section-two {
-    @include at2x('/media/img/foundation/reimagine-open/section-two.png', 960px, 540px);
+    @include at2x(
+        "/media/img/foundation/reimagine-open/section-two.png",
+        960px,
+        540px
+    );
     background-position: left -650px top;
     background-repeat: repeat-y;
     background-attachment: fixed;
 
     .mzp-l-content {
-        background: transparentize($color-white, .15);
+        background: transparentize($color-white, 0.15);
     }
 
     .case-study {
-        background: transparentize($color-moz-warm-red, .95);
+        background: transparentize($color-moz-warm-red, 0.95);
     }
 
     @media #{$mq-md} {
@@ -88,14 +95,15 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 // Section III: The Future of Open: 2020 and Beyond
 .section-three {
-    background: lighten($color-moz-lemon-yellow, 20%) url('/media/img/foundation/reimagine-open/section-three.svg') right -20% top 10% no-repeat;
+    background: lighten($color-moz-lemon-yellow, 20%)
+        url("/media/img/foundation/reimagine-open/section-three.svg") right -20%
+        top 10% no-repeat;
     @include background-size(600px, 514px);
 
     .case-study {
-        background: transparentize($color-moz-lemon-yellow, .8);
+        background: transparentize($color-moz-lemon-yellow, 0.8);
     }
 
     @media #{$mq-md} {
@@ -103,10 +111,10 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 // Section IV: Conclusion
 .section-four {
-    background: url('/media/img/foundation/reimagine-open/bg-conclusion.jpg') center top no-repeat;
+    background: url("/media/img/foundation/reimagine-open/bg-conclusion.jpg")
+        center top no-repeat;
     @include background-size(cover);
 
     .c-article-footer {
@@ -118,15 +126,16 @@ $image-path: '/media/protocol/img';
     }
 }
 
-
 // Pull quotes
 @media #{$mq-md} {
     .c-pullquote {
-        @include bidi((
-            (float, right, left),
-            (margin-right, -$spacing-lg, $spacing-xl),
-            (margin-left, $spacing-xl, -$spacing-lg),
-        ));
+        @include bidi(
+            (
+                (float, right, left),
+                (margin-right, -$spacing-lg, $spacing-xl),
+                (margin-left, $spacing-xl, -$spacing-lg)
+            )
+        );
         @include border-box;
         background: $color-dark-gray-40;
         color: $color-white;
@@ -142,21 +151,27 @@ $image-path: '/media/protocol/img';
         }
 
         &.pullquote-intro {
-            background: #2e2c31 url('/media/img/foundation/reimagine-open/bg-quote-intro.jpg') center center no-repeat;
+            background: #2e2c31
+                url("/media/img/foundation/reimagine-open/bg-quote-intro.jpg")
+                center center no-repeat;
             @include background-size(cover);
 
             blockquote {
-                background: rgba(0, 0, 0, .85);
+                background: rgba(0, 0, 0, 0.85);
             }
         }
 
         &.pullquote-section-one {
-            @include bidi((
-                (float, left, right),
-                (margin-left, -$spacing-lg, $spacing-xl),
-                (margin-right, $spacing-xl, -$spacing-lg),
-            ));
-            background: #080d13 url('/media/img/foundation/reimagine-open/bg-quote-section-one.jpg') center center no-repeat;
+            @include bidi(
+                (
+                    (float, left, right),
+                    (margin-left, -$spacing-lg, $spacing-xl),
+                    (margin-right, $spacing-xl, -$spacing-lg)
+                )
+            );
+            background: #080d13
+                url("/media/img/foundation/reimagine-open/bg-quote-section-one.jpg")
+                center center no-repeat;
             @include background-size(cover);
 
             blockquote {
@@ -168,11 +183,13 @@ $image-path: '/media/protocol/img';
 
 @media #{$mq-lg} {
     .c-pullquote {
-        @include bidi((
-            (margin-right, -$layout-xl, $spacing-lg),
-            (margin-left, $spacing-lg, -$layout-xl),
-            (padding-left, $layout-md, padding-right, $layout-md),
-        ));
+        @include bidi(
+            (
+                (margin-right, -$layout-xl, $spacing-lg),
+                (margin-left, $spacing-lg, -$layout-xl),
+                (padding-left, $layout-md, padding-right, $layout-md)
+            )
+        );
         width: 60%;
 
         blockquote {
@@ -180,13 +197,14 @@ $image-path: '/media/protocol/img';
         }
 
         &.pullquote-section-one {
-            @include bidi((
-                (margin-left, -$layout-xl, $spacing-xl),
-                (margin-right, $spacing-xl, -$layout-xl),
-                (padding-left, $layout-md, $layout-sm),
-                (padding-right, $layout-sm, $layout-md),
-            ));
+            @include bidi(
+                (
+                    (margin-left, -$layout-xl, $spacing-xl),
+                    (margin-right, $spacing-xl, -$layout-xl),
+                    (padding-left, $layout-md, $layout-sm),
+                    (padding-right, $layout-sm, $layout-md)
+                )
+            );
         }
     }
 }
-

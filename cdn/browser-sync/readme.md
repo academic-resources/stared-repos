@@ -1,27 +1,21 @@
-# browser-sync  
+# browser-sync
 
+https://github.com/xgqfrms-GitHub/browser-sync
 
-https://github.com/xgqfrms-GitHub/browser-sync  
-
-https://github.com/xgqfrms-GitHub/browser-sync/blob/master/README.md  
-
-
+https://github.com/xgqfrms-GitHub/browser-sync/blob/master/README.md
 
 ```sh
 $ npm install -g browser-sync
 
 $ npm i -S browser-sync
-``` 
+```
 
 ## run
 
 ```sh
 $ browser-sync start --server --files "./*.*"
 
-``` 
-
-
-
+```
 
 ```code
 PS G:\wwwRoot\AngularJS\Angular-1.5.8-App\000-imooc-form-validation> browser-sync start
@@ -37,7 +31,7 @@ PS G:\wwwRoot\AngularJS\Angular-1.5.8-App\000-imooc-form-validation> browser-syn
  UI External: http://192.168.56.1:3002
  -------------------------------------
 
-``` 
+```
 
 ```sh
 $ browser-sync --help
@@ -52,7 +46,7 @@ $ browser-sync reload --help
 
 # 食谱
 $ browser-sync recipe --help
-``` 
+```
 
 ```PS
 
@@ -123,8 +117,7 @@ Examples:
   start -p www.bbc.co.uk
 
 PS G:\wwwRoot\AngularJS\Angular-1.5.8-App\000-imooc-form-validation>
-``` 
-
+```
 
 ```PS
 
@@ -165,7 +158,7 @@ Examples:
 PS G:\wwwRoot\AngularJS\Angular-1.5.8-App\000-imooc-form-validation>
 
 
-``` 
+```
 
 ```PS
 
@@ -188,13 +181,4 @@ Examples:
   recipe gulp.sass
 
 PS G:\wwwRoot\AngularJS\Angular-1.5.8-App\000-imooc-form-validation>
-``` 
-
-
-
-
-
-
-
-
-
+```

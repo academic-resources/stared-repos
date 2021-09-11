@@ -7,32 +7,34 @@
 
 // YouTube API hook has to be in global scope
 function onYouTubeIframeAPIReady() {
-    'use strict';
+    "use strict";
 
     // Play the video only once the API is ready.
     Mozilla.pipVideoPlay();
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
-    var videoLink = document.querySelector('.js-video-play');
-    var src = 'https://www.youtube.com/iframe_api';
+    var videoLink = document.querySelector(".js-video-play");
+    var src = "https://www.youtube.com/iframe_api";
 
     function loadScript() {
-        var tag = document.createElement('script');
+        var tag = document.createElement("script");
         tag.src = src;
-        var firstScriptTag = document.getElementsByTagName('script')[0];
+        var firstScriptTag = document.getElementsByTagName("script")[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     }
 
     function isScriptLoaded() {
-        return document.querySelector('script[src="' + src + '"]') ? true : false;
+        return document.querySelector('script[src="' + src + '"]')
+            ? true
+            : false;
     }
 
     function playVideo() {
-        var videoId = videoLink.getAttribute('data-id');
-        var title = videoLink.getAttribute('data-video-title');
+        var videoId = videoLink.getAttribute("data-id");
+        var title = videoLink.getAttribute("data-video-title");
 
         new YT.Player(videoLink, {
             width: 500,
@@ -43,9 +45,9 @@ function onYouTubeIframeAPIReady() {
                 rel: 0, // do not show related videos on end.
             },
             events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
+                onReady: onPlayerReady,
+                onStateChange: onPlayerStateChange,
+            },
         });
 
         function onPlayerReady(event) {
@@ -55,23 +57,23 @@ function onYouTubeIframeAPIReady() {
         function onPlayerStateChange(event) {
             var state;
 
-            switch(event.data) {
-            case YT.PlayerState.PLAYING:
-                state = 'video play';
-                break;
-            case YT.PlayerState.PAUSED:
-                state = 'video paused';
-                break;
-            case YT.PlayerState.ENDED:
-                state = 'video complete';
-                break;
+            switch (event.data) {
+                case YT.PlayerState.PLAYING:
+                    state = "video play";
+                    break;
+                case YT.PlayerState.PAUSED:
+                    state = "video paused";
+                    break;
+                case YT.PlayerState.ENDED:
+                    state = "video complete";
+                    break;
             }
 
             if (state) {
                 window.dataLayer.push({
-                    'event': 'video-interaction',
-                    'videoTitle': title,
-                    'interaction': state
+                    event: "video-interaction",
+                    videoTitle: title,
+                    interaction: state,
                 });
             }
         }
@@ -87,9 +89,9 @@ function onYouTubeIframeAPIReady() {
     }
 
     function init() {
-        videoLink.setAttribute('role', 'button');
+        videoLink.setAttribute("role", "button");
 
-        videoLink.addEventListener('click', function(e) {
+        videoLink.addEventListener("click", function (e) {
             e.preventDefault();
             initVideoPlayer();
         });

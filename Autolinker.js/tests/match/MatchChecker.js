@@ -7,7 +7,6 @@
  * {@link Autolinker.match.Match} objects.
  */
 Autolinker.match.MatchChecker = {
-
 	/**
 	 * Expects an {@link Autolinker.match.Email Email} match.
 	 *
@@ -16,13 +15,12 @@ Autolinker.match.MatchChecker = {
 	 * @param {Number} offset The offset for the match in the original string to
 	 *   expect.
 	 */
-	expectEmailMatch : function( match, email, offset ) {
-		this.expectMatchType( match, 'Email' );
+	expectEmailMatch: function (match, email, offset) {
+		this.expectMatchType(match, "Email");
 
-		expect( match.getEmail() ).toBe( email );
-		expect( match.getOffset() ).toBe( offset );
+		expect(match.getEmail()).toBe(email);
+		expect(match.getOffset()).toBe(offset);
 	},
-
 
 	/**
 	 * Expects a {@link Autolinker.match.Hashtag Hashtag} match.
@@ -35,14 +33,13 @@ Autolinker.match.MatchChecker = {
 	 * @param {Number} offset The offset for the match in the original string to
 	 *   expect.
 	 */
-	expectHashtagMatch : function( match, serviceName, hashtag, offset ) {
-		this.expectMatchType( match, 'Hashtag' );
+	expectHashtagMatch: function (match, serviceName, hashtag, offset) {
+		this.expectMatchType(match, "Hashtag");
 
-		expect( match.getServiceName() ).toBe( serviceName );
-		expect( match.getHashtag() ).toBe( hashtag );
-		expect( match.getOffset() ).toBe( offset );
+		expect(match.getServiceName()).toBe(serviceName);
+		expect(match.getHashtag()).toBe(hashtag);
+		expect(match.getOffset()).toBe(offset);
 	},
-
 
 	/**
 	 * Expects a {@link Autolinker.match.Phone Phone} match.
@@ -53,13 +50,12 @@ Autolinker.match.MatchChecker = {
 	 * @param {Number} offset The offset for the match in the original string to
 	 *   expect.
 	 */
-	expectPhoneMatch : function( match, number, offset ) {
-		this.expectMatchType( match, 'Phone' );
+	expectPhoneMatch: function (match, number, offset) {
+		this.expectMatchType(match, "Phone");
 
-		expect( match.getNumber() ).toBe( number );
-		expect( match.getOffset() ).toBe( offset );
+		expect(match.getNumber()).toBe(number);
+		expect(match.getOffset()).toBe(offset);
 	},
-	
 
 	/**
 	 * Expects a {@link Autolinker.match.Mention Mention} match.
@@ -72,14 +68,13 @@ Autolinker.match.MatchChecker = {
 	 * @param {Number} offset The offset for the match in the original string to
 	 *   expect.
 	 */
-	expectMentionMatch : function( match, serviceName, mention, offset ) {
-		this.expectMatchType( match, 'Mention' );
+	expectMentionMatch: function (match, serviceName, mention, offset) {
+		this.expectMatchType(match, "Mention");
 
-		expect( match.getServiceName() ).toBe( serviceName );
-		expect( match.getMention() ).toBe( mention );
-		expect( match.getOffset() ).toBe( offset );
+		expect(match.getServiceName()).toBe(serviceName);
+		expect(match.getMention()).toBe(mention);
+		expect(match.getOffset()).toBe(offset);
 	},
-
 
 	/**
 	 * Expects a {@link Autolinker.match.Url Url} match.
@@ -89,16 +84,14 @@ Autolinker.match.MatchChecker = {
 	 * @param {Number} offset The offset for the match in the original string to
 	 *   expect.
 	 */
-	expectUrlMatch : function( match, url, offset ) {
-		this.expectMatchType( match, 'Url' );
+	expectUrlMatch: function (match, url, offset) {
+		this.expectMatchType(match, "Url");
 
-		expect( match.getUrl() ).toBe( url );
-		expect( match.getOffset() ).toBe( offset );
+		expect(match.getUrl()).toBe(url);
+		expect(match.getOffset()).toBe(offset);
 	},
 
-
 	// ---------------------------------------
-
 
 	/**
 	 * Private utility method used to check the type of the `match` object
@@ -110,10 +103,11 @@ Autolinker.match.MatchChecker = {
 	 *   'Twitter', 'Url', etc.
 	 * @throws {Error} If the `match` is not an instance of the `typeName`.
 	 */
-	expectMatchType : function( match, typeName ) {
-		if( !( match instanceof Autolinker.match[ typeName ] ) ) {
-			throw new Error( 'Expected an Autolinker.match.' + typeName + ' match object' );
+	expectMatchType: function (match, typeName) {
+		if (!(match instanceof Autolinker.match[typeName])) {
+			throw new Error(
+				"Expected an Autolinker.match." + typeName + " match object"
+			);
 		}
-	}
-
+	},
 };

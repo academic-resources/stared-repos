@@ -1,4 +1,5 @@
 # Clear Sessions on a Fortigate Firewall
+
 The [official documentation](https://kb.fortinet.com/kb/viewContent.do?externalId=FD30042) is both sparse and information overload at the same time, lacking the fundamental example of what a properly-formed command needs to look like.
 
 Executing the commands incorrectly will **compound** your filters and even if you get the next command perfect, because of the compounding, it'll never match.
@@ -6,7 +7,9 @@ Executing the commands incorrectly will **compound** your filters and even if yo
 > You do **not** need to reboot the firewall to clear sessions
 
 ## Proper Sequence of Filter Commands
+
 For filtering and clearing sessions for sip:
+
 ```bash
 diagnose sys session filter
 diagnose sys session filter dport 5060

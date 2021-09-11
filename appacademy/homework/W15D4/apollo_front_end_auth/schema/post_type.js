@@ -15,11 +15,11 @@ const PostType = new GraphQLObjectType({
       type: UserType,
       resolve(parentValue) {
         return User.findById(parentValue.author)
-          .then(user => user)
-          .catch(err => null);
-      }
-    }
-  }
+          .then((user) => user)
+          .catch((err) => null);
+      },
+    },
+  },
 });
 
 module.exports = PostType;

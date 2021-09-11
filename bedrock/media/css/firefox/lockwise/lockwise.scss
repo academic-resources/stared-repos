@@ -2,28 +2,26 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/picto';
-@import '../../../protocol/css/components/split';
-@import '../../../protocol/css/templates/card-layout';
-@import '../../../protocol/css/templates/multi-column';
-@import '../../../protocol/css/components/logos/wordmark';
-@import '../../../protocol/css/components/logos/wordmark-product-lockwise';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/picto";
+@import "../../../protocol/css/components/split";
+@import "../../../protocol/css/templates/card-layout";
+@import "../../../protocol/css/templates/multi-column";
+@import "../../../protocol/css/components/logos/wordmark";
+@import "../../../protocol/css/components/logos/wordmark-product-lockwise";
 
 // split
 
 .mzp-c-split {
-
     @media #{$mq-lg} {
         padding: $spacing-2xl;
     }
 }
 
 .mzp-c-split-container {
-
     p {
         @include text-body-lg;
     }
@@ -51,7 +49,7 @@ $image-path: '/media/protocol/img';
 
 .mzp-c-split-container .mzp-c-split-media {
     @media #{$mq-lg} {
-       width: 460px;
+        width: 460px;
     }
 }
 

@@ -1,9 +1,8 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from "react";
 
+import "./ImageUpload.css";
 
-import './ImageUpload.css';
-
-const ImageUpload = props => {
+const ImageUpload = (props) => {
   const [file, setFile] = useState();
   const [previewUrl, setPreviewUrl] = useState();
   const [isValid, setIsValid] = useState(false);
@@ -20,7 +19,7 @@ const ImageUpload = props => {
     fileReader.readAsDataURL(file);
   }, [file]);
 
-  const pickedHandler = event => {
+  const pickedHandler = (event) => {
     let pickedFile;
     let fileIsValid = isValid;
     if (event.target.files && event.target.files.length === 1) {
@@ -32,8 +31,8 @@ const ImageUpload = props => {
       setIsValid(false);
       fileIsValid = false;
     }
-    props.onInput(props.id, pickedFile, fileIsValid); return file
-
+    props.onInput(props.id, pickedFile, fileIsValid);
+    return file;
   };
 
   const pickImageHandler = () => {
@@ -46,25 +45,30 @@ const ImageUpload = props => {
         id={props.id}
         name={props.name}
         ref={filePickerRef}
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
         type="file"
         accept=".jpg,.png,.jpeg"
         onChange={pickedHandler}
       />
-      <div className={`image-upload ${props.center && 'center'}`}>
-
+      <div className={`image-upload ${props.center && "center"}`}>
         {/* {!previewUrl && <p>Please pick an image.</p>} */}
-        <button type="button" className="btn btn-outline-primary" onClick={pickImageHandler}>
+        <button
+          type="button"
+          className="btn btn-outline-primary"
+          onClick={pickImageHandler}
+        >
           PICK IMAGE
         </button>
-        {previewUrl && <div className="image-upload__preview">
-          <img src={previewUrl} alt="Preview" />
-
-        </div>}
-        {!previewUrl && props.value && <div className="image-upload__preview">
-          <img src={props.value} alt="Preview" />
-
-        </div>}
+        {previewUrl && (
+          <div className="image-upload__preview">
+            <img src={previewUrl} alt="Preview" />
+          </div>
+        )}
+        {!previewUrl && props.value && (
+          <div className="image-upload__preview">
+            <img src={props.value} alt="Preview" />
+          </div>
+        )}
       </div>
       {!isValid && <p>{props.errorText}</p>}
     </div>

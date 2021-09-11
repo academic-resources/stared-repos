@@ -2,16 +2,16 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/article';
-@import '../../../protocol/css/components/call-out';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/article";
+@import "../../../protocol/css/components/call-out";
 
 .mzp-c-hero {
     background: $color-purple-90;
-    color: get-theme('body-text-color-inverse');
+    color: get-theme("body-text-color-inverse");
     text-align: center;
     min-height: 500px;
     margin-bottom: $spacing-xl;
@@ -21,7 +21,7 @@ $image-path: '/media/protocol/img';
 
         h1 {
             @include text-title-lg;
-            color: get-theme('title-text-color-inverse');
+            color: get-theme("title-text-color-inverse");
             margin: 0 auto $spacing-2xl;
 
             @media #{$mq-lg} {
@@ -57,7 +57,6 @@ $image-path: '/media/protocol/img';
         width: 100px;
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Call out

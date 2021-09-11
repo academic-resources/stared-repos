@@ -18,7 +18,6 @@ Let's build a simple plugin that will automatically add some metadata (author na
 
 Make a new directory named `archivy_extra_metadata` that will be our plugin directory and create a new [`setup.py`](https://stackoverflow.com/questions/1471994/what-is-setup-py) file that will define the characteristics of our package.
 
-
 Note: Using [`frontmatter`](https://archivy.github.io/reference/architecture/#data-storage) is better suited for this functionality, but here we'll just want something simple that adds text directly at the end of the content, like: `Made by John Doe in London.`
 
 This is what our `setup.py` looks like:
@@ -47,7 +46,7 @@ setup(
 
 Let's walk through what this is doing:
 
-- We specify some metadata you can adapt to your own package like `name`, `author` and `description`. 
+- We specify some metadata you can adapt to your own package like `name`, `author` and `description`.
 - We then load our package and source code by using the `find_packages` function.
 - The `entry_points` is the most important: the `[archivy.plugins]` part tells archivy that this package's commands will directly extend the archivy CLI so we can call `archivy extra-metadata` in the command line. We will actually be creating a group of commands so users will call subcommands like this: `archivy extra-metadata <subcommand>`. You can do things either way.
 
@@ -93,7 +92,7 @@ def extra_metadata():
 @click.option("--author", required=True)
 @click.option("--location", required=True)
 def setup(author, location):
-    """Save metadata values."""    
+    """Save metadata values."""
     with app.app_context():
         # save data in db
         get_db().insert({"type": "metadata", "author": author, "location": location})
@@ -107,7 +106,6 @@ The code above does a few things:
 - We define our `extra_metadata` group of commands that will be the parent of our subcommands.
 - We create a new command from that group with two parameters: `author` and `location`. An important part of the code is the `with app.app_context()` part, we need to run our code inside the archivy `app_context` to be able to call some of the archivy methods. If you call archivy methods in your plugins, it might fail if you don't include this part.
 - Then we just have our command code that takes the arguments and saves them into the [database](/reference/architecture/#data-storage).
-
 
 Now you just need to do `pip install .` in the main directory and you'll have access to the commands. Check it out by running `archivy extra_metadata --help` and then you can access the commands:
 
@@ -136,7 +134,6 @@ Options:
 $ archivy extra-metadata setup --author Uzay --location Europe
 Metadata saved!
 ```
-
 
 That's nice and all, but now we want to actually use this metadata! This wouldn't work with a cli command, because we want it to add metadata whenever a new note is created, not just when a command is executed.
 
@@ -193,7 +190,7 @@ def extra_metadata():
 @click.option("--author", required=True)
 @click.option("--location", required=True)
 def setup(author, location):
-    """Save metadata values."""    
+    """Save metadata values."""
     with app.app_context():
         # save data in db
         get_db().insert({"type": "metadata", "author": author, "location": location})
@@ -238,7 +235,6 @@ This is a short overview of how you can upload your package. Check out [this web
 
 This section is inspired by [this useful tutorial](https://packaging.python.org/tutorials/packaging-projects/#installing-your-newly-uploaded-package).
 
-
 Make sure the required utilities are installed:
 
 ```python
@@ -252,7 +248,6 @@ python3 setup.py sdist bdist_wheel
 ```
 
 Create an account on [Pypi](https://pypi.org). Then go [here](https://pypi.org/manage/account/#api-tokens) and create a new API token; set its scope to all projects.
-
 
 Once you've saved your token, install `twine`, the program that will take care of the upload:
 

@@ -1,4 +1,5 @@
 # Moving Grafana to Another Server
+
 Easy as dragging files.
 
 1. Stop the Grafana server
@@ -6,14 +7,19 @@ Easy as dragging files.
 3. Start the Grafana server
 
 ## Windows Systems
+
 Copy the following folders from `C:\Program Files\GrafanaLabs\grafana`:
+
 - `conf`
 - `data`
 
 ## Linux-based Systems
+
 Copy the following from `/var/lib/grafana`:
+
 - `grafana.db`
 - `plugins/` (your plugins folder)
 
 From `/etc/grafana/`:
+
 - `grafana.ini`

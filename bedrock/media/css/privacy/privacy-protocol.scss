@@ -2,18 +2,18 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$image-path: '/media/protocol/img';
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/includes/mixins/details';
-@import '../../protocol/css/components/sidebar-menu';
-@import '../../protocol/css/templates/main-with-sidebar';
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/includes/mixins/details";
+@import "../../protocol/css/components/sidebar-menu";
+@import "../../protocol/css/templates/main-with-sidebar";
 
-@import '../protocol/basic-article';
+@import "../protocol/basic-article";
 
 $border: 2px solid $color-marketing-gray-20;
 
-.mzp-c-sidemenu .mzp-c-sidemenu-title  {
+.mzp-c-sidemenu .mzp-c-sidemenu-title {
     @include font-base;
 }
 
@@ -46,23 +46,18 @@ $border: 2px solid $color-marketing-gray-20;
     width: auto;
 
     @media #{$mq-sm} {
-        @include bidi((
-            (float, left, right),
-            (margin-right, $spacing-sm, margin-left, 0),
-        ));
+        @include bidi(
+            ((float, left, right), (margin-right, $spacing-sm, margin-left, 0))
+        );
     }
 
     @media #{$mq-md} {
-        @include bidi((
-            (left, $layout-lg, right, auto),
-        ));
+        @include bidi(((left, $layout-lg, right, auto)));
         position: absolute;
     }
 
     @media #{$mq-lg} {
-        @include bidi((
-            (left, $layout-xl, right, auto),
-        ));
+        @include bidi(((left, $layout-xl, right, auto)));
     }
 }
 
@@ -100,7 +95,6 @@ $border: 2px solid $color-marketing-gray-20;
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Policy header intro
 
@@ -119,7 +113,6 @@ $border: 2px solid $color-marketing-gray-20;
 // Main policy content
 
 .privacy-body {
-
     > div > section > section {
         border-bottom: $border;
     }
@@ -183,7 +176,7 @@ $border: 2px solid $color-marketing-gray-20;
         display: grid;
         grid-template-columns: 4fr 1fr;
 
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
 
         .mzp-c-button {
             margin: 0;
@@ -212,10 +205,10 @@ $border: 2px solid $color-marketing-gray-20;
     .is-summary {
         button {
             @include summary;
-            @include bidi(((padding-left, 0, padding-right, 0),));
+            @include bidi(((padding-left, 0, padding-right, 0)));
         }
 
-        button[aria-expanded=true]:before {
+        button[aria-expanded="true"]:before {
             @include summary-open;
         }
 
@@ -241,7 +234,7 @@ $border: 2px solid $color-marketing-gray-20;
             }
         }
 
-        button[aria-expanded=true]:after {
+        button[aria-expanded="true"]:after {
             content: attr(data-close);
         }
 
@@ -251,7 +244,6 @@ $border: 2px solid $color-marketing-gray-20;
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Privacy Principles page
@@ -264,7 +256,6 @@ $border: 2px solid $color-marketing-gray-20;
 }
 
 #privacy-principles {
-
     ol {
         @include text-title-md;
         @include font-mozilla;

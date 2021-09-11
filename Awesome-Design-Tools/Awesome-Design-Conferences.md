@@ -1,9 +1,10 @@
 <div class="hidden-in-page">
 
 # Awesome Design Conferences
-* [Awesome Design Tools](https://github.com/LisaDziuba/Awesome-Design-Tools)
-* [Awesome Design Plugins](https://github.com/LisaDziuba/Awesome-Design-Tools/blob/master/Awesome-Design-Plugins.md)
-* [Awesome Design UI Kits](https://github.com/LisaDziuba/Awesome-Design-Tools/blob/master/Awesome-Design-UI-Kits.md)
+
+- [Awesome Design Tools](https://github.com/LisaDziuba/Awesome-Design-Tools)
+- [Awesome Design Plugins](https://github.com/LisaDziuba/Awesome-Design-Tools/blob/master/Awesome-Design-Plugins.md)
+- [Awesome Design UI Kits](https://github.com/LisaDziuba/Awesome-Design-Tools/blob/master/Awesome-Design-UI-Kits.md)
 
 </div>
 
@@ -18,9 +19,9 @@
 
 ## How to Use and Contribute
 
-* Now you are in **Awesome Design Conferences** section, if you need tools & plugins — go to [Awesome Design Tools](https://github.com/LisaDziuba/Awesome-Design-Tools) & [Awesome Design Plugins](https://github.com/LisaDziuba/Awesome-Design-Tools/blob/master/Awesome-Design-Plugins.md).
-* To find the conference, go through the Table of Contents or search for a keyword (for example, "UX", "prototyping").
-* Ask [Lisa](https://twitter.com/LisaDziuba) on Twitter.
+- Now you are in **Awesome Design Conferences** section, if you need tools & plugins — go to [Awesome Design Tools](https://github.com/LisaDziuba/Awesome-Design-Tools) & [Awesome Design Plugins](https://github.com/LisaDziuba/Awesome-Design-Tools/blob/master/Awesome-Design-Plugins.md).
+- To find the conference, go through the Table of Contents or search for a keyword (for example, "UX", "prototyping").
+- Ask [Lisa](https://twitter.com/LisaDziuba) on Twitter.
 
 If you found some great design conference, just send a Pull Request with respect to our [Contribution Guidelines](https://github.com/LisaDziuba/Awesome-Design-Tools/blob/master/Contribution_Guidelines.md) (they're very simple, please take a look). Design tools should be submitted [here](https://github.com/LisaDziuba/Awesome-Design-Tools), plugins - [here](https://github.com/LisaDziuba/Awesome-Design-Tools/blob/master/Awesome-Design-Plugins.md), and conferences in this file. And don't forget to add the location and date at the end of each conference. Now I'd love to see your suggestions!
 
@@ -32,36 +33,36 @@ If you found some great design conference, just send a Pull Request with respect
 
 ## Table of Content
 
-* [January](#january)
-* [February](#february)
-* [March](#march)
-* [April](#april)
-* [May](#may)
-* [June](#june)
-* [July](#july)
-* [August](#august)
-* [September](#september)
-* [October](#october)
-* [December](#december)
+- [January](#january)
+- [February](#february)
+- [March](#march)
+- [April](#april)
+- [May](#may)
+- [June](#june)
+- [July](#july)
+- [August](#august)
+- [September](#september)
+- [October](#october)
+- [December](#december)
 
 </div>
 
 <main>
 
-
 <article id="january">
 
 ### January
-| Name | About | Dates | Location |
-|---|---|---|---|
-| [Workshop: Getting started with Sketch App](https://www.sketch.com/community/groups/munich/?event=2020-01-15)| a meetup for designers interested in Sketch. Join it to share knowledge, discover tricks, plugins and new workflows or see how others utilise the powerful tool. | January 15 | München, Germany |
-| [CLT Sketch Meetup](https://www.sketch.com/community/groups/charlotte/?event=2020-01-15) | an official Sketch meetup for designers and developers in Charlotte. Share knowledge, trade tips, and hear about new plugins and resources. Meet local designers and members of the Sketch team, learn more about the app and have fun with likeminded people. | January 15 | Charlotte, USA |
-| [In/Visible Talks](https://invisibletalks.com/conference-2020/) | a conference for creative professionals that celebrates the art of design. It focuses on fresh takes and honest talks about the process, inspiration, and challenges behind the creative practice. | January 16 | San Francisco, USA |
-| [Sketch Dallas January Meetup Event](https://www.sketch.com/community/groups/dallas/?event=2020-01-21) | an official Sketch meetup for designers and developers in Dallas. Share knowledge, trade tips, and hear about new plugins and resources. Meet local designers, learn more about the app and have fun with likeminded people. | January 21 | Dallas, USA |
-| [Awwwards Conference Tokyo](https://conference.awwwards.com/tokyo/) | a digital thinkers conference is coming to Tokyo! It brings you the hottest topics and newest technologies on User Experience, UI Design, Web Design and Development, Animation, Technology, Branding, Trends, Creativity and much more. | January 22-24 | Tokyo, Japan |
-| [New Adventures](https://newadventuresconf.com/2020/) | a digital design conference where you'll explore speculative and critical design, radical inclusivity, climate, sustainability, and much more. | January 22-23 | Nottingham, UK |
-| [Workshop: How to master Sketch & Design Systems](https://www.sketch.com/community/groups/munich/?event=2020-01-23) | a meetup for designers interested in Sketch. Share knowledge, discover tricks, plugins and new workflows or see how others utilise the powerful tool. | January 23 | München, Germany |
-| [Humanising Design](https://www.meetup.com/figma-africa/events/267044435/) | Figma's meetup where you'll dive into cognitive UI/UX principles that can be used to create delightful experiences for users. | January 25 | Lagos, Nigeria |
+
+| Name                                                                                                                | About                                                                                                                                                                                                                                                          | Dates         | Location           |
+| ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------ |
+| [Workshop: Getting started with Sketch App](https://www.sketch.com/community/groups/munich/?event=2020-01-15)       | a meetup for designers interested in Sketch. Join it to share knowledge, discover tricks, plugins and new workflows or see how others utilise the powerful tool.                                                                                               | January 15    | München, Germany   |
+| [CLT Sketch Meetup](https://www.sketch.com/community/groups/charlotte/?event=2020-01-15)                            | an official Sketch meetup for designers and developers in Charlotte. Share knowledge, trade tips, and hear about new plugins and resources. Meet local designers and members of the Sketch team, learn more about the app and have fun with likeminded people. | January 15    | Charlotte, USA     |
+| [In/Visible Talks](https://invisibletalks.com/conference-2020/)                                                     | a conference for creative professionals that celebrates the art of design. It focuses on fresh takes and honest talks about the process, inspiration, and challenges behind the creative practice.                                                             | January 16    | San Francisco, USA |
+| [Sketch Dallas January Meetup Event](https://www.sketch.com/community/groups/dallas/?event=2020-01-21)              | an official Sketch meetup for designers and developers in Dallas. Share knowledge, trade tips, and hear about new plugins and resources. Meet local designers, learn more about the app and have fun with likeminded people.                                   | January 21    | Dallas, USA        |
+| [Awwwards Conference Tokyo](https://conference.awwwards.com/tokyo/)                                                 | a digital thinkers conference is coming to Tokyo! It brings you the hottest topics and newest technologies on User Experience, UI Design, Web Design and Development, Animation, Technology, Branding, Trends, Creativity and much more.                       | January 22-24 | Tokyo, Japan       |
+| [New Adventures](https://newadventuresconf.com/2020/)                                                               | a digital design conference where you'll explore speculative and critical design, radical inclusivity, climate, sustainability, and much more.                                                                                                                 | January 22-23 | Nottingham, UK     |
+| [Workshop: How to master Sketch & Design Systems](https://www.sketch.com/community/groups/munich/?event=2020-01-23) | a meetup for designers interested in Sketch. Share knowledge, discover tricks, plugins and new workflows or see how others utilise the powerful tool.                                                                                                          | January 23    | München, Germany   |
+| [Humanising Design](https://www.meetup.com/figma-africa/events/267044435/)                                          | Figma's meetup where you'll dive into cognitive UI/UX principles that can be used to create delightful experiences for users.                                                                                                                                  | January 25    | Lagos, Nigeria     |
 
 </article>
 
@@ -96,7 +97,6 @@ If you found some great design conference, just send a Pull Request with respect
 | [UX Copenhagen](https://uxcopenhagen.com/) | a two-day conference for professionals working with UX design. You will hear about some of the newest trends in UX and Design, presented by a diverse panel of speakers ranging from gurus to people new to the field. | March 30-31 | Copenhagen, Denmark |
 | [AIGA Design Conference](https://designconference.aiga.org/) | brings the design community together in a once-in-a-lifetime, cross-disciplinary exchange of ideas about the changing world of design. | March 30 - April 1 | Pittsburgh, USA |
 
-
 </article>
 
 <article id="april">
@@ -116,7 +116,6 @@ If you found some great design conference, just send a Pull Request with respect
 | [SmashingConf SF](https://smashingconf.com/sf-2020/) | a friendly, inclusive event that is focused on front-end and UX, but it covers everything web, be it interface design or machine learning. Live sessions on performance, accessibility, interface design, copywriting, designing for emotion, debugging and fancy CSS/JS techniques. | April 21-22 | San Francisco, USA |
 | [OFFF Barcelona 2020](https://offf.barcelona/pins/offf-barcelona-2020/) | a three-day journey of conferences, workshops, activities, and performances. All for the community of designers: sound, graphic, motion designers, thinkers, theorists and more. | April 23-25 | Barcelona, Spain |
 | [beyond tellerrand](https://beyondtellerrand.com/events/dusseldorf-2020) | the affordable single-track event where creativity and technology meet. | April 27-29 | Düsseldorf, Germany |
-
 
 </article>
 
@@ -211,8 +210,6 @@ If you found some great design conference, just send a Pull Request with respect
 |---|---|---|---|
 | [An Event Apart San Francisco](https://aneventapart.com/) | the web design conference for UX & front-end experts. Three days of design, code, and content for interaction designers and developers. Packed with tips, techniques, and insights into the future from industry shakers and shapers. | December 14-16 | San Francisco, USA |
 
-
-
 </article>
 
 <article id="addendum">
@@ -222,5 +219,3 @@ If you found some great design conference, just send a Pull Request with respect
 Awesome Design Tools & Plugins & Conferences are curated by [Lisa Dziuba](https://twitter.com/LisaDziuba) & [Valia Havruliyk](https://twitter.com/ValiaHavryliuk) from Flawless team. And it was hugely inspired by articles from the design community and Prototypr.io Toolbox made by our good friend Graeme Fulton. If you found some great design tool, plugins or conferences, please [suggest it](https://github.com/LisaDziuba/Awesome-Design-Tools/blob/master/Contribution_Guidelines.md). Thanks for making this project awesome :)
 
 </article>
-
-

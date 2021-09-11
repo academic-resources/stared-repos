@@ -7,13 +7,14 @@ const isSubstring = (searchString, subString) =>
 console.log(isSubstring("time to program", "time"));
 console.log(isSubstring("Jump for joy", "joys"));
 
-const fizzBuzz = array =>
+const fizzBuzz = (array) =>
   array.filter(
-    num => (num % 3 === 0 && num % 5 !== 0) || (num % 5 === 0 && num % 3 !== 0)
+    (num) =>
+      (num % 3 === 0 && num % 5 !== 0) || (num % 5 === 0 && num % 3 !== 0)
   );
 console.log(fizzBuzz([3, 5, 15]));
 
-const isPrime = num => {
+const isPrime = (num) => {
   if (num === 2) return true;
   let i = 2;
   while (i < num) {
@@ -27,7 +28,7 @@ console.log(isPrime(10));
 console.log(isPrime(15485863));
 console.log(isPrime(3548563));
 
-const firstNPrimes = n => {
+const firstNPrimes = (n) => {
   let result = [];
   let candidate = 2;
   while (result.length < n) {
@@ -39,7 +40,7 @@ const firstNPrimes = n => {
   return result;
 };
 
-const sumOfNPrimes = n => {
+const sumOfNPrimes = (n) => {
   let firstn = firstNPrimes(n);
   return firstn.reduce((acc, p) => acc + p, 0);
 };

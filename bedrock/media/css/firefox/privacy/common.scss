@@ -2,19 +2,18 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
-$brand-theme: 'firefox';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
+$brand-theme: "firefox";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/call-out';
-@import '../../../protocol/css/components/split';
-@import '../../../protocol/css/templates/multi-column';
-@import '../../../protocol/css/components/picto';
-@import '../../../protocol/css/components/picto-card';
-@import '../../../protocol/css/templates/card-layout';
-@import '../../protocol/components/sub-navigation';
-
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/call-out";
+@import "../../../protocol/css/components/split";
+@import "../../../protocol/css/templates/multi-column";
+@import "../../../protocol/css/components/picto";
+@import "../../../protocol/css/components/picto-card";
+@import "../../../protocol/css/templates/card-layout";
+@import "../../protocol/components/sub-navigation";
 
 /* -------------------------------------------------------------------------- */
 // Privacy Notice Call Out
@@ -24,7 +23,8 @@ $brand-theme: 'firefox';
 
     .mzp-c-call-out-title {
         @include text-title-xs;
-        background: url('/media/img/firefox/privacy/icon-privacy.svg') top center no-repeat;
+        background: url("/media/img/firefox/privacy/icon-privacy.svg") top
+            center no-repeat;
         padding-top: 70px + $spacing-lg;
     }
 }

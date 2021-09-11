@@ -2,11 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../../protocol/css/includes/lib';
-@import '../includes/lib';
+@import "../../../../protocol/css/includes/lib";
+@import "../includes/lib";
 
 //* -------------------------------------------------------------------------- */
 // Hero component
@@ -27,7 +27,8 @@ $image-path: '/media/protocol/img';
 
 .vpn-hero-heading {
     @include image-replaced();
-    background: transparent url('/media/img/logos/vpn/logo-with-wordmark.svg') top left no-repeat;
+    background: transparent url("/media/img/logos/vpn/logo-with-wordmark.svg")
+        top left no-repeat;
     @include background-size(175px 60px);
     height: 60px;
     margin: 0 auto $spacing-lg;
@@ -55,16 +56,14 @@ $image-path: '/media/protocol/img';
     position: relative;
 
     picture {
-        @include bidi((
-            (left, 0, right, 0),
-        ));
+        @include bidi(((left, 0, right, 0)));
         height: 480px;
         position: absolute;
         top: 0;
         width: 480px;
 
         img {
-            @include transition(opacity .5s ease-in-out);
+            @include transition(opacity 0.5s ease-in-out);
             opacity: 0;
         }
     }
@@ -94,11 +93,13 @@ $image-path: '/media/protocol/img';
     }
 
     .vpn-hero-body {
-        @include bidi((
-            (float, left, right),
-            (text-align, left, right),
-            (padding-right, $spacing-2xl, 0),
-        ));
+        @include bidi(
+            (
+                (float, left, right),
+                (text-align, left, right),
+                (padding-right, $spacing-2xl, 0)
+            )
+        );
         max-width: none;
         width: calc(100% - 480px - #{$spacing-2xl});
     }
@@ -120,9 +121,7 @@ $image-path: '/media/protocol/img';
     }
 
     .vpn-hero-image {
-        @include bidi((
-            (float, left, right),
-        ));
+        @include bidi(((float, left, right)));
         display: block;
     }
 }

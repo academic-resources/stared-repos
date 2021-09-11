@@ -1,9 +1,12 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
- # License, v. 2.0. If a copy of the MPL was not distributed with this
- # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. #}
 
- <nav class="mzp-c-sidemenu" role="navigation">
-  <section class="mzp-c-sidemenu-summary mzp-js-toggle" aria-controls="sidebar-menu">
+<nav class="mzp-c-sidemenu" role="navigation">
+  <section
+    class="mzp-c-sidemenu-summary mzp-js-toggle"
+    aria-controls="sidebar-menu"
+  >
     <h3 class="mzp-c-sidemenu-label">{{ _('Contact') }}</h3>
     <ul>
       <li class="mzp-is-current">{{ _('Spaces') }}</li>
@@ -13,33 +16,123 @@
   <section id="nav-spaces" class="mzp-c-sidemenu-main" id="sidebar-menu">
     <ul>
       <li>
-        <h4 class="mzp-c-sidemenu-title {% if current == 'san-francisco' %}mzp-is-current{% endif %}" data-id="san-francisco">
-          <a href="{{ url('mozorg.contact.spaces.san-francisco') }}">{{ _('San Francisco') }}</a>
+        <h4
+          class="
+            mzp-c-sidemenu-title
+            {%
+            if
+            current
+            ==
+            'san-francisco'
+            %}mzp-is-current{%
+            endif
+            %}
+          "
+          data-id="san-francisco"
+        >
+          <a href="{{ url('mozorg.contact.spaces.san-francisco') }}"
+            >{{ _('San Francisco') }}</a
+          >
         </h4>
       </li>
       <li>
-        <h4 class="mzp-c-sidemenu-title {% if current == 'beijing' %}mzp-is-current{% endif %}" data-id="beijing">
-          <a href="{{ url('mozorg.contact.spaces.beijing') }}">{{ _('Beijing') }}</a>
+        <h4
+          class="
+            mzp-c-sidemenu-title
+            {%
+            if
+            current
+            ==
+            'beijing'
+            %}mzp-is-current{%
+            endif
+            %}
+          "
+          data-id="beijing"
+        >
+          <a href="{{ url('mozorg.contact.spaces.beijing') }}"
+            >{{ _('Beijing') }}</a
+          >
         </h4>
       </li>
       <li>
-        <h4 class="mzp-c-sidemenu-title {% if current == 'berlin' %}mzp-is-current{% endif %}" data-id="berlin">
-          <a href="{{ url('mozorg.contact.spaces.berlin') }}">{{ _('Berlin') }}</a>
+        <h4
+          class="
+            mzp-c-sidemenu-title
+            {%
+            if
+            current
+            ==
+            'berlin'
+            %}mzp-is-current{%
+            endif
+            %}
+          "
+          data-id="berlin"
+        >
+          <a href="{{ url('mozorg.contact.spaces.berlin') }}"
+            >{{ _('Berlin') }}</a
+          >
         </h4>
       </li>
       <li>
-        <h4 class="mzp-c-sidemenu-title {% if current == 'paris' %}mzp-is-current{% endif %}" data-id="paris">
-          <a href="{{ url('mozorg.contact.spaces.paris') }}">{{ _('Paris') }}</a>
+        <h4
+          class="
+            mzp-c-sidemenu-title
+            {%
+            if
+            current
+            ==
+            'paris'
+            %}mzp-is-current{%
+            endif
+            %}
+          "
+          data-id="paris"
+        >
+          <a href="{{ url('mozorg.contact.spaces.paris') }}"
+            >{{ _('Paris') }}</a
+          >
         </h4>
       </li>
       <li>
-        <h4 class="mzp-c-sidemenu-title {% if current == 'portland' %}mzp-is-current{% endif %}" data-id="portland">
-          <a href="{{ url('mozorg.contact.spaces.portland') }}">{{ _('Portland') }}</a>
+        <h4
+          class="
+            mzp-c-sidemenu-title
+            {%
+            if
+            current
+            ==
+            'portland'
+            %}mzp-is-current{%
+            endif
+            %}
+          "
+          data-id="portland"
+        >
+          <a href="{{ url('mozorg.contact.spaces.portland') }}"
+            >{{ _('Portland') }}</a
+          >
         </h4>
       </li>
       <li>
-        <h4 class="mzp-c-sidemenu-title {% if current == 'toronto' %}mzp-is-current{% endif %}" data-id="toronto">
-          <a href="{{ url('mozorg.contact.spaces.toronto') }}">{{ _('Toronto') }}</a>
+        <h4
+          class="
+            mzp-c-sidemenu-title
+            {%
+            if
+            current
+            ==
+            'toronto'
+            %}mzp-is-current{%
+            endif
+            %}
+          "
+          data-id="toronto"
+        >
+          <a href="{{ url('mozorg.contact.spaces.toronto') }}"
+            >{{ _('Toronto') }}</a
+          >
         </h4>
       </li>
     </ul>

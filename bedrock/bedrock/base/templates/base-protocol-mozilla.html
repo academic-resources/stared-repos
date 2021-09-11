@@ -1,13 +1,4 @@
-{% extends 'base-protocol.html' %}
-
-{% block body_class %}mzp-t-mozilla{% endblock %}
-
-{% block site_css %}
-  {{ css_bundle('protocol-mozilla') }}
-{% endblock %}
-
-{% block site_footer %}
-  {% with theme_class='mzp-t-dark' %}
-    {% include 'includes/protocol/footer/footer.html' %}
-  {% endwith %}
-{% endblock %}
+{% extends 'base-protocol.html' %} {% block body_class %}mzp-t-mozilla{%
+endblock %} {% block site_css %} {{ css_bundle('protocol-mozilla') }} {%
+endblock %} {% block site_footer %} {% with theme_class='mzp-t-dark' %} {%
+include 'includes/protocol/footer/footer.html' %} {% endwith %} {% endblock %}

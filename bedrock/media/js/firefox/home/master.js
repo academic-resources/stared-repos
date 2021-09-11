@@ -3,10 +3,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 (function (Mozilla) {
-    'use strict';
+    "use strict";
 
     Mozilla.LazyLoad.init();
 
-    window.Mzp.Details.init('.mzp-c-menu-list-title');
-
+    window.Mzp.Details.init(".mzp-c-menu-list-title");
 })(window.Mozilla);

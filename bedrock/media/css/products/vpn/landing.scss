@@ -2,12 +2,12 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../../protocol/css/includes/lib';
-@import '../../../protocol/css/components/inline-list';
-@import '../../../protocol/css/components/notification-bar';
+@import "../../../protocol/css/includes/lib";
+@import "../../../protocol/css/components/inline-list";
+@import "../../../protocol/css/components/notification-bar";
 
 //* -------------------------------------------------------------------------- */
 // Smooth Scroll
@@ -33,7 +33,7 @@ html {
     }
 
     @media #{$mq-md} {
-        @include bidi(((text-align, left, right),));
+        @include bidi(((text-align, left, right)));
         margin: $layout-2xl 0;
     }
 
@@ -56,7 +56,7 @@ html {
         @include font-size(18px);
         font-weight: normal;
 
-        html[lang^='en'] & {
+        html[lang^="en"] & {
             text-transform: uppercase;
         }
     }
@@ -88,17 +88,13 @@ html {
     }
 
     h3 {
-        @include bidi((
-            (text-align, left, right),
-        ));
+        @include bidi(((text-align, left, right)));
         @include text-title-xs;
     }
 }
 
 .vpn-faq-item-detail {
-    @include bidi((
-        (padding-right, $spacing-xl, padding-left, 0),
-    ));
+    @include bidi(((padding-right, $spacing-xl, padding-left, 0)));
     @include text-body-lg;
 
     li {

@@ -1,23 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { InMemoryCache } from 'apollo-cache-inmemory'
-import ApolloClient from 'apollo-boost'
-import App from './components/App'
-import { HashRouter } from 'react-router-dom'
-import { ApolloProvider } from 'react-apollo'
+import React from "react";
+import ReactDOM from "react-dom";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import ApolloClient from "apollo-boost";
+import App from "./components/App";
+import { HashRouter } from "react-router-dom";
+import { ApolloProvider } from "react-apollo";
 
 const cache = new InMemoryCache({
-  dataIdFromObject: object => object._id || null
-})
+  dataIdFromObject: (object) => object._id || null,
+});
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql',
+  uri: "http://localhost:5000/graphql",
   cache: cache,
   onError: ({ networkError, graphQLErrors }) => {
-    console.log('graphQLErrors', graphQLErrors)
-    console.log('networkError', networkError)
-  }
-})
+    console.log("graphQLErrors", graphQLErrors);
+    console.log("networkError", networkError);
+  },
+});
 
 const Root = () => {
   return (
@@ -26,7 +26,7 @@ const Root = () => {
         <App />
       </HashRouter>
     </ApolloProvider>
-  )
-}
+  );
+};
 
-ReactDOM.render(<Root />, document.querySelector('#root'))
+ReactDOM.render(<Root />, document.querySelector("#root"));

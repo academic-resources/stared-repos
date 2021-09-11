@@ -2,33 +2,33 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-'use strict';
+"use strict";
 
-const gulp = require('gulp');
-const cached = require('gulp-cached');
-const filter = require('gulp-filter');
-const log = require('fancy-log');
-const colors = require('ansi-colors');
-const gulpif = require('gulp-if');
-const sass = require('gulp-sass');
-const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
-const sourcemaps = require('gulp-sourcemaps');
-const del = require('del');
-const argv = require('yargs').argv;
-const browserSync = require('browser-sync').create();
-const merge = require('merge-stream');
-const staticBundles = require('./media/static-bundles.json');
+const gulp = require("gulp");
+const cached = require("gulp-cached");
+const filter = require("gulp-filter");
+const log = require("fancy-log");
+const colors = require("ansi-colors");
+const gulpif = require("gulp-if");
+const sass = require("gulp-sass");
+const cleanCSS = require("gulp-clean-css");
+const uglify = require("gulp-uglify");
+const concat = require("gulp-concat");
+const sourcemaps = require("gulp-sourcemaps");
+const del = require("del");
+const argv = require("yargs").argv;
+const browserSync = require("browser-sync").create();
+const merge = require("merge-stream");
+const staticBundles = require("./media/static-bundles.json");
 
 // directory for building LESS, SASS, and bundles
-const buildDir = 'static_build';
+const buildDir = "static_build";
 
 // directory for the final assets ready for consumption
-const finalDir = 'static_final';
+const finalDir = "static_final";
 
 const cachedOpts = {
-    optimizeMemory: true
+    optimizeMemory: true,
 };
 
 global.watching = false;
@@ -38,8 +38,8 @@ const production = !!argv.production;
 
 const allBundleFiles = (fileType, fileExt) => {
     let allFiles = [];
-    staticBundles[fileType].forEach(bundle => {
-        bundle.files.forEach(bFile => {
+    staticBundles[fileType].forEach((bundle) => {
+        bundle.files.forEach((bFile) => {
             if (bFile.endsWith(fileExt)) {
                 allFiles.push(bFile);
             }
@@ -48,39 +48,46 @@ const allBundleFiles = (fileType, fileExt) => {
     return allFiles;
 };
 
-const handleError = task => {
-    return err => {
+const handleError = (task) => {
+    return (err) => {
         log.warn(colors.bold(colors.red(`[ERROR] ${task}:`)), colors.red(err));
     };
 };
 
-const bundleCssFiles = bundle => {
+const bundleCssFiles = (bundle) => {
     let bundleFilename = `css/BUNDLES/${bundle.name}.css`;
     if (global.watching) {
         log.info(`building: ${bundleFilename}`);
     }
-    let cssFiles = bundle.files.map(fileName => {
-        if (!fileName.endsWith('.css')) {
-            return fileName.replace(/\.scss$/i, '.css');
+    let cssFiles = bundle.files.map((fileName) => {
+        if (!fileName.endsWith(".css")) {
+            return fileName.replace(/\.scss$/i, ".css");
         }
         return fileName;
     });
-    return gulp.src(cssFiles, {base: finalDir, 'cwd': finalDir})
+    return gulp
+        .src(cssFiles, { base: finalDir, cwd: finalDir })
         .pipe(concat(bundleFilename))
         .pipe(gulp.dest(finalDir));
 };
 
-const bundleJsFiles = bundle => {
+const bundleJsFiles = (bundle) => {
     let bundleFilename = `js/BUNDLES/${bundle.name}.js`;
     if (global.watching) {
         log.info(`building: ${bundleFilename}`);
     }
-    return gulp.src(bundle.files, {base: finalDir, cwd: finalDir})
+    return gulp
+        .src(bundle.files, { base: finalDir, cwd: finalDir })
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(concat(bundleFilename))
-        .pipe(gulpif(!production, sourcemaps.write({
-            'includeContent': true
-        })))
+        .pipe(
+            gulpif(
+                !production,
+                sourcemaps.write({
+                    includeContent: true,
+                })
+            )
+        )
         .pipe(gulp.dest(finalDir));
 };
 
@@ -103,20 +110,24 @@ function clean(cb) {
 function assetsCopy() {
     return merge([
         // SASS and LESS go to build dir
-        gulp.src([
-            'media/**/*.scss',
-            'node_modules/@mozilla-protocol/core/**/*',
-            '!node_modules/@mozilla-protocol/core/*'])
-            .pipe(gulpif(global.watching, cached('all', cachedOpts)))
+        gulp
+            .src([
+                "media/**/*.scss",
+                "node_modules/@mozilla-protocol/core/**/*",
+                "!node_modules/@mozilla-protocol/core/*",
+            ])
+            .pipe(gulpif(global.watching, cached("all", cachedOpts)))
             .pipe(gulp.dest(buildDir)),
         // Everything else goes to final dir
-        gulp.src([
-            'media/**/*',
-            '!media/**/*.scss',
-            'node_modules/@mozilla-protocol/core/**/*',
-            '!node_modules/@mozilla-protocol/core/**/*.scss',
-            '!node_modules/@mozilla-protocol/core/*'])
-            .pipe(gulpif(global.watching, cached('all', cachedOpts)))
+        gulp
+            .src([
+                "media/**/*",
+                "!media/**/*.scss",
+                "node_modules/@mozilla-protocol/core/**/*",
+                "!node_modules/@mozilla-protocol/core/**/*.scss",
+                "!node_modules/@mozilla-protocol/core/*",
+            ])
+            .pipe(gulpif(global.watching, cached("all", cachedOpts)))
             .pipe(gulp.dest(finalDir)),
     ]);
 }
@@ -125,15 +136,23 @@ function assetsCopy() {
  * Find all SASS files from bundles in the static_build directory and compile them.
  */
 function sassCompileAllFiles() {
-    return gulp.src(allBundleFiles('css', '.scss'), { base: buildDir, cwd: buildDir })
+    return gulp
+        .src(allBundleFiles("css", ".scss"), { base: buildDir, cwd: buildDir })
         .pipe(gulpif(!production, sourcemaps.init()))
-        .pipe(sass({
-            sourceComments: !production,
-            outputStyle: production ? 'compressed' : 'nested'
-        }).on('error', handleError('SASS')))
-        .pipe(gulpif(!production, sourcemaps.write({
-            'includeContent': true
-        })))
+        .pipe(
+            sass({
+                sourceComments: !production,
+                outputStyle: production ? "compressed" : "nested",
+            }).on("error", handleError("SASS"))
+        )
+        .pipe(
+            gulpif(
+                !production,
+                sourcemaps.write({
+                    includeContent: true,
+                })
+            )
+        )
         .pipe(gulp.dest(finalDir));
 }
 
@@ -141,23 +160,34 @@ function sassCompileAllFiles() {
  * Watch and only compile those SASS files that have changed
  */
 function sassWatch(cb) {
-    const sassWatcher = gulp.watch(buildDir + '/css/**/*.scss', {base: buildDir});
+    const sassWatcher = gulp.watch(buildDir + "/css/**/*.scss", {
+        base: buildDir,
+    });
 
-    sassWatcher.on('change', function(path) {
-        return gulp.src(path, {base: buildDir})
-            // filter out internal imports (files starting with "_" )
-            .pipe(filter(file => {
-                return !file.relative.startsWith('_');
-            }))
-            .pipe(sourcemaps.init())
-            .pipe(sass({
-                sourceComments: !production,
-                outputStyle: production ? 'compressed' : 'nested'
-            }).on('error', handleError('SASS')))
-            .pipe(sourcemaps.write({
-                'includeContent': true
-            }))
-            .pipe(gulp.dest(finalDir));
+    sassWatcher.on("change", function (path) {
+        return (
+            gulp
+                .src(path, { base: buildDir })
+                // filter out internal imports (files starting with "_" )
+                .pipe(
+                    filter((file) => {
+                        return !file.relative.startsWith("_");
+                    })
+                )
+                .pipe(sourcemaps.init())
+                .pipe(
+                    sass({
+                        sourceComments: !production,
+                        outputStyle: production ? "compressed" : "nested",
+                    }).on("error", handleError("SASS"))
+                )
+                .pipe(
+                    sourcemaps.write({
+                        includeContent: true,
+                    })
+                )
+                .pipe(gulp.dest(finalDir))
+        );
     });
 
     cb();
@@ -176,13 +206,13 @@ function cssCompileBundles() {
  * and recompile bundles when necessary.
  */
 function cssWatch(cb) {
-    const cssWatcher = gulp.watch(finalDir + '/css/**/*.css');
+    const cssWatcher = gulp.watch(finalDir + "/css/**/*.css");
 
-    cssWatcher.on('change', function(path) {
-        let modBundles = staticBundles.css.filter(bundle => {
+    cssWatcher.on("change", function (path) {
+        let modBundles = staticBundles.css.filter((bundle) => {
             let contains = false;
-            bundle.files.every(filename => {
-                let cssfn = filename.replace(/\.scss$/i, '.css');
+            bundle.files.every((filename) => {
+                let cssfn = filename.replace(/\.scss$/i, ".css");
                 if (path.endsWith(cssfn)) {
                     contains = true;
                     return false;
@@ -213,12 +243,12 @@ function jsCompileBundles() {
  * and recompile bundles when necessary.
  */
 function jsWatch(cb) {
-    const jsWatcher = gulp.watch(finalDir + '/js/**/*.js');
+    const jsWatcher = gulp.watch(finalDir + "/js/**/*.js");
 
-    jsWatcher.on('change', function(path) {
-        let modBundles = staticBundles.js.filter(bundle => {
+    jsWatcher.on("change", function (path) {
+        let modBundles = staticBundles.js.filter((bundle) => {
             let contains = false;
-            bundle.files.every(filename => {
+            bundle.files.every((filename) => {
                 if (path.endsWith(filename)) {
                     contains = true;
                     return false;
@@ -240,14 +270,17 @@ function jsWatch(cb) {
  * Minify all of the CSS files after compilation.
  */
 function cssMinify() {
-    return gulp.src(finalDir + '/css/**/*.css', {base: buildDir})
-        .pipe(cleanCSS({
-            compatibility: {
-                properties: {
-                    iePrefixHack: true, // controls keeping IE prefix hack used in oldIE.scss
+    return gulp
+        .src(finalDir + "/css/**/*.css", { base: buildDir })
+        .pipe(
+            cleanCSS({
+                compatibility: {
+                    properties: {
+                        iePrefixHack: true, // controls keeping IE prefix hack used in oldIE.scss
+                    },
                 },
-            }
-        }).on('error', handleError('CLEANCSS')))
+            }).on("error", handleError("CLEANCSS"))
+        )
         .pipe(gulp.dest(finalDir));
 }
 
@@ -255,8 +288,9 @@ function cssMinify() {
  * Minify all of the JS files after compilation.
  */
 function jsMinify() {
-    return gulp.src(finalDir + '/js/**/*.js', {base: buildDir})
-        .pipe(uglify({ie8: true}).on('error', handleError('UGLIFY')))
+    return gulp
+        .src(finalDir + "/js/**/*.js", { base: buildDir })
+        .pipe(uglify({ ie8: true }).on("error", handleError("UGLIFY")))
         .pipe(gulp.dest(finalDir));
 }
 
@@ -265,18 +299,22 @@ function jsMinify() {
  * either `static_build` or `static_final` depending on the file type.
  */
 function assetsWatch(cb) {
-    const assetsWatcher = gulp.watch(['media/**/*', '!media/**/*.scss'], {base: 'media'});
-    const cssWatcher = gulp.watch('media/**/*.scss', {base: 'media'});
+    const assetsWatcher = gulp.watch(["media/**/*", "!media/**/*.scss"], {
+        base: "media",
+    });
+    const cssWatcher = gulp.watch("media/**/*.scss", { base: "media" });
     // send everything but scss to the final dir
-    assetsWatcher.on('change', function(path) {
-        return gulp.src(path, {base: 'media'})
-            .pipe(cached('all', cachedOpts))
+    assetsWatcher.on("change", function (path) {
+        return gulp
+            .src(path, { base: "media" })
+            .pipe(cached("all", cachedOpts))
             .pipe(gulp.dest(finalDir));
     });
     // send scss to the build dir
-    cssWatcher.on('change', function(path) {
-        return gulp.src(path, {base: 'media'})
-            .pipe(cached('all', cachedOpts))
+    cssWatcher.on("change", function (path) {
+        return gulp
+            .src(path, { base: "media" })
+            .pipe(cached("all", cachedOpts))
             .pipe(gulp.dest(buildDir));
     });
 
@@ -287,8 +325,8 @@ function assetsWatch(cb) {
  * Start the browser-sync daemon for local development.
  */
 function browserSyncTask(cb) {
-    const proxyURL = process.env.BS_PROXY_URL || 'localhost:8080';
-    const openBrowser = !(process.env.BS_OPEN_BROWSER === 'false');
+    const proxyURL = process.env.BS_PROXY_URL || "localhost:8080";
+    const openBrowser = !(process.env.BS_OPEN_BROWSER === "false");
     browserSync.init({
         port: 8000,
         proxy: proxyURL,
@@ -298,12 +336,14 @@ function browserSyncTask(cb) {
         reloadDebounce: 500,
         injectChanges: false,
         ui: {
-            port: 8001
+            port: 8001,
         },
-        serveStatic: [{
-            route: '/media',
-            dir: finalDir
-        }]
+        serveStatic: [
+            {
+                route: "/media",
+                dir: finalDir,
+            },
+        ],
     });
     cb();
 }
@@ -316,10 +356,7 @@ function reloadBrowser(cb) {
     cb();
 }
 
-const reloadSass = gulp.series(
-    sassCompileAllFiles,
-    reloadBrowser
-);
+const reloadSass = gulp.series(sassCompileAllFiles, reloadBrowser);
 
 // --------------------------
 // DEV/WATCH TASK
@@ -330,14 +367,14 @@ function devWatch(cb) {
     // --------------------------
     // watch:sass library files
     // --------------------------
-    gulp.watch(buildDir + '/css/**/_*.scss', reloadSass);
+    gulp.watch(buildDir + "/css/**/_*.scss", reloadSass);
 
     // --------------------------
     // watch:html
     // --------------------------
-    gulp.watch('bedrock/*/templates/**/*.html', reloadBrowser);
+    gulp.watch("bedrock/*/templates/**/*.html", reloadBrowser);
 
-    log.info(colors.green('Watching for changes...'));
+    log.info(colors.green("Watching for changes..."));
 
     cb();
 }
@@ -353,7 +390,7 @@ const buildTask = gulp.series(
     gulp.parallel(jsCompileBundles, cssCompileBundles),
     gulp.parallel(jsMinify, cssMinify)
 );
-gulp.task('build', buildTask);
+gulp.task("build", buildTask);
 
 const defaultTask = gulp.series(
     clean,
@@ -365,6 +402,6 @@ const defaultTask = gulp.series(
     gulp.parallel(sassWatch, cssWatch, jsWatch),
     devWatch
 );
-gulp.task('default', defaultTask);
+gulp.task("default", defaultTask);
 
 module.exports = defaultTask;

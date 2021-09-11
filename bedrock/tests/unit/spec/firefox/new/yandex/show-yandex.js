@@ -7,10 +7,10 @@
 /* eslint camelcase: [2, {properties: "never"}] */
 /* eslint new-cap: [2, {"capIsNewExceptions": ["Deferred"]}] */
 
-describe('show-yandex.js', function() {
-    'use strict';
+describe("show-yandex.js", function () {
+    "use strict";
 
-    beforeEach(function() {
+    beforeEach(function () {
         // stub out Mozilla.Cookie lib
         window.Mozilla.Cookies = sinon.stub();
         window.Mozilla.Cookies.enabled = sinon.stub().returns(true);
@@ -23,76 +23,86 @@ describe('show-yandex.js', function() {
         window.dataLayer.push = sinon.stub();
     });
 
-    describe('getLocation', function() {
-
+    describe("getLocation", function () {
         var xhr;
         var xhrRequests = [];
 
-        beforeEach(function() {
-            spyOn(Mozilla.Yandex, 'onRequestComplete');
+        beforeEach(function () {
+            spyOn(Mozilla.Yandex, "onRequestComplete");
 
             xhr = sinon.useFakeXMLHttpRequest();
-            xhr.onCreate = function(req) {
+            xhr.onCreate = function (req) {
                 xhrRequests.push(req);
             };
         });
 
-        afterEach(function() {
+        afterEach(function () {
             xhr.restore();
             xhrRequests = [];
         });
 
-        it('should pass country to onRequestComplete if server makes a response', function() {
-            var country = 'ru';
+        it("should pass country to onRequestComplete if server makes a response", function () {
+            var country = "ru";
 
             Mozilla.Yandex.getLocation();
 
-            xhrRequests[0].respond(200, {'Content-Type': 'application/json'}, '{"country_code": "' + country + '"}');
+            xhrRequests[0].respond(
+                200,
+                { "Content-Type": "application/json" },
+                '{"country_code": "' + country + '"}'
+            );
 
-            expect(Mozilla.Yandex.onRequestComplete).toHaveBeenCalledWith(country);
+            expect(Mozilla.Yandex.onRequestComplete).toHaveBeenCalledWith(
+                country
+            );
         });
 
-        it('should call onRequestComplete even if server errors out', function() {
+        it("should call onRequestComplete even if server errors out", function () {
             Mozilla.Yandex.getLocation();
 
-            xhrRequests[0].respond(500, '', '');
+            xhrRequests[0].respond(500, "", "");
 
-            expect(Mozilla.Yandex.onRequestComplete).toHaveBeenCalledWith('none');
+            expect(Mozilla.Yandex.onRequestComplete).toHaveBeenCalledWith(
+                "none"
+            );
         });
     });
 
-    describe('hasGeoOverride', function() {
-
-        it('should return a geo value when supplied', function() {
-            expect(Mozilla.Yandex.hasGeoOverride('/firefox/new/?geo=ru')).toEqual('ru');
+    describe("hasGeoOverride", function () {
+        it("should return a geo value when supplied", function () {
+            expect(
+                Mozilla.Yandex.hasGeoOverride("/firefox/new/?geo=ru")
+            ).toEqual("ru");
         });
 
-        it('should return false for no override', function() {
-            expect(Mozilla.Yandex.hasGeoOverride('/firefox/new/')).toBeFalsy();
-        });
-    });
-
-    describe('verifyLocation', function() {
-
-        it('should return true if location is correct', function() {
-            expect(Mozilla.Yandex.verifyLocation(Mozilla.Yandex.RUSSIA_COUNTRY_CODE)).toBeTruthy();
-        });
-
-        it('should return false if location is inocrrect', function() {
-            expect(Mozilla.Yandex.verifyLocation('us')).toBeFalsy();
+        it("should return false for no override", function () {
+            expect(Mozilla.Yandex.hasGeoOverride("/firefox/new/")).toBeFalsy();
         });
     });
 
-    describe('onRequestComplete', function() {
-
-        var country = 'ru';
-
-        beforeEach(function() {
-            spyOn(Mozilla.Yandex, 'updatePageContent');
-            spyOn(Mozilla.Yandex, 'setCookie');
+    describe("verifyLocation", function () {
+        it("should return true if location is correct", function () {
+            expect(
+                Mozilla.Yandex.verifyLocation(
+                    Mozilla.Yandex.RUSSIA_COUNTRY_CODE
+                )
+            ).toBeTruthy();
         });
 
-        it('should update page content on first call only and set a cookie', function() {
+        it("should return false if location is inocrrect", function () {
+            expect(Mozilla.Yandex.verifyLocation("us")).toBeFalsy();
+        });
+    });
+
+    describe("onRequestComplete", function () {
+        var country = "ru";
+
+        beforeEach(function () {
+            spyOn(Mozilla.Yandex, "updatePageContent");
+            spyOn(Mozilla.Yandex, "setCookie");
+        });
+
+        it("should update page content on first call only and set a cookie", function () {
             Mozilla.Yandex.onRequestComplete(country);
             expect(Mozilla.Yandex.updatePageContent).toHaveBeenCalled();
             expect(Mozilla.Yandex.setCookie).toHaveBeenCalledWith(country);
@@ -103,20 +113,19 @@ describe('show-yandex.js', function() {
         });
     });
 
-    describe('updatePageContent', function() {
-
-        it('should show Yandex content for users in Russia', function() {
-            spyOn(Mozilla.Yandex, 'shouldShowYandex').and.returnValue(true);
-            spyOn(Mozilla.Yandex, 'showYandexContent');
+    describe("updatePageContent", function () {
+        it("should show Yandex content for users in Russia", function () {
+            spyOn(Mozilla.Yandex, "shouldShowYandex").and.returnValue(true);
+            spyOn(Mozilla.Yandex, "showYandexContent");
 
             Mozilla.Yandex.updatePageContent();
 
             expect(Mozilla.Yandex.showYandexContent).toHaveBeenCalled();
         });
 
-        it('should regular content for users not in Russia', function() {
-            spyOn(Mozilla.Yandex, 'shouldShowYandex').and.returnValue(false);
-            spyOn(Mozilla.Yandex, 'showRegularContent');
+        it("should regular content for users not in Russia", function () {
+            spyOn(Mozilla.Yandex, "shouldShowYandex").and.returnValue(false);
+            spyOn(Mozilla.Yandex, "showRegularContent");
 
             Mozilla.Yandex.updatePageContent();
 
@@ -124,25 +133,25 @@ describe('show-yandex.js', function() {
         });
     });
 
-    describe('shouldShowYandex', function() {
-
-        it('should return true if criteria is met', function() {
-            spyOn(Mozilla.Yandex, 'verifyLocation').and.returnValue(true);
+    describe("shouldShowYandex", function () {
+        it("should return true if criteria is met", function () {
+            spyOn(Mozilla.Yandex, "verifyLocation").and.returnValue(true);
 
             expect(Mozilla.Yandex.shouldShowYandex()).toBeTruthy();
         });
 
-        it('should return false if one or more of the criteria is not met', function() {
-            spyOn(Mozilla.Yandex, 'verifyLocation').and.returnValue(false);
+        it("should return false if one or more of the criteria is not met", function () {
+            spyOn(Mozilla.Yandex, "verifyLocation").and.returnValue(false);
 
             expect(Mozilla.Yandex.shouldShowYandex()).toBeFalsy();
         });
     });
 
-    describe('cookieExpiresDate', function() {
-
-        it('should return a cookie expiry date 3 days in the future by default', function() {
-            var expiry = Mozilla.Yandex.cookieExpiresDate(new Date(2018, 8, 1, 10, 15));
+    describe("cookieExpiresDate", function () {
+        it("should return a cookie expiry date 3 days in the future by default", function () {
+            var expiry = Mozilla.Yandex.cookieExpiresDate(
+                new Date(2018, 8, 1, 10, 15)
+            );
             var date = new Date(expiry);
             expect(date.getFullYear()).toBe(2018);
             expect(date.getMonth()).toBe(8);
@@ -150,60 +159,63 @@ describe('show-yandex.js', function() {
         });
     });
 
-    describe('setCookie', function() {
-
-        it('should set session cookies as expected', function() {
-            var country = 'ru';
-            spyOn(Mozilla.Cookies, 'setItem');
+    describe("setCookie", function () {
+        it("should set session cookies as expected", function () {
+            var country = "ru";
+            spyOn(Mozilla.Cookies, "setItem");
 
             Mozilla.Yandex.setCookie(country);
 
-            expect(Mozilla.Cookies.setItem).toHaveBeenCalledWith(Mozilla.Yandex.COOKIE_ID, country, jasmine.any(String));
+            expect(Mozilla.Cookies.setItem).toHaveBeenCalledWith(
+                Mozilla.Yandex.COOKIE_ID,
+                country,
+                jasmine.any(String)
+            );
         });
     });
 
-    describe('getCookie', function() {
-
-        it('should return an value as expected', function() {
-            spyOn(Mozilla.Cookies, 'getItem');
+    describe("getCookie", function () {
+        it("should return an value as expected", function () {
+            spyOn(Mozilla.Cookies, "getItem");
             Mozilla.Yandex.getCookie(Mozilla.Yandex.COOKIE_ID);
         });
     });
 
-    describe('hasCookie', function() {
-
-        it('should return true if session cookie exists', function() {
-            spyOn(Mozilla.Cookies, 'hasItem').and.returnValue(true);
+    describe("hasCookie", function () {
+        it("should return true if session cookie exists", function () {
+            spyOn(Mozilla.Cookies, "hasItem").and.returnValue(true);
             var result = Mozilla.Yandex.hasCookie();
-            expect(Mozilla.Cookies.hasItem).toHaveBeenCalledWith(Mozilla.Yandex.COOKIE_ID);
+            expect(Mozilla.Cookies.hasItem).toHaveBeenCalledWith(
+                Mozilla.Yandex.COOKIE_ID
+            );
             expect(result).toBeTruthy();
         });
 
-        it('should return false if session cookie does not exist', function() {
-            spyOn(Mozilla.Cookies, 'hasItem').and.returnValue(false);
+        it("should return false if session cookie does not exist", function () {
+            spyOn(Mozilla.Cookies, "hasItem").and.returnValue(false);
             var result = Mozilla.Yandex.hasCookie();
             expect(result).toBeFalsy();
         });
     });
 
-    describe('init', function() {
+    describe("init", function () {
         var isDesktop;
 
-        beforeEach(function() {
+        beforeEach(function () {
             isDesktop = Mozilla.Client.isDesktop;
         });
 
-        afterEach(function() {
+        afterEach(function () {
             Mozilla.Client.isDesktop = isDesktop;
         });
 
-        it('should display Yandex content if override URL is set to Russia', function() {
-            var country = 'ru';
+        it("should display Yandex content if override URL is set to Russia", function () {
+            var country = "ru";
             Mozilla.Client.isDesktop = true;
-            spyOn(Mozilla.Cookies, 'enabled').and.returnValue(true);
-            spyOn(Mozilla.Yandex, 'hasGeoOverride').and.returnValue(country);
-            spyOn(Mozilla.Yandex, 'verifyLocation').and.callThrough();
-            spyOn(Mozilla.Yandex, 'showYandexContent');
+            spyOn(Mozilla.Cookies, "enabled").and.returnValue(true);
+            spyOn(Mozilla.Yandex, "hasGeoOverride").and.returnValue(country);
+            spyOn(Mozilla.Yandex, "verifyLocation").and.callThrough();
+            spyOn(Mozilla.Yandex, "showYandexContent");
 
             Mozilla.Yandex.init();
 
@@ -211,13 +223,13 @@ describe('show-yandex.js', function() {
             expect(Mozilla.Yandex.showYandexContent).toHaveBeenCalled();
         });
 
-        it('should display Regular content if override URL is set to any other value', function() {
-            var country = 'us';
+        it("should display Regular content if override URL is set to any other value", function () {
+            var country = "us";
             Mozilla.Client.isDesktop = true;
-            spyOn(Mozilla.Cookies, 'enabled').and.returnValue(true);
-            spyOn(Mozilla.Yandex, 'hasGeoOverride').and.returnValue(country);
-            spyOn(Mozilla.Yandex, 'verifyLocation').and.callThrough();
-            spyOn(Mozilla.Yandex, 'showRegularContent');
+            spyOn(Mozilla.Cookies, "enabled").and.returnValue(true);
+            spyOn(Mozilla.Yandex, "hasGeoOverride").and.returnValue(country);
+            spyOn(Mozilla.Yandex, "verifyLocation").and.callThrough();
+            spyOn(Mozilla.Yandex, "showRegularContent");
 
             Mozilla.Yandex.init();
 
@@ -225,25 +237,25 @@ describe('show-yandex.js', function() {
             expect(Mozilla.Yandex.showRegularContent).toHaveBeenCalled();
         });
 
-        it('should query geo-location if cookie does not exist', function () {
+        it("should query geo-location if cookie does not exist", function () {
             Mozilla.Client.isDesktop = true;
-            spyOn(Mozilla.Cookies, 'enabled').and.returnValue(true);
-            spyOn(Mozilla.Yandex, 'hasGeoOverride').and.returnValue(false);
-            spyOn(Mozilla.Yandex, 'hasCookie').and.returnValue(false);
-            spyOn(Mozilla.Yandex, 'getLocation');
+            spyOn(Mozilla.Cookies, "enabled").and.returnValue(true);
+            spyOn(Mozilla.Yandex, "hasGeoOverride").and.returnValue(false);
+            spyOn(Mozilla.Yandex, "hasCookie").and.returnValue(false);
+            spyOn(Mozilla.Yandex, "getLocation");
 
             Mozilla.Yandex.init();
 
             expect(Mozilla.Yandex.getLocation).toHaveBeenCalled();
         });
 
-        it('should only update content if cookie is already set', function () {
+        it("should only update content if cookie is already set", function () {
             Mozilla.Client.isDesktop = true;
-            spyOn(Mozilla.Cookies, 'enabled').and.returnValue(true);
-            spyOn(Mozilla.Yandex, 'hasGeoOverride').and.returnValue(false);
-            spyOn(Mozilla.Yandex, 'hasCookie').and.returnValue(true);
-            spyOn(Mozilla.Yandex, 'updatePageContent');
-            spyOn(Mozilla.Yandex, 'getLocation');
+            spyOn(Mozilla.Cookies, "enabled").and.returnValue(true);
+            spyOn(Mozilla.Yandex, "hasGeoOverride").and.returnValue(false);
+            spyOn(Mozilla.Yandex, "hasCookie").and.returnValue(true);
+            spyOn(Mozilla.Yandex, "updatePageContent");
+            spyOn(Mozilla.Yandex, "getLocation");
 
             Mozilla.Yandex.init();
 
@@ -251,11 +263,11 @@ describe('show-yandex.js', function() {
             expect(Mozilla.Yandex.updatePageContent).toHaveBeenCalled();
         });
 
-        it('should show regular content if minimum criteria is not met', function () {
+        it("should show regular content if minimum criteria is not met", function () {
             Mozilla.Client.isDesktop = false;
-            spyOn(Mozilla.Cookies, 'enabled').and.returnValue(false);
-            spyOn(Mozilla.Yandex, 'hasGeoOverride').and.returnValue(false);
-            spyOn(Mozilla.Yandex, 'showRegularContent');
+            spyOn(Mozilla.Cookies, "enabled").and.returnValue(false);
+            spyOn(Mozilla.Yandex, "hasGeoOverride").and.returnValue(false);
+            spyOn(Mozilla.Yandex, "showRegularContent");
 
             Mozilla.Yandex.init();
 

@@ -2,10 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../protocol/css/includes/lib';
+@import "../../protocol/css/includes/lib";
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
 .list-content a:link,
 .list-content a:visited,
@@ -22,16 +22,16 @@ main {
     @include font-size(40px);
 }
 
-.error-helper { // Fallback content only
+.error-helper {
+    // Fallback content only
     @include text-title-xs;
     padding-top: $spacing-lg;
 }
 
 .list-icon {
-    @include bidi((
-        (padding-left, auto, $spacing-md),
-        (padding-right, $spacing-md, auto),
-    ));
+    @include bidi(
+        ((padding-left, auto, $spacing-md), (padding-right, $spacing-md, auto))
+    );
     vertical-align: top;
 }
 
@@ -40,7 +40,7 @@ main {
 }
 
 .back-button:before {
-    content:"\2190\0020";
+    content: "\2190\0020";
 }
 
 .back-button {
@@ -57,7 +57,8 @@ main {
     padding-bottom: $spacing-xl;
 }
 
-.list-icon, .list-content {
+.list-icon,
+.list-content {
     display: inline-block;
 }
 .list-content {
@@ -73,9 +74,9 @@ main {
         transform: translateY(-6px);
 
         &:after {
-            @include bidi(((float, right, left),));
+            @include bidi(((float, right, left)));
             background: $color-marketing-gray-30;
-            content: '';
+            content: "";
             height: 50px;
             margin: -10px $spacing-lg 0;
             width: 2px;
@@ -83,19 +84,20 @@ main {
     }
 
     .logo-firefox {
-        @include bidi(((transform, translateX(-5px), translateX(5px)),));
+        @include bidi(((transform, translateX(-5px), translateX(5px))));
         display: inline-block;
         height: 50px;
     }
-
 }
 
-.prose { // Fallback content only
+.prose {
+    // Fallback content only
     list-style-type: disc;
     padding-left: $spacing-xl;
 }
 
-.fallback-list-content { // Fallback content only
+.fallback-list-content {
+    // Fallback content only
     @include font-size(16px);
     padding-bottom: $spacing-md;
 }
@@ -113,5 +115,3 @@ main {
         @include font-size(48px);
     }
 }
-
-

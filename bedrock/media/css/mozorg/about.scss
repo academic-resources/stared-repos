@@ -2,36 +2,34 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$font-path: '/media/fonts';
-$image-path: '/media/protocol/img';
+$font-path: "/media/fonts";
+$image-path: "/media/protocol/img";
 
-@import '../../protocol/css/includes/lib';
-@import '../../protocol/css/components/billboard';
-@import '../../protocol/css/components/split';
-@import '../../protocol/css/components/hero';
-@import '../../protocol/css/components/newsletter-form';
-@import '../../protocol/css/templates/card-layout';
-
-
+@import "../../protocol/css/includes/lib";
+@import "../../protocol/css/components/billboard";
+@import "../../protocol/css/components/split";
+@import "../../protocol/css/components/hero";
+@import "../../protocol/css/components/newsletter-form";
+@import "../../protocol/css/templates/card-layout";
 
 /* -------------------------------------------------------------------------- */
 // Hero image
 
 .mzp-c-hero.t-mission {
-    @include at2x('/media/img/mozorg/about/about-hero-xxs.jpg', auto, 400px);
+    @include at2x("/media/img/mozorg/about/about-hero-xxs.jpg", auto, 400px);
     @include border-box;
     background-repeat: no-repeat;
     background-position: bottom center;
     min-height: 400px;
 
     @media #{$mq-xs} {
-        @include at2x('/media/img/mozorg/about/about-hero-xs.jpg', auto, 400px);
+        @include at2x("/media/img/mozorg/about/about-hero-xs.jpg", auto, 400px);
     }
     @media #{$mq-sm} {
-        @include at2x('/media/img/mozorg/about/about-hero-sm.jpg', auto, 400px);
+        @include at2x("/media/img/mozorg/about/about-hero-sm.jpg", auto, 400px);
     }
     @media #{$mq-md} {
-        @include at2x('/media/img/mozorg/about/about-hero.jpg', auto, 400px);
+        @include at2x("/media/img/mozorg/about/about-hero.jpg", auto, 400px);
     }
 
     .mzp-l-content {
@@ -52,13 +50,13 @@ $image-path: '/media/protocol/img';
     max-width: 830px;
 }
 
-
 /* -------------------------------------------------------------------------- */
 // Intro section
 
 .t-shade {
     background: $color-marketing-gray-20;
-    background: $color-marketing-gray-20 linear-gradient($color-marketing-gray-20, $color-white 350px);
+    background: $color-marketing-gray-20
+        linear-gradient($color-marketing-gray-20, $color-white 350px);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -121,7 +119,7 @@ $city-image-size: 106px;
     text-align: center;
 
     &:before {
-        content: '';
+        content: "";
         display: block;
         height: $city-image-size;
         width: $city-image-size;
@@ -130,15 +128,15 @@ $city-image-size: 106px;
     }
 
     &.c-city-sf:before {
-        background-image: url('/media/img/mozorg/about/city-sf.png');
+        background-image: url("/media/img/mozorg/about/city-sf.png");
     }
 
     &.c-city-berlin:before {
-        background-image: url('/media/img/mozorg/about/city-berlin.png');
+        background-image: url("/media/img/mozorg/about/city-berlin.png");
     }
 
     &.c-city-toronto:before {
-        background-image: url('/media/img/mozorg/about/city-toronto.png');
+        background-image: url("/media/img/mozorg/about/city-toronto.png");
     }
 
     &,
@@ -197,7 +195,12 @@ $city-image-size: 106px;
     }
 
     .c-city-title {
-        border-image: linear-gradient(to top, $color-white 1px, $color-white 1px) 2;
+        border-image: linear-gradient(
+                to top,
+                $color-white 1px,
+                $color-white 1px
+            )
+            2;
         padding-bottom: 0;
         margin-bottom: 0;
     }
@@ -212,7 +215,7 @@ $city-image-size: 106px;
 @media #{$mq-md} {
     .c-city {
         @include grid-half;
-        @include bidi(((float, left, right),));
+        @include bidi(((float, left, right)));
         padding: 0 ($spacing-xl / 2);
         margin: $spacing-xl 0;
     }

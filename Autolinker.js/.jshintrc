@@ -3,11 +3,11 @@
 	"smarttabs": true,
 	"eqnull": true,
 	"esnext": true,
-	"globals" : {
-		"describe" : true,
-		"beforeEach" : true,
-		"åfterEach" : true,
-		"it" : true,
-		"expect" : true
+	"globals": {
+		"describe": true,
+		"beforeEach": true,
+		"åfterEach": true,
+		"it": true,
+		"expect": true
 	}
 }

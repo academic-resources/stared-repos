@@ -1,19 +1,9 @@
-{# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
-
-{% extends "base-protocol-mozilla.html" %}
-
-{% block page_title %}Transparency Report{% endblock %}
-
-{% block page_css %}
-{{ css_bundle('about-transparency') }}
-{% endblock %}
-
-{% block js %}
-{{ js_bundle('about-transparency') }}
-{% endblock %}
-
+{# This Source Code Form is subject to the terms of the Mozilla Public #
+License, v. 2.0. If a copy of the MPL was not distributed with this # file, You
+can obtain one at http://mozilla.org/MPL/2.0/. -#} {% extends
+"base-protocol-mozilla.html" %} {% block page_title %}Transparency Report{%
+endblock %} {% block page_css %} {{ css_bundle('about-transparency') }} {%
+endblock %} {% block js %} {{ js_bundle('about-transparency') }} {% endblock %}
 {% block content %}
 <main role="main">
   <header class="c-page-header">
@@ -32,8 +22,5 @@
     {% include 'mozorg/about/policy/transparency/includes/past-reports.html' %}
   </aside>
   {% endblock %}
-
 </main>
-{% endblock %}
-
-{% block email_form %}{% endblock %}
+{% endblock %} {% block email_form %}{% endblock %}

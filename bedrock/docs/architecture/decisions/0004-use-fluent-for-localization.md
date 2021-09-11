@@ -26,5 +26,5 @@ are no longer in the templates at all, and are instead referenced by string IDs 
 The positive side of this change is that the developer has total control over the strings in the translation files
 and there are no string extraction or merge steps.
 
-[Fluent]: https://projectfluent.org/
+[fluent]: https://projectfluent.org/
 [bedrock docs]: https://bedrock.readthedocs.io/en/latest/l10n.html#fluent
