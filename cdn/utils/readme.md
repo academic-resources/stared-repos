@@ -1,6 +1,5 @@
 # Utils
 
-
 ## FBI warning
 
 ```js
@@ -16,5 +15,5 @@
 //   },
   // console.warn("%c\n👻 被我发现了吧！ xgqfrms 博客，在这里与你一起分享生活，分享技术。%c\n\ncontact: https://www.xgqfrms.xyz/about/", "color: red;", "color: green;");
   console.warn("%c\n👻 被我发现了吧！ FBI警告：  不要搞事情！%c\n\ncontact: https://www.xgqfrms.xyz/about.html", "font-size: 23px; color: red;", "color: green;");\
-  
-  ```
+
+```

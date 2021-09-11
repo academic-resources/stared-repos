@@ -1,4 +1,3 @@
-
 "use strict";
 
 /**
@@ -25,15 +24,17 @@ const log = console.log;
 
 const app = document.querySelector(`#msg`);
 try {
-  const url = location.href;
-  const search = location.search;
-  // const msg = decodeURIComponent(search).replace(`?uri=web+xgqfrms:`, ``);
-  const msg = decodeURIComponent(search).slice(decodeURIComponent(search).indexOf(`:`) + 1);
-  log(`handler OK ✅`, msg)
-  app.insertAdjacentHTML(`beforeend`, msg);
+    const url = location.href;
+    const search = location.search;
+    // const msg = decodeURIComponent(search).replace(`?uri=web+xgqfrms:`, ``);
+    const msg = decodeURIComponent(search).slice(
+        decodeURIComponent(search).indexOf(`:`) + 1
+    );
+    log(`handler OK ✅`, msg);
+    app.insertAdjacentHTML(`beforeend`, msg);
 } catch (error) {
-  log(`hanlder error ❌`, error)
-  app.insertAdjacentHTML(`beforeend`, `❌❓👻⚠️🤣💩🐞`);
+    log(`hanlder error ❌`, error);
+    app.insertAdjacentHTML(`beforeend`, `❌❓👻⚠️🤣💩🐞`);
 }
 
 /*
