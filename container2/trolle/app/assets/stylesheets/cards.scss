@@ -1,0 +1,115 @@
+.cards-holder {
+  display: flex;
+  flex-direction: column;
+
+  .card {
+    padding: 6px 8px;
+    position: relative;
+    z-index: 10;
+    color: #172b4d;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+    margin-bottom: 8px;
+    min-height: 20px;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      color: #091e42;
+      background-color: #f5f6f8;
+
+      i {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  i {
+    font-size: 10px;
+    opacity: 0;
+    background: #0000002b;
+    padding: 8px;
+    margin: -3px;
+    border-radius: 3px;
+  }
+
+  .dragged-card {
+    color: transparent;
+    &:before {
+      content: attr(data-title);
+      width: 246px;
+      height: 20px;
+      padding: 6px 8px;
+      position: absolute;
+      color: #172b4d;
+      cursor: pointer;
+      background-color: #fff;
+      border-radius: 3px;
+      box-shadow: 0 5px 5px rgba(9, 30, 66, 0.55);
+      margin-bottom: 8px;
+      min-height: 20px;
+      word-wrap: break-word;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      transform: rotate(3deg);
+    }
+  }
+}
+
+.editing-card {
+  background: #0000004d;
+  padding: 1000px;
+  margin: -1000px;
+  z-index: 10000;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+      resize: none;
+      height: 83px;
+      border-radius: 3px;
+      border: none;
+      position: relative;
+      margin-bottom: -65px;
+      z-index: 1000;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .save-card-form-btn {
+      position: relative;
+      top: 71px;
+      align-self: start;
+      z-index: 1000;
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 20px;
+      margin: 8px 4px 0 0;
+      padding: 6px 24px;
+      text-align: center;
+      background-color: #5aac44;
+      box-shadow: 0 1px 0 0 #3f6f21;
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: #519839;
+        box-shadow: 0 1px 0 0 #3f6f21;
+        border: none;
+        color: #fff;
+      }
+    }
+  }
+}

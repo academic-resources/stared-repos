@@ -1,0 +1,28 @@
+<% if logged_in? %>
+  <script id="bootstrap-current-user" type="text/javascript">
+  	window.currentUser = <%= render("api/users/user.json.jbuilder",
+  		user: current_user).html_safe %>
+  </script>
+<% end %>
+
+<script type="text/javascript">
+  window.splash_image_1 = '<%= image_url "hero-a.svg" %>'
+  window.splash_image_2 = '<%= image_url "img2.png" %>'
+  window.splash_image_3 = '<%= image_url "img3.png" %>'
+  window.splash_image_4 = '<%= image_url "carousel-1.jpg" %>'
+  window.splash_image_5 = '<%= image_url "carousel-2.jpg" %>'
+  window.splash_image_6 = '<%= image_url "carousel-3.jpg" %>'
+  window.splash_image_7 = '<%= image_url "carousel-4.jpg" %>'
+  window.splash_image_8 = '<%= image_url "carousel-5.jpg" %>'
+  window.splash_image_9 = '<%= image_url "bottom.jpg" %>'
+  window.icon_search = '<%= image_url "search.png" %>'
+  window.add_search = '<%= image_url "add.png" %>'
+  window.home_search = '<%= image_url "home.png" %>'
+
+</script>
+
+<main id="root"></main>
+
+    
+
+
