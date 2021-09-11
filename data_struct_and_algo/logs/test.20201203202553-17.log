@@ -1,0 +1,32 @@
+2020-12-03 20:25:53,978 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-12-03 20:25:53,978 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\OneDrive - Anthem\\Desktop\\GITHUB\\DS_ALGO\\udaexec.ini: Not Found']
+2020-12-03 20:25:53,978 - teradata.udaexec - INFO - Found run number file: "C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\.runNumber"
+2020-12-03 20:25:53,978 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-12-03 20:25:53,978 - teradata.udaexec - INFO - Removed 0 log files.
+2020-12-03 20:25:53,983 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\test.checkpoint
+2020-12-03 20:25:53,984 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-12-03 20:25:53,984 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: test
+ *          Version: 1.0
+ *       Run Number: 20201203202553-17
+ *             Host: LDMG1XT2
+ *         Platform: Windows-10-10.0.18362-SP0
+ *          OS User: AG16000
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: teradata_con_usi.py
+ *      Working Dir: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO
+ *          Log Dir: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\logs
+ *         Log File: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\logs\test.20201203202553-17.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\OneDrive - Anthem\\Desktop\\GITHUB\\DS_ALGO\\udaexec.ini: Not Found']
+ *      Query Bands: ApplicationName=test;Version=1.0;JobID=20201203202553-17;ClientUser=AG16000;Production=False;udaAppLogFile=C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\logs\test.20201203202553-17.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-12-03 20:25:53,984 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'DWTEST3COP1.WELLPOINT.COM', 'authentication': 'LDAP', 'driver': 'Teradata Database ODBC Driver 16.20', 'username': 'AG16000', 'password': 'XXXXXX'}
+2020-12-03 20:25:53,988 - teradata.tdodbc - INFO - Available drivers: SQL Server, Teradata Database ODBC Driver 16.20
+2020-12-03 20:25:58,018 - teradata.udaexec - INFO - Connection successful. Duration: 4.034 seconds. Details: {'method': 'odbc', 'system': 'DWTEST3COP1.WELLPOINT.COM', 'authentication': 'LDAP', 'driver': 'Teradata Database ODBC Driver 16.20', 'username': 'AG16000', 'password': 'XXXXXX'}
+2020-12-03 20:25:58,781 - teradata.udaexec - INFO - Query Successful. Duration: 0.762 seconds, Rows: 5, Query: select * from t2a_etl_views_mrdm_xm.CLNDR sample 5
+2020-12-03 20:25:59,130 - teradata.tdodbc - WARNING - 1 open connections found on exit, attempting to close...
+2020-12-03 20:25:59,429 - teradata.udaexec - INFO - UdaExec exiting.

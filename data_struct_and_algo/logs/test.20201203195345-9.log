@@ -1,0 +1,66 @@
+2020-12-03 19:53:45,802 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-12-03 19:53:45,802 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\OneDrive - Anthem\\Desktop\\GITHUB\\DS_ALGO\\udaexec.ini: Not Found']
+2020-12-03 19:53:45,802 - teradata.udaexec - INFO - Found run number file: "C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\.runNumber"
+2020-12-03 19:53:45,802 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-12-03 19:53:45,802 - teradata.udaexec - INFO - Removed 0 log files.
+2020-12-03 19:53:45,808 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\test.checkpoint
+2020-12-03 19:53:45,808 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-12-03 19:53:45,808 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: test
+ *          Version: 1.0
+ *       Run Number: 20201203195345-9
+ *             Host: LDMG1XT2
+ *         Platform: Windows-10-10.0.18362-SP0
+ *          OS User: AG16000
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: C:/Users/ag16000/OneDrive - Anthem/Desktop/GITHUB/DS_ALGO/teradata_con_usi.py
+ *      Working Dir: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO
+ *          Log Dir: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\logs
+ *         Log File: C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\logs\test.20201203195345-9.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\udaexec.ini: Not Found', 'C:\\Users\\ag16000\\OneDrive - Anthem\\Desktop\\GITHUB\\DS_ALGO\\udaexec.ini: Not Found']
+ *      Query Bands: ApplicationName=test;Version=1.0;JobID=20201203195345-9;ClientUser=AG16000;Production=False;udaAppLogFile=C:\Users\ag16000\OneDrive - Anthem\Desktop\GITHUB\DS_ALGO\logs\test.20201203195345-9.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-12-03 19:53:45,808 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'DWDEVCOP1.CORP.ANTHEM.COM', 'authentication': 'LDAP', 'driver': 'Teradata Database ODBC Driver 16.20', 'username': 'AG16000', 'password': 'XXXXXX'}
+2020-12-03 19:53:45,812 - teradata.tdodbc - INFO - Available drivers: SQL Server, Teradata Database ODBC Driver 16.20
+2020-12-03 19:53:49,650 - teradata.udaexec - INFO - Connection successful. Duration: 3.840 seconds. Details: {'method': 'odbc', 'system': 'DWDEVCOP1.CORP.ANTHEM.COM', 'authentication': 'LDAP', 'driver': 'Teradata Database ODBC Driver 16.20', 'username': 'AG16000', 'password': 'XXXXXX'}
+2020-12-03 19:53:49,932 - teradata.udaexec - ERROR - Query Failed! Duration: 0.281 seconds, Query: SELECT * MRDM_NEXT_RLSE_DEVDDL.LZ_STARS_OUTRCH_SMRY
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Python\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Python\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3706, '[42000] [Teradata][ODBC Teradata Driver][Teradata Database](-3706)Syntax error: SELECT * must have a FROM clause.')
+2020-12-03 19:53:49,936 - teradata.udaexec - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Python\lib\site-packages\pandas\io\sql.py", line 1681, in execute
+    cur.execute(*args, **kwargs)
+  File "C:\Python\lib\site-packages\teradata\udaexec.py", line 745, in execute
+    self._execute(self.cursor.execute, query, params, **kwargs)
+  File "C:\Python\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Python\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Python\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3706, '[42000] [Teradata][ODBC Teradata Driver][Teradata Database](-3706)Syntax error: SELECT * must have a FROM clause.')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:/Users/ag16000/OneDrive - Anthem/Desktop/GITHUB/DS_ALGO/teradata_con_usi.py", line 14, in <module>
+    pda = pd.read_sql(query,connection)
+  File "C:\Python\lib\site-packages\pandas\io\sql.py", line 489, in read_sql
+    chunksize=chunksize,
+  File "C:\Python\lib\site-packages\pandas\io\sql.py", line 1727, in read_query
+    cursor = self.execute(*args)
+  File "C:\Python\lib\site-packages\pandas\io\sql.py", line 1693, in execute
+    raise ex from exc
+pandas.io.sql.DatabaseError: Execution failed on sql 'SELECT * MRDM_NEXT_RLSE_DEVDDL.LZ_STARS_OUTRCH_SMRY': (3706, '[42000] [Teradata][ODBC Teradata Driver][Teradata Database](-3706)Syntax error: SELECT * must have a FROM clause.')
+2020-12-03 19:53:49,941 - teradata.tdodbc - WARNING - 1 open connections found on exit, attempting to close...
+2020-12-03 19:53:50,242 - teradata.udaexec - INFO - UdaExec exiting.
