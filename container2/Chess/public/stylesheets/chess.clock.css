@@ -1,0 +1,81 @@
+.chessClock {
+	margin-top:10px;
+	position:relative;
+	width:320px;
+	height:70px;
+	background:#000;
+	color:#fff;
+}
+.chessClock {
+	margin-top:10px;
+	position:relative;
+	width:320px;
+	height:70px;
+	background:#333;
+	color:#fff;
+}
+.glyphClock {
+	width:50px;
+	height:50px;
+	background:url(../images/red.clock.svg) no-repeat;
+	background-size:50px;
+	position:absolute;
+}
+.glyphClock:hover {
+	cursor:pointer;
+	transform: rotate(11deg);
+}
+
+.chessClock > * {
+	padding:10px;		
+}
+
+.chessClock.standard  #countdown {
+	display:none;
+}
+.chessClock.countdown #standard {
+	display:none;
+}
+
+.setTime, .showtime {
+	font-size:31px;
+}
+
+.syncStart {
+	position:absolute;
+	left:220px;
+	top:13px;
+}
+
+.syncStart button {
+	width:100px;
+	height:42px;
+	font-size:14px;
+}
+
+.setTime input, .showtime input {
+	background:#fff;
+	text-align:right;
+	font-size:31px;
+	color:#333;
+}
+
+.setTime input {
+	width:46px;
+}
+
+.showtime input {
+	width:140px;
+}
+
+.inputs {
+	position:absolute;
+	left:74px;
+}
+
+.setTime .setTimer {
+	display:inline-block;
+	width:50px;
+	height:50px;
+	border:1px solid red;
+}

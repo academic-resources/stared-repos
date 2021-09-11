@@ -1,0 +1,240 @@
+html, body {
+		height:100%;	
+		position:relative;
+	}
+	body {
+		background: black ;
+		overflow-y: hidden;
+		max-width: 1200px;
+	}
+	body, img, div {
+		margin: 0;
+		padding: 0;
+	}
+		
+	.rotate, .rotate > div {
+		tranform-origin: 50% 50%;	
+		transform: rotate(180deg);
+	}
+	
+	.black {
+		background: #999;	
+	}
+	
+	.white {
+		background: #fff;
+	}
+	
+	.hide {
+		display:none;
+	}
+	
+	#table {
+			position:absolute;
+			top:10px;
+			left:10px;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			user-select: none;
+			tranform-origin:50% 50%;
+		}
+	#table:hover{
+		cursor:pointer;
+	}
+	#table:focus {
+		outline:none;
+	}
+	#table > div {
+		width:100px;
+		height:100px;
+		border:none;
+		position:absolute;
+	}
+	
+	#table div > img {
+		width: 100%;
+		height: 100%;
+	}
+		
+	.captured {
+		margin:10px 0;
+		top:10px;
+		width:100%;
+		background: #eee;
+	}
+	
+	.captured .piece {
+		width:30px;
+		height:30px;
+		overflow:auto;
+		display:inline-block;
+	}
+	.captured .piece:hover {
+		cursor:pointer;
+	}
+	button {
+		position:relative;
+		height:40px;
+		width:80px;
+	}
+	button:hover {
+		cursor:pointer;
+	}
+	
+	.chat{
+		text-align:left;
+		width:100%;
+		height:350px;
+		background:rgba(255,255,255, .3);
+	}
+	
+	.chatlog {
+		height:245px;
+		overflow-y:auto;
+		overflow-x:hidden;
+		width:100%;
+	}
+	
+	.input {
+		width:100%;
+		border-top:5px solid #000;
+		background:#fff url('../../images/chat-bg.png');
+		padding: 0;
+		margin:0;
+		height:100px;
+	}
+	
+	.input > p:focus {
+		background:#fff;
+	}
+
+	.input > p {
+		padding:2px 0 2px 2px;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		font-size:18px;
+		line-height:18px;
+		color:#000;
+		overflow: auto;
+		z-index:2;
+	}
+	.input > p:focus {
+		outline: none;
+	}
+
+	.chatlog div {
+		margin:10px 0 10px 10px;
+		max-width:300px;
+		margin-right:10px;
+		overflow:hidden;
+	}
+	
+	.chatlog p {
+		font-size:18px;
+		line-height:21px;
+		-webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+		overflow:hidden;
+			text-overflow:ellipsis;
+	}
+	
+	@-webkit-keyframes glow {
+		0%{
+			color:yellow;
+		}
+		100% {
+			color:#eee;
+		}
+	}
+	
+	.chatlog h3 {
+		color: #fff;
+		display: inline;
+	}
+	.helper {
+		position:absolute;
+		width: 100px;
+		height:100px;
+	}
+	.dragImg {
+		width:100px;
+		height:100px;
+		position:fixed;
+	}
+	.fade {
+		opacity:.2;
+	}
+	.sidebar {
+		position:absolute;
+		top:10px;
+		width:320px;
+		opacity:.55;
+		transition: opacity 206ms;
+	}
+	
+	.sidebar:hover, .sidebar.focus{
+		opacity:1;
+	}
+	
+	.sidebar h1 {
+		margin:0;
+		padding:0;
+		font-family:sans-serif;
+		font-size:40px;
+		color: #000;
+		margin-bottom:10px;
+		background:#333;
+		text-align:center;
+	}
+	
+	.sidebar h1.title
+	{
+		color: rgb(100,0,0);
+	}
+	.legs {
+		position:relative;
+	}
+	
+@media all and (min-width: 1160px)
+{
+	
+	html, body {
+		height:100%;	
+		width:100%;
+		max-width: none;
+		position:relative;
+	}
+	
+	body {
+		background: black ;
+		overflow-y: hidden;
+	}
+	
+	body, img, div {
+		margin: 0;
+		padding: 0;
+	}
+
+	#table {
+		position:relative;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+		tranform-origin:50% 50%;
+	}
+	
+	
+	.legs {
+		position:relative;
+		margin: 0 0 0 8%;
+	}
+	
+}	
+@media all and (min-width: 1360px)
+{
+	.legs {
+		margin: 0 0 0 20%;
+	}
+}
+	

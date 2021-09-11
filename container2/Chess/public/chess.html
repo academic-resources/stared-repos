@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Chess Board</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel='stylesheet' href='stylesheets/sidebar.css' />
+	<link rel='stylesheet' href='stylesheets/chess.clock.css' />
+</head>
+<body>
+<div class='padding'>
+  <div class='sidebar'>
+    <div id='chessClock' class='chessClock standard'>
+    	<div class='setTime' id='standard'>
+    		<div class='glyphClock' onclick=''></div>
+    		<div class='inputs'>
+    			<input id='min' type='text' name='minutes' value=5></input> :
+    			<input id='sec' type='text' name='seconds' value=00></input>
+    		</div>
+    		<div class='syncStart'>
+    			<button type='submit' id='sixtysecond'>start new game</button>
+    		</div>
+    	</div>
+    	<div class='showtime' id='countdown'>
+    			<div class='glyphClock' onclick=''></div>
+    			<div class='inputs'>
+    				<input id='millisecond' type='text' name='countdown' value=600000></input>
+    			</div>
+    			<div class='syncStart'>
+    				<button type='submit' id='msbutton'>sync & start</button>
+    			</div>
+    		</div>
+    </div>
+    <div class='boardOptions'>
+      <h1>
+        Board options
+      </h1>
+      <div class='controls'>
+        <button type='submit' onclick='game._reset()'>RESET <br />GAME</button>
+        <button type='submit' onclick='game.rotate()'>CLEAR <br /> PIECES</button>
+        <button type='submit'  onclick='game.clearBoard()'>ROTATE BOARD</button>
+      </div>
+      <fieldset>
+        <legend>
+          CHOOSE VARIANT
+        </legend>
+        <label>
+          <input name='variant' type='radio' /> standard chess
+        </label>
+        <br />
+        <label>
+           <input name='variant' type='radio' /> 960 Random
+        </label>
+        <br />
+        <label>
+           <input name='variant' type='radio' /> no queens
+        </label>
+        <br />
+        <label>
+           <input name='variant' type='radio' /> empty board
+           <input id='min' type='text' name='rows' value=8></input> <span class='x'>x</span>
+           <input id='sec' type='text' name='columns' value=8></input> 
+        </label>
+      </fieldset>
+      <label class='forClock'>
+      <input name='useGameClock' type='checkbox' /> Timed game
+      </label>
+      
+      <fieldset class='setClock'>
+        <legend> SET TIMER
+        </legend>
+        <div id='chessClock' class='chessClock standard'>
+        	<div class='setTime' id='standard'>
+        		<div class='glyphClock' onclick=''></div>
+        		<div class='inputs'>
+        			<input id='min' type='text' name='minutes' value=5></input> :
+        			<input id='sec' type='text' name='seconds' value=00></input>
+        		</div>
+        	</div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+	<script type="text/javascript" src="javascripts/jquery-1.5.1.min.js"></script>
+	<script type="text/javascript" src="javascripts/underscore-min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery-ui-1.8.14.custom.min.js"></script>
+	<script type="text/javascript" src="javascripts/raf.js"></script>
+</body>
+</html>
