@@ -1,0 +1,69 @@
+// admins access token = 56ab5075-de2e-43ba-a407-e52b8f267ac7
+// barnbarns access token = a87cdc74-7188-43d7-9c2e-f689841f083f
+
+// get admins access code
+curl -X POST --user "lambda-client:lambda-secret" -d "grant_type=password&username=admin&password=password" http://localhost:2019/login
+
+// this works
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 56ab5075-de2e-43ba-a407-e52b8f267ac7" http://localhost:2019/users/users
+
+// get users access code
+curl -X POST --user "lambda-client:lambda-secret" -d 'grant_type=password&username=barnbarn&password=ILuvM4th!' http://localhost:2019/login
+
+// this has an authentication error
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer a87cdc74-7188-43d7-9c2e-f689841f083f" http://localhost:2019/users/users
+
+// switch back to admins access code and this works
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 56ab5075-de2e-43ba-a407-e52b8f267ac7" http://localhost:2019/users/users
+
+// add snoopy as a user
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer 56ab5075-de2e-43ba-a407-e52b8f267ac7" -d "{ \"username\":\"snoopy\", \"password\":\"password\", \"roleid\":"1" }" http://localhost:2019/users/user
+
+// look up users and find snoopy's id
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 56ab5075-de2e-43ba-a407-e52b8f267ac7" http://localhost:2019/users/users
+
+// delete snoopy user
+curl -X DELETE -H "Authorization: Bearer 56ab5075-de2e-43ba-a407-e52b8f267ac7" http://localhost:2019/users/user/15
+
+// verify that snoopy is deleted
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 56ab5075-de2e-43ba-a407-e52b8f267ac7" http://localhost:2019/users/user/15
+
+// add ginger a new user
+curl -X POST -H "Content-Type: application/json" -d "{\"username\": \"Ginger\", \"password\": \"EATEATEAT\"}" http://localhost:2019/createnewuser
+
+// add snoopy again with full information
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer 56ab5075-de2e-43ba-a407-e52b8f267ac7" -d "{ \"username\": \"Snoopy\", \"password\": \"password\", \"userRoles\": [ { \"role\": { \"roleid\": 1 } } ], \"userphones\": [ { \"userphone\": \"myemail@local.home\" } ]}" http://localhost:2019/users/user
+
+// look at all users and verify that snoopy and ginger are available
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 56ab5075-de2e-43ba-a407-e52b8f267ac7" http://localhost:2019/users/users
+
+// revokes token for admin
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 56ab5075-de2e-43ba-a407-e52b8f267ac7" http://localhost:2019/oauth/revoke-token
+
+// this should fail with invalid token
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 56ab5075-de2e-43ba-a407-e52b8f267ac7" http://localhost:2019/users/users
+
+// get admins access code
+curl -X POST --user "lambda-client:lambda-secret" -d "grant_type=password&username=admin&password=password" http://localhost:2019/login
+
+// look at all users and ginger's id
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 3d28337c-b699-4ae6-86fe-4961f42b1142" http://localhost:2019/users/users
+
+// add email to ginger
+curl -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer 3d28337c-b699-4ae6-86fe-4961f42b1142" -d  "{ \"userid\": 16, \"userphones\": [ { \"userphone\": \"whisker@home.local\" } ] }" http://localhost:2019/users/user/16
+
+// look at all users and ginger's emails
+curl -X GET -H "Accept: application/json" -H "Authorization: Bearer 3d28337c-b699-4ae6-86fe-4961f42b1142" http://localhost:2019/users/users
+
+*** using a different host
+
+// sign on admin when on heroku
+curl -X POST --user "lambda-client:lambda-secret" -d "grant_type=password&username=admin&password=password" http://jrmmba-starthere.herokuapp.com/oauth/token
+
+
+{
+    "userid": 7,
+    "userphones": [
+        { "userphone": "whisker@home.local"}
+    ]
+}

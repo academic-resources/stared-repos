@@ -1,0 +1,1229 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Searching Tables</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715" cellspacing="0">
+  <TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2" height="517"> 
+            <CENTER>
+              <H2><img src="/cobol/course/Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> Searching Tables</H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP" height="49">&nbsp;</TD>
+                <TD width="4%" valign="TOP" height="49"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" height="49"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><br>
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP" height="57">&nbsp;</TD>
+                <TD width="4%" valign="TOP" height="57"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top" height="57"> 
+                  <p><B><A href="#part1" target="">OCCURS clause extensions</A><BR>
+                    </B><FONT size="-1">The SEARCH and SEARCH ALL require that 
+                    the description of the table to be searched contain a number 
+                    of new extensions to the OCCURS clause. In this section the 
+                    syntax of these new extensions is introduced</FONT> <br>
+                    <br>
+                  </p>
+                </TD>
+              </TR>
+              <tr> 
+                <td width="3%" valign="TOP" height="55">&nbsp;</td>
+                <td width="4%" valign="TOP" height="55"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" valign="top" height="55"> 
+                  <div align="left"> 
+                    <p><b><a href="#part2" target="">The SEARCH verb</a><br>
+                      </b><font size="-1">This section demonstrates how the SEARCH 
+                      verb may be used to search through a table sequentially.<br>
+                      </font> 
+                      <br>
+                    </p>
+                    </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP" height="78">&nbsp;</td>
+                <td width="4%" valign="TOP" height="78"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" height="78"> 
+                  <div align="left"> 
+                    <p><b><a href="#part3" target="">Searching multi-dimension 
+                      tables </a><br>
+                      </b><font size="-1">The SEARCH cannot be applied directly 
+                      to search a multi-dimension table. This section demonstrates 
+                      how to overcome this restriction by treating the multi-dimension 
+                      table as a collection of single dimension tables and applying 
+                      the SEARCH to each single dimension table.</font><font size="-1">.</font><font size="-1"><br>
+                      <br>
+                      </font> </p>
+                    </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP" height="67">&nbsp;</td>
+                <td width="4%" valign="TOP" height="67"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" height="67"> 
+                  <div align="left"> 
+                    <p><b><a href="#part4" target="">The SEARCH ALL verb</a><br>
+                      </b><font size="-1">The SEARCH ALL is used when a binary 
+                      search is required. This section introduces the syntax of 
+                      the SEARCH ALL, demonstrates how a binary search works and 
+                      shows how the SEARCH ALL can be used to search an ordered 
+                      table.</font><font size="-1"><br>
+                      <br>
+                      </font><font size="-1"> </font> </p>
+                    </div>
+                </td>
+              </tr>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2" height="27"> 
+            <h2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><font face="Arial, Helvetica, sans-serif">Introduction</font></FONT></h2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" bgcolor="#FFFFCC" height="154"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="154"> 
+            <div align="center"> 
+              <p align="left">The task of searching a table to determine whether 
+                it contains a particular value is a common operation. The method 
+                used to search a table depends heavily on how the values in the 
+                table are organized. </p>
+              <p align="left">For instance, if the values are not ordered, the 
+                table may only be searched sequentially, but if the values are 
+                ordered, then either a sequential or a binary search may be used. 
+              </p>
+              <p align="left">In COBOL, the <font size="-1">SEARCH</font> verb 
+                is used for sequential searches and the <font size="-1">SEARCH 
+                ALL</font> for binary searches. </p>
+              <p align="left">This tutorial introduces the syntax and rules of 
+                operation of the <font size="-1">SEARCH</font> and <font size="-1">SEARCH 
+                ALL</font> verbs. It introduces the extensions to the<font size="-1"> 
+                OCCURS </font>clause that are required when the <font size="-1">SEARCH</font> 
+                or <font size="-1">SEARCH ALL</font> is used. It shows how the 
+                SET verb may be used to alter the value of an index and it demonstrates 
+                how the <font size="-1">SEARCH</font> and <font size="-1">SEARCH 
+                ALL</font> may be used to search a table. </p>
+            </div>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="225"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="225"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Know the new <font size="-1">OCCURS</font> clause entries that 
+                are required when the <font size="-1">SEARCH</font> is used to 
+                search a table.</LI>
+              <LI>Be able to use the <font size="-1">SEARCH</font> to search a 
+                table.</LI>
+              <LI>Understand the restrictions that apply to manipulating a table 
+                index.</LI>
+              <LI>Be able to use the SET verb to change the value of a table index.</LI>
+              <LI>Understand how the <font size="-1">SEARCH </font>can be used 
+                to search a multi-dimension table.</LI>
+              <LI>Know the new <font size="-1">OCCURS</font> clause entries that 
+                are required when the <font size="-1">SEARCH ALL </font>is used 
+                to search a table.</LI>
+              <LI>Understand how a binary search works.</LI>
+            </OL>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="77"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="77" valign="top"> 
+            <p>Introduction to COBOL </p>
+            <p>Declaring data in COBOL </p>
+            <p>Basic Procedure Division Commands</p>
+            <p>Selection Constructs</p>
+            <p>Iteration Constructs</p>
+            <p>Introduction to Sequential files</p>
+            <p>Processing Sequential files</p>
+            <p>Print files and variable length records</p>
+            <p>Sorting and Merging files</p>
+            <p>Using Tables</p>
+            <p>Creating Tables - syntax and semantics</p>
+            <p>&nbsp;</p>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <hr width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part1"></a><FONT face="Arial, Helvetica, sans-serif">Occurs 
+              clause extensions</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="131"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="131"> 
+            <p align="left">When the <font size="-1">SEARCH</font> and <font size="-1">SEARCH 
+              ALL</font> are used the normal table declarations are no longer 
+              sufficient and the <font size="-1">OCCURS</font> clause must be 
+              extended with the <font size="-1">INDEXED BY</font> phrase and, 
+              in the case of the <font size="-1">SEARCH ALL</font>, by the <font size="-1">KEY 
+              IS </font>phrase. </p>
+            <p align="left">The full syntax of the <font size="-1">OCCURS </font>clause, 
+              including the <font size="-1">INDEXED BY</font> and <font size="-1">KEY 
+              IS</font> phrases is shown below.</p>
+            <hr size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="140"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Full 
+              OCCURS clause syntax</FONT></H4>
+            <H4>&nbsp;</H4>
+            <h4 align="center"><font size="-1"> </font></h4>
+          </TD>
+          <TD width="525" valign="top" height="140"> 
+            <p align="left"><img src="Resources/pics/Search1.gif" width="331" height="122"></p>
+            <p align="left">&nbsp; </p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="441"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">INDEXED 
+              BY phrase - notes</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="441"> 
+            <p align="left">Before the <font size="-1">SEARCH </font>or <font size="-1">SEARCH 
+              ALL</font> can be used to search a table, the table must be defined 
+              as having an index item associated with it.</p>
+            <p align="left">The index is specified by the <i>IndexName </i>given 
+              in the <font size="-1">INDEXED BY</font> phrase. </p>
+            <p align="left">The index defined in a table declaration is associated 
+              with that table and is the subscript which the <font size="-1">SEARCH</font> 
+              or <font size="-1">SEARCH ALL</font> uses to access the table. </p>
+            <p align="left"> Using an index makes the searching more efficient. 
+              Since the index is linked to a particular table, the compiler, taking 
+              into account the size of the table, can choose the most efficient 
+              representation possible for the index and this speeds up the search.</p>
+            <p align="left">The only entry that needs to be made for an <i>IndexName</i> 
+              is to use it in an<font size="-1"> INDEXED BY</font> phrase. There 
+              is no need to define a picture clause for it, because the compiler 
+              handles its declaration automatically.</p>
+            <p align="left">Because an index has a special internal representation 
+              it cannot be displayed and can only be assigned a value, or have 
+              its value assigned, by the <font size="-1">SET</font> verb. The 
+              <font size="-1">MOVE</font> cannot be used with a table index. </p>
+            <p align="left">Normal arithmetic cannot be performed on a table index. 
+              The <font size="-1"> SET</font> verb must be used to increment or 
+              decrement the value of an index item. </p>
+            <p align="left">&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="151"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">KEY 
+              IS phrase - notes</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="151"> 
+            <p>While the <font size="-1">SEARCH</font> performs a sequential search 
+              on a table, the <font size="-1">SEARCH ALL</font> performs a binary 
+              search. But a binary search requires that the table is ordered on 
+              some key field. The key field may be the element itself or, where 
+              the element is a group item, a field within the element.</p>
+            <p>Before a table can be searched with the <font size="-1">SEARCH 
+              ALL</font>, the key field must be identified by using the <font size="-1">KEY 
+              IS</font> phrase in the table declaration. As well as identifying 
+              the key field, the <font size="-1">KEY IS</font> phrase specifies 
+              whether the table is in ascending or descending order.</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A><font face="Arial, Helvetica, sans-serif">The 
+              SEARCH verb</font></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="69"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="69"> 
+            <p>When the values in a table are not ordered, the only way to find 
+              the item we seek is to search through the table sequentially, element 
+              by element. In COBOL, the <font size="-1">SEARCH</font> verb is 
+              used to search a table sequentially.</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="697"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">SEARCH 
+              syntax </FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="697"> 
+            <p><img src="Resources/pics/Search2.gif" width="374" height="152"></p>
+            <p><b><font size="-1">SEARCH</font> rules</b></p>
+            <ol>
+              <li><i>TableName</i> must identify a data-item in the table hierarchy 
+                with both <font size="-1">OCCURS</font> and <font size="-1">INDEXED 
+                BY</font> clauses. The index specified in the <font size="-1">INDEXED 
+                BY</font> clause of <i>TableName</i> is the controlling index 
+                of the <font size="-1">SEARCH</font>. </li>
+              <li>The <font size="-1">SEARCH </font>can only be used if the table 
+                to be searched has an index item associated with it. An index 
+                item is associated with a table by using the<font size="-1"> INDEXED 
+                BY</font> phrase in the table declaration. The index item is known 
+                as the table index. The table index is the subscript which the 
+                <font size="-1">SEARCH</font> uses to access the table.</li>
+            </ol>
+            <p><b><font size="-1">SEARCH</font> notes</b></p>
+            <ul>
+              <li>The<font size="-1"> SEARCH</font> searches a table sequentially 
+                starting at the element pointed to by the table index. </li>
+              <li>The starting value of the table index is under the control of 
+                the programmer. The programmer must ensure that, when the <font size="-1">SEARCH</font> 
+                executes, the table index points to some element in the table 
+                (for instance, it cannot have a value of 0 or be greater than 
+                the size of the table). </li>
+              <li>The <font size="-1">VARYING</font> phrase is only required when 
+                we require data-item to mirror the values of the table index. 
+                When the <font size="-1">VARYING</font> phrase is used, and the 
+                associated data-item is not the table index, then the data-item 
+                is varied along with the index. </li>
+              <li>The <font size="-1">AT END</font> phrase allows the programmer 
+                to specify an action to be taken if the searched for item is not 
+                found in the table. </li>
+              <li>When the <font size="-1">AT END</font> is specified, and the 
+                index is incremented beyond the highest legal occurrence for the 
+                table (i.e. the item has not been found), then the statements 
+                following the <font size="-1">AT END</font> will be executed and 
+                the <font size="-1">SEARCH </font>will terminate. </li>
+              <li>The conditions attached to the <font size="-1">SEARCH</font> 
+                are evaluated in turn and as soon as one is true the statements 
+                following the <font size="-1">WHEN </font>phrase are executed 
+                and the <font size="-1">SEARCH</font> ends. </li>
+            </ul>
+            <hr size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="422"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              SET verb syntax</FONT></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="422"> 
+            <p>The <font size="-1">SET</font> verb is used for a number of unrelated 
+              purposes. We have already seen how the <font size="-1">SET</font> 
+              verb may be used to set a condition name to true. This section introduces 
+              the versions of the <font size="-1">SET</font> verb used to manipulate 
+              table indexes.</p>
+            <p>Because an index item has a special internal representation designed 
+              to optimize searching, it cannot be used in any type of normal arithmetic 
+              operation (<font size="-1">ADD</font>, <font size="-1">SUBTRACT</font> 
+              etc.) or even in a <font size="-1">MOVE</font> or <font size="-1">DISPLAY</font> 
+              statement. For index items, all these operations must be handled 
+              by the <font size="-1">SET</font> verb. </p>
+            <p>The versions of the <font size="-1">SET</font> verb shown below 
+              are used to assign a value to an index item, to assign the value 
+              of an index item to a variable, and to increment or decrement the 
+              value of an index item.</p>
+            <p><img src="Resources/pics/Search4.gif" width="326" height="148"></p>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="709"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">SEARCH 
+              example 1</FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/program.gif" width="42" height="44"></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="709"> 
+            <p>The example program below accepts an upper case letter from the 
+              user and then uses the <font size="-1">SEARCH</font> verb to searche 
+              a pre-filled table of letters to find and display the position of 
+              the letter in the alphabet. </p>
+            <p>Because a table index can be tricky to manipulate (can't display 
+              it, can't move it) the program uses the <font size="-1">VARYING</font> 
+              phrase to vary an ordinary numeric value along with the index. When 
+              the letter is found in the table, this item will contain the same 
+              value as the index and we can display it without the complications 
+              we might encounter with the index item. For instance, to display 
+              the value of the index item we would require following code - </p>
+            <blockquote> 
+              <pre>SET LetterPos TO LetterIdx
+MOVE LetterPos TO PrnPos
+DISPLAY LetterIn, " is in position ", PrnPos
+</pre>
+            </blockquote>
+            <p>The example below is not meant to be a practical example of how 
+              to find the position of a letter in the alphabet. Nowadays, this 
+              task would be accomplished in much the same way as it would in C 
+              or Modula-2 except that, in COBOL, we would use the Intrinsic Function 
+              - ORD - as shown below. </p>
+            <pre>COMPUTE PrnIdx = FUNCTION ORD(LetterIn) - FUNCTION ORD("A") + 1 </pre>
+            <table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td height="199"> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID. LetterSearch.
+AUTHOR. Michael Coughlan.
+* This program accepts an upper case letter from the
+* user and then displays which letter of the alphabet
+* it is.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01  LetterTable.
+    02 LetterValues.
+       03 FILLER PIC X(13) 
+          VALUE "ABCDEFGHIJKLM".
+       03 FILLER PIC X(13)
+          VALUE "NOPQRSTUVWXYZ".
+    02 FILLER REDEFINES LetterValues.
+       03 Letter PIC X OCCURS 26 TIMES 
+                       INDEXED BY LetterIdx.
+
+
+01 LetterIn      PIC X.
+01 LetterPos     PIC 99.
+01 PrnPos        PIC Z9.
+
+PROCEDURE DIVISION.
+Begin.
+    DISPLAY "Enter the letter please - "
+          WITH NO ADVANCING
+    ACCEPT LetterIn
+    SET LetterIdx LetterPos TO 1
+    SEARCH Letter VARYING LetterPos
+       AT END DISPLAY "Letter " LetterIn " not found!"
+       WHEN Letter(LetterIdx) = LetterIn 
+            MOVE LetterPos TO PrnPos
+            DISPLAY LetterIn, " is in position ", PrnPos
+    END-SEARCH
+    STOP RUN.</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <hr width="100%" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1893"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Example 
+              program 2</FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/program.gif" width="42" height="44"></H4>
+            <H4 align="center">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="1893"> 
+            <p>In this example below, we return to the County Tax Report problem. 
+              In the last question we posed in the <i>Using Tables</i> tutorial 
+              we asked how the County Tax report problem could be solved if the 
+              tax record contained a county name instead of a county code. We 
+              noted that the county name had to be converted into a numeric value 
+              that we could use as a subscript. In the <i>Using Tables</i> tutorial 
+              we used a <font size="-1">PERFORM</font> to search through the table 
+              to find the numeric equivalent of the county name. In this example 
+              we use the <font size="-1">SEARCH</font>.</p>
+            <p>The <font size="-1">VARYING</font> phrase is used in this <font size="-1">SEARCH</font> 
+              example so that we don't have to set the <i>Idx</i> to the <i>CountyIdx</i>. 
+              We can not use <i>CountyIdx</i> as a subscript for the <i>CountyTaxTable</i> 
+              because it is bound to the <i>CountyNameTable</i>.</p>
+            <p>&nbsp;</p>
+            <table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID. CountyTaxTable.
+AUTHOR. Michael Coughlan.
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT TaxFile ASSIGN TO "CountyTaxes.DAT"
+           ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+FD TaxFile.
+01 TaxRec.
+   88 EndOfTaxFile   VALUE HIGH-VALUES.
+   02 PAYENum        PIC 9(8).
+   02 County         PIC X(9).
+   02 TaxPaid        PIC 9(7)V99.
+
+WORKING-STORAGE SECTION.
+01 CountyTaxTable.
+   02 CountyTaxDetails OCCURS 26 TIMES.
+      03 CountyTax   PIC 9(8)V99.  
+      03 PayerCount  PIC 9(7).
+         88 NoOnePaidTax VALUE ZEROS.
+
+01 Idx               PIC 99.
+
+01 CountyTaxLine.
+   02 PrnCounty      PIC X(9).
+   02 FILLER         PIC X(7) VALUE " Tax = ".
+   02 PrnTax         PIC $$$,$$$,$$9.99.
+   02 FILLER         PIC X(12) VALUE "   Payers = ".
+   02 PrnPayers      PIC Z,ZZZ,ZZ9.
+
+
+01 CountyNameTable.
+   02 TableValues.
+      03 FILLER  PIC X(9)  VALUE "Carlow".
+      03 FILLER  PIC X(9)  VALUE "Cavan".
+      03 FILLER  PIC X(9)  VALUE "Clare".
+      03 FILLER  PIC X(9)  VALUE "Cork".
+      03 FILLER  PIC X(9)  VALUE "Donegal".
+      03 FILLER  PIC X(9)  VALUE "Dublin".
+      03 FILLER  PIC X(9)  VALUE "Galway".
+      03 FILLER  PIC X(9)  VALUE "Kerry".
+      03 FILLER  PIC X(9)  VALUE "Kildare".
+      03 FILLER  PIC X(9)  VALUE "Kilkenny".
+      03 FILLER  PIC X(9)  VALUE "Laois".
+      03 FILLER  PIC X(9)  VALUE "Leitrim".
+      03 FILLER  PIC X(9)  VALUE "Limerick".
+      03 FILLER  PIC X(9)  VALUE "Longford".
+      03 FILLER  PIC X(9)  VALUE "Louth".
+      03 FILLER  PIC X(9)  VALUE "Mayo".
+      03 FILLER  PIC X(9)  VALUE "Meath".
+      03 FILLER  PIC X(9)  VALUE "Monaghan".
+      03 FILLER  PIC X(9)  VALUE "Offaly".
+      03 FILLER  PIC X(9)  VALUE "Roscommon".
+      03 FILLER  PIC X(9)  VALUE "Sligo".
+      03 FILLER  PIC X(9)  VALUE "Tipperary".
+      03 FILLER  PIC X(9)  VALUE "Waterford".
+      03 FILLER  PIC X(9)  VALUE "Westmeath".
+      03 FILLER  PIC X(9)  VALUE "Wexford".
+      03 FILLER  PIC X(9)  VALUE "Wicklow".
+   02 FILLER REDEFINES TableValues.
+      03   CountyName  PIC X(9)
+                       OCCURS 26 TIMES
+                       INDEXED BY CountyIdx.
+
+PROCEDURE DIVISION.
+Begin.
+   OPEN INPUT TaxFile
+   MOVE ZEROS TO CountyTaxTable
+   READ TaxFile
+      AT END SET EndOfTaxFile TO TRUE
+   END-READ
+   PERFORM UNTIL EndOfTaxFile
+      SET CountyIdx Idx TO 1
+      SEARCH CountyName VARYING Idx
+         AT END DISPLAY "County " County " was not found"
+         WHEN CountyName(CountyIdx) = County
+              ADD TaxPaid TO CountyTax(Idx)
+              ADD 1 TO PayerCount(Idx)
+      END-SEARCH
+      READ TaxFile
+         AT END SET EndOfTaxFile TO TRUE
+      END-READ
+   END-PERFORM
+   PERFORM DisplayCountyTaxes VARYING Idx FROM 1 BY 1
+           UNTIL Idx GREATER THAN 26
+   CLOSE TaxFile
+   STOP RUN.
+
+DisplayCountyTaxes.
+   IF NOT NoOnePaidTax(Idx)
+      MOVE CountyName(Idx) TO PrnCounty
+      MOVE CountyTax(Idx)  TO PrnTax
+      MOVE PayerCount(Idx) TO PrnPayers
+      DISPLAY CountyTaxLine
+   END-IF.</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp; </p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part3"></A><font face="Arial, Helvetica, sans-serif">Searching 
+              multi-dimension tables</font></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="792"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="792"> 
+            <p align="left">When the <font size="-1">SEARCH</font> verb is used, 
+              the target of the <font size="-1">SEARCH </font>must be an item 
+              in the table with both an <font size="-1">OCCURS</font> clause and 
+              an <font size="-1">INDEXED BY</font> phrase. The index item specified 
+              in the <font size="-1">INDEXED BY</font> phrase is the controlling 
+              index of the search. The controlling index governs the submission 
+              of the elements, or element items, for examination by the <font size="-1">WHEN</font> 
+              phrase of the <font size="-1">SEARCH</font>. A <font size="-1">SEARCH</font> 
+              can only have one controlling index.</p>
+            <p align="left">Because a <font size="-1">SEARCH</font> can only have 
+              one controlling index it can only be used to search a single dimension 
+              of a table at a time. If the table to be searched is a multi-dimension 
+              table then the programmer must control the indexes of the other 
+              dimensions. </p>
+            <p align="left">For instance, suppose a hotel keeps an Occupancy Table 
+              showing which rooms in the hotel are currently occupied. The table 
+              might be described as - </p>
+            <pre align="left">01 HotelOccupanyTable.
+   02 Floor OCCURS 5 TIMES INDEXED BY Fidx.
+      03 Room OCCURS 25 TIMES INDEXED BY Ridx.
+         04 CustomerId  PIC 9(6).
+         04 NumOfOccupants PIC 9.</pre>
+            <p align="left"> and we can represent this diagrammatically as follows 
+              -</p>
+            <div align="center"> 
+              <pre align="left">
+<img src="Resources/pics/Search5.gif" width="411" height="170">
+</pre>
+            </div>
+            <pre align="left">&nbsp;
+</pre>
+            <p align="left"> Suppose we want to search the table to discover which 
+              room is occupied by customer 126789. We can't use the <font size="-1">SEARCH</font> 
+              to search the whole two-dimension table directly but we can use 
+              the <font size="-1">SEARCH</font> to search the table floor by floor. 
+              In other words, we can treat the table as if it were a collection 
+              of floor tables and we use the <font size="-1">SEARCH </font>to 
+              search all the rooms in a particular floor table.</p>
+            <p align="left">The example program below demonstrates how the <font size="-1">SEARCH</font> 
+              verb may be used to search the two-dimension <i>HotelOccupancyTable</i>.</p>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1140"> 
+            <h4 align="center"><font color="#800000" face="Arial, Helvetica, sans-serif"><img src="Resources/pics/program.gif" width="42" height="44"></font></h4>
+          </TD>
+          <TD width="525" valign="top" height="1140"> 
+            <table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID. HotelSearch.
+AUTHOR. Michael Coughlan.
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT OccupancyFile ASSIGN TO "Occupancy.DAT"
+           ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+FD OccupancyFile.
+01 FloorRec      PIC X(175).
+   88  EndOfFile VALUE HIGH-VALUES.
+*Each record represents one row of the table
+
+WORKING-STORAGE SECTION.
+01 HotelOccupanyTable.
+   02 Floor OCCURS 5 TIMES INDEXED BY Fidx.
+      03 Room OCCURS 25 TIMES INDEXED BY Ridx.
+         04 CustomerId     PIC 9(6).
+         04 NumOfOccupants PIC 9.
+
+01 CustId                  PIC 9(6).
+01 RoomNum                 PIC 99.
+01 FloorNum                PIC 9.
+01 FILLER                  PIC 9 VALUE 0.
+   88 CustomerFound        VALUE 1.
+
+
+PROCEDURE DIVISION.
+Begin.
+   PERFORM LoadTable 
+   DISPLAY "Enter Customer Id  - " WITH NO ADVANCING
+   ACCEPT CustId
+   PERFORM VARYING Fidx FROM 1 BY 1 UNTIL Fidx > 5
+                   OR CustomerFound
+      SET Ridx TO 1
+      SEARCH Room
+         WHEN CustomerId(Fidx,Ridx) = CustId
+              SET CustomerFound TO TRUE
+              SET FloorNum TO Fidx
+              SET RoomNum TO Ridx
+              DISPLAY "Customer " CustId
+                      " is in room " FloorNum "-" RoomNum
+      END-SEARCH
+   END-PERFORM
+   IF NOT CustomerFound
+      DISPLAY "That customer is not in the hotel"
+   END-IF
+   STOP RUN.
+
+LoadTable.   
+   OPEN INPUT OccupancyFile
+   READ OccupancyFile
+      AT END SET EndOfFile TO TRUE
+   END-READ
+   PERFORM VARYING Fidx FROM 1 BY 1 UNTIL EndOfFile
+      MOVE FloorRec TO Floor(Fidx)
+      READ OccupancyFile
+        AT END SET EndOfFile TO TRUE
+      END-READ
+   END-PERFORM
+   CLOSE OccupancyFile.</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p><hr size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="484"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              Race Results Example program </FONT></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="484"> 
+            <p>This example demonstrates how the<font size="-1"> SEARCH</font> 
+              may be used to search either of the dimensions of a two-dimension 
+              table. </p>
+            <p>Suppose that we want to use a two-dimension table to hold the finishing 
+              positions of drivers in fifteen races. The table to hold these details 
+              may be described as - </p>
+            <pre>01 RaceResultsTable. 
+   02 Race OCCURS 15 TIMES INDEXED BY Ridx.
+      03 Venue  PIC X(20).
+      03 RacePos OCCURS 50 TIMES INDEXED BY Pidx.
+         04 DriverId    PIC 9(4).
+      
+
+</pre>
+            <p>We can represent this diagramatically as follows - </p>
+            <p align="center"><img src="Resources/pics/Search6.gif" width="469" height="109"></p>
+            <p>In the example program below, the first dimension of the table 
+              is searched to find the results for a particular venue and then 
+              the second dimension, representing the results fo the race at that 
+              venue, are searched to find the finishing position of a particular 
+              driver.</p>
+            <p>&nbsp;</p>
+            </TD>
+        </TR>
+       <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="69"> 
+            <H4 align="center"><font color="#800000" face="Arial, Helvetica, sans-serif"><img src="Resources/pics/program.gif" width="42" height="44"></font></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="69">
+<table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>       $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID. RaceSearch.
+AUTHOR. Michael Coughlan.
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT RaceResultsFile ASSIGN TO "RaceResults.DAT"
+           ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+FD RaceResultsFile.
+01 VenueRec.
+   88 EndOfFile VALUE HIGH-VALUES.
+   02 RaceVenue         PIC X(20).
+   02 Results           PIC X(200).
+*Each record represents one row of the table
+
+WORKING-STORAGE SECTION.
+01 RaceResultsTable. 
+   02 Race OCCURS 15 TIMES INDEXED BY Ridx.
+      03 Venue  PIC X(20).
+      03 RacePos OCCURS 50 TIMES INDEXED BY Pidx.
+         04 DriverId    PIC 9(4).
+
+01 VenueName            PIC X(20).
+01 DriverIdNum          PIC 9(4).
+01 Pos                  PIC 99.
+
+
+PROCEDURE DIVISION.
+Begin.
+   PERFORM LoadTable 
+   DISPLAY "Enter Venue name - " WITH NO ADVANCING
+   ACCEPT VenueName
+   DISPLAY "Enter the drivers id  - "WITH NO ADVANCING
+   ACCEPT DriverIdNum
+   SET Ridx TO 1
+   SEARCH Race
+      AT END DISPLAY "Venue not found."
+      WHEN Venue(Ridx) = VenueName 
+           PERFORM SearchForDriver
+   END-SEARCH
+   STOP RUN.
+
+SearchForDriver.
+   SET Pidx TO 1
+   SEARCH RacePos
+       AT END DISPLAY "Driver not in top 50 finishers"
+       WHEN DriverId(Ridx, Pidx) = DriverIdNum
+            SET Pos TO Pidx
+            DISPLAY "In the race at " VenueName
+            DISPLAY "Driver " DriverIdNum 
+                    "finished in position " Pos
+   END-SEARCH.     
+
+LoadTable.   
+   OPEN INPUT RaceResultsFile
+   READ RaceResultsFile
+      AT END SET EndOfFile TO TRUE
+   END-READ
+   PERFORM VARYING Ridx FROM 1 BY 1 UNTIL EndOfFile
+      MOVE VenueRec TO Race(Ridx)
+      READ RaceResultsFile
+        AT END SET EndOfFile TO TRUE
+      END-READ
+   END-PERFORM
+   CLOSE RaceResultsFile.</pre>
+                </td>
+              </tr>
+            </table>
+            <p>In the example above an out-of-line perform was used for the second 
+              <font size="-1">SEARCH</font>. This was not strictly necessary. 
+              The same result could have been achieved with nested <font size="-1">SEARCH</font> 
+              statements. For instance - </p>
+            <pre>SET Ridx TO 1
+SEARCH Race
+   AT END DISPLAY "Venue not found."
+   WHEN Venue(Ridx) = VenueName 
+     SET Pidx TO 1
+     SEARCH RacePos
+        AT END DISPLAY "Driver not in top 50 finishers"
+        WHEN DriverId(Ridx, Pidx) = DriverIdNum
+             SET Pos TO Pidx
+             DISPLAY "In the race at " VenueName
+             DISPLAY "Driver " DriverIdNum
+                     " finished in position " Pos
+     END-SEARCH   
+END-SEARCH</pre>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part4"></A> <font face="Arial, Helvetica, sans-serif">The 
+              SEARCH ALL verb</font></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="137"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="137"> 
+            <P> The <font size="-1">SEARCH ALL</font> is used when a binary search 
+              is required. For this reason, the <font size="-1">SEARCH ALL</font> 
+              will only work on an ordered table. The table must be ordered on 
+              some some key field. The key field may be the element itself or, 
+              where the element is a group item, a field within the element. The 
+              key field must be identified by using the <font size="-1">KEY IS</font> 
+              phrase in the table declaration. </P>
+            <hr size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="792"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">SEARCH 
+              ALL syntax</FONT></H4>
+            <H4 align="center">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="792"> 
+            <p align="left"><img src="Resources/pics/Search3.gif" width="492" height="302"></p>
+            <p align="left"><b><font size="-1">SEARCH ALL</font> rules</b></p>
+            <ol>
+              <li> The <font size="-1">OCCURS</font> clause of the table to be 
+                searched must have a <font size="-1">KEY IS</font> clause in addition 
+                to an <font size="-1">INDEXED BY</font> clause.</li>
+              <li> The <i>ElementIdentifier</i> must be the item referenced by 
+                the <font size="-1">KEY IS </font>phrase of the table's <font size="-1">OCCURS</font> 
+                clause.</li>
+              <li>The <i>ConditionName</i> must have only one value and it must 
+                be associated with a data-item referenced by the <font size="-1">KEY 
+                IS </font>phrase of the table's <font size="-1">OCCURS</font> 
+                clause.</li>
+            </ol>
+            <p align="left"><b><font size="-1">SEARCH ALL</font> notes<br>
+              </b>The<font size="-1"> KEY IS </font>phrase identifies the data-item 
+              upon which the table is ordered. </p>
+            <p align="left"> When the <font size="-1">SEARCH ALL</font> is used, 
+              the programmer does not need to set the table index to a starting 
+              value because the <font size="-1">SEARCH ALL</font> controls it 
+              automatically. </p>
+            <p align="left"><b>Some problems using the <font size="-1">SEARCH 
+              ALL<br>
+              </font></b>If the table to be searched is only partially populated, 
+              the <font size="-1">SEARCH ALL</font> may not work correctly. If 
+              the table is ordered in ascending sequence then, to get the <font size="-1">SEARCH 
+              ALL</font> to function correctly, the unpopulated elements must 
+              be filled with <font size="-1">HIGH-VALUES</font>. If the table 
+              is in descending sequence, the unpopulated elements should be filled 
+              with <font size="-1">LOW-VALUES</font>.</p>
+            <hr width="100%" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="898"> 
+            <H4><font color="#800000" face="Arial, Helvetica, sans-serif">How 
+              a binary search works</font></H4>
+          </TD>
+          <TD width="525" valign="top" height="898"> 
+            <p>A binary search requires that the table to be searched is ordered 
+              on some key field. A binary search works by repeatedly dividing 
+              the search area into a top and bottom half, deciding which half 
+              contains the required item, and then making that half the new search 
+              area. It continues halving the search area like this until the required 
+              item is found or it discovers that the item is not in the table.</p>
+            <p>The algorithm for the binary search is -</p>
+            <table width="93%" border="1" bgcolor="#E1FFE1" align="center" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>PERFORM UNTIL ItemFound OR ItemNotInTable
+  COMPUTE Middle = (Lower + Upper) / 2 
+  EVALUATE TRUE
+    WHEN Key(Middle) < SearchItem COMPUTE Lower = Middle + 1
+    WHEN Key(Middle) > SearchItem COMPUTE Upper = Middle -1
+    WHEN Key(Middle) = SearchItem SET ItemFound TO TRUE
+    WHEN Lower > Upper THEN SET ItemNotInTable TO TRUE
+  END-EVALUATE 
+END-PERFORM</pre>
+                </td>
+              </tr>
+            </table>
+            <p>The animation below demonstrates how the binary search works. It 
+              uses a search of the letter table described in one of the examples 
+              above, as an example. To allow the table to be searched with the 
+              <font size="-1">SEARCH ALL</font> the description of the table has 
+              to be amended to include a <font size="-1">KEY IS</font> phrase 
+              as shown below. </p>
+            <pre>01  LetterTable.
+    02 LetterValues.
+       03 FILLER PIC X(13) 
+          VALUE "ABCDEFGHIJKLM".
+       03 FILLER PIC X(13)
+          VALUE "NOPQRSTUVWXYZ".
+    02 FILLER REDEFINES LetterValues.
+       03 Letter PIC X OCCURS 26 TIMES 
+                       <b><font color="#FF0000">ASCENDING KEY IS Letter</font></b>
+                       INDEXED BY LetterIdx.
+</pre>
+            <p>When the table description contains a KEY IS phrase we can search 
+              it using the following statement - </p>
+            <blockquote> 
+              <pre>SEARCH ALL Letter
+  AT END DISPLAY "Letter " SearchLetter " was not found!"
+  WHEN Letter(LetterIdx) = SearchLetter
+       SET LetterPos TO LetterIdx
+       DISPLAY SearchLetter " is in position " LetterPos
+END-SEARCH.</pre>
+            </blockquote>
+            <p align="center"><a href="Resources/ppz/TC-Search2.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0"></a> 
+            </p>
+            <p align="left">The full program for searching the letter table is 
+              given below.</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="660"> 
+            <H4 align="center"><FONT color="#800000" face="Arial, Helvetica, sans-serif"><img src="Resources/pics/program.gif" width="42" height="44"></FONT></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="660"> 
+            <table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID. LetterSearchAll.
+AUTHOR. Michael Coughlan.
+* This program accepts an upper case letter from the
+* user and then displays which letter of the alphabet
+* it is.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01  LetterTable.
+    02 LetterValues.
+       03 FILLER PIC X(13) 
+          VALUE "ABCDEFGHIJKLM".
+       03 FILLER PIC X(13)
+          VALUE "NOPQRSTUVWXYZ".
+    02 FILLER REDEFINES LetterValues.
+       03 Letter PIC X OCCURS 26 TIMES 
+                       ASCENDING KEY IS Letter
+                       INDEXED BY LetterIdx.
+
+
+01 SearchLetter  PIC X.
+01 LetterPos     PIC 99.
+
+PROCEDURE DIVISION.
+Begin.
+    DISPLAY "Enter the letter please - "
+          WITH NO ADVANCING
+    ACCEPT SearchLetter
+    SET LetterIdx LetterPos TO 1
+    SEARCH ALL Letter
+       AT END DISPLAY "Letter " SearchLetter " was not found!"
+       WHEN Letter(LetterIdx) = SearchLetter
+       SET LetterPos TO LetterIdx
+       DISPLAY SearchLetter " is in position " LetterPos
+    END-SEARCH
+    STOP RUN.
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp; </p>
+            <hr size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1773"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Example 
+              program </FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/program.gif" width="42" height="44"></H4>
+          </TD>
+          <TD width="525" valign="top" height="1773"> 
+            <p>In this example, we revisit the County Tax Report program once 
+              more. This time we use the <font size="-1">SEARCH ALL</font> to 
+              search the pre-filled table of county names.</p>
+            <p>The new parts of the program are coloured red.</p>
+            <table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID. CountyTaxTable4.
+AUTHOR. Michael Coughlan.
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT TaxFile ASSIGN TO "CountyTaxes.DAT"
+           ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+FD TaxFile.
+01 TaxRec.
+   88 EndOfTaxFile   VALUE HIGH-VALUES.
+   02 PAYENum        PIC 9(8).
+   02 County         PIC X(9).
+   02 TaxPaid        PIC 9(7)V99.
+
+WORKING-STORAGE SECTION.
+01 CountyTaxTable.
+   02 CountyTaxDetails OCCURS 26 TIMES.
+      03 CountyTax   PIC 9(8)V99.  
+      03 PayerCount  PIC 9(7).
+         88 NoOnePaidTax VALUE ZEROS.
+
+01 Idx               PIC 99.
+
+01 CountyTaxLine.
+   02 PrnCounty      PIC X(9).
+   02 FILLER         PIC X(7) VALUE " Tax = ".
+   02 PrnTax         PIC $$$,$$$,$$9.99.
+   02 FILLER         PIC X(12) VALUE "   Payers = ".
+   02 PrnPayers      PIC Z,ZZZ,ZZ9.
+
+
+01 CountyNameTable.
+   02 TableValues.
+      03 FILLER  PIC X(9)  VALUE "Carlow".
+      03 FILLER  PIC X(9)  VALUE "Cavan".
+      03 FILLER  PIC X(9)  VALUE "Clare".
+      03 FILLER  PIC X(9)  VALUE "Cork".
+      03 FILLER  PIC X(9)  VALUE "Donegal".
+      03 FILLER  PIC X(9)  VALUE "Dublin".
+      03 FILLER  PIC X(9)  VALUE "Galway".
+      03 FILLER  PIC X(9)  VALUE "Kerry".
+      03 FILLER  PIC X(9)  VALUE "Kildare".
+      03 FILLER  PIC X(9)  VALUE "Kilkenny".
+      03 FILLER  PIC X(9)  VALUE "Laois".
+      03 FILLER  PIC X(9)  VALUE "Leitrim".
+      03 FILLER  PIC X(9)  VALUE "Limerick".
+      03 FILLER  PIC X(9)  VALUE "Longford".
+      03 FILLER  PIC X(9)  VALUE "Louth".
+      03 FILLER  PIC X(9)  VALUE "Mayo".
+      03 FILLER  PIC X(9)  VALUE "Meath".
+      03 FILLER  PIC X(9)  VALUE "Monaghan".
+      03 FILLER  PIC X(9)  VALUE "Offaly".
+      03 FILLER  PIC X(9)  VALUE "Roscommon".
+      03 FILLER  PIC X(9)  VALUE "Sligo".
+      03 FILLER  PIC X(9)  VALUE "Tipperary".
+      03 FILLER  PIC X(9)  VALUE "Westmeath".
+      03 FILLER  PIC X(9)  VALUE "Waterford".
+      03 FILLER  PIC X(9)  VALUE "Wexford".
+      03 FILLER  PIC X(9)  VALUE "Wicklow".
+   02 FILLER REDEFINES TableValues.
+      03   CountyName  PIC X(9)
+                       OCCURS 26 TIMES
+          <font color="#FF0000">            <b> ASCENDING KEY IS CountyName
+</b></font>                       INDEXED BY CountyIdx.
+
+PROCEDURE DIVISION.
+Begin.
+   OPEN INPUT TaxFile
+   MOVE ZEROS TO CountyTaxTable
+   READ TaxFile
+      AT END SET EndOfTaxFile TO TRUE
+   END-READ
+   PERFORM UNTIL EndOfTaxFile
+     <b><font color="#FF0000"> SEARCH ALL CountyName
+</font></b>         AT END DISPLAY "County " County " was not found"
+         WHEN CountyName(CountyIdx) = County
+             <font color="#FF0000"><b> SET Idx TO CountyIdx
+</b></font>              ADD TaxPaid TO CountyTax(Idx)
+              ADD 1 TO PayerCount(Idx)
+      END-SEARCH
+      READ TaxFile
+         AT END SET EndOfTaxFile TO TRUE
+      END-READ
+   END-PERFORM
+   PERFORM DisplayCountyTaxes VARYING Idx FROM 1 BY 1
+           UNTIL Idx GREATER THAN 26
+   CLOSE TaxFile
+   STOP RUN.
+
+DisplayCountyTaxes.
+   IF NOT NoOnePaidTax(Idx)
+      MOVE CountyName(Idx) TO PrnCounty
+      MOVE CountyTax(Idx)  TO PrnTax
+      MOVE PayerCount(Idx) TO PrnPayers
+      DISPLAY CountyTaxLine
+   END-IF.</pre>
+                </td>
+              </tr>
+            </table>
+            
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : May 1999</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

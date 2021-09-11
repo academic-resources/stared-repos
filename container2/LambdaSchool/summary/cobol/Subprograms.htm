@@ -1,0 +1,1050 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Contained and external sub-programs</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715" cellspacing="0">
+  <TR>
+    <TD height="16235"> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2" height="373"> 
+            <CENTER>
+              <H2><img src="Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> Subprograms</H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP" height="44">&nbsp;</TD>
+                <TD width="4%" valign="TOP" height="44"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" height="44"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><br>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP" height="58">&nbsp;</TD>
+                <TD width="4%" valign="TOP" height="58"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top" height="58"> 
+                  <p><B><A href="#part1" target="">The CALL verb</A><BR>
+                    </B><FONT size="-1">Subprograms, the syntax and semantics 
+                    of the CALL verb and parameter passing mechanisms. State memory, 
+                    the IS INITIAL clause and the CANCEL command.</FONT><br>
+                  </p>
+                </TD>
+              </TR>
+              <tr> 
+                <td width="3%" valign="TOP" height="46">&nbsp;</td>
+                <td width="4%" valign="TOP" height="46"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" valign="top" height="46"> 
+                  <div align="left"> 
+                    <p><b><a href="#part2" target="">Contained Subprograms</a><br>
+                      </b><FONT size="-1">C</FONT><FONT size="-1">ontained subprogram 
+                      defined. Sharing data with the IS GLOBAL and IS EXTERNAL 
+                      clause. Using the IS COMMON PROGRAM clause. Measuring the 
+                      quality of subprograms.<br>
+                      </FONT> </p>
+                  </div>
+                </td>
+              </tr>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2" height="27"> 
+            <h2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><font face="Arial, Helvetica, sans-serif">Introduction</font></FONT></h2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" bgcolor="#FFFFCC" height="218"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+            <H4><IMG src="Resources/pics/PanelLine.gif" width="175" height="1"></H4>
+          </TD>
+          <TD width="525" valign="top" height="218"> 
+            <div align="center"> 
+              <p align="left">To provide a brief introduction to building modular 
+                systems using separately compiled and/or contained subprograms. 
+              </p>
+              <p align="left">To explore the syntax, semantics, and use of the 
+                <FONT size="-1">CALL</FONT> verb. </p>
+              <p align="left">To examine how &quot;state memory&quot; is implemented 
+                in COBOL and to demonstrate the effects of the <FONT size="-1">IS 
+                INITIAL</FONT> clause and the <FONT size="-1">CANCEL</FONT> command. 
+              </p>
+              <p align="left">To examine how contained subprograms are implemented 
+                and to show how the <FONT size="-1">IS GLOBAL</FONT> clause may 
+                be used to implement a form of &quot;Information Hiding&quot;. 
+              </p>
+              <p align="left">To show how the <FONT size="-1">IS EXTERNAL</FONT> 
+                clause may be used to set up an area of storage that may be accessed 
+                by any program in the run-unit. </p>
+              <p align="left">To introduce Structured Design and to summarize 
+                its criteria for achieving good quality subprograms.</p>
+              <HR width="100%" align="center" size="1">
+             </div>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="244"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="244"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Understand the difference between a subprogram and a contained 
+                subprogram<BR>
+                <BR>
+              </LI>
+              <LI>Be able to use the <FONT size="-1">CALL</FONT> verb to transfer 
+                control to a subprogram and to pass parameter values to it.<BR>
+                <BR>
+              </LI>
+              <LI>Understand the difference between the <FONT size="-1">BY REFERENCE</FONT> 
+                and <FONT size="-1">BY CONTENT</FONT> parameter passing mechanisms.<BR>
+                <BR>
+              </LI>
+              <LI>Understand what &quot;state memory&quot; is and be able to create 
+                subprograms that do, or do not, exhibit &quot;state memory&quot;.<BR>
+                <BR>
+              </LI>
+              <LI>Understand the<FONT size="-1"> IS COMMON</FONT>, <FONT size="-1">IS 
+                GLOBAL</FONT> and <FONT size="-1">IS EXTERNAL</FONT> clauses.<BR>
+                <BR>
+              </LI>
+              <LI>Be able to create subprograms of good quality.</LI>
+            </OL>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="308"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="308" valign="top"> 
+            <p>Introduction to COBOL <BR>
+              Declaring data in COBOL<BR>
+              Basic Procedure Division commands <BR>
+              Selection in COBOL<BR>
+              Iteration in COBOL <BR>
+              Introduction to Sequential files<BR>
+              Processing Sequential files<BR>
+              Reading Sequential Files <BR>
+              Edited Pictures <BR>
+              The USAGE clause<BR>
+              COBOL print files and variable-length records<BR>
+              Sorting and Merging<BR>
+              Introduction to direct access files<BR>
+              Relative Files<BR>
+              Indexed Files <BR>
+              Using tables<BR>
+              Creating tables - syntax and semantics<BR>
+              Searching tables<BR>
+            </p>
+            </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part1"></A> <FONT face="Arial, Helvetica, sans-serif">The 
+              CALL verb</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="392"> 
+            <H4><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>Introduction</B></FONT></H4>
+            <H4>&nbsp;</H4>
+            <DIV align="center"><IMG src="/cobol/course/Resources/pics/i-Detail.gif" width="30" height="37"> 
+            </DIV>
+            <DIV align="center"> 
+              <P><FONT size="-1"><BR>
+                </FONT><FONT size="-1">Your vendor will have supplied a Linker 
+                with your COBOL development system. You will have to read the 
+                vendor manual for the specifics of how it works.</FONT><BR>
+              </P>
+              </DIV>
+          </TD>
+          <TD width="525" valign="top" height="392"> 
+            <P>A large software system is not usually written as a single monolithic 
+              program. Instead, it consists of a main program and many independently 
+              compiled subprograms, linked together to form one executable run-unit. 
+            </P>
+            <P>A subprogram is the name we give to a program that is invoked from 
+              another program.</P>
+            <P>The object code of separately compiled subprograms has to be linked 
+              together into one executable run-unit by a special program called 
+              a &quot;Linker&quot;.</P>
+            <P>One purpose of the Linker is to resolve the subprogram names (given 
+              in the <FONT size="-1">PROGRAM-ID</FONT> clause) into actual physical 
+              addresses so that the computer can find a particular subprogram 
+              when it is invoked.<BR>
+            </P>
+            <P>In a system consisting of a main program and linked subprograms, 
+              there must be a mechanism that allows one program to invoke another 
+              and to pass data to it. In many programming languages, the procedure 
+              or function call serves this purpose. </P>
+            <P>In COBOL, the <FONT size="-1">CALL </FONT>verb is used to invoke 
+              one program from another.</P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="141"> 
+            <H4><FONT color="#800000"><B><FONT face="Arial, Helvetica, sans-serif">CALL 
+              verb semantics</FONT></B></FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="141"> 
+            <P>The <FONT size="-1">CALL</FONT> verb transfers control to a subprogram. 
+              When the subprogram has finished, control returns to the statement 
+              that follows the <FONT size="-1">CALL</FONT> in the calling program. 
+            </P>
+            <P>The called program may be an independently compiled program, or 
+              it may be contained within the text of the calling program (i.e. 
+              it may be a contained subprogram).</P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="57"> 
+            <P><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>CALL 
+              syntax and notes</B></FONT></P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P align="center"><IMG src="Resources/pics/i-BugAlert.gif" width="56" height="62"></P>
+            <P align="center"><FONT size="-1">Passing parameters of incorrect 
+              types to a called program is a frequent source of program failure 
+              (crashes).<BR>
+              </FONT><FONT size="-1">Always double check to make sure that the 
+              types of the parameters passed by the caller program are in agreement 
+              with those declared in the LINKAGE SECTION of the called program.</FONT></P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+          </TD>
+          <TD width="525" valign="top" height="57"> 
+            <P align="center"><IMG src="Resources/pics/Call1.gif" width="480" height="208"></P>
+            <P align="left"><B>CALL notes</B></P>
+            <OL>
+              <LI>If the <FONT size="-1">CALL</FONT> passes parameters, then the 
+                called program must have a <FONT size="-1">USING</FONT> phrase 
+                after the <FONT size="-1 ">PROCEDURE DIVISION</FONT> header and 
+                a <FONT size="-1">LINKAGE SECTION</FONT> to describe the parameters 
+                passed.<BR>
+                <BR>
+              </LI>
+              <LI>The <FONT size="-1">CALL</FONT> statement has a <FONT size="-1">USING</FONT> 
+                phrase only if a <FONT size="-1">USING</FONT> phrase is used in 
+                the <FONT size="-1">PROCEDURE DIVISION</FONT> header of the called 
+                program.<BR>
+                <BR>
+              </LI>
+              <LI>Both <FONT size="-1">USING</FONT> phrases must have the same 
+                number of parameters.<BR>
+                <BR>
+              </LI>
+              <LI>Unlike languages like Modula-2, COBOL does not check the type 
+                of the parameters passed to a called program. It is the programmer's 
+                responsibility to make sure that only parameters of the correct 
+                type and size are passed.<BR>
+                <BR>
+              </LI>
+              <LI>Parameters passed from the calling program to the called program 
+                correspond by position, not by name. That is, the first parameter 
+                in the <FONT size="-1">USING</FONT> phrase of the <FONT size="-1">CALL</FONT> 
+                corresponds to the first in the <FONT size="-1">USING</FONT> phase 
+                of the called program, and so on.<BR>
+                <BR>
+                <IMG src="Resources/pics/Call2.gif" width="524" height="354"><BR>
+                <BR>
+                <BR>
+              </LI>
+              <LI>If the program being called has not been linked (does not exist 
+                in the executable image,) the statement block following the <FONT size="-1">ON 
+                EXCEPTION/OVERFLOW</FONT> will execute. Otherwise, the program 
+                will terminate abnormally.<BR>
+                <BR>
+              </LI>
+              <LI><FONT size="-1">BY REFERENCE </FONT>is the default passing mechanism, 
+                and so is sometimes omitted.<BR>
+                <BR>
+              </LI>
+              <LI>Note that vendors often extend the <FONT size="-1">CALL </FONT>by 
+                introducing <FONT size="-1">BY VALUE</FONT> parameter passing, 
+                and by including a <FONT size="-1">GIVING</FONT> phrase. These 
+                are non-standard extensions.<BR>
+              </LI>
+            </OL>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="423"><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>Parameter 
+            passing mechanisms</B></FONT></TD>
+          <TD width="525" valign="top" height="423"> 
+            <P>In standard COBOL, the <FONT size="-1">CALL</FONT> verb has two 
+              parameter passing mechanisms - <BR>
+              <FONT size="-1">BY REFERENCE</FONT> and <FONT size="-1">BY CONTENT</FONT>.</P>
+            <UL>
+              <LI><FONT size="-1"><B>BY REFERENCE</B></FONT> is used when the 
+                called program needs to pass data back to the caller.<BR>
+                <BR>
+              </LI>
+              <LI><B><FONT size="-1">BY CONTENT</FONT></B> is used when data needs 
+                to be passed to, but not received from, the called program.</LI>
+            </UL>
+            <P>The diagrams and explanations below show how these mechanisms work.</P>
+            <P align="left"><B>CALL..BY REFERENCE</B><BR>
+              When data is passed <FONT size="-1">BY REFERENCE</FONT>, the address 
+              of the data-item is supplied to the called subprogram. So any changes 
+              made to the data-item in the subprogram are also made to the data-item 
+              in the main program because both items refer to the same memory 
+              location.</P>
+            <P align="center"><IMG src="Resources/pics/Call3.gif" width="490" height="164"></P>
+            <P align="center">&nbsp;</P>
+            <P><B>CALL..BY CONTENT<BR>
+              </B>When a parameter is passed <FONT size="-1">BY CONTENT</FONT> 
+              a copy of the data-item is made and the address of the copy is supplied 
+              to subprogram. Any changes made to the data-item in the subprogram 
+              affect only the copy.</P>
+            <P align="center"><IMG src="Resources/pics/Call4.gif" width="489" height="193"></P>
+            <P>&nbsp;</P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1262"> 
+            <P><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>CALL 
+              example</B></FONT></P>
+            <P>&nbsp;</P>
+          </TD>
+          <TD width="525" valign="top" height="1262"> 
+            <P>The example fragments below show how a <FONT size="-1">CALL</FONT> 
+              statement is made in a calling program to invoke and pass parameters 
+              to a subprogram (shown in outline).</P>
+            <P>&nbsp;</P>
+            <TABLE width="399" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD> 
+                  <PRE><B>
+CALL &quot;DateValidate&quot;<BR>     USING BY CONTENT TempDate<BR>     USING BY REFERENCE DateCheckResult.<BR></B></PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <DIV align="center">The <FONT size="-1">CALL</FONT> statement in the 
+              calling program.<BR>
+            </DIV>
+            <P>&nbsp;</P>
+            <TABLE width="374" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD> 
+                  <PRE><B><BR>IDENTIFICATION DIVISION.<BR>PROGRAM-ID DateValidate IS INITIAL.<BR>DATA DIVISION.<BR>WORKING-STORAGE SECTION.<BR>          ? ? ? ? ? ? ? ? ? ? ? ? <BR>LINKAGE SECTION.<BR>01  DateParam            PIC X(8).<BR>01  DateResult           PIC 9.<BR>PROCEDURE DIVISION USING DateParam, DateResult.<BR>Begin. <BR>       ? ? ? ? ? ? ? ? ? ? ? ? <BR>       ? ? ? ? ? ? ? ? ? ? ? ?<BR>       EXIT PROGRAM.<BR>??????.<BR>       ? ? ? ? ? ? ? ? ? ? ? ?<BR><BR></B></PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <DIV align="center"> 
+              <P>Outline of the called program</P>
+              <P align="left"><B>Notes<BR>
+                </B>Note that the name given in the <FONT size="-1">CALL </FONT>statement 
+                (i.e. &quot;DateValidate&quot;) corresponds with the name given 
+                in the <FONT size="-1">PROGRAM-ID</FONT> of the called program. 
+                The main purpose of the <FONT size="-1">PROGRAM-ID</FONT> clause 
+                is to identify programs within a run-unit (i.e. a set of programs 
+                that have been compiled and linked into one executable image) 
+                and the <FONT size="-1">CALL</FONT> transfers control from one 
+                program in the run-unit to another.</P>
+            </DIV>
+            <P>Note that the subprogram has a <FONT size="-1">LINKAGE SECTION 
+              </FONT>where the parameters passed to it are defined.</P>
+            <P>Note that the names of the parameters passed by the <FONT size="-1">CALL 
+              </FONT>statement in the main program are different from those in 
+              the called subprogram. This is because it is the positions of the 
+              parameters following their respective <FONT size="-1">USING</FONT> 
+              clauses that is significant, not the names used. </P>
+            <P>In this case <I>TempDate</I> corresponds to <I>DateParam</I> and 
+              <I>DateCheckResult</I> to <I>DateResult</I>. </P>
+            <BLOCKQUOTE>
+              <P><I>TempDate</I> is a parameter passed to the subprogram<FONT size="-1"> 
+                BY CONTENT</FONT>. This means that no matter what the subprogram 
+                does to the value in the corresponding <I>DateParam</I>, the original 
+                value of <I>TempDate</I> will be unaffected.</P>
+              <P>By contrast, <I>DateCheckResult</I> is passed <FONT size="-1">BY 
+                REFERENCE </FONT>and this means that any changes to the value 
+                in the corresponding <I>DateResult </I>are reflected by a change 
+                in value of <I>DateCheckResult</I> in the main program. </P>
+            </BLOCKQUOTE>
+            <P>Passing parameters <FONT size="-1">BY REFERENCE</FONT> is the mechanism 
+              by which data is passed from a called subprogram to the main program. 
+              In this example, what is being passed back is a code indicating 
+              the success or failure of the validation. </P>
+            <P><FONT size="-1">BY REFERENCE</FONT> should be used only when you 
+              require a subprogram to pass data back to the main program. It is 
+              a principle of modular design (i.e. a design where the system is 
+              broken into a number of subprograms. rather than consisting of a 
+              single monolithic program) that the data connection between modules 
+              should be as limited as possible. </P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1355"><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>State 
+            memory and the IS INITIAL clause</B></FONT></TD>
+          <TD width="525" valign="top" height="1355"> 
+            <P><B>The IS INITIAL phrase</B><BR>
+              The first time a subprogram is called, it is in its initial state: 
+              all files are closed and the data-items are initialized to their 
+              <FONT size="-1">VALUE</FONT> clauses. </P>
+            <P>The next time it is called, it remembers its state from the previous 
+              call. Any files that were opened are still open, and any data-items 
+              that were assigned values still contain those values.</P>
+            <P>Although it can be useful for a subprogram to remember its state 
+              from call to call, systems that contain subprograms. with &quot;state 
+              memory&quot; are often less reliable and more difficult to debug 
+              than those that do not.</P>
+            <P>A subprogram can be forced into its initial state each time it 
+              is called, by including the <FONT size="-1">IS INITIAL</FONT> clause 
+              in the <FONT size="-1">PROGRAM-ID</FONT>.</P>
+            <P>In the examples below, the subprogram &quot;Steadfast&quot; produces 
+              the same result every time it is called with the same parameter 
+              value. But &quot;Fickle&quot;, because it remembers its state from 
+              the previous call, will produce different results when called with 
+              the same value.</P>
+            <P>&nbsp;</P>
+			<DIV align="center">
+              <TABLE width="412" border="1" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+                <TR> 
+                  <TD width="0" height="322" valign="top"> 
+                    <PRE><B>
+? ? ? ? ? ? ? ? ? ? 
+MOVE 12 TO IncrementVal.
+CALL &quot;Steadfast&quot; USING BY CONTENT IncrementVal.<BR>
+MOVE 5 TO IncrementVal
+CALL &quot;Steadfast&quot; USING BY CONTENT IncrementVal.<BR>
+MOVE 12 TO IncrementVal.
+CALL &quot;Steadfast&quot; USING BY CONTENT IncrementVal.<BR>
+? ? ? ? ? ? ? ? ? ? 
+MOVE 12 TO IncrementVal.
+CALL &quot;Fickle&quot; USING BY CONTENT IncrementVal.<BR>
+MOVE 5 TO IncrementVal.
+CALL &quot;Fickle&quot; USING BY CONTENT IncrementVal.
+MOVE 12 TO IncrementVal.
+CALL &quot;Fickle&quot; USING BY CONTENT IncrementVal.
+? ? ? ? ? ? ? ? ? ? <BR></B></PRE>
+                </TD>
+              </TR>
+            </TABLE>
+           Statements in the calling program<BR>
+            </DIV>
+            <P><BR>
+            </P>
+            <P>&nbsp;</P>
+            <TABLE width="439" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD height="318" valign="top"> 
+                  <PRE><B>      $SET SOURCEFORMAT&quot;FREE&quot;<BR>IDENTIFICATION DIVISION.<BR>PROGRAM-ID. Steadfast IS INITIAL.</B></PRE>
+                  <PRE><B>DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 RunningTotal PIC 9(5) VALUE 50.</B></PRE>
+                  <PRE><B>LINKAGE SECTION.
+01 ParamValue PIC 99.</B></PRE>
+                  <PRE><B>PROCEDURE DIVISION USING ParamValue.
+Begin.
+   ADD ParamValue TO RunningTotal.
+   DISPLAY &quot;Total = &quot;, RunningTotal.
+   EXIT PROGRAM.</B><B><BR></B></PRE>
+                </TD>
+                <TD valign="top" height="318" bgcolor="#FFFFFF"> 
+                  <DIV align="left"> 
+                    <DIV align="center"><B>Example Runs<BR>
+                      </B><FONT size="-1">The parameter </FONT><FONT size="-1"> 
+                      value is shown in <FONT color="#0000FF">blue</FONT> and 
+                      the result displayed is shown in <FONT color="#FF0000">red</FONT>. 
+                      <BR>
+                      </FONT></DIV>
+                    <HR>
+                    <DIV align="center"><FONT size="-2">First Run</FONT><BR>
+                    </DIV>
+                    <DIV align="center"><FONT color="#0000FF"><B><FONT face="Arial, Helvetica, sans-serif">12</FONT></B></FONT><B><FONT face="Arial, Helvetica, sans-serif"><BR>
+                      <FONT color="#FF0000">Total = 62</FONT></FONT></B> </DIV>
+                    <HR align="center">
+                    <DIV align="center"><FONT size="-2">Second Run</FONT><BR>
+                    </DIV>
+                    <DIV align="center"><FONT color="#0000FF"><B><FONT face="Arial, Helvetica, sans-serif">5</FONT></B></FONT><B><FONT face="Arial, Helvetica, sans-serif"><BR>
+                      <FONT color="#FF0000">Total = 55</FONT></FONT></B> </DIV>
+                    <HR align="center">
+                    <DIV align="center"><FONT size="-2">Third Run</FONT><BR>
+                    </DIV>
+                    <DIV align="center"><FONT color="#0000FF"><B><FONT face="Arial, Helvetica, sans-serif">12</FONT></B></FONT><B><FONT face="Arial, Helvetica, sans-serif"><BR>
+                      <FONT color="#FF0000">Total = 62</FONT></FONT></B> </DIV>
+                  </DIV>
+                </TD>
+              </TR>
+            </TABLE>
+            <P>&nbsp;</P>
+            <P>In &quot;Steadfast&quot;, no matter how many times we run the program, 
+              when the parameter value is the same - the result is the same. For 
+              instance, on the first and third runs of the program the parameter 
+              has the value 12 and each time the result is 62 (12+50).</P>
+            <P>&nbsp;</P>
+            <TABLE width="439" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD height="330" valign="top"> 
+                  <PRE><B>      $SET SOURCEFORMAT&quot;FREE&quot;<BR>IDENTIFICATION DIVISION.<BR>PROGRAM-ID. Fickle.
+<BR>DATA DIVISION.<BR>WORKING-STORAGE SECTION.<BR>01 RunningTotal   PIC 9(5) VALUE 50.
+<BR>LINKAGE SECTION.<BR>01 ParamValue     PIC 99.
+<BR>PROCEDURE DIVISION USING ParamValue.<BR>Begin.<BR>   ADD ParamValue TO RunningTotal.<BR>   DISPLAY &quot;Total = &quot;, RunningTotal.<BR>   EXIT PROGRAM.</B><B><BR></B></PRE>
+                </TD>
+                <TD valign="top" height="330" bgcolor="#FFFFFF"> 
+                  <DIV align="left"> 
+                    <DIV align="center"><B>Example Runs<BR>
+                      </B><FONT size="-1">The parameter </FONT><FONT size="-1"> 
+                      value is shown in <FONT color="#0000FF">blue</FONT> and 
+                      the result displayed is shown in <FONT color="#FF0000">red</FONT>. 
+                      <BR>
+                      </FONT> </DIV>
+                    <HR>
+                    <DIV align="center"><FONT size="-2">First Run</FONT><BR>
+                      <FONT size="-1"> </FONT> </DIV>
+                    <DIV align="center"><FONT color="#0000FF"><B><FONT face="Arial, Helvetica, sans-serif">12</FONT></B></FONT><B><FONT face="Arial, Helvetica, sans-serif"><BR>
+                      <FONT color="#FF0000">Total = 62</FONT></FONT></B> </DIV>
+                    <HR align="center">
+                    <DIV align="center"><FONT size="-2">Second Run</FONT><BR>
+                    </DIV>
+                    <DIV align="center"> 
+                      <DIV><FONT color="#0000FF"><B><FONT face="Arial, Helvetica, sans-serif">5</FONT></B></FONT><B><FONT face="Arial, Helvetica, sans-serif"><BR>
+                        <FONT color="#FF0000">Total = 67</FONT></FONT></B> </DIV>
+                      <HR>
+                      <FONT size="-2">Third Run</FONT><BR>
+                      <DIV align="center"><FONT color="#0000FF"><B><FONT face="Arial, Helvetica, sans-serif">12</FONT></B></FONT><B><FONT face="Arial, Helvetica, sans-serif"><BR>
+                        <FONT color="#FF0000">Total = 79</FONT></FONT></B> </DIV>
+                    </DIV>
+                  </DIV>
+                </TD>
+              </TR>
+            </TABLE>
+            <P>In &quot;Fickle&quot; the result produced by running the program 
+              depends on what the program &quot;remembers&quot; from the last 
+              time it was run. In the example runs, even though the parameter 
+              value is the same on the first and third runs, the result produced 
+              is different. On the first run the result is 62 (12+50) but on the 
+              third run, even though the value of the parameter is still 12, the 
+              program &quot;remembers&quot; the value of <I>RunningTotal</I> from 
+              the previous run and produces a result of 79 (12+67).</P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="457"> 
+            <H4><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>State 
+              memory and the CANCEL verb</B></FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="457"> 
+            <P>Sometimes a program only needs &quot;state memory&quot; part of 
+              the time. That is, it needs to be reset to its initial state periodically. 
+            </P>
+            <P>In COBOL this can be done by means of the <FONT size="-1">CANCEL</FONT> 
+              verb/command. </P>
+            <P>The syntax of the <FONT size="-1">CANCEL</FONT> verb is as follows</P>
+            <P align="center"><IMG src="Resources/pics/Call5.gif" width="264" height="71"></P>
+            <P>When the <FONT size="-1">CANCEL</FONT> command is executed, the 
+              memory space occupied by the subprogram is freed and if the subprogram 
+              is called again it will be in its initial state (i.e. all files 
+              closed and the data-items initialized to their <FONT size="-1">VALUE</FONT> 
+              clauses).</P>
+            <P>By using the following statements in our main program</P>
+            <BLOCKQUOTE> 
+              <PRE><B>CALL &quot;Fickle&quot; USING BY CONTENT IncValue.
+CANCEL &quot;Fickle&quot;
+CALL &quot;Fickle&quot; USING BY CONTENT IncValue</B>.</PRE>
+            </BLOCKQUOTE>
+            <P>we can force &quot;Fickle&quot; to act like &quot;Steadfast&quot;.<BR>
+            </P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="388"> 
+            <H4><B><FONT face="Arial, Helvetica, sans-serif" color="#800000">Subprogram 
+              clauses and verbs</FONT></B></H4>
+          </TD>
+          <TD width="525" valign="top" height="388"> 
+            <P>COBOL subprograms. are identical to standard COBOL programs with 
+              the following exceptions:</P>
+            <OL>
+              <LI>The <FONT size="-1">PROGRAM-ID</FONT> may take the <FONT size="-1">IS 
+                INITIAL</FONT> and <FONT size="-1">IS COMMON PROGRAM</FONT> clauses.<BR>
+                <BR>
+              </LI>
+              <LI> When parameters are passed to the subprogram, the <FONT size="-1">PROCEDURE 
+                DIVISION</FONT> header of the subprogram must have the <FONT size="-1">USING 
+                </FONT>phrase.<BR>
+                <BR>
+              </LI>
+              <LI>When there are parameters, the <FONT size="-1">DATA DIVISION</FONT> 
+                of the subprogram must have a <FONT size="-1">LINKAGE SECTION</FONT> 
+                where the items specified in the <FONT size="-1">USING</FONT> 
+                phrase are declared.<BR>
+                <BR>
+              </LI>
+              <LI>The <FONT size="-1">EXIT PROGRAM</FONT> statement is used where 
+                the <FONT size="-1">STOP RUN</FONT> would be used in a standard 
+                COBOL program. <BR>
+                An <FONT size="-1">EXIT PROGRAM</FONT> statement has the effect 
+                of stopping the subprogram and returning control to the calling 
+                program. <BR>
+                The difference between a <FONT size="-1">STOP RUN </FONT>and an 
+                <FONT size="-1">EXIT PROGRAM</FONT> statement is that the <FONT size="-1">STOP 
+                RUN</FONT> causes the whole run-unit to stop (even if it is encountered 
+                in a subprogram) instead of just the subprogram<BR>
+                <BR>
+              </LI>
+              <LI>Contained subprograms. must end with the <FONT size="-1">END 
+                PROGRAM</FONT> statement. The END PROGRAM statement delimits the 
+                scope of a contained subprogram<BR>
+              </LI>
+            </OL>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <hr width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part2"></a><FONT face="Arial, Helvetica, sans-serif">Contained 
+              Subprograms</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="131"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="131"> 
+            <p align="left">COBOL subprograms can be independently compiled separate 
+              programs (linked into a single executable run-unit) or they can 
+              be contained within the text of a containing program.</p>
+            <p align="left">Contained subprograms. are very similar to the procedures 
+              (or user defined functions) found in other languages except that 
+              they are invoked with the <FONT size="-1">CALL</FONT> verb and are 
+              better protected against accidental data corruption.</p>
+            <OL>
+              <LI>In the procedures used in other languages all external data-items 
+                are visible within the procedure unless they are explicitly redeclared 
+                as local data-items.<BR>
+                <BR>
+              </LI>
+              <LI>In COBOL's contained subprograms, no external data-items are 
+                visible within the contained subprogram, unless this has been 
+                explicitly permitted by using the <FONT size="-1">IS GLOBAL</FONT> 
+                clause in the data declaration. <BR>
+              </LI>
+            </OL>
+            <hr size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="319"><FONT color="#800000" face="Arial, Helvetica, sans-serif"><B> 
+            Defining a contained subprogram</B></FONT></TD>
+          <TD width="525" valign="top" height="319"> 
+            <P align="left">When contained subprograms are used, the end of the 
+              main program, and each subprogram, is signalled by means of the 
+              <FONT size="-1">END PROGRAM</FONT> statement. This has the format:</P>
+            <P align="center"><B><FONT face="Arial, Helvetica, sans-serif">END 
+              PROGRAM ProgramIdName.</FONT></B></P>
+            <P align="center"><BR>
+            </P>
+            <B><FONT face="Arial, Helvetica, sans-serif">Contained subprogram 
+            restrictions</FONT></B><B><BR>
+            </B>Contained subprograms have the following restrictions:<BR>
+            <OL>
+              <LI> Although contained subprograms can be nested, a contained subprogram 
+                can only be called by the immediate containing program or by a 
+                subprogram at the same level. <BR>
+                <BR>
+              </LI>
+              <LI> Contained subprograms. can only call a subprogram at the same 
+                level if the called program uses the <FONT size="-1">IS COMMON 
+                PROGRAM</FONT> clause in its <FONT size="-1">PROGRAM-ID.</FONT> 
+                <BR>
+                <BR>
+              </LI>
+            </OL>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="210"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"><B>The 
+              IS GLOBAL clause</B></FONT></H4>
+            <H4>&nbsp;</H4>
+            <h4 align="center"><font size="-1"> </font></h4>
+          </TD>
+          <TD width="525" valign="top" height="210"> 
+            <p align="left">As noted above, data-items declared outside the scope 
+              of a contained subprogram cannot be seen within the subprogram.</p>
+            <p align="left">Sometimes however, you may want to share some data-item 
+              within a number of contained subprograms.</p>
+            <p align="left">For instance, in the example program fragments below, 
+              we want both of our subprograms to be able to access the <I>NameTable</I>. 
+            </p>
+            <p align="left">When we want a data-item to be seen within contained 
+              subprograms we simply follow the item declaration with the <FONT size="-1">IS 
+              GLOBAL</FONT> clause.</p>
+            <p align="left">The <FONT size="-1">IS GLOBAL</FONT> clause specifies 
+              that the data item is to be visible within any subordinate contained 
+              subprograms.</p>
+            <TABLE width="383" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD width="0" height="472"> 
+                  <PRE>      <B>$SET SOURCEFORMAT&quot;FREE&quot;<BR>      $SET NESTCALL<BR>IDENTIFICATION DIVISION.<BR>PROGRAM-ID. ContainerProgram.
+   ? ? ? ? ? ? ? ? ?<BR><FONT color="#FF0000">01 NameTable IS GLOBAL.
+<FONT size="-1">   02 SName OCCURS 200 TIMES PIC X(20).</FONT></FONT><FONT size="-1">
+   </FONT>? ? ? ? ? ? ? ? ? <BR>PROCEDURE DIVISION.
+   ? ? ? ? ? ? ? ? ?
+   CALL &quot;PutToTable&quot; USING ???
+   ? ? ? ? ? ? ? ? ?
+   CALL &quot;ReportFromTable&quot;
+   ? ? ? ? ? ? ? ? ? <BR>   EXIT PROGRAM.
+<BR><FONT color="#0000CC">IDENTIFICATION DIVISION.<BR>PROGRAM-ID. PutToTable.<BR>   ? ? ? ? ? ? ? ? ?</FONT><FONT color="#0000FF">
+  <FONT color="#FF0000"> MOVE StudName TO SName(SNum).</FONT><BR><FONT color="#0000CC">   ? ? ? ? ? ? ? ? ? 
+   EXIT PROGRAM<BR>END-PROGRAM PutToTable.</FONT></FONT>
+
+<FONT color="#0000CC">IDENTIFICATION DIVISION.<BR>PROGRAM-ID. ReportFromTable.<BR>   ? ? ? ? ? ? ? ? ?</FONT><FONT color="#0000FF">
+   <FONT color="#FF0000">DISPLAY &quot;Student &quot; SNum &quot; = &quot; SName(SNum).</FONT><BR><FONT color="#0000CC">   ? ? ? ? ? ? ? ? ? 
+   EXIT PROGRAM<BR>END-PROGRAM ReportFromTable.</FONT></FONT><BR>END-PROGRAM ContainerProgram.</B></PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <p align="left">&nbsp;</p>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1127"> 
+            <H4><FONT face="Arial, Helvetica, sans-serif" color="#800000"> Information 
+              Hiding using the IS GLOBAL clause and contained subprograms</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="1127"> 
+            <p align="left">Contained subprograms. seem to offer us the opportunity 
+              to create some form of Information Hiding. For instance, it looks 
+              as though we could create an Informational Strength module as defined 
+              by Myres (<FONT size="-1">Myres, G.J. <I>Composite/Structured Design.</I> 
+              1979</FONT>) by hiding a table declaration within a containing program 
+              and then allowing access to it through the contained subprograms. 
+              (see diagram below).</p>
+            <p align="left">&nbsp;</p>
+            <p align="center"><IMG src="Resources/pics/call6.gif" width="401" height="206"></p>
+            <p align="left"> Unfortunately, this arrangement is not allowed in 
+              COBOL because, although subprograms. may be nested, a contained 
+              subprogram can only be called by the immediate containing program 
+              or by a subprogram at the same level. So in the diagram above, the 
+              main program would not be allowed direct access to the contained 
+              subprograms.</p>
+            <p align="left">The only way any kind of Informational Strength module 
+              can be achieved is for the MainProgram to call the ContainerProgram 
+              and for the ContainerProgram to call the appropriate subprogram 
+              as shown below. </p>
+            <p align="left">To do this the MainProgram would have to pass some 
+              sort of code to the ContainerProgram to tell it which of the subprograms 
+              to use and the parameter list passed to the ContainerProgram would 
+              have to be wide enough to accommodate the needs of the contained 
+              subprograms. This does not cause much of a problem in the example 
+              below, but in a case where the contained programs had more significant 
+              data needs it could prove a serious drawback. </p>
+            <p align="left">Glenford Myres (<FONT size="-1">Myres, G.J. <I>Composite/Structured 
+              Design.</I> 1979</FONT>) has produced criteria for deciding whether 
+              a module (i.e. a subprogram) is good or bad. Module Coupling (i.e. 
+              the data connections between modules) is one of the criteria he 
+              considers. According to his criteria the ContainerProgram below 
+              exhibits both Stamp and Control coupling. </p>
+            <p align="center"><IMG src="Resources/pics/Call7.gif" width="406" height="286"></p>
+            <p align="left">&nbsp;</p>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="376"><B><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+            IS COMMON PROGRAM clause</FONT></B></TD>
+          <TD width="525" valign="top" height="376"> 
+            <P>A programmer pondering the problem outlined above - how to get 
+              an external program to make direct calls to the subprograms contained 
+              within a container might be excited to come across the <FONT size="-1">IS 
+              COMMON PROGRAM </FONT>clause. He might be forgiven for thinking 
+              for a moment that this clause was the solution to his problem. Sadly 
+              this is not the case. 
+            <P>The <B>only use</B> of the <FONT size="-1">IS COMMON PROGRAM </FONT>clause 
+              is to allow a subprogram to call one of its sibling subprograms. 
+              (i.e. a subprogram at the same level). 
+            <P>Contained subprograms can only call a subprogram at the same level 
+              if the called program uses the <FONT size="-1">IS COMMON PROGRAM</FONT> 
+              phrase in its <FONT size="-1">PROGRAM-ID</FONT>. For instance in 
+              the example below <I>DisplayData</I> is called by the main program 
+              and by its sibling <I>InsertData</I> but <I>InsertData</I> cannot 
+              call <I>DisplayData</I>. 
+            <P>The syntax diagram for the <FONT size="-1">IS INITIAL</FONT> and 
+              <FONT size="-1">IS COMMON</FONT> clauses is shown below. As you 
+              can see from the diagram both the <FONT size="-1">COMMON</FONT> 
+              and <FONT size="-1">INITIAL</FONT> clauses may be used in combination. 
+              The words<FONT size="-1"> IS</FONT> and <FONT size="-1">PROGRAM</FONT> 
+              are noise words which may be omitted. 
+            <P align="center"><IMG src="Resources/pics/Call8.gif" width="495" height="23"> 
+            <P>&nbsp; 
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="161"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"><B>Example 
+              program using contained subprograms. and the IS COMMON PROGRAM and 
+              IS GLOBAL clauses</B></FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="161"> 
+            <P>In this example, <I>SharedItem</I> can be accessed in the main 
+              program and in each of the subprograms because this has been explicitly 
+              specified in the data declaration by using the <FONT size="-1">IS 
+              GLOBAL</FONT> clause. </P>
+            <P>Note that &quot;<FONT size="-1">$ SET NESTCALL</FONT>&quot; is 
+              a compiler directive for Microfocus NetExpress telling the compiler 
+              to expect contained subprograms. It is not standard COBOL.</P>
+            <TABLE width="374" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD width="0" height="472" valign="top"> 
+                  <PRE>      <B>$SET SOURCEFORMAT&quot;FREE&quot;<BR>      $SET NESTCALL<BR>IDENTIFICATION DIVISION.<BR>PROGRAM-ID. MainProgram.<BR>DATA DIVISION.<BR>WORKING-STORAGE SECTION.<BR>01 SharedItem     PIC X(25) IS GLOBAL.<BR>PROCEDURE DIVISION.
+Begin.<BR>    CALL &quot;InsertData&quot;<BR>    MOVE &quot;Main can also use the share&quot; TO SharedItem<BR>    CALL &quot;DisplayData&quot;<BR>    STOP RUN.
+<FONT color="#000099"><BR>IDENTIFICATION DIVISION.<BR>PROGRAM-ID. InsertData.<BR>PROCEDURE DIVISION.
+Begin.<BR>    MOVE &quot;Shared area works&quot; TO SharedItem<BR>    CALL &quot;DisplayData&quot;<BR>    EXIT PROGRAM.<BR>END PROGRAM InsertData.</FONT>
+<BR><FONT color="#000099">IDENTIFICATION DIVISION.<BR>PROGRAM-ID. DisplayData IS COMMON PROGRAM.<BR>PROCEDURE DIVISION.
+Begin.<BR>    DISPLAY SharedItem.<BR>    EXIT PROGRAM<BR>END PROGRAM DisplayData.</FONT>
+<BR>END PROGRAM MainProgram.<BR></B></PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <P>&nbsp;</P>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="2123"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Example 
+              program using the IS INITIAL and IS COMMON clauses and the CANCEL 
+              command.</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="2123"> 
+            <P>In the example below the &quot;Fickle&quot; and &quot;Steadfast&quot; 
+              subprograms are revisited. This time they have been incorporated 
+              into the text of a main, containing program.</P>
+            <P>The first part of the main program calls &quot;Fickle&quot; and 
+              &quot;Steadfast&quot; to demonstrate the difference between a program 
+              that has state memory and one that does not.</P>
+            <P>In the second part of the main program, &quot;Fickle&quot; is used 
+              with the <FONT size="-1">CANCEL </FONT>command to calculate the 
+              square of a number by repeated addition. After the square of a particular 
+              number has been calculated the <FONT size="-1">CANCEL</FONT> command 
+              is used to initialize &quot;Fickle&quot; so that the next number 
+              may be computed.</P>
+            <TABLE width="374" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD width="0" height="472" valign="top"> 
+                  <PRE><B>      $SET SOURCEFORMAT&quot;FREE&quot;<BR>      $SET NESTCALL<BR>IDENTIFICATION DIVISION.<BR>PROGRAM-ID. Counter.<BR>DATA DIVISION.<BR>WORKING-STORAGE SECTION.<BR>01 Increment      PIC 99 VALUE ZERO.<BR>   88 EndOfData VALUE ZERO.<BR>PROCEDURE DIVISION.<BR>Begin.<BR>* Demonstrates the difference between Fickle<BR>* and Steadfast.  Entering a 0 ends the iteration<BR>  DISPLAY &quot;Enter value - &quot; WITH NO ADVANCING.<BR>  ACCEPT Increment.<BR>  PERFORM UNTIL EndOfData<BR>     CALL &quot;Fickle&quot;    USING BY CONTENT Increment<BR>     CALL &quot;Steadfast&quot; USING BY CONTENT Increment<BR>     DISPLAY &quot;Enter value - &quot; WITH NO ADVANCING<BR>     ACCEPT Increment<BR>  END-PERFORM.
+<BR>* Shows how CANCEL may be used to initialise<BR>* Fickle periodically.  Fickle is used to get the<BR>* square of a number by repeated addition.<BR>  DISPLAY &quot;Enter the value to be squared&quot;<BR>  DISPLAY &quot;Value - &quot; WITH NO ADVANCING.<BR>  ACCEPT Increment.<BR>  PERFORM UNTIL EndOfData<BR>     CANCEL &quot;Fickle&quot;<BR>     PERFORM Increment TIMES<BR>       CALL &quot;Fickle&quot; USING BY CONTENT Increment<BR>     END-PERFORM<BR>     DISPLAY &quot;Value - &quot; WITH NO ADVANCING<BR>     ACCEPT Increment<BR>  END-PERFORM.<BR>  STOP RUN.
+
+<BR><FONT color="#000099">IDENTIFICATION DIVISION.<BR>PROGRAM-ID. Fickle.<BR>DATA DIVISION.<BR>WORKING-STORAGE SECTION.<BR>01 RunningTotal   PIC 9(5) VALUE ZERO.<BR>LINKAGE SECTION.<BR>01 ParamValue     PIC 99.<BR>PROCEDURE DIVISION USING ParamValue.<BR>Begin.<BR>  ADD ParamValue TO RunningTotal.<BR>  DISPLAY &quot;Fickle total    = &quot; WITH NO ADVANCING<BR>  CALL &quot;DisplayTotal&quot; USING BY CONTENT RunningTotal<BR>  EXIT PROGRAM.<BR>END PROGRAM Fickle.</FONT>
+
+<FONT color="#0000CC"><BR>IDENTIFICATION DIVISION.<BR>PROGRAM-ID. Steadfast IS INITIAL.<BR>DATA DIVISION.<BR>WORKING-STORAGE SECTION.<BR>01 RunningTotal PIC 9(5) VALUE ZERO.<BR>LINKAGE SECTION.<BR>01 ParamValue PIC 99.<BR>PROCEDURE DIVISION USING ParamValue.<BR>Begin.<BR>  ADD ParamValue TO RunningTotal.<BR>  DISPLAY &quot;Steadfast total = &quot; WITH NO ADVANCING<BR>  CALL &quot;DisplayTotal&quot; USING BY CONTENT RunningTotal<BR>  EXIT PROGRAM.<BR>END PROGRAM Steadfast.
+</FONT>
+<FONT color="#000099"><BR>IDENTIFICATION DIVISION.<BR>PROGRAM-ID. DisplayTotal IS COMMON INITIAL PROGRAM.<BR>DATA DIVISION.<BR>WORKING-STORAGE SECTION.<BR>01 PrnTotal  PIC ZZ,ZZ9.<BR>LINKAGE SECTION.<BR>01 Total     PIC 9(5).<BR>PROCEDURE DIVISION USING Total.<BR>Begin.<BR>  MOVE Total TO PrnTotal.<BR>  DISPLAY PrnTotal.<BR>  EXIT PROGRAM.<BR>END PROGRAM DisplayTotal.</FONT><BR>END PROGRAM Counter.</B></PRE>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="0" height="505" valign="top" bgcolor="#FFFFFF"> 
+                  <DIV align="center"> 
+                    <H3><B>Example Run</B></H3>
+                    <P><FONT size="-1">Numeric values entered by the user are 
+                      shown in <FONT color="#0000FF">blue </FONT>and values output 
+                      by the computer are shown in <FONT color="#FF0000">red</FONT>.</FONT></P>
+                  </DIV>
+                  <BLOCKQUOTE> 
+                    <PRE align="left"><B><FONT color="#000000">Enter value -</FONT> <FONT color="#0000FF">13</FONT>
+<FONT color="#000000">Fickle total    = </FONT><FONT color="#FF0000">13</FONT>
+<FONT color="#000000">Steadfast total =</FONT><FONT color="#FF0000"> 13</FONT>
+Enter value - <FONT color="#0000FF">3</FONT>
+<FONT color="#000000">Fickle total    = </FONT><FONT color="#FF0000">16
+<FONT color="#000000">Steadfast total = </FONT> 3</FONT>
+Enter value - <FONT color="#0000FF">13</FONT>
+<FONT color="#000000">Fickle total    = </FONT><FONT color="#FF0000">29
+<FONT color="#000000">Steadfast total =</FONT> 13</FONT>
+Enter value - <FONT color="#0000FF">0
+                       
+</FONT>Enter the value to be squared
+Value - <FONT color="#0000FF">8</FONT>
+<FONT color="#000000">Fickle total =  </FONT><FONT color="#FF0000">8
+<FONT color="#000000">Fickle total = </FONT>16
+<FONT color="#000000">Fickle total = </FONT>24
+<FONT color="#000000">Fickle total = </FONT>32
+<FONT color="#000000">Fickle total = </FONT>40
+<FONT color="#000000">Fickle total = </FONT>48
+<FONT color="#000000">Fickle total = </FONT>56
+<FONT color="#000000">Fickle total =</FONT> 64</FONT>
+                       
+Value - <FONT color="#0000FF">3</FONT>
+<FONT color="#000000">Fickle total = </FONT><FONT color="#FF0000"> 3
+<FONT color="#000000">Fickle total =</FONT>  6
+<FONT color="#000000">Fickle total = </FONT> 9</FONT>
+Value - <FONT color="#0000FF">0</FONT></B></PRE>
+                  </BLOCKQUOTE>
+                </TD>
+              </TR>
+            </TABLE>
+            <P>&nbsp;</P>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="647"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              IS EXTERNAL clause</FONT></H4>
+            <P align="center">&nbsp;</P>
+          </TD>
+          <TD width="525" valign="top" height="647"> 
+            <p>The <FONT size="-1">IS GLOBAL</FONT> clause allows a program and 
+              its contained subprograms to share access to a data-item. </p>
+            <p>The <FONT size="-1">IS EXTERNAL </FONT>clause does the same for 
+              any subprogram in a run-unit (i.e. any linked subprogram). But while 
+              the data-item that uses <FONT size="-1">IS GLOBAL</FONT> phrase 
+              only has to be declared in one place, each of the subprograms that 
+              wish to gain access to an <FONT size="-1">EXTERNAL</FONT> shared 
+              item must declare the item in exactly the same way.</p>
+            <p>The animation below shows how the <FONT size="-1">IS EXTERNAL</FONT> 
+              clause works. </p>
+            <p>In this animation there are four programs in the run-unit. Program 
+              B and Program D wish to communicate using a shared data. In COBOL 
+              they can do this by using the <FONT size="-1">IS EXTERNAL</FONT> 
+              clause to set up a shared area of memory but both both programs 
+              must contain the declarations below. These set up, and allow access 
+              to, the shared area.</p>
+            <PRE>Example:
+     WORKING-STORAGE SECTION.
+     01 SharedRec IS EXTERNAL.
+        02 PartA     PIC X(4).
+        02 PartB     PIC 9(5).
+               
+             </PRE>
+            <p align="center">SharedRecord<BR>
+              Program<BR>
+              <A href="Resources/ppz/TC-Call.htm"><IMG src="Resources/pics/i-Animation.gif" width="62" height="62" align="middle" border="0"></A> 
+            </p>
+            <p>The kind of hidden data communication between subprograms that 
+              is supported by the <FONT size="-1">IS EXTERNAL</FONT> clause is 
+              generally regarded as very poor practice. Myres (<FONT size="-1">Myres, 
+              G.J. <I>Composite/Structured Design.</I> 1979</FONT>), for instance, 
+              indicates that this &quot;Common Coupling&quot; is nearly the worst 
+              kind of module coupling possible.</p>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="312"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Designing 
+              a modular system</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="312"> 
+            <P>Anyone who considers creating a system that consists of subprograms 
+              and contained subprograms should not embark on such an undertaking 
+              without an sound understanding how such a system is designed and 
+              what makes a good subprogram and what does not.</P>
+            <P> This kind of system design is called a modular design and the 
+              subprograms are called modules. There are a number of different 
+              methods/approaches to designing a modular system but Structured 
+              Design is probably the most successful.</P>
+            <P>It is beyond the scope of this course to provide instruction in 
+              Structured Design but programmers tasked with creating a modular 
+              system should read these two texts.</P>
+            <P>Page-Jones, Meilir, <I>Practical guide to Structured Systems Design 
+              - Second Edition</I>,<BR>
+              Prentice-Hall 1988.</P>
+            <P>Myers, Glenford, <I>Composite/Structured Design</I>, Von Nostrand 
+              Reinhold 19</P>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="296"> 
+            <H4><FONT color="#800000"><B><FONT face="Arial, Helvetica, sans-serif">Criteria 
+              for module goodness</FONT></B></FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="296"> 
+            <P>Although this course cannot provide instruction in Structured Design 
+              we can observe that the criteria for module goodness specified in 
+              that approach boils down to three things:</P>
+            <UL>
+              <LI>A subprogram should perform a single specific function or should 
+                co-ordinate its subordinate subprograms such that they perform 
+                a single function.<BR>
+                <BR>
+              </LI>
+              <LI>A subprogram should only be given access to the data it actually 
+                requires to do its job. Even then, the type of access (Read-Only 
+                or Read-Write) allowed on the data should be restricted.<BR>
+                <BR>
+              </LI>
+              <LI>The data passed to and from the subprogram should be passed 
+                through the parameter list in as transparent a manner as possible 
+                - there should be no hidden method of data transfer.<BR>
+              </LI>
+            </UL>
+            </TD>
+        </TR>
+        <TR> 
+          <TD align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : May 2002</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

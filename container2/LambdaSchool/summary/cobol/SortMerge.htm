@@ -1,0 +1,1678 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Sorting and Merging files</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+  <TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2" height="574"> 
+            <CENTER>
+              <H2><img src="/cobol/course/Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> Sorting and Merging files</H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><BR>
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP" height="79">&nbsp;</TD>
+                <TD width="4%" valign="TOP" height="79"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top" height="79"> 
+                  <p><B><A href="#part1" target="">Simple SORTing</A><BR>
+                    </B><FONT size="-1">This section introduces a simplified version 
+                    of SORT verb syntax, and discusses why we might need to sort 
+                    a file as part of a solution to a programming problem..</FONT><br>
+                    <br>
+                  </p>
+                </TD>
+              </TR>
+              <tr> 
+                <td width="3%" valign="TOP" height="73">&nbsp;</td>
+                <td width="4%" valign="TOP" height="73"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" valign="top" height="73"> 
+                  <div align="left"> 
+                    <p><b><a href="#part2" target="">Sorting with an INPUT PROCEDURE 
+                      </a><br>
+                      </b><font size="-1">This section introduces a SORT with 
+                      an INPUT PROCEDURE and demonstrates how an INPUT PROCEDURE 
+                      may be used to filter, or alter, records before they are 
+                      supplied to the sort process.<br>
+                      </font><font size="-1"> <br>
+                      </font> </p>
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP" height="20">&nbsp;</td>
+                <td width="4%" valign="TOP" height="20"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" height="20"> 
+                  <div align="left">
+                    <p><b><a href="#part3" target="">Sorting with an OUTPUT PROCEDURE</a><br>
+                      </b><font size="-1">This section shows how an OUTPUT PROCEDURE 
+                      may be used to filter, or alter, records after they have 
+                      been sorted.</font><font size="-1"><br>
+                      </font> <br>
+                    </p>
+                    </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP" height="33">&nbsp;</td>
+                <td width="4%" valign="TOP" height="33"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" height="33"> 
+                  <div align="left">
+                    <p><b><a href="#part4" target="">MERGEing files</a><br>
+                      </b><font size="-1">In this section the MERGE verb is introduced. 
+                      The MERGE verb may be used to merge two or more ordered 
+                      files.</font><font size="-1"><br>
+                      </font> <br>
+                    </p>
+                    </div>
+                </td>
+              </tr>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2" height="27"> 
+            <h2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><font face="Arial, Helvetica, sans-serif">Introduction</font></FONT></h2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" bgcolor="#FFFFCC" height="288"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="288"> 
+            <div align="center"> 
+              <p align="left">As we noted in the tutorial - Processing Sequential 
+                Files - it is possible to apply processing to an ordered sequential 
+                file that is difficult, or impossible, when the file is unordered. 
+              </p>
+              <p align="left">When this kind of processing is required, and the 
+                data file we have to work with is an unordered Sequential file, 
+                then part of the solution to the problem must be to sort the file. 
+                COBOL provides the <font size="-1">SORT </font>verb for this purpose.</p>
+              <p align="left">Sometimes, when two or more files are ordered on 
+                the same key field or fields, we may want to combine them into 
+                one single ordered file. COBOL provides the <font size="-1">MERGE</font> 
+                verb for this purpose.</p>
+              <p align="left">This tutorial explores the syntax, semantics, and 
+                use of the <font size="-1">SORT</font> and <font size="-1">MERGE</font> 
+                verbs.</p>
+            </div>
+              <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="280"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="280"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Understand why you might want to sort a file as part of your 
+                solution to a programming problem.</LI>
+              <LI>Understand the role of the temporary work file and the <font size="-1">USING</font> 
+                and <font size="-1">GIVING</font> files.</LI>
+              <LI>Be able to apply the <font size="-1">SORT</font> to sort a file 
+                on ascending or descending or multiple keys..</LI>
+              <LI>Understand why you might want to use an <font size="-1">INPUT 
+                PROCEDURE </font>or an <font size="-1">OUTPUT PROCEDURE</font> 
+                to filter or alter records. </LI>
+              <LI>Know the difference between an <font size="-1">INPUT PROCEDURE</font> 
+                and an <font size="-1">OUTPUT PROCEDURE</font> and know when to 
+                use one, and when the other.</LI>
+              <LI>Be able to use the <font size="-1">MERGE</font> verb to merge 
+                two or more files.</LI>
+              <LI>Understand the significance of the merge keys.</LI>
+            </OL>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="77"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="77" valign="top"> 
+            <p>Introduction to COBOL </p>
+            <p>Declaring data in COBOL </p>
+            <p>Basic Procedure Division Commands</p>
+            <p>Selection Constructs</p>
+            <p>Iteration Constructs</p>
+            <p>Introduction to Sequential files</p>
+            <p>Processing Sequential files</p>
+            <p>Print files and variable length records</p>
+            <p>&nbsp;</p>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part1"></a><FONT face="Arial, Helvetica, sans-serif">Simple 
+              Sorting </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="195"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="195"> 
+            <DIV align="center"> 
+              <p align="left">In COBOL programs, the <font size="-1">SORT</font> 
+                verb is usually used to sort Sequential files. </p>
+              <p align="left">Some programmers claim that <font size="-1">SORT</font> 
+                verb is unnecessary, preferring to use a vendor-provided or "bought 
+                in" sort. But one major advantage of using the <font size="-1">SORT</font> 
+                verb, is that it enhances the portability of COBOL programs. </p>
+              <p align="left">Because the <font size="-1">SORT</font> verb is 
+                available in every COBOL compiler, when a program that uses the 
+                <font size="-1">SORT</font> verb has to be moved to a different 
+                computer system, it can make the transition without requiring 
+                any changes to the <font size="-1">SORT</font>. This is rarely 
+                the case when programs rely on a vendor-supplied or "bought in" 
+                sort.</p>
+              </DIV>
+              <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="649"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Why 
+              sort the file?</FONT></H4>
+            <H4>&nbsp;</H4>
+            <h4 align="center"><font size="-1"> </font></h4>
+          </TD>
+          <TD width="525" valign="top" height="649"> 
+            <DIV align="center"> 
+              <p align="left">Sometimes, processing that is is difficult or impossible 
+                to do if the file is unordered, is easy if the file is ordered. 
+                In these situations, an obvious part of the solution is to sort 
+                the file. This is an approach to problem solving sometimes called, 
+                &quot;beneficial wishful thinking&quot;. We start by thinking 
+                <i>if only this file were ordered, then it would be easy to write 
+                the code to process it</i>, and then take the next logical step 
+                which is - &quot;Well then, let's sort the file first&quot;.</p>
+              <p align="left">Consider the following specification;</p>
+              <table width="500" border="1" cellpadding="10" bgcolor="#E1FFE1">
+                <tr> 
+                  <td height="405"> 
+                    <p>A program is required to print out a monthly report detailing 
+                      the value of calls made by each telephone subscriber (i.e. 
+                      anyone who has a telephone and who used it in the month 
+                      in question). </p>
+                    <p>The program will use as input, the file <font size="-1">CALLS.DAT</font>. 
+                      This file contains a record of all the calls made that month. 
+                      The cost per unit is €0.10.</p>
+                    <p>The calls file in an unordered Sequential file. The record 
+                      description is as follows; </p>
+                    <blockquote> 
+                      <pre><b>FIELD          TYPE   LENGTH        VALUE
+</b>SubscriberNum    9      8    00000001 - 99999999
+UnitsUsed        9      5       00001 - 99999</pre>
+                    </blockquote>
+                    <p>The report must be printed on ascending subscriber number 
+                      and has the following format;</p>
+                    <blockquote> 
+                      <pre>Telephone Analysis Monthly Report</pre>
+                      <pre>
+SubscriberNum      ValueOfCalls
+
+  99999999         €999,999.99
+  99999999         €999,999.99
+  99999999         €999,999.99
+-------------------------------
+Total value =  €999,999,999.99</pre>
+                    </blockquote>
+                  </td>
+                </tr>
+              </table>
+              <p align="left">&nbsp; </p>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="724"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Solving 
+              the problem without sorting the file?</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="724"> 
+            <p align="left">There are millions of telephone subscribers and, 
+                  in the course of a month, they will make tens, if not hundreds, 
+                  of calls. So the calls file will contain tens of millions, or 
+                  hundreds of millions, of records. Is there any viable way for 
+                  a program to produce the report, without first sorting the calls 
+                  file?</p>
+                <p align="left">An array or table based solution does not seem 
+                  viable. For one thing, the array would have to contain millions 
+                  of elements. For another, new subscribers are constantly joining, 
+                  so the array would have to be re-dimensioned every time the 
+                  program ran.</p>
+                <p align="left">If we had pointers available to us, we might try 
+                  a linked list or tree based solution. But the problem with these 
+                  solutions is that, with millions of subscribers in the list 
+                  or tree, the search to find a particular subscriber would involve 
+                  a serious performance hit, as well as being complicated to implement. 
+                </p>
+                <p align="left">Since a Relative file may be thought of as a table 
+                  on disk, a Relative file solution might beckon. But while Relative 
+                  file based solution would be easy to implement (though still 
+                  not as easy as the control break solution) there would be serious 
+                  performance implications. For each of the millions of records 
+                  in the file we would have to;</p>
+              <blockquote> 
+                <blockquote> 
+                    <pre>Read the Sequential File
+IF the record already exists THEN
+   Read the Relative Record
+   Add the units to the total units
+   Write the Relative Record to the file
+ELSE
+   Write a new Relative Record to the file
+END-IF</pre>
+                </blockquote>
+              </blockquote>
+                <p align="left">And when the calls file ended we would have to 
+                  read through the entire Relative file again to create the report.</p>
+                <p align="left">We can arrive at the most viable solution by using 
+                  &quot;beneficial wishful thinking&quot;. We might think - <i>If 
+                  only the calls file were ordered on ascending subscriber number, 
+                  then this would be a very simple control break problem. For 
+                  each subscriber, we'd sum all the units until there was a change 
+                  of subscriber number, and then we'd multiply the total units 
+                  by the cost per unit. </i>This thinking would lead us to the 
+                  obvious conclusion - we must sort the calls file.</p>
+              <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1769"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Syntax 
+              of a simplified SORT</FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></H4>
+            <p><font size="-1">Records in <font size="-2">LINE SEQUENTIAL</font> 
+              files are followed by the carriage return and line feed characters, 
+              but <font size="-2">RECORD SEQUENTIAL</font> files are organized 
+              as a simple stream of bytes.</font></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center">&nbsp;</p>
+            <p align="center"><img src="Resources/pics/ProgFrag.gif" width="48" height="44"></p>
+          </TD>
+          <TD width="525" valign="top" height="1769"> 
+            <DIV align="center"> 
+              <p align="left">The syntax for a simplified version of the <font size="-1">SORT 
+                </font>is shown below. The <font size="-1">SORT</font> takes the 
+                records in the <i>InFileName</i> file, sorts them on the <i>SortKeyIdentifier</i> 
+                key or keys and writes the sorted records to the <i>OutFileName</i> 
+                file.</p>
+              <p align="left"><img src="Resources/pics/Sort1.gif" width="436" height="194"></p>
+              <p align="left">e.g. </p>
+            </DIV>
+            <blockquote> 
+              <DIV align="center"> 
+                <div align="left"> 
+                  <pre align="left">SORT WorkFile ON ASCENDING KEY CourseCode
+     USING  StudentFile
+     GIVING SortedStudentsFile.
+
+
+SORT WorkFile ON ASCENDING ProvinceCode 
+                 DESCENDING VendorNumber
+                 USING SalesFile
+                 GIVING SortedSalesFile.</pre>
+                </div>
+              </DIV>
+            </blockquote>
+            <DIV align="center"> 
+              <p align="left"><b><font size="-1">SORT</font> notes</b><br>
+                The <i>SDWorkFileName</i> identifies a temporary work file that 
+                the <font size="-1">SORT</font> process uses for the sort. It 
+                is defined in the <font size="-1">FILE SECTION</font> using an 
+                <font size="-1">SD</font> (Stream/Sort Description) entry. Even 
+                though the work file is a temporary file, it must still have an 
+                associated <font size="-1">SELECT</font> and <font size="-1">ASSIGN</font> 
+                clause in the <font size="-1">ENVIRONMENT DIVISION.</font></p>
+              <p align="left">The <i>SDWorkFileName</i> file is a Sequential file 
+                with an organization of<font size="-1"> RECORD SEQUENTIAL</font>. 
+                Since this is the default organization is it usually omitted; 
+                as it is in the example below.</p>
+              <p align="left">Each <i>SortKeyIdentifier </i>identifies a field 
+                in the record of the work file. The sorted file will be in sequence 
+                on this key field(s). </p>
+              <p align="left">When more than one <i>SortKeyIdentifier </i>is specified, 
+                the keys decrease in significance from left to right (leftmost 
+                key is most significant, rightmost is least significant). </p>
+              <p align="left"><i>InFileName</i> and <i>OutFileName</i>, are the 
+                names of the input and output files respectively. </p>
+              <p align="left"> If the <font size="-1">DUPLICATES</font> clause 
+                is used then, when the file has been sorted, the final order of 
+                records with the duplicate keys is the same as that in the unsorted 
+                file. If no <font size="-1">DUPLICATES</font> clause is used, 
+                the order of records with duplicate keys is undefined. </p>
+              <p align="left"> <i>AlphabetName </i>is an alphabet-name defined 
+                in the <font size="-1">SPECIAL-NAMES</font> paragraph of the <font size="-1">ENVIRONMENT 
+                DIVISION</font>. This clause is used to select the character set 
+                the <font size="-1">SORT </font>verb uses for collating the records 
+                in the file. The character set may be <font size="-1">ASCII</font> 
+                (8 or 7 bit ), <font size="-1">EBCDIC</font>,or user-defined. 
+              </p>
+              <p align="left"><font size="-1"><b>SORT</b></font><b> rules</b></p>
+            </DIV>
+            <ol>
+              <li> 
+                <div align="left">The <font size="-1">SORT</font> can be used 
+                  anywhere in the <font size="-1">PROCEDURE DIVISION</font> except 
+                  in an <font size="-1">INPUT</font> or <font size="-1">OUTPUT 
+                  PROCEDURE, </font>or another <font size="-1">SORT</font>, or 
+                  a <font size="-1">MERGE,</font> or in the <font size="-1">DECLARATIVES 
+                  SECTION</font>. </div>
+              </li>
+              <li> 
+                <div align="left">The records described for the input file (<font size="-1">USING</font>) 
+                  must be able to fit into the records described for the <i>SDWorkFileName</i>. 
+                </div>
+              </li>
+              <li> 
+                <div align="left">The records described for the <i>SDWorkFileName</i> 
+                  must be able to fit into the records described for the output 
+                  file (<font size="-1">GIVING</font>). </div>
+              </li>
+              <li> 
+                <div align="left"> The <i>SortKeyIdentifer</i> description cannot 
+                  contain an <font size="-1">OCCURS</font> clause (i.e., it can't 
+                  be a table/array) nor can it be subordinate to an entry that 
+                  does contain one.</div>
+              </li>
+              <li><i>InFileName</i> and <i>OutFileName</i> files are automatically 
+                opened by the <font size="-1">SORT</font>. When the <font size="-1">SORT</font> 
+                executes they must <b>not</b> be open already. </li>
+            </ol>
+            <DIV align="center"> 
+              <p align="left"><b><font size="-1">SORT</font> example</b></p>
+            </DIV>
+                  
+            <div align="center">
+              <table width="475" border="1" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+                <tr> 
+                  <td> 
+                    <pre>ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+   SELECT CallsFile 
+          ASSIGN TO “CALLS.DAT”
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+   SELECT SortedCallsFile 
+          ASSIGN TO “SORTEDCALLS.DAT”
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+   SELECT <font color="#FF0000"><b>WorkFile</b></font> 
+          ASSIGN TO “WORK.TMP”.
+
+DATA DIVISION.
+FILE SECTION.
+FD CallsFile.
+01 CallRec.
+   02 SubscriberNumCF   PIC 9(8).
+   02 UnitsUsedCF       PIC 9(5).
+
+FD SortedCallsFile.
+01 SortedCallRec.
+   02 SubscriberNumSF   PIC 9(8).
+   02 UnitsUsedSF       PIC 9(5).
+
+SD <b><font color="#FF0000">WorkFile</font></b>.
+01 WorkRec.
+   02 <font color="#FF0000"><b>SubscriberNumWF</b></font>   PIC 9(8).
+   02 UnitsUsedWF       PIC 9(5).
+
+        etc.
+
+
+PROCEDURE DIVISION.
+Begin.
+   SORT <font color="#FF0000"><b>WorkFile</b></font> ON ASCENDING <font color="#FF0000"><b>SubscriberNumWF</b></font>
+        USING  CallsFile
+        GIVING SortedCallsFile.
+
+        etc.
+
+</pre>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="296"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">How 
+              a simple SORT works</FONT></H4>
+            <H4 align="center">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="296"> 
+            <p align="left">As illustrated by the diagram below, the sort process 
+              takes records from the input file (CallsFile)<i> </i>and sorts them 
+              using the temporary file (WorkFile) on the field(s), and in the 
+              sequence, specified in the <font size="-1">KEY</font> phrase. When 
+              all the records have been sorted, the sort process writes them to 
+              the output file (SortedCallsFile). </p>
+            <p align="left">Remember - the <font size="-1">SORT</font> automatically 
+              opens the CallsFile and the SortedCallsFile. These files must not 
+              be open when the <font size="-1">SORT</font> executes or it<font size="-1"></font> 
+              will fail.</p>
+            <p align="center"><img src="Resources/pics/Sort2.gif" width="470" height="270"> 
+            </p>
+            <blockquote>
+              <pre align="center">SORT <font color="#000000">WorkFile</font> ON ASCENDING <font color="#000000">SubscriberNumWF</font>
+     USING  CallsFile
+     GIVING SortedCallsFile.
+</pre>
+            </blockquote>
+              <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="151"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Using 
+              multiple keys.</FONT></H4>
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"> </FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="151"> 
+            <p align="left">If you examine the <font size="-1">SORT</font> syntax 
+              diagram above, carefully, you will realize that, not only can a 
+              file be sorted on a number of keys, but that one key can be ascending 
+              while another can be descending. This is illustrated in the table 
+              below. The table contains a sales file that has been sorted into 
+              descending VendorNumber, within ascending ProvinceCode, by the following 
+              <font size="-1">SORT</font> statement; </p>
+            <blockquote> 
+              <pre align="left">SORT WorkFile ON ASCENDING ProvinceCode 
+                 DESCENDING VendorNumber
+                 USING SalesFile
+                 GIVING SortedSalesFile</pre>
+            </blockquote>
+            <p align="left">Notice that ProvinceCode is the major key, and that 
+              VendorNumber is only in descending sequence, <i>within</i> ProvinceCode. 
+              The first key named in a <font size="-1">SORT</font> statement is 
+              the major key and keys get less significant with each successive 
+              declaration.</p>
+            <p align="center"><b>SortedSalesFile</b></p>
+            <table width="36%" border="1" align="center" bgcolor="#E1FFE1">
+              <tr bgcolor="#FFFFCC"> 
+                <td width="58" height="42" valign="top"> 
+                  <p align="center"><font size="-1"><b>Ascending<br>
+                    Province <br>
+                    Cod</b></font><b>e </b></p>
+                </td>
+                <td width="64" height="42" valign="top"> 
+                  <div align="center"><font size="-1"><b>Descending<br>
+                    Vendor<br>
+                    Number</b></font> </div>
+                </td>
+                <td width="45" height="42" valign="top"> 
+                  <div align="center"><font size="-1"><b>Remaining<br>
+                    Record</b></font></div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="58" height="1" valign="top" bgcolor="#CCCCCC"></td>
+                <td width="64" height="1" valign="top" bgcolor="#CCCCCC"></td>
+                <td width="45" height="1" valign="top" bgcolor="#CCCCCC"></td>
+              </tr>
+              <tr> 
+                <td width="58" height="377" valign="top"> 
+                  <div align="center"> 
+                    <pre>1
+1
+1
+1
+1
+1
+1
+2
+2
+2
+2
+2
+2
+3
+3
+3
+3
+3
+3
+3
+4
+4
+4</pre>
+                  </div>
+                </td>
+                <td width="64" height="377" valign="top"> 
+                  <div align="center"> 
+                    <pre>91234
+91234
+81234
+71234
+71234
+71234
+22222
+91234
+90345
+90345
+81234
+81234
+81111
+99999
+99999
+91234
+91234
+89765
+11111
+11111
+56789
+56789
+44444</pre>
+                  </div>
+                </td>
+                <td width="45" height="377" valign="top"> 
+                  <div align="center"> 
+                    <pre>etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.
+etc.</pre>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A><font face="Arial, Helvetica, sans-serif">SORTing 
+              with an INPUT PROCEDURE</font></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="118"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="118"> 
+            <P>Some times, not all the records in an unsorted file are required 
+              in the sorted file. Other times, it may be that the sorted file 
+              records require additional, altered, or fewer fields, than the unsorted 
+              records. In these cases, an <font size="-1">INPUT PROCEDURE</font> 
+              can be used to eliminate unwanted records, or to alter the format 
+              of the records, before they are submitted to the sort process.</P>
+            <P>Since sorting is a disk-based process, and thus comparatively slow, 
+              every effort should be made to reduce the amount of data that has 
+              to be sorted.</P>
+            <hr width="100%" align="center" size="1">
+
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="994"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">SORT 
+              syntax with INPUT PROCEDURE</FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="994"> 
+            <P align="left"><img src="Resources/pics/Sort3.gif" width="486" height="274"></P>
+            e.g. 
+
+              <pre align="left">
+SORT WorkFile ON ASCENDING CountyNumWF, VendorNumWF
+              INPUT PROCEDURE RejectNorthernRecs 
+              GIVING SortedSalesFile.
+
+
+SORT WorkFile ON ASCENDING CountryNameWF
+              INPUT PROCEDURE IS SelectForeignGuests
+              GIVING SortedGuestsFile.
+
+
+SORT WorkFile ON ASCENDING CountryNameWF, CustomerNameWF
+              INPUT PROCEDURE IS RestructureRecords 
+              GIVING SortedSubscriptionsFile. 
+</pre>
+            <P align="left"><font size="-1"><b>INPUT PROCEDURE</b></font><b> notes</b><br>
+              When an <font size="-1">INPUT PROCEDURE</font> is used, it replaces 
+              the <font size="-1">USING </font>phrase. The <i>ProcName</i> in 
+              the <font size="-1">INPUT PROCEDURE</font> phrase, identifies a 
+              block of code, that uses the <font size="-1">RELEASE</font> verb 
+              to supply records to the sort process.</P>
+            <P align="left">The <font size="-1">INPUT PROCEDURE</font> must finish 
+              before the sort process sorts the records supplied to it by the 
+              procedure. That's why the records are <font size="-1">RELEASE</font>d 
+              to the work file. They are stored there until the <font size="-1">INPUT 
+              PROCEDURE</font> finishes and then they are sorted.</P>
+            <P align="left">An <font size="-1">INPUT PROCEDURE</font> allows us 
+              to select which records, and what type of records, will be submitted 
+              to the sort process. Because an <font size="-1">INPUT PROCEDURE</font> 
+              executes before the sort process sorts the records, only the data 
+              that is actually required in the sorted file will be sorted. </P>
+            <P align="left"><b><font size="-1">INPUT PROCEDURE</font> rules</b></P>
+            <ol>
+              <li> The <font size="-1">INPUT PROCEDURE </font>must contain at 
+                least one<font size="-1"> RELEASE</font> statement to transfer 
+                the records to the <i>SDWorkFileName</i>.</li>
+              <li>The old COBOL rules for the <font size="-1">SORT</font> verb 
+                stated that the <font size="-1">INPUT</font> and <font size="-1">OUTPUT</font> 
+                procedures had to be self-contained sections of code, and could 
+                not be entered from elsewhere in the program. </li>
+              <li>In COBOL '85, <font size="-1"> INPUT</font> and <font size="-1">OUTPUT</font> 
+                procedures can be any contiguous group of paragraphs or sections. 
+                The only restriction is that the range of paragraphs or sections 
+                used, must not overlap. </li>
+            </ol>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="785"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">How 
+              a SORT with and INPUT PROCEDURE works.</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top" height="785"> 
+            <P align="left">A simple <font size="-1">SORT</font> works by taking 
+              records from the <font size="-1">USING</font> file, sorting them, 
+              and then writing them to the <font size="-1">GIVING</font> file. 
+              When an <font size="-1">INPUT PROCEDURE</font> is used, there is 
+              no <font size="-1">USING</font> file, so the <font size="-1">SORT 
+              </font>process has to get its records from the <font size="-1">INPUT 
+              PROCEDURE</font> . The <font size="-1">INPUT PROCEDURE</font> uses 
+              the <font size="-1">RELEASE</font> verb to supply the records to 
+              the <font size="-1">SORT,</font> one at a time. </P>
+            <P align="left">Although an <font size="-1">INPUT PROCEDURE</font> 
+              usually gets the records it supplies to the sort process from an 
+              input file, the records can actually originate from anywhere. For 
+              instance, if we wanted to sort the elements of a table, we could 
+              use an <font size="-1">INPUT PROCEDURE</font> to send the elements, 
+              one at a time, to the sort process. Or if we wanted to sort the 
+              records as they were entered by the user, we could use an <font size="-1">INPUT 
+              PROCEDURE</font> to get the records from the user and supply them 
+              to the sort process.</P>
+            <P align="left">When an <font size="-1">INPUT PROCEDURE</font> gets 
+              its records from an input file it can select which records to send 
+              to the sort process and can even alter the structure of the records 
+              before they are sent. </P>
+            <P align="left">In the example below, an <font size="-1">INPUT PROCEDURE</font> 
+              is used to select only the records of foreign guests, for sorting. 
+              The diagram shows how an <font size="-1">INPUT PROCEDURE, </font>is 
+              used to sit between the input file and the sort process, to filter 
+              the records.</P>
+            <P align="left">&nbsp;</P>
+            <P align="center"><img src="Resources/pics/Sort5.gif" width="435" height="240"></P>
+            <blockquote>
+              <pre>SORT WorkFile ON ASCENDING CountryNameWF
+              INPUT PROCEDURE IS SelectForeignGuests
+              GIVING SortedGuestsFile.
+</pre>
+            </blockquote>
+             <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="379"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Creating 
+              an INPUT PROCEDURE</FONT></h4>
+            <h4 align="center">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top" height="379"> 
+            <p>An <font size="-1">INPUT PROCEDURE</font> supplies records to the 
+              sort process by writing them to the work file declared in the <font size="-1">SORT</font>'s 
+              <font size="-1">SD</font> entry. But to write the records to the 
+              work file a special verb - the <font size="-1">RELEASE</font> verb 
+              is used. The syntax of the <font size="-1">RELEASE</font> verb is;</p>
+            <blockquote> 
+              <p><u>RELEASE</u> <i>SDRecordName</i> [<u>FROM</u> <i>Identifier</i>]</p>
+            </blockquote>
+            <p>where SDRecordName is the name of the record declared in the work 
+              file's <font size="-1">SD</font> entry.</p>
+            <p>An operational template for an <font size="-1">INPUT PROCEDURE</font>, 
+              which gets records from and input file and <font size="-1">RELEASE</font>s 
+              them to the work file, is shown in the table below.</p>
+            <div align="center"> 
+              <table width="40%" border="1" bgcolor="#E1FFE1" cellpadding="10">
+                <tr> 
+                  <td> 
+                    <pre>OPEN INPUT InFileName
+READ InFileName
+PERFORM UNTIL TerminatingCondition
+   <i>Process input record
+</i>   RELEASE SDWorkRec
+   READ InFileName
+END-PERFORM 
+CLOSE InFileName</pre>
+                  </td>
+                </tr>
+              </table>
+</div><p>&nbsp;</p>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="582"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">The 
+              Foreign Guests Report - example program </font></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></h4>
+            <p><font size="-1">In this instance, since the number of countries 
+              in the world is fairly static, a table-based solution might also 
+              be viable.</font></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p align="center"><img src="Resources/pics/program.gif" width="42" height="44"></p>
+          </TD>
+          <TD width="525" valign="top" height="582"> 
+            <p>Visitors to the CSIS web site are asked to fill in a &quot;guestbook&quot; 
+              form. The form requests the name of the visitor, his/her country 
+              of origin and a comment. These fields are stored, as a fixed length 
+              record, in the GuestBook file. </p>
+            <p>The example program below prints a report showing the number of 
+              visitors from each foreign country. The records in the GuestBook 
+              file are not in any particular order, so before the report can be 
+              printed, the file must be sorted by CountryName. </p>
+            <p>Since we are only interested in foreign visitors, there is no point 
+              in sorting the whole file. The program uses an <font size="-1">INPUT 
+              PROCEDURE</font> to select only the records of visitors from foreign 
+              countries. </p>
+            <p>When we examine the fields of a GuestBook record, we notice that, 
+              for the purposes of this report, the GuestName and GuestComment 
+              are irrelevant. The only field we actually need for the report, 
+              is the CountryName field. So as well as selecting only foreign guests, 
+              the <font size="-1">INPUT PROCEDURE</font> alters the structure 
+              of the GuestBook records supplied to the sort process. Since the 
+              new records are only 20 characters in size, rather than 80 characters, 
+              the amount of data that has to be sorted is substantially reduced.</p>
+            <table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="10">
+              <tr> 
+                <td height="1878"> 
+                  <pre>         $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  ForeignGuestsRpt.
+AUTHOR.  Michael Coughlan.
+* This program analyses the CSIS web site GuestBook file  
+* and prints a report showing the number of visitors 
+* to the web site from each foreign country.  
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+   SELECT GuestBookFile 
+          ASSIGN TO "GuestBook.Dat"
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+   SELECT WorkFile 
+          ASSIGN TO "Work.Tmp".
+
+   SELECT SortedGuestsFile 
+          ASSIGN TO "SortedGuests.Dat"
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+   SELECT ForeignGuestReport
+          ASSIGN TO "ForeignGuest.Rpt"
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+FD GuestBookFile.
+01 GuestRec.
+   88  EndOfFile  VALUE HIGH-VALUES.
+   02  GuestNameGF         PIC X(20).
+   02  CountryNameGF       PIC X(20).
+       88 CountryIsIreland VALUE "IRELAND". 
+   02  GuestCommentGF      PIC X(40).
+
+SD WorkFile.
+01 WorkRec.
+   02 CountryNameWF        PIC X(20).
+
+FD SortedGuestsFile.
+01 SortedRec.
+   88 EndOfSortedFile VALUE HIGH-VALUES.
+   02 CountryNameSF        PIC X(20).
+
+FD ForeignGuestReport.
+01 PrintLine               PIC X(38).
+
+
+WORKING-STORAGE SECTION.
+01 Heading1                PIC X(37) 
+         VALUE "CSIS Web site - Foreign Guests Report".
+
+01 Heading2. 
+   02 FILLER               PIC X(25) VALUE "   Country".
+   02 FILLER               PIC X(8)  VALUE "Visitors".
+
+01 CountryLine.
+   02 FILLER               PIC X(3) VALUE SPACES.
+   02 PrnCountryName       PIC X(20).
+   02 PrnVisitorCount      PIC BBBZZ,ZZ9.
+
+01 ReportFooting           PIC X(36)
+         VALUE "*** End of Foreign Guests report ***".
+
+01 VisitorCount            PIC 9(5).
+
+PROCEDURE DIVISION.
+PrintGuestReport.
+   SORT WorkFile ON ASCENDING CountryNameWF
+        INPUT PROCEDURE IS SelectForeignGuests
+        GIVING SortedGuestsFile.
+
+   OPEN INPUT  SortedGuestsFile
+   OPEN OUTPUT ForeignGuestReport
+   WRITE PrintLine FROM Heading1
+         AFTER ADVANCING PAGE
+   WRITE PrintLine FROM Heading2
+         AFTER ADVANCING 2 LINES
+   
+   READ SortedGuestsFile
+        AT END SET EndOfSortedFile TO TRUE
+   END-READ
+   PERFORM PrintReportBody UNTIL EndOfSortedFile
+   WRITE PrintLine FROM ReportFooting 
+         AFTER ADVANCING 3 LINES
+   CLOSE SortedGuestsFile, ForeignGuestReport
+   STOP RUN.
+
+SelectForeignGuests.
+   OPEN INPUT GuestBookFile.
+   READ GuestBookFile
+      AT END SET EndOfFile TO TRUE
+   END-READ
+   PERFORM UNTIL EndOfFile
+      IF NOT CountryIsIreland
+         MOVE CountryNameGF TO CountryNameWF
+         RELEASE WorkRec
+      END-IF
+      READ GuestBookFile
+        AT END SET EndOfFile TO TRUE
+      END-READ
+   END-PERFORM
+   CLOSE GuestBookFile.
+
+
+PrintReportBody.
+   MOVE CountryNameSF TO PrnCountryName
+   MOVE ZEROS TO VisitorCount
+   PERFORM UNTIL CountryNameSF NOT EQUAL TO PrnCountryName
+                 OR EndOfSortedFile
+      ADD 1 TO VisitorCount
+      READ SortedGuestsFile
+         AT END SET EndOfSortedFile TO TRUE
+      END-READ 
+   END-PERFORM
+   MOVE VisitorCount TO PrnVisitorCount
+   WRITE PrintLine FROM CountryLine 
+         AFTER ADVANCING 1 LINE.
+</pre>
+                </td>
+              </tr>
+            </table>
+            <P>&nbsp; </P>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1571"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Feeding 
+              the SORT from the keyboard - example program</FONT></H4>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p align="center"><img src="Resources/pics/program.gif" width="42" height="44"></p>
+          </TD>
+          <td width="525" valign="top" height="1571"> 
+            <div align="center"> 
+              <p align="left">As we noted earlier, because the <font size="-1"> 
+                INPUT PROCEDURE</font> is responsible for supplying records to 
+                the sort process, the records could be coming from anywhere. We 
+                could obtain them from a table, or, as in this example, directly 
+                from the user. </p>
+              <p align="left">As the illustration below shows, this example program 
+                gets records from the user, sorts them on ascending StudentId, 
+                and then outputs them to the StudentFile. Notice that the sort 
+                process only sorts the file, when the <font size="-1">INPUT PROCEDURE</font> 
+                has finished.</p>
+              <p align="center"><img src="Resources/pics/Sort6.gif" width="515" height="295"></p>
+              <p align="center">&nbsp;</p>
+              <table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="10" height="962">
+                <tr> 
+                  <td height="824"> 
+                    <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  SortInput.
+AUTHOR.  Michael Coughlan.
+* An example program using the SORT and an INPUT PROCEDURE.
+* The program accepts records from the user RELEASEs them
+* to the work file where they are sorted and then written
+* to the StudentFile.
+* This program allows student records to be entered in any
+* order but creates a file sorted on ascending StudentId.
+ 
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT StudentFile ASSIGN TO "SORTSTUD.DAT"
+           ORGANIZATION IS LINE SEQUENTIAL.
+
+    SELECT WorkFile ASSIGN TO "WORK.TMP".
+
+
+DATA DIVISION.
+FILE SECTION.
+FD StudentFile.
+01 StudentDetails      PIC X(30).
+
+* The StudentDetails record has the description shown below.
+* But in this program we don't actually need to refer to any
+* of the items in the record so we have described it as
+* PIC X(30) 
+* 01 StudentDetails
+*    02  StudentId       PIC 9(7).
+*    02  StudentName.
+*        03 Surname      PIC X(8).
+*        03 Initials     PIC XX.
+*    02  DateOfBirth.
+*        03 YOBirth      PIC 9(4).
+*        03 MOBirth      PIC 9(2).
+*        03 DOBirth      PIC 9(2).
+*    02  CourseCode      PIC X(4).
+*    02  Gender          PIC X.
+
+
+SD WorkFile.
+01 WorkRec.
+   02 StudentIdWF        PIC 9(7).
+   02 FILLER             PIC X(23).
+
+
+PROCEDURE DIVISION.
+Begin.
+   SORT WorkFile ON ASCENDING KEY StudentIdWF
+        INPUT PROCEDURE IS GetStudentDetails
+        GIVING StudentFile.
+   STOP RUN.
+
+
+GetStudentDetails.
+    DISPLAY "Enter student details using template below."
+    DISPLAY "Enter no data to end.".
+    DISPLAY "NNNNNNNSSSSSSSSIIYYYYMMDDCCCCG".
+    ACCEPT  WorkRec.
+    PERFORM UNTIL WorkRec = SPACES
+       RELEASE WorkRec
+       ACCEPT WorkRec
+    END-PERFORM.</pre>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part3"></A><FONT face="Arial, Helvetica, sans-serif">Sorting 
+              with an OUTPUT PROCEDURE</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="380"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="380"> 
+            <P>The advantage of an <font size="-1">INPUT PROCEDURE</font> is that 
+              it allows us to filter, or alter, records before they are supplied 
+              to the sort process and this can substantially reduce the amount 
+              of data that has to be sorted. </P>
+            <P>An <font size="-1">OUTPUT PROCEDURE</font> has no such advantage. 
+              An <font size="-1">OUTPUT PROCEDURE</font> only executes when the 
+              sort process has already sorted the file. </P>
+            <P>Nevertheless, an <font size="-1">OUTPUT PROCEDURE</font> is useful 
+              when we don't need to preserve the sorted file. For instance, if 
+              we are sorting records to produce a once-off report, we can use 
+              an <font size="-1">OUTPUT PROCEDURE</font> to create the report 
+              directly, without first having to create a file containing the sorted 
+              records. This is what we do in the revised ForeignGuestsRpt program 
+              below. Instead of creating a sorted guest file and then reading 
+              it to create the report; we use an <font size="-1">OUTPUT PROCEDURE</font> 
+              to create the report directly.</P>
+            <P>An <font size="-1">OUTPUT PROCEDURE </font>is also useful when 
+              we want to alter the structure of the records written to the sorted 
+              file. For instance, in the first example program below, we use an 
+              <font size="-1">OUTPUT PROCEDURE</font> to summarize the sorted 
+              records. The resulting sorted file contains summary records, rather 
+              than the detail records, contained in the unsorted file.</P>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="796"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">SORT 
+              syntax with OUTPUT<br>
+              </font><font color="#800000" face="Arial, Helvetica, sans-serif">PROCEDURE</font></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="796"> 
+            <P align="left">The syntax diagram below is the complete syntax for 
+              the <font size="-1">SORT</font> verb.</P>
+            <p><img src="Resources/pics/Sort4.gif" width="502" height="306"></p>
+            <p>e.g.</p>
+              <pre>SORT WorkFile ON ASCENDING CustNameWF
+     INPUT PROCEDURE IS SelectEssentialOils
+     OUTPUT PROCEDURE IS PrintOilSalesReport.
+
+
+SORT WorkFile ON ASCENDING KEY SalespersonNumWF
+     USING SalesFile
+     OUTPUT PROCEDURE IS SummariseSales.
+             </pre>
+            <p><font size="-1"><b>OUTPUT PROCEDURE </b></font><b>notes</b><br>
+              An <font size="-1">OUTPUT PROCEDURE</font> is used to retrieve sorted 
+              records from the work file using the <font size="-1">RETURN</font> 
+              verb.</p>
+            <p>An <font size="-1">OUTPUT PROCEDURE </font>only executes after 
+              the file has been sorted. </p>
+            <p><b><font size="-1">OUTPUT PROCEDURE</font> rules</b></p>
+            <ol>
+              <li> An <font size="-1">OUTPUT PROCEDURE </font>must contain at 
+                least one <font size="-1">RETURN</font> statement to get the records 
+                from the SortFile.</li>
+              <li>The <font size="-1">SORT ..GIVING</font> phrase cannot be used 
+                if an <font size="-1">OUTPUT PROCEDURE</font> is used. </li>
+            </ol>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="163"> 
+            <H4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">How 
+              the OUTPUT PROCEDURE works</font></H4>
+          </TD>
+          <TD width="525" valign="top" height="163"> 
+            <p> An <font size="-1">OUTPUT PROCEDURE</font> uses the <font size="-1">RETURN 
+              </font>verb to retrieve sorted records from the work file. An <font size="-1">OUTPUT 
+              PROCEDURE</font> can do what it likes with the records it gets from 
+              work file. It could put them into an array, display them on the 
+              screen, or send them to an output file.</p>
+            <p> When the <font size="-1">OUTPUT PROCEDURE</font> sends records 
+              to an output file, it can control which records, and what type of 
+              records, appear in the file. For instance, the <font size="-1">SORT</font> 
+              statement in the illustration below produces a sorted SalesSummaryFile 
+              from an unsorted SalesFile.</p>
+            <p> The SalesSummaryFile is a sequential file sorted on ascending 
+              salesperson number but each record in the summary file is the <i>sum</i> 
+              of all the items sold by a particular salesperson. </p>
+            <p>An <font size="-1">OUTPUT PROCEDURE</font> is used because, until 
+              the records have been sorted into salesperson number order, the 
+              quantities sold cannot be summed.</p>
+            <p align="center"><img src="Resources/pics/Sort7.gif" width="435" height="235"></p>
+                  <pre align="center">SORT WorkFile ON ASCENDING KEY SalespersonNumWF
+     USING SalesFile
+     OUTPUT PROCEDURE IS SummariseSales.
+</pre>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="476"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Creating 
+              an OUTPUT PROCEDURE</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="476"> 
+            <p>An <font size="-1">OUTPUT PROCEDURE</font> uses the RETURN verb 
+              to read sorted records from the work file declared in the <font size="-1">Sort's</font> 
+              <font size="-1">SD</font> entry. The syntax of the <font size="-1">RETURN</font> 
+              verb is;</p>
+            <blockquote> 
+              <p><u>RETURN</u> <i>SDFileName</i> RECORD [<u>INTO</u> <i>Identifier</i>]<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AT END <i>StatementBlock</i><br>
+                END-RETURN </p>
+            </blockquote>
+            <p>where SDFileName is the name of the file declared in the <font size="-1">SD</font> 
+              entry.</p>
+            <p>An operational template for an <font size="-1"> OUTPUT PROCEDURE</font>, 
+              which gets records from the work file and writes them to an output 
+              file, is shown in the table below. Notice that the work file is 
+              not opened by the code in the <font size="-1">OUTPUT PROCEDURE</font>. 
+              The work file is automatically opened by the <font size="-1">SORT</font>.</p>
+            <div align="center"> 
+              <table width="40%" border="1" bgcolor="#E1FFE1" cellpadding="10" height="121">
+                <tr> 
+                  <td height="109"> 
+                    <pre>OPEN OUTPUT OutFile
+RETURN SDWorkFile RECORD
+PERFORM UNTIL TerminatingCondition
+   <i>Setup OutRec
+</i>   WRITE OutRec
+   RETURN SDWorkFile RECORD
+END-PERFORM
+CLOSE OutFile
+</pre>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <p>&nbsp;</p>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Sales 
+              summary file - example program</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/program.gif" width="42" height="44"></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p>The example below creates a sorted SalesSummaryFile from an unsorted 
+              SalesFile. The SalesSummaryFile is a sequential file, sorted on 
+              ascending salesperson-number. Each record in the summary file is 
+              the sum of all the items sold by a particular salesperson. An <font size="-1">OUTPUT 
+              PROCEDURE</font> is used, because until the records have been sorted 
+              into salesperson number order, the salesperson records cannot be 
+              summarized.</p>
+            <table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="10" height="930">
+              <tr> 
+                <td height="930"> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID. MakeSummaryFile.
+AUTHOR. Michael Coughlan.
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT WorkFile ASSIGN TO "WORK.TMP".
+
+    SELECT SalesFile ASSIGN TO "SALES.DAT"
+           ORGANIZATION IS LINE SEQUENTIAL.
+
+    SELECT SalesSummaryFile ASSIGN TO "SUMMARY.DAT"
+           ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+
+FD  SalesFile.
+01  SalesRec            PIC X(10).
+
+SD  WorkFile.
+01  WorkRec.
+    88 EndOfWorkFile    VALUE HIGH-VALUES.
+    02 SalespsnNumWF    PIC X(5).
+    02 QtySoldWF        PIC 9(4).
+
+FD  SalesSummaryFile.
+01  SummaryRec.
+    02 SalespsnNum      PIC 9(5).
+    02 TotalQtySold     PIC 9(6).
+
+PROCEDURE DIVISION.
+Begin.
+    SORT WorkFile ON ASCENDING KEY SalespsnNumWF
+           USING SalesFile
+           OUTPUT PROCEDURE IS SummariseSales
+    STOP RUN.
+
+SummariseSales.
+    OPEN OUTPUT SalesSummaryFile
+    RETURN WorkFile
+       AT END SET EndOfWorkFile TO TRUE
+    END-RETURN
+    PERFORM UNTIL EndOfWorkFile
+      MOVE SalespsnNumWF TO SalespsnNum
+      MOVE ZEROS TO TotalQtySold
+      PERFORM UNTIL SalespsnNumWF NOT = SalespsnNum
+                    OR EndOfWorkFile
+         ADD QtySoldWF TO TotalQtySold
+         RETURN WorkFile
+            AT END SET EndOfWorkFile TO TRUE
+         END-RETURN
+      END-PERFORM
+      WRITE SummaryRec
+    END-PERFORM
+    CLOSE SalesSummaryFile.
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <hr width="100%" align="center" size="1">
+</TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="1917"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Revised 
+              Foreign Guests Report - example program</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/program.gif" width="42" height="44"></h4>
+          </TD>
+          <TD width="525" valign="top" height="1917"> 
+            <p>This example program is a revised version of the Foreign Guest 
+              Report program. In this example, instead of creating a sorted file 
+              which is read to create the report; the report is created directly 
+              from the <font size="-1">OUTPUT PROCEDURE</font>. This has the effect 
+              of making the program simpler and shorter, since we no longer need 
+              all the sorted file declarations.</p>
+            <table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="10">
+              <tr> 
+                <td height="1770"> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  ForeignGuestsRpt2.
+AUTHOR.  Michael Coughlan.
+* This program analyses the CSIS web site GuestBook file  
+* and uses an OUTPUT PROCEDURE to print a report showing
+* the number of visitors to the web site from each
+* foreign country.  
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+   SELECT GuestBookFile 
+          ASSIGN TO "GuestBook.Dat"
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+   SELECT WorkFile 
+          ASSIGN TO "Work.Tmp".
+
+   SELECT ForeignGuestReport
+          ASSIGN TO "ForeignGuest.Rpt"
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+FD GuestBookFile.
+01 GuestRec.
+   88  EndOfFile  VALUE HIGH-VALUES.
+   02  GuestNameGF         PIC X(20).
+   02  CountryNameGF       PIC X(20).
+       88 CountryIsIreland VALUE "IRELAND". 
+   02  GuestCommentGF      PIC X(40).
+
+SD WorkFile.
+01 WorkRec.
+   88 EndOfWorkFile VALUE HIGH-VALUES.
+   02 CountryNameWF        PIC X(20).
+
+FD ForeignGuestReport.
+01 PrintLine               PIC X(38).
+
+
+WORKING-STORAGE SECTION.
+01 Heading1                PIC X(37) 
+         VALUE "CSIS Web site - Foreign Guests Report".
+
+01 Heading2. 
+   02 FILLER               PIC X(25) VALUE "   Country".
+   02 FILLER               PIC X(8)  VALUE "Visitors".
+
+01 CountryLine.
+   02 FILLER               PIC X(3) VALUE SPACES.
+   02 PrnCountryName       PIC X(20).
+   02 PrnVisitorCount      PIC BBBZZ,ZZ9.
+
+01 ReportFooting           PIC X(36)
+         VALUE "*** End of Foreign Guests report ***".
+
+01 VisitorCount            PIC 9(5).
+
+PROCEDURE DIVISION.
+PrintForeignGuestReport.
+   SORT WorkFile ON ASCENDING CountryNameWF
+        INPUT PROCEDURE IS SelectForeignGuests
+        OUTPUT PROCEDURE IS PrintGuestReport.
+   STOP RUN.
+
+SelectForeignGuests.
+   OPEN INPUT GuestBookFile.
+   READ GuestBookFile
+      AT END SET EndOfFile TO TRUE
+   END-READ
+   PERFORM UNTIL EndOfFile
+      IF NOT CountryIsIreland
+         MOVE CountryNameGF TO CountryNameWF
+         RELEASE WorkRec
+      END-IF
+      READ GuestBookFile
+        AT END SET EndOfFile TO TRUE
+      END-READ
+   END-PERFORM
+   CLOSE GuestBookFile.
+
+
+PrintGuestReport.
+   OPEN OUTPUT ForeignGuestReport
+   WRITE PrintLine FROM Heading1
+         AFTER ADVANCING PAGE
+   WRITE PrintLine FROM Heading2
+         AFTER ADVANCING 2 LINES
+   RETURN WorkFile
+      AT END SET EndOfWorkFile TO TRUE
+   END-RETURN
+   PERFORM PrintReportBody UNTIL EndOfWorkFile
+   WRITE PrintLine FROM ReportFooting 
+         AFTER ADVANCING 3 LINES
+   CLOSE ForeignGuestReport.
+
+PrintReportBody.
+   MOVE CountryNameWF TO PrnCountryName
+   MOVE ZEROS TO VisitorCount
+   PERFORM UNTIL CountryNameWF NOT EQUAL TO PrnCountryName
+                 OR EndOfWorkFile
+      ADD 1 TO VisitorCount
+      RETURN WorkFile
+        AT END SET EndofWorkFile TO TRUE
+      END-RETURN
+   END-PERFORM
+   MOVE VisitorCount TO PrnVisitorCount
+   WRITE PrintLine FROM CountryLine 
+         AFTER ADVANCING 1 LINE.
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part4"></A><font face="Arial, Helvetica, sans-serif">MERGEing 
+              files</font></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="118"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="118"> 
+            <P>It is often useful to combine two or more files into a single large 
+              file. If the files are unordered, this is easy to accomplish because 
+              we can simply append the records in one file to the end of the other. 
+              But if the files are unordered, the task is somewhat more complicated, 
+              especially if there are more than two files, because we must preserve 
+              the ordering in the combined file.</P>
+            <P>In COBOL, instead of having to write special code every time we 
+              want to merge files, we can use the <font size="-1">MERGE</font> 
+              verb. The <font size="-1">MERGE</font> verb takes two or more identically 
+              sequenced files and combines them, according to the key values specified. 
+              The combined file is then sent to an output file or an <font size="-1">OUTPUT 
+              PROCEDURE</font>.</P>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="118"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">MERGE 
+              syntax </FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="118"> 
+            <P><img src="Resources/pics/Sort8.gif" width="494" height="229"></P>
+            <P>e.g.</P>
+            <pre>MERGE MergeWorkFile 
+   ON ASCENDING KEY TransDateWF, TransCodeWF, StudentIdWF
+   USING InsertTransFile, DeleteTransFile, UpdateTransFile
+   GIVING CombinedTransFile. </pre>
+            <P><font size="-1"><b>MERGE</b></font><b> notes</b><br>
+              The results of the <font size="-1">MERGE</font> verb are predictable 
+              only when the records in the input files are ordered as described 
+              in the <font size="-1">KEY</font> clause associated with the <font size="-1">MERGE</font> 
+              statement. For instance, if the <font size="-1">MERGE</font> statement 
+              has an <font size="-1">ON DESCENDING KEY</font> StudentId clause, 
+              then all the <font size="-1">USING</font> files must be ordered 
+              on descending StudentId. </P>
+            <P>As with the <font size="-1">SORT</font>, the <i>SDWorkFileName</i> 
+              is the name of a temporary file, with an <font size="-1">SD</font> 
+              entry in the <font size="-1">FILE SECTION</font>, a <font size="-1">SELECT</font> 
+              and <font size="-1">ASSIGN</font> entry in the <font size="-1">INPUT-OUTPUT 
+              SECTION</font>, and an organization of <font size="-1"> RECORD SEQUENTIAL.</font></P>
+            <p align="left">Each <i>MergeKeyIdentifier </i>identifies a field 
+              in the record of the work file. The sorted file will be in sequence 
+              on this key field(s). </p>
+            <p align="left">When more than one <i>MergeKeyIdentifier </i>is specified, 
+              the keys decrease in significance from left to right (leftmost key 
+              is most significant, rightmost is least significant). </p>
+            <p align="left"><i>InFileName</i> and <i>OutFileName</i>, are the 
+              names of the input and output files respectively. These files are 
+              automatically opened by the <font size="-1">MERGE</font>. When the 
+              <font size="-1">MERGE</font> executes they must <b>not</b> be already 
+              open. </p>
+            <p align="left"> <i>AlphabetName </i>is an alphabet-name defined in 
+              the <font size="-1">SPECIAL-NAMES</font> paragraph of the <font size="-1">ENVIRONMENT 
+              DIVISION</font>. This clause is used to select the character set 
+              the <font size="-1">SORT </font>verb uses for collating the records 
+              in the file. The character set may be <font size="-1">ASCII</font> 
+              (8 or 7 bit ), <font size="-1">EBCDIC</font>,or user-defined. </p>
+            <P>The <font size="-1">MERGE</font> can use an <font size="-1">OUTPUT 
+              PROCEDURE</font> and the <font size="-1">RETURN</font> verb to get 
+              merged records from the <i>SDWorkFileName.</i> </P>
+            <P>The <font size="-1">OUTPUT PROCEDURE </font>only executes after 
+              the files have been merged and must contain at least one <font size="-1">RETURN</font> 
+              statement to get the records from the SortFile.</P>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="838"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">MERGE 
+              example</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="838"> 
+            <p>In this example program, instead of writing code to insert records 
+              from a transaction file into an ordered master file, we have used 
+              the <font size="-1">MERGE</font> verb to merge the files. </p>
+            <table width="475" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="10">
+              <tr> 
+                <td height="732"> 
+                  <pre>      $ SET SOURCEFORMAT "FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID. MergeFiles.
+AUTHOR. MICHAEL COUGHLAN.
+* Example program demonstrating the use of the MERGE.
+* The program merges the file Students.Dat and 
+* Transins.Dat to create a new file Students.New
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT StudentFile ASSIGN TO "STUDENTS.DAT"
+             ORGANIZATION IS LINE SEQUENTIAL.
+
+    SELECT InsertionsFile ASSIGN TO "TRANSINS.DAT"
+             ORGANIZATION IS LINE SEQUENTIAL.
+
+    SELECT NewStudentFile    ASSIGN TO "STUDENTS.NEW"
+             ORGANIZATION IS LINE SEQUENTIAL.
+
+    SELECT WorkFile ASSIGN TO "WORK.TMP".
+
+DATA DIVISION.
+FILE SECTION.
+FD  StudentFile.
+01  StudentRec             PIC X(30).
+
+FD  InsertionsFile.
+01  InsertionRec           PIC X(30).
+
+FD  NewStudentFile.
+01  NewStudentRec          PIC X(30).
+
+SD  WorkFile.
+01  WorkRec.
+    02 StudentIdWF         PIC 9(7).
+    02 FILLER              PIC X(23).
+
+PROCEDURE DIVISION.
+Begin.
+    MERGE WorkFile
+       ON ASCENDING KEY StudentIdWF
+       USING InsertionsFile,  StudentFile
+       GIVING NewStudentFile.
+    STOP RUN.
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : April 1999</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

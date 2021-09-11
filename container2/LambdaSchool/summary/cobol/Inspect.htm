@@ -1,0 +1,692 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>The INSPECT verb</TITLE>
+<style type="text/css">
+<!--
+-->
+</style></HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<CENTER>
+</CENTER>
+<CENTER>
+  <div align="LEFT">
+    <table border="0" width="710">
+      <tr> 
+        <td> 
+          <center>
+            <h2><a name="top"></a> <img src="Resources/pics/t-CobolCourse.gif" height=56 width=161 align="MIDDLE" alt="Cobol Course" border="0"></h2>
+          </center>
+          <center>
+            <h2> <b>The INSPECT verb</b></h2>
+            <hr align="LEFT">
+          </center>
+        </td>
+      </tr>
+    </table>
+  </div>
+</CENTER>
+<table border="0" width="710" vspace="15">
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> 
+     <b><a href="#intro" target="">Introduction</a><br>
+      </b><font size="-1">Unit aims, objectives, prerequisites and a legend for 
+      this unit's syntax diagrams. <br>
+      </font>
+      </td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> <b><a href="#inspect" target="">Using the INSPECT</a><br>
+      </b>T<font size="-1">he INSPECT is introduced by looking at an example program. 
+      The way the INSPECT works is explained and its modifying phrases are explored.<br>
+      </font></td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> <a href="#count" target=""><b>The counting format</b></a><br>
+      <font size="-1">Presents the syntax and rules of the counting format of 
+      the INSPECT.<br>
+      </font></td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"><b><a href="#replace" target="">The replacing format</a><br>
+      </b><font size="-1">Presents the syntax and rules of the replacing format 
+      of the INSPECT<br>
+      </font></td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> <b><a href="#combine" target="">The combined format</a><br>
+      </b><font size="-1">This version combines the syntax and rules of the other 
+      two formats. The syntax of this combined format is presented.</font> <br>
+    </td>
+  </tr>
+  <tr>
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%">
+      <p><a href="#convert" target=""><b>The converting format</b></a><br>
+        <font size="-1">Presents the syntax and rules of the converting format 
+        of the INSPECT.<br>
+        <br>
+        </font></p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="intro"></a>Introduction</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#993300">Aims</font></h3>
+    </td>
+    <td width="525"> 
+      <p>Many programming languages rely on library functions for string handling. 
+        COBOL too, uses Intrinsic Functions for some tasks but most string manipulation 
+        is done using Reference Modification and the three string handling verbs 
+        : <font size="2">INSPECT</font>, <font size="2">STRING</font> and <font size="2">UNSTRING</font>.</p>
+      <p>This unit examines the first of three string handling verbs and aims 
+        to provide you with a solid understanding of its various formats and modifying 
+        phrases.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Objectives</font></h3>
+    </td>
+    <td width="525"> 
+      <p>By the end of this unit you should:</p>
+      <ol>
+        <li>Understand how the <font size="2">INSPECT</font> verb works.</li>
+        <li>Have a good knowledge of the different formats and modifying phrases 
+          of the <font size="2">INSPECT</font> verb.</li>
+        <li>Be able to use the <font size="2">INSPECT</font> to count, replace 
+          and convert characters in a string.</li>
+      </ol>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Prerequisites</font></h3>
+    </td>
+    <td width="525"> 
+      <p>You should be familiar with the following material; </p>
+      <ul>
+        <li>Data Declaration</li>
+        <li>Iteration</li>
+        <li>Selection</li>
+        <li>Tables</li>
+        <li>Edited Pictures</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC">
+      <h3><font color="#800000">Syntax legend</font></h3>
+    </td>
+    <td width="525"> 
+      <p>To simplify the syntax diagrams and reduce the number of rules that must 
+        be explained, special operand endings are used in this unit's syntax diagrams. 
+      </p>
+      <p>These operand endings have the following meaning:</p>
+      <div align="CENTER">
+        <table border="1" width="67%" cellpadding="4" cellspacing="0" bgcolor="#D2FFD2">
+          <tr> 
+            <td width="9%">$i</td>
+            <td width="91%">uses an alphanumeric data item</td>
+          </tr>
+          <tr> 
+            <td width="9%">$il</td>
+            <td width="91%">uses an alphanumeric data item or a string literal</td>
+          </tr>
+          <tr> 
+            <td width="9%">#i</td>
+            <td width="91%">uses a numeric data item</td>
+          </tr>
+          <tr> 
+            <td width="9%">#il</td>
+            <td width="91%">uses a numeric data item or numeric literal</td>
+          </tr>
+          <tr> 
+            <td width="9%">$#i</td>
+            <td width="91%"> uses a numeric or an alphanumeric data item </td>
+          </tr>
+        </table>
+      </div>
+      <p>&nbsp;</p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr>
+    <td>
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+</td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="inspect"></a>Using the 
+        INSPECT </font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">INSPECT</font> has four formats;</p>
+      <ol>
+        <li>The first format is used for counting characters in a string.<br>
+          <br>
+        </li>
+        <li>The second replaces a group of characters in a stringwith another 
+          group of characters.<br>
+          <br>
+        </li>
+        <li>The third combines both operations in one statement.<br>
+          <br>
+        </li>
+        <li>The fourth format converts each of a set of characters to its corresponding 
+          character in another set of characters.</li>
+      </ol>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">Example program Counting letter occurences 
+        using the INSPECT</font></h3>
+    </td>
+    <td width="525"> 
+      <table border="0" width="100%">
+        <tr> 
+          <td height="43" width="525"> 
+            <p>We'll start by looking at the <font size="2">PROCEDURE DIVISION</font> 
+              of an example program that uses the <font size="2">INSPECT</font> 
+              verb. This program reads through a file, counts how many times each 
+              letter of the alphabet occurs and displays the results</p>
+            <p>To do this the program;</p>
+            <ul>
+              <li>Reads in a line of text</li>
+              <li>Converts all the characters to upper case using the <font size="2">INSPECT..CONVERTING 
+                </font></li>
+              <li>Counts the number of times each letter appears in the line using 
+                the <font size="2">INSPECT..TALLYING</font> and increments the 
+                count in LetterCount. It gets the letters from inspection from 
+                a pre-defined table of letters (see the unit on tables for the 
+                definition of this letter table)</li>
+              <li>Uses a <font size="2">PERFORM..VARYING</font> to display the 
+                counts after they have been accumulated.</li>
+            </ul>
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="525" background="Resources\pics\code.gif"> 
+            <pre>PROCEDURE DIVISION.
+Begin.
+    OPEN INPUT TextFile
+    READ TextFile 
+      AT END SET EndOfFile TO TRUE
+    END-READ
+    PERFORM UNTIL EndOfFile
+       INSPECT TextLine
+           CONVERTING "abcdefghijklmnopqrstuvwxyz"
+               TO     "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+       PERFORM VARYING idx FROM 1 BY 1 UNTIL idx > 26
+          INSPECT TextLine TALLYING LetterCount(idx)
+                     FOR ALL Letter(idx)
+       END-PERFORM
+       READ TextFile 
+          AT END SET EndOfFile TO TRUE
+       END-READ
+    END-PERFORM
+    PERFORM VARYING idx FROM 1 BY 1 UNTIL idx > 26
+       DISPLAY "Letter " Letter(idx) 
+            " occurs " LetterCount(idx) " times" 
+    END-PERFORM
+    CLOSE TextFile
+    STOP RUN.
+</pre>
+          </td>
+        </tr>
+      </table>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">How the INSPECT works.</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The I<font size="2">NSPECT</font> scans the source string from left to 
+        right counting, replacing or converting characters under the control of 
+        the <font size="2">TALLYING</font>, <font size="2">REPLACING</font> or 
+        <font size="2">CONVERTING</font> phrases.</p>
+      <p> The behavior of the <font size="2">INSPECT</font> is modified by using 
+        the <font size="2">LEADING, FIRST, BEFORE</font> and <font size="2">AFTER</font> 
+        phrases. </p>
+      <p>An <font size="2">ALL, LEADING, CHARACTERS, FIRST</font> or <font size="2">CONVERTING</font> 
+        phrase may only be followed by one <font size="2">BEFORE</font> and one 
+        <font size="2">AFTER</font> phrase. </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">The modifying phrases</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <b><font size="2">LEADING </font></b>phrase causes counting/replacement 
+        of all Compare$il characters from the first valid one encountered to the 
+        first invalid one. </p>
+      <p>The <font size="2"><b>FIRST</b></font> phrase causes only the first valid 
+        character to be replaced. </p>
+      <p>The <font size="2"><b>BEFORE</b></font> phrase designates as valid those 
+        characters to the left of the delimiter associated with it. </p>
+      <p>The <font size="2"><b>AFTER</b> </font>phrase designates as valid those 
+        characters to the right of the delimiter associated with it. </p>
+      <p>If the delimiter is not present in the SourceStr$i then using the <font size="2">BEFORE</font> 
+        phrase implies the whole string and using the <font size="2">AFTER</font> 
+        phrase implies no characters at all. </p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="count"></a>The counting 
+        INSPECT </font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" colspan="2"> 
+      <h3><font color="#993300">Syntax</font></h3>
+      <p><img src="Resources/pics/CntInspect.gif"></p>
+      <p align="LEFT">This format of the Inspect is used to count characters in 
+        a string.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Notes</font></h3>
+    </td>
+    <td width="525"> 
+      <p>If Compare$il or Delim$il is a figurative constant it is 1 character 
+        in size. </p>
+      <p>An <font size="2">ALL</font>, <font size="2">LEADING</font> or<font size="2"> 
+        CHARACTERS</font> phrase can have not more than one <font size="2">BEFORE</font> 
+        and one <font size="2">AFTER</font> phrase following it.</p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Examples</font></h3>
+    </td>
+    <td width="525"> 
+      <pre>INSPECT FullName TALLYING UnstrPtr FOR LEADING SPACES.
+
+INSPECT SourceLine TALLYING ECount
+        FOR ALL "e" AFTER  INITIAL "start"
+                    BEFORE INITIAL "end".   </pre>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="replace"></a>The replacing 
+        INSPECT </font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" colspan="2"> 
+      <h3><font color="#993300">Syntax</font></h3>
+      <p><img src="Resources/pics/RepInspect.gif" width="619" height="255"></p>
+      <p align="LEFT">This format of the <font size="2">INSPECT</font> is used 
+        to count characters in a string.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Rules</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The sizes of Compare$il and Replace$il must be equal. </p>
+      <p>When Replace$il is a figurative constant its size equals that of Compare$il. 
+      </p>
+      <p>When there is a <font size="2">CHARACTERS</font> phrase, the size of 
+        ReplaceChar$il and the delimiter which may follow it (Delim$il) must be 
+        one character. </p>
+      <p>If Compare$il, Delim$il or Replace$il is a figurative constant it is 
+        1 character in size. </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Example 1 <br>
+        with animation</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The following examples work on the data in StringData to produce the 
+        results shown in the storage schematic below. </p>
+      <p>Click on the storage schematic to see the result of each of these <font size="2">INSPECT 
+        </font>statements (use left click or PageDown for next item and right 
+        click or PageUp for previsou item) .&nbsp; </p>
+      <blockquote> 
+        <pre>
+1. INSPECT StringData REPLACING ALL "<b>R</b><b><font color="#0000FF"></font></b>" BY "<font color="#0000FF"><b>G</b></font><font color="#0000FF"><b></b></font><font color="#FF0000"><b></b></font><font color="#FF0000"><b></b></font><b></b>" 
+       AFTER INITIAL "<font color="#FF0000"><b>A</b></font><font color="#008000"><b></b></font><b></b>" BEFORE INITIAL "<font color="#FF0000"><b>Q</b></font><font color="#008000"><b></b></font><font color="#009900"><b></b></font><font color="#00CC33"><b></b></font><font color="#00CC33"><b></b></font><font color="#00FF00"><b></b></font><b></b>".
+
+2. INSPECT StringData REPLACING LEADING "<b>R</b><font color="#000080"><b></b></font><font color="#000080"><b></b></font><b></b>" BY "<font color="#0000FF"><b>G</b></font><b></b>" 
+       AFTER INITIAL "<font color="#FF0000"><b>A</b></font><b></b>" BEFORE INITIAL "<font color="#FF0000"><b>Z</b></font><b></b>".
+
+3. INSPECT StringData REPLACING ALL "<b>R</b>" BY "<font color="#0000FF"><b>G</b></font><b></b>" 
+       AFTER INITIAL "<font color="#FF0000"><b>A</b></font><b></b>" BEFORE INITIAL "<font color="#FF0000"><b>Z</b></font><b></b>".
+
+4. INSPECT StringData REPLACING FIRST "<b>R</b>" BY "<font color="#0000FF"><b>G</b></font><b></b>" 
+       AFTER INITIAL "<font color="#FF0000"><b>A</b></font><b></b>" BEFORE INITIAL "<font color="#FF0000"><b>Q</b></font><b></b>".
+
+5. INSPECT StringData REPLACING 
+       ALL "<b>RRRR</b>" BY "<font color="#0000FF"><b>FROG</b></font><b></b>" 
+       AFTER INITIAL "<font color="#FF0000"><b>A</b></font><b></b>" BEFORE INITIAL "<font color="#FF0000"><b>Q</b></font><b></b>".
+</pre>
+      </blockquote>
+      <CENTER>
+        <p><OBJECT CLASSID="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" WIDTH=500 HEIGHT=125>
+            <PARAM NAME="File" VALUE="Inspect1.ppz">
+            <EMBED WIDTH=500 HEIGHT=125 SRC="Resources/ppz/Inspect1.ppz"></EMBED><NOEMBED> 
+            This page contains a Microsoft PowerPoint Animation that your browser 
+            was unable to view.<A HREF="Resources/ppz/Inspect1.ppz">Click here to 
+            open Inspect1.ppz fullscreen</A></NOEMBED> 
+          </OBJECT> </p>
+        <hr>
+      </CENTER>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Example 2</font></h3>
+    </td>
+    <td width="525"> 
+      <p>This example inspects the string TextLine and checks it for each of the 
+        4 letter swear words in the table. If one is found it is replaced by the 
+        text *#@!.</p>
+      <pre>PERFORM VARYING idx FROM 1 BY 1 UNTIL idx > 10
+  INSPECT TextLine REPLACING SwearWord(idx) BY "*#@!"
+END-PERFORM</pre>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Example 3<br>
+        with animation</font></h3>
+    </td>
+    <td width="525">
+      <p>In this example we want to create an edited item with a floating Rouble 
+        currency symbol instead of a floating dollar sign. </p>
+      <p>To achieve we use a picture clause edited with a floating dollar sign 
+        and then we use the <font size="2">INSPECT</font> to replace the dollar 
+        sign with the Rouble symbol &quot;R&quot;. </p>
+      <p>This works because when a value is moved into an edited item the editing 
+        is immediately applied to the value. </p>
+      <p>Click on the diagram below to see how this use of the <font size="2">INSPECT</font> 
+        works (use left click or PageDown for next item and right click or PageUp 
+        for previsou item) .</p>
+      <p>&nbsp;</p>
+      <CENTER>
+      <OBJECT CLASSID="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" WIDTH=520 HEIGHT=333>
+      <PARAM NAME="File" VALUE="Resources/ppz/inspect3.ppz">
+       <EMBED WIDTH=520 HEIGHT=333 SRC="Resources/ppz/Inspect3.ppz"></EMBED>
+      <NOEMBED>This page contains a Microsoft PowerPoint Animation that your browser was          unable to view.<A HREF="Resources/ppz/Inspect3.ppz">Click here to open          Resources/ppz/inspect3.ppz fullscreen</A></NOEMBED>
+        </OBJECT>
+        </CENTER>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="combine"></a>The combined 
+        INSPECT </font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175"  colspan="2"> 
+      <h3><font color="#800000">Syntax</font></h3>
+      <p><img src="Resources/pics/CombInspect.gif" width="649" height="338"> </p>
+      <p>This format of the <font size="2">INSPECT</font> combines the syntactic 
+        elements of the previous two formats allowing both counting and replacing 
+        to be done in one statement.&nbsp; </p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<hr>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="convert"></a>The converting 
+        INSPECT </font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT"  width="175" colspan="2"> 
+      <h3><font color="#800000">Syntax</font></h3>
+      <h3><img src="Resources/pics/ConvInspect.gif"></h3>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">How th</font><font color="#800000">is format of 
+        the INSPECT works</font></h3>
+      <h3>&nbsp;</h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">INSPECT..CONVERTING</font> works on individual characters. 
+        Compare$il is a list of characters that will be replaced with the characters 
+        in Convert$il on a one for one basis. </p>
+      <p>For instance the statement - </p>
+      <blockquote> 
+        <pre>INSPECT StringData CONVERTING "abc" TO "XYZ". </pre>
+      </blockquote>
+      <p> replaces "a" with "X", "b" with "Y" and "c" with "Z". </p>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Rules</font> </h3>
+    </td>
+    <td width="525">
+      <ol>
+        <li>Compare$il and Convert$il must be equal in size. <br>
+          <br>
+        </li>
+        <li>When Convert$il is a figurative constant its size equals that of Compare$il. 
+          <br>
+          <br>
+        </li>
+        <li>The same character cannot appear more than once in the Compare$il 
+          (because each character in the Compare$il string is associated with 
+          a replacement). </li>
+      </ol>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Example 1<br>
+        with animation</font></h3>
+    </td>
+    <td width="525"> 
+      <div align="CENTER">
+        <p align="LEFT">The following examples work on the data in StringData 
+          to produce the results shown in the storage schematic below. </p>
+        <p align="LEFT">Click on the storage schematic to see the result of each 
+          of these <font size="2">INSPECT </font>statements (use left click or 
+          PageDown for next item and right click or PageUp for previsou item).&nbsp; 
+        </p>
+        <blockquote> 
+          <div align="LEFT">
+            <pre>
+1. INSPECT StringData CONVERTING "<b>fxtd"</b> TO "<b><font color="#FF0000">ZYAB</font></b>".
+
+2. INSPECT StringData REPLACING "<b>fxtd"</b> BY "<b><font color="#FF0000">ZYAB</font></b>".
+
+3. INSPECT StringData REPLACING ALL "<b>x</b>" BY "<b><font color="#FF0000">Y</font></b>"
+                                    "<b>d</b>" BY "<b><font color="#FF0000">Z</font></b>"
+                                    "<b>f</b>" BY "<b><font color="#FF0000">S</font></b>".
+
+</pre>
+          </div>
+        </blockquote>
+        <p><object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=500 height=125>
+            <param name="File" value="Inspect1.ppz">
+            <embed width=500 height=125 src="Resources/ppz/Inspect2.ppz"></embed><noembed> 
+            This page contains a Microsoft PowerPoint Animation that your browser 
+            was unable to view.<a href="Resources/ppz/Inspect2.ppz">Click here to 
+            open Inspect2.ppz fullscreen</a></NOEMBED> 
+          </object> </p>
+        <hr>
+      </div>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Example 2</font></h3>
+    </td>
+    <td width="525"> 
+      <p>This example shows how the <font size="2">INSPECT..CONVERTING</font> 
+        can be used to implement a simple encoding mechanism. </p>
+      <p>It converts the character 0 to character 5, 1 to 2, 2 to 9, 3 to 8 etc. 
+        Conversion starts when the word "codeon" is encountered in the string 
+        and stops when "codeoff" is encountered. </p>
+      <pre>INSPECT TextLine 
+    CONVERTING "0123456789" TO "5298317046"
+    AFTER INITIAL "codeon" BEFORE INITIAL "codeoff". </pre>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" bgcolor="#FFFFCC" width="175"> 
+      <h3><font color="#800000">Example 3</font></h3>
+    </td>
+    <td width="525"> 
+      <p> In this example, the <font size="2">INSPECT..CONVERTING</font> is used 
+        to convert upper case letters to lower case and visa versa.</p>
+      <p>The first <font size="2">INSPECT</font> shows how we can convert the 
+        characters using string literals and the next two show how storing the 
+        strings in data items makes the conversion operation more versatile.</p>
+      <p>Actually, these days we can do this with the <font size="2">UPPER-CASE</font> 
+        and <font size="2">LOWER-CASE</font> Intrinsic Functions. </p>
+      <pre>* Data Division entries 
+01 AlphaChars. 
+   02 AlphaLower PIC X(26) VALUE "abcdefghijklmnopqrstuvwxyz". 
+   02 AlphaUpper PIC X(26) VALUE "ABCDEFGHIJKLMNOPQRSTUVWXYZ".</pre>
+      <pre>* Procedure Division entries 
+    INSPECT CustAddress
+        CONVERTING "abcdefghijklmnopqrstuvwxyz"
+            TO     "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
+
+    INSPECT CustAddress 
+        CONVERTING AlphaLower TO AlphaUpper. </pre>
+      <pre>    INSPECT CustAddress
+        CONVERTING AlphaUpper TO AlphaLower.    </pre>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr>
+    <td> 
+      <hr>
+      <h3 align="CENTER">Copyright Notice</h3>
+      <p align="LEFT">These COBOL course materials are the copyright property 
+        of Michael Coughlan.</p>
+      <p><font size="2">All rights reserved. No part of these course materials 
+        may be reproduced in any form or by any means - graphic, electronic, mechanical, 
+        photocopying, printing, recording, taping or stored in an information 
+        storage and retrieval system - without the written permission of </font><font size="2">the 
+        author.</font></p>
+      <p align="CENTER"><font size="2">(c) Michael Coughlan</font></p>
+      <hr>
+      <p><i><font size=-1>Last updated : April 1998</font></i> <br>
+        <font size=-1><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font> 
+      </p>
+    </td>
+  </tr>
+</table>
+<h3 align="CENTER">&nbsp;</h3>
+<h3 align="CENTER">&nbsp;</h3>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+</BODY>
+</HTML>

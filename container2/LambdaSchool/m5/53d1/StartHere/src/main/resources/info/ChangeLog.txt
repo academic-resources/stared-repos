@@ -1,0 +1,29 @@
+October 1, 2019
+A complete overhaul of the code so am restarting this list...
+
+Todo
+
+Sign on with Google, Facebook, GitHub, us
+    https://www.callicoder.com/spring-boot-security-oauth2-social-login-part-1/
+
+Upload Files
+     https://www.devglan.com/spring-boot/spring-boot-file-upload-download
+
+CI
+
+Dev, Test, Prod staging
+
+Send email from an endpoint - unhandled exception
+
+Send twilio from an endpoint - unhandled exception
+
+Check valid request body
+
+
+----
+
+Custom Swagger
+
+Swagger for custom request body
+
+javadocs

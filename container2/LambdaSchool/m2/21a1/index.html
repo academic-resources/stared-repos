@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Great Idea! DOM</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+    <script src="js/index.js" async></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <nav>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </nav>
+
+            <img id="logo-img" class="logo" src="" alt="Great Idea! Company logo.">
+        </header>
+
+        <section class="cta">
+            <div class="cta-text">
+                <h1></h1>
+                <button></button>
+            </div>
+            <img id="cta-img" src="" alt="Image of a code snippet.">
+        </section>
+
+        <section class="main-content">
+
+            <div class="top-content">
+                <div class="text-content">
+                    <h4></h4>
+                    <p></p>
+                </div>
+                <div class="text-content">
+                    <h4></h4>
+                    <p></p>
+                </div>
+            </div>
+
+            <img class="middle-img" id="middle-img" src="" alt="Image of code snippets across the screen">
+
+            <div class="bottom-content">
+                <div class="text-content">
+                    <h4></h4>
+                    <p></p>
+                </div>
+                <div class="text-content">
+                    <h4></h4>
+                    <p></p>
+                </div>
+                <div class="text-content">
+                    <h4></h4>
+                    <p></p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="contact">
+
+            <h4></h4>
+
+            <p></p>
+
+            <p></p>
+
+            <p></p>
+
+        </section>
+
+        <footer>
+            <p></p>
+        </footer>
+
+    </div><!-- container -->
+</body>
+<script>
+    document.querySelector('.middle-img').src = "img/mid-page-accent.jpg";
+    document.querySelector('#cta-img').src = "img/header-img.png";
+    document.querySelector('button').textContent = "Get Started";
+    document.querySelectorAll('a')[0].style.color = "green";
+    document.querySelectorAll('a')[1].style.color = "green";
+    document.querySelectorAll('a')[2].style.color = "green";
+    document.querySelectorAll('a')[3].style.color = "green";
+    document.querySelectorAll('a')[4].style.color = "green";
+    document.querySelectorAll('a')[5].style.color = "green";
+    document.querySelectorAll('a')[0].textContent = "Services";
+    document.querySelectorAll('a')[1].textContent = "Product";
+    document.querySelectorAll('a')[2].textContent = "Vision";
+    document.querySelectorAll('a')[3].textContent = "Features";
+    document.querySelectorAll('a')[4].textContent = "About";
+    document.querySelectorAll('a')[5].textContent = "Contact";
+    document.querySelector('.cta-text > h1').textContent = "DOM Is Awesome";
+    document.querySelectorAll('.main-content > .top-content > .text-content > h4')[0].textContent = "Features";
+    document.querySelectorAll('.main-content > .top-content > .text-content > h4')[1].textContent = "About";
+    document.querySelectorAll('.main-content > .top-content > .text-content > p')[0].textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+    document.querySelectorAll('.main-content > .top-content > .text-content > p')[1].textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+    document.querySelectorAll('.main-content > .bottom-content > .text-content > h4')[0].textContent = "Services";
+    document.querySelectorAll('.main-content > .bottom-content > .text-content > h4')[1].textContent = "Product";
+    document.querySelectorAll('.main-content > .bottom-content > .text-content > h4')[2].textContent = "Vision";
+    document.querySelectorAll('.main-content > .bottom-content > .text-content > p')[0].textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+    document.querySelectorAll('.main-content > .bottom-content > .text-content > p')[1].textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+    document.querySelectorAll('.main-content > .bottom-content > .text-content > p')[2].textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+    document.querySelectorAll('.contact > h4').textContent = "Contact";
+    document.querySelectorAll('.contact > p')[0].textContent = "123 Way 456 Street\nSomewhere, USA";
+    document.querySelectorAll('.contact > p')[1].textContent = "1 (888) 888-8888";
+    document.querySelectorAll('.contact > p')[2].textContent = "sales@greatidea.io";
+
+    document.querySelector('footer > p').textContent = "Copyright Great Idea! 2018";
+    var n = document.createElement("a");
+    var textN = document.createTextNode(" Dommy ");
+    n.appendChild(textN);
+    document.querySelectorAll("nav > a")[5].appendChild(n);
+    document.querySelectorAll("nav > a")[0].prepend(n);
+
+
+    // integrate a button that can update content on the site with a click of a button. You could build a similar data object with new values to help you test the click event.
+
+    var x = document.createElement("button");
+    x.setAttribute("id", "domButton");
+    x.style.width = "250px";
+    x.style.height = "250px";
+    document.querySelector('footer').prepend(x);
+    document.getElementById("domButton").addEventListener('click', (event) => { event.target.style.backgroundColor = 'blue'; });
+</script>
+
+</html>

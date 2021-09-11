@@ -1,0 +1,1145 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Print files and variable-length records</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+  <TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <CENTER>
+              <H2><img src="/cobol/course/Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> Print files and variable-length records</H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><BR>
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top"> 
+                  <p><B><A href="#part1" target="">Multiple record-type files</A><BR>
+                    </B><FONT size="-1">This section demonstrates how to declare 
+                    and use files that contain multiple types of record.</FONT><br>
+                    <br>
+                  </p>
+                </TD>
+              </TR>
+              <tr> 
+                <td width="3%" valign="TOP" height="50">&nbsp;</td>
+                <td width="4%" valign="TOP" height="50"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" valign="top" height="50"> 
+                  <div align="left"> 
+                    <p><b><a href="#part2" target="">COBOL print files </a><br>
+                      </b><font size="-1">This section introduces COBOL print 
+                      files, demonstrates how a print file may be set up and shows 
+                      how a print file is used to print a report.<br>
+                      </font><font size="-1"> <br>
+                      </font> </p>
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%"> 
+                  <div align="left"><b><a href="#part3" target="">Variable length 
+                    records </a><br>
+                    </b><font size="-1">This section introduces variable length 
+                    records, demonstrates how variable length records may be declared 
+                    and shows how variable length records with the DEPENDING ON 
+                    phrase may be processed. In addition, this section demonstrates 
+                    how a file name may be assigned to a file at run-time rather 
+                    than at compile-time.<br>
+                    </font> <br>
+                  </div>
+                </td>
+              </tr>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><FONT face="Arial, Helvetica, sans-serif">Introduction</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" bgcolor="#FFFFCC" height="86"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="540" valign="top" height="86"> 
+            <div align="center"> 
+              <p align="left">This tutorial covers a number of topics including; 
+                COBOL print files, multiple record-type files, variable length 
+                records, and run-time file name assignment.</p>
+            </div>
+            <div align="center"> 
+              <center>
+              </center>
+              <hr width="50%" align="center">
+            </div>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="135"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="540" valign="top" height="135"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Understand how the records map on to the record buffer in a 
+                file containing different types of record.</LI>
+              <LI>Be able to declare a file containing different types of record.</LI>
+              <LI>Understand the problems of declaring print-line records in the 
+                <font size="-1">FILE SECTION</font>.</LI>
+              <LI>Be able to declare and use print files.</LI>
+              <LI>Know how to set up different kinds of variable length record.</LI>
+              <LI>Understand how variable length records, declared with the <font size="-1">DEPENDING 
+                ON </font>phrase, work.</LI>
+              <LI>Be able set up a file so that the file name can be assigned 
+                at run-time rather than at compile-time.</LI>
+            </OL>
+            <hr width="50%" align="center">
+          <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="77"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="77" valign="top"> 
+            <p>Introduction to COBOL </p>
+            <p>Declaring data in COBOL </p>
+            <p>Basic Procedure Division Commands</p>
+            <p>Selection Constructs</p>
+            <p>Iteration Constructs</p>
+            <p>Introduction to Sequential files</p>
+            <p>Processing Sequential files</p>
+            <p>&nbsp;</p>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part1"></a><FONT face="Arial, Helvetica, sans-serif">Multiple 
+              record-type files</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="195"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="195"> 
+            <DIV align="center"> 
+              <p align="left">In the tutorial - Processing Sequential Files - 
+                the transaction files used as examples only contained batched 
+                records of a single type. For instance, the transaction file contained 
+                either a batch of deletions, or a batch of insertions or a batch 
+                of updates. In a real environment, transactions of this sort would 
+                normally be collected together into one single transaction file. 
+              </p>
+              <p align="left">This section demonstrates how files, which contain 
+                a number of different types of record, may be declared and used.</p>
+            </DIV>
+            <DIV align="center"> 
+              <center>
+              </center>
+              <hr width="50%" align="center">
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="126"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Implications 
+              of multiple record types</FONT></H4>
+            <H4>&nbsp;</H4>
+            <h4 align="center"><font size="-1"> </font></h4>
+          </TD>
+          <TD width="525" valign="top" height="126"> 
+            <DIV align="center"> 
+              <p align="left">A transaction file which contains insertion, deletion 
+                and update records, raises some interesting problems. Gathering 
+                all these types of transactions into a single file implies that 
+                the file will contain records of different types (i.e. records 
+                with different structures) and this may give rise to records of 
+                different lengths. A deletion record only needs the key field 
+                StudentId (7 characters), while an insertion requires the whole 
+                record (30 characters, and an update may be somewhere between 
+                these two depending on which fields, and how many of them, are 
+                being updated.</p>
+            </DIV>
+            <div align="left"> 
+              <hr width="50%" align="center">
+            </div>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Declaring 
+              a multiple record-type file</FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/ProgFrag.gif" width="48" height="44"></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <div align="center"> 
+              <p align="left">To describe these different record types we have 
+                to use more than one record description in the file's FD entry. 
+              </p>
+              <p align="left">Because record descriptions always begin with level 
+                01, we must provide a 01 level for each record type in the file.</p>
+              <p align="left">In the example below, the declarations required 
+                for a transaction containing insert, deletion and update records 
+                are given. In this example, the update transaction is intended 
+                to update the course code, with a new course code.</p>
+            </div>
+            <table width="58%" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+   SELECT TransFile 
+          ASSIGN TO “TRANS.DAT”
+          ORGANIZATION IS LINE SEQUENTIAL.
+DATA DIVISION.
+FILE SECTION.
+FD TransFile.
+<font color="#000080"><b>01 InsertRec.
+   02 StudentId         PIC 9(7).
+   02 StudentName.
+      03 Surname        PIC X(8).
+      03 Initials       PIC XX.
+   02 DateOfBirth.
+      03 YOBirth        PIC 9(4).
+      03 MOBirth        PIC 99.
+      03 DOBirth        PIC 99.
+   02 CourseCode        PIC X(4).
+   02 Gender  </b>          PIC X.
+</font>
+
+<b><font color="#FF0000">01 DeleteRec.
+   02 StudentId         PIC 9(7).
+</font></b>
+
+<b><font color="#008000">01 UpdateRec.
+   02 StudentId         PIC 9(7).
+   02 NewCourseCode     PIC X(4).
+</font></b></pre>
+                </td>
+              </tr>
+            </table>
+            <p>What is not obvious from this description is that COBOL still continues 
+              to create just a single ‘record buffer’ for the file! And this ‘record 
+              buffer’ is only able to store a single record at a time!</p>
+            <hr width="50%" align="center">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="427"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Multiple 
+              record-types - one record buffer</FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/i-Animation.gif" width="62" height="62"></H4>
+            <p align="left"><font size="-1">Click on the diagram opposite to see 
+              how the records map on to the buffer</font></p>
+          </TD>
+          <TD width="525" valign="top" height="427"> 
+            <DIV align="center"> 
+              <p align="left">When a file contains multiple record types, a record 
+                declaration (starting with a 01 level number) must be created 
+                for each type of record.</p>
+              <p align="left">Even though there are different types of record 
+                in the file, and there are separate record declarations for each 
+                record type, only a single ‘record buffer’ is created for the 
+                file.</p>
+              <p align="left">All the record declarations map on to this area 
+                of storage, which is the size of the largest record, and all the 
+                identifiers, in all the mapped records, are current/active at 
+                the same time.</p>
+              <p align="center"><a href="Resources/ppz/TC-SeqFile3a.htm"><img src="Resources/pics/MultRec.gif" width="458" height="255" border="0"></a></p>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="296"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Implications 
+              of record mappings</FONT></H4>
+            <H4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></H4>
+            <p align="left"><font size="-1">Actually, in the NetExpress version 
+              of COBOL, when a record is smaller than the record buffer the rest 
+              of the buffer is filled with spaces. So in the example opposite, 
+              the NewCourseCode would display spaces. </font></p>
+          </TD>
+          <TD width="525" valign="top" height="296"> 
+            <DIV align="center"> 
+              <p align="left">The buffer, in the illustration above, currently 
+                contains an insert record. But even though the record is an insert 
+                record, it is still possible to refer to the NewCourseCode, because 
+                all the identifiers, in all the mapped records, are available 
+                for use (are active). Of course, it doesn't make any sense to 
+                refer to NewCourseCode because the record is not an update record. 
+                For instance, in this case, the statement <font size="-1"><i>DISPLAY 
+                </i></font><i>NewCourseCode</i> would display &quot;COUG&quot; 
+                instead of an actual course code.</p>
+              <p align="left">When a record is read into a shared buffer, it is 
+                the programmers responsibility to discover what type of record 
+                has been read into the buffer and then, only to refer to the fields 
+                that make sense for that type of record. For instance, if an update 
+                record has been read into the buffer, then it only makes sense 
+                to refer to StudentId and NewCourseCode. We can still access the 
+                values in StudentName or DateOfBirth but they will not be meaningful.</p>
+              <hr width="50%" align="center">
+            </DIV>
+            <DIV align="center"></DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="151"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              type-code.</FONT></H4>
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"> </FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="151"> 
+            <DIV align="center"> 
+              <p align="left">Looking at the record above, you might wonder how 
+                the programmer can discover what type of record had been read 
+                into the buffer. Sometimes we can discover what type of record 
+                is in the buffer by examining the record and looking for characteristics, 
+                such as a particular value or data type, that are unique to that 
+                type of record. But generally, we cannot reliably establish the 
+                type of record in the buffer, by simply examining it. </p>
+              <p align="left">To allow us to distinguish between record types, 
+                a special data-item, which identifies the transaction type, is 
+                usually inserted into each transaction, . This data-item is usually 
+                called the transaction type-code. It is usually the first data-item 
+                in the transaction record and is usually one character in size, 
+                but it can be placed anywhere in the record, be of any size, and 
+                be any type of character.</p>
+            </DIV>
+            <DIV align="center"> 
+              <center>
+              </center>
+              <hr width="50%" align="center">
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1071"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              revised record descriptions.</FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/ProgFrag.gif" width="48" height="44"><FONT color="#800000" face="Arial, Helvetica, sans-serif"> 
+              </FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="1071"> 
+            <DIV align="center"> 
+              <p align="left">In the program fragment below, the revised record 
+                descriptions are shown. These record descriptions now include 
+                a one character field, which stores the type-code inserted into 
+                each transaction record to indicate the transaction type. Obviously 
+                the transaction file (<font size="-1">TRANS.DAT</font>) must must 
+                also be altered so that its actual records contain the type-code. 
+              </p>
+              <table width="58%" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+                <tr> 
+                  <td> 
+                    <pre>ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+   SELECT TransFile 
+          ASSIGN TO “TRANS.DAT”
+          ORGANIZATION IS LINE SEQUENTIAL.
+DATA DIVISION.
+FILE SECTION.
+FD TransFile.
+01 InsertRec.
+   02 TransCode         PIC X.
+   02 StudentId         PIC 9(7).
+   02 StudentName.
+      03 Surname        PIC X(8).
+      03 Initials       PIC XX.
+   02 DateOfBirth.
+      03 YOBirth        PIC 9(4).
+      03 MOBirth        PIC 99.
+      03 DOBirth        PIC 99.
+   02 CourseCode        PIC X(4).
+   02 Gender            PIC X.
+
+01 DeleteRec.
+   02 TransCode         PIC X.
+   02 StudentId         PIC 9(7).
+
+01 UpdateRec.
+   02 TransCode         PIC X.
+   02 StudentId         PIC 9(7).
+   02 NewCourseCode     PIC X(4).
+</pre>
+                  </td>
+                </tr>
+              </table>
+              <p align="left">When you examine the record descriptions above a 
+                question may occur to you. TransCode occurs in all the record 
+                descriptions - is this legal and how can I refer to the one in 
+                DeleteRec? </p>
+              <p align="left">The answer is - yes! It is legal to use the same 
+                identifier in different records (but not in the same record); 
+                but in order to uniquely identify the one you want, you must qualify 
+                it with the record name. So we can refer to the TransCode in the 
+                delete record by using the form <i>TransCode OF DeleteRec. </i> 
+                For instance, we might<i> MOVE TransCode OF DeleteRec TO PrnCode</i>. 
+              </p>
+              <p align="left">But even though it is legal to declare TransCode 
+                in all the records, and even though we must declare the storage 
+                for TransCode in all the records, we don't actually need to use 
+                the <i>name</i> TransCode in all the records. Since all the records 
+                map on to the same area of storage, it does not matter which TransCode 
+                we refer to - they all access the same value in the record. So 
+                if an update record is in the buffer, a statement referring to 
+                <i>TransCode <font size="-1">OF</font> InsertRec, </i>will still 
+                access the correct value. </p>
+              <p align="left">The same logic applies to the StudentId. The StudentId 
+                is in the same place in all three record types, so it doesn't 
+                matter which one we use - they all access the same area of memory. 
+              </p>
+              <p align="left">When an area of storage must be declared but we 
+                don't care what name we give it, we use the special name - <font size="-1">FILLER</font>.</p>
+            </DIV>
+            <DIV align="center"> 
+              <center>
+              </center>
+              <hr width="50%" align="center">
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="918"> 
+            <H4><font color="#800000" face="Arial, Helvetica, sans-serif">Using 
+              FILLER in the transaction records.</font></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/ProgFrag.gif" width="48" height="44"><FONT color="#800000" face="Arial, Helvetica, sans-serif"> 
+              </FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="918"> 
+            <div align="left"> 
+              <p>In the program fragment below, the final record descriptions 
+                are shown. TransCode and StudentId have the same description and 
+                are in the same location in all three records, so they have been 
+                explicitly defined only in the InsertionRec. In the other records, 
+                the area occupied by the two items is named - <font size="-1">FILLER</font>.</p>
+            </div>
+            <table width="58%" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+   SELECT TransFile 
+          ASSIGN TO “TRANS.DAT”
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+FD TransFile.
+01 InsertRec.
+   02 TransCode         PIC X.
+   02 StudentId         PIC 9(7).
+   02 StudentName.
+      03 Surname        PIC X(8).
+      03 Initials       PIC XX.
+   02 DateOfBirth.
+      03 YOBirth        PIC 9(4).
+      03 MOBirth        PIC 99.
+      03 DOBirth        PIC 99.
+   02 CourseCode        PIC X(4).
+   02 Gender            PIC X.
+
+01 DeleteRec.
+   02 FILLER            PIC X(8).
+
+01 UpdateRec.
+   02 FILLER            PIC X(8).
+   02 NewCourseCode     PIC X(4).
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p align="left">&nbsp;</p>
+            <p align="left">The record schematic for this new record is shown 
+              below. Notice how the TransCode and StudentId in the InsertRec map 
+              on to the same area of storage as the FILLERs in the other two record 
+              types. </p>
+            <p align="center"><img src="Resources/pics/SeqFile2.gif" width="480" height="253"></p>
+            <DIV align="center">
+              <center>
+              </center>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A>COBOL 
+              print files </FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="118"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="118"> 
+            <P>In a business-programming environment, the ability to print reports 
+              is an important property for a programming language. COBOL allows 
+              programmers to write to the printer, either directly or through 
+              an intermediate print file. COBOL treats the printer as a serial 
+              file, but uses a special variant of the <font size="-1">WRITE</font> 
+              verb to control the placement of lines on the page. </P>
+            <hr width="50%" align="center">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="373"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Setting 
+              up a print file </FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="373"> 
+            <P align="left">All data coming from, or going to, the peripherals 
+              must pass through a file buffer declared in the File Section. The 
+              file buffer is associated with the physical device by means of a 
+              Select and Assign clause. In the case of a print file, the Select 
+              and Assign may assign the print file to an actual physical printing 
+              device or, more likely, to a file which is sent to the printer later. 
+              In the diagram below one print file is assigned directly to a printer 
+              while the other is assigned to a file.</P>
+            <P align="left"><img src="Resources/pics/Printfile.gif" width="475" height="256"></P>
+            <hr width="50%" align="center">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="785"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Declaring 
+              print lines</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top" height="785"> 
+            <P>A report is made up of groups of printed lines of different types. 
+              There may be heading lines at the beginning of the report, and at 
+              the top of each page; there will be detail lines, where the main 
+              information of the report is printed; there may be footing lines 
+              at the bottom of each page, or at the end of the report. </P>
+            <P>When we set up a print file we create an FD for the file and a 
+              print record for each type of print line that will appear on the 
+              report.</P>
+            <P>For instance, let's suppose we want to write a program to print 
+              a Student Details Report which shows the StudentName, StudentId, 
+              Gender and CourseCode of each student in the students file. </P>
+            <P>In the Student Details Report there will be; </P>
+            <table width="91%" border="0" align="center">
+              <tr> 
+                <td height="18"> 
+                  <li>two Page Heading lines which we can declare as -</li>
+                </td>
+              </tr>
+              <tr valign="top"> 
+                <td> 
+                  <pre>  01 Heading1.
+     02 FILLER      PIC X(7)  VALUE SPACES.
+     02 FILLER      PIC X(25) 
+                      VALUE "UL Student Details Report".
+
+  01 Heading2. 
+     02 FILLER      PIC X(21) VALUE "StudentId StudentName".
+     02 FILLER      PIC X(14) VALUE " Gender Course".
+
+</pre>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+                  <li> a Detail Line to print the student details which we declare 
+                    as - </li>
+                </td>
+              </tr>
+              <tr valign="top"> 
+                <td> 
+                  <pre>  01 StudentDetailLine.
+     02 PrnStudId   PIC B9(7)BB.
+     02 PrnStudName PIC X(10).
+     02 PrnGender   PIC BBBBX.
+     02 PrnCourse   PIC BBBBX(4).
+
+</pre>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+                  <li> a Page Footing line declared as - </li>
+                </td>
+              </tr>
+              <tr valign="top"> 
+                <td> 
+                  <pre>  01 PageFooting.
+     02 FILLER      PIC X(19) VALUE SPACES.
+     02 FILLER      PIC X(7) VALUE "Page : ".
+     02 PageNum     PIC Z9.
+
+</pre>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+                  <li>and a Report Footing line</li>
+                </td>
+              </tr>
+              <tr valign="top"> 
+                <td> 
+                  <pre>  01 ReportFooting  PIC X(38)
+           VALUE "*** End of Student Details Report ***".
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p><hr width="50%" align="center">
+          <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="281"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Problems 
+              multiple print records.</FONT></h4>
+            <h4 align="center">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top" height="281"> 
+            <p>There is a problem with the different kinds of print record we 
+              must have in a print file. As we have seen in the previous section, 
+              if a file is declared as having multiple record types, all the records 
+              map on to the same physical area of storage. This doesn't cause 
+              any difficulties if the file is an input file, because only one 
+              type of record at a time can be in the buffer. But as we can see 
+              from the print line declarations above, the information in many 
+              print lines is static - set up at compile time - so all the records 
+              have to be in the buffer at the same time. Obviously this is impossible. 
+              In fact to prevent the creation of print records in the <font size="-1">FILE 
+              SECTION,</font> there is a COBOL rule which states that, in the<font size="-1"> 
+              FILE SECTION</font>, the <font size="-1">VALUE </font>clause can 
+              only be used with Condition Names (i.e. it cannot be used to give 
+              an initial value to an item). </p>
+            <p>If the print records cannot be set up in the file's FD entry in 
+              the <font size="-1">FILE SECTION</font>. How do we set up a print 
+              file?</p>
+            <hr width="50%" align="center">
+            <p>&nbsp; </p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="582"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Setting 
+              up a print file</font></h4>
+          </TD>
+          <TD width="525" valign="top" height="582"> 
+            <P>To set up a print file, the print line records are declared in 
+              the <font size="-1">WORKING-STORAGE SECTION; </font>and in the <font size="-1">FILE 
+              SECTION, </font>a record the size of the largest print-line record 
+              is declared in the file's FD entry. A line is printed by moving 
+              it from the <font size="-1">WORKING-STORAGE SECTION,</font> to the 
+              PrintLine record in the <font size="-1">FILE SECTION</font>, and 
+              that record is then written to the print file. This is shown graphically 
+              in the illustration below.</P>
+            <P align="center"><img src="Resources/pics/Printfile2.gif" width="430" height="425"></P>
+            <hr width="50%" align="center">
+            <P>&nbsp;</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="596"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              WRITE format revisited.</FONT></H4>
+            <p>&nbsp;</p>
+          </TD>
+          <td width="525" valign="top" height="596"> 
+            <div align="center"> 
+              <p align="left">The WRITE syntax for writing to print files is more 
+                complicated than that used for writing in ordinary Sequential 
+                files because it must contain entries to allow us to control the 
+                vertical placement of the print lines. The revised write syntax 
+                is shown below.</p>
+              <p align="left"><img src="Resources/pics/Printfile3.gif" width="417" height="154"></p>
+              <p align="left"><b><font size="-1">WRITE</font> notes<br>
+                </b>The <font size="-1">ADVANCING </font>clause is used to position 
+                the lines on the page when writing to a print file or a printer. 
+              </p>
+              <p align="left">The <font size="-1">PAGE </font>option writes a 
+                form feed to the print file or printer. </p>
+              <p align="left">MnemonicName refers to a vendor-specific page control 
+                command. It is defined in the <font size="-1">SPECIAL-NAMES</font> 
+                paragraph. </p>
+              <p align="left"> When writing to print files the <font size="-1">WRITE..FROM</font> 
+                option is generally used because the print records are described 
+                in the Working Storage Section . When the <font size="-1">WRITE..FROM 
+                </font>option is used, the data is moved from the source area 
+                into the record buffer before the contents of the record buffer 
+                are written to the file. The <font size="-1">WRITE..FROM</font> 
+                is the equivalent of a <font size="-1"><i>MOVE</i></font><i> SourceItem 
+                <font size="-1">TO</font> RecordBuffer</i> statement followed 
+                by a <font size="-1"><i>WRITE</i></font><i> RecordBuffer</i> statement.</p>
+            </div>
+            <div align="center"> 
+              <div align="left"></div>
+            </div>
+            <div align="center"> 
+              <center>
+              </center>
+              <hr width="50%" align="center">
+            </div>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="245"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Bringing 
+              it all together.</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/program.gif" width="42" height="44"></h4>
+          </TD>
+          <TD width="525" valign="top" height="245"> 
+            <p>The example program below implements the Student Details Report 
+              specified above;</p>
+            <table width="58%" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td height="520"> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  StudDetailsRpt.
+AUTHOR.  Michael Coughlan.
+* An example program demonstrating COBOL
+* Print files.   This program prints
+* a report based on the Students file
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+   SELECT StudentDetailsReport 
+          ASSIGN TO "StudRpt.Lpt"
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+   SELECT StudentFile 
+          ASSIGN TO "STUDENTS.DAT"
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+FD StudentFile.
+01 StudentRec.
+   88  EndOfStudentFile  VALUE HIGH-VALUES.
+   02  StudentId      PIC 9(7).
+   02  StudentName.
+       03 Surname     PIC X(8).
+       03 Initials    PIC XX.
+   02  DateOfBirth.
+       03 YOBirth     PIC 9(4).
+       03 MOBirth     PIC 9(2).
+       03 DOBirth     PIC 9(2).
+   02  CourseCode     PIC X(4).
+   02  Gender         PIC X.
+
+FD StudentDetailsReport.
+01 PrintLine          PIC X(38).
+
+
+WORKING-STORAGE SECTION.
+01 Heading1.
+   02 FILLER          PIC X(7)  VALUE SPACES.
+   02 FILLER          PIC X(25) 
+                      VALUE "UL Student Details Report".
+
+01 Heading2. 
+   02 FILLER          PIC X(21) 
+                      VALUE "StudentId StudentName".
+   02 FILLER          PIC X(14) 
+                      VALUE " Gender Course".
+
+01 StudentDetailLine.
+   02 PrnStudId       PIC B9(7)BB.
+   02 PrnStudName     PIC X(10).
+   02 PrnGender       PIC BBBBX.
+   02 PrnCourse       PIC BBBBX(4).
+
+01 PageFooting.
+   02 FILLER          PIC X(19) VALUE SPACES.
+   02 FILLER          PIC X(7) VALUE "Page : ".
+   02 PrnPageNum      PIC Z9.
+
+01 ReportFooting      PIC X(38)
+           VALUE "*** End of Student Details Report ***".
+
+01 PageItems.
+   02 LineCount          PIC 99 VALUE ZEROS.
+      88 NewPageRequired VALUE 50 THRU 99.
+   02 PageNum            PIC 99 VALUE ZEROS.
+
+PROCEDURE DIVISION.
+PrintStudentReport.
+   OPEN INPUT StudentFile
+   OPEN OUTPUT StudentDetailsReport
+   PERFORM PrintPageHeadings
+   READ StudentFile
+        AT END SET EndOfStudentFile TO TRUE
+   END-READ
+   PERFORM PrintReportBody UNTIL EndOfStudentFile
+   WRITE PrintLine FROM ReportFooting 
+         AFTER ADVANCING 3 LINES
+   CLOSE StudentFile, StudentDetailsReport
+   STOP RUN.
+
+PrintReportBody.
+   IF NewPageRequired 
+      ADD 1 TO PageNum
+      MOVE PageNum TO PrnPageNum
+      WRITE PrintLine FROM PageFooting 
+            AFTER ADVANCING 3 LINES
+      PERFORM PrintPageHeadings
+   END-IF
+   MOVE StudentId TO PrnStudId
+   MOVE StudentName TO PrnStudName
+   MOVE Gender TO PrnGender
+   MOVE CourseCode TO PrnCourse
+   WRITE PrintLine FROM StudentDetailLine
+        AFTER ADVANCING 1 LINE
+   ADD 1 TO LineCount
+   READ StudentFile
+        AT END SET EndOfStudentFile TO TRUE
+   END-READ.
+
+PrintPageHeadings.
+   WRITE PrintLine FROM Heading1 
+         AFTER ADVANCING PAGE
+   WRITE PrintLine FROM Heading2
+         AFTER ADVANCING 2 LINES
+   MOVE 3 TO LineCount.
+    
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp; </p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part3"></A><FONT face="Arial, Helvetica, sans-serif">Variable 
+              length records</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>COBOL programs normally process fixed-length records but sometimes 
+              files contain records of different lengths. For instance, the transaction 
+              file introduced in the first section, contains three different types 
+              of fixed-length record and an ordinary text file contains records 
+              whose size is differs from record to record. </P>
+            <p>This section demonstrates how files, containing variable-length 
+              records, may be declared and processed.</p>
+            <hr width="50%" align="center">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="389"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">FD 
+              entries for variable length records</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></h4>
+            <p align="left"><font size="-1">The<font size="-2"> RECORD CONTAINS 
+              </font>clause does much the same as the <font size="-2">RECORD..VARYING</font> 
+              clause without the <font size="-2">DEPENDING ON </font>phrase, but 
+              the <font size="-2">RECORD..VARYING</font> clause is the more versatile.</font></p>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="389"> 
+            <P align="left">The File Description (FD) entry was introduced in 
+              the first tutorial on Sequential files. But the entry shown in that 
+              tutorial was very simple; it consisted of the letters FD followed 
+              by the filename. An FD entry can be more complicated than this, 
+              and can have a large number of subordinate clauses (see your vendor 
+              manual or help files). Among these clauses is the <font size="-1">RECORD 
+              IS VARYING IN SIZE</font> clause.</P>
+            <p align="left"> The<font size="-1"> RECORD IS VARYING IN SIZE</font> 
+              clause allows us to specify that a file contains variable length 
+              records. The syntax diagram for this clause is shown below.</p>
+            <P align="left"><img src="Resources/pics/SeqFile3.gif" width="426" height="70"></P>
+            <P align="left">&nbsp;</P>
+            <P align="left"><b>Notes</b><br>
+              The <font size="-1">RECORD IS VARYING IN SIZE </font>clause, without 
+              the <font size="-1">DEPENDING ON</font> phrase, is not strictly 
+              required because the compiler can this information out from the 
+              record sizes. That is why it was not included in the multiple record-type 
+              declarations in the first section.</P>
+            <P align="left">The RecordSize#i in the <font size="-1">DEPENDING 
+              ON</font> phase must be an elementary unsigned integer data-item 
+              declared in the <font size="-1">WORKING-STORAGE SECTION</font>.</P>
+            <P align="left"><b>Examples</b></P>
+            <blockquote> 
+              <pre align="left">FD TransFile
+   RECORD IS VARYING IN SIZE 
+   FROM 8 TO 31 CHARACTERS.
+
+
+FD Stringfile
+   RECORD IS VARYING IN SIZE
+   FROM 1 TO 80 CHARACTERS
+   DEPENDING ON StringSize.</pre>
+              <div align="left"></div>
+            </blockquote>
+            <hr width="50%" align="center">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="163"> 
+            <H4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">How 
+              variable-length records, declared with the DEPENDING ON phrase, 
+              work. </font></H4>
+            </TD>
+          <TD width="525" valign="top" height="163"> 
+            <p>When a record is read from a file, defined with the <font size="-1">RECORD 
+              IS VARYING IN SIZE.. DEPENDING ON</font> phrase, the size of the 
+              record read into the buffer is moved into the data-item <i>RecordSize#i</i> 
+              (see the example program below).</p>
+            <p>To write to a file, defined with the <font size="-1">RECORD IS 
+              VARYING IN SIZE.. DEPENDING ON</font> phrase, the size of the record 
+              to be written must first be moved to <i>RecordSize#i</i> data-item, 
+              and then the <font size="-1">WRITE</font> statement must be executed.</p>
+            <hr width="50%" align="center">
+            <p>&nbsp;</p>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="147"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Example 
+              program </FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="147"> 
+            <p>The example program below introduces and number of new techniques 
+              and concepts; </p>
+            <ul>
+              <li>The filenames we have used so far have been defined at compile-time. 
+                In this example we see how we can set up a file so that the file 
+                name is accepted from the user at run-time.</li>
+              <li>This program demonstrates variable-length records that are defined 
+                both with, and without, the <font size="-1">DEPENDING ON </font>clause. 
+              </li>
+              <li>This program demonstrates how condition names set on the transaction 
+                type code can be used to discover which type of transaction has 
+                been read into the record buffer. Notice how reading a record 
+                into the record buffer automatically sets one of the condition 
+                names to true.</li>
+              <li>This program uses Reference Modification to display the variable-length 
+                string that has been read into the record buffer. The form <i>StringRec(1:StringSize) 
+                </i>extracts the characters in StringRec, from the character at 
+                position 1, to the character at position StringSize.</li>
+            </ul>
+            <table width="370" border="1" align="center" cellpadding="5" background="Resources%5Cpics%5Ccode.gif">
+              <tr valign="top"> 
+                <td height="188"> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  VarLenRecs.
+AUTHOR.  Michael Coughlan.
+* This program uses variable length records. 
+* It demonstrates how condition names may be used to 
+* discover which type of record is in the record buffer.
+* It shows how a file name may be assigned to a file
+* at run time rather than compile time.
+* It uses Reference Modification to extract the input
+* string from the record buffer.
+
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+   SELECT StringFile
+          ASSIGN TO StringFileName
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+   SELECT TransFile 
+          ASSIGN TO "TRANS.DAT"
+          ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+FD TransFile
+   RECORD IS VARYING IN SIZE
+   FROM 8 TO 31 CHARACTERS.
+01 InsertRec.
+   88 EndOfTrans        VALUE HIGH-VALUES.
+   02 TransCode         PIC X.
+      88 DoInsert       VALUE "I".
+      88 DoDelete       VALUE "D".
+      88 DoUpdate       VALUE "U".
+   02 StudentId         PIC 9(7).
+   02 StudentName.
+      03 Surname        PIC X(8).
+      03 Initials       PIC XX.
+   02 DateOfBirth.
+      03 YOBirth        PIC 9(4).
+      03 MOBirth        PIC 99.
+      03 DOBirth        PIC 99.
+   02 CourseCode        PIC X(4).
+   02 Gender            PIC X.
+
+01 DeleteRec.
+   02 FILLER            PIC X(8).
+
+01 UpdateRec.
+   02 FILLER            PIC X(8).
+   02 NewCourseCode     PIC X(4).
+
+
+FD Stringfile
+   RECORD IS VARYING IN SIZE
+   FROM 1 TO 80 CHARACTERS
+   DEPENDING ON StringSize.
+01 StringRec            PIC X(80).
+   88 EndOfStrings      VALUE HIGH-VALUES.
+   
+
+WORKING-STORAGE SECTION.
+01 StringSize           PIC 99.
+01 StringFileName       PIC X(20).
+
+PROCEDURE DIVISION.
+Begin.
+   DISPLAY "Enter the name of the string file :- "
+      WITH NO ADVANCING
+   ACCEPT StringFileName.
+   OPEN INPUT StringFile.
+   OPEN INPUT TransFile.
+   READ TransFile
+     AT END SET EndOfTrans TO TRUE
+   END-READ
+   PERFORM DisplayTransactions
+           UNTIL EndOfTrans
+
+   READ StringFile
+     AT END SET EndOfStrings TO TRUE
+   END-READ
+   PERFORM UNTIL EndOfStrings
+      DISPLAY "Valid Rec - " StringRec(1:StringSize) "***"
+      READ StringFile
+        AT END SET EndOfStrings TO TRUE
+      END-READ
+   END-PERFORM
+
+   CLOSE StringFile, TransFile.
+   STOP RUN.
+
+DisplayTransactions.
+   EVALUATE TRUE
+     WHEN DoInsert DISPLAY "Insert - " InsertRec
+     WHEN DoDelete DISPLAY "Delete - " DeleteRec
+     WHEN DoUpdate DISPLAY "Update - " UpdateRec
+     WHEN OTHER DISPLAY "Error - " InsertRec
+   END-EVALUATE
+   READ TransFile
+     AT END SET EndOfTrans TO TRUE
+   END-READ.
+
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : March 1999</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

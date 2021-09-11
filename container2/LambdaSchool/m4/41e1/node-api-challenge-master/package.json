@@ -1,0 +1,30 @@
+{
+  "name": "node-api-challenge",
+  "version": "1.0.0",
+  "description": "Node API Challenge",
+  "main": "index.js",
+  "scripts": {
+    "db:seed": "knex seed:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaSchool/node-api-challenge.git"
+  },
+  "keywords": [
+    "api",
+    "node"
+  ],
+  "author": "Lambda School",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/node-api-challenge/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/node-api-challenge#readme",
+  "dependencies": {
+    "helmet": "^3.21.2",
+    "knex": "^0.20.9",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "knex-cleaner": "^1.3.0"
+  }
+}

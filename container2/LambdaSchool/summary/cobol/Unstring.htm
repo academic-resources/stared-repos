@@ -1,0 +1,647 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>The UNSTRING verb</TITLE>
+<style type="text/css">
+<!--
+-->
+</style></HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<CENTER>
+</CENTER>
+<CENTER>
+  <div align="LEFT">
+    <table border="0" width="710">
+      <tr> 
+        <td> 
+          <center>
+            <h2><a name="top"></a> <img src="Resources/pics/t-CobolCourse.gif" height=56 width=161 align="MIDDLE" alt="Cobol Course" border="0"></h2>
+          </center>
+          <center>
+            <h2> <b>The UNSTRING verb</b></h2>
+            <hr align="LEFT">
+          </center>
+        </td>
+      </tr>
+    </table>
+  </div>
+</CENTER>
+<table border="0" width="710" vspace="15">
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> <b><a href="#intro" target="">Introduction</a><br>
+      </b><font size="-1">Unit aims, objectives and prerequisites.</font> <br>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><IMG SRC="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"><b><a href="#verb" target="">The UNSTRING verb</a><br>
+      </b><font size="-1">This section examines the syntax, functioning and rules 
+      of the UNSTRING.<br>
+      <br>
+      </font></td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> <b><a href="#examples" target="">UNSTRING examples</a><br>
+      </b><font size="-1">This section starts with some abstract examples, goes 
+      on to a more practical example and ends with a example program</font> <br>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="3%" valign="TOP">&nbsp;</td>
+    <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+    <td width="93%"> 
+      <p><a href="#combined" target=""><b>A combined example</b></a><br>
+        <font size="-1">The unit ends with a practical example that uses the STRING 
+        and UNSTRING verbs in combination.<br>
+        <br>
+        </font></p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00">Introd<a name="intro"></a>uction</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#993300">Aims</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The aim of this unit is to provide to provide you with a solid understanding 
+        of the <font size="2">UNSTRING</font> verb.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Objectives</font></h3>
+    </td>
+    <td width="525"> 
+      <p>By the end of this unit you should:By the end of this unit you should:</p>
+      <ol>
+        <li>Understand how the <font size="2">UNSTRING</font> works</li>
+        <li>Be able to use the <font size="2">UNSTRING</font> to divide a string 
+          into sub-strings</li>
+      </ol>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Prerequisites</font></h3>
+    </td>
+    <td width="525"> 
+      <p>You should be familiar with the material covered in the unit; </p>
+      <ul>
+        <li>Data Declaration </li>
+        <li>Iteration</li>
+        <li>Selection</li>
+        <li>Tables</li>
+        <li>Edited Pictures</li>
+        <li>The<font size="2"> INSPECT</font> verb</li>
+        <li>The <font size="2">STRING</font> verb</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr>
+    <td>
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+</td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="verb"></a>The UNSTRING 
+        verb </font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3 align="LEFT"><font color="#800000">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">UNSTRING</font> is used to divide a string into sub-strings. 
+      </p>
+      <p>The examples below show how the <font size="2">UNSTRING </font>is used. 
+      </p>
+      <p>The first example breaks a name string into its three constituent part 
+        - the first name , second name and surname. For instance the string &quot;John 
+        Joseph Ryan&quot; is broken into the three strings &quot;John&quot;, &quot;Joseph&quot; 
+        and &quot;Ryan&quot;.</p>
+      <p>The second example breaks an address string (where the parts of the address 
+        are separated from one another by commas) into separate address lines. 
+        The address lines are stored in a six element table. </p>
+      <p>Since not all addresses will have six parts exactly, we use the <font size="2">TALLYING</font> 
+        clause to discover how many parts there are.</p>
+      <blockquote> 
+        <pre>UNSTRING FullName DELIMITED BY ALL SPACES
+    INTO FirstName, SecondName, Surname
+END-UNSTRING.
+
+UNSTRING CustAddress DELIMITED BY ","
+   INTO AdrLine(1), AdrLine(2), AdrLine(3), 
+        AdrLine(4), AdrLine(5), AdrLine(6) 
+   TALLYING IN AdrLinesUsed
+END-UNSTRING.</pre>
+      </blockquote>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">UNSTRING syntax</font></h3>
+    </td>
+    <td width="525"> 
+      <p><img src="Resources/pics/I-UnString.gif"></p>
+      <p>&nbsp;</p>
+      <div align="CENTER">
+        <table border="1" width="77%" cellpadding="5" bgcolor="#DDFFDD">
+          <tr> 
+            <td width="21%">Delim$il</td>
+            <td width="79%">Character or set of characters in the source string 
+              that terminate data transfer to a particular destination String</td>
+          </tr>
+          <tr> 
+            <td width="21%">HoldDelim$i </td>
+            <td width="79%">Holds the delimiter that caused data transfer to a 
+              particular destination string to terminate.</td>
+          </tr>
+          <tr> 
+            <td width="21%">CharCounter#i</td>
+            <td width="79%">Is associated with a particular destination string 
+              and holds a count of the characters copied into it.</td>
+          </tr>
+          <tr> 
+            <td width="21%">Pointer#i</td>
+            <td width="79%"> Points to the position in the source string from 
+              which the next character will be taken. </td>
+          </tr>
+          <tr> 
+            <td width="21%">DestCounter#i</td>
+            <td width="79%">Holds the count of the number of destination strings 
+              affected by the <font size="2">UNSTRING</font> operation.</td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+      </div>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">How the UNSTRING works</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">UNSTRING </font>copies characters from the source 
+        string, to the destination string, until a condition is encountered that 
+        terminates data movement.</p>
+      <p>When data movement ends for a particular destination string, the next 
+        destination string becomes the receiving area and characters are copied 
+        into it until once again a terminating condition is encountered.</p>
+      <p>Characters are copied from the source string to the destination strings 
+        according to the rules for alphanumeric moves. There is space filling. 
+      </p>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC">
+      <h3><font color="#800000">Data movement termination</font></h3>
+    </td>
+    <td width="525"> 
+      <p>When the <font size="2">DELIMITED BY</font> clause is used data movement 
+        from the source string to the current destination string ends when either 
+        ;</p>
+      <blockquote> 
+        <ul>
+          <li>a delimiter is encountered in the source string</li>
+          <li>the end of the source string is reached.</li>
+        </ul>
+      </blockquote>
+      <p>When the <font size="2">DELIMITED BY</font> clause is not used, data 
+        movement from the source string to the current destination string ends 
+        when either;</p>
+      <blockquote>
+        <ul>
+          <li>the destination string is full</li>
+          <li>the end of the source string is reached</li>
+        </ul>
+      </blockquote>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">UNSTRING termination</font></h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">UNSTRING</font> statement terminates when either; 
+      </p>
+      <blockquote>
+        <ul>
+          <li>All the characters in the source string have been examined </li>
+          <li> All the destination strings have been processed </li>
+          <li>Some error condition is encountered (such as the pointer pointing 
+            outside the source string).</li>
+        </ul>
+      </blockquote>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">UNSTRING rules</font></h3>
+    </td>
+    <td width="525"> 
+      <ol>
+        <li>Where a literal can be used any figurative constant can be used except 
+          the <font size="2">ALL</font> (literal).<br>
+          <br>
+        </li>
+        <li>When a figurative constant is used then its length is one character. 
+          <br>
+          <br>
+        </li>
+        <li>Characters are moved from the source string to the destination strings 
+          according to the rules for the <font size="2">MOVE</font>, with space 
+          filling if required. <br>
+          <br>
+        </li>
+        <li>The delimiter is moved into HoldDelim$i according to the rules for 
+          the <font size="2">MOVE</font>.<br>
+          <br>
+        </li>
+        <li>The <font size="2">DELIMITER IN</font> and <font size="2">COUNT IN</font> 
+          phrases may be specified only if the <font size="2">DELIMITED BY</font> 
+          phrase is used. </li>
+      </ol>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">UNSTRING clauses</font></h3>
+    </td>
+    <td width="525"> 
+      <p> <font size="2"><b>ON OVERFLOW</b></font><br>
+        The <font size="2">ON OVERFLOW</font> is activated if :- </p>
+      <ul>
+        <li>The unstring pointer (Pointer#i) is not pointing to a character position 
+          within the source string when the <font size="2">UNSTRING</font> executes. 
+        </li>
+        <li>All the destination strings have been processed but there are still 
+          valid unexamined characters in the source string. </li>
+      </ul>
+      <p>The statements following the <font size="2">NOT ON OVERFLOW</font> are 
+        executed if the <font size="2">UNSTRING</font> is about to terminate successfully.</p>
+      <p><font size="2"><b>COUNT IN</b></font><br>
+        The <font size="2">COUNT IN</font> clause is associated with a particular 
+        destination string and holds a count of the number of characters passed 
+        to the destination string. </p>
+      <p><font size="2"><b>TALLYING IN</b></font><br>
+        Only one <font size="2">TALLYING</font> clause can be used with each <font size="2">UNSTRING</font>. 
+        It holds a count of the number of destination strings affected by the 
+        <font size="2">UNSTRING</font> operation.</p>
+      <p><font size="2"><b>WITH POINTER</b></font><br>
+        When the <font size="2">WITH POINTER</font> clause is used the Pointer#i 
+        holds the position of the next non-delimiter character to be examined 
+        in the source string. </p>
+      <p>Pointer#i must be large enough to hold a value one greater than the size 
+        of the source string. </p>
+      <p><font size="2"><b>ALL<br>
+        </b></font>When the ALL phrase is used, contiguous delimiters are treated 
+        as if only one delimiter had been encountered.<b> </b><font size="2"><b> 
+        <br>
+        </b></font></p>
+      <p>If the ALL is not used, contiguous delimiters will result in spaces being 
+        sent to some of the destination strings </p>
+      <p><font size="2"><b>DELIMITER IN</b></font><br>
+        A <font size="2">DELIMITER IN</font> clause is associated with a particular 
+        destination string. HoldDelim$i holds the delimiter that was encountered 
+        in the source string. </p>
+      <p>If the <font size="2">DELIMITER IN</font> phrase is used with the <font size="2">ALL</font> 
+        phrase then only one occurrence of the delimiter will be moved to HoldDelim$i.</p>
+      <p><font size="2"><b>DELIMITED BY<br>
+        </b></font>When the <font size="2">DELIMITED BY</font> phrase is used, 
+        characters are examined in the source string and transferred to the current 
+        destination string until one of the specified delimiters is encountered 
+        or the end the source string is reached.</p>
+      <p> If there is not enough room in the destination string to take all the 
+        characters that are sent to it from the source string then the remaining 
+        characters will be truncated/lost.</p>
+      <p>When the delimiter is encountered in the source string, the next destination 
+        string becomes current and characters are transferred into it, from the 
+        source string. </p>
+      <p>Delimiters are not transferred or counted in CharCounter#i. </p>
+      </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="examples"></a>UNSTRING 
+        examples</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#993300">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>This section starts with 6 short examples exploring various aspects the 
+        UNSTRING. </p>
+      <p>Example 7 is a longer and more practical example</p>
+      <p>Finally the section ends with an example program that uses the <font size="2">UNSTRING</font>.</p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Examples 1 - 6<br>
+        (animation) </font></h3>
+    </td>
+    <td width="525"> 
+      <p>When you view these examples start by carefully examining the <font size="2">UNSTRING</font> 
+        statement. See if you can figure out what it's going to do (you may need 
+        to review the material above for this). </p>
+      <p>When you are happy with your prediction step through the example and 
+        see if you were correct. </p>
+      <p>If your prediction is not correct try to discover what misunderstanding 
+        has led to your error.</p>
+      <p> 
+        <CENTER>
+          <OBJECT CLASSID="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" WIDTH=520 HEIGHT=416>
+            <PARAM NAME="File" VALUE="Resources/ppz/Unstring2.ppz">
+            <EMBED WIDTH=520 HEIGHT=416 SRC="Resources/ppz/Unstring2.ppz"></EMBED><NOEMBED> 
+            This page contains a Microsoft PowerPoint Animation that your browser 
+            was unable to view.<A HREF="Resources/ppz/Unstring2.ppz">Click here to 
+            open Resources/ppz/Unstring2.ppz fullscreen</A></NOEMBED> 
+          </OBJECT> <font size="2">Left click or PageDown to go to the next frame 
+          and right click or press PageUp to go to the previous frame. </font> 
+        </CENTER>
+      </p>
+      <p> 
+        <CENTER>
+        </CENTER>
+      </p>
+      <p> 
+        <CENTER>
+        </CENTER>
+      </p>
+      <p> 
+        <CENTER>
+        </CENTER>
+      </p>
+      <p> 
+        <CENTER>
+        </CENTER>
+      </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Example 7<br>
+        (animation) </font> </h3>
+    </td>
+    <td width="525"> 
+      <p>The <font size="2">WITH POINTER</font> phrase is often very useful because 
+        it means that we don't have to unpack the whole source string in one go.. 
+      </p>
+      <p>In this example, we unpack a full name, any number of Christian names 
+        followed by a surname, and display the names one after another.</p>
+      <p> 
+        <center>
+          <object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=520 height=416>
+            <param name="File" value="Resources/ppz/Unstring1.ppz">
+            <embed width=520 height=416 src="Resources/ppz/Unstring1.ppz"></embed><noembed> 
+            This page contains a Microsoft PowerPoint Animation that your browser 
+            was unable to view.<a href="Resources/ppz/Unstring1.ppz">Click here to 
+            open Resources/ppz/Unstring1.ppz fullscreen</a></NOEMBED> 
+          </object> <font size="2">Click on the diagram below to step through 
+          the animation. Left click or PageDown to go to the next step and right 
+          click or press PageUp to go to the previous step. </font> 
+        </center>
+      </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Example program</font></h3>
+    </td>
+    <td width="525"> 
+      <p> Comma delimited or comma separated values (CSV) is a file format widely 
+        used in the computing industry. </p>
+      <p>It allows data to be transferred between applications with incompatible 
+        file formats (Excel, for example, can save its spreadsheets in this form). 
+      </p>
+      <p>But before the records in a CSV format file can be processed they must 
+        be unpacked into individual fields. </p>
+      <p>In this example, a file of customer records is held in file with a CSV-like 
+        format. Each record contains a customer name, a customer address and the 
+        customer balance. The fields are separated from one another by commas. 
+        The individual parts of the customer address are separated by the slash 
+        "/" character. </p>
+      <p>An example record is - </p>
+      <p>Michael Ryan,3 Winchester Drive/Castletroy/Limerick/Ireland,0022456 </p>
+      <p>The program below reads the file, unpacks each the record into separate 
+        fields and writes the unpacked record to a new file.</p>
+      <div align="CENTER">
+        <table border="1" width="75%" bordercolor="#C0C0C0" BACKGROUND="Resources\pics\code.gif" cellpadding="10" cellspacing="0">
+          <tr> 
+            <td> 
+              <pre>IDENTIFICATION DIVISION.
+PROGRAM-ID. CDFILE.
+AUTHOR. Michael Coughlan.
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+     SELECT CommaDelimitedFile ASSIGN TO "CDFILE.DAT".
+     SELECT CustomerFile ASSIGN TO "CustFile.DAT".
+
+DATA DIVISION.
+FILE SECTION.
+FD  CommaDelimitedFile.
+01  CommaDelimitedRec     PIC X(205).
+    88 EndOfFile   VALUE HIGH-VALUES.
+
+FD  CustomerFile.
+01  CustomerRec.
+    02 CustName    PIC X(40).
+    02 AddrLinesUsed      PIC 9.
+    02 CustAddress.
+       03 AddrLine PIC X(25) OCCURS 1 TO 6
+                   DEPENDING ON AddrLinesUsed.
+    02 CustBalance PIC 9(5)V99.
+
+WORKING-STORAGE SECTION.
+01  TempAddress    PIC X(150).
+01  TempBalance    PIC X(7).
+01  AdjustedBalance REDEFINES TempBalance PIC 9(5)V99.
+
+PROCEDURE DIVISION.
+Begin.
+    OPEN INPUT CommaDelimitedFile
+    OPEN OUTPUT CustomerFile
+    READ CommaDelimitedFile
+       AT END SET EndOfFile TO TRUE
+    END-READ
+
+    PERFORM UNTIL EndOfFile
+       MOVE ZEROS TO AddrLinesUsed
+       UNSTRING CommaDelimitedRec DELIMITED BY ","
+           INTO CustName, TempAddress, TempBalance
+       UNSTRING TempAddress DELIMITED BY "/"
+           INTO AddrLine(1), AddrLine(2), AddrLine(3),
+                AddrLine(4), AddrLine(5), AddrLine(6)
+                TALLYING IN AddrLinesUsed
+       MOVE AdjustedBalance TO CustBalance
+       WRITE CustomerRec
+       READ CommaDelimitedFile
+          AT END SET EndOfFile TO TRUE
+       END-READ
+    END-PERFORM
+    CLOSE CommaDelimitedFile, CustomerFile
+    STOP RUN.</pre>
+            </td>
+          </tr>
+        </table>
+        </div>
+      
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td valign="TOP" align="LEFT" width="100%" bgcolor="#993300" colspan="2"> 
+      <h2 align="CENTER"><font color="#FFFF00"><a name="combined"></a>Combined 
+        example</font></h2>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#993300">Introduction</font></h3>
+    </td>
+    <td width="525"> 
+      <p>This example takes a string, containing a name consisting of any number 
+        of Christian names followed by a surname, and converts it by reducing 
+        the Christian names to their first letters followed by a period. </p>
+      <p>For example "Michael John Tim James Ryan" becomes "M.J.T.J. Ryan".</p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Data items used in the example</font> </h3>
+    </td>
+    <td width="525"> 
+      <pre>01 OldName  PIC X(80).
+  
+01 TempName.
+   02 NameInitial  PIC X.
+   02 FILLER       PIC X(15).
+
+01 NewName         PIC X(30).
+
+01 Pointers.
+   02 StrPtr       PIC 99 VALUE 1.
+   02 UnstrPtr     PIC 99 VALUE 1.
+      88 NameProcessed VALUE 81.</pre>
+      <p> 
+        <center>
+        </center>
+      </p>
+      <hr>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+      <h3><font color="#800000">Animation</font> </h3>
+    </td>
+    <td width="525"> 
+      <center>
+        <object classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=520 height=416>
+          <param name="File" value="Resources/ppz/Unstring3.ppz">
+          <embed width=520 height=416 src="Resources/ppz/Unstring3.ppz"></embed><noembed>
+          This page contains a Microsoft PowerPoint Animation that your browser 
+          was unable to view.<a href="Resources/ppz/Unstring3.ppz">Click here to open 
+          Resources/ppz/Unstring3.ppz fullscreen</a></NOEMBED> 
+        </object> 
+      </center>
+      <div align="CENTER">
+        <font size="2">Click on the diagram below to step through the animation. 
+        Left click or PageDown to go to the next step and right click or press 
+        PageUp to go to the previous step. </font> 
+      </div>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr> 
+    <td> 
+      <hr>
+      <p align="CENTER"><a href="#top">To top of page</a></p>
+      <p align="CENTER">&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="710">
+  <tr>
+    <td> 
+      <hr>
+      <h3 align="CENTER">Copyright Notice</h3>
+      <p align="LEFT">These COBOL course materials are the copyright property 
+        of Michael Coughlan.</p>
+      <p><font size="2">All rights reserved. No part of these course materials 
+        may be reproduced in any form or by any means - graphic, electronic, mechanical, 
+        photocopying, printing, recording, taping or stored in an information 
+        storage and retrieval system - without the written permission of </font><font size="2">the 
+        author.</font></p>
+      <p align="CENTER"><font size="2">(c) Michael Coughlan</font></p>
+      <hr>
+      <p><i><font size=-1>Last updated : April 1998</font></i> <br>
+        <font size=-1><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font> 
+      </p>
+    </td>
+  </tr>
+</table>
+<h3 align="CENTER">&nbsp;</h3>
+<h3 align="CENTER">&nbsp;</h3>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+</BODY>
+</HTML>

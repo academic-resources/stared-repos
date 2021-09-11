@@ -1,0 +1,28 @@
+{
+    "name": "node-db3-challenge",
+    "version": "1.0.0",
+    "description": "Challenge for Node DB3 Module",
+    "main": "index.js",
+    "scripts": {
+        "server": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LambdaSchool/node-db3-challenge.git"
+    },
+    "keywords": [],
+    "author": "Lambda School",
+    "bugs": {
+        "url": "https://github.com/LambdaSchool/node-db3-challenge/issues"
+    },
+    "homepage": "https://github.com/LambdaSchool/node-db3-challenge#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "knex": "^0.20.8",
+        "knex-cleaner": "^1.3.0",
+        "sqlite3": "^4.1.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    }
+}

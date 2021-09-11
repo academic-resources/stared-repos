@@ -1,0 +1,396 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Reading Sequential Files</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+
+<CENTER>
+<H2>
+<IMG SRC="T-CobolExercise.gif" HEIGHT=56 WIDTH=183></H2></CENTER>
+
+<CENTER>
+<H2>
+Reading Sequential Files</H2></CENTER>
+
+<HR WIDTH="100%">
+<CENTER><FONT SIZE=-1>READ</FONT>, <FONT SIZE=-1>PERFORM .. UNTIL</FONT>,
+<FONT SIZE=-1>DISPLAY</FONT></CENTER>
+
+<HR WIDTH="100%">
+<H2>
+Introduction</H2>
+The program SeqRead.Cbl reads a sequential file and displays the StudentId,
+StudentName and the CourseCode of each record in the file on the screen.&nbsp;&nbsp;
+In this exercise you will re-write this program so that it displays the
+Student Initials, Surname and DateOfBirth on the screen.
+
+<P>Download the <A HREF="ftp://www.csis.ul.ie/cobol/exercises/seqread.cbl">SeqRead.Cbl</A> 
+  program and save it to the WorkArea directory on drive D:. 
+<P>Download the data file <A HREF="ftp://www.csis.ul.ie/cobol/exercises/students.dat">Students.Dat</A>
+and save it to the same place.
+
+<P>Load SeqRead.Cbl into the NetExpress environment. <BR>
+  &nbsp;
+<H2>
+Examining SeqRead</H2>
+Examine the program carefully, paying particular attention to the way the
+end of file is handled.&nbsp; Note the use of&nbsp; the condition name
+EndOfStudentFile.
+
+<P>Compile the program.&nbsp;<IMG SRC="i-tick.gif" HSPACE=7 HEIGHT=24 WIDTH=24>
+
+<P>Set a breakpoint at the first statement in the Procedure Division (move
+the cursor over the statement, right-click and select Set Breakpoint from
+the menu which appears).
+<BR>Use the Animator to step&nbsp;<IMG SRC="i-step.gif" HSPACE=7 HEIGHT=23 WIDTH=23>through
+the program.
+
+<P>Assign the variables StudentDetails, StudentName, Initials, DateOfBirth
+and MOBirth to the watch list (Right-click on the variable, select <B><I>Examine</I></B>
+from menu and then <B><I>Add to list</I></B> from dialogue box).
+
+<P>As the program runs attempt to answer the following questions:-
+<OL>
+  <LI> What is the size (in characters) of the StudentDetails record?</LI>
+  <LI> What is the size of StudentName?</LI>
+  <LI> What is the size of DateOfBirth?</LI>
+  <LI> The level number for MOBirth is 03 and that of DateOfBirth is 02.&nbsp; 
+    What is the significance of that?&nbsp; Examine the values in DateOfBirth 
+    and MOBirth as the program runs to see if your answer makes sense.</LI>
+</OL>
+
+<H2>
+Amending SeqRead</H2>
+Change the program SeqRead.Cbl to produce a program which displays the student 
+Initials, Surname and DateOfBirth on the computer screen. The Initials should 
+be immediately followed by a full stop and a space (see example run below). The 
+date should be displayed in the US month, day, year format. The parts of the date 
+should be separated from one another by a hyphen. The year should be the full 
+four digits. 
+<P>The student record consists of the following items;
+<TABLE BORDER WIDTH="50%" >
+  <TR> 
+    <TD WIDTH="115"> 
+      <CENTER>
+        <B>Field</B>
+      </CENTER>
+    </TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        <B>Type</B>
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        <B>Length</B>
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        <B>Value</B>
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="115">Student Id</TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        9
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        7
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        0-9999999
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="115">Student Name</TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        .
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        .
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        Group
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="115">Surname</TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        X
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        8
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        -
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="115">Initials</TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        X
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        2
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        -
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="115">DateOfBirth</TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        .
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        .
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        Group
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="115">Year</TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        9
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        4 
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        00-9999 
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="115">Month</TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        9
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        2
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        01-12
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="115">Day</TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        9
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        2
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        01-31
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="115">Course Code</TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        X
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        4
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        -
+      </CENTER>
+    </TD>
+  </TR>
+  <TR> 
+    <TD WIDTH="115">Gender</TD>
+    <TD WIDTH="11"> 
+      <CENTER>
+        X
+      </CENTER>
+    </TD>
+    <TD WIDTH="64"> 
+      <CENTER>
+        1
+      </CENTER>
+    </TD>
+    <TD WIDTH="188"> 
+      <CENTER>
+        M/F
+      </CENTER>
+    </TD>
+  </TR>
+</TABLE>
+&nbsp;
+<BR>&nbsp;
+<UL>
+<UL>
+<UL><U><FONT SIZE=+2>Example Run</FONT></U></UL>
+<TT>------ STUDENT REPORT ------</TT>
+
+<P><TT>MS. COUGHLAN DOB = 10-08-1985</TT>
+
+<P><TT>SR. SMITH DOB = 01-28-1989</TT>
+
+<P><TT>JM. Ryan DOB = 09-25-1986</TT>
+
+<P><TT>etc.</TT>
+<BR>&nbsp;</UL>
+</UL>
+
+<H2> &nbsp; <BR>
+</H2>
+<HR>
+<TABLE CELLSPACING=0 CELLPADDING=0 COLS=3 WIDTH="200" ><TR ALIGN=CENTER VALIGN=TOP>
+<TD><A HREF="default.htm"><IMG SRC="/pics/B-BackArrow.gif" ALT="Back to COBOL Exercises page" BORDER=0 HEIGHT=52 WIDTH=52></A>
+<FONT SIZE=-2>To COBOL Exercises</FONT></TD>
+
+<TD><A HREF="/CSISFORM.HTM"><IMG SRC="/pics/b-evaluation.gif" ALT="Please fill out our evaluation form" BORDER=0 HEIGHT=52 WIDTH=52></A>
+<FONT SIZE=-2>Evaluation Form</FONT></TD>
+
+<TD><A HREF="/SEARCH/CSISQueryHit.HTM"><IMG SRC="/pics/b-WebSearch.gif" ALT="Search the CSIS Web Site" BORDER=0 HEIGHT=52 WIDTH=52></A>
+<FONT SIZE=-2>Search CSIS Web Site</FONT></TD>
+<TD>
+
+<CENTER>
+<FORM>
+          Selectable Site Contents
+          <select name="list">
+            <option value="http://www.ul.ie/">UL Home Page</option>
+            <option value="http://www.ul.ie/~informat/">College of I&amp;E Home 
+            Page</option>
+            <option value="http://www.csis.ul.ie/default.htm">CSIS Home Page</option>
+            <option value="http://www.csis.ul.ie/courses.HTM">Courses On Offer</option>
+            <option value="http://www.csis.ul.ie/CompSys.HTM">...Computer Systems 
+            Degree</option>
+            <option value="http://www.csis.ul.ie/GradDip.HTM">...Graduate Diploma 
+            in Computing</option>
+            <option value="http://www.csis.ul.ie/software_localisation/default.htm">...Graduate 
+            Diploma/MSc in Software Localisation</option>
+            <option value="http://www.csis.ul.ie/ccmcm/default.htm">...MSc in 
+            Music Technology</option>
+            <option value="http://www.csis.ul.ie/soft_re_eng.html/default.htm">...MSc 
+            in Software Reengineering</option>
+            <option value="http://www.csis.ul.ie/Directory/Staff.HTM">Department 
+            Personnel</option>
+            <option value="http://www.csis.ul.ie/Directory/phone.HTM">...CSIS 
+            Telephone Directory</option>
+            <option value="http://www.ul.ie/ITD/PhoneBook.html">...UL Internal 
+            Telephone Directory</option>
+            <option value="http://www.csis.ul.ie/Research.HTM">Research</option>
+            <option value="http://www.csis.ul.ie/Research/ResearchCntr.HTM">...Research 
+            Centres</option>
+            <option value="http://www.csis.ul.ie/Research/ResearchPrj.HTM">...Research 
+            Projects</option>
+            <option value="http://www.csis.ul.ie/Research/RsrchPubs.htm">...Research 
+            Publications</option>
+            <option value="http://www.csis.ul.ie/Research/techrpts.htm">...Technical 
+            Reports</option>
+            <option value="http://www.csis.ul.ie/Research/PhdTheses.htm">...Ph.D 
+            Theses</option>
+            <option value="http://www.csis.ul.ie/Research/masters.htm">...M.Sc. 
+            Theses</option>
+            <option value="http://www.csis.ul.ie/StudentResources.HTM">Student 
+            Resources</option>
+            <option value="http://www.csis.ul.ie/photoalbum/classes/namesonly.htm">...Computer 
+            Systems Graduated Classes </option>
+            <option value="http://www.csis.ul.ie/staff/norahpower/FYPSuggestions9798.htm">...Final 
+            Year Project suggestions</option>
+            <option value="http://www.csis.ul.ie/fyp97/index.html">...Final Year 
+            Projects web page</option>
+            <option value="http://www.csis.ul.ie/studentresources/schedules/csislabs.htm">...Lab 
+            Schedules</option>
+            <option value="http://www.csis.ul.ie/studentresources/ModuleMaterial.htm">...Module 
+            Materials</option>
+            <option value="http://www.csis.ul.ie/studentresources/links.htm">...Useful 
+            Links</option>
+            <option value="http://www.csis.ul.ie/StudentResources/fyproj.htm">...Completed 
+            Final Year Projects</option>
+            <option value="http://www.csis.ul.ie/meetings/Meetings.HTM">Meetings</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/Album.htm">Photo Album</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/classes/default.htm">...Computer 
+            Systems - Class Photos</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuin.htm">...Schuman 
+            Interior</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuout.htm">...Schuman 
+            Environs</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/ULgrounds/default.htm">...University 
+            Grounds</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM">General Information</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Department">...Department 
+            Information</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Getting">...Getting 
+            Around</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Contacting">...Contacting 
+            the department</option>
+            <option value="http://www.csis.ul.ie/TOYS/WHOSON.HTM">...Who's on 
+            the server</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#About">...About these 
+            pages</option>
+          </select>
+          <INPUT TYPE=BUTTON VALUE="Go!" 
+onClick="top.location.href=this.form.list.options[this.form.list.selectedIndex].value">
+</FORM><p></P>
+</CENTER>
+
+</TD>
+</TR>
+</TABLE>
+
+<HR><I><FONT SIZE=-1>Last updated : March 1998</FONT></I>
+<BR><FONT SIZE=-1><A HREF="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</A></FONT>
+</BODY>
+</HTML>

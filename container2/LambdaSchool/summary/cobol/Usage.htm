@@ -1,0 +1,2323 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>The USAGE clause</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715" cellspacing="0" height="100%">
+  <TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2" height="307"> 
+            <CENTER>
+              <H2><img src="Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> The USAGE clause</H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP" height="44">&nbsp;</TD>
+                <TD width="4%" valign="TOP" height="44"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" height="44"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><br>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP" height="58">&nbsp;</TD>
+                <TD width="4%" valign="TOP" height="58"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top" height="58"> 
+                  <p><B><A href="#part1" target="">The USAGE clause</A><BR>
+                    </B><FONT size="-1">Subprograms, the syntax and semantics 
+                    of the CALL verb and parameter passing mechanisms. State memory, 
+                    the IS INITIAL clause and the CANCEL command.</FONT><br>
+                  </p>
+                </TD>
+              </TR>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2" height="27"> 
+            <h2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><font face="Arial, Helvetica, sans-serif">Introduction</font></FONT></h2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" bgcolor="#FFFFCC" height="302"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+            <H4><IMG src="Resources/pics/PanelLine.gif" width="175" height="1"></H4>
+          </TD>
+          <TD width="525" valign="top" height="302"> 
+            <div align="center"> 
+              <p align="left">The internal representation of data can be an important 
+                consideration for program efficiency. Unfortunately the default 
+                representation used by COBOL for numeric data items can negatively 
+                impact the speed of computations. A more efficient format for 
+                numeric data can be specified by using the USAGE clause.</p>
+              <p align="left">This unit introduces the concept of internal data 
+                representations, it discusses the default representation used 
+                in COBOL and outlines how that representation, used for numeric 
+                data, might cause inefficiencies.</p>
+              <p align="left"> The syntax of the <FONT size="-1">USAGE</FONT> 
+                clause is given and the various options explained.</p>
+              <p align="left">The <FONT size="-1">SYNCHRONIZED</FONT> clause is 
+                introduced and a generalized example given.</p>
+              <HR width="100%" align="center" size="1">
+            </div>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="242"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="242"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Know that text is stored in a computer using some encoding sequence.<BR>
+                <BR>
+              </LI>
+              <LI>Understand the problems caused by storing numeric data as ASCII 
+                digits.<BR>
+                <BR>
+              </LI>
+              <LI>Be able to use use the <FONT size="-1">USAGE</FONT> clause to 
+                change the way numeric data is stored in the computer.<BR>
+                <BR>
+              </LI>
+              <LI>Know when and how to use the <FONT size="-1">SYNCHRONIZED</FONT> 
+                clause.</LI>
+            </OL>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="177"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="177" valign="top"> 
+            <p>Introduction to COBOL <BR>
+              Declaring data in COBOL<BR>
+              Basic Procedure Division commands <BR>
+              Selection in COBOL<BR>
+              Iteration in COBOL <BR>
+              Introduction to Sequential files<BR>
+              Processing Sequential files<BR>
+              Reading Sequential Files <BR>
+              Edited Pictures <BR>
+            </p>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part1"></A> <FONT face="Arial, Helvetica, sans-serif">The 
+              USAGE clause</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="551"> 
+            <H4><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>Introduction</B></FONT></H4>
+            <H4>&nbsp;</H4>
+            <DIV align="center"><IMG src="Resources/pics/i-Detail.gif" width="30" height="37"> 
+            </DIV>
+            <DIV align="center"> 
+              <P><FONT size="-1"><BR>
+                </FONT><FONT size="-1"><B>ASCII</B> <BR>
+                <B>A</B>merican<B> S</B>tandard <B>C</B>ode for <B>I</B>nformation 
+                <B>I</B>nterchange</FONT></P>
+              <P><FONT size="-1"><B>EBCDIC<BR>
+                </B></FONT><FONT size="-1"><B>E</B>xtended <B>B</B>inary <B>C</B>oded 
+                <B>D</B>ecimal <B>I</B>nterchange <B>C</B>ode</FONT></P>
+              <P><FONT size="-1"><B>BCD</B><BR>
+                <B>B</B>inary <B>C</B>oded <B>D</B>ecimal</FONT></P>
+              <P>&nbsp;</P>
+              <P><BR>
+              </P>
+            </DIV>
+          </TD>
+          <TD width="525" valign="top" height="551"> 
+            <P>Computers store their data in the form of binary digits. Apart 
+              from cardinal numbers (positive integers) all other data stored 
+              in the computer's memory uses some sort of formatting convention. 
+            </P>
+            <P>Text data, for example, is stored using an encoding sequence like 
+              ASCII or EBCDIC. An encoding system is simply a convention which 
+              specifies that a particular set of bits is to be used to represent 
+              a particular character. For instance, the diagram below shows the 
+              bit configuration used to represent an upper case &quot;A&quot; 
+              in the ASCII and the EBCDIC encoding sequences.</P>
+            <P align="center"><IMG src="Resources/pics/Usage1.gif" width="396" height="102"></P>
+            <P>Numeric data can be held as text digits (ASCII digits) or as pure 
+              binary numbers (in the case of cardinal values), or as twos complement 
+              binary numbers (in the case of integers), or as decimal numbers 
+              (using BCD), or as real numbers (using a real number format such 
+              as the IEEE specification for floating point numbers).</P>
+            <P>The <FONT size="-1">USAGE</FONT> clause is used to specify how 
+              a data item is to be stored in the computer's memory. Every variable 
+              declared in a COBOL program has a <FONT size="-1">USAGE </FONT>clause 
+              - even when no explicit clause is specified. When there is no explicit 
+              <FONT size="-1">USAGE</FONT> clause, the default - <FONT size="-1">USAGE 
+              IS DISPLAY</FONT> - is applied. </P>
+            <DIV align="center"> </DIV>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="141"> 
+            <H4><FONT color="#800000"><B><FONT face="Arial, Helvetica, sans-serif">Problems 
+              with USAGE IS DISPLAY</FONT></B></FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><IMG src="Resources/pics/aa-ProgFrag.gif" width="48" height="44"></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><IMG src="Resources/pics/aai-LightBulbTip.gif" width="42" height="44"></H4>
+            <P><FONT size="-1">The speed of modern computers means that it is 
+              hardly worth the effort of using the USAGE clause unless the data 
+              item is going to be used in thousands of computations.</FONT></P>
+            <P> <FONT size="-1">For reasons of portability the USAGE clause should 
+              never be used in record descriptions.<BR>
+              If the file is read on a different make of computer we have no guarantee 
+              that the data will be interpreted correctly.</FONT></P>
+            <P><FONT size="-1">Even on the same make of computer, using the USAGE 
+              clause in record descriptions means that the data in the file will 
+              probably not be understood by other programming languages or by 
+              utility programs or by text editors. </FONT> </P>
+            <P>&nbsp;</P>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="141"> 
+            <P>For text items, or for numeric items that are not going to be used 
+              in a computation (Account Numbers, Phone Numbers etc.), the default 
+              of <FONT size="-1">USAGE IS DISPLAY</FONT> presents no problems; 
+              but for numeric items upon which some calculation is to be performed 
+              the default usage is not the most efficient way to store the data. 
+            </P>
+            <P>When numeric items (PIC 9 items) have a usage of <FONT size="-1">DISPLAY</FONT>, 
+              they are stored as ASCII digits (see the ASCII digits 0-9 in the 
+              ASCII table below). </P>
+            <P>Consider the following program fragment. What would happen if computations 
+              were done directly on numbers stored in this format?</P>
+            <TABLE width="289" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD height="197"> 
+                  <PRE><B>   ? ? ? ? ? ? ? ? ? ? ? ? 
+WORKING-STORAGE SECTION.
+01 Num1    PIC 9 VALUE 4.
+01 NUM2    PIC 9 VALUE 1.
+01 Num3    PIC 9 VALUE ZERO.<BR>   ? ? ? ? ? ? ? ? ? ? ? ? <BR><BR>PROCEDURE DIVISION.<BR>Begin. 
+   ? ? ? ? ? ? ? ? ? ? ? ? <BR>   ADD Num1, Num2 GIVING Num3<BR>   ? ? ? ? ? ? ? ? ? ? ? ?</B></PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <DIV align="center"></DIV>
+            <P>&nbsp;</P>
+            <P>Since none of the data items have an explicit <FONT size="-1">USAGE</FONT> 
+              clause they default to - <FONT size="-1">USAGE IS DISPLAY</FONT>. 
+              This means that the values in the variables Num1, Num2 and Num3 
+              are stored as ASCII digits. How does this effect calculations?</P>
+            <P>If you examine the ASCII table below you will see that the digit 
+              4 (the value in Num1) is encoded as <B><FONT color="#FF0000">00110100 
+              </FONT></B> and the digit 1 is encoded as <FONT color="#FF0000"><B>00110001</B></FONT>. 
+            <P>When these these binary numbers are added together the result is 
+              <B><FONT color="#FF0000">01100101</FONT></B> which is the ASCII 
+              code for the lower case letter &quot;e&quot;. 
+            <P>The sum <B>4 + 1 = e</B> does not compute. 
+            <P align="center"><IMG src="Resources/pics/Usage2.gif" width="439" height="202"> 
+            <P>&nbsp;</P>
+            <P>When calculations are done with numeric data items whose <FONT size="-1">USAGE 
+              IS DISPLAY,</FONT> the computer has to convert the numeric values 
+              to their binary equivalents before the calculation can be done. 
+              When the result has been computed the computer has to reconvert 
+              it to ASCII digits. Conversion to and from ASCII digits slows down 
+              computations.</P>
+            <P>For this reason, data that is heavily involved in computation is 
+              often declared using one of the usages optimized for computation 
+              such as <FONT size="-1">USAGE IS COMPUTATIONAL</FONT>.</P>
+            <P>&nbsp;</P>
+            <DIV align="center"> 
+              <P><B>ASCII Table</B> </P>
+              <TABLE border=1 cellspacing=0 cellpadding=0 align="center">
+                <TR bgcolor="#FFFFCC"> 
+                  <TD width=114> 
+                    <P align="center"><B><A>Char</A></B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center"><B>Dec</B></P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center"><B>Hex</B></P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center"><B>Binary</B></P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^@ (NUL)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">0</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">00</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00000000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^A (SOX)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">1</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">01</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00000001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^B (STX)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">2</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">02</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00000010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^C (ETX)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">3</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">03</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00000011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^D (EOT)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">4</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">04</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00000100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^E (ENQ)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">5</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">05</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00000101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^F (ACK)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">6</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">06</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00000110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^G (BEL)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">7</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">07</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00000111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^H (BS)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">8</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">08</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00001000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^I (HT)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">9</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">09</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00001001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^J (NL)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">10</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">0A</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00001010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^K (VT)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">11</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">0B</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00001011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^L (NP)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">12</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">0C</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00001100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^M (CR)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">13</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">0D</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00001101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^N (SO)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">14</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">0E</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00001110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^O (SI)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">15</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">0F</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00001111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^P (DLE)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">16</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">10</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00010000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^Q (DS1)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">17</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">11</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00010001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^R (DS2)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">18</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">12</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00010010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^S (DS3)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">19</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">13</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00010011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^T (DC4)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">20</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">14</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00010100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^U (NAK)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">21</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">15</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00010101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^V (SYN)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">22</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">16</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00010110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^W (ETB)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">23</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">17</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00010111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^X (CAN)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">24</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">18</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00011000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^Y (EM)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">25</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">19</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00011001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^Z (SUB)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">26</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">1A</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00011010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^[ (ESC)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">27</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">1B</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00011011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^\ (FS)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">28</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">1C</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00011100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^] (GS)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">29</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">1D</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00011101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^^ (RS)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">30</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">1E</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00011110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^_ (US)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">31</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">1F</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00011111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>(SP)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">32</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">20</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00100000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>!</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">33</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">21</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00100001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>&quot;</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">34</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">22</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00100010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>#</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">35</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">23</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00100011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>$</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">36</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">24</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00100100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>%</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">37</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">25</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00100101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>&amp;</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">38</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">26</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00100110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>'</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">39</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">27</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00100111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>(</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">40</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">28</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00101000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">41</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">29</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00101001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>*</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">42</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">2A</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00101010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>+</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">43</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">2B</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00101011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>,</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">44</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">2C</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00101100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>-</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">45</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">2D</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00101101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>.</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">46</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">2E</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00101110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>/</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">47</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">2F</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00101111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>0</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">48</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">30</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00110000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B><FONT color="#FF0000">1</FONT></B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center"><B><FONT color="#FF0000">49</FONT></B></P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center"><B><FONT color="#FF0000">31</FONT></B></P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center"><B><FONT color="#FF0000">00110001</FONT></B></P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>2</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">50</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">32</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00110010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>3</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">51</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">33</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00110011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B><FONT color="#FF0000">4</FONT></B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center"><B><FONT color="#FF0000">52</FONT></B></P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center"><B><FONT color="#FF0000">34</FONT></B></P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center"><B><FONT color="#FF0000">00110100</FONT></B></P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>5</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">53</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">35</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00110101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>6</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">54</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">36</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00110110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>7</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">55</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">37</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00110111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>8</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">56</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">38</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00111000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>9</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">57</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">39</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00111001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>:</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">58</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">3A</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00111010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>;</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">59</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">3B</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00111011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>&lt;</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">60</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">3C</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00111100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>=</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">61</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">3D</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00111101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>&gt;</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">62</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">3E</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00111110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>?</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">63</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">3F</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">00111111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>@</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">64</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">40</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01000000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>A</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">65</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">41</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01000001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>B</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">66</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">42</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01000010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>C</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">67</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">43</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01000011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>D</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">68</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">44</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01000100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>E</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">69</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">45</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01000101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>F</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">70</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">46</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01000110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>G</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">71</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">47</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01000111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>H</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">72</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">48</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01001000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>I</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">73</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">49</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01001001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>J</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">74</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">4A</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01001010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>K</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">75</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">4B</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01001011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>L</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">76</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">4C</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01001100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>M</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">77</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">4D</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01001101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>N</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">78</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">4E</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01001110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>O</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">79</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">4F</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01001111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>P</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">80</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">50</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01010000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>Q</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">81</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">51</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01010001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>R</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">82</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">52</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01010010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>S</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">83</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">53</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01010011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>T</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">84</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">54</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01010100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>U</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">85</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">55</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01010101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>V</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">86</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">56</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01010110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>W</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">87</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">57</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01010111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>X</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">88</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">58</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01011000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>Y</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">89</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">59</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01011001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>Z</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">90</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">5A</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01011010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>[</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">91</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">5B</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01011011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>\</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">92</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">5C</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01011100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>]</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">93</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">5D</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01011101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">94</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">5E</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01011110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>_</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">95</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">5F</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01011111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>`</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">96</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">60</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01100000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>a</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">97</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">61</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01100001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>b</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">98</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">62</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01100010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>c</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">99</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">63</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01100011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>d</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">100</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">64</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01100100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B><FONT color="#FF0000">e</FONT></B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center"><B><FONT color="#FF0000">101</FONT></B></P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center"><B><FONT color="#FF0000">65</FONT></B></P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center"><B><FONT color="#FF0000">01100101</FONT></B></P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>f</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">102</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">66</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01100110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>g</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">103</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">67</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01100111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>h</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">104</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">68</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01101000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>i</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">105</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">69</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01101001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>j</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">106</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">6A</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01101010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>k</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">107</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">6B</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01101011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>l</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">108</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">6C</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01101100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>m</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">109</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">6D</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01101101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>n</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">110</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">6E</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01101110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>o</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">111</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">6F</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01101111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>p</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">112</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">70</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01110000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>q</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">113</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">71</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01110001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>r</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">114</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">72</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01110010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>s</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">115</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">73</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01110011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>t</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">116</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">74</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01110100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>u</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">117</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">75</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01110101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>v</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">118</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">76</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01110110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>w</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">119</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">77</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01110111</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>x</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">120</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">78</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01111000</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>y</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">121</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">79</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01111001</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>z</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">122</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">7A</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01111010</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>{</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">123</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">7B</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01111011</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>|</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">124</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">7C</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01111100</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>}</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">125</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">7D</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01111101</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>~</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">126</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">7E</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01111110</P>
+                  </TD>
+                </TR>
+                <TR> 
+                  <TD width=114> 
+                    <P align="center"><B>^? (DEL)</B></P>
+                  </TD>
+                  <TD width=66> 
+                    <P align="center">127</P>
+                  </TD>
+                  <TD width=60> 
+                    <P align="center">7F</P>
+                  </TD>
+                  <TD width=108> 
+                    <P align="center">01111111</P>
+                  </TD>
+                </TR>
+              </TABLE>
+              <P>&nbsp;</P>
+            </DIV>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1780"> 
+            <P><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>USAGE 
+              syntax and notes</B></FONT></P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P align="center"><IMG src="Resources/pics/aa-ProgFrag.gif" width="48" height="44"></P>
+            <P align="center"><IMG src="Resources/pics/aai-BugAlert.gif" width="56" height="62"></P>
+            <P align="center"><FONT size="-1">Group items are always treated as 
+              alphanumeric and this can cause problems when there are subordinate 
+              COMP items.</FONT></P>
+            <P align="center"><FONT size="-1">For instance, suppose we had a statement 
+              like - <BR>
+              MOVE ZEROS TO GROUP2.<BR>
+              in the program opposite.</FONT><FONT size="-1"><BR>
+              <BR>
+              On the surface it looks as if this statement is moving the numeric 
+              value 0 to NumItem1 and NumItem2 but what is actually moved into 
+              these items is the ASCII digit &quot;0&quot;.<BR>
+              <BR>
+              When an attempt is made to use NumItem1 or NumItem2 in a calculation 
+              the program will crash because these data-items contain non-numeric 
+              data. </FONT></P>
+            </TD>
+          <TD width="525" valign="top" height="1780"> 
+            <P align="center"><IMG src="Resources/pics/UsageSyn1.gif" width="214" height="118"></P>
+            <P><B>USAGE notes</B></P>
+            <UL>
+              <LI>The <FONT size="-1">USAGE </FONT>clause may be used with any 
+                data description entry except those with level numbers of 66 or 
+                88.<BR>
+                <BR>
+              </LI>
+              <LI>When the <FONT size="-1">USAGE</FONT> clause is declared for 
+                a group item, the usage specified is applied to every item in 
+                the group. The group item itself is still treated as an alphanumeric 
+                data-item (see example program below).<BR>
+                <BR>
+              </LI>
+              <LI><FONT size="-1">USAGE IS COMPUTATIONAL</FONT> or <FONT size="-1">COMP</FONT> 
+                or <FONT size="-1">BINARY</FONT> are synonyms of one another.<BR>
+                <BR>
+              </LI>
+              <LI>The <FONT size="-1">USAGE IS INDEX</FONT> clause is used to 
+                provide an optimized table subscript. When a table is the target 
+                of a <FONT size="-1">SEARCH</FONT> statement it must have an associated 
+                index item (see the Search Tutorial).</LI>
+            </UL>
+            <P><BR>
+              <B>USAGE rules</B><BR>
+            </P>
+            <OL>
+              <LI>Any item declared with <FONT size="-1">USAGE IS INDEX </FONT>can 
+                only appear in:<BR>
+                - A <FONT size="-1">SEARCH </FONT>or <FONT size="-1">SET</FONT> 
+                statement<BR>
+                - A relation condition<BR>
+                - The <FONT size="-1">USING</FONT> phrase of the <FONT size="-1">PROCEDURE 
+                DIVISION</FONT><BR>
+                - The <FONT size="-1">USING</FONT> phrase of the <FONT size="-1">CALL</FONT> 
+                statement<BR>
+                <BR>
+              </LI>
+              <LI>The picture string of a <FONT size="-1">COMP</FONT> or <FONT size="-1">PACKED-DECIMAL</FONT> 
+                item can contain only the symbols 9, S, V and/or P.<BR>
+                <BR>
+              </LI>
+              <LI>The picture clause used for <FONT size="-1">COMP</FONT> or <FONT size="-1">PACKED-DECIMAL</FONT> 
+                items must be numeric.<BR>
+              </LI>
+            </OL>
+            <P><B>USAGE examples</B></P>
+            <P><BR>
+            </P>
+            <TABLE width="374" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD height="187"> 
+                  <PRE><B><BR>01 Num1 PIC 9(5)V99 USAGE IS COMP.
+01 Num2 PIC 99 USAGE IS PACKED-DECIMAL.
+01 IdxItem USAGE IS INDEX.<BR>
+01 GroupItems USAGE IS COMP.
+   02 Item1 PIC 999.
+   02 Item2 PIC 9(4)V99.
+   02 New1 PIC S9(5) COMP SYNC.
+<BR>01 Group2.
+   02 NumItem1 PIC 9(3)V99 USAGE IS COMP.
+   02 NumItem2 PIC 99V99   USAGE IS COMP.<BR></B></PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <DIV align="center"></DIV>
+            <PRE>&nbsp;
+
+</PRE>
+            <P><B>COMP/COMPUTATIONAL/BINARY</B><BR>
+              <FONT size="-1">COMP</FONT> items are held in memory as pure binary 
+              two's complement numbers. The storage requirements for fields described 
+              as <FONT size="-1">COMP</FONT> are as follows:</P>
+            <TABLE width="293" border="1" cellspacing="1" cellpadding="1" align="center">
+              <TR bgcolor="#FFFFCC"> 
+                <TD width="133"> 
+                  <DIV align="center"><B>Number of Digits</B></DIV>
+                </TD>
+                <TD width="166"> 
+                  <DIV align="center"><B>Storage Required.</B></DIV>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="133">PIC 9(1 to 4) </TD>
+                <TD width="166">1 Word (2 Bytes)</TD>
+              </TR>
+              <TR> 
+                <TD width="133">PIC 9(5 to 9) </TD>
+                <TD width="166">1 LongWord (4 Bytes)</TD>
+              </TR>
+              <TR> 
+                <TD width="133">PIC 9(10 to 18) </TD>
+                <TD width="166">1QuadWord (8 Bytes)</TD>
+              </TR>
+            </TABLE>
+            <P><BR>
+              <BR>
+              <B>PACKED-DECIMAL</B><BR>
+              Data-items declared as <FONT size="-1">PACKED-DECIMAL</FONT> are 
+              held in binary-coded-decimal (BCD) form.<BR>
+              Instead of representing the value as a single binary number, the 
+              binary value of each digit is held in a nibble (half a byte). The 
+              sign is held in a separate nibble in the least significant position 
+              of the item (see diagram below).</P>
+            <P align="center"><IMG src="Resources/pics/Usage3.gif" width="406" height="155"></P>
+            <P><BR>
+              <B>General USAGE notes</B><BR>
+              The <FONT size="-1">USAGE</FONT> clause is one of the areas where 
+              many vendors have introduced extensions to the COBOL standard. It 
+              is not uncommon to see <FONT size="-1">COMP-1</FONT>, <FONT size="-1">COMP-2</FONT>, 
+              <FONT size="-1">COMP-3</FONT>, <FONT size="-1">COMP-4</FONT>, <FONT size="-1">COMP-5</FONT> 
+              and <FONT size="-1">POINTER</FONT> usage items in programs written 
+              using these extensions.</P>
+            <P>Even though <FONT size="-1">COMP-1</FONT> and <FONT size="-1">COMP-2</FONT> 
+              are extensions to the COBOL standard, vendors seem to use identical 
+              representations for these usages. <FONT size="-1">COMP-1</FONT> 
+              is usually defined as a single precision, floating point number, 
+              adhering to the IEEE specification for such numbers (Real or Float 
+              in typed languages) and <FONT size="-1">COMP-2</FONT> is usually 
+              defined as a double precision, floating point number (LongReal or 
+              Double in typed languages).</P>
+            <P align="left">&nbsp;</P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="326"><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>The 
+            SYNCHRONIZED clause</B></FONT></TD>
+          <TD width="525" valign="top" height="326"> 
+            <P>The <FONT size="-1">SYNCHRONIZED</FONT> clause is sometimes used 
+              with <FONT size="-1">USAGE IS COMP</FONT> or <FONT size="-1">USAGE 
+              IS INDEX</FONT> items. It is used to optimize speed of processing 
+              but it does so at the expense of increased storage requirements.</P>
+            <P>Many computer memories are organized in such a way that there are 
+              natural addressing boundaries - such as word boundaries. If no special 
+              action is taken some data items in memory may straddle theses boundaries. 
+              This may cause a processing overhead as the CPU may need two fetch 
+              cycles to retrieve the data from memory.</P>
+            <P>The <FONT size="-1">SYNCHRONIZED</FONT> clause is used to explicitly 
+              align<FONT size="-1"> COMP</FONT> and <FONT size="-1">INDEX</FONT> 
+              items along their natural word boundaries. Without the <FONT size="-1">SYNCHRONIZED</FONT> 
+              clause, data-items are aligned on byte boundaries. </P>
+            <P>The word <FONT size="-1">SYNC</FONT> can be used instead of <FONT size="-1">SYNCHRONIZED</FONT>.</P>
+            <P>The effect of the synchronized clause is implementation dependant. 
+              You will need to read your vendor manual to see how it works on 
+              your computer (in some cases it may have no effect).</P>
+            <P>For the purpose of illustrating how the <FONT size="-1">SYNCHRONIZED 
+              </FONT>clause works let us assume that a COBOL program is running 
+              on a word-oriented computer where the CPU fetches data from memory 
+              a word at a time. </P>
+            <P>In this program we want to perform a calculation on the number 
+              stored in the variable <I>TwoBytes</I> (as declared in the diagram 
+              below). Because of the way the data items have been declared, the 
+              number stored in <I>TwoBytes</I> straddles a word boundary. </P>
+            <P>In order to use the number, the CPU has to execute two fetch cycles 
+              - one to get the first part of the number in Word2 and the second 
+              to get the second part of the number in Word3. This double fetch 
+              slows down calculations. </P>
+            <P align="center"><IMG src="Resources/pics/Usage4.gif" width="492" height="164"></P>
+            <P>Now consider the impact of using the <FONT size="-1">SYNCHRONIZED</FONT> 
+              clause. The number in <I>TwoBytes</I> is now aligned along the word 
+              boundary, so the CPU only has to do one fetch cycle to retrieve 
+              the number from memory. This speeds up processing but at the expense 
+              of wasting some storage (the second byte of Word2 is no longer used).</P>
+            <P align="center"><IMG src="Resources/pics/Usage5.gif" width="492" height="164"></P>
+            <P align="center">&nbsp;</P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : May 2002</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

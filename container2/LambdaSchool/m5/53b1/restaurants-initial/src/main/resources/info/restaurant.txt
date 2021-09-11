@@ -1,0 +1,67 @@
+Explain
+See restaurant.png for database layout
+See restaurant.pdf for initial end points documentations
+
+To run the application - all in PostMan! Port is 2019
+
+Get: /restaurants/restaurants
+http://localhost:2019/restaurants/restaurants
+
+Get: /restaurants/restaurant/{restaurantid}
+http://localhost:2019/restaurants/restaurant/13
+
+Get: /restaurants/restaurant/name/{name}
+http://localhost:2019/restaurants/restaurant/name/Apple
+
+Post: /restaurants/restaurant
+http://localhost:2019/restaurants/restaurant
+
+{
+    "name": "Good East",
+    "address": "123 Main Avenue",
+    "city": "Uptown",
+    "state": "ST",
+    "telephone": "555-777-7777",
+    "restaurantPayments": [
+        {
+            "payment": {
+                "paymentid": 1,
+                "type": "Credit Card"
+            }
+        },
+        {
+            "payment": {
+                "paymentid": 3,
+                "type": "Mobile Pay"
+            }
+        }
+    ],
+    "menus": [
+        {
+            "dish": "Soda",
+            "price": 3.50
+        },
+        {
+            "dish": "Latte",
+            "price": 5.00
+        }
+    ]
+}
+
+Put: /restaurants/restaurant/{restaurantid}
+http://localhost:2019/restaurants/restaurant/10
+{
+    "restaurantid": 10,
+    "telephone": "555-555-1234",
+    "restaurantPayments": [
+        {
+            "payment": {
+                "paymentid": 1
+            }
+        }
+    ]
+}
+
+
+
+

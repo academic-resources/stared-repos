@@ -1,0 +1,121 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.associations": {
+        "*.COBOL*": "cobol",
+        "*.COB*": "cobol",
+        "*.COBCOPY*": "cobol",
+        "*.COPYBOOK*": "cobol",
+        "*.COPY*": "cobol",
+        "*.PL1*": "pl1",
+        "*.PLI*": "pl1",
+        "*.INC*": "pl1",
+        "*.INCLUDE*": "pl1",
+        "*.JCL*": "jcl",
+        "*.HLASM*": "hlasm",
+        "*.ASSEMBLE*": "hlasm",
+        "*.ASM*": "hlasm",
+        "*.MACRO*": "hlasm",
+        "*.MACLIB*": "hlasm"
+    },
+    "python.languageServer": "Microsoft",
+    "workbench.sideBar.location": "right",
+    "editor.fontSize": 17,
+    "editor.fontFamily": "'Fira Code', 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "'NanumGothicCoding', 'Inconsolata'",
+    "editor.cursorStyle": "line",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Girl, Do you like Unicorn?",
+    "workbench.colorCustomizations": {
+        "terminal.integrated.fontFamily": "'Fira Code', 'Courier New', monospace",
+        "terminal.background": "#150229",
+        "terminal.foreground": "#ff66cc",
+        "activityBar.foreground": "#000000",
+        "activityBar.inactiveForeground": "#000000",
+        "statusBar.foreground": "#ff66cc",
+        "editor.selectionBackground": "#f0e691b0",
+        "editor.selectionForeground": "#000000",
+        "editor.selectionHighlightBorder": "#ffffff",
+        "sideBarSectionHeader.foreground": "#ff66cc",
+        "sideBarTitle.foreground": "#cc99ff",
+        "sideBar.foreground": "#cc99ff",
+        "menu.foreground": "#ff66cc",
+        "menubar.selectionForeground": "#000000",
+        "titleBar.inactiveForeground": "#ff66cc",
+        "titleBar.activeForeground": "#ff66cc",
+        "tab.activeForeground": "#000000",
+        "tab.inactiveForeground": "#ff66cc"
+    },
+    "editor.tokenColorCustomizations": {
+        "variables": "#FF66CC",
+        "comments": "#58e296",
+        "keywords": "#60add1",
+        "types": "#58e2dc",
+        "textMateRules": [
+            {
+                "scope": [
+                    "support.type.property-name",
+                    "variable.parameter",
+                    "entity.name.class",
+                    "string.json.comments"
+                ],
+                "settings": {
+                    "foreground": "#eae336"
+                }
+            },
+            {
+                "scope": [
+                    "string.json.comments",
+                    "support.type.property-name.json.comments",
+                    "meta.embedded.block.html",
+                    "punctuation.accessor"
+                ],
+                "settings": {
+                    "foreground": "#cf9cf7"
+                }
+            },
+            {
+                "scope": [
+                    "entity.other.attribute-name.class.css",
+                    "entity.other.attribute-name.class.mixin.css",
+                    "entity.other.attribute-name.id.css",
+                    "entity.other.attribute-name.parent-selector.css",
+                    "entity.other.attribute-name.pseudo-class.css",
+                    "entity.other.attribute-name.pseudo-element.css",
+                    "source.css.less entity.other.attribute-name.id",
+                    "entity.other.attribute-name.attribute.scss",
+                    "entity.other.attribute-name.scss",
+                    "meta.block"
+                ],
+                "settings": {
+                    "foreground": "#f3ad51"
+                }
+            },
+            {
+                "scope": [
+                    "variable.other.readwrite"
+                ],
+                "settings": {
+                    "foreground": "#f3ad51"
+                }
+            },
+            {
+                "scope": [
+                    "variable.name",
+                    "constant",
+                    "meta.block variable.other.property",
+                    "meta.block variable.other.constant",
+                    "storage.modifier"
+                ],
+                "settings": {
+                    "foreground": "#FF66CC"
+                }
+            },
+        ],
+    },
+    "bracket-pair-colorizer-2.colors": [
+        "#fa8dae",
+        "#ffff80",
+        "#b3ffcc"
+    ]
+}

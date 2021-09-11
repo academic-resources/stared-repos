@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.lambdaschool.restaurants.EchoIT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.957 s <<< FAILURE! - in com.lambdaschool.restaurants.EchoIT
+firstEchoTest(com.lambdaschool.restaurants.EchoIT)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.boot.web.embedded.tomcat.ConnectorStartFailedException: Connector configured to listen on port 8080 failed to start
+

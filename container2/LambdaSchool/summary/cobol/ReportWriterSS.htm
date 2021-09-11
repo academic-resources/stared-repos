@@ -1,0 +1,1226 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>COBOL Report Writer - Syntax and Semantics</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+<TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <CENTER>
+              <H2><IMG src="Resources/pics/t-CobolCourse.gif" height=56 width=161 align="MIDDLE" 
+             alt="Cobol Course" border="0"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> <B>The COBOL Report Writer - Syntax and Semantics</B></H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><B><A href="#intro" target="">Introduction</A><BR>
+                    </B><FONT size="-1">Unit aims, objectives and prerequisites.</FONT> 
+                    <BR>
+                  </P>
+                  </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><B><A href="#part1" target="">Defining the Report - Report 
+                    File entries</A><BR>
+                    </B><FONT size="-1">This section examines the Environment 
+                    Division and File Section entries required when we create 
+                    <BR>
+                    a Report Writer program.</FONT><FONT size="-1"> <BR>
+                    </FONT></P>
+                  </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><B><A href="#part2" target="">Defining the Report - Report 
+                    Description (RD) entries </A><BR>
+                    </B><FONT size="-1">In this section we examine the Report 
+                    Section and the Report Description (RD) entries required to 
+                    <BR>
+                    define a report. <BR>
+                    </FONT></P>
+                  </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><B><A href="#part3" target="">Defining the Report - Report 
+                    Group entries</A><BR>
+                    </B><FONT size="-1">This section examines the entries required 
+                    to define a report group record.<BR>
+                    </FONT></P>
+                  </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><B><A href="#part4" target="">Defining the Report - Lines 
+                    and Columns</A><BR>
+                    </B><FONT size="-1">This section examines the entries the 
+                    vertical and horizontal placement of print items. </FONT><FONT size="-1">It 
+                    examines <BR>
+                    clauses such as - </FONT><FONT size="-1">LINE NUMBER, COLUMN 
+                    NUMBER, GROUP INDICATE , SOURCE and SUM</FONT><FONT size="-1">.<BR>
+                    </FONT></P>
+                  </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><A href="#part5" target=""><B>Special Report Writer registers</B></A><BR>
+                    <FONT size="-1">In this section the LINE-COUNTER and PAGE-COUNTER 
+                    registers are examined.<BR>
+                    </FONT></P>
+                  </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%">
+                  <P><B><A href="#part6" target="">The Procedure Division Verbs 
+                    </A><BR>
+                    </B><FONT size="-1">This section introduces the INITIATE, 
+                    GENERATE and TERMINATE verbs. <BR>
+                    </FONT></P>
+                  </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <DIV align="left"> 
+                    <P><B><A href="#part7" target="">Report Writer Declaratives</A></B><B> 
+                      <BR>
+                      </B><FONT size="-1">In this section elements of the Declaratives, 
+                      such as USE BEFORE REPORTING, SUPPRESS PRINTING and <BR>
+                      control break registers, are examined.<BR>
+                      </FONT></P>
+                    </DIV>
+                </TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><FONT face="Arial, Helvetica, sans-serif">Introduction</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="540"> 
+            <P>The unit provides a Report Writer reference. The syntax elements 
+              of the Report Writer are presented and the semantics of their operation 
+              discussed.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="540"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Know how to set up a report file in the Environment Division 
+                and the File Section. </LI>
+              <LI>Be able to define a report and the appropriate report groups 
+                in the Report Section.</LI>
+              <LI>Understand how Declaratives may be used to extend the functionality 
+                of the Report Writer.</LI>
+              <LI>Be able to write the Procedure Division code (using the INITIATE, 
+                GENERATE and TERMINATE verbs) to create a report.</LI>
+            </OL>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <TD width="525"> 
+            <P>You should be familiar with the material covered in the units; 
+            </P>
+            <UL>
+              <LI>Sequential files</LI>
+              <LI>Data Declaration</LI>
+              <LI>The Report Writer</LI>
+            </UL>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <P>&nbsp; </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part1"></A><FONT face="Arial, Helvetica, sans-serif">Defining 
+              the Report - Report File entries</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Environment 
+              Division entries</FONT></H4>
+          </TD>
+          <TD width="540" valign="top"> 
+            <P>Just like ordinary reports, the reports generated by the Report 
+              Writer are written to an external device - usually a report file.</P>
+            <P>The Environment Division entries for a report file are the same 
+              as those for an ordinary file. The same Select and Assign clauses 
+              apply.</P>
+            <P>For instance, in the program fragment below, the Select and Assign 
+              for the final example program (given in the previous Report Writer 
+              unit) is shown. </P>
+            <P>When the Report Writer generates this report it will be stored 
+              in the file <FONT size="-1">SALESREPORT.LPT</FONT>.</P>
+            <TABLE border="1" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD> 
+                  <PRE>ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT SalesFile ASSIGN TO "GBPAY.DAT"
+           ORGANIZATION IS LINE SEQUENTIAL.
+   <FONT color="#FF0000"><B> SELECT PrintFile ASSIGN TO "SALESREPORT.LPT".</B></FONT>
+
+
+DATA DIVISION.
+FILE SECTION.
+FD  SalesFile.
+01  SalesRecord.
+    88 EndOfFile  VALUE HIGH-VALUES.
+    02 CityCode         PIC 9.
+    02 SalesPersonNum   PIC 9.
+    02 ValueOfSale      PIC 9(4)V99.
+
+<B><FONT color="#FF0000">FD  PrintFile
+    REPORT IS SalesReport.
+
+</FONT></B><FONT color="#FF0000"><FONT color="#000000">    : intervening entries :
+    : intervening entries :</FONT></FONT><B><FONT color="#FF0000">
+
+</FONT></B><FONT color="#FF0000"><FONT color="#000000">REPORT SECTION.</FONT></FONT><B><FONT color="#FF0000"><FONT color="#000000">
+<B><FONT color="#FF3300">RD  SalesReport</FONT></B>
+</FONT></FONT></B><FONT color="#FF0000"><FONT color="#000000">    CONTROLS ARE FINAL
+                 CityCode
+                 SalesPersonNum 
+    PAGE LIMIT IS 66
+    HEADING 1
+    FIRST DETAIL 6
+    LAST DETAIL 42
+    FOOTING 52.</FONT></FONT><B><FONT color="#FF0000"><FONT color="#000000">
+</FONT></FONT></B></PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif"> 
+              File Section entries</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Although the entries in the Environment Division are the same as 
+              those for ordinary print files, in the File Section the normal file 
+              description is replaced by phrase which points to the Report Description 
+              (RD) in the Report Section. The syntax of the phrase is - </P>
+            <P align="center"><IMG src="Resources/pics/rwReportIS.gif" width="222" height="48"></P>
+            <DIV align="center"> </DIV>
+            <P>The <I>ReportName</I> must be the same as the <I>ReportName</I> 
+              used in the Report Description (RD) entry.</P>
+            <P>You can see this in the program fragment above where the <B>REPORT 
+              IS</B><B> SalesReport</B> phrase links the PrintFile with the Report 
+              Description(RD) in the Report Section.</P>
+            <P><B>Notes:</B></P>
+            <P>Before the report can be used it must be opened for output. For 
+              instance in the example above the PrintFile must be opened for output 
+              before the SalesReport can be generated.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00" face="Arial, Helvetica, sans-serif"><A name="part2"></A>Defining 
+              the Report - Report Description (RD) Entries</FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Every report generated by the Report Writer must have a Report 
+              Description (RD) entry in the Report Section.</P>
+            <P>The RD entry names the report and specifies the format of the printed 
+              page and identifies the control break items.</P>
+            <P>Each RD entry is followed by one or more 01 level-number entries. 
+              Each 01 level-number entry identifies a report group and consists 
+              of a hierarchical structure similar to a COBOL record.</P>
+            <P>Each report group is a unit consisting of one or more print lines 
+              and cannot be split across pages.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              Report Description (RD) entries - Syntax</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The syntax for the Report Description (RD) entries is shown below 
+              - </P>
+            <P align="center"><IMG src="Resources/pics/rwRD.gif" width="360" height="277"></P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              Report Description (RD) entries - Semantics</FONT></H4>
+            <H4 align="center">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P align="center"><B>RD Rules</B></P>
+            <OL>
+              <LI> The <I>ReportName</I> can only appear in one RD entry.</LI>
+              <LI>When more than one report is declared in the Report Section 
+                the <I>ReportName</I> can be used to qualify the LINE-COUNTER 
+                and PAGE-COUNTER report registers.</LI>
+            </OL>
+            <HR width="50%">
+            <P align="center"><B>CONTROL Rules</B></P>
+            <OL>
+              <LI>The <I>ControlName$#i </I>must not be defined in the Report 
+                Section.</LI>
+              <LI>Each occurrence of <I>ControlName$#i </I>must identify a different 
+                data item.</LI>
+              <LI>The <I>ControlName$#i</I> must not have a variable length table 
+                subordinate to it.</LI>
+              <LI><I>ControlName$#i</I> and FINAL specify the levels of the control 
+                break hierarchy where FINAL (if specified) is the highest and 
+                the first <I>ControlName$#i</I> the next highest and so on.</LI>
+              <LI>When the value in any <I>ControlName$#i</I> changes a control 
+                break occurs. The level of the control break depends on the position 
+                of the <I>ControlName$#i </I>in the control break hierarchy.</LI>
+            </OL>
+            <HR width="50%">
+            <P align="center"><B>PAGE Rules</B></P>
+            <OL>
+              <LI><I>HeadingLine#l</I> must be greater than or equal to 1.</LI>
+              <LI><I>HeadingLine#l</I> &lt;= <I>FirstDetailLine#l</I> &lt;= <I>LastDetailLine#l 
+                </I>&lt;= <I>FootingLine#l</I> &lt;= <I>PageSize#l</I></LI>
+              <LI>Line numbers used in a Report Heading or Page Heading group 
+                must be greater than or equal to <I>HeadingLine#l</I> and less 
+                than <I>FirstDetailLine#l</I> but when a Report Heading appears 
+                on a page by itself any line number between <I>HeadingLine#l</I> 
+                and <I>PageSize#l</I> may be used.</LI>
+              <LI>Line numbers used in Detail or Control Heading groups must be 
+                in the range <I>FirstDetailLine#l </I>to <I>LastDetailLine#l</I> 
+                inclusive.</LI>
+              <LI>Line numbers used in Control Footing groups must be in the range 
+                <I>FirstDetailLine#l FootingLine#l</I> inclusive</LI>
+              <LI>Line numbers used in the Report Footing or Page Footing groups 
+                must be greater than<I> FootingLine#l </I>and less than or equal 
+                to <I>PageSize#l</I> but when a Report Footing appears on a page 
+                by itself any line number between <I>HeadingLine#l</I> and <I>PageSize#l</I> 
+                may be used.</LI>
+              <LI>All report groups must be defined so that they can be presented 
+                on one page. The Report Writer never splits a multi-line group 
+                across page boundaries.</LI>
+            </OL>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00" face="Arial, Helvetica, sans-serif"><A name="part3"></A></FONT><FONT color="#FFFF00"><FONT face="Arial, Helvetica, sans-serif">Defining 
+              the Report - Report Group entries</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>In the Report Section each report group is represented by a report 
+              group record. As with all record descriptions in COBOL a report 
+              group record starts with level number 01. Subordinate items in the 
+              record describe the report lines and columns within the report group.</P>
+            <P>The description of a report group consists of a number of hierarchic 
+              levels. At the top must be the Report Group Definition. </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Defining 
+              a Report Group Record - Syntax</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P><B><FONT size="+1">Report Group Definition</FONT></B></P>
+            <P><IMG src="Resources/pics/rwGroupType.gif" width="405" height="512"></P>
+            <P>&nbsp; </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif"><I>ReportGroupName 
+              </I>Rules </FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <I>ReportGroupName</I> is required only when the group - </P>
+            <OL>
+              <LI> is a detail group referenced by a <FONT size="-1">GENERATE</FONT> 
+                statement or the <FONT size="-1">UPON</FONT> phrase of a <FONT size="-1">SUM</FONT> 
+                clause.</LI>
+              <LI>is referenced in a <FONT size="-1">USE BEFORE REPORTING</FONT> 
+                sentence in the Declaratives</LI>
+              <LI>is required to qualify the reference to a sum counter.</LI>
+            </OL>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              LINE NUMBER clause</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <FONT size="-1">LINE NUMBER</FONT> clause is used to specify 
+              the vertical positioning of print lines. Lines can be printed on 
+              - </P>
+            <UL>
+              <UL>
+                <LI>a specified line (absolute)</LI>
+                <LI>a specified line on the next page (absolute)</LI>
+                <LI>the current line number plus some increment (relative)</LI>
+              </UL>
+            </UL>
+            <P><B>Rules:</B></P>
+            <OL>
+              <LI>The <FONT size="-1">LINE NUMBER </FONT>clause specifies where 
+                each line is to be printed so no item that contains a <FONT size="-1">LINE 
+                NUMBER</FONT> clause may contain a subordinate item that also 
+                contains a <FONT size="-1">LINE NUMBER</FONT> clause (subordinate 
+                items specify the column items).</LI>
+              <LI>Where absolute <FONT size="-1">LINE NUMBER</FONT> clauses are 
+                specified all absolute clauses must precede all relative clauses 
+                and the line numbers specified in the successive absolute clauses 
+                must be in ascending order.</LI>
+              <LI>The first <FONT size="-1">LINE NUMBER</FONT> clause specified 
+                in a <FONT size="-1">PAGE FOOTING</FONT> group must be absolute.</LI>
+              <LI>The <FONT size="-1">NEXT PAGE</FONT> clause can only appear 
+                once in a given report group description and it must be in the 
+                first <FONT size="-1">LINE NUMBER</FONT> clause in the report 
+                group.</LI>
+              <LI>The <FONT size="-1">NEXT PAGE</FONT> clause cannot appear in 
+                any <FONT size="-1">HEADING</FONT> group. </LI>
+            </OL>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              NEXT GROUP clause</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <FONT size="-1">NEXT GROUP</FONT> clause is used to specify 
+              the vertical positioning of the start of the next group. The <FONT size="-1">NEXT 
+              GROUP</FONT> clause can be used to specify that the next report 
+              groups should be printed on - </P>
+            <UL>
+              <UL>
+                <LI>a specified line (absolute)</LI>
+                <LI>the current line number plus some increment (relative)</LI>
+                <LI>the next page</LI>
+              </UL>
+            </UL>
+            <P><B>Rules</B></P>
+            <P>The <FONT size="-1">NEXT PAGE</FONT> option in the <FONT size="-1">NEXT 
+              GROUP</FONT> clause must not be specified in a page footing.</P>
+            <P>The <FONT size="-1">NEXT GROUP</FONT> clause must not be specified 
+              in a <FONT size="-1">REPORT FOOTING</FONT> or <FONT size="-1">PAGE 
+              HEADING</FONT> group.</P>
+            <P>When used in a <FONT size="-1">DETAIL</FONT> group the <FONT size="-1">NEXT 
+              GROUP</FONT> clause refers to the next <FONT size="-1">DETAIL</FONT> 
+              group to be printed.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              TYPE clause</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The TYPE clause specifies the type of the report group. The type 
+              of the report group governs when and where will be printed in the 
+              the report (for instance, a <FONT size="-1">REPORT HEADING</FONT> 
+              group is printed only once - at the beginning of the report).</P>
+            <P><B>Rules</B></P>
+            <P>Most groups are defined once for each report but control groups 
+              (other than <FONT size="-1">CONTROL ..FINAL</FONT> groups) are defined 
+              for each control break item.</P>
+            <P>In <FONT size="-1">REPORT FOOTING</FONT>, and <FONT size="-1">CONTROL 
+              FOOTING</FONT> groups, <FONT size="-1">SOURCE</FONT> and <FONT size="-1">USE</FONT> 
+              clauses must not reference any data item which contains a control 
+              break item or is subordinate to a control break item.</P>
+            <P><FONT size="-1">PAGE HEADING</FONT> or <FONT size="-1">FOOTING</FONT> 
+              groups must not reference a control break item or any item subordinate 
+              to a control break item.</P>
+            <P><FONT size="-1">DETAIL</FONT> report groups are processed when 
+              they are referenced in a <FONT size="-1">GENERATE </FONT>statement. 
+              All other groups are processed automatically by the Report Writer. 
+              There can be more than one <FONT size="-1">DETAIL</FONT> group.</P>
+            <P>The <FONT size="-1">REPORT HEADING</FONT>, <FONT size="-1">PAGE 
+              HEADING</FONT>, <FONT size="-1">CONTROL HEADING FINAL</FONT>, <FONT size="-1">CONTROL 
+              FOOTING FINAL</FONT>, <FONT size="-1">PAGE FOOTING</FONT> and <FONT size="-1">REPORT 
+              FOOTING</FONT> report groups can each appear only once in the description 
+              of a report.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00" face="Arial, Helvetica, sans-serif"><A name="part4"></A></FONT><FONT color="#FFFF00"><FONT face="Arial, Helvetica, sans-serif">Defining 
+              the Report - Lines and Columns</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The subordinate items in a report group record describe the report 
+              lines and columns within the report group. There are two formats 
+              for defining items subordinate to the report group record. The first 
+              is usually used to define the lines of the report group and the 
+              second to define and position the elementary print items.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Defining 
+              Report Lines </FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Print lines in a report group are usually defined using the format 
+              shown below. This format is used to specify the vertical placement 
+              of a print line and it is always followed by subordinate items that 
+              specify the columns where the data items are to be printed.</P>
+            <P> As shown in the syntax diagram below the level number is from 
+              2 to 48 inclusive. </P>
+            <P>If the <I>ReportLineName </I>is used its only purpose is to qualify 
+              a sum counter reference. </P>
+            <P>&nbsp;</P>
+            <P><IMG src="Resources/pics/rwGroupDesc1.gif" width="364" height="74"></P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="center"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Defining 
+              Elementary print items in a report group</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Elementary print items in the print line of a report group are 
+              described using the syntactic elements shown in the diagram below.</P>
+            <P> As we can see from the syntax diagram, the normal data description 
+              clauses such as <FONT size="-1">PIC</FONT>, <FONT size="-1">USAGE</FONT>, 
+              <FONT size="-1">SIGN</FONT>, <FONT size="-1">JUSTIFIED</FONT>, <FONT size="-1">BLANK 
+              WHEN ZERO</FONT> and <FONT size="-1">VALUE</FONT> may be applied 
+              when describing an elementary print item. The Report Writer provides 
+              a number of additional clauses that may also be used.</P>
+            <P>The <I>PrintItemName</I> can only be referenced if the entry uses 
+              the <FONT size="-1">SUM</FONT> clause to define a sum counter.</P>
+            <P><IMG src="Resources/pics/rwGroupDesc2.gif" width="413" height="456"></P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              COLUMN NUMBER clause</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <FONT size="-1">COLUMN NUMBER</FONT> specifies the position 
+              of a print item on the print line. When this clause is used it must 
+              be subordinate to an item that contains a <FONT size="-1">LINE NUMBER</FONT> 
+              clause.</P>
+            <P>Within a given print line the <I>ColNum#l's </I>should be in ascending 
+              sequence. </P>
+            <P><I>ColNum#l</I> specifies the column number of the leftmost character 
+              position of the print item.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              GROUP INDICATE clause</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <FONT size="-1">GROUP INDICATE</FONT> is used to specify that 
+              a print item should be printed only on the first occurrence of its 
+              report group after a control break or page advance.</P>
+            <P>For instance in the full version of the example program the CityName 
+              and SalesPersonNum are suppressed after their first occurrence.</P>
+            <TABLE border="1" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD> 
+                  <PRE>01  DetailLine TYPE IS DETAIL.
+    02 LINE IS PLUS 1.
+       03 COLUMN 1      PIC X(9)
+                        SOURCE CityName(CityCode) <FONT color="#FF0000"><B>GROUP INDICATE</B></FONT>.
+       03 COLUMN 15     PIC 9
+                        SOURCE SalesPersonNum  <B><FONT color="#FF0000">GROUP INDICATE</FONT></B>.
+       03 COLUMN 25     PIC $$,$$$.99 SOURCE ValueOfSale.</PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <P>The <FONT size="-1">GROUP INDICATE</FONT> clause can only appear 
+              in a <FONT size="-1">DETAIL</FONT> report group</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              SOURCE clause</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The SOURCE clause is used to identify a data item that contains 
+              the value to be used when the print-item is printed. For instance, 
+              the SOURCE<I> ValueOfSale</I> clause in the example above specifies 
+              that the value of the item to be printed in column 25 is to be found 
+              in the data-item ValueOfSale. </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              SUM clause</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The SUM clause is used both to establish a sum counter and to name 
+              the data-items to be summed.</P>
+            <P>Three forms of summing can be done in the Report Writer;</P>
+            <OL>
+              <OL>
+                <LI>Subtotalling</LI>
+                <LI>Rolling Forward</LI>
+                <LI>Cross footing</LI>
+              </OL>
+            </OL>
+            <HR>
+            <H4><B>Subtotalling</B></H4>
+            <P>In Subtotalling, each time a <FONT size="-1">GENERATE</FONT> statement 
+              is executed the value to be summed is added to the sum counter. 
+            </P>
+            <HR>
+            <H4><B>Rolling Forward</B></H4>
+            <P>In Rolling Forward the value accumulated in the sum counter of 
+              one group is used as the value to be summed in the sum counter of 
+              another group.</P>
+            <P> The full version of the example program contains a good example 
+              of both Subtotalling and Rolling forward. The SUM clause is used 
+              to accumulate the ValueOfSale into a sum counter named as SMS (Subtotalling). 
+              The SMS sum counter is used as the value to be summed into the CS 
+              sum counter and CS is used as the value to be summed into the final 
+              total (Rolling Forward).</P>
+            <P>In the example code fragment below, each time a <FONT size="-1">DETAIL</FONT> 
+              line is <FONT size="-1">GENERATED</FONT> the ValueOf Sale is added 
+              to the SMS sum counter. When a control break occurs on SalesPersonNum 
+              the accumulated sum is printed and is added to the CS sum counter. 
+              When a control break occurs on the CityCode the sum accumulated 
+              in the CS sum counter is added to the final total sum counter. </P>
+            <TABLE border="1" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD> 
+                  <PRE>01  SalesPersonGrp
+    TYPE IS CONTROL FOOTING SalesPersonNum  NEXT GROUP PLUS 2.
+                      :<I> other entries</I> :
+                      :<I> other entries</I> :
+       03 <FONT color="#FF0000"><B>SMS</B></FONT> COLUMN 45 PIC $$$$$,$$$.99 <FONT color="#FF0000"><B>SUM ValueOfSale</B></FONT>.
+
+
+
+01  CityGrp TYPE IS CONTROL FOOTING CityCode NEXT GROUP PLUS 2.
+                      :<I> other entries</I> :
+                      :<I> other entries</I> :
+       03 <B><FONT color="#FF0000">CS</FONT></B> COLUMN 45  PIC $$$$$,$$$.99 <FONT color="#FF0000"><B>SUM SMS</B></FONT>.
+
+
+
+01  TotalSalesGrp TYPE IS CONTROL FOOTING FINAL.
+                      :<I> other entries</I> :
+                      :<I> other entries</I> :
+       03 COLUMN 45     PIC $$$$$,$$$.99 <B><FONT color="#FF0000">SUM CS</FONT></B>.</PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <HR>
+            <H4><B>Cross Footing</B></H4>
+            <P>In Cross Footing sum counters in the same report group can be added 
+              together. In the example below, each time a GENERATE statement is 
+              executed the value of the SalesPersonSale is added to the SPS sum 
+              counter and the value of CounterSale is added to SCS (Subtotalling). 
+              When a control break occurs on ShopNum the values of the SPS and 
+              SCS sum counters are added together to give the combined total printed 
+              in column 60 (Cross Footing).</P>
+            <TABLE border="1" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD> 
+                  <PRE>01  ShopTotalsGrp
+    TYPE IS CONTROL FOOTING ShopNum  NEXT GROUP PLUS 2.
+                      :<I> other entries</I> :
+                      :<I> other entries</I> :
+       03 <FONT color="#FF0000"><B>SPS</B></FONT> COLUMN 20 PIC $$$,$$$.99  <FONT color="#FF0000"><B>SUM SalesPersonSale</B></FONT>.
+       03 <FONT color="#FF0000"><B>SCS</B></FONT> COLUMN 40 PIC $$$,$$$.99  <FONT color="#FF0000"><B>SUM CounterSale</B></FONT>.
+       03     COLUMN 60 PIC $$$$,$$$.99 <FONT color="#FF0000"><B>SUM SPS, SCS</B></FONT>.
+</PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <H4>&nbsp;</H4>
+            <H4>Rules</H4>
+            <OL>
+              <LI>If the the SUM..UPON <I>ReportGroupName</I> clause is used then 
+                the value is only added to the sum counter when the specified 
+                report group is printed.</LI>
+              <LI>A SUM clause can appear only in the description of a <FONT size="-1">CONTROL 
+                FOOTING </FONT>report group.</LI>
+              <LI>Statements in the Procedure Division can be used to alter the 
+                contents of the sum counters.</LI>
+            </OL>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              RESET ON clause</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Sum counters are normally reset to zero after a control break on 
+              the control break item associated with the report group but the 
+              <FONT size="-1">RESET</FONT> clause can be used to reset the sum 
+              counters on the break of a more senior control item. </P>
+            <H4>Rules</H4>
+            <OL>
+              <LI>The <I>ControlBreakItem#$i </I>must be one of the data items 
+                mentioned in the <FONT size="-1">CONTROL/CONTROLS</FONT> clause 
+                in the Report Description. </LI>
+            </OL>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part5"></A><FONT face="Arial, Helvetica, sans-serif">Special 
+              Report Writer registers</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">The Report Writer maintains two special registers 
+                for each report declared in the Report Section. The two registers 
+                are -</P>
+            </DIV>
+            <DIV align="left"> 
+              <BLOCKQUOTE> 
+                <BLOCKQUOTE> 
+                  <BLOCKQUOTE> 
+                    <P align="center"> the LINE-COUNTER<BR>
+                      and<BR>
+                      the PAGE-COUNTER</P>
+                  </BLOCKQUOTE>
+                </BLOCKQUOTE>
+              </BLOCKQUOTE>
+            </DIV>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"> The 
+              LINE-COUNTER register</FONT></H4>
+            <H3>&nbsp;</H3>
+            <DIV align="right"></DIV>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P align="left">The reserved word <FONT size="-1">LINE-COUNTER</FONT> 
+              can be used to access a special register that the Report Writer 
+              maintains for each report in the Report Section.</P>
+            <P align="left"> The Report Writer uses the <FONT size="-1">LINE-COUNTER</FONT> 
+              register to keep track of where the lines are being printed on the 
+              report. It uses this information and the information specified in 
+              the <FONT size="-1">PAGE LIMIT</FONT> clause in the RD entry to 
+              decide when a new page is required.</P>
+            <P align="left">While the <FONT size="-1">LINE-COUNTER </FONT>register 
+              can be used as a <FONT size="-1">SOURCE</FONT> item in the report 
+              no statements in the Procedure Division can alter the value in the 
+              register. </P>
+            <P align="left">References to the <FONT size="-1">LINE-COUNTER</FONT> 
+              register can be qualified by referring to the name of the report 
+              given in the RD entry.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              PAGE-COUNTER register</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">The reserved word <FONT size="-1">PAGE-COUNTER</FONT> 
+                can be used to access a special register that the Report Writer 
+                maintains for each report in the Report Section.</P>
+              <P align="left">The <FONT size="-1">PAGE-COUNTER</FONT> is used 
+                to count the number of pages in the report.</P>
+              <P align="left">The <FONT size="-1">PAGE-COUNTER</FONT> register 
+                can be used as a <FONT size="-1">SOURCE</FONT> item in the report 
+                but the value of the <FONT size="-1">PAGE-COUNTER</FONT> may also 
+                be changed by statements in the Procedure Division.</P>
+              <TABLE border="1" width="100%" background="Resources\pics\code.gif">
+                <TR> 
+                  <TD> 
+                    <PRE>01  TYPE IS PAGE FOOTING.
+    02 LINE IS 53.
+       03 COLUMN 1      PIC X(29) 
+                        VALUE "Programmer - Michael Coughlan".
+       03 COLUMN 45     PIC X(6) VALUE "Page :".
+       03 COLUMN 52     PIC Z9 SOURCE<B><FONT color="#FF0000"> PAGE-COUNTER.</FONT></B></PRE>
+                  </TD>
+                </TR>
+              </TABLE>
+              
+            </DIV>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part6"></A>Procedure 
+              Division verbs</FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">The Report Writer introduces four new verbs for 
+                processing reports. These are -</P>
+            </DIV>
+            <DIV align="left"> 
+              <OL>
+                <OL>
+                  <OL>
+                    <OL>
+                      <LI>INITIATE</LI>
+                      <LI> GENERATE</LI>
+                      <LI> TERMINATE</LI>
+                      <LI> SUPPRESS PRINTING</LI>
+                    </OL>
+                  </OL>
+                </OL>
+              </OL>
+            </DIV>
+            <DIV align="center"> 
+              <P align="left">The first three are normal Procedure Division verbs 
+                but the last can only be used in the Declaratives Section. </P>
+              <P align="left">The normal Procedure Division verbs will be covered 
+                in this section. Please see the section on Declaratives for the 
+                <FONT size="-1">SUPPRESS PRINTING</FONT> statement.</P>
+            </DIV>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Syntax</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P><IMG src="Resources/pics/rwVerbs.gif" width="238" height="144"></P>
+            <HR>
+            <P>&nbsp;</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">INITIATE</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <FONT size="-1">INITIATE</FONT> statement starts the processing 
+              of the <I>ReportName</I> report or reports.</P>
+            <P>The <I>ReportName</I> must be the name defined for a report in 
+              the RD entry in the Report Section.</P>
+            <P>The <FONT size="-1">INITIATE</FONT> statement initializes -</P>
+            <UL>
+              <LI>all the report's sum counters to zero</LI>
+              <LI>the report <FONT size="-1">LINE-COUNTER</FONT> to zero</LI>
+              <LI>the report <FONT size="-1">PAGE-COUNTER</FONT> to one</LI>
+            </UL>
+            <P>Before the <FONT size="-1">INITIATE</FONT> statement is executed 
+              the file associated with the Report must have been opened for <FONT size="-1">OUTPUT</FONT> 
+              or <FONT size="-1">EXTEND</FONT>.</P>
+            <HR>
+            <P>&nbsp;</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">GENERATE</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <FONT size="-1">GENERATE</FONT> statement drives the production 
+              of the report. </P>
+            <P>The target of a <FONT size="-1">GENERATE</FONT> statement is either 
+              a <FONT size="-1">DETAIL</FONT> report group or a Report Name.</P>
+            <P>When the target is a <I>ReportName</I> then the report description 
+              must contain -</P>
+            <UL>
+              <LI>a <FONT size="-1">CONTROL</FONT> clause </LI>
+              <LI>not more than one <FONT size="-1">DETAIL</FONT> group</LI>
+              <LI>at least one group that is not a <FONT size="-1">PAGE</FONT> 
+                or <FONT size="-1">REPORT</FONT> group.</LI>
+            </UL>
+            <P>When all the <FONT size="-1">GENERATE </FONT>statements for a particular 
+              report target the <I>ReportName </I>then the report performs summary 
+              processing only and the report produced is called a summary report. 
+              For instance to make a summary report from the example report all 
+              we have to to is to change the <FONT size="-1">GENERATE </FONT>statement 
+              from -</P>
+            <BLOCKQUOTE> 
+              <BLOCKQUOTE> 
+                <BLOCKQUOTE> 
+                  <BLOCKQUOTE> 
+                    <P>GENERATE DetailLine.</P>
+                    <BLOCKQUOTE> 
+                      <BLOCKQUOTE> 
+                        <P>to </P>
+                      </BLOCKQUOTE>
+                    </BLOCKQUOTE>
+                    <P>GENERATE SalesReport.</P>
+                  </BLOCKQUOTE>
+                </BLOCKQUOTE>
+              </BLOCKQUOTE>
+            </BLOCKQUOTE>
+            <P>&nbsp;</P>
+            <P>If we specify <FONT size="-1">GENERATE</FONT> SalesReport then 
+              the <FONT size="-1">DETAIL</FONT> group is never printed but the 
+              other groups are printed (see the first page of the summary report 
+              shown below).</P>
+            <P>&nbsp;</P>
+            <HR>
+            <TABLE border="0" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD valign="top"> 
+                  <PRE>          An example COBOL Report Program              
+     Bible Salesperson - Sales and Salary Report        
+                                                        
+ City      Salesperson     Sale                         
+ Name       Number         Value                        
+              Sales for salesperson 1     =      $334.00
+              Sales commission is         =       $16.70
+              Salesperson salary is       =      $139.70
+              Current  salesperson number = 2           
+              Previous salesperson number = 1           
+                                                        
+                                                        
+              Sales for salesperson 2     =    $3,667.50
+              Sales commission is         =      $183.38
+              Salesperson salary is       =      $504.38
+              Current  salesperson number = 3           
+              Previous salesperson number = 2           
+                                                        
+                                                        
+              Sales for salesperson 3     =      $777.70
+              Sales commission is         =       $38.89
+              Salesperson salary is       =      $473.89
+              Current  salesperson number = 1           
+              Previous salesperson number = 3           
+                                                        
+              Sales for Dublin            =    $4,779.20
+              Current city                = 2           
+              Previous city               = 1           
+                                                        
+                                                        
+              Sales for salesperson 1     =      $334.00
+              Sales commission is         =       $16.70
+              Salesperson salary is       =      $139.70
+              Current  salesperson number = 2           
+              Previous salesperson number = 1           
+                                                        
+                                                        
+              Sales for salesperson 2     =    $2,334.00
+              Sales commission is         =      $116.70
+              Salesperson salary is       =      $458.70
+              Current  salesperson number = 3           
+              Previous salesperson number = 2           
+                                                        
+                                                        
+              Sales for salesperson 3     =      $222.20
+              Sales commission is         =       $11.11
+              Salesperson salary is       =      $122.11
+              Current  salesperson number = 4           
+              Previous salesperson number = 3           
+                                                        
+                                                        
+                                                        
+Programmer - Michael Coughlan               Page :  1   
+                                                        
+  </PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">TERMINATE</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <FONT size="-1">TERMINATE</FONT> statement instructs the Report 
+              Writer to complete the processing of the specified report. The Report 
+              Writer prints the Page and Report Footings and all the <FONT size="-1">CONTROL 
+              FOOTING</FONT> groups are printed as if there had been a control 
+              break on the most senior control group.</P>
+            <P>After the report has been terminated the file associated with the 
+              report must be closed. For instance in the example program the <I>TERMINATE 
+              SalesReport</I> statement is followed by the<I> CLOSE PrintFile 
+              </I>statement.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00" face="Arial, Helvetica, sans-serif"><A name="part7"></A>Report 
+              Writer Declaratives</FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Declaratives are used to extend the functionality of the Report 
+              Writer when its standard operations are insufficient of create the 
+              desired report. Declaratives extend the functionality of the Report 
+              Writer by performing tasks or calculations that the Report Writer 
+              can not do automatically or by selectively stopping the report group 
+              from being printed (using the <FONT size="-1">SUPPRESS PRINTING</FONT> 
+              command). </P>
+            <P>When Declaratives are used with the Report Writer the <FONT size="-1">USE 
+              BEFORE REPORTING</FONT> phrase allows a programmer to specify that 
+              the particular section of code is to be executed before some report 
+              group is printed.</P>
+            <P>Declaratives may also be used to handle file operation errors. 
+              In this case the USE clause should use the following syntax -</P>
+            <P align="center"><IMG src="Resources/pics/rwUSE1.gif" width="495" height="173"> 
+            </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Using 
+              Declaratives with the Report Writer</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>When Declaratives are used they must appear as the first item in 
+              the Procedure Division.</P>
+            <P>The Declaratives must be divided into sections and each section 
+              must be associated with a particular USE statement.</P>
+            <P>The USE statement governs when a particular declarative section 
+              is executed.</P>
+            <P>When Declaratives are used with the Report Writer the USE syntax 
+              shown below must be used</P>
+            <P align="center"><IMG src="Resources/pics/rwUSE2.gif" width="402" height="22"></P>
+            <P align="left"><B>Rules:</B></P>
+            <P align="left">The ReportGroupName must not appear in more than one 
+              USE statement.</P>
+            <P align="left">The <FONT size="-1">GENERATE</FONT>, <FONT size="-1">INITIATE</FONT> 
+              and <FONT size="-1">TERMINATE</FONT> statements must not appear 
+              in the Declaratives.</P>
+            <P align="left">The value of any control data items must not be altered 
+              in the Declaratives.</P>
+            <P align="left">Statements in the Declaratives must not reference 
+              non-declarative procedures.</P>
+            <P align="left">&nbsp;</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Declaratives 
+              Example </FONT></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <TABLE border="1" width="90%" background="Resources\pics\code.gif">
+                <TR> 
+                  <TD> 
+                    <PRE>PROCEDURE DIVISION.
+<B><FONT color="#FF0000">DECLARATIVES.
+Calc SECTION.
+    USE BEFORE REPORTING SalesPersonGrp.
+Calculate-Salary.
+    MULTIPLY SMS BY Percentage
+          GIVING Commission ROUNDED.
+    ADD Commission, FixedRate(CityCode,SalesPersonNum)
+          GIVING Salary.
+END DECLARATIVES.</FONT></B>
+
+Main SECTION.
+Begin.
+    OPEN INPUT SalesFile.
+    OPEN OUTPUT PrintFile.
+       : etc :
+       : etc : </PRE>
+                  </TD>
+                </TR>
+              </TABLE>
+            </DIV>
+            <P>&nbsp;</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              SUPPRESS PRINTING statement</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The <FONT size="-1">SUPPRESS PRINTING</FONT> statement is used 
+              in a Declarative section to stop a particular report group from 
+              being printed.</P>
+            <P align="left">The report group suppressed is the one mentioned in 
+              the USE statement associated with the section containing the <FONT size="-1">SUPPRESS 
+              PRINTING</FONT> statement.</P>
+            <P align="left">The <FONT size="-1">SUPPRESS PRINTING</FONT> statement 
+              must be executed each time you want to stop the report group from 
+              being printed.</P>
+            <P align="left">In the example below we only want to print the ShopTotalGrp 
+              if the sales for the shop are greater than or equal to 10,000. </P>
+            <TABLE border="1" width="91%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD> 
+                  <BLOCKQUOTE> 
+                    <PRE><FONT color="#000000">PROCEDURE DIVISION.
+DECLARATIVES.
+CheckShopSales SECTION.
+    USE BEFORE REPORTING ShopTotalGrp.
+PrintMajorShopsOnly.
+    IF SalesTotal &lt; 10000<B>
+       <FONT color="#FF3300">SUPPRESS PRINTING</FONT>
+</B>    END-IF.
+END DECLARATIVES.</FONT></PRE>
+                  </BLOCKQUOTE>
+                </TD>
+              </TR>
+            </TABLE>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Control 
+              Break Registers</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">A control break occurs when the value in a control 
+                break item changes. This causes an interesting problem when the 
+                control break item is used as the <FONT size="-1">SOURCE</FONT> 
+                value in a control footing because by the time the control footing 
+                is printed, the control break item no longer contains the correct 
+                value. When we print a control footing and refer to a control 
+                break item we normally want to access the previous value of the 
+                item not the current one.</P>
+              <P align="left">The Report Writer deals with this problem by maintaining 
+                a special control break register for each control break item mentioned 
+                in the <FONT size="-1">CONTROLS ARE</FONT> phrase in the RD entry.</P>
+              <P align="left">When a control break item is referred to in a control 
+                footing or in the Declaratives the Report Writer supplies the 
+                value held in the control break register and not the value in 
+                the item itself. </P>
+              <P align="left">If a control break has just occurred the value in 
+                the control break register is the previous value of the control 
+                break item.</P>
+              <P align="left">&nbsp; </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <HR>
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="left">These COBOL course materials are the copyright property 
+                of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : January 1999</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

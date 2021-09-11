@@ -1,0 +1,1133 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>COBOL Report Writer</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+<TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <CENTER>
+              <H2><IMG src="Resources/pics/t-CobolCourse.gif" height=56 width=161 align="MIDDLE" 
+             alt="Cobol Course" border="0"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> <B>The COBOL Report Writer</B></H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives and prerequisites.</FONT> 
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"><B><A href="#part1" target="">The Report Writer 
+                  in action</A><BR>
+                  </B><FONT size="-1">This section examines a report produced 
+                  by a Report Writer program and then examines the Procedure Division 
+                  of the program that produced the report. <BR>
+                  </FONT> </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"><B><A href="#part1b" target="">How the Report 
+                  Writer works</A><BR>
+                  </B><FONT size="-1">This section explains how the Report Writer 
+                  works. It examines the seven report groups a report produced 
+                  by a Report Writer program and then examines the Procedure Division 
+                  of the program that produced the report. <BR>
+                  </FONT> </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <DIV align="left"> 
+                    <P><B><A href="#part2" target="">Let's write a Report Writer 
+                      p</A></B><B><A href="#part2" target="">rogram</A><BR>
+                      </B><FONT size="-1">This section uses learning by doing 
+                      as its mode of instruction. We learn how to write a simple 
+                      version of the report program shown in the previous section.</FONT><BR>
+                    </P>
+                  </DIV>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><A href="#part3" target=""><B>Let's add some features to 
+                    our Report Program</B></A><BR>
+                    <FONT size="-1">In this section we amend the report program 
+                    to include more functionality</FONT><FONT size="-1">.<BR>
+                    </FONT></P>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <P><A href="#part4" target=""><B>Report Writer Declaratives</B></A><BR>
+                    <FONT size="-1">When the requirements of the report do not 
+                    coincide with the way the Report Writer works Declaratives 
+                    can be used to extend the functionality of the Report Writer.</FONT><FONT size="-1"><BR>
+                    </FONT></P>
+                </TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><FONT face="Arial, Helvetica, sans-serif">Introduction</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="540"> 
+            <P>The aim of this unit is to provide you with a solid understanding 
+              of COBOL Report Writer. This unit introduces the report writer by 
+              -</P>
+            <OL>
+              <LI>Looking at a fairly complex report created using the report 
+                writer and examining what the Report Writer had to do to produce 
+                the report.</LI>
+              <LI>Looking at the Procedure Division of the program that produced 
+                the report.</LI>
+              <LI>Writing a simple version of the the program that produced the 
+                report.</LI>
+              <LI>Adding more features to the report program.</LI>
+              <LI>Examining the use of Declaratives in extending the functionality 
+                of the Report Writer.</LI>
+              <LI>Examining a full report program that uses Declaratives.</LI>
+            </OL>
+            <P>In the next unit we examine the syntax and semantics of the Report 
+              Writer clauses and verbs in detail.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="540"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Understand how the Report Writer works</LI>
+              <LI>Understand how and when to use the seven different types of 
+                report group.</LI>
+              <LI>Be able to control the placement of print items on the page 
+                and to control when the Report Writer goes to a new page.</LI>
+              <LI>Understand how to use the SUM clause to automatically accumulate 
+                totals.</LI>
+              <LI>Be able to set up control break items and understand how the 
+                relationship between them is controlled.</LI>
+              <LI>Understand how and when to use Declaratives.</LI>
+            </OL>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <TD width="525"> 
+            <P>You should be familiar with the material covered in the unit; </P>
+            <UL>
+              <LI>Data Declaration </LI>
+              <LI>Iteration</LI>
+              <LI>Selection</LI>
+              <LI>Tables</LI>
+              <LI>Edited Pictures</LI>
+              <LI>The<FONT size="2"> INSPECT</FONT> verb</LI>
+              <LI>The <FONT size="2">STRING</FONT> verb</LI>
+              <LI>The<FONT size="-1"> UNSTRING</FONT> verb</LI>
+              <LI>Sequential files</LI>
+            </UL>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <P>&nbsp; </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part1"></A><FONT face="Arial, Helvetica, sans-serif">The 
+              Report Writer in Action</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="540" valign="top"> 
+            <P>Producing printed reports is an important aspect of business programming. 
+              Unfortunately, report programs are often tedious to code. Report 
+              programs are long, and frequently consist of mere repetitions of 
+              the tasks and techniques used in other report programs. To simplify 
+              the task of writing report programs COBOL contains the Report Writer.</P>
+            <P>The COBOL Report Writer is very large. It includes many new <FONT size="2">DATA 
+              DIVISION</FONT> entries, including a <FONT size="2">REPORT SECTION</FONT>, 
+              and a number of new <FONT size="2">PROCEDURE DIVISION</FONT> verbs. 
+            </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="center"><FONT color="#800000" face="Arial, Helvetica, sans-serif">An 
+              example report - with animated commentary.</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The first page from an example report, produced by the Report Writer, 
+              is shown below. The report shows the sales made by Bible salespersons 
+              in all of the cities of Ireland. </P>
+            <P>In the attached animated commentary we will examine what the program 
+              has to do to produce the report.</P>
+            <TABLE border="1" width="100%">
+              <TR> 
+                <TD> 
+                  <CENTER>
+                    <OBJECT CLASSID="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" WIDTH=425 HEIGHT=575>
+                      <PARAM NAME="File" VALUE="Resources/ppz/TC-RepWrite1.ppz">
+                      <EMBED WIDTH=425 HEIGHT=575 SRC="Resources/ppz/tc-repwrite1.ppz"></EMBED><NOEMBED> 
+                      This page contains a Microsoft PowerPoint Animation that 
+                      your browser was unable to view.<A HREF="TC-RepWrite1.ppz">Click 
+                      here to open TC-RepWrite1.ppz fullscreen</A></NOEMBED> 
+                    </OBJECT> 
+                  </CENTER>
+                </TD>
+              </TR>
+            </TABLE>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="center"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              Procedure Division that produces the sales report </FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>In a program that did not use the Report Writer, the<FONT size="-1"> 
+              PROCEDURE DIVISION</FONT> required to produce the sales report shown 
+              above would occupy a hundred lines or so of code. When the <FONT size="-1">REPORT 
+              WRITER</FONT> is used, only the <FONT size="-1">PROCEDURE DIVISION</FONT> 
+              shown below is required. </P>
+            <P>All the work of printing the report is being done in just 10 statements.</P>
+            <HR>
+            <TABLE border="0" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD height="333"> 
+                  <PRE>PROCEDURE DIVISION.
+Begin.
+    OPEN INPUT SalesFile.
+    OPEN OUTPUT PrintFile.
+    READ SalesFile
+         AT END SET EndOfFile TO TRUE
+    END-READ.
+    INITIATE SalesReport.
+    PERFORM PrintSalaryReport
+            UNTIL EndOfFile.
+    TERMINATE SalesReport.
+    CLOSE SalesFile, PrintFile.
+    STOP RUN.
+
+
+PrintSalaryReport.
+    GENERATE DetailLine.
+    READ SalesFile
+          AT END SET EndOfFile TO TRUE
+    END-READ.                                                       </PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="center"><FONT color="#800000" face="Arial, Helvetica, sans-serif">So 
+              much work, so little Procedure Division code</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>How can so much work be done in so little <FONT size="-1">PROCEDURE 
+              DIVISION</FONT> code? How does the report writer know that page 
+              headings are required or that it is time to print the salesperson 
+              or city totals. </P>
+            <P>To achieve so much in so little <FONT size="-1">PROCEDURE DIVISION</FONT> 
+              code, the Report Writer uses a declarative approach to programming 
+              rather than the procedural one familiar to most programmers. </P>
+            <P>When the Report Writer is used, the programmer declares <B>what</B> 
+              to print when a page heading, page footing, salesman total, city 
+              total or final total is required and the Report Writer works out 
+              <B>when</B> to print these items.</P>
+            <P>In keeping with the adage that &quot;there is no such thing as 
+              free lunch&quot;, the <FONT size="-1">PROCEDURE DIVISION</FONT> 
+              of a Report Writer program is short because most of the work is 
+              actually done in the (greatly expanded) <FONT size="-1">DATA DIVISION</FONT>. 
+            </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00" face="Arial, Helvetica, sans-serif"><A name="part1b"></A>How 
+              the Report Writer works</FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Report 
+              Groups </FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The Report Writer works by recognizing that many reports take (more 
+              or less) the same shape. </P>
+            <UL>
+              <LI>There may be headings at the beginning of the report and footings 
+                at the end. </LI>
+              <LI>There may be headings at the top of each page and footings at 
+                the bottom. </LI>
+              <LI>Headings and Footings may need to be printed whenever there 
+                is a control break (i.e., when the value in a specified field 
+                changes, such as when the SalesPerson number changes in the example 
+                above).</LI>
+              <LI>Detail lines must be printed. </LI>
+            </UL>
+            <P>The Report Writer calls these different report items - Report Groups. 
+              Reports are organized around report groups and the Report Writer 
+              recognizes seven types of report group (shown below). The indentation 
+              shows the importance/order of execution of the report groups. </P>
+            <BLOCKQUOTE> 
+              <P>REPORT HEADING or RH group<BR>
+                <FONT size="-1">- printed once at the beginning of the report 
+                </FONT></P>
+            </BLOCKQUOTE>
+            <OL>
+              <BLOCKQUOTE> 
+                <P> PAGE HEADING of PH group <BR>
+                  <FONT size="-1">- printed at the top of each page </FONT></P>
+                <BLOCKQUOTE> 
+                  <P>CONTROL HEADING or CH group<BR>
+                    <FONT size="-1">- printed at the beginning of each control 
+                    break </FONT></P>
+                  <BLOCKQUOTE> 
+                    <P>DETAIL or DE group <BR>
+                      <FONT size="-1">- printed each time the GENERATE statement 
+                      is executed</FONT></P>
+                  </BLOCKQUOTE>
+                  <P>CONTROL FOOTING or CF group<BR>
+                    <FONT size="-1">- printed at the end of each control break 
+                    </FONT></P>
+                </BLOCKQUOTE>
+                <P>PAGE FOOTING or PF group <BR>
+                  <FONT size="-1">- printed at the bottom of each page </FONT></P>
+              </BLOCKQUOTE>
+            </OL>
+            <BLOCKQUOTE> 
+              <P>REPORT FOOTING or RF group <BR>
+                <FONT size="-1">- printed once at the end of the report. </FONT></P>
+            </BLOCKQUOTE>
+            <P>Report Groups are defined as records in the <FONT size="-1">REPORT 
+              SECTION</FONT> of the <FONT size="-1">DATA DIVISION</FONT>. Most 
+              groups are defined once for each report, but control groups are 
+              defined for each control break item. For instance, in the example 
+              program, control footings are defined on the SalesPersonNumber, 
+              the CityCode and <FONT size="-1">FINAL</FONT>. <FONT size="-1">FINAL</FONT> 
+              is a special control group that is invoked before the normal control 
+              groups (<FONT size="-1">CONTROL HEADING FINAL</FONT>) and after 
+              the normal control groups (<FONT size="-1">CONTROL FOOTING FINAL</FONT>).</P>
+            <P>An ordinary control group is defined on some control break data-item. 
+              The Report Writer monitors the contents of the data-item and when 
+              the value in the item changes a control break is automatically initiated 
+              and the <FONT size="-1">CONTROL FOOTING</FONT> group (if there is 
+              one) is printed.</P>
+            <P>&nbsp; </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="center"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Report 
+              writing made easy</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Writing report programs is time consuming. It may be difficult 
+              to get the vertical and horizontal placement of printed items correct. 
+              Many lines of code may have to be written merely to move values 
+              to their corresponding items in the print line. A line count has 
+              to be kept to control when the report prints on a new page and a 
+              page count is often required.</P>
+            <P>The Report Writer makes all of this easy by;</P>
+            <UL>
+              <LI>Allowing simple vertical and horizontal placement of printed 
+                items using the <FONT size="-1">LINE IS</FONT> and <FONT size="-1">COLUMN 
+                IS </FONT>phrases in the data declaration</LI>
+              <LI>Automatically moving data values to output items</LI>
+              <LI>Keeping a line count and automatically generating report and 
+                page headers and footers at the appropriate times</LI>
+              <LI>Keeping a page count which can be referenced in the report declaration</LI>
+              <LI>Recognizing control breaks and automatically generating the 
+                appropriate control headings and footings</LI>
+              <LI>Automatically accumulating totals, sub-totals and final totals 
+              </LI>
+            </UL>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A><FONT face="Arial, Helvetica, sans-serif">Let's 
+              write a Report Writer program!</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">Let's write a Report Writer program!</P>
+              <P align="left"> We'll start by writing a simpler version of the 
+                program that produces example report shown above and then we'll 
+                add to it to create a report program with even more features than 
+                the one shown.</P>
+              <P align="left">Let's start by looking the data we have been giving 
+                to work with and at what is required in our simple report.</P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"> Report 
+              Specification </FONT></H4>
+            <H3>&nbsp;</H3>
+            <DIV align="right"></DIV>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P align="left">Bible salespersons work in each of the cities of Ireland. 
+              Each time a salesperson sells some bibles the value of that sale 
+              is recorded in a sales file along with the salesperson number and 
+              the city code.</P>
+            <P align="left">The sales file has been validated and sorted on ascending 
+              SalesPersonNum within ascending CityCode.</P>
+            <P align="left">We want to write a program that will produce a report 
+              that prints - </P>
+            <UL>
+              <LI> a heading and a footing on each page</LI>
+              <LI>for each sale record we want to print the the city name (obtained 
+                from a table), salesperson number and the value of the sale</LI>
+              <LI>the total value of sales for each salesperson</LI>
+            </UL>
+            <HR>
+          </TD>
+        </TR>
+        <TR> </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">A simple 
+              report </FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">The first page produced by the simple report program 
+                we are going to write is shown below. In the section that follows 
+                we will examine the program that created the report.</P>
+              <TABLE border="1" width="100%" background="Resources\pics\code.gif">
+                <TR> 
+                  <TD height="333"> 
+                    <PRE>           An example COBOL Report Program              
+     Bible Salesperson - Sales and Salary Report        
+                                                        
+ City      Salesperson     Sale                         
+ Name       Number         Value                        
+Dublin        1           $111.50                       
+Dublin        1           $222.50                       
+              Sales for salesperson 1     =      $334.00
+                                                        
+                                                        
+Dublin        2         $1,111.50                       
+Dublin        2         $1,222.50                       
+Dublin        2         $1,333.50                       
+              Sales for salesperson 2     =    $3,667.50
+                                                        
+                                                        
+Dublin        3           $777.70                       
+              Sales for salesperson 3     =      $777.70
+                                                        
+                                                        
+Belfast       1           $111.50                       
+Belfast       1           $222.50                       
+              Sales for salesperson 1     =      $334.00
+                                                        
+                                                        
+Belfast       2         $1,111.50                       
+Belfast       2         $1,222.50                       
+              Sales for salesperson 2     =    $2,334.00
+                                                        
+                                                        
+Belfast       3           $111.10                       
+Belfast       3           $111.10                       
+              Sales for salesperson 3     =      $222.20
+                                                        
+                                                        
+Belfast       4           $111.50                       
+Belfast       4         $1,502.50                       
+Belfast       4         $2,505.50                       
+              Sales for salesperson 4     =    $4,119.50
+                                                        
+                                                        
+Cork          1           $333.50                       
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+Programmer - Michael Coughlan               Page :  1
+                                                    </PRE>
+                  </TD>
+                </TR>
+              </TABLE>
+              <P>&nbsp;</P>
+            </DIV>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Code 
+              &amp; Commentary</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <TABLE border="1" width="100%">
+              <TR> 
+                <TD> 
+                  <CENTER>
+                    <OBJECT classid="clsid:EFBD14F0-6BFB-11CF-9177-00805F8813FF" width=425 height=575>
+                      <PARAM name="File" value="Resources/ppz/TC-RepWrite2.ppz">
+                      <EMBED width=425 height=575 src="Resources/ppz/tc-repwrite2.ppz"></EMBED><NOEMBED> 
+                      This page contains a Microsoft PowerPoint Animation that 
+                      your browser was unable to view.<A href="TC-RepWrite2.ppz">Click 
+                      here to open TC-RepWrite2.ppz fullscreen</A></NOEMBED> 
+                    </OBJECT> 
+                  </CENTER>
+                </TD>
+              </TR>
+            </TABLE>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <DIV align="center"> </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part3"></A>Let's 
+              add some features to our Report Program</FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Adding 
+              a city and a final total</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> </DIV>
+            <P>Let's add city totals and a final total to the Report. The city 
+              total will be the sum of all the salesperson totals for the city 
+              and the final total will be the sum of all the city totals. A city 
+              total will be printed when the CityCode changes (i.e. when there 
+              is a control break on the CityCode) and the final total will be 
+              printed at the end of the report.</P>
+            <P>What changes do we have to make to our program to get it to print 
+              the city and final totals?</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Printing 
+              the city total</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>If we want to print the city total we must set up a report group 
+              for it describing <B>what </B>we want printed. To describe <B>when</B> 
+              we want the group printed, we must specify that the group is a CONTROL 
+              FOOTING group and we must identify the CityCode as the control break 
+              data-item. Since the city control break is senior to the salesperson 
+              control break we must indicate this by placing CityCode before SalespersonNumber 
+              in the CONTROLS are phrase.</P>
+            <P>The total for the city is automatically accumulated by means of 
+              the SUM clause. Every time a salesperson total is printed the phrase 
+              - SUM SMS - adds the total to the city total. This is why the item 
+              for printing the salesperson total was given a name - so that we 
+              could refer to it in the SUM phrase of the city total.</P>
+            <P>The item that prints the city total has also been given a name. 
+              This is so that we can refer to it in the final total SUM phrase. 
+            </P>
+            <HR>
+            <DIV align="center"></DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Printing 
+              a Final Total</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>To print the final total we must set up a CONTROL FOOTING FINAL 
+              group. Final is a special keyword that indicates the control break 
+              that occurs when the end of the report is reached. This is the most 
+              senior control break and we indicate this by placing the word FINAL 
+              ahead of all the other control break items in the CONTROLS ARE phrase.</P>
+            <P>The final total is automatically accumulated by means of the SUM 
+              CS clause. Every time a city total is printed the phrase SUM CS 
+              adds the city total to the final total. Note that the final total 
+              print item is not named because we never need to refer to it.</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">REPORT 
+              SECTION changes</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <HR>
+            <TABLE border="0" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD valign="top"> 
+                  <PRE>REPORT SECTION.
+RD  SalesReport
+    CONTROLS ARE <B><FONT color="#FF0000">FINAL
+                 CityCode</FONT></B>
+                 SalesPersonNum 
+    PAGE LIMIT IS 66
+    HEADING 1
+    FIRST DETAIL 6
+    LAST DETAIL 42
+    FOOTING 52.
+
+01  TYPE IS PAGE HEADING.
+    02 LINE 1.
+       03 COLUMN 12     PIC X(32)
+                        VALUE "An example COBOL Report Program".
+
+    02 LINE 2.
+       03 COLUMN 6      PIC X(17)
+          VALUE "Bible Salesperson".
+       03 COLUMN 23     PIC X(26)
+          VALUE " - Sales and Salary Report".
+
+    02 LINE 4.
+       03 COLUMN 2      PIC X(4) VALUE "City".
+       03 COLUMN 12     PIC X(11) VALUE "Salesperson".
+       03 COLUMN 28     PIC X(4) VALUE "Sale".
+
+    02 LINE 5.
+       03 COLUMN 2      PIC X(4) VALUE "Name".
+       03 COLUMN 13     PIC X(6) VALUE "Number".
+       03 COLUMN 28     PIC X(5) VALUE "Value".
+
+
+01  DetailLine TYPE IS DETAIL.
+    02 LINE IS PLUS 1.
+       03 COLUMN 1      PIC X(9)
+                        SOURCE CityName(CityCode) GROUP INDICATE.
+       03 COLUMN 15     PIC 9
+                        SOURCE SalesPersonNum  GROUP INDICATE.
+       03 COLUMN 25     PIC $$,$$$.99 SOURCE ValueOfSale.
+		
+
+01  SalesPersonGrp
+    TYPE IS CONTROL FOOTING SalesPersonNum  NEXT GROUP PLUS 2.
+    02 LINE IS PLUS 1.
+       03 COLUMN 15     PIC X(21) VALUE "Sales for salesperson".
+       03 COLUMN 37     PIC 9 SOURCE SalesPersonNum.
+       03 COLUMN 43     PIC X VALUE "=".
+       03 <B><FONT color="#FF0000">SMS</FONT></B> COLUMN 45 PIC $$$$$,$$$.99 SUM ValueOfSale.
+
+<B><FONT color="#FF0000">
+01  CityGrp TYPE IS CONTROL FOOTING CityCode NEXT GROUP PLUS 2.
+    02 LINE IS PLUS 2.
+       03 COLUMN 15     PIC X(9) VALUE "Sales for".
+       03 COLUMN 25     PIC X(9) SOURCE CityName(CityCode).
+       03 COLUMN 43     PIC X VALUE "=".
+       03 CS COLUMN 45  PIC $$$$$,$$$.99 SUM SMS.
+
+
+01  TotalSalesGrp TYPE IS CONTROL FOOTING FINAL.
+    02 LINE IS PLUS 4.
+       03 COLUMN 15     PIC X(11)
+                        VALUE "Total sales".
+       03 COLUMN 43     PIC X VALUE "=".
+       03 COLUMN 45     PIC $$$$$,$$$.99 SUM CS.</FONT></B>
+
+
+01  TYPE IS PAGE FOOTING.
+    02 LINE IS 53.
+       03 COLUMN 1      PIC X(29) 
+                        VALUE "Programmer - Michael Coughlan".
+       03 COLUMN 45     PIC X(6) VALUE "Page :".
+       03 COLUMN 52     PIC Z9 SOURCE PAGE-COUNTER.
+
+</PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <HR>
+            <P>&nbsp;</P>
+            <DIV align="center"> </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Changes 
+              to the Procedure Division</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>What changes do we need to make to the Procedure Division code 
+              to print the city and final totals. </P>
+            <P>Why none at all!!!</P>
+            <P> The Procedure Division code remains exactly the same.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00" face="Arial, Helvetica, sans-serif"><A name="part4"></A>Report 
+              Writer Declaratives</FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The Report Writer is a wonderful tool if the structure of the required 
+              report fits in to the way the Report Writer does things. But sometimes, 
+              the structure or requirements of the report are such that the standard 
+              Report Writer alone is an insufficient tool. In these cases, <FONT size="-1">DECLARATIVES</FONT> 
+              may be used to extend the functionality of the Report Writer.</P>
+            <P>The <FONT size="-1">USE BEFORE REPORTING</FONT> phrase allows code 
+              specified in the <FONT size="-1">DECLARATIVES</FONT> to be executed 
+              just before a report group is printed. The code in the <FONT size="-1">DECLARATIVES</FONT> 
+              extends the functionality of the Report Writer by performing tasks 
+              or calculations that the Report Writer can not do automatically 
+              or by selectively stopping the report group from being printed (using 
+              the <FONT size="-1">SUPPRESS PRINTING</FONT> command). </P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Calculating 
+              the salesperson's commission and salary</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Suppose we want to extend our report so that as well as printing 
+              the salesperson total it also prints the salesperson's commission 
+              and salary. The commission will be a percentage of the saleperson's 
+              sales and the salary will be calculated as the commission plus a 
+              fixed amount obtained from a two dimension table.</P>
+            <P>Additionally to enhance our understanding of how the control break 
+              items are referenced we will show the number of the salesperson 
+              for which we have just calculated the totals, commission and salary 
+              and the salesperson number currently in the file buffer.</P>
+            <P>Calculating the commission requires more than just simple addition 
+              so the Report Writer cannot handle it automatically. To calculate 
+              the commission are <FONT size="-1">DECLARATIVES</FONT> are required. 
+              The <FONT size="-1">USE BEFORE REPORTING</FONT> Salespsn-Line phrase 
+              in the <FONT size="-1">DECLARATIVES </FONT> allows these items to 
+              be calculated when the Salespsn-Number control footer group is about 
+              to be printed.</P>
+            <P>In the example program, <FONT size="-1">DECLARATIVES</FONT> are 
+              used because the Report Writer cannot automatically calculate a 
+              salesperson's commission and salary. The <FONT size="-1">USE BEFORE 
+              REPORTING</FONT> SalesPersonGrp phrase in the <FONT size="-1">DECLARATIVES 
+              </FONT> allows these items to be calculated when the SalesPersonGrp 
+              control footer group is about to be printed.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Values 
+              of control break items</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Have another look at the Report Section above. In particular look 
+              at the salesperson control footing group. Notice anything strange?</P>
+            <P>The salesperson number is being printed and the SOURCE clause is 
+              used to get its value from the SalesPersonNum in the sales record. 
+              But this is a control footing and that means that it is printed 
+              when there is a change of salesperson number. So the value in SalesPersonNum 
+              should be the number of the next salesperson and not the number 
+              of the salesperson whose totals have just been produced.</P>
+            <P>Yet the report produced has the correct salesperson number printed. 
+              How can this be?</P>
+            <P>In the control footing any reference to the control break item 
+              will be supplied with the previous value not the current value.</P>
+            <P>To help make the relationship between control break items and the 
+              Report Section, the Declaratives and the Procedure Division we will 
+              show the number of the salesperson for which we have just calculated 
+              the totals, commission and salary and the salesperson number currently 
+              in the file buffer. In the city footing we will show the city code 
+              for the city whose total sales have just been printed and the city 
+              code currently in the file buffer.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              full program and the report it produces</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Changes from the simple version are shown in red.</P>
+            <TABLE border="0" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD valign="top"> 
+                  <PRE>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  ReportExampleFull.
+AUTHOR.  Michael Coughlan.
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT SalesFile ASSIGN TO "GBPAY.DAT"
+           ORGANIZATION IS LINE SEQUENTIAL.
+    SELECT PrintFile ASSIGN TO "SALESREPORT.LPT".
+
+
+DATA DIVISION.
+FILE SECTION.
+FD  SalesFile.
+01  SalesRecord.
+    88 EndOfFile  VALUE HIGH-VALUES.
+    02 CityCode         PIC 9.
+    02 SalesPersonNum   PIC 9.
+    02 ValueOfSale      PIC 9(4)V99.
+
+FD  PrintFile
+    REPORT IS SalesReport.
+
+WORKING-STORAGE SECTION.
+01  NameTable.
+    02 TableValues.
+       03 FILLER        PIC X(18) VALUE "Dublin   Belfast  ".
+       03 FILLER        PIC X(18) VALUE "Cork     Galway   ".
+       03 FILLER        PIC X(18) VALUE "Sligo    Waterford".
+       03 FILLER        PIC X(9)  VALUE "Limerick".
+    02 FILLER REDEFINES TableValues.
+       03 CityName     PIC X(9) OCCURS 7 TIMES.
+
+01  RateTable.
+    02 TableValues.
+       03 FILLER        PIC X(35)
+                        VALUE "12300321004350056700123002340034500".
+       03 FILLER        PIC X(35)
+                        VALUE "12300543001230034200111001220013300".
+       03 FILLER        PIC X(35)
+                        VALUE "12000321001760018700133001440015500".
+       03 FILLER        PIC X(35)
+                        VALUE "32100123003210012000166001770018800".
+       03 FILLER        PIC X(35)
+                        VALUE "34500345004560054300111001220013200".
+       03 FILLER        PIC X(35)
+                        VALUE "19000180001780017900444003330022200".
+       03 FILLER        PIC X(35)
+                        VALUE "16700156001450014600222001110021200".
+       03 FILLER        PIC X(35)
+                        VALUE "12000132001230014300121003210043200".
+       03 FILLER        PIC X(35)
+                        VALUE "15400165001640017600111007770033300".
+
+    02 FILLER REDEFINES TableValues.
+       03 City OCCURS 7 TIMES.
+          04 FixedRate  PIC 9(3)V99 OCCURS 9 TIMES.
+
+01  MiscVariables.
+    02 Commission       PIC 9(4)V99.
+    02 Percentage       PIC V99 VALUE .05.
+    02 Salary           PIC 9(6)V99.
+    02 SalesPersonNow   PIC 9.
+    02 CityNow          PIC 9.
+
+
+REPORT SECTION.
+RD  SalesReport
+    CONTROLS ARE FINAL
+                CityCode
+                SalesPersonNum 
+    PAGE LIMIT IS 66
+    HEADING 1
+    FIRST DETAIL 6
+    LAST DETAIL 42
+    FOOTING 52.
+
+01  TYPE IS PAGE HEADING.
+    02 LINE 1.
+       03 COLUMN 12     PIC X(32)
+                        VALUE "An example COBOL Report Program".
+
+    02 LINE 2.
+       03 COLUMN 6      PIC X(17)
+          VALUE "Bible Salesperson".
+       03 COLUMN 23     PIC X(26)
+          VALUE " - Sales and Salary Report".
+
+    02 LINE 4.
+       03 COLUMN 2      PIC X(4) VALUE "City".
+       03 COLUMN 12     PIC X(11) VALUE "Salesperson".
+       03 COLUMN 28     PIC X(4) VALUE "Sale".
+
+    02 LINE 5.
+       03 COLUMN 2      PIC X(4) VALUE "Name".
+       03 COLUMN 13     PIC X(6) VALUE "Number".
+       03 COLUMN 28     PIC X(5) VALUE "Value".
+
+
+01  DetailLine TYPE IS DETAIL.
+    02 LINE IS PLUS 1.
+       03 COLUMN 1      PIC X(9)
+                        SOURCE CityName(CityCode) GROUP INDICATE.
+       03 COLUMN 15     PIC 9
+                        SOURCE SalesPersonNum  GROUP INDICATE.
+       03 COLUMN 25     PIC $$,$$$.99 SOURCE ValueOfSale.
+		
+
+01  SalesPersonGrp
+    TYPE IS CONTROL FOOTING SalesPersonNum  NEXT GROUP PLUS 2.
+    02 LINE IS PLUS 1.
+       03 COLUMN 15     PIC X(21) VALUE "Sales for salesperson".
+       03 COLUMN 37     PIC 9 SOURCE SalesPersonNum.
+       03 COLUMN 43     PIC X VALUE "=".
+       03 SMS COLUMN 45 PIC $$$$$,$$$.99 SUM ValueOfSale.
+
+<B><FONT color="#FF0000">    02 LINE IS PLUS 1.
+       03 COLUMN 15     PIC X(19) VALUE "Sales commission is".
+       03 COLUMN 43     PIC X VALUE "=".
+       03 COLUMN 45     PIC $$$$$,$$$.99 SOURCE Commission.
+
+    02 LINE IS PLUS 1.
+       03 COLUMN 15     PIC X(22) VALUE "Salesperson salary is".
+       03 COLUMN 43     PIC X VALUE "=".
+       03 COLUMN 45     PIC $$$$$,$$$.99 SOURCE Salary.
+
+    02 LINE IS PLUS 1.
+       03 COLUMN 15     PIC X(30)
+                        VALUE "Current  salesperson number = ".
+       03 COLUMN 45     PIC 9 SOURCE SalesPersonNow.
+
+    02 LINE IS PLUS 1.
+       03 COLUMN 15     PIC X(30)
+                        VALUE "Previous salesperson number = ".
+       03 COLUMN 45     PIC 9 SOURCE SalesPersonNum.</FONT></B>
+
+
+
+01  CityGrp TYPE IS CONTROL FOOTING CityCode NEXT GROUP PLUS 2.
+    02 LINE IS PLUS 2.
+       03 COLUMN 15     PIC X(9) VALUE "Sales for".
+       03 COLUMN 25     PIC X(9) SOURCE CityName(CityCode).
+       03 COLUMN 43     PIC X VALUE "=".
+       03 CS COLUMN 45  PIC $$$$$,$$$.99 SUM SMS.
+
+<B><FONT color="#FF0000">    02 LINE IS PLUS 1.
+       03 COLUMN 15     PIC X(12)
+                        VALUE "Current city".
+       03 COLUMN 43     PIC X VALUE "=".
+       03 COLUMN 45     PIC 9 SOURCE CityNow.
+
+    02 LINE IS PLUS 1.
+       03 COLUMN 15     PIC X(13)
+                        VALUE "Previous city".
+       03 COLUMN 43     PIC X VALUE "=".
+       03 COLUMN 45     PIC 9   SOURCE CityCode.</FONT></B>
+
+
+01  TotalSalesGrp TYPE IS CONTROL FOOTING FINAL.
+    02 LINE IS PLUS 4.
+       03 COLUMN 15     PIC X(11)
+                        VALUE "Total sales".
+       03 COLUMN 43     PIC X VALUE "=".
+       03 COLUMN 45     PIC $$$$$,$$$.99 SUM CS.
+
+
+01  TYPE IS PAGE FOOTING.
+    02 LINE IS 53.
+       03 COLUMN 1      PIC X(29) 
+                        VALUE "Programmer - Michael Coughlan".
+       03 COLUMN 45     PIC X(6) VALUE "Page :".
+       03 COLUMN 52     PIC Z9 SOURCE PAGE-COUNTER.
+
+
+PROCEDURE DIVISION.
+<B><FONT color="#FF0000">DECLARATIVES.
+Calc SECTION.
+    USE BEFORE REPORTING SalesPersonGrp.
+Calculate-Salary.
+    MULTIPLY SMS BY Percentage
+          GIVING Commission ROUNDED.
+    ADD Commission, FixedRate(CityCode,SalesPersonNum)
+          GIVING Salary.
+END DECLARATIVES.</FONT></B>
+
+Main SECTION.
+Begin.
+    OPEN INPUT SalesFile.
+    OPEN OUTPUT PrintFile.
+    READ SalesFile
+         AT END SET EndOfFile TO TRUE
+    END-READ.
+    INITIATE SalesReport.
+    PERFORM PrintSalaryReport
+            UNTIL EndOfFile.
+    TERMINATE SalesReport.
+    CLOSE SalesFile, PrintFile.
+    STOP RUN.
+
+
+PrintSalaryReport.
+<B><FONT color="#FF0000">    MOVE CityCode TO CityNow.
+    MOVE SalesPersonNum  TO SalesPersonNow.</FONT></B>
+    GENERATE DetailLine.
+    READ SalesFile
+          AT END SET EndOfFile TO TRUE
+    END-READ.</PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <P>&nbsp; </P>
+            <HR>
+            <TABLE border="0" width="100%" background="Resources\pics\code.gif">
+              <TR> 
+                <TD valign="top"> 
+                  <PRE>           An example COBOL Report Program              
+     Bible Salesperson - Sales and Salary Report        
+                                                        
+ City      Salesperson     Sale                         
+ Name       Number         Value                        
+Dublin        1           $111.50                       
+                          $222.50                       
+              Sales for salesperson 1     =      $334.00
+              Sales commission is         =       $16.70
+              Salesperson salary is       =      $139.70
+              Current  salesperson number = 2           
+              Previous salesperson number = 1           
+                                                        
+                                                        
+Dublin        2         $1,111.50                       
+                        $1,222.50                       
+                        $1,333.50                       
+              Sales for salesperson 2     =    $3,667.50
+              Sales commission is         =      $183.38
+              Salesperson salary is       =      $504.38
+              Current  salesperson number = 3           
+              Previous salesperson number = 2           
+                                                        
+                                                        
+Dublin        3           $777.70                       
+              Sales for salesperson 3     =      $777.70
+              Sales commission is         =       $38.89
+              Salesperson salary is       =      $473.89
+              Current  salesperson number = 1           
+              Previous salesperson number = 3           
+                                                        
+              Sales for Dublin            =    $4,779.20
+              Current city                = 2           
+              Previous city               = 1           
+                                                        
+                                                        
+Belfast       1           $111.50                       
+                          $222.50                       
+              Sales for salesperson 1     =      $334.00
+              Sales commission is         =       $16.70
+              Salesperson salary is       =      $139.70
+              Current  salesperson number = 2  
+              Previous salesperson number = 1  
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+Programmer - Michael Coughlan               Page :  1 </PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <HR>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Summary 
+              of control break item reference</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>When a control break item is used in a control footing or in the 
+              DECLARATIVES before printing a control footing the value supplied 
+              by the Report Writer is the previous value. Referring to the same 
+              item in the Procedure Division yields the current value.</P>
+            <HR>
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <HR>
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="left">These COBOL course materials are the copyright property 
+                of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : November 1998</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

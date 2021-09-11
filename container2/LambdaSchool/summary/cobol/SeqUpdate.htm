@@ -1,0 +1,477 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Updating a Sequential File</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+
+<CENTER><IMG SRC="T-CobolExercise.gif" HEIGHT=56 WIDTH=183></CENTER>
+
+<CENTER>
+<H2>
+Updating a Sequential File</H2></CENTER>
+
+<CENTER>
+<HR WIDTH="100%"></CENTER>
+
+<CENTER><FONT SIZE=-1>READ, WRITE, PERFORM..UNTIL, EVALUATE, DISPLAY</FONT>
+<HR WIDTH="100%"></CENTER>
+
+<H2>
+<B>Introduction</B></H2>
+The transaction file (Transfer.Dat) contains records of students who have
+transferred from one University of Limerick (UL) course to another. The
+file is sequenced on ascending StudentId. Using this file, update the records
+in the student file (Students.Dat). Do this by creating a new file (Students.New)
+which contains the updated records. The students file and the new file
+are sequential files held in ascending StudentId order.
+
+<P>We are guaranteed that there will not be more than one transaction record
+for a particular Student.
+
+<P>The program must be able to detect two kinds of error;
+<OL>
+<LI>
+It must be able to detect when a record in the transaction file does not
+have a matching record in the student file.</LI>
+
+<LI>
+It must be able to detect (in mataching records) when the OldCourseCode
+of the transaction record is not the same as the CourseCode in the student
+record.</LI>
+</OL>
+&nbsp;Download <A HREF="ftp://www.csis.ul.ie/cobol/exercises/Students.Dat">Students.Dat</A> 
+and save it to the WorkArea directory on the drive D: 
+<P>Download <A HREF="ftp://www.csis.ul.ie/cobol/exercises/Transfer.dat">Transfer.Dat</A>
+and save it to the same place.
+<BR>&nbsp;
+<H2>
+File Descriptions</H2>
+The transaction file is a sequential file ordered on ascending StudentId.
+<BR>The records in the transaction file (Transfer.Dat) have the following
+description;
+<TABLE BORDER >
+<TR>
+<TD WIDTH="144">
+<CENTER><B>Field</B></CENTER>
+</TD>
+
+<TD WIDTH="67">
+<CENTER><B>Type</B></CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER><B>Length</B></CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER><B>Value</B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Student Id</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>7</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>0-9999999</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Old Course Code</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>4</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>-</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">New Course Code</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>4</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>-</CENTER>
+</TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<P>The students file is a sequential file ordered on ascending StudentId.
+<BR>The records in the students file and the new file have the same description.
+<BR>Records in these files have the following description;
+<TABLE BORDER >
+<TR>
+<TD WIDTH="144">
+<CENTER><B>Field</B></CENTER>
+</TD>
+
+<TD WIDTH="67">
+<CENTER><B>Type</B></CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER><B>Length</B></CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER><B>Value</B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Student Id</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>7</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>0-9999999</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Student Name</TD>
+
+<TD WIDTH="67">
+<CENTER>.</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>.</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>Group</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Surname</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>8</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>-</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Initials</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>2</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>-</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">DateOfBirth</TD>
+
+<TD WIDTH="67">
+<CENTER>.</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>.</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>Group</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Year</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>2</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>00-99</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Month</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>2</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>01-12</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Day</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>2</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>01-31</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Course Code</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>4</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>-</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Grant</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>4</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>0000-9999</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Gender</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>1</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>M/F</CENTER>
+</TD>
+</TR>
+</TABLE>
+&nbsp;
+<BR>&nbsp;
+<H2>
+Suggested Approaches</H2>
+This is quite a tricky problem so you may have some difficulty devising
+a solution to it.&nbsp; Here are some suggestions that may help you.
+
+<P>You need to work out what must to be done to solve the problem before
+you can write the program to solve it.&nbsp; One way of finding out what
+must be done is to solve the problem yourself on paper and note what you
+had to do.&nbsp; You can do this by running through some simple test data.
+
+<P>In the example test data which follows <B>T</B> represents the records
+in the transaction file and <B>S</B> represents the records in the student
+file.&nbsp; The numbers represent the StudentIds of the records.&nbsp;
+A "y" following the transaction number means the CourseCodes are ok, an
+"n" means that the CourseCodes do not match and an "x" means it is not
+relevant.
+<UL>
+<UL><B><TT>T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S</TT></B>
+<BR><TT>05y&nbsp;&nbsp;&nbsp;&nbsp; 01</TT>
+<BR><TT>15x&nbsp;&nbsp;&nbsp;&nbsp; 05</TT>
+<BR><TT>25y&nbsp;&nbsp;&nbsp;&nbsp; 10</TT>
+<BR><TT>50y&nbsp;&nbsp;&nbsp;&nbsp; 25</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50</TT>
+<BR><TT></TT>&nbsp;</UL>
+</UL>
+<TT>Go through the test data and answer the following questions;</TT>
+<OL>
+<LI>
+<TT>When T &lt; S (i.e. when the transaction StudentId is less than the
+StudentId in the student file) what file(s) must be read?&nbsp;&nbsp; Must
+a record be written to the new file?</TT></LI>
+
+<LI>
+<TT>When T = S what file(s) must be read?&nbsp; Must a record be written
+to the new file? Is there anything else that needs to be taken into consideration?</TT></LI>
+
+<LI>
+<TT>When T > S what file(s) must be read?&nbsp; Must a record be written
+to the new file?</TT></LI>
+</OL>
+<TT></TT>&nbsp;
+<H2>
+Sample Solution</H2>
+When you have written your program and have compiled it and have it working
+correctly you may wish to compare it with this
+<BR><A HREF="ftp://www.csis.ul.ie/cobol/exercises/SeqUpdate.cbl">sample solution</A>.
+<BR>&nbsp;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B><U><FONT COLOR="#FF0000">WARNING</FONT></U></B>
+<BR>As always please do not look at the solution until you have finished
+your own program.&nbsp;&nbsp; At the very least you should make a substantial
+effort to complete your own attempt at the program before examining the
+sample solution.
+<BR>&nbsp;
+
+<BR>
+<hr>
+<table cellspacing=0 cellpadding=0 cols=3 width="200" >
+  <tr align=CENTER valign=TOP> 
+    <td><a href="default.htm"><img src="/pics/B-BackArrow.gif" alt="Back to COBOL Exercises page" border=0 height=52 width=52></a> 
+      <font size=-2>To COBOL Exercises</font></td>
+    <td><a href="/CSISFORM.HTM"><img src="/pics/b-evaluation.gif" alt="Please fill out our evaluation form" border=0 height=52 width=52></a> 
+      <font size=-2>Evaluation Form</font></td>
+    <td><a href="/SEARCH/CSISQueryHit.HTM"><img src="/pics/b-WebSearch.gif" alt="Search the CSIS Web Site" border=0 height=52 width=52></a> 
+      <font size=-2>Search CSIS Web Site</font></td>
+    <td> 
+      <center>
+        <form>
+          Selectable Site Contents 
+          <select name="list">
+            <option value="http://www.ul.ie/">UL Home Page</option>
+            <option value="http://www.ul.ie/~informat/">College of I&amp;E Home 
+            Page</option>
+            <option value="http://www.csis.ul.ie/default.htm">CSIS Home Page</option>
+            <option value="http://www.csis.ul.ie/courses.HTM">Courses On Offer</option>
+            <option value="http://www.csis.ul.ie/CompSys.HTM">...Computer Systems 
+            Degree</option>
+            <option value="http://www.csis.ul.ie/GradDip.HTM">...Graduate Diploma 
+            in Computing</option>
+            <option value="http://www.csis.ul.ie/software_localisation/default.htm">...Graduate 
+            Diploma/MSc in Software Localisation</option>
+            <option value="http://www.csis.ul.ie/ccmcm/default.htm">...MSc in 
+            Music Technology</option>
+            <option value="http://www.csis.ul.ie/soft_re_eng.html/default.htm">...MSc 
+            in Software Reengineering</option>
+            <option value="http://www.csis.ul.ie/Directory/Staff.HTM">Department 
+            Personnel</option>
+            <option value="http://www.csis.ul.ie/Directory/phone.HTM">...CSIS 
+            Telephone Directory</option>
+            <option value="http://www.ul.ie/ITD/PhoneBook.html">...UL Internal 
+            Telephone Directory</option>
+            <option value="http://www.csis.ul.ie/Research.HTM">Research</option>
+            <option value="http://www.csis.ul.ie/Research/ResearchCntr.HTM">...Research 
+            Centres</option>
+            <option value="http://www.csis.ul.ie/Research/ResearchPrj.HTM">...Research 
+            Projects</option>
+            <option value="http://www.csis.ul.ie/Research/RsrchPubs.htm">...Research 
+            Publications</option>
+            <option value="http://www.csis.ul.ie/Research/techrpts.htm">...Technical 
+            Reports</option>
+            <option value="http://www.csis.ul.ie/Research/PhdTheses.htm">...Ph.D 
+            Theses</option>
+            <option value="http://www.csis.ul.ie/Research/masters.htm">...M.Sc. 
+            Theses</option>
+            <option value="http://www.csis.ul.ie/StudentResources.HTM">Student 
+            Resources</option>
+            <option value="http://www.csis.ul.ie/photoalbum/classes/namesonly.htm">...Computer 
+            Systems Graduated Classes </option>
+            <option value="http://www.csis.ul.ie/staff/norahpower/FYPSuggestions9798.htm">...Final 
+            Year Project suggestions</option>
+            <option value="http://www.csis.ul.ie/fyp97/index.html">...Final Year 
+            Projects web page</option>
+            <option value="http://www.csis.ul.ie/studentresources/schedules/csislabs.htm">...Lab 
+            Schedules</option>
+            <option value="http://www.csis.ul.ie/studentresources/ModuleMaterial.htm">...Module 
+            Materials</option>
+            <option value="http://www.csis.ul.ie/studentresources/links.htm">...Useful 
+            Links</option>
+            <option value="http://www.csis.ul.ie/StudentResources/fyproj.htm">...Completed 
+            Final Year Projects</option>
+            <option value="http://www.csis.ul.ie/meetings/Meetings.HTM">Meetings</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/Album.htm">Photo Album</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/classes/default.htm">...Computer 
+            Systems - Class Photos</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuin.htm">...Schuman 
+            Interior</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuout.htm">...Schuman 
+            Environs</option>
+            <option value="http://www.csis.ul.ie/PhotoAlbum/ULgrounds/default.htm">...University 
+            Grounds</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM">General Information</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Department">...Department 
+            Information</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Getting">...Getting 
+            Around</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#Contacting">...Contacting 
+            the department</option>
+            <option value="http://www.csis.ul.ie/TOYS/WHOSON.HTM">...Who's on 
+            the server</option>
+            <option value="http://www.csis.ul.ie/GenInfo.HTM#About">...About these 
+            pages</option>
+          </select>
+          <input type=BUTTON value="Go!" 
+onclick="top.location.href=this.form.list.options[this.form.list.selectedIndex].value" name="BUTTON">
+        </form>
+        <p></p>
+      </center>
+    </td>
+  </tr>
+</table>
+<hr>
+<font size=-1><i>Last updated :April 1997</i></font> <br>
+<font size=-1><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font> 
+</BODY>
+</HTML>

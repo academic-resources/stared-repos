@@ -1,0 +1,438 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Sorting a Sequential File</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+
+<CENTER><IMG SRC="T-CobolExercise.gif" HEIGHT=56 WIDTH=183></CENTER>
+
+<CENTER>
+<H2>
+Sorting a Sequential File</H2></CENTER>
+
+<HR WIDTH="100%">
+<CENTER><FONT SIZE=-1>READ, RELEASE, SORT, Input Procedure</FONT></CENTER>
+
+<HR WIDTH="100%">
+<H2>
+<B>Introduction</B></H2>
+A program is required which will process the Students File (Students.Dat)
+and will count the number of males and females taking each course. The
+totals must be displayed in ascending CourseCode order.
+
+<P>&nbsp;Download <A HREF="ftp://www.csis.ul.ie/cobol/exercises/Students.Dat">Students.Dat</A> 
+  and save it to the \WorkArea directory on drive D: <BR>
+  &nbsp;
+<H2>
+Student File Description</H2>
+The Students File is a sequential file held in <B>ascending StudentId</B>
+order.
+<BR>Each record of the students file contains the following items;
+<TABLE BORDER >
+<TR>
+<TD WIDTH="144">
+<CENTER><B>Field</B></CENTER>
+</TD>
+
+<TD WIDTH="67">
+<CENTER><B>Type</B></CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER><B>Length</B></CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER><B>Value</B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Student Id</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>7</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>0-9999999</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Student Name</TD>
+
+<TD WIDTH="67"></TD>
+
+<TD WIDTH="78"></TD>
+
+<TD WIDTH="133">
+<CENTER>Group</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Surname</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>8</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>-</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Initials</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>2</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>-</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">DateOfBirth</TD>
+
+<TD WIDTH="67"></TD>
+
+<TD WIDTH="78"></TD>
+
+<TD WIDTH="133">
+<CENTER>Group</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Year</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>2</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>00-99</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Month</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>2</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>01-12</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Day</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>2</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>01-31</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Course Code</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>4</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>-</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Grant</TD>
+
+<TD WIDTH="67">
+<CENTER>9</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>4</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>0000-9999</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Gender</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>1</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>M/F</CENTER>
+</TD>
+</TR>
+</TABLE>
+&nbsp;
+<BR>&nbsp;
+<H2>
+<B>Suggested Approaches.</B></H2>
+The main problem that we face here is that the results must be displayed
+in CourseCode order but the file is held in StudentId order.
+
+<P>You may think that a solution using tables would be the answer here.&nbsp;
+That is, read each record, find its CourseCode and add 1 to the appropriate
+place in a CourseCode table (where the elements are in CourseCode order).&nbsp;
+When all the records have been processed display the results by going through
+the table element by element.
+
+<P>The problem with this solution is that new courses are added quite frequently.&nbsp;
+If we adopted the table approach we would have to change the program each
+time a new course is added.
+
+<P>So the solution you are going to adopt in this exercise is to create a new 
+  file with the records sorted on ascending CourseCode by&nbsp; using the <font size="2">SORT</font> 
+  verb to sort the Students File.&nbsp; To make the <font size="2">SORT</font> 
+  as efficient as possible (by reducing the amount of data that needs to be processed) 
+  records of the sorted file should only contain the fields that are needed for 
+  this program. An Input Procedure should be used to create the appropriate Sort 
+  Records. 
+<P>When the sorted file has been produced it is a simple matter to process
+it to calculate the required totals
+<BR>&nbsp;
+<H2>
+Sorted File Description.</H2>
+The sorted file is a sequential file held in <B>ascending CourseCode</B> order. 
+<BR>
+Each record of the&nbsp; file contains the following items;
+<TABLE BORDER >
+<TR>
+<TD WIDTH="144">
+<CENTER><B>Field</B></CENTER>
+</TD>
+
+<TD WIDTH="67">
+<CENTER><B>Type</B></CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER><B>Length</B></CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER><B>Value</B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Course Code</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>4</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>-</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="144">Gender</TD>
+
+<TD WIDTH="67">
+<CENTER>X</CENTER>
+</TD>
+
+<TD WIDTH="78">
+<CENTER>1</CENTER>
+</TD>
+
+<TD WIDTH="133">
+<CENTER>M/F</CENTER>
+</TD>
+</TR>
+</TABLE>
+&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<UL>
+<UL>
+<UL>
+<UL><U><FONT SIZE=+2>Example Run</FONT></U></UL>
+<TT>CourseCode Females Males</TT>
+<BR><TT>&nbsp; LM51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;
+15</TT>
+<BR><TT>&nbsp; LM52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;
+12</TT>
+<BR><TT>&nbsp; LM60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6</TT></UL>
+</UL>
+</UL>
+Use edited picture clauses and the zero suppression symbol to produce the output 
+as shown. <BR>
+&nbsp;
+<BR>&nbsp;
+<H2>
+Sample Solution</H2>
+<div align="LEFT">
+  When you have written your program and have compiled it and have it working 
+  correctly you may wish to compare it with this <A HREF="ftp://www.csis.ul.ie/cobol/exercises/sortip.cbl">sample 
+  solution</A>. <BR>
+  &nbsp; <BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <B><U><FONT COLOR="#FF0000">WARNING</FONT></U></B> <BR>
+  As always please do not look at the solution until you have finished your own 
+  program.&nbsp;&nbsp; At the very least you should make a substantial effort 
+  to complete your <BR>
+  own attempt at the program before examining the sample solution. <BR>
+  &nbsp; <BR>
+  &nbsp; <BR>
+  <hr>
+  <table cellspacing=0 cellpadding=0 cols=3 width="200" >
+    <tr align=CENTER valign=TOP> 
+      <td><a href="default.htm"><img src="/pics/B-BackArrow.gif" alt="Back to COBOL Exercises page" border=0 height=52 width=52></a> 
+        <font size=-2>To COBOL Exercises</font></td>
+      <td><a href="/CSISFORM.HTM"><img src="/pics/b-evaluation.gif" alt="Please fill out our evaluation form" border=0 height=52 width=52></a> 
+        <font size=-2>Evaluation Form</font></td>
+      <td><a href="/SEARCH/CSISQueryHit.HTM"><img src="/pics/b-WebSearch.gif" alt="Search the CSIS Web Site" border=0 height=52 width=52></a> 
+        <font size=-2>Search CSIS Web Site</font></td>
+      <td> 
+        <center>
+          <form>
+            Selectable Site Contents 
+            <select name="list">
+              <option value="http://www.ul.ie/">UL Home Page</option>
+              <option value="http://www.ul.ie/~informat/">College of I&amp;E Home 
+              Page</option>
+              <option value="http://www.csis.ul.ie/default.htm">CSIS Home Page</option>
+              <option value="http://www.csis.ul.ie/courses.HTM">Courses On Offer</option>
+              <option value="http://www.csis.ul.ie/CompSys.HTM">...Computer Systems 
+              Degree</option>
+              <option value="http://www.csis.ul.ie/GradDip.HTM">...Graduate Diploma 
+              in Computing</option>
+              <option value="http://www.csis.ul.ie/software_localisation/default.htm">...Graduate 
+              Diploma/MSc in Software Localisation</option>
+              <option value="http://www.csis.ul.ie/ccmcm/default.htm">...MSc in 
+              Music Technology</option>
+              <option value="http://www.csis.ul.ie/soft_re_eng.html/default.htm">...MSc 
+              in Software Reengineering</option>
+              <option value="http://www.csis.ul.ie/Directory/Staff.HTM">Department 
+              Personnel</option>
+              <option value="http://www.csis.ul.ie/Directory/phone.HTM">...CSIS 
+              Telephone Directory</option>
+              <option value="http://www.ul.ie/ITD/PhoneBook.html">...UL Internal 
+              Telephone Directory</option>
+              <option value="http://www.csis.ul.ie/Research.HTM">Research</option>
+              <option value="http://www.csis.ul.ie/Research/ResearchCntr.HTM">...Research 
+              Centres</option>
+              <option value="http://www.csis.ul.ie/Research/ResearchPrj.HTM">...Research 
+              Projects</option>
+              <option value="http://www.csis.ul.ie/Research/RsrchPubs.htm">...Research 
+              Publications</option>
+              <option value="http://www.csis.ul.ie/Research/techrpts.htm">...Technical 
+              Reports</option>
+              <option value="http://www.csis.ul.ie/Research/PhdTheses.htm">...Ph.D 
+              Theses</option>
+              <option value="http://www.csis.ul.ie/Research/masters.htm">...M.Sc. 
+              Theses</option>
+              <option value="http://www.csis.ul.ie/StudentResources.HTM">Student 
+              Resources</option>
+              <option value="http://www.csis.ul.ie/photoalbum/classes/namesonly.htm">...Computer 
+              Systems Graduated Classes </option>
+              <option value="http://www.csis.ul.ie/staff/norahpower/FYPSuggestions9798.htm">...Final 
+              Year Project suggestions</option>
+              <option value="http://www.csis.ul.ie/fyp97/index.html">...Final 
+              Year Projects web page</option>
+              <option value="http://www.csis.ul.ie/studentresources/schedules/csislabs.htm">...Lab 
+              Schedules</option>
+              <option value="http://www.csis.ul.ie/studentresources/ModuleMaterial.htm">...Module 
+              Materials</option>
+              <option value="http://www.csis.ul.ie/studentresources/links.htm">...Useful 
+              Links</option>
+              <option value="http://www.csis.ul.ie/StudentResources/fyproj.htm">...Completed 
+              Final Year Projects</option>
+              <option value="http://www.csis.ul.ie/meetings/Meetings.HTM">Meetings</option>
+              <option value="http://www.csis.ul.ie/PhotoAlbum/Album.htm">Photo 
+              Album</option>
+              <option value="http://www.csis.ul.ie/PhotoAlbum/classes/default.htm">...Computer 
+              Systems - Class Photos</option>
+              <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuin.htm">...Schuman 
+              Interior</option>
+              <option value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuout.htm">...Schuman 
+              Environs</option>
+              <option value="http://www.csis.ul.ie/PhotoAlbum/ULgrounds/default.htm">...University 
+              Grounds</option>
+              <option value="http://www.csis.ul.ie/GenInfo.HTM">General Information</option>
+              <option value="http://www.csis.ul.ie/GenInfo.HTM#Department">...Department 
+              Information</option>
+              <option value="http://www.csis.ul.ie/GenInfo.HTM#Getting">...Getting 
+              Around</option>
+              <option value="http://www.csis.ul.ie/GenInfo.HTM#Contacting">...Contacting 
+              the department</option>
+              <option value="http://www.csis.ul.ie/TOYS/WHOSON.HTM">...Who's on 
+              the server</option>
+              <option value="http://www.csis.ul.ie/GenInfo.HTM#About">...About 
+              these pages</option>
+            </select>
+            <input type=BUTTON value="Go!" 
+onclick="top.location.href=this.form.list.options[this.form.list.selectedIndex].value" name="BUTTON">
+          </form>
+          <p></p>
+        </center>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <i><font size=-1>Last updated : April 1998</font></i> <br>
+  <font size=-1><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font> 
+</div>
+</BODY>
+</HTML>

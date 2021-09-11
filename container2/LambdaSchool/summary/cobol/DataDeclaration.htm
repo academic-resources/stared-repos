@@ -1,0 +1,839 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Declaring Data in COBOL</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+<TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <CENTER>
+              <H2><img src="/cobol/course/Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> <B>Declaring Data in COBOL</B></H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites and 
+                  further reading.</FONT> <BR>
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"><B><A href="#part1" target="">Categories of COBOL 
+                  data </A><BR>
+                  </B><FONT size="-1">This section introduces the three categories 
+                  of COBOL data - Literals, Variables and Figurative Constants. 
+                  <BR>
+                  <br>
+                  </FONT> </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"><B><A href="#part2" target="">Declaring Data-Items 
+                  in COBOL</A><BR>
+                  </B><FONT size="-1">In this section we show how variables are 
+                  declared in COBOL using the PICTURE clause. <br>
+                  <br>
+                  </FONT> </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> 
+                  <DIV align="left"><B><A href="#part3" target="">Group and Elementary 
+                    Data-Items </A><BR>
+                    </B><FONT size="-1">This section demonstrates how record structures 
+                    can be specified using an appropriate arrangement of level 
+                    numbers.<br>
+                    </FONT> <BR>
+                  </DIV>
+                </TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><FONT face="Arial, Helvetica, sans-serif">Introduction</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="540"> 
+            <P>The aim of this unit is give you an understanding of the different 
+              categories of data used in a COBOL program and to demonstrate how 
+              items of each category may be created and used.</P>
+            <HR width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="540"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Know how to use and create literals, variables and Figurative 
+                Constants. </LI>
+              <LI>Understand how to declare numeric, alphabetic and alphanumeric 
+                data-items.</LI>
+              <LI>Be able to create a record structure by assigning the appropriate 
+                level numbers to its data-items.</LI>
+              <LI>Understand the difference between group and an elementary data-items.</LI>
+              <LI>Be able to assign an initial value to a variable.</LI>
+            </OL>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC" height="160"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <TD width="525" height="160"> 
+            <P>Introduction to COBOL.</P>
+            <P>but more information on declaring data items in COBOL can be found 
+              in the units covering </P>
+            <ul>
+              <li>Edited Pictures</li>
+              <li>Sequential Files</li>
+              <li>The USAGE clause</li>
+            </ul>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC" height="159"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Further 
+              reading </FONT></H4>
+          </TD>
+          <TD width="525" height="159" valign="top"> 
+            <P>More information on declaring data items in COBOL can be found 
+              in the units covering -</P>
+            <ul>
+              <li>Edited Pictures</li>
+              <li>Sequential Files</li>
+              <li>The USAGE clause</li>
+            </ul>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part1"></A><FONT face="Arial, Helvetica, sans-serif">Categories 
+              of COBOL data </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="160" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="540" valign="top"> 
+            <P>There are three categories of data item used in COBOL programs: 
+            </P>
+            <ul>
+              <ul>
+                <li>Variables.</li>
+                <li>Literals.</li>
+                <li>Figurative Constants. </li>
+              </ul>
+            </ul>
+            <HR width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Variables</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>A data-name or identifier is the name used to identify the area 
+              of memory reserved for a variable. A variable is a named location 
+              in memory into which a program can put data, and from which it can 
+              retrieve data. </P>
+            <P>Every variable used in a COBOL program must be described in the 
+              <font size="-1">DATA DIVISION</font>. </P>
+            <P>In addition to the data-name, a variable declaration also defines 
+              the type of data to be stored in the variable. This is known as 
+              the variable's data type.</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Variable 
+              Data types </FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <table width="100%" 0>
+              <tr> 
+                <td height="85"> 
+                  <p align="center"><img src="Resources/pics/i-BugAlert.gif" width="56" height="62"><br>
+                    <font size="-1">Attempting to perform computations on numeric 
+                    data items that contain non-numeric data is a frequent cause 
+                    of program crashes for beginning COBOL programmers.</font></p>
+                </td>
+              </tr>
+            </table>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Some languages like Modula-2,Pascal or Ada are described as being 
+              <i>strongly typed</i>. In these languages there are a large number 
+              of different data types and the distinction between them is rigorously 
+              enforced by the compiler. For instance, the compiler will reject 
+              a statement that attempts to assign character value to an integer 
+              data item. </P>
+            <p>In COBOL, there are really only three data types -</p>
+            <ul>
+              <li> numeric </li>
+              <li>alphanumeric (text/string) </li>
+              <li>alphabetic</li>
+            </ul>
+            <p>The distinction between these data types is a little blurred and 
+              only weakly enforced by the compiler. For instance, it is perfectly 
+              possible to assign a non-numeric value to a data item that has been 
+              declared to be numeric. </p>
+            <p>The problem with this lax approach to data typing is that, since 
+              COBOL programs crash (halt unexpectedly) if they attempt to do computations 
+              on items that contain non-numeric data, it is up to the programmer 
+              to make sure this never happens. </p>
+            <p>COBOL programmers must make sure that non-numeric data is never 
+              assigned to numeric items intended for use in calculations. Programmers 
+              who use strongly typed languages don't need this level of discipline 
+              because the compiler ensures that a variable of a particular types 
+              can only be assigned appropriate values.</p>
+            <HR width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Literals</FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>A literal is a data-item that consists only of the data-item value 
+              itself. It cannot be referred to by a name. By definition, literals 
+              are constant data-items.</P>
+            <P>There are two types of literal - </P>
+            <ul>
+              <li>String/Alphanumeric Literals</li>
+              <li>Numeric Literals</li>
+            </ul>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">String 
+              Literals</FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>String/Alphanumeric literals are enclosed in quotes and consist 
+              of alphanumeric characters. </P>
+            <P>For example: "Michael Ryan", "-123", "123.45" </P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Numeric 
+              Literals</FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P> Numeric literals may consist of numerals, the decimal point, and 
+              the plus or minus sign. Numeric literals are not enclosed in quotes. 
+            </P>
+            <P>For example: 123, 123.45, -256, +2987 </P>
+            <HR width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Figurative 
+              Constants</FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></H4>
+            <p align="center"><font size="-1">Actually <font size="-2">COBOL</font> 
+              does allow you to set up single character user-defined Figurative 
+              Constants. These can be useful if you need to use the non-printable 
+              <font size="-2">ASCII</font> characters such as <font size="-2">ESC</font> 
+              or FormFeed.</font></p>
+            <p align="center"><font size="-1">User-defined Figurative Constants 
+              are declared in the <font size="-2">SYMBOLIC CHARACTERS </font>clause 
+              of the <font size="-2">ENVIRONMENT DIVISION</font>.</font></p>
+            <p align="center"><font size="-1">In an extension that previews the 
+              new <font size="-2">COBOL</font> specification, NetExpress does 
+              allow user-defined constants. It uses the level 78 for this purpose.</font></p>
+            <p align="left">&nbsp;</p>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Unlike most other programming languages COBOL does not provide 
+              a mechanism for creating user-defined constants but it does provide 
+              a set of special constants called Figurative Constants. </P>
+            <P>A Figurative Constant may be used wherever it is legal to use a 
+              literal but unlike literals, when a Figurative Constant is assigned 
+              to a data-item it fills the whole item overwriting everything in 
+              it.</P>
+            <P>The Figurative Constants are: 
+            <P ALIGN="CENTER"> 
+            <TABLE CELLSPACING=0 BORDER=1 CELLPADDING=5 WIDTH=439 align="center" bgcolor="#E1FFE1">
+              <TR> 
+                <TD WIDTH="47%" VALIGN="TOP"> <font size="-1"><b>SPACE</b></font> 
+                  or <font size="-1"><b>SPACES</b></font></TD>
+                <TD WIDTH="53%" VALIGN="TOP"> Acts like one or more spaces</TD>
+              </TR>
+              <TR> 
+                <TD WIDTH="47%" VALIGN="TOP"> <font size="-1"><b>ZERO</b></font> 
+                  or <font size="-1"><b>ZEROS</b></font> or <font size="-1"><b>ZEROES</b></font></TD>
+                <TD WIDTH="53%" VALIGN="TOP"> Acts like one or more zeros</TD>
+              </TR>
+              <TR> 
+                <TD WIDTH="47%" VALIGN="TOP"> <font size="-1"><b>QUOTE</b></font> 
+                  or <font size="-1"><b>QUOTES</b></font></TD>
+                <TD WIDTH="53%" VALIGN="TOP"> Used instead of a quotation mark</TD>
+              </TR>
+              <TR> 
+                <TD WIDTH="47%" VALIGN="TOP"> <font size="-1"><b>HIGH-VALUE</b></font> 
+                  or <font size="-1"><b>HIGH-VALUES</b></font></TD>
+                <TD WIDTH="53%" VALIGN="TOP"> Uses the maximum value possible</TD>
+              </TR>
+              <TR> 
+                <TD WIDTH="47%" VALIGN="TOP"> <font size="-1"><b>LOW-VALUE</b></font> 
+                  or <font size="-1"><b>LOW-VALUES</b></font></TD>
+                <TD WIDTH="53%" VALIGN="TOP"> Uses the minimum value possible</TD>
+              </TR>
+              <TR> 
+                <TD WIDTH="47%" VALIGN="TOP"> <font size="-1"><b>ALL</b></font> 
+                  literal</TD>
+                <TD WIDTH="53%" VALIGN="TOP"> Allows a ordinary literal to act 
+                  as Figurative Constant</TD>
+              </TR>
+            </TABLE>
+            <p><b>Figurative Constant Notes</b></p>
+            <ul>
+              <li>When the <font size="-1">ALL</font> Figurative Constant is used, 
+                it must be followed by a one character literal. The designated 
+                literal then acts like the standard Figurative Constants.</li>
+              <li><font size="-1">ZERO</font>, <font size="-1">ZEROS</font> and 
+                <font size="-1">ZEROES</font> are synonyms, not separate Figurative 
+                Constants. The same applies to <font size="-1">SPACE</font> and 
+                <font size="-1">SPACES</font>, <font size="-1">QUOTE</font> and 
+                <font size="-1">QUOTES</font>, <font size="-1">HIGH-VALUE</font> 
+                and <font size="-1">HIGH-VALUES</font>, <font size="-1">LOW-VALUES</font> 
+                and <font size="-1">LOW-VALUES</font>. </li>
+            </ul>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Using 
+              COBOLdata<br>
+              ------ examples ------</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P><font color="#800000" face="Arial, Helvetica, sans-serif"><a name="data1"></a></font>The 
+              animated program fragments below demonstrate how variables, literals 
+              and Figurative Constants may be created and used. </P>
+            <p align="center">&nbsp; </p>
+            <p align="center"><a href="Resources/ppz/TC-Data1.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0" alt="Click to view the animation"></a></p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00" face="Arial, Helvetica, sans-serif"><A name="part2"></A>Declaring 
+              Data-Items in COBOL</FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Because COBOL is not a typed language like Modula-2 or C it employs 
+              a different mechanism for describing the characteristics of the 
+              data-items in a program.</P>
+            <P>Rather than using types, as these languages do, COBOL uses a kind 
+              of "declaration by example" strategy. The programmer provides the 
+              system with an example, or template, or PICture of the storage required 
+              for the data-item. </P>
+            <P>In COBOL, a variable declaration consists of a line in the <font size="-1">DATA 
+              DIVISION</font> that contains the following items: </P>
+            <ul>
+              <li>A level number. </li>
+              <li> A data-name or identifier. </li>
+              <li> A Picture clause. </li>
+            </ul>
+            <HR width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">COBOL 
+              picture clauses</FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <h4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></h4>
+            <p align="center"><font size="-1">There are actually many more picture 
+              symbols than these. Most of these will be introduced when we cover 
+              Edited Pictures.</font></p>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p>To create the required 'picture' the programmer uses a set of symbols. 
+              The most common symbols used in standard picture clauses are: </p>
+            <table cellspacing=0 border=1 cellpadding=7 width=445 align="center" bgcolor="#E1FFE1">
+              <tr> 
+                <td width="14%" valign="TOP"> 
+                  <p align="CENTER"><b><font face="TIMES" size="2">9</font></b> 
+                </td>
+                <td width="86%" valign="TOP"> 
+                  <p><font face="TIMES" size="2">The digit nine is used to indicate 
+                    the occurrence of a digit at the corresponding position in 
+                    the picture.</font> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="14%" valign="TOP"> 
+                  <p align="CENTER"><b><font face="TIMES" size="2">X</font></b> 
+                </td>
+                <td width="86%" valign="TOP"> 
+                  <p><font face="TIMES" size="2">The character X is used to indicate 
+                    the occurrence of any character from the character set at 
+                    the corresponding position in the picture.</font> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="14%" valign="TOP"> 
+                  <p align="CENTER"><b><font face="TIMES" size="2">A</font></b> 
+                </td>
+                <td width="86%" valign="TOP"> 
+                  <p><font face="TIMES" size="2">The character A is used to indicate 
+                    the occurrence of any alphabetic character (A to Z plus blank) 
+                    at the corresponding position in the picture.</font> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="14%" valign="TOP"> 
+                  <p align="CENTER"><b><font face="TIMES" size="2">V</font></b> 
+                </td>
+                <td width="86%" valign="TOP"> 
+                  <p><font face="TIMES" size="2">The character V is used to indicate 
+                    the position of the decimal point in a numeric value. It is 
+                    often referred to as the "assumed decimal point". It is called 
+                    that because, although the actual decimal point is not stored, 
+                    values are treated as if they had a decimal point in that 
+                    position.</font> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="14%" valign="TOP"> 
+                  <p align="CENTER"><b><font face="TIMES" size="2">S</font></b> 
+                </td>
+                <td width="86%" valign="TOP"> 
+                  <p><font face="TIMES" size="2">The character S indicates the 
+                    presence of a sign and can only appear at the beginning of 
+                    a picture.</font> 
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <HR width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif"> 
+              Picture clause notes</font></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Although the word <font size="-1">PICTURE</font> can be used when 
+              defining a picture clause it is normal to use the abbreviation <font size="-1">PIC.</font></P>
+            <P>Recurring symbols may be specified by using a 'repeat' factor inside 
+              brackets. For instance: </P>
+            <blockquote> 
+              <pre>PIC 9(6)       is equivalent to PICTURE 999999
+PIC 9(6)V99    is equivalent to PIC 999999V99
+PICTURE X(10)  is equivalent to PIC XXXXXXXXXX
+PIC S9(4)V9(4) is equivalent to PIC S9999V9999
+PIC 9(18)      is equivalent to PIC 999999999999999999 </pre>
+            </blockquote>
+            <p>Numeric values can have a maximum of 18 (eighteen) digits. </p>
+            <p>The limit on string values is usually system dependent. </p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part3"></a><FONT face="Arial, Helvetica, sans-serif">Group 
+              and Elementary data-items</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">Although we stated above that each variable declaration 
+                consists of a level number, an identifying name and a picture 
+                clause, that definition only applies to elementary data-items. 
+                Group items are defined using only a level-number and an identifying 
+                name; no picture clause is required or allowed.</P>
+              <P align="left"> Which begs the question - what is a group item 
+                and what is an elementary item?</P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Elementary 
+              items </font></H4>
+            <h4>&nbsp;</h4>
+            <h4>&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></h4>
+            <p align="center"><font size="-1">A variable declaration may also 
+              have a number of other clauses such as <font size="-2">USAGE</font> 
+              or <font size="-2">BLANK WHEN ZERO</font></font></p>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p>An &quot;elementary item&quot; is the name we use in COBOL to describe 
+              a data-item that has not been further subdivided. Other languages 
+              might describe these as ordinary variables.</p>
+            <p align="left">Elementary items <b>must</b> have a picture clause 
+              because they actually reserve the storage required for the item. 
+              The amount of storage reserved is specified by the item's picture 
+              clause. </p>
+            <p>An elementary item declaration consists of; </p>
+            <ul>
+              <li>a level number</li>
+              <li>a data name </li>
+              <li>a picture clause</li>
+            </ul>
+            <p align="left">A starting value may be assigned to a variable by 
+              means of an extension to the <font size="-1">PICTURE</font> clause 
+              called the <font size="-1">VALUE</font> clause. </p>
+            <p align="left"><b>Some examples:</b></p>
+            <blockquote> 
+              <pre>01 GrossPay       PIC 9(5)V99 VALUE ZEROS.
+
+01 NetPay         PIC 9(5)V99 VALUE ZEROS.
+
+01 CustomerName   PIC X(20) VALUE SPACES.
+
+01 CustDiscount   PIC V99 VALUE .25.</pre>
+            </blockquote>
+            <HR width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"> Group 
+              items </FONT></H4>
+            <H3>&nbsp;</H3>
+            <DIV align="right"></DIV>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P align="left">Sometimes when we are manipulating data it is convenient 
+              to treat a collection of elementary items as a single group. For 
+              instance, we may want to group the data-items YearofBirth, MonthofBirth, 
+              DayOfBirth under the group name - DateOfBirth. If we are recording 
+              information about students we may want to subdivide StudentName 
+              into FirstName, MiddleInitial and Surname. And we may want to use 
+              both these group items and the elementary items StudentId and CourseCode 
+              in a student record description.</P>
+            <P align="left">We can create groups like these in COBOL using group 
+              items. A "group item" is the term used in COBOL to describe a data-item 
+              - like DateOfBirth or StudentName - that has been further subdivided. 
+              In other languages group items might be described as &quot;structures&quot;.</P>
+            <P align="left">A group item consists of subordinate items. The items 
+              subordinate to a group item may be elementary items or other group 
+              items. But ultimately every group item must be defined in terms 
+              of its subordinate elementary items.</P>
+            <P align="left"> In a group item, the hierarchical relationship between 
+              the various subordinate items of the group is expressed using level 
+              numbers. The higher the level number, the lower the item is in the 
+              hierarchy. Where a group item is the highest item in a data hierarchy 
+              it is referred to as a &quot;record&quot; and uses the level number 
+              01.</P>
+            <P align="left">Group items are declared using a level number and 
+              a data name only. A group item cannot have a picture clause because 
+              it does not actually reserve any storage. It is merely a name given 
+              to a collection of (ultimately) elementary items which do reserve 
+              the storage.</P>
+            <P align="left">Therefore, the size of a group item is the sum of 
+              the sizes of its subordinate elementary items. </P>
+            <P align="left">The type of a group item is always assumed to be <font size="-1">PIC 
+              X</font> because a group item may have several different data items 
+              and types subordinate to it and an X picture is the only one which 
+              could support such collections.</P>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Level 
+              Numbers </FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/i-LightBulbTip.gif" width="42" height="44"></H4>
+            <p align="center"><font size="-1">Although level numbers specify the 
+              actual data hierarchy you should use indentation to provide a graphic 
+              representation of it.</font><font size="-1"> This will make your 
+              programs easier to read. For instance, indentation makes it obvious 
+              that DayOfBirth, MonthOfBirth and YearOfBirth are subordinate items 
+              of DateOfBirth, while CourseCode is not.</font></p>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">Level numbers are used to express data hierarchy. 
+                The higher the level number, the lower the item is in the hierarchy. 
+                At the lowest level the data is completely atomic. </P>
+            </DIV>
+            <P align="left">What is important in a structure defined with level 
+              numbers is the <i>relationship</i> of the level numbers to one another, 
+              not the actual level numbers used. For instance, the record descriptions 
+              shown below are equivalent.</P>
+            <table width="60%" border="1" bgcolor="#E1FFE1" align="center">
+              <tr> 
+                <td width="51%"> 
+                  <div align="center"><b>Record-A</b></div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="51%"> 
+                  <pre>01 StudentDetails.
+   02 StudentId        PIC 9(7). 
+   02 StudentName. 
+      03 FirstName     PIC X(10).
+      03 MiddleInitial PIC X. 
+      03 Surname       PIC X(15).
+   02 DateOfBirth.
+      03 DayOfBirth    PIC 99.
+      03 MonthOfBirth  PIC 99.
+      03 YearOfBirth   PIC 9(4).
+   02 CourseCode       PIC X(4).
+</pre>
+                </td>
+              </tr>
+            </table>  
+            <p>&nbsp;</p>
+            <table width="60%" border="1" bgcolor="#E1FFE1" align="center">
+              <tr> 
+                <td width="49%"> 
+                  <div align="center"><b>Record-B</b></div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="49%"> 
+                  <pre>01 StudentDetails.
+   05 StudentId        PIC 9(7). 
+   05 StudentName. 
+      07 FirstName     PIC X(10).
+      07 MiddleInitial PIC X. 
+      07 Surname       PIC X(15).
+   05 DateOfBirth.
+      07 DayOfBirth    PIC 99.
+      07 MonthOfBirth  PIC 99.
+      07 YearOfBirth   PIC 9(4).
+   05 CourseCode       PIC X(4).
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Some 
+              observations on Record-A</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+              <p>It is useful to examine Record-A above and to answer the following 
+                questions:</p>
+            <table width="84%" border="0" align="center" cellspacing="5">
+              <tr> 
+                  <td width="8%" valign="top"><b>Q1.</b></td>
+                  <td width="92%"> 
+                   What is the size (in characters) of Record-A?
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" valign="top"><b>Q2.</b></td>
+                  <td width="92%"> 
+                  What is the size of the data-item StudentName? 
+                   
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" valign="top"><b>Q3.</b></td>
+                  <td width="92%"> 
+                    What is the size of DateOfBirth?
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" valign="top"><b>Q4.</b></td>
+                  <td width="92%"> 
+                    What is the data type of DateOfBirth? Is 
+                      it numeric, alphabetic or alphanumeric.
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" valign="top">&nbsp;</td>
+                  <td width="92%"> 
+                    <p></p>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" valign="top"><b>A1.</b></td>
+                  <td width="92%"> 
+                   The size of Record-A is the sum of the sizes 
+                      of all the elementary items subordinate to it (7+10+1+15+2+2+4+4 
+                      = 45 characters).
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" valign="top"><b>A2.</b></td>
+                  <td width="92%"> 
+                   The size of StudentName is the sum of the 
+                      sizes of FirstName, MiddleInitial and Surname. So StudentName 
+                      is 26 characters in size (10+1+15).
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" valign="top"><b>A3.</b></td>
+                  <td width="92%"> 
+                   DateOfBirth is 8 characters in size (2+2+4).
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="8%" valign="top"><b>A4.</b></td>
+                  <td width="92%"> 
+                   The data type of DateOfBirth is alphanumeric 
+                      (i.e. PIC X) even though all its subordinate items are numeric 
+                      because the type of a group item is always alphanumeric.
+                  </td>
+                </tr>
+              </table>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Level 
+              number notes</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <div align="center"> 
+              <p align="left">The level numbers 01 through 49 are general level 
+                numbers but there are also special level numbers such as 66, 77 
+                and 88.</p>
+            </div>
+            <div align="left"> 
+              <ul>
+                <li> Level 77's can only be used to define individual elementary 
+                  items. The use of 77's is banned in some shops who take the 
+                  view that instead of declaring large numbers of indistinguishable 
+                  77's it is better to collect the individual items into groups. 
+                </li>
+                <li> Level 88's are used to define Condition Names. </li>
+                <li> Level 66's (<font size="-1">RENAMES</font> clause) are used 
+                  to apply a new name to an identifier or group of identifiers. 
+                  It is not generally used in modern COBOL programs.</li>
+              </ul>
+            </div>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Building 
+              a record structure</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p>In the animation below we show how level numbers can be used to 
+              define a record structure as hierarchy of data-items.</p>
+            <DIV align="center">
+              <p>&nbsp; </p>
+              <p><a href="Resources/ppz/TC-Data2.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0" alt="Click to view the animation"></a></p>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <HR>
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : March 1999</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

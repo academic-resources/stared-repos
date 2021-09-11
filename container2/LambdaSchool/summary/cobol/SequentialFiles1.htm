@@ -1,0 +1,930 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Introduction to Sequential Files</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+  <TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <CENTER>
+              <H2><img src="/cobol/course/Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> <B>Introduction to Sequential Files</B></H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><BR>
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top"> 
+                  <p><B><A href="#part1" target="">Introduction to record-based 
+                    files </A><BR>
+                    </B><FONT size="-1">This section introduces record-based files, 
+                    the concept of the record buffer and defines terminology such 
+                    as file, record and field.<br>
+                    <br>
+                    </FONT></p>
+                </TD>
+              </TR>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" valign="top"> 
+                  <div align="left"> 
+                    <p><b><a href="#part2" target="">Declaring records and files</a><br>
+                      </b><font size="-1">This section demonstrates how the FD 
+                      entry is used to describe a files record buffer and show 
+                      how to use the SELECT and ASSIGN clause to connect an internal 
+                      file name to an external data repository.</font><font size="-1"><br>
+                      <br>
+                      </font> </p>
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%"> 
+                  <div align="left"><b><a href="#part3" target="">COBOL file handling 
+                    verbs </a><br>
+                    </b><font size="-1">The COBOL verbs for processing Sequential 
+                    Files are introduced in this section. The section ends with 
+                    a full example program.<br>
+                    </font> <br>
+                  </div>
+                </td>
+              </tr>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><FONT face="Arial, Helvetica, sans-serif">Introduction</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="540" valign="top"> 
+            <div align="center"> 
+              <p align="left">Files are repositories of data that reside on backing 
+                storage (hard disk, magnetic tape or <font size="-1">CD-ROM</font>). 
+                Nowadays, files are used to store a variety of different types 
+                of information, such as programs, documents, spreadsheets, videos, 
+                sounds, pictures and record-based data. </p>
+              <p align="left">Although COBOL can be used to process these other 
+                kinds of data file, it is generally used only to process record-based 
+                files. </p>
+              <p align="left">In this, and subsequent file-oriented tutorials, 
+                we examine how COBOL may be used to process record-based files.</p>
+              <p align="left">There are essentially two types of record-based 
+                file organization: </p>
+            </div>
+            <ol>
+              <li> 
+                <div align="left">Serial Files (COBOL calls these Sequential Files)</div>
+              </li>
+              <li> 
+                <div align="left">Direct Access Files.</div>
+              </li>
+            </ol>
+            <div align="center"> 
+              <p align="left">In a Serial File, the records are organized and 
+                accessed serially.</p>
+              <p align="left">In a Direct Access File, the records are organized 
+                in a manner that allows direct access to a particular record without 
+                having the read any of the preceding records.</p>
+              <p align="left">In this tutorial, you will discover how COBOL may 
+                be used to process serial files.</p>
+            </div>
+            <div align="center"> 
+              <p align="CENTER">&nbsp;</p>
+              <center>
+              </center>
+              <hr width="50%">
+            </div>
+            <P>&nbsp; </P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="540" valign="top"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Understand concepts and terminology like file, record, field 
+                and record buffer.</LI>
+              <LI>Be able to write the file and record declarations for a Sequential 
+                File.</LI>
+              <LI>Understand how <font size="-1">READ</font> verbs works </LI>
+              <LI>Be able to use the <font size="-1">READ</font>, <font size="-1">WRITE</font>, 
+                <font size="-1">OPEN</font> and <font size="-1">CLOSE</font> verbs 
+                to process a Sequential File.</LI>
+            </OL>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="77"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="77" valign="top"> 
+            <p>Introduction to COBOL </p>
+            <p>Declaring data in COBOL </p>
+            <p>Basic Procedure Division Commands</p>
+            <p>Selection Constructs</p>
+            <p>Iteration Constructs</p>
+            <p>&nbsp;</p>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part1"></a><FONT face="Arial, Helvetica, sans-serif">Introduction 
+              to record-based files</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">COBOL is generally used in situations where the 
+                volume of data to be processed is large. These systems are sometimes 
+                referred to as “data intensive” systems. Generally, large volumes 
+                arise not because the data is inherently voluminous but because 
+                the same items of information have been recorded about a great 
+                many instances of the same object. Record-based files are used 
+                to record this information.</P>
+            </DIV>
+            <DIV align="center"> 
+              <center>
+              </center>
+              <hr width="50%">
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Files, 
+              Records, Fields</FONT></H4>
+            <H4>&nbsp;</H4>
+            <h4 align="center"><font size="-1"> </font></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <p align="left">In record-based files;</p>
+            </DIV>
+            <ul>
+              <li> 
+                <div align="left"> We use the term<i> file</i>, to describe a 
+                  collection of one or more occurrences (instances) of a record 
+                  type (template). </div>
+              </li>
+              <li> 
+                <div align="left"> We use the term r<i>ecord,</i> to describe 
+                  a collection of fields which record information about an object. 
+                </div>
+              </li>
+              <li> 
+                <div align="left">We use the term <i>field, </i>to describe an 
+                  item of information recorded about an object (e.g. StudentName, 
+                  DateOfBirth). </div>
+              </li>
+            </ul>
+            <div align="left"> 
+              <hr width="50%">
+              <p>&nbsp;</p>
+            </div>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Record 
+              instance vs Record type</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <div align="center"> 
+                <p align="left"></p>
+              </div>
+              <div align="left">It is important to distinguish between a record 
+                occurrence (i.e. the values of a record) and the record type or 
+                template (i.e. the structure of the record). </div>
+              <div align="left">Each record occurrence in a file will have a different 
+                value but every record in the file will have the same structure. 
+              </div>
+              <P align="left">For instance, in the student details file, illustrated 
+                below, the occurrences of the student records are actual values 
+                in the file. The record type/template describes the <i>structure</i> 
+                of each record occurrence.</P>
+              <P align="center"><img src="Resources/pics/FileSeq1.gif" width="472" height="388"></P>
+            </DIV>
+            <blockquote> 
+              <div align="left"></div>
+            </blockquote>
+            <DIV align="center"> 
+              <hr width="50%">
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              record buffer</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Before a computer can do any processing on a piece of data, the 
+              data must be loaded into main memory (RAM). The CPU can only address 
+              data that is in RAM.</P>
+            <P>A record-based file may consist of hundreds of thousands, millions 
+              or even tens of millions of records, and may require gigabytes of 
+              storage. Files of this size cannot be processed by loading the whole 
+              file into memory in one go. Instead, files are processed by reading 
+              the records into memory, one at a time. </P>
+            <P>To store the record read into memory and to allow access to the 
+              individual fields of the record, a programmer must declare the record 
+              structure (see the diagram above) in his program. The computer uses 
+              the programmer's description of the record (the record template) 
+              to set aside sufficient memory to store one instance of the record. 
+              The memory allocated for storing a record is usually called a "record 
+              buffer".</P>
+            <P> A record buffer is capable of storing the data recorded for only 
+              one instance of the record. To process a file a program must read 
+              the records one at a time into the record buffer. The record buffer 
+              is the only connection between the program and the records in the 
+              file.</P>
+            <P align="center"><img src="Resources/pics/FileSeq2.gif" width="471" height="248"></P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Some 
+              implications of &quot;buffers&quot;</FONT></H4>
+            <H4 align="center"><img src="Resources/pics/program.gif" width="42" height="44"></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <p>If a program processes more than one file, a record buffer must 
+              be defined for each file. </p>
+            <p>To process all the records in an <font size="-1">INPUT</font> file, 
+              we must ensure that each record instance is copied (read) from the 
+              file, into the record buffer, when required. </p>
+            <p>To create an <font size="-1">OUTPUT</font> file containing data 
+              records, we must ensure that each record is placed in the record 
+              buffer and then transferred (written) to the file. </p>
+            <p>To transfer a record from an input file to an output file we must 
+              read the record into the input record buffer, transfer it to the 
+              output record buffer and then write the data to the output file 
+              from the output record buffer. This type of data transfer between 
+              ‘buffers’ is quite common in COBOL programs. </p>
+            <p>&nbsp; </P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A><FONT face="Arial, Helvetica, sans-serif">Declaring 
+              Records and Files</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+            <h4 align="center">&nbsp;</h4>
+            <h4 align="center">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></h4>
+            <p align="left"><font size="-1">This is for demonstration only. In 
+              reality we would need to include far more items and some of the 
+              fields would have to be considerably larger.</font></p>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Suppose we want to create a file to hold information about the 
+              students in the University. What kind of information do we need 
+              to store about each student?</P>
+            <P> One thing we need to store is the student's name. Each student 
+              is assigned an identification number; so we need to store that as 
+              well. We also need to store the date of birth, and the code of the 
+              course the student is taking. Finally, we are going to store the 
+              student's gender. These items are summarized below;</P>
+            <ul>
+              <li>Student Id</li>
+              <li> Student Name</li>
+              <li>Date of birth</li>
+              <li>Course Code</li>
+              <li>Gender</li>
+            </ul>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Creating 
+              a record</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>To create a record buffer large enough to store one instance of 
+              a record, containing the information described above, we must decide 
+              on the type and size of each of the fields.</P>
+            <ul>
+              <li>The student identity number is 7 digits in size so we need to 
+                declare the data-item to hold it as PIC 9(7).</li>
+              <li>To store the student name, we will assume that we require only 
+                10 characters. So we can declare a data-item to hold it as PIC 
+                X(10).</li>
+              <li>The date of birth is 8 digits long so we declare it as PIC 9(8).</li>
+              <li>The course code is 4 characters long so we declare it as PIC 
+                X(4).</li>
+              <li>Finally, the gender is only one character so we declare it as 
+                PIC X.</li>
+            </ul>
+            <p>The fields described above are individual data items but we must 
+              collect them together into a record structure as follows;</p>
+            <table width="58%" border="1" align="center" bgcolor="#E1FFE1" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>01 StudentRec.
+   02 StudentId         PIC 9(7).
+   02 StudentName       PIC X(10).
+   02 DateOfBirth       PIC 9(8).
+   02 CourseCode        PIC X(4).
+   02 Gender            PIC X.</pre>
+                </td>
+              </tr>
+            </table>
+            <p>The record description above is correct as far as it goes. It reserves 
+              the correct amount of storage for the record buffer. But it does 
+              not allow us to access all the individual parts of the record that 
+              we might require. </p>
+            <p>For instance, the name is actually made up of the student's surname 
+              and initials while the date consists of 4 digits for the year, 2 
+              digits for the month and 2 digits for the day .</p>
+            <p>To allow us to access these fields individually we need to declare 
+              the record as follows;</p>
+            <table width="58%" border="1" align="center" bgcolor="#E1FFE1" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>01 StudentRec.
+   02 StudentId         PIC 9(7).
+   02 StudentName.
+      03 Surname        PIC X(8).
+      03 Initials       PIC XX.
+   02 DateOfBirth.
+      03 YOBirth        PIC 9(4).
+      03 MOBirth        PIC 99.
+      03 DOBirth        PIC 99.
+   02 CourseCode        PIC X(4).
+   02 Gender            PIC X.</pre>
+                </td>
+              </tr>
+            </table>
+            <p>In this description, StudentName is a group item consisting of 
+              Surname and Initials, and DateOfBirth consists of YOBirth, MOBirth 
+              and DOBirth.</p>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Declaring 
+              a record buffer in your program</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/ProgFrag.gif" width="48" height="44"></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <P>The record type/template/buffer of every file used in a program 
+              must be described in the <font size="-1">FILE SECTION </font>by 
+              means of an <font size="-1">FD </font>(file description) entry. 
+              The <font size="-1">FD</font> entry consists of the letters <font size="-1">FD</font> 
+              and an internal name that the programmer assigns to the file. </P>
+            <P>So the full file description for the students file might be;.</P>
+            <table width="58%" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>DATA DIVISION.
+FILE SECTION.
+FD StudentFile.
+01 StudentRec.
+   02 StudentId         PIC 9(7).
+   02 StudentName.
+      03 Surname        PIC X(8).
+      03 Initials       PIC XX.
+   02 DateOfBirth.
+      03 YOBirth        PIC 9(4).
+      03 MOBirth        PIC 99.
+      03 DOBirth        PIC 99.
+   02 CourseCode        PIC X(4).
+   02 Gender            PIC X.</pre>
+                </td>
+              </tr>
+            </table>
+            <P>Note that we have assigned the name StudentFile as the internal 
+              file name. The actual name of the file on disk is <i>Students.Dat</i>. 
+            </P>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">The 
+              SELECT and ASSIGN clause</font></h4>
+            <h4 align="center">&nbsp;</h4>
+            <h4 align="center">&nbsp;</h4>
+            <h4 align="center">&nbsp;</h4>
+            <h4 align="center">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/ProgFrag.gif" width="48" height="44"></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Although the name of the students file on disk is <i>Students.Dat</i> 
+              we are going to refer to it in our program as StudentFile. How can 
+              we connect the name we are going to use internally with the actual 
+              name of the program on disk?</P>
+            <P>The internal file name used in a file's <font size="-1">FD</font> 
+              entry is connected to an external file (on disk, tape or <font size="-1">CD-ROM</font>) 
+              by means of the <font size="-1">SELECT </font>and <font size="-1">ASSIGN</font> 
+              clause. The <font size="-1">SELECT </font>and <font size="-1">ASSIGN</font> 
+              clause is an entry in the <font size="-1">FILE-CONTRO</font>L paragraph 
+              in the<font size="-1"> INPUT-OUTPUT SECTION </font>in the <font size="-1">ENVIRONMENT 
+              DIVISION</font>.</P>
+            <table width="58%" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+   SELECT StudentFile 
+          ASSIGN TO “STUDENTS.DAT”.
+DATA DIVISION.
+FILE SECTION.
+FD StudentFile.
+01 StudentRec.
+   02 StudentId         PIC 9(7).
+   02 StudentName.
+      03 Surname        PIC X(8).
+      03 Initials       PIC XX.
+   02 DateOfBirth.
+      03 YOBirth        PIC 9(4).
+      03 MOBirth        PIC 99.
+      03 DOBirth        PIC 99.
+   02 CourseCode        PIC X(4).
+   02 Gender            PIC X.</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <P>&nbsp;</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="551"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">SELECT 
+              and ASSIGN syntax for Sequential files</FONT></H4>
+            <H4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></H4>
+            <p><font size="-1">The Select and Assign clause has far more entries 
+              (even for Sequential files) than those we show here; but we will 
+              examine the other entries in later tutorials.</font></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <h4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></h4>
+            <p><font size="-1">We are only going to deal with statically assigned 
+              file names for the moment, but it is possible to assign a file name 
+              to a file at run-time.</font></p>
+            <p>&nbsp;</p>
+          </TD>
+          <td width="525" valign="top" height="551"> 
+            <div align="center"> 
+              <p align="left"><img src="Resources/pics/FileSeq3.gif" width="375" height="72"></p>
+              <p align="left">The Microfocus COBOL compiler recognizes two kinds 
+                of Sequential File organization </p>
+              <p align="center"> <font size="-1">LINE SEQUENTIAL</font><br>
+                and <font size="-1"><br>
+                RECORD SEQUENTIAL</font>.</p>
+              <p align="left"><font size="-1"> </font> <font size="-1">LINE SEQUENTIAL 
+                </font>files, are files in which each record is followed by the 
+                carriage return and line feed characters. These are the kind of 
+                files produced by a text editor such as Notepad. </p>
+              <p align="left"><font size="-1">RECORD SEQUENTIAL</font> files, 
+                are files where the file consists of a stream of bytes. Only the 
+                fact that we know the size of each record allows us to retrieve 
+                them. Files that are not record based, can be processed by defining 
+                them as <font size="-1">RECORD SEQUENTIAL</font>.</p>
+              <p align="left">The <i>ExternalFileReference</i> can be a simple 
+                file name, or a full, or a partial, file specification. If a simple 
+                file name is used, the drive and directory where the program is 
+                running is assumed but we may choose to include the full path 
+                to the file. For instance, we could associate the StudentFile 
+                with an actual file using statements like:</p>
+            </div>
+            <blockquote> 
+              <pre align="left">SELECT StudentFile 
+       ASSIGN TO &quot;D:\Cobol\ExampleProgs\Students.Dat&quot;
+
+SELECT StudentFile 
+       ASSIGN TO &quot;A:\Students.Dat&quot;
+</pre>
+            </blockquote>
+            <div align="center"> 
+              <div align="left"></div>
+            </div>
+            <div align="center"> 
+              <center>
+              </center>
+              <hr width="50%">
+            </div>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">What 
+              is the purpose of the SELECT and ASSIGN clause?</FONT></H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <P align="left">The <font size="-1">SELECT</font> and <font size="-1">ASSIGN</font> 
+                clause allows us to assign a meaningful name to an actual file 
+                on a storage device. The advantage of this is that it makes our 
+                programs more readable and more easy to maintain. If the location 
+                of the file, or the medium on which the file is held, changes 
+                then the only change we need to make to our program, is to change 
+                the entry in the <font size="-1">SELECT</font> and <font size="-1">ASSIGN</font> 
+                clause. </P>
+            </DIV>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part3"></A><FONT face="Arial, Helvetica, sans-serif">COBOL 
+              file handling verbs</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Sequential files are uncomplicated. To write programs that process 
+              Sequential Files you only need to know four new verbs - the <font size="-1">OPEN</font>, 
+              <font size="-1">CLOSE</font>, <font size="-1">READ</font> and <font size="-1">WRITE</font>.</P>
+            <P> You must ensure that (before terminating) your program closes 
+              all the files it has opened. Failure to do so may result in data 
+              not being written to the file or users being prevented from accessing 
+              the file.</P>
+            <hr width="50%">
+          <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              OPEN verb</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-LightBulbTip.gif" width="42" height="44"></h4>
+            <p align="left"><font size="-1">Although, as you can see from the 
+              ellipses in the syntax diagram, it is possible to open a number 
+              of files with one OPEN statement it not advisable to do so. If an 
+              error is detected on opening a file and you have used only one statement 
+              to open all the files, the system probably won't be able to show 
+              you which particular file is causing the problem. If you open all 
+              the files separately, it will.</font></p>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P align="left"><img src="Resources/pics/FileSeq4.gif" width="277" height="78"></P>
+            <P align="left">Before your program can access the data in an input 
+              file or place data in an output file, you must make the file available 
+              to the program by <font size="-1">OPEN</font>ing it. </P>
+            <p>When you open a file you have to indicate how you intend to use 
+              it (e.g. <font size="-1">INPUT</font>, <font size="-1">OUTPUT</font>, 
+              <font size="-1">EXTEND</font>) so that the system can manage the 
+              file correctly.Opening a file does not transfer any data to the 
+              record buffer, it simply provides access.</p>
+            <p><b><font size="-1">OPEN</font> notes<br>
+              </b>When a file is opened for 
+              <font size="-1">INPUT</font> or <font size="-1">EXTEND</font>, the 
+              file must exist or the<font size="-1"> OPEN</font> will fail.</p>
+            <p> When a file is opened for <font size="-1">INPUT</font>, the <i>Next 
+              Record Pointer</i> is positioned at the beginning of the file.</p>
+            <p> When the file is opened for <font size="-1">EXTEND</font>, the 
+              Next Record Pointer is positioned after the last record in the file. 
+              This allows records to be appended to the file. </p>
+            <p> When a file is opened for <font size="-1">OUTPUT</font>, it is 
+              created if it does not exist, and is overwritten, if it already 
+              exists. </p>
+            <blockquote> 
+              <div align="left"></div>
+            </blockquote>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              CLOSE verb</FONT></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P><u>CLOSE</u> InternalFileName...</P>
+            <p>You must ensure that, before terminating, your program closes all 
+              the files it has opened. Failure to do so may result in some data 
+              not being written to the file or users being prevented from accessing 
+              the file.</p>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="355"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              READ verb</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="355"> 
+            <p><img src="Resources/pics/FileSeq5.gif" width="288" height="101"></p>
+            <p>Once the system has opened a file and made it available to the 
+              program it is the programmers responsibility to process it correctly. 
+              To process all the records in the file we have to transfer them, 
+              one record at a time, from the file to the file's record buffer. 
+              The READ is provided this purpose.</p>
+            <p>The READ copies a record occurrence/instance from the file and 
+              places it in the record buffer. </p>
+            <p><b><font size="-1">READ</font> notes <br>
+              </b>When the <font size="-1">READ</font> attempts to read a record 
+              from the file and encounters the end of file marker, the <font size="-1">AT 
+              END </font>is triggered and the <i>StatementBlock</i> following 
+              the <font size="-1">AT END</font> is executed. </p>
+            <p>Using the <font size="-1">INTO</font> <i>Identifier</i> clause, 
+              causes the data to be read into the record buffer and then copied 
+              from there, to the <i>Identifier</i>, in one operation. When this 
+              option is used, there will be two copies of the data. One in the 
+              record buffer and one in the <i>Identifier</i>. Using this clause 
+              is the equivalent of executing a <font size="-1">READ</font> and 
+              then moving the contents of the record buffer to the <i>Identifier</i>. 
+            </p>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">How 
+              the READ works</font></h4>
+            <h4 align="center">&nbsp;</h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The animation below demonstrates how the <font size="-1">READ</font> 
+              works. When a record is read it is copied from the backing storage 
+              file into the record buffer in <font size="-1">RAM</font>. When 
+              an attempt to <font size="-1">READ</font> detects the end of file 
+              the <font size="-1">AT END </font>is triggered and the condition 
+              name EndOfFile is set to true. Since the condition name is set up 
+              as shown below, setting it to true fills the whole record with <font size="-1">HIGH</font>-<font size="-1">VALUES</font>.</P>
+            <table width="58%" border="1" align="center" bgcolor="#E1FFE1" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre>FD StudentFile.
+01 StudentRec.
+   88 EndOfFile     VALUE HIGH-VALUES.
+
+   02 StudentId     PIC 9(7).
+       etc
+</pre>
+                </td>
+              </tr>
+            </table>
+            <p align="center"><a href="Resources/ppz/TC-SeqFile1.htm"><img src="Resources/pics/i-Animation.gif" width="62" height="62" border="0"></a></p>
+            <hr width="50%">
+            <p align="center">&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              WRITE verb</FONT></h4>
+            <h4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></h4>
+            <p align="left"><font size="-1">The WRITE format actually contains 
+              a number of other entries but these relate to writing to print files 
+              and will be covered in subsequent tutorials.</font></p>
+            <p align="left">&nbsp;</p>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P><u>WRITE</u><font size="-1"> </font>RecordName [<u>FROM</u> Identifier]</P>
+            <P>The <font size="-1">WRITE</font> verb is used to copy data from 
+              the record buffer (RAM) to the file on backing storage (Disk, tape 
+              or <font size="-1">CD-ROM</font>).</P>
+            <P>To <font size="-1">WRITE</font> data to a file we must move the 
+              data to the record buffer (declared in the FD entry) and then <font size="-1">WRITE</font> 
+              the contents of record buffer to the file.</P>
+            <P>When the <font size="-1">WRITE..FROM</font> is used the data contained 
+              in the <i>Identifier</i> is copied into the record buffer and is 
+              then written to the file. The <font size="-1">WRITE..FROM </font>is 
+              the equivalent of a <font size="-1"><i>MOVE</i></font><i> Identifier 
+              <font size="-1">TO</font> RecordBuffer</i> statement followed by 
+              a <i><font size="-1">WRITE</font> RecordBuffer</i> statement.</P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Read 
+              a file, Write a record</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>If you were paying close attention to the syntax diagrams above 
+              you probably noticed that while we <font size="-1">READ</font> a 
+              file, we must <font size="-1">WRITE</font> a record.</P>
+            <p>The reason we read a file but write a record, is that a file can 
+              contain a number of different types of record. For instance, if 
+              we want to update the students file we might have a file of transaction 
+              records that contained Insertion records and Deletion records. While 
+              the Insertion records would contain all the student record fields, 
+              the Deletion only needs the StudentId. </p>
+            <p>When we read a record from the transaction file we don't know which 
+              of the types will be supplied; so we must - <i><font size="-1">READ</font> 
+              Filename</i>. It is the programmers responsibility to discover what 
+              type of record has been supplied. </p>
+            <p>When we write a record to the a file we have to specify which of 
+              the record types we want to write; so we must - <i><font size="-1">WRITE</font> 
+              RecordName</i>.</p>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Example 
+              Program </FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/program.gif" width="42" height="44"></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>The example program below demonstrates the items discussed above. 
+              The program gets records from the user and writes them to a file. 
+              It then reads the file and displays part of each record.</P>
+            <table width="486" border="1" align="center" cellpadding="5" background="Resources%5Cpics%5Ccode.gif">
+              <tr valign="top"> 
+                <td> 
+                  <pre>      $ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  SeqWriteRead.
+AUTHOR.  Michael Coughlan.
+* Example program showing how to create a sequential file
+* using the ACCEPT and the WRITE verbs and then read and
+* display its records using the READ and DISPLAY.
+* Note: In this version of COBOL pressing the Carriage Return (CR)
+* without entering any data results in StudentDetails 
+* being filled with spaces.
+
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT StudentFile ASSIGN TO "STUDENTS.DAT"
+		ORGANIZATION IS LINE SEQUENTIAL.
+
+DATA DIVISION.
+FILE SECTION.
+FD StudentFile.
+01 StudentRec.
+   88  EndOfStudentFile  VALUE HIGH-VALUES.
+   02  StudentId         PIC 9(7).
+   02  StudentName.
+       03 Surname        PIC X(8).
+       03 Initials       PIC XX.
+   02  DateOfBirth.
+       03 YOBirth        PIC 9(4).
+       03 MOBirth        PIC 9(2).
+       03 DOBirth        PIC 9(2).
+   02  CourseCode        PIC X(4).
+   02  Gender            PIC X.
+
+PROCEDURE DIVISION.
+Begin.
+    OPEN OUTPUT StudentFile
+    DISPLAY "Enter student details using template below."
+    DISPLAY "Enter no data to end"
+
+    PERFORM GetStudentRecord
+    PERFORM UNTIL StudentRec = SPACES
+       WRITE StudentRec
+       PERFORM GetStudentRecord
+    END-PERFORM
+    CLOSE StudentFile
+
+    OPEN INPUT StudentFile.
+    READ StudentFile
+         AT END SET EndOfStudentFile TO TRUE
+    END-READ
+    PERFORM UNTIL EndOfStudentFile
+       DISPLAY StudentId SPACE StudentName SPACE CourseCode
+       READ StudentFile
+            AT END SET EndOfStudentFile TO TRUE
+       END-READ
+    END-PERFORM
+    CLOSE StudentFile
+    STOP RUN.
+
+GetStudentRecord.
+    DISPLAY "NNNNNNNSSSSSSSSIIYYYYMMDDCCCCG"
+    ACCEPT  StudentRec.
+
+
+
+ </pre>
+                </td>
+              </tr>
+            </table>
+            <P>&nbsp;</P>
+            
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : March 1999</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

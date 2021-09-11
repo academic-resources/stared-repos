@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.0.0",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^8.0.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.3",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "jest"
+  },
+  "author": "Lambda School",
+  "license": "ISC"
+}

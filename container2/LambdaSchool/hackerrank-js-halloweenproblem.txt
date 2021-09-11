@@ -1,0 +1,65 @@
+'use strict';
+
+const fs = require('fs');
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', _ => {
+    inputString = inputString.replace(/\s*$/, '')
+        .split('\n')
+        .map(str => str.replace(/\s*$/, ''));
+
+    main();
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+// Complete the minimumNumber function below.
+function minimumNumber(n, password) {
+    // Return the minimum number of characters to make the password strong
+// Its length is at least 6.
+// It contains at least one digit.
+if(n<6) {return 6-n;}
+let arrLetter = password.split("");
+let x=0;
+let lowercaseCount = 0;
+let uppercaseCount = 0;
+let specialCount = 0;
+let finalCount = 0;
+for(x=0;x<arrLetter.length;x++){
+// It contains at least one lowercase English character.
+    if(arrLetter[x] === arrLetter[x].toLowerCase()){lowercaseCount+=1;}
+// It contains at least one uppercase English character.
+    if(arrLetter[x] === arrLetter[x].toUpperCase()){uppercaseCount+=1;}
+// It contains at least one special character. The special characters are: !@#$%^&*()-+
+    if(arrLetter[x].includes("!") || arrLetter[x].includes("@") || arrLetter[x].includes("#") || arrLetter[x].includes("$") || arrLetter[x].includes("%") || arrLetter[x].includes("^") || arrLetter[x].includes("&") || arrLetter[x].includes("*") || arrLetter[x].includes("(") || arrLetter[x].includes(")") || arrLetter[x].includes("-") || arrLetter[x].includes("+") ){specialCount+=1;}
+}
+if(lowercaseCount < 1){finalCount+=1;}
+if(uppercaseCount < 1){finalCount+=1;}
+if(specialCount < 1){finalCount+=1;}
+return finalCount;
+}
+
+function main() {
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+
+    const n = parseInt(readLine(), 10);
+
+    const password = readLine();
+
+    let answer = minimumNumber(n, password);
+
+    ws.write(answer + "\n");
+
+    ws.end();
+}

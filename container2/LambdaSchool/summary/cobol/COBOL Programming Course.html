@@ -1,0 +1,2170 @@
+
+<!-- saved from url=(0046)http://www.csis.ul.ie/cobol/course/Default.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+<title>COBOL Programming Course</title>
+<meta name="resource-type" content="document">
+<meta name="description" content="" on-line="" cobol="" programming="" course="" -="" includes="" tutorials,="" example="" programs="" and="" exercises."="">
+<meta name="keywords" content="COBOL programming course, COBOL training, COBOL tutorial, COBOL exercises, COBOL examples, example programs, tutorials, learning">
+<meta name="revisit-after" content="15 days">
+<meta name="distribution" content="Global">
+<meta name="copyright" content="Michael Coughlan">
+<meta name="author" content="Michael Coughlan">
+<meta name="generator" content="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+<meta name="robots" content="All">
+<meta name="rating" content="General">
+<style type="text/css">@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);</style><style type="text/css">.huntr-ext-add-job-container .add-job-container {
+  padding: 25px 25px 100px 25px;
+  max-height: 550px;
+}
+.huntr-ext-add-job-container .save-job-footer {
+  width: 300px;
+  position: absolute;
+  bottom: 22px;
+  background-color: #f3f1f5;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.huntr-ext-add-job-container .btn {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  width: 150px !important;
+}
+.huntr-ext-add-job-container .btn.waiting {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.huntr-ext-add-job-container .list-item {
+  text-transform: capitalize;
+}
+.huntr-ext-parsed-jobs-container .no-results {
+  font-size: 14px !important;
+  color: rgba(25,4,69,0.7) !important;
+  padding: 40px;
+  text-align: center;
+}
+.huntr-ext-parsed-jobs-container .job-result {
+  padding: 20px 25px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.huntr-ext-parsed-jobs-container .job-result:hover {
+  background-color: rgba(25,4,69,0.1);
+}
+.huntr-ext-parsed-jobs-container .job-title {
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #190445 !important;
+  margin-bottom: 3px !important;
+}
+.huntr-ext-parsed-jobs-container .job-company,
+.huntr-ext-parsed-jobs-container .job-location {
+  max-width: 100px !important;
+}
+.huntr-ext-parsed-jobs-container .job-company {
+  margin-right: 10px !important;
+  font-weight: bold;
+  color: rgba(25,4,69,0.9);
+}
+.huntr-ext-parsed-jobs-container .job-location {
+  color: rgba(25,4,69,0.7);
+}
+.huntr-ext-parsed-jobs-container .job-description {
+  color: rgba(25,4,69,0.4);
+}
+.huntr-ext-parsed-jobs-container .job-company,
+.huntr-ext-parsed-jobs-container .job-description,
+.huntr-ext-parsed-jobs-container .job-location {
+  font-size: 13px;
+}
+.huntr-ext-parsed-jobs-container p {
+  line-height: 15px !important;
+  margin: 0 !important;
+}
+.huntr-ext-parsed-jobs-container span {
+  margin: 0 !important;
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+.huntr-capitalize {
+  text-transform: capitalize;
+}
+.huntr-error-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #ff3569;
+  padding: 15px;
+  font-size: 12px;
+  color: #fff;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: Lato, sans-serif;
+}
+.huntr-ext-add-job-success-container {
+  padding: 30px;
+  text-align: center;
+}
+.huntr-ext-add-job-success-container .message {
+  height: 180px !important;
+  margin-top: 20px !important;
+  border-bottom: 1px solid #eaeaea !important;
+}
+.huntr-ext-add-job-success-container .message p {
+  font-size: 22px !important;
+  line-height: 50px !important;
+  text-align: center !important;
+}
+.huntr-ext-add-job-success-container .message .huntr-icon {
+  font-size: 45px !important;
+  color: rgba(74,74,74,0.2) !important;
+}
+.huntr-ext-add-job-success-container .huntr-footer {
+  margin-top: 30px;
+}
+.huntr-ext-add-job-success-container .huntr-footer a.btn {
+  color: #fff !important;
+  width: 200px;
+}
+.huntr-ext-add-job-success-container .huntr-footer .btn img {
+  position: absolute;
+  left: 8px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+.huntr-ext-settings-container {
+  margin-top: 25px;
+  font-family: 'Lato', sans-serif !important;
+  font-size: 16px;
+  text-align: center;
+  color: #4a4a4a;
+  height: 140px;
+  margin-top: 50px;
+}
+.huntr-ext-settings-container p {
+  line-height: 18px;
+}
+.huntr-ext-time-to-upgrade {
+  padding: 35px;
+  text-align: center;
+  color: #6a4feb;
+}
+.huntr-ext-time-to-upgrade .huntr-icon {
+  margin: 10px 0 40px 0;
+  font-size: 60px;
+  color: rgba(106,79,235,0.1);
+}
+#huntr-react-container-2 {
+  position: absolute;
+  display: block !important;
+  font-family: 'Lato', sans-serif;
+}
+#huntr-react-container-2 a,
+#huntr-react-container-2 p,
+#huntr-react-container-2 span,
+#huntr-react-container-2 div {
+  font-family: 'Lato', sans-serif !important;
+}
+#huntr-react-container-2 form {
+  margin: 0;
+  padding: 0;
+}
+#huntr-react-container-2 ::-webkit-scrollbar-button {
+  width: 0px !important;
+  height: 0px !important;
+}
+#huntr-react-container-2 ::-webkit-scrollbar-track {
+  box-shadow: none !important;
+  background-color: "white" !important;
+}
+#huntr-react-container-2 ::-webkit-scrollbar-thumb {
+  background-color: rgba(24,0,69,0.1) !important;
+  border: 4px solid #fff !important;
+  border-radius: 100px !important;
+}
+#huntr-react-container-2 ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(24,0,69,0.2) !important;
+}
+#huntr-react-container-2 ::-webkit-scrollbar-thumb:active {
+  background-color: rgba(24,0,69,0.2) !important;
+}
+#huntr-react-container-2 ::-webkit-scrollbar {
+  width: 13px !important;
+  height: 20px !important;
+}
+#huntr-react-container-2 .huntr-title {
+  font-size: 22px;
+  font-weight: regular;
+  color: #190445 !important;
+}
+#huntr-react-container-2 .huntr-description {
+  font-size: 15px;
+  font-weight: regular;
+  color: rgba(25,4,69,0.7) !important;
+}
+#huntr-react-container-2 a {
+  cursor: pointer;
+}
+#huntr-react-container-2 .centered {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+#huntr-react-container-2 .field {
+  position: relative;
+}
+#huntr-react-container-2 .field-container .huntr-icon {
+  position: absolute;
+  right: 5px;
+  bottom: 14px;
+  font-size: 16px;
+  color: #d4d4d4;
+  cursor: pointer;
+}
+#huntr-react-container-2 .field-container .input-image {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  bottom: 14px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.1);
+}
+#huntr-react-container-2 .hide {
+  visibility: hidden;
+}
+#huntr-react-container-2 .btn {
+  font-family: 'Lato', sans-serif !important;
+  border-radius: 4px !important;
+  font-size: 14px;
+  display: block !important;
+  cursor: pointer !important;
+  text-transform: capitalize !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2px !important;
+  position: relative;
+  transition: all 0.4s ease-out !important;
+  text-align: center !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+  text-shadow: none !important;
+  line-height: 37px;
+  box-sizing: border-box !important;
+}
+#huntr-react-container-2 .btn .huntr-icon {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  color: rgba(255,255,255,0.4);
+  font-size: 16px;
+}
+#huntr-react-container-2 .btn-purple {
+  color: #fff;
+  text-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+  background-color: #6a4feb;
+}
+#huntr-react-container-2 .btn-purple:hover {
+  background-color: #8c35ff;
+}
+#huntr-react-container-2 .btn-purple:disabled {
+  cursor: not-allowed;
+  color: rgba(25,4,69,0.4) !important;
+  background-color: rgba(25,4,69,0.2) !important;
+}
+#huntr-react-container-2 ul {
+  margin: 0px;
+  padding: 0px;
+}
+#huntr-react-container-2 ul li {
+  list-style: none;
+}
+#huntr-react-container-2 .location-search .huntr-drop-down-menu span {
+  font-size: 11px;
+  display: inline-block;
+}
+#huntr-react-container-2 .truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#huntr-react-container-2 .huntr-drop-down-menu {
+  color: #4a4a4a;
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 13px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.1);
+  z-index: 1;
+  border: 1px solid #ddd;
+  max-height: 250px;
+  overflow-y: auto;
+}
+#huntr-react-container-2 .huntr-drop-down-menu .huntr-ddmenu-footer {
+  padding: 10px 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  cursor: pointer;
+}
+#huntr-react-container-2 .huntr-drop-down-menu .huntr-ddmenu-footer .huntr-icon {
+  margin-right: 10px;
+}
+#huntr-react-container-2 .huntr-logo img {
+  width: 16px;
+  position: relative;
+  top: -5px;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+#huntr-react-container-2 .huntr-ext-nav-menu .nav-tooltip {
+  display: none;
+  position: absolute;
+  background-color: #7f7b92;
+  color: #fff;
+  left: -45px;
+  font-size: 11px;
+  width: 90px;
+  line-height: 30px;
+  padding: 0px 15px;
+  border-radius: 20px;
+  top: -25px;
+  text-align: center;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu .nav-tooltip:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #7f7b92;
+  top: 30px;
+  left: 45px;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li {
+  position: relative;
+  padding: 0px;
+  cursor: pointer;
+  margin: 0px 31px 0px 0px;
+  font-size: 17px;
+  display: inline-block;
+  color: #b5b5b5;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li a,
+#huntr-react-container-2 .huntr-ext-nav-menu ul li span {
+  line-height: 50px;
+  vertical-align: middle;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li:first-child {
+  margin-left: 20px;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li:last-child {
+  margin: 0px;
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li:hover {
+  color: rgba(0,0,0,0.8);
+}
+#huntr-react-container-2 .huntr-ext-nav-menu ul li:hover .nav-tooltip {
+  display: inline-block;
+}
+#huntr-react-container-2 .huntr-ext-top-menu {
+  background-color: #f3f1f5;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+  width: 100%;
+  color: rgba(0,0,0,0.25);
+}
+#huntr-react-container-2 .huntr-ext-top-menu img {
+  max-width: 60px;
+  box-sizing: content-box;
+  padding: 12px 0px 10px 12px;
+}
+#huntr-react-container-2 p,
+#huntr-react-container-2 span {
+  text-shadow: none;
+}
+#huntr-react-container-2 p.huntr-icon,
+#huntr-react-container-2 span.huntr-icon {
+  font-family: 'simple-line-icons' !important;
+}
+#huntr-react-container-2 p.huntr-icon:before,
+#huntr-react-container-2 span.huntr-icon:before {
+  font-family: 'simple-line-icons' !important;
+}
+#huntr-react-container-2 h1 {
+  font-family: 'Lato', sans-serif !important;
+  text-transform: uppercase !important;
+  color: #4a4a4a !important;
+  letter-spacing: 5px !important;
+  font-size: 16px !important;
+  font-weight: 900;
+}
+#huntr-react-container-2 .huntr-ext-app-container {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  z-index: 100000;
+  max-height: 600px;
+  min-height: 300px;
+}
+#huntr-react-container-2 .huntr-ext-app-container .inner-container {
+  height: 100%;
+  background-color: #fff;
+  width: 300px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  outline: 1px solid rgba(0,0,0,0.1);
+}
+#huntr-react-container-2 .huntr-ext-minimize {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-size: 35px;
+  font-family: 'Lato', sans-serif;
+  line-height: normal;
+  transform: rotate(45deg);
+  cursor: pointer;
+  color: rgba(74,74,74,0.2);
+  font-weight: 400;
+  z-index: 1;
+}
+#huntr-react-container-2 .huntr-ext-minimize:hover {
+  color: rgba(74,74,74,0.7);
+}
+#huntr-react-container-2 .editable-text-field {
+  width: 100%;
+}
+#huntr-react-container-2 .huntr-ext-app-mini {
+  background-color: #6a4feb;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: fixed;
+  z-index: 10000;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+#huntr-react-container-2 .huntr-ext-app-mini:after {
+  content: 'h';
+}
+#huntr-react-container-2 .huntr-ext-component-container h1 {
+  text-align: center;
+  margin: 60px 0px;
+}
+#huntr-react-container-2 .huntr-ext-component-container .drop-down-button {
+  font-family: 'Lato', sans-serif !important;
+  -webkit-appearance: none !important;
+  outline: 0 !important;
+  border-radius: 2px !important;
+  box-sizing: border-box !important;
+  font-family: 'Lato', sans-serif !important;
+  width: 100% !important;
+  padding: 12px 12px !important;
+  font-size: 14px !important;
+  color: rgba(74,74,74,0.9) !important;
+  margin-bottom: 14px !important;
+  font-weight: 400 !important;
+  background-color: #fafafa !important;
+  border: 1px solid #dcdcdc !important;
+  transition: none !important;
+  text-align: left !important;
+  cursor: pointer !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input {
+  font-size: 16px;
+  height: 35px;
+}
+#huntr-react-container-2 .huntr-ext-component-container input::-webkit-input-placeholder {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  font-family: 'Lato', sans-serif !important;
+  color: rgba(24,0,69,0.3) !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container textarea {
+  font-size: 14px;
+  height: 130px;
+}
+#huntr-react-container-2 .huntr-ext-component-container textarea::-webkit-input-placeholder {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-family: 'Lato', sans-serif !important;
+  color: rgba(24,0,69,0.3) !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input,
+#huntr-react-container-2 .huntr-ext-component-container textarea {
+  box-shadow: none;
+  background-color: #fff;
+  background-image: none !important;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif !important;
+  letter-spacing: 0px;
+  width: 100%;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid #eee !important;
+  font-weight: 400 !important;
+  margin: 0px !important;
+  color: rgba(25,4,69,0.7) !important;
+  border-radius: 0 !important;
+  line-height: normal !important;
+  padding: 20px 0 !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input.clean,
+#huntr-react-container-2 .huntr-ext-component-container textarea.clean {
+  border: none !important;
+  height: 100%;
+  padding: 0 !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input.clean:focus,
+#huntr-react-container-2 .huntr-ext-component-container textarea.clean:focus,
+#huntr-react-container-2 .huntr-ext-component-container input.clean::selection,
+#huntr-react-container-2 .huntr-ext-component-container textarea.clean::selection {
+  border-bottom: none !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input:focus,
+#huntr-react-container-2 .huntr-ext-component-container textarea:focus,
+#huntr-react-container-2 .huntr-ext-component-container input::selection,
+#huntr-react-container-2 .huntr-ext-component-container textarea::selection {
+  outline: 0;
+  border-bottom: 1px solid #8c35ff !important;
+  background-color: #fff !important;
+}
+#huntr-react-container-2 .huntr-ext-component-container input::selection,
+#huntr-react-container-2 .huntr-ext-component-container textarea::selection {
+  background-color: #8c35ff !important;
+  color: #fff;
+}
+.huntr-loader ::after,
+.huntr-loader ::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.huntr-loader {
+  display: block;
+  height: 50px;
+  width: 50px;
+  animation: huntr-loader-1 3s linear infinite;
+  -webkit-animation: huntr-loader-1 3s linear infinite;
+}
+@-webkit-keyframes huntr-loader-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.huntr-loader span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  clip: rect(0px, 50px, 50px, 0);
+  -webkit-animation: huntr-loader-2 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: huntr-loader-2 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+@-webkit-keyframes huntr-loader-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.huntr-loader span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  border: 4px solid transparent;
+  border-top: 4px solid #6a4feb;
+  border-radius: 50%;
+  -webkit-animation: huntr-loader-3 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: huntr-loader-3 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+@-webkit-keyframes huntr-loader-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.huntr-loader span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  border: 4px solid rgba(106,79,235,0.2);
+  border-radius: 50%;
+}
+@-moz-keyframes huntr-loader-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes huntr-loader-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes huntr-loader-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes huntr-loader-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes huntr-loader-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes huntr-loader-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes huntr-loader-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes huntr-loader-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes huntr-loader-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes huntr-loader-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes huntr-loader-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes huntr-loader-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style><style type="text/css">/*!
+ * Quill Editor v1.3.0
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+#huntr-react-container-2 .ql-container span,
+#huntr-react-container-2 .ql-container li,
+#huntr-react-container-2 .ql-container ul,
+#huntr-react-container-2 .ql-container div,
+#huntr-react-container-2 .ql-container strong,
+#huntr-react-container-2 .ql-container b,
+#huntr-react-container-2 .ql-container h1,
+#huntr-react-container-2 .ql-container h2,
+#huntr-react-container-2 .ql-container h3,
+#huntr-react-container-2 .ql-container p  {
+  font-size: 14px;
+  font-family: Lato, Arial, sans-serif !important;
+  color: #180045 !important;
+}
+
+#huntr-react-container-2 .ql-container {
+  box-sizing: border-box;
+  font-family: Lato, Arial, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  margin: 0px;
+  position: relative;
+}
+#huntr-react-container-2 .ql-container.ql-disabled .ql-tooltip {
+  visibility: hidden;
+}
+#huntr-react-container-2 .ql-container.ql-disabled .ql-editor ul[data-checked] > li::before {
+  pointer-events: none;
+}
+#huntr-react-container-2 .ql-clipboard {
+  left: -100000px;
+  height: 1px;
+  overflow-y: hidden;
+  position: absolute;
+  top: 50%;
+}
+#huntr-react-container-2 .ql-clipboard p {
+  margin: 0;
+  padding: 0;
+}
+#huntr-react-container-2 .ql-editor {
+  box-sizing: border-box;
+  line-height: 1.42;
+  height: 100% !important;
+  outline: none;
+  overflow-y: auto;
+  padding: 12px 25px;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+#huntr-react-container-2 .ql-editor > * {
+  cursor: text;
+}
+#huntr-react-container-2 .ql-editor p,
+#huntr-react-container-2 .ql-editor ol,
+#huntr-react-container-2 .ql-editor ul,
+#huntr-react-container-2 .ql-editor pre,
+#huntr-react-container-2 .ql-editor blockquote,
+#huntr-react-container-2 .ql-editor h1,
+#huntr-react-container-2 .ql-editor h2,
+#huntr-react-container-2 .ql-editor h3,
+#huntr-react-container-2 .ql-editor h4,
+#huntr-react-container-2 .ql-editor h5,
+#huntr-react-container-2 .ql-editor h6 {
+  margin: 0;
+  padding: 0;
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol,
+#huntr-react-container-2 .ql-editor ul {
+  padding-left: 1.5em;
+}
+#huntr-react-container-2 .ql-editor ol > li,
+#huntr-react-container-2 .ql-editor ul > li {
+  list-style-type: none;
+}
+#huntr-react-container-2 .ql-editor ul > li::before {
+  content: '\2022';
+}
+#huntr-react-container-2 .ql-editor ul[data-checked=true],
+#huntr-react-container-2 .ql-editor ul[data-checked=false] {
+  pointer-events: none;
+}
+#huntr-react-container-2 .ql-editor ul[data-checked=true] > li *,
+#huntr-react-container-2 .ql-editor ul[data-checked=false] > li * {
+  pointer-events: all;
+}
+#huntr-react-container-2 .ql-editor ul[data-checked=true] > li::before,
+#huntr-react-container-2 .ql-editor ul[data-checked=false] > li::before {
+  color: #777;
+  cursor: pointer;
+  pointer-events: all;
+}
+#huntr-react-container-2 .ql-editor ul[data-checked=true] > li::before {
+  content: '\2611';
+}
+#huntr-react-container-2 .ql-editor ul[data-checked=false] > li::before {
+  content: '\2610';
+}
+#huntr-react-container-2 .ql-editor li::before {
+  display: inline-block;
+  white-space: nowrap;
+  width: 1.2em;
+}
+#huntr-react-container-2 .ql-editor li:not(.ql-direction-rtl)::before {
+  margin-left: -1.5em;
+  margin-right: 0.3em;
+  text-align: right;
+}
+#huntr-react-container-2 .ql-editor li.ql-direction-rtl::before {
+  margin-left: 0.3em;
+  margin-right: -1.5em;
+}
+#huntr-react-container-2 .ql-editor ol li:not(.ql-direction-rtl),
+#huntr-react-container-2 .ql-editor ul li:not(.ql-direction-rtl) {
+  padding-left: 1.5em;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-direction-rtl,
+#huntr-react-container-2 .ql-editor ul li.ql-direction-rtl {
+  padding-right: 1.5em;
+}
+#huntr-react-container-2 .ql-editor ol li {
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  counter-increment: list-0;
+}
+#huntr-react-container-2 .ql-editor ol li:before {
+  content: counter(list-0, decimal) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-1 {
+  counter-increment: list-1;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-1:before {
+  content: counter(list-1, lower-alpha) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-1 {
+  counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-2 {
+  counter-increment: list-2;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-2:before {
+  content: counter(list-2, lower-roman) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-2 {
+  counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-3 {
+  counter-increment: list-3;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-3:before {
+  content: counter(list-3, decimal) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-3 {
+  counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-4 {
+  counter-increment: list-4;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-4:before {
+  content: counter(list-4, lower-alpha) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-4 {
+  counter-reset: list-5 list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-5 {
+  counter-increment: list-5;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-5:before {
+  content: counter(list-5, lower-roman) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-5 {
+  counter-reset: list-6 list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-6 {
+  counter-increment: list-6;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-6:before {
+  content: counter(list-6, decimal) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-6 {
+  counter-reset: list-7 list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-7 {
+  counter-increment: list-7;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-7:before {
+  content: counter(list-7, lower-alpha) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-7 {
+  counter-reset: list-8 list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-8 {
+  counter-increment: list-8;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-8:before {
+  content: counter(list-8, lower-roman) '. ';
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-8 {
+  counter-reset: list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-9 {
+  counter-increment: list-9;
+}
+#huntr-react-container-2 .ql-editor ol li.ql-indent-9:before {
+  content: counter(list-9, decimal) '. ';
+}
+#huntr-react-container-2 .ql-editor .ql-indent-1:not(.ql-direction-rtl) {
+  padding-left: 3em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-1:not(.ql-direction-rtl) {
+  padding-left: 4.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-1.ql-direction-rtl.ql-align-right {
+  padding-right: 3em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-1.ql-direction-rtl.ql-align-right {
+  padding-right: 4.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-2:not(.ql-direction-rtl) {
+  padding-left: 6em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-2:not(.ql-direction-rtl) {
+  padding-left: 7.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-2.ql-direction-rtl.ql-align-right {
+  padding-right: 6em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-2.ql-direction-rtl.ql-align-right {
+  padding-right: 7.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-3:not(.ql-direction-rtl) {
+  padding-left: 9em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-3:not(.ql-direction-rtl) {
+  padding-left: 10.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-3.ql-direction-rtl.ql-align-right {
+  padding-right: 9em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-3.ql-direction-rtl.ql-align-right {
+  padding-right: 10.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-4:not(.ql-direction-rtl) {
+  padding-left: 12em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-4:not(.ql-direction-rtl) {
+  padding-left: 13.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-4.ql-direction-rtl.ql-align-right {
+  padding-right: 12em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-4.ql-direction-rtl.ql-align-right {
+  padding-right: 13.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-5:not(.ql-direction-rtl) {
+  padding-left: 15em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-5:not(.ql-direction-rtl) {
+  padding-left: 16.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-5.ql-direction-rtl.ql-align-right {
+  padding-right: 15em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-5.ql-direction-rtl.ql-align-right {
+  padding-right: 16.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-6:not(.ql-direction-rtl) {
+  padding-left: 18em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-6:not(.ql-direction-rtl) {
+  padding-left: 19.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-6.ql-direction-rtl.ql-align-right {
+  padding-right: 18em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-6.ql-direction-rtl.ql-align-right {
+  padding-right: 19.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-7:not(.ql-direction-rtl) {
+  padding-left: 21em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-7:not(.ql-direction-rtl) {
+  padding-left: 22.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-7.ql-direction-rtl.ql-align-right {
+  padding-right: 21em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-7.ql-direction-rtl.ql-align-right {
+  padding-right: 22.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-8:not(.ql-direction-rtl) {
+  padding-left: 24em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-8:not(.ql-direction-rtl) {
+  padding-left: 25.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-8.ql-direction-rtl.ql-align-right {
+  padding-right: 24em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-8.ql-direction-rtl.ql-align-right {
+  padding-right: 25.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-9:not(.ql-direction-rtl) {
+  padding-left: 27em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-9:not(.ql-direction-rtl) {
+  padding-left: 28.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-indent-9.ql-direction-rtl.ql-align-right {
+  padding-right: 27em;
+}
+#huntr-react-container-2 .ql-editor li.ql-indent-9.ql-direction-rtl.ql-align-right {
+  padding-right: 28.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-video {
+  display: block;
+  max-width: 100%;
+}
+#huntr-react-container-2 .ql-editor .ql-video.ql-align-center {
+  margin: 0 auto;
+}
+#huntr-react-container-2 .ql-editor .ql-video.ql-align-right {
+  margin: 0 0 0 auto;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-black {
+  background-color: #000;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-red {
+  background-color: #e60000;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-orange {
+  background-color: #f90;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-yellow {
+  background-color: #ff0;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-green {
+  background-color: #008a00;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-blue {
+  background-color: #06c;
+}
+#huntr-react-container-2 .ql-editor .ql-bg-purple {
+  background-color: #93f;
+}
+#huntr-react-container-2 .ql-editor .ql-color-white {
+  color: #fff;
+}
+#huntr-react-container-2 .ql-editor .ql-color-red {
+  color: #e60000;
+}
+#huntr-react-container-2 .ql-editor .ql-color-orange {
+  color: #f90;
+}
+#huntr-react-container-2 .ql-editor .ql-color-yellow {
+  color: #ff0;
+}
+#huntr-react-container-2 .ql-editor .ql-color-green {
+  color: #008a00;
+}
+#huntr-react-container-2 .ql-editor .ql-color-blue {
+  color: #06c;
+}
+#huntr-react-container-2 .ql-editor .ql-color-purple {
+  color: #93f;
+}
+#huntr-react-container-2 .ql-editor .ql-font-serif {
+  font-family: Georgia, Times New Roman, serif;
+}
+#huntr-react-container-2 .ql-editor .ql-font-monospace {
+  font-family: Monaco, Courier New, monospace;
+}
+#huntr-react-container-2 .ql-editor .ql-size-small {
+  font-size: 0.75em;
+}
+#huntr-react-container-2 .ql-editor .ql-size-large {
+  font-size: 1.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-size-huge {
+  font-size: 2.5em;
+}
+#huntr-react-container-2 .ql-editor .ql-direction-rtl {
+  direction: rtl;
+  text-align: inherit;
+}
+#huntr-react-container-2 .ql-editor .ql-align-center {
+  text-align: center;
+}
+#huntr-react-container-2 .ql-editor .ql-align-justify {
+  text-align: justify;
+}
+#huntr-react-container-2 .ql-editor .ql-align-right {
+  text-align: right;
+}
+#huntr-react-container-2 .ql-editor .ql-embed-selected {
+  border: 1px solid #777;
+  user-select: none;
+}
+#huntr-react-container-2 .ql-editor.ql-blank::before {
+  color: rgba(0,0,0,0.6);
+  content: attr(data-placeholder);
+  font-style: italic;
+  pointer-events: none;
+  position: absolute;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar:after,
+#huntr-react-container-2 .ql-snow .ql-toolbar:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button,
+#huntr-react-container-2 .ql-snow .ql-toolbar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  height: 24px;
+  padding: 3px 5px;
+  width: 28px;
+  box-shadow: none;
+  min-height: 1em;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button svg,
+#huntr-react-container-2 .ql-snow .ql-toolbar button svg {
+  float: left;
+  height: 100%;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button:active:hover,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:active:hover {
+  outline: none;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar input.ql-image[type=file],
+#huntr-react-container-2 .ql-snow .ql-toolbar input.ql-image[type=file] {
+  display: none;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button:hover,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:hover,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:focus,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:focus,
+#huntr-react-container-2 .ql-snow.ql-toolbar button.ql-active,
+#huntr-react-container-2 .ql-snow .ql-toolbar button.ql-active,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label:hover,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label:hover,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label.ql-active,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label.ql-active,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item:hover,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item:hover,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item.ql-selected,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+  color: #06c;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button:hover .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:hover .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:focus .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:focus .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar button.ql-active .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button.ql-active .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:focus .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:focus .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill {
+  fill: #06c;
+}
+#huntr-react-container-2 .ql-snow.ql-toolbar button:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:focus .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:focus .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar button.ql-active .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar button.ql-active .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar button:focus .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar button:focus .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar button.ql-active .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar button.ql-active .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,
+#huntr-react-container-2 .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
+  stroke: #06c;
+}
+@media (pointer: coarse) {
+  .ql-snow.ql-toolbar button:hover:not(.ql-active),
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) {
+    color: #444;
+  }
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-fill,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-fill,
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill {
+    fill: #444;
+  }
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke,
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter {
+    stroke: #444;
+  }
+}
+#huntr-react-container-2 .ql-snow {
+  box-sizing: border-box;
+}
+#huntr-react-container-2 .ql-snow * {
+  box-sizing: border-box;
+}
+#huntr-react-container-2 .ql-snow .ql-hidden {
+  display: none;
+}
+#huntr-react-container-2 .ql-snow .ql-out-bottom,
+#huntr-react-container-2 .ql-snow .ql-out-top {
+  visibility: hidden;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip {
+  position: absolute;
+  transform: translateY(10px);
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip a {
+  cursor: pointer;
+  text-decoration: none;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip.ql-flip {
+  transform: translateY(-10px);
+}
+#huntr-react-container-2 .ql-snow .ql-formats {
+  display: inline-block;
+  vertical-align: middle;
+}
+#huntr-react-container-2 .ql-snow .ql-formats:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+#huntr-react-container-2 .ql-snow .ql-stroke {
+  fill: none;
+  stroke: #444;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+#huntr-react-container-2 .ql-snow .ql-stroke-miter {
+  fill: none;
+  stroke: #444;
+  stroke-miterlimit: 10;
+  stroke-width: 2;
+}
+#huntr-react-container-2 .ql-snow .ql-fill,
+#huntr-react-container-2 .ql-snow .ql-stroke.ql-fill {
+  fill: #444;
+}
+#huntr-react-container-2 .ql-snow .ql-empty {
+  fill: none;
+}
+#huntr-react-container-2 .ql-snow .ql-even {
+  fill-rule: evenodd;
+}
+#huntr-react-container-2 .ql-snow .ql-thin,
+#huntr-react-container-2 .ql-snow .ql-stroke.ql-thin {
+  stroke-width: 1;
+}
+#huntr-react-container-2 .ql-snow .ql-transparent {
+  opacity: 0.4;
+}
+#huntr-react-container-2 .ql-snow .ql-direction svg:last-child {
+  display: none;
+}
+#huntr-react-container-2 .ql-snow .ql-direction.ql-active svg:last-child {
+  display: inline;
+}
+#huntr-react-container-2 .ql-snow .ql-direction.ql-active svg:first-child {
+  display: none;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h1 {
+  font-size: 2em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h2 {
+  font-size: 1.5em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h3 {
+  font-size: 1.17em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h4 {
+  font-size: 1em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h5 {
+  font-size: 0.83em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor h6 {
+  font-size: 0.67em;
+}
+#huntr-react-container-2 .ql-snow .ql-editor a {
+  text-decoration: underline;
+}
+#huntr-react-container-2 .ql-snow .ql-editor blockquote {
+  border-left: 4px solid #ccc;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-left: 16px;
+}
+#huntr-react-container-2 .ql-snow .ql-editor code,
+#huntr-react-container-2 .ql-snow .ql-editor pre {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+#huntr-react-container-2 .ql-snow .ql-editor pre {
+  white-space: pre-wrap;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+#huntr-react-container-2 .ql-snow .ql-editor code {
+  font-size: 85%;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+#huntr-react-container-2 .ql-snow .ql-editor code:before,
+#huntr-react-container-2 .ql-snow .ql-editor code:after {
+  content: "\A0";
+  letter-spacing: -2px;
+}
+#huntr-react-container-2 .ql-snow .ql-editor pre.ql-syntax {
+  background-color: #23241f;
+  color: #f8f8f2;
+  overflow: visible;
+}
+#huntr-react-container-2 .ql-snow .ql-editor img {
+  max-width: 100%;
+}
+#huntr-react-container-2 .ql-snow .ql-picker {
+  color: #444;
+  display: inline-block;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  height: 24px;
+  position: relative;
+  vertical-align: middle;
+}
+#huntr-react-container-2 .ql-snow .ql-picker-label {
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+  padding-left: 8px;
+  padding-right: 2px;
+  position: relative;
+  width: 100%;
+}
+#huntr-react-container-2 .ql-snow .ql-picker-label::before {
+  display: inline-block;
+  line-height: 22px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker-options {
+  background-color: #fff;
+  display: none;
+  min-width: 100%;
+  padding: 4px 8px;
+  position: absolute;
+  white-space: nowrap;
+}
+#huntr-react-container-2 .ql-snow .ql-picker-options .ql-picker-item {
+  cursor: pointer;
+  display: block;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-expanded .ql-picker-label {
+  color: #ccc;
+  z-index: 2;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-fill {
+  fill: #ccc;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-stroke {
+  stroke: #ccc;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-expanded .ql-picker-options {
+  display: block;
+  margin-top: -1px;
+  top: 100%;
+  z-index: 1;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker,
+#huntr-react-container-2 .ql-snow .ql-icon-picker {
+  width: 28px;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker .ql-picker-label,
+#huntr-react-container-2 .ql-snow .ql-icon-picker .ql-picker-label {
+  padding: 2px 4px;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker .ql-picker-label svg,
+#huntr-react-container-2 .ql-snow .ql-icon-picker .ql-picker-label svg {
+  right: 4px;
+}
+#huntr-react-container-2 .ql-snow .ql-icon-picker .ql-picker-options {
+  padding: 4px 0px;
+}
+#huntr-react-container-2 .ql-snow .ql-icon-picker .ql-picker-item {
+  height: 24px;
+  width: 24px;
+  padding: 2px 4px;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker .ql-picker-options {
+  padding: 3px 5px;
+  width: 152px;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker .ql-picker-item {
+  border: 1px solid transparent;
+  float: left;
+  height: 16px;
+  margin: 2px;
+  padding: 0px;
+  width: 16px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+  position: absolute;
+  margin-top: -9px;
+  right: 0;
+  top: 50%;
+  width: 18px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-label]:not([data-label=''])::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-label[data-label]:not([data-label=''])::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-label[data-label]:not([data-label=''])::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-label]:not([data-label=''])::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item[data-label]:not([data-label=''])::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-label]:not([data-label=''])::before {
+  content: attr(data-label);
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header {
+  width: 98px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item::before {
+  content: 'Normal';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+  content: 'Heading 1';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+  content: 'Heading 2';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+  content: 'Heading 3';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+  content: 'Heading 4';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+  content: 'Heading 5';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+  content: 'Heading 6';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+  font-size: 2em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+  font-size: 1.5em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+  font-size: 1.17em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+  font-size: 1em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+  font-size: 0.83em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+  font-size: 0.67em;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font {
+  width: 108px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-label::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item::before {
+  content: 'Sans Serif';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-label[data-value=serif]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serif]::before {
+  content: 'Serif';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-label[data-value=monospace]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=monospace]::before {
+  content: 'Monospace';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=serif]::before {
+  font-family: Georgia, Times New Roman, serif;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-font .ql-picker-item[data-value=monospace]::before {
+  font-family: Monaco, Courier New, monospace;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size {
+  width: 98px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-label::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: 'Normal';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=small]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+  content: 'Small';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=large]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+  content: 'Large';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=huge]::before,
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+  content: 'Huge';
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+  font-size: 10px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+  font-size: 18px;
+}
+#huntr-react-container-2 .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+  font-size: 32px;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker.ql-background .ql-picker-item {
+  background-color: #fff;
+}
+#huntr-react-container-2 .ql-snow .ql-color-picker.ql-color .ql-picker-item {
+  background-color: #000;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow {
+  border-bottom: 1px solid #ECE9F2;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  padding: 8px;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-formats {
+  margin-right: 15px;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-picker-label {
+  border: 1px solid transparent;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-picker-options {
+  border: 1px solid transparent;
+  box-shadow: rgba(0,0,0,0.2) 0 2px 8px;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+  border-color: #ccc;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+  border-color: #ccc;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected,
+#huntr-react-container-2 .ql-toolbar.ql-snow .ql-color-picker .ql-picker-item:hover {
+  border-color: #000;
+}
+#huntr-react-container-2 .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-top: 0px;
+  padding-bottom: 40px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px #ddd;
+  color: #444;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip::before {
+  content: "Visit URL:";
+  line-height: 26px;
+  margin-right: 8px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip input[type=text] {
+  display: none;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  height: 26px;
+  margin: 0px;
+  padding: 3px 5px;
+  width: 170px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip a.ql-preview {
+  display: inline-block;
+  max-width: 200px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip a.ql-action::after {
+  border-right: 1px solid #ccc;
+  content: 'Edit';
+  margin-left: 16px;
+  padding-right: 8px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip a.ql-remove::before {
+  content: 'Remove';
+  margin-left: 8px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip a {
+  line-height: 26px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip.ql-editing a.ql-preview,
+#huntr-react-container-2 .ql-snow .ql-tooltip.ql-editing a.ql-remove {
+  display: none;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip.ql-editing input[type=text] {
+  display: inline-block;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+  border-right: 0px;
+  content: 'Save';
+  padding-right: 0px;
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip[data-mode=link]::before {
+  content: "Enter link:";
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip[data-mode=formula]::before {
+  content: "Enter formula:";
+}
+#huntr-react-container-2 .ql-snow .ql-tooltip[data-mode=video]::before {
+  content: "Enter video:";
+}
+#huntr-react-container-2 .ql-snow a {
+  color: #06c;
+}
+</style><style type="text/css">@font-face { font-family: 'simple-line-icons'; src: url('chrome-extension://mihdfbecejheednfigjpdacgeilhlmnf/assets/fonts/Simple-Line-Icons.ttf') format('truetype'); }</style></head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#FF0000" alink="#009B00" cz-shortcut-listen="true"><div id="huntr-react-container-2"><!-- react-empty: 1 --></div>
+<table width="605" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr valign="top"> 
+    <td width="48" height="105"><img src="./COBOL Programming Course_files/I-TEACHER.GIF" width="40" height="42" align="top" hspace="4"></td>
+    <td width="350" height="105"> 
+      <h1><img src="./COBOL Programming Course_files/T-Dept.gif" width="297" height="36"><br>
+        <font size="5"><font color="#000000"> &nbsp;COBOL Programming Course</font></font></h1>
+      <p align="center"><b>Includes COBOL tutorials, COBOL example programs, COBOL 
+        programming exercises and COBOL self assessment questions.</b></p>
+      </td>
+    <td width="207" height="105"> 
+      <table width="100%" border="1" align="left" height="100" cellpadding="2" cellspacing="0">
+        <tbody><tr> 
+          <td colspan="2" height="29"> 
+            <div align="center"><img src="./COBOL Programming Course_files/aai-Legend.gif"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="14%" height="15"><img src="./COBOL Programming Course_files/i-Tuts.gif" width="17" height="16" vspace="1" hspace="2"></td>
+          <td width="86%" height="15"> <font size="-1">COBOL tutorial</font></td>
+        </tr>
+        <tr> 
+          <td width="14%"><img src="./COBOL Programming Course_files/i-exercises.gif" width="16" height="16" hspace="2" vspace="1"></td>
+          <td width="86%"><font size="-1">COBOL programming exercise</font></td>
+        </tr>
+        <tr valign="middle"> 
+          <td width="14%" height="8"><img src="./COBOL Programming Course_files/i-SAQ.gif" vspace="0" hspace="2"></td>
+          <td width="86%" height="8"> <font size="-1">Self assessement questions</font></td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+<hr width="605" align="left">
+<div align="center"> </div>
+<table width="605" border="1" cellpadding="1" cellspacing="1">
+  <tbody><tr>
+    <td height="1045"> 
+      <table border="0" width="600" cellpadding="0" cellspacing="0">
+        <tbody><tr> 
+          <td width="225" valign="top" height="144" bgcolor="#FFFFCC"><img src="./COBOL Programming Course_files/BallRedG.gif" hspace="4" height="13" width="13"><b>Introduction 
+            to COBOL</b></td>
+          <td width="375" height="144" valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr>
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="5" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/COBOLIntro.htm">The structure 
+                  of COBOL programs</a> <font color="#FF0000" size="-1">(new 
+                  may 2002)</font></td>
+              </tr>
+              <tr>
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="5" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/DataDeclaration.htm">Declaring 
+                  data in COBOL</a></td>
+              </tr>
+              <tr>
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="5" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/COBOLcommands.htm">Basic 
+                  Procedure Division commands</a> </td>
+              </tr>
+              <tr>
+                <td width="5%"><img src="./COBOL Programming Course_files/i-exercise.gif" width="21" height="21" vspace="4" hspace="5"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/GettingStarted.htm">Getting 
+                  Started</a></td>
+              </tr>
+              <tr>
+                <td width="5%"><img src="./COBOL Programming Course_files/i-SAQ.gif" hspace="5" vspace="4"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/GettingStarted.htm">These 
+                  will be self assessment questions</a> </td>
+              </tr>
+            </tbody></table>
+            
+          </td>
+        </tr>
+        <tr bgcolor="#990033"> 
+          <th width="600" valign="top" height="1" colspan="2"> 
+          </th>
+        </tr>
+        <tr> 
+          <td width="225" valign="top" height="104" bgcolor="#FFFFCC"><img src="./COBOL Programming Course_files/BallRedG.gif" hspace="4" height="13" width="13"><b>COBOL 
+            Control structures</b></td>
+          <td width="375" height="104" valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="5" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Selection.htm">Selection in COBOL</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="5" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Iteration.htm">Iteration 
+                  in COBOL</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-exercise.gif" width="21" height="21" vspace="4" hspace="5"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/CountDown.htm">The 
+                  Calculator and Countdown exercise</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-SAQ.gif" hspace="5" vspace="5"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/GettingStarted.htm">These 
+                  will be self assessment questions</a> </td>
+              </tr>
+            </tbody></table>            
+          </td>
+        </tr>
+        <tr bgcolor="#990033"> 
+          <th width="600" valign="top" height="1" colspan="2"> 
+          </th>
+        </tr>		
+		
+		
+		
+		
+		
+		
+        <tr> 
+          <td width="225" valign="top" height="120" bgcolor="#FFFFCC"><img src="./COBOL Programming Course_files/BallRedG.gif" hspace="4" height="13" width="13"><b>Simple 
+            Sequential Files</b></td>
+          <td width="375" height="120" valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/SequentialFiles1.htm">Introduction 
+                  to Sequential files</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/SequentialFiles2.htm">Processing 
+                  Sequential files</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-exercise.gif" width="21" height="21" vspace="4" hspace="4"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/SeqRead.htm">Reading 
+                  Sequential Files</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-exercise.gif" width="21" height="21" vspace="4" hspace="4"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/SeqReadIf.htm">Counting 
+                  records in a Sequential File </a></td>
+              </tr>
+            </tbody></table>
+            
+          </td>
+        </tr>
+        <tr bgcolor="#990033"> 
+          <th width="600" valign="top" height="1" colspan="2"> 
+          </th>
+        </tr>
+       <tr> 
+          <td width="225" valign="top" height="115" bgcolor="#FFFFCC"><img src="./COBOL Programming Course_files/BallRedG.gif" hspace="4" height="13" width="13"><b>Advanced 
+            data declaration</b></td>
+          <td width="375" height="115" valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/EditedPics.htm">Edited 
+                  Pictures</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Usage.htm">The USAGE 
+                  clause</a> <font color="#FF0000" size="-1">(new may 2002)</font></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-exercise.gif" width="21" height="21" vspace="4" hspace="4"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/SeqWrite.htm">Writing 
+                  records to a Sequential File</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-exercise.gif" width="21" height="21" vspace="4" hspace="4"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/SeqInsert.htm">Inserting 
+                  records in a Sequential File</a></td>
+              </tr>
+            </tbody></table>
+            
+          </td>
+        </tr>
+		<tr bgcolor="#990033"> 
+          <th width="600" valign="top" height="1" colspan="2"> 
+          </th>
+        </tr>		
+        <tr> 
+          <td width="225" valign="top" height="129" bgcolor="#FFFFCC"><img src="./COBOL Programming Course_files/BallRedG.gif" hspace="4" height="13" width="13"><b>Advanced 
+            Sequential Files</b></td>
+          <td width="375" height="129" valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/SequentialFiles3.htm">COBOL 
+                  print files and variable-length records</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/SortMerge.htm">Sorting 
+                  and Merging</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/COBOLcommands.htm">Basic 
+                  Procedure Division commands</a> </td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-exercise.gif" width="21" height="21" vspace="4" hspace="4"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/SeqUpdate.htm">Updating 
+                  a Sequential File</a> </td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-exercise.gif" width="21" height="21" vspace="4" hspace="4"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/SortIP.htm">Sorting 
+                  a Sequential File</a> </td>
+              </tr>
+            </tbody></table>
+            
+          </td>
+        </tr>
+        <tr bgcolor="#990033"> 
+          <th width="600" valign="top" height="1" colspan="2"> 
+          </th>
+        </tr>		
+       <tr> 
+          <td width="225" valign="top" height="92" bgcolor="#FFFFCC"><img src="./COBOL Programming Course_files/BallRedG.gif" hspace="4" height="13" width="13"><b>Direct 
+            access files</b></td>
+          <td width="375" height="92" valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Intro2DirectAccess.htm">Introduction 
+                  to direct access files</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/RelativeFiles.htm">Relative 
+                  Files</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/IndexedFiles.htm">Indexed 
+                  Files</a> </td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+        <tr bgcolor="#990033"> 
+          <th width="600" valign="top" height="1" colspan="2"> 
+          </th>
+        </tr>		
+        <tr> 
+          <td width="225" valign="top" height="77" bgcolor="#FFFFCC"><img src="./COBOL Programming Course_files/BallRedG.gif" hspace="4" height="13" width="13"><b>COBOL 
+            tables</b></td>
+          <td width="375" height="77" valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Tables1.htm">Using tables</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Tables2.htm">Creating 
+                  tables - syntax and semantics</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Search.htm">Searching 
+                  tables</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-exercise.gif" width="21" height="21" vspace="4" hspace="4"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/exercises/MonthTable.htm">Using 
+                  Tables</a> </td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+	    <tr bgcolor="#990033"> 
+          <th width="600" valign="top" height="1" colspan="2"> 
+          </th>
+        </tr>	
+        <tr> 
+          <td width="225" valign="top" height="51" bgcolor="#FFFFCC"><img src="./COBOL Programming Course_files/BallRedG.gif" hspace="4" height="13" width="13"><b>Constructing 
+            large systems</b></td>
+          <td width="375" height="51" valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Subprograms.htm">Contained 
+                  and external sub-programs</a> <font color="#FF0000" size="-1">(new 
+                  may 2002)</font></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Copy.htm">The 
+                  COPY verb</a> <font color="#FF0000" size="-1">(new may 
+                  2002)</font></td>
+              </tr>
+            </tbody></table>
+            
+          </td>
+        </tr>
+        <tr bgcolor="#990033"> 
+          <th width="600" valign="top" height="1" colspan="2"> 
+          </th>
+        </tr>		
+        <tr> 
+          <td width="225" valign="top" height="116" bgcolor="#FFFFCC"><img src="./COBOL Programming Course_files/BallRedG.gif" hspace="4" height="13" width="13"><b>COBOL 
+            string handling</b></td>
+          <td width="375" height="116" valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Inspect.htm">Inspect</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/String.htm">String</a> 
+                  </td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/Unstring.htm">Unstring</a> 
+                  </td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/RefMod.htm">Reference 
+                  modification and Intrinsic Functions</a></td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+		<tr bgcolor="#990033"> 
+          <th width="600" valign="top" height="1" colspan="2"> 
+          </th>
+        </tr>
+        <tr> 
+          <td width="225" valign="top" height="61" bgcolor="#FFFFCC"><img src="./COBOL Programming Course_files/BallRedG.gif" hspace="4" height="13" width="13"><b>The 
+            COBOL Report Writer</b></td>
+          <td width="375" height="61" valign="top" bgcolor="#FFFFFF"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/ReportWriter.htm">Report 
+                  Writer by example</a></td>
+              </tr>
+              <tr> 
+                <td width="5%"><img src="./COBOL Programming Course_files/i-Tut.gif" width="22" height="21" vspace="4" hspace="4" alt="COBOL tutorial"></td>
+                <td width="95%"><a href="http://www.csis.ul.ie/cobol/course/ReportWriterSS.htm">Report 
+                  Writer syntax and semantics</a></td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+<hr>
+<p>The <a href="http://www.csis.ul.ie/cobol/PPT95AnimationPlay.exe">PowerPoint 
+  animation plugin</a> for the (Internet Explorer, Netscape, Mozilla) is required 
+  to view the animations on these pages.</p>
+<a href="http://www.piercom.ie/aboutyear2000.htm"><p> 
+</p><hr>
+</a> 
+<table cellspacing="0" cellpadding="0" cols="4" width="250">
+  <tbody><tr align="CENTER" valign="TOP">
+    <td> <a href="http://www.csis.ul.ie/studentresources.htm"><img src="./COBOL Programming Course_files/B-BackArrow.gif" alt="Back to Student Resources" border="0" height="52" width="52"></a> 
+      <font size="-2">To Student Resources</font></td>
+    <td><a href="http://www.csis.ul.ie/CSISFORM.HTM"><img src="./COBOL Programming Course_files/B-Evaluation.gif" alt="Please fill out our evaluation form" border="0" height="52" width="52"></a> 
+      <font size="-2">Evaluation Form</font></td>
+    <td><a href="http://www.csis.ul.ie/SEARCH/CSISQueryHit.HTM"><img src="./COBOL Programming Course_files/B-WebSearch.gif" alt="Search the CSIS Web Site" border="0" height="52" width="52"></a> 
+      <font size="-2">Search CSIS Web Site</font></td>
+    <td> 
+      <center>
+     <form>
+          Selectable Site Contents 
+          <select name="list">
+            <option value="http://www.ul.ie/">University of Limerick Home Page</option>
+            <!--<OPTION value="http://www.ul.ie/~informat/">College of I&amp;E Home 
+            Page</OPTION>-->
+            <option value="http://www.csis.ul.ie/">CSIS Home Page</option>
+            <option value="http://www.csis.ul.ie/undergraduate">Undergraduate - Prospective Students</option>
+            <option value="http://www.csis.ul.ie/postgraduate">Postgraduate - Prospective Students</option>            
+            <option value="http://www.csis.ul.ie/currentstudents">Current Students</option>
+            <option value="http://www.csis.ul.ie/research">Research</option>
+            <option value="http://www.csis.ul.ie/csis_staff">Staff</option>
+          <!--  <OPTION value="http://www.csis.ul.ie/CompSys.HTM">...Computer Systems 
+            Degree</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GradDip.HTM">...Graduate Diploma 
+            in Computing</OPTION>
+            <OPTION value="http://www.csis.ul.ie/software_localisation/default.htm">...Graduate 
+            Diploma/MSc in Software Localisation</OPTION>
+            <OPTION value="http://www.csis.ul.ie/ccmcm/default.htm">...MSc in 
+            Music Technology</OPTION>
+            <OPTION value="http://www.csis.ul.ie/soft_re_eng.html/default.htm">...MSc 
+            in Software Reengineering</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Directory/Staff.HTM">Department 
+            Personnel</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Directory/phone.HTM">...CSIS 
+            Telephone Directory</OPTION>
+            <OPTION value="http://www.ul.ie/ITD/PhoneBook.html">...UL Internal 
+            Telephone Directory</OPTION>-->
+            <!--
+            <OPTION value="http://www.csis.ul.ie/Research/ResearchCntr.HTM">...Research 
+            Centres</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Research/ResearchPrj.HTM">...Research 
+            Projects</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Research/RsrchPubs.htm">...Research 
+            Publications</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Research/techrpts.htm">...Technical 
+            Reports</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Research/PhdTheses.htm">...Ph.D 
+            Theses</OPTION>
+            <OPTION value="http://www.csis.ul.ie/Research/masters.htm">...M.Sc. 
+            Theses</OPTION>
+            <OPTION value="http://www.csis.ul.ie/StudentResources.HTM">Student 
+            Resources</OPTION>
+            <OPTION value="http://www.csis.ul.ie/photoalbum/classes/namesonly.htm">...Computer 
+            Systems Graduated Classes </OPTION>
+            <OPTION value="http://www.csis.ul.ie/staff/norahpower/FYPSuggestions9798.htm">...Final 
+            Year Project suggestions</OPTION>
+            <OPTION value="http://www.csis.ul.ie/fyp97/index.html">...Final Year 
+            Projects web page</OPTION>
+            <OPTION value="http://www.csis.ul.ie/studentresources/schedules/csislabs.htm">...Lab 
+            Schedules</OPTION>
+            <OPTION value="http://www.csis.ul.ie/studentresources/ModuleMaterial.htm">...Module 
+            Materials</OPTION>
+            <OPTION value="http://www.csis.ul.ie/studentresources/links.htm">...Useful 
+            Links</OPTION>
+            <OPTION value="http://www.csis.ul.ie/StudentResources/fyproj.htm">...Completed 
+            Final Year Projects</OPTION>
+            <OPTION value="http://www.csis.ul.ie/meetings/Meetings.HTM">Meetings</OPTION>
+            <OPTION value="http://www.csis.ul.ie/PhotoAlbum/Album.htm">Photo Album</OPTION>
+            <OPTION value="http://www.csis.ul.ie/PhotoAlbum/classes/default.htm">...Computer 
+            Systems - Class Photos</OPTION>
+            <OPTION value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuin.htm">...Schuman 
+            Interior</OPTION>
+            <OPTION value="http://www.csis.ul.ie/PhotoAlbum/schuman/schuout.htm">...Schuman 
+            Environs</OPTION>
+            <OPTION value="http://www.csis.ul.ie/PhotoAlbum/ULgrounds/default.htm">...University 
+            Grounds</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GenInfo.HTM">General Information</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GenInfo.HTM#Department">...Department 
+            Information</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GenInfo.HTM#Getting">...Getting 
+            Around</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GenInfo.HTM#Contacting">...Contacting 
+            the department</OPTION>
+            <OPTION value="http://www.csis.ul.ie/TOYS/WHOSON.HTM">...Who's on 
+            the server</OPTION>
+            <OPTION value="http://www.csis.ul.ie/GenInfo.HTM#About">...About these 
+            pages</OPTION>-->
+          </select>
+          <input type="BUTTON" value="Go!" onclick="top.location.href=this.form.list.options[this.form.list.selectedIndex].value">
+        </form>
+        <p></p>
+      </center>
+    </td>
+  </tr>
+</tbody></table>
+<hr>
+<p> 
+  </p><center>
+    <font face="Verdana,Arial,Times New I2" size="2" color="BLACK"> </font> 
+  </center>
+<p> <i><font size="-1">Last updated : March 1999</font></i> <br>
+<font size="-1"><a href="mailto:michael.coughlan@ul.ie">e-mail : CSISwebeditor@ul.ie</a></font> 
+
+
+</p></body></html>

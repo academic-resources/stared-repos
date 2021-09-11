@@ -1,0 +1,21 @@
+{
+    "name": "node-server-testing-guided",
+    "version": "1.0.0",
+    "description": "Starter Code for Node Server Testing Module",
+    "main": "index.js",
+    "scripts": {
+        "server": "nodemon index.js",
+        "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "Lambda School",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "knex": "^0.20.8",
+        "sqlite3": "^4.1.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    }
+}

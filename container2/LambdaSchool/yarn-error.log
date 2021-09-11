@@ -1,0 +1,57 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add create-react-app team-builder
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\inqui\bin;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Git\cmd;C:\Program Files\Microsoft\Web Platform Installer;C:\Sass;C:\Program Files\MySQL\MySQL Utilities 1.6;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin;C:\Users\inqui\AppData\Roaming\npm;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Users\inqui\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\inqui\AppData\Local\Programs\Python\Python37;C:\Users\inqui\AppData\Local\Microsoft\WindowsApps;C:\Users\inqui\AppData\Local\Programs\Fiddler;C:\Users\inqui\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-11.0.2\bin;C:\MinGW\bin;C:\MinGW\msys\1.0\bin;C:\Users\inqui\AppData\Local\GitHubDesktop\bin;C:\swigwin-3.0.12;C:\Program Files\Microsoft Office\root\Office16;C:\Program Files\xampp\php;C:\Sass;C:\Users\inqui\AppData\Local\Microsoft\WindowsApps;C:\Users\inqui\AppData\Roaming\npm;C:\Users\inqui\AppData\Local\Yarn\bin;C:\Program Files\heroku\bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  12.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/team-builder: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66035:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140564:22)
+      at Request.emit (events.js:210:5)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141536:10)
+      at Request.emit (events.js:210:5)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141458:12)
+      at Object.onceWrapper (events.js:299:28)
+      at IncomingMessage.emit (events.js:215:7)
+      at endReadableNT (_stream_readable.js:1183:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "",
+    "version": "1.0.0",
+    "description": "projects for Lambda School full-stack web development track:\r (see below the list for how to set a repository up like this, read them in full before following them)\r /m#/##_#/ corresponds to the following:",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/evoingram/LambdaSchool.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/evoingram/LambdaSchool/issues"
+    },
+    "homepage": "https://github.com/evoingram/LambdaSchool#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

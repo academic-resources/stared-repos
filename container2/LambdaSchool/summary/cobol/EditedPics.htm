@@ -1,0 +1,1606 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Edited Pictures</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715">
+  <TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <CENTER>
+              <H2><img src="/cobol/course/Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> <B>Edited Pictures</B></H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><IMG src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><BR>
+                  <BR>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP">&nbsp;</TD>
+                <TD width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top"> 
+                  <p><B><A href="#part1" target="">What is an Edited Picture?</A><BR>
+                    </B><FONT size="-1">This section introduces Edited Pictures, 
+                    the types of edited pictures, and the edit symbols used.</FONT><br>
+                    <br>
+                  </p>
+                </TD>
+              </TR>
+              <tr> 
+                <td width="3%" valign="TOP" height="2">&nbsp;</td>
+                <td width="4%" valign="TOP" height="2"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" valign="top" height="2"> 
+                  <div align="left"> 
+                    <p><b><a href="#part2" target="">Insertion Editing</a><br>
+                      </b><font size="-1">This section introduces the four types 
+                      of Insertion Editing - Simple Insertion, Special Insertion, 
+                      Fixed Insertion, and Floating Insertion</font><font size="-1"><br>
+                      </font><font size="-1"> <br>
+                      </font> </p>
+                    </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP">&nbsp;</td>
+                <td width="4%" valign="TOP"><img src="Resources/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%"> 
+                  <div align="left">
+                    <p><b><a href="#part3" target="">Suppression and Replacement 
+                      Editing</a><br>
+                      </b><font size="-1">This section introduces the two types 
+                      Suppresion and Replacement Editng - suppression of leading 
+                      zeros and replacement with spaces, and suppresion and replacement 
+                      with asterisks.</font><font size="-1"><br>
+                      </font> <br>
+                    </p>
+                    </div>
+                </td>
+              </tr>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><FONT face="Arial, Helvetica, sans-serif">Introduction</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" height="172" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="540" valign="top" height="172"> 
+            <div align="center"> 
+              <p align="left">In a business-programming environment, the ability 
+                to print reports is an important property for a programming language. 
+                COBOL allows programmers to write to the printer, either directly 
+                or through an intermediate print file. </p>
+              <p align="left">But there would be little point in being able to 
+                write to the printer, if the output could not be formatted properly. 
+                COBOL allows sophisticated formatting of output through its Edited 
+                Picture clauses. </p>
+              <p align="left">This tutorial introduces the additional symbols 
+                required for edited pictures and shows how they may be used to 
+                format data for output to screen or printer.</p>
+              <p align="left">&nbsp; </p>
+            </div>
+            <div align="center"> 
+              <center>
+              </center>
+              <hr width="50%">
+            </div>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" height="135" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="540" valign="top" height="135"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Know what an Edited Picture is.</LI>
+              <LI>Know and be able to use the different kinds of Edited Picture.</LI>
+            </OL>
+            <hr width="50%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" height="77" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="77" valign="top"> 
+            <p>Introduction to COBOL </p>
+            <p>Declaring data in COBOL </p>
+            <p>Basic Procedure Division Commands</p>
+            <p>Selection Constructs</p>
+            <p>Iteration Constructs</p>
+            <p>Introduction to Sequential files</p>
+            <p>Processing Sequential files</p>
+            <p>&nbsp;</p>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part1"></a><FONT face="Arial, Helvetica, sans-serif">What 
+              is an Edited Picture? </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="321"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="321"> 
+            <P align="left">Most users of the data produced by COBOL programs 
+                are not content with the simple raw data. They often want it presented 
+                in a particular way. Some people like to have the thousands, in 
+                numeric values, separated by commas, others may want leading zeros 
+                suppressed while still others may require that the currency symbol 
+                &quot;floats&quot; up against the first non-zero digit. In COBOL 
+                these things can be achieved using Edited Pictures.</P>
+              
+            <table width="72%" border="1" cellpadding="10" bgcolor="#E1FFE1" align="center">
+              <tr> 
+                  <td width="60%" bgcolor="#FFFFCC">Original value</td>
+                  <td width="40%"> 
+                    <div align="center">00023456.78</div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="60%" bgcolor="#FFFFCC"> 
+                    <div align="left">With commas inserted</div>
+                  </td>
+                  <td width="40%"> 
+                    <div align="center">00,023,456.78</div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="60%" bgcolor="#FFFFCC"> 
+                    <div align="left">Plus zero suppression</div>
+                  </td>
+                  <td width="40%"> 
+                    <div align="center">23,456.78</div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td height="4" width="60%" bgcolor="#FFFFCC">Plus floating currency 
+                    symbol</td>
+                  <td height="4" width="40%"> 
+                    <div align="center">$23,456.78 </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td height="4" width="60%" bgcolor="#FFFFCC"> 
+                    <div align="left">With anti-fraud printing</div>
+                  </td>
+                  <td height="4" width="40%"> 
+                    <div align="center">$***23,456.78</div>
+                  </td>
+                </tr>
+              </table> 
+               <p>&nbsp;</p><hr width="50%" align="center">            
+          <p>&nbsp;</p></TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Edit 
+              Symbols </FONT></H4>
+            <H4>&nbsp;</H4>
+            <h4 align="center"><font size="-1"> </font></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <DIV align="center"> 
+              <p align="left">Edited Pictures, are <font size="-1">PICTURE</font> 
+                clauses that format data intended for output to screen or printer. 
+                To enable the data items to be formatted, COBOL provides additional 
+                picture symbols to supplement the basic 9, X, A, V and S. </p>
+              <p align="left">The additional symbols are referred to as "Edit 
+                Symbols," and <font size="-1">PICTURE</font> clauses that include 
+                edit symbols are called "Edited Pictures". </p>
+              <p align="left">The term edit is used, because the edit symbols 
+                have the effect of changing, or editing, the data inserted into 
+                the edited item. </p>
+              <p align="left">Edited items cannot be used as operands in a computation, 
+                but they may be used as the result or destination of a computation 
+                (they can be used in items placed to the right of the word <font size="-1">GIVING</font>). 
+              </p>
+            </DIV>
+            <div align="left"> 
+              <hr width="50%" align="center">
+              <p>&nbsp;</p>
+            </div>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="97"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Types 
+              of editing picture</FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="97"> 
+            <P>COBOL permits two basic types of editing picture:</P>
+            <ol>
+              <li><b> Insertion Editing</b><br>
+                This type of editing modifies a value by including additional 
+                items and has the following sub-categories: 
+                <ul>
+                  <li>Simple Insertion</li>
+                  <li>Special Insertion </li>
+                  <li>Fixed Insertion</li>
+                  <li>Floating Insertion </li>
+                </ul>
+              </li>
+              <li><b>Suppression and Replacement Editing</b><br>
+                This type of editing suppresses and replaces leading zeros and 
+                has the following sub-categories: 
+                <ul>
+                  <li>Zero suppression and replacement with spaces</li>
+                  <li>Zero suppression and replacement with asterisks </li>
+                </ul>
+              </li>
+            </ol>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="97"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Editing 
+              symbols </FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="97"> 
+            <P>COBOL permits two basic types of editing picture:></P>
+            <table border cellspacing=1 cellpadding=7 width=338 align="center" bgcolor="#E1FFE1">
+              <tr bgcolor="#FFFFCC"> 
+                <td width="32%" valign="TOP"> 
+                  <p align="center"><b>Edit Symbol</b> 
+                </td>
+                <td width="68%" valign="TOP"> 
+                  <p align="CENTER"><b>Editing Type</b> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="32%" valign="TOP"> 
+                  <p align="center"><font face="TIMES"><b>, B 0 /</b></font> 
+                </td>
+                <td width="68%" valign="TOP"> 
+                  <p><font face="TIMES">Simple Insertion</font> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="32%" valign="TOP"> 
+                  <p align="center"><font face="TIMES"><b>.</b></font> 
+                </td>
+                <td width="68%" valign="TOP"> 
+                  <p><font face="TIMES">Special Insertion</font> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="32%" valign="TOP"> 
+                  <p align="center"><font face="TIMES"><b>+ - CR DB $</b></font> 
+                </td>
+                <td width="68%" valign="TOP"> 
+                  <p><font face="TIMES">Fixed Insertion</font> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="32%" valign="TOP"> 
+                  <p align="center"><font face="TIMES"><b>+ - $</b></font> 
+                </td>
+                <td width="68%" valign="TOP"> 
+                  <p><font face="TIMES">Floating Insertion</font> 
+                </td>
+              </tr>
+              <tr> 
+                <td width="32%" valign="TOP"> 
+                  <p align="center"><font face="TIMES"><b>Z *</b></font> 
+                </td>
+                <td width="68%" valign="TOP"> 
+                  <p><font face="TIMES">Suppression and Replacement</font> 
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part2"></A><FONT face="Arial, Helvetica, sans-serif">Insertion 
+              Editing </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="97"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+            <p align="left">&nbsp;</p>
+          </TD>
+          <TD width="525" valign="top" height="97"> 
+            <P>There are four types of Insertion Editing:-</P>
+            <ul>
+              <li>Simple Insertion</li>
+              <li>Special Insertion </li>
+              <li>Fixed Insertion</li>
+              <li>Floating Insertion </li>
+            </ul>
+            <p>Insertion Editing is so called because the edit symbol is inserted 
+              into the data item at the same position it occupies in the picture 
+              clause.</p>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="420"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Simple 
+              Insertion editing</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="420"> 
+            <P>Simple Insertion editing consists of specifying the relevant insertion 
+              character(s) in the <font size="-1">PICTURE</font> string. When 
+              a value is moved into the edited item, the insertion characters 
+              are inserted into the item at the position specified in the <font size="-1">PICTURE</font>. 
+            </P>
+            <P>The comma, the B, the 0, and the slash (/) are the Simple Insertion 
+              editing symbols.</P>
+            <P>All Simple Insertion symbols count toward the number of characters 
+              printed or displayed. For instance, an item described as PIC 99/99/9999 
+              will occupy 10 character positions when printed.</P>
+            <P> <b>The comma (,) symbol</b><br>
+              The comma symbol (,) instructs the computer to insert a comma at 
+              the character position where the symbol occurs. The comma counts 
+              towards the size of the printed item. The comma symbol cannot be 
+              the first symbol in the <font size="-1">PICTURE</font> string. </P>
+            <P>If all characters to the left of the comma are zeros and zero-suppression 
+              is called for, the comma is replaced by the replacement symbol (asterisk 
+              or space). </P>
+            <P><b>The space or blank (B) symbol</b><br>
+              A space is inserted where the blank symbol (B) occurs. </P>
+            <P><b>The slash and zero symbols (/ and 0)</b><br>
+              A slash is inserted where the slash symbol (/) occurs, and a 0 is 
+              inserted where the zero symbol (0) occurs. </P>
+            <P>&nbsp;</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="413"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Simple 
+              Insertion examples </FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-SAQ2.gif" width="32" height="46"></h4>
+          </TD>
+          <TD width="525" valign="top" height="413"> 
+            <P>In the examples/questions below, see if you can figure out what 
+              result will be produced when we move the value in the Sending item 
+              to the editied picture in the Receiving item. The description of 
+              the Sending item is shown in the Picture column and its current 
+              value is shown in the Data column. </P>
+            <form method="post" action="EditedPics.htm">
+              <table width="94%" border="1" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFCC">
+                <tr bgcolor="#FFFFCC"> 
+                  <td colspan="2" height="24"> 
+                    <div align="center"><b>Sending item</b></div>
+                  </td>
+                  <td colspan="2" height="24"> 
+                    <div align="center"><b>Receiving item</b></div>
+                  </td>
+                </tr>
+                <tr bgcolor="#FFFFCC"> 
+                  <td width="20%"> 
+                    <div align="center"><b>Picture </b></div>
+                  </td>
+                  <td width="15%"> 
+                    <div align="center"><b>Data</b></div>
+                  </td>
+                  <td width="24%"> 
+                    <div align="center"><b>Picture&nbsp;&nbsp;&nbsp;&nbsp;</b></div>
+                  </td>
+                  <td width="41%"> 
+                    <div align="center"><b>Result</b></div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="20%"> 
+                    <div align="left">PIC 999999</div>
+                  </td>
+                  <td width="15%"> 
+                    <div align="center">123456</div>
+                  </td>
+                  <td width="24%"> 
+                    <div align="left">PIC 999,999</div>
+                  </td>
+                  <td width="41%"> 
+                    <div align="center"> 
+                      <select name="select">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 123,456</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="20%"> 
+                    <div align="left">PIC 9(6)</div>
+                  </td>
+                  <td width="15%"> 
+                    <div align="center">000078</div>
+                  </td>
+                  <td width="24%"> 
+                    <div align="left">PIC 9(3),9(3)</div>
+                  </td>
+                  <td width="41%"> 
+                    <div align="center"> 
+                      <select name="select2">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 000,078</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="20%">PIC 9(6)</td>
+                  <td width="15%"> 
+                    <div align="center">000078</div>
+                  </td>
+                  <td width="24%">PIC ZZZ,ZZZ</td>
+                  <td width="41%"> 
+                    <div align="center"> 
+                      <select name="select3">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = sssss78</option>
+                        <option>s - indicates a space.</option>
+                        <option>The Z suppresses</option>
+                        <option>leading zeros, replacing</option>
+                        <option>them with spaces. Since</option>
+                        <option>there are only zeros to </option>
+                        <option>the left of the comma, it </option>
+                        <option>is replaced by a space.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="20%">PIC 9(6)</td>
+                  <td width="15%"> 
+                    <div align="center">000178</div>
+                  </td>
+                  <td width="24%">PIC ***,***</td>
+                  <td width="41%"> 
+                    <div align="center"> 
+                      <select name="select4">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = ****178</option>
+                        <option>Since only zeros are </option>
+                        <option>to the left of the comma</option>
+                        <option>it is replaced by the </option>
+                        <option>replacement symbol *.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="20%">PIC 9(6)</td>
+                  <td width="15%"> 
+                    <div align="center">002178</div>
+                  </td>
+                  <td width="24%">PIC ***,***</td>
+                  <td width="41%"> 
+                    <div align="center"> 
+                      <select name="select8">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = **2,178</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="20%"> 
+                    <div align="left">PIC 9(6)</div>
+                  </td>
+                  <td width="15%"> 
+                    <div align="center">120183</div>
+                  </td>
+                  <td width="24%"> 
+                    <div align="left">PIC 99B99B99</div>
+                  </td>
+                  <td width="41%"> 
+                    <div align="center"> 
+                      <select name="select9">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 12s01s83</option>
+                        <option>s - indicates a space</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="20%"> 
+                    <div align="left">PIC 9(6)</div>
+                  </td>
+                  <td width="15%"> 
+                    <div align="center">120183</div>
+                  </td>
+                  <td width="24%"> 
+                    <div align="left">PIC 99/99/99</div>
+                  </td>
+                  <td width="41%"> 
+                    <div align="center"> 
+                      <select name="select10">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 12/01/83</option>
+                        <option>As in this case,</option>
+                        <option>the slash is often</option>
+                        <option>used to edit dates.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="20%" height="2"> 
+                    <div align="left">PIC 9(6)</div>
+                  </td>
+                  <td width="15%" height="2"> 
+                    <div align="center">031245</div>
+                  </td>
+                  <td width="24%" height="2"> 
+                    <div align="left">PIC 990099</div>
+                  </td>
+                  <td width="41%" height="2"> 
+                    <div align="center"> 
+                      <select name="select11">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 120045</option>
+                        <option>Decimal point alignment </option>
+                        <option>means that 45 will be </option>
+                        <option>placed in the rightmost</option>
+                        <option>two digits, then the zeros</option>
+                        <option>will be inserted and then</option>
+                        <option>the 12 will be placed in</option>
+                        <option>the last two positions.</option>
+                        <option>The 3 will be truncated.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <P>&nbsp; </P>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="135"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Special 
+              Insertion </font></h4>
+          </TD>
+          <TD width="525" valign="top" height="135"> 
+            <P> The decimal point is the only Special Insertion symbol. A decimal 
+              point is inserted in the character position where the symbol occurs. 
+            </P>
+            <P><b>Notes</b><br>
+              When a numeric data-item is moved into an edited data-item containing 
+              the decimal point symbol, alignment occurs along the position of 
+              the decimal point symbol, with zero-filling and truncation as necessary. 
+            </P>
+            <P>There may be only one decimal point in each edited picture clause. 
+            </P>
+            <P>The decimal point symbol cannot be mixed with either the V (assumed 
+              decimal point) or the P (scaling position) symbol. </P>
+            <P>&nbsp;</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="177"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Special 
+              Insertion examples</FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4 align="center"><img src="Resources/pics/i-SAQ2.gif" width="32" height="46"></H4>
+          </TD>
+          <td width="525" valign="top" height="177"> 
+            <div align="center"> 
+              <p align="left">In the examples/questions below, see if you can 
+                figure out what result will be produced when the value in the 
+                Sending item is moved to the editied picture in the Receiving 
+                item. The description of the Sending item is shown in the Picture 
+                column and its current value is shown in the Data column. </p>
+            </div>
+              
+            <form method="post" action="EditedPics.htm">
+              <table width="88%" border="1" align="center" bgcolor="#FFFFCC" bordercolorlight="#FFFFFF" cellspacing="0" cellpadding="0">
+                <tr bgcolor="#FFFFCC"> 
+                  <td colspan="2" height="24"> 
+                    <div align="center"><b>Sending item</b></div>
+                  </td>
+                  <td colspan="2" height="24"> 
+                    <div align="center"><b>Receiving item</b></div>
+                  </td>
+                </tr>
+                <tr bgcolor="#FFFFCC"> 
+                  <td width="23%"> 
+                    <div align="center"><b>Picture </b></div>
+                  </td>
+                  <td width="11%"> 
+                    <div align="center"><b>Data</b></div>
+                  </td>
+                  <td width="22%"> 
+                    <div align="center"><b>Picture&nbsp;&nbsp;&nbsp;&nbsp;</b></div>
+                  </td>
+                  <td width="44%"> 
+                    <div align="center"><b>Result</b></div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="23%" height="13"> 
+                    <div align="left">PIC 999V99 </div>
+                  </td>
+                  <td width="11%" height="13"> 
+                    <div align="center">12345</div>
+                  </td>
+                  <td width="22%" height="13"> 
+                    <div align="left">PIC 999.99</div>
+                  </td>
+                  <td width="44%" height="13"> 
+                    <div align="center"> 
+                      <select name="select12" size="1">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 123.45</option>
+                        <option>The assumed decimal </option>
+                        <option>point (V) aligns with the</option>
+                        <option>actual decimal point (.)</option>
+                        <option>so 45 goes after the</option>
+                        <option>decimal point and 123</option>
+                        <option>before it.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="23%" height="16"> 
+                    <div align="left">PIC 999V99 </div>
+                  </td>
+                  <td width="11%" height="16"> 
+                    <div align="center">02345</div>
+                  </td>
+                  <td width="22%" height="16"> 
+                    <div align="left">PIC 999.9</div>
+                  </td>
+                  <td width="44%" height="16"> 
+                    <div align="center"> 
+                      <select name="select12" size="1">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 023.4</option>
+                        <option>The receiving field only </option>
+                        <option>allows one digit after the </option>
+                        <option>decimal point so after </option>
+                        <option>decimal point alignment </option>
+                        <option>the 5 will be lost.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="23%" height="16">PIC 999V99 </td>
+                  <td width="11%" height="16"> 
+                    <div align="center">71234 </div>
+                  </td>
+                  <td width="22%" height="16">PIC 99.99</td>
+                  <td width="44%" height="16"> 
+                    <div align="center"> 
+                      <select name="select12" size="1">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 12.34</option>
+                        <option>In this case decimal </option>
+                        <option>point alignment causes </option>
+                        <option>most significant digit (7) to</option>
+                        <option>be lost.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="23%">PIC 9(4) </td>
+                  <td width="11%"> 
+                    <div align="center">2456</div>
+                  </td>
+                  <td width="22%">PIC 999.99</td>
+                  <td width="44%"> 
+                    <div align="center"> 
+                      <select name="select12" size="1">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 456.00</option>
+                        <option>Decimal point alignment</option>
+                        <option>means that, the most </option>
+                        <option>significant digit (2) will be</option>
+                        <option>lost, and the positions </option>
+                        <option>after the decimal point </option>
+                        <option>will be filled with zeros</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <p>&nbsp;</p><div align="center"> 
+              <div align="left"></div>
+            </div>
+            <div align="center"> 
+              <center>
+              </center>
+              <hr width="50%">
+              <p>&nbsp;</p>
+            </div>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="135"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Fixed 
+              Insertion </font></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-Detail.gif" width="30" height="37"></h4>
+            <p align="left"><font size="-1">The default currency symbol is the 
+              dollar sign ($) but it may be changed to a different symbol by the 
+              <font size="-2">CURRENCY SIGN IS</font> clause, in the<font size="-2"> 
+              SPECIAL-NAMES </font>paragraph, of the <font size="-2">CONFIGURATION 
+              SECTION</font>, in the <font size="-2">ENVIRONMENT DIVISION</font>. 
+              </font></p>
+          </TD>
+          <TD width="525" valign="top" height="135"> 
+            <P> Fixed Insertion editing inserts the symbol at the beginning or 
+              end of the edited item. </P>
+            <P>The Fixed Insertion editing symbols are: </P>
+            <ul>
+              <li>the plus (+) and minus (-) signs,</li>
+              <li> the letters CR and DB representing credit and debit, </li>
+              <li>and the currency symbol usually the $ sign. </li>
+            </ul>
+            <P>All symbols count toward the size of the printed item. </P>
+            <P>&nbsp;</P>
+            <P> <b>Plus and minus symbols</b><br>
+              These must appear in the leftmost or rightmost character positions 
+              and they count towards the size of the data item. They must be the 
+              first or last character in the <font size="-1">PICTURE</font> string. 
+            </P>
+            <blockquote> 
+              <p><b>Minus</b> <br>
+                If the sending item is negative, a minus sign is printed. If the 
+                sending item is positive, a space is printed instead. Use this 
+                to highlight negative values only. </p>
+              <p><b>Plus<br>
+                </b> If the sending item is negative, a minus in printed and if 
+                the sending item is positive, a plus is inserted. Use this to 
+                when you always want the sign printed. </p>
+            </blockquote>
+            <p><b>CR and DB</b><br>
+              CR and DB count towards the data item size and occupy two character 
+              positions. They may only appear in the rightmost position. Both 
+              are only printed if the sending item is negative. Otherwise two 
+              spaces are printed.</p>
+            <p><b>The currency symbol (usually $).</b><br>
+              The currency symbol must be the leftmost character and it counts 
+              towards the size of the item. It may be preceded by a plus or a 
+              minus sign.</p>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="135"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Fixed 
+              Insertion examples</font></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-SAQ2.gif" width="32" height="46"></h4>
+          </TD>
+          <TD width="525" valign="top" height="135"> 
+            <P>Like the previous examples/questions above, see if you can figure 
+              out what result will be produced when the value in the Sending item 
+              is moved to the editied picture in the Receiving item. </P>
+            <form method="post" action="EditedPics.htm">
+              <table width="87%" border="1" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFCC">
+                <tr bgcolor="#FFFFCC"> 
+                  <td colspan="2" height="24"> 
+                    <div align="center"><b>Sending item</b></div>
+                  </td>
+                  <td colspan="2" height="24"> 
+                    <div align="center"><b>Receiving item</b></div>
+                  </td>
+                </tr>
+                <tr bgcolor="#FFFFCC"> 
+                  <td width="18%"> 
+                    <div align="center"><b>Picture </b></div>
+                  </td>
+                  <td width="16%"> 
+                    <div align="center"><b>Data</b></div>
+                  </td>
+                  <td width="20%"> 
+                    <div align="center"><b>Picture&nbsp;&nbsp;&nbsp;&nbsp;</b></div>
+                  </td>
+                  <td width="46%"> 
+                    <div align="center"><b>Result</b></div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="15"> 
+                    <div align="left">PIC S999 </div>
+                  </td>
+                  <td width="16%" height="15"> 
+                    <div align="center">-123</div>
+                  </td>
+                  <td width="20%" height="15"> 
+                    <div align="left">PIC -999 </div>
+                  </td>
+                  <td width="46%" height="15"> 
+                    <div align="center"> 
+                      <select name="select13">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = -123</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16"> 
+                    <div align="left">PIC S999 </div>
+                  </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">-123</div>
+                  </td>
+                  <td width="20%" height="16"> 
+                    <div align="left">PIC 999-</div>
+                  </td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select13">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 123-</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S999 </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">+123</div>
+                  </td>
+                  <td width="20%" height="16">PIC -999</td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select14">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = s123</option>
+                        <option>s - indicates a space</option>
+                        <option>The - symbol only </option>
+                        <option>highlights negative</option>
+                        <option>values. If the value is </option>
+                        <option>positive, a space is </option>
+                        <option>printed instead of the </option>
+                        <option>sign.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S9(5)</td>
+                  <td width="16%" height="16"> 
+                    <div align="center">+12345</div>
+                  </td>
+                  <td width="20%" height="16">PIC +9(5)</td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select15">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = +12345</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S9(3) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">-123</div>
+                  </td>
+                  <td width="20%" height="16">PIC +9(3)</td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select16">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = -123</option>
+                        <option>If a + symbol is used, a +</option>
+                        <option>is printed if the value is </option>
+                        <option>positive and a - is printed</option>
+                        <option>if the value is negative.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S9(3) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">-123</div>
+                  </td>
+                  <td width="20%" height="16">PIC 999+ </td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select13">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 123-</option>
+                        <option>In this case decimal </option>
+                        <option>point alignment causes </option>
+                        <option>most significant digit (7) </option>
+                        <option>to be lost.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S9(4) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">+1234</div>
+                  </td>
+                  <td width="20%" height="16">PIC 9(4)CR</td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select17">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 1234ss</option>
+                        <option>s- indicates a space</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S9(4) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">-1234</div>
+                  </td>
+                  <td width="20%" height="16">PIC 9(4)CR</td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select18">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 1234CR</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S9(4) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">+1234</div>
+                  </td>
+                  <td width="20%" height="16">PIC 9(4)DB</td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select19">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 1223ss</option>
+                        <option>s - indicates a space</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S9(4) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">-1234</div>
+                  </td>
+                  <td width="20%" height="16">PIC 9(4)DB</td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select20">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = 1234DB</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC 9(4) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">1234</div>
+                  </td>
+                  <td width="20%" height="16">PIC $99999</td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select21">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = $01234</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC 9(4) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">0000</div>
+                  </td>
+                  <td width="20%" height="16">PIC $ZZZZZ</td>
+                  <td width="46%" height="16"> 
+                    <div align="center"> 
+                      <select name="select22">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = $sssss</option>
+                        <option>s - indicates a space</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <p>&nbsp;</p>
+            <hr width="50%">
+            <P>&nbsp; </P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="135"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Floating 
+              Insertion </font></h4>
+          </TD>
+          <TD width="525" valign="top" height="135"> 
+            <P> The problem with using the fixed insertion symbols is that they 
+              can be somewhat unsightly. Values like $0045,345.56 or -0012 are 
+              more acceptablely presented as $45,345.56 and -12. </P>
+            <P>What makes these formats more presentable is that the leading zeros 
+              have been suppressed and the editing symbol has been &quot;floated&quot; 
+              up against the first non-zero digit. In COBOL this is achieved using 
+              Floating Insertion.</P>
+            <P>Floating Insertion suppresses leading zeros, and "floats" the insertion 
+              symbol up against the first non-zero digit. </P>
+            <P>The Floating Insertion symbols are;</P>
+            <ul>
+              <li>The plus and minus signs</li>
+              <li> and the currency symbol. </li>
+            </ul>
+            <P>Every floating symbol counts toward the size of the printed item. 
+            </P>
+            <P>Except for the left-most one, which is always printed, each Floating 
+              Insertion symbol is a placeholder that may be replaced by a digit. 
+              Accordingly, there will always be at least one symbol printed, even 
+              though this may be at the cost of truncating the number (see the 
+              fourth row in the example below.) </P>
+            <P>&nbsp; </P>
+            <P>&nbsp;</P>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="135"> 
+            <h4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Floating 
+              Insertion examples</font></h4>
+          </TD>
+          <TD width="525" valign="top" height="135"> 
+            <P>Like the previous examples/questions above, see if you can figure 
+              out what result will be produced when the value in the Sending item 
+              is moved to the editied picture in the Receiving item. </P>
+            <form method="post" action="EditedPics.htm">
+              <table width="83%" border="1" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFCC">
+                <tr bgcolor="#FFFFCC"> 
+                  <td colspan="2" height="24"> 
+                    <div align="center"><b>Sending item</b></div>
+                  </td>
+                  <td colspan="2" height="24"> 
+                    <div align="center"><b>Receiving item</b></div>
+                  </td>
+                </tr>
+                <tr bgcolor="#FFFFCC"> 
+                  <td width="18%"> 
+                    <div align="center"><b>Picture </b></div>
+                  </td>
+                  <td width="16%"> 
+                    <div align="center"><b>Data</b></div>
+                  </td>
+                  <td width="23%"> 
+                    <div align="center"><b>Picture&nbsp;&nbsp;&nbsp;&nbsp;</b></div>
+                  </td>
+                  <td width="43%"> 
+                    <div align="center"><b>Result</b></div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="15"> 
+                    <div align="left">PIC 9(4) </div>
+                  </td>
+                  <td width="16%" height="15"> 
+                    <div align="center">0000</div>
+                  </td>
+                  <td width="23%" height="15"> 
+                    <div align="left">PIC $$,$$9.99 </div>
+                  </td>
+                  <td width="43%" height="15"> 
+                    <div align="center"> 
+                      <select name="select5">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = ssss$0.00</option>
+                        <option>s - indicates a space</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16"> 
+                    <div align="left">PIC 9(4) </div>
+                  </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">0080</div>
+                  </td>
+                  <td width="23%" height="16"> 
+                    <div align="left">PIC $$,$$9.00</div>
+                  </td>
+                  <td width="43%" height="16"> 
+                    <div align="center"> 
+                      <select name="select5">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = sss$80.00</option>
+                        <option>s - indicates a space</option>
+                        <option>The fixed insertion zeros</option>
+                        <option>are added to the end.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC 9(4) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">0128</div>
+                  </td>
+                  <td width="23%" height="16">PIC $$,$$9.99</td>
+                  <td width="43%" height="16"> 
+                    <div align="center"> 
+                      <select name="select5">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = ss$128.00</option>
+                        <option>s - indicates a space</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC 9(5) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center"><b>5</b>7397 </div>
+                  </td>
+                  <td width="23%" height="16">PIC $$,$$9</td>
+                  <td width="43%" height="16"> 
+                    <div align="center"> 
+                      <select name="select5">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = $7,397</option>
+                        <option>Although the receiving </option>
+                        <option>field appears to have </option>
+                        <option>enough room for the </option>
+                        <option>value, the programmer </option>
+                        <option>forgot that the left-most</option>
+                        <option>floating symbol cannot</option>
+                        <option>be replaced by a digit. </option>
+                        <option>This causes the digit (5)</option>
+                        <option>to be lost.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S9(4)</td>
+                  <td width="16%" height="16"> 
+                    <div align="center">-0005</div>
+                  </td>
+                  <td width="23%" height="16">PIC ++++9</td>
+                  <td width="43%" height="16"> 
+                    <div align="center"> 
+                      <select name="select5">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = sss-5</option>
+                        <option>s - indicates a space</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S9(4) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">+0080 </div>
+                  </td>
+                  <td width="23%" height="16">PIC ++++9</td>
+                  <td width="43%" height="16"> 
+                    <div align="center"> 
+                      <select name="select5">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = sss+80</option>
+                        <option>s - indicates a space</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="20"> 
+                    <p>PIC S9(4)</p>
+                  </td>
+                  <td width="16%" height="20"> 
+                    <div align="center">-0080</div>
+                  </td>
+                  <td width="23%" height="20">PIC - - - - 9</td>
+                  <td width="43%" height="20" valign="top"> 
+                    <div align="center"> 
+                      <select name="select5">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = sss-80</option>
+                        <option>s- indicates a space</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr bgcolor="#E1FFE1"> 
+                  <td width="18%" height="16">PIC S9(5) </td>
+                  <td width="16%" height="16"> 
+                    <div align="center">+<b>7</b>1234 </div>
+                  </td>
+                  <td width="23%" height="16">PIC - - - - 9 </td>
+                  <td width="43%" height="16"> 
+                    <div align="center"> 
+                      <select name="select5">
+                        <option selected>Click arrow for the answer</option>
+                        <option>Ans = s1234</option>
+                        <option>s- indicates a space</option>
+                        <option>The left-most sign cannot</option>
+                        <option>be replaced by a digit,</option>
+                        <option>so the most significant</option>
+                        <option>digit (7) is truncated.</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="700" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part3"></A><FONT face="Arial, Helvetica, sans-serif">Suppression 
+              and Replacement Editing</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></h4>
+          </TD>
+          <TD width="525" valign="top"> 
+            <P>Suppression and replacement editing is used to remove leading zeroes 
+              from the value to be edited. There are two varieties of suppression 
+              and replacement editing- </P>
+            <ul>
+              <li>Suppression of leading zeros and replacement with spaces</li>
+              <li>Suppression of leading zeros and replacement with asterisks 
+              </li>
+            </ul>
+            <P><b>Notes<br>
+              </b>The characters <b>Z</b> and <b>*</b> are the suppression symbols. 
+            </P>
+            <P>Using Z in an editing picture, instructs the computer to suppress 
+              a leading zero in that character position and replace it with a 
+              space. </P>
+            <P>Using an * in an editing picture, instructs the computer to suppress 
+              a leading zero in that character position and replace it with an 
+              *.</P>
+            <P> If all the character positions in a data item are Z editing symbols 
+              and the sending item is 0 then only spaces will be printed. </P>
+            <P>If a Z or * is used, the picture clause symbol 9, cannot appear 
+              to the left of it.</P>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="389"> 
+            <h4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">Suppression 
+              and Replacement editing examples</FONT></h4>
+            <h4 align="left">&nbsp;</h4>
+            <h4 align="center"><img src="Resources/pics/i-SAQ2.gif" width="32" height="46"></h4>
+          </TD>
+          <TD width="525" valign="top" height="389"> 
+            <p>&nbsp;</p>
+            <form>
+            <table width="93%" border="1" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFCC">
+              <tr bgcolor="#FFFFCC"> 
+                <td colspan="2" height="24"> 
+                  <div align="center"><b>Sending item</b></div>
+                </td>
+                <td colspan="2" height="24"> 
+                  <div align="center"><b>Receiving item</b></div>
+                </td>
+              </tr>
+              <tr bgcolor="#FFFFCC"> 
+                <td width="21%"> 
+                  <div align="center"><b>Picture </b></div>
+                </td>
+                <td width="13%"> 
+                  <div align="center"><b>Data</b></div>
+                </td>
+                <td width="25%"> 
+                  <div align="center"><b>Picture&nbsp;&nbsp;&nbsp;&nbsp;</b></div>
+                </td>
+                <td width="41%"> 
+                  <div align="center"><b>Result</b></div>
+                </td>
+              </tr>
+              <tr bgcolor="#E1FFE1"> 
+                <td width="21%" height="15"> 
+                  <div align="left">PIC 9(5) </div>
+                </td>
+                <td width="13%" height="15"> 
+                  <div align="center">12345 </div>
+                </td>
+                <td width="25%" height="15"> 
+                  <div align="left">PIC ZZ,999 </div>
+                </td>
+                <td width="41%" height="15"> 
+                  <div align="center"> 
+                    <select name="select27">
+                      <option value="none" selected>Click arrow for the answer</option>
+                      <option value="none">Ans = 12,345</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr bgcolor="#E1FFE1"> 
+                <td width="21%" height="16"> 
+                  <div align="left">PIC 9(5) </div>
+                </td>
+                <td width="13%" height="16"> 
+                  <div align="center">01234 </div>
+                </td>
+                <td width="25%" height="16"> 
+                  <div align="left">PIC ZZ,999</div>
+                </td>
+                <td width="41%" height="16"> 
+                  <div align="center"> 
+                    <select name="select23" size="1">
+                      <option selected>Click arrow for the answer</option>
+                      <option>Ans = s1,234</option>
+                      <option>s - indicates a space</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr bgcolor="#E1FFE1"> 
+                <td width="21%" height="16">PIC 9(5) </td>
+                <td width="13%" height="16"> 
+                  <div align="center">00123 </div>
+                </td>
+                <td width="25%" height="16">PIC ZZ,999 </td>
+                <td width="41%" height="16"> 
+                  <div align="center"> 
+                    <select name="select23">
+                      <option selected>Click arrow for the answer</option>
+                      <option>Ans = sss123</option>
+                      <option>s - indicates a space</option>
+                      <option>Because there are only</option>
+                      <option>zeros to the left of the </option>
+                      <option>comma, it is replaced by </option>
+                      <option>the replacement symbol </option>
+                      <option>space.</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr bgcolor="#E1FFE1"> 
+                <td width="21%" height="16">PIC 9(5) </td>
+                <td width="13%" height="16"> 
+                  <div align="center">00012 </div>
+                </td>
+                <td width="25%" height="16">PIC ZZ,999</td>
+                <td width="41%" height="16"> 
+                  <div align="center"> 
+                    <select name="select23">
+                      <option selected>Click arrow for the answer</option>
+                      <option>Ans = sss012</option>
+                      <option>s - indicates a space</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr bgcolor="#E1FFE1"> 
+                <td width="21%" height="16">PIC 9(5) </td>
+                <td width="13%" height="16"> 
+                  <div align="center">05678 </div>
+                </td>
+                <td width="25%" height="16">PIC **,**9</td>
+                <td width="41%" height="16"> 
+                  <div align="center"> 
+                    <select name="select23">
+                      <option selected>Click arrow for the answer</option>
+                      <option>Ans = *5,678</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr bgcolor="#E1FFE1"> 
+                <td width="21%" height="16">PIC 9(5) </td>
+                <td width="13%" height="16"> 
+                  <div align="center">00567 </div>
+                </td>
+                <td width="25%" height="16">PIC **,**9</td>
+                <td width="41%" height="16"> 
+                  <div align="center"> 
+                    <select name="select23">
+                      <option selected>Click arrow for the answer</option>
+                      <option>Ans = ***567</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr bgcolor="#E1FFE1"> 
+                <td width="21%" height="20">PIC 9(5) </td>
+                <td width="13%" height="20"> 
+                  <div align="center">00000 </div>
+                </td>
+                <td width="25%" height="20">PIC **,***</td>
+                <td width="41%" height="20" valign="top"> 
+                  <div align="center"> 
+                    <select name="select25">
+                      <option selected>Click arrow for the answer</option>
+                      <option>Ans = ******</option>
+                      <option>s- indicates a space</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr bgcolor="#E1FFE1"> 
+                <td width="21%" height="20"> 
+                  <p>PIC 9(5)V99</p>
+                </td>
+                <td width="13%" height="20"> 
+                  <div align="center">00043.45</div>
+                </td>
+                <td width="25%" height="20">PIC $**,**9.99</td>
+                <td width="41%" height="20" valign="top" bgcolor="#E1FFE1"> 
+                  <div align="center"> 
+                    <select name="select26">
+                      <option selected>Click arrow for the answer</option>
+                      <option>Ans = $****43.45</option>
+                      <option>Helps to prevent fraud </option>
+                      <option>when printing cheques.</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+            </table></form>
+            <P align="left">&nbsp;</P>
+            <blockquote> 
+              <div align="left"></div>
+            </blockquote>
+            <hr width="50%">
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="293"> 
+            <H4 align="left"><font color="#800000" face="Arial, Helvetica, sans-serif">Picture 
+              string restrictions</font></H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="left">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="293"> 
+            <p>Some combinations of picture symbols are not permitted. The table 
+              below shows the combination of symbols that is allowed.</p>
+            <table width="47%" border="1" align="center" height="69" cellpadding="5" bgcolor="#E1FFE1">
+              <tr bgcolor="#FFFFCC"> 
+                <td width="15%" bgcolor="#FFFFCC"> 
+                  <div align="center"><b>Character</b></div>
+                </td>
+                <td width="85%"> 
+                  <div align="center"><b>May be followed by</b></div>
+                </td>
+              </tr>
+              <tr> 
+                <td valign="top" width="15%" height="192" bgcolor="#FFFFCC"> 
+                  <div align="center"> 
+                    <pre>P
+B
+0
+/
+,
+.
++
+-
+CR or DB
+$
+9
+V</pre>
+                  </div>
+                </td>
+                <td valign="top" width="85%" height="192"> 
+                  <pre>P B 0 / , + - CR DB 9 V
+P B 0 / , . + - CR DB 9 V
+P B 0 / , . + - CR DB 9 V
+P B 0 / , . + - CR DB 9 V
+P B 0 / , . + - CR DB 9 V
+B 0 / , . + - CR DB 9 
+P B 0 / , . + $ 9 V
+P B 0 / , . - $ 9 V
+Nothing at all
+P B 0 / , . + - CR DB $ 9 V
+P B 0 / , . + - CR DB 9 V
+B 0 / , + - CR DB 9</pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" width="700" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : March 1999</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>

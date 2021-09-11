@@ -1,0 +1,51 @@
+html,
+body,
+#root {
+	height: 100%;
+}
+body {
+	background: #333;
+	margin: 0;
+	display: grid;
+	padding: 3em;
+	place-items: center;
+}
+.boxes {
+	display: grid;
+	grid-gap: 2em;
+	grid-template-columns: repeat(2, minmax(350px, 1fr));
+	// grid-template-rows: auto;
+}
+.box {
+	display: flex;
+	flex-direction: column;
+	// min-height: 100%;
+	h1 {
+		font-size: 20px;
+		margin: 0 0 1rem 0;
+	}
+	.content {
+		padding-top: 1em;
+	}
+	ol {
+		margin-left: 0;
+		li {
+			align-items: center;
+			display: flex;
+			justify-content: flex-start;
+		}
+	}
+}
+.button {
+	background: hotpink;
+	border: 1px solid transparent;
+	color: white;
+	margin-right: 1em;
+	padding: .25em .75em;
+	transition: all .25s ease-in;
+	&:hover {
+		background: white;
+		border: 1px solid hotpink;
+		color: #333;
+	}
+}

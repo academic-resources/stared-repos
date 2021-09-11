@@ -1,0 +1,1216 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0 [en] (WinNT; I) [Netscape]">
+   <TITLE>Introduction to COBOL</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#FF0000" ALINK="#009B00">
+<TABLE border="1" width="715" cellspacing="0">
+  <TR>
+    <TD> 
+      <TABLE width="710" cellpadding="4" cellspacing="0" border="0">
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2" height="517"> 
+            <CENTER>
+              <H2><img src="Resources/pics/t-CobolTut.gif" width="173" height="59"></H2>
+            </CENTER>
+            <CENTER>
+              <H2> Introduction to COBOL</H2>
+              <HR>
+            </CENTER>
+            <TABLE border="0" width="700" vspace="15">
+              <TR> 
+                <TD width="3%" valign="TOP" height="44">&nbsp;</TD>
+                <TD width="4%" valign="TOP" height="44"><IMG src="/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" height="44"> <B><A href="#intro" target="">Introduction</A><BR>
+                  </B><FONT size="-1">Unit aims, objectives, prerequisites.</FONT><br>
+                </TD>
+              </TR>
+              <TR> 
+                <TD width="3%" valign="TOP" height="44">&nbsp;</TD>
+                <TD width="4%" valign="TOP" height="44"><IMG src="/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></TD>
+                <TD width="93%" valign="top" height="44"> 
+                  <p><B><A href="#part1" target="">What is COBOL?</A><BR>
+                    </B><FONT size="-1">A brief introduction to the COBOL programming 
+                    language. A historical overview. COBOL's dominance in the 
+                    business computing domain. Characteristics of COBOL applications. 
+                    Some reasons for COBOL's success.</FONT><br>
+                  </p>
+                </TD>
+              </TR>
+              <tr> 
+                <td width="3%" valign="TOP" height="46">&nbsp;</td>
+                <td width="4%" valign="TOP" height="46"><img src="/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" valign="top" height="46"> 
+                  <div align="left"> 
+                    <p><b><a href="#part2" target="">Introduction to Programming 
+                      </a><br>
+                      </b><font size="-1">This section provides a gentle introduction 
+                      to programing in general and to programming in COBOL in 
+                      particular by means of writing some simple COBOL programs.<br>
+                      </font> </p>
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP" height="56">&nbsp;</td>
+                <td width="4%" valign="TOP" height="56"><img src="/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" height="56"> 
+                  <div align="left"> 
+                    <p><b><a href="#part3" target="">COBOL basics</a><br>
+                      </b><FONT size="-1">This section presents the fundamentals 
+                      of constructing COBOL programs. It explains the notation 
+                      used in COBOL syntax diagrams, enumerates the COBOL coding 
+                      rules, and examines the hierarchical structure of COBOL 
+                      programs.</FONT><font size="-1"><br>
+                      </font> </p>
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <td width="3%" valign="TOP" height="52">&nbsp;</td>
+                <td width="4%" valign="TOP" height="52"><img src="/pics/BallGreenG.gif" hspace=4 height=13 width=13 align="TOP" vspace="4"></td>
+                <td width="93%" height="52"> 
+                  <div align="left"> 
+                    <p><b><a href="#part4" target="">The Four Divisions</a><br>
+                      </b><FONT size="-1">Provides an introduction to the structure 
+                      and purpose of the four COBOL divisions.<br>
+                      </FONT> </p>
+                  </div>
+                </td>
+              </tr>
+            </TABLE>
+            <hr>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2" height="27"> 
+            <h2 align="CENTER"><FONT color="#FFFF00"><A name="intro"></A><font face="Arial, Helvetica, sans-serif">Introduction</font></FONT></h2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" width="175" bgcolor="#FFFFCC" height="115"> 
+            <H4><FONT color="#993300" face="Arial, Helvetica, sans-serif">Aims</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="115"> 
+            <div align="center"> 
+              <p align="left">To provide a brief introduction to the programming 
+                language COBOL. To provide a context in which its uses might be 
+                understood. To introduce the Metalanguage used to describe syntactic 
+                elements of the language. To provide an introduction to the major 
+                structures present in a COBOL program.</p>
+            </div>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="244"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Objectives</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="244"> 
+            <P>By the end of this unit you should - </P>
+            <OL>
+              <LI>Know what the acronym COBOL stands for.</LI>
+              <LI>Be aware of the significance of COBOL in the marketplace.</LI>
+              <LI>Understand some of the reasons for COBOL's success.</LI>
+              <LI>Be able to understand COBOL Metalanguage syntax diagrams.</LI>
+              <LI>Be aware of the COBOL coding rules</LI>
+              <LI>Understand the structure of COBOL programs</LI>
+              <LI>Understand the purpose of the <FONT size="-1">IDENTIFICATION</FONT>, 
+                <FONT size="-1">ENVIRONMENT</FONT>, <FONT size="-1">DATA</FONT> 
+                and <FONT size="-1">PROCEDURE </FONT>divisions.</LI>
+            </OL>
+            <hr width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" width="175" bgcolor="#FFFFCC" height="69"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Prerequisites</FONT></H4>
+          </TD>
+          <td width="525" height="69" valign="top"> 
+            <p>None. This is the first unit in the course.</p>
+            <p>&nbsp;</p>
+          </td>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR>
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part1"></A> <FONT face="Arial, Helvetica, sans-serif">What 
+              is COBOL?</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="276"> 
+            <H4><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>Introduction</B></FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="276"> 
+            <P>COBOL is a high-level programming language first developed by the 
+              CODASYL Committee (<B>Co</B>nference on <B>Da</B>ta <B>Sy</B>stems 
+              <B>L</B>anguages) in 1960. Since then, responsibility for developing 
+              new COBOL standards has been assumed by the American National Standards 
+              Institute (ANSI).</P>
+            <P> Three ANSI standards for COBOL have been produced: in 1968, 1974 
+              and 1985. A new COBOL standard introducing object-oriented programming 
+              to COBOL, is due within the next few years.</P>
+            <P>The word <B>COBOL</B> is an acronym that stands for <B>CO</B>mmon 
+              <B>B</B>usiness <B>O</B>riented <B>L</B>anguage. As the the expanded 
+              acronym indicates, COBOL is designed for developing business, typically 
+              file-oriented, applications. It is not designed for writing systems 
+              programs. For instance you would not develop an operating system 
+              or a compiler using COBOL.</P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="337"> 
+            <H4><FONT color="#800000"><B><FONT face="Arial, Helvetica, sans-serif">How 
+              widely used is COBOL? </FONT></B></FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="337"> 
+            <P>For over four decades COBOL has been the dominant programming language 
+              in the business computing domain. In that time it it has seen off 
+              the challenges of a number of other languages such as PL1, Algol68, 
+              Pascal, Modula, Ada, C, C++. All these languages have found a niche 
+              but none has yet displaced COBOL. Two recent challengers though, 
+              Java and Visual Basic, are proving to be serious contenders.</P>
+            <P>COBOL's dominance in underlined by the reports from the Gartner 
+              group. </P>
+            <BLOCKQUOTE>
+              <P>In 1997 they estimated that there were about 300 billion lines 
+                of computer code in use in the world. Of that they estimated that 
+                about 80% (240 billion lines) were in COBOL and 20% (60 billion 
+                lines) were written in all the other computer languages combined 
+                [<FONT size="-1"><A href="#brown">Brown</A></FONT>]. </P>
+              <P>In 1999 they reported that over 50% of all new mission-critical 
+                applications were still being done in COBOL and their recent estimates 
+                indicate that through 2004-2005 15% of all new applications (5 
+                billion lines) will be developed in COBOL while 80% of <B>all</B> 
+                deployed applications will include extensions to existing legacy 
+                (usually COBOL) programs. </P>
+              <P>Gartner estimates for 2002 are that there are about two million 
+                COBOL programmers world-wide compared to about about one million 
+                Java programmers and one million C++ programmers.</P>
+            </BLOCKQUOTE>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="57"><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>Surprised 
+            by COBOL's success?</B></FONT></TD>
+          <TD width="525" valign="top" height="57"> 
+            <P>People are often surprised when presented with the evidence for 
+              COBOL's dominance in the market place. The hype that surrounds some 
+              computer languages would persuade you to believe that most of the 
+              production business applications in the world are written in Java, 
+              C, C++ or Visual Basic and that only a small percentage are written 
+              in COBOL. In fact, the reverse is actually the case. </P>
+            <P>One reason for this misconception lies in the difference between 
+              the vertical and the horizontal software markets.</P>
+            <P>In the vertical software market (sometimes called &quot;bespoke&quot; 
+              software) applications cost many millions of dollars to produce, 
+              are tailored to a specified company, encapsulate the business rules 
+              of that company, and only a limited number of copies of the software 
+              may be in use. A good example of this kind of application is the 
+              DoD MRP II system. This system is &quot;used to manage almost 550,000 
+              spare and repair parts and equipment items with an inventory value 
+              of $28 billion. The system runs on Amdahl mainframes at multiple 
+              locations throughout the U.S. and contains over 4,000,000 lines 
+              of COBOL code.&quot; [<FONT size="-1">http://www.uppermohawkinc.com/corporate_capabilities.htm</FONT>] 
+            </P>
+            <P>In the horizontal software market, applications may still cost 
+              millions of dollars to produce but thousands, and in some cases 
+              millions, of copies of the software are in use. As a result, these 
+              applications often have a very high profile, a short life span, 
+              and a relatively low per-copy replacement cost. The Microsoft Office 
+              suite (Word, Excel, Access) is an example of an application in the 
+              horizontal software market. Because of the highly competitive nature 
+              of this marketplace considerations of speed, size and efficiency 
+              often make languages like C or C++ the language of choice for creating 
+              these applications.</P>
+            <P>Applications written for the vertical market, on the other hand, 
+              often have a low profile (because they are usually written for use 
+              in one particular company), a very high per-copy replacement cost, 
+              and consequently, a very long life span. For example, the cost of 
+              replacing COBOL code has been estimated at approximately twenty 
+              five dollars ($25) per line of code. At this rate, the cost of replacing 
+              the DoD MRP II system mentioned above, with a system written in 
+              some other language, would be some one hundred million dollars ($100,000,000). 
+              The importance of ease of maintenance often makes COBOL the language 
+              of choice for these applications.</P>
+            <P>The high visibility of horizontal applications like Microsoft Word 
+              or Excel persuades people that the languages used to write these 
+              applications are the market leaders. But however many copies of 
+              Excel are sold, it is just a single application produced by a limited 
+              number of programmers. Many more programmers are involved in coding 
+              or maintaining one off, &quot;bespoke&quot;, applications. And these 
+              programmers generally write their programs in COBOL.</P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="423"> 
+            <P><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>Some 
+              characteristics of COBOL applications</B></FONT></P>
+            <P>&nbsp;</P>
+          </TD>
+          <TD width="525" valign="top" height="423"> 
+            <P>As exemplified by the DoD MRP II example above, COBOL applications 
+              are often very large.Many COBOL applications consist of more than 
+              1,000,000 lines of code - with 6,000,000+ line applications not 
+              considered unusually large in many shops.</P>
+            <P>COBOL applications are also very long-lived.The huge investment 
+              in creating a software application consisting of some millions of 
+              lines of COBOL code means that the application cannot simply be 
+              discarded when some new programming language or technology appears. 
+              As a consequence business applications between 10 and 30 years-old 
+              are common. This accounts for the predominance of COBOL programs 
+              in the year 2000 problem (12,000,000 COBOL applications vs 375,000 
+              C and C++ applications in the US alone - [<FONT size="-1"><A href="#capers">Capers 
+              Jones</A></FONT>]). Twenty years ago when programmers were writing 
+              these applications they just didn't anticipate that they would last 
+              into this millennium.</P>
+            <P>COBOL applications often run in critical areas of business. For 
+              instance, over 95% of finance&#150;insurance data is processed with 
+              COBOL [<FONT size="-1"><A href="#arranga">In Cobol&#146;s Defense</A>].</FONT> 
+              The serious financial and legal consequences that can result from 
+              an application failure is one reason for the near panic over the 
+              year 2000 problem.</P>
+            <P>COBOL applications often deal with enormous volumes of data.Single 
+              production files and databases measured in terabytes are not uncommon.</P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1690"><FONT face="Arial, Helvetica, sans-serif" color="#800000"><B>Some 
+            characteristics that contribute to COBOL's success</B></FONT></TD>
+          <TD width="525" valign="top" height="1690"> 
+            <P><B>COBOL is self-documenting</B><BR>
+              One of the design goals for COBOL was to make it possible for non-programmers 
+              such as supervisors, managers and users, to read and understand 
+              COBOL code. As a result, COBOL contains such English-like structural 
+              elements as verbs, clauses, sentences, sections and divisions. As 
+              it happens, this design goal was not realized. Managers and users 
+              nowadays do not read COBOL programs. Computer programs are just 
+              too complex for most laymen to understand them, however familiar 
+              the syntactic elements. But the design goal and its effect on COBOL 
+              syntax has had one important side-effect. It has made COBOL the 
+              most readable, understandable and self-documenting programming language 
+              in use today. It has also made it the most verbose.</P>
+            <P>It is easy for programmers unused to the business programming paradigm, 
+              where programming with a view to ease of maintenance is very important, 
+              to dismiss the advantage that COBOL's readability imparts. Not only 
+              does this readability generally assist the maintenance process but 
+              the older a program gets the more valuable this readability becomes.</P>
+            <P>When programs are new, both the in-program comments and the external 
+              documentation accurately reflect the program code. But over time, 
+              as more and more revisions are applied to the code, it gets out 
+              of step with the documentation until the documentation is actually 
+              a hindrance to maintenance rather than a help. The self-documenting 
+              nature of COBOL means that this problem is not as severe with COBOL 
+              programs as it is with other languages</P>
+            <P>Readers who are familiar with C or C++ or Java might want to consider 
+              how difficult it becomes to maintain programs written in these languages. 
+              C programs that you have written yourself are difficult enough to 
+              understand when you come back to them six months later. Consider 
+              how much more difficult it would be to understand a program that 
+              had been written fifteen years previously, by someone else, and 
+              which had since been amended and added to by so many others that 
+              the documentation no longer accurately reflects the program code. 
+              This is a nightmare still awaiting maintenance programmers of the 
+              future</P>
+            <P><B>COBOL is simple<BR>
+              </B>COBOL is a simple language (no pointers, no user defined functions, 
+              no user defined types) with a limited scope of function. It encourages 
+              a simple straightforward programming style. Curiously enough though, 
+              despite its limitations, COBOL has proven itself to be well suited 
+              to its targeted problem domain (business computing). Most COBOL 
+              programs operate in a domain where the program complexity lies in 
+              the business rules that have to be encoded rather than in the sophistication 
+              of the data structures or algorithms required. And in cases where 
+              sophisticated algorithms are required COBOL usually meets the need 
+              with an appropriate verb such as the <FONT size="-1">SORT</FONT> 
+              and the <FONT size="-1">SEARCH</FONT>. </P>
+            <P> We noted above that COBOL is a simple language with a limited 
+              scope of function. And that is the way it used to be but the introduction 
+              of OO-COBOL has changed all that. OO-COBOL retains all the advantages 
+              of previous versions but now includes -</P>
+            <UL>
+              <UL>
+                <UL>
+                  <LI>User Defined Functions </LI>
+                  <LI>Object Orientation</LI>
+                  <LI>National Characters - Unicode </LI>
+                  <LI>Multiple Currency Symbols </LI>
+                  <LI>Cultural Adaptability (Locales) </LI>
+                  <LI>Dynamic Memory Allocation (pointers)</LI>
+                  <LI>Data Validation Using New VALIDATE Verb </LI>
+                  <LI>Binary and Floating Point Data Types </LI>
+                  <LI>User Defined Data Types </LI>
+                </UL>
+              </UL>
+            </UL>
+            <P><B>COBOL is non-proprietary (portable)</B><BR>
+              The COBOL standard does not belong to any particular vendor. The 
+              vendor independent ANSI COBOL committee legislates formal, non-vendor-specific 
+              syntax and semantic language standards. COBOL has been ported to 
+              virtually every hardware platform - from every favour of Windows, 
+              to every falser of Unix, to AS/400, VSE, OS/2, DOS, VMS, Unisys, 
+              DG, VM, and MVS.</P>
+            <P><BR>
+              <B>COBOL is Maintainable<BR>
+              </B>COBOL has a 30 year proven track record for application maintenance, 
+              enhancement and production support at the enterprise level. Early 
+              indications from the year 2000 problem are that COBOL applications 
+              were actually cheaper to fix than applications written in more recent 
+              languages. [<FONT size="-1"> <A href="#capers">Capers Jones</A></FONT>] 
+              [<FONT size="-1"><A href="#kapple">Kappleman</A></FONT>]</P>
+            <P>One reason for the maintainability of COBOL programs has been given 
+              above - the readability of COBOL code. Another reason is COBOL's 
+              rigid hierarchical structure. In COBOL programs all external references, 
+              such as to devices, files, command sequences, collating sequences, 
+              the currency symbol and the decimal point symbol, are defined in 
+              the Environment Division. </P>
+            <P>When a COBOL program is moved to a new machine, or has new peripheral 
+              devices attached, or is required to work in a different country; 
+              COBOL programmers know that the parts of the program that will have 
+              to be altered to accommodate these changes will be isolated in the 
+              Environment Division. In other programming languages, programmer 
+              discipline could have ensured that the references liable to change 
+              were restricted to one part of the program but they could just as 
+              easily be spread throughout the program. In COBOL programs, programmers 
+              have no choice. COBOL's rigid hierarchical structure ensures that 
+              these items are restricted to the Environment Division.<BR>
+            </P>
+            <HR width="100%" align="center" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="1130">
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">References 
+              and further reading</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="1130"> 
+            <P>In this semi-formal document I have not been fastidious in referencing 
+              all the souces I have used. Because of that I would like to acknowledge 
+              that most of factual material and some of the commentary was gleaned 
+              from the following sources. These may also serve as further reading.</P>
+            <P>Most of this material is available on the web but as the web is 
+              dynamic and links are all to easily broken I won't give the URL's 
+              here. You will have to search for them.</P>
+            <H3 align="center">Resources</H3>
+            <P>Ankrum,T. Scott - COBOL -- A Best Practice (Sept, 2001)- COBOLReport.com</P>
+            <P>Arranga,Edmund C. - The Viagrazation of COBOL - COBOLwebler.com</P>
+            <P>Arranga, Edmund C. &amp; Price, Wilson - Fresh from Y2K, What's 
+              next for COBOL? (March/April 2000) - IEEE Software</P>
+            <P><A name="arranga"></A>Arranga et al - In COBOL's Defense : Roundtable 
+              Discussion (March/April 2000) - IEEE Software</P>
+            <P>Badower, Justin - COBOL: Foundation of the future - COBOLwebler.com</P>
+            <P><A name="brown"></A>Brown, Gary DeWard - COBOL: The failure that 
+              wasn't - COBOLReport.com</P>
+            <P>Burger,Thomas Wolfgang - COBOL in an open source future (May 2000) 
+              - IBM developerWorks : Linux : Linux articles</P>
+            <P>Carr, Donald &amp; Kizior, Ronald J. - The Case for Continued COBOL 
+              Education (March/April 2000) - IEEE Software</P>
+            <P>Feiman, J. - The Gartner Programming Language Survey (October 2001) 
+              - Gartner Advisory</P>
+            <P>Glass, Robert L. - Cobol - A Contradiction and an Enigma - COMMUNICATIONS 
+              OF THE ACM September 1997/Vol. 40, No. 9</P>
+            <P><A name="capers"></A>Jones, Capers - The global economic impact 
+              of the year 2000 software problem (Jan, 1997) </P>
+            <P><A name="kapple"></A>Kappelman, Leon A. - Some Strategic Y2K Blessings 
+              (March/April 2000) - IEEE Software</P>
+            <P>Kizior, Dr. Ronald J. &amp; Carr, Donald &amp; Halpern, Dr. Paul 
+              - What Professionals think of the Future of COBOL? </P>
+            <P>Murach, Mike - Is COBOL Dying ... or Thriving? (February 2001) 
+              - The Cobol Newswire </P>
+            <P>Pagnan, Martin - Can A Java Programmer Be Transitioned To Cobol? 
+              (Feb, 2002) - COBOLReport.com</P>
+            <P>Reimann, Artur -COBOL, Language of Choice - Then and Now (January, 
+              2001) - COBOLReport.com</P>
+            <P>Sayles, Jonathan - COBOL and the Enterprise Business Application 
+              Programming Legacy - MicroFocus Ltd.</P>
+            <P>Silverberg, Fred, COBOL and the Business Programming Paradigm (1996)</P>
+            <P>Sneed, Harry M.- The Evolution of COBOL - COBOLReport.com</P>
+            <P>Wilkinson,Stephanie - From the Dustbin, Cobol Rises (May, 2001)- 
+              eWeek</P>
+            <P>&nbsp;</P>
+            </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <hr width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><a name="part2"></a><FONT face="Arial, Helvetica, sans-serif">Introduction 
+              to Programming </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="131"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="131"> 
+            <p align="left">In this section a gentle introduction to programing 
+              in general, and to programming in COBOL in particular, is provided. 
+              This is done by writing some simple COBOL programs that use the 
+              three main programming constructs - Sequence, Iteration and Selection.</p>
+            <p align="left">Don't worry if you don't understand these programs 
+              at this point. The main purpose of this section is to give you a 
+              first look at some simple COBOL programs.</p>
+            <hr size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="338"><FONT color="#800000" face="Arial, Helvetica, sans-serif"><B> 
+            Let's write a program</B></FONT></TD>
+          <TD width="525" valign="top" height="338"> 
+            <P align="left">A program is a collection of statements written in 
+              a language the computer understands.<BR>
+            </P>
+            <P align="left">A computer executes program statements one after another 
+              in sequence until it reaches the end of the program unless some 
+              statement in the program alters the order of execution.</P>
+            <P align="left">Computer Scientists have shown that any program can 
+              be written using the three main programming constructs;</P>
+            <TABLE width="100%" border="0" cellspacing="1" cellpadding="1">
+              <TR> 
+                <TD width="125">&nbsp;</TD>
+                <TD><FONT size="+2" face="Arial, Helvetica, sans-serif"><B><FONT size="+1" color="#000099"><IMG src="Resources/pics/BallRedG.gif" width="13" height="13" hspace="10">Sequence</FONT></B></FONT><FONT size="+1" color="#000099" face="Arial, Helvetica, sans-serif"><B><BR>
+                  <FONT size="+2"><B><IMG src="Resources/pics/BallRedG.gif" width="13" height="13" hspace="10"></B></FONT>Selection<BR>
+                  <FONT size="+2"><B><IMG src="Resources/pics/BallRedG.gif" width="13" height="13" hspace="10"></B></FONT>Iteration</B></FONT></TD>
+              </TR>
+            </TABLE>
+            <P align="left">This section introduces COBOL programming by writing 
+              some simple COBOL programs using these constructs.</P>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="210"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"><B>Sequence 
+              Program Specification</B></FONT></H4>
+            <H4>&nbsp;</H4>
+            <h4 align="center"><font size="-1"> </font></h4>
+          </TD>
+          <TD width="525" valign="top" height="210"> 
+            <p align="left">We want to write a program which will accept two numbers 
+              from the users keyboard, multiply them together and display the 
+              result on the computer screen.<BR>
+            </p>
+            <p align="left">Any program consists of three main things;</p>
+            <OL>
+              <LI>The computer statements needed to do the job</LI>
+              <LI>Declarations for the data items that the computer statements 
+                need.</LI>
+              <LI>A plan, or algorithm, that arranges the computer statements 
+                in the program so that the computer executes them in the correct 
+                order.</LI>
+            </OL>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="398"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Program 
+              Statements and Data items </FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="398"> 
+            <p align="left">What COBOL program statements will we need to do the 
+              job specified above and what data items will we need to access?<BR>
+            </p>
+            <BLOCKQUOTE> 
+              <P>We will need a statement to take in the first number and store 
+                it in the named memory location (a variable) - Num1<B><FONT face="Courier New, Courier, mono" size="+1"><BR>
+                </FONT><FONT size="+1"><B><FONT face="Courier New, Courier, mono" size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT face="Courier New, Courier, mono"></FONT></B></FONT><FONT face="Courier New, Courier, mono" size="+1">ACCEPT 
+                Num1.</FONT></B></P>
+            </BLOCKQUOTE>
+            <BLOCKQUOTE> 
+              <P>We will need a statement to take in the second number and store 
+                it in the named memory location - Num2<B><FONT size="+1" face="Courier New, Courier, mono"><BR>
+                </FONT><FONT size="+1"><B><FONT face="Courier New, Courier, mono" size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT face="Courier New, Courier, mono"></FONT></B></FONT><FONT size="+1" face="Courier New, Courier, mono">ACCEPT 
+                Num2.</FONT></B></P>
+            </BLOCKQUOTE>
+            <BLOCKQUOTE> 
+              <P>We will need a statement to multiply the two numbers together 
+                and to store the result in the named location - Result<FONT size="+1"><B><BR>
+                <FONT face="Courier New, Courier, mono" size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT face="Courier New, Courier, mono">MULTIPLY 
+                Num1 BY Num2 GIVING Result.</FONT></B></FONT></P>
+              <P>We will need a statement to display the value in the named memory 
+                location &quot;<B>Result</B>&quot; on the computer screen -<BR>
+                <B><FONT size="+1"><B><FONT face="Courier New, Courier, mono" size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></B><FONT face="Courier New, Courier, mono">DISPLAY 
+                &quot;Result is = &quot;, Result.</FONT></FONT></B> </P>
+            </BLOCKQUOTE>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="376"><B><FONT color="#800000" face="Arial, Helvetica, sans-serif">Getting 
+            the Algorithm right</FONT></B></TD>
+          <TD width="525" valign="top" height="376"> 
+            <P>Now all we need to do to have a working program is to declare the 
+              items needed to store the data and to place the statements shown 
+              above in the correct order. 
+            <P>Click on these animations to see our attempts to write a program 
+              that produces the correct answer. These attempts illustrate importance 
+              of arranging the statements in a program so that they are executed 
+              in the correct order. 
+            <P>&nbsp; 
+            <TABLE width="80%" border="1" cellspacing="1" cellpadding="1" align="center">
+              <TR> 
+                <TD> 
+                  <P> 
+                  <P align="center">Attempt 1<BR>
+                    <A href="Resources/ppz/TC-CobIntro1.htm"><IMG src="Resources/pics/i-Animation.gif" width="62" height="62" align="middle" border="0"></A> 
+                </TD>
+                <TD> 
+                  <P> 
+                  <P align="center">Attempt 2<BR>
+                    <A href="Resources/ppz/TC-CobIntro2.htm"><IMG src="Resources/pics/i-Animation.gif" width="62" height="62" align="middle" border="0"></A> 
+                </TD>
+                <TD> 
+                  <P> 
+                  <P align="center">Attempt 3<BR>
+                    <A href="Resources/ppz/TC-CobIntro3.htm"><IMG src="Resources/pics/i-Animation.gif" width="62" height="62" align="middle" border="0"></A> 
+                </TD>
+              </TR>
+            </TABLE>
+            <P>Because this program is short, simple and easy to understand, you 
+              may think that programming mistakes like these could never happen. 
+              But don't be deceived - when writing a larger program it is all 
+              to easy to make the mistake of trying to use, or output, the contents 
+              of a data item before you have assigned it a value.</P>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="161"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"><B>An 
+              annotated look at the COBOL program</B></FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="161"> 
+            <P>Click on the animation below for an annotated version of the program. 
+              Click anywhere in the animation to see the first and subsequent 
+              annotations.</P>
+            <P align="center">Annotated Program<BR>
+              <A href="Resources/ppz/TC-CobIntro4.htm"><IMG src="Resources/pics/i-Animation.gif" width="62" height="62" align="middle" border="0"></A> 
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="233"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Selection 
+              Program Specification</FONT></H4>
+            <P align="center"><IMG src="Resources/pics/i-Detail.gif" width="30" height="37"><BR>
+              <FONT size="-1">Note that these example programs are not meant to 
+              be realistic. For instance, at the very least, a program operating 
+              in the real world would have to ensure that the input data was validated 
+              before it was used.</FONT></P>
+          </TD>
+          <TD width="525" valign="top" height="233"> 
+            <P>Write a program that accepts two numbers and an operator from the 
+              user and then performs the appropriate calculation for that operator. 
+              The operator must be either the addition (+) or the multiplication 
+              (*) operator.</P>
+            <P>In this example run it is assumed that the user enters an addition 
+              sign (+) as the operator</P>
+            <P align="center">Selection Program<BR>
+              <A href="Resources/ppz/TC-CobIntro5.htm"><IMG src="Resources/pics/i-Animation.gif" width="62" height="62" align="middle" border="0"></A> 
+            </P>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="151"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Iteration 
+              Program Specification</FONT></H4>
+            <P align="center">&nbsp;</P>
+          </TD>
+          <TD width="525" valign="top" height="151"> 
+            <p>Write a program that accepts two numbers and an operator from the 
+              user and then performs the appropriate calculation for that operator. 
+              The operator must be either the addition (+) or the multiplication 
+              (*) operator.</p>
+            <p>This is only a partial example run. It follows the flow of control 
+              through the program for only one and a half iterations.</p>
+            <p align="center">Iteration Program<BR>
+              <A href="Resources/ppz/TC-CobIntro6.htm"><IMG src="Resources/pics/i-Animation.gif" width="62" height="62" align="middle" border="0"></A> 
+            </p>
+            <p>&nbsp;</p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part3"></A><FONT face="Arial, Helvetica, sans-serif">COBOL 
+              basics </FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="119"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="119"> 
+            <p>This section presents the fundamentals of constructing COBOL programs. 
+              It explains the notation used in COBOL syntax diagrams and enumerates 
+              the COBOL coding rules. It shows how user-defined names are constructed 
+              and examines the structure of COBOL programs. <BR>
+            </p>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="406"> 
+            <H4 align="left"><B><FONT color="#800000" face="Arial, Helvetica, sans-serif">COBOL 
+              idiosyncrasies</FONT> </B></H4>
+          </TD>
+          <TD width="525" valign="top" height="406"> 
+            <P>COBOL is one of the oldest programming languages in use. As a result 
+              it has some idiosyncrasies which programmers used to other languages 
+              may find irritating. </P>
+            <P>When COBOL was developed (around the end of the 1950's) one of 
+              the design goals was to make it as English-like as possible. As 
+              a result, COBOL uses structural concepts normally associated with 
+              English prose such as section, paragraph and sentence. It also has 
+              an extensive reserved word list with over 300 entries and the reserved 
+              words themselves, tend to be long. COBOL programs tend to be verbose 
+              especially when compared to languages like C.</P>
+            <P>When COBOL was designed, programs were written on coding forms 
+              (see below) , punched on to punch cards, and loaded into the computer 
+              using a punch card reader. These media (coding forms and punch cards) 
+              required adherence to a number formatting restrictions that some 
+              COBOL implementations still enforce today, long after the need for 
+              them has gone.</P>
+            <P>Although modern COBOL (COBOL 85 and OO-COBOL) has introduced many 
+              of the constructs required to write well structured programs it 
+              also still retains elements which, if used, make it difficult, and 
+              in some cases impossible, to write good programs. </P>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="404"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">COBOL 
+              syntax </FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="404"> 
+            <p>COBOL syntax is defined using particular notation sometimes called 
+              the COBOL MetaLanguage. </p>
+            <p>In this notation, words in uppercase are reserved words. When underlined 
+              they are mandatory. When not underlined they are &quot;noise&quot; 
+              words, used for readability only, and are optional. Because COBOL 
+              statements are supposed to read like English sentences there are 
+              a lot of these &quot;noise&quot; words.</p>
+            <p>Words in mixed case represent names that must be devised by the 
+              programmer (like data item names). </p>
+            <p>When material is enclosed in curly braces <B>{ }</B>, a choice 
+              must be made from the options within the braces. If there is only 
+              one option then that item in mandatory.</p>
+            <p>Material enclosed in square brackets <B>[ ]</B>, indicates that 
+              the material is optional, and may be included or omitted as required. 
+            </p>
+            <p>The ellipsis symbol <B>...</B> (three dots), indicates that the 
+              preceding syntax element may be repeated at the programmer's discretion.</p>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="273"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Some 
+              notes on syntax diagrams</FONT></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="273"> 
+            <P>To simplify the syntax diagrams and reduce the number of rules 
+              that must be explained, in some diagrams special operand endings 
+              have been used (note that this is my own extension - it is not standard 
+              COBOL). <BR>
+            </P>
+            <P> These special operand endings have the following meanings:</P>
+            <BLOCKQUOTE> 
+              <TABLE width="100%" border="1" cellspacing="1" cellpadding="5">
+                <TR> 
+                  <TD><B><FONT face="Arial, Helvetica, sans-serif">$i </FONT></B></TD>
+                  <TD><FONT face="Arial, Helvetica, sans-serif">uses an alphanumeric 
+                    data-item</FONT><B><FONT face="Arial, Helvetica, sans-serif"></FONT></B></TD>
+                </TR>
+                <TR> 
+                  <TD><B><FONT face="Arial, Helvetica, sans-serif">$il</FONT></B></TD>
+                  <TD><FONT face="Arial, Helvetica, sans-serif">uses an alphanumeric 
+                    data-item or a string literal</FONT><B><FONT face="Arial, Helvetica, sans-serif"></FONT></B></TD>
+                </TR>
+                <TR> 
+                  <TD><B><FONT face="Arial, Helvetica, sans-serif">#i</FONT></B></TD>
+                  <TD><FONT face="Arial, Helvetica, sans-serif">uses a numeric 
+                    data-item</FONT><B><FONT face="Arial, Helvetica, sans-serif"></FONT></B></TD>
+                </TR>
+                <TR> 
+                  <TD><B><FONT face="Arial, Helvetica, sans-serif">#il </FONT></B><FONT face="Arial, Helvetica, sans-serif"></FONT></TD>
+                  <TD><FONT face="Arial, Helvetica, sans-serif">uses a numeric 
+                    data-item or numeric literal </FONT><B><FONT face="Arial, Helvetica, sans-serif"></FONT></B></TD>
+                </TR>
+                <TR> 
+                  <TD><B><FONT face="Arial, Helvetica, sans-serif">$#i</FONT></B></TD>
+                  <TD><FONT face="Arial, Helvetica, sans-serif">uses a numeric 
+                    or an alphanumeric data-item</FONT></TD>
+                </TR>
+              </TABLE>
+              <P>&nbsp;</P>
+            </BLOCKQUOTE>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="663"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">An example 
+              syntax diagram</FONT></H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp; </H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <H4>&nbsp;</H4>
+            <DIV align="center"><IMG src="Resources/pics/i-Detail.gif" width="30" height="37"><BR>
+              <FONT size="-1">Note that for clarity data items may be separated 
+              from one another by means of an optional comma. <BR>
+              This has been done in the COMPUTE statement opposite</FONT></DIV>
+            <H4>&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="663"> 
+            <p>In COBOL, evaluating an arithmetic expression and assigning the 
+              result to a data item is achieved by means of the COMPUTE statement. 
+              The syntax diagram for the COMPUTE is shown below.</p>
+            <p align="center"><IMG src="Resources/pics/Compute.gif" width="509" height="77"></p>
+            <p>This syntax diagram may be interpreted as follows; </p>
+            <P>We must start a <FONT size="-1">COMPUTE</FONT> statement with the 
+              keyword <FONT size="-1">COMPUTE</FONT>. </P>
+            <P>We must follow the keyword with the name(s) of the numeric data 
+              item (or items - note the ellipsis symbol (...)) to be used to receive 
+              the result of the expression. The #i suffix at the end of word <B>Result</B> 
+              tells us that a numeric identifier/data item must be used.</P>
+            <P align="left">Since the ellipsis symbol is placed outside the curly 
+              brackets we can interpret this to mean that each result field can 
+              have its own <FONT size="-1">ROUNDED</FONT> phase. In other words 
+              we could have a <FONT size="-1">COMPUTE</FONT> statement like -<BR>
+              <BR>
+              <B><FONT face="Courier New, Courier, mono">COMPUTE Result1 ROUNDED, 
+              Result2 = ((9*9)+8)/5</FONT></B></P>
+            <P align="left">where Result1 would be assigned a value of 18 and 
+              Result2 would be assigned a value of 17.8.</P>
+            <P align="left">The square brackets after the Arithmetic Expression 
+              indicate that the next items are optional but if used we must choose 
+              between the <FONT size="-1">ON SIZE ERROR</FONT> or <FONT size="-1">NOT 
+              ON SIZE ERROR</FONT> phrases.</P>
+            <P align="left">Because the <FONT size="-1">END-COMPUTE</FONT> is 
+              contained within the square brackets it must only be used when a 
+              <FONT size="-1">SIZE ERROR</FONT> or <FONT size="-1">NOT SIZE ERROR</FONT> 
+              phrase is used.</P>
+            <hr width="100%" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="907"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif"><B>COBOL 
+              coding rules</B></FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="907"> 
+            <P>Traditionally, COBOL programs were written on coding forms and 
+              then punched on to punch cards. Although nowadays most programs 
+              are entered directly into a computer, some COBOL formatting conventions 
+              remain that derive from its ancient punch-card history.</P>
+            <P>On coding forms, the first six character positions are reserved 
+              for sequence numbers. The seventh character position is reserved 
+              for the continuation character, or for an asterisk that denotes 
+              a comment line. </P>
+            <P>The actual program text starts in column 8. The four positions 
+              from 8 to 11 are known as Area A, and positions from 12 to 72 are 
+              Area B.<BR>
+            </P>
+            <P>Although many COBOL compilers ignore some of these formatting restrictions, 
+              most still retain the distinction between Area A and Area B. </P>
+            <P>When a COBOL compiler recognizes the two areas, all division names, 
+              section names, paragraph names, FD entries and 01 level numbers 
+              must start in Area A. All other sentences must start in Area B.</P>
+            <P>In our example programs we use the compiler directive (available 
+              with the NetExpress COBOL compiler) - <FONT size="-1">$ SET SOURCEFORMAT&quot;FREE&quot;</FONT> 
+              - to free us from these formatting restrictions.<BR>
+            </P>
+            <P align="center"><B>Ancient COBOL coding form</B><IMG src="Resources/pics/CodingForm.jpg" width="498" height="415" border="1"></P>
+            <HR width="100%" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="238"> 
+            <H4><B><FONT color="#800000" face="Arial, Helvetica, sans-serif">Name 
+              construction</FONT></B></H4>
+          </TD>
+          <TD width="525" valign="top" height="238"> 
+            <P>All user-defined names, such as data names, paragraph names, section 
+              names condition names and mnemonic names, must adhere to the following 
+              rules:</P>
+            <OL>
+              <LI>They must contain at least one character, but not more than 
+                30 characters.</LI>
+              <LI>They must contain at least one alphabetic character.</LI>
+              <LI>They must not begin or end with a hyphen.</LI>
+              <LI>They must be constructed from the characters A to Z, the numbers 
+                0 to 9, and the hyphen.</LI>
+              <LI>They must not contain spaces.</LI>
+              <LI>Names are not case-sensitive: TotalPay is the same as totalpay, 
+                Totalpay or <FONT size="-1">TOTALPAY</FONT>.<BR>
+              </LI>
+            </OL>
+            <HR width="100%" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="502"> 
+            <H4><FONT face="Arial, Helvetica, sans-serif" color="#800000">The 
+              structure of COBOL programs</FONT></H4>
+            <H4 align="center">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+            <H4 align="center">&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="502"> 
+            <p>COBOL programs are hierarchical in structure. Each element of the 
+              hierarchy consists of one or more subordinate elements. </p>
+            <p>The hierarchy consists of Divisions, Sections, Paragraphs, Sentences 
+              and Statements. </p>
+            <p>A Division may contain one or more Sections, a Section one or more 
+              Paragraphs, a Paragraph one or more Sentences and a Sentence one 
+              or more Statements. </p>
+            <p>We can represent the COBOL hierarchy using the COBOL metalanguage 
+              as follows;</p>
+            <p>&nbsp;</p>
+            <p align="center"> <IMG src="Resources/pics/CobolStructure.gif" width="467" height="203"><BR>
+            </p>
+            <p align="center">&nbsp;</p>
+            <p align="left"><B><FONT face="Arial, Helvetica, sans-serif">Divisions</FONT></B><BR>
+              A division is a block of code, usually containing one or more sections, 
+              that starts where the division name is encountered and ends with 
+              the beginning of the next division or with the end of the program 
+              text. </p>
+            <p align="left"><BR>
+              <B><FONT face="Arial, Helvetica, sans-serif">Sections</FONT></B><BR>
+              A section is a block of code usually containing one or more paragraphs. 
+              A section begins with the section name and ends where the next section 
+              name is encountered or where the program text ends. </p>
+            <p align="left">Section names are devised by the programmer, or defined 
+              by the language. A section name is followed by the word <FONT size="-1">SECTION</FONT> 
+              and a period. <BR>
+              See the two example names below -</p>
+            <BLOCKQUOTE> 
+              <P> <B><FONT face="Courier New, Courier, mono">SelectUnpaidBills 
+                SECTION.<BR>
+                </FONT></B><FONT face="Courier New, Courier, mono"><B>FILE SECTION.</B></FONT></P>
+              <P>&nbsp;</P>
+            </BLOCKQUOTE>
+            <P><FONT face="Arial, Helvetica, sans-serif"><B>Paragraphs</B></FONT><BR>
+              A paragraph is a block of code made up of one or more sentences. 
+              A paragraph begins with the paragraph name and ends with the next 
+              paragraph or section name or the end of the program text. </P>
+            <P>A paragraph name is devised by the programmer or defined by the 
+              language, and is followed by a period. <BR>
+              See the two example names below -</P>
+            <BLOCKQUOTE> 
+              <P><FONT face="Courier New, Courier, mono"><B>PrintFinalTotals.<BR>
+                </B></FONT><FONT face="Courier New, Courier, mono"><B>PROGRAM-ID.</B></FONT><BR>
+              </P>
+              <P>&nbsp; </P>
+            </BLOCKQUOTE>
+            <P><FONT face="Arial, Helvetica, sans-serif"><B>Sentences and statements</B></FONT><BR>
+              A sentence consists of one or more statements and is terminated 
+              by a period.<BR>
+              For example:</P>
+            <BLOCKQUOTE> 
+              <P><B><FONT face="Courier New, Courier, mono">MOVE .21 TO VatRate<BR>
+                &nbsp;&nbsp;&nbsp;MOVE 1235.76 TO ProductCost<BR>
+                &nbsp;&nbsp;&nbsp;COMPUTE VatAmount = ProductCost * VatRate.</FONT></B></P>
+            </BLOCKQUOTE>
+            <P><BR>
+              A statement consists of a COBOL verb and an operand or operands. 
+              <BR>
+              For example:</P>
+            <BLOCKQUOTE> 
+              <P><B><FONT face="Courier New, Courier, mono">SUBTRACT Tax FROM 
+                GrossPay GIVING NetPay</FONT></B><BR>
+              </P>
+            </BLOCKQUOTE>
+            <p align="left">&nbsp; </p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <DIV align="center"> 
+              <HR width="100%">
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+            </DIV>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="top" align="LEFT" bgcolor="#993300" colspan="2"> 
+            <H2 align="CENTER"><FONT color="#FFFF00"><A name="part4"></A><FONT face="Arial, Helvetica, sans-serif">The 
+              Four Divisions</FONT></FONT></H2>
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="374"> 
+            <H4><FONT color="#800000" face="Arial, Helvetica, sans-serif">Introduction</FONT></H4>
+          </TD>
+          <TD width="525" valign="top" height="374"> 
+            <P>At the top of the COBOL hierarchy are the four divisions. These 
+              divide the program into distinct structural elements. Although some 
+              of the divisions may be omitted, the sequence in which they are 
+              specified is fixed, and must follow the order below.</P>
+            <BLOCKQUOTE> 
+              <BLOCKQUOTE> 
+                <BLOCKQUOTE> 
+                  <P align="center"><BR>
+                    <B><FONT face="Arial, Helvetica, sans-serif" size="+1">IDENTIFICATION 
+                    DIVISION.</FONT></B><BR>
+                    Contains program information</P>
+                  <P align="center"><FONT face="Arial, Helvetica, sans-serif"><B><FONT size="+1">ENVIRONMENT 
+                    DIVISION.</FONT></B></FONT><BR>
+                    Contains environment information</P>
+                  <P align="center"><FONT face="Arial, Helvetica, sans-serif"><B><FONT size="+1">DATA 
+                    DIVISION.</FONT></B></FONT><BR>
+                    Contains data descriptions</P>
+                  <P align="center"><B><FONT face="Arial, Helvetica, sans-serif" size="+1">PROCEDURE 
+                    DIVISION.</FONT></B><BR>
+                    Contains the program algorithms<BR>
+                  </P>
+                </BLOCKQUOTE>
+              </BLOCKQUOTE>
+            </BLOCKQUOTE>
+            <div align="center"></div>
+            <HR width="100%" size="1">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="710"> 
+            <h4 align="left"><FONT face="Arial, Helvetica, sans-serif" color="#800000">The 
+              IDENTIFICATION DIVISION</FONT></h4>
+          </TD>
+          <TD width="525" valign="top" height="710"> 
+            <P>The <FONT size="-1">IDENTIFICATION DIVISION</FONT> supplies information 
+              about the program to the programmer and the compiler. </P>
+            <P>Most entries in the <FONT size="-1">IDENTIFICATION DIVISION </FONT>are 
+              directed at the programmer. The compiler treats them as comments.</P>
+            <P>The <FONT size="-1">PROGRAM-ID</FONT> clause is an exception to 
+              this rule. Every COBOL program must have a <FONT size="-1">PROGRAM-ID</FONT> 
+              because the name specified after this clause is used by the linker 
+              when linking a number of subprograms into one run unit, and by the 
+              <FONT size="-1">CALL</FONT> statement when transferring control 
+              to a subprogram.</P>
+            <P>The <FONT size="-1">IDENTIFICATION DIVISION </FONT>has the following 
+              structure:</P>
+            <BLOCKQUOTE> 
+              <P><FONT face="Courier New, Courier, mono"><B>IDENTIFICATION DIVISION<BR>
+                PROGRAM-ID. NameOfProgram.<BR>
+                [AUTHOR. YourName.]<BR>
+                other entries here</B></FONT></P>
+            </BLOCKQUOTE>
+            <P>The keywords - <FONT size="-1">IDENTIFICATION DIVISION</FONT> - 
+              represent the division header, and signal the commencement of the 
+              program text.</P>
+            <P><FONT size="-1">PROGRAM-ID</FONT> is a paragraph name that must 
+              be specified immediately after the division header.</P>
+            <P>NameOfProgram is a name devised by the programmer, and must satisfy 
+              the rules for user-defined names.</P>
+            <P>Here's a typical program fragment:</P>
+            <table width="374" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <tr> 
+                <td> 
+                  <pre><B><FONT face="Courier New, Courier, mono">IDENTIFICATION DIVISION.<BR>PROGRAM-ID. SequenceProgram.<BR>AUTHOR. Michael Coughlan.</FONT></B></pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <hr size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="288"> 
+            <H4 align="left"><FONT color="#800000"><B><FONT face="Arial, Helvetica, sans-serif">The 
+              ENVIRONMENT DIVISION</FONT></B></FONT></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="288"> 
+            <p>The <FONT size="-1">ENVIRONMENT DIVISION</FONT> is used to describe 
+              the environment in which the program will run. </p>
+            <p>The purpose of the <FONT size="-1">ENVIRONMENT DIVISION</FONT> 
+              is to isolate in one place all aspects of the program that are dependant 
+              upon a specific computer, device or encoding sequence.</p>
+            <p> The idea behind this is to make it easy to change the program 
+              when it has to run on a different computer or one with different 
+              peripheral devices.</p>
+            <p>In the <FONT size="-1">ENVIRONMENT DIVISION</FONT>, aliases are 
+              assigned to external devices, files or command sequences. Other 
+              environment details, such as the collating sequence, the currency 
+              symbol and the decimal point symbol may also be defined here.</p>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="825"> 
+            <DIV align="left"><FONT color="#800000"><B><FONT face="Arial, Helvetica, sans-serif">The 
+              DATA DIVISION</FONT></B></FONT></DIV>
+          </TD>
+          <TD width="525" valign="top" height="825"> 
+            <P>As the name suggests, the <FONT size="-1">DATA DIVISION</FONT> 
+              provides descriptions of the data-items processed by the program. 
+            </P>
+            <P>The <FONT size="-1">DATA DIVISION</FONT> has two main sections: 
+              the <FONT size="-1">FILE SECTION</FONT> and the <FONT size="-1">WORKING-STORAGE 
+              SECTION</FONT>. Additional sections, such as the <FONT size="-1">LINKAGE 
+              SECTION</FONT> (used in subprograms) and the <FONT size="-1">REPORT 
+              SECTION</FONT> (used in Report Writer based programs) may also be 
+              required.</P>
+            <P>The <FONT size="-1">FILE SECTION</FONT> is used to describe most 
+              of the data that is sent to, or comes from, the computer's peripherals. 
+            </P>
+            <P>The <FONT size="-1">WORKING-STORAGE SECTION</FONT> is used to describe 
+              the general variables used in the program.</P>
+            <P align="left"><BR>
+              The <FONT size="-1">DATA DIVISION</FONT> has the following structure 
+              and syntax:</P>
+            <P align="center"><IMG src="/cobol/course/Resources/pics/DataDiv.gif" width="332" height="161"> 
+            </P>
+            <P align="left"><BR>
+              Below is a sample program fragment -</P>
+            <TABLE width="406" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD> 
+                  <PRE><FONT face="Courier New, Courier, mono">IDENTIFICATION DIVISION.<BR>PROGRAM-ID. SequenceProgram.<BR>AUTHOR. Michael Coughlan.</FONT><B><FONT face="Courier New, Courier, mono">
+<BR>DATA DIVISION.<BR>WORKING-STORAGE SECTION.<BR>01  Num1           PIC 9  VALUE ZEROS.<BR>01  Num2           PIC 9  VALUE ZEROS.<BR>01  Result         PIC 99 VALUE ZEROS.<BR></FONT></B></PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <P>&nbsp;</P>
+            <HR size="1" width="100%">
+          </TD>
+        </TR>
+        <TR> 
+          <TD valign="TOP" align="LEFT" width="175" bgcolor="#FFFFCC" height="69"> 
+            <H4 align="left"><FONT color="#800000" face="Arial, Helvetica, sans-serif">The 
+              PROCEDURE DIVISION</FONT></H4>
+            <H4>&nbsp;</H4>
+          </TD>
+          <TD width="525" valign="top" height="69"> 
+            <p>The <FONT size="-1">PROCEDURE DIVISION</FONT> contains the code 
+              used to manipulate the data described in the <FONT size="-1">DATA 
+              DIVISION</FONT>. It is here that the programmer describes his algorithm.</p>
+            <p>The <FONT size="-1">PROCEDURE DIVISION</FONT> is hierarchical in 
+              structure and consists of sections, paragraphs, sentences and statements.</p>
+            <p>Only the section is optional. There must be at least one paragraph, 
+              sentence and statement in the <FONT size="-1">PROCEDURE DIVISION</FONT>. 
+            </p>
+            <p>Paragraph and section names in the <FONT size="-1">PROCEDURE DIVISION</FONT> 
+              are chosen by the programmer and must conform to the rules for user-defined 
+              names.</p>
+            <p align="center"><BR>
+              <B>Sample Program</B></p>
+            <TABLE width="390" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD> 
+                  <PRE><FONT face="Courier New, Courier, mono">IDENTIFICATION DIVISION.
+PROGRAM-ID. SequenceProgram.
+AUTHOR. Michael Coughlan. </FONT>                    </PRE>
+                  <PRE><FONT face="Courier New, Courier, mono">DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 Num1 PIC 9 VALUE ZEROS.
+01 Num2 PIC 9 VALUE ZEROS.
+01 Result PIC 99 VALUE ZEROS.</FONT></PRE>
+                  <PRE><B><FONT face="Courier New, Courier, mono">
+PROCEDURE DIVISION.
+CalculateResult.
+   ACCEPT Num1.
+   ACCEPT Num2.
+   MULTIPLY Num1 BY Num2 GIVING Result.
+   DISPLAY &quot;Result is = &quot;, Result.
+   STOP RUN.</FONT></B>
+                   </PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <P>&nbsp;</P>
+            <P>Some COBOL compilers require that all the divisions be present 
+              in a program while others only require the <FONT size="-1">IDENTIFICATION 
+              DIVISION</FONT> and the <FONT size="-1">PROCEDURE DIVISION</FONT>. 
+              For instance the program shown below is perfectly valid when compiled 
+              with the Microfocus NetExpress compiler.</P>
+            <P align="center"><B>Minimum COBOL program</B></P>
+            <TABLE width="390" border="1" align="center" background="Resources%5Cpics%5Ccode.gif" cellpadding="5">
+              <TR> 
+                <TD height="130"> 
+                  <PRE><B>IDENTIFICATION DIVISION.<BR>PROGRAM-ID.  SmallestProgram.</B></PRE>
+                  <PRE><B>PROCEDURE DIVISION.
+DisplayGreeting.
+   DISPLAY &quot;Hello world&quot;.
+   STOP RUN.</B>
+                   </PRE>
+                </TD>
+              </TR>
+            </TABLE>
+            <P>&nbsp;</P>
+            <p align="left">&nbsp; </p>
+          </TD>
+        </TR>
+        <TR> 
+          <TD align="left" bgcolor="#FFFFFF" colspan="2"> 
+            <hr width="100%">
+            <DIV align="center"> 
+              <P><A href="#top"> <IMG src="Resources/pics/i-pagetop.gif" width="132" height="38" border="0"></A> 
+              </P>
+              <HR>
+              <H3 align="center">Copyright Notice</H3>
+              <P align="center">These COBOL course materials are the copyright 
+                property of Michael Coughlan.</P>
+              <P align="left"><FONT size="2">All rights reserved. No part of these 
+                course materials may be reproduced in any form or by any means 
+                - graphic, electronic, mechanical, photocopying, printing, recording, 
+                taping or stored in an information storage and retrieval system 
+                - without the written permission of </FONT><FONT size="2">the 
+                author.</FONT></P>
+              <P align="center"><FONT size="2">(c) Michael Coughlan</FONT></P>
+              <HR align="left">
+              <DIV align="left"><I><FONT size=-1>Last updated : April 2002</FONT></I> 
+                <BR>
+                <FONT size=-1><A href="mailto:michael.coughlan@ul.ie">e-mail : 
+                CSISwebeditor@ul.ie</A></FONT> </DIV>
+            </DIV>
+          </TD>
+        </TR>
+      </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+</BODY>
+</HTML>
