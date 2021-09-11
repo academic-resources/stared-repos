@@ -1,0 +1,86 @@
+doctype html
+head
+  // meta data
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // import bootstrap imports
+  script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+  // import the webpage's stylesheet
+  link(rel='stylesheet' href='/style.css')
+  // import the webpage's javascript file
+  script(src='/search.js' defer='')
+  // HEAD CODE STARTS HERE
+  title 355 Project
+// NAVBAR
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.shadow
+  ul.navbar-nav
+    li.nav-item.active
+      a.nav-link.text-success(href='index.html') Home
+    li.nav-item.dropdown
+      a#dropdowncourse.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown') Course
+      .dropdown-menu(aria-labelledby='dropdowncourse')
+        a.dropdown-item(href='https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanFall2019') Zybook
+        .dropdown-divider
+        a.dropdown-item(href='https://app.tophat.com/e/648883/lecture/') Tophat
+        .dropdown-divider
+        a.dropdown-item(href='https://drive.google.com/drive/folders/1AsHhIFfQ3yNE_m2z4wswRfKh77K0UH9w') Google Drive
+        .dropdown-divider
+        a.dropdown-item(href='https://www.w3schools.com/') W3Schools
+    li.nav-item.dropdown
+      a#dropdownabout.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown') About
+      .dropdown-menu(aria-labelledby='dropdownabout')
+        a.dropdown-item(href='developers.html')  Developers
+        .dropdown-divider
+        a.dropdown-item(href='contact.html') Contact Us
+    li.nav-item.dropdown
+      a#dropdownbrowser.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown') Browser
+      .dropdown-menu(aria-labelledby='dropdownbrowser')
+        a.dropdown-item(href='navigator.html') Navigator
+        .dropdown-divider
+        a.dropdown-item(href='window.html') Window
+        .dropdown-divider
+        a.dropdown-item(href='screen.html') Screen
+        .dropdown-divider
+        a.dropdown-item(href='location.html') Location
+        .dropdown-divider
+        a.dropdown-item(href='geolocation.html') Geolocation
+    li.nav-item.dropdown
+      a#navbarSearchDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown') Search
+      .dropdown-menu(aria-labelledby='navbarSearchDropdown')
+        a.dropdown-item(href='search.html') Google Search
+        a.dropdown-item(href='customSearch.html') Custom Search
+        a.dropdown-item(href='admin') Admin Page
+form.d-flex.justify-content-center.p-3(action='admin' method='post' enctype='application/x-www-form-urlencoded')
+  .card.shadow.bg-white.rounded.w-75.text-center.p-3
+    if hasMessage
+      .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+        strong #{message}
+        button.close(type='button' data-dismiss='alert' aria-label='Close')
+          span(aria-hidden='true') &times;
+    .card-body.text-center
+      h3.pb-1.text-danger  ADMIN
+      .form-group
+        input.form-control(name='indexLink' type='text' placeholder='Enter link to index')
+        input#level(type='number' name='level' min='1' max='3')
+        label.m-1(for='level') level
+      button.btn.btn-danger.w-50(type='submit') Submit
+.card.shadow.bg-white.rounded.my-3.py-1
+  .card-body.d-flex.justify-content-between
+    .font-weight-bold.text-center SearchId
+    .font-weight-bold.text-center Terms
+    .font-weight-bold.text-center Result Count
+    .font-weight-bold.text-center Date
+each row, index in topSearches  
+  - var searchId = row.searchId
+  - var terms = row.terms
+  - var count = row.count
+  - var searchDate = row.searchDate
+  .card.shadow.bg-white.rounded.my-3.py-1
+    .card-body.d-flex.justify-content-between
+      .text-center #{searchId}
+      .text-center #{terms}
+      .text-center #{count}
+      .text-center #{searchDate}

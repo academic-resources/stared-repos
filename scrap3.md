@@ -357,23 +357,5 @@ git clone  https://github.com/jm-alan/JSJ-retooling
 git clone  https://github.com/cellomatt/musiconimbus
 git clone  https://github.com/c4software/python-sitemap
 git clone  https://github.com/dthree/vorpal
-git clone  https://github.com/bvaughn/js-search
-git clone  https://github.com/glennjones/mani
-git clone  https://github.com/cebe/js-search
-git clone  https://github.com/Shobandeep/Simple-Search-Engine
-git clone  https://github.com/giorgosera/simple-search
-git clone  https://github.com/lucaong/minisearch
-git clone  https://github.com/AnthonySigogne/web-search-engine
-git clone  https://github.com/meilisearch/MeiliSearch
-git clone  https://github.com/trein/simple-search-engine
-git clone  https://github.com/SimoneStefani/simple-search-engine
-git clone  https://github.com/open-guides/og-search-engineering
-git clone  https://github.com/willmcgugan/rich
-git clone  https://github.com/surfcodes/surf
-git clone  https://github.com/Tonejs/Tone.js
-git clone  https://github.com/cdr/code-server
-git clone  https://github.com/zhuyingda/webster
-git clone  https://github.com/scotch-io/node-web-scraper
-git clone  https://github.com/learn-co-curriculum/javascript-fetch-lab
 
 

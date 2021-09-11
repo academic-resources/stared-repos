@@ -1,0 +1,42 @@
+{
+  "name": "mani",
+  "version": "0.1.1",
+  "description": "Pure javascript search - browser and node.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "app.js",
+    "build-browser": "browserify lib/index.js -s Fulcrum > fulcrum.js",
+    "test": "make test"
+  },
+  "keywords": [
+    "mani",
+    "fts",
+    "free text",
+    "facets"
+  ],
+  "author": "Glenn Jones <glennjonesnet@gmail.com> (http://glennjones.net/)",
+  "license": "MIT",
+  "homepage": "https://github.com/glennjones/mani",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/glennjones/mani.git"
+  },
+  "dependencies": {
+    "geolib": "2.0.x",
+    "lodash": "3.6.x",
+    "localforage": "1.4.x",
+    "lunr": "0.7.x"
+  },
+  "devDependencies": {
+    "chai": "2.2.x",
+    "grunt": "0.4.x",
+    "grunt-contrib-concat": "0.5.x",
+    "grunt-contrib-copy": "0.8.x",
+    "grunt-contrib-jshint": "0.11.x",
+    "grunt-contrib-uglify": "0.9.x",
+    "grunt-contrib-watch": "0.6.x",
+    "grunt-lodash": "^0.4.0",
+    "lodash-cli": "^3.8.0",
+    "mocha": "2.2.x"
+  }
+}

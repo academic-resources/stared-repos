@@ -1,0 +1,22 @@
+---
+on:
+  release:
+    types: [released]
+
+name: Publish latest image to Docker Hub
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check if current release is latest
+        run: echo "##[set-output name=is_latest;]$(sh .github/is-latest-release.sh)"
+        id: release
+      - name: Publish to Registry
+        if: steps.release.outputs.is_latest == 'true'
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: getmeili/meilisearch
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
