@@ -1,0 +1,21 @@
+{
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "outDir": "./typescript-built",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false
+  },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended"
+}
