@@ -1,0 +1,23 @@
+{
+  "name": "todolistapi",
+  "version": "1.0.0",
+  "description": "RESTful todoListApi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "Tutorial"
+  ],
+  "author": "Oliver Almalel",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.8"
+  }
+}
