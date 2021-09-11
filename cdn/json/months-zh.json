@@ -1,13 +1,6 @@
 {
     "sixMonths": {
-        "months": [
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
-        ]
+        "months": ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     },
     "year": {
         "months": [

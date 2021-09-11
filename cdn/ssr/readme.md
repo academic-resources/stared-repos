@@ -6,10 +6,9 @@
 
 https://cdn.xgqfrms.xyz/ssr/template/index.html
 
-
 https://cdn.xgqfrms.xyz/json/ssr/posts.json
 
-***
+---
 
 # puppeteer ssr
 
@@ -17,13 +16,9 @@ https://developers.google.com/web/tools/puppeteer/articles/ssr
 
 http://localhost/index.html
 
-
 https://github.com/GoogleChromeLabs/devwebfeed
 
-
 https://cdn.xgqfrms.xyz/json/ssr/posts.json
-
-
 
 ```sh
 # es modules
@@ -40,6 +35,3 @@ https://github.com/GoogleChromeLabs/devwebfeed/blob/master/ssr.mjs
 https://prerender.io/
 
 https://github.com/prerender/prerender/
-
-
-

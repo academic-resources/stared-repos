@@ -41,11 +41,7 @@
                             "Sort": {
                                 "type": "string",
                                 "Description": "排序方式，升序或者降序",
-                                "enum": [
-                                    "asc(升序)",
-                                    "desc(降序)",
-                                    "no(无序)"
-                                ]
+                                "enum": ["asc(升序)", "desc(降序)", "no(无序)"]
                             }
                         }
                     }
@@ -74,10 +70,7 @@
                     "type": "string",
                     "Description": "返回的数据协议格式",
                     "DefaultValue": "binary",
-                    "enum": [
-                        "json(json文本格式)",
-                        "binary(二维表二进制格式)"
-                    ]
+                    "enum": ["json(json文本格式)", "binary(二维表二进制格式)"]
                 },
                 "OutField": {
                     "type": "array",

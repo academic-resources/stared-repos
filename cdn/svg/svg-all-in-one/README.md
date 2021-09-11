@@ -6,7 +6,6 @@ https://codepen.io/xgqfrms/pen/bGNaZeV
 
 https://cdn.xgqfrms.xyz/svg/svg-all-in-one/svg-path.html
 
-
 ## svg polygon to path
 
 https://cdn.xgqfrms.xyz/svg/seat.svg

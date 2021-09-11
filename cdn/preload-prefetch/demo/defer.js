@@ -17,4 +17,4 @@
 
 // const log = console.log;
 
-log(`defer.js`)
+log(`defer.js`);

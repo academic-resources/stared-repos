@@ -20,13 +20,12 @@
  *
  */
 
-
 // IIFE
 (() => {
-  const log = console.log;
-  log(`this is normal.js`);
-  const app = document.getElementById("app");
-  if(app) {
-    app.insertAdjacentHTML(`beforeend`, `<p>normal.js loaded!</p>`);
-  }
+    const log = console.log;
+    log(`this is normal.js`);
+    const app = document.getElementById("app");
+    if (app) {
+        app.insertAdjacentHTML(`beforeend`, `<p>normal.js loaded!</p>`);
+    }
 })();

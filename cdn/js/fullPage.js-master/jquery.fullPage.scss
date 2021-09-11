@@ -10,10 +10,10 @@ html.fp-enabled,
 .fp-enabled body {
     margin: 0;
     padding: 0;
-    overflow:hidden;
+    overflow: hidden;
 
     /*Avoid flicker on slides transitions for mobile phones #336 */
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 #superContainer {
     height: 100%;
@@ -34,21 +34,23 @@ html.fp-enabled,
 .fp-slide {
     float: left;
 }
-.fp-slide, .fp-slidesContainer {
+.fp-slide,
+.fp-slidesContainer {
     height: 100%;
     display: block;
 }
 .fp-slides {
-    z-index:1;
+    z-index: 1;
     height: 100%;
     overflow: hidden;
     position: relative;
     -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
     transition: all 0.3s ease-out;
 }
-.fp-section.fp-table, .fp-slide.fp-table {
+.fp-section.fp-table,
+.fp-slide.fp-table {
     display: table;
-    table-layout:fixed;
+    table-layout: fixed;
     width: 100%;
 }
 .fp-tableCell {
@@ -70,9 +72,9 @@ html.fp-enabled,
     height: 0;
     border-style: solid;
     margin-top: -38px;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 
     &.fp-prev {
         left: 15px;
@@ -94,7 +96,7 @@ html.fp-enabled,
     -webkit-transition: none !important;
     transition: none !important;
 }
-.fp-slidesNav{
+.fp-slidesNav {
     position: absolute;
     z-index: 4;
     left: 50%;
@@ -119,7 +121,7 @@ html.fp-enabled,
         width: 14px;
         height: 13px;
         margin: 7px;
-        position:relative;
+        position: relative;
 
         a {
             display: block;
@@ -164,7 +166,6 @@ html.fp-enabled,
         }
 
         &:hover {
-
             a {
                 span {
                     width: 10px;
@@ -173,7 +174,6 @@ html.fp-enabled,
                 }
             }
         }
-
     }
 }
 #fp-nav {
@@ -182,12 +182,12 @@ html.fp-enabled,
     margin-top: -32px;
     top: 50%;
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
     &.right {
-       right: 17px;
+        right: 17px;
     }
     &.left {
-        left: 17px
+        left: 17px;
     }
     ul {
         li {
@@ -209,7 +209,6 @@ html.fp-enabled,
                 }
 
                 &.left {
-
                 }
             }
             &:hover {
@@ -234,7 +233,7 @@ html.fp-enabled,
 }
 .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,
-.fp-auto-height .fp-tableCell{
+.fp-auto-height .fp-tableCell {
     height: auto !important;
 }
 
@@ -276,7 +275,7 @@ html.fp-enabled,
 
 @media print {
     html.fp-enabled,
-    .fp-enabled body{
+    .fp-enabled body {
         overflow: visible !important;
         height: auto !important;
     }
@@ -304,12 +303,26 @@ html.fp-enabled,
         display: none !important;
     }
     /* Need to reduce the size of the fonts for printing */
-    h1 { font-size: 28pt !important; }
-    h2 { font-size: 24pt !important; }
-    h3 { font-size: 22pt !important; }
-    h4 { font-size: 22pt !important; font-variant: small-caps; }
-    h5 { font-size: 21pt !important; }
-    h6 { font-size: 20pt !important; font-style: italic; }
+    h1 {
+        font-size: 28pt !important;
+    }
+    h2 {
+        font-size: 24pt !important;
+    }
+    h3 {
+        font-size: 22pt !important;
+    }
+    h4 {
+        font-size: 22pt !important;
+        font-variant: small-caps;
+    }
+    h5 {
+        font-size: 21pt !important;
+    }
+    h6 {
+        font-size: 20pt !important;
+        font-style: italic;
+    }
 
     .fp-section,
     .fp-tableCell,
@@ -318,7 +331,7 @@ html.fp-enabled,
         width: 100% !important;
         height: auto !important;
         display: block !important;
-        position:relative;
+        position: relative;
         float: none !important;
     }
     .fp-slidesContainer {
@@ -382,5 +395,4 @@ html.fp-enabled,
     .fp-slide {
         page-break-after: always !important;
     }
-
 }

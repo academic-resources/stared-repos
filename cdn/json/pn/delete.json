@@ -1,6 +1,6 @@
 {
-  "success": true,
-  "code": 200,
-  "errorCode": 404,
-  "data": "delete success"
+    "success": true,
+    "code": 200,
+    "errorCode": 404,
+    "data": "delete success"
 }

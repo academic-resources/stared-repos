@@ -14,15 +14,14 @@
  *
  */
 
+var polys = document.querySelectorAll("polygon,polyline");
+[].forEach.call(polys, convertPolyToPath);
 
-var polys = document.querySelectorAll('polygon,polyline');
-[].forEach.call(polys,convertPolyToPath);
-
-function convertPolyToPath(poly){
-  var svgNS = poly.ownerSVGElement.namespaceURI;
-  var path = document.createElementNS(svgNS,'path');
-  var pathdata = 'M '+poly.getAttribute('points');
-  if (poly.tagName=='polygon') pathdata+='z';
-  path.setAttribute('d',pathdata);
-  poly.parentNode.replaceChild(path,poly);
+function convertPolyToPath(poly) {
+    var svgNS = poly.ownerSVGElement.namespaceURI;
+    var path = document.createElementNS(svgNS, "path");
+    var pathdata = "M " + poly.getAttribute("points");
+    if (poly.tagName == "polygon") pathdata += "z";
+    path.setAttribute("d", pathdata);
+    poly.parentNode.replaceChild(path, poly);
 }

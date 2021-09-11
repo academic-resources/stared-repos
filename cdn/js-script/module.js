@@ -24,25 +24,21 @@ const log = console.log;
 
 // IIFE
 (() => {
-  const log = console.log;
-  log(`this is module.js`);
-  const app = document.getElementById("app");
-  if(app) {
-    app.insertAdjacentHTML(`beforeend`, `<p>module.js loaded!</p>`);
-  }
+    const log = console.log;
+    log(`this is module.js`);
+    const app = document.getElementById("app");
+    if (app) {
+        app.insertAdjacentHTML(`beforeend`, `<p>module.js loaded!</p>`);
+    }
 })();
 
-
 const sum = (a, b) => {
-  // const log = console.log;
-  const result = a + b;
-  log(`result =`, result);
-  return result;
-}
-
-export {
-  sum,
+    // const log = console.log;
+    const result = a + b;
+    log(`result =`, result);
+    return result;
 };
 
-export default sum;
+export { sum };
 
+export default sum;

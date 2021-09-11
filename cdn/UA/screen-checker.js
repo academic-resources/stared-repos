@@ -6,7 +6,7 @@
  * @modified 2021.02.23
  */
 class ScreenChecker {
-    constructor () {
+    constructor() {
         this.screen = window.screen;
         this.fullscreen = false;
         this.screenSize = {
@@ -15,11 +15,8 @@ class ScreenChecker {
         };
         this.init();
     }
-    getScreenSize () {
-        const {
-            height,
-            width,
-        } = this.screen;
+    getScreenSize() {
+        const { height, width } = this.screen;
         this.screenSize = {
             width,
             height,
@@ -29,33 +26,25 @@ class ScreenChecker {
             height,
         };
     }
-    isFullScreen () {
+    isFullScreen() {
         // 全屏判断逻辑，可用的屏幕大小等于实际的屏幕大小, 浏览器地址栏高度为 0
         // availLeft, availTop, 👎 不推荐使用
-        const {
-            availHeight,
-            availWidth,
-            height,
-            width,
-        } = this.screen;
-        this.fullscreen = (availHeight === height && availWidth === width);
+        const { availHeight, availWidth, height, width } = this.screen;
+        this.fullscreen = availHeight === height && availWidth === width;
         return this.fullscreen;
     }
-    getDepth () {
-        const {
-            colorDepth,
-            pixelDepth,
-        } = this.screen;
+    getDepth() {
+        const { colorDepth, pixelDepth } = this.screen;
         return {
             colorDepth,
             pixelDepth,
         };
     }
-    isScreenResized () {
+    isScreenResized() {
         // TODO: 屏幕缩放检测
         return false;
     }
-    getOrientation () {
+    getOrientation() {
         // 屏幕方向，判断屏幕是否旋转
         const {
             orientation: {
@@ -70,11 +59,11 @@ class ScreenChecker {
         };
     }
     // static 里面不能使用 this, 仅用于 pure function， utils
-    init () {
+    init() {
         this.getScreenSize();
         this.isFullScreen();
     }
-    getAll () {
+    getAll() {
         return {
             screen: this.screen,
             fullscreen: this.fullscreen,
@@ -88,5 +77,3 @@ class ScreenChecker {
 // };
 
 // export default ScreenChecker;
-
-

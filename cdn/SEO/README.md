@@ -2,7 +2,6 @@
 
 > SEO
 
-
 ## multi subdomain
 
 https://cdn.xgqfrms.xyz
@@ -16,7 +15,6 @@ https://sh.cdn.xgqfrms.xyz
 https://gz.cdn.xgqfrms.xyz
 
 https://sz.cdn.xgqfrms.xyz
-
 
 > demo
 

@@ -1,20 +1,20 @@
 {
-    "menu":{
-        "id":"file",
-        "value":"File",
-        "popup":{
-            "menuitem":[
+    "menu": {
+        "id": "file",
+        "value": "File",
+        "popup": {
+            "menuitem": [
                 {
-                    "value":"New",
-                    "onclick":"CreateNewDoc()"
+                    "value": "New",
+                    "onclick": "CreateNewDoc()"
                 },
                 {
-                    "value":"Open",
-                    "onclick":"OpenDoc()"
+                    "value": "Open",
+                    "onclick": "OpenDoc()"
                 },
                 {
-                    "value":"Close",
-                    "onclick":"CloseDoc()"
+                    "value": "Close",
+                    "onclick": "CloseDoc()"
                 }
             ]
         }

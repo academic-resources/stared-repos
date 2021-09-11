@@ -182,28 +182,34 @@
                 "apiname": null,
                 "name": "WEBF10",
                 "toggled": false,
-                "children": [{
-                    "apiname": null,
-                    "name": "财务概况",
-                    "toggled": false,
-                    "children": [{
+                "children": [
+                    {
                         "apiname": null,
-                        "name": "财务指标",
+                        "name": "财务概况",
                         "toggled": false,
-                        "children": [{
-                            "apiname": "F10.FinanceIndicator.Primary",
-                            "name": "主要指标",
-                            "toggled": false,
-                            "children": null,
-                            "active": false,
-                            "loading": false
-                        }],
+                        "children": [
+                            {
+                                "apiname": null,
+                                "name": "财务指标",
+                                "toggled": false,
+                                "children": [
+                                    {
+                                        "apiname": "F10.FinanceIndicator.Primary",
+                                        "name": "主要指标",
+                                        "toggled": false,
+                                        "children": null,
+                                        "active": false,
+                                        "loading": false
+                                    }
+                                ],
+                                "active": false,
+                                "loading": false
+                            }
+                        ],
                         "active": false,
                         "loading": false
-                    }],
-                    "active": false,
-                    "loading": false
-                }],
+                    }
+                ],
                 "active": false,
                 "loading": false
             },

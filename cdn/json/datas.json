@@ -11,7 +11,8 @@
     "ToolBar": {
         "name": "lcToolbar",
         "Caption": "工具栏",
-        "Button": [{
+        "Button": [
+            {
                 "name": "btnRequest"
             },
             {
@@ -37,7 +38,8 @@
                 "showhead": "false",
                 "AutoNodeHeight": "true",
                 "ShowButton": "false",
-                "Row": [{
+                "Row": [
+                    {
                         "RName": "row1",
                         "heigh": "220"
                     },
@@ -46,7 +48,8 @@
                         "heigh": "700"
                     }
                 ],
-                "Column": [{
+                "Column": [
+                    {
                         "filedname": "chiName",
                         "caption": "公司名称"
                     },
@@ -54,7 +57,8 @@
                         "filedname": "oldName",
                         "functype": "ftStaticTable",
                         "caption": "曾用名",
-                        "Column": [{
+                        "Column": [
+                            {
                                 "filedname": "changedate",
                                 "caption": "变更日期",
                                 "width": "100"
@@ -92,7 +96,8 @@
                         "functype": "ftStaticTable",
                         "caption": "总经理",
                         "ParamEx": "reverse",
-                        "Column": [{
+                        "Column": [
+                            {
                                 "filedname": "Name",
                                 "caption": "姓名",
                                 "width": "90"
@@ -116,7 +121,8 @@
                         "functype": "ftStaticTable",
                         "caption": "董事长",
                         "ParamEx": "reverse",
-                        "Column": [{
+                        "Column": [
+                            {
                                 "filedname": "Name",
                                 "caption": "姓名",
                                 "width": "90"
@@ -140,7 +146,8 @@
                         "functype": "ftStaticTable",
                         "caption": "董事会秘书",
                         "ParamEx": "reverse",
-                        "Column": [{
+                        "Column": [
+                            {
                                 "filedname": "Name",
                                 "caption": "姓名",
                                 "width": "90"

@@ -1,32 +1,32 @@
 {
-  "state": 200,
-  "success": true,
-  "page": {
-    "current": 2,
-    "size": 10,
-    "total": 100
-  },
-  "data": [
-    {
-      "putId": "111",
-      "putLink": "http://ab.ufo.xyz/111",
-      "title": "引导下载",
-      "subtitle": "引导下载图片以演出为维度，可配置文字",
-      "putTime": ""
+    "state": 200,
+    "success": true,
+    "page": {
+        "current": 2,
+        "size": 10,
+        "total": 100
     },
-    {
-      "putId": "222",
-      "putLink": "http://ab.ufo.xyz/222",
-      "title": "超过字符限制，弹窗文案提醒",
-      "subtitle": "备注：超过字符限制",
-      "putTime": ""
-    },
-    {
-      "putId": "333",
-      "putLink": "http://ab.ufo.xyz/333",
-      "title": "",
-      "subtitle": "",
-      "putTime": ""
-    }
-  ]
+    "data": [
+        {
+            "putId": "111",
+            "putLink": "http://ab.ufo.xyz/111",
+            "title": "引导下载",
+            "subtitle": "引导下载图片以演出为维度，可配置文字",
+            "putTime": ""
+        },
+        {
+            "putId": "222",
+            "putLink": "http://ab.ufo.xyz/222",
+            "title": "超过字符限制，弹窗文案提醒",
+            "subtitle": "备注：超过字符限制",
+            "putTime": ""
+        },
+        {
+            "putId": "333",
+            "putLink": "http://ab.ufo.xyz/333",
+            "title": "",
+            "subtitle": "",
+            "putTime": ""
+        }
+    ]
 }

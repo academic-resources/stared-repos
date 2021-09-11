@@ -1,9 +1,7 @@
-
 Statistics on changes in institutional shareholding
 机构持股变动统计
 
 institutional-shareholding-change-statistics
-
 
 stock/turnover Volume Trading volume
 股价/成交量
@@ -19,7 +17,6 @@ Agency Research Statistics
 机构调研统计
 
 agency-research-statistics
-
 
 Research Report
 研究报告
@@ -49,7 +46,6 @@ Difference trend
 
 financing-and-margin-balance-difference-trend
 
-
 Capital flows to large single statistics in recent January
 近一月资金流向大单统计
 
@@ -58,17 +54,15 @@ Nearly one months of capital flows to large single statistics
 
 monthly-capital-flows-large-single-statistics
 
-
 Equity pledge
 股权质押
 equity-pledge
 
-Holdings participation 
+Holdings participation
 控股参股情况
 Holding status / Participation situation
 
 holdings-participation-situation
-
 
 Changes in the shareholding of executives
 Changes in executive stock ownership
@@ -80,12 +74,7 @@ changes-shareholding-executives
 
 ③
 
-
 机构调研统计
-
-
-
-
 
 news:新闻，
 bulletion:公告，
@@ -102,49 +91,43 @@ research:研报，
 "stockfast09": 近一月资金流向大单统计
 "stockfast10": 股权质押
 "stockfast11": 控股或参股公司
-"stockfast12": 高管持股变动情况(取10条)
+"stockfast12": 高管持股变动情况(取 10 条)
 "stockfast13": 机构持股变动统计(机构投资者(主表明细数据))
 
 投资者关系 ??? template hidden
 
-
-
-
-每股指标: 
+每股指标:
 // CSS (元)
 {
-    "syjb": "每股收益-基本",
-    "syxs": "每股收益-稀释",
-    "sykcjb": "每股收益-扣除／基本",
-    "sykcxs": "每股收益-扣除／稀释",
-    "jzc": "每股净资产",
-    "jycsxjllje": "每股经营活动产生的现金流量净额",
-    "jyjs": "聚源计算",
-    "qbtb": "每股收益-期末股本摊薄",
-    "kcqbtb": "每股收益-扣除/期末股本摊薄",
-    "yyzsr": "每股营业总收入",
-    "yysr": "每股营业收入",
-    "sqlr": "每股息税前利润",
-    "zbgj": "每股资本公积",
-    "yygj": "每股盈余公积",
-    "wfplr": "每股未分配利润",
-    "lcsy": "每股留存收益",
-    "xjllje": "每股现金流量净额",
-    "qyzyxjll": "每股企业自由现金流量",
-    "gdzyxjll": "每股股东自由现金流量",
-    "bgq": "报告期",
-    "ssqh": "上市前后",
-    "bbgs": "报表格式",
-    "bblx": "报表类型",
-    "fbrq": "发布日期"
+"syjb": "每股收益-基本",
+"syxs": "每股收益-稀释",
+"sykcjb": "每股收益-扣除／基本",
+"sykcxs": "每股收益-扣除／稀释",
+"jzc": "每股净资产",
+"jycsxjllje": "每股经营活动产生的现金流量净额",
+"jyjs": "聚源计算",
+"qbtb": "每股收益-期末股本摊薄",
+"kcqbtb": "每股收益-扣除/期末股本摊薄",
+"yyzsr": "每股营业总收入",
+"yysr": "每股营业收入",
+"sqlr": "每股息税前利润",
+"zbgj": "每股资本公积",
+"yygj": "每股盈余公积",
+"wfplr": "每股未分配利润",
+"lcsy": "每股留存收益",
+"xjllje": "每股现金流量净额",
+"qyzyxjll": "每股企业自由现金流量",
+"gdzyxjll": "每股股东自由现金流量",
+"bgq": "报告期",
+"ssqh": "上市前后",
+"bbgs": "报表格式",
+"bblx": "报表类型",
+"fbrq": "发布日期"
 }
 
 let obj = {};
 copy(obj);
 paste obj to url ???
-
-
-
 
 ```js
 
@@ -153,7 +136,7 @@ let title = `${(arr[i].xwtitle !== undefined) ? arr[i].xwtitle : `🤓暂无 新
 
 
 {
-    
+
     "news": {
         name: "新闻",
         "xwtitle": "新闻标题",
@@ -197,7 +180,7 @@ let title = `${(arr[i].xwtitle !== undefined) ? arr[i].xwtitle : `🤓暂无 新
     "stockfast02": {
         name: "近期重要事项 / 近期中重要事项",
         rq: "日期",
-        sj: "事件", 
+        sj: "事件",
         nr: "内容"// 更多>> ???
     },
     "stockfast03": {
@@ -299,10 +282,10 @@ let title = `${(arr[i].xwtitle !== undefined) ? arr[i].xwtitle : `🤓暂无 新
     },
     "stockfast12": {
         name: "高管持股变动情况",
-        "bdr": "变动截止日",// 变动日期	
+        "bdr": "变动截止日",// 变动日期
         "mc": "股东名称",// 变动人姓名
         "fx": "方向",// 变动方向
-        "sl": "变动数量",// 变动股份数量(股)	
+        "sl": "变动数量",// 变动股份数量(股)
         "glgg": "关联高管",// 成交均价(元)
         "jyjj": "交易均价"
         // 变动比例(‰)
@@ -317,41 +300,37 @@ let title = `${(arr[i].xwtitle !== undefined) ? arr[i].xwtitle : `🤓暂无 新
 
 ```
 
-
 ```js
-
-    let obj = {
-        // name: "每股指标",
-        // bbgs:"报表格式",
-        // bblx:"报表类型",
-        // bgq:"报告期",
-        // fbrq:"发布日期",
-        // ssqh:"上市前后",// 上市公司公告 ???
-        syjb:"每股收益-基本",
-        syxs:"每股收益-稀释",
-        sykcjb:"每股收益-扣除／基本",
-        sykcxs:"每股收益-扣除／稀释",
-        jzc:"每股净资产",
-        jycsxjllje:"每股经营活动产生的现金流量净额",
-        jyjs:"聚源计算",// 聚源计算
-        qbtb:"每股收益-期末股本摊薄",
-        kcqbtb:"每股收益-扣除/期末股本摊薄",
-        yyzsr:"每股营业总收入",
-        yysr:"每股营业收入",
-        sqlr:"每股息税前利润",
-        zbgj:"每股资本公积",
-        yygj:"每股盈余公积",
-        wfplr:"每股未分配利润",
-        lcsy:"每股留存收益",
-        xjllje:"每股现金流量净额",
-        qyzyxjll:"每股企业自由现金流量",
-        gdzyxjll:"每股股东自由现金流量",
-    };
-    // Object.keys(obj);
-    // copy(JSON.stringify(Object.keys(obj)));
-    // [ "syjb", "syxs", "sykcjb", "sykcxs", "jzc", "jycsxjllje", "jyjs", "qbtb", "kcqbtb", "yyzsr", "yysr", "sqlr", "zbgj", "yygj", "wfplr", "lcsy", "xjllje", "qyzyxjll", "gdzyxjll" ]
-
-
+let obj = {
+    // name: "每股指标",
+    // bbgs:"报表格式",
+    // bblx:"报表类型",
+    // bgq:"报告期",
+    // fbrq:"发布日期",
+    // ssqh:"上市前后",// 上市公司公告 ???
+    syjb: "每股收益-基本",
+    syxs: "每股收益-稀释",
+    sykcjb: "每股收益-扣除／基本",
+    sykcxs: "每股收益-扣除／稀释",
+    jzc: "每股净资产",
+    jycsxjllje: "每股经营活动产生的现金流量净额",
+    jyjs: "聚源计算", // 聚源计算
+    qbtb: "每股收益-期末股本摊薄",
+    kcqbtb: "每股收益-扣除/期末股本摊薄",
+    yyzsr: "每股营业总收入",
+    yysr: "每股营业收入",
+    sqlr: "每股息税前利润",
+    zbgj: "每股资本公积",
+    yygj: "每股盈余公积",
+    wfplr: "每股未分配利润",
+    lcsy: "每股留存收益",
+    xjllje: "每股现金流量净额",
+    qyzyxjll: "每股企业自由现金流量",
+    gdzyxjll: "每股股东自由现金流量",
+};
+// Object.keys(obj);
+// copy(JSON.stringify(Object.keys(obj)));
+// [ "syjb", "syxs", "sykcjb", "sykcxs", "jzc", "jycsxjllje", "jyjs", "qbtb", "kcqbtb", "yyzsr", "yysr", "sqlr", "zbgj", "yygj", "wfplr", "lcsy", "xjllje", "qyzyxjll", "gdzyxjll" ]
 ```
 
 https://www.hcharts.cn/demo/highcharts
@@ -360,55 +339,48 @@ https://www.hcharts.cn/demo/highcharts/renderer
 
 https://www.hcharts.cn/demo/highcharts/wordcloud
 
-
 https://www.hcharts.cn/demo/highcharts/dynamic-master-detail
 https://www.hcharts.cn/demo/highcharts/column-negative
 
 https://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting#html
 http://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/legend/navigation/
 
-
-
 # SVG
 
 > modify css style
 
 ```js
+// svg style
+let svg_legends = document.querySelectorAll(`.highcharts-legend-item`);
+// svg_legend;
+console.log(`svg_legends = `, svg_legends);
+svg_legends.forEach((svg_legend, index) => {
+    console.log(`svg_legend, index`, svg_legend, index);
+    if (index < svg_legends.length - 1) {
+        svg_legend.lastChild;
+        svg_legend.lastChild.setAttribute(`x`, 0);
+        svg_legend.lastChild.setAttribute(`y`, 5);
+        svg_legend.lastChild.setAttribute(`width`, 17);
+        svg_legend.lastChild.setAttribute(`height`, 10);
+        svg_legend.lastChild.setAttribute(`rx`, 0);
+        svg_legend.lastChild.setAttribute(`ry`, 0);
+    }
+});
 
-    // svg style
-    let svg_legends = document.querySelectorAll(`.highcharts-legend-item`);
-    // svg_legend;
-    console.log(`svg_legends = `, svg_legends);
-    svg_legends.forEach(
-        (svg_legend, index) => {
-            console.log(`svg_legend, index`, svg_legend, index);
-            if (index < svg_legends.length - 1) {
-                svg_legend.lastChild;
-                svg_legend.lastChild.setAttribute(`x`, 0);
-                svg_legend.lastChild.setAttribute(`y`, 5);
-                svg_legend.lastChild.setAttribute(`width`, 17);
-                svg_legend.lastChild.setAttribute(`height`, 10);
-                svg_legend.lastChild.setAttribute(`rx`, 0);
-                svg_legend.lastChild.setAttribute(`ry`, 0);
-            }
-        }
-    );
-
-    // svg style
-    let svg_legend = document.querySelector(`.highcharts-legend-item`);
-    svg_legend;
-    svg_legend.lastChild;
-    svg_legend.lastChild.setAttribute(`x`, 0);
-    svg_legend.lastChild.setAttribute(`y`, 5);
-    svg_legend.lastChild.setAttribute(`width`, 17);
-    svg_legend.lastChild.setAttribute(`height`, 10);
-    svg_legend.lastChild.setAttribute(`rx`, 0);
-    svg_legend.lastChild.setAttribute(`ry`, 0);
-    /* 
+// svg style
+let svg_legend = document.querySelector(`.highcharts-legend-item`);
+svg_legend;
+svg_legend.lastChild;
+svg_legend.lastChild.setAttribute(`x`, 0);
+svg_legend.lastChild.setAttribute(`y`, 5);
+svg_legend.lastChild.setAttribute(`width`, 17);
+svg_legend.lastChild.setAttribute(`height`, 10);
+svg_legend.lastChild.setAttribute(`rx`, 0);
+svg_legend.lastChild.setAttribute(`ry`, 0);
+/* 
         <rect x="2" y="4" width="17" height="12" fill="#1a75bc" rx="0" ry="0" class="highcharts-point"></rect>
         <rect x="0" y="5" width="17" height="10" fill="#1a75bc" rx="0" ry="0" class="highcharts-point"></rect>
     */
-
 ```
 
 ```sh
@@ -418,7 +390,6 @@ $ browser-sync start --server --files "./*.*"
 ```
 
 ```css
-
 .fv-financing-and-margin-balance-difference-trend-hs-container {
     /* max-width: 544px;
     max-height: 295px; */
@@ -431,28 +402,20 @@ $ browser-sync start --server --files "./*.*"
     min-height: 295px;
     min-width: 544px;
 }
-
 ```
-
-
-
 
 https://www.hcharts.cn/demo/highstock
 
 https://www.hcharts.cn/demo/highstock/navigator-multiple-series
 https://www.hcharts.cn/demo/highstock/compare
 
-
 https://www.hcharts.cn/demo/highcharts/combo-dual-axes
 https://www.hcharts.cn/demo/highcharts/line-time-series
-
 
 https://www.hcharts.cn/demo/highcharts/combo-meteogram
 https://www.hcharts.cn/demo/highcharts/column-drilldown
 https://www.hcharts.cn/demo/highcharts/column-parsed
 https://www.hcharts.cn/demo/highcharts/combo-timeline
-
-
 
 https://xueqiu.com/
 
@@ -460,26 +423,24 @@ https://xueqiu.com/S/HKHSI
 
 https://raphaeljs.com/
 
-
-恒生指数，香港股市价格的重要指标，指数由若干只成份股（即蓝筹股）市值计算出来的，代表了香港交易所所有上市公司的12个月平均市值涵盖率的63%，恒生指数由恒生银行下属恒生指数有限公司负责计算及按季检讨，公布成份股调整。
-恒生指数，由香港恒生银行全资附属的恒生指数服务有限公司编制，是以香港股票市场中的50家上市股票为成份股样本，以其发行量为权数的加权平均股价指数，是反映香港股市价幅趋势最有影响的一种股价指数。
-该指数于1969年11月24日首次公开发布，基期为1964年7月31日．基期指数定为100。
-
-
-
+恒生指数，香港股市价格的重要指标，指数由若干只成份股（即蓝筹股）市值计算出来的，代表了香港交易所所有上市公司的 12 个月平均市值涵盖率的 63%，恒生指数由恒生银行下属恒生指数有限公司负责计算及按季检讨，公布成份股调整。
+恒生指数，由香港恒生银行全资附属的恒生指数服务有限公司编制，是以香港股票市场中的 50 家上市股票为成份股样本，以其发行量为权数的加权平均股价指数，是反映香港股市价幅趋势最有影响的一种股价指数。
+该指数于 1969 年 11 月 24 日首次公开发布，基期为 1964 年 7 月 31 日．基期指数定为 100。
 
 ```js
-
 const json = ((debug = false) => {
-    let body, str = text = "", beforeend = "beforeend", objs = {};
+    let body,
+        str = (text = ""),
+        beforeend = "beforeend",
+        objs = {};
     body = document.querySelector(`body`);
     str = body.innerText;
     let o = str.lastIndexOf("}"),
         a = str.lastIndexOf("]");
     if (o > a) {
-        str = str.substr(0, str.lastIndexOf("}")+1);
-    }else{
-        str = str.substr(0, str.lastIndexOf("]")+1);
+        str = str.substr(0, str.lastIndexOf("}") + 1);
+    } else {
+        str = str.substr(0, str.lastIndexOf("]") + 1);
     }
     html = body.innerHTML;
     objs = JSON.parse(str);
@@ -491,20 +452,21 @@ const json = ((debug = false) => {
     }
     text = JSON.stringify(objs, null, 4);
     body.innerHTML = "<div></div>";
-    body.firstChild.insertAdjacentHTML(beforeend, `<pre data-uid="string-to-json">${text}</pre>`);
+    body.firstChild.insertAdjacentHTML(
+        beforeend,
+        `<pre data-uid="string-to-json">${text}</pre>`
+    );
     copy(text);
     return text;
 })();
-
-
 
 const keys = (() => {
     const getAllKeys = (arr_or_obj = {}, debug = false) => {
-        let any = (typeof arr_or_obj === "object") ? arr_or_obj : {};
+        let any = typeof arr_or_obj === "object" ? arr_or_obj : {};
         let keys = [];
         if (Array.isArray(any)) {
             keys = Object.keys(any[0]);
-        }else{
+        } else {
             keys = Object.keys(any);
         }
         if (debug) {
@@ -521,29 +483,30 @@ const keys = (() => {
     let o = str.lastIndexOf("}"),
         a = str.lastIndexOf("]");
     if (o > a) {
-        str = str.substr(0, str.lastIndexOf("}")+1);
-    }else{
-        str = str.substr(0, str.lastIndexOf("]")+1);
+        str = str.substr(0, str.lastIndexOf("}") + 1);
+    } else {
+        str = str.substr(0, str.lastIndexOf("]") + 1);
     }
     let objs = JSON.parse(str),
         // keys = getAllKeys(objs);
         keys = getAllKeys(objs, true);
     text = JSON.stringify(keys, null, 4);
     body.innerHTML = "<div></div>";
-    body.firstChild.insertAdjacentHTML(`beforeend`, `<pre data-uid="string-to-json">${text}</pre>`);
+    body.firstChild.insertAdjacentHTML(
+        `beforeend`,
+        `<pre data-uid="string-to-json">${text}</pre>`
+    );
     copy(text);
     return text;
 })();
 
-
-
 const getAllKeys = () => {
     const getAllKeys = (arr_or_obj = {}, debug = false) => {
-        let any = (typeof arr_or_obj === "object") ? arr_or_obj : {};
+        let any = typeof arr_or_obj === "object" ? arr_or_obj : {};
         let keys = [];
         if (Array.isArray(any)) {
             keys = Object.keys(any[0]);
-        }else{
+        } else {
             keys = Object.keys(any);
         }
         if (debug) {
@@ -560,46 +523,27 @@ const getAllKeys = () => {
     let o = str.lastIndexOf("}"),
         a = str.lastIndexOf("]");
     if (o > a) {
-        str = str.substr(0, str.lastIndexOf("}")+1);
-    }else{
-        str = str.substr(0, str.lastIndexOf("]")+1);
+        str = str.substr(0, str.lastIndexOf("}") + 1);
+    } else {
+        str = str.substr(0, str.lastIndexOf("]") + 1);
     }
     let objs = JSON.parse(str),
         // keys = getAllKeys(objs);
         keys = getAllKeys(objs, true);
     text = JSON.stringify(keys, null, 4);
     body.innerHTML = "<div></div>";
-    body.firstChild.insertAdjacentHTML(`beforeend`, `<pre data-uid="string-to-json">${text}</pre>`);
+    body.firstChild.insertAdjacentHTML(
+        `beforeend`,
+        `<pre data-uid="string-to-json">${text}</pre>`
+    );
     copy(text);
     return text;
 };
 
-
-
 window.utils = {
     // keys: getAllKeys(),
-    keys: (() => getAllKeys())()
-}
+    keys: (() => getAllKeys())(),
+};
 
 window.utils.keys;
-
-
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

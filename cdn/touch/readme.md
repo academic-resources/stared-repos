@@ -2,17 +2,13 @@
 
 https://hammerjs.github.io/getting-started/
 
-
 ```js
-    // todo
-
+// todo
 ```
 
 https://hammerjs.github.io/dist/hammer.js
 
 https://hammerjs.github.io/dist/hammer.min.js
-
-
 
 https://cdn.xgqfrms.xyz/touch/hammer.js
 

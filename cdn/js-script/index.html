@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="author" content="xgqfrms">
-  <meta name="generator" content="VS code">
-  <title>js script all in one</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-  <link rel="stylesheet" href="./index.css">
-  <script>
-    /*
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="author" content="xgqfrms" />
+        <meta name="generator" content="VS code" />
+        <title>js script all in one</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+        <link rel="stylesheet" href="./index.css" />
+        <script>
+            /*
     (() => {
       const log = console.log;
       log(`js begin`);
     })();
     */
-    const log = console.log;
-    log(`js begin`);
-    const app = document.getElementById("app");
-    window.addEventListener(`load`, () => {
-      log(`HTML loaded!`);
-      if(app) {
-        app.insertAdjacentHTML(`beforeend`, `<p>HTML loaded!</p>`);
-      }
-    });
-    document.addEventListener(`DOMContentLoaded`, () => {
-      log(`DOMContentLoaded loaded!`);
-      if(app) {
-        app.insertAdjacentHTML(`beforeend`, `<p>DOMContentLoaded loaded!</p>`);
-      }
-    });
-  </script>
-  <!-- 下载完成，立即执行(顺序不确定) -->
-  <script async src="./async.js"></script>
-  <!--  在 DOMContentLoaded 前面执行(顺序确定) -->
-  <script defer src="./defer.js"></script>
-  <script src="./normal.js"></script>
-  <script type="text/javascript" src="./text-javascript.js"></script>
-  <!-- 不会处理, 被忽略 -->
-  <script type="other/types" src="other.js"></script>
-  <!-- <script type="module" src="./module.mjs">
+            const log = console.log;
+            log(`js begin`);
+            const app = document.getElementById("app");
+            window.addEventListener(`load`, () => {
+                log(`HTML loaded!`);
+                if (app) {
+                    app.insertAdjacentHTML(`beforeend`, `<p>HTML loaded!</p>`);
+                }
+            });
+            document.addEventListener(`DOMContentLoaded`, () => {
+                log(`DOMContentLoaded loaded!`);
+                if (app) {
+                    app.insertAdjacentHTML(
+                        `beforeend`,
+                        `<p>DOMContentLoaded loaded!</p>`
+                    );
+                }
+            });
+        </script>
+        <!-- 下载完成，立即执行(顺序不确定) -->
+        <script async src="./async.js"></script>
+        <!--  在 DOMContentLoaded 前面执行(顺序确定) -->
+        <script defer src="./defer.js"></script>
+        <script src="./normal.js"></script>
+        <script type="text/javascript" src="./text-javascript.js"></script>
+        <!-- 不会处理, 被忽略 -->
+        <script type="other/types" src="other.js"></script>
+        <!-- <script type="module" src="./module.mjs">
     sum(1, 2);
   </script> -->
-  <!-- <script type="module" src="./module.js">
+        <!-- <script type="module" src="./module.js">
     sum(1, 2);
   </script> -->
-  <!-- <script type="module" src="./module.js">
+        <!-- <script type="module" src="./module.js">
     (() => {
       const log = console.log;
       log(`module.js`);
@@ -60,31 +63,31 @@
     import sum from "./module.js";
     sum(1, 2);
   </script> -->
-  <script type="module">
-    (() => {
-      const log = console.log;
-      log(`module.js`);
-    })();
-    import sum from "./module.js";
-    sum(1, 2);
-  </script>
-</head>
-<body>
-  <header>
-    <h1>js script all in one</h1>
-  </header>
-  <main>
-    <section id="app"></section>
-  </main>
-  <footer>
-    <p>copyright&copy; xgqfrms 2020</p>
-  </footer>
-  <!-- js -->
-  <script>
-    (() => {
-      const log = console.log;
-      log(`js end`);
-    })();
-  </script>
-</body>
+        <script type="module">
+            (() => {
+                const log = console.log;
+                log(`module.js`);
+            })();
+            import sum from "./module.js";
+            sum(1, 2);
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>js script all in one</h1>
+        </header>
+        <main>
+            <section id="app"></section>
+        </main>
+        <footer>
+            <p>copyright&copy; xgqfrms 2020</p>
+        </footer>
+        <!-- js -->
+        <script>
+            (() => {
+                const log = console.log;
+                log(`js end`);
+            })();
+        </script>
+    </body>
 </html>

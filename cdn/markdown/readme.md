@@ -8,8 +8,6 @@ https://typora.io/#windows
 
 chrome-extension://lhkmoheomjbkfloacpgllgjcamhihfaj/index.html
 
-
-
 # shape shit data
 
 http://10.1.5.203/http-report/query?{%22Page%22:{%22PageNo%22:%221%22,%22PageSize%22:%221%22},%22EndDate%22:%222011-03-11%22,%22MarketType%22:%22HSLS%22,%22DatePerformType%22:[%22RBX%22,%22JYZBX%22],%22SecuType%22:%22All%22,%22ApiName%22:%22JYTopic.StockSecondaryMarket.StockMarketPeform%22,%22WriteType%22:%22json%22}
@@ -18,52 +16,52 @@ http://10.1.5.203/http-report/query?{%22Page%22:{%22PageNo%22:%221%22,%22PageSiz
 
 > output url => test url
 
-> "a0".toUpperCase()  === "A0"
+> "a0".toUpperCase() === "A0"
 
 ```js
-
 [
     {
-        "name": "JYTopic.StockSecondaryMarket.StockMarketPeform",
-        "attributes": {
-            "numfound": "1",
-            "columns": "{\"cols\":[{\"name\":\"交易日期\",\"value\":\"a0\"},{\"name\":\"证券代码\",\"value\":\"a1\"},{\"name\":\"证券简称\",\"value\":\"a2\"},{\"name\":\"总市值(亿元)\",\"value\":\"a3\"},{\"name\":\"流通市值(亿元)\",\"value\":\"a4\"},{\"name\":\"市盈率\",\"value\":\"a5\"},{\"name\":\"市净率\",\"value\":\"a6\"},{\"name\":\"日表现\",\"cols\":[{\"name\":\"收盘价\",\"value\":\"ClosePrice\"},{\"name\":\"涨跌幅(%)\",\"value\":\"ChangePCT\"},{\"name\":\"振幅(%)\",\"value\":\"RangePCT\"},{\"name\":\"换手率(%)\",\"value\":\"TurnoverRate\"},{\"name\":\"成交量(万股)\",\"value\":\"TurnoverVolume\"},{\"name\":\"成交额(万元)\",\"value\":\"TurnoverValue\"},{\"name\":\"前收盘价\",\"value\":\"PrevClosePrice\"},{\"name\":\"开盘价\",\"value\":\"OpenPrice\"},{\"name\":\"最高价\",\"value\":\"HighPrice\"},{\"name\":\"最低价\",\"value\":\"LowPrice\"},{\"name\":\"均价\",\"value\":\"AvgPrice\"}]},{\"name\":\"近一周表现\",\"cols\":[{\"name\":\"涨跌幅(%)\",\"value\":\"ChangePCTRW\"},{\"name\":\"振幅(%)\",\"value\":\"RangePCTRW\"},{\"name\":\"换手率(%)\",\"value\":\"TurnoverRateRW\"},{\"name\":\"日均换手率(%)\",\"value\":\"TurnoverRatePerDayRW\"},{\"name\":\"成交量(万股)\",\"value\":\"TurnoverVolumeRW\"},{\"name\":\"成交额(万元)\",\"value\":\"TurnoverValueRW\"},{\"name\":\"日均成交额(万元)\",\"value\":\"TurnoverValuePerDayRW\"},{\"name\":\"最高价\",\"value\":\"HighPriceRW\"},{\"name\":\"最低价\",\"value\":\"LowPriceRW\"},{\"name\":\"收盘最高价\",\"value\":\"HighestClosePriceRW\"},{\"name\":\"收盘最低价\",\"value\":\"LowestClosePriceRW\"},{\"name\":\"均价\",\"value\":\"AvgPriceRW\"}]},{\"name\":\"证监会行业\",\"value\":\"a8\"},{\"name\":\"申万行业\",\"value\":\"a7\"}]}"
+        name: "JYTopic.StockSecondaryMarket.StockMarketPeform",
+        attributes: {
+            numfound: "1",
+            columns:
+                '{"cols":[{"name":"交易日期","value":"a0"},{"name":"证券代码","value":"a1"},{"name":"证券简称","value":"a2"},{"name":"总市值(亿元)","value":"a3"},{"name":"流通市值(亿元)","value":"a4"},{"name":"市盈率","value":"a5"},{"name":"市净率","value":"a6"},{"name":"日表现","cols":[{"name":"收盘价","value":"ClosePrice"},{"name":"涨跌幅(%)","value":"ChangePCT"},{"name":"振幅(%)","value":"RangePCT"},{"name":"换手率(%)","value":"TurnoverRate"},{"name":"成交量(万股)","value":"TurnoverVolume"},{"name":"成交额(万元)","value":"TurnoverValue"},{"name":"前收盘价","value":"PrevClosePrice"},{"name":"开盘价","value":"OpenPrice"},{"name":"最高价","value":"HighPrice"},{"name":"最低价","value":"LowPrice"},{"name":"均价","value":"AvgPrice"}]},{"name":"近一周表现","cols":[{"name":"涨跌幅(%)","value":"ChangePCTRW"},{"name":"振幅(%)","value":"RangePCTRW"},{"name":"换手率(%)","value":"TurnoverRateRW"},{"name":"日均换手率(%)","value":"TurnoverRatePerDayRW"},{"name":"成交量(万股)","value":"TurnoverVolumeRW"},{"name":"成交额(万元)","value":"TurnoverValueRW"},{"name":"日均成交额(万元)","value":"TurnoverValuePerDayRW"},{"name":"最高价","value":"HighPriceRW"},{"name":"最低价","value":"LowPriceRW"},{"name":"收盘最高价","value":"HighestClosePriceRW"},{"name":"收盘最低价","value":"LowestClosePriceRW"},{"name":"均价","value":"AvgPriceRW"}]},{"name":"证监会行业","value":"a8"},{"name":"申万行业","value":"a7"}]}',
         },
-        "columnMeta": {
-            "a0": "DATE",
-            "a1": "STRING",
-            "a2": "STRING",
-            "a3": "DOUBLE",
-            "a4": "DOUBLE",
-            "a5": "DOUBLE",
-            "a6": "DOUBLE",
-            "a7": "STRING",
-            "a8": "STRING",
-            "closeprice": "DOUBLE",
-            "changepct": "DOUBLE",
-            "rangepct": "DOUBLE",
-            "turnoverrate": "DOUBLE",
-            "turnovervolume": "DOUBLE",
-            "turnovervalue": "DOUBLE",
-            "prevcloseprice": "DOUBLE",
-            "openprice": "DOUBLE",
-            "highprice": "DOUBLE",
-            "lowprice": "DOUBLE",
-            "avgprice": "DOUBLE",
-            "changepctrw": "DOUBLE",
-            "rangepctrw": "DOUBLE",
-            "turnoverraterw": "DOUBLE",
-            "turnoverrateperdayrw": "DOUBLE",
-            "turnovervolumerw": "DOUBLE",
-            "turnovervaluerw": "DOUBLE",
-            "turnovervalueperdayrw": "DOUBLE",
-            "highpricerw": "DOUBLE",
-            "lowpricerw": "DOUBLE",
-            "highestclosepricerw": "DOUBLE",
-            "lowestclosepricerw": "DOUBLE",
-            "avgpricerw": "DOUBLE"
+        columnMeta: {
+            a0: "DATE",
+            a1: "STRING",
+            a2: "STRING",
+            a3: "DOUBLE",
+            a4: "DOUBLE",
+            a5: "DOUBLE",
+            a6: "DOUBLE",
+            a7: "STRING",
+            a8: "STRING",
+            closeprice: "DOUBLE",
+            changepct: "DOUBLE",
+            rangepct: "DOUBLE",
+            turnoverrate: "DOUBLE",
+            turnovervolume: "DOUBLE",
+            turnovervalue: "DOUBLE",
+            prevcloseprice: "DOUBLE",
+            openprice: "DOUBLE",
+            highprice: "DOUBLE",
+            lowprice: "DOUBLE",
+            avgprice: "DOUBLE",
+            changepctrw: "DOUBLE",
+            rangepctrw: "DOUBLE",
+            turnoverraterw: "DOUBLE",
+            turnoverrateperdayrw: "DOUBLE",
+            turnovervolumerw: "DOUBLE",
+            turnovervaluerw: "DOUBLE",
+            turnovervalueperdayrw: "DOUBLE",
+            highpricerw: "DOUBLE",
+            lowpricerw: "DOUBLE",
+            highestclosepricerw: "DOUBLE",
+            lowestclosepricerw: "DOUBLE",
+            avgpricerw: "DOUBLE",
         },
-        "rows": [
+        rows: [
             [
                 "2011-03-11",
                 "000001.SZ",
@@ -96,12 +94,11 @@ http://10.1.5.203/http-report/query?{%22Page%22:{%22PageNo%22:%221%22,%22PageSiz
                 16.03,
                 16.74,
                 16.05,
-                16.5679
-            ]
-        ]
-    }
-]
-
+                16.5679,
+            ],
+        ],
+    },
+];
 ```
 
 ## json
@@ -330,4 +327,3 @@ http://10.1.5.203/http-report/query?{%22Page%22:{%22PageNo%22:%221%22,%22PageSiz
 }
 
 ```
-

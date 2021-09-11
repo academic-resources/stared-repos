@@ -2,7 +2,6 @@
 
 https://github.com/cubiq/iscroll
 
-
 ```sh
 # browser-sync start --server --files './demos/*.*' && start http://localhost:3000/demos/index.html
 $ npm run open
@@ -11,7 +10,6 @@ $ npm run open
 
 http://localhost:3000/demos/index.html
 http://localhost:3000/demos/simple/index.html
-
 
 ## HTML
 
@@ -27,20 +25,18 @@ http://localhost:3000/demos/simple/index.html
 
 ```html
 <script type="text/javascript">
-    var myScroll = new IScroll('#wrapper');
+    var myScroll = new IScroll("#wrapper");
 </script>
 ```
 
-
 ```js
-var wrapper = document.getElementById('wrapper');
+var wrapper = document.getElementById("wrapper");
 var myScroll = new IScroll(wrapper);
 
 // OR
 
-var myScroll = new IScroll('.wrapper');
+var myScroll = new IScroll(".wrapper");
 ```
-
 
 ```html
 <head>
@@ -50,27 +46,28 @@ var myScroll = new IScroll('.wrapper');
     <script type="text/javascript">
         var myScroll;
         function loaded() {
-            myScroll = new IScroll('#wrapper');
+            myScroll = new IScroll("#wrapper");
         }
     </script>
 </head>
 
 <body onload="loaded()">
-<div id="wrapper">
-    <ul>
-        <li>...</li>
-        <li>...</li>
-        ...
-    </ul>
-</div>
+    <div id="wrapper">
+        <ul>
+            <li>...</li>
+            <li>...</li>
+            ...
+        </ul>
+    </div>
 </body>
 ```
+
 ## Configures
 
 ```js
-var myScroll = new IScroll('#wrapper', {
+var myScroll = new IScroll("#wrapper", {
     mouseWheel: true,
-    scrollbars: true
+    scrollbars: true,
 });
 ```
 
@@ -78,43 +75,36 @@ var myScroll = new IScroll('#wrapper', {
 console.dir(myScroll.options);
 ```
 
-
 ```js
-var myScroll = new IScroll('#wrapper', {
+var myScroll = new IScroll("#wrapper", {
     disableMouse: true,
-    disablePointer: true
+    disablePointer: true,
 });
 ```
 
-
 ```js
-element.addEventListener('tap', doSomething, false);
+element.addEventListener("tap", doSomething, false);
 // Native
 
-$('#element').on('tap', doSomething);
+$("#element").on("tap", doSomething);
 // jQuery
 ```
 
-
-
 ```js
-tap: 'myCustomTapEvent'
+tap: "myCustomTapEvent";
 ```
 
-
 ```js
-var myScroll = new IScroll('#wrapper', {
-    scrollbars: true
+var myScroll = new IScroll("#wrapper", {
+    scrollbars: true,
 });
 ```
 
-
 ```js
-var myScroll = new IScroll('#wrapper', {
-    scrollbars: 'custom'
+var myScroll = new IScroll("#wrapper", {
+    scrollbars: "custom",
 });
 ```
-
 
 ```js
 var myScroll = new IScroll('#wrapper', {
@@ -133,24 +123,21 @@ var myScroll = new IScroll('#wrapper', {
 });
 ```
 
-
 ```js
 indicators: {
-    el: document.getElementById('indicator')
+    el: document.getElementById("indicator");
 }
 
 // OR
 
 indicators: {
-    el: '#indicator'
+    el: "#indicator";
 }
 ```
-
 
 ```js
 myScroll.scrollTo(0, -100);
 ```
-
 
 ```js
 myScroll.scrollTo(0, -100, 1000, IScroll.utils.ease.elastic);
@@ -158,22 +145,19 @@ myScroll.scrollTo(0, -100, 1000, IScroll.utils.ease.elastic);
 
 > `quadratic`, `circular`, `back`, `bounce`, `elastic`.
 
-
-
 ```js
 myScroll.scrollBy(0, -10);
 ```
 
-
 ```js
-var myScroll = new IScroll('#wrapper', {
-    snap: true
+var myScroll = new IScroll("#wrapper", {
+    snap: true,
 });
 ```
 
 ```js
-var myScroll = new IScroll('#wrapper', {
-    snap: 'li'
+var myScroll = new IScroll("#wrapper", {
+    snap: "li",
 });
 ```
 
@@ -181,16 +165,13 @@ var myScroll = new IScroll('#wrapper', {
 myScroll.goToPage(10, 0, 1000);
 ```
 
-
-
 ```js
-myScroll = new IScroll('#wrapper', {
+myScroll = new IScroll("#wrapper", {
     zoom: true,
     mouseWheel: true,
-    wheelAction: 'zoom'
+    wheelAction: "zoom",
 });
 ```
-
 
 ```js
 bounceEasing: {
@@ -200,26 +181,26 @@ bounceEasing: {
 ```
 
 ```js
-preventDefaultException: { className: /(^|\s)formfield(\s|$)/ }
+preventDefaultException: {
+    className: /(^|\s)formfield(\s|$)/;
+}
 ```
 
-
 ```js
-ajax('page.php', onCompletion);
+ajax("page.php", onCompletion);
 
-function onCompletion () {
+function onCompletion() {
     // Update here your DOM
 
     setTimeout(function () {
         myScroll.refresh();
     }, 0);
-};
+}
 ```
 
-
 ```js
-myScroll = new IScroll('#wrapper');
-myScroll.on('scrollEnd', doSomething);
+myScroll = new IScroll("#wrapper");
+myScroll.on("scrollEnd", doSomething);
 ```
 
 ```js
@@ -235,11 +216,10 @@ keyBindings: {
 }
 ```
 
-
 ```js
-myScroll = new IScroll('#wrapper');
-myScroll.on('scrollEnd', function () {
-    if ( this.x < -1000 ) {
+myScroll = new IScroll("#wrapper");
+myScroll.on("scrollEnd", function () {
+    if (this.x < -1000) {
         // do something
     }
 });

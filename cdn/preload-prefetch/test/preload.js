@@ -25,13 +25,12 @@ log(`preload.js`);
 // }
 
 (() => {
-  const preload = document.querySelector(`[data-uid="preload"]`);
-  preload.innerText = `preload.js 预加载`;
-  log(`preload.js OK`);
-  // if(log) {
-  //   log(`preload.js OK`);
-  // } else {
-  //   console.log(`preload.js OK`);
-  // }
+    const preload = document.querySelector(`[data-uid="preload"]`);
+    preload.innerText = `preload.js 预加载`;
+    log(`preload.js OK`);
+    // if(log) {
+    //   log(`preload.js OK`);
+    // } else {
+    //   console.log(`preload.js OK`);
+    // }
 })();
-

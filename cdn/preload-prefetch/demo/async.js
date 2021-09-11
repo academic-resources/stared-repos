@@ -17,4 +17,4 @@
 
 // const log = console.log;
 
-log(`async.js`)
+log(`async.js`);

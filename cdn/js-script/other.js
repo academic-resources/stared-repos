@@ -20,13 +20,12 @@
  *
  */
 
-
 // IIFE
 (() => {
-  const log = console.log;
-  log(`others type ignore bug!`);
-  const app = document.getElementById("app");
-  if(app) {
-    app.insertAdjacentHTML(`beforeend`, `<p>other.js loaded!</p>`);
-  }
+    const log = console.log;
+    log(`others type ignore bug!`);
+    const app = document.getElementById("app");
+    if (app) {
+        app.insertAdjacentHTML(`beforeend`, `<p>other.js loaded!</p>`);
+    }
 })();

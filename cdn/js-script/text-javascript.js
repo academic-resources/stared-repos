@@ -20,13 +20,15 @@
  *
  */
 
-
 // IIFE
 (() => {
-  const log = console.log;
-  log(`this is text-javascript.js`);
-  const app = document.getElementById("app");
-  if(app) {
-    app.insertAdjacentHTML(`beforeend`, `<p>text-javascript.js loaded!</p>`);
-  }
+    const log = console.log;
+    log(`this is text-javascript.js`);
+    const app = document.getElementById("app");
+    if (app) {
+        app.insertAdjacentHTML(
+            `beforeend`,
+            `<p>text-javascript.js loaded!</p>`
+        );
+    }
 })();

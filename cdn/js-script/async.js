@@ -20,13 +20,12 @@
  *
  */
 
-
 // IIFE
 (() => {
-  const log = console.log;
-  log(`this is async.js`);
-  const app = document.getElementById("app");
-  if(app) {
-    app.insertAdjacentHTML(`beforeend`, `<p>async.js loaded!</p>`);
-  }
+    const log = console.log;
+    log(`this is async.js`);
+    const app = document.getElementById("app");
+    if (app) {
+        app.insertAdjacentHTML(`beforeend`, `<p>async.js loaded!</p>`);
+    }
 })();

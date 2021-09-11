@@ -1,94 +1,94 @@
 /*UA Start*/
 span.this_ua {
-    background-color: #ccc!important;
+    background-color: #ccc !important;
     border-radius: 4px;
-    padding: 0 5px!important;
-    margin: 0 1px!important;
-    border: 1px solid #BBB!important;
+    padding: 0 5px !important;
+    margin: 0 1px !important;
+    border: 1px solid #bbb !important;
     color: #fff;
 
     /*text-transform: Capitalize!important;
     float: right!important;
     line-height: 18px!important;*/
 }
-.this_ua.platform.Windows{
-    background-color: #39b3d7!important;
-    border-color: #46b8da!important;
+.this_ua.platform.Windows {
+    background-color: #39b3d7 !important;
+    border-color: #46b8da !important;
 }
 .this_ua.platform.Linux {
-    background-color: #3A3A3A!important;
-    border-color: #1F1F1F!important;
+    background-color: #3a3a3a !important;
+    border-color: #1f1f1f !important;
 }
 .this_ua.platform.Ubuntu {
-    background-color: #DD4814!important;
-    border-color: #DD4814!important;
+    background-color: #dd4814 !important;
+    border-color: #dd4814 !important;
 }
 .this_ua.platform.Mac {
-    background-color: #666666!important;
-    border-color: #666666!important;
+    background-color: #666666 !important;
+    border-color: #666666 !important;
 }
 .this_ua.platform.Android {
-    background-color: #98C13D!important;
-    border-color: #98C13D!important;
+    background-color: #98c13d !important;
+    border-color: #98c13d !important;
 }
 .this_ua.platform.iOS {
-    background-color: #666666!important;
-    border-color: #666666!important;
+    background-color: #666666 !important;
+    border-color: #666666 !important;
 }
-.this_ua.browser.Chrome{
-    background-color: #EE6252!important;
-    border-color: #EE6252!important;
+.this_ua.browser.Chrome {
+    background-color: #ee6252 !important;
+    border-color: #ee6252 !important;
 }
-.this_ua.browser.Chromium{
-    background-color: #EE6252!important;
-    border-color: #EE6252!important;
+.this_ua.browser.Chromium {
+    background-color: #ee6252 !important;
+    border-color: #ee6252 !important;
 }
-.this_ua.browser.Firefox{
-    background-color: #f0ad4e!important;
-    border-color: #eea236!important;
+.this_ua.browser.Firefox {
+    background-color: #f0ad4e !important;
+    border-color: #eea236 !important;
 }
-.this_ua.browser.IE{
-    background-color: #428bca!important;
-    border-color: #357ebd!important;
+.this_ua.browser.IE {
+    background-color: #428bca !important;
+    border-color: #357ebd !important;
 }
-.this_ua.browser.Edge{
-    background-color: #428bca!important;
-    border-color: #357ebd!important;
+.this_ua.browser.Edge {
+    background-color: #428bca !important;
+    border-color: #357ebd !important;
 }
-.this_ua.browser.Opera{
-    background-color: #d9534f!important;
-    border-color: #d43f3a!important;
+.this_ua.browser.Opera {
+    background-color: #d9534f !important;
+    border-color: #d43f3a !important;
 }
-.this_ua.browser.Maxthon{
-    background-color: #7373B9!important;
-    border-color: #7373B9!important;
+.this_ua.browser.Maxthon {
+    background-color: #7373b9 !important;
+    border-color: #7373b9 !important;
 }
-.this_ua.browser.Safari{
-    background-color: #666666!important;
-    border-color: #666666!important;
+.this_ua.browser.Safari {
+    background-color: #666666 !important;
+    border-color: #666666 !important;
 }
 .this_ua.sskadmin {
-    background-color: #00a67c!important;
-    border-color: #00a67c!important;
+    background-color: #00a67c !important;
+    border-color: #00a67c !important;
 }
 /*UA End*/
 /*Head Start*/
 #ds-thread #ds-reset ul.ds-comments-tabs li.ds-tab a.ds-current {
     border: 0px;
-    color: #6D6D6B;
+    color: #6d6d6b;
     text-shadow: none;
-    background: #F3F3F3;
+    background: #f3f3f3;
 }
 
 #ds-thread #ds-reset .ds-highlight {
     font-family: Microsoft YaHei, "Helvetica Neue", Helvetica, Arial, Sans-serif;
-    ;font-size: 100%;
-    color: #6D6D6B !important;
+    font-size: 100%;
+    color: #6d6d6b !important;
 }
 
 #ds-thread #ds-reset ul.ds-comments-tabs li.ds-tab a.ds-current:hover {
     color: #696a52;
-    background: #F2F2F2;
+    background: #f2f2f2;
 }
 
 #ds-thread #ds-reset a.ds-highlight:hover {
@@ -99,7 +99,8 @@ span.this_ua {
     padding-left: 15px;
 }
 
-#ds-thread #ds-reset li.ds-post,#ds-thread #ds-reset #ds-hot-posts {
+#ds-thread #ds-reset li.ds-post,
+#ds-thread #ds-reset #ds-hot-posts {
     overflow: visible;
 }
 
@@ -107,19 +108,21 @@ span.this_ua {
     padding: 10px 0 10px 10px;
 }
 
-#ds-thread #ds-reset li.ds-post,#ds-thread #ds-reset .ds-post-self {
+#ds-thread #ds-reset li.ds-post,
+#ds-thread #ds-reset .ds-post-self {
     border: 0 !important;
 }
 
-#ds-reset .ds-avatar, #ds-thread #ds-reset ul.ds-children .ds-avatar {
+#ds-reset .ds-avatar,
+#ds-thread #ds-reset ul.ds-children .ds-avatar {
     top: 15px;
     left: -20px;
     padding: 5px;
     width: 36px;
     height: 36px;
-    box-shadow: -1px 0 1px rgba(0,0,0,.15) inset;
+    box-shadow: -1px 0 1px rgba(0, 0, 0, 0.15) inset;
     border-radius: 46px;
-    background: #FAFAFA;
+    background: #fafafa;
 }
 
 #ds-thread .ds-avatar a {
@@ -173,11 +176,11 @@ span.this_ua {
     height: 32px !important;
     border-radius: 32px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
-    -webkit-transition: .8s all ease-in-out;
-    -moz-transition: .4s all ease-in-out;
-    -o-transition: .4s all ease-in-out;
-    -ms-transition: .4s all ease-in-out;
-    transition: .4s all ease-in-out;
+    -webkit-transition: 0.8s all ease-in-out;
+    -moz-transition: 0.4s all ease-in-out;
+    -o-transition: 0.4s all ease-in-out;
+    -ms-transition: 0.4s all ease-in-out;
+    transition: 0.4s all ease-in-out;
 }
 
 .ds-post-self:hover .ds-avatar img {
@@ -193,10 +196,10 @@ span.this_ua {
     -webkit-transition-duration: 0.4s;
     -webkit-transition-property: all;
     -webkit-transition-timing-function: initial;
-    background: #F7F7F7;
+    background: #f7f7f7;
     padding: 15px 15px 15px 47px;
     border-radius: 5px;
-    box-shadow: #B8B9B9 0 1px 3px;
+    box-shadow: #b8b9b9 0 1px 3px;
     border: white 1px solid;
 }
 
@@ -218,11 +221,11 @@ span.this_ua {
 
 #ds-thread #ds-reset .ds-comments a.ds-user-name {
     font-weight: normal;
-    color: #3D3D3D !important;
+    color: #3d3d3d !important;
 }
 
 #ds-thread #ds-reset .ds-comments a.ds-user-name:hover {
-    color: #D32 !important;
+    color: #d32 !important;
 }
 
 #ds-thread #ds-reset #ds-bubble {
@@ -238,7 +241,7 @@ span.this_ua {
 }
 
 #ds-thread #ds-reset .ds-comment-body:hover {
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
     -webkit-transition-delay: initial;
     -webkit-transition-duration: 0.4s;
     -webkit-transition-property: all;

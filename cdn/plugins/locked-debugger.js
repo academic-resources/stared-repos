@@ -13,6 +13,6 @@
 // 无限循环，锁死 debugger
 
 (function anonymous() {
-   debugger;
-   anonymous();
+    debugger;
+    anonymous();
 })();

@@ -18,7 +18,6 @@
  *
  */
 
-
 // new version, 2021.07.13
 setTimeout(() => {
     (() => {
@@ -33,8 +32,7 @@ setTimeout(() => {
         log(` 🎉 flagcounter.com finished!`);
     })();
 }, 1000);
-    
-    
+
 // const log = console.log;
 
 // window.SEO_FALG_FINISHED = window.SEO_FALG_FINISHED || false;
