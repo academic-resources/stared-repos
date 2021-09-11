@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="xgqfrms">
+  <meta name="generator" content="VS code">
+  <title>UFO 👻 🛸 web components, custom elements</title>
+  <!-- If your application is compiled to ES5, then load this script first. -->
+  <!--  <script src="./node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script> -->
+  <!-- Add support for Web Components to older browsers. -->
+  <!--  <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script> -->
+  <script src="https://raw.githubusercontent.com/webcomponents/polyfills/master/packages/webcomponentsjs/webcomponents-loader.js"></script>
+  <!-- Load your application code anytime after loader.js -->
+  <!-- <title>HTML5 custom element tag (web components)</title> -->
+  <!-- https://cdn.xgqfrms.xyz/web-components/webcomponents-loader.js -->
+  <style>
+    .ghost{
+      box-sizing: border-box;
+      color: #f0f;
+      background: #000;
+      border: 1px solid red;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    header{
+      box-sizing: border-box;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML5 custom element tag (web components)</h1>
+    <header>
+      <h1>
+        <ufo-element>UFO</ufo-element>
+        <ghost-element class="ghost">👻</ghost-element>
+         <xyz-element style="font-size: 136px;">🛸</xyz-element>
+      </h1>
+        <h2>✅ ufo-element 正确命名</h2>
+        <autonomous-button>👍 customElements.define("ufo-element", UFO);</autonomous-button>
+        <h2>❌ ufo 错误命名</h2>
+        <autonomous-button>👎 customElements.define("ufo", UFO);</autonomous-button>
+    </header>
+  </header>
+  <main>
+    <!--  -->
+  </main>
+  <footer>
+    <p>copyright&copy; xgqfrms 2020</p>
+  </footer>
+  <script>
+    class AutonomousButton extends HTMLElement {
+      // ...
+    }
+    customElements.define("autonomous-button", AutonomousButton);
+
+    // 注册
+    class UFO extends HTMLElement {
+      //
+    }
+    // 定义
+    customElements.define("ufo-element", UFO);
+    // customElements.define("ufo", UFO);
+    // Uncaught SyntaxError: Failed to execute 'define' on 'CustomElementRegistry': "ufo" is not a valid custom element name
+
+    class GHOST extends HTMLElement {
+      //
+    }
+    customElements.define("ghost-element", GHOST);
+    // customElements.define("ghost", GHOST);
+    // Uncaught SyntaxError: Failed to execute 'define' on 'CustomElementRegistry': "ghost" is not a valid custom element name
+
+    class XYZ extends HTMLElement {
+      //
+    }
+    customElements.define("xyz-element", XYZ);
+    // customElements.define("xyz", XYZ);
+    // Uncaught SyntaxError: Failed to execute 'define' on 'CustomElementRegistry': "xyz" is not a valid custom element name
+
+  </script>
+</body>
+</html>

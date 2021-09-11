@@ -1,0 +1,221 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "text": "舞台xxx",
+                "labelPoint": {
+                    "x": 402,
+                    "y": 81
+                },
+                "type": "text",
+                "fill": "#ffffff"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    402,
+                    81
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "text": "A区",
+                "labelPoint": {
+                    "x": 36,
+                    "y": 301
+                },
+                "type": "text",
+                "fill": "#ffffff"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    36,
+                    301
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "text": "B区",
+                "labelPoint": {
+                    "x": 405,
+                    "y": 275
+                },
+                "type": "text",
+                "fill": "#ffffff"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    405,
+                    275
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "text": "C区",
+                "labelPoint": {
+                    "x": 787,
+                    "y": 294
+                },
+                "type": "text",
+                "fill": "#ffffff"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    787,
+                    294
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 9201,
+                "activityEventId": 0,
+                "ticketCategoryId": 0,
+                "name": "一楼",
+                "sort": 0,
+                "floor": 0,
+                "status": 1,
+                "rows": [],
+                "type": "section",
+                "fill": "#FBD5D5"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            103.5,
+                            0.5
+                        ],
+                        [
+                            735.5,
+                            0.5
+                        ],
+                        [
+                            735.5,
+                            147.5
+                        ],
+                        [
+                            103.5,
+                            147.5
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "labelPoint": {
+                    "x": 51.5,
+                    "y": 294
+                },
+                "type": "",
+                "fill": "#5461F2"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            0.5,
+                            188.5
+                        ],
+                        [
+                            102.5,
+                            188.5
+                        ],
+                        [
+                            102.5,
+                            399.5
+                        ],
+                        [
+                            0.5,
+                            399.5
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "labelPoint": {
+                    "x": 419.5,
+                    "y": 268.5
+                },
+                "type": "",
+                "fill": "#84FFEF"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            170.5,
+                            192.5
+                        ],
+                        [
+                            668.5,
+                            192.5
+                        ],
+                        [
+                            668.5,
+                            344.5
+                        ],
+                        [
+                            170.5,
+                            344.5
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "labelPoint": {
+                    "x": 792.5,
+                    "y": 291.5
+                },
+                "type": "",
+                "fill": "#A25AF1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            738.5,
+                            183.5
+                        ],
+                        [
+                            846.5,
+                            183.5
+                        ],
+                        [
+                            846.5,
+                            399.5
+                        ],
+                        [
+                            738.5,
+                            399.5
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+@charset "UTf-8";
+
+/**
+ *
+ * @author xgqfrms
+ * @license MIT
+ * @copyright xgqfrms
+ *
+ * @description htmlimports.css
+ *
+ */
+
+.no-htmlimports {
+    color: red;
+}
+
+.htmlimports {
+    color: green;
+}

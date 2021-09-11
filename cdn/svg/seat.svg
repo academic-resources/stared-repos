@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="847px" height="400px" viewBox="0 0 847 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#979797" fill="#FBD5D5" x="103.5" y="0.5" width="632" height="147"></rect>
+        <text id="舞台" font-family="PingFangSC-Medium, PingFang SC" font-size="18" font-weight="400" fill="#000000">
+            <tspan x="402" y="81">舞台</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#979797" fill="#5461F2" x="0.5" y="188.5" width="102" height="211"></rect>
+        <text id="A区" font-family="PingFangSC-Medium, PingFang SC" font-size="18" font-weight="400" fill="#000000">
+            <tspan x="36" y="301">A区</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#979797" fill="#84FFEF" x="170.5" y="192.5" width="498" height="152"></rect>
+        <text id="B区" font-family="PingFangSC-Medium, PingFang SC" font-size="18" font-weight="400" fill="#000000">
+            <tspan x="405" y="275">B区</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#979797" fill="#A25AF1" x="738.5" y="183.5" width="108" height="216"></rect>
+        <text id="C区" font-family="PingFangSC-Medium, PingFang SC" font-size="18" font-weight="400" fill="#000000">
+            <tspan x="787" y="294">C区</tspan>
+        </text>
+    </g>
+</svg>

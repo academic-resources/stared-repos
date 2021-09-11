@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- https://app.satismeter.com/projects/5760c4da8739e50300b5dba2/admin/install/html -->
+	<title>stais meter | user feedback collect</title>
+</head>
+<body>
+	<div>
+		<pre>
+			Install SatisMeter into your app
+
+			SatisMeter gathers your customers feedback with a survey widget for your mobile and web apps. See it in action in our <a href="https://app.satismeter.com/sample">sample web app</a>.
+		</pre>
+	</div>
+	<pre>
+		1. Add code to your app
+		Copy and paste this code before &lt;/body&gt; on every page where your users are logged in.
+	</pre>
+	<!-- js -->
+	<script>
+		(function() { 
+			window.satismeter = window.satismeter || function() {
+				(window.satismeter.q = window.satismeter.q || []).push(arguments);
+			};
+				window.satismeter.l = 1 * new Date();
+				var script = document.createElement("script");
+				var parent = document.getElementsByTagName("script")[0].parentNode;
+				script.async = 1;script.src = "https://app.satismeter.com/satismeter.js";
+				// cdn 
+				parent.appendChild(script);
+			}
+		)();
+
+		satismeter({
+		  token: "SZD3MdJJfazcEwnz",
+		  user: {
+		    id: "1234", // TODO: Current user unique ID (required)
+		    name: "xgqfrms", // TODO: Current user name (optional)
+		    email: "xgqfrms@outlok.com", // TODO: Current user email (optional)
+		    createdAt: "2016-05-15T03:01:39.680Z" // TODO: Date when user was registered (optional)
+		  }
+		});
+	</script>
+	<pre>
+		2. Identify user
+		We need to identify the logged-in user for survey targeting. Replace lines of code marked as TODO with data of user logged in to your application.
+
+		Done!
+		Survey widget is collecting feedback from your users. Their responses immediatelly appear on your <a href="https://app.satismeter.com/projects/5760c4da8739e50300b5dba2/dashboard">SatisMeter dashboard</a>.
+
+		<span>Need help setting up SatisMeter? Feel free to contact us.</span>
+	</pre>
+</body>
+</html>

@@ -1,0 +1,164 @@
+{
+    "Success": true,
+    "Info": {
+        "schema": {
+            "type": "object",
+            "Properties": {
+                "ByteV": {
+                    "type": "integer"
+                },
+                "BooleanV": {
+                    "type": "boolean"
+                },
+                "DoubleV": {
+                    "type": "number"
+                },
+                "FloatV": {
+                    "type": "number"
+                },
+                "IntV": {
+                    "type": "integer"
+                },
+                "ShortV": {
+                    "type": "integer"
+                },
+                "CharV": {
+                    "type": "string"
+                },
+                "ByteArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "string"
+                    }
+                },
+                "BooleanArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "boolean"
+                    }
+                },
+                "DoubleArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "number"
+                    }
+                },
+                "FloatArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "number"
+                    }
+                },
+                "IntArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "integer"
+                    }
+                },
+                "ShortArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "integer"
+                    }
+                },
+                "LongV": {
+                    "type": "integer"
+                },
+                "LongArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "number"
+                    }
+                },
+                "CharArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "string"
+                    }
+                },
+                "DateV": {
+                    "type": "string",
+                    "Format": "date-time"
+                },
+                "DateArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "string",
+                        "Format": "date-time"
+                    }
+                },
+                "TimeStampV": {
+                    "type": "string",
+                    "Format": "date-time"
+                },
+                "TimestampArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "string",
+                        "Format": "date-time"
+                    }
+                },
+                "ListV": {
+                    "type": "array",
+                    "Items": {
+                        "type": "string"
+                    }
+                },
+                "StringV": {
+                    "type": "string"
+                },
+                "StringArray": {
+                    "type": "array",
+                    "Items": {
+                        "type": "string"
+                    }
+                },
+                "TableV": {
+                    "type": "object",
+                    "Properties": {
+                        "TableName": {
+                            "type": "string"
+                        },
+                        "Attributes": {
+                            "type": "object",
+                            "AdditionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "Attribute": {
+                            "type": "object",
+                            "AdditionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "RowCount": {
+                            "type": "integer"
+                        },
+                        "ColumnMetas": {
+                            "type": "array",
+                            "Items": {
+                                "type": "object",
+                                "Properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "type": "string",
+                                        "enum": ["STOP", "BOOL", "STRING", "BYTE", "SHORT", "UNSHORT", "INT", "LONG", "FLOAT", "DOUBLE", "DATE", "DATETIME", "BYTEARRAY", "TABLE", "NOTHING", "OBJECT", "ARRAY", "COLLECTION", "IMAGE", "NULL", "INTARRAY", "SHORTARRAY", "LONGARRAY", "STRINGARRAY", "FLOATARRAY", "DOUBLEARRAY", "BOOLARRAY", "CHARARRAY", "DATEARRAY", "DATETIMEARRAY", "OBJECTARRAY", "BOOLBOX", "BYTEBOX", "SHORTBOX", "UNSHORTBOX", "INTBOX", "LONGBOX", "FLOATBOX", "DOUBLEBOX", "INTBOXARRAY", "SHORTBOXARRAY", "LONGBOXARRAY", "FLOATBOXARRAY", "DOUBLEBOXARRAY", "CHARBOXARRAY", "BOOLBOXARRAY", "BYTEBOXARRAY", "DATERANGE"]
+                                    },
+                                    "View": {
+                                        "type": "boolean"
+                                    },
+                                    "OriginalName": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "name": "TestProtocol"
+    }
+}

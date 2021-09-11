@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="xgqfrms">
+  <meta name="generator" content="VS code">
+  <title>HTML5 Canvas safety-canvas</title>
+  <!-- 需要运行在 server 中，并且要开启 https:// 服务 -->
+  <!--  https://xgqfrms.github.io/HTML5/Canvas/safety-canvas.html-->
+  <!-- 仅在 chrome/chrome canary/opera等(webkit) 浏览器中可以使用!(低层调用camera的API 针对，不同浏览器的实现不同！) -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML5 Canvas safety-canvas</h1>
+    <h2><span id="video_error"></span></h2>
+  </header>
+  <main>
+    <article>
+      <section>
+        <div></div>
+        <video width="640" height="480" autoplay></video>
+        <canvas width="640" height="480"></canvas>
+        <canvas width="640" height="480"></canvas>
+        <audio src="alarm.wav" type="audio/wav" autoplay="autoplay" loop="loop"></audio>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>copyright&copy; xgqfrms 2020</p>
+  </footer>
+  <!-- js -->
+  <script>
+    // const log = console.log;
+  </script>
+  <!--
+    纯 JS 的“防盗”,防盗监控系统
+    https://www.cnblogs.com/vajoy/p/5656439.html
+  -->
+  <!-- js -->
+  <script>
+    var videoError = document.getElementById("video_error");
+    if (window.navigator.userAgent.toLowerCase().includes(`webkit`)) {
+      // UA : webkit check
+      videoError.innerHTML = "It's really super cool, you are using the webkit kernel browser!"
+    } else {
+      videoError.innerHTML = "<mark>Error:</mark> It's really sorry, please using the webkit kernel browser for better exprience!";
+      alert("video error:[object NavigatorUserMediaError]");
+    }
+  </script>
+  <script src="app.js"></script>
+  <!-- stats.min.js -->
+  <script src="stats.js"></script>
+  <script src="show-fps.js"></script>
+</body>
+</html>

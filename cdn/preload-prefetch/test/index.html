@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="xgqfrms">
+  <meta name="generator" content="VS code">
+  <title>preload prefetch</title>
+  <script>
+    const log = console.log;
+  </script>
+  <!-- css -->
+  <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="./preload.css">
+  <link rel="prefetch" as="style" onload="this.rel = 'stylesheet'" href="./prefetch.css">
+  <!-- js -->
+  <link rel="preload" as="script" href="./preload.js" onload="log(`preload.js load`);const preloadScript = document.createElement(`script`);preloadScript.src = `./preload.js`;document.body.appendChild(preloadScript);">
+  <link rel="prefetch" as="script" href="./prefetch.js" onload="log(`prefetch.js load`);const prefetchScript = document.createElement(`script`);prefetchScript.src = `./prefetch.js`;document.body.appendChild(prefetchScript);">
+  <noscript>
+    <!-- fallback -->
+    <link rel="stylesheet" href="./preload.css">
+    <link rel="stylesheet" href="./prefetch.css">
+    <script src="./preload.js"></script>
+    <script src="./prefetch.js"></script>
+  </noscript>
+</head>
+<body>
+  <header>
+    <h1>preload prefetch</h1>
+  </header>
+  <main>
+    <section>
+      <div class="preload" data-uid="preload">preload</div>
+      <div class="prefetch" data-uid="preload">prefetch</div>
+    </section>
+  <main>
+  <footer>
+    <p>copyright&copy; xgqfrms 2020</p>
+  </footer>
+  <noscript>
+    JavaScript is disabled or fails to load
+  </noscript>
+  <script src="./index.js"></script>
+  <script src="./async.js" async></script>
+  <script src="./defer.js" defer></script>
+</body>
+</html>

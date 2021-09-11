@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="xgqfrms">
+    <meta name="generator" content="VS code">
+    <title>eapp & iframe</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/infoDetail.css" />
+    <link rel="stylesheet" href="./css/dialog.css" />
+</head>
+<body>
+    <div class="mask">
+        <div class="skip">跳过</div>
+        <ul class="step step1">
+            <li>标记你认为有用的文章</li>
+            <li></li>
+        </ul>
+        <ul class="step step2">
+            <li>标记后你的朋友可以看到你认为有用的文章</li>
+            <li class="known">我知道了</li>
+            <li></li>
+        </ul>
+        <ul class="step step3">
+            <li id="companyorperson">快来探一探你感兴趣的企业</li>
+            <li class="known">我知道了</li>
+            <li></li>
+        </ul>
+        <ul class="step step4">
+            <li>分享到钉钉，和探友一起探讨</li>
+            <li class="known">我知道了</li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="iframBox">
+        <iframe
+            id="iframes"
+            data-dom="iframe"
+            frameborder="0"
+            height="100%"
+            width="100%"
+            scrolling="yes"
+            src=""
+        ></iframe>
+    </div>
+    <div class="tagBoxWrap">
+        <div class="tagBox">
+            <div class="tagConBox">
+                <ul class="tagCon">
+                    <img
+                        src="./img/iconTip.png"
+                        width="20px"
+                        height="20px"
+                        alt=""
+                    />
+                </ul>
+            </div>
+            <div class="comCardBox">
+                <div class="comCard">
+                    <div class="comImgBox"></div>
+                    <img class="comImg" src="" alt="" />
+                    <div class="comNameBox">
+                        <span class="comName"></span>
+                        <span class="comArrow"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow arrow_up"></div>
+            <div class="arrow arrow_down"></div>
+        </div>
+    </div>
+    <div class="clickBox">
+        <div class="markImg">
+            <ul></ul>
+        </div>
+        <div class="markImgModel">
+            <ul></ul>
+        </div>
+        <ul class="clickCon">
+            <li class="sign" name="sign">标记</li>
+            <li class="collect" name="collect">收藏</li>
+            <li class="praise" name="praise">0</li>
+            <li class="transmit">转发</li>
+        </ul>
+    </div>
+    <!-- js -->
+    <script src="./app.js"></script>
+</body>
+</html>

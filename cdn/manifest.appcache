@@ -1,0 +1,61 @@
+CACHE MANIFEST
+# comment: the above line is required
+
+# @version
+# v1 - 2017-04-02
+
+
+# online whitelist - it isn't cached
+
+NETWORK:
+index.php
+
+# CSS
+CACHE:
+# https://learning.xgqfrms.xyz/stylesheets/style.css
+/stylesheets/style.css
+
+
+# images
+
+CACHE:
+# https://learning.xgqfrms.xyz/logos/canva-Angular2-bible.png
+https://cdn.xgqfrms.xyz/logo/favicon.ico
+https://cdn.xgqfrms.xyz/logo/favicon.png
+https://learning.xgqfrms.xyz//logos/canva-Angular2-bible.png
+
+# 404 
+CACHE:
+https://cdn.xgqfrms.xyz/404/404.gif
+
+
+# json
+CACHE:
+https://learning.xgqfrms.xyz/manifest.json
+
+# SEO
+CACHE:
+/humans.txt
+/sitemap.xml
+/robots.txt
+
+
+FALLBACK:
+
+# 404 redirect
+# https://moz.com/learn/seo/redirection
+# http://www.redirect-checker.org/
+# http://www.checkupdown.com/status/E405_zh.html
+# https://www.html5rocks.com/zh/tutorials/appcache/beginner/
+
+CACHE:
+/html5/ /404.html
+
+*.html /404.html
+
+
+# manifest.appcache
+
+
+
+

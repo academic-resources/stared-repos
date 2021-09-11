@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="93px" height="96px" viewBox="0 0 93 96" enable-background="new 0 0 93 96" xml:space="preserve">
+<filter  x="0" y="0" id="OpacityMaskFilter" height="60.479" width="74.197" filterUnits="userSpaceOnUse">
+		<feColorMatrix  type="matrix" result="source" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" />
+</filter>
+<g>
+	<g>
+		<path fill="#919191" d="M2.186,57.696c-7.754-17.702,5.774-40.974,30.2-51.993c24.437-11.009,50.523-5.602,58.278,12.1
+			c7.753,17.702-5.775,40.975-30.201,51.993C36.028,80.806,9.94,75.398,2.186,57.696z"/>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="31.8677" y1="764.293" x2="44.138" y2="694.7044" gradientTransform="matrix(1 0 0 -1 8.5 767)">
+			<stop  offset="0" style="stop-color:#D8D8DB"/>
+			<stop  offset="0.3313" style="stop-color:#F3F3F3"/>
+			<stop  offset="0.6319" style="stop-color:#919191"/>
+			<stop  offset="1" style="stop-color:#D8D8DB"/>
+		</linearGradient>
+		<path fill="url(#SVGID_1_)" d="M3.142,57.05c-7.6-17.35,5.66-40.16,29.6-50.958c23.95-10.79,49.52-5.49,57.12,11.86
+			c7.6,17.35-5.66,40.16-29.602,50.96C36.312,79.7,10.742,74.4,3.142,57.05z"/>
+		<path fill="#003366" d="M11.152,51.55c-6.2-14.18,4.61-32.818,24.13-41.64c19.53-8.83,40.38-4.49,46.57,9.69
+			c6.2,14.18-4.608,32.821-24.13,41.64C38.192,70.07,17.342,65.73,11.152,51.55z"/>
+		<g>
+			<g>
+				<path fill="#336699" d="M11.152,52.55c-6.2-14.18,4.61-32.818,24.13-41.64c19.53-8.83,40.38-4.49,46.57,9.69
+					c6.2,14.18-4.608,32.821-24.13,41.64C38.192,71.07,17.342,66.73,11.152,52.55z"/>
+			</g>
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="9.403" y="6.336" width="74.198" height="60.479">
+					<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="9.403" y="6.336" width="74.198" height="60.479" id="SVGID_2_">
+				<g filter="url(#OpacityMaskFilter)">
+					
+						<image overflow="visible" enable-background="new    " width="80" height="66" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
+EAMCAwYAAAH9AAAC3gAABEb/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX
+Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa
+JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAEMAUQMBIgACEQEDEQH/
+xACYAAEAAgMBAQAAAAAAAAAAAAAABgcBAwUEAgEBAAAAAAAAAAAAAAAAAAAAABAAAQQCAQIGAwAA
+AAAAAAAABAIDBQYAASQgFBBAERI0FTEjBxEAAgECAAgLBwUAAAAAAAAAAQIDABEQITHREgREpCBB
+UWFxgrJzkxQ0kSKSEyMzQzAyUmKjEgEAAAAAAAAAAAAAAAAAAABA/9oADAMBAAIRAxEAAACHaHnP
+R99CwiA9axdpXnKtj4KP12fWBPGsQfuc62j0eoDIwyPms7NgAB4LNrixz6YyAD5PmppdWJPGRFbX
+pr2F1oV2zt44nFJhE4fwzd5wn4IvoBtDGsAAJwD/2gAIAQIAAQUA89//2gAIAQMAAQUA89//2gAI
+AQEAAQUAPPO0d9gfn2B+NlybuxImxlYzUZxePU6W0k2v2IbTxMowv7A/O4IyQ+fkNWjJJcRUwgm2
+xmWtemvBxltzVhqwpjRojgZGSHz6tW1yLwQDAjXSpOlavoCGX8SIoybhY5sITr/ob6fZlVF07PJ1
+rWup5xLTdxktGH5USNImtfjp3vSdW2xtCsOuLdcxg9QE5ESjBo3Q8Syymw3Fgdswx8x/wkPnxM6Z
+Grjb4M4hm0RrqSLXGspOv4repS1nnbWta1eJ3Z97w84eN9n7XOz9OHnDzh5w84efpz//2gAIAQIC
+Bj8Ad//aAAgBAwIGPwB3/9oACAEBAQY/ANZA1mUASuAA7fyPPXqZvEbPXqZvEbPWjHPMx5A7Z6BE
+syg5CXbPQL65MBx++2evp65ODzu2eiy6xM4H92z0UlnmRhxF2z16mbxGz191/iNaz30naOAEqUiO
+O/LSlkBarIgGGzKCKaREs4BsRlpoZBYqcXRg1nvpO0aWaUfSBxDloJGoFuEQchoTKtiTYnBLCBe8
+736NM0iKLG36AQZSbYNakYX0ZnAPWNAcNnY2AFGNTdUOPpwa3G1vvOR8RocIkmwFNDE3vkWAFNI+
+NmNzgmmBsvznDdGkaRlcEkcEtIwFqaKBtJzkApppmJZj7MOs99J2jQ0GLRjKtATnRPHpUGEi2PPV
+zIvtphCdI8VqIRiiHirSYknlPA1i/lb/ADXvfzV/3HLbFWyb3Wyb3X4Or5u1bP1vN1sm91sm91sm
+91sm91sm91+H/Wv/2Q==" transform="matrix(1 0 0 1 6.502 3.4463)">
+					</image>
+				</g>
+			</mask>
+			<g opacity="0.75" mask="url(#SVGID_2_)">
+				<path fill="#304499" d="M11.152,52.55c-6.2-14.18,4.61-32.818,24.13-41.64c19.53-8.83,40.38-4.49,46.57,9.69
+					c6.2,14.18-4.608,32.821-24.13,41.64C38.192,71.07,17.342,66.73,11.152,52.55z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<polygon fill="#003366" points="29.472,58.937 23.672,70.776 33.732,68.576 46.992,51.446 36.122,52.056 		"/>
+		<path fill="#003366" d="M39.102,16.856l-17.37,42.58l12.28-0.61l8.05-17.26l10.642-0.46c8.148-0.36,17.39-6.48,20.56-13.59
+			c3.142-7.02-0.858-12.34-8.87-11.93L39.102,16.856z M48.972,24.766l7.86-0.33c2.81-0.13,4.28,1.52,3.29,3.7
+			c-1,2.19-4.11,4.08-6.94,4.21l-7.89,0.32L48.972,24.766z"/>
+	</g>
+	<polygon fill="#9C9C9C" points="22.332,72.776 31.556,74.361 39.13,74.361 44.585,66.456 33.732,67.576 	"/>
+	<polygon fill="#FFFF00" points="31.489,50.445 19.402,77.387 28.632,75.696 20.262,95.446 44.262,65.456 31.752,66.814 
+		45.992,49.446 	"/>
+	
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="36.6504" y1="752.7773" x2="39.453" y2="672.5196" gradientTransform="matrix(1 0 0 -1 8.5 767)">
+		<stop  offset="0" style="stop-color:#FFFF00"/>
+		<stop  offset="0.4847" style="stop-color:#FF9900"/>
+		<stop  offset="1" style="stop-color:#9F6100"/>
+	</linearGradient>
+	<path fill="url(#SVGID_3_)" d="M29.432,57.007l-10.03,20.381l10.23-1.69l-9.37,19.749l24-29.99l-12.53,2.12l14.26-18.13
+		l-10.563,1.549l5.633-11.429l10.642-0.46c8.148-0.36,17.39-6.48,20.56-13.59c3.142-7.02-0.858-12.34-8.87-11.93l-27.29,1.27
+		l-15.37,42.58L29.432,57.007z M47.972,22.766l7.86-0.33c2.81-0.13,4.28,1.52,3.29,3.7c-1,2.19-4.11,4.08-6.94,4.21l-7.89,0.32
+		L47.972,22.766z"/>
+	<path fill="#FFFFFF" d="M52.952,30.706c2.987-0.447,5.55-2.01,6.47-5.693c-0.292,2.39-4.449,5.28-7.24,5.333l-7.89,0.32
+		C44.292,30.667,49.273,31.077,52.952,30.706z"/>
+	<polygon fill="#FFFFFF" points="20.732,57.437 36.102,14.856 63.689,13.575 36.877,15.821 	"/>
+</g>
+</svg>

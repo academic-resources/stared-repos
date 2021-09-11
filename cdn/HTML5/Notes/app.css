@@ -1,0 +1,100 @@
+@charset "UTf-8";
+
+/* reset.css */
+
+:root {
+   --cololr: #fff;
+   --default-cololr: #000;
+   --new-cololr: #0f0;
+}
+
+html{
+    font-size: 62.5%;
+    /* 10px = 1rem */
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, object, code, legend, button, input, textarea, th, td, a, img, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+/* section */
+
+.section-box{
+    margin: 50px auto;
+    padding: 5px;
+    width: 80vw;
+    height: 50vh;
+    background: #ccc;
+    font-size: 1.6rem;
+}
+.section-box > h1{
+    text-align: center;
+    color: #0f0;
+}
+.section-box > main{
+    color: #fff;
+}
+.section-box > main::selection{
+    color: #f0f;
+}
+
+/* menus */
+
+[data-box="main-conatiner"] {
+    width: calc(80vw - 10px);
+    height: calc(50vh - 60px);
+    background: #000;
+}
+
+.hidden-menus{
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    background: #fff;
+    color: #fff;
+    width: 132px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+.menus-ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.menus-li {
+    position: relative;
+    float: left;
+    width: 30px;
+    margin: 0 5px;
+    padding: 0;
+}
+
+.menus-li > button{
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+}
+.menus-li > button:hover{
+    background: #fff;
+    color: #0f0;
+    cursor: pointer;
+}
+
+
+.highlight-marked{
+    color: rgb(5, 255, 5);
+    text-decoration: underline;
+}

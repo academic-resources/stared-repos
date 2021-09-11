@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="xgqfrms">
+  <meta name="generator" content="VS code">
+  <title>scroll image compare</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .home-sec {
+      padding-top: 64px;
+      padding-bottom: 80px;
+    }
+    .before-after {
+      background: #283593;
+    }
+    .home-col {
+      width: 100%;
+      max-width: 1024px;
+      padding-left: 32px;
+      padding-right: 32px;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+    }
+    .home-sec h2 {
+      text-align: center;
+    }
+    .before-after .container {
+      width: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      cursor: col-resize;
+      box-shadow: 0 12px 24px 0;
+      rgba(0,0,0,.18);
+      min-height: 300px;
+    }
+    .before-after .before {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      border-right: 4px solid #00a2eb;
+      box-sizing: border-box;
+    }
+    .before-after .before img {
+      display: flex;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>scroll image compare</h1>
+    <div>
+      <h2>css effects all in one</h2>
+      <a href="https://www.cnblogs.com/xgqfrms/p/13337924.html">https://www.cnblogs.com/xgqfrms/p/13337924.html</a>
+      <br>
+      <a href="https://cdn.xgqfrms/css-effects-all-in-one/index.html">https://cdn.xgqfrms/css-effects-all-in-one/index.html</a>
+    </div>
+  </header>
+  <main class="before-after home-sec">
+    <article class="home-col">
+      <h2 style="color: white;">Before &amp; After</h2>
+      <section class="before-after">
+        <div class="container">
+          <!-- <div class="before" style="width: 972.5px;"> -->
+          <div class="before" style="width: 484.5px;">
+            <img srcset="https://cdn.xgqfrms.xyz/css-effects-all-in-one/images/before.png">
+          </div>
+          <img srcset="https://cdn.xgqfrms.xyz/css-effects-all-in-one/images/after.png" class="after">
+<!--           <div class="before" style="width: 484.5px;">
+            <img src="https://www.fika.io/img/origin.290c77e9.png" srcset="https://cdn.xgqfrms.xyz/css-effects-all-in-one/images/before.png">
+          </div>
+          <img src="https://www.fika.io/img/latte.f6f60fee.png" srcset="https://cdn.xgqfrms.xyz/css-effects-all-in-one/images/after.png" class="after"> -->
+        </div>
+      </section>
+      <div>
+        <a href="https://www.fika.io/">https://www.fika.io/</a>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>copyright&copy; xgqfrms 2020</p>
+  </footer>
+  <!-- js -->
+  <script>
+    const log = console.log;
+    // const div = document.querySelector(`[class="before"]`);
+    const div = document.querySelector(`div.before`);
+    const box = document.querySelector(`div.container`);
+    // log(`box`, box)
+    // box.addEventListener(`mousedown`, (e) => {
+    //   log(`mousedown`, e);
+    // });
+    box.addEventListener(`mousemove`, (e) => {
+      // log(`mousemove`, e);
+      const {
+        offsetX,
+        offsetY,
+      } = e;
+      // log(`offsetX`, offsetX);
+      // div.style.width = offsetX;
+      div.style.width = offsetX + `px`;
+    });
+    // box.addEventListener(`scroll`, (e) => {
+    //   log(`scroll`, e);
+    // });
+    // box.addEventListener(`move`, (e) => {
+    //   log(`move`, e);
+    // });
+  </script>
+</body>
+</html>
+

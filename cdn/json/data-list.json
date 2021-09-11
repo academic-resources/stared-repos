@@ -1,0 +1,26 @@
+[
+    {
+        "id":"1",
+        "name":"name_1",
+        "parent_id":"0",
+        "depth":"0"
+    },
+    {
+        "id":"2",
+        "name":"name_2",
+        "parent_id":"0",
+        "depth":"0"
+    },
+    {
+        "id":"3",
+        "name":"name_3",
+        "parent_id":"1",
+        "depth":"1"
+    },
+    {
+        "id":"4",
+        "name":"name_4",
+        "parent_id":"3",
+        "depth":"2"
+    }
+]

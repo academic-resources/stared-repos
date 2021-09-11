@@ -1,0 +1,201 @@
+{
+    "Success": true,
+    "Info": {
+        "schema": {
+            "BasicInformationRow": {
+                "type": "object",
+                "Properties": {
+                    "A0": {
+                        "type": "string",
+                        "Description": "性别"
+                    },
+                    "A1": {
+                        "type": "string",
+                        "Description": "出生日期",
+                        "Format": "date-time"
+                    },
+                    "A2": {
+                        "type": "string",
+                        "Description": "学历"
+                    },
+                    "A3": {
+                        "type": "number",
+                        "Description": "证券从业年限"
+                    },
+                    "A4": {
+                        "type": "integer",
+                        "Description": "历任管理基金数"
+                    },
+                    "A5": {
+                        "type": "integer",
+                        "Description": "历任基金经理公司数"
+                    },
+                    "A6": {
+                        "type": "string",
+                        "Description": "简历"
+                    },
+                    "A7": {
+                        "type": "string",
+                        "Description": "照片"
+                    },
+                    "A8": {
+                        "type": "integer",
+                        "Description": "PersonalCode（参数）"
+                    }
+                },
+                "desc": "基金经理详细信息(基本资料)"
+            },
+            "AnyManagedFundsRow": {
+                "type": "object",
+                "Properties": {
+                    "A0": {
+                        "type": "string",
+                        "Description": "管理公司"
+                    },
+                    "A1": {
+                        "type": "string",
+                        "Description": "基金简称"
+                    },
+                    "A2": {
+                        "type": "string",
+                        "Description": "投资类型"
+                    },
+                    "A3": {
+                        "type": "string",
+                        "Description": "到任日期(传参)",
+                        "Format": "date-time"
+                    },
+                    "A4": {
+                        "type": "string",
+                        "Description": "离职日期(传参)",
+                        "Format": "date-time"
+                    },
+                    "A5": {
+                        "type": "number",
+                        "Description": "任职年化回报"
+                    },
+                    "A6": {
+                        "type": "integer",
+                        "Description": "基金编码(不显示)"
+                    }
+                },
+                "desc": "基金经理详细信息(历任管理基金)"
+            },
+            "HistoricalReturnsRow": {
+                "type": "object",
+                "Properties": {
+                    "A0": {
+                        "type": "string",
+                        "Description": "历史回报"
+                    },
+                    "A1": {
+                        "type": "number",
+                        "Description": "3月"
+                    },
+                    "A2": {
+                        "type": "number",
+                        "Description": "6月"
+                    },
+                    "A3": {
+                        "type": "number",
+                        "Description": "YTD"
+                    },
+                    "A4": {
+                        "type": "number",
+                        "Description": "1年"
+                    },
+                    "A5": {
+                        "type": "number",
+                        "Description": "2年"
+                    },
+                    "A6": {
+                        "type": "number",
+                        "Description": "3年"
+                    },
+                    "A7": {
+                        "type": "number",
+                        "Description": "5年"
+                    }
+                },
+                "desc": "基金经理详细信息(历史回报)"
+            },
+            "RiskAnalysisRow ": {
+                "type": "object",
+                "Properties": {
+                    "A0": {
+                        "type": "string",
+                        "Description": "类型"
+                    },
+                    "A1": {
+                        "type": "number",
+                        "Description": "ɑ"
+                    },
+                    "A2": {
+                        "type": "number",
+                        "Description": "β"
+                    },
+                    "A3": {
+                        "type": "number",
+                        "Description": "SharpeRatio"
+                    },
+                    "A4": {
+                        "type": "number",
+                        "Description": "收益标准差"
+                    },
+                    "A5": {
+                        "type": "string",
+                        "Description": "风险度"
+                    }
+                },
+                "desc": "基金经理详细信息(风险分析)"
+            },
+            "lineChartRow ": {
+                "type": "object",
+                "Properties": {
+                    "A0": {
+                        "type": "string",
+                        "Description": "时间",
+                        "Format": "date-time"
+                    },
+                    "A1": {
+                        "type": "number",
+                        "Description": "基金值"
+                    },
+                    "A2": {
+                        "type": "number",
+                        "Description": "同类平均"
+                    },
+                    "A3": {
+                        "type": "number",
+                        "Description": "沪深300"
+                    }
+                },
+                "desc": "基金经理详细信息(折线图基金值)"
+            },
+            "lineChartRows ": {
+                "type": "object",
+                "Properties": {
+                    "A0": {
+                        "type": "string",
+                        "Description": "时间",
+                        "Format": "date-time"
+                    },
+                    "A1": {
+                        "type": "number",
+                        "Description": "基金值"
+                    },
+                    "A2": {
+                        "type": "number",
+                        "Description": "同类平均"
+                    },
+                    "A3": {
+                        "type": "number",
+                        "Description": "沪深300"
+                    }
+                },
+                "desc": "基金经理详细信息(折线图同类平均)"
+            }
+        },
+        "name": "fund.f9.fund_profile.FundManager.BasicInformations"
+    }
+}

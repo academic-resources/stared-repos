@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--     <img src="https://raw.githubusercontent.com/ufo-github/cdn/gh-pages/dd/operate-record.png" alt="">
+        {
+      if(imatch.params.topicId === "" ?
+       return `<img src="https://raw.githubusercontent.com/ufo-github/cdn/gh-pages/dd/my-goods.png" />`
+        :
+       return `<img src="https://raw.githubusercontent.com/ufo-github/cdn/gh-pages/dd/operate-record.png" alt="">`
+    } -->
+    <style>
+        body, div,img{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .left-side{
+            position: absolute;
+            background: #000;
+            color: #fff;
+            width: 200px;
+            height: calc(100% - 100px);
+        }
+        header{
+            position: relative;
+            height: 100px;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(125,255,125,0.5);
+        }
+        header > .logo{
+            height: 100px;
+            width: 200px;
+            background: rgba(0,255,0,0.5);
+            position: relative;
+        }
+        header > .logo > .img{
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .clearfix::after{
+            overflow: hidden;
+            display: table;
+            content: '';
+        }
+        li{
+            list-style: none;
+            text-indent: -30px;
+        }
+    </style>
+    <header>
+        <div class="logo">
+            <!-- logo -->
+            <div class="img">
+                <img src="https://s.gravatar.com/avatar/25cafc8ea7555c473060178167a0709e?size=50&default=retro" alt="">
+                <span>第三方系统</span>
+            </div>
+        </div>
+        <div>
+            xxxx
+        </div>
+    </header>
+    <div class="left-side">
+        <ul>
+            <li>
+                <span>商品管理</span>
+                <ul>
+                    <li>
+                        <a href="">我的商品</a>
+                    </li>
+                    <li>
+                        <a href="">操作记录</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>订单管理</span>
+                <ul>
+                    <li>
+                        <a href="">订单管理</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>我的账户</span>
+                <ul>
+                    <li>
+                        <span><a href="">我的账户</a></span>
+                        <ul>
+                            <li>
+                                <a href="">预付佣金</a>
+                            </li>
+                            <li>
+                                <a href="">配送员设置</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<head>
+ <link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" media="screen">
+</head>
+
+<div class="CDN">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--jquery-2.x  does not support Internet Explorer 6, 7, or 8--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    -->
+    <!--minified-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/vendors/jquery.easings.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/vendors/jquery.slimscroll.min.js"></script>
+</div>

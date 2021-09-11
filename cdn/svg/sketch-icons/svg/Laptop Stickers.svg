@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="414px" height="264px" viewBox="0 0 414 264" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch Beta 3.8.3 (29801) - http://www.bohemiancoding.com/sketch -->
+    <title>Laptop W/ Stickers Copy</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="396" height="245" rx="7"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.28 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="30" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0927026721 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Laptop-W/-Stickers-Copy" transform="translate(9.000000, 2.500000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                <use fill="#C6C6C6" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-1"></use>
+            </g>
+            <g id="Group-5" filter="url(#filter-5)" mask="url(#mask-2)">
+                <g transform="translate(155.000000, 80.172764)">
+                    <rect id="Rectangle-75" fill="#524763" x="0" y="0" width="86" height="84.6544715"></rect>
+                    <g id="logo-copy" stroke-width="1" fill="none" transform="translate(5.000000, 3.983740)">
+                        <path d="M72.1899281,3.81843943 L72.1899281,72.5503492 L4.15251799,72.5503492 L4.15251799,3.81843943 L72.1899281,3.81843943 L72.1899281,3.81843943 L72.1899281,3.81843943 Z M76.0230216,0 L72.1254043,0 L3.8915482,0 L0,0 L0,3.72520587 L0,72.669039 L0,76.6869919 L3.8915482,76.6869919 L72.1254043,76.6869919 L76.0230216,76.6869919 L76.0230216,72.669039 L76.0230216,3.72520587 L76.0230216,0 L76.0230216,0 L76.0230216,0 Z" id="Shape" fill="#82D8D8"></path>
+                        <polygon id="Shape" fill="#FFFFFF" points="32.2618705 51.230729 32.2618705 20.1330401 32.2618705 18.1375873 30.0556058 18.1375873 26.6463885 18.1375873 23.3179856 18.1375873 23.3179856 19.6713271 23.3179856 20.1330401 23.3179856 53.2455922 23.3179856 55.5716582 23.3179856 56.5122671 23.3179856 57.912998 26.6463885 57.912998 30.2261784 57.912998 38.9193151 57.912998 40.8863309 57.912998 40.8863309 55.5716582 40.8863309 53.4171038 40.8863309 51.230729 38.9193151 51.230729"></polygon>
+                        <polygon id="plus" fill="#82D8D8" points="58.3387252 29.9111089 53.6633094 29.9111089 53.6633094 26.6367971 53.6633094 25.1380596 53.049695 25.1380596 52.5657669 25.1380596 49.5999108 25.1380596 48.1915683 25.1380596 45.9971223 25.1380596 45.9971223 26.6367971 45.9971223 29.9111089 43.0740691 29.9111089 40.8863309 29.9111089 40.8863309 32.8054859 40.8863309 35.0780938 40.8863309 37.5479877 43.0740691 37.5479877 45.9971223 37.5479877 45.9971223 41.5796234 45.9971223 42.321037 48.1915683 42.321037 49.5999108 42.321037 52.5657669 42.321037 53.049695 42.321037 53.6633094 42.321037 53.6633094 41.5796234 53.6633094 37.5479877 58.3387252 37.5479877 58.4546763 37.5479877 58.4546763 35.0780938 58.4546763 32.8054859 58.4546763 29.9111089"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

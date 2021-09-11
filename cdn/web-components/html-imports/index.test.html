@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="xgqfrms">
+    <meta name="generator" content="VS code">
+    <title>H5 html template</title>
+    <!-- firefox bug -->
+    <!-- polyfill & preload -->
+    <!-- <link rel="preload" href="./webcomponents-hi-sd-ce.min.js" as="script"> -->
+    <script src="./webcomponents-hi-sd-ce.min.js"></script>
+    <!-- <link rel="preload" href="style.css" as="style"> -->
+</head>
+
+<body>
+    <section>
+        <h1>H5 html template & preload && delay</h1>
+    </section>
+    <section data-test="html-template">
+        <!-- test -->
+    </section>
+    <section data-modules="modules-container">
+        <link rel="import" href="./containers.html" data-rel="containers">
+        <!-- links -->
+        <section data-template="template-container">
+            <!-- templates -->
+        </section>
+    </section>
+    <!-- js -->
+    <script>
+        // no need jQuery
+        let $$ = {
+            qs: function qs(uid = ``) {
+                return document.querySelector(uid);
+            },
+            qsa: function qsa(uid = ``) {
+                return document.querySelectorAll(uid);
+            },
+        };
+        if (window.$) {
+            window.$ = Object.assign($, $$);
+        } else {
+            window.$ = Object.assign({}, $$);
+        }
+        const loadTemplate = (uid = `containers`) => {
+            let templatesBox = document.querySelector(`[data-template="template-container"`),
+                link = document.querySelector(`link[data-rel="containers"]`),
+                // #document
+                template = link ? link.import : null,
+                div = template ? template.querySelector(`[data-div="templates-${uid}"]`) : null;
+            if (div) {
+                // read template once
+                templatesBox.appendChild(div);
+            } else {
+                // exsit template
+            }
+        };
+        const showDOM = (uid = `full-width`) => {
+            let container = $.qs(`[data-test="html-template"]`),
+                temp = $.qs(`[data-template="template-containers-${uid}"]`),
+                clone = temp ? temp.content.cloneNode(true) : null;
+            if (clone) {
+                container.appendChild(clone);
+            }
+        };
+        // DOM fully loaded and parsed!
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                // preload && delay
+                // loadTemplate();
+                // // init
+                // showDOM();
+            }, 100);
+        });
+        // window.onload = () => {
+        //     setTimeout(() => {
+        //         loadTemplate();
+        //         // init
+        //         showDOM();
+        //     }, 1000);
+        // };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+{
+    "name": "CompanyShortDesc",
+    "caption": "公司简介",
+    "Request": {
+        "responsetype": "rtDataSet",
+        "#text": {
+            "ApiName": "CompanyShortDesc",
+            "SecuCode": "SecuCode"
+        }
+    },
+    "ToolBar": {
+        "name": "lcToolbar",
+        "Caption": "工具栏",
+        "Button": [{
+                "name": "btnRequest"
+            },
+            {
+                "name": "btnOutput",
+                "caption": "数据导出",
+                "bindvalue": "OUTPUT",
+                "ImageIndex": "9"
+            }
+        ]
+    },
+    "Container": {
+        "name": "ctDataGround3",
+        "caption": "报表容器",
+        "BorderSides": "0",
+        "Container": {
+            "name": "ctChart2",
+            "caption": "报表容器",
+            "Padding": "0",
+            "Report": {
+                "name": "CompanyShortDesc",
+                "caption": "公司简介",
+                "reverse": "true",
+                "showhead": "false",
+                "AutoNodeHeight": "true",
+                "ShowButton": "false",
+                "Row": [{
+                        "RName": "row1",
+                        "heigh": "220"
+                    },
+                    {
+                        "RName": "row2",
+                        "heigh": "700"
+                    }
+                ],
+                "Column": [{
+                        "filedname": "chiName",
+                        "caption": "公司名称"
+                    },
+                    {
+                        "filedname": "oldName",
+                        "functype": "ftStaticTable",
+                        "caption": "曾用名",
+                        "Column": [{
+                                "filedname": "changedate",
+                                "caption": "变更日期",
+                                "width": "100"
+                            },
+                            {
+                                "filedname": "changebeforename",
+                                "caption": "变更前",
+                                "width": "300"
+                            },
+                            {
+                                "filedname": "changeaftername",
+                                "caption": "变更后",
+                                "width": "300"
+                            }
+                        ]
+                    },
+                    {
+                        "filedname": "engName",
+                        "caption": "英文名称"
+                    },
+                    {
+                        "filedname": "briefIntroText",
+                        "caption": "公司简介"
+                    },
+                    {
+                        "filedname": "businessMajor",
+                        "caption": "经营范围"
+                    },
+                    {
+                        "filedname": "seconIndustry",
+                        "caption": "证监会二级行业"
+                    },
+                    {
+                        "filedname": "leaderName",
+                        "functype": "ftStaticTable",
+                        "caption": "总经理",
+                        "ParamEx": "reverse",
+                        "Column": [{
+                                "filedname": "Name",
+                                "caption": "姓名",
+                                "width": "90"
+                            },
+                            {
+                                "filedname": "Position",
+                                "caption": "职务"
+                            },
+                            {
+                                "filedname": "PersonCV",
+                                "caption": "个人简历"
+                            },
+                            {
+                                "filedname": "PositionSummary",
+                                "caption": "任职概况"
+                            }
+                        ]
+                    },
+                    {
+                        "filedname": "Chairman",
+                        "functype": "ftStaticTable",
+                        "caption": "董事长",
+                        "ParamEx": "reverse",
+                        "Column": [{
+                                "filedname": "Name",
+                                "caption": "姓名",
+                                "width": "90"
+                            },
+                            {
+                                "filedname": "Position",
+                                "caption": "职务"
+                            },
+                            {
+                                "filedname": "PersonCV",
+                                "caption": "个人简历"
+                            },
+                            {
+                                "filedname": "PositionSummary",
+                                "caption": "任职概况"
+                            }
+                        ]
+                    },
+                    {
+                        "filedname": "secretary",
+                        "functype": "ftStaticTable",
+                        "caption": "董事会秘书",
+                        "ParamEx": "reverse",
+                        "Column": [{
+                                "filedname": "Name",
+                                "caption": "姓名",
+                                "width": "90"
+                            },
+                            {
+                                "filedname": "Position",
+                                "caption": "职务"
+                            },
+                            {
+                                "filedname": "PersonCV",
+                                "caption": "个人简历"
+                            },
+                            {
+                                "filedname": "PositionSummary",
+                                "caption": "任职概况"
+                            }
+                        ]
+                    },
+                    {
+                        "filedname": "workerCount",
+                        "caption": "员工总数(人)"
+                    },
+                    {
+                        "filedname": "establishDate",
+                        "caption": "成立日期"
+                    },
+                    {
+                        "filedname": "listedDate",
+                        "caption": "挂牌日期"
+                    },
+                    {
+                        "filedname": "regCapital",
+                        "caption": "注册资本(万元)"
+                    },
+                    {
+                        "filedname": "legalRepr",
+                        "caption": "法人代表"
+                    },
+                    {
+                        "filedname": "businessRegNum",
+                        "caption": "工商登记号"
+                    },
+                    {
+                        "filedname": "area",
+                        "caption": "所属地区"
+                    },
+                    {
+                        "filedname": "regAddrAndZipCode",
+                        "caption": "注册地址和邮编"
+                    },
+                    {
+                        "filedname": "officeAddrAndZipCode",
+                        "caption": "办公地址和邮编"
+                    },
+                    {
+                        "filedname": "secretaryBDTel",
+                        "caption": "电话"
+                    },
+                    {
+                        "filedname": "secretaryBDFax",
+                        "caption": "传真"
+                    },
+                    {
+                        "filedname": "email",
+                        "functype": "ftEmail",
+                        "caption": "电子邮件"
+                    },
+                    {
+                        "filedname": "webSite",
+                        "functype": "ftWeb",
+                        "caption": "公司网站"
+                    },
+                    {
+                        "filedname": "acctName",
+                        "caption": "审计机构"
+                    },
+                    {
+                        "filedname": "lawName",
+                        "caption": "法律顾问"
+                    }
+                ]
+            }
+        }
+    }
+}

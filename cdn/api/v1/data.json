@@ -1,0 +1,91 @@
+{
+  "message": [
+    "success"
+  ],
+  "statusCode": [
+    "200"
+  ],
+  "data": {
+    "tList": [
+      {
+        "id": 1400,
+        "name": "农夫山泉",
+        "saleName": "11111",
+        "state": 10,
+        "specification": "22222",
+        "unit": "箱",
+        "prodactedAt": "1990-11-11",
+        "initNumber": 1111,
+        "saleNumber": 2222,
+        "salePrice": 2222,
+        "supplierId": 1,
+        "barCode": "111111",
+        "firstCatalogId": 2000000,
+        "secondCatalogId": 2010000,
+        "zhengDou": 1111,
+        "goodsId": 1444,
+        "catalogId": null,
+        "catalogName": "饮料-矿泉水",
+        "index": 1,
+        "size": 10,
+        "createdAt": "2017-03-22 12:13:14",
+        "updatedAt": "2017-03-22 12:13:14"
+      },
+      {
+        "id": 1397,
+        "name": "农夫山泉",
+        "saleName": null,
+        "state": 0,
+        "specification": "24瓶*1箱",
+        "unit": "箱",
+        "prodactedAt": null,
+        "initNumber": null,
+        "saleNumber": null,
+        "salePrice": null,
+        "supplierId": 1,
+        "barCode": "111111",
+        "firstCatalogId": 2000000,
+        "secondCatalogId": 2010000,
+        "zhengDou": null,
+        "goodsId": 1444,
+        "catalogId": null,
+        "catalogName": "饮料-矿泉水",
+        "index": 1,
+        "size": 10,
+        "createdAt": "2017-03-22 08:50:12",
+        "updatedAt": "2017-03-22 08:50:12"
+      },
+      {
+        "id": 1229,
+        "name": "统一",
+        "saleName": "11",
+        "state": 10,
+        "specification": "11",
+        "unit": "箱",
+        "prodactedAt": "1990-11-11",
+        "initNumber": 11,
+        "saleNumber": 11,
+        "salePrice": 11,
+        "supplierId": 1,
+        "barCode": "123123",
+        "firstCatalogId": 1000000,
+        "secondCatalogId": 1010000,
+        "zhengDou": 11,
+        "goodsId": 1222,
+        "catalogId": null,
+        "catalogName": "酒类-白酒",
+        "index": 1,
+        "size": 10,
+        "createdAt": "2017-03-21 10:24:21",
+        "updatedAt": "2017-03-21 10:24:21"
+      }
+    ],
+    "page": {
+      "index": 1,
+      "maxRows": 3,
+      "rows": 10,
+      "page": 1,
+      "stratIndex": 0
+    }
+  }
+}

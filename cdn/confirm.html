@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window.confirm()</title>
+</head>
+<body>
+    <div>
+        <h1>Window.confirm()</h1>
+        <button id="btn">
+            click for exit!
+        </button>
+    </div>
+    <!-- js -->
+    <script>
+        const confirm = () => {
+            if (window.confirm("Do you really want to leave?")) {
+                window.open("https://cdn.xgqfrms.xyz/confirm.html", "Thanks for Visiting!");
+            }
+        }
+        let btn = document.querySelector("#btn");
+        btn.addEventListener('click', confirm);
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="xgqfrms">
+  <meta name="generator" content="VS code">
+  <title>HTTPS form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    form{
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTTPS form</h1>
+    <!-- Content-Type: application/x-www-form-urlencoded -->
+  </header>
+  <main>
+    <article>
+      <section>
+        <!-- <form action="./form.html" method="post"> -->
+        <form action="./index.html#" method="post">
+        <!-- <form action="./https-form.html#" method="post"> -->
+          <label for="username">username:</label><br>
+          <input type="text" id="username" placeholder="username"><br>
+          <label for="password">password:</label><br>
+          <input type="password" id="password" placeholder="password"><br>
+          <button type="submit">提交</button>
+        </form>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>copyright&copy; xgqfrms 2020</p>
+  </footer>
+  <!-- js -->
+  <script>
+    const log = console.log;
+    const btn = document.querySelector(`[type="submit"]`);
+    const name = document.querySelector(`#username`);
+    const pwd = document.querySelector(`#password`);
+    btn.addEventListener(`click`, (e) => {
+      e.preventDefault();
+      log(`name`, name.value)
+      log(`pwd`, pwd.value)
+      const obj = {
+        username: name,
+        password: pwd,
+      };
+      // Fetch API cannot load file:///.../index. URL scheme must be "http" or "https" for CORS request.
+      // Fetch API cannot load file:///.../index. URL scheme "file" is not supported.
+      fetch(`./index`, {
+        method: "POST",
+        // mode: "no-cors",
+        mode: "cors",
+        // cookies
+        credentials: "include",
+        headers: {
+          // "Content-Type": "text/plain",
+          // "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Type": "application/json",
+          "x-csrf-token": `csrftoken`,
+        },
+        body: JSON.stringify(obj),
+      })
+      .then(res => {
+        log(`res`, res);
+        return res.json();
+      })
+      .catch(err => log(`fetch error`, err));
+    });
+  </script>
+</body>
+</html>

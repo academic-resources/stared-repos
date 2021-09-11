@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+
+pre {
+  margin: 50px 30px;
+  background: #000;
+  color: #0f0;
+  font-size: 16px;
+  padding: 20px;
+  /* 
+    fix: 内容宽度超过了屏幕显示范围 
+    https://search.google.com/search-console/mobile-usability/drilldown?resource_id=sc-domain:xgqfrms.xyz&item_key=CAk&utm_source=wnc_10030322&utm_medium=gamma&utm_campaign=wnc_10030322&utm_content=msg_100058679&hl=zh-CN
+  */
+  max-width: 80vw;
+  overflow: auto;
+}

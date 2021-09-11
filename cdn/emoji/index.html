@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>es6 let & emoji</title>
+    <style>
+        #cat {
+          margin-top: 0.3em;
+          font-size: 10em;
+        }
+
+        button {
+          background: #0a0;
+          color: white;
+          /*border-radius: 0.2em;*/
+          /*border-width: 0.07em;*/
+          padding: 0.2em 3em;
+          font-size: 3em;
+          border: none;
+          cursor: pointer;
+        }
+
+        /*
+         * Speech bubble CSS lifted from
+         *   http://natashatherobot.com/speech-bubble-css/
+         * this time! Thanks!
+         */
+        blockquote {
+            background-color: #f8f8f8;
+            border: 2px solid #c8c8c8;
+            border-radius: 1em;
+            height: 1.5em;
+            width: 22em;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        blockquote .arrow {
+            border-style: solid;
+            position: absolute;
+        }
+
+        .bottom {
+            border-color: #c8c8c8 transparent transparent transparent;
+            border-width: 13px 13px 0px 13px;
+            bottom: -13px;
+        }
+
+        .bottom:after {
+            border-color: #f8f8f8 transparent transparent transparent;
+            border-style: solid;
+            border-width: 13px 13px 0px 13px;
+            bottom: 2.8px;
+            content: "";
+            position: absolute;
+            left: -12.5px;
+        }
+    </style>
+</head>
+<body>
+    <blockquote>
+        <div id="speech"></div>
+        <div class="arrow bottom right"></div>
+    </blockquote>
+    <div id="cat">😼</div>
+    <button id="go">go()</button>
+    <!-- js -->
+    <!-- <script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer></script> -->
+    <script>
+        const cat = {
+            speech: document.getElementById("speech"),
+            cat: document.getElementById("cat"),
+            say: function (quip) {
+                this.speech.textContent = "" + quip;
+                this.cat.textContent = "😸";
+            setTimeout(function () {
+                    this.speech.textContent = "";
+                    this.cat.textContent = "😼";
+                }.bind(this), 1250);
+            }
+        };
+        let go = () => {
+            var messages = ["Meow!", "I'm a talking cat!", "Callbacks are fun!"];
+            messages.forEach(function (message, i) {
+                setTimeout(function () {
+                    cat.say(message);
+                }, i * 1500);
+            });
+        }
+        document.getElementById("go").addEventListener("click", function () {
+            // setImmediate(callback, arg1, arg2, arg3);
+            setTimeout(go, 1000);
+        });
+    </script>
+</body>
+</html>

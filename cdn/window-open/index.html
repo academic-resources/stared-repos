@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="xgqfrms">
+    <meta name="generator" content="VS code">
+    <title>index</title>
+    <style>
+        [data-btn="hash"] {
+            width: 50px;
+            background: #ccc;
+            color: #fff;
+            outline: none;
+            /* border: 1px solid #000; */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>a link</h1>
+        <ul>
+            <li>
+                <a href="./test.html#aaa" target="_blank">aaa</a>
+            </li>
+            <li>
+                <a href="./test.html#bbb" target="_blank">bbb</a>
+            </li>
+            <li>
+                <a href="./test.html#ccc" target="_blank">ccc</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h1>open window</h1>
+        <ul>
+            <li>
+                <button data-btn="hash">aaa</button>
+            </li>
+            <li>
+                <button data-btn="hash">bbb</button>
+            </li>
+            <li>
+                <button data-btn="hash">ccc</button>
+            </li>
+        </ul>
+    </section>
+    <!-- js -->
+    <script>
+        let btns = [...document.querySelectorAll(`[data-btn="hash"]`)];
+        btns.forEach(
+            (btn, i) => {
+                btn.addEventListener(`click`, () => {
+                    let value = btn.innerText;
+                    console.log(`value =`, value);
+                    window.open(`./test.html#${value}`, `logs`);
+                });
+            }
+        );
+    </script>
+</body>
+
+</html>
