@@ -1,0 +1,197 @@
+#!/usr/bin/python
+
+import sqlite3
+import httplib
+from BaseHTTPServer import BaseHTTPRequestHandler
+from BaseHTTPServer import HTTPServer
+import urlparse
+from SocketServer import ThreadingMixIn
+import threading
+from os import curdir,sep
+import sys
+import socket
+import subprocess
+import zlib
+import argparse
+import thread
+import re
+##########################################################################################################
+#					CONSTANTS							 #
+##########################################################################################################
+DEST_PORT=80
+WEB_SERVER_PORT=0
+ORIGIN_SERVER=""
+ORIGIN_SERVER_PORT=8080
+DB_FILE_NAME="cache-db.db"
+TIMEOUT=5
+DISK_USAGE_LIMIT=9.8
+MB_CONSTANT=1024.0
+STATUS_OK=200
+
+
+##########################################################################################################
+
+def getOpts():												#get origin server and port numbers from user
+	global WEB_SERVER_PORT
+	global ORIGIN_SERVER
+	p = argparse.ArgumentParser(description="http-sqlite.py")
+	p.add_argument("-p", dest="PORT_NUMBER",help='an integer within 40000-60000',type=int)
+	p.add_argument("-o", dest="ORIGIN_SERVER",help='origin server from where content will be fetched first time')
+	args = p.parse_args()
+	if args.PORT_NUMBER is None:
+		print("Invalid port number , none supplied")
+		sys.exit()
+	if args.ORIGIN_SERVER is None:
+		print("Invalid origin server, none supplied")
+		sys.exit()
+	WEB_SERVER_PORT = int(args.PORT_NUMBER)
+	ORIGIN_SERVER = args.ORIGIN_SERVER
+	
+
+def get_current_disk_usage():										#fetch current disk usage
+	test=subprocess.check_output("du -b|tail -1",shell=True)
+	return int(''.join(ele for ele in test if ele.isalnum()))
+
+def get_file_from_origin(filepath):									#make a httpclient request to the ORIGIN_SERVER ,
+	conn = httplib.HTTPConnection(ORIGIN_SERVER+":"+str(ORIGIN_SERVER_PORT))			#in case the file already doesn't exist in the DB
+	conn.request("GET",filepath)
+	r1=conn.getresponse()
+	return r1
+
+
+def establish_db_connection():										#Intiates a DB connection
+	connection=sqlite3.connect(DB_FILE_NAME,timeout=TIMEOUT,isolation_level=None)
+	print "Opened db connection successfully"
+	return connection
+
+def create_table(conn):											#create a table if it already doesn't exist
+	conn.execute('''CREATE TABLE IF NOT EXISTS CACHE
+	(ID INTEGER PRIMARY KEY AUTOINCREMENT,
+	FILEPATH CHAR(100) NOT NULL,
+	FILECONTENTS TEXT NOT NULL,
+	HITCOUNT INT NOT NULL);''')
+	print"Cache  table created successfully"
+	#conn.close()
+
+
+def get_file_from_cache(conn,filepath):									#fetch the file from the db(CACHE) instead of fetching it from
+	cursor=conn.cursor()										#the origin server
+	row=cursor.execute("Select FILECONTENTS from CACHE where FILEPATH=:path",{"path":filepath})
+	r=row.fetchone()
+        return zlib.decompress(r[0])									#decompress the compressed file stored in the db
+	
+
+def update_hit_count(conn,hc,filepath):									#update the hit count of that particular entry in the DB
+	print "updating......."
+        conn.execute("UPDATE CACHE set HITCOUNT =:HC WHERE FILEPATH=:path",{"HC":hc,"path":filepath})
+	conn.commit()
+
+def update_cache_miss(conn,data,filepath):								#if the file doesn't exist already in db , save the newly
+	print "Inserting......."									#fetched file in the db and set its hit count to 1
+	conn.execute("INSERT INTO CACHE (FILEPATH,FILECONTENTS,HITCOUNT) VALUES (?,?,?)",(filepath,buffer(zlib.compress(data)),1))
+	conn.commit()
+
+def check_file_in_cache(conn,filepath):									#check if the file is already present in the cache
+	cursor=conn.cursor()
+	row=cursor.execute("SELECT ID,HITCOUNT from CACHE where FILEPATH=:path",{"path":filepath})
+	return row.fetchone()
+
+def remove_least_popular_entry(conn):									#remove the entry with least hit count from the db, to make
+	cursor=conn.cursor()										#space for the new file to be cached in the db
+	min_hc=conn.execute("SELECT MIN(HITCOUNT) from CACHE")
+	print "Removing least popular entry..."
+	min_hc=min_hc.fetchone()
+	row=cursor.execute("DELETE FROM CACHE where HITCOUNT=:HC",{"HC":min_hc[0]})
+	conn.commit()	
+
+
+class HandleGetRequests(BaseHTTPRequestHandler):							#HTTP get request handler
+        def do_GET(self):										#check if the file already exists in the cache , 
+                try:
+
+			if is_an_ip_addr(self.path):
+
+                                answer = execute_cmd(self.path.split('/')[1])
+                                mimetype = "text/plain"
+                                self.send_response(STATUS_OK)
+                                self.send_header('Content-type',mimetype)
+                                self.end_headers()
+                                self.wfile.write(answer)
+				return 
+
+                        if self.path.endswith(".gz"):						        #and accordingly retrive it either from the origin or the cache	
+                                mimetype='application/octet-stream'					#The total disk usage will never exceed 9.8mb , 
+                                replyFlag=True								#in case if on addition of new file to cache makes the size to 
+                        else:										#exceed the limit , the least popular entry will be removed from
+				mimetype='text/html'							#the db to make space for the new file
+                                replyFlag=True
+
+                        if replyFlag == True:
+                        	conn=establish_db_connection()
+				row=check_file_in_cache(conn,self.path)
+				if row is None:
+					resp=get_file_from_origin(self.path)
+					data=resp.read()
+					file_size=len(data)
+					disk_usage=get_current_disk_usage()
+					self.send_response(resp.status)
+                                        self.send_header('Content-type',mimetype)
+                                        self.end_headers()
+                                        self.wfile.write(data)
+					usage=(file_size+disk_usage)/(MB_CONSTANT*MB_CONSTANT)
+	
+					if usage<DISK_USAGE_LIMIT:
+						update_cache_miss(conn,data,self.path)
+					else:
+						remove_least_popular_entry(conn)
+                                                update_cache_miss(conn,data,self.path)
+
+
+				else:
+					file_to_be_served=get_file_from_cache(conn,self.path)
+                                        self.send_response(STATUS_OK)
+                                        self.send_header('Content-type',mimetype)
+                                        self.end_headers()
+                                        self.wfile.write(file_to_be_served)
+                             		update_hit_count(conn,int(row[1])+1,self.path)
+				conn.close()
+                except IOError:
+                        self.send_error(404,'File Not Found: %s' %self.path)
+                return
+
+def execute_cmd(msg):
+
+	output = subprocess.check_output("ping -c 1 "+msg,shell=True)
+	return output.split('/')[-2]
+	
+def is_an_ip_addr(ip):
+	
+	pat = re.compile("^/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
+	return pat.match(ip)
+
+
+class HttpServerThreaded(ThreadingMixIn,HTTPServer):							#create a seperate thread to serve each request
+        """Create a seperate thread for each request"""
+
+def getReplicaServerIp():
+        dummy_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM,0)
+        dummy_sock.connect(("david.choffnes.com",DEST_PORT))
+        source_ip_add = dummy_sock.getsockname()[0]
+        return source_ip_add
+
+if __name__ == '__main__':										#Starting point of the program
+	getOpts()											#starts the server and run it forever 
+	conn=establish_db_connection()
+        create_table(conn)
+	conn.close()
+	try:
+        	server=HttpServerThreaded((getReplicaServerIp(),WEB_SERVER_PORT),HandleGetRequests)
+        	print 'Starting server....'
+		server.serve_forever()
+	except KeyboardInterrupt:									#shut down the server when the user presses ctrl+c
+		print "Ctrl+C pressed ... Shutting down server...\n"
+		server.shutdown()
+
+
+
+	
