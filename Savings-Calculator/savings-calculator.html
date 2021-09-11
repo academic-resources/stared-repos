@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Savings Calculator - Input & Output</title>
+<meta name="author" content="Val Scrivner">
+<meta name="description" content="On page html for input and output of savings calculator js. Both secionts are needed on the same page.">
+</head>
+<body>
+<!-- This is the input section -->
+<div class="cost-calculator">
+	<form name="calculateCost" method="post">
+		<label>Number of Card Transactions Processed Monthly</label> <span id="transactionError" class="error-message"></span><input type="text" id ="numTransactions" name="numTransactions" size="7">
+		<label>Amount ($) Processed Monthly</label> <span id="amountError" class="error-message"></span> <input type="text" id="amountProcessed" name="amountProcessed" size="7">
+		<label class="radio-main">Transaction Type</label> <input type="radio" name="typeTransactions" value="swiped" checked="checked"> <label class="radio-sub">Card Present - Swiped</label>  <input type="radio" name="typeTransactions" value="keyed"> <label class="radio-sub">eCommerce - Keyed-in</label> 
+		<button onclick="validateFields()" type="button">Calculate Your Cost</button>
+	</form>
+</div>
+
+<!-- This is the output section -->
+<h2>Your Results</h2>
+<div id="results-box">
+<p id="cost-simplepay">Once you enter and submit your details, your monthly cost with SimplePay will display here.</p>
+
+<h2>Your savings</h2>
+<p id="savings-pp">Once you enter and submit your details, your monthly savings over other credit card processors will display here.</p>
+<p id="savings-sq"></p>
+<p id="savings-stripe"></p>
+<p id="savings-authorize"></p>
+<p id="savings-bt"></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Savings Calculator Input Widget</title>
+<meta name="author" content="Val Scrivner">
+<meta name="description" content="Widget to be used with savings calculator js that takes input information and then sends to the calculator page.">
+</head>
+<body>
+<div class="cost-calculator">
+	<form name="calculateCost" method="post">
+		<label>Number of Card Transactions Processed Monthly</label> <span id="transactionError" class="error-message"></span><input type="text" id ="numTransactions" name="numTransactions" size="7">
+		<label>Amount ($) Processed Monthly</label> <span id="amountError" class="error-message"></span> <input type="text" id="amountProcessed" name="amountProcessed" size="7">
+		<label class="radio-main">Transaction Type</label> <input type="radio" name="typeTransactions" value="swiped" checked="checked"> <label class="radio-sub">Card Present - Swiped</label>  <input type="radio" name="typeTransactions" value="keyed"> <label class="radio-sub">eCommerce - Keyed-in</label> 
+		<button onclick="validateFieldsWidget()" type="button">Calculate Your Cost</button>
+	</form>
+</div>
+</body>
+</html>
