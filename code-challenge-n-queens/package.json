@@ -1,0 +1,27 @@
+{
+  "name": "code-challenge-n-queens",
+  "version": "0.0.1",
+  "description": "Solve various n-queens problems.",
+  "main": "n-queens.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/code-challenge-n-queens.git"
+  },
+  "keywords": [
+    "code-challenge",
+    "n-queens"
+  ],
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/code-challenge-n-queens/issues"
+  },
+  "homepage": "https://github.com/blakeembrey/code-challenge-n-queens",
+  "dependencies": {
+    "code-challenge": "0.0.1"
+  }
+}
