@@ -1,0 +1,22 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.renderIndentGuides": false,
+    "files.insertFinalNewline": true,
+    "window.zoomLevel": 1,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.closeOnFileDelete": true,
+    "editor.rulers": [
+        80
+    ],
+    "editor.tabSize": 2,
+    "editor.fontSize": 12.5,
+    "extensions.ignoreRecommendations": false,
+    "workbench.tree.indent": 8,
+    "workbench.iconTheme": "material-icon-theme",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true
+}
+

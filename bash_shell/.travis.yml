@@ -1,0 +1,11 @@
+install:
+  - export SHELLCHECK_OPTS="-e SC1091 -e SC1090 -e SC2181"
+
+script:
+  - shellcheck *.bash
+  - shellcheck general/aliases.bash
+  - shellcheck general/main.bash
+  - shellcheck general/prompt.bash
+  - shellcheck mac/*.bash
+  - shellcheck ubuntu/*.bash
+  - shellcheck windows/*.bash
