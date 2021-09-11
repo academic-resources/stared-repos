@@ -1,0 +1,37 @@
+{
+  "name": "language-detect-exec",
+  "version": "1.0.0",
+  "description": "Automatically execute a file in a known programming language.",
+  "main": "language-detect-exec.js",
+  "scripts": {
+    "test": "istanbul cover _mocha -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/node-language-detect-exec.git"
+  },
+  "keywords": [
+    "language",
+    "detect",
+    "exec",
+    "process"
+  ],
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakeembrey/node-language-detect-exec/issues"
+  },
+  "homepage": "https://github.com/blakeembrey/node-language-detect-exec",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.3.0"
+  },
+  "dependencies": {
+    "language-detect": "^1.0.0",
+    "language-exec": "^1.0.0"
+  }
+}
