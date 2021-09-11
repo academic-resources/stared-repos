@@ -1,0 +1,139 @@
+#imgs img
+{
+	/* overlays all the imgs */
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	transition: 1s;
+	visibility:hidden;
+	
+	/* we want to show only 1 img at a time */
+}
+/*the container*/
+#Snav
+{
+	display:block;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+/* where the circles are going to be*/
+#SnavUp
+{
+	display:block;
+	width:100%;
+	height:20%;
+}
+#Scircles
+{
+	display:block;
+	width:5%;
+	height:15%;
+	margin-right:5%;
+	margin-top:2%;
+	float:right;   /* is going to be on the right side of the slider */
+}
+#Scircles ul
+{
+	margin:0;
+	float:right;
+	display:block;
+	width:100%;
+	height:100%;
+}
+#Scircles li
+{
+	list-style:none;
+	display:block;
+	background-color:rgba(0,0,0,1);
+	width:25%;
+	height:90%;
+	margin-left:5%;
+	float:left;    /* on the same line */
+	visibility:hidden;
+	
+	/* We need circles, not squares */
+	border-bottom-left-radius:25px;
+	border-top-left-radius:25px;
+	border-bottom-right-radius:25px;
+	border-top-right-radius:25px;
+}
+/* Thus endeth SnavUp */
+
+#SnavMiddle
+{
+	display:block;
+	width:100%;
+	height:15%;
+	margin-top:20%;
+}
+
+#Sleft
+{
+	width:3.5%;
+	height:100%;
+	float:left;
+	margin-left:3%;
+	opacity:0.5;
+}
+/* button effect */
+#Sleft:hover
+{
+	opacity:0.8;
+}
+
+#Shuffle
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	opacity:0.5;
+}
+
+#Shuffle:hover
+{
+	opacity:0.8;
+}
+
+#Sright
+{
+	width:3.5%;
+	height:100%;
+	float:right;
+	margin-right:3%;
+	opacity:0.5;
+}
+/* button effect */
+#Sright:hover
+{
+	opacity:0.8;
+}
+
+/* info at the bottom of the slider */
+#SnavBottom
+{
+	display:block;
+	background-color:rgba(0,0,0,0.8);
+	width:100%;
+	height:10%;
+	position: absolute;
+	bottom:0;
+	left:0;
+}
+
+#SnavBottom p
+{
+	font:normal 200% Arial;
+	color:#fff;
+	position:absolute;
+	bottom:0;
+	left:0;
+	margin-left:3%;
+	visibility:hidden;
+}
+
+

@@ -1,0 +1,87 @@
+body{
+	background-color:#600;
+	color:#000;
+	font:100% Verdana, Arial, sans-serif;
+	
+}
+
+p{
+	font-size:0.875em;
+	line-height:1.6em;
+}
+/* id selectors */
+#content li {
+	font:100% Verdana, Arial, sans-serif;
+	font-size:0.975em;
+}
+
+#content ul {
+	font:100% Verdana, Arial, sans-serif;
+	font-size:0.975em;
+}
+#wrapper {
+	width:920px;
+	background:#fff;
+	margin:0 auto; /* a good way to center an entire block of content in the middle of page */
+	border:4px double #999;
+}
+
+#header{
+	text-align:center;
+}
+
+#navigation {
+	text-align:center;
+}
+
+#navigation a:link {
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#content {
+	padding:0 25px;
+}
+
+#footer {
+	font-size:0.75em;
+	text-align:center;
+	background:#eee;
+	border-top:1px solid #999;
+	padding:4px 0;
+}
+
+#footer a:link {
+	color:#000;
+	
+}
+
+#footer a:visited {
+	color:#450
+}
+/* img{
+	float:left;
+    margin-left:10px; 
+} */
+
+/* Box model */
+/* solid, dotted, dashed and double all work on all browsers */
+/* groove, ridge, inset, outset don't work on Chrome/Safari or IE very well or at all */
+.special {
+	border:10px solid #fff;
+	background:#ccf url(http://assets.rollingstone.com/assets/2015/article/stevie-wonder-produce-underground-railroad-miniseries-musical-20150116/181457/large_rect/1421434279/1401x788-458541434.jpg) no-repeat;
+	padding:500px 60px 200px 400px;
+  /* look at image size to determine padding */
+	margin:50px;
+	width:320px;
+	/*float:right; /* causes the paragraph to move left (or right) while the other text wraps around it */
+}
+
+.fltright{
+	float:right;
+	margin-left:20px;
+}
+.fltleft{
+	float:left;
+	margin-right:15px;
+}
