@@ -1,0 +1,23 @@
+/* PHASE 8: Thumbs */
+.friend-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumb{
+    background: url("../images/cat.jpg");
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border-radius: 10px;
+    margin: 3px;
+}
+.thumb:hover:before{
+    content: "";
+    width: 60px;
+    height: 30px;
+    background: #292929;
+    color: white;
+    display: block;
+}

@@ -1,0 +1,77 @@
+#sections-sidebar {
+    opacity: 0;
+    left: 14px;
+    top: 21px;
+    position: absolute;
+    background: $lightest-gray;
+    padding: 10px;
+    width: 150px;
+    border: 1px solid $gray;
+    > li{
+        padding: 5px;
+        &:hover {
+            background-color: $gray;
+            color: white;
+        }
+    }
+}
+
+#sections-sidebar.expand {
+    opacity: 1;
+    z-index: 1;
+}
+
+#sections-sidebar-btn {
+    position: relative;
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown > ul {
+    display: none;
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    background-color: $light-gray;
+    z-index: 2;
+    /* use top, left, right, bottom to position */
+    background: $lightest-gray;
+    padding: 10px;
+    width: 150px;
+    color: black;
+    border: 1px solid $gray;
+    > li{
+        padding: 5px;
+        &:hover {
+            background-color: $gray;
+            color: white;
+        }
+    }
+}
+.dropdown:hover > ul {
+    /* applies the following style to uls inside .dropdown */
+    /* but only when .dropdown is being hovered over */
+    display: block;
+}
+
+#sections-sidebar  li {
+    position: relative;
+}
+#sections-sidebar > li .dropdown:after ,
+#sections-sidebar > li .dropdown:before  {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    border-left: 5px solid gray;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    width: 0;
+    height: 0;
+}
+#sections-sidebar > li .dropdown:after {
+    right: 2px;
+    border-left: 5px solid white;
+    z-index: 1;
+}

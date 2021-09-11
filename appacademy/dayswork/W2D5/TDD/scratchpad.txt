@@ -1,0 +1,42 @@
+card
+==========
+face
+suit
+
+
+deck
+==========
+cards
+
+
+hand_defs
+===========
+hand_category (full house, etc)
+strongest hand wins
+full_house?
+pair?
+
+
+
+player
+==========
+hand
+pot
+prompt_for_cards_to_discard
+call, bet, fold, see, raise?
+player can discard up to 3 cards
+player can bet
+player can fold
+player can see
+player can raise
+player receives new cards
+players bet again
+
+game
+==========
+deck
+current_player
+players
+pot amount
+deals each player 5 cards
+initializes with players' names

@@ -1,0 +1,38 @@
+                     Prefix Verb   URI Pattern                                                                              Controller#Action
+              user_artworks GET    /users/:user_id/artworks(.:format)                                                       artworks#index
+                 user_likes GET    /users/:user_id/likes(.:format)                                                          likes#index
+           user_collections GET    /users/:user_id/collections(.:format)                                                    collections#index
+                      users GET    /users(.:format)                                                                         users#index
+                            POST   /users(.:format)                                                                         users#create
+                       user GET    /users/:id(.:format)                                                                     users#show
+                            PATCH  /users/:id(.:format)                                                                     users#update
+                            PUT    /users/:id(.:format)                                                                     users#update
+                            DELETE /users/:id(.:format)                                                                     users#destroy
+              artwork_likes GET    /artworks/:artwork_id/likes(.:format)                                                    likes#index
+                   artworks POST   /artworks(.:format)                                                                      artworks#create
+                    artwork GET    /artworks/:id(.:format)                                                                  artworks#show
+                            PATCH  /artworks/:id(.:format)                                                                  artworks#update
+                            PUT    /artworks/:id(.:format)                                                                  artworks#update
+                            DELETE /artworks/:id(.:format)                                                                  artworks#destroy
+              comment_likes GET    /comments/:comment_id/likes(.:format)                                                    likes#index
+                   comments GET    /comments(.:format)                                                                      comments#index
+                            POST   /comments(.:format)                                                                      comments#create
+                    comment DELETE /comments/:id(.:format)                                                                  comments#destroy
+             artwork_shares POST   /artwork_shares(.:format)                                                                artwork_shares#create
+              artwork_share DELETE /artwork_shares/:id(.:format)                                                            artwork_shares#destroy
+                      likes POST   /likes(.:format)                                                                         likes#create
+                       like DELETE /likes/:id(.:format)                                                                     likes#destroy
+        collection_artworks GET    /collections/:collection_id/artworks(.:format)                                           artworks#index
+collection_collection_items GET    /collections/:collection_id/collection_items(.:format)                                   collection_items#index
+                collections POST   /collections(.:format)                                                                   collections#create
+                 collection GET    /collections/:id(.:format)                                                               collections#show
+                            PATCH  /collections/:id(.:format)                                                               collections#update
+                            PUT    /collections/:id(.:format)                                                               collections#update
+                            DELETE /collections/:id(.:format)                                                               collections#destroy
+           collection_items POST   /collection_items(.:format)                                                              collection_items#create
+            collection_item DELETE /collection_items/:id(.:format)                                                          collection_items#destroy
+         rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+  rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+         rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+  update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+       rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create

@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+def get_and_visit_url
+  print "Please input URL "
+  short_url = gets.chomp
+  long = ShortenedUrl.find_by(short_url: short_url)
+    .long_url
+  launchy long
+end
+
+print "Enter your email "
+email = gets.chomp
+
+user = User.find_by(email: email)
+
+print "Enter 1 to visit url or 2 to create one "
+choice = gets.chomp
+
+if choice == "1"
+  get_and_visit_url
+else
+  #get_and_create_url
+end

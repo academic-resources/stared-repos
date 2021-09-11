@@ -1,0 +1,59 @@
+<h1><%= @cat.name %></h1>
+
+<table>
+    <tr>
+        <td>Birthdate</td>
+        <td><%= @cat.birth_date %></td>
+    </tr>
+    <tr>
+        <td>Color</td>
+        <td><%= @cat.color %></td>
+    </tr>
+    <tr>
+        <td>Sex</td>
+        <td><%= @cat.sex %></td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td><%= @cat.description %></td>
+    </tr>
+</table>
+
+<br/>
+
+<form action="<%= edit_cat_url(@cat)  %>">
+    <input type="submit" value="Edit <%= @cat.name %>">
+</form>
+
+<br/>
+
+<h2>All Requests for <%= @cat.name %></h2>
+
+<table>
+  <thead>
+    <tr>         
+      <th></th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <% @cat.rental_requests.each do |request| %>
+    <tr>
+      <td><a href="<%= cat_rental_requests_url(request)%>">
+        #<%= request.id %></a>
+      </td>
+      <td><%= request.start_date %></td>
+      <td><%= request.end_date %></td>
+    </tr>
+  <% end %>
+
+
+    </tbody>
+  </table>
+
+<br/>
+
+<a href="<%= cats_url %>">Back to Index</a>
+

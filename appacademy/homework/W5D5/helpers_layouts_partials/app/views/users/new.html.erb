@@ -1,0 +1,31 @@
+<section class="page">
+  <div class="centered-box">
+    <h1>New User</h1>
+
+    <%= render 'shared/errors' %>
+
+    <form action="<%= users_url %>" method="post">
+      <%= auth_token %>
+
+      <label for="user_username">User Name</label>
+      <input type="text"
+        name="user[username]"
+        id="user_username"
+        value="<%= @user.username %>">
+      <br>
+
+      <label for="user_password">Password</label>
+      <input type="password"
+        name="user[password]"
+        id="user_password"
+        value="<%= @user.password %>">
+      <br>
+
+      <input type="submit">
+    </form>
+  </div>
+</section>
+
+<% content_for :footer do %>
+  <p>Signup page.</p>
+<% end %>

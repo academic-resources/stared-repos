@@ -1,0 +1,41 @@
+.main {
+  background: #0da96c;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 3rem;
+  margin: 0 100px;
+  line-height: 4rem;
+  font-weight: 600;
+}
+
+h1 span {
+  font-weight: 200;
+}
+
+img {
+  width: 45%;
+}
+
+.left button {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #10a96c;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 19px;
+  cursor: pointer;
+}
