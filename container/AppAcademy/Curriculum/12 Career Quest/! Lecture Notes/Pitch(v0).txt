@@ -1,0 +1,34 @@
+I'm a Software Engineer which started when I was 7.
+
+Our school introduced us to Monochrome, mouseless, IBM compatibles.  It-was-the-future!
+
+I was a fast typest, learned all the programs, and then one day, we were given GW BASIC. And at age 9, I wrote my first loop -- it literally did nothing... 10 times.
+
+But I was hooked.  Unfortunately, I never had a clear cut path or anyone to mentor me.
+
+So you move on.  You grow up.  I went to University, burned out on Chemical Engineering, and eventually earned a degree in Multimedia Design which combined my two passions--Art & Computers.
+
+And what do I do with that degree? Well, it's obvious. I become an Operations Manager. <beat> It was 2009--times were tough. You get work where you can.
+
+But doing that kind of work is what actually gave me providence.  I remember one day I had to communicate between the drivers, the technicians, the warehouse manager, the routing manager, the owners, someone's mom.  I was going crazy.  There just wasn't enough time.  Then I remembered reading Microsoft Office is integrated with Visual BASIC (dear old BASIC).  I started teaching myself programming and ultimately, I compressed my 10 hour work pile into a 20 minute job which eventually was automated enough to pass on to staff.  Hands clean.
+
+And then I was hooked again.  I couldn't get enough.  I realized the power of programming, and it affected the world around me.  I eventually left that work to begin a new career as a software developer.  I found an awesome school, and never looked back.
+
+So I started off learning Ruby on Rails and JavaScript to get use to a stack.  This eventually lead to all the libraries Node has to offer, and picking up React and Redux.  And to test myself, I put together a clone of Medium.com, using PostGres on the back end and AWS for storage.
+
+I then read about MERN stack and how MongoDB is what the cool kids are doing.  So this eventually lead to another project where some friends and I cloned Pinterest with Mongoose and Express on our back end.
+
+From there, it kind of evolved.  You have a MERN stack.  Add some GraphQL and Apollo.  A MERN-GA stack.  That's just what we did.  Some other friends and I put together a mobile-first app called JustDecide which helps indecisive groups come to a decision like: what movie are we seeing?
+
+In all honesty, this past year has really been just non-stop.
+
+And I guess that brings me back to why I'm here.  I'm good in a team and I'm ready to work -- to hustle, grow, and contribute.
+
+I think you're looking for good people, and I know I can help.
+
+(Current: 3 min)
+
+NOTES:
+- Don't use "LEARN" - comes off as not knowledgeable
+
+I've always been adept with computers on the hardware side.  I built my first computer when I was 9--when graphics outputted directly from the motherboard and any time you wanted to add a new piece of hardware you had to mess with Interupt ReQuests in the BIOS

@@ -1,0 +1,26 @@
+<!--
+<%# colors = %w(calico white brown persian-blue orange black) %>
+<form action="<%#= cat_url(@cat) %>" method = "POST">
+  <input type="hidden" name="_method" value="PATCH">
+    <h1>Edit My Cat</h1>
+    <label>Name</label>
+    <input type="text" name="cat[name]" value = "<%#= @cat.name %>"><br>
+    <label>Birth Date</label>
+    <input type="date" name="cat[birth_date]" value = "<%#= @cat.birth_date%>"><br>
+    <label>Color</label>
+    <select name="cat[color]">
+      <option value="" disabled></option>
+      <%# colors.each do |color| %>
+        <option value="<%#= color %>" <%#= @cat.color == color ? "selected" : "" %> ><%#= color %></option>
+      <%# end %>
+    </select><br>
+    <input type="radio" name="cat[sex]" value = "M" <%#= @cat.sex == "M" ? "checked" : "" %> > Male
+    <input type="radio" name="cat[sex]" value = "F" <%#= @cat.sex == "F" ? "checked" : "" %> > Female<br>
+    <label>Description</label><br>
+    <textarea name="cat[description]" cols="30" rows="10"><%#= @cat.description %></textarea><br>
+
+    <input type="submit" value="Update Cat!">
+</form>
+-->
+
+<%= render 'form', edit: true, cat: @cat %>

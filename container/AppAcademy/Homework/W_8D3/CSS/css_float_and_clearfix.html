@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FLOAT</title>
+  <style>
+  
+  /* 
+  
+  The issues with block elements is that they take up the full width of their parent container. Even if you could constraint them, they still stack.
+    
+  So introduce Flex Box.  It will be the future but not fully adopted yet.
+
+  So currently, we have to stick with floats from an early archetype and the use of .clearfix pseudo class.
+    */
+  
+    h1 {
+      display: block;
+      background: yellow;
+    }
+  
+    p {
+      display: block;
+      background: orange;
+    }
+
+    img {
+      display: block;
+      width: 450px;
+      height: 600px;
+
+      float: left;
+
+      opacity: .75;
+    }
+
+    article {
+      margin: 50px;
+      background: blue;
+      border: 10px solid red;
+
+      clear: left;
+    }
+    
+    .stop-float{
+      display: block;
+      background: green;
+
+      clear: left;
+    }
+
+    .pseudo-stop-float:after { /* :after injects after*/
+      /* content: "STOP THE FLOAT"; */
+      background: green;
+
+      display: block;
+      clear: both;
+    }
+
+    .group:after {  /* more typically known as .clearfix */
+      content: ""; /* must have the empty string*/
+      display: block;
+      clear: both;
+    }
+
+  </style>
+</head>
+<body>
+  <article class="group">
+    <h1>Cats</h1>
+
+    <img src="cat.jpg" alt="cat">
+    <img src="cat.jpg" alt="cat">
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
+    
+    <!-- <div class="stop-float"></div>  not ideal but works -->
+  </article>
+  
+  <article class="group">
+      <img src="cat.jpg" alt="cat">
+    <h1>Lasers</h1>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat saepe quas, ad eveniet architecto vero labore voluptatum sed laudantium illo minima expedita nihil quisquam corporis omnis pariatur esse error.</p>
+  </article>
+
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+.completed{
+    text-decoration: line-through black;
+}
+
+.clear{
+    display: none;
+}

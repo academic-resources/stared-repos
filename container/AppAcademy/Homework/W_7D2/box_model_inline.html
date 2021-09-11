@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  
+  body {
+    background: pink;
+  }
+
+  p {
+    display: block;
+    background: orange;
+  }
+
+  strong {
+    display: inline;
+    background: yellow;
+    width: 200px; /* Does not change */
+    height: 200px; /* Does not change */
+    /* Cannot put a width or height on an inline element! */
+    
+    padding: 20px;
+    /* left and right works alright, but up and down kind of push */
+    /* since this is later in the document takes precedence */
+
+    border: 5px solid blue;
+
+    margin: 50px;
+    /* margin also pushes space left and right but ignore top and bottom */
+    
+  }
+  
+  </style>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ut aliquam dicta id sed deserunt exercitationem quaerat cumque fugiat quidem quasi ad, sint laboriosam adipisci facilis <strong>dolores</strong> molestiae corrupti debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque rem assumenda qui tempora necessitatibus nihil quas aut veritatis quasi aspernatur laboriosam, quod quos excepturi quis maxime ea nam distinctio corporis.</p>
+</body>
+</html>

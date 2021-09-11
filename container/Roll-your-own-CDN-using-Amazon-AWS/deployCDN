@@ -1,0 +1,79 @@
+#!/usr/bin/python
+import subprocess
+import argparse
+import sys
+
+##################################################################
+#List of Replica servers
+##################################################################
+replica_servers=[
+"ec2-54-174-6-90.compute-1.amazonaws.com",
+"ec2-54-149-9-25.us-west-2.compute.amazonaws.com",
+"ec2-54-67-86-61.us-west-1.compute.amazonaws.com",
+"ec2-54-72-167-104.eu-west-1.compute.amazonaws.com",
+"ec2-54-93-182-67.eu-central-1.compute.amazonaws.com",
+"ec2-54-169-146-226.ap-southeast-1.compute.amazonaws.com",
+"ec2-54-65-104-220.ap-northeast-1.compute.amazonaws.com",
+"ec2-54-66-212-131.ap-southeast-2.compute.amazonaws.com",
+"ec2-54-94-156-232.sa-east-1.compute.amazonaws.com"]
+
+dns_server="cs5700cdnproject.ccs.neu.edu"                                                               #dns server location
+NAME_SERVER=""
+KEY_FILE=""
+USERNAME=""
+
+def getOpts():                                                                                   #get origin server,port number ,username ,ssh key file from the user
+        global WEB_SERVER_PORT
+        global ORIGIN_SERVER
+	global KEY_FILE
+	global USERNAME
+	global NAME_SERVER
+        p = argparse.ArgumentParser(description="deployCDN")
+        p.add_argument("-p", dest="PORT_NUMBER",help='an integer within 40000-60000',type=int)
+        p.add_argument("-o", dest="ORIGIN_SERVER",help='origin server from where content will be fetched first time')
+	p.add_argument("-n", dest="NAME_SERVER",help="name server")
+	p.add_argument("-i", dest="KEY_FILE",help='key file for ssh/scp')
+	p.add_argument("-u", dest="USERNAME",help='user who will be running this script')
+        args = p.parse_args()
+        if args.PORT_NUMBER is None:
+                print("Invalid port number , none supplied")
+                sys.exit()
+        if args.ORIGIN_SERVER is None:
+                print("Invalid origin server, none supplied")
+                sys.exit()
+	if args.USERNAME is None:
+                print("Invalid username, none supplied")
+                sys.exit()
+	if args.NAME_SERVER is None:
+		print("Invalid dns server name,none supplied")
+		sys.exit()
+	if args.KEY_FILE is None:
+                print("Invalid key file, none supplied")
+                sys.exit()
+
+               
+        WEB_SERVER_PORT = int(args.PORT_NUMBER)
+        ORIGIN_SERVER = args.ORIGIN_SERVER
+	USERNAME=args.USERNAME
+	KEY_FILE=args.KEY_FILE
+	NAME_SERVER=args.NAME_SERVER
+
+
+def deployCDN_http_servers():									#deploy code to each of the replica servers
+	global replica_servers
+	getOpts()
+	for server in replica_servers:
+		test=subprocess.check_output("scp "+KEY_FILE+" httpserver "+USERNAME+"@"+server+":~",shell=True)
+		test1=subprocess.check_output("ssh -i "+KEY_FILE+" "+USERNAME+"@"+server+" 'chmod 711 ~/httpserver'",shell=True)
+
+def deployCDN_dns_server():									#deploy dns server code to the dns server location
+	global dns_server
+	getOpts()
+	deploy=subprocess.check_output("scp "+KEY_FILE+" dnsserver "+USERNAME+"@"+dns_server+":~",shell=True)
+	test1=subprocess.check_output("ssh -i "+KEY_FILE+" "+USERNAME+"@"+dns_server+" 'chmod 711 ~/dnsserver'",shell=True)
+
+
+
+if __name__ == '__main__':									#starting point of the program
+	deployCDN_http_servers() 
+	deployCDN_dns_server()

@@ -1,0 +1,15 @@
+<section>
+  New Comment!
+
+  <form action="<%= comments_url %>" method="POST">
+    <input type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+    <label>Body
+    <textarea name="comment[content]"></textarea>  
+    </label>
+    <input type="hidden" name="comment[post_id]" value="<%= params[:post_id] %>">
+    <input type="submit" value="submit">
+  </form>
+
+</section>

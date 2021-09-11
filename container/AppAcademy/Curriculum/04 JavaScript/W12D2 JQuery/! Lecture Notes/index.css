@@ -1,0 +1,29 @@
+form {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  padding: 10px;
+}
+
+li:hover {
+  color: white;
+  background-color: rebeccapurple;
+  cursor: pointer;
+}
+
+body { 
+  /* background-color: blue; */
+}
+
+.completed {
+  text-decoration: line-through;
+}

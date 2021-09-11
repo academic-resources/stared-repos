@@ -1,0 +1,73 @@
+/* Reset */
+
+h1, h2 ,h3, ul {
+  margin: 0;
+  vertical-align: bottom;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Layout */
+
+body {
+  font-family: sans-serif;
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png");
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header,
+aside,
+section,
+footer {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+header, footer {
+  margin: 20px 0;
+}
+
+header, footer, aside, section {
+  flex: 1 100%;
+}
+
+header ul li {
+  margin-left: 50px;
+}
+
+article, aside li {
+  margin: 15px 0;
+}
+
+header, header ul, footer {
+  display: flex;
+}
+
+header, footer {
+  justify-content: space-between;
+}
+header ul, footer ul {
+  align-items: center;
+}
+
+@media all and (min-width: 600px) {
+  aside {
+    flex: 1;
+    order:  1;
+    margin-right: 20px
+  }
+  
+  section {
+    flex: 3;
+    order: 2;
+  }
+
+  footer {
+    order: 3;
+  }
+}
+

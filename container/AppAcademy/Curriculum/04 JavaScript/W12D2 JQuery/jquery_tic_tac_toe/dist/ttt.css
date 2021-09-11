@@ -1,0 +1,48 @@
+html, body, figure, h1, ul, li {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  display: flex;
+  width: 330px;
+  flex-wrap: wrap;
+  border: 5px solid black;
+  margin: 50px;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  border: 5px solid black;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: yellow;
+}
+
+.current-players-mark {
+  color: black;
+  background-color: white;
+  display: flex;
+  font-size: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.fig-caption {
+  font-size: 48px;
+}
+

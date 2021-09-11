@@ -1,0 +1,70 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<ul id="dogs"></ul>
+
+<script>
+  const DOGS = {
+    101: {
+      id: 101,
+      name: "Sable",
+      genus: "Husky Huskius"
+    },
+
+    234: {
+      id: 234,
+      name: "Blixa",
+      genus: "Corgi Corgiorum"
+    }
+  };
+
+  // Fill $dogsUl with list items; one per dog.
+  const $dogsUl = $("ul#dogs");
+  Object.keys(DOGS).forEach( id => {
+    const dog = DOGS[id];
+
+    const $dogLi = $("<li class='dog'></li>");
+    $dogLi.text(dog.name + " -- " + dog.genus);
+
+    // store the dog's id in a **data-* attribute**
+    $dogLi.data("id", dog.id);
+
+    $dogsUl.append($dogLi);
+  });
+
+  // Install click handlers on the li.dog elements.
+  $("li.dog").on("click", event => {
+    const $dogLi = $(event.currentTarget);
+
+    // pull dog id out of the DOM to identify the dog.
+    const dogId = $dogLi.data("id");
+    const dog = DOGS[dogId];
+
+    alert(dog.name + " loves you!");
+  });
+</script>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<ul id="dogs">
+  <li data-dog='{ "id": 101, "name": "Sable", "genus": "Husky Huskius" }'>
+    Sable -- Husky Huskius
+  </li>
+
+  <li data-dog='{ "id": 234, "name": "Blixa", "genus": "Corgi Corgiorum" }'>
+    Blixa -- Corgi Corgiorum
+  </li>
+</ul>
+
+<script>
+  // Install click handlers on the li.dog elements.
+  $("li").on("click", event => {
+    const $dogLi = $(event.currentTarget);
+
+    // pull dog attributes out of the DOM to identify the dog.
+    const dog = $dogLi.data("dog");
+    console.log(dog);
+
+    alert(dog.name + " loves you!");
+  });
+</script>

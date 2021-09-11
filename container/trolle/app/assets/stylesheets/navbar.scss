@@ -1,0 +1,42 @@
+.navbar {
+  background: #0079bf;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+
+  .logged_out_btns {
+    .login {
+      color: white;
+      margin-right: 6px;
+    }
+    .signup {
+      font-weight: 500px;
+      background: white;
+    }
+  }
+
+  &.navbar-loggedin {
+    padding: 2px 6px;
+    display: flex;
+
+    a {
+      flex: 1;
+      text-align: center;
+      svg {
+        height: 28px;
+        width: auto;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

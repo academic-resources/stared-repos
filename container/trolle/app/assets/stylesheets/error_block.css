@@ -1,0 +1,11 @@
+.error-block {
+  background: #eb5a46;
+  color: #fbedeb;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  border-radius: 4px;
+  border: 1px solid #eb5a46;
+  display: inline-block;
+  padding: 0.5em 1em;
+  list-style: none
+}

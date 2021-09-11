@@ -1,0 +1,30 @@
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<ul class="cool-things">
+  <li>Racecars</li>
+  <li>Lasers</li>
+  <li>Aeroplanes</li>
+</ul>
+
+<script>
+  // does nothing; no such ul exists yet.
+  $("ul.cool-things > li").attr("style", "background-color: red");
+</script> -->
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<script>
+  // jQuery will call the function only after the DOM is fully loaded.
+  // The anonymous function **is not** called right at this point.
+  $( () => {
+    $("ul.cool-things > li").attr("style", "background-color: red");
+  });
+</script>
+
+
+<ul class="cool-things">
+  <li>Racecars</li>
+  <li>Lasers</li>
+  <li>Aeroplanes</li>
+</ul>

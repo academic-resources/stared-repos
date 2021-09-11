@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    image: pokedex
+    ports:
+      - '81:8080'
+    environment:
+      DATABASE_URL: postgres://pokeuser:pokepass@db:5432/pokedex
+    networks:
+      pgnodeapp:
+    depends_on:
+      - 'db'
+    command: ['./wait-for', 'postgres:5432', '-t', '60', '--', 'npm', 'run', 'db:migrate-seed']
+
+  db:
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_USER: pokeuser
+      POSTGRES_PASSWORD: pokepass
+      POSTGRES_DB: pokedex
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+    networks:
+      pgnodeapp:
+        aliases:
+          - 'postgres'
+
+networks:
+  pgnodeapp:
+    driver: bridge
+
+volumes:
+  postgres-db:

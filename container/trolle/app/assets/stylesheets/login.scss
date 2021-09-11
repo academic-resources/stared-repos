@@ -1,0 +1,111 @@
+.login-form {
+  // font-family: 'Helvetica Neue', Arial, sans-serif;
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 79px;
+  box-sizing: border-box;
+
+  .contents-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 37px;
+
+    h1 {
+      color: #333;
+      font-size: 40px;
+      line-height: 48px;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+
+    .create-link {
+      color: #298fca;
+      font-size: 20px;
+      font-weight: 300;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      fieldset {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+        margin: 20px 0 0 0;
+        label {
+          font-weight: 300;
+          margin: 0 0 0.4em;
+          font-size: 23px;
+          span {
+            color: hsl(0, 0%, 60%);
+          }
+        }
+        input {
+          box-sizing: border-box;
+          width: 100%;
+          max-width: 430px;
+          font-size: 1rem;
+          border-color: #a5acb0;
+          outline: none;
+          box-shadow: 0 0 6px #cdd2d4;
+          background: #edeff0;
+          border-radius: 4px;
+          border: 1px solid #cdd2d4;
+          padding: 0.8rem;
+          &::placeholder {
+            font-size: 23px;
+            color: #757575;
+            font-weight: 300;
+          }
+        }
+      }
+      .button {
+        width: 100%;
+        max-width: 430px;
+        margin-bottom: 1.2rem;
+        background: #61bd4f;
+        border-radius: 3px;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 2px 0 #3f6f21;
+        font-weight: 700;
+        padding: 0.8rem 1.3rem;
+        border: 0px;
+        font-size: 23px;
+        margin: 20px 0 0 0;
+
+        &.disabled {
+          background: #e2e4e6;
+          box-shadow: none;
+          color: hsl(0, 0%, 55%);
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+.demo-user {
+  font-size: 20px;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: center;
+  border-radius: 3px;
+  border: 2px solid #cdd2d4;
+  margin-top: 24px;
+  padding: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+  max-width: 430px;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.8);
+  }
+}

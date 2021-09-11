@@ -1,0 +1,79 @@
+.col {
+  float: left;
+  box-sizing: border-box;
+}
+
+/* Attribute selector targeting all elements
+with a class attribute containing 'col-' */
+[class*='col-'] {
+  padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+.col-2-3 {
+  width: 66.6666%;
+}
+
+.col-1-2 {
+  width: 50%;
+}
+
+.col-1-3 {
+  width: 33.3333%;
+}
+
+.col-1-4 {
+  width: 25%;
+}
+
+.col-1-8 {
+  width: 12.5%;
+}
+
+.cf:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* CSS Day 6 media queries */
+@media all and (max-width: 840px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav > ul {
+    display: none;
+  }
+
+  .hamburger-dropdown {
+    display: block;
+    position: fixed;
+    right: 15%; 
+  }
+
+  .hamburger-dropdown > li {
+    background-image: url("hamburger.png");
+    background-size: 50px 50px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+  }
+  
+  .hamburger-dropdown-content {
+    display: none;
+    position: absolute;
+    left: -70%;
+    top: 40px;
+   
+  }
+  .hamburger-dropdown:hover .hamburger-dropdown-content {
+    display: block;
+  }
+
+}
+

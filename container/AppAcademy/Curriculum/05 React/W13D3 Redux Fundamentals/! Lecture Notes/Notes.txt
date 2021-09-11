@@ -1,0 +1,7 @@
+Redux allows for subcomponents to re-render without the parent/root having to re-render.
+
+Has a store that floats top level to which everything refers
+
+The store also allows for a single source of truth where props do not change.
+  - only read and write to/from the store.
+

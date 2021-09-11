@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  
+  body {
+    background:orange;
+  }
+
+  .box {
+    display: block; /* block elements do not tolerate any neighbors */
+    background: lightblue;
+
+    width: 200px;
+    height: 200px; /* generally don't specify height */
+    
+    padding: 20px;
+    /* whole box has grown by 20px */
+    /* can also specify each side top,right,bottom, left*/
+    padding: 20px 10px 50px 20px;
+    /* padding is inside the element */
+    border: 10px solid black;
+    /* border is on the outside of the element */
+
+    margin: 50px;
+    /* acts like private space around the element */
+    /* does not combine with like elements: no 50px + 50px */
+    /* collapses and is see through */
+  }
+  
+  p {
+    background: blue;
+    margin: 200px;
+  }
+  </style>
+</head>
+<body>
+  
+<div class="box">I AM A BOX Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore laudantium enim reiciendis nihil quaerat est cumque veniam? Neque atque id itaque commodi? Id, maiores at? Consequatur facere id labore accusamus.</div>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sunt consequuntur consequatur quibusdam at rem ipsam vel harum, magnam rerum placeat nobis quaerat doloremque neque numquam fugit ipsum, deserunt eos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident nisi voluptatum, delectus obcaecati aliquid illo, eum atque quo doloremque eos ex itaque et mollitia quam impedit voluptas magni perspiciatis. Soluta.</p>
+
+<div class="box">I AM A BOX Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore laudantium enim reiciendis nihil quaerat est cumque veniam? Neque atque id itaque commodi? Id, maiores at? Consequatur facere id labore accusamus.</div>
+
+
+</body>
+</html>

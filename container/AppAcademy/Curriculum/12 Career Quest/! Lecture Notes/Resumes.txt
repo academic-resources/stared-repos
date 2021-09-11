@@ -1,0 +1,223 @@
+Numbers Game
+  - Even with a perfect resume, you'll need to send out 100s of applications
+
+Structure for resume:
+1. Projects
+2. Skills
+  - Resumes are fed through A.I. that filter resumes by key words.  Have them.
+3. Experience
+  - Most important section, but usually not related
+  - Having full Stack Experience
+  - Even having an internship for free with production level code
+4. Education
+  - Can move up if already have a degree in Computer Science
+
+
+Tips:
+  - Put your skills in the order you want them to be noticed.
+  - Start at the top, start at the left
+  - Put JavaScript, React more toward the left if front end
+  - Show your location so they know where you are.  Let the recruiters know if you're local
+    - Generally recruits don't want to relocate a candidate
+  - Use Action verbs
+  - Make sure your links for Live, GitHub, and personal site work.
+    - Manu students are rejected the moment they had a dead link
+  - Don't have a blank second page when converted to PDF
+  - Font Size of 9 is TOO SMALL.  Make sure everyone can read it
+  - Hirers are looking for reasons to disqualify resumes
+  - Restrain from High Falutin language that says nothing
+
+"Not Enough Experience"
+  - One of the most common reasons for rejection is "not enough experience"
+  - Sometimes it's not true, but really a generic rejection reason
+  - Try doing 10 hours/week at an internship doing real development code
+  - Reverse engineer your dream job and get that experience
+
+Turn your weaknesses into Strengths
+  - Start viewing yoru lack of experience as agood thing
+  - You aren't stuck in your ways like someone with 10 years of experience
+  - You aren't weighed down with irrelevant technologies
+  - YOu're an outside-the-box thinker
+  - Faster to adapt
+  - Faster to learn
+  - More open minded
+  - Hungrier for work and will work harder
+
+Describing Past Job Experience
+  - Always QUANTIFY and qualify your resume bullets
+  - If your previous job was non-technical, highlight relevant soft-skills
+  - Time when you took leadership, results
+  - What can you say about a previous job that will be relevant and impressive?
+    - if I was reading the bullet point, would I hire myself
+  - List quantifiable results
+  - Elaborate on what you did to make it better - it sounds better
+
+Brainstorming questions:
+  - What technical things did you do?
+    - Built applications in VBA
+  - When did you take initiative?
+    - Solved communication problem between drivers and office via email
+    - Employed a script in MS Outlook that routed driver text-to-email
+  - When did you show leadership?
+    - Department Manager and advocate for employees
+  - When did you show strong communication skills?
+    - Constantly helped clients on a personal level
+  - What awards/promotiond did you get?
+    - SDP MMS
+  - What is the most impressive thing you did? (worth a bullet point)
+    - Reached ROI by year 2
+  - What QUANTIFIED results did you produce?
+    - Decreased waste: 10% below regional standard
+  - What relationships did you develop?
+    - I knew everyone by first and last name
+    - My clients always looked to me for help and showed great satisfaction
+  - When did you show good problem solving skills?
+    - Reduced mistakes in orders by employing a color coding scheme
+
+Only put something down if it's worth a bullet point!
+
+
+Workshop
+  - Brainstorm answers to the questions from the previous slide (5 minutes)
+  - Write five bullets for one of your jobs (10 minutes)
+  - Meet with 2 people to get feedback (10 minutes)
+    - be honest. If their bullets are bad buy you say they're good, you're not helping them
+  - Improve your bullet points (5 minutes)
+  - Be ready to share
+  GOAL: Get your entire experience portion done
+
+
+Gourmet Coffee Service:
+  - Selected to headline a new line of business (micro markets) where I built a department from 1 employee (myself) to a tight-knit team of 10
+  - Wrote an application in VBA that lowered waste of Fresh Consumables down to 6%--The regional average hovered at 15%
+  - Department broke 7 figures in gross sales by the 8th running quarter, and achieved it's ROI by the 3rd year--ahead of schedule
+  - Employed a script for our front of house, reducing communication errors 55% between field agents and department heads
+  - Wore every hat and so trained every technician, driver, data entry person, and warehouse man
+
+  Notes:
+    - last 2 points need quantifyers
+    - Point 5: oversaw onboarding (instead of trained) process for employees
+    - Point 5: Mention the departments by name
+    - Point 4: "Streamlined" Communication, "Reducing", "Instituted communication protocol"
+    - Point 4: "Came up with front of house process" for communicating between field personnel and department heads
+
+Describing your Projects:
+  - These bullets detail your decisions, actions, and results as an engineer
+  - This is your equivalent of experience in the field
+  - 
+  - 
+
+Bullet Point Formula for Projects:
+  - Powerful Verb + Impressive Technical Feature w/ Keyword (for A.I.) + Plain-English benefit (for non tech person)
+
+Powerful Verbs:
+  - Built
+  - Leveraged
+  - Employed
+  - Designed
+  - Ensured
+  - Constructed
+  - Implemented
+  - Incorporated
+
+Technical Keywords:
+  - React
+  - Rails / Ruby
+  - JavaScript
+  - CSS3
+  - Flux
+  - Git
+  - HTML5
+  - jQuery
+  - RSpec
+  - SQL / Postgres
+  - Polymorphic Associations
+  - AJAX 
+  - DOM
+  - API
+  - AWS
+  - D3 
+  - UI/UX
+  - REST 
+  - CRUD
+  - Websockets / Webhooks
+
+Plain English Benefits
+  - Faster
+  - DRY code
+  - Reduced load time 
+  - Increased performance 
+  - Scalable
+  - Reduced time complexity
+  - Optimized
+  - Real-time
+  - Dynamic
+  - Improved user experience
+  - Responsive
+
+Programming Concepts:
+  - Specific algorithms used / designed
+  - Specific data structures used
+  - Closures
+  - DRY
+  - Inheritance (classical and prototypal)
+  - Metaprogramming
+  - Object Oriented Programming
+  - ORM
+  - Portability
+  - TDD,  Unit / Behavioral Testing
+
+Plain-English Benefits:
+  - Faster
+  - DRY code
+  - Reduced load Time
+  - Increased performance
+  - Scalable
+  - REduced time complexity
+  - Optimized
+  - Real-time
+  - Dynamic
+  - Improved user experience
+  - Responsive
+  (Want to produce a result)
+
+Workshop:
+  - Brainstorm what you can say about your project using previous guidelines (5 min)
+  - Create 5 bullet points for your full stack, cover front end and back end (10 min)
+  - Review them with two other people (10 minutes each)
+  - Improve the bullets based on the feedback
+  - Be ready to share
+
+========================
+
+
+Projects:
+  - EtherTechna (Medium.com)
+    - Built a text editor component using React and vanilla DOM JS improving author experience
+    - Employed Amazon Web Services S3 for the storage of blob data allowing users to upload custom images
+    - Secured front-end routes with state changes from Redux to handle access to web features
+    - Styled site images and layout with SASS to handle oversized images and content, creating a clean UI
+    - 
+
+========================
+
+You don't have to feel ready to land a job
+ - Don't start looking for your dream job in the beginning
+ - Apply for all the Senior Software Developer Jobs in Cities you don't want to work in.
+  - Throw always
+
+9 Foundations (actually 8 if combining projects)
+Done = 100% on Interview DB
+1. Projects are done
+2. Personal site is done
+3. Resume is done
+4. Cover letter is done
+5. All your sites
+  - Git Hub (All readmes done)
+  - Linked In
+  - Angel List
+  - Other Social Media
+6. Comfortable with Tech interview
+7. Comfortable with Behavioral interview
+8. Comfortable with Personal Pitch
+

@@ -1,0 +1,27 @@
+/* PHASE 9: Forms */
+.form {
+  display: flex;
+  margin: 0 0 20px 0;
+  flex-direction: column;
+}
+
+.form-thumb {
+
+}
+
+.input {
+  display: flex;
+  margin: 0 0 20px 0;
+}
+
+.input textarea {
+  display: block;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.submit {
+
+}

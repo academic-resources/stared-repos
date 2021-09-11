@@ -1,0 +1,4 @@
+  [1m[35m (1000.2ms)[0m  [1m[35mCREATE DATABASE "mailer_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (553.3ms)[0m  [1m[35mCREATE DATABASE "mailer_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9

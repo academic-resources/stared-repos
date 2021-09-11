@@ -1,0 +1,113 @@
+
+<ul id="cats">
+</ul>
+
+<script>
+  window.setTimeout( () => {
+    const ul = document.getElementById("cats");
+    const li = document.createElement("li");
+    li.textContent = "This is injected by JavaScript";
+    ul.appendChild(li);
+  }, 1000);
+</script>
+
+<style>
+  .red { background-color: red }
+  .green { background-color: green }
+</style>
+
+<ul id="cats">
+  <li class="green">Markov</li>
+  <li class="red">Markov</li>
+</ul>
+
+<p>ALL PARAGRAPHS MUST DIE</p>
+
+<label>
+  Name
+  <input type="text" name="cat[name]" id="cat_name">
+</label>
+
+<script>
+  window.setTimeout( () => {
+    const reds = document.getElementsByClassName("red");
+    const greens = document.getElementsByClassName("green");
+
+    // swap the `HTMLElement#className` property
+    for (let i = 0; i < reds.length; i++) {
+      reds[i].className = "green";
+    }
+    for (let i = 0; i < greens.length; i++) {
+      greens[i].className = "red";
+    }
+
+    // disable the input
+    document.getElementById("cat_name").disabled = true;
+
+    // Remove a paragraph from the document.
+    const paragraph = document.querySelector("p");
+    paragraph.parentElement.removeChild(paragraph);
+  }, 1000);
+</script>
+
+
+<ul id="cats"></ul>
+
+<form id="cat-form">
+  <label>
+    Name
+    <input type="text" name="cat[name]" id="cat_name">
+  </label>
+
+  <input type="submit" value="Create Cat!">
+</form>
+
+<script>
+  const catFormEl = document.getElementById("cat-form");
+  catFormEl.addEventListener("submit", event => {
+    // **cancel** the event; if the event were not canceled the browser
+    // would try to submit the form for real.
+    event.preventDefault();
+
+    // Get the name input element (type `HTMLInputElement`), get the
+    // value, and clear it.
+    const catNameInputEl = document.getElementById("cat_name")
+    const catName = catNameInputEl.value;
+    catNameInputEl.value = "";
+
+    // Get the ul of cats.
+    const ul = document.getElementById("cats");
+    // create an li element
+    const li = document.createElement("li");
+    // set the text of the li to be the value of the input field
+    li.textContent = catName;
+
+    // insert it as the last item in the ul.
+    ul.appendChild(li);
+  });
+</script>
+
+
+<button id="alert-button">Click Me For An Alert</button>
+
+<input type="text" id="mystring">
+
+<p id="mystring-reversed"></p>
+
+<script>
+  const buttonEl = document.getElementById("alert-button");
+  buttonEl.addEventListener("click", event => {
+    alert("HELLO");
+  });
+
+  const inputEl = document.getElementById("mystring");
+  const pEl = document.getElementById("mystring-reversed");
+  inputEl.addEventListener("input", () => {
+    const value = inputEl.value;
+    pEl.textContent = value.split("").reverse().join("");
+  });
+
+  pEl.addEventListener("mouseover", () => {
+    alert("YOU MOUSED OVER ME!");
+  });
+</script>

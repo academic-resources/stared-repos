@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  
+    /*
+    RESET the CSS from Browser default
+      - 2 Schools of thought:
+        >1 I should normalize CSS by using sensible defaults
+        >2 Anything that is styled should be styled be me
+
+        We will focus on mindset 2 to have full control
+      LETS RESET the browser CSS
+
+    TYPOGRAPHY
+      - 
+    */
+    /* list out all the tags */
+    html, body, section, article, h1, h2, p {
+      /* reset properties */
+      /* So what's the root element */
+      margin: 0;
+      border: 0;
+      padding: 0;
+
+      font: inherit;
+      /* font-family: sans-serif; /*Not good to do the point is to reset!*/
+      text-align: inherit;
+      text-decoration: inherit;
+      color: inherit;
+
+      /* background: white; /* NOPE */
+      /* background: inherit; /* NOPE */
+      background: transparent;
+
+    }
+
+    body { /*boxes like crazy! if all properties inherit*/
+      padding: 20px;
+      border: 10px solid red;
+
+      font-family: sans-serif;
+      font-weight: bold;
+      color: red;
+
+      background-image: url("cat.jpg");
+      background-size: contain;
+    }
+
+    article {
+      color: blue;
+      font-family: serif;
+      background: green;
+    }
+  
+  </style>
+</head>
+<body>
+  
+  <h1>My Amazing Document</h1>
+
+  <section>
+    <article>
+      <h2>Cats</h2>
+
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ad vel facere officiis repudiandae mollitia ex dicta, accusantium voluptates excepturi voluptate asperiores vitae pariatur expedita nisi doloremque earum reprehenderit incidunt!</p>
+    </article>
+    
+    <article>
+      <h2>Lasers</h2>
+
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ad vel facere officiis repudiandae mollitia ex dicta, accusantium voluptates excepturi voluptate asperiores vitae pariatur expedita nisi doloremque earum reprehenderit incidunt!</p>
+    </article>
+    
+    <article>
+      <h2>Clouds</h2>
+
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ad vel facere officiis repudiandae mollitia ex dicta, accusantium voluptates excepturi voluptate asperiores vitae pariatur expedita nisi doloremque earum reprehenderit incidunt!</p>
+    </article>
+  </section>
+</body>
+</html>

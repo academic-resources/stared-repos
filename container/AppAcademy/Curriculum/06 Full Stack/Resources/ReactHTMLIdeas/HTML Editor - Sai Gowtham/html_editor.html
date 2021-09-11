@@ -1,0 +1,100 @@
+
+<html lang="en">
+
+  <head>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./html_editor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./html_editor.css">
+  
+  </head>
+  
+  <body>
+  
+    <div class="toolbar">
+  
+      <button class="tool-items fa fa-underline"  onclick="document.execCommand('underline', false, '');">
+      </button>
+  
+      <button class="tool-items fa fa-italic" onclick="document.execCommand('italic', false, '');">
+      </button>
+  
+  
+      <button class="tool-items fa fa-bold" onclick="document.execCommand('bold', false, '');">
+      </button>
+  
+  
+      <button class="tool-items fa fa-link" onclick="link()">
+      </button>
+  
+      <button class="tool-items fa fa-scissors" onclick="document.execCommand('cut',false,'')"></button>
+  
+  
+      <input class="tool-items fa fa-file-image-o" type="file" accept="image/*" id="file" style="display: none;" onchange="getImage()">
+  
+      <label for="file" class="tool-items fa fa-file-image-o"></label>
+  
+  
+  
+  
+  
+      <button class="tool-items fa fa-undo" onclick="document.execCommand('undo',false,'')"></button>
+  
+      <button class="tool-items fa fa-repeat" onclick="document.execCommand('redo',false,'')"></button>
+  
+      <button class="tool-items fa fa-tint" onclick="changeColor()"></button>
+  
+      <button class="tool-items fa fa-strikethrough" onclick="document.execCommand('strikeThrough',false,'')"></button>
+  
+      <button class="tool-items fa fa-trash" onclick="document.execCommand('delete',false,'')"></button>
+  
+  
+      <button class="tool-items fa fa-scribd" onclick="document.execCommand('selectAll',false,'')"></button>
+  
+  
+      <button class="tool-items fa fa-clone" onclick="copy()"></button>
+  
+  
+  
+  
+      <!-- Jutify -->
+  
+      <button class="tool-items fa fa-align-center" onclick="document.execCommand('justifyCenter',false,'')"></button>
+  
+  
+      <button class="tool-items fa fa-align-left" onclick="document.execCommand('justifyLeft',false,'')"></button>
+      <button class="tool-items fa fa-align-right" onclick="document.execCommand('justifyRight',false,'')"></button>
+    </div>
+  
+    <div class="center">
+      <div class="editor" contenteditable>
+        <h1>Simple Html editor</h1>
+        <p>Good to start</p>
+      </div>
+    </div>
+  
+    <div class="center">
+  
+      <button class="sai btn">GetHtml</button>
+      <button class="getText btn">GetText</button>
+      <button class="btn
+  print" onclick="printMe()">PrintHtml</button>
+    </div>
+  
+  
+  
+    <div class="center">
+      <section class="getcontent">
+      </section>
+    </div>
+  
+  
+  </body>
+  
+  
+  </html>
+  

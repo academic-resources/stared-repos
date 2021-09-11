@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+html, body, input, textarea, button, a {
+  font-family: 'Open Sans';
+  font-size: 16px;
+}
+
+button {
+  border: 0;
+  background: none;
+  font-weight: 700;
+  padding: .5em 1em;
+  text-transform: uppercase;
+  transition: background-color .25s, color .25s;
+}
+
+button:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+main {
+  bottom: 0;
+  display: flex;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+form {
+  flex: 0 0 400px;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid #CCC;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 2em;
+  outline: 0;
+  padding: .25em .5em;
+  width: 100%;
+}
+
+input:focus {
+  border-bottom-color: blueviolet;
+}
+
+nav {
+  flex: 0 0 300px;
+  overflow-y: auto;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+td.centered {
+  text-align: center;
+}
+
+.bigger {
+  font-size: 4em;
+  margin-top: 0;
+}
+
+.centered {
+  justify-content: center;
+}
+
+.item-image {
+  width: 50px;
+  height: auto;
+}
+
+.middled {
+  align-items: center;
+}
+
+.nav-entry {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  padding: 1em;
+}
+
+.nav-entry-image {
+  background-size: contain;
+  border: 4px solid #DFDFDF;
+  border-radius: 60px;
+  height: 60px;
+  margin-right: 15px;
+  width: 60px;
+}
+
+.pokemon-image {
+  height: 50px;
+  width: auto;
+}
+
+.pokemon-detail {
+  flex: 1 0 0;
+}
+
+.pokemon-detail h1 {
+  background-color: #d43316;
+  border-bottom: 8px solid #333;
+  color: white;
+  padding: 25px;
+  margin-bottom: 0;
+}
+
+.pokemon-detail-image-background {
+  background: linear-gradient(315deg, #d43316, #ff0);
+  border-bottom: 8px solid #333;
+  padding: 30px;
+}
+
+.pokemon-detail-image {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+}
+
+.pokemon-detail-lists {
+  padding-left: 25px;
+}

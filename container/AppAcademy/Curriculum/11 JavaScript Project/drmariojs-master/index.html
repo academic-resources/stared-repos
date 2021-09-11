@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Dr Mario JS</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/swangs/drmariojs/master/images/Virus-128.png">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114133598-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114133598-1');
+    </script>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css.css">
+  </head>
+
+  <body>
+    <audio id="movepill" src="sounds/movepill.mp3"></audio>
+    <audio id="rotatepill" src="sounds/rotatepill.mp3"></audio>
+    <audio id="eatblocks" src="sounds/eatblocks.mp3"></audio>
+    <audio id="levelclear" src="sounds/levelclear.mp3"></audio>
+    <audio id="gameover" src="sounds/gameover.mp3"></audio>
+    <audio id="bgm" src="sounds/bgm.mp3" loop></audio>
+
+    <div class="gamecontainer">
+      <div class="controls">
+        <h1>Controls</h1>
+        <h2>Left - Left Arrow</h2>
+        <h2>Right - Right Arrow</h2>
+        <h2>Down - Down Arrow</h2>
+        <h2>Rotate Left - Z</h2>
+        <h2>Rotate Right - X</h2>
+        <h2>Pause - Space</h2>
+        <p>Destroy as many Viruses as you can by creating rows and columns of 4 or more matching colors</p>
+      </div>
+      <canvas></canvas>
+      <div class="information">
+        <div class="swang-links">
+          <a href='https://github.com/swangs/drmariojs' target="_blank">
+            <i class="fab fa-github fa-3x"></i>
+          </a>
+          <a href='https://www.linkedin.com/in/s-wang/' target="_blank">
+            <i class="fab fa-linkedin fa-3x"></i>
+          </a>
+        </div>
+        <h2 id="level"></h2>
+        <h2 id="score"></h2>
+        <h2 id="virus"></h2>
+        <button id="mute" type="button"><i id="muteicon" class="fas fa-volume-up"></i></button>
+      </div>
+    </div>
+
+    <script type="application/javascript" src="lib/keymaster.js"></script>
+    <script type="application/javascript" src="lib/bundle.js"></script>
+  </body>
+</html>

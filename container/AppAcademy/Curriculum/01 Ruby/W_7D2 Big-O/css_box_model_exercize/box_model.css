@@ -1,0 +1,33 @@
+div {
+  height: 200px; 
+  width: 200px;
+  padding: 50px;
+  border: 5px solid black;
+}
+div:last-child {
+  max_width: 100%;
+  height: 10px;
+}
+
+
+#first-div {
+  background-color: #39cccc;
+}
+
+
+
+#second-div {
+  background-color: #ff4136;
+  box-sizing: border-box; 
+}
+
+#third-div {
+  background-color: #ff4136;
+  box-sizing: border-box;
+  height: fit-content;
+  padding: 2px;
+}
+
+p {
+  background-color: #7fdbff;
+}

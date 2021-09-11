@@ -1,0 +1,143 @@
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<ul class="cool-things">
+  <li>Racecars</li>
+  <li>Lasers</li>
+  <li>Aeroplanes</li>
+</ul>
+
+<form id="cool-thing-form">
+  <label>
+    Cool Thing
+    <input type="text" id="cool_thing">
+  </label>
+
+  <input type="submit" value="Create Cool Thing">
+</form>
+
+<script>
+  // const $form = $("#cool-thing-form");
+  // $form.on("submit", event => {
+  //   event.preventDefault();
+
+  //   const $input = $("#cool_thing");
+  //   const coolThing = $input.val();
+  //   $input.val("");
+
+  //   $("ul.cool-things").append($("<li></li>").text(coolThing));
+  // });
+
+  // const $listItems = $("li");
+  // $listItems.on("mouseover", event => {
+  //   const currentTarget = event.currentTarget;
+  //   const $currentTarget = $(currentTarget);
+  //   alert($currentTarget.text());
+  // });
+
+  const $form = $("#cool-thing-form");
+  $form.on("submit", event => {
+  event.preventDefault();
+
+  const $input = $("#cool_thing");
+  const coolThing = $input.val();
+  $input.val("");
+
+  const $li = $("<li></li>").text(coolThing);
+  console.log($li)
+  $li.on("mouseover", mouseoverCallback);
+  $("ul.cool-things").append($li);
+});
+
+const $listItems = $("li");
+$listItems.on("mouseover", mouseoverCallback);
+
+mouseoverCallback = event => {
+  const currentTarget = event.currentTarget;
+  const $currentTarget = $(currentTarget);
+  alert($currentTarget.text());
+}
+</script> -->
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<ul class="cool-things">
+  <li>Racecars</li>
+  <li>Lasers</li>
+  <li>Aeroplanes</li>
+
+  <div>What is a div doing inside here?? I don't alert when you hover.</div>
+</ul>
+
+<form id="cool-thing-form">
+  <label>
+    Cool Thing
+    <input type="text" id="cool_thing">
+  </label>
+
+  <input type="submit" value="Create Cool Thing">
+</form>
+
+<script>
+  // const $form = $("#cool-thing-form");
+  // $form.on("submit", event => {
+  //   event.preventDefault();
+
+  //   const $input = $("#cool_thing");
+  //   const coolThing = $input.val();
+  //   $input.val("");
+
+  //   const $li = $("<li></li>").text(coolThing);
+  //   $("ul.cool-things").append($li);
+  // });
+
+  // $("ul.cool-things").on("mouseover", event => {
+  //   // currentTarget is the thing the event handler is installed on.
+  //   const $ul = $(event.currentTarget);
+
+  //   // target is the thing that the event happened to. This line sees
+  //   // if the thing we mousedover is an `li` in the `$ul`.
+  //   if ($ul.find("li").is(event.target)) {
+  //     alert($(event.target).text());
+  //   };
+  // });
+
+
+
+  const $form = $("#cool-thing-form");
+  $form.on("submit", event => {
+    event.preventDefault();
+
+    const $input = $("#cool_thing");
+    const coolThing = $input.val();
+    $input.val("");
+
+    const $li = $("<li></li>").text(coolThing);
+    $("ul.cool-things").append($li);
+  });
+
+  // the handler will be called whenever we mouseover any `li` in
+  // `ul.cool-things`.
+  $("ul.cool-things").on("mouseover", "li", event => {
+    alert($(event.currentTarget).text());
+  });
+</script>
+
+
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<ul class="cool-things">
+  <li>
+    A cool thing
+    <span>This gets moused over</span>
+  </li>
+</ul>
+
+<script>
+$("ul").on("mouseover", "li", event => {
+  console.log(event.target);
+  console.log(event.currentTarget);
+  console.log(event.delegateTarget);
+});
+</script> -->

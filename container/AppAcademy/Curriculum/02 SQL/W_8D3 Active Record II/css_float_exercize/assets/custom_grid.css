@@ -1,0 +1,13 @@
+/* PUT FLUID GRID CODE HERE */
+.col {
+  float: left;
+  box-sizing: border-box
+}
+
+.col-1-5 {
+  width: 20%;
+}
+
+.col-4-5 {
+  width: 80%;
+}

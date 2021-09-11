@@ -1,0 +1,31 @@
+/* PHASE 4: Footer */
+footer {
+  display: flex;
+  margin: 0 auto;
+  width: 900px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+  color: #bbb;
+  align-content: center;
+  align-items: center;
+  height: 80px;
+  
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+footer ul li {
+  margin: 10px;
+  padding: 10px 0;
+}
+
+footer h2 {
+  margin: 10px;
+  padding: 10px 0;
+}

@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+require 'launchy'
+
+puts 'Input your email:'
+email = gets.chomp
+user = User.find_by(email: email)
+return 'You need to create an account' unless user 
+
+puts 'What do you want to do?'
+puts '0. Create shortened URL'
+puts '1. Visit shortened URL'
+choice = gets.chomp.to_i
+if choice == 0
+  puts 'Type in your long url'
+  long = gets.chomp
+  shortened = ShortenedUrl.submit(user, long)
+  puts 'Short url is: #{shortened.short_url}'
+  return 'Goodbye'
+elsif choice == 1
+  puts 'Type in the shortened URL'
+  short = gets.chomp
+  long = ShortenedUrl.find(short_url: short)
+  Launchy.open(long) do |exception|
+    puts 'Attempted to open #{long} and failed because #{exception}'
+  end
+else
+  puts 'Not a valid choice'
+  return 'Goodbye'
+end

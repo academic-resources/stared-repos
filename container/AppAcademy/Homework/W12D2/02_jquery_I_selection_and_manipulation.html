@@ -1,0 +1,172 @@
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<ul>
+  <li>Racecars</li>
+  <li>Lasers</li>
+  <li>Aeroplanes</li>
+</ul>
+
+<script>
+  // Two ways of doing the same thing:
+
+  console.log("DOM WAY");
+  const listItems = document.querySelectorAll("li");
+  for (let i = 0; i < listItems.length; i++) {
+    console.log(listItems[i].textContent);
+  }
+
+  console.log("JQUERY WAY");
+  // returns a jQuery object; the leading dollar-sign in front of
+  // $listItems is conventional; it is just part of the variable name.
+  const $listItems = $("li");
+  for (let i = 0; i < $listItems.length; i++) {
+    console.log($listItems[i].textContent);
+  }
+</script> -->
+
+
+<style>
+  li.green {
+    background-color: green;
+  }
+</style>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<ul>
+  <li>Racecars</li>
+  <li>Lasers</li>
+  <li>Aeroplanes</li>
+</ul>
+
+<script>
+  const $listItems = $("li");
+
+  // you can iterate with the each method
+  $listItems.each(function (index) {
+  // The function is called for each `HTMLElement` in `$listItems`;
+  // each time it sets `this` to the next `HTMLElement` in the set.
+    console.log([index, this.textContent].join(" "));
+  });
+
+
+  // after one second, make the list green
+  window.setTimeout( () => {
+    // $listItems.each( (_, obj) => {
+    //   // in the low-level DOM API, `element.classList` returns a
+    //   // `ClassList` object; calling `ClassList#add` adds the class to
+    //   // the element.
+    //   obj.classList.add("green");
+    // });
+
+    // more convenient; uses **implicit iteration**
+    $listItems.addClass("green");
+  }, 1000);
+</script>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<div>
+  <ul>
+    <li>Racecars</li>
+    <li>Lasers</li>
+    <li>Aeroplanes</li>
+  </ul>
+
+  <p>Something else</p>
+</div>
+
+<script>
+  const $ul = $("ul");
+  $ul.children().attr("style", "background-color: red");
+  $ul.parent().attr("style", "background-color: green");
+  $ul.siblings().attr("style", "color: blue");
+</script>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<div>
+  <ul></ul>
+</div>
+
+<script>
+  const coolThings = [
+    "racecars",
+    "lasers",
+    "aeroplanes"
+  ];
+
+  let i = 0;
+  window.setInterval( () => {
+    const $ul = $("ul");
+    if ($ul.children().length == 10) {
+      // $ul.children() returns a jQuery object containing all the
+      // children; we then call `#remove`, which implicitly iterates
+      // over the set, removing each of them.
+      $ul.children().remove();
+    }
+
+    const li = document.createElement("li");
+    li.textContent = coolThings[i];
+    // jQuery#append is just like HTMLElement#appendChild
+    $ul.append(li);
+
+    i = (i + 1) % 3;
+  }, 1000);
+</script>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<input type="text" id="cool-input">
+
+<script>
+  window.setInterval( () => {
+    const $coolInput = $("#cool-input");
+
+    if ($coolInput.val() == "racecars") {
+      // Reset the input on them!
+      $coolInput.val("lasers");
+    }
+  }, 100);
+</script>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<label>
+  <input type="radio" name="duck[favorite_toy]" value="racecars">
+  Racecars
+</label>
+
+<label>
+  <input type="radio" name="duck[favorite_toy]" value="lasers">
+  Lasers
+</label>
+
+<label>
+  <input type="radio" name="duck[favorite_toy]" value="aeroplanes">
+  Aeroplanes
+</label>
+
+
+<script>
+  window.setInterval( () => {
+    const $coolInputs = $("input");
+
+    // unselect any item.
+    $coolInputs.prop("checked", false);
+
+    // randomly samples a number 0...3.
+    const i = Math.floor(3 * Math.random());
+
+    // Indexing takes us out of jQuery world!
+    const coolInput = $coolInputs[i];
+    // We can **wrap** an HTMLElement to create a jQuery object with one
+    // item; the wrapped element.
+    const $coolInput = $(coolInput);
+    $coolInput.prop("checked", true);
+  }, 200);
+</script>

@@ -1,0 +1,155 @@
+{
+  "1": {
+    "name": "Tim Ferriss",
+    "profilePic": "https://cdn-images-1.medium.com/max/800/1*-vBC6ubXL6iJSkFhHkKhjw.jpeg",
+    "recs": [
+      {
+        "title": "Paul Singer, Doomsday Investor",
+        "link": "https://www.newyorker.com/magazine/2018/08/27/paul-singer-doomsday-investor",
+        "type": "article"
+      },
+      {
+        "title": "Won't You Be My Neighbor?",
+        "link": "https://www.amazon.com/Wont-You-Be-My-Neighbor/dp/B07FJNWQR5",
+        "type": "video"
+      },
+      {
+        "title": "Corkcicle Whiskey Wedge",
+        "link": "https://www.amazon.com/Corkcicle-Whiskey-Wedge-Fashioned-Silicone/dp/B00MYSQ9GA",
+        "type": "tech"
+      },
+      {
+        "title": "C.L. Butaud’s 100% Texas tempranillo",
+        "link": "http://clbutaud.com/purchase/",
+        "type": "tech"
+      },
+      {
+        "title": "Athletic Greens",
+        "link": "https://athleticgreens.com/pages/tim?utm_campaign=5bfnov&utm_medium=email&utm_source=timferriss&rfsn=1926246.c8944",
+        "type": "tech"
+      }
+    ]
+  },
+  "2": {
+    "name": "Quincy Larson",
+    "profilePic": "https://pbs.twimg.com/profile_images/378800000147359764/54dc9a5c34e912f34db8662d53d16a39_400x400.png",
+    "recs": [
+      {
+        "title": "Simon JavaScript Game Tutorial",
+        "link": "https://www.freecodecamp.org/n/s1M0ntu70",
+        "type": "js"
+      },
+      {
+        "title": "A Software Engineering Survival Guide",
+        "link": "https://medium.freecodecamp.org/fe3eafb47166",
+        "type": "article"
+      },
+      {
+        "title": "Introduction to Computer Networks",
+        "link": "https://www.freecodecamp.org/n/n3tW0rk88",
+        "type": "article"
+      },
+      {
+        "title": "The Complete JavaScript Handbook",
+        "link": "https://medium.freecodecamp.org/f26b2c71719c",
+        "type": "js"
+      },
+      {
+        "title": "Podcast #51: Erica Peterson",
+        "link": "https://www.freecodecamp.org/n/jdigPOM2d",
+        "type": "audio"
+      }
+    ]
+  },
+  "3": {
+    "name": "Kevin Rose'",
+    "recs": [
+      {
+        "title": "The Random Show (Summer Edition)",
+        "link": "https://www.kevinrose.com/single-post/Tim-Ferriss-The-Random-Show-Summer-2018",
+        "type": "audio"
+      },
+      {
+        "title": "Wim Hof's powerful breathing exercise",
+        "link": "https://www.instagram.com/tv/BnKRdXPnbnD/?utm_source=ig_share_sheet&igshid=41h4ggquln9y",
+        "type": "instagram"
+      },
+      {
+        "title": "A mistake is just a moment in time",
+        "link": "https://m.signalvnoise.com/a-mistake-is-just-a-moment-in-time-825146629369",
+        "type": "article"
+      },
+      {
+        "title": "Japan's abandoned sculpture garden",
+        "link": "https://www.youtube.com/watch?v=QnkgySyGDGY",
+        "type": "video"
+      },
+      {
+        "title": "Kevin Rose Show #25: Michael Pollan",
+        "link": "https://www.kevinrose.com/single-post/Michael-Pollan",
+        "type": "audio"
+      }
+    ]
+  },
+  "4": {
+    "name": "Veni Kunche",
+    "recs": [
+      {
+        "title": "100+ Women In Tech Projects",
+        "link": "https://twitter.com/i/moments/1047492658619404288",
+        "type": "code"
+      },
+      {
+        "title": "LaBrina Loving, SSE at Microsoft",
+        "link": "http://blog.codewithveni.com/labrina-loving-senior-software-engineer-microsoft/",
+        "type": "article"
+      },
+      {
+        "title": "Self-care resources for developers",
+        "link": "http://selfcare.tech/",
+        "type": "tech"
+      },
+      {
+        "title": "Vogue & Code's Sticker Pack",
+        "link": "https://www.vogueandcode.com/shop/culture-kids-sticker-pack-1",
+        "type": "code"
+      },
+      {
+        "title": "Kelsey Campbell 👉 Data Scientist",
+        "link": "http://blog.codewithveni.com/kelsey-campbell-data-scientist/",
+        "type": "article"
+      }
+
+    ]
+  },
+  "5": {
+    "name": "Dan Abramov",
+    "recs": [
+      {
+        "title": "Making Sense of React Hooks",
+        "link": "https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889",
+        "type": "article"
+      },
+      {
+        "title": "react-window vs react-virtualized",
+        "link": "https://github.com/bvaughn/react-window#how-is-react-window-different-from-react-virtualized",
+        "type": "react"
+      },
+      {
+        "title": "Like button with React Hooks!",
+        "link": "https://codesandbox.io/s/1vqr8qlzo4",
+        "type": "code"
+      },
+      {
+        "title": "React Hooks and Suspense",
+        "link": "https://egghead.io/playlists/react-hooks-and-suspense-650307f2",
+        "type": "video"
+      },
+      {
+        "title": "Slide Button using useGesture",
+        "link": "https://codesandbox.io/embed/387p7vo9z5",
+        "type": "code"
+      }
+    ]
+  }
+}

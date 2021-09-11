@@ -1,0 +1,95 @@
+body{
+  background-image: url("../images/virus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.gamecontainer {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+canvas {
+  background: #000000;
+  background: linear-gradient(#252525, #252525);
+  border: 2px solid #FFFFFF;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+
+.controls {
+  min-width: 250px;
+  max-width: 250px;
+  /* height: 360px; */
+  background: rgba(25, 25, 25, 0.9);
+  border-radius: 20px;
+  padding: 0px 20px;
+}
+
+.information {
+  min-width: 250px;
+  max-width: 250px;
+  height: 150px;
+  background: rgba(25, 25, 25, 0.9);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+}
+button:hover{
+  cursor: pointer;
+  outline: none;
+}
+
+.swang-links {
+  position: relative;
+  /* top: 25px; */
+  left: 150px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: #FFFFFF;
+}
+a:visited { text-decoration: none; color:#FFFFFF; }
+a:hover { text-decoration: none; color:#0074BB; }
+a:hover, a:active { text-decoration: none; color:#0074BB }
+
+#mute {
+  border-radius: 5px;
+  min-width: 20px;
+  min-height: 20px;
+  position: relative;
+  bottom: 5px;
+}

@@ -1,0 +1,7 @@
+.gitignore
+.rpt2_cache
+CHANGELOG.md
+design.md
+rollup.*.js
+tsconfig.json
+tslint.json

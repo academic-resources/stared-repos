@@ -1,0 +1,11 @@
+<p>
+  (<%= comment.votes %>) <a href="<%= comment_url(comment.id) %>"><%= comment.body %></a>
+</p>
+
+<ul>
+  <% comments_by_parent[comment.id].each do |child_comment| %>
+    <li><%= render("comments/comment",
+            comment: child_comment,
+            comments_by_parent: comments_by_parent) %></li>
+  <% end %>
+</ul>

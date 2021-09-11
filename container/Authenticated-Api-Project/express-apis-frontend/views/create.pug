@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+  .errors-container
+  form(class="create-form")
+    .form-group
+      label(for='message') Message
+      input#message.form-control(type='message', name="message", placeholder='What do you want to tweet?')
+    button.btn.btn-primary(type='submit') Tweet
+
+  script(src="js/create.js")

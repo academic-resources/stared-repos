@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SYNTAX</title>
+
+  <style>
+  
+  /*
+  
+  SYNTAX - simple declarative syntax
+  
+  selector {
+    property: value;  #<== remember semi-colon
+  }
+  So what properties should be set?
+  What values should be set?
+
+  Well there are different types: (generally 5)
+  SELECTORS (The more specific, the more precedence it holds)
+  # BAD (Too Specific)
+  1) !important   ex: value !important
+    - will override all other styles and should be used as a TOOL, not in practice
+  2) inline css   ex: <p style="color: orange;">
+    - removes the point of CSS and stops abstraction and DRYness
+  3) id           ex: #cat_one_1'  - can only have ONE id per elemnt
+    - use for JavaScript or hooking up labels
+  # GOOD
+  4) class        ex: .favorite'
+  5) element      ex: <p>'
+
+  SPECIFICITY MATTERS
+  If all is equal, then last declared rule wins
+  */
+  .important {
+    color: gray !important;
+  }
+
+  p {
+    color: blue;
+  }
+
+  .favorite {
+    color: red;
+  }
+
+  .special {
+    color: green;
+  }
+
+  #cat_one_1 {
+    color: purple
+  }
+  
+  </style>
+
+</head>
+
+<body>
+  <h1>My Amazing Document</h1>
+
+  <section>
+    <article>
+      <h2>Big Cats</h2>
+      <p id="cat_one_1" class="favorite special">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
+      
+      <h2>Cats</h2>
+      <p class="favorite special">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
+      
+      <h2>Small Cats</h2>
+      <p style="color: orange;" class="favorite special">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
+      
+      <h2>Lasers</h2>
+      <p class="favorite">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
+
+      <h2>Clouds</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
+
+      <h2>Dark Clouds</h2>
+      <p class="important">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore impedit blanditiis voluptatibus laborum enim labore nesciunt eligendi, facere unde, hic quis sint repellendus quas libero. Deserunt, saepe. Velit, officia veritatis.</p>
+    </article>
+  </section>
+</body>
+</html>

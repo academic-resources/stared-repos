@@ -1,0 +1,16 @@
+version: "3"
+services:
+  app:
+    build: .
+    image: torto21/custom-drupal
+    ports:
+      - "8080:80"
+  db:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_PASSWORD=password
+    volumes: 
+      - "drupal-data:/var/lib/postgresql/data"
+    
+volumes:
+  drupal-data:
