@@ -1,0 +1,61 @@
+#certificate-input-form{
+	margin-top: 50px;
+}
+#url-input-form{
+	margin-top: 50px;
+}
+
+#file-upload{
+	margin: 10px;
+}
+
+#file-type-label{
+	margin: 10px;
+}
+
+#submit-button{
+	width: 200px;
+	height: 40px;
+	margin: 10px;
+}
+
+center{
+	margin: 25px;
+}
+
+#lint{
+	margin-top: 50px;
+}
+
+#lint p{
+	text-align: right; 
+	display:inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 20px;
+}
+
+ul{
+	width: auto;
+}
+
+.lint-list-item {
+	list-style-type: none;
+	margin-left:0px;
+	margin-top: 10px;
+	padding-left:0px;
+	display: inline-block;
+}
+
+.lint-list-item img
+{
+	float:left;
+}
+
+.lint-list-item p{
+	text-align: right; 
+	display:inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 20px;
+}

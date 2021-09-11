@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OCSP and CRL Linter</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+</head>
+<body>
+	<center>
+	<h1>Lint Results</h1>
+	<div id="lint">
+		<p id="domain"></p></br>
+		<p id="ocspurl"></br> 
+		<center>
+			<ul id="warning-lint-list"></ul>
+			<ul id="error-lint-list"></ul>
+		</center> 
+	</div>
+	</center>
+</body>
+</html>
