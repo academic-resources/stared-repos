@@ -1,0 +1,33 @@
+Explor Concrete Examples
+  - Coming up with examples can help you understand the problem better
+  - Examples also provide sanity checks that your eventual solution works how it should
+  - User Stories! - Given an input, what is our output?
+  - Unit Tests
+
+  1. Start with simple examples
+    - an input and an output - write it down
+  2. Progress to more complex examples
+  3. Explroe Examples with Empty Inputs
+  4. Explore Examples with Invalid Inputs
+
+Example: Write a function which takes in a string and returns counts of each character in the string
+1. Start with simple examples
+  charCount("aaaa") // => {a:4}
+  charCount("hello") // => {h:1, e:1, l:2, o:1}
+  - should we have 0 counts of letters not included?  Something to think about
+
+2. Progress to more complex examples
+  what if input is: "my phone number is 182763"
+  - Do we count spaces?
+  - Do we count numbers
+
+  What about: "Hello hi"
+  - Do we account for capitalization
+
+3. Explore examples with empt Inputs
+  charCount("")
+  - what do we return?
+
+4. Explore examples with invalid Inputs
+  charCount(23)
+  - convert to string then count
