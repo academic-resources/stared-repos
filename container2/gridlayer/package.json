@@ -1,0 +1,20 @@
+{
+  "name": "gridlayer",
+  "version": "0.0.2",
+  "description": "makes an array of arrays matrix out of x,y values",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NHQ/gridlayer.git"
+  },
+  "keywords": [
+    "array",
+    "matrix",
+    "grid"
+  ],
+  "author": "johnnyscriptus",
+  "license": "MIT"
+}
