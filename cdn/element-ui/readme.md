@@ -1,15 +1,15 @@
 # element-ui
 
-
 https://www.cnblogs.com/xgqfrms/p/14272107.html#4800140
 
 ```html
-
 <!-- 引入样式 -->
-<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+/>
 <!-- 引入组件库 -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-
 ```
 
 ## version
@@ -23,16 +23,14 @@ https://unpkg.com/element-ui@2.14.1/lib/theme-chalk/index.css
 
 https://unpkg.com/element-ui@2.14.1/lib/index.js
 
-
 ```html
-<link rel="stylesheet" href="https://unpkg.com/element-ui@2.14.1/lib/theme-chalk/index.css">
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/element-ui@2.14.1/lib/theme-chalk/index.css"
+/>
 
 <script src="https://unpkg.com/element-ui@2.14.1/lib/index.js"></script>
-
 ```
-
-
-
 
 ```js
   "bin": {

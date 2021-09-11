@@ -21,100 +21,102 @@ const log = console.log;
 
 const synth = window.speechSynthesis;
 
-const inputForm = document.querySelector('form');
-const inputTxt = document.querySelector('.txt');
-const voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector(".txt");
+const voiceSelect = document.querySelector("select");
 
-const pitch = document.querySelector('#pitch');
-const pitchValue = document.querySelector('.pitch-value');
-const rate = document.querySelector('#rate');
-const rateValue = document.querySelector('.rate-value');
+const pitch = document.querySelector("#pitch");
+const pitchValue = document.querySelector(".pitch-value");
+const rate = document.querySelector("#rate");
+const rateValue = document.querySelector(".rate-value");
 
 let voices = [];
 
 function populateVoiceList() {
-  voices = synth.getVoices();
-  log(`voices =`, voices.length, voices);
-  // voices = synth.getVoices()
-  //     .sort(function (a, b) {
-  //     const aname = a.name.toUpperCase();
-  //     const bname = b.name.toUpperCase();
-  //     if ( aname < bname ) {
-  //       return -1;
-  //     } else if ( aname == bname ) {
-  //       return 0;
-  //     } else {
-  //       return +1;
-  //     }
-  // });
-  // log(`voices =`, voices.length, voices);
-  const selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
-  voiceSelect.innerHTML = '';
-  for(let i = 0; i < voices.length ; i++) {
-    const option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
-    if(voices[i].lang === "zh-CN") {
-      option.textContent += ' -- DEFAULT';
+    voices = synth.getVoices();
+    log(`voices =`, voices.length, voices);
+    // voices = synth.getVoices()
+    //     .sort(function (a, b) {
+    //     const aname = a.name.toUpperCase();
+    //     const bname = b.name.toUpperCase();
+    //     if ( aname < bname ) {
+    //       return -1;
+    //     } else if ( aname == bname ) {
+    //       return 0;
+    //     } else {
+    //       return +1;
+    //     }
+    // });
+    // log(`voices =`, voices.length, voices);
+    const selectedIndex =
+        voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
+    voiceSelect.innerHTML = "";
+    for (let i = 0; i < voices.length; i++) {
+        const option = document.createElement("option");
+        option.textContent = voices[i].name + " (" + voices[i].lang + ")";
+        if (voices[i].lang === "zh-CN") {
+            option.textContent += " -- DEFAULT";
+        }
+        // if(voices[i].default) {
+        //   option.textContent += ' -- DEFAULT';
+        // }
+        option.setAttribute("data-lang", voices[i].lang);
+        option.setAttribute("data-name", voices[i].name);
+        voiceSelect.appendChild(option);
     }
-    // if(voices[i].default) {
-    //   option.textContent += ' -- DEFAULT';
-    // }
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
-    voiceSelect.appendChild(option);
-  }
-  voiceSelect.selectedIndex = 63;// un-sort
-  // voiceSelect.selectedIndex = 29;// sort
-  // voiceSelect.selectedIndex = selectedIndex;
+    voiceSelect.selectedIndex = 63; // un-sort
+    // voiceSelect.selectedIndex = 29;// sort
+    // voiceSelect.selectedIndex = selectedIndex;
 }
 
 populateVoiceList();
 if (speechSynthesis.onvoiceschanged !== undefined) {
-  speechSynthesis.onvoiceschanged = populateVoiceList;
+    speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-function speak(){
+function speak() {
     if (synth.speaking) {
-        console.error('speechSynthesis.speaking');
+        console.error("speechSynthesis.speaking");
         return;
     }
-    if (inputTxt.value !== '') {
-    const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-    utterThis.onend = function (event) {
-        console.log('SpeechSynthesisUtterance.onend');
+    if (inputTxt.value !== "") {
+        const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+        utterThis.onend = function (event) {
+            console.log("SpeechSynthesisUtterance.onend");
+        };
+        utterThis.onerror = function (event) {
+            console.error("SpeechSynthesisUtterance.onerror");
+        };
+        const selectedOption =
+            voiceSelect.selectedOptions[0].getAttribute("data-name");
+        for (let i = 0; i < voices.length; i++) {
+            if (voices[i].name === selectedOption) {
+                utterThis.voice = voices[i];
+                break;
+            }
+        }
+        utterThis.pitch = pitch.value;
+        utterThis.rate = rate.value;
+        synth.speak(utterThis);
     }
-    utterThis.onerror = function (event) {
-        console.error('SpeechSynthesisUtterance.onerror');
-    }
-    const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-    for(let i = 0; i < voices.length ; i++) {
-      if(voices[i].name === selectedOption) {
-        utterThis.voice = voices[i];
-        break;
-      }
-    }
-    utterThis.pitch = pitch.value;
-    utterThis.rate = rate.value;
-    synth.speak(utterThis);
-  }
 }
 
-inputForm.onsubmit = function(event) {
-  event.preventDefault();
+inputForm.onsubmit = function (event) {
+    event.preventDefault();
 
-  speak();
+    speak();
 
-  inputTxt.blur();
-}
+    inputTxt.blur();
+};
 
-pitch.onchange = function() {
-  pitchValue.textContent = pitch.value;
-}
+pitch.onchange = function () {
+    pitchValue.textContent = pitch.value;
+};
 
-rate.onchange = function() {
-  rateValue.textContent = rate.value;
-}
+rate.onchange = function () {
+    rateValue.textContent = rate.value;
+};
 
-voiceSelect.onchange = function(){
-  speak();
-}
+voiceSelect.onchange = function () {
+    speak();
+};

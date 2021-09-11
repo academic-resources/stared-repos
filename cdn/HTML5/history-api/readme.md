@@ -1,44 +1,40 @@
 # History API All In One
 
-
 ## rewrite function
 
 https://cdn.xgqfrms.xyz/HTML5/history-api/url-change-event.html
 
 ```js
-    (function(history){
-      var pushState = history.pushState;
-      history.pushState = function(state) {
+(function (history) {
+    var pushState = history.pushState;
+    history.pushState = function (state) {
         // YOUR CUSTOM HOOK / FUNCTION
-        log('called from pushStateHook', state, arguments);
+        log("called from pushStateHook", state, arguments);
         // func();
         return pushState.apply(history, arguments);
-      };
-    })(window.history);
+    };
+})(window.history);
 ```
-
 
 ## old
 
 https://cdn.xgqfrms.xyz/HTML5/history-api/pushstate-event.html
 
-
 ```js
-    function rewriteHistory(type) {
-        const origin = window.history[type];
-        return function () {
-            console.log(`arguments =`, arguments);
-            console.log(`type =`, type, type.toLocaleLowerCase());
-            const rs = origin.apply(this, arguments);
-            // custom event
-            const e = new Event(type.toLocaleLowerCase());
-            e.arguments = arguments;
-            // 手动触发事件 
-            window.dispatchEvent(e);
-            return rs;
-        };
-    }
-
+function rewriteHistory(type) {
+    const origin = window.history[type];
+    return function () {
+        console.log(`arguments =`, arguments);
+        console.log(`type =`, type, type.toLocaleLowerCase());
+        const rs = origin.apply(this, arguments);
+        // custom event
+        const e = new Event(type.toLocaleLowerCase());
+        e.arguments = arguments;
+        // 手动触发事件
+        window.dispatchEvent(e);
+        return rs;
+    };
+}
 ```
 
 ## new
@@ -79,12 +75,6 @@ https://cdn.xgqfrms.xyz/HTML5/history-api/rewirte-pushstate-event.html
     }
 ```
 
-
 ## refs
 
 https://www.cnblogs.com/xgqfrms/p/14434635.html
-
-
-
-
-

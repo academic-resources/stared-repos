@@ -14,14 +14,45 @@
     -webkit-box-sizing: border-box;
 }
 
-html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, object, code, legend, button, input, textarea, th, td, a, img, video {
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+object,
+code,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+a,
+img,
+video {
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
 }
 
-button{
+button {
     padding: 1px 6px;
     border-width: 2px;
     border-style: outset;
@@ -29,7 +60,7 @@ button{
     border-image: initial;
 }
 
-.show-data-box{
+.show-data-box {
     width: 100vw;
     min-height: 50vh;
     background: #fff;

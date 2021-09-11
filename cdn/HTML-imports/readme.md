@@ -2,10 +2,8 @@
 
 > once bug ???
 
-
 ```js
-    
-// 
+//
 
 "use strict";
 
@@ -23,14 +21,20 @@
 
 const HTMLGenerator = (module_uid = ``, debug = false) => {
     // let result = ``;
-    let templatesBox = document.querySelector(`[data-template="template-container"`),
+    let templatesBox = document.querySelector(
+            `[data-template="template-container"`
+        ),
         link = document.querySelector(`link[data-rel="${module_uid}"]`),
         template = link.import,
         // #document
         div = template.querySelector(`[data-div="templates-${module_uid}"]`);
     templatesBox.appendChild(div);
-    let js = document.querySelector(`[data-template="template-script-${module_uid}"]`),
-        css = document.querySelector(`[data-template="template-style-${module_uid}"]`);
+    let js = document.querySelector(
+            `[data-template="template-script-${module_uid}"]`
+        ),
+        css = document.querySelector(
+            `[data-template="template-style-${module_uid}"]`
+        );
     js.src = js.dataset.src;
     css.href = css.dataset.href;
     // return result;
@@ -49,18 +53,8 @@ const HTMLGenerator = (module_uid = ``, debug = false) => {
 
 // container.appendChild(clone);
 
-const supportImport = ("import" in document.createElement("link"));
+const supportImport = "import" in document.createElement("link");
 
 export default HTMLGenerator;
-export {
-    HTMLGenerator,
-    supportImport
-};
-
-
-
-
-
+export { HTMLGenerator, supportImport };
 ```
-
-

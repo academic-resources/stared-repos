@@ -3,16 +3,15 @@
 /* reset.css */
 
 :root {
-   --cololr: #fff;
-   --default-cololr: #000;
-   --new-cololr: #0f0;
+    --cololr: #fff;
+    --default-cololr: #000;
+    --new-cololr: #0f0;
 }
 
-html{
+html {
     font-size: 62.5%;
     /* 10px = 1rem */
 }
-
 
 * {
     -webkit-box-sizing: border-box;
@@ -20,7 +19,38 @@ html{
     box-sizing: border-box;
 }
 
-html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, object, code, legend, button, input, textarea, th, td, a, img, video {
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+object,
+code,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+a,
+img,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -29,7 +59,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, 
 
 /* section */
 
-.section-box{
+.section-box {
     margin: 50px auto;
     padding: 5px;
     width: 80vw;
@@ -37,14 +67,14 @@ html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, 
     background: #ccc;
     font-size: 1.6rem;
 }
-.section-box > h1{
+.section-box > h1 {
     text-align: center;
     color: #0f0;
 }
-.section-box > main{
+.section-box > main {
     color: #fff;
 }
-.section-box > main::selection{
+.section-box > main::selection {
     color: #f0f;
 }
 
@@ -56,7 +86,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, 
     background: #000;
 }
 
-.hidden-menus{
+.hidden-menus {
     box-sizing: border-box;
     display: none;
     position: absolute;
@@ -82,19 +112,18 @@ html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, 
     padding: 0;
 }
 
-.menus-li > button{
+.menus-li > button {
     color: #000;
     background: #fff;
     cursor: pointer;
 }
-.menus-li > button:hover{
+.menus-li > button:hover {
     background: #fff;
     color: #0f0;
     cursor: pointer;
 }
 
-
-.highlight-marked{
+.highlight-marked {
     color: rgb(5, 255, 5);
     text-decoration: underline;
 }

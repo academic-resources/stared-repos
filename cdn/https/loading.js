@@ -1,13 +1,18 @@
-;(function () {
-  window.pageAccelerator && window.pageAccelerator({
-    beforeLoading: function () {
-      document.getElementsByClassName('loading-bar')[0].classList.add('isloading')
-    },
-    afterLoading: function () {
-      document.getElementsByClassName('loading-bar')[0].classList.remove('isloading')
-    }
-  })
-}());
+(function () {
+    window.pageAccelerator &&
+        window.pageAccelerator({
+            beforeLoading: function () {
+                document
+                    .getElementsByClassName("loading-bar")[0]
+                    .classList.add("isloading");
+            },
+            afterLoading: function () {
+                document
+                    .getElementsByClassName("loading-bar")[0]
+                    .classList.remove("isloading");
+            },
+        });
+})();
 
 /*
 
@@ -114,16 +119,15 @@ https://gist.github.com/xgqfrms-GitHub/0c9781858c17dd1173593289b9831cfd
 */
 
 setTimeout(function hiddenLinks() {
-    let links = document.querySelectorAll('a');
+    let links = document.querySelectorAll("a");
     for (var i = 0; i < links.length; i++) {
-        links[i].style.display = 'none';
+        links[i].style.display = "none";
     }
 }, 1000);
 
-
 setTimeout(function showLinks() {
-    let links = document.querySelectorAll('a');
+    let links = document.querySelectorAll("a");
     for (var i = 0; i < links.length; i++) {
-        links[i].style.display = 'inline-block';
+        links[i].style.display = "inline-block";
     }
 }, 1000);

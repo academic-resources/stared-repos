@@ -1,14 +1,11 @@
 # RESTful API
 
-
 http://www.restapitutorial.com/lessons/restquicktips.html
-
 
 Use HTTP Verbs to Make Your Requests Mean Something
 API consumers are capable of sending GET, POST, PUT, and DELETE verbs, which greatly enhance the clarity of a given request.
 
 Generally, the four primary HTTP verbs are used as follows:
-
 
 ## GET
 
@@ -25,23 +22,3 @@ Remove/delete a specific resource by an identifier.
 ## POST
 
 Create a new resource. Also a catch-all verb for operations that don't fit into the other categories.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

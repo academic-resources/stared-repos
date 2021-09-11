@@ -11,18 +11,20 @@ window.onload = (() => {
             regex = /^https:\/\/[a-zA-Z]{3,}\.xgqfrms\.xyz$/gi,
             // window.location.origin
             result = regex.test(window.location.origin);
-            // true
+        // true
         if (!result) {
             // window.location = http + '/#body/' + result[1] + '#' + result[2];
             window.location.protocol = https;
         } else {
             // window.location.protocol
-            console.log(`window.location.protocol = \n`, window.location.protocol);
+            console.log(
+                `window.location.protocol = \n`,
+                window.location.protocol
+            );
         }
-    }
+    };
     redirection();
 })();
-
 
 /*
 # HTTP Status Codes
@@ -87,7 +89,3 @@ null === null
 // true
 
 */
-
-
-
-

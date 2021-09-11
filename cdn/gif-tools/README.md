@@ -2,10 +2,8 @@
 
 ## LICEcap
 
-> PC 
+> PC
 
 ## Gifox
 
 > Mac
-
-

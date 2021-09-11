@@ -11,7 +11,10 @@ window.onload = (() => {
             // window.location = https;
             window.location.protocol = https;
         } else {
-            console.log(`window.location.protocol = \n`, window.location.protocol);
+            console.log(
+                `window.location.protocol = \n`,
+                window.location.protocol
+            );
         }
     };
     redirection();

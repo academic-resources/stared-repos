@@ -30,28 +30,32 @@ window.$ = $$;
 //     window.$ = Object.assign({}, $$);
 // }
 
-function loadTemplate ()  {
-    let templatesBox = document.querySelector('[data-template="template-container"'),
+function loadTemplate() {
+    let templatesBox = document.querySelector(
+            '[data-template="template-container"'
+        ),
         link = document.querySelector('link[data-rel="containers"]'),
         // #document
         template = link ? link.import : null,
-        div = template ? template.querySelector('[data-div="templates-containers"]') : null;
+        div = template
+            ? template.querySelector('[data-div="templates-containers"]')
+            : null;
     if (div) {
         // read template once
         templatesBox.appendChild(div);
     } else {
         // exsit template
     }
-};
+}
 
-function showDOM () {
+function showDOM() {
     let container = $.qs('[data-test="html-template"]'),
         temp = $.qs('[data-template="template-containers-full-width"]'),
         clone = temp ? temp.content.cloneNode(true) : null;
     if (clone) {
         container.appendChild(clone);
     }
-};
+}
 
 let uid = document.querySelector('[data-uid="result"]');
 
@@ -63,7 +67,6 @@ if (Modernizr.htmlimports) {
     uid.innerHTML = '<span class="no-htmlimports">not-supported<span>';
 }
 
-
 // DOM fully loaded and parsed!
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
@@ -74,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showDOM();
         } else {
             // not-supported
-           alert("template is not supported!");
+            alert("template is not supported!");
         }
     }, 100);
 });

@@ -4,7 +4,6 @@ http://docs-im.easemob.com/im/web/intro/basic
 
 http://webim-h5.easemob.com/jsdoc/out/connection.html
 
-
 ## Web IM 集成方式
 
 1. npm / CDN 集成 / 本地集成
@@ -41,11 +40,11 @@ conn = WebIM.conn = new WebIM.connection({
     autoReconnectNumMax: WebIM.config.autoReconnectNumMax,
     autoReconnectInterval: WebIM.config.autoReconnectInterval,
     isStropheLog: WebIM.config.isStropheLog,
-    delivery: WebIM.config.delivery
-})
+    delivery: WebIM.config.delivery,
+});
 // WebIM.config 为之前集成里介绍的WebIMConfig.js
-
 ```
+
 3. callback
 
 ```js
@@ -59,7 +58,7 @@ conn.listen({
         // 则无需调用conn.setPresence();
         alert("登录成功!");
         // conn.setPresence();
-    },  
+    },
     onError: function (msg) {
         // 失败回调
         log(`连接失败: `, msg);
@@ -103,15 +102,18 @@ conn.listen({
         var option = {
             url: msg.url,
             headers: {
-              "Accept": "audio/mp4"
+                Accept: "audio/mp4",
             },
             onFileDownloadComplete: function (response) {
-                var objectURL = WebIM.utils.parseDownloadResponse.call(conn, response);
+                var objectURL = WebIM.utils.parseDownloadResponse.call(
+                    conn,
+                    response
+                );
                 node.src = objectURL;
             },
             onFileDownloadError: function () {
-                console.log("File down load error.")
-            }
+                console.log("File down load error.");
+            },
         };
         WebIM.utils.download.call(conn, option);
     },
@@ -129,23 +131,22 @@ conn.listen({
         // 查询黑名单，将好友拉黑，将好友从黑名单移除都会回调这个函数，list则是黑名单现有的所有好友信息
         log(list);
     },
-    onReceivedMessage: function(msg){
+    onReceivedMessage: function (msg) {
         // 收到消息送达服务器回执
     },
-    onDeliveredMessage: function(msg){
+    onDeliveredMessage: function (msg) {
         // 收到消息送达客户端回执
     },
-    onReadMessage: function(msg){
+    onReadMessage: function (msg) {
         // 收到消息已读回执
     },
-    onCreateGroup: function(msg){
+    onCreateGroup: function (msg) {
         // 创建群组成功回执（需调用createGroupNew）
     },
-    onMutedMessage: function(msg){
+    onMutedMessage: function (msg) {
         // 如果用户在A群组被禁言，在A群发消息会走这个回调并且消息不会传递给群其它成员
     },
 });
-
 ```
 
 4. 注册
@@ -153,33 +154,31 @@ conn.listen({
 根据用户名/密码/昵称注册环信 Web IM :
 
 ```js
-var options = { 
-    username: 'username',
-    password: 'password',
-    nickname: 'nickname',
+var options = {
+    username: "username",
+    password: "password",
+    nickname: "nickname",
     appKey: WebIM.config.appkey,
-    success: function () { },  
-    error: function () { }, 
-    apiUrl: WebIM.config.apiURL
-}; 
+    success: function () {},
+    error: function () {},
+    apiUrl: WebIM.config.apiURL,
+};
 conn.registerUser(options);
-
 ```
+
 5. 登录
 
 用户名/密码登录
 使用用户名/密码登录环信 Web IM :
 
 ```js
-
-var options = { 
-  apiUrl: WebIM.config.apiURL,
-  user: 'username',
-  pwd: 'password',
-  appKey: WebIM.config.appkey
+var options = {
+    apiUrl: WebIM.config.apiURL,
+    user: "username",
+    pwd: "password",
+    appKey: WebIM.config.appkey,
 };
 conn.open(options);
-
 ```
 
 6. 使用 Token 登录
@@ -189,18 +188,16 @@ conn.open(options);
 ```js
 var options = {
     apiUrl: WebIM.config.apiURL,
-    user: 'username',
-    pwd: 'password',
+    user: "username",
+    pwd: "password",
     appKey: WebIM.config.appkey,
     success: function (token) {
         var token = token.access_token;
-        WebIM.utils.setCookie('webim_' + encryptUsername, token, 1);
+        WebIM.utils.setCookie("webim_" + encryptUsername, token, 1);
     },
-    error: function(){
-    }
+    error: function () {},
 };
 conn.open(options);
-
 ```
 
 7. 使用 Token 登录环信 Web IM。
@@ -208,19 +205,17 @@ conn.open(options);
 ```js
 var options = {
     apiUrl: WebIM.config.apiURL,
-    user: 'username',
-    accessToken: 'token',
-    appKey: WebIM.config.appkey
+    user: "username",
+    accessToken: "token",
+    appKey: WebIM.config.appkey,
 };
 conn.open(options);
-
 ```
 
 8. 退出
 
 ```js
 conn.close();
-
 ```
 
 ## 常见问题
@@ -238,13 +233,12 @@ A: 登录之后需要设置在线状态，才能收到消息。请检查登录�
 Q: 调试时经常报连接中断。
 A: 如果使用 alter 方式调试长时间没有进行操作时，连接超时后服务器会自动断开连接。同样断点等待时间过长时服务器也会断开连接。
 
-Q: ws有上行没有下行？ 
-A: 可能是浏览器缓存了错误的ws返回结果，解决办法是加个时间戳参数，强制浏览器不走缓存。
-在websdk里面搜
+Q: ws 有上行没有下行？
+A: 可能是浏览器缓存了错误的 ws 返回结果，解决办法是加个时间戳参数，强制浏览器不走缓存。
+在 websdk 里面搜
 `this.url = _getXmppUrl(options.url, this.https);`
 改成
 `this.url = _getXmppUrl(options.url, this.https)+'?'+new Date().getTime();`
-
 ```
 
 ## WebIM 消息的使用方法
@@ -286,7 +280,6 @@ http://docs-im.easemob.com/im/web/basics/message
 5. 历史消息
 
 ```js
-    
 
 ```
 

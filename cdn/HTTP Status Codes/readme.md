@@ -2,11 +2,6 @@
 
 https://gist.github.com/xgqfrms-GitHub/3c1df86c0cca4281516ddbb7132f77c3
 
-
-
-
-
-
 # 1×× Informational
 
 100 Continue
@@ -85,11 +80,6 @@ https://gist.github.com/xgqfrms-GitHub/3c1df86c0cca4281516ddbb7132f77c3
 511 Network Authentication Required
 599 Network Connect Timeout Error
 
-
-
-
-
-
 ## httpstatuses
 
 https://httpstatuses.com/405
@@ -97,9 +87,3 @@ https://httpstatuses.com/405
 ## CheckUpDown
 
 http://www.checkupdown.com/status/E405_zh.html
-
-
-
-
-
-

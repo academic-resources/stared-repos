@@ -7,7 +7,5 @@ https://github.com/webcomponents/webcomponentsjs/tree/v1
 https://github.com/webcomponents/webcomponentsjs/tree/v1#how-to-use
 
 ```js
-    // webcomponents-lite.js
-
-
+// webcomponents-lite.js
 ```

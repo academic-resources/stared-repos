@@ -1,16 +1,16 @@
 "use strict";
 
 /**
- * 
+ *
  * @author xgqfrms
  * @license MIT
  * @copyright xgqfrms
- * 
+ *
  * @description app.js
- * @augments 
- * @example 
- * @link 
- * 
+ * @augments
+ * @example
+ * @link
+ *
  */
 
 const IMKeys = {
@@ -26,14 +26,14 @@ Object.assign(config, IMKeys);
 log(config);
 
 // init DOMParser / document for strophe and sdk
-let WebIM = window.WebIM || {}
+let WebIM = window.WebIM || {};
 
 // 0. config
 WebIM.config = config;
 WebIM.loglevel = config.loglevel;
 
 // 1. 创建连接
-let conn = WebIM.conn = new WebIM.connection({
+let conn = (WebIM.conn = new WebIM.connection({
     url: WebIM.config.xmppURL,
     apiUrl: WebIM.config.apiURL,
     https: WebIM.config.https,
@@ -47,7 +47,7 @@ let conn = WebIM.conn = new WebIM.connection({
     delivery: WebIM.config.delivery,
     saveLocal: WebIM.config.saveLocal,
     heartBeatWait: WebIM.config.heartBeatWait,
-});
+}));
 
 // WebIM.conn.api.render(document.getElementById("demo"));
 
@@ -61,7 +61,7 @@ conn.listen({
         // 则无需调用conn.setPresence();
         alert("登录成功!");
         // conn.setPresence();
-    },  
+    },
     onError: function (msg) {
         // 失败回调
         log(`连接失败: `, msg);
@@ -105,15 +105,18 @@ conn.listen({
         var option = {
             url: msg.url,
             headers: {
-              "Accept": "audio/mp4"
+                Accept: "audio/mp4",
             },
             onFileDownloadComplete: function (response) {
-                var objectURL = WebIM.utils.parseDownloadResponse.call(conn, response);
+                var objectURL = WebIM.utils.parseDownloadResponse.call(
+                    conn,
+                    response
+                );
                 node.src = objectURL;
             },
             onFileDownloadError: function () {
-                console.log("File down load error.")
-            }
+                console.log("File down load error.");
+            },
         };
         WebIM.utils.download.call(conn, option);
     },
@@ -131,19 +134,19 @@ conn.listen({
         // 查询黑名单，将好友拉黑，将好友从黑名单移除都会回调这个函数，list则是黑名单现有的所有好友信息
         log(list);
     },
-    onReceivedMessage: function(msg){
+    onReceivedMessage: function (msg) {
         // 收到消息送达服务器回执
     },
-    onDeliveredMessage: function(msg){
+    onDeliveredMessage: function (msg) {
         // 收到消息送达客户端回执
     },
-    onReadMessage: function(msg){
+    onReadMessage: function (msg) {
         // 收到消息已读回执
     },
-    onCreateGroup: function(msg){
+    onCreateGroup: function (msg) {
         // 创建群组成功回执（需调用createGroupNew）
     },
-    onMutedMessage: function(msg){
+    onMutedMessage: function (msg) {
         // 如果用户在A群组被禁言，在A群发消息会走这个回调并且消息不会传递给群其它成员
     },
 });
@@ -164,9 +167,9 @@ const login = (username, password) => {
             // Creators.setLoginSuccess(username);
             log(`token =`, token);
         },
-        error: err => {
+        error: (err) => {
             log(`error =`, err);
-        }
+        },
     });
 };
 
