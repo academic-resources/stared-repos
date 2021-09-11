@@ -1,0 +1,14 @@
+name: Main
+on: push
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-ruby@v1
+      - name: Install Dependencies
+        run: gem install github-pages html-proofer
+      - name: Build
+        run: jekyll build
+      - name: Test HTML
+        run: htmlproofer --assume-extension ./_site
