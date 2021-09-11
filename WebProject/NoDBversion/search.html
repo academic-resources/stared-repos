@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Internet and Web Technologies</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="search.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 400px)' href='mobilestyles.css' />
+	</head>
+
+		<body>
+			<script src="script.js"></script>
+
+<div class="navbar">
+<ul>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Course</a>
+    <div class="dropdown-content">
+		<a href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanSpring2019">Zybook</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Search</a>
+    <div class="dropdown-content">
+		<a href="search.html">Fixed List</a>
+		<a href="#">From File</a>
+		<a href="searchapi.html">Google API</a>
+		<a href="#">Custom Search Engine</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Browser</a>
+    <div class="dropdown-content">
+      <a href="index.html" onclick="BrowserInfo()">Navigator</a>
+      <a href="index.html" onclick="WindowInfo()">Window</a>
+      <a href="index.html" onclick="applyOrientation()">Screen</a>
+      <a href="index.html" onclick="geturl()">Location</a>
+      <a href="index.html" onclick="getLocation()">Geolocation</a>
+    </div>
+  </li>
+  
+      <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">About</a>
+    <div class="dropdown-content">
+      <a href="index.html" onclick="AboutMe()">Anguel Metodiev</a>
+      <a href="index.html" onclick="ContactMe()">Contact Me</a>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div>
+<form class="example" action="" disabled>
+  <input type="text" placeholder="Machine Learning" name="search">
+  <button type="submit" disabled><i class="fa fa-search"></i></button>
+</form>
+</div>
+
+
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>&nbsp;</th>
+    </tr>
+    <tr>
+      <td>
+	  <div class="Results">
+        <p class="Title"><a href="https://www.google.com/url?q=https://www.sas.com/en_us/insights/analytics/machine-learning.html&sa=U&ved=0ahUKEwjkyrqyh__gAhVineAKHc5zDeAQFggEMAA&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw2iC_sydl5yzMxgenrvrYPE">Machine Learning: What it is and why it matters | SAS</a></p>
+        <p class="URL">https://www.sas.com/en_us/insights/.../machine-learning.html</p>
+        <p class="Description">Machine learning is a method of data analysis that automates analytical model building. It is a branch of artificial intelligence based on the idea that systems can  ...</p>
+	   </div>
+	  </td>
+    </tr>
+    <tr>
+	<td>
+	  <div class="Results">
+        <p class="Title"><a href="https://en.wikipedia.org/wiki/Machine_learning">Machine learning - Wikipedia</a></p>
+        <p class="URL">https://en.wikipedia.org/wiki/Machine_learning</p>
+        <p class="Description">Machine learning (ML) is the scientific study of algorithms and statistical models that computer systems use to effectively perform a specific task without using ...</p>
+      </div>
+	  </td>
+    </tr>
+
+ <tr>
+	<td>
+	  <div class="Results">
+        <p class="Title"><a href="https://developers.google.com/machine-learning/crash-course/">Machine Learning Crash Course | Google Developers</a></p>
+        <p class="URL">https://developers.google.com/machine-learning/crash-course/</p>
+        <p class="Description">An intensive, practical 20-hour introduction to machine learning fundamentals, with companion TensorFlow exercises</p>
+      </div>
+	  </td>
+  </tr>
+  
+   <tr>
+	<td>
+	  <div class="Results">
+        <p class="Title"><a href="https://www.google.com/url?q=https://searchenterpriseai.techtarget.com/definition/machine-learning-ML&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggKMAM&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw3jmeQwZIgZKGGzNxDyRm-p">What is machine learning (ML)? - Definition from WhatIs.com</a></p>
+        <p class="URL">https://searchenterpriseai.techtarget.com/.../machine-learning-ML</p>
+        <p class="Description">Machine learning (ML) is a category of algorithm that allows software applications to become more accurate in predicting outcomes without being explicitly ...</p>
+      </div>
+	  </td>
+  </tr>
+  
+     <tr>
+	<td>
+	  <div class="Results">
+        <p class="Title"><a href="https://www.google.com/url?q=https://www.geeksforgeeks.org/machine-learning/&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggMMAQ&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw3Y6yy5oAv5taX4qvVrObC8">Machine Learning - GeeksforGeeks</a></p>
+        <p class="URL">https://www.geeksforgeeks.org/machine-learning/</p>
+        <p class="Description">As it is evident from the name, it gives the computer that which makes it more similar to humans: The ability to learn. Machine learning is actively being used ...</p>
+      </div>
+	  </td>
+  </tr>
+  
+       <tr>
+	<td>
+	  <div class="Results">
+        <p class="Title"><a href="https://www.google.com/url?q=https://www.coursera.org/learn/machine-learning&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggOMAU&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw3MM_Cz-MhOA44T68PcL3Qm">Machine Learning | Coursera</a></p>
+        <p class="URL">https://www.coursera.org/learn/machine-learning</p>
+        <p class="Description">Machine Learning from Stanford University. Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade,  ...</p>
+      </div>
+	  </td>
+  </tr>
+  
+        <tr>
+	<td>
+	  <div class="Results">
+        <p class="Title"><a href="https://www.google.com/url?q=https://www.ml.cmu.edu/&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggQMAY&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw3m7VljoeGAUSqtz1HFRUm0">Machine Learning | Carnegie Mellon University</a></p>
+        <p class="URL">https://www.ml.cmu.edu/</p>
+        <p class="Description">@Carnegie Mellon University - Pittsburgh Pennsylvania Machine Learning Department at Carnegie Mellon University. Machine learning ( ML) is a fascinating field of AI research and practice, where computer agents ...</p>
+      </div>
+	  </td>
+  </tr>
+  
+     <tr>
+	<td>
+	  <div class="Results">
+        <p class="Title"><a href="https://www.google.com/url?q=https://towardsdatascience.com/machine-learning/home&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggSMAc&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw0cvq5SzcrYRomFUjDc7O4b">Machine Learning – Towards Data Science</a></p>
+        <p class="URL">https://towardsdatascience.com/machine-learning/home</p>
+        <p class="Description">Read here our best posts on machine learning. Sharing concepts, ideas, and codes.</p>
+      </div>
+	  </td>
+  </tr>
+  
+      <tr>
+	<td>
+	  <div class="Results">
+        <p class="Title"><a href="https://www.google.com/url?q=https://developers.google.com/machine-learning/crash-course/ml-intro&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggUMAg&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw0QWxoPIg_NGhudARIDHH70">Introduction to Machine Learning | Machine Learning Crash </a></p>
+        <p class="URL">https://developers.google.com/machine-learning/crash.../ml-intro</p>
+        <p class="Description">This module introduces Machine Learning (ML). Estimated Time: 3 minutes Learning Objectives; Recognize the practical benefits of mastering machine learning ...</p>
+      </div>
+	  </td>
+  </tr>
+  
+       <tr>
+	<td>
+	  <div class="Results">
+        <p class="Title"><a href="https://www.google.com/url?q=https://www.sas.com/ro_ro/software/visual-data-mining-machine-learning.html&sa=U&ved=0ahUKEwje1M6vhYHhAhVENd8KHUOaAaMQFggWMAk&client=internal-uds-cse&cx=018379122786601901865:mgunhojaa70&usg=AOvVaw1BCMM607OlLNAEixX8Z1RO">SAS Visual Data Mining and Machine Learning | SAS </a></p>
+        <p class="URL">https://www.sas.com/ro.../visual-data-mining-machine-learning.html</p>
+        <p class="Description">SAS Visual Data Mining and Machine Learning provides a single, integrated in- memory environment for solving your most complex problems faster.</p>
+      </div>
+	  </td>
+  </tr>
+	  
+    </tr>
+  </table>
+</div>
+
+
+
+
+<script src="geolocation.js"></script>
+
+<script src="search.js"></script>
+	
+</body>
+</html>
+

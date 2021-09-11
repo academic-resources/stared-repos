@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Internet and Web Technologies</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 400px)' href='mobilestyles.css' />
+	</head>
+
+		<body>
+			<script src="script.js"></script>
+
+<div class="navbar">
+<ul>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Course</a>
+    <div class="dropdown-content">
+		<a href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanSpring2019">Zybook</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Search</a>
+    <div class="dropdown-content">
+		<a href="search.html">Fixed List</a>
+		<a href="#">From File</a>
+		<a href="searchapi.html">Google API</a>
+		<a href="#">Custom Search Engine</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Browser</a>
+    <div class="dropdown-content">
+      <a href="#" onclick="BrowserInfo()">Navigator</a>
+      <a href="#" onclick="WindowInfo()">Window</a>
+      <a href="#" onclick="applyOrientation()">Screen</a>
+      <a href="#" onclick="geturl()">Location</a>
+      <a href="#" onclick="getLocation()">Geolocation</a>
+    </div>
+  </li>
+  
+      <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">About</a>
+    <div class="dropdown-content">
+      <a href="#" onclick="AboutMe()">Anguel Metodiev</a>
+      <a href="#" onclick="ContactMe()">Contact Me</a>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div id="wrapper">
+	<p id="home">Please select one of the options above.</p>
+</div>
+<script>
+var x = document.getElementById("home");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+</script>
+<script src="geolocation.js"></script>
+
+<script src="search.js"></script>
+	
+</body>
+</html>
+

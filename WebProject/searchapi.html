@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Internet and Web Technologies</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="search.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" media='screen and (min-width: 200px) and (max-width: 400px)' href='mobilestyles.css' />
+	</head>
+
+		<body>
+			<script src="script.js"></script>
+
+<div class="navbar">
+<ul>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Course</a>
+    <div class="dropdown-content">
+		<a href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanSpring2019">Zybook</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Search</a>
+    <div class="dropdown-content">
+		<a href="search.html">Fixed List</a>
+		<a href="fromfile.html">From File</a>
+		<a href="searchapi.html">Google API</a>
+		<a href="#">Custom Search Engine</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Browser</a>
+    <div class="dropdown-content">
+      <a href="index.html" onclick="BrowserInfo()">Navigator</a>
+      <a href="index.html" onclick="WindowInfo()">Window</a>
+      <a href="index.html" onclick="applyOrientation()">Screen</a>
+      <a href="index.html" onclick="geturl()">Location</a>
+      <a href="index.html" onclick="getLocation()">Geolocation</a>
+    </div>
+  </li>
+  
+      <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">About</a>
+    <div class="dropdown-content">
+      <a href="index.html" onclick="AboutMe()">Anguel Metodiev</a>
+      <a href="index.html" onclick="ContactMe()">Contact Me</a>
+    </div>
+  </li>
+</ul>
+</div>
+
+<script>
+  (function() {
+    var cx = '018379122786601901865:mgunhojaa70';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+
+
+
+
+
+<script src="geolocation.js"></script>
+
+<script src="search.js"></script>
+
+<script>
+function checkAll(obj)
+{
+  var items = document.getElementsByTagName("input"), len, i;
+  for (i = 0, len = items.length; i < len; i += 1) {
+    if (items.item(i).type && items.item(i).type === "checkbox") {       
+      if (obj.checked) {
+        items.item(i).checked = true;
+      } else {
+        items.item(i).checked = false;
+      }       
+    }
+  }
+}
+</script>
+
+<script>
+function SaveSpecificFormat(obj)
+{
+  var items = document.getElementsByTagName("input"), len, i;
+  var listItems = new Array();
+  for (i = 4, len = items.length; i < len; i += 1) {
+    if (items.item(i).type === "checkbox" && items.item(i).checked) {       
+      listItems.push(i);
+    }
+  }
+
+  if (document.getElementById("radioJSON").checked)
+    downloadObjectAsJson(listItems, makeid(10));
+  else if (document.getElementById("radioXML").checked)
+    downloadObjectAsXML(listItems, makeid(10));
+  else if (document.getElementById("radioCSV").checked)
+    downloadCSV(listItems, makeid(10));
+}
+</script>
+
+<script>
+function makeid(length) {
+    var currentDate = new Date("Month dd, yyyy hh:mm:ss");
+
+    var currentDate = new Date("Month dd, yyyy hh:mm:ss");
+
+	var date = currentDate.getDate();
+    var month = currentDate.getMonth(); //Be careful! January is 0 not 1
+    var year = currentDate.getFullYear();
+    var hour = currentDate.getHours();
+    var minutes = currentDate.getMinutes();
+    var seconds = currentDate.getSeconds();
+    
+    return Date("Month dd, yyyy hh:mm:ss");
+
+}
+</script>
+
+<script>
+function downloadObjectAsJson(listItems, exportName){
+  var resArr = new Array();
+  for (i = 0, len = listItems.length; i < len; i += 1) {
+    var title = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[0].textContent;
+    var url = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[1].textContent;
+    var description = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[2].textContent;      
+    resArr.push({'title' : title, 'url' : url, 'description' : description});
+  }
+  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(resArr));
+  var downloadAnchorNode = document.createElement('a');
+  downloadAnchorNode.setAttribute("href",     dataStr);
+  downloadAnchorNode.setAttribute("download", exportName + ".json");
+  document.body.appendChild(downloadAnchorNode);
+  downloadAnchorNode.click();
+  downloadAnchorNode.remove();
+}
+</script>
+
+<script>
+function downloadObjectAsXML(listItems, exportName){
+  var xmldata=['<?xml version="1.0 encoding="UTF-8"?>'];
+  xmldata.push("<Results>");
+
+  for (i = 0, len = listItems.length; i < len; i += 1) {
+    var title = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[0].textContent;
+    var url = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[1].textContent;
+    var description = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[2].textContent;      
+
+    var el=document.createElement("Result");
+    var elTit=document.createElement("Title");
+    elTit.text = title;
+    el.appendChild(elTit);
+
+    var elUrl=document.createElement("Url");
+    elUrl.innerText = url;
+    el.appendChild(elUrl);
+    
+    var elDesc=document.createElement("Description");
+    elDesc.innerText = description;
+    el.appendChild(elDesc);
+
+    xmldata.push(el.outerHTML);
+  }
+
+  xmldata.push("</Results>");
+  xmldata.join('\n');
+
+  var link=document.createElement("A");
+  link.setAttribute("href",encodeURI("data:xml" + xmldata));
+  link.setAttribute("style","display:none");
+  link.setAttribute("download",exportName + ".xml");
+  document.body.appendChild(link);
+  link.click();
+  setTimeout(function(){ document.body.removeChild(link)},1000);
+}
+</script>
+
+<script>  
+function convertArrayOfObjectsToCSV(args) {
+  var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+
+  data = args.data || null;
+  if (data == null || !data.length) {
+      return null;
+  }
+
+  columnDelimiter = args.columnDelimiter || ',';
+  lineDelimiter = args.lineDelimiter || '\n';
+
+  keys = Object.keys(data[0]);
+
+  result = '';
+  result += keys.join(columnDelimiter);
+  result += lineDelimiter;
+
+  data.forEach(function(item) {
+      ctr = 0;
+      keys.forEach(function(key) {
+          if (ctr > 0) result += columnDelimiter;
+
+          result += item[key];
+          ctr++;
+      });
+      result += lineDelimiter;
+  });
+
+  return result;
+}
+
+function downloadCSV(listItems, filename) {
+  var infoData = [];
+  for (i = 0, len = listItems.length; i < len; i += 1) {
+    var title = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[0].textContent;
+    var url = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[1].textContent;
+    var description = document.getElementsByClassName('Results')[listItems[i] - 8].getElementsByTagName("p")[2].textContent;  
+    infoData.push({Title : title, URL : url, Description : description})
+  }
+
+  var data, link;
+  var csv = convertArrayOfObjectsToCSV({
+      data: infoData
+  });
+  if (csv == null) return;
+
+  if (!csv.match(/^data:text\/csv/i)) {
+      csv = 'data:text/csv;charset=utf-8,' + csv;
+  }
+  data = encodeURI(csv);
+
+  link = document.createElement('a');
+  link.setAttribute('href', data);
+  link.setAttribute('download', filename + ".csv");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+<script>
+function loadFile() {
+  var input, file, fr;
+
+  if (typeof window.FileReader !== 'function') {
+    alert("The file API isn't supported on this browser yet.");
+    return;
+  }
+
+  input = document.getElementById('fileinput');
+  if (!input) {
+    alert("Um, couldn't find the fileinput element.");
+  }
+  else if (!input.files) {
+    alert("This browser doesn't seem to support the `files` property of file inputs.");
+  }
+  else if (!input.files[0]) {
+    alert("Please select a file before clicking 'Load'");
+  }
+  else {
+    file = input.files[0];
+    fr = new FileReader();
+    var arrFilename = file.name.split('.');
+    if (arrFilename[1] == "csv")
+      fr.onload = receivedTextFromCSV;
+    else if (arrFilename[1] == "json")
+      fr.onload = receivedTextFromJson;
+    else if (arrFilename[1] == "xml")
+      fr.onload = receivedTextFromXml;
+    fr.readAsText(file);
+  }
+
+  function receivedTextFromJson(e) {
+    let lines = e.target.result;
+    var newArr = JSON.parse(lines); 
+
+    var tableHeaderRowCount = 1;
+    var table = document.getElementById('tableItems');
+    var rowCount = table.rows.length;
+    for (var i = tableHeaderRowCount; i < rowCount; i++) {
+        table.deleteRow(tableHeaderRowCount);
+    }
+
+    for(i = tableHeaderRowCount; i < newArr.length + 1; ++i) {
+      var row = table.insertRow(i);
+      var cell = row.insertCell(0);
+      cell.innerHTML = '<div class="Results">' +
+        '<input type="checkbox" name="resItems" value="item6">Choose<br>' +
+        '<p class="Title"><a href=' + newArr[i - 1].url + '>' + newArr[i - 1].title + '</a></p>' +
+        '<p class="URL">' + newArr[i - 1].url + '</p>' +
+        '<p class="Description">' + newArr[i - 1].description + '</p>' + '</div>';
+    }
+  }
+}
+</script>
+
+<p id="demo"></p>
+
+<script>
+function receivedTextFromXml(e)
+{
+  var tableHeaderRowCount = 1;
+  var table = document.getElementById('tableItems');
+  var rowCount = table.rows.length;
+  for (var i = tableHeaderRowCount; i < rowCount; i++) {
+      table.deleteRow(tableHeaderRowCount);
+  }
+
+  var stringContainingXMLSource = e.target.result.split("\n");
+
+  var parser = new DOMParser();
+  var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
+
+  var title = "";
+  var url = "";
+  var descr = "";
+  var res = doc.getElementsByTagName("result");
+  
+  for (var i = 0; i < res.length; ++i) {
+    title = res[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+    url = res[i].getElementsByTagName("url")[0].childNodes[0].nodeValue;
+    descr = res[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+
+    var row = table.insertRow(i + tableHeaderRowCount);
+    var cell = row.insertCell(0);
+
+    cell.innerHTML = '<div class="Results">' +
+          '<input type="checkbox" name="resItems" value="item6">Choose<br>' +
+          '<p class="Title"><a href=' + url + '>' + title + '</a></p>' +
+          '<p class="URL">' + url + '</p>' +
+          '<p class="Description">' + descr + '</p>' + '</div>';
+  }
+}
+
+  function receivedTextFromCSV(e) {
+
+    var tableHeaderRowCount = 1;
+    var table = document.getElementById('tableItems');
+    var rowCount = table.rows.length;
+    for (var i = tableHeaderRowCount; i < rowCount; i++) {
+        table.deleteRow(tableHeaderRowCount);
+    }
+
+    var rows = e.target.result.split("\n");
+    for(i = tableHeaderRowCount; i < rows.length; ++i) {
+      var items = rows[i].split(',');
+      if (items.length > 1) {
+        var row = table.insertRow(i);
+        var cell = row.insertCell(0);
+
+        var description = items[2];
+        for(j = 3; j < items.length; ++j) {
+          description += "," + items[j];
+        }
+        
+        cell.innerHTML = '<div class="Results">' +
+          '<input type="checkbox" name="resItems" value="item6">Choose<br>' +
+          '<p class="Title"><a href=' + items[1] + '>' + items[0] + '</a></p>' +
+          '<p class="URL">' + items[1] + '</p>' +
+          '<p class="Description">' + description + '</p>' + '</div>';
+      }
+      
+    }
+
+    
+  }
+</script>
+	
+</body>
+</html>
