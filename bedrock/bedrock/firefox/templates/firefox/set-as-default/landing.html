@@ -1,0 +1,86 @@
+
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "firefox/base/base-protocol.html" %}
+{% from "macros-protocol.html" import hero, picto with context %}
+
+{% block page_title %}{{ ftl('set-as-default-landing-make-firefox-your-default') }}{% endblock %}
+{% block page_desc %}{{ ftl('set-as-default-landing-choose-the-browser') }}{% endblock %}
+
+{% block page_css %}
+  {{ css_bundle('firefox-default-landing') }}
+{% endblock %}
+
+{% block content %}
+  <main role="main">
+    {% call hero(
+      title=ftl('set-as-default-landing-make-sure-youre-protected'),
+      desc=ftl('set-as-default-landing-thanks-for-using-the'),
+      class='mzp-c-hero',
+      include_cta=True,
+      heading_level=1,
+    ) %}
+    <div class="cta-container">
+      <div class="mzp-c-button-download-container">
+        <a id="set-as-default-button" href="{{ url('firefox.set-as-default.thanks') }}" class="mzp-c-button mzp-t-product" data-cta-text="Make Firefox your default browser" data-cta-type="button">
+          {{ ftl('set-as-default-landing-make-firefox-your-default') }}
+        </a>
+      </div>
+    </div>
+    {% endcall %}
+
+    <ul class="mzp-l-columns mzp-t-columns-three mzp-l-content mzp-t-content-lg">
+    {% if l10n_has_tag('default-browser-012020') %}
+      {% call picto(
+        title=ftl('set-as-default-landing-choose-automatic-privacy'),
+        image_url='protocol/img/icons/brand/violet/no-eye.svg',
+        body=true,
+      ) %}
+        <p>{{ ftl('set-as-default-landing-companies-keep-finding') }}</p>
+      {% endcall %}
+
+      {% call picto(
+        title=ftl('set-as-default-landing-choose-freedom-on-every'),
+        image_url='protocol/img/icons/brand/orange/devices.svg',
+        body=true,
+      ) %}
+        <p>{{ ftl('set-as-default-landing-firefox-is-fast-and') }}</p>
+      {% endcall %}
+
+      {% call picto(
+        title=ftl('set-as-default-landing-choose-corporate-independence'),
+        image_url='protocol/img/icons/brand/blue/mountain.svg',
+        body=true,
+      ) %}
+        <p>{{ ftl('set-as-default-landing-firefox-is-the-only') }}</p>
+      {% endcall %}
+    {% else %}
+      {% call picto(
+        title=ftl('set-as-default-landing-choose-automatic-privacy'),
+        image_url='protocol/img/icons/brand/violet/no-eye.svg',
+        body=true,
+      ) %}
+        <p>{{ ftl('set-as-default-landing-the-internet-keeps') }}</p>
+      {% endcall %}
+
+      {% call picto(
+        title=ftl('set-as-default-landing-choose-freedom-on-every'),
+        image_url='protocol/img/icons/brand/orange/devices.svg',
+        body=true,
+      ) %}
+        <p>{{ ftl('set-as-default-landing-firefox-is-fast-no-interest') }}</p>
+      {% endcall %}
+
+      {% call picto(
+        title=ftl('set-as-default-landing-choose-corporate-independence'),
+        image_url='protocol/img/icons/brand/blue/mountain.svg',
+        body=true,
+      ) %}
+        <p>{{ ftl('set-as-default-landing-firefox-is-the-only-major') }}</p>
+      {% endcall %}
+    {% endif %}
+    </ul>
+  </main>
+{% endblock %}

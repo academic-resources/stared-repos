@@ -1,0 +1,52 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends 'newsletter/base.html' %}
+
+{# "noindex" pages should not have the canonical or hreflang tags: bug 1442331 #}
+{% block canonical_urls %}<meta name="robots" content="noindex,follow">{% endblock %}
+
+{% block page_title %}{{ ftl('newsletters-newsletter-email-recovery') }}{% endblock page_title %}
+
+{% block content %}
+  <main role="main" class="mzp-l-content mzp-t-content-sm">
+    {% block messages %}
+    <h1 class="mzp-u-title-sm">{{ ftl('newsletters-manage-your-newsletter') }}</h1>
+      {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endblock messages %}
+
+    {% if form %}
+      <form method="post" action="{{ url('newsletter.recovery') }}" id="newsletter-recovery-form" class="mzp-c-form">
+        <header class="mzp-c-newsletter-header">
+          <p>{{ ftl('newsletters-enter-your-email-address') }}</p>
+        </header>
+
+        {% if form.non_field_errors() %}
+          <div class="mzp-c-form-errors" id="newsletter-errors">
+            {{ form.non_field_errors()|safe }}
+          </div>
+        {% endif %}
+
+        <div class="mzp-c-field mzp-l-stretch {% if form.email.errors %} mzp-is-error{% endif %}">
+          <label for="id_email" class="mzp-c-field-label">
+            {{ ftl('newsletters-your-email-address') }}
+            {% if form.email.errors %}
+              <em class="mzp-c-fieldnote">{{ form.email.errors }}</em>
+            {% endif %}
+          </label>
+          {{ field_with_attrs(form.email, class='mzp-c-field-control'|safe) }}
+        </div>
+        <div class="mzp-c-button-container mzp-l-stretch">
+          <button class="mzp-c-button" id="newsletter-submit" type="submit">{{ ftl('newsletters-send-me-a-link') }}</button>
+        </div>
+      </form>
+    {% endif %}
+  </main>
+{% endblock %}

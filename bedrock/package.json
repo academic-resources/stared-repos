@@ -1,0 +1,57 @@
+{
+  "name": "bedrock",
+  "version": "0.1.0",
+  "description": "Making mozilla.org awesome, one pebble at a time",
+  "private": true,
+  "dependencies": {
+    "@mozilla-protocol/core": "14.0.3",
+    "@mozilla-protocol/eslint-config": "^1.1.0",
+    "ansi-colors": "4.1.1",
+    "clean-css-cli": "4.3.0",
+    "del": "5.1.0",
+    "eslint": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-clean-css": "4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "6.0.0",
+    "gulp-if": "3.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "merge-stream": "2.0.0",
+    "stylelint": "^13.12.0",
+    "yargs": "14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mozilla/bedrock.git"
+  },
+  "author": "Mozilla",
+  "license": "MPL",
+  "bugs": {
+    "url": "https://bugzilla.mozilla.org/"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "concurrently": "^6.0.1",
+    "eslint-plugin-json": "^2.1.1",
+    "jasmine-core": "3.4.0",
+    "karma": "^6.3.2",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-firefox-launcher": "1.2.0",
+    "karma-jasmine": "2.0.1",
+    "sinon": "7.4.1",
+    "svgo": "^1.2.2",
+    "tinypng-cli": "^0.0.7"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others \"python manage.py runserver 0.0.0.0:8080\" \"gulp\"",
+    "lint-js": "./node_modules/.bin/eslint \"media/js/**/*.js\" \"tests/unit/spec/**/*.js\" gulpfile.js",
+    "lint-css": "./node_modules/.bin/stylelint \"media/css/**/*.{css,scss}\"",
+    "lint-json": "./node_modules/.bin/eslint \"bedrock/base/templates/includes/structured-data/**/*.json\"",
+    "lint": "npm run lint-js && npm run lint-css && npm run lint-json",
+    "pretest": "npm run lint",
+    "test": "./node_modules/.bin/karma start ./tests/unit/karma.conf.js"
+  }
+}

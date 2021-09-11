@@ -1,0 +1,82 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% from "macros-protocol.html" import call_out, picto_card with context %}
+
+{% extends "firefox/new/basic/base.html" %}
+
+{# FxA automated tests use this attribute to verify the page #}
+{% block html_attrs %}data-test-fxa-template="firefox-download-thanks"{% endblock %}
+
+{# "scene2" page should not be indexed to avoid it appearing in search results: issue 7024 #}
+{% block canonical_urls %}<meta name="robots" content="noindex,follow">{% endblock %}
+
+{% block extrahead %}
+  {{ super() }}
+  {{ css_bundle('firefox_new_thanks') }}
+{% endblock %}
+
+{% block string_data %}
+  data-pixels="{% for pixel in settings.TRACKING_PIXELS %}{{ pixel }}{% if not loop.last %}::{% endif %}{% endfor %}"
+{% endblock %}
+
+{% block site_header %}
+  {% with hide_nav_download_button=True %}
+    {% include 'includes/protocol/navigation/navigation.html' %}
+  {% endwith %}
+{% endblock %}
+
+{% block content %}
+<main role="main">
+  <div class="mzp-l-content">
+    <div class="mzp-c-notification-bar mzp-t-success show-auto-download-notification">
+      {# fallback_url is replaced by the platform download link via JS, but if
+         something fails the user should still get a link to a working download path. #}
+      <p>
+        {{ ftl('firefox-new-your-firefox-new-should-begin', id='direct-download-link', fallback_url=url('firefox.all'))}}
+      </p>
+    </div>
+  </div>
+
+  <section class="mzp-c-call-out mzp-t-product-firefox">
+    <div class="mzp-l-content">
+      <h1 class="mzp-c-call-out-title show-windows show-mac show-else">{{ ftl('firefox-new-firefox-is-more-than-a-browser') }}</h1>
+
+      <h1 class="mzp-c-call-out-title show-linux-arm">{{ ftl('firefox-new-download-interrupted') }}</h1>
+
+      <h1 class="mzp-c-call-out-title show-unknown">{{ ftl('firefox-new-download-interrupted') }}</h1>
+
+    {% if ftl_has_messages('firefox-new-if-you-see-a-prompt', 'firefox-new-visit-support-for-more') %}
+      <aside class="c-windows-disclaimer mzp-c-emphasis-box show-windows-10">
+        <img class="c-windows-disclaimer-logo" src="{{ static('img/logos/windows/logo-windows-10-black.svg') }}" alt="{{ ftl('firefox-new-windows-10') }}" width="132" height="24">
+        <p>{{ ftl('firefox-new-if-you-see-a-prompt', attrs='href="https://support.mozilla.org/kb/windows-10-warns-me-use-microsoft-verified-app%s" rel="external noopener" data-cta-type="link" data-cta-text="Get help with your installation"'|safe|format(referrals)) }}</p>
+
+        <p><a href="https://support.mozilla.org/kb/windows-10-warns-me-use-microsoft-verified-app{{ referrals }}" rel="external noopener" data-cta-type="link" data-cta-text="Visit Support for More Details">{{ ftl('firefox-new-visit-support-for-more') }}</a></p>
+      </aside>
+    {% endif %}
+
+      <div class="c-support-install">
+        {# Edge-case platform support messaging #}
+        <span class="show-linux-arm">{{ ftl('firefox-new-please-follow', fallback='download-button-please-follow-these', url='https://support.mozilla.org/kb/install-firefox-linux') }}</span>
+        <span class="show-unknown">
+          {{ ftl('firefox-new-your-system-may-not', url=firefox_url('desktop', 'all'))}}
+        </span>
+      </div>
+
+      {{ download_firefox(force_direct=true, dom_id='thanks-download-button') }}
+    </div>
+  </section>
+
+  <p class="mzp-l-content download-another-language-link">
+    <a href="{{ firefox_url('desktop', 'all') }}">{{ ftl('firefox-new-download-in-another-language') }}</a>
+  </p>
+</main>
+{% endblock %}
+
+{% block js %}
+  {% if switch('tracking-pixel') %}
+    {{ js_bundle('firefox_new_pixel') }}
+  {% endif %}
+  {{ js_bundle('firefox_new_thanks') }}
+{% endblock %}

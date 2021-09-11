@@ -1,0 +1,107 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% from "macros-protocol.html" import feature_card, split with context %}
+{% from "macros.html" import google_play_button with context %}
+
+{% extends "firefox/base/base-protocol.html" %}
+
+{% block page_title %}{{ ftl('browsers-chromebook-get-firefox-browser') }}{% endblock %}
+
+{% block page_desc %} {{ ftl('browsers-chromebook-so-youve-got') }} {% endblock %}
+
+{% block page_css %}
+  {{ css_bundle('chromebook') }}
+{% endblock %}
+
+{% set android_url = firefox_adjust_url('android', 'firefox-browsers-chromebook') %}
+
+{% block sub_navigation %}
+<nav class="c-sub-navigation">
+  <div class="mzp-l-content">
+    <div class="c-sub-navigation-content">
+      <h2 class="c-sub-navigation-title">{{ ftl('sub-navigation-firefox-for-desktop', fallback='navigation-firefox-browser-for-desktop') }}</h2>
+      <ul class="c-sub-navigation-list">
+        <li class="c-sub-navigation-item"><a href="{{ url('firefox.windows') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Windows">{{ ftl('sub-navigation-windows') }}</a></li>
+        <li class="c-sub-navigation-item"><a href="{{ url('firefox.browsers.windows-64-bit') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Windows 64-bit">{{ ftl('sub-navigation-windows-64-bit') }}</a></li>
+        <li class="c-sub-navigation-item"><a href="{{ url('firefox.mac') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Mac">{{ ftl('sub-navigation-mac') }}</a></li>
+        <li class="c-sub-navigation-item"><a href="{{ url('firefox.linux') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Linux">{{ ftl('sub-navigation-linux') }}</a></li>
+        <li class="c-sub-navigation-item"><a href="{{ url('firefox.browsers.chromebook') }}" data-link-type="nav" data-link-position="subnav" data-link-name="Chromebook">{{ ftl('sub-navigation-chromebook') }}</a></li>
+        <li class="c-sub-navigation-item"><a href="{{ url('firefox.all') }}" data-link-type="nav" data-link-position="subnav" data-link-name="All Languages">{{ ftl('sub-navigation-all-languages', fallback='download-button-systems-languages') }}</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+  {% call split(
+    image_url='img/firefox/browsers/quantum/browser.jpg',
+    include_highres_image=True,
+    media_after=True
+  ) %}
+  <div class="mzp-c-logo mzp-t-logo-lg mzp-t-product-firefox"></div>
+  <h1 class="mzp-u-title-xl">{{ ftl('browsers-chromebook-get-firefox-browser') }}</h1>
+  <p>{{ ftl('browsers-chromebook-so-youve-got') }}</p>
+
+  <div class="mzp-c-menu-list mzp-t-cta mzp-t-download" id="chromebook-download-list">
+    <h4 class="mzp-c-menu-list-title">{{ ftl('browsers-chromebook-dropdown-copy') }}</h4>
+    <ul class="mzp-c-menu-list-list download-platform-list">
+      <li class="mzp-c-menu-list-item">
+        <a href="{{ firefox_adjust_url('android', 'firefox-browsers-faq') }}" rel="external noopener" data-link-type="download" data-display-name="Android" data-download-version="android" data-download-os="Android">
+          {{ ftl('browsers-chromebook-browsers-chromebook-get-firefox-for') }}
+          <p><small>{{ ftl('browsers-chromebook-x86-based-chromebook') }}</small></p>
+        </a>
+      </li>
+      <li class="mzp-c-menu-list-item t-sumo">
+        <a href="https://support.mozilla.org/kb/run-firefox-chromeos?utm_source=www.mozilla.org-firefox-browsers-chromebook&amp;utm_medium=referral&amp;utm_campaign=seo" rel="external noopener" data-cta-text="Install Firefox for Chromebook" data-cta-type="link">
+          {{ ftl('browsers-chromebook-get-firefox-desktop') }}
+        </a>
+      </li>
+    </ul>
+  </div>
+  {% endcall %}
+
+
+
+  <section>
+    <h2 class="mzp-c-section-heading">{{ ftl('browsers-chromebook-why-get-firefox') }}</h2>
+    {% call split(
+      image_url='img/firefox/browsers/chromebook/shield.png',
+      include_highres_image=True
+    ) %}
+      <p>{{ ftl('browsers-chromebook-while-a-chromebook') }}</p>
+      <ul class="mzp-u-list-styled">
+        <li>{{ ftl('browsers-chromebook-alwayson-tracking-protection') }}</li>
+        <li>{{ ftl('browsers-chromebook-supporting-independent-technology') }}</li>
+      </ul>
+    {% endcall %}
+  </section>
+
+  <section class="mzp-l-content mzp-t-content-lg">
+    <h2>{{ ftl('browsers-chromebook-is-it-hard') }}</h2>
+    <p>{{ ftl('browsers-chromebook-we-wish-it') }}</p>
+
+    <div class="mzp-l-card-half">
+      <div class="mzp-c-card">
+        {{ high_res_img('img/firefox/browsers/chromebook/mobile.png', {'alt': '', 'class': 'mzp-c-billboard-image', 'width': '436', 'height': '464'}) }}
+
+        <p>{{ ftl('browsers-chromebook-install-firefox-from') }}</p>
+        {{ google_play_button(href=android_url, id='playStoreLink') }}
+      </div>
+
+      <div class="mzp-c-card">
+        {{ high_res_img('img/firefox/browsers/chromebook/addon.png', {'alt': '', 'class': 'mzp-c-billboard-image', 'width': '436', 'height': '464'}) }}
+
+        <p>{{ ftl('browsers-chromebook-install-firefox-as', url='href="https://support.mozilla.org/kb/run-firefox-chromeos?utm_source=www.mozilla.org-firefox-browsers-chromebook&amp;utm_medium=referral&amp;utm_campaign=seo" rel="external noopener" data-cta-text="Install Firefox for Chromebook" data-cta-type="link"'|safe) }}</p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block js %}
+  {{ js_bundle('chromebook') }}
+{% endblock %}
+

@@ -1,0 +1,60 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% extends "base-error.html" %}
+
+{% block gtm_page_id %}data-gtm-page-id="404"{% endblock %}
+
+{% block page_title %}{{ ftl('not-found-page-not-found-page-page-not-found') }}{% endblock %}
+
+{% block page_css %}
+  {{ css_bundle('page_not_found') }}
+{% endblock %}
+
+{# 404 pages must not include canonical and hreflang x-default: https://github.com/mozilla/bedrock/issues/5895 #}
+{% block canonical_urls %}{% endblock %}
+
+{% block content %}
+  <main role="main">
+    <section class="mzp-l-content message-section">
+      <h1 class="error-header">{{ ftl('not-found-page-sorry-we-cant-find-that-page') }}</h1>
+      <p>{{ftl('not-found-page-were-all-about-a-healthy-internet') }}</p>
+      <div class="hide-back" id="go-back">
+        <a class="back-button">{{ ftl('not-found-page-go-back') }}</a>
+      </div>
+    </section>
+    <section class="mzp-l-content">
+      <ul>
+        <li>
+          <section class="has-icon">
+            <img class="list-icon" alt="" src="{{ static('protocol/img/icons/mozilla.svg') }}" width="30" height="30">
+              <p class="list-content">
+                {{ ftl('not-found-page-learn-about-mozilla-the-non', about=url('mozorg.about.index')) }}
+              </p>
+          </section>
+        </li>
+        <li>
+          <section class="has-icon">
+            <img class="list-icon" alt="" src="{{ static('protocol/img/logos/firefox/logo-flat.svg') }}" width="30" height="30">
+            <p class="list-content">
+            {{ ftl('not-found-page-explore-the-entire-family-for', explore=url('firefox')) }}
+            </p>
+          </section>
+        </li>
+        <li>
+          <section class="has-icon">
+            <img class="list-icon" alt="" src="{{ static('protocol/img/icons/desktop.svg') }}" width="30" height="30">
+            <p class="list-content">
+            {{ ftl('not-found-page-download-the-firefox-browser', download=url('firefox.new')) }}
+            </p>
+          </section>
+        </li>
+      </ul>
+    </section>
+  </main>
+{% endblock %}
+
+{% block js %}
+  {{ js_bundle('page_not_found') }}
+{% endblock %}
