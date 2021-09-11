@@ -1,0 +1,18 @@
+{
+  "name": "JsonSearchEngine",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "crawl": "node --max-old-space-size=4096 crawler.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "crawler": "^1.2.0",
+    "debug": "~2.6.9",
+    "elasticsearch": "^15.2.0",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
+  }
+}

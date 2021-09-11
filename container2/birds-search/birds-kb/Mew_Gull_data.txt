@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Common gull - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aaba997e-31e5-482c-a2e4-baae104095af","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Common_gull","wgTitle":"Common gull","wgCurRevisionId":986756474,"wgRevisionId":986756474,"wgArticleId":265232,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description matches Wikidata","Articles with 'species' microformats","Commons category link is on Wikidata","ARKive links","Taxonbars with 25–29 taxon IDs","Wikipedia articles with NDL identifiers","IUCN Red List least concern species","Larus","Holarctic birds"
+,"Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Common_gull","wgRelevantArticleId":265232,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Mew_Gull","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Common_gull","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q26427"};RLSTATE={"ext.globalCssJs.user.styles":"ready",
+"site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","mediawiki.page.gallery","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents",
+"ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.page.gallery.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Larus_canus1.jpg/1200px-Larus_canus1.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Common_gull"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Common_gull&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Common_gull&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Common_gull"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Common_gull rootpage-Common_gull skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Common gull</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Mew_Gull&amp;redirect=no" class="mw-redirect" title="Mew Gull">Mew Gull</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Species of bird</div>
+<div role="note" class="hatnote navigation-not-searchable">"Mew gull" redirects here. For the aircraft, see <a href="/wiki/Percival_Mew_Gull" title="Percival Mew Gull">Percival Mew Gull</a>.</div>
+<dl><dd><i>For the common gull butterfly, see</i> <a href="/wiki/Cepora_nerissa" title="Cepora nerissa">Cepora nerissa</a>.</dd></dl>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Common gull
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Larus_canus1.jpg" class="image"><img alt="Larus canus1.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/de/Larus_canus1.jpg/220px-Larus_canus1.jpg" decoding="async" width="220" height="312" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/de/Larus_canus1.jpg/330px-Larus_canus1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/de/Larus_canus1.jpg/440px-Larus_canus1.jpg 2x" data-file-width="2344" data-file-height="3321" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Adult mew gull. Anchorage Coastal Wildlife Refuge, Alaska.
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-iucn_1-0" class="reference"><a href="#cite_note-iucn-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Larus" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Charadriiformes" title="Charadriiformes">Charadriiformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Laridae" title="Laridae">Laridae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Larus" title="Larus"><i>Larus</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>L.&#160;canus</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Larus canus</i></span></b><br /><div style="font-size: 85%;"><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a></div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Larus_canus_map.svg" class="image"><img alt="Larus canus map.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Larus_canus_map.svg/220px-Larus_canus_map.svg.png" decoding="async" width="220" height="114" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Larus_canus_map.svg/330px-Larus_canus_map.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Larus_canus_map.svg/440px-Larus_canus_map.svg.png 2x" data-file-width="3100" data-file-height="1600" /></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</tbody></table>
+<p>The <b>common gull</b> (<i>Larus canus</i>) or <b>sea mew</b> is a medium-sized <a href="/wiki/Gull" title="Gull">gull</a> that breeds in the <a href="/wiki/Palearctic" class="mw-redirect" title="Palearctic">Palearctic</a>, northern <a href="/wiki/Europe" title="Europe">Europe</a>, and northwestern <a href="/wiki/North_America" title="North America">North America</a>. The North American subspecies is commonly referred to as the <b>mew gull</b>, although that name is also used by some authorities for the whole species.<sup id="cite_ref-IOC_2-0" class="reference"><a href="#cite_note-IOC-2">&#91;2&#93;</a></sup> Many common gulls <a href="/wiki/Bird_migration" title="Bird migration">migrate</a> further south in winter.<sup id="cite_ref-hbw_3-0" class="reference"><a href="#cite_note-hbw-3">&#91;3&#93;</a></sup> There are differing accounts as to how the species acquired its vernacular name (see <a href="#Etymology">Etymology</a> section below).
+</p><p>The name "sea mew" is a <a href="/wiki/Calque" title="Calque">calque</a> of the Dutch name "zee meeuw"
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Taxonomy"><span class="tocnumber">2</span> <span class="toctext">Taxonomy</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Ecology"><span class="tocnumber">3</span> <span class="toctext">Ecology</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Vagrancy"><span class="tocnumber">4</span> <span class="toctext">Vagrancy</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Etymology"><span class="tocnumber">5</span> <span class="toctext">Etymology</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_gull&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Common_Gull_Larus_canus,_Vaxholm_Sweden_1.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Common_Gull_Larus_canus%2C_Vaxholm_Sweden_1.jpg/220px-Common_Gull_Larus_canus%2C_Vaxholm_Sweden_1.jpg" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Common_Gull_Larus_canus%2C_Vaxholm_Sweden_1.jpg/330px-Common_Gull_Larus_canus%2C_Vaxholm_Sweden_1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Common_Gull_Larus_canus%2C_Vaxholm_Sweden_1.jpg/440px-Common_Gull_Larus_canus%2C_Vaxholm_Sweden_1.jpg 2x" data-file-width="3744" data-file-height="3744" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Common_Gull_Larus_canus,_Vaxholm_Sweden_1.jpg" class="internal" title="Enlarge"></a></div>Common Gulls, <i>Larus canus</i>, in flight</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Larus_canus_MWNH_0334.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Larus_canus_MWNH_0334.JPG/220px-Larus_canus_MWNH_0334.JPG" decoding="async" width="220" height="146" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Larus_canus_MWNH_0334.JPG/330px-Larus_canus_MWNH_0334.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Larus_canus_MWNH_0334.JPG/440px-Larus_canus_MWNH_0334.JPG 2x" data-file-width="4288" data-file-height="2848" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Larus_canus_MWNH_0334.JPG" class="internal" title="Enlarge"></a></div>Eggs, Collection <a href="/wiki/Museum_Wiesbaden" title="Museum Wiesbaden">Museum Wiesbaden</a></div></div></div>
+<p>Adult common gulls are 40–46&#160;cm (16–18&#160;in) long, noticeably smaller than the <a href="/wiki/Herring_gull" title="Herring gull">herring gull</a> and slightly smaller than the <a href="/wiki/Ring-billed_gull" title="Ring-billed gull">ring-billed gull</a>. It is further distinguished from the ring-billed gull by its shorter, more tapered bill, which is a more greenish shade of yellow and is unmarked during the breeding season. The body is grey above and white below. The legs are greenish-yellow. In winter, the head is streaked grey and the bill often has a poorly defined blackish band near the tip, which is sometimes sufficiently obvious to cause confusion with ring-billed gull. They have black wingtips with large white "mirrors". Young birds have scaly black-brown upperparts and a neat wing pattern, and grey legs. They take two to three years to reach maturity. The call is a high-pitched "laughing" cry.<sup id="cite_ref-hbw_3-1" class="reference"><a href="#cite_note-hbw-3">&#91;3&#93;</a></sup><sup id="cite_ref-bwp_4-0" class="reference"><a href="#cite_note-bwp-4">&#91;4&#93;</a></sup>
+</p>
+<ul class="gallery mw-gallery-packed">
+		<li class="gallerybox" style="width: 182px"><div style="width: 182px">
+			<div class="thumb" style="width: 180px;"><div style="margin:0px auto;"><a href="/wiki/File:Larus_canus_winter_plumage.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Larus_canus_winter_plumage.jpg/270px-Larus_canus_winter_plumage.jpg" decoding="async" width="180" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Larus_canus_winter_plumage.jpg/405px-Larus_canus_winter_plumage.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Larus_canus_winter_plumage.jpg/540px-Larus_canus_winter_plumage.jpg 2x" data-file-width="3091" data-file-height="2061" /></a></div></div>
+			<div class="gallerytext">
+<p>Winter plumage
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 162px"><div style="width: 162px">
+			<div class="thumb" style="width: 160px;"><div style="margin:0px auto;"><a href="/wiki/File:Larus_canus-calling.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Larus_canus-calling.jpg/240px-Larus_canus-calling.jpg" decoding="async" width="160" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Larus_canus-calling.jpg/360px-Larus_canus-calling.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Larus_canus-calling.jpg/480px-Larus_canus-calling.jpg 2x" data-file-width="1200" data-file-height="900" /></a></div></div>
+			<div class="gallerytext">
+<p>Breeding adults have red rings around dark eyes <a href="/wiki/Kizhi_Island" title="Kizhi Island">Kizhi Island</a>, <a href="/wiki/Russia" title="Russia">Russia</a>
+</p>
+			</div>
+		</div></li>
+</ul>
+<h2><span class="mw-headline" id="Taxonomy">Taxonomy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_gull&amp;action=edit&amp;section=2" title="Edit section: Taxonomy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are four <a href="/wiki/Subspecies" title="Subspecies">subspecies</a>, two of which are considered distinct species by some authorities:<sup id="cite_ref-hbw_3-2" class="reference"><a href="#cite_note-hbw-3">&#91;3&#93;</a></sup><sup id="cite_ref-olsen_5-0" class="reference"><a href="#cite_note-olsen-5">&#91;5&#93;</a></sup> 
+</p>
+<ul><li><i>L. c. canus</i> – <small><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a></small> – <b>common gull</b>. <a href="/wiki/Nominate_subspecies#Nominotypical_subspecies_and_subspecies_autonyms" class="mw-redirect" title="Nominate subspecies">nominate</a>, found in Europe and western Asia. Small; mantle medium grey (palest subspecies); wingtips with extensive black; iris dark. Wingspan 110–125&#160;cm (43–49&#160;in); mass 290–480&#160;g (10–17&#160;oz).</li>
+<li><i>L. c. heinei</i> – <small><a href="/wiki/Eugen_Ferdinand_von_Homeyer" title="Eugen Ferdinand von Homeyer">Homeyer</a>, 1853</small> – <b>Russian common gull</b>. Found in central northern Asia. Medium size; mantle dark grey (darkest subspecies); wingtips with extensive black; iris dark. Mass 315–550&#160;g (11.1–19.4&#160;oz).</li>
+<li><i>L. c. kamtschatschensis</i> – <small><a href="/wiki/Charles_Lucien_Bonaparte" title="Charles Lucien Bonaparte">Bonaparte</a>, 1857</small>; syn. <i>L. kamtschatschensis</i> – <b>Kamchatka gull</b>. Found in northeastern Asia. Large; mantle medium-dark grey; wingtips with extensive black; iris pale. Mass 394–586&#160;g (13.9–20.7&#160;oz).</li>
+<li><i>L. c. brachyrhynchus</i> – <small><a href="/wiki/John_Richardson_(naturalist)" title="John Richardson (naturalist)">Richardson</a>, 1831</small>; syn. <i>L. brachyrhynchus</i> – <b>mew gull</b> or <b>short-billed gull</b>. Found in <a href="/wiki/Alaska" title="Alaska">Alaska</a> and western <a href="/wiki/Canada" title="Canada">Canada</a>. Small; mantle medium-dark grey; wingtips with little black and much white; iris pale. Wingspan 96–102&#160;cm (38–40&#160;in); mass 320–550&#160;g (11–19&#160;oz).</li></ul>
+<h2><span class="mw-headline" id="Ecology">Ecology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_gull&amp;action=edit&amp;section=3" title="Edit section: Ecology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Both common and mew gulls breed colonially near water or in marshes, making a lined nest on the ground or in a small tree; <a href="/wiki/Group_size_measures" title="Group size measures">colony size</a> varies from 2 to 320 or even more pairs. Usually three eggs are laid (sometimes just one or two); they hatch after 24–26 days, with the chicks fledging after a further 30–35 days. Like most gulls, they are omnivores and will scavenge as well as hunt small prey. The global population is estimated to be about one million pairs; they are most numerous in Europe, with over half (possibly as much as 80-90%) of the world population.<sup id="cite_ref-ebcc_6-0" class="reference"><a href="#cite_note-ebcc-6">&#91;6&#93;</a></sup> By contrast, the Alaskan population is only about 10,000 pairs.<sup id="cite_ref-hbw_3-3" class="reference"><a href="#cite_note-hbw-3">&#91;3&#93;</a></sup>
+</p>
+<div class="thumb tnone" style="margin-left:auto;margin-right:auto;overflow:hidden;width:none;max-width:1208px"><div class="thumbinner"><div class="noresize" style="overflow:auto"><a href="/wiki/File:Larus_Canus_Fishing_Sequence.jpg" class="image" title="Larus canus fishing sequence"><img alt="Larus canus fishing sequence" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Larus_Canus_Fishing_Sequence.jpg/1200px-Larus_Canus_Fishing_Sequence.jpg" decoding="async" width="1200" height="141" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Larus_Canus_Fishing_Sequence.jpg/1800px-Larus_Canus_Fishing_Sequence.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Larus_Canus_Fishing_Sequence.jpg/2400px-Larus_Canus_Fishing_Sequence.jpg 2x" data-file-width="10000" data-file-height="1171" /></a></div><div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Larus_Canus_Fishing_Sequence.jpg" title="File:Larus Canus Fishing Sequence.jpg"> </a></div><i>Larus canus</i> fishing sequence</div></div></div>
+<h2><span class="mw-headline" id="Vagrancy">Vagrancy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_gull&amp;action=edit&amp;section=4" title="Edit section: Vagrancy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The common gull occurs as a scarce winter visitor to coastal eastern Canada and as a vagrant to the northeastern <a href="/wiki/United_States" title="United States">USA</a>.<sup id="cite_ref-Sibley2000_7-0" class="reference"><a href="#cite_note-Sibley2000-7">&#91;7&#93;</a></sup> There is one recent record of a mew gull in Europe, on the <a href="/wiki/Azores" title="Azores">Azores</a> in 2003.<sup id="cite_ref-Alfrey2007_8-0" class="reference"><a href="#cite_note-Alfrey2007-8">&#91;8&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Etymology">Etymology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_gull&amp;action=edit&amp;section=5" title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The scientific name is from <a href="/wiki/Latin" title="Latin">Latin</a>. <i>Larus</i> appears to have referred to a gull or other large seabird, and <i>canus</i> is "grey".<sup id="cite_ref-job_9-0" class="reference"><a href="#cite_note-job-9">&#91;9&#93;</a></sup> The name "common gull" was coined by <a href="/wiki/Thomas_Pennant" title="Thomas Pennant">Thomas Pennant</a> in 1768 because he considered it the most numerous of its <a href="/wiki/Genus" title="Genus">genus</a>.<sup id="cite_ref-ODBBN_10-0" class="reference"><a href="#cite_note-ODBBN-10">&#91;10&#93;</a></sup> Others assert that the name does not indicate its abundance, but that during the winter it feeds on <a href="/wiki/Common_land" title="Common land">common land</a>, short pasture used for grazing.<sup id="cite_ref-Okill2004_11-0" class="reference"><a href="#cite_note-Okill2004-11">&#91;11&#93;</a></sup> <a href="/wiki/John_Ray" title="John Ray">John Ray</a> earlier used the name <i>common sea-mall</i>.<sup id="cite_ref-ODBBN_10-1" class="reference"><a href="#cite_note-ODBBN-10">&#91;10&#93;</a></sup> It is said that <i>uncommon gull</i> is a more accurate description. There are many old British regional names for this species, typically variations on <i>maa</i>, <i>mar</i> and <i>mew.</i><sup id="cite_ref-BNB_12-0" class="reference"><a href="#cite_note-BNB-12">&#91;12&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_gull&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 33em; -webkit-column-width: 33em; column-width: 33em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-iucn-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-iucn_1-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2015" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2015). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/species/22694308/85045850">"<i>Larus canus</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2015</b>: e.T22694308A85045850.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Larus+canus&amp;rft.volume=2015&amp;rft.pages=e.T22694308A85045850&amp;rft.date=2015&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fspecies%2F22694308%2F85045850&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-IOC-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-IOC_2-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFGillDonsker2016" class="citation web cs1">Gill, F.; Donsker, D., eds. (2016). <a rel="nofollow" class="external text" href="http://www.worldbirdnames.org/DOI-6/master_ioc_list_v6.2.xls">"IOC World Bird List (v 6.2)"</a>. <i>IOC World Bird List</i>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.14344%2FIOC.ML.6.2">10.14344/IOC.ML.6.2</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=IOC+World+Bird+List&amp;rft.atitle=IOC+World+Bird+List+%28v+6.2%29&amp;rft.date=2016&amp;rft_id=info%3Adoi%2F10.14344%2FIOC.ML.6.2&amp;rft_id=http%3A%2F%2Fwww.worldbirdnames.org%2FDOI-6%2Fmaster_ioc_list_v6.2.xls&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-hbw-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-hbw_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-hbw_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-hbw_3-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-hbw_3-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFdel_HoyoElliotSargatal1998" class="citation book cs1">del Hoyo, J.; Elliot, A.; Sargatal, J., eds. (1998). <i><a href="/wiki/Handbook_of_the_Birds_of_the_World" title="Handbook of the Birds of the World">Handbook of the Birds of the World</a></i>. <b>3</b>. <a href="/wiki/Barcelona" title="Barcelona">Barcelona</a>: <a href="/wiki/Lynx_Edicions" title="Lynx Edicions">Lynx Edicions</a>. p.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/handbookofbirdso0001unse/page/621">621</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/84-87334-20-2" title="Special:BookSources/84-87334-20-2"><bdi>84-87334-20-2</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+the+Birds+of+the+World&amp;rft.place=Barcelona&amp;rft.pages=621&amp;rft.pub=Lynx+Edicions&amp;rft.date=1998&amp;rft.isbn=84-87334-20-2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-bwp-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-bwp_4-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFSnowPerrins1998" class="citation book cs1">Snow, D.W.; Perrins, C.M. (1998). <i><a href="/wiki/The_Birds_of_the_Western_Palearctic" title="The Birds of the Western Palearctic">The Birds of the Western Palearctic</a></i> (Concise ed.). Oxford University Press. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-19-854099-X" title="Special:BookSources/0-19-854099-X"><bdi>0-19-854099-X</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Birds+of+the+Western+Palearctic&amp;rft.edition=Concise&amp;rft.pub=Oxford+University+Press&amp;rft.date=1998&amp;rft.isbn=0-19-854099-X&amp;rft.aulast=Snow&amp;rft.aufirst=D.W.&amp;rft.au=Perrins%2C+C.M.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-olsen-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-olsen_5-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFOlsenLarsson2004" class="citation book cs1">Olsen, K.M.; Larsson, H. (2004). <i><a href="/wiki/Gulls_of_Europe,_Asia_and_North_America" title="Gulls of Europe, Asia and North America">Gulls of Europe, Asia and North America</a></i>. Helm. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-7136-7087-8" title="Special:BookSources/0-7136-7087-8"><bdi>0-7136-7087-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Gulls+of+Europe%2C+Asia+and+North+America&amp;rft.pub=Helm&amp;rft.date=2004&amp;rft.isbn=0-7136-7087-8&amp;rft.aulast=Olsen&amp;rft.aufirst=K.M.&amp;rft.au=Larsson%2C+H.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-ebcc-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-ebcc_6-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFHagemeijerBlair1997" class="citation book cs1">Hagemeijer, W.J.M.; Blair, M.J., eds. (1997). <i><a href="/wiki/The_EBCC_Atlas_of_European_Breeding_Birds" title="The EBCC Atlas of European Breeding Birds">The EBCC Atlas of European Breeding Birds</a></i>. London: Poyser. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-85661-091-7" title="Special:BookSources/0-85661-091-7"><bdi>0-85661-091-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+EBCC+Atlas+of+European+Breeding+Birds&amp;rft.place=London&amp;rft.pub=Poyser&amp;rft.date=1997&amp;rft.isbn=0-85661-091-7&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Sibley2000-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-Sibley2000_7-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFSibley2000" class="citation book cs1"><a href="/wiki/David_Allen_Sibley" title="David Allen Sibley">Sibley, David Allen</a> (2000). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/sibleyguidetobir00sibl_0/page/483"><i>The Sibley Guide to Birds</i></a></span>. New York: Knopf. p.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/sibleyguidetobir00sibl_0/page/483">483</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-679-45122-6" title="Special:BookSources/0-679-45122-6"><bdi>0-679-45122-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Sibley+Guide+to+Birds&amp;rft.place=New+York&amp;rft.pages=483&amp;rft.pub=Knopf&amp;rft.date=2000&amp;rft.isbn=0-679-45122-6&amp;rft.aulast=Sibley&amp;rft.aufirst=David+Allen&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fsibleyguidetobir00sibl_0%2Fpage%2F483&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Alfrey2007-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-Alfrey2007_8-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFAlfreyAhmad2007" class="citation journal cs1">Alfrey, P.; Ahmad, M. (2007). "Short-billed Gull on Terceira, Azores, in February–March 2003 and identification of the 'Mew Gull complex<span class="cs1-kern-right">'</span>". <i><a href="/wiki/Dutch_Birding" title="Dutch Birding">Dutch Birding</a></i>. <b>29</b> (4): 201–212.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Dutch+Birding&amp;rft.atitle=Short-billed+Gull+on+Terceira%2C+Azores%2C+in+February%E2%80%93March+2003+and+identification+of+the+%27Mew+Gull+complex%27&amp;rft.volume=29&amp;rft.issue=4&amp;rft.pages=201-212&amp;rft.date=2007&amp;rft.aulast=Alfrey&amp;rft.aufirst=P.&amp;rft.au=Ahmad%2C+M.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-job-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-job_9-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n89">89</a>, 219. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=89%2C+219&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-ODBBN-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-ODBBN_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ODBBN_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFLockwood1993" class="citation book cs1">Lockwood, W.B. (1993). <i>The Oxford Dictionary of British Bird Names</i>. <a href="/wiki/Oxford_University_Press" title="Oxford University Press">Oxford University Press</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-19-866196-2" title="Special:BookSources/978-0-19-866196-2"><bdi>978-0-19-866196-2</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Oxford+Dictionary+of+British+Bird+Names&amp;rft.pub=Oxford+University+Press&amp;rft.date=1993&amp;rft.isbn=978-0-19-866196-2&amp;rft.aulast=Lockwood&amp;rft.aufirst=W.B.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Okill2004-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-Okill2004_11-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFOkill2004" class="citation journal cs1">Okill, Dave (2004). "English names for Western Palearctic birds". <i><a href="/wiki/British_Birds_(magazine)" title="British Birds (magazine)">British Birds</a></i>. <b>97</b> (7): 348–349.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=British+Birds&amp;rft.atitle=English+names+for+Western+Palearctic+birds&amp;rft.volume=97&amp;rft.issue=7&amp;rft.pages=348-349&amp;rft.date=2004&amp;rft.aulast=Okill&amp;rft.aufirst=Dave&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-BNB-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-BNB_12-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJackson1968" class="citation book cs1">Jackson, Christine E. (1968). <i>British Names of Birds</i>. Witherby. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0854930043" title="Special:BookSources/978-0854930043"><bdi>978-0854930043</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=British+Names+of+Birds&amp;rft.pub=Witherby&amp;rft.date=1968&amp;rft.isbn=978-0854930043&amp;rft.aulast=Jackson&amp;rft.aufirst=Christine+E.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_gull&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Larus_canus" class="extiw" title="commons:Category:Larus canus"><span style="">Larus canus</span></a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://www.birdlife.org/datazone/species/factsheet/22694308">BirdLife species factsheet for <i>Larus canus</i></a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?lang=EN&amp;avibaseid=00DA9D9151189271">"Larus canus"</a>. <i>Avibase</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Avibase&amp;rft.atitle=Larus+canus&amp;rft_id=https%3A%2F%2Favibase.bsc-eoc.org%2Fspecies.jsp%3Flang%3DEN%26avibaseid%3D00DA9D9151189271&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/> <a href="https://www.wikidata.org/wiki/Q26427#P2026" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.hbw.com/ibc/species/mew-gull-larus-canus">"Mew Gull media"</a>. <i><a href="/wiki/Internet_Bird_Collection" class="mw-redirect" title="Internet Bird Collection">Internet Bird Collection</a></i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Internet+Bird+Collection&amp;rft.atitle=Mew+Gull+media&amp;rft_id=http%3A%2F%2Fwww.hbw.com%2Fibc%2Fspecies%2Fmew-gull-larus-canus&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+gull" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><a rel="nofollow" class="external text" href="http://vireo.acnatsci.org/search.html?Form=Search&amp;SEARCHBY=Common&amp;KEYWORDS=mew+gull&amp;showwhat=images&amp;AGE=All&amp;SEX=All&amp;ACT=All&amp;Search=Search&amp;VIEW=All&amp;ORIENTATION=All&amp;RESULTS=24">Mew Gull photo gallery</a> at VIREO (Drexel University)</li>
+<li><a rel="nofollow" class="external text" href="http://maps.iucnredlist.org/map.html?id=22694308">Interactive range map of <i>Larus canus</i></a> at <a rel="nofollow" class="external text" href="http://maps.iucnredlist.org/index.html">IUCN Red List maps</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.xeno-canto.org/species/Larus-canus">Audio recordings of Mew gull</a> on <a href="/wiki/Xeno-canto" title="Xeno-canto">Xeno-canto</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://www.flickr.com/groups/birdguide/pool/tags/Larus+canus"><i>Larus canus</i></a> in <i><a rel="nofollow" class="external text" href="https://www.flickr.com/groups/birdguide">Field Guide: Birds of the World</a></i> on <a href="/wiki/Flickr" title="Flickr">Flickr</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/larus-canus">Common gull</a> media from <a href="/wiki/ARKive" title="ARKive">ARKive</a> <a href="https://www.wikidata.org/wiki/Q26427#P2833" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Gulls_(family:_Laridae)" style="padding:3px"><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Gulls" title="Template:Gulls"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Gulls" title="Template talk:Gulls"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Gulls&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Gulls_(family:_Laridae)" style="font-size:114%;margin:0 4em"><a href="/wiki/Gull" title="Gull">Gulls</a> (<a href="/wiki/Family_(biology)" title="Family (biology)">family</a>: Laridae)</div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Genus" title="Genus">Genus</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;background:#eef;"><div style="padding:0em 0.25em">
+<ul><li><b><a href="/wiki/Species" title="Species">Species</a></b></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Larus" title="Larus">Larus</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Pacific_gull" title="Pacific gull">Pacific gull</a></li>
+<li><a href="/wiki/Belcher%27s_gull" title="Belcher&#39;s gull">Belcher's gull</a></li>
+<li><a href="/wiki/Olrog%27s_gull" title="Olrog&#39;s gull">Olrog's gull</a></li>
+<li><a href="/wiki/Black-tailed_gull" title="Black-tailed gull">Black-tailed gull</a></li>
+<li><a href="/wiki/Heermann%27s_gull" title="Heermann&#39;s gull">Heermann's gull</a></li>
+<li><a class="mw-selflink selflink">Common gull (or mew gull)</a></li>
+<li><a href="/wiki/Ring-billed_gull" title="Ring-billed gull">Ring-billed gull</a></li>
+<li><a href="/wiki/California_gull" title="California gull">California gull</a></li>
+<li><a href="/wiki/Great_black-backed_gull" title="Great black-backed gull">Great black-backed gull</a></li>
+<li><a href="/wiki/Kelp_gull" title="Kelp gull">Kelp gull (or Cape gull)</a></li>
+<li><a href="/wiki/Glaucous-winged_gull" title="Glaucous-winged gull">Glaucous-winged gull</a></li>
+<li><a href="/wiki/Western_gull" title="Western gull">Western gull</a></li>
+<li><a href="/wiki/Yellow-footed_gull" title="Yellow-footed gull">Yellow-footed gull</a></li>
+<li><a href="/wiki/Glaucous_gull" title="Glaucous gull">Glaucous gull</a></li>
+<li><a href="/wiki/Iceland_gull" title="Iceland gull">Iceland gull</a></li>
+<li><a href="/wiki/Kumlien%27s_gull" title="Kumlien&#39;s gull">Kumlien's gull</a></li>
+<li><a href="/wiki/Thayer%27s_gull" title="Thayer&#39;s gull">Thayer's gull</a></li>
+<li><a href="/wiki/European_herring_gull" title="European herring gull">European herring gull</a></li>
+<li><a href="/wiki/Heuglin%27s_gull" title="Heuglin&#39;s gull">Heuglin's gull</a></li>
+<li><a href="/wiki/American_herring_gull" title="American herring gull">American herring gull</a></li>
+<li><a href="/wiki/Yellow-legged_gull" title="Yellow-legged gull">Yellow-legged gull</a></li>
+<li><a href="/wiki/Caspian_gull" title="Caspian gull">Caspian gull</a></li>
+<li><a href="/wiki/Vega_gull" title="Vega gull">Vega gull (or East Siberian gull&#160;/ Mongolian gull)</a></li>
+<li><a href="/wiki/Armenian_gull" title="Armenian gull">Armenian gull</a></li>
+<li><a href="/wiki/Slaty-backed_gull" title="Slaty-backed gull">Slaty-backed gull</a></li>
+<li><a href="/wiki/Lesser_black-backed_gull" title="Lesser black-backed gull">Lesser black-backed gull</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Ichthyaetus" title="Ichthyaetus">Ichthyaetus</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/White-eyed_gull" title="White-eyed gull">White-eyed gull</a></li>
+<li><a href="/wiki/Sooty_gull" title="Sooty gull">Sooty gull</a></li>
+<li><a href="/wiki/Great_black-headed_gull" class="mw-redirect" title="Great black-headed gull">Great black-headed gull (or Pallas's gull)</a></li>
+<li><a href="/wiki/Audouin%27s_gull" title="Audouin&#39;s gull">Audouin's gull</a></li>
+<li><a href="/wiki/Mediterranean_gull" title="Mediterranean gull">Mediterranean gull</a></li>
+<li><a href="/wiki/Relict_gull" title="Relict gull">Relict gull</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Leucophaeus" title="Leucophaeus">Leucophaeus</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Dolphin_gull" title="Dolphin gull">Dolphin gull</a></li>
+<li><a href="/wiki/Laughing_gull" title="Laughing gull">Laughing gull</a></li>
+<li><a href="/wiki/Franklin%27s_gull" title="Franklin&#39;s gull">Franklin's gull</a></li>
+<li><a href="/wiki/Lava_gull" title="Lava gull">Lava gull</a></li>
+<li><a href="/wiki/Grey_gull" title="Grey gull">Grey gull</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Chroicocephalus" title="Chroicocephalus">Chroicocephalus</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Silver_gull" title="Silver gull">Silver gull</a></li>
+<li><a href="/wiki/Red-billed_gull" title="Red-billed gull">Red-billed gull</a></li>
+<li><a href="/wiki/Huahine_gull" title="Huahine gull">Huahine gull</a></li>
+<li><a href="/wiki/Hartlaub%27s_gull" title="Hartlaub&#39;s gull">Hartlaub's gull</a></li>
+<li><a href="/wiki/Brown-hooded_gull" title="Brown-hooded gull">Brown-hooded gull</a></li>
+<li><a href="/wiki/Grey-headed_gull" title="Grey-headed gull">Grey-headed gull (or grey-hooded gull)</a></li>
+<li><a href="/wiki/Andean_gull" title="Andean gull">Andean gull</a></li>
+<li><a href="/wiki/Black-billed_gull" title="Black-billed gull">Black-billed gull</a></li>
+<li><a href="/wiki/Brown-headed_gull" title="Brown-headed gull">Brown-headed gull</a></li>
+<li><a href="/wiki/Black-headed_gull" title="Black-headed gull">Black-headed gull</a></li>
+<li><a href="/wiki/Slender-billed_gull" title="Slender-billed gull">Slender-billed gull</a></li>
+<li><a href="/wiki/Bonaparte%27s_gull" title="Bonaparte&#39;s gull">Bonaparte's gull</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i>Saundersilarus</i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Saunders%27s_gull" title="Saunders&#39;s gull">Saunders's gull</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i>Hydrocoloeus</i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Little_gull" title="Little gull">Little gull</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i>Rhodostethia</i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ross%27s_gull" title="Ross&#39;s gull">Ross's gull</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Kittiwake" title="Kittiwake">Rissa</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Black-legged_kittiwake" title="Black-legged kittiwake">Black-legged kittiwake</a></li>
+<li><a href="/wiki/Red-legged_kittiwake" title="Red-legged kittiwake">Red-legged kittiwake</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i>Pagophila</i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ivory_gull" title="Ivory gull">Ivory gull</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i>Xema</i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Sabine%27s_gull" title="Sabine&#39;s gull">Sabine's gull</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i>Creagrus</i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Swallow-tailed_gull" title="Swallow-tailed gull">Swallow-tailed gull</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q26427" class="extiw" title="wikidata:Q26427">Q26427</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Larus_canus" class="extiw" title="wikispecies:Larus canus">Larus canus</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/American_Birding_Association" title="American Birding Association">ABA</a>: <span class="uid">mewgul</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Larus_canus/">Larus_canus</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/larus-canus/">larus-canus</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=00DA9D9151189271">00DA9D9151189271</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8696">8696</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22694308">22694308</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">COMGU</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/mewgul">mewgul</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EPPO_Code" title="EPPO Code">EPPO</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://gd.eppo.int/taxon/LARUCA">LARUCA</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/1107">1107</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">5900</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:96935">96935</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/9707ce90-6f74-4fa6-a8e1-e6930dc26864">9707ce90-6f74-4fa6-a8e1-e6930dc26864</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=372763">372763</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2481187">2481187</a></span></span></li>
+<li><span style="white-space:nowrap;">GNAB: <span class="uid"><a rel="nofollow" class="external text" href="https://www.audubon.org/field-guide/bird/mew-gull">mew-gull</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Handbook_of_the_Birds_of_the_World" title="Handbook of the Birds of the World">IBC</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.hbw.com/species/mew-gull-larus-canus">mew-gull-larus-canus</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/4356">4356</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10452599">10452599</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=176832">176832</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22694308">22694308</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NBNSYS0000000354">NBNSYS0000000354</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=28681">28681</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Neotropical_Birds_Online" class="mw-redirect" title="Neotropical Birds Online">Neotropical</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://neotropical.birds.cornell.edu/Species-Account/nb/species/mewgul">mewgul</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/SeaLifeBase" title="SeaLifeBase">SeaLifeBase</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.sealifebase.ca/Summary/SpeciesSummary.php?id=75067">75067</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=9040">9040</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=137141">137141</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Xeno-canto" title="Xeno-canto">Xeno-canto</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.xeno-canto.org/species/Larus-canus">Larus-canus</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox authority-control" aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q26427#identifiers&amp;#124;Edit_this_at_Wikidata" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q26427#identifiers&amp;#124;Edit_this_at_Wikidata" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q26427#identifiers" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/NDL_(identifier)" class="mw-redirect" title="NDL (identifier)">NDL</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://id.ndl.go.jp/auth/ndlna/00564820">00564820</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1299
+Cached time: 20201102204621
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 1.032 seconds
+Real time usage: 1.628 seconds
+Preprocessor visited node count: 6282/1000000
+Post‐expand include size: 71851/2097152 bytes
+Template argument size: 4676/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 30/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 43904/5000000 bytes
+Lua time usage: 0.676/10.000 seconds
+Lua memory usage: 10.28 MB/50 MB
+Number of Wikibase entities loaded: 29/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1519.884      1 -total
+ 27.23%  413.831      1 Template:Speciesbox
+ 26.00%  395.190      1 Template:Taxobox/core
+ 18.37%  279.141      1 Template:Taxonbar
+ 14.27%  216.931      1 Template:Xeno-canto_species
+ 12.19%  185.253      1 Template:Reflist
+  6.44%   97.927      1 Template:Cite_iucn
+  5.38%   81.784      1 Template:Short_description
+  5.24%   79.587      1 Template:Authority_control
+  4.97%   75.540      1 Template:Avibase
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:265232-0!canonical and timestamp 20201102204621 and revision id 986756474
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Common_gull&amp;oldid=986756474">https://en.wikipedia.org/w/index.php?title=Common_gull&amp;oldid=986756474</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Larus" title="Category:Larus">Larus</a></li><li><a href="/wiki/Category:Holarctic_birds" title="Category:Holarctic birds">Holarctic birds</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:ARKive_links" title="Category:ARKive links">ARKive links</a></li><li><a href="/wiki/Category:Taxonbars_with_25%E2%80%9329_taxon_IDs" title="Category:Taxonbars with 25–29 taxon IDs">Taxonbars with 25–29 taxon IDs</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_NDL_identifiers" title="Category:Wikipedia articles with NDL identifiers">Wikipedia articles with NDL identifiers</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Common+gull" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Common+gull" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Common_gull" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Common_gull" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Common_gull">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Common_gull&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Common_gull&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Common_gull" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Common_gull" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Common_gull&amp;oldid=986756474" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Common_gull&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Common_gull&amp;id=986756474&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26427" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Common_gull&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Common_gull&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Larus_canus" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Larus_canus" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ang"><a href="https://ang.wikipedia.org/wiki/Gem%C7%A3nelic_m%C7%A3w" title="Gemǣnelic mǣw – Old English" lang="ang" hreflang="ang" class="interlanguage-link-target">Ænglisc</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%86%D9%88%D8%B1%D8%B3_%D8%B4%D8%A7%D8%A6%D8%B9" title="نورس شائع – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Larus_canus" title="Larus canus – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D0%9A%D2%AF%D0%BA_%D1%81%D0%B0%D1%80%D0%BB%D0%B0%D2%A1" title="Күк сарлаҡ – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/%D0%A7%D0%B0%D0%B9%D0%BA%D0%B0_%D1%88%D1%8B%D0%B7%D0%B0%D1%8F" title="Чайка шызая – Belarusian" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-be-x-old"><a href="https://be-tarask.wikipedia.org/wiki/%D0%A7%D0%B0%D0%B9%D0%BA%D0%B0_%D1%88%D1%8B%D0%B7%D0%B0%D1%8F" title="Чайка шызая – Belarusian (Taraškievica orthography)" lang="be-tarask" hreflang="be-tarask" class="interlanguage-link-target">Беларуская (тарашкевіца)‎</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A7%D0%B0%D0%B9%D0%BA%D0%B0_%D0%B1%D1%83%D1%80%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B8%D1%86%D0%B0" title="Чайка буревестница – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Gouelan_louet" title="Gouelan louet – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Gavina_cendrosa" title="Gavina cendrosa – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Larus_canus" title="Larus canus – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Racek_bou%C5%99n%C3%AD" title="Racek bouřní – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Gwylan_y_Gweunydd" title="Gwylan y Gweunydd – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Stormm%C3%A5ge" title="Stormmåge – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-se"><a href="https://se.wikipedia.org/wiki/B%C3%A1iski" title="Báiski – Northern Sami" lang="se" hreflang="se" class="interlanguage-link-target">Davvisámegiella</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Sturmm%C3%B6we" title="Sturmmöwe – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/Deeteel_Bik%C3%A9yahd%C4%99%CC%81%C4%99%CC%81%CA%BC_t%C3%B3nteel_ts%C3%ADdii" title="Deeteel Bikéyahdę́ę́ʼ tónteel tsídii – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Kalakajakas" title="Kalakajakas – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Larus_canus" title="Larus canus – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Griza_mevo" title="Griza mevo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Kaio_mokohori" title="Kaio mokohori – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%DA%A9%D8%A7%DA%A9%D8%A7%DB%8C%DB%8C_%D9%85%D8%B9%D9%85%D9%88%D9%84%DB%8C" title="کاکایی معمولی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Skatum%C3%A1si" title="Skatumási – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Go%C3%A9land_cendr%C3%A9" title="Goéland cendré – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-fy"><a href="https://fy.wikipedia.org/wiki/Unwaarsf%C3%BBgel" title="Unwaarsfûgel – Western Frisian" lang="fy" hreflang="fy" class="interlanguage-link-target">Frysk</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Faoile%C3%A1n_b%C3%A1n" title="Faoileán bán – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Gaivota_cana" title="Gaivota cana – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B0%88%EB%A7%A4%EA%B8%B0" title="갈매기 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%B9%D5%AD%D5%A1%D5%AF%D5%A1%D5%BA%D5%B8%D6%82%D5%B5%D5%BF_%D5%B8%D6%80%D5%B8%D6%80" title="Թխակապույտ որոր – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Burni_galeb" title="Burni galeb – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-ik"><a href="https://ik.wikipedia.org/wiki/Nauyatchiaq" title="Nauyatchiaq – Inupiaq" lang="ik" hreflang="ik" class="interlanguage-link-target">Iñupiak</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Stormm%C3%A1fur" title="Stormmáfur – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Larus_canus" title="Larus canus – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A9%D7%97%D7%A3_%D7%90%D7%A4%D7%A8%D7%95%D7%A8%D7%99" title="שחף אפרורי – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-csb"><a href="https://csb.wikipedia.org/wiki/Zw%C3%ABczajn%C3%B4_miewa" title="Zwëczajnô miewa – Kashubian" lang="csb" hreflang="csb" class="interlanguage-link-target">Kaszëbsczi</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Kajaks" title="Kajaks – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Paprastasis_kiras" title="Paprastasis kiras – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Viharsir%C3%A1ly" title="Viharsirály – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B8%D1%87%D0%B5%D0%BD_%D0%B3%D0%B0%D0%BB%D0%B5%D0%B1" title="Обичен галеб – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/%D2%AE%D2%AF%D0%BB%D1%8D%D0%BD_%D1%86%D0%B0%D1%85%D0%BB%D0%B0%D0%B9" title="Үүлэн цахлай – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Stormmeeuw" title="Stormmeeuw – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ne"><a href="https://ne.wikipedia.org/wiki/%E0%A4%AE%E0%A4%BF%E0%A4%89_%E0%A4%97%E0%A4%82%E0%A4%97%E0%A4%BE%E0%A4%9A%E0%A5%80%E0%A4%B2" title="मिउ गंगाचील – Nepali" lang="ne" hreflang="ne" class="interlanguage-link-target">नेपाली</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%A2%E3%83%A1" title="カモメ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-frr"><a href="https://frr.wikipedia.org/wiki/Meew" title="Meew – Northern Frisian" lang="frr" hreflang="frr" class="interlanguage-link-target">Nordfriisk</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Fiskem%C3%A5ke" title="Fiskemåke – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Fiskem%C3%A5se" title="Fiskemåse – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pnb"><a href="https://pnb.wikipedia.org/wiki/%D8%B9%D8%A7%D9%85_%DA%AF%D9%84" title="عام گل – Western Punjabi" lang="pnb" hreflang="pnb" class="interlanguage-link-target">پنجابی</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Larus_canus" title="Larus canus – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-nds"><a href="https://nds.wikipedia.org/wiki/L%C3%BCttje_Seem%C3%B6we" title="Lüttje Seemöwe – Low German" lang="nds" hreflang="nds" class="interlanguage-link-target">Plattdüütsch</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Mewa_siwa" title="Mewa siwa – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Gaivota-parda" title="Gaivota-parda – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B2%D0%B0_%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%BE%D0%BD%D0%BE%D0%B3%D0%B0" title="Мева голубонога – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%B7%D0%B0%D1%8F_%D1%87%D0%B0%D0%B9%D0%BA%D0%B0" title="Сизая чайка – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sah"><a href="https://sah.wikipedia.org/wiki/%D0%90%D0%BB%D1%8B%D1%8B_%D1%85%D0%BE%D0%BF%D1%82%D0%BE%D1%82%D0%BE" title="Алыы хоптото – Sakha" lang="sah" hreflang="sah" class="interlanguage-link-target">Саха тыла</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Loch_maw" title="Loch maw – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/%C4%8Cajka_siv%C3%A1" title="Čajka sivá – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Kalalokki" title="Kalalokki – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv badge-Q17437798 badge-goodarticle" title="good article badge"><a href="https://sv.wikipedia.org/wiki/Fiskm%C3%A5s" title="Fiskmås – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%90%E0%AE%B0%E0%AF%8B%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%BF%E0%AE%AF_%E0%AE%AE%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AF%81%E0%AE%AE%E0%AF%8D_%E0%AE%86%E0%AE%9A%E0%AE%BF%E0%AE%AF_%E0%AE%95%E0%AE%BF%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%BF%E0%AE%A9_%E0%AE%95%E0%AE%9F%E0%AE%B1%E0%AF%8D%E0%AE%AA%E0%AE%B1%E0%AE%B5%E0%AF%88" title="ஐரோப்பிய மற்றும் ஆசிய கிளையின கடற்பறவை – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/K%C3%BC%C3%A7%C3%BCk_g%C3%BCm%C3%BC%C5%9F_mart%C4%B1" title="Küçük gümüş martı – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%82%D0%B8%D0%BD_%D1%81%D0%B8%D0%B7%D0%B8%D0%B9" title="Мартин сизий – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/M%C3%B2ng_bi%E1%BB%83n_th%C3%B4ng_th%C6%B0%E1%BB%9Dng" title="Mòng biển thông thường – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Larus_canus" title="Larus canus – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-wuu"><a href="https://wuu.wikipedia.org/wiki/%E6%B5%B7%E9%B8%A5" title="海鸥 – Wu Chinese" lang="wuu" hreflang="wuu" class="interlanguage-link-target">吴语</a></li><li class="interlanguage-link interwiki-zh-yue"><a href="https://zh-yue.wikipedia.org/wiki/%E6%B5%B7%E9%B7%97" title="海鷗 – Cantonese" lang="yue" hreflang="yue" class="interlanguage-link-target">粵語</a></li><li class="interlanguage-link interwiki-zea"><a href="https://zea.wikipedia.org/wiki/Sturmme%C3%AAuwe" title="Sturmmeêuwe – Zeelandic" lang="zea" hreflang="zea" class="interlanguage-link-target">Zeêuws</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%B5%B7%E9%B8%A5" title="海鸥 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26427#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 2 November 2020, at 20:46<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Common_gull&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.032","walltime":"1.628","ppvisitednodes":{"value":6282,"limit":1000000},"postexpandincludesize":{"value":71851,"limit":2097152},"templateargumentsize":{"value":4676,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":30,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":43904,"limit":5000000},"entityaccesscount":{"value":29,"limit":400},"timingprofile":["100.00% 1519.884      1 -total"," 27.23%  413.831      1 Template:Speciesbox"," 26.00%  395.190      1 Template:Taxobox/core"," 18.37%  279.141      1 Template:Taxonbar"," 14.27%  216.931      1 Template:Xeno-canto_species"," 12.19%  185.253      1 Template:Reflist","  6.44%   97.927      1 Template:Cite_iucn","  5.38%   81.784      1 Template:Short_description","  5.24%   79.587      1 Template:Authority_control","  4.97%   75.540      1 Template:Avibase"]},"scribunto":{"limitreport-timeusage":{"value":"0.676","limit":"10.000"},"limitreport-memusage":{"value":10782672,"limit":52428800}},"cachereport":{"origin":"mw1299","timestamp":"20201102204621","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Common gull","url":"https:\/\/en.wikipedia.org\/wiki\/Common_gull","sameAs":"http:\/\/www.wikidata.org\/entity\/Q26427","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q26427","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-07-11T12:59:44Z","dateModified":"2020-11-02T20:46:15Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/d\/de\/Larus_canus1.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":203,"wgHostname":"mw1324"});});</script>
+</body></html>

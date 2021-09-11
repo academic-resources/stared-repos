@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Leach's storm petrel - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"974071fd-d559-465d-b004-01d2f2129170","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Leach's_storm_petrel","wgTitle":"Leach's storm petrel","wgCurRevisionId":943305458,"wgRevisionId":943305458,"wgArticleId":234231,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","Webarchive template wayback links","Articles with 'species' microformats","Commons link is on Wikidata","Taxonbars with automatically added original combinations","Taxonbars with 20–24 taxon IDs","IUCN Red List vulnerable species",
+"Oceanodroma","Birds of the Atlantic Ocean","Birds of the Pacific Ocean","Birds of Iceland","Birds of Europe","Birds of Saint Pierre and Miquelon","Native birds of Eastern Canada","Native birds of Western Canada","Subterranean nesting birds","Birds described in 1818","Taxa named by Louis Jean Pierre Vieillot"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Leach's_storm_petrel","wgRelevantArticleId":234231,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Leach's_Storm-Petrel","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,
+"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Leach%27s_storm_petrel","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q211986"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin",
+"mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Lesp1.jpg/1200px-Lesp1.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Leach%27s_storm_petrel"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Leach%27s_storm_petrel"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Leach_s_storm_petrel rootpage-Leach_s_storm_petrel skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Leach's storm petrel</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Leach%27s_Storm-Petrel&amp;redirect=no" class="mw-redirect" title="Leach&#039;s Storm-Petrel">Leach&#039;s Storm-Petrel</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Leach&#39;s storm petrel
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Lesp1.jpg" class="image"><img alt="Lesp1.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/09/Lesp1.jpg/220px-Lesp1.jpg" decoding="async" width="220" height="171" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/09/Lesp1.jpg/330px-Lesp1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/09/Lesp1.jpg/440px-Lesp1.jpg 2x" data-file-width="1454" data-file-height="1133" /></a>
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Status_iucn3.1_VU.svg/220px-Status_iucn3.1_VU.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Status_iucn3.1_VU.svg/330px-Status_iucn3.1_VU.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/63/Status_iucn3.1_VU.svg/440px-Status_iucn3.1_VU.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Vulnerable_species" title="Vulnerable species">Vulnerable</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Oceanodroma" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Procellariiformes" title="Procellariiformes">Procellariiformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Storm_petrel" title="Storm petrel">Hydrobatidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Oceanodroma" title="Oceanodroma"><i>Oceanodroma</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>O.&#160;leucorhoa</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Oceanodroma leucorhoa</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Louis_Jean_Pierre_Vieillot" title="Louis Jean Pierre Vieillot">Vieillot</a>, 1818)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Subspecies
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<p>See text
+</p>
+</td></tr>
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Oceanodroma_leucorhoa_map.svg" class="image"><img alt="Oceanodroma leucorhoa map.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Oceanodroma_leucorhoa_map.svg/220px-Oceanodroma_leucorhoa_map.svg.png" decoding="async" width="220" height="114" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Oceanodroma_leucorhoa_map.svg/330px-Oceanodroma_leucorhoa_map.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Oceanodroma_leucorhoa_map.svg/440px-Oceanodroma_leucorhoa_map.svg.png 2x" data-file-width="3100" data-file-height="1600" /></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</tbody></table>
+<p><b>Leach's storm petrel</b> or  <b>Leach's petrel</b> (<i>Oceanodroma leucorhoa</i>) is a small <a href="/wiki/Seabird" title="Seabird">seabird</a> of the <a href="/wiki/Procellariiformes" title="Procellariiformes">tubenose</a> order. It is named after the British zoologist <a href="/wiki/William_Elford_Leach" title="William Elford Leach">William Elford Leach</a>. The scientific name is derived from <a href="/wiki/Ancient_Greek" title="Ancient Greek">Ancient Greek</a>. <i>Oceanodroma</i> is from <i>okeanos</i>, "ocean" and <i>dromos</i>, "runner", and <i>leucorhoa</i> is from  <i>leukos</i>, "white" and <i>orrhos</i>, "rump".<sup id="cite_ref-job90_2-0" class="reference"><a href="#cite_note-job90-2">&#91;2&#93;</a></sup>
+</p><p>It breeds on inaccessible islands in the colder northern areas of the <a href="/wiki/Atlantic_Ocean" title="Atlantic Ocean">Atlantic</a> and <a href="/wiki/Pacific_Ocean" title="Pacific Ocean">Pacific Oceans</a>. It nests in colonies close to the sea in well concealed areas such as rock crevices, shallow burrows, or even logs. It lays a single white egg, which often has a faint ring of spots at the large end. This <a href="/wiki/Storm_petrel" title="Storm petrel">storm petrel</a> is strictly <a href="/wiki/Nocturnal" class="mw-redirect" title="Nocturnal">nocturnal</a> at the breeding sites to avoid <a href="/wiki/Predation" title="Predation">predation</a> by <a href="/wiki/Gull" title="Gull">gulls</a> and <a href="/wiki/Skua" title="Skua">skuas</a>, and  even avoids coming to land on clear, moonlit nights. The largest colony of Leach's storm petrels can be found on <a href="/wiki/Baccalieu_Island" title="Baccalieu Island">Baccalieu Island</a> of eastern <a href="/wiki/Canada" title="Canada">Canada</a>, an ecological reserve with more than 3 million pairs of the birds.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Subspecies"><span class="tocnumber">2</span> <span class="toctext">Subspecies</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Distribution_and_habitat"><span class="tocnumber">3</span> <span class="toctext">Distribution and habitat</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Ecology"><span class="tocnumber">4</span> <span class="toctext">Ecology</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Leach's petrel, known in some rural areas as Carrie chicks,  is a small bird at 18–21&#160;cm in length with a 43– to 48-cm wingspan.  Like many other storm petrels, it has all-dark <a href="/wiki/Plumage" title="Plumage">plumage</a> and usually a white rump.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> However, dark-rumped individuals exist on the west coast of North America; they are very rare north of southern California, but the percentage increases suddenly on the United States-Mexico border, where 90-100% of breeding birds are dark-rumped.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> In Europe, it can be readily distinguished from the <a href="/wiki/European_storm_petrel" title="European storm petrel">European storm petrel</a> and  <a href="/wiki/Wilson%27s_storm_petrel" title="Wilson&#39;s storm petrel">Wilson's storm petrel</a> by its larger size, forked tail, different rump pattern, and flight behavior. Identification in the Americas, however, proves more difficult. On the Atlantic Coast, separating this species from <a href="/wiki/Band-rumped_storm_petrel" title="Band-rumped storm petrel">band-rumped storm petrels</a> is difficult; identification involves characteristics such as the extent of white on the rump and flight pattern. Discerning this species from others is arguably hardest on the Pacific Coast, where the dark-rumped form can be confused with at least three other all-dark storm petrel species. Here, identification involves close attention to wingbeats and overall color. It has a fluttering flight, and patters on the water as it picks <a href="/wiki/Plankton" title="Plankton">planktonic</a> food items from the ocean surface. Like most petrels, its walking ability is limited to a short shuffle to the burrow.
+</p>
+<h2><span class="mw-headline" id="Subspecies">Subspecies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=edit&amp;section=2" title="Edit section: Subspecies">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><i>O. l. leucorha</i> — <small>(<a href="/wiki/Louis_Jean_Pierre_Vieillot" title="Louis Jean Pierre Vieillot">Vieillot</a>, 1818)</small> — coasts of the <a href="/wiki/North_Pacific" class="mw-redirect" title="North Pacific">North Pacific</a> and the <a href="/wiki/North_Atlantic" class="mw-redirect" title="North Atlantic">North Atlantic</a></li>
+<li><i>O. l. chapmani</i> — <small><a href="/wiki/Hans_von_Berlepsch" title="Hans von Berlepsch">von Berlepsch</a>, 1906</small> — <a href="/wiki/Coronado_Islands" title="Coronado Islands">Coronados</a> and <a href="/wiki/Islas_San_Benito" title="Islas San Benito">San Benito Island</a> (Mexico)</li></ul>
+<h2><span class="mw-headline" id="Distribution_and_habitat">Distribution and habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=edit&amp;section=3" title="Edit section: Distribution and habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>It is strictly pelagic outside the breeding season, and this, together with its remote breeding sites, makes Leach's petrel a difficult bird to see from land. Only in <a href="/wiki/Storm" title="Storm">storms</a> might this species be pushed into headlands.  Unlike the storm petrel, it does not follow ships. In Europe, the best chance of seeing this species is in September in <a href="/wiki/Liverpool_Bay" title="Liverpool Bay">Liverpool Bay</a> between north <a href="/wiki/Wales" title="Wales">Wales</a> and <a href="/wiki/England" title="England">England</a>. Strong north-westerlies funnel <a href="/wiki/Bird_migration" title="Bird migration">migrating</a> Leach's petrels into this bay. British ornithologists Robert Atkinson and John Ainslie observed the communities of Leach's petrel on the remote Scottish islands of <a href="/wiki/North_Rona" title="North Rona">North Rona</a> between 16 July and 12 August 1936, and on <a href="/wiki/Sula_Sgeir" title="Sula Sgeir">Sula Sgeir</a> between 3 and 4 August 1939.
+</p>
+<h2><span class="mw-headline" id="Ecology">Ecology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=edit&amp;section=4" title="Edit section: Ecology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Lifespan for this bird is unusually long for a bird of such small size, with an average of 25 years and a maximum recorded lifespan of 38+ years (a bird banded between 1979-1982 recaptured in 2019 still healthy). In 2003, Haussmann <i>et al.</i> <sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> found that the bird's <a href="/wiki/Telomere" title="Telomere">telomeres</a> lengthen with age, the only known example to date of such a phenomenon. However, this phenomenon likely also occurs in other members of the Procellariiformes, which all have a rather long lifespan compared to their size.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Oceanodroma_leucorhoa_MHNT_ZOO_2010_11_42_Fair_Isle_-_Naurois.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Oceanodroma_leucorhoa_MHNT_ZOO_2010_11_42_Fair_Isle_-_Naurois.jpg/220px-Oceanodroma_leucorhoa_MHNT_ZOO_2010_11_42_Fair_Isle_-_Naurois.jpg" decoding="async" width="220" height="225" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Oceanodroma_leucorhoa_MHNT_ZOO_2010_11_42_Fair_Isle_-_Naurois.jpg/330px-Oceanodroma_leucorhoa_MHNT_ZOO_2010_11_42_Fair_Isle_-_Naurois.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Oceanodroma_leucorhoa_MHNT_ZOO_2010_11_42_Fair_Isle_-_Naurois.jpg/440px-Oceanodroma_leucorhoa_MHNT_ZOO_2010_11_42_Fair_Isle_-_Naurois.jpg 2x" data-file-width="3122" data-file-height="3187" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Oceanodroma_leucorhoa_MHNT_ZOO_2010_11_42_Fair_Isle_-_Naurois.jpg" class="internal" title="Enlarge"></a></div>Egg of Leach's storm petrel<br />(coll.<a href="/wiki/MHNT" class="mw-redirect" title="MHNT">MHNT</a>)</div></div></div>
+<p>They feed primarily on plankton, including <a href="/wiki/Euphausiids" class="mw-redirect" title="Euphausiids">euphausiids</a>, <a href="/wiki/Copepod" title="Copepod">copepods</a>, and a form of <a href="/wiki/Amphipod" class="mw-redirect" title="Amphipod">amphipod</a> that is parasitic to jellyfish gonadal pouches.  They also feed to a large extent on <a href="/wiki/Myctophids" class="mw-redirect" title="Myctophids">myctophids</a> (lantern fish), which only occur at the surface at night in water over the continental slope.  Individuals have been observed to feed at distances up to 1000&#160;km from their breeding colony.<sup id="cite_ref-Pollet_2014_7-0" class="reference"><a href="#cite_note-Pollet_2014-7">&#91;7&#93;</a></sup>  A breeding individual stores energy-rich lipids in a sac anterior to its stomach, which is used to either sustain itself while incubating its single egg, to feed its chick, or as a defensive mechanism when caught by a predator, as do many other Procellariformes. Some evidence shows that parents feed their chicks different prey species from what they consume themselves.  Parent birds also accidentally feed their chicks plastic debris, which they mistake for food items floating on the surface of the ocean.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> Chicks grow to a prefledging weight almost double  that of when they actually fledge from the burrow in late September.  During their migration, they travel to waters associated with the North Equatorial Current, or to waters associated with the Benguela Current. <sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>. Fall storms can cause these young fledging individuals to wreck on the mainland.
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22698511/0">"<i>Oceanodroma leucorhoa</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Oceanodroma+leucorhoa&amp;rft.volume=2012&amp;rft.date=2012&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22698511%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALeach%27s+storm+petrel" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-job90-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-job90_2-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n225">225</a>, 279. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=225%2C+279&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALeach%27s+storm+petrel" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.env.gov.nl.ca/parks/wer/r_bie/">Baccalieu Island reserve homepage</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20080201004008/http://www.env.gov.nl.ca/parks/wer/r_bie/">Archived</a> 2008-02-01 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a> (accessed 3 July 2007)</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://neotropical.birds.cornell.edu/portal/species/overview?p_p_spp=104636">"<i>Oceanodroma leucorhoa</i>"</a>. <i>Neotropical Birds</i>. The Cornell Lab of Ornithology<span class="reference-accessdate">. Retrieved <span class="nowrap">5 January</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Neotropical+Birds&amp;rft.atitle=Oceanodroma+leucorhoa&amp;rft_id=http%3A%2F%2Fneotropical.birds.cornell.edu%2Fportal%2Fspecies%2Foverview%3Fp_p_spp%3D104636&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALeach%27s+storm+petrel" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">Sibley, David Allen. <i>The Sibley Guide to Birds</i>. Alfred A. Knopf, inc., 2000, p. 43.</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Haussmann M. F. <i>et al.</i> (2003): Telomeres shorten more slowly in long-lived birds and mammals than in short-lived ones. <i><a href="/wiki/Proceedings_of_the_Royal_Society_of_London" class="mw-redirect" title="Proceedings of the Royal Society of London">Proceedings of the Royal Society of London B: Biological Sciences</a></i>, <b>270</b>:1387–1392</span>
+</li>
+<li id="cite_note-Pollet_2014-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-Pollet_2014_7-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFPolletRonconiJonsenLeonard2014" class="citation journal cs1">Pollet, Ingrid L.; Ronconi, Robert A.; Jonsen, Ian. D.; Leonard, Marty L.; Taylor, Philip D.; Shutler, Dave (2014). "Foraging movements of Leach's storm-petrels <i>Oceanodroma</i> leucorhoaduring incubation". <i>Journal of Avian Biology</i>. <b>45</b> (4): 305–314. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fjav.00361">10.1111/jav.00361</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Avian+Biology&amp;rft.atitle=Foraging+movements+of+Leach%27s+storm-petrels+Oceanodroma+leucorhoaduring+incubation&amp;rft.volume=45&amp;rft.issue=4&amp;rft.pages=305-314&amp;rft.date=2014&amp;rft_id=info%3Adoi%2F10.1111%2Fjav.00361&amp;rft.aulast=Pollet&amp;rft.aufirst=Ingrid+L.&amp;rft.au=Ronconi%2C+Robert+A.&amp;rft.au=Jonsen%2C+Ian.+D.&amp;rft.au=Leonard%2C+Marty+L.&amp;rft.au=Taylor%2C+Philip+D.&amp;rft.au=Shutler%2C+Dave&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALeach%27s+storm+petrel" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Bond AL, Lavers JL (2013) Effectiveness of emetics to study plastic ingestion by Leach’s Storm Petrels (<i>Oceanodroma leucorhoa</i>). <i>Marine Pollution Bulletin</i> 70:171-175</span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">Pollet et al. (2019) Migration routes and stopover areas of Leach’s Storm Petrels <i>Oceanodroma leucorhoa</i>. <i>Marine Ornithology</i> 47: 55–65</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Oceanodroma_leucorhoa" class="extiw" title="commons:Oceanodroma leucorhoa">Oceanodroma leucorhoa</a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://sabap2.adu.org.za/docs/sabap1/043.pdf">Leach’s Storm Petrel</a> - <i>The Atlas of Southern African Birds</i></li>
+<li><a rel="nofollow" class="external text" href="http://www.kiwifoto.com/galleries/birds/leachs_storm_petrel/">Leach's storm-petrel [<i>Oceanodroma leucorhoa</i>]</a> - photos, Christopher Taylor Nature Photography</li>
+<li><a rel="nofollow" class="external text" href="http://www.mbr-pwrc.usgs.gov/id/framlst/i1060id.html">Leach's storm-petrel <i>Oceanodroma leucorhoa</i></a> - USGS Patuxent Bird Identification InfoCenter</li>
+<li><a rel="nofollow" class="external text" href="http://www.bird-stamps.org/cspecies/1201200.htm">Stamps</a> (for <a href="/wiki/Canada" title="Canada">Canada</a>, <a href="/wiki/Faroe_Islands" title="Faroe Islands">Faroe Islands</a> and <a href="/wiki/Marshall_Islands" title="Marshall Islands">Marshall Islands</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://vireo.acnatsci.org/search.html?Form=Search&amp;SEARCHBY=Common&amp;KEYWORDS=leach%27s+storm-petrel&amp;showwhat=images&amp;AGE=All&amp;SEX=All&amp;ACT=All&amp;Search=Search&amp;VIEW=All&amp;ORIENTATION=All&amp;RESULTS=24">Leach's Storm-Petrel <i>Oceanodroma leucorhoa</i></a> - photos, VIREO</li>
+<li><a rel="nofollow" class="external text" href="http://www.bsc-eoc.org/avibase/species.jsp?lang=EN&amp;id=CF8E31FB023D9067&amp;ts=1222807666889&amp;sec=flickr">Leach's Storm-Petrel (<i>Oceanodroma leucorhoa</i>)</a> - Avibase</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Taxon_identifiers" style="font-size:114%;margin:0 4em"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%;text-align: left;"><i>Oceanodroma leucorhoa</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q211986" class="extiw" title="wikidata:Q211986">Q211986</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Oceanodroma_leucorhoa" class="extiw" title="wikispecies:Oceanodroma leucorhoa">Oceanodroma leucorhoa</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/American_Birding_Association" title="American Birding Association">ABA</a>: <span class="uid">leacsp</span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=05E98392444BE5C7">05E98392444BE5C7</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">LEAPE</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/lcspet">lcspet</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/1164">1164</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">550</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:96606">96606</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/0c76c49a-18c6-45af-b191-7576fb1cb9ed">0c76c49a-18c6-45af-b191-7576fb1cb9ed</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=372777">372777</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2482012">2482012</a></span></span></li>
+<li><span style="white-space:nowrap;">GNAB: <span class="uid"><a rel="nofollow" class="external text" href="https://www.audubon.org/field-guide/bird/leachs-storm-petrel">leachs-storm-petrel</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/4080">4080</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=11437461">11437461</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=174628">174628</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0000530508">NHMSYS0000530508</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Neotropical_Birds_Online" class="mw-redirect" title="Neotropical Birds Online">Neotropical</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://neotropical.birds.cornell.edu/Species-Account/nb/species/lcspet">lcspet</a></span></span></li>
+<li><span style="white-space:nowrap;">NZBO: <span class="uid"><a rel="nofollow" class="external text" href="http://nzbirdsonline.org.nz/species/leachs-storm-petrel">leachs-storm-petrel</a></span></span></li>
+<li><span style="white-space:nowrap;">NZOR: <span class="uid"><a rel="nofollow" class="external text" href="http://www.nzor.org.nz/names/48b96690-6a5b-45ef-9f27-7081f6bb65d0">48b96690-6a5b-45ef-9f27-7081f6bb65d0</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/SeaLifeBase" title="SeaLifeBase">SeaLifeBase</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.sealifebase.ca/Summary/SpeciesSummary.php?id=73539">73539</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=137192">137192</a></span></span></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;text-align: left;"><i>Procellaria leucorhoa</i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q28114554" class="extiw" title="wikidata:Q28114554">Q28114554</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/4408450">4408450</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=1297613">1297613</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1322
+Cached time: 20201029215900
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.688 seconds
+Real time usage: 0.967 seconds
+Preprocessor visited node count: 5643/1000000
+Post‐expand include size: 35734/2097152 bytes
+Template argument size: 4251/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 22/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 15471/5000000 bytes
+Lua time usage: 0.503/10.000 seconds
+Lua memory usage: 6.4 MB/50 MB
+Number of Wikibase entities loaded: 22/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  895.931      1 -total
+ 48.11%  431.023      1 Template:Speciesbox
+ 46.07%  412.726      1 Template:Taxobox/core
+ 27.47%  246.137      1 Template:Taxonbar
+ 17.85%  159.910      1 Template:Reflist
+ 10.06%   90.148      1 Template:Cite_iucn
+  5.99%   53.711      1 Template:Commons
+  5.68%   50.851      1 Template:Sister_project
+  5.20%   46.630      1 Template:Side_box
+  4.77%   42.732     20 Template:Delink
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:234231-0!canonical and timestamp 20201029215859 and revision id 943305458
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Leach%27s_storm_petrel&amp;oldid=943305458">https://en.wikipedia.org/w/index.php?title=Leach%27s_storm_petrel&amp;oldid=943305458</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_vulnerable_species" title="Category:IUCN Red List vulnerable species">IUCN Red List vulnerable species</a></li><li><a href="/wiki/Category:Oceanodroma" title="Category:Oceanodroma">Oceanodroma</a></li><li><a href="/wiki/Category:Birds_of_the_Atlantic_Ocean" title="Category:Birds of the Atlantic Ocean">Birds of the Atlantic Ocean</a></li><li><a href="/wiki/Category:Birds_of_the_Pacific_Ocean" title="Category:Birds of the Pacific Ocean">Birds of the Pacific Ocean</a></li><li><a href="/wiki/Category:Birds_of_Iceland" title="Category:Birds of Iceland">Birds of Iceland</a></li><li><a href="/wiki/Category:Birds_of_Europe" title="Category:Birds of Europe">Birds of Europe</a></li><li><a href="/wiki/Category:Birds_of_Saint_Pierre_and_Miquelon" title="Category:Birds of Saint Pierre and Miquelon">Birds of Saint Pierre and Miquelon</a></li><li><a href="/wiki/Category:Native_birds_of_Eastern_Canada" title="Category:Native birds of Eastern Canada">Native birds of Eastern Canada</a></li><li><a href="/wiki/Category:Native_birds_of_Western_Canada" title="Category:Native birds of Western Canada">Native birds of Western Canada</a></li><li><a href="/wiki/Category:Subterranean_nesting_birds" title="Category:Subterranean nesting birds">Subterranean nesting birds</a></li><li><a href="/wiki/Category:Birds_described_in_1818" title="Category:Birds described in 1818">Birds described in 1818</a></li><li><a href="/wiki/Category:Taxa_named_by_Louis_Jean_Pierre_Vieillot" title="Category:Taxa named by Louis Jean Pierre Vieillot">Taxa named by Louis Jean Pierre Vieillot</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_link_is_on_Wikidata" title="Category:Commons link is on Wikidata">Commons link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_automatically_added_original_combinations" title="Category:Taxonbars with automatically added original combinations">Taxonbars with automatically added original combinations</a></li><li><a href="/wiki/Category:Taxonbars_with_20%E2%80%9324_taxon_IDs" title="Category:Taxonbars with 20–24 taxon IDs">Taxonbars with 20–24 taxon IDs</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Leach%27s+storm+petrel" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Leach%27s+storm+petrel" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Leach%27s_storm_petrel" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Leach%27s_storm_petrel" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Leach%27s_storm_petrel">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Leach%27s_storm_petrel" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Leach%27s_storm_petrel" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;oldid=943305458" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Leach%27s_storm_petrel&amp;id=943305458&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q211986" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Leach%27s_storm_petrel&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Leach%27s_storm_petrel&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Oceanodroma_leucorhoa" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Oceanodroma_leucorhoa" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Swaelstertstormswael" title="Swaelstertstormswael – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%B7%D8%A7%D8%A6%D8%B1_%D9%86%D9%88%D8%A1_%D9%84%D9%8A%D8%AA%D8%B4" title="طائر نوء ليتش – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Oceanodroma_leucorhoa" title="Oceanodroma leucorhoa – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0_%D0%B2%D1%8A%D0%BB%D0%BD%D0%BE%D0%BB%D1%8E%D0%B1%D0%BA%D0%B0" title="Северна вълнолюбка – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Satanig_bras" title="Satanig bras – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Ocell_de_tempesta_boreal" title="Ocell de tempesta boreal – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Oceanodroma_leucorhoa" title="Oceanodroma leucorhoa – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Pedryn_drycin_Leach" title="Pedryn drycin Leach – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Stor_stormsvale" title="Stor stormsvale – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Wellenl%C3%A4ufer_(Art)" title="Wellenläufer (Art) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/N%C3%ADyol_yii%CA%BC_naat%CA%BCa%CA%BC%C3%AD_di%C5%82hi%C5%82%C3%ADg%C3%AD%C3%AD" title="Níyol yiiʼ naatʼaʼí diłhiłígíí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/P%C3%B5hja-tormip%C3%A4%C3%A4su" title="Põhja-tormipääsu – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Oceanodroma_leucorhoa" title="Oceanodroma leucorhoa – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Forkvosta_petrelo" title="Forkvosta petrelo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Ekaitz-txori_handi" title="Ekaitz-txori handi – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D8%BA_%D8%B7%D9%88%D9%81%D8%A7%D9%86_%D9%84%DB%8C%DA%86" title="مرغ طوفان لیچ – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/S%C3%BDldur_drunnhv%C3%ADti" title="Sýldur drunnhvíti – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Oc%C3%A9anite_cul-blanc" title="Océanite cul-blanc – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Pa%C3%AD%C3%B1o_gallado" title="Paíño gallado – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Sj%C3%B3svala" title="Sjósvala – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Oceanodroma_leucorhoa" title="Oceanodroma leucorhoa – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%99%D7%A1%D7%A2%D7%95%D7%A8%D7%95%D7%9F_%D7%90%D7%98%D7%9C%D7%A0%D7%98%D7%99" title="יסעורון אטלנטי – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/%C5%A0iaurinis_audra%C5%A1auklis" title="Šiaurinis audrašauklis – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-olo"><a href="https://olo.wikipedia.org/wiki/Tuhukeiju" title="Tuhukeiju – Livvi-Karelian" lang="olo" hreflang="olo" class="interlanguage-link-target">Livvinkarjala</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Vill%C3%A1s_viharfecske" title="Villás viharfecske – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%B2%E0%B5%80%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%8D%E0%B4%B8%E0%B5%8D_%E0%B4%B8%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B5%8B%E0%B4%82_%E0%B4%AA%E0%B5%86%E0%B4%9F%E0%B5%8D%E0%B4%B0%E0%B5%86%E0%B5%BD" title="ലീച്ച്സ് സ്റ്റോം പെട്രെൽ – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Vaal_stormvogeltje" title="Vaal stormvogeltje – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%B3%E3%82%B7%E3%82%B8%E3%83%AD%E3%82%A6%E3%83%9F%E3%83%84%E3%83%90%E3%83%A1" title="コシジロウミツバメ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Stormsvale" title="Stormsvale – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Stormsvale" title="Stormsvale – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Oceanodroma_leucorhoa" title="Oceanodroma leucorhoa – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Nawa%C5%82nik_du%C5%BCy" title="Nawałnik duży – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Painho-de-cauda-furcada" title="Painho-de-cauda-furcada – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%BA%D0%B0%D1%87%D1%83%D1%80%D0%BA%D0%B0" title="Северная качурка – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Oceanodroma_leucorhoa" title="Oceanodroma leucorhoa – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/Viharni_strako%C5%A1" title="Viharni strakoš – Slovenian" lang="sl" hreflang="sl" class="interlanguage-link-target">Slovenščina</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Myrskykeiju" title="Myrskykeiju – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Klykstj%C3%A4rtad_stormsvala" title="Klykstjärtad stormsvala – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9A%D0%B0%D1%87%D1%83%D1%80%D0%BA%D0%B0_%D0%BF%D1%96%D0%B2%D0%BD%D1%96%D1%87%D0%BD%D0%B0" title="Качурка північна – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Oceanodroma_leucorhoa" title="Oceanodroma leucorhoa – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Oceanodroma_leucorhoa" title="Oceanodroma leucorhoa – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E7%99%BD%E8%85%B0%E5%8F%89%E5%B0%BE%E6%B5%B7%E7%87%95" title="白腰叉尾海燕 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q211986#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 1 March 2020, at 03:25<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Leach%27s_storm_petrel&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.688","walltime":"0.967","ppvisitednodes":{"value":5643,"limit":1000000},"postexpandincludesize":{"value":35734,"limit":2097152},"templateargumentsize":{"value":4251,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":22,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":15471,"limit":5000000},"entityaccesscount":{"value":22,"limit":400},"timingprofile":["100.00%  895.931      1 -total"," 48.11%  431.023      1 Template:Speciesbox"," 46.07%  412.726      1 Template:Taxobox/core"," 27.47%  246.137      1 Template:Taxonbar"," 17.85%  159.910      1 Template:Reflist"," 10.06%   90.148      1 Template:Cite_iucn","  5.99%   53.711      1 Template:Commons","  5.68%   50.851      1 Template:Sister_project","  5.20%   46.630      1 Template:Side_box","  4.77%   42.732     20 Template:Delink"]},"scribunto":{"limitreport-timeusage":{"value":"0.503","limit":"10.000"},"limitreport-memusage":{"value":6707451,"limit":52428800}},"cachereport":{"origin":"mw1322","timestamp":"20201029215900","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Leach's storm petrel","url":"https:\/\/en.wikipedia.org\/wiki\/Leach%27s_storm_petrel","sameAs":"http:\/\/www.wikidata.org\/entity\/Q211986","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q211986","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-05-26T10:53:32Z","dateModified":"2020-03-01T03:25:41Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/0\/09\/Lesp1.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":217,"wgHostname":"mw1275"});});</script>
+</body></html>

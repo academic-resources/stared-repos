@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Common merganser - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"1a31bb67-c7c2-47c4-91c6-ba6ba0191791","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Common_merganser","wgTitle":"Common merganser","wgCurRevisionId":980727649,"wgRevisionId":980727649,"wgArticleId":256823,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","CS1 Latin-language sources (la)","CS1: long volume value","Articles with short description","Short description matches Wikidata","Articles with 'species' microformats","Commons category link is on Wikidata","Taxonbars with 25–29 taxon IDs",
+"IUCN Red List least concern species","Mergansers","Mergus","Holarctic birds","Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Common_merganser","wgRelevantArticleId":256823,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Common_Merganser","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Common_merganser","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,
+"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q180991"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming",
+"ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mergus_merganser_-Sandwell_-England_-male-8.jpg/1200px-Mergus_merganser_-Sandwell_-England_-male-8.jpg"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Common_merganser"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Common_merganser&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Common_merganser&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Common_merganser"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Common_merganser rootpage-Common_merganser skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Common merganser</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Common_Merganser&amp;redirect=no" class="mw-redirect" title="Common Merganser">Common Merganser</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Species of bird</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Common merganser
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Mergus_merganser_-Sandwell_-England_-male-8.jpg" class="image"><img alt="Mergus merganser -Sandwell -England -male-8.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mergus_merganser_-Sandwell_-England_-male-8.jpg/220px-Mergus_merganser_-Sandwell_-England_-male-8.jpg" decoding="async" width="220" height="147" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mergus_merganser_-Sandwell_-England_-male-8.jpg/330px-Mergus_merganser_-Sandwell_-England_-male-8.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mergus_merganser_-Sandwell_-England_-male-8.jpg/440px-Mergus_merganser_-Sandwell_-England_-male-8.jpg 2x" data-file-width="4752" data-file-height="3168" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%"><i>M. m. merganser</i>, male in <a href="/wiki/Sandwell" title="Sandwell">Sandwell</a>, England
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Female_Mergus_merganser_americanus_at_Las_Gallinas_Wildlife_Ponds.jpg" class="image"><img alt="Female Mergus merganser americanus at Las Gallinas Wildlife Ponds.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Female_Mergus_merganser_americanus_at_Las_Gallinas_Wildlife_Ponds.jpg/220px-Female_Mergus_merganser_americanus_at_Las_Gallinas_Wildlife_Ponds.jpg" decoding="async" width="220" height="330" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Female_Mergus_merganser_americanus_at_Las_Gallinas_Wildlife_Ponds.jpg/330px-Female_Mergus_merganser_americanus_at_Las_Gallinas_Wildlife_Ponds.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Female_Mergus_merganser_americanus_at_Las_Gallinas_Wildlife_Ponds.jpg/440px-Female_Mergus_merganser_americanus_at_Las_Gallinas_Wildlife_Ponds.jpg 2x" data-file-width="1666" data-file-height="2499" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%"><i>M. m. merganser</i>, female
+</td></tr>
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Mergus" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Anseriformes" title="Anseriformes">Anseriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Anatidae" title="Anatidae">Anatidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Mergus" title="Mergus"><i>Mergus</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>M.&#160;merganser</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Mergus merganser</i></span></b><br /><div style="font-size: 85%;"><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a></div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Subspecies
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<p>3, see <a href="#Taxonomy">text</a>
+</p>
+</td></tr>
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:MergusMerganserIUCNver2019-2.png" class="image"><img alt="MergusMerganserIUCNver2019-2.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/MergusMerganserIUCNver2019-2.png/220px-MergusMerganserIUCNver2019-2.png" decoding="async" width="220" height="66" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/MergusMerganserIUCNver2019-2.png/330px-MergusMerganserIUCNver2019-2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e6/MergusMerganserIUCNver2019-2.png/440px-MergusMerganserIUCNver2019-2.png 2x" data-file-width="3445" data-file-height="1026" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%"><i>M. merganser</i> range <style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#00FF00; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Breeding</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#008000; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Resident</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#00FFFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Passage</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#007FFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Non-breeding</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<p><i>Merganser americanus</i> Cassin, 1852
+</p>
+</td></tr>
+
+</tbody></table>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Mergus_merganser,_female_and_male,_Vaxholm,_Sweden.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mergus_merganser%2C_female_and_male%2C_Vaxholm%2C_Sweden.jpg/220px-Mergus_merganser%2C_female_and_male%2C_Vaxholm%2C_Sweden.jpg" decoding="async" width="220" height="141" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mergus_merganser%2C_female_and_male%2C_Vaxholm%2C_Sweden.jpg/330px-Mergus_merganser%2C_female_and_male%2C_Vaxholm%2C_Sweden.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/be/Mergus_merganser%2C_female_and_male%2C_Vaxholm%2C_Sweden.jpg/440px-Mergus_merganser%2C_female_and_male%2C_Vaxholm%2C_Sweden.jpg 2x" data-file-width="5443" data-file-height="3489" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Mergus_merganser,_female_and_male,_Vaxholm,_Sweden.jpg" class="internal" title="Enlarge"></a></div>Mergus merganser couple, Vaxholm, Sweden</div></div></div>
+<p>The <b>common merganser</b> (North American) or <b>goosander</b> (Eurasian) (<i>Mergus merganser</i>) is a large <a href="/wiki/Seaduck" class="mw-redirect" title="Seaduck">seaduck</a> of rivers and lakes in forested areas of <a href="/wiki/Europe" title="Europe">Europe</a>, the northern and central <a href="/wiki/Palearctic" class="mw-redirect" title="Palearctic">Palearctic</a>, and <a href="/wiki/North_America" title="North America">North America</a>.
+</p><p>The common merganser eats fish.  It nests in holes in trees.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Taxonomy"><span class="tocnumber">1</span> <span class="toctext">Taxonomy</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Behaviour"><span class="tocnumber">3</span> <span class="toctext">Behaviour</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Feeding"><span class="tocnumber">3.1</span> <span class="toctext">Feeding</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Breeding"><span class="tocnumber">3.2</span> <span class="toctext">Breeding</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Movements"><span class="tocnumber">3.3</span> <span class="toctext">Movements</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Status_and_conservation"><span class="tocnumber">4</span> <span class="toctext">Status and conservation</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Taxonomy">Taxonomy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_merganser&amp;action=edit&amp;section=1" title="Edit section: Taxonomy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The first <a href="/wiki/Species_description" title="Species description">formal description</a> of the common merganser was by the Swedish naturalist <a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Carl Linnaeus</a> in 1758 in the <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">tenth edition</a> of his <i><a href="/wiki/Systema_Naturae" title="Systema Naturae">Systema Naturae</a></i>. He introduced the current <a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">binomial name</a> <i>Mergus merganser</i>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>  The genus name is a <a href="/wiki/Latin" title="Latin">Latin</a> word used by <a href="/wiki/Pliny_the_Elder" title="Pliny the Elder">Pliny</a> and other <a href="/wiki/Ancient_Rome" title="Ancient Rome">Roman</a> authors to refer to an unspecified waterbird, and <i>merganser</i> is derived from <i>mergus</i> and <i>anser</i>, Latin for "goose".<sup id="cite_ref-job90_3-0" class="reference"><a href="#cite_note-job90-3">&#91;3&#93;</a></sup> In 1843 <a href="/wiki/John_James_Audubon" title="John James Audubon">John James Audubon</a> used the name "Buff-breasted Merganser" in addition to "goosander" in his book <i><a href="/wiki/The_Birds_of_America" title="The Birds of America">The Birds of America</a></i>.<sup id="cite_ref-Audubon_4-0" class="reference"><a href="#cite_note-Audubon-4">&#91;4&#93;</a></sup>
+</p><p>There are three <a href="/wiki/Subspecies" title="Subspecies">subspecies</a>, differing in only minor detail:<sup id="cite_ref-Hoyo_5-0" class="reference"><a href="#cite_note-Hoyo-5">&#91;5&#93;</a></sup><sup id="cite_ref-Madge_6-0" class="reference"><a href="#cite_note-Madge-6">&#91;6&#93;</a></sup>
+</p>
+<ul><li><i>M. m. merganser</i> – <small><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, 1758</small>: found throughout northern Europe and northern Asiatic Russia.</li>
+<li><i>M. m. orientalis</i> – <small><a href="/wiki/John_Gould" title="John Gould">Gould</a>, 1845</small> (syn. <i>M. m. comatus</i> – <small><a href="/wiki/Tommaso_Salvadori" title="Tommaso Salvadori">Salvadori</a>, 1895</small>): found in the Central Asian mountains. Slightly larger than <i>M. m. merganser</i>, with a slenderer bill.</li>
+<li><i>M. m. americanus</i> – <small><a href="/wiki/John_Cassin" title="John Cassin">Cassin</a>, 1852</small>: found in North America. Bill broader-based than in <i>M. m. merganser</i>, and a black bar crossing the white inner wing (visible in flight) on males.</li></ul>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_merganser&amp;action=edit&amp;section=2" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>It is 58–72&#160;cm (23–28&#160;in) long with a 78–97&#160;cm (31–38&#160;in) wingspan and a weight of 0.9–2.1&#160;kg (2.0–4.6&#160;lb); males average slightly larger than females but with some overlap. Like other <a href="/wiki/Species" title="Species">species</a> in the <a href="/wiki/Genus" title="Genus">genus</a> <i><a href="/wiki/Mergus" title="Mergus">Mergus</a></i>, it has a crest of longer head feathers, but these usually lie smoothly rounded behind the head, not normally forming an erect crest. Adult males in breeding plumage are easily distinguished, the body white with a variable salmon-pink tinge, the head black with an iridescent green gloss, the rump and tail grey, and the wings largely white on the inner half, black on the outer half. Females, and males in "eclipse" (non-breeding plumage, July to October) are largely grey, with a reddish-brown head, white chin, and white secondary feathers on the wing. Juveniles (both sexes) are similar to adult females but also show a short black-edged white stripe between the eye and bill. The bill and legs are red to brownish-red, brightest on adult males, dullest on juveniles.<sup id="cite_ref-Hoyo_5-1" class="reference"><a href="#cite_note-Hoyo-5">&#91;5&#93;</a></sup><sup id="cite_ref-Madge_6-1" class="reference"><a href="#cite_note-Madge-6">&#91;6&#93;</a></sup><sup id="cite_ref-Snow_7-0" class="reference"><a href="#cite_note-Snow-7">&#91;7&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Behaviour">Behaviour</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_merganser&amp;action=edit&amp;section=3" title="Edit section: Behaviour">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Feeding">Feeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_merganser&amp;action=edit&amp;section=4" title="Edit section: Feeding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Goosander_looking_up.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Goosander_looking_up.jpg/220px-Goosander_looking_up.jpg" decoding="async" width="220" height="124" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Goosander_looking_up.jpg/330px-Goosander_looking_up.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Goosander_looking_up.jpg/440px-Goosander_looking_up.jpg 2x" data-file-width="2637" data-file-height="1489" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Goosander_looking_up.jpg" class="internal" title="Enlarge"></a></div>Female goosander's bill showing the serrated edge</div></div></div>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Jona_-_Jona_(SG)_-_Mergus_merganser_IMG_9145.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Jona_-_Jona_%28SG%29_-_Mergus_merganser_IMG_9145.JPG/220px-Jona_-_Jona_%28SG%29_-_Mergus_merganser_IMG_9145.JPG" decoding="async" width="220" height="147" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Jona_-_Jona_%28SG%29_-_Mergus_merganser_IMG_9145.JPG/330px-Jona_-_Jona_%28SG%29_-_Mergus_merganser_IMG_9145.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Jona_-_Jona_%28SG%29_-_Mergus_merganser_IMG_9145.JPG/440px-Jona_-_Jona_%28SG%29_-_Mergus_merganser_IMG_9145.JPG 2x" data-file-width="3888" data-file-height="2592" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Jona_-_Jona_(SG)_-_Mergus_merganser_IMG_9145.JPG" class="internal" title="Enlarge"></a></div>Couple and single female on <a href="/wiki/Jona_(river)" title="Jona (river)">Jona (river)</a> in Switzerland</div></div></div>
+<p>Like the other mergansers, these piscivorous ducks have serrated edges to their bills to help them grip their prey, so they are often known as "sawbills". In addition to fish, they take a wide range of other aquatic prey, such as <a href="/wiki/Mollusc" class="mw-redirect" title="Mollusc">molluscs</a>, <a href="/wiki/Crustacean" title="Crustacean">crustaceans</a>, worms, insect larvae, and amphibians; more rarely, small mammals and birds may be taken.<sup id="cite_ref-Hoyo_5-2" class="reference"><a href="#cite_note-Hoyo-5">&#91;5&#93;</a></sup><sup id="cite_ref-Madge_6-2" class="reference"><a href="#cite_note-Madge-6">&#91;6&#93;</a></sup> As in other birds with the character, the salmon-pink tinge shown variably by males is probably diet-related, obtained from the <a href="/wiki/Carotenoid" title="Carotenoid">carotenoid</a> pigments present in some crustaceans and fish.<sup id="cite_ref-Hudon1990_8-0" class="reference"><a href="#cite_note-Hudon1990-8">&#91;8&#93;</a></sup> When not diving for food, they are usually seen swimming on the water surface, or resting on rocks in midstream or hidden among riverbank vegetation, or (in winter) on the edge of floating ice.<sup id="cite_ref-Hoyo_5-3" class="reference"><a href="#cite_note-Hoyo-5">&#91;5&#93;</a></sup><sup id="cite_ref-Madge_6-3" class="reference"><a href="#cite_note-Madge-6">&#91;6&#93;</a></sup>
+</p><p>In most places, the common merganser is as much a frequenter of salt water as fresh water. In larger streams and rivers, they float down with the stream for a few miles, and either fly back again or more commonly fish their way back, diving incessantly the whole way. In smaller streams, they are present in pairs or smaller groups, and they float down, twisting round and round in the rapids, or fishing vigorously in a deep pool near the foot of a waterfall or rapid. When floating leisurely, they position themselves in water similar to ducks, but they also swim deep in water like cormorants, especially when swimming upstream. They often sit on a rock in the middle of the water, similar to cormorants, often half-opening their wings to the sun. To rise from water, they flap along the surface for many yards. Once they are airborne, the flight is strong and rapid.<sup id="cite_ref-Hume1880_9-0" class="reference"><a href="#cite_note-Hume1880-9">&#91;9&#93;</a></sup> They often fish in a group forming a semicircle and driving the fish into shallow water, where they are captured easily. Their ordinary voice is a low, harsh croak, but during the breeding season, they (including the young) make a plaintive, soft whistle. Generally, they are wary, and one or more birds stay on sentry duty to warn the flock of approaching danger. When disturbed, they often disgorge food before moving.<sup id="cite_ref-fbi6_10-0" class="reference"><a href="#cite_note-fbi6-10">&#91;10&#93;</a></sup> Though they move clumsily on land, they resort to running when pressed, assuming a very upright position similar to penguins, and falling and stumbling frequently.<sup id="cite_ref-Baker1922_11-0" class="reference"><a href="#cite_note-Baker1922-11">&#91;11&#93;</a></sup>
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Common_Merganser,_female_and_4_young.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Common_Merganser%2C_female_and_4_young.jpg/220px-Common_Merganser%2C_female_and_4_young.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Common_Merganser%2C_female_and_4_young.jpg/330px-Common_Merganser%2C_female_and_4_young.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Common_Merganser%2C_female_and_4_young.jpg/440px-Common_Merganser%2C_female_and_4_young.jpg 2x" data-file-width="1024" data-file-height="768" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Common_Merganser,_female_and_4_young.jpg" class="internal" title="Enlarge"></a></div><i>M. m. americanus</i>, female and juveniles</div></div></div>
+<h3><span class="mw-headline" id="Breeding">Breeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_merganser&amp;action=edit&amp;section=5" title="Edit section: Breeding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Mergus_merganser_MWNH_2015.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mergus_merganser_MWNH_2015.JPG/220px-Mergus_merganser_MWNH_2015.JPG" decoding="async" width="220" height="225" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mergus_merganser_MWNH_2015.JPG/330px-Mergus_merganser_MWNH_2015.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mergus_merganser_MWNH_2015.JPG/440px-Mergus_merganser_MWNH_2015.JPG 2x" data-file-width="2563" data-file-height="2623" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Mergus_merganser_MWNH_2015.JPG" class="internal" title="Enlarge"></a></div>Egg, Collection <a href="/wiki/Museum_Wiesbaden" title="Museum Wiesbaden">Museum Wiesbaden</a></div></div></div>
+<p><a href="/wiki/Bird_nest" title="Bird nest">Nesting</a> is normally in a tree cavity, so it requires mature forest as its breeding habitat; they also readily use large nest boxes where provided, requiring an entrance hole 15&#160;cm (5.9&#160;in) in diameter.<sup id="cite_ref-duFeu2005_12-0" class="reference"><a href="#cite_note-duFeu2005-12">&#91;12&#93;</a></sup> In places devoid of trees (like Central Asian mountains), they use holes in cliffs and steep, high banks, sometimes at considerable distances from the water.<sup id="cite_ref-fbi6_10-1" class="reference"><a href="#cite_note-fbi6-10">&#91;10&#93;</a></sup> The female lays 6–17 (most often 8–12) white to yellowish eggs, and raises one brood in a season. The ducklings are taken by their mother in her bill to rivers or lakes immediately after hatching, where they feed on freshwater invertebrates and small fish fry, fledging when 60–70 days old. The young are sexually mature at the age of two years.<sup id="cite_ref-Hoyo_5-4" class="reference"><a href="#cite_note-Hoyo-5">&#91;5&#93;</a></sup><sup id="cite_ref-Madge_6-4" class="reference"><a href="#cite_note-Madge-6">&#91;6&#93;</a></sup><sup id="cite_ref-Snow_7-1" class="reference"><a href="#cite_note-Snow-7">&#91;7&#93;</a></sup> Common Mergansers are known to form <a href="/wiki/Cr%C3%A8che_(zoology)" title="Crèche (zoology)">crèches</a>, with single females having being observed with over 70 ducklings at one time.<sup id="cite_ref-Mervosh2018_13-0" class="reference"><a href="#cite_note-Mervosh2018-13">&#91;13&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Movements">Movements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_merganser&amp;action=edit&amp;section=6" title="Edit section: Movements">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The species is a partial <a href="/wiki/Bird_migration" title="Bird migration">migrant</a>, with birds moving away from areas where rivers and major lakes freeze in the winter, but resident where waters remain open. Eastern North American birds move south in small groups to the <a href="/wiki/United_States" title="United States">United States</a> wherever ice free conditions exist on lakes and rivers; on the milder Pacific coast, they are permanent residents. <a href="/wiki/Scandinavia" title="Scandinavia">Scandinavian</a> and <a href="/wiki/Russia" title="Russia">Russian</a> birds also migrate southwards, but western <a href="/wiki/Europe" title="Europe">European</a> birds, and a few in <a href="/wiki/Japan" title="Japan">Japan</a>, are largely resident.<sup id="cite_ref-Hoyo_5-5" class="reference"><a href="#cite_note-Hoyo-5">&#91;5&#93;</a></sup><sup id="cite_ref-Madge_6-5" class="reference"><a href="#cite_note-Madge-6">&#91;6&#93;</a></sup> In some populations, the males also show distinct moult migration, leaving the breeding areas as soon as the young hatch to spend the summer (June to September) elsewhere. Notably, most of the western European male population migrates north to estuaries in <a href="/wiki/Finnmark" title="Finnmark">Finnmark</a> in northern <a href="/wiki/Norway" title="Norway">Norway</a> (principally <a href="/wiki/Tanafjord" title="Tanafjord">Tanafjord</a>) to moult, leaving the females to care for the ducklings. Much smaller numbers of males also use estuaries in eastern <a href="/wiki/Scotland" title="Scotland">Scotland</a> as a moulting area.<sup id="cite_ref-Snow_7-2" class="reference"><a href="#cite_note-Snow-7">&#91;7&#93;</a></sup><sup id="cite_ref-Little1985_14-0" class="reference"><a href="#cite_note-Little1985-14">&#91;14&#93;</a></sup><sup id="cite_ref-Hatton2004_15-0" class="reference"><a href="#cite_note-Hatton2004-15">&#91;15&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Status_and_conservation">Status and conservation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_merganser&amp;action=edit&amp;section=7" title="Edit section: Status and conservation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Robert_Wilkinson_Padley_-_A_Dun_Diver_(Goosander)_-_Google_Art_Project.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/19/Robert_Wilkinson_Padley_-_A_Dun_Diver_%28Goosander%29_-_Google_Art_Project.jpg/220px-Robert_Wilkinson_Padley_-_A_Dun_Diver_%28Goosander%29_-_Google_Art_Project.jpg" decoding="async" width="220" height="184" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/19/Robert_Wilkinson_Padley_-_A_Dun_Diver_%28Goosander%29_-_Google_Art_Project.jpg/330px-Robert_Wilkinson_Padley_-_A_Dun_Diver_%28Goosander%29_-_Google_Art_Project.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/19/Robert_Wilkinson_Padley_-_A_Dun_Diver_%28Goosander%29_-_Google_Art_Project.jpg/440px-Robert_Wilkinson_Padley_-_A_Dun_Diver_%28Goosander%29_-_Google_Art_Project.jpg 2x" data-file-width="4537" data-file-height="3793" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Robert_Wilkinson_Padley_-_A_Dun_Diver_(Goosander)_-_Google_Art_Project.jpg" class="internal" title="Enlarge"></a></div>Robert Wilkinson Padley - <i>A Goosander</i>, 1817</div></div></div>
+<p>Overall, the species is not threatened, though illegal persecution by game fishing interests is a problem in some areas.<sup id="cite_ref-crime_16-0" class="reference"><a href="#cite_note-crime-16">&#91;16&#93;</a></sup> In February 2020, a rare goosander siting was documented in <a href="/wiki/Central_Park" title="Central Park">Central Park, New York</a>; the bird was in obvious distress, with its beak being trapped by a piece of debris.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup>
+</p><p>Within western Europe, a marked southward spread has occurred from <a href="/wiki/Scandinavia" title="Scandinavia">Scandinavia</a> in the breeding range since about 1850, colonising <a href="/wiki/Scotland" title="Scotland">Scotland</a> in 1871, <a href="/wiki/England" title="England">England</a> in 1941, and also a strong increase in the population in the <a href="/wiki/Alps" title="Alps">Alps</a>.<sup id="cite_ref-Snow_7-3" class="reference"><a href="#cite_note-Snow-7">&#91;7&#93;</a></sup> They are very scarce in <a href="/wiki/Ireland" title="Ireland">Ireland</a>, with regular breeding confined to a few pairs in <a href="/wiki/County_Wicklow" title="County Wicklow">County Wicklow</a>.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup>
+</p><p>The goosander is one of the species to which the <a href="/wiki/AEWA" class="mw-redirect" title="AEWA">Agreement on the Conservation of African-Eurasian Migratory Waterbirds</a> applies.
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_merganser&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22680492/0">"<i>Mergus merganser</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Mergus+merganser&amp;rft.volume=2012&amp;rft.date=2012&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22680492%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite id="CITEREFLinnaeus1758" class="citation book cs1"><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus, C.</a> (1758). <a rel="nofollow" class="external text" href="https://www.biodiversitylibrary.org/page/727034"><i>Systema Naturæ per regna tria naturae, secundum classes, ordines, genera, species, cum characteribus, differentiis, synonymis, locis, Volume 1</i></a> (in Latin). <b>v.1</b> (10th ed.). Holmiae:Laurentii Salvii. p.&#160;129.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Systema+Natur%C3%A6+per+regna+tria+naturae%2C+secundum+classes%2C+ordines%2C+genera%2C+species%2C+cum+characteribus%2C+differentiis%2C+synonymis%2C+locis%2C+Volume+1&amp;rft.pages=129&amp;rft.edition=10th&amp;rft.pub=Holmiae%3ALaurentii+Salvii&amp;rft.date=1758&amp;rft.aulast=Linnaeus&amp;rft.aufirst=C.&amp;rft_id=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpage%2F727034&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-job90-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-job90_3-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n250">250</a>–251. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=250-251&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Audubon-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-Audubon_4-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFAudubon1843" class="citation book cs1">Audubon, J.J. (1843). <a rel="nofollow" class="external text" href="https://books.google.com/?id=X4RIAAAAYAAJ&amp;pg=PA387"><i>The birds of America</i></a>. Vol. 6. pp.&#160;387–394.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+birds+of+America&amp;rft.pages=387-394&amp;rft.date=1843&amp;rft.aulast=Audubon&amp;rft.aufirst=J.J.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2F%3Fid%3DX4RIAAAAYAAJ%26pg%3DPA387&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Hoyo-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-Hoyo_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Hoyo_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Hoyo_5-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Hoyo_5-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Hoyo_5-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Hoyo_5-5"><sup><i><b>f</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFdel_HoyoElliottSargatal1992" class="citation book cs1">del Hoyo, J.; Elliott, A.; Sargatal, J., eds. (1992). <a rel="nofollow" class="external text" href="https://archive.org/details/handbookofbirdso0001unse/page/626"><i>Handbook of the Birds of the World</i></a>. Volume 1. Barcelona: Lynx Edicions. p.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/handbookofbirdso0001unse/page/626">626</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-84-87334-10-8" title="Special:BookSources/978-84-87334-10-8"><bdi>978-84-87334-10-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+the+Birds+of+the+World&amp;rft.place=Barcelona&amp;rft.pages=626&amp;rft.pub=Lynx+Edicions&amp;rft.date=1992&amp;rft.isbn=978-84-87334-10-8&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fhandbookofbirdso0001unse%2Fpage%2F626&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Madge-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-Madge_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Madge_6-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Madge_6-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Madge_6-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Madge_6-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Madge_6-5"><sup><i><b>f</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFMadgeBurn1987" class="citation book cs1">Madge, S.; Burn, H. (1987). <i>Wildfowl: An Identification Guide to the Ducks, Geese and Swans of the World</i>. A &amp; C Black. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7470-2201-5" title="Special:BookSources/978-0-7470-2201-5"><bdi>978-0-7470-2201-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Wildfowl%3A+An+Identification+Guide+to+the+Ducks%2C+Geese+and+Swans+of+the+World&amp;rft.pub=A+%26+C+Black&amp;rft.date=1987&amp;rft.isbn=978-0-7470-2201-5&amp;rft.aulast=Madge&amp;rft.aufirst=S.&amp;rft.au=Burn%2C+H.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Snow-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-Snow_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Snow_7-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Snow_7-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Snow_7-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFSnowPerrins1998" class="citation book cs1">Snow, D.W.; Perrins, C.M. (1998). <i>The Birds of the Western Palearctic</i> (Concise ed.). Oxford: Oxford University Press. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-19-854099-1" title="Special:BookSources/978-0-19-854099-1"><bdi>978-0-19-854099-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Birds+of+the+Western+Palearctic&amp;rft.place=Oxford&amp;rft.edition=Concise&amp;rft.pub=Oxford+University+Press&amp;rft.date=1998&amp;rft.isbn=978-0-19-854099-1&amp;rft.aulast=Snow&amp;rft.aufirst=D.W.&amp;rft.au=Perrins%2C+C.M.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Hudon1990-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hudon1990_8-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFHudonBrush1990" class="citation journal cs1">Hudon, J.; Brush, A.H. (1990). <a rel="nofollow" class="external text" href="http://sora.unm.edu/sites/default/files/journals/condor/v092n03/p0798-p0801.pdf">"Carotenoids produce flush in the Elegant Tern plumage"</a> <span class="cs1-format">(PDF)</span>. <i>The Condor</i>. <b>92</b> (3): 798–801. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2307%2F1368708">10.2307/1368708</a>. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/1368708">1368708</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+Condor&amp;rft.atitle=Carotenoids+produce+flush+in+the+Elegant+Tern+plumage&amp;rft.volume=92&amp;rft.issue=3&amp;rft.pages=798-801&amp;rft.date=1990&amp;rft_id=info%3Adoi%2F10.2307%2F1368708&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F1368708&amp;rft.aulast=Hudon&amp;rft.aufirst=J.&amp;rft.au=Brush%2C+A.H.&amp;rft_id=http%3A%2F%2Fsora.unm.edu%2Fsites%2Fdefault%2Ffiles%2Fjournals%2Fcondor%2Fv092n03%2Fp0798-p0801.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Hume1880-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hume1880_9-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFHumeMarshall1880" class="citation book cs1">Hume, A.O.; Marshall, C.H.T. (1880). <a rel="nofollow" class="external text" href="https://archive.org/stream/GameBirdsOfIndia3/HumeGameBirds3#page/n331/mode/2up"><i>The Game birds of India, Burmah and Ceylon</i></a>. <b>3</b>. Self published.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Game+birds+of+India%2C+Burmah+and+Ceylon&amp;rft.pub=Self+published&amp;rft.date=1880&amp;rft.aulast=Hume&amp;rft.aufirst=A.O.&amp;rft.au=Marshall%2C+C.H.T.&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2FGameBirdsOfIndia3%2FHumeGameBirds3%23page%2Fn331%2Fmode%2F2up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-fbi6-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-fbi6_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-fbi6_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFBaker1928" class="citation book cs1">Baker, E.C.S. (1928). <a rel="nofollow" class="external text" href="https://archive.org/stream/BakerFbiBirds6/BakerFBI6#page/n511/mode/1up"><i>Fauna of British India. Birds</i></a>. Volume 5 (2nd ed.). London: Taylor and Francis. pp.&#160;470–473.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fauna+of+British+India.+Birds&amp;rft.place=London&amp;rft.pages=470-473&amp;rft.edition=2nd&amp;rft.pub=Taylor+and+Francis&amp;rft.date=1928&amp;rft.aulast=Baker&amp;rft.aufirst=E.C.S.&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2FBakerFbiBirds6%2FBakerFBI6%23page%2Fn511%2Fmode%2F1up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Baker1922-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-Baker1922_11-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFBaker1922" class="citation book cs1">Baker, E.C. Stuart (1922). <a rel="nofollow" class="external text" href="https://archive.org/stream/gamebirdsofindia01bake#page/n405/mode/2up"><i>The game birds of India, Burma and Ceylon</i></a>. Vol. 1. London, Bombay Natural History Society. pp.&#160;317–327.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+game+birds+of+India%2C+Burma+and+Ceylon&amp;rft.pages=317-327&amp;rft.pub=London%2C+Bombay+Natural+History+Society&amp;rft.date=1922&amp;rft.aulast=Baker&amp;rft.aufirst=E.C.+Stuart&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2Fgamebirdsofindia01bake%23page%2Fn405%2Fmode%2F2up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-duFeu2005-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-duFeu2005_12-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFdu_Feu2005" class="citation book cs1">du Feu, C. (2005). <a rel="nofollow" class="external text" href="http://www.bto.org/sites/default/files/u15/downloads/publications/guides/nestbox.pdf"><i>Nestboxes</i></a> <span class="cs1-format">(PDF)</span>. British Trust for Ornithology Field Guide. Thetford: The British Trust for Ornithology.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Nestboxes&amp;rft.place=Thetford&amp;rft.series=British+Trust+for+Ornithology+Field+Guide&amp;rft.pub=The+British+Trust+for+Ornithology&amp;rft.date=2005&amp;rft.aulast=du+Feu&amp;rft.aufirst=C.&amp;rft_id=http%3A%2F%2Fwww.bto.org%2Fsites%2Fdefault%2Ffiles%2Fu15%2Fdownloads%2Fpublications%2Fguides%2Fnestbox.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Mervosh2018-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-Mervosh2018_13-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFMervosh2018" class="citation news cs1">Mervosh, Sarah (2018-07-24). <a rel="nofollow" class="external text" href="https://www.nytimes.com/2018/07/24/science/merganser-ducklings-photo.html">"1 Hen, 76 Ducklings: What's the Deal With This Picture?"</a>. <i>The New York Times</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+New+York+Times&amp;rft.atitle=1+Hen%2C+76+Ducklings%3A+What%27s+the+Deal+With+This+Picture%3F&amp;rft.date=2018-07-24&amp;rft.aulast=Mervosh&amp;rft.aufirst=Sarah&amp;rft_id=https%3A%2F%2Fwww.nytimes.com%2F2018%2F07%2F24%2Fscience%2Fmerganser-ducklings-photo.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Little1985-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-Little1985_14-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFLittleFurness1985" class="citation journal cs1">Little, B.; Furness, R.W. (1985). "Long distance moult migration by British Goosanders <i>Mergus merganser</i>". <i>Ringing &amp; Migration</i>. <b>6</b> (2): 77–82. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1080%2F03078698.1985.9673860">10.1080/03078698.1985.9673860</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ringing+%26+Migration&amp;rft.atitle=Long+distance+moult+migration+by+British+Goosanders+Mergus+merganser&amp;rft.volume=6&amp;rft.issue=2&amp;rft.pages=77-82&amp;rft.date=1985&amp;rft_id=info%3Adoi%2F10.1080%2F03078698.1985.9673860&amp;rft.aulast=Little&amp;rft.aufirst=B.&amp;rft.au=Furness%2C+R.W.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Hatton2004-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hatton2004_15-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFHattonMarquiss2004" class="citation journal cs1">Hatton, P.L.; Marquiss, M. (2004). <a rel="nofollow" class="external text" href="https://doi.org/10.1080%2F03078698.2004.9674315">"The origins of moulting Goosanders on the Eden Estuary"</a>. <i>Ringing &amp; Migration</i>. <b>22</b> (2): 70–74. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1080%2F03078698.2004.9674315">10.1080/03078698.2004.9674315</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ringing+%26+Migration&amp;rft.atitle=The+origins+of+moulting+Goosanders+on+the+Eden+Estuary&amp;rft.volume=22&amp;rft.issue=2&amp;rft.pages=70-74&amp;rft.date=2004&amp;rft_id=info%3Adoi%2F10.1080%2F03078698.2004.9674315&amp;rft.aulast=Hatton&amp;rft.aufirst=P.L.&amp;rft.au=Marquiss%2C+M.&amp;rft_id=%2F%2Fdoi.org%2F10.1080%252F03078698.2004.9674315&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-crime-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-crime_16-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.scotland.gov.uk/Topics/Environment/Wildlife-Habitats/paw-scotland/types-of-crime/crimes-against-birds">"Crimes against birds"</a>. <i>Partnership for Action Against Wildlife Crime in Scotland</i>. 2009-12-07.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Partnership+for+Action+Against+Wildlife+Crime+in+Scotland&amp;rft.atitle=Crimes+against+birds&amp;rft.date=2009-12-07&amp;rft_id=http%3A%2F%2Fwww.scotland.gov.uk%2FTopics%2FEnvironment%2FWildlife-Habitats%2Fpaw-scotland%2Ftypes-of-crime%2Fcrimes-against-birds&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite id="CITEREFKilgannon2020" class="citation news cs1">Kilgannon, Corey (2020-02-24). <a rel="nofollow" class="external text" href="https://www.nytimes.com/2020/02/24/nyregion/central-parks-duck-plastic.html">"Central Park Races to Save a Rare Duck Gagging on a Piece of Plastic"</a>. <i>The New York Times</i>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0362-4331">0362-4331</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2020-02-26</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+New+York+Times&amp;rft.atitle=Central+Park+Races+to+Save+a+Rare+Duck+Gagging+on+a+Piece+of+Plastic&amp;rft.date=2020-02-24&amp;rft.issn=0362-4331&amp;rft.aulast=Kilgannon&amp;rft.aufirst=Corey&amp;rft_id=https%3A%2F%2Fwww.nytimes.com%2F2020%2F02%2F24%2Fnyregion%2Fcentral-parks-duck-plastic.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text">Report of the Irish Rare Breeding Birds Panel 2013  <i>Irish Birds</i> Vol. 10 p.65</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_merganser&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Mergus_merganser" class="extiw" title="commons:Category:Mergus merganser"><span style="">Mergus merganser</span></a></b></i>.</td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/34px-Wikispecies-logo.svg.png" decoding="async" width="34" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/51px-Wikispecies-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/68px-Wikispecies-logo.svg.png 2x" data-file-width="941" data-file-height="1103" /></td>
+<td class="mbox-text plainlist"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a> has information related to <i><b><a href="https://species.wikimedia.org/wiki/Mergus_merganser" class="extiw" title="wikispecies:Mergus merganser">Mergus merganser</a></b></i></td></tr>
+</tbody></table>
+<ul><li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.hbw.com/ibc/species/goosander-mergus-merganser">"Goosander media"</a>. <i><a href="/wiki/Internet_Bird_Collection" class="mw-redirect" title="Internet Bird Collection">Internet Bird Collection</a></i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Internet+Bird+Collection&amp;rft.atitle=Goosander+media&amp;rft_id=http%3A%2F%2Fwww.hbw.com%2Fibc%2Fspecies%2Fgoosander-mergus-merganser&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+merganser" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><a rel="nofollow" class="external text" href="http://vireo.acnatsci.org/search.html?Form=Search&amp;SEARCHBY=Common&amp;KEYWORDS=common+merganser&amp;showwhat=images&amp;AGE=All&amp;SEX=All&amp;ACT=All&amp;Search=Search&amp;VIEW=All&amp;ORIENTATION=All&amp;RESULTS=24">Common Merganser photo gallery</a> at VIREO (Drexel University)</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q180991" class="extiw" title="wikidata:Q180991">Q180991</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Mergus_merganser" class="extiw" title="wikispecies:Mergus merganser">Mergus merganser</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/American_Birding_Association" title="American Birding Association">ABA</a>: <span class="uid">commer</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Mergus_merganser/">Mergus_merganser</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/mergus-merganser/">mergus-merganser</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=407E2CA886367DBB">407E2CA886367DBB</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8492">8492</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22680492">22680492</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">GOOSA</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Convention_on_the_Conservation_of_Migratory_Species_of_Wild_Animals" title="Convention on the Conservation of Migratory Species of Wild Animals">CMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.cms.int/en/species/mergus-merganser">mergus-merganser</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/commer">commer</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EPPO_Code" title="EPPO Code">EPPO</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://gd.eppo.int/taxon/MERGME">MERGME</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/1139">1139</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">2230</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:96551">96551</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/d1f7f754-6550-45aa-a17e-6f91788ea58a">d1f7f754-6550-45aa-a17e-6f91788ea58a</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=336064">336064</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2498370">2498370</a></span></span></li>
+<li><span style="white-space:nowrap;">GNAB: <span class="uid"><a rel="nofollow" class="external text" href="https://www.audubon.org/field-guide/bird/common-merganser">common-merganser</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Handbook_of_the_Birds_of_the_World" title="Handbook of the Birds of the World">IBC</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.hbw.com/species/goosander-mergus-merganser">goosander-mergus-merganser</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/7004">7004</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10587529">10587529</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=175185">175185</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22680492">22680492</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NBNSYS0000000128">NBNSYS0000000128</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=8880">8880</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Neotropical_Birds_Online" class="mw-redirect" title="Neotropical Birds Online">Neotropical</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://neotropical.birds.cornell.edu/Species-Account/nb/species/commer">commer</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=159097">159097</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1352
+Cached time: 20201030042027
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 1.040 seconds
+Real time usage: 1.370 seconds
+Preprocessor visited node count: 6914/1000000
+Post‐expand include size: 69390/2097152 bytes
+Template argument size: 9198/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 26/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 61785/5000000 bytes
+Lua time usage: 0.743/10.000 seconds
+Lua memory usage: 10.18 MB/50 MB
+Number of Wikibase entities loaded: 27/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1270.114      1 -total
+ 36.12%  458.711      1 Template:Speciesbox
+ 35.40%  449.680      1 Template:Taxobox/core
+ 25.23%  320.419      1 Template:Taxonbar
+ 20.43%  259.505      1 Template:Reflist
+  9.00%  114.371      1 Template:Cite_iucn
+  6.71%   85.188      1 Template:Commons_category
+  6.56%   83.345      2 Template:Sister_project
+  6.10%   77.539      2 Template:Side_box
+  5.79%   73.531      1 Template:Short_description
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:256823-0!canonical and timestamp 20201030042026 and revision id 980727649
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Common_merganser&amp;oldid=980727649">https://en.wikipedia.org/w/index.php?title=Common_merganser&amp;oldid=980727649</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Mergansers" title="Category:Mergansers">Mergansers</a></li><li><a href="/wiki/Category:Mergus" title="Category:Mergus">Mergus</a></li><li><a href="/wiki/Category:Holarctic_birds" title="Category:Holarctic birds">Holarctic birds</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:CS1_Latin-language_sources_(la)" title="Category:CS1 Latin-language sources (la)">CS1 Latin-language sources (la)</a></li><li><a href="/wiki/Category:CS1:_long_volume_value" title="Category:CS1: long volume value">CS1: long volume value</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_25%E2%80%9329_taxon_IDs" title="Category:Taxonbars with 25–29 taxon IDs">Taxonbars with 25–29 taxon IDs</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Common+merganser" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Common+merganser" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Common_merganser" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Common_merganser" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Common_merganser">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Common_merganser&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Common_merganser&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Common_merganser" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Common_merganser" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Common_merganser&amp;oldid=980727649" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Common_merganser&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Common_merganser&amp;id=980727649&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q180991" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Common_merganser&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Common_merganser&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Mergus_merganser" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Mergus_merganser" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%A8%D9%84%D9%82%D8%B4%D8%A9_%D8%B4%D8%A7%D8%A6%D8%B9%D8%A9" title="بلقشة شائعة – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Mergus_merganser" title="Mergus merganser – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-atj"><a href="https://atj.wikipedia.org/wiki/Asikw" title="Asikw – Atikamekw" lang="atj" hreflang="atj" class="interlanguage-link-target">Atikamekw</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/B%C3%B6y%C3%BCk_pazdimdik" title="Böyük pazdimdik – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-bn"><a href="https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%B0%E0%A7%81%E0%A6%A0%E0%A7%8B%E0%A6%81%E0%A6%9F_%E0%A6%A1%E0%A7%81%E0%A6%AC%E0%A7%81%E0%A6%B0%E0%A6%BF_%E0%A6%B9%E0%A6%BE%E0%A6%81%E0%A6%B8" title="সরুঠোঁট ডুবুরি হাঁস – Bangla" lang="bn" hreflang="bn" class="interlanguage-link-target">বাংলা</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B5" title="Беле – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/%D0%9A%D1%80%D0%B0%D1%85%D0%B0%D0%BB%D1%8C_%D0%B2%D1%8F%D0%BB%D1%96%D0%BA%D1%96" title="Крахаль вялікі – Belarusian" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-be-x-old"><a href="https://be-tarask.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B2%D1%83%D0%BA_%D0%B2%D1%8F%D0%BB%D1%96%D0%BA%D1%96" title="Савук вялікі – Belarusian (Taraškievica orthography)" lang="be-tarask" hreflang="be-tarask" class="interlanguage-link-target">Беларуская (тарашкевіца)‎</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%93%D0%BE%D0%BB%D1%8F%D0%BC_%D0%BD%D0%B8%D1%80%D0%B5%D1%86" title="Голям нирец – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Heskenneg_bras" title="Heskenneg bras – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Bec_de_serra_gros" title="Bec de serra gros – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Mergus_merganser" title="Mergus merganser – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Mor%C4%8D%C3%A1k_velk%C3%BD" title="Morčák velký – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Hwyaden_ddanheddog" title="Hwyaden ddanheddog – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Stor_skallesluger" title="Stor skallesluger – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-se"><a href="https://se.wikipedia.org/wiki/Gussagoalsi" title="Gussagoalsi – Northern Sami" lang="se" hreflang="se" class="interlanguage-link-target">Davvisámegiella</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/G%C3%A4nses%C3%A4ger" title="Gänsesäger – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/J%C3%A4%C3%A4koskel" title="Jääkoskel – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Mergus_merganser" title="Mergus merganser – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Granda_mer%C4%9Do" title="Granda merĝo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Zerra_handi" title="Zerra handi – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B1%D8%AF%DA%A9_%D9%85%D8%A7%D9%87%DB%8C%E2%80%8C%D8%AE%D9%88%D8%A7%D8%B1_%D9%85%D8%B9%D9%85%D9%88%D9%84%DB%8C" title="اردک ماهی‌خوار معمولی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Tannont" title="Tannont – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Harle_bi%C3%A8vre" title="Harle bièvre – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-fy"><a href="https://fy.wikipedia.org/wiki/Grutte_seachbek" title="Grutte seachbek – Western Frisian" lang="fy" hreflang="fy" class="interlanguage-link-target">Frysk</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/S%C3%ADolta_mh%C3%B3r" title="Síolta mhór – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Mergo_grande" title="Mergo grande – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EB%B9%84%EC%98%A4%EB%A6%AC" title="비오리 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D5%84%D5%A5%D5%AE_%D5%BD%D5%B2%D5%B8%D6%81%D5%A1%D5%AF%D5%BF%D5%B8%D6%82%D6%81_%D5%A2%D5%A1%D5%A4" title="Մեծ սղոցակտուց բադ – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Gul%C3%B6nd" title="Gulönd – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Mergus_merganser" title="Mergus merganser – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%9E%D7%A8%D7%92%D7%95%D7%9F_%D7%92%D7%93%D7%95%D7%9C" title="מרגון גדול – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D2%AE%D0%BB%D0%BA%D0%B5%D0%BD_%D0%B1%D0%B5%D0%B9%D0%BD%D0%B0%D1%80%D1%8B%D2%9B" title="Үлкен бейнарық – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Liel%C4%81_gaura" title="Lielā gaura – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Didysis_dan%C4%8Diasnapis" title="Didysis dančiasnapis – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-olo"><a href="https://olo.wikipedia.org/wiki/Suurikoskelo" title="Suurikoskelo – Livvi-Karelian" lang="olo" hreflang="olo" class="interlanguage-link-target">Livvinkarjala</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Nagy_buk%C3%B3" title="Nagy bukó – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%93%D0%BE%D0%BB%D0%B5%D0%BC_%D1%81%D0%B5%D0%B2%D0%B5%D1%80%D0%B5%D0%BD_%D0%BD%D1%83%D1%80%D0%BA%D0%B0%D1%87" title="Голем северен нуркач – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/%D0%A5%D1%83%D0%BC%D1%85%D0%B8%D0%BD_%D0%BD%D1%83%D0%B3%D0%B0%D1%81" title="Хумхин нугас – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-my"><a href="https://my.wikipedia.org/wiki/%E1%80%98%E1%80%B2%E1%80%82%E1%80%B1%E1%80%AB%E1%80%BA%E1%80%95%E1%80%BC%E1%80%AC%E1%80%B8" title="ဘဲဂေါ်ပြား – Burmese" lang="my" hreflang="my" class="interlanguage-link-target">မြန်မာဘာသာ</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Grote_zaagbek" title="Grote zaagbek – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ne"><a href="https://ne.wikipedia.org/wiki/%E0%A4%AE%E0%A4%A3%E0%A4%BF%E0%A4%A4%E0%A5%81%E0%A4%A3%E0%A5%8D%E0%A4%A1%E0%A4%95" title="मणितुण्डक – Nepali" lang="ne" hreflang="ne" class="interlanguage-link-target">नेपाली</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%AF%E3%82%A2%E3%82%A4%E3%82%B5" title="カワアイサ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Laksand" title="Laksand – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Laksand" title="Laksand – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pnb"><a href="https://pnb.wikipedia.org/wiki/%D8%B9%D8%A7%D9%85_%D9%85%D8%B1%DA%AF%D8%A7%D9%86%D8%B3%D8%B1" title="عام مرگانسر – Western Punjabi" lang="pnb" hreflang="pnb" class="interlanguage-link-target">پنجابی</a></li><li class="interlanguage-link interwiki-pcd"><a href="https://pcd.wikipedia.org/wiki/Gueufe" title="Gueufe – Picard" lang="pcd" hreflang="pcd" class="interlanguage-link-target">Picard</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Mergus_merganser" title="Mergus merganser – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Nurog%C4%99%C5%9B" title="Nurogęś – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Merganso-grande" title="Merganso-grande – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Ferestra%C8%99_mare" title="Ferestraș mare – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D1%8B%D0%B9_%D0%BA%D1%80%D0%BE%D1%85%D0%B0%D0%BB%D1%8C" title="Великый крохаль – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D0%BA%D1%80%D0%BE%D1%85%D0%B0%D0%BB%D1%8C" title="Большой крохаль – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sah"><a href="https://sah.wikipedia.org/wiki/%D2%AE%D1%80%D2%AF%D2%A5_%D1%83%D0%BB%D1%83%D0%BD" title="Үрүҥ улун – Sakha" lang="sah" hreflang="sah" class="interlanguage-link-target">Саха тыла</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Mergus_merganser" title="Mergus merganser – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Pot%C3%A1pa%C4%8D_ve%C4%BEk%C3%BD" title="Potápač veľký – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8_%D1%80%D0%BE%D0%BD%D0%B0%D1%86" title="Велики ронац – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Isokoskelo" title="Isokoskelo – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Storskrake" title="Storskrake – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/B%C3%BCy%C3%BCk_tarakdi%C5%9F" title="Büyük tarakdiş – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9A%D1%80%D0%B5%D1%85_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D0%B9" title="Крех великий – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/V%E1%BB%8Bt_c%C3%A1t" title="Vịt cát – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Mergus_merganser" title="Mergus merganser – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-wuu"><a href="https://wuu.wikipedia.org/wiki/%E6%99%AE%E9%80%9A%E7%A7%8B%E6%B2%99%E9%B8%AD" title="普通秋沙鸭 – Wu Chinese" lang="wuu" hreflang="wuu" class="interlanguage-link-target">吴语</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%99%AE%E9%80%9A%E7%A7%8B%E6%B2%99%E9%B8%AD" title="普通秋沙鸭 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q180991#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 28 September 2020, at 03:01<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Common_merganser&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.040","walltime":"1.370","ppvisitednodes":{"value":6914,"limit":1000000},"postexpandincludesize":{"value":69390,"limit":2097152},"templateargumentsize":{"value":9198,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":26,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":61785,"limit":5000000},"entityaccesscount":{"value":27,"limit":400},"timingprofile":["100.00% 1270.114      1 -total"," 36.12%  458.711      1 Template:Speciesbox"," 35.40%  449.680      1 Template:Taxobox/core"," 25.23%  320.419      1 Template:Taxonbar"," 20.43%  259.505      1 Template:Reflist","  9.00%  114.371      1 Template:Cite_iucn","  6.71%   85.188      1 Template:Commons_category","  6.56%   83.345      2 Template:Sister_project","  6.10%   77.539      2 Template:Side_box","  5.79%   73.531      1 Template:Short_description"]},"scribunto":{"limitreport-timeusage":{"value":"0.743","limit":"10.000"},"limitreport-memusage":{"value":10676742,"limit":52428800}},"cachereport":{"origin":"mw1352","timestamp":"20201030042027","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Common merganser","url":"https:\/\/en.wikipedia.org\/wiki\/Common_merganser","sameAs":"http:\/\/www.wikidata.org\/entity\/Q180991","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q180991","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-07-02T19:33:42Z","dateModified":"2020-09-28T03:01:02Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/b\/be\/Mergus_merganser_-Sandwell_-England_-male-8.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":204,"wgHostname":"mw1262"});});</script>
+</body></html>

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Bird Search
+        </title>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+                              
+        </script>
+        <script type="text/javascript" src="dist/js/birds-search.min.js">
+                                
+        </script>
+        <script type="text/javascript">
+         $(document).ready(function() {
+                 $("#searchterm").on("keyup", changeSearchValue);
+                 $(".arrow").on("click", changeResultPage);
+                 $(body).on("results-done", resultsDone)
+         });
+        </script>
+        <link rel="stylesheet" href="dist/css/birds-search.min.css">
+        </link>
+    </head>
+    
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>
+                    Birds Search via Solr
+                </h1>
+            </header>
+            <div id="body">
+                <div>
+                    <label for="searchterm">
+                        Enter search criteria:
+                    </label>
+                    <input type="text" id="searchterm">
+                    <span id="matched">
+                    </span>
+                </div>
+                <div class="resultpane">
+                    <ul id="results">
+                    </ul>
+                </div>
+            </div>
+            <footer>
+                <nav>
+                    <button class="arrow prev" data-dir="prev">
+                        Prev &#x25C0;
+                    </button> 
+                    <button class="arrow next" data-dir="next">
+                        &#x25B6; Next
+                    </button>
+                </nav>
+            </footer>
+        </div>
+    </body>
+
+</html>

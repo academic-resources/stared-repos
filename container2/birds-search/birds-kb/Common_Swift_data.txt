@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Common swift - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"b2a07813-a206-4e48-a924-d25bc34e618f","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Common_swift","wgTitle":"Common swift","wgCurRevisionId":977861843,"wgRevisionId":977861843,"wgArticleId":66173,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 Latin-language sources (la)","CS1: long volume value","Articles with short description","Short description matches Wikidata","Articles with 'species' microformats","All articles with unsourced statements","Articles with unsourced statements from May 2013","Commons category link is on Wikidata",
+"Taxonbars with automatically added original combinations","Taxonbars with 25–29 taxon IDs","Wikipedia articles with GND identifiers","Wikipedia articles with LCCN identifiers","Articles containing video clips","IUCN Red List least concern species","Apus (genus)","Swifts","Birds of Eurasia","Birds of Africa","Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Common_swift","wgRelevantArticleId":66173,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Common_Swift","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},
+"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Common_swift","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q25377"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js",
+"ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Apus_apus_-Barcelona%2C_Spain-8_%281%29.jpg/1200px-Apus_apus_-Barcelona%2C_Spain-8_%281%29.jpg"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Common_swift"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Common_swift&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Common_swift&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Common_swift"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Common_swift rootpage-Common_swift skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Common swift</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Common_Swift&amp;redirect=no" class="mw-redirect" title="Common Swift">Common Swift</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Species of bird</div>
+<div role="note" class="hatnote navigation-not-searchable">For the <a href="/wiki/Moth" title="Moth">moth</a> <i>Korscheltellus lupulina</i>, see <a href="/wiki/Common_swift_(moth)" title="Common swift (moth)">Common swift (moth)</a>.</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Common swift
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Apus_apus_-Barcelona,_Spain-8_(1).jpg" class="image"><img alt="Apus apus -Barcelona, Spain-8 (1).jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Apus_apus_-Barcelona%2C_Spain-8_%281%29.jpg/220px-Apus_apus_-Barcelona%2C_Spain-8_%281%29.jpg" decoding="async" width="220" height="147" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Apus_apus_-Barcelona%2C_Spain-8_%281%29.jpg/330px-Apus_apus_-Barcelona%2C_Spain-8_%281%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/be/Apus_apus_-Barcelona%2C_Spain-8_%281%29.jpg/440px-Apus_apus_-Barcelona%2C_Spain-8_%281%29.jpg 2x" data-file-width="1280" data-file-height="855" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">In <a href="/wiki/Barcelona" title="Barcelona">Barcelona</a>, Spain
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-iucn_1-0" class="reference"><a href="#cite_note-iucn-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Apus" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Apodiformes" title="Apodiformes">Apodiformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Swift" title="Swift">Apodidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Apus_(genus)" title="Apus (genus)"><i>Apus</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>A.&#160;apus</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Apus apus</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Apus_apus_distribution_map.png" class="image"><img alt="Apus apus distribution map.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Apus_apus_distribution_map.png/220px-Apus_apus_distribution_map.png" decoding="async" width="220" height="151" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Apus_apus_distribution_map.png/330px-Apus_apus_distribution_map.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/80/Apus_apus_distribution_map.png/440px-Apus_apus_distribution_map.png 2x" data-file-width="783" data-file-height="539" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Range of <i>A. apus</i> <style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#FF0000; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Breeding range</div><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#140087; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Wintering range</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<p><i>Hirundo apus</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span><br /><i>Cypselus apus</i>
+</p>
+</td></tr>
+
+</tbody></table>
+<p>The <b>common swift</b> (<i>Apus apus</i>) is a medium-sized <a href="/wiki/Bird" title="Bird">bird</a>, superficially similar to the <a href="/wiki/Barn_swallow" title="Barn swallow">barn swallow</a> or <a href="/wiki/Common_house_martin" title="Common house martin">house martin</a> but somewhat larger, though not stemming from those <a href="/wiki/Passerine" title="Passerine">passerine</a> species, being in the order <a href="/wiki/Apodiformes" title="Apodiformes">Apodiformes</a>. The resemblances between the groups are due to <a href="/wiki/Convergent_evolution" title="Convergent evolution">convergent evolution</a>, reflecting similar contextual development. The swifts' nearest relatives are the New World <a href="/wiki/Hummingbirds" class="mw-redirect" title="Hummingbirds">hummingbirds</a> and the Southeast Asian <a href="/wiki/Treeswift" title="Treeswift">treeswifts</a>.
+</p><p>Its scientific name <i>Apus</i> is <a href="/wiki/Latin" title="Latin">Latin</a> for a swift, thought by the ancients to be a type of <a href="/wiki/Swallow" title="Swallow">swallow</a> with no feet (from <a href="/wiki/Ancient_Greek" title="Ancient Greek">Ancient Greek</a> α, <i>a</i>, "without", and πούς, <i>pous</i>, "foot").<sup id="cite_ref-job_2-0" class="reference"><a href="#cite_note-job-2">&#91;2&#93;</a></sup>
+</p><p>Swifts have very short legs which they use primarily for clinging to vertical surfaces (hence the German name <i>Mauersegler</i>, literally meaning "wall-glider"). They never settle voluntarily on the ground, where they would be vulnerable to accidents and predation, and non-breeding individuals may spend up to ten months in continuous flight.<sup id="cite_ref-heden_3-0" class="reference"><a href="#cite_note-heden-3">&#91;3&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Taxonomy"><span class="tocnumber">1</span> <span class="toctext">Taxonomy</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Behaviour"><span class="tocnumber">3</span> <span class="toctext">Behaviour</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Breeding"><span class="tocnumber">3.1</span> <span class="toctext">Breeding</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Migration"><span class="tocnumber">3.2</span> <span class="toctext">Migration</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Differences_between_swifts_and_swallows"><span class="tocnumber">4</span> <span class="toctext">Differences between swifts and swallows</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Parasites"><span class="tocnumber">5</span> <span class="toctext">Parasites</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#In_heraldry"><span class="tocnumber">6</span> <span class="toctext">In heraldry</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Taxonomy">Taxonomy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=1" title="Edit section: Taxonomy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The common swift was one of the many species described by the Swedish naturalist <a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Carl Linnaeus</a> in 1758 in the <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">tenth edition</a> of his <i><a href="/wiki/Systema_Naturae" title="Systema Naturae">Systema Naturae</a></i>. He introduced the <a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">binomial name</a> <i>Hirundo apus</i>.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> The current genus <i>Apus</i> was erected by the Italian naturalist <a href="/wiki/Giovanni_Antonio_Scopoli" title="Giovanni Antonio Scopoli">Giovanni Antonio Scopoli</a> in 1777 based on <a href="/wiki/Tautonymy" class="mw-redirect" title="Tautonymy">tautonymy</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> The word <i>apus</i> is the Latin word for a swift. It is derived from the <a href="/wiki/Ancient_Greek" title="Ancient Greek">Ancient Greek</a> α, <i>a</i>, "without", and πούς, <i>pous</i>, "foot", based on the belief that these birds were a form of swallow that lacked feet.<sup id="cite_ref-job_2-1" class="reference"><a href="#cite_note-job-2">&#91;2&#93;</a></sup>
+</p><p>The predecessor of the Central European <a href="/wiki/Subspecies" title="Subspecies">subspecies</a> which lived during the <a href="/wiki/Last_glacial_period" class="mw-redirect" title="Last glacial period">last ice age</a> has been described as <i>Apus apus palapus</i>.
+</p>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=2" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Common swifts are 16–17&#160;cm (6.3–6.7&#160;in) long with a wingspan of 38–40&#160;cm (15–16&#160;in)<sup id="cite_ref-commonswift.org_7-0" class="reference"><a href="#cite_note-commonswift.org-7">&#91;7&#93;</a></sup> and entirely blackish-brown except for a small white or pale grey patch on their chins which is not visible from a distance. They have a short forked tail and very long swept-back wings that resemble a crescent or a <a href="/wiki/Boomerang" title="Boomerang">boomerang</a>.
+</p><p>Their call is a loud scream in two different tone pitches, the higher of which issues from the female. They often form 'screaming parties' during summer evenings, when 10–20 swifts will gather in flight around their nesting area, calling out and being answered by nesting swifts. Larger "screaming parties" are formed at higher altitudes, especially late in the breeding season. The purpose of these parties is uncertain, but may include ascending to sleep on the wing, while still breeding adults tend to spend the night in the nest.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (May 2013)">citation needed</span></a></i>&#93;</sup> Tracking swifts at their breeding colonies using radar has revealed that individuals often occur in flocks during evening ascent and dawn descent but not during the subsequent evening descent or prior dawn ascent, suggesting that this flocking benefits the swifts via cue acquisition and information exchange between individuals or through extending social behaviour. <sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Behaviour">Behaviour</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=3" title="Edit section: Behaviour">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Apus_apus_MHNT_ZOO_2011_11_159_Le_Louvres_Paris.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Apus_apus_MHNT_ZOO_2011_11_159_Le_Louvres_Paris.jpg/220px-Apus_apus_MHNT_ZOO_2011_11_159_Le_Louvres_Paris.jpg" decoding="async" width="220" height="142" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Apus_apus_MHNT_ZOO_2011_11_159_Le_Louvres_Paris.jpg/330px-Apus_apus_MHNT_ZOO_2011_11_159_Le_Louvres_Paris.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Apus_apus_MHNT_ZOO_2011_11_159_Le_Louvres_Paris.jpg/440px-Apus_apus_MHNT_ZOO_2011_11_159_Le_Louvres_Paris.jpg 2x" data-file-width="2496" data-file-height="1609" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Apus_apus_MHNT_ZOO_2011_11_159_Le_Louvres_Paris.jpg" class="internal" title="Enlarge"></a></div>Eggs of <i>Apus apus</i></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Mauersegler4.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Mauersegler4.jpg/220px-Mauersegler4.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Mauersegler4.jpg/330px-Mauersegler4.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/0/0d/Mauersegler4.jpg 2x" data-file-width="400" data-file-height="300" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Mauersegler4.jpg" class="internal" title="Enlarge"></a></div>Young bird, not yet able to fly</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Apus_apus_flock_flying_1.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apus_apus_flock_flying_1.jpg/220px-Apus_apus_flock_flying_1.jpg" decoding="async" width="220" height="157" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apus_apus_flock_flying_1.jpg/330px-Apus_apus_flock_flying_1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apus_apus_flock_flying_1.jpg/440px-Apus_apus_flock_flying_1.jpg 2x" data-file-width="544" data-file-height="389" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Apus_apus_flock_flying_1.jpg" class="internal" title="Enlarge"></a></div>Several swifts flying</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><div id="mwe_player_0" class="PopUpMediaTransform" style="width:220px;" videopayload="&lt;div class=&quot;mediaContainer&quot; style=&quot;width:854px&quot;&gt;&lt;video id=&quot;mwe_player_1&quot; poster=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/5/50/Common_swifts._Hubala_residetials_in_Tomaszow_Mazowiecki%2C_Lodz_Voivodeship%2C_Poland%2C_CC0.ogv/854px--Common_swifts._Hubala_residetials_in_Tomaszow_Mazowiecki%2C_Lodz_Voivodeship%2C_Poland%2C_CC0.ogv.jpg&quot; controls=&quot;&quot; preload=&quot;none&quot; autoplay=&quot;&quot; style=&quot;width:854px;height:480px&quot; class=&quot;kskin&quot; data-durationhint=&quot;6.0373469387755&quot; data-startoffset=&quot;0&quot; data-mwtitle=&quot;Common_swifts._Hubala_residetials_in_Tomaszow_Mazowiecki,_Lodz_Voivodeship,_Poland,_CC0.ogv&quot; data-mwprovider=&quot;wikimediacommons&quot;&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/5/50/Common_swifts._Hubala_residetials_in_Tomaszow_Mazowiecki%2C_Lodz_Voivodeship%2C_Poland%2C_CC0.ogv&quot; type=&quot;video/ogg; codecs=&amp;quot;theora, vorbis&amp;quot;&quot; data-title=&quot;Original Ogg file, 1,280 × 720 (1.11 Mbps)&quot; data-shorttitle=&quot;Ogg source&quot; data-width=&quot;1280&quot; data-height=&quot;720&quot; data-bandwidth=&quot;1111013&quot; data-framerate=&quot;30&quot;/&gt;&lt;/video&gt;&lt;/div&gt;"><img alt="File:Common swifts. Hubala residetials in Tomaszow Mazowiecki, Lodz Voivodeship, Poland, CC0.ogv" style="width:220px;height:124px" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/50/Common_swifts._Hubala_residetials_in_Tomaszow_Mazowiecki%2C_Lodz_Voivodeship%2C_Poland%2C_CC0.ogv/220px--Common_swifts._Hubala_residetials_in_Tomaszow_Mazowiecki%2C_Lodz_Voivodeship%2C_Poland%2C_CC0.ogv.jpg" /><a href="//upload.wikimedia.org/wikipedia/commons/5/50/Common_swifts._Hubala_residetials_in_Tomaszow_Mazowiecki%2C_Lodz_Voivodeship%2C_Poland%2C_CC0.ogv" title="Play media" target="new"><span class="play-btn-large"><span class="mw-tmh-playtext">Play media</span></span></a></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Common_swifts._Hubala_residetials_in_Tomaszow_Mazowiecki,_Lodz_Voivodeship,_Poland,_CC0.ogv" class="internal" title="Enlarge"></a></div>Swifts in flight, <a href="/wiki/Tomasz%C3%B3w_Mazowiecki" title="Tomaszów Mazowiecki">Tomaszów Mazowiecki</a>, Poland</div></div></div>
+<p>Swifts may nest in former woodpecker tree burrows found in ancient forests, such as some 600 reported nesting in the <a href="/wiki/Bia%C5%82owie%C5%BCa_Forest" title="Białowieża Forest">Białowieża Forest</a> of North Eastern Poland, or the small colony found in a combination of woodpecker holes and tree <a href="/wiki/Nest_box" title="Nest box">nestboxes</a> on the <a href="/wiki/RSPB" class="mw-redirect" title="RSPB">RSPB</a>'s reserve at the <a href="/wiki/Caledonian_Forest" title="Caledonian Forest">Caledonian Forest</a> in Abernethy, Scotland. While tree holes and cliffs may have comprised their historic nesting resource, the almost complete removal of ancient forest from their nesting range has resulted in adaptation to man-made sites. Swifts build their <a href="/wiki/Bird_nest" title="Bird nest">nests</a> of air-borne material caught in flight, bonded with their saliva, in suitable buildings hollows, such as under tiles, in gaps beneath window sills, and most typically under eaves and within gables.
+</p><p>Swifts form pairs that may couple for years, and often return to the same nesting site and partner year after year, repairing degradation suffered in their 40-week migratory absence. Insects such as <a href="/wiki/Clothes_moth" title="Clothes moth">clothes moths</a>, carpet and <a href="/wiki/Larder_beetle" class="mw-redirect" title="Larder beetle">larder beetles</a> may consume all but the most indigestible nest elements, typically feather shafts.
+</p><p>Young nesting swifts are able to survive for a few days without food by dropping their body temperature and metabolic rate, entering a <a href="/wiki/Torpid" class="mw-redirect" title="Torpid">torpid</a> state.
+</p><p>Except when nesting, swifts spend their lives in the air, living on the insects caught in flight; they drink, feed, and often mate and sleep on the wing.<sup id="cite_ref-commonswift.org_7-1" class="reference"><a href="#cite_note-commonswift.org-7">&#91;7&#93;</a></sup> Some individuals go 10 months without landing.<sup id="cite_ref-heden_3-1" class="reference"><a href="#cite_note-heden-3">&#91;3&#93;</a></sup> No other bird spends as much of its life in flight. Their maximum horizontal flying speed is 111.6&#160;km/h.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> Over a lifetime they can cover millions of kilometers.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p><p>Feeding parties can be very large in insect-rich areas, such as wetlands. Reports of as many as 2000 swifts feeding over flooded gravel pits, lakes and marshy river deltas are not uncommon, and may represent an ingress of swifts from within as much as a 100&#160;km (62&#160;mi) radius; swifts nesting in Western Scotland are thought to venture to Lough Neagh in Northern Ireland to feed on the abundant and nutritious "Lough Neagh Fly".
+</p>
+<h3><span class="mw-headline" id="Breeding">Breeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=4" title="Edit section: Breeding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Common swifts nest in a wider variety of sites than any other species of <i>Apus</i>. Swifts usually nest in buildings but they can also be found nesting in holes in trees, cliffs and crevices, and even in nestboxes. Swifts usually enter their nesting holes with direct flight, and take-off is characterized by an initial free-fall. Empty cavities are shallower than those with nests, and the entry size is smaller in the former than in the latter.<sup id="cite_ref-Corrales2013_11-0" class="reference"><a href="#cite_note-Corrales2013-11">&#91;11&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Migration">Migration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=5" title="Edit section: Migration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:ApusApusKlausRoggel02.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ApusApusKlausRoggel02.jpg/220px-ApusApusKlausRoggel02.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ApusApusKlausRoggel02.jpg/330px-ApusApusKlausRoggel02.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ApusApusKlausRoggel02.jpg/440px-ApusApusKlausRoggel02.jpg 2x" data-file-width="2048" data-file-height="1536" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:ApusApusKlausRoggel02.jpg" class="internal" title="Enlarge"></a></div>A juvenile, <a href="/wiki/Apparent_death" title="Apparent death">feigning death</a> (thanatosis)</div></div></div>
+<p>Common swifts are <a href="/wiki/Bird_migration" title="Bird migration">migratory</a>. Their summer breeding range runs from Portugal and Ireland in the West across to China and Siberia in the East. They breed as far south as Northern Africa (in Morocco and Algeria), with a presence in the Middle East in Israel, Lebanon and Syria, the Near East across Turkey, and the whole of Europe as far north as Norway, Finland, and most of sub-Arctic Russia. Swifts migrate to Africa by a variety of routes, ending up in Equatorial and Sub-Equatorial Africa, excluding the Cape. Common swifts do not breed on the Indian Subcontinent.
+</p><p>Subjects of a geolocator tracking study demonstrated that swifts breeding in Sweden winter in the Congo region of Africa.<sup id="cite_ref-Akesson2012_12-0" class="reference"><a href="#cite_note-Akesson2012-12">&#91;12&#93;</a></sup> Swifts spend three to three-and-a-half months in Africa and a similar time breeding - the rest is spent on the wing, flying home or away. Unsuccessful breeders, <a href="/wiki/Fledge" title="Fledge">fledglings</a>, and sexually immature year-old birds are the first to leave their breeding area. Breeding males follow next, and finally the breeding females. The breeding females stay longer in the nest to rebuild their fat reserves. The time of departure is often determined by the light cycle, and begins at the first day of less than 17 hours light. For this reason, birds further north, for instance in Finland, leave later in the second half of August. These latecomers are rushed through the quickly shortening days in Central Europe and are barely seen by bird watchers.
+</p><p>The prevailing direction of travel through Central Europe is south-by-southwest, and so the Alps do not present a barrier. In bad weather, the swifts follow rivers, because they can find a better food supply there. The population of Western and Central Europe traverses the Iberian peninsula and northwestern Africa. Swifts from Russia and southeastern Europe made a long journey over the eastern part of the Mediterranean. It is unclear where the two groups meet. The western group of swifts mostly follow the Atlantic coastline of Africa—otherwise they would have to cross the Sahara. Once they arrive at the humid savanna, they turn southeast to arrive at their winter feeding grounds. During the summer in Africa, there is a great bounty of insects for the swifts, since the region lies in the <a href="/wiki/Intertropical_Convergence_Zone" title="Intertropical Convergence Zone">Intertropical Convergence Zone</a>. The swifts have a nearly unbroken presence in the sky.
+</p><p>A few swifts, usually some of the sexually immature one year olds, remain in Africa. The majority fly northwards through Africa, then turn east towards their destinations. The birds use low pressure fronts during their spring migrations to exploit the southwestern flow of warm air, and on the return trip, ride northeastern winds on the back of the low pressure fronts.
+</p><p>In Central Europe, the swifts return in the second half of April and the first third of May, and like to stay in lowlands and near water rather than in high places. In more northerly regions, the swifts arrive later. The weather along the journey has an enormous influence on the arrival date, so in one region the swifts may come back at varying times year to year.
+</p>
+<h2><span class="mw-headline" id="Differences_between_swifts_and_swallows">Differences between swifts and swallows</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=6" title="Edit section: Differences between swifts and swallows">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table border="0" align="right" style="border-collapse:collapse; background-color:transparent;" cellpadding="0">
+<tbody><tr>
+<td><div class="thumb tright"><div class="thumbinner" style="width:172px;"><a href="/wiki/File:HirundoRusticaFlight1.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/HirundoRusticaFlight1.jpg/170px-HirundoRusticaFlight1.jpg" decoding="async" width="170" height="227" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/HirundoRusticaFlight1.jpg/255px-HirundoRusticaFlight1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/HirundoRusticaFlight1.jpg/340px-HirundoRusticaFlight1.jpg 2x" data-file-width="451" data-file-height="601" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:HirundoRusticaFlight1.jpg" class="internal" title="Enlarge"></a></div>Barn swallow</div></div></div>
+</td>
+<td><div class="thumb tright"><div class="thumbinner" style="width:172px;"><a href="/wiki/File:Apus_apus_01.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Apus_apus_01.jpg/170px-Apus_apus_01.jpg" decoding="async" width="170" height="227" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Apus_apus_01.jpg/255px-Apus_apus_01.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Apus_apus_01.jpg/340px-Apus_apus_01.jpg 2x" data-file-width="1200" data-file-height="1600" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Apus_apus_01.jpg" class="internal" title="Enlarge"></a></div>Swift</div></div></div>
+</td></tr></tbody></table>
+<p>The barn swallow and house martin hunt for airborne insects in a manner similar to that of the slightly larger swift, and occasionally mixed groups of the species form. The most noticeable differences between the three types are:
+</p>
+<ul><li>The shrill scream of the swift distinguishes itself from the more inconspicuous babbling of the swallow.</li>
+<li>The narrow sickle-shaped wings of the swift are longer than its body, and its silhouette in the air resembles an anchor.</li>
+<li>The swift's wingbeats are deep and quick, and the swift glides for longer. The swallow's flight is more fluttering, and it presses its wings further to the rear during beats.</li>
+<li>The underside of a swift, with the exception of the white spot under its chin, is entirely dark brown. Swallows show a beige-white underside. They can also be recognized by the long forks in their tails.</li></ul>
+<h2><span class="mw-headline" id="Parasites">Parasites</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=7" title="Edit section: Parasites">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Swift nests commonly support populations of the <a href="/wiki/Chewing_louse" class="mw-redirect" title="Chewing louse">chewing louse</a> <i><a href="/w/index.php?title=Dennyus_hirundinis&amp;action=edit&amp;redlink=1" class="new" title="Dennyus hirundinis (page does not exist)">Dennyus hirundinis</a></i> and the lousefly <i><a href="/wiki/Crataerina_pallida" title="Crataerina pallida">Crataerina pallida</a></i>.<sup id="cite_ref-Tompkins1996_13-0" class="reference"><a href="#cite_note-Tompkins1996-13">&#91;13&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="In_heraldry">In heraldry</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=8" title="Edit section: In heraldry">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="/wiki/Heraldry" title="Heraldry">heraldic</a> bird known as the "<a href="/wiki/Martlet" title="Martlet">martlet</a>", which is represented without feet, may have been based on the swift, but is generally assumed to refer to the house martin; it was used for the arms of younger sons, perhaps because it symbolized their landless wandering.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=9" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/International_Swift_Conference" title="International Swift Conference">International Swift Conference</a></li>
+<li><a href="/wiki/Unihemispheric_slow-wave_sleep" title="Unihemispheric slow-wave sleep">Unihemispheric slow-wave sleep</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=10" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 40em; -webkit-column-width: 40em; column-width: 40em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-iucn-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-iucn_1-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2014" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2014). "<i>Apus apus</i>". <i><a href="/wiki/IUCN_Red_List_of_Threatened_Species" class="mw-redirect" title="IUCN Red List of Threatened Species">IUCN Red List of Threatened Species</a></i>. <b>2014</b>: e.T22686800A62552970. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2305%2FIUCN.UK.2014-2.RLTS.T22686800A62552970.en">10.2305/IUCN.UK.2014-2.RLTS.T22686800A62552970.en</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Apus+apus&amp;rft.volume=2014&amp;rft.pages=e.T22686800A62552970&amp;rft.date=2014&amp;rft_id=info%3Adoi%2F10.2305%2FIUCN.UK.2014-2.RLTS.T22686800A62552970.en&amp;rft.au=BirdLife+International&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-job-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-job_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-job_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A. (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. p.&#160;52. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=52&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-heden-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-heden_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-heden_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFHedenström2016" class="citation journal cs1">Hedenström, Anders;  et al. (September 2016). <a rel="nofollow" class="external text" href="http://www.cell.com/current-biology/abstract/S0960-9822%2816%2931063-6">"Annual 10-Month Aerial Life Phase in the Common Swift <i>Apus apus</i>"</a>. <i>Current Biology</i>. <b>26</b> (22): 3066–3070. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.cub.2016.09.014">10.1016/j.cub.2016.09.014</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/28094028">28094028</a><span class="reference-accessdate">. Retrieved <span class="nowrap">28 October</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Current+Biology&amp;rft.atitle=Annual+10-Month+Aerial+Life+Phase+in+the+Common+Swift+Apus+apus&amp;rft.volume=26&amp;rft.issue=22&amp;rft.pages=3066-3070&amp;rft.date=2016-09&amp;rft_id=info%3Adoi%2F10.1016%2Fj.cub.2016.09.014&amp;rft_id=info%3Apmid%2F28094028&amp;rft.aulast=Hedenstr%C3%B6m&amp;rft.aufirst=Anders&amp;rft_id=http%3A%2F%2Fwww.cell.com%2Fcurrent-biology%2Fabstract%2FS0960-9822%252816%252931063-6&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite id="CITEREFLinnaeus1758" class="citation book cs1"><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus, C.</a> (1758). <a rel="nofollow" class="external text" href="https://www.biodiversitylibrary.org/page/727101"><i>Systema Naturæ per regna tria naturae, secundum classes, ordines, genera, species, cum characteribus, differentiis, synonymis, locis, Volume 1</i></a> (in Latin). <b>v.1</b> (10th ed.). Holmiae:Laurentii Salvii. p.&#160;192.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Systema+Natur%C3%A6+per+regna+tria+naturae%2C+secundum+classes%2C+ordines%2C+genera%2C+species%2C+cum+characteribus%2C+differentiis%2C+synonymis%2C+locis%2C+Volume+1&amp;rft.pages=192&amp;rft.edition=10th&amp;rft.pub=Holmiae%3ALaurentii+Salvii&amp;rft.date=1758&amp;rft.aulast=Linnaeus&amp;rft.aufirst=C.&amp;rft_id=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpage%2F727101&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite id="CITEREFScopoli1777" class="citation book cs1"><a href="/wiki/Giovanni_Antonio_Scopoli" title="Giovanni Antonio Scopoli">Scopoli, Giovanni Antonio</a> (1777). <a rel="nofollow" class="external text" href="https://www.biodiversitylibrary.org/page/11269479"><i>Introductio ad historiam naturalem</i></a> (in Latin). Pragae: Apud Wolfgangum Gerle. p.&#160;483.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introductio+ad+historiam+naturalem&amp;rft.place=Pragae&amp;rft.pages=483&amp;rft.pub=Apud+Wolfgangum+Gerle&amp;rft.date=1777&amp;rft.aulast=Scopoli&amp;rft.aufirst=Giovanni+Antonio&amp;rft_id=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpage%2F11269479&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite id="CITEREFPeters1940" class="citation book cs1"><a href="/wiki/James_L._Peters" title="James L. Peters">Peters, James Lee</a>, ed. (1940). <a rel="nofollow" class="external text" href="https://www.biodiversitylibrary.org/page/14476715"><i>Check-list of Birds of the World</i></a>. Volume 4. Cambridge, Massachusetts: Harvard University Press. p.&#160;244.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Check-list+of+Birds+of+the+World&amp;rft.place=Cambridge%2C+Massachusetts&amp;rft.pages=244&amp;rft.pub=Harvard+University+Press&amp;rft.date=1940&amp;rft_id=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpage%2F14476715&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-commonswift.org-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-commonswift.org_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-commonswift.org_7-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.commonswift.org/swift_english.html">"Common Swift - <i>Apus apus</i>"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Common+Swift+-+Apus+apus&amp;rft_id=http%3A%2F%2Fwww.commonswift.org%2Fswift_english.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite id="CITEREFNilsson,_C.Bäckman,_J.Dokter,_A.M.2019" class="citation journal cs1">Nilsson, C.; Bäckman, J.; Dokter, A.M. (2019). "Flocking behaviour in the twilight ascents of Common Swifts <i>Apus apus</i>". <i>Ibis</i>. <b>161</b> (3): 674–678. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fibi.12704">10.1111/ibi.12704</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ibis&amp;rft.atitle=Flocking+behaviour+in+the+twilight+ascents+of+Common+Swifts+Apus+apus&amp;rft.volume=161&amp;rft.issue=3&amp;rft.pages=674-678&amp;rft.date=2019&amp;rft_id=info%3Adoi%2F10.1111%2Fibi.12704&amp;rft.au=Nilsson%2C+C.&amp;rft.au=B%C3%A4ckman%2C+J.&amp;rft.au=Dokter%2C+A.M.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite id="CITEREFBourton2010" class="citation news cs1">Bourton, Jody (2 March 2010). <a rel="nofollow" class="external text" href="http://news.bbc.co.uk/earth/hi/earth_news/newsid_8539000/8539383.stm">"Supercharged swifts take flight speed record"</a>. <i>BBC earth news</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2 November</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=BBC+earth+news&amp;rft.atitle=Supercharged+swifts+take+flight+speed+record&amp;rft.date=2010-03-02&amp;rft.aulast=Bourton&amp;rft.aufirst=Jody&amp;rft_id=http%3A%2F%2Fnews.bbc.co.uk%2Fearth%2Fhi%2Fearth_news%2Fnewsid_8539000%2F8539383.stm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.rspb.org.uk/Images/Amazing%20swift%20facts_tcm9-279347.pdf">https://www.rspb.org.uk/Images/Amazing%20swift%20facts_tcm9-279347.pdf</a></span>
+</li>
+<li id="cite_note-Corrales2013-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-Corrales2013_11-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFCorralesBautistaSantaMaríaMas2013" class="citation journal cs1">Corrales, L.; Bautista, L.M.; SantaMaría, T.; Mas, P. (2013). <a rel="nofollow" class="external text" href="https://digital.csic.es/bitstream/10261/96963/1/Corrales%20Ardeola60%20p291%202013.pdf">"Hole selection by nesting swifts in medieval city-walls of central Spain"</a> <span class="cs1-format">(PDF)</span>. <i>Ardeola</i>. <b>60</b> (2): 291–304. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.13157%2Farla.60.2.2013.291">10.13157/arla.60.2.2013.291</a>. <a href="/wiki/Hdl_(identifier)" class="mw-redirect" title="Hdl (identifier)">hdl</a>:<a rel="nofollow" class="external text" href="//hdl.handle.net/10261%2F96963">10261/96963</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:84894013">84894013</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ardeola&amp;rft.atitle=Hole+selection+by+nesting+swifts+in+medieval+city-walls+of+central+Spain&amp;rft.volume=60&amp;rft.issue=2&amp;rft.pages=291-304&amp;rft.date=2013&amp;rft_id=info%3Ahdl%2F10261%2F96963&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A84894013&amp;rft_id=info%3Adoi%2F10.13157%2Farla.60.2.2013.291&amp;rft.aulast=Corrales&amp;rft.aufirst=L.&amp;rft.au=Bautista%2C+L.M.&amp;rft.au=SantaMar%C3%ADa%2C+T.&amp;rft.au=Mas%2C+P.&amp;rft_id=https%3A%2F%2Fdigital.csic.es%2Fbitstream%2F10261%2F96963%2F1%2FCorrales%2520Ardeola60%2520p291%25202013.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Akesson2012-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-Akesson2012_12-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFÅkessonKlaassenHolmgrenFox2012" class="citation journal cs1">Åkesson, S.; Klaassen, R.; Holmgren, J.; Fox, J.W.; Hedenström, A. (2012). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3399846">"Migration Routes and Strategies in a Highly Aerial Migrant, the Common Swift <i>Apus apus</i>, Revealed by Light-Level Geolocators"</a>. <i>PLOS ONE</i>. <b>7</b> (7:e41195): e41195. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1371%2Fjournal.pone.0041195">10.1371/journal.pone.0041195</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3399846">3399846</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/22815968">22815968</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=PLOS+ONE&amp;rft.atitle=Migration+Routes+and+Strategies+in+a+Highly+Aerial+Migrant%2C+the+Common+Swift+Apus+apus%2C+Revealed+by+Light-Level+Geolocators&amp;rft.volume=7&amp;rft.issue=7%3Ae41195&amp;rft.pages=e41195&amp;rft.date=2012&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3399846&amp;rft_id=info%3Apmid%2F22815968&amp;rft_id=info%3Adoi%2F10.1371%2Fjournal.pone.0041195&amp;rft.aulast=%C3%85kesson&amp;rft.aufirst=S.&amp;rft.au=Klaassen%2C+R.&amp;rft.au=Holmgren%2C+J.&amp;rft.au=Fox%2C+J.W.&amp;rft.au=Hedenstr%C3%B6m%2C+A.&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3399846&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Tompkins1996-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-Tompkins1996_13-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFTompkinsJonesClayton1996" class="citation journal cs1">Tompkins, D.M.; Jones, T.; Clayton, D.H. (1996). "Effect of vertically transmitted ectoparasites on the reproductive success of Swifts (<i>Apus apus</i>)". <i>Functional Ecology</i>. <b>10</b> (6): 733–740. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2307%2F2390508">10.2307/2390508</a>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0269-8463">0269-8463</a>. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/2390508">2390508</a>. <a href="/wiki/S2CID_(identifier)" class="mw-redirect" title="S2CID (identifier)">S2CID</a>&#160;<a rel="nofollow" class="external text" href="https://api.semanticscholar.org/CorpusID:33059571">33059571</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Functional+Ecology&amp;rft.atitle=Effect+of+vertically+transmitted+ectoparasites+on+the+reproductive+success+of+Swifts+%28Apus+apus%29&amp;rft.volume=10&amp;rft.issue=6&amp;rft.pages=733-740&amp;rft.date=1996&amp;rft.issn=0269-8463&amp;rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A33059571&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2390508&amp;rft_id=info%3Adoi%2F10.2307%2F2390508&amp;rft.aulast=Tompkins&amp;rft.aufirst=D.M.&amp;rft.au=Jones%2C+T.&amp;rft.au=Clayton%2C+D.H.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_swift&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Apus_apus" class="extiw" title="commons:Category:Apus apus"><span style="">Apus apus</span></a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://www.swift-conservation.org/">Swift Conservation Homepage</a> Swift Conservation.Org free advice on the natural history and conservation of Apus apus the Common Swift</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20161108172109/http://aulaenred.ibercaja.es/wp-content/uploads/277_SwiftAapus.pdf">Ageing and sexing (PDF; 3.1 MB) by Javier Blasco-Zumeta &amp; Gerd-Michael Heinze</a></li>
+<li><a rel="nofollow" class="external text" href="https://sites.google.com/site/commonswiftapus/">The Common Swift</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ornithos.de/Ornithos/Feather_Collection/Apus_apus/Apus_apus.htm#Top">Feathers of Common Swift (<i>Apus apus</i>)</a></li>
+<li><a rel="nofollow" class="external text" href="http://sabap2.adu.org.za/docs/sabap1/411.pdf">Common swift species text in The Atlas of Southern African Birds</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.oum.ox.ac.uk/swifts.htm">Nesting swifts webcam</a> in the tower of the <a href="/wiki/Oxford_University_Museum_of_Natural_History" title="Oxford University Museum of Natural History">Oxford University Museum of Natural History</a>, <a href="/wiki/UK" class="mw-redirect" title="UK">UK</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.birdlife.org/datazone/species/factsheet/22686800">BirdLife species factsheet for <i>Apus apus</i></a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.hbw.com/ibc/species/common-swift-apus-apus">"Common swift media"</a>. <i><a href="/wiki/Internet_Bird_Collection" class="mw-redirect" title="Internet Bird Collection">Internet Bird Collection</a></i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Internet+Bird+Collection&amp;rft.atitle=Common+swift+media&amp;rft_id=http%3A%2F%2Fwww.hbw.com%2Fibc%2Fspecies%2Fcommon-swift-apus-apus&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+swift" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><a rel="nofollow" class="external text" href="http://vireo.acnatsci.org/search.html?Form=Search&amp;SEARCHBY=Common&amp;KEYWORDS=common+swift&amp;showwhat=images&amp;AGE=All&amp;SEX=All&amp;ACT=All&amp;Search=Search&amp;VIEW=All&amp;ORIENTATION=All&amp;RESULTS=24">Common swift photo gallery</a> at VIREO (Drexel University)</li>
+<li><a rel="nofollow" class="external text" href="http://maps.iucnredlist.org/map.html?id=22686800">Interactive range map of <i>Apus apus</i></a> at <a rel="nofollow" class="external text" href="http://maps.iucnredlist.org/index.html">IUCN Red List maps</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Taxon_identifiers" style="font-size:114%;margin:0 4em"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%;text-align: left;"><i>Apus apus</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q25377" class="extiw" title="wikidata:Q25377">Q25377</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Apus_apus" class="extiw" title="wikispecies:Apus apus">Apus apus</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/American_Birding_Association" title="American Birding Association">ABA</a>: <span class="uid">comswi</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Apus_apus/">Apus_apus</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/apus-apus/">apus-apus</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=4E6EF3F983079D73">4E6EF3F983079D73</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8782">8782</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22686800">22686800</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Barcode_of_Life_Data_System" title="Barcode of Life Data System">BOLD</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.boldsystems.org/index.php/TaxBrowser_TaxonPage?taxid=9912">9912</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">SWIFT</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/comswi">comswi</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EPPO_Code" title="EPPO Code">EPPO</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://gd.eppo.int/taxon/APUSAP">APUSAP</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/888">888</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">7950</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:97070">97070</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/f6c311a8-a173-4c2e-8942-2bee127a6c4c">f6c311a8-a173-4c2e-8942-2bee127a6c4c</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=369020">369020</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/5228676">5228676</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Handbook_of_the_Birds_of_the_World" title="Handbook of the Birds of the World">IBC</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.hbw.com/species/common-swift-apus-apus">common-swift-apus-apus</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/6638">6638</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10195258">10195258</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=178010">178010</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22686800">22686800</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0000530165">NHMSYS0000530165</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=8895">8895</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=2092">2092</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=212734">212734</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Xeno-canto" title="Xeno-canto">Xeno-canto</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.xeno-canto.org/species/Apus-apus">Apus-apus</a></span></span></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;text-align: left;"><i>Hirundo apus</i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q47482520" class="extiw" title="wikidata:Q47482520">Q47482520</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/8352489">8352489</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox authority-control" aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q25377#identifiers&amp;#124;Edit_this_at_Wikidata" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q25377#identifiers&amp;#124;Edit_this_at_Wikidata" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q25377#identifiers" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/GND_(identifier)" class="mw-redirect" title="GND (identifier)">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://d-nb.info/gnd/4221212-1">4221212-1</a></span></span></li>
+<li><span class="nowrap"><a href="/wiki/LCCN_(identifier)" class="mw-redirect" title="LCCN (identifier)">LCCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://id.loc.gov/authorities/subjects/sh2015000590">sh2015000590</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1373
+Cached time: 20201102224227
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 1.136 seconds
+Real time usage: 1.568 seconds
+Preprocessor visited node count: 6740/1000000
+Post‐expand include size: 63920/2097152 bytes
+Template argument size: 7365/2097152 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 31/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 44674/5000000 bytes
+Lua time usage: 0.803/10.000 seconds
+Lua memory usage: 10.96 MB/50 MB
+Number of Wikibase entities loaded: 28/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1464.347      1 -total
+ 35.74%  523.422      1 Template:Speciesbox
+ 35.12%  514.333      1 Template:Taxobox/core
+ 24.76%  362.532      1 Template:Taxonbar
+ 14.16%  207.291      1 Template:Reflist
+  8.29%  121.328      6 Template:Cite_journal
+  5.97%   87.482      1 Template:Commons_category
+  5.59%   81.905      1 Template:Short_description
+  5.57%   81.634      1 Template:Sister_project
+  5.23%   76.513      1 Template:Side_box
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:66173-0!canonical and timestamp 20201102224225 and revision id 977861843
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Common_swift&amp;oldid=977861843">https://en.wikipedia.org/w/index.php?title=Common_swift&amp;oldid=977861843</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Apus_(genus)" title="Category:Apus (genus)">Apus (genus)</a></li><li><a href="/wiki/Category:Swifts" title="Category:Swifts">Swifts</a></li><li><a href="/wiki/Category:Birds_of_Eurasia" title="Category:Birds of Eurasia">Birds of Eurasia</a></li><li><a href="/wiki/Category:Birds_of_Africa" title="Category:Birds of Africa">Birds of Africa</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_Latin-language_sources_(la)" title="Category:CS1 Latin-language sources (la)">CS1 Latin-language sources (la)</a></li><li><a href="/wiki/Category:CS1:_long_volume_value" title="Category:CS1: long volume value">CS1: long volume value</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_May_2013" title="Category:Articles with unsourced statements from May 2013">Articles with unsourced statements from May 2013</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_automatically_added_original_combinations" title="Category:Taxonbars with automatically added original combinations">Taxonbars with automatically added original combinations</a></li><li><a href="/wiki/Category:Taxonbars_with_25%E2%80%9329_taxon_IDs" title="Category:Taxonbars with 25–29 taxon IDs">Taxonbars with 25–29 taxon IDs</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_LCCN_identifiers" title="Category:Wikipedia articles with LCCN identifiers">Wikipedia articles with LCCN identifiers</a></li><li><a href="/wiki/Category:Articles_containing_video_clips" title="Category:Articles containing video clips">Articles containing video clips</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Common+swift" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Common+swift" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Common_swift" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Common_swift" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Common_swift">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Common_swift&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Common_swift&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Common_swift" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Common_swift" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Common_swift&amp;oldid=977861843" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Common_swift&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Common_swift&amp;id=977861843&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q25377" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Common_swift&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Common_swift&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Apus_apus" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Apus_apus" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%A5%D1%8C%D1%8D%D0%BF%D1%86%D3%80%D0%B0%D1%89%D1%85%D1%8A%D1%83%D1%8D" title="ХьэпцӀащхъуэ – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Europese_windswael" title="Europese windswael – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-als"><a href="https://als.wikipedia.org/wiki/Mauersegler" title="Mauersegler – Alemannisch" lang="gsw" hreflang="gsw" class="interlanguage-link-target">Alemannisch</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%B3%D9%85%D8%A7%D9%85%D8%A9_%D8%B4%D8%A7%D8%A6%D8%B9%D8%A9" title="سمامة شائعة – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Apus_apus" title="Apus apus – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Qara_uzunqanad" title="Qara uzunqanad – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/%D0%A7%D0%BE%D1%80%D0%BD%D1%8B_%D1%81%D0%B2%D1%96%D1%80%D0%B3%D1%83%D0%BB%D1%8C" title="Чорны свіргуль – Belarusian" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%B5%D0%BD_%D0%B1%D1%8A%D1%80%D0%B7%D0%BE%D0%BB%D0%B5%D1%82" title="Черен бързолет – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Glaouer_du" title="Glaouer du – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Falciot_negre" title="Falciot negre – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cv"><a href="https://cv.wikipedia.org/wiki/%D0%A5%D1%83%D1%80%D0%B0_%D0%B2%C4%95%D1%80%D1%88%C4%95%D0%BD" title="Хура вĕршĕн – Chuvash" lang="cv" hreflang="cv" class="interlanguage-link-target">Чӑвашла</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Apus_apus" title="Apus apus – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Ror%C3%BDs_obecn%C3%BD" title="Rorýs obecný – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-co"><a href="https://co.wikipedia.org/wiki/Rundonu_cumunu" title="Rundonu cumunu – Corsican" lang="co" hreflang="co" class="interlanguage-link-target">Corsu</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Gwennol_ddu" title="Gwennol ddu – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Mursejler" title="Mursejler – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-se"><a href="https://se.wikipedia.org/wiki/Leahttosp%C3%A1lfu" title="Leahttospálfu – Northern Sami" lang="se" hreflang="se" class="interlanguage-link-target">Davvisámegiella</a></li><li class="interlanguage-link interwiki-de badge-Q17437796 badge-featuredarticle" title="featured article badge"><a href="https://de.wikipedia.org/wiki/Mauersegler" title="Mauersegler – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/T%C3%B3_w%C3%B3naan%C3%ADd%C4%99%CC%81%C4%99%CC%81%CA%BC_tsx%C4%AF%CC%81%C4%AF%CC%81%C5%82naalk%CA%BC%C4%AFhii" title="Tó wónaanídę́ę́ʼ tsxį́į́łnaalkʼįhii – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Piiritaja" title="Piiritaja – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%9C%CE%B1%CF%85%CF%81%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1" title="Μαυροσταχτάρα – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Apus_apus" title="Apus apus – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Ordinara_apuso" title="Ordinara apuso – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Sorbeltz_arrunt" title="Sorbeltz arrunt – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%D8%AF%D8%AE%D9%88%D8%B1%DA%A9_%D9%85%D8%B9%D9%85%D9%88%D9%84%DB%8C" title="بادخورک معمولی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Feigdarsveimari" title="Feigdarsveimari – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Martinet_noir" title="Martinet noir – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-fy"><a href="https://fy.wikipedia.org/wiki/Toerswel" title="Toerswel – Western Frisian" lang="fy" hreflang="fy" class="interlanguage-link-target">Frysk</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Gabhl%C3%A1n_gaoithe" title="Gabhlán gaoithe – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Cirrio_com%C3%BAn" title="Cirrio común – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%9F%BD%EC%B9%BC%EC%83%88" title="유럽칼새 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D5%8D%D6%87_%D5%B4%D5%A1%D5%B6%D5%A3%D5%A1%D5%B2%D5%A1%D5%A9%D6%87" title="Սև մանգաղաթև – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Crna_%C4%8Diopa" title="Crna čiopa – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Apus_apus" title="Apus apus – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-ia"><a href="https://ia.wikipedia.org/wiki/Apus_apus" title="Apus apus – Interlingua" lang="ia" hreflang="ia" class="interlanguage-link-target">Interlingua</a></li><li class="interlanguage-link interwiki-os"><a href="https://os.wikipedia.org/wiki/%D0%A1%D0%B0%D1%83_%D1%87%D1%8A%D0%B8%D0%BC%D0%B0" title="Сау чъима – Ossetic" lang="os" hreflang="os" class="interlanguage-link-target">Ирон</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/M%C3%BArsv%C3%B6lungur" title="Múrsvölungur – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Apus_apus" title="Apus apus – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A1%D7%99%D7%A1_%D7%97%D7%95%D7%9E%D7%95%D7%AA" title="סיס חומות – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-csb"><a href="https://csb.wikipedia.org/wiki/Jask%C3%B9lc" title="Jaskùlc – Kashubian" lang="csb" hreflang="csb" class="interlanguage-link-target">Kaszëbsczi</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D2%9A%D0%B0%D1%80%D0%B0_%D1%81%D2%B1%D1%80%D2%9B%D0%B0%D1%80%D0%BB%D1%8B%D2%93%D0%B0%D1%88" title="Қара сұрқарлығаш – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-ky"><a href="https://ky.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%B0_%D0%BA%D0%B0%D1%80%D0%BB%D1%8B%D0%B3%D0%B0%D1%87" title="Кара карлыгач – Kyrgyz" lang="ky" hreflang="ky" class="interlanguage-link-target">Кыргызча</a></li><li class="interlanguage-link interwiki-mrj"><a href="https://mrj.wikipedia.org/wiki/%D0%92%D3%B9%D1%80%D0%B7%D0%B8" title="Вӹрзи – Western Mari" lang="mrj" hreflang="mrj" class="interlanguage-link-target">Кырык мары</a></li><li class="interlanguage-link interwiki-la"><a href="https://la.wikipedia.org/wiki/Apus_apus" title="Apus apus – Latin" lang="la" hreflang="la" class="interlanguage-link-target">Latina</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Sv%C4%ABre" title="Svīre – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Juodasis_%C4%8Diurlys" title="Juodasis čiurlys – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-lij"><a href="https://lij.wikipedia.org/wiki/Barboutu" title="Barboutu – Ligurian" lang="lij" hreflang="lij" class="interlanguage-link-target">Ligure</a></li><li class="interlanguage-link interwiki-olo"><a href="https://olo.wikipedia.org/wiki/Me%C4%8D%C4%8Dypi%C3%A4%C4%8Dk%C3%B6i" title="Meččypiäčköi – Livvi-Karelian" lang="olo" hreflang="olo" class="interlanguage-link-target">Livvinkarjala</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Sarl%C3%B3sfecske" title="Sarlósfecske – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0_%D0%BF%D0%B8%D1%88%D1%82%D0%B0%D1%80%D0%BA%D0%B0" title="Мала пиштарка – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%AE%E0%B4%B2%E0%B4%99%E0%B5%8D%E0%B4%95%E0%B5%82%E0%B4%B3%E0%B5%BB" title="മലങ്കൂളൻ – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Gierzwaluw" title="Gierzwaluw – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ne"><a href="https://ne.wikipedia.org/wiki/%E0%A4%96%E0%A5%88%E0%A4%B0%E0%A5%8B_%E0%A4%97%E0%A5%8C%E0%A4%81%E0%A4%A5%E0%A4%B2%E0%A5%80" title="खैरो गौँथली – Nepali" lang="ne" hreflang="ne" class="interlanguage-link-target">नेपाली</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%82%A2%E3%83%9E%E3%83%84%E3%83%90%E3%83%A1" title="ヨーロッパアマツバメ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-frr"><a href="https://frr.wikipedia.org/wiki/T%C3%BCrnswaalk" title="Türnswaalk – Northern Frisian" lang="frr" hreflang="frr" class="interlanguage-link-target">Nordfriisk</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/T%C3%A5rnseiler" title="Tårnseiler – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/T%C3%A5rnseglar" title="Tårnseglar – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Apus_apus" title="Apus apus – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Jerzyk_zwyczajny" title="Jerzyk zwyczajny – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Andorinh%C3%A3o-preto" title="Andorinhão-preto – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Drepnea_neagr%C4%83" title="Drepnea neagră – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%A1%D0%B5%D1%80%D0%BF%D0%B8%D0%BA" title="Серпик – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A7%D1%91%D1%80%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D1%80%D0%B8%D0%B6" title="Чёрный стриж – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sc"><a href="https://sc.wikipedia.org/wiki/Rundinone" title="Rundinone – Sardinian" lang="sc" hreflang="sc" class="interlanguage-link-target">Sardu</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Apus_apus" title="Apus apus – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-scn"><a href="https://scn.wikipedia.org/wiki/Rinninuni" title="Rinninuni – Sicilian" lang="scn" hreflang="scn" class="interlanguage-link-target">Sicilianu</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/D%C3%A1%C5%BE%C4%8Fovn%C3%ADk_oby%C4%8Dajn%C3%BD" title="Dážďovník obyčajný – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/Hudournik_(pti%C4%8D)" title="Hudournik (ptič) – Slovenian" lang="sl" hreflang="sl" class="interlanguage-link-target">Slovenščina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BD%D0%B0_%D1%87%D0%B8%D0%BE%D0%BF%D0%B0" title="Црна чиопа – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/Crna_%C4%8Diopa" title="Crna čiopa – Serbo-Croatian" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Tervap%C3%A4%C3%A4sky" title="Tervapääsky – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv badge-Q17437798 badge-goodarticle" title="good article badge"><a href="https://sv.wikipedia.org/wiki/Tornseglare" title="Tornseglare – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tl"><a href="https://tl.wikipedia.org/wiki/Apus_apus" title="Apus apus – Tagalog" lang="tl" hreflang="tl" class="interlanguage-link-target">Tagalog</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%A4%E0%AE%B0%E0%AF%88%E0%AE%AF%E0%AE%BF%E0%AE%B2%E0%AE%BE%E0%AE%A9%E0%AF%8D_%E0%AE%95%E0%AF%81%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BF" title="தரையிலான் குருவி – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Ebabil" title="Ebabil – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-udm"><a href="https://udm.wikipedia.org/wiki/%D0%A1%D1%8C%D3%A7%D0%B4_%D0%BF%D3%A7%D1%81%D1%8C%D0%BA%D1%8B" title="Сьӧд пӧськы – Udmurt" lang="udm" hreflang="udm" class="interlanguage-link-target">Удмурт</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A1%D0%B5%D1%80%D0%BF%D0%BE%D0%BA%D1%80%D0%B8%D0%BB%D0%B5%D1%86%D1%8C_%D1%87%D0%BE%D1%80%D0%BD%D0%B8%D0%B9" title="Серпокрилець чорний – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Y%E1%BA%BFn_th%C3%B4ng_th%C6%B0%E1%BB%9Dng" title="Yến thông thường – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-wa"><a href="https://wa.wikipedia.org/wiki/Airtch%C3%AE_(oujhea)" title="Airtchî (oujhea) – Walloon" lang="wa" hreflang="wa" class="interlanguage-link-target">Walon</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Apus_apus" title="Apus apus – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-wuu"><a href="https://wuu.wikipedia.org/wiki/%E6%99%AE%E9%80%9A%E6%A5%BC%E7%87%95" title="普通楼燕 – Wu Chinese" lang="wuu" hreflang="wuu" class="interlanguage-link-target">吴语</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%99%AE%E9%80%9A%E6%A5%BC%E7%87%95" title="普通楼燕 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q25377#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 11 September 2020, at 12:05<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Common_swift&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.136","walltime":"1.568","ppvisitednodes":{"value":6740,"limit":1000000},"postexpandincludesize":{"value":63920,"limit":2097152},"templateargumentsize":{"value":7365,"limit":2097152},"expansiondepth":{"value":21,"limit":40},"expensivefunctioncount":{"value":31,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":44674,"limit":5000000},"entityaccesscount":{"value":28,"limit":400},"timingprofile":["100.00% 1464.347      1 -total"," 35.74%  523.422      1 Template:Speciesbox"," 35.12%  514.333      1 Template:Taxobox/core"," 24.76%  362.532      1 Template:Taxonbar"," 14.16%  207.291      1 Template:Reflist","  8.29%  121.328      6 Template:Cite_journal","  5.97%   87.482      1 Template:Commons_category","  5.59%   81.905      1 Template:Short_description","  5.57%   81.634      1 Template:Sister_project","  5.23%   76.513      1 Template:Side_box"]},"scribunto":{"limitreport-timeusage":{"value":"0.803","limit":"10.000"},"limitreport-memusage":{"value":11492360,"limit":52428800}},"cachereport":{"origin":"mw1373","timestamp":"20201102224227","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Common swift","url":"https:\/\/en.wikipedia.org\/wiki\/Common_swift","sameAs":"http:\/\/www.wikidata.org\/entity\/Q25377","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q25377","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2002-07-31T04:19:03Z","dateModified":"2020-09-11T12:05:32Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/b\/be\/Apus_apus_-Barcelona%2C_Spain-8_%281%29.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":237,"wgHostname":"mw1325"});});</script>
+</body></html>

@@ -1,0 +1,91 @@
+.container-fluid {
+    text-align: center;
+}
+
+/* INDEX STYLES */
+#header {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+
+#form input {
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+#form select {
+    padding: .61rem;
+    margin-right: 1rem;
+}
+
+#form button {
+    /* IMDB Yellow */
+    background-color: rgb(245,197,24);
+    /* Center it to the input */
+    margin-bottom: .25rem;
+}
+
+#form button:hover {
+    /* IMDB Yellow */
+    background-color: rgba(245,197,24, 0.75);
+}
+
+/* RESULTS STYLES */
+#results-header {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#results-header i{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+#results-header i:hover {
+    color: rgb(245,197,24);
+}
+
+#results {
+    margin: 1rem auto;
+    width: 90%
+}
+
+#results .row {
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    padding: .5rem;
+}
+
+#results .row:nth-child(even) {
+    background-color: lightgrey;
+}
+
+#results .row img {
+    margin-right: 1rem;
+}
+
+#results .row a {
+    text-decoration: none;
+    color: black;
+}
+
+#results .row a:hover {
+    text-decoration: underline;
+    color: rgb(245,197,24);
+}
+
+
+/* MEDIA QUERIES */
+@media (min-width: 370px) {
+    #form input {
+        margin-right: 1rem;
+    }
+}
+
+@media (min-width: 540px) {
+    #form input {
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Bateleur - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"4968f469-0756-43cb-bcbb-fb5a454f2851","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Bateleur","wgTitle":"Bateleur","wgCurRevisionId":973382143,"wgRevisionId":973382143,"wgArticleId":3830863,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","Articles with 'species' microformats","Commons link is on Wikidata","Commons category link is on Wikidata","Articles containing video clips","IUCN Red List near threatened species","Circaetinae","Birds of prey of Sub-Saharan Africa","Birds of the Middle East",
+"Near threatened animals","Near threatened biota of Africa","Near threatened biota of Asia","Birds described in 1830"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Bateleur","wgRelevantArticleId":3830863,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q726387"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready"
+,"noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","mediawiki.page.gallery.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader",
+"ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.page.gallery.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/9/92/Bateleur_Eagle_with_Kill.jpg"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Bateleur"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Bateleur&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Bateleur&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Bateleur"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Bateleur rootpage-Bateleur skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Bateleur</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">This article is about the species of bird. For other uses, see <a href="/wiki/Bateleur_(disambiguation)" class="mw-disambig" title="Bateleur (disambiguation)">Bateleur (disambiguation)</a>.</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Bateleur
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Bateleur_Eagle_with_Kill.jpg" class="image"><img alt="Bateleur Eagle with Kill.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bateleur_Eagle_with_Kill.jpg/260px-Bateleur_Eagle_with_Kill.jpg" decoding="async" width="260" height="173" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bateleur_Eagle_with_Kill.jpg/390px-Bateleur_Eagle_with_Kill.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Bateleur_Eagle_with_Kill.jpg/520px-Bateleur_Eagle_with_Kill.jpg 2x" data-file-width="1184" data-file-height="789" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Male at <a href="/wiki/Maasai_Mara_National_Reserve" class="mw-redirect" title="Maasai Mara National Reserve">Maasai Mara</a> with a <a href="/wiki/Coqui_francolin" title="Coqui francolin">coqui francolin</a> kill
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Status_iucn3.1_NT.svg/220px-Status_iucn3.1_NT.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Status_iucn3.1_NT.svg/330px-Status_iucn3.1_NT.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Status_iucn3.1_NT.svg/440px-Status_iucn3.1_NT.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Near_Threatened" class="mw-redirect" title="Near Threatened">Near Threatened</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Terathopius" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Accipitriformes" title="Accipitriformes">Accipitriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Accipitridae" title="Accipitridae">Accipitridae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a class="mw-selflink selflink"><i>Terathopius</i></a><br /><small><a href="/wiki/Ren%C3%A9_Primev%C3%A8re_Lesson" class="mw-redirect" title="René Primevère Lesson">Lesson</a>, 1830</small>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>T.&#160;ecaudatus</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Terathopius ecaudatus</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Fran%C3%A7ois_Marie_Daudin" title="François Marie Daudin">Daudin</a>, 1800)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Gaukler_Terathopius_ecaudatus_world.png" class="image"><img alt="Gaukler Terathopius ecaudatus world.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gaukler_Terathopius_ecaudatus_world.png/260px-Gaukler_Terathopius_ecaudatus_world.png" decoding="async" width="260" height="122" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gaukler_Terathopius_ecaudatus_world.png/390px-Gaukler_Terathopius_ecaudatus_world.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/af/Gaukler_Terathopius_ecaudatus_world.png/520px-Gaukler_Terathopius_ecaudatus_world.png 2x" data-file-width="1334" data-file-height="628" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%"><span style="margin:0px; font-size:90%;"><span style="border:none; background-color:#03C03C; color:#03C03C;">&#160;&#160;&#160;&#160;</span>&#160;approximate breeding range</span>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</tbody></table>
+<p>The <b>Bateleur</b> (<i>Terathopius ecaudatus</i>) is a medium-sized <a href="/wiki/Eagle" title="Eagle">eagle</a> in the family <a href="/wiki/Accipitridae" title="Accipitridae">Accipitridae</a>. Its closest relatives are the snake eagles. It is the only member of the <a href="/wiki/Genus" title="Genus">genus</a> <i>Terathopius</i> and may be the origin of the "<a href="/wiki/Zimbabwe_Bird" title="Zimbabwe Bird">Zimbabwe Bird</a>", the national emblem of <a href="/wiki/Zimbabwe" title="Zimbabwe">Zimbabwe</a>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> It is endemic to Africa and small parts of Arabia. "<i>Bateleur</i>" is <a href="/wiki/French_language" title="French language">French</a> for "street performer".<sup id="cite_ref-dictionary.reverso.net_3-0" class="reference"><a href="#cite_note-dictionary.reverso.net-3">&#91;3&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Distribution_and_habitat"><span class="tocnumber">2</span> <span class="toctext">Distribution and habitat</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Ecology"><span class="tocnumber">3</span> <span class="toctext">Ecology</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Habitat"><span class="tocnumber">3.1</span> <span class="toctext">Habitat</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Diet"><span class="tocnumber">3.2</span> <span class="toctext">Diet</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Behaviour"><span class="tocnumber">4</span> <span class="toctext">Behaviour</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Sunning"><span class="tocnumber">4.1</span> <span class="toctext">Sunning</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Breeding"><span class="tocnumber">5</span> <span class="toctext">Breeding</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Conservation"><span class="tocnumber">6</span> <span class="toctext">Conservation</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Media"><span class="tocnumber">7</span> <span class="toctext">Media</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Terathopius-ecaudatus-01.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Terathopius-ecaudatus-01.jpg/220px-Terathopius-ecaudatus-01.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Terathopius-ecaudatus-01.jpg/330px-Terathopius-ecaudatus-01.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Terathopius-ecaudatus-01.jpg/440px-Terathopius-ecaudatus-01.jpg 2x" data-file-width="1280" data-file-height="960" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Terathopius-ecaudatus-01.jpg" class="internal" title="Enlarge"></a></div>Close-up of head</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Terathopius_ecaudatus_Flickr1.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Terathopius_ecaudatus_Flickr1.jpg/220px-Terathopius_ecaudatus_Flickr1.jpg" decoding="async" width="220" height="130" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Terathopius_ecaudatus_Flickr1.jpg/330px-Terathopius_ecaudatus_Flickr1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/01/Terathopius_ecaudatus_Flickr1.jpg/440px-Terathopius_ecaudatus_Flickr1.jpg 2x" data-file-width="2075" data-file-height="1228" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Terathopius_ecaudatus_Flickr1.jpg" class="internal" title="Enlarge"></a></div>A captive immature bateleur</div></div></div>
+<p>The average adult is 55 to 70&#160;cm (22 to 28&#160;in) long with a 186&#160;cm (6&#160;ft 1&#160;in) wingspan. The wing chord averages approximately 51&#160;cm (20&#160;in). Adult weight is typically 2 to 2.6&#160;kg (4&#160;lb 7&#160;oz to 5&#160;lb 12&#160;oz).<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p><p>The Bateleur is a colourful <a href="/wiki/Species" title="Species">species</a> with a bushy head and very short tail (<i>ecaudatus</i> is <a href="/wiki/Latin" title="Latin">Latin</a> for tail-less) which, together with its white underwing coverts, makes it unmistakable in flight. The tail is so small the bird's legs protrude slightly beyond the tail during flight. The Bateleur is sexually dimorphic; both adults have black plumage, a <a href="/wiki/Chestnut_(color)" title="Chestnut (color)">chestnut</a> mantle and tail, grey shoulders, tawny wing coverts, and red facial skin, bill and legs. The female additionally has tawny secondary wing feathers. Less commonly, the mantle may be white.<sup id="cite_ref-Newmans_5-0" class="reference"><a href="#cite_note-Newmans-5">&#91;5&#93;</a></sup> Immature birds are brown with white dappling and have greenish blue-grey facial skin.<sup id="cite_ref-:1_6-0" class="reference"><a href="#cite_note-:1-6">&#91;6&#93;</a></sup> It takes them seven or eight years to reach full maturity.
+</p>
+<h2><span class="mw-headline" id="Distribution_and_habitat">Distribution and habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=2" title="Edit section: Distribution and habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Bateleur_des_savanes.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Bateleur_des_savanes.jpg/220px-Bateleur_des_savanes.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Bateleur_des_savanes.jpg/330px-Bateleur_des_savanes.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/08/Bateleur_des_savanes.jpg/440px-Bateleur_des_savanes.jpg 2x" data-file-width="5184" data-file-height="3888" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Bateleur_des_savanes.jpg" class="internal" title="Enlarge"></a></div>savannah bateleur in bénin</div></div></div><p>The range of the Bateleur spreads across Mauritania, Senegal, Mali, Guinea, Sudan, Ethiopia, Somalia, Namibia, Botswana, South Africa, Saudi Arabia, Yemen, Côte d'Ivoire, Kenya, Nigeria, Zambia, Zimbabwe, Tanzania.<sup id="cite_ref-:1_6-1" class="reference"><a href="#cite_note-:1-6">&#91;6&#93;</a></sup> The bird's range has diminished significantly in recent decades, possibly due to poisoning,<sup id="cite_ref-Allan_7-0" class="reference"><a href="#cite_note-Allan-7">&#91;7&#93;</a></sup> and as such has been confined mostly to conservation areas such as national wildlife parks.<sup id="cite_ref-Roberts_8-0" class="reference"><a href="#cite_note-Roberts-8">&#91;8&#93;</a></sup>
+</p><p>In April 2012, a juvenile Bateleur was seen in Algeciras in southern Spain.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> This was the first European record for the Bateleur.
+</p>
+<h2><span class="mw-headline" id="Ecology">Ecology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=3" title="Edit section: Ecology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This eagle is a solitary, tree-nesting species with a large home range.<sup id="cite_ref-:0_10-0" class="reference"><a href="#cite_note-:0-10">&#91;10&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Habitat">Habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=4" title="Edit section: Habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The Bateleur is a common to fairly common resident or nomadic<sup id="cite_ref-:1_6-2" class="reference"><a href="#cite_note-:1-6">&#91;6&#93;</a></sup> bird of the open <a href="/wiki/Savanna" title="Savanna">savanna</a> country and woodland (<a href="/wiki/Thornveld" class="mw-redirect" title="Thornveld">thornveld</a>) within <a href="/wiki/Sub-Saharan_Africa" title="Sub-Saharan Africa">Sub-Saharan Africa</a>; it also occurs in south-western <a href="/wiki/Arabia" class="mw-redirect" title="Arabia">Arabia</a>. Found in closed-canopy savannah woodland habitats, including Acacia savannah, Mopane and miombo woodlands. It is commonest in broad-leaved woodland in the Okavango Delta. It occurs rarely in heavily forested, mountainous or largely treeless habitats. In Namibia, it is often found over tall woodland near drainage lines, and ephemeral rivers in north-eastern Namibia and within the more arid Etosha National Park.<sup id="cite_ref-:0_10-1" class="reference"><a href="#cite_note-:0-10">&#91;10&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Diet">Diet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=5" title="Edit section: Diet">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The Bateleur is diurnal, foraging over a huge range (55–200&#160;km²)<sup id="cite_ref-:1_6-3" class="reference"><a href="#cite_note-:1-6">&#91;6&#93;</a></sup> and hunting over a territory of approximately 250 square miles (650&#160;km<sup>2</sup>) a day. Bateleurs are hunters and scavengers, they will attack other species for food and will scavenge carrion. The bird is adept at finding smaller carcasses before most other scavengers. The Bateleur will hunt birds and their eggs (mainly doves and pigeons), small reptiles, small mammals (like rodents, genets and mongooses) and insects.<sup id="cite_ref-:0_10-2" class="reference"><a href="#cite_note-:0-10">&#91;10&#93;</a></sup><sup id="cite_ref-:1_6-4" class="reference"><a href="#cite_note-:1-6">&#91;6&#93;</a></sup> Its prey is often stolen by the <a href="/wiki/Tawny_eagle" title="Tawny eagle">tawny eagle</a> (<i>Aquila rapax</i>), and the Bateleur may attempt kleptoparasitism of white-backed vultures.<sup id="cite_ref-Roberts_8-1" class="reference"><a href="#cite_note-Roberts-8">&#91;8&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Behaviour">Behaviour</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=6" title="Edit section: Behaviour">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Bateleur is generally silent, but can produce a variety of <a href="/wiki/Bird_song" class="mw-redirect" title="Bird song">barks and screams</a>. The bird spends a considerable amount of time on the wing, particularly in low-altitude glides.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> "<i>Bateleur</i>" is <a href="/wiki/French_language" title="French language">French</a> for "tumbler".  This name implies the bird's characteristic habit of rocking its <a href="/wiki/Wing" title="Wing">wings</a> or tilting action from side to side when gliding, as if catching its balance.<sup id="cite_ref-:1_6-5" class="reference"><a href="#cite_note-:1-6">&#91;6&#93;</a></sup> The wings are held in a slightly bent, deep 'V', position and fast flight with. Bateleurs hunt from swift, direct gliding flight across country, or in wide sweeping circles.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> The Bateleur is a territorial bird and will defend its territory by means of an aggressive attack flight pattern shown to intruding conspecifics.<sup id="cite_ref-Watson_1989_13-0" class="reference"><a href="#cite_note-Watson_1989-13">&#91;13&#93;</a></sup> Intruders to whom this behavior is displayed always submit and submission is shown by retreating to a safe upper boundary (elevation). Males and females both display this behavior in all stages of the breeding cycle. This behavior is mainly shown to members of the same sex and particularly to non-adults, as it is thought that they may have a greater ability to take over another bird's territory (having greater competitive ability for limited food resources).<sup id="cite_ref-Watson_1989_13-1" class="reference"><a href="#cite_note-Watson_1989-13">&#91;13&#93;</a></sup> In the wild Bateleurs are shy of man and sensitive to disturbance at the nest, easily abandoning the structure.<sup id="cite_ref-:2_14-0" class="reference"><a href="#cite_note-:2-14">&#91;14&#93;</a></sup> In captivity, however, they becomes unusually tame.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup> Bateleur eagles are among a group of raptors that secrete a clear, salty fluid from their <a href="/wiki/Nares" class="mw-redirect" title="Nares">nares</a> whilst eating. According to Schmidt-Nielson's (1964) hypothesis, this is due to the general necessity for birds to use an extrarenal mechanism of salt secretion to aid water reabsorption.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Sunning">Sunning</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=7" title="Edit section: Sunning">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Bateleur_(Terathopius_ecaudatus)_male_(6854281398).jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Bateleur_%28Terathopius_ecaudatus%29_male_%286854281398%29.jpg/220px-Bateleur_%28Terathopius_ecaudatus%29_male_%286854281398%29.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Bateleur_%28Terathopius_ecaudatus%29_male_%286854281398%29.jpg/330px-Bateleur_%28Terathopius_ecaudatus%29_male_%286854281398%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/99/Bateleur_%28Terathopius_ecaudatus%29_male_%286854281398%29.jpg/440px-Bateleur_%28Terathopius_ecaudatus%29_male_%286854281398%29.jpg 2x" data-file-width="4320" data-file-height="3240" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Bateleur_(Terathopius_ecaudatus)_male_(6854281398).jpg" class="internal" title="Enlarge"></a></div>Bateleur sunbathing by a waterhole</div></div></div>
+<p>Bateleurs frequently enter water-bodies for a bath and then open their wings to often sunbathe. Standing upright and holding their wings straight out to the sides and tipped vertically, a classic 'phoenix' pose as they turn to follow the sun.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup> Bateleurs will lie on the ground with their wings spread, exposing the feathers to direct sunlight, warming the oils in the feathers. The bird will then spread the oils with its beak to improve its aerodynamics. Bateleurs may also be seen "praying" allowing ants to crawl over the wings and feathers, collecting bits of food, dead feather and skin material. When covered in ants, the Bateleur then ruffles its feathers, startling the ants, which react by secreting formic acid as self-defense. This in turn kills the ticks and fleas, ridding the host of its parasites.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Breeding">Breeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=8" title="Edit section: Breeding">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Bateleurs are monogamous and breed from September–May in West Africa, throughout the year in East Africa and December–August in southern Africa, with a peak from January to April.<sup id="cite_ref-:1_6-6" class="reference"><a href="#cite_note-:1-6">&#91;6&#93;</a></sup><sup id="cite_ref-:0_10-3" class="reference"><a href="#cite_note-:0-10">&#91;10&#93;</a></sup> Bateleurs are long-lived species, slow-maturing, slow-breeding species,<sup id="cite_ref-:0_10-4" class="reference"><a href="#cite_note-:0-10">&#91;10&#93;</a></sup> laying only one egg at a time<sup id="cite_ref-Watson_1990_19-0" class="reference"><a href="#cite_note-Watson_1990-19">&#91;19&#93;</a></sup> (this is because more parental care can be invested per offspring resulting in greater survival).<sup id="cite_ref-Roberts_8-2" class="reference"><a href="#cite_note-Roberts-8">&#91;8&#93;</a></sup> Nests are stick platforms placed below the canopy of large trees such as <a href="/wiki/Senegalia_nigrescens" title="Senegalia nigrescens">Senegalia nigrescens</a>.<sup id="cite_ref-:2_14-1" class="reference"><a href="#cite_note-:2-14">&#91;14&#93;</a></sup> Both parents put equal amounts of care into the young and breeding failures are due to predation or a failure to lay the egg. Incubation lasts for 55 days and annual mean production is 0.47 chicks per breeding pair per year.<sup id="cite_ref-Watson_1990_19-1" class="reference"><a href="#cite_note-Watson_1990-19">&#91;19&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Conservation">Conservation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=9" title="Edit section: Conservation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Bateleur is considered to have a lifespan about 27 years. The annual adult survival rate is estimated at 95%, while the annual juvenile survival rate is estimated at 75%. Average sex ratios remain 1:1.<sup id="cite_ref-Roberts_8-3" class="reference"><a href="#cite_note-Roberts-8">&#91;8&#93;</a></sup> Global population is estimated in the tens of thousands at 10,000 to 100,000 individuals.<sup id="cite_ref-Ferguson_20-0" class="reference"><a href="#cite_note-Ferguson-20">&#91;20&#93;</a></sup><sup id="cite_ref-:1_6-7" class="reference"><a href="#cite_note-:1-6">&#91;6&#93;</a></sup> Like the <a href="/wiki/Martial_eagle" title="Martial eagle">martial eagle</a>, the Bateleur is reasonably common in conservation areas and scarce elsewhere.<sup id="cite_ref-Roberts_8-4" class="reference"><a href="#cite_note-Roberts-8">&#91;8&#93;</a></sup> In 2009, the Bateleur was placed in the <a href="/wiki/Near_threatened" class="mw-redirect" title="Near threatened">near threatened</a> <a href="/wiki/IUCN" class="mw-redirect" title="IUCN">IUCN</a> Red List category due to loss of <a href="/wiki/Habitat" title="Habitat">habitat</a>, <a href="/wiki/Pesticides" class="mw-redirect" title="Pesticides">pesticides</a>, capture for international trade and nest disturbance.<sup id="cite_ref-:1_6-8" class="reference"><a href="#cite_note-:1-6">&#91;6&#93;</a></sup><sup id="cite_ref-Ferguson_20-1" class="reference"><a href="#cite_note-Ferguson-20">&#91;20&#93;</a></sup>  Decline of the species and the reduction in range is suspected to have been moderately rapid over the past three generations. In South Africa and Namibia the Bateleur has been labelled as a "Vulnerable/Endangered" species, most likely from being trapped, for its feathers to be used in medicine by traditional healers for predicting future events.<sup id="cite_ref-:0_10-5" class="reference"><a href="#cite_note-:0-10">&#91;10&#93;</a></sup> The population has also decreased due to it feasting on poisoned animal carcasses being left out for other species. The Bateleur's wide foraging areas and their ability to locate very small pieces of carrion, makes them highly susceptible to poison-laced carcasses even from a small proportion of farmers who use poisons.<sup id="cite_ref-:0_10-6" class="reference"><a href="#cite_note-:0-10">&#91;10&#93;</a></sup> No large scale actions are underway but they are possibly protected in Yemen as an endangered species.<sup id="cite_ref-:1_6-9" class="reference"><a href="#cite_note-:1-6">&#91;6&#93;</a></sup> It is proposed to implement education and awareness campaigns across its range to reduce the use of poisoned baits. Regular population monitoring is being carried out.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Media">Media</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=10" title="Edit section: Media">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:30px auto;"><a href="/wiki/File:Gaukler-03.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Gaukler-03.jpg/120px-Gaukler-03.jpg" decoding="async" width="120" height="90" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Gaukler-03.jpg/180px-Gaukler-03.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Gaukler-03.jpg/240px-Gaukler-03.jpg 2x" data-file-width="520" data-file-height="390" /></a></div></div>
+			<div class="gallerytext">
+<center>Adult</center>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Gaukler-08.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Gaukler-08.jpg/90px-Gaukler-08.jpg" decoding="async" width="90" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Gaukler-08.jpg/135px-Gaukler-08.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/08/Gaukler-08.jpg/180px-Gaukler-08.jpg 2x" data-file-width="387" data-file-height="517" /></a></div></div>
+			<div class="gallerytext">
+<center>Adult male</center>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:28.5px auto;"><a href="/wiki/File:Buk%C3%A1z%C3%B3_sas_1.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Buk%C3%A1z%C3%B3_sas_1.jpg/120px-Buk%C3%A1z%C3%B3_sas_1.jpg" decoding="async" width="120" height="93" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Buk%C3%A1z%C3%B3_sas_1.jpg/180px-Buk%C3%A1z%C3%B3_sas_1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Buk%C3%A1z%C3%B3_sas_1.jpg/240px-Buk%C3%A1z%C3%B3_sas_1.jpg 2x" data-file-width="1395" data-file-height="1083" /></a></div></div>
+			<div class="gallerytext">
+<center>A female sunwarming in a zoo</center>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Bateleur_Eagle.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Bateleur_Eagle.jpg/80px-Bateleur_Eagle.jpg" decoding="async" width="80" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Bateleur_Eagle.jpg/120px-Bateleur_Eagle.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Bateleur_Eagle.jpg/159px-Bateleur_Eagle.jpg 2x" data-file-width="2000" data-file-height="3008" /></a></div></div>
+			<div class="gallerytext">
+<center>Immature</center>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><div id="mwe_player_0" class="PopUpMediaTransform" style="width:90px;" videopayload="&lt;div class=&quot;mediaContainer&quot; style=&quot;width:240px&quot;&gt;&lt;video id=&quot;mwe_player_1&quot; poster=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/d/de/Terathopius_ecaudatus.ogv/240px--Terathopius_ecaudatus.ogv.jpg&quot; controls=&quot;&quot; preload=&quot;none&quot; autoplay=&quot;&quot; style=&quot;width:240px;height:320px&quot; class=&quot;kskin&quot; data-durationhint=&quot;4.5&quot; data-startoffset=&quot;0&quot; data-mwtitle=&quot;Terathopius_ecaudatus.ogv&quot; data-mwprovider=&quot;wikimediacommons&quot;&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/d/de/Terathopius_ecaudatus.ogv&quot; type=&quot;video/ogg; codecs=&amp;quot;theora&amp;quot;&quot; data-title=&quot;Original Ogg file, 240 × 320 (1.71 Mbps)&quot; data-shorttitle=&quot;Ogg source&quot; data-width=&quot;240&quot; data-height=&quot;320&quot; data-bandwidth=&quot;1711282&quot; data-framerate=&quot;30&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/de/Terathopius_ecaudatus.ogv/Terathopius_ecaudatus.ogv.120p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Lowest bandwidth VP9 (120P)&quot; data-shorttitle=&quot;VP9 120P&quot; data-transcodekey=&quot;120p.vp9.webm&quot; data-width=&quot;90&quot; data-height=&quot;120&quot; data-bandwidth=&quot;96384&quot; data-framerate=&quot;30&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/de/Terathopius_ecaudatus.ogv/Terathopius_ecaudatus.ogv.160p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Low bandwidth WebM (160P)&quot; data-shorttitle=&quot;WebM 160P&quot; data-transcodekey=&quot;160p.webm&quot; data-width=&quot;120&quot; data-height=&quot;160&quot; data-bandwidth=&quot;134464&quot; data-framerate=&quot;30&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/de/Terathopius_ecaudatus.ogv/Terathopius_ecaudatus.ogv.180p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Low bandwidth VP9 (180P)&quot; data-shorttitle=&quot;VP9 180P&quot; data-transcodekey=&quot;180p.vp9.webm&quot; data-width=&quot;136&quot; data-height=&quot;180&quot; data-bandwidth=&quot;178368&quot; data-framerate=&quot;30&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/de/Terathopius_ecaudatus.ogv/Terathopius_ecaudatus.ogv.240p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Small WebM (240P)&quot; data-shorttitle=&quot;WebM 240P&quot; data-transcodekey=&quot;240p.webm&quot; data-width=&quot;180&quot; data-height=&quot;240&quot; data-bandwidth=&quot;264352&quot; data-framerate=&quot;30&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/de/Terathopius_ecaudatus.ogv/Terathopius_ecaudatus.ogv.240p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Small VP9 (240P)&quot; data-shorttitle=&quot;VP9 240P&quot; data-transcodekey=&quot;240p.vp9.webm&quot; data-width=&quot;180&quot; data-height=&quot;240&quot; data-bandwidth=&quot;321216&quot; data-framerate=&quot;30&quot;/&gt;&lt;/video&gt;&lt;/div&gt;"><img alt="File:Terathopius ecaudatus.ogv" style="width:90px;height:120px" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/de/Terathopius_ecaudatus.ogv/90px--Terathopius_ecaudatus.ogv.jpg" /><a href="//upload.wikimedia.org/wikipedia/commons/d/de/Terathopius_ecaudatus.ogv" title="Play media" target="new"><span class="play-btn-large"><span class="mw-tmh-playtext">Play media</span></span></a></div></div></div>
+			<div class="gallerytext">
+<center>A female perched on a gloved hand in <a href="/wiki/Disney%27s_Animal_Kingdom" title="Disney&#39;s Animal Kingdom">Disney's Animal Kingdom</a></center>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:41px auto;"><a href="/wiki/File:Bateleur.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Bateleur.jpg/120px-Bateleur.jpg" decoding="async" width="120" height="68" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Bateleur.jpg/180px-Bateleur.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Bateleur.jpg/240px-Bateleur.jpg 2x" data-file-width="1920" data-file-height="1080" /></a></div></div>
+			<div class="gallerytext">
+<center>Female in Texas</center>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Gaukler-01.jpg" class="image"><img alt="Gaukler-01.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Gaukler-01.jpg/99px-Gaukler-01.jpg" decoding="async" width="99" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Gaukler-01.jpg/148px-Gaukler-01.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Gaukler-01.jpg/198px-Gaukler-01.jpg 2x" data-file-width="429" data-file-height="520" /></a></div></div>
+			<div class="gallerytext">
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:35px auto;"><a href="/wiki/File:Terathopius_ecaudatus_-Chobe_River_front,_Botswana_-juvenile.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Terathopius_ecaudatus_-Chobe_River_front%2C_Botswana_-juvenile.jpg/120px-Terathopius_ecaudatus_-Chobe_River_front%2C_Botswana_-juvenile.jpg" decoding="async" width="120" height="80" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Terathopius_ecaudatus_-Chobe_River_front%2C_Botswana_-juvenile.jpg/180px-Terathopius_ecaudatus_-Chobe_River_front%2C_Botswana_-juvenile.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Terathopius_ecaudatus_-Chobe_River_front%2C_Botswana_-juvenile.jpg/240px-Terathopius_ecaudatus_-Chobe_River_front%2C_Botswana_-juvenile.jpg 2x" data-file-width="3008" data-file-height="2000" /></a></div></div>
+			<div class="gallerytext">
+<center>Two juveniles in Botswana</center>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Bateleur_drinking_water.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/56/Bateleur_drinking_water.jpg/116px-Bateleur_drinking_water.jpg" decoding="async" width="116" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/56/Bateleur_drinking_water.jpg/174px-Bateleur_drinking_water.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/56/Bateleur_drinking_water.jpg/232px-Bateleur_drinking_water.jpg 2x" data-file-width="2487" data-file-height="2576" /></a></div></div>
+			<div class="gallerytext">
+<center>Female drinking</center>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Bateleur_Eagle_skeleton.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Bateleur_Eagle_skeleton.jpg/75px-Bateleur_Eagle_skeleton.jpg" decoding="async" width="75" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Bateleur_Eagle_skeleton.jpg/113px-Bateleur_Eagle_skeleton.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Bateleur_Eagle_skeleton.jpg/151px-Bateleur_Eagle_skeleton.jpg 2x" data-file-width="3265" data-file-height="5180" /></a></div></div>
+			<div class="gallerytext">
+<p>Skeleton of a bateleur eagle (<a href="/wiki/Museum_of_Osteology" title="Museum of Osteology">Museum of Osteology</a>)
+</p>
+			</div>
+		</div></li>
+</ul>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Terathopius_ecaudatus" class="extiw" title="commons:Terathopius ecaudatus">Terathopius ecaudatus</a></b></i>.</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22695289/0">"<i>Terathopius ecaudatus</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Terathopius+ecaudatus&amp;rft.volume=2012&amp;rft.date=2012&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22695289%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABateleur" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.victoriafalls-guide.net/zimbabwe-bird.html">"Zimbabwe Bird"</a>. <i>victoriafalls-guide.net</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=victoriafalls-guide.net&amp;rft.atitle=Zimbabwe+Bird&amp;rft_id=http%3A%2F%2Fwww.victoriafalls-guide.net%2Fzimbabwe-bird.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABateleur" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-dictionary.reverso.net-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-dictionary.reverso.net_3-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://dictionary.reverso.net/french-english/bateleur">"bateleur translation English - French dictionary - Reverso"</a>. <i>reverso.net</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=reverso.net&amp;rft.atitle=bateleur+translation+English+-+French+dictionary+-+Reverso&amp;rft_id=http%3A%2F%2Fdictionary.reverso.net%2Ffrench-english%2Fbateleur&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABateleur" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">J. M. Mendelsohn, A. C. Kemp, H. C. Biggs, R. Biggs &amp; C. J. Brown(1989) <i>WING AREAS, WING LOADINGS AND WING SPANS OF 66 SPECIES OF AFRICAN RAPTORS</i> Ostrich, Vol. 60, No.1, p.35-60</span>
+</li>
+<li id="cite_note-Newmans-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Newmans_5-0">^</a></b></span> <span class="reference-text">Newman, K (1998) Newman's Birds of Southern Africa. Halfway House: Southern Book Publishers. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1868127680" title="Special:BookSources/1868127680">1868127680</a>.</span>
+</li>
+<li id="cite_note-:1-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-:1_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:1_6-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:1_6-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-:1_6-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-:1_6-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-:1_6-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-:1_6-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-:1_6-7"><sup><i><b>h</b></i></sup></a> <a href="#cite_ref-:1_6-8"><sup><i><b>i</b></i></sup></a> <a href="#cite_ref-:1_6-9"><sup><i><b>j</b></i></sup></a></span> <span class="reference-text">BirdLife International (2019) Species factsheet: <i>Terathopius ecaudatus</i>. Downloaded fromhttp://www.birdlife.org on 29/07/2019.</span>
+</li>
+<li id="cite_note-Allan-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-Allan_7-0">^</a></b></span> <span class="reference-text">Allan, D. 1996. A Photographic Guide to Birds of Prey of Southern, Central and East Africa. Cape Town: New Holland Publishers. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1853689033" title="Special:BookSources/1853689033">1853689033</a>.</span>
+</li>
+<li id="cite_note-Roberts-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-Roberts_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Roberts_8-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Roberts_8-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Roberts_8-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Roberts_8-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text">Hockey, P.A.R.; Dean, W.R.J. and Ryan, P.G. 2016. Roberts VII Birds of Southern Africa. John Voelcker Book Fund.</span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://birdcadiz.com/terathopius-ecaudatus-aguila-volatinera-bateleur-1">http://birdcadiz.com/terathopius-ecaudatus-aguila-volatinera-bateleur-1</a></span>
+</li>
+<li id="cite_note-:0-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-:0_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_10-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:0_10-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-:0_10-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-:0_10-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-:0_10-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-:0_10-6"><sup><i><b>g</b></i></sup></a></span> <span class="reference-text">Simmons, R. E., and C. J. Brown. "Bateleur Terathopius ecaudatus." <i>The Atlas of Southern African Birds</i> 1 (1997): 202-203.</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text">Kemp, AC &amp; Begg KS 2001.
+Comparison of time-activity budgets and population structure for 18 large-bird species in the Kruger National Park, South Africa. Ostrich, Vol.72, No.3-4, p.179-184</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text">Steyn, Peter. "Some observations on the bateleur Terathopius ecaudatus (Daudin)." <i>Ostrich</i> 36, no. 4 (1965): 203-213.</span>
+</li>
+<li id="cite_note-Watson_1989-13"><span class="mw-cite-backlink">^ <a href="#cite_ref-Watson_1989_13-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Watson_1989_13-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Watson, R.T. (1989). Aggressive display and territoriality of the bateleur Terathopius ecaudatus. African Zoology, 24(2),p146-150.</span>
+</li>
+<li id="cite_note-:2-14"><span class="mw-cite-backlink">^ <a href="#cite_ref-:2_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:2_14-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFChittenden,_Hugh2016" class="citation book cs1">Chittenden, Hugh (2016). <i>Roberts bird guide&#160;: illustrating nearly 1,000 species in Southern Africa</i>. Davies, Greg (Ornithologist),, Weiersbye, Ingrid,, John Voelcker Bird Book Fund., Percy FitzPatrick Institute of African Ornithology (Cape Town, South Africa) (Second ed.). Cape Town. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781920602017" title="Special:BookSources/9781920602017"><bdi>9781920602017</bdi></a>. <a href="/wiki/OCLC_(identifier)" class="mw-redirect" title="OCLC (identifier)">OCLC</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/oclc/958354485">958354485</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Roberts+bird+guide+%3A+illustrating+nearly+1%2C000+species+in+Southern+Africa&amp;rft.place=Cape+Town&amp;rft.edition=Second&amp;rft.date=2016&amp;rft_id=info%3Aoclcnum%2F958354485&amp;rft.isbn=9781920602017&amp;rft.au=Chittenden%2C+Hugh&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABateleur" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text">Moreau, R. E. "On the Bateleur, especially at the Nest." <i>Ibis</i>87, no. 2 (1945): 224-249.</span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text">Cade, T.J. and L. Greenwald 1964. Nasal Salt Secretion in Falconiform Birds. The Condor, Vol.68, No.4, p.338-350</span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.krugerpark.co.za/africa_bateleur_eagle.html">"Bataleur Eagle | Terathopius ecaudatus | Africa..."</a> <i>www.krugerpark.co.za</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-07-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.krugerpark.co.za&amp;rft.atitle=Bataleur+Eagle+%7C+Terathopius+ecaudatus+%7C+Africa...&amp;rft_id=http%3A%2F%2Fwww.krugerpark.co.za%2Fafrica_bateleur_eagle.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABateleur" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite id="CITEREFAfrica" class="citation web cs1">Africa, HPH Publishing South. <a rel="nofollow" class="external text" href="https://www.hphpublishing.co.za/blogs/news/praying-bateleur-do-you-know-why-bateleur-eagles-do-this">"Praying Bateleur? Do you know why Bateleur Eagles do this?"</a>. <i>HPH Publishing South Africa</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-07-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=HPH+Publishing+South+Africa&amp;rft.atitle=Praying+Bateleur%3F+Do+you+know+why+Bateleur+Eagles+do+this%3F&amp;rft.aulast=Africa&amp;rft.aufirst=HPH+Publishing+South&amp;rft_id=https%3A%2F%2Fwww.hphpublishing.co.za%2Fblogs%2Fnews%2Fpraying-bateleur-do-you-know-why-bateleur-eagles-do-this&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABateleur" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Watson_1990-19"><span class="mw-cite-backlink">^ <a href="#cite_ref-Watson_1990_19-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Watson_1990_19-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Watson, R.T. (1990) BREEDING BIOLOGY OF THE BATELEUR. Ostrich, 61:1-2, p13-23. DOI: 10.1080/00306525.1990.9633933.</span>
+</li>
+<li id="cite_note-Ferguson-20"><span class="mw-cite-backlink">^ <a href="#cite_ref-Ferguson_20-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Ferguson_20-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Ferguson-Lees, J. and Christie, D. A. (2001) Raptors of the world. London: Christopher Helm.</span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.iucnredlist.org/en">"The IUCN Red List of Threatened Species"</a>. <i>IUCN Red List of Threatened Species</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-07-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=The+IUCN+Red+List+of+Threatened+Species&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fen&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABateleur" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bateleur&amp;action=edit&amp;section=12" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Bateleur - <a rel="nofollow" class="external text" href="http://sabap2.adu.org.za/docs/sabap1/146.pdf">Species text in The Atlas of Southern African Birds</a>.</li></ul>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Terathopius_ecaudatus" class="extiw" title="commons:Category:Terathopius ecaudatus"><span style="">Terathopius ecaudatus</span></a></b></i>.</td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/34px-Wikispecies-logo.svg.png" decoding="async" width="34" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/51px-Wikispecies-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/68px-Wikispecies-logo.svg.png 2x" data-file-width="941" data-file-height="1103" /></td>
+<td class="mbox-text plainlist"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a> has information related to <i><b><a href="https://species.wikimedia.org/wiki/Terathopius_ecaudatus" class="extiw" title="wikispecies:Terathopius ecaudatus">Terathopius ecaudatus</a></b></i></td></tr>
+</tbody></table>
+<div role="navigation" class="navbox" aria-labelledby="Subfamily:_Circaetinae" style="padding:3px"><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Circaetinae" title="Template:Circaetinae"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Circaetinae" title="Template talk:Circaetinae"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Circaetinae&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Subfamily:_Circaetinae" style="font-size:114%;margin:0 4em"><a href="/wiki/Family_(biology)" title="Family (biology)">Subfamily</a>: <b><a href="/wiki/Circaetinae" title="Circaetinae">Circaetinae</a></b></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><b><a href="/wiki/Genus" title="Genus">Genus</a></b></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;background:#eef;"><div style="padding:0em 0.25em"><b><a href="/wiki/Species" title="Species">Species</a></b></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Terathopius" class="mw-redirect" title="Terathopius">Terathopius</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a class="mw-selflink selflink">Bateleur</a></span></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Circaetus" title="Circaetus">Circaetus</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/Beaudouin%27s_snake_eagle" title="Beaudouin&#39;s snake eagle">Beaudouin's snake eagle</a></span></li>
+<li><span class="nowrap"><a href="/wiki/Short-toed_snake_eagle" title="Short-toed snake eagle">Short-toed snake eagle</a></span></li>
+<li><span class="nowrap"><a href="/wiki/Black-chested_snake_eagle" title="Black-chested snake eagle">Black-chested snake eagle</a></span></li>
+<li><span class="nowrap"><a href="/wiki/Brown_snake_eagle" title="Brown snake eagle">Brown snake eagle</a></span></li>
+<li><span class="nowrap"><a href="/wiki/Southern_banded_snake_eagle" title="Southern banded snake eagle">Southern banded snake eagle</a></span></li>
+<li><span class="nowrap"><a href="/wiki/Western_banded_snake_eagle" title="Western banded snake eagle">Western banded snake eagle</a></span></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Dryotriorchis" class="mw-redirect" title="Dryotriorchis">Dryotriorchis</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/Congo_serpent_eagle" title="Congo serpent eagle">Congo serpent eagle</a></span></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Spilornis" title="Spilornis">Spilornis</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/Crested_serpent_eagle" title="Crested serpent eagle">Crested serpent eagle</a></span></li>
+<li><span class="nowrap"><a href="/wiki/South_Nicobar_serpent_eagle" class="mw-redirect" title="South Nicobar serpent eagle">South Nicobar serpent eagle</a></span></li>
+<li><span class="nowrap"><a href="/wiki/Mountain_serpent_eagle" title="Mountain serpent eagle">Mountain serpent eagle</a></span></li>
+<li><span class="nowrap"><a href="/wiki/Sulawesi_serpent_eagle" title="Sulawesi serpent eagle">Sulawesi serpent eagle</a></span></li>
+<li><span class="nowrap"><a href="/wiki/Philippine_serpent_eagle" title="Philippine serpent eagle">Philippine serpent eagle</a></span></li>
+<li><span class="nowrap"><a href="/wiki/Andaman_serpent_eagle" title="Andaman serpent eagle">Andaman serpent eagle</a></span></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Eutriorchis" class="mw-redirect" title="Eutriorchis">Eutriorchis</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/Madagascan_serpent_eagle" title="Madagascan serpent eagle">Madagascan serpent eagle</a></span></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Pithecophaga" class="mw-redirect" title="Pithecophaga">Pithecophaga</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/Philippine_eagle" title="Philippine eagle">Philippine eagle</a></span></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow hlist" colspan="2"><div>
+<ul><li><span class="nowrap"><a href="/wiki/Eagle" title="Eagle">Eagle</a></span></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q726387" class="extiw" title="wikidata:Q726387">Q726387</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Terathopius_ecaudatus" class="extiw" title="wikispecies:Terathopius ecaudatus">Terathopius ecaudatus</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Terathopius_ecaudatus/">Terathopius_ecaudatus</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/terathopius-ecaudatus/">terathopius-ecaudatus</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=6CBD872456996F41">6CBD872456996F41</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22695289">22695289</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/batele1">batele1</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">2570</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2480377">2480377</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/5231">5231</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10771528">10771528</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=175504">175504</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22695289">22695289</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0001689696">NHMSYS0001689696</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=321104">321104</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/CITES" title="CITES">Species+</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://speciesplus.net/#/taxon_concepts/6765/legal">6765</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=17557">17557</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Xeno-canto" title="Xeno-canto">Xeno-canto</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.xeno-canto.org/species/Terathopius-ecaudatus">Terathopius-ecaudatus</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1271
+Cached time: 20201030063233
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.884 seconds
+Real time usage: 1.227 seconds
+Preprocessor visited node count: 6781/1000000
+Post‐expand include size: 55616/2097152 bytes
+Template argument size: 6576/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 16/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 46211/5000000 bytes
+Lua time usage: 0.554/10.000 seconds
+Lua memory usage: 10.13 MB/50 MB
+Number of Wikibase entities loaded: 17/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1138.282      1 -total
+ 38.36%  436.602      1 Template:Speciesbox
+ 37.08%  422.046      1 Template:Taxobox/core
+ 19.68%  224.040      1 Template:Reflist
+ 17.65%  200.922      1 Template:Taxonbar
+  9.14%  104.026      1 Template:Cite_iucn
+  6.52%   74.258      3 Template:Sister_project
+  5.99%   68.229      3 Template:Side_box
+  5.57%   63.398      2 Template:ISBN
+  4.93%   56.106      1 Template:Commons
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:3830863-0!canonical and timestamp 20201030063232 and revision id 973382143
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Bateleur&amp;oldid=973382143">https://en.wikipedia.org/w/index.php?title=Bateleur&amp;oldid=973382143</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_near_threatened_species" title="Category:IUCN Red List near threatened species">IUCN Red List near threatened species</a></li><li><a href="/wiki/Category:Circaetinae" title="Category:Circaetinae">Circaetinae</a></li><li><a href="/wiki/Category:Birds_of_prey_of_Sub-Saharan_Africa" title="Category:Birds of prey of Sub-Saharan Africa">Birds of prey of Sub-Saharan Africa</a></li><li><a href="/wiki/Category:Birds_of_the_Middle_East" title="Category:Birds of the Middle East">Birds of the Middle East</a></li><li><a href="/wiki/Category:Near_threatened_animals" title="Category:Near threatened animals">Near threatened animals</a></li><li><a href="/wiki/Category:Near_threatened_biota_of_Africa" title="Category:Near threatened biota of Africa">Near threatened biota of Africa</a></li><li><a href="/wiki/Category:Near_threatened_biota_of_Asia" title="Category:Near threatened biota of Asia">Near threatened biota of Asia</a></li><li><a href="/wiki/Category:Birds_described_in_1830" title="Category:Birds described in 1830">Birds described in 1830</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_link_is_on_Wikidata" title="Category:Commons link is on Wikidata">Commons link is on Wikidata</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Articles_containing_video_clips" title="Category:Articles containing video clips">Articles containing video clips</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Bateleur" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Bateleur" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Bateleur" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Bateleur" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Bateleur">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Bateleur&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Bateleur&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Bateleur" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Bateleur" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Bateleur&amp;oldid=973382143" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Bateleur&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Bateleur&amp;id=973382143&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q726387" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Bateleur&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Bateleur&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Terathopius_ecaudatus" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Terathopius_ecaudatus" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-af badge-Q17437796 badge-featuredarticle" title="featured article badge"><a href="https://af.wikipedia.org/wiki/Berghaan" title="Berghaan – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%B9%D9%82%D8%A7%D8%A8_%D8%AD%D9%83%D9%8A%D9%85" title="عقاب حكيم – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Terathopius_ecaudatus" title="Terathopius ecaudatus – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Terathopius_ecaudatus" title="Terathopius ecaudatus – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/%C3%80guila_batallaire" title="Àguila batallaire – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Terathopius_ecaudatus" title="Terathopius ecaudatus – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Orl%C3%ADk_kejkl%C3%AD%C5%99" title="Orlík kejklíř – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Eryr_cwta" title="Eryr cwta – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Gaukler_(Vogel)" title="Gaukler (Vogel) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/Ats%C3%A1_bin%C3%A1k%CA%BCee_halch%C3%ADi%CA%BCii" title="Atsá binákʼee halchíiʼii – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%86%CE%BD%CE%BF%CF%85%CF%81%CE%BF%CF%82_%CE%B1%CE%B5%CF%84%CF%8C%CF%82" title="Άνουρος αετός – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Terathopius_ecaudatus" title="Terathopius ecaudatus – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Senvosta_serpentaglo" title="Senvosta serpentaglo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Terathopius_ecaudatus" title="Terathopius ecaudatus – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B9%D9%82%D8%A7%D8%A8_%D8%A8%D9%86%D8%AF%D8%A8%D8%A7%D8%B2" title="عقاب بندباز – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Bateleur_des_savanes" title="Bateleur des savanes – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EB%8B%AC%EB%A7%88%EC%88%98%EB%A6%AC" title="달마수리 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Lodda" title="Lodda – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Terathopius_ecaudatus" title="Terathopius ecaudatus – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%97%D7%99%D7%95%D7%95%D7%99%D7%90%D7%99_%D7%9C%D7%94%D7%98%D7%95%D7%98%D7%9F" title="חיוויאי להטוטן – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-avk"><a href="https://avk.wikipedia.org/wiki/Kiizey_(Terathopius)" title="Kiizey (Terathopius) – Kotava" lang="avk" hreflang="avk" class="interlanguage-link-target">Kotava</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Akrob%C4%81t%C4%93rglis" title="Akrobātērglis – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Buk%C3%A1z%C3%B3_sas" title="Bukázó sas – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%AC%E0%B4%BE%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B5%8D%E2%80%8C%E0%B4%B2%E0%B4%BF%E0%B4%AF%E0%B5%BC_%E0%B4%AA%E0%B4%B0%E0%B5%81%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B5%8D" title="ബാറ്റ്‌ലിയർ പരുന്ത് – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Bateleur" title="Bateleur – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%AB%E3%83%9E%E3%83%AF%E3%82%B7" title="ダルマワシ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Gj%C3%B8gler%C3%B8rn" title="Gjøglerørn – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-oc"><a href="https://oc.wikipedia.org/wiki/Bateleire_de_las_savanas" title="Bateleire de las savanas – Occitan" lang="oc" hreflang="oc" class="interlanguage-link-target">Occitan</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Kuglarz_(ptak)" title="Kuglarz (ptak) – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Terathopius_ecaudatus" title="Terathopius ecaudatus – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Terathopius_ecaudatus" title="Terathopius ecaudatus – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%80%D1%91%D0%BB-%D1%81%D0%BA%D0%BE%D0%BC%D0%BE%D1%80%D0%BE%D1%85" title="Орёл-скоморох – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Liitokotka" title="Liitokotka – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Gycklar%C3%B6rn" title="Gycklarörn – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_b%C3%A0ng_Bateleur" title="Đại bàng Bateleur – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Terathopius_ecaudatus" title="Terathopius ecaudatus – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E7%9F%AD%E5%B0%BE%E9%9B%95" title="短尾雕 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q726387#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 16 August 2020, at 22:37<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Bateleur&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.884","walltime":"1.227","ppvisitednodes":{"value":6781,"limit":1000000},"postexpandincludesize":{"value":55616,"limit":2097152},"templateargumentsize":{"value":6576,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":16,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":46211,"limit":5000000},"entityaccesscount":{"value":17,"limit":400},"timingprofile":["100.00% 1138.282      1 -total"," 38.36%  436.602      1 Template:Speciesbox"," 37.08%  422.046      1 Template:Taxobox/core"," 19.68%  224.040      1 Template:Reflist"," 17.65%  200.922      1 Template:Taxonbar","  9.14%  104.026      1 Template:Cite_iucn","  6.52%   74.258      3 Template:Sister_project","  5.99%   68.229      3 Template:Side_box","  5.57%   63.398      2 Template:ISBN","  4.93%   56.106      1 Template:Commons"]},"scribunto":{"limitreport-timeusage":{"value":"0.554","limit":"10.000"},"limitreport-memusage":{"value":10622496,"limit":52428800}},"cachereport":{"origin":"mw1271","timestamp":"20201030063233","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Bateleur","url":"https:\/\/en.wikipedia.org\/wiki\/Bateleur","sameAs":"http:\/\/www.wikidata.org\/entity\/Q726387","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q726387","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2006-01-24T16:18:10Z","dateModified":"2020-08-16T22:37:34Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/9\/92\/Bateleur_Eagle_with_Kill.jpg","headline":"medium-sized eagle"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":153,"wgHostname":"mw1399"});});</script>
+</body></html>

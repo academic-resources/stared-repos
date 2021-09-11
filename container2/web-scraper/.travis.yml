@@ -1,0 +1,12 @@
+language: node_js
+node_js: node
+before_install:
+  - npm i -g npm
+cache:
+  directories:
+    - node_modules
+before_script:
+  - npm install
+  - cp .env.sample .env
+script:
+  - npm test

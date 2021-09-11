@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Common pochard - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"972f265c-ab99-47ae-8365-3d68b376b22b","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Common_pochard","wgTitle":"Common pochard","wgCurRevisionId":986382277,"wgRevisionId":986382277,"wgArticleId":251457,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description matches Wikidata","Articles with 'species' microformats","Commons category link is on Wikidata","Taxonbars with 25–29 taxon IDs","IUCN Red List vulnerable species","Aythya","Birds of Eurasia","Birds of Africa","Birds of North Africa",
+"Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Common_pochard","wgRelevantArticleId":251457,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Common_Pochard","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Common_pochard","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q26742"};RLSTATE={
+"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","mediawiki.page.gallery","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming",
+"ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.page.gallery.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Aythya_ferina_Sandwell_2.jpg/1200px-Aythya_ferina_Sandwell_2.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Common_pochard"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Common_pochard&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Common_pochard&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Common_pochard"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Common_pochard rootpage-Common_pochard skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Common pochard</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Common_Pochard&amp;redirect=no" class="mw-redirect" title="Common Pochard">Common Pochard</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Species of bird</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Common pochard
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Aythya_ferina_Sandwell_2.jpg" class="image"><img alt="Aythya ferina Sandwell 2.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Aythya_ferina_Sandwell_2.jpg/220px-Aythya_ferina_Sandwell_2.jpg" decoding="async" width="220" height="166" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Aythya_ferina_Sandwell_2.jpg/330px-Aythya_ferina_Sandwell_2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Aythya_ferina_Sandwell_2.jpg/440px-Aythya_ferina_Sandwell_2.jpg 2x" data-file-width="3006" data-file-height="2274" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Male
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Common_pochard_(Aythya_ferina).jpg" class="image"><img alt="Common pochard (Aythya ferina).jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Common_pochard_%28Aythya_ferina%29.jpg/220px-Common_pochard_%28Aythya_ferina%29.jpg" decoding="async" width="220" height="147" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Common_pochard_%28Aythya_ferina%29.jpg/330px-Common_pochard_%28Aythya_ferina%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/61/Common_pochard_%28Aythya_ferina%29.jpg/440px-Common_pochard_%28Aythya_ferina%29.jpg 2x" data-file-width="2531" data-file-height="1687" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Female
+</td></tr>
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Status_iucn3.1_VU.svg/220px-Status_iucn3.1_VU.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Status_iucn3.1_VU.svg/330px-Status_iucn3.1_VU.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/63/Status_iucn3.1_VU.svg/440px-Status_iucn3.1_VU.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Vulnerable_species" title="Vulnerable species">Vulnerable</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-iucn_1-0" class="reference"><a href="#cite_note-iucn-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Aythya" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Anseriformes" title="Anseriformes">Anseriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Anatidae" title="Anatidae">Anatidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Aythya" title="Aythya"><i>Aythya</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>A.&#160;ferina</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Aythya ferina</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:AythyaFerinaIUCNver2018_2.png" class="image"><img alt="AythyaFerinaIUCNver2018 2.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7d/AythyaFerinaIUCNver2018_2.png/220px-AythyaFerinaIUCNver2018_2.png" decoding="async" width="220" height="156" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7d/AythyaFerinaIUCNver2018_2.png/330px-AythyaFerinaIUCNver2018_2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7d/AythyaFerinaIUCNver2018_2.png/440px-AythyaFerinaIUCNver2018_2.png 2x" data-file-width="3507" data-file-height="2480" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Range of <i>A. ferina</i><style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#008000; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Breeding</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#00FF00; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Resident</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#007FFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Non-breeding</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<p><i>Anas ferina</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span>
+</p>
+</td></tr>
+
+</tbody></table>
+<p>The <b>common pochard</b> (<span class="rt-commentedText nowrap"><span class="IPA nopopups noexcerpt"><a href="/wiki/Help:IPA/English" title="Help:IPA/English">/<span style="border-bottom:1px dotted"><span title="/ˈ/: primary stress follows">ˈ</span><span title="&#39;p&#39; in &#39;pie&#39;">p</span><span title="/ɒ/: &#39;o&#39; in &#39;body&#39;">ɒ</span><span title="/tʃ/: &#39;ch&#39; in &#39;China&#39;">tʃ</span><span title="/ər/: &#39;er&#39; in &#39;letter&#39;">ər</span><span title="&#39;d&#39; in &#39;dye&#39;">d</span></span>/</a></span></span>; <i>Aythya ferina</i>) is a medium-sized <a href="/wiki/Diving_duck" title="Diving duck">diving duck</a>. The scientific name is derived from <a href="/wiki/Greek_language" title="Greek language">Greek</a> <i> aithuia</i> an unidentified <a href="/wiki/Seabird" title="Seabird">seabird</a> mentioned by authors including <a href="/wiki/Hesychius_of_Miletus" title="Hesychius of Miletus">Hesychius</a> and <a href="/wiki/Aristotle" title="Aristotle">Aristotle</a>, and <a href="/wiki/Latin" title="Latin">Latin</a>  <i>ferina</i>, "wild game", from <i>ferus</i>, "wild".<sup id="cite_ref-job90_2-0" class="reference"><a href="#cite_note-job90-2">&#91;2&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Distribution_and_habitat"><span class="tocnumber">2</span> <span class="toctext">Distribution and habitat</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Ecology"><span class="tocnumber">3</span> <span class="toctext">Ecology</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Further_reading"><span class="tocnumber">5</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_pochard&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The adult male has a long dark bill with a grey band, a red head and neck, a black breast, red eyes and a grey back. The adult female has a brown head and body and a narrower grey bill-band. The triangular head shape is distinctive. Pochards are superficially similar to the closely related <a href="/wiki/North_America" title="North America">North American</a> <a href="/wiki/Redhead_(duck)" class="mw-redirect" title="Redhead (duck)">redhead</a> and <a href="/wiki/Canvasback" title="Canvasback">canvasback</a>.
+</p><p>Females give hoarse growls. Males have whistles cut off by a final nasal note <i>aaoo-oo-haa</i>.
+</p>
+<ul class="gallery mw-gallery-packed">
+		<li class="gallerybox" style="width: 158px"><div style="width: 158px">
+			<div class="thumb" style="width: 156px;"><div style="margin:0px auto;"><a href="/wiki/File:2011.06.20_pochard,_St._James_Park,_London,_UK_013c.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/2011.06.20_pochard%2C_St._James_Park%2C_London%2C_UK_013c.jpg/234px-2011.06.20_pochard%2C_St._James_Park%2C_London%2C_UK_013c.jpg" decoding="async" width="156" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/2011.06.20_pochard%2C_St._James_Park%2C_London%2C_UK_013c.jpg/351px-2011.06.20_pochard%2C_St._James_Park%2C_London%2C_UK_013c.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ea/2011.06.20_pochard%2C_St._James_Park%2C_London%2C_UK_013c.jpg/468px-2011.06.20_pochard%2C_St._James_Park%2C_London%2C_UK_013c.jpg 2x" data-file-width="3388" data-file-height="2608" /></a></div></div>
+			<div class="gallerytext">
+<p>Male common pochard, London, UK
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 162px"><div style="width: 162px">
+			<div class="thumb" style="width: 160px;"><div style="margin:0px auto;"><a href="/wiki/File:Aythya_ferina-male_diving.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Aythya_ferina-male_diving.jpg/240px-Aythya_ferina-male_diving.jpg" decoding="async" width="160" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Aythya_ferina-male_diving.jpg/360px-Aythya_ferina-male_diving.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Aythya_ferina-male_diving.jpg/480px-Aythya_ferina-male_diving.jpg 2x" data-file-width="1200" data-file-height="900" /></a></div></div>
+			<div class="gallerytext">
+<p>Diving, <a href="https://es.wikipedia.org/wiki/Delta_del_Llobregat" class="extiw" title="es:Delta del Llobregat">Delta del Llobregat</a>, <a href="https://es.wikipedia.org/wiki/Barcelona" class="extiw" title="es:Barcelona">Barcelona</a>
+</p>
+			</div>
+		</div></li>
+</ul>
+<h2><span class="mw-headline" id="Distribution_and_habitat">Distribution and habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_pochard&amp;action=edit&amp;section=2" title="Edit section: Distribution and habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Their breeding habitat consists of <a href="/wiki/Marsh" title="Marsh">marshes</a> and lakes with a metre or more water depth. Pochards breed in much of temperate and northern <a href="/wiki/Europe" title="Europe">Europe</a> and across the <a href="/wiki/Palearctic" class="mw-redirect" title="Palearctic">Palearctic</a>. They are <a href="/wiki/Bird_migration" title="Bird migration">migratory</a>, and spend winter in the south and west of Europe.
+</p><p>In the <a href="/wiki/British_Isles" title="British Isles">British Isles</a>, birds breed in eastern <a href="/wiki/England" title="England">England</a> and lowland <a href="/wiki/Scotland" title="Scotland">Scotland</a>, in small numbers in <a href="/wiki/Northern_Ireland" title="Northern Ireland">Northern Ireland</a> with numbers increasing gradually, and sporadically in the <a href="/wiki/Republic_of_Ireland" title="Republic of Ireland">Republic of Ireland</a>, where it may also be increasing. While uncommon, individuals are also occasionally seen in the south of England, and small populations are sometimes observed on the River Thames. Large numbers stay overwinter in <a href="/wiki/Great_Britain" title="Great Britain">Great Britain</a>, after the birds retreat from <a href="/wiki/Russia" title="Russia">Russia</a> and <a href="/wiki/Scandinavia" title="Scandinavia">Scandinavia</a>.
+</p>
+<h2><span class="mw-headline" id="Ecology">Ecology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_pochard&amp;action=edit&amp;section=3" title="Edit section: Ecology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:102px;"><a href="/wiki/File:Aythya_ferina_MWNH_2003.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Aythya_ferina_MWNH_2003.JPG/100px-Aythya_ferina_MWNH_2003.JPG" decoding="async" width="100" height="183" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Aythya_ferina_MWNH_2003.JPG/150px-Aythya_ferina_MWNH_2003.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Aythya_ferina_MWNH_2003.JPG/200px-Aythya_ferina_MWNH_2003.JPG 2x" data-file-width="2266" data-file-height="4147" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Aythya_ferina_MWNH_2003.JPG" class="internal" title="Enlarge"></a></div>Eggs, Collection <a href="/wiki/Museum_Wiesbaden,_Germany" class="mw-redirect" title="Museum Wiesbaden, Germany">Museum Wiesbaden, Germany</a></div></div></div>
+<p>These are gregarious birds, forming large flocks in winter, often mixed with other diving ducks such as the <a href="/wiki/Tufted_duck" title="Tufted duck">tufted duck</a>, with which they are known to hybridise.
+</p><p>These birds feed mainly by diving or dabbling. They eat aquatic plants with some <a href="/wiki/Mollusc" class="mw-redirect" title="Mollusc">molluscs</a>, aquatic <a href="/wiki/Insect" title="Insect">insects</a> and small <a href="/wiki/Fish" title="Fish">fish</a>. They often feed at night, and will up-end for food as well as the more characteristic diving. According to the article 'Patterns in the diving behaviour of the pochard, <i>Aythya ferina</i>: a test of an optimality model' Pochard's have a behavioral preference when it comes to their feeding patterns. This behavioral preference is that Pochards prefer shallower water in comparison to deeper water even though the food concentration in deeper water may be higher.
+</p><p>In number of countries the population of Common Pochard is decreasing mainly due to urbanization of the natural habitats and their transformation, as well as due to overhunting.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+The pochard is one of the species to which the <i>Agreement on the Conservation of African-Eurasian Migratory Waterbirds</i> (<a href="/wiki/AEWA" class="mw-redirect" title="AEWA">AEWA</a>) applies.
+</p>
+<div style="clear:both;"></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_pochard&amp;action=edit&amp;section=4" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-iucn-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-iucn_1-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2015" class="citation journal cs1">BirdLife International (2015). "<i>Aythya ferina</i>". <i><a href="/wiki/IUCN_Red_List_of_Threatened_Species" class="mw-redirect" title="IUCN Red List of Threatened Species">IUCN Red List of Threatened Species</a></i>. <b>2015</b>: e.T22680358A82571892. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2305%2FIUCN.UK.2015-4.RLTS.T22680358A82571892.en">10.2305/IUCN.UK.2015-4.RLTS.T22680358A82571892.en</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Aythya+ferina&amp;rft.volume=2015&amp;rft.pages=e.T22680358A82571892&amp;rft.date=2015&amp;rft_id=info%3Adoi%2F10.2305%2FIUCN.UK.2015-4.RLTS.T22680358A82571892.en&amp;rft.au=BirdLife+International&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+pochard" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-job90-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-job90_2-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n64">64</a>, 158. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=64%2C+158&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+pochard" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.abcc-am.org/common-pochard.html">Common Pochard (<i>Aythya ferina</i>) in Armenia.</a> 2017. In online publication: "The State of Breeding Birds of Armenia". TSE NGO, Armenian Bird Census Council. Retrieved on 10 October 2017.</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_pochard&amp;action=edit&amp;section=5" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite id="CITEREFCarboneHouston1994" class="citation journal cs1">Carbone, C.; Houston, A.I. (August 1994). "Patterns in the diving behaviour of the pochard, Aythya ferina: a test of an optimality model". <i>Animal Behaviour</i>. <b>48</b> (2): 457–465. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1006%2Fanbe.1994.1259">10.1006/anbe.1994.1259</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Animal+Behaviour&amp;rft.atitle=Patterns+in+the+diving+behaviour+of+the+pochard%2C+Aythya+ferina%3A+a+test+of+an+optimality+model&amp;rft.volume=48&amp;rft.issue=2&amp;rft.pages=457-465&amp;rft.date=1994-08&amp;rft_id=info%3Adoi%2F10.1006%2Fanbe.1994.1259&amp;rft.aulast=Carbone&amp;rft.aufirst=C.&amp;rft.au=Houston%2C+A.I.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+pochard" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_pochard&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Aythya_ferina" class="extiw" title="commons:Category:Aythya ferina"><span style="">Aythya ferina</span></a></b></i>.</td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/34px-Wikispecies-logo.svg.png" decoding="async" width="34" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/51px-Wikispecies-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/68px-Wikispecies-logo.svg.png 2x" data-file-width="941" data-file-height="1103" /></td>
+<td class="mbox-text plainlist"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a> has information related to <i><b><a href="https://species.wikimedia.org/wiki/Aythya_ferina" class="extiw" title="wikispecies:Aythya ferina">Aythya ferina</a></b></i></td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20081120210812/http://www.rspb.org.uk/birds/guide/p/pochard/index.asp">Pochard at RSPB Birds by Name</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.birdlife.org/datazone/species/factsheet/22680358">BirdLife species factsheet for <i>Aythya ferina</i></a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?lang=EN&amp;avibaseid=A96692E0C9F7508B">"Aythya ferina"</a>. <i>Avibase</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Avibase&amp;rft.atitle=Aythya+ferina&amp;rft_id=https%3A%2F%2Favibase.bsc-eoc.org%2Fspecies.jsp%3Flang%3DEN%26avibaseid%3DA96692E0C9F7508B&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+pochard" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/> <a href="https://www.wikidata.org/wiki/Q26742#P2026" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.hbw.com/ibc/species/common-pochard-aythya-ferina">"Common pochard media"</a>. <i><a href="/wiki/Internet_Bird_Collection" class="mw-redirect" title="Internet Bird Collection">Internet Bird Collection</a></i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Internet+Bird+Collection&amp;rft.atitle=Common+pochard+media&amp;rft_id=http%3A%2F%2Fwww.hbw.com%2Fibc%2Fspecies%2Fcommon-pochard-aythya-ferina&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+pochard" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><a rel="nofollow" class="external text" href="http://vireo.acnatsci.org/search.html?Form=Search&amp;SEARCHBY=Common&amp;KEYWORDS=Common+pochard&amp;showwhat=images&amp;AGE=All&amp;SEX=All&amp;ACT=All&amp;Search=Search&amp;VIEW=All&amp;ORIENTATION=All&amp;RESULTS=24">Common pochard photo gallery</a> at VIREO (Drexel University)</li>
+<li><a rel="nofollow" class="external text" href="http://maps.iucnredlist.org/map.html?id=22680358">Interactive range map of <i>Aythya ferina</i></a> at <a rel="nofollow" class="external text" href="http://maps.iucnredlist.org/index.html">IUCN Red List maps</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.xeno-canto.org/species/Aythya-ferina">Audio recordings of Common pochard</a> on <a href="/wiki/Xeno-canto" title="Xeno-canto">Xeno-canto</a>.</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q26742" class="extiw" title="wikidata:Q26742">Q26742</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Aythya_ferina" class="extiw" title="wikispecies:Aythya ferina">Aythya ferina</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/American_Birding_Association" title="American Birding Association">ABA</a>: <span class="uid">compoc</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Aythya_ferina/">Aythya_ferina</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/aythya-ferina/">aythya-ferina</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=A96692E0C9F7508B">A96692E0C9F7508B</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8469">8469</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22680358">22680358</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Convention_on_the_Conservation_of_Migratory_Species_of_Wild_Animals" title="Convention on the Conservation of Migratory Species of Wild Animals">CMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.cms.int/en/species/aythya-ferina">aythya-ferina</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/compoc">compoc</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EPPO_Code" title="EPPO Code">EPPO</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://gd.eppo.int/taxon/AYTHFE">AYTHFE</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/908">908</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">1980</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:96513">96513</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/9c6ba619-df36-4b38-a6eb-5a67928e2160">9c6ba619-df36-4b38-a6eb-5a67928e2160</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=368600">368600</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2498255">2498255</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Handbook_of_the_Birds_of_the_World" title="Handbook of the Birds of the World">IBC</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.hbw.com/species/common-pochard-aythya-ferina">common-pochard-aythya-ferina</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/7045">7045</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10585295">10585295</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=175126">175126</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22680358">22680358</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NBNSYS0000000137">NBNSYS0000000137</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=219593">219593</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=2532">2532</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=232037">232037</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Xeno-canto" title="Xeno-canto">Xeno-canto</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.xeno-canto.org/species/Aythya-ferina">Aythya-ferina</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1323
+Cached time: 20201031141612
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.908 seconds
+Real time usage: 1.249 seconds
+Preprocessor visited node count: 6338/1000000
+Post‐expand include size: 45413/2097152 bytes
+Template argument size: 7633/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 25/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 16523/5000000 bytes
+Lua time usage: 0.644/10.000 seconds
+Lua memory usage: 10.16 MB/50 MB
+Number of Wikibase entities loaded: 26/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1169.837      1 -total
+ 41.37%  483.921      1 Template:Speciesbox
+ 40.60%  474.966      1 Template:Taxobox/core
+ 22.76%  266.300      1 Template:Taxonbar
+  8.92%  104.329      1 Template:Reflist
+  7.84%   91.766      1 Template:Commons_category
+  7.74%   90.498      2 Template:Cite_journal
+  7.70%   90.111      2 Template:Sister_project
+  7.40%   86.592      2 Template:Side_box
+  6.31%   73.810      1 Template:Short_description
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:251457-0!canonical and timestamp 20201031141611 and revision id 986382277
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Common_pochard&amp;oldid=986382277">https://en.wikipedia.org/w/index.php?title=Common_pochard&amp;oldid=986382277</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_vulnerable_species" title="Category:IUCN Red List vulnerable species">IUCN Red List vulnerable species</a></li><li><a href="/wiki/Category:Aythya" title="Category:Aythya">Aythya</a></li><li><a href="/wiki/Category:Birds_of_Eurasia" title="Category:Birds of Eurasia">Birds of Eurasia</a></li><li><a href="/wiki/Category:Birds_of_Africa" title="Category:Birds of Africa">Birds of Africa</a></li><li><a href="/wiki/Category:Birds_of_North_Africa" title="Category:Birds of North Africa">Birds of North Africa</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_25%E2%80%9329_taxon_IDs" title="Category:Taxonbars with 25–29 taxon IDs">Taxonbars with 25–29 taxon IDs</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Common+pochard" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Common+pochard" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Common_pochard" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Common_pochard" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Common_pochard">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Common_pochard&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Common_pochard&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Common_pochard" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Common_pochard" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Common_pochard&amp;oldid=986382277" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Common_pochard&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Common_pochard&amp;id=986382277&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26742" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Common_pochard&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Common_pochard&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Aythya_ferina" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Aythya_ferina" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%A5%D1%8C%D1%8D%D0%B6%D0%B1%D0%B0%D0%B1%D1%8B%D1%89" title="Хьэжбабыщ – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AD%D9%85%D8%B1%D9%88%D8%A7%D9%8A" title="حمرواي – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Aythya_ferina" title="Aythya ferina – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Q%C4%B1rm%C4%B1z%C4%B1ba%C5%9F_dal%C4%9F%C4%B1c" title="Qırmızıbaş dalğıc – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-bn"><a href="https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BF_%E0%A6%AD%E0%A7%81%E0%A6%A4%E0%A6%BF%E0%A6%B9%E0%A6%BE%E0%A6%81%E0%A6%B8" title="পাতি ভুতিহাঁস – Bangla" lang="bn" hreflang="bn" class="interlanguage-link-target">বাংলা</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D0%A1%D1%83%D0%BC%D2%93%D1%8B%D1%81_%D3%A9%D0%B9%D1%80%D3%99%D0%BA" title="Сумғыс өйрәк – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%9A%D0%B0%D1%84%D1%8F%D0%B2%D0%BE%D0%B3%D0%BB%D0%B0%D0%B2%D0%B0_%D0%BF%D0%BE%D1%82%D0%B0%D0%BF%D0%BD%D0%B8%D1%86%D0%B0" title="Кафявоглава потапница – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Morilhon_penn_ruz" title="Morilhon penn ruz – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Morell_cap-roig" title="Morell cap-roig – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Aythya_ferina" title="Aythya ferina – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Pol%C3%A1k_velk%C3%BD" title="Polák velký – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Hwyaden_bengoch" title="Hwyaden bengoch – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Taffeland" title="Taffeland – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-se"><a href="https://se.wikipedia.org/wiki/Ruksesfiehta" title="Ruksesfiehta – Northern Sami" lang="se" hreflang="se" class="interlanguage-link-target">Davvisámegiella</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Tafelente" title="Tafelente – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/T%C3%B3_w%C3%B3naan%C3%ADd%C4%99%CC%81%C4%99%CC%81%CA%BC_naal%CA%BCee%C5%82%C3%AD_bitsii%CA%BC_halch%C3%ADi%CA%BCii" title="Tó wónaanídę́ę́ʼ naalʼeełí bitsiiʼ halchíiʼii – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-dty"><a href="https://dty.wikipedia.org/wiki/%E0%A4%95%E0%A5%88%E0%A4%B2%E0%A5%8B%E0%A4%9F%E0%A4%BE%E0%A4%89%E0%A4%95%E0%A5%87_%E0%A4%B9%E0%A4%BE%E0%A4%81%E0%A4%B8" title="कैलोटाउके हाँस – Doteli" lang="dty" hreflang="dty" class="interlanguage-link-target">डोटेली</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Punapea-vart" title="Punapea-vart – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%93%CE%BA%CE%B9%CF%83%CE%AC%CF%81%CE%B9" title="Γκισάρι – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Aythya_ferina" title="Aythya ferina – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Brunkapa_anaso" title="Brunkapa anaso – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Murgilari_arrunt" title="Murgilari arrunt – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B1%D8%AF%DA%A9_%D8%B3%D8%B1%D8%AD%D9%86%D8%A7%DB%8C%DB%8C" title="اردک سرحنایی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/H%C3%B8vu%C3%B0rey%C3%B0_ont" title="Høvuðreyð ont – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Fuligule_milouin" title="Fuligule milouin – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-fy"><a href="https://fy.wikipedia.org/wiki/Karein" title="Karein – Western Frisian" lang="fy" hreflang="fy" class="interlanguage-link-target">Frysk</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/P%C3%B3iseard" title="Póiseard – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gd"><a href="https://gd.wikipedia.org/wiki/Lach-mh%C3%A0sach" title="Lach-mhàsach – Scottish Gaelic" lang="gd" hreflang="gd" class="interlanguage-link-target">Gàidhlig</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Pato_chup%C3%B3n" title="Pato chupón – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%ED%9D%B0%EC%A3%BD%EC%A7%80" title="흰죽지 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%BF%D5%A1%D6%80%D5%B4%D6%80%D5%A1%D5%A3%D5%AC%D5%B8%D6%82%D5%AD_%D5%BD%D5%B8%D6%82%D5%A6%D5%A1%D5%A2%D5%A1%D5%A4" title="Կարմրագլուխ սուզաբադ – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Glavata_patka" title="Glavata patka – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Aythya_ferina" title="Aythya ferina – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-ia"><a href="https://ia.wikipedia.org/wiki/Aythya_ferina" title="Aythya ferina – Interlingua" lang="ia" hreflang="ia" class="interlanguage-link-target">Interlingua</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Skutul%C3%B6nd" title="Skutulönd – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Aythya_ferina" title="Aythya ferina – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A6%D7%95%D7%9C%D7%9C_%D7%97%D7%9C%D7%95%D7%93%D7%99" title="צולל חלודי – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%9A%D3%A9%D0%BA_%D1%81%D2%AF%D2%A3%D0%B3%D1%83%D1%96%D1%80" title="Көк сүңгуір – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Br%C5%ABnkaklis" title="Brūnkaklis – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Rudagalv%C4%97_antis" title="Rudagalvė antis – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-olo"><a href="https://olo.wikipedia.org/wiki/Ruskeisotku" title="Ruskeisotku – Livvi-Karelian" lang="olo" hreflang="olo" class="interlanguage-link-target">Livvinkarjala</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Bar%C3%A1tr%C3%A9ce" title="Barátréce – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%A6%D1%80%D0%B2%D0%B5%D0%BD%D0%BE%D0%B3%D0%BB%D0%B0%D0%B2_%D0%BA%D0%BE%D0%B6%D1%83%D0%B2%D0%B0%D1%80" title="Црвеноглав кожувар – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%9A%E0%B5%86%E0%B4%A8%E0%B5%8D%E0%B4%A4%E0%B4%B2%E0%B4%AF%E0%B5%BB_%E0%B4%8E%E0%B4%B0%E0%B4%A3%E0%B5%8D%E0%B4%9F" title="ചെന്തലയൻ എരണ്ട – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-mr"><a href="https://mr.wikipedia.org/wiki/%E0%A4%9B%E0%A5%8B%E0%A4%9F%E0%A5%80_%E0%A4%B2%E0%A4%BE%E0%A4%B2%E0%A4%B8%E0%A4%B0%E0%A5%80" title="छोटी लालसरी – Marathi" lang="mr" hreflang="mr" class="interlanguage-link-target">मराठी</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/%D0%A3%D0%BB%D0%B0%D0%B0%D0%BD%D1%85%D2%AF%D0%B7%D2%AF%D2%AF_%D1%88%D1%83%D0%BC%D0%B1%D1%83%D1%83%D1%80" title="Улаанхүзүү шумбуур – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-my"><a href="https://my.wikipedia.org/wiki/%E1%80%95%E1%80%AD%E1%80%AF%E1%80%B7%E1%80%81%E1%80%BB%E1%80%95%E1%80%BA%E1%80%98%E1%80%B2" title="ပို့ချပ်ဘဲ – Burmese" lang="my" hreflang="my" class="interlanguage-link-target">မြန်မာဘာသာ</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Tafeleend" title="Tafeleend – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ne"><a href="https://ne.wikipedia.org/wiki/%E0%A4%95%E0%A5%88%E0%A4%B2%E0%A5%8B%E0%A4%9F%E0%A4%BE%E0%A4%89%E0%A4%95%E0%A5%87_%E0%A4%B9%E0%A4%BE%E0%A4%81%E0%A4%B8" title="कैलोटाउके हाँस – Nepali" lang="ne" hreflang="ne" class="interlanguage-link-target">नेपाली</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%9B%E3%82%B7%E3%83%8F%E3%82%B8%E3%83%AD" title="ホシハジロ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-frr"><a href="https://frr.wikipedia.org/wiki/Toofelan" title="Toofelan – Northern Frisian" lang="frr" hreflang="frr" class="interlanguage-link-target">Nordfriisk</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Taffeland" title="Taffeland – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-uz"><a href="https://uz.wikipedia.org/wiki/Ko%CA%BBkbel" title="Koʻkbel – Uzbek" lang="uz" hreflang="uz" class="interlanguage-link-target">Oʻzbekcha/ўзбекча</a></li><li class="interlanguage-link interwiki-pnb"><a href="https://pnb.wikipedia.org/wiki/%D8%B9%D8%A7%D9%85_%D9%BE%D9%88%DA%86%D8%A7%D8%B1%DA%88" title="عام پوچارڈ – Western Punjabi" lang="pnb" hreflang="pnb" class="interlanguage-link-target">پنجابی</a></li><li class="interlanguage-link interwiki-pcd"><a href="https://pcd.wikipedia.org/wiki/Pil%C3%A9-chindr%C3%A8i" title="Pilé-chindrèi – Picard" lang="pcd" hreflang="pcd" class="interlanguage-link-target">Picard</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Aythya_ferina" title="Aythya ferina – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/G%C5%82owienka_zwyczajna" title="Głowienka zwyczajna – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Zarro-comum" title="Zarro-comum – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Ra%C8%9B%C4%83_cu_cap_castaniu" title="Rață cu cap castaniu – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D1%8C_%D1%80%D1%83%D0%B4%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0" title="Чернеть рудоголова – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BD%D1%8B%D1%80%D0%BE%D0%BA" title="Красноголовый нырок – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sah"><a href="https://sah.wikipedia.org/wiki/%D0%9A%D2%AF%D0%BB%D1%82%D1%8D%D0%BD" title="Күлтэн – Sakha" lang="sah" hreflang="sah" class="interlanguage-link-target">Саха тыла</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Awteal" title="Awteal – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Chochla%C4%8Dka_siv%C3%A1" title="Chochlačka sivá – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%A0%D0%B8%D1%92%D0%BE%D0%B3%D0%BB%D0%B0%D0%B2%D0%B0_%D0%BF%D0%B0%D1%82%D0%BA%D0%B0" title="Риђоглава патка – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/Glavata_patka" title="Glavata patka – Serbo-Croatian" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Punasotka" title="Punasotka – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Brunand" title="Brunand – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Elmaba%C5%9F_patka" title="Elmabaş patka – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-tk"><a href="https://tk.wikipedia.org/wiki/Erig%C3%B6rdek" title="Erigördek – Turkmen" lang="tk" hreflang="tk" class="interlanguage-link-target">Türkmençe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BF%D0%B5%D0%BB%D1%8E%D1%85" title="Попелюх – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/V%E1%BB%8Bt_%C4%91%E1%BA%A7u_%C4%91%E1%BB%8F" title="Vịt đầu đỏ – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Aythya_ferina" title="Aythya ferina – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-wuu"><a href="https://wuu.wikipedia.org/wiki/%E7%BA%A2%E5%A4%B4%E6%BD%9C%E9%B8%AD" title="红头潜鸭 – Wu Chinese" lang="wuu" hreflang="wuu" class="interlanguage-link-target">吴语</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E7%BA%A2%E5%A4%B4%E6%BD%9C%E9%B8%AD" title="红头潜鸭 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26742#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 31 October 2020, at 14:15<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Common_pochard&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.908","walltime":"1.249","ppvisitednodes":{"value":6338,"limit":1000000},"postexpandincludesize":{"value":45413,"limit":2097152},"templateargumentsize":{"value":7633,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":25,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":16523,"limit":5000000},"entityaccesscount":{"value":26,"limit":400},"timingprofile":["100.00% 1169.837      1 -total"," 41.37%  483.921      1 Template:Speciesbox"," 40.60%  474.966      1 Template:Taxobox/core"," 22.76%  266.300      1 Template:Taxonbar","  8.92%  104.329      1 Template:Reflist","  7.84%   91.766      1 Template:Commons_category","  7.74%   90.498      2 Template:Cite_journal","  7.70%   90.111      2 Template:Sister_project","  7.40%   86.592      2 Template:Side_box","  6.31%   73.810      1 Template:Short_description"]},"scribunto":{"limitreport-timeusage":{"value":"0.644","limit":"10.000"},"limitreport-memusage":{"value":10649019,"limit":52428800}},"cachereport":{"origin":"mw1323","timestamp":"20201031141612","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Common pochard","url":"https:\/\/en.wikipedia.org\/wiki\/Common_pochard","sameAs":"http:\/\/www.wikidata.org\/entity\/Q26742","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q26742","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-06-23T06:39:49Z","dateModified":"2020-10-31T14:15:48Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/5\/5c\/Aythya_ferina_Sandwell_2.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":178,"wgHostname":"mw1385"});});</script>
+</body></html>

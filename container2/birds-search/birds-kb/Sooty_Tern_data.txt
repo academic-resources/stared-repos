@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Sooty tern - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"2e8e7ff0-5b64-4818-a157-fd6d3c579e03","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Sooty_tern","wgTitle":"Sooty tern","wgCurRevisionId":977150765,"wgRevisionId":977150765,"wgArticleId":391598,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description matches Wikidata","Articles with 'species' microformats","CS1 Spanish-language sources (es)","Commons link is on Wikidata","Taxonbars with automatically added original combinations","IUCN Red List least concern species","Onychoprion","Terns",
+"Birds of Ascension Island","Birds of Hawaii","Birds of the Atlantic Ocean","Birds of the Dominican Republic","Birds of the Indian Ocean","Birds of the Pacific Ocean","Pantropical fauna","Least concern biota of Asia","Least concern biota of Oceania","Birds of Norfolk Island","Birds described in 1766","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Sooty_tern","wgRelevantArticleId":391598,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Sooty_Tern","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,
+"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Sooty_tern","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q28482"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","mediawiki.page.gallery.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher",
+"ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.page.gallery.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sterna_fuscata.JPG/1200px-Sterna_fuscata.JPG"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Sooty_tern"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Sooty_tern&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Sooty_tern&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Sooty_tern"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Sooty_tern rootpage-Sooty_tern skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Sooty tern</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Sooty_Tern&amp;redirect=no" class="mw-redirect" title="Sooty Tern">Sooty Tern</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Species of bird</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Sooty tern
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Sterna_fuscata.JPG" class="image"><img alt="Sterna fuscata.JPG" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sterna_fuscata.JPG/220px-Sterna_fuscata.JPG" decoding="async" width="220" height="147" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sterna_fuscata.JPG/330px-Sterna_fuscata.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sterna_fuscata.JPG/440px-Sterna_fuscata.JPG 2x" data-file-width="3456" data-file-height="2304" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%"><i>Onychoprion fuscatus nubilosus</i> (or <i>O. f. oahuensis</i>) on Tern Island (<a href="/wiki/French_Frigate_Shoals" title="French Frigate Shoals">French Frigate Shoals</a>)
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-IUCN_1-0" class="reference"><a href="#cite_note-IUCN-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Onychoprion" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Charadriiformes" title="Charadriiformes">Charadriiformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Laridae" title="Laridae">Laridae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Onychoprion" title="Onychoprion"><i>Onychoprion</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>O.&#160;fuscatus</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Onychoprion fuscatus</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, 1766)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Subspecies
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<p>2-9, see text
+</p>
+</td></tr>
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Onychoprion_fuscatus_map.svg" class="image"><img alt="Onychoprion fuscatus map.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Onychoprion_fuscatus_map.svg/220px-Onychoprion_fuscatus_map.svg.png" decoding="async" width="220" height="112" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Onychoprion_fuscatus_map.svg/330px-Onychoprion_fuscatus_map.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Onychoprion_fuscatus_map.svg/440px-Onychoprion_fuscatus_map.svg.png 2x" data-file-width="940" data-file-height="477" /></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<p><i>Onychoprion fuscata</i> <small>(<i><a href="/wiki/Lapsus" title="Lapsus">lapsus</a></i>)</small><br />
+<i>Sterna fuscata</i> <small>Linnaeus, 1766</small><br />
+<i>Sterna fuscata fuscata</i> <small>Linnaeus, 1766</small><br />
+<i>Sterna fuscata nubilosa</i><br />
+and see <a href="#Taxonomy">text</a>
+</p>
+</td></tr>
+
+</tbody></table>
+<p>The <b>sooty tern</b> (<i>Onychoprion fuscatus</i>) is a <a href="/wiki/Seabird" title="Seabird">seabird</a> in the <a href="/wiki/Family_(biology)" title="Family (biology)">family</a> <a href="/wiki/Laridae" title="Laridae">Laridae</a>. It is a bird of the tropical oceans which sleeps on the wing, returning to land only for breeding- on islands throughout the <a href="/wiki/Equator" title="Equator">equatorial</a> zone.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Taxonomy"><span class="tocnumber">1</span> <span class="toctext">Taxonomy</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Ecology"><span class="tocnumber">3</span> <span class="toctext">Ecology</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Role_in_Easter_Island_culture"><span class="tocnumber">4</span> <span class="toctext">Role in Easter Island culture</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Gallery"><span class="tocnumber">5</span> <span class="toctext">Gallery</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Footnotes"><span class="tocnumber">6</span> <span class="toctext">Footnotes</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Taxonomy">Taxonomy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sooty_tern&amp;action=edit&amp;section=1" title="Edit section: Taxonomy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The sooty tern was described by <a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Carl Linnaeus</a> in 1766 as <i>Sterna fuscata</i>, bearing this name for many years until the genus <i>Sterna</i> was split up. It is now known as <i>Onychoprion fuscatus</i>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> The genus name is from <a href="/wiki/Ancient_Greek" title="Ancient Greek">ancient Greek</a> <i>onux</i>, "claw" or "nail", and <i>prion</i>, "saw". The specific <i>fuscatus</i> is <a href="/wiki/Latin" title="Latin">Latin</a> for "dark".<sup id="cite_ref-job_3-0" class="reference"><a href="#cite_note-job-3">&#91;3&#93;</a></sup>
+</p><p>Colloquially, it is known as the wideawake tern or just wideawake. This refers to the incessant calls produced by a colony of these birds, as does the <a href="/wiki/Hawaiian_(language)" class="mw-redirect" title="Hawaiian (language)">Hawaiian</a> name <i>ʻewa ʻewa</i> which roughly means "<a href="/wiki/Cacophony" class="mw-redirect" title="Cacophony">cacophony</a>".<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> In most of <a href="/wiki/Polynesia" title="Polynesia">Polynesia</a> its name is <i>manutara</i> or similar &#8211; literally "tern-bird",<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> though it might be better rendered in English as "the tern" or "common tern". This refers to the fact that wherever <a href="/wiki/Polynesian_seafarer" class="mw-redirect" title="Polynesian seafarer">Polynesian seafarers</a> went on their long voyages, they usually would find these birds in astounding numbers. It is also known as <i>kaveka</i> in the <a href="/wiki/Marquesas_Islands" title="Marquesas Islands">Marquesas Islands</a>, where dishes using its eggs are a delicacy.<sup id="cite_ref-BlondBrash2006_6-0" class="reference"><a href="#cite_note-BlondBrash2006-6">&#91;6&#93;</a></sup>
+</p><p>The sooty tern has little <a href="/wiki/Interspecific" class="mw-redirect" title="Interspecific">interspecific</a> variation, but it can be divided into at least two <a href="/wiki/Allopatric" class="mw-redirect" title="Allopatric">allopatric</a> <a href="/wiki/Subspecies" title="Subspecies">subspecies</a>. Some recent authors further subdivide the <a href="/wiki/Indopacific" class="mw-redirect" title="Indopacific">Indopacific</a> population into up to 8 subspecies altogether, but much of the variation is really <a href="/wiki/Cline_(population_genetics)" class="mw-redirect" title="Cline (population genetics)">clinal</a>. The affinities of eastern Pacific birds (including the famous <i>manutara</i> of <a href="/wiki/Easter_Island" title="Easter Island">Easter Island</a>) are most strongly contested.
+</p><p><i>Onychoprion fuscatus fuscatus</i> <small>(Linnaeus, 1766)</small> &#8211; Atlantic sooty tern<br />
+Underparts white. Breeds <a href="/wiki/Atlantic" class="mw-redirect" title="Atlantic">Atlantic</a> and <a href="/wiki/Caribbean" title="Caribbean">Caribbean</a>.
+</p><p><i>Onychoprion fuscatus nubilosus</i> <small>(Sparrman, 1788)</small> &#8211; Indopacific sooty tern<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup><br />
+Underparts light grey in fresh plumage, dull white in worn plumage. Breeds from <a href="/wiki/Red_Sea" title="Red Sea">Red Sea</a> across <a href="/wiki/Indian_Ocean" title="Indian Ocean">Indian Ocean</a> to at least central <a href="/wiki/Pacific" class="mw-redirect" title="Pacific">Pacific</a>. Some authors restrict this <a href="/wiki/Taxon" title="Taxon">taxon</a> to the Indian Ocean population and use the following subspecies for the birds from <a href="/wiki/Indonesia" title="Indonesia">Indonesia</a> to the <a href="/wiki/Americas" title="Americas">Americas</a>:
+</p>
+<ul><li><i>Onychoprion fuscatus infuscatus</i> &#8211; Sunda sooty tern <small>(Lichtenstein, 1823)</small> &#8211; <a href="/wiki/Sunda_Islands" title="Sunda Islands">Sunda Islands</a> and vicinity</li>
+<li><i>Onychoprion fuscatus oahuensis</i> &#8211; Central Pacific sooty tern <small>(Bloxam, 1826)</small> &#8211; <a href="/wiki/Bonin_Islands" title="Bonin Islands">Bonin Islands</a> through <a href="/wiki/Micronesia" title="Micronesia">Micronesia</a> to southern <a href="/wiki/Polynesia" title="Polynesia">Polynesia</a></li>
+<li><i>Onychoprion fuscatus serrata</i> &#8211; Melanesian sooty tern <small>(Wagler, 1830)</small> &#8211; <a href="/wiki/Australia" title="Australia">Australia</a>, <a href="/wiki/New_Guinea" title="New Guinea">New Guinea</a>, <a href="/wiki/New_Caledonia" title="New Caledonia">New Caledonia</a></li>
+<li><i>Onychoprion fuscatus luctuosa</i> &#8211; Juan Fernández sooty tern <small>(Philippi &amp; Landbeck, 1866)</small> &#8211; <a href="/wiki/Juan_Fern%C3%A1ndez_Islands" title="Juan Fernández Islands">Juan Fernández Islands</a></li>
+<li><i>Onychoprion fuscatus crissalis</i> &#8211; East Pacific sooty tern <small>Lawrence, 1872.</small> <sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> &#8211; Eastern Pacific from <a href="/wiki/Guadalupe_Island" title="Guadalupe Island">Guadalupe Island</a> to <a href="/wiki/Gal%C3%A1pagos_Islands" title="Galápagos Islands">Galápagos Islands</a></li>
+<li><i>Onychoprion fuscatus kermadeci</i> &#8211; Kermadec sooty tern <small>Mathews, 1916.</small> <sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> &#8211; <a href="/wiki/Kermadec_Islands" title="Kermadec Islands">Kermadec Islands</a></li>
+<li><i>Onychoprion fuscatus somaliensis</i> &#8211; Somali sooty tern &#8211; Maydh Island (<a href="/wiki/Gulf_of_Aden" title="Gulf of Aden">Gulf of Aden</a>)</li></ul>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sooty_tern&amp;action=edit&amp;section=2" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Onychoprion_fuscatus_-Rodrigues_Island,_Indian_Ocean_-flying-8.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Onychoprion_fuscatus_-Rodrigues_Island%2C_Indian_Ocean_-flying-8.jpg/220px-Onychoprion_fuscatus_-Rodrigues_Island%2C_Indian_Ocean_-flying-8.jpg" decoding="async" width="220" height="146" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Onychoprion_fuscatus_-Rodrigues_Island%2C_Indian_Ocean_-flying-8.jpg/330px-Onychoprion_fuscatus_-Rodrigues_Island%2C_Indian_Ocean_-flying-8.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Onychoprion_fuscatus_-Rodrigues_Island%2C_Indian_Ocean_-flying-8.jpg/440px-Onychoprion_fuscatus_-Rodrigues_Island%2C_Indian_Ocean_-flying-8.jpg 2x" data-file-width="4288" data-file-height="2848" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Onychoprion_fuscatus_-Rodrigues_Island,_Indian_Ocean_-flying-8.jpg" class="internal" title="Enlarge"></a></div><i>O. f. nubilosus</i> flying on <a href="/wiki/Rodrigues_Island" class="mw-redirect" title="Rodrigues Island">Rodrigues Island</a> in the Indian Ocean</div></div></div>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Lord_Howe_Island_-_Sooty_Tern_juvenile.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Lord_Howe_Island_-_Sooty_Tern_juvenile.JPG/220px-Lord_Howe_Island_-_Sooty_Tern_juvenile.JPG" decoding="async" width="220" height="125" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Lord_Howe_Island_-_Sooty_Tern_juvenile.JPG/330px-Lord_Howe_Island_-_Sooty_Tern_juvenile.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Lord_Howe_Island_-_Sooty_Tern_juvenile.JPG/440px-Lord_Howe_Island_-_Sooty_Tern_juvenile.JPG 2x" data-file-width="2622" data-file-height="1486" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Lord_Howe_Island_-_Sooty_Tern_juvenile.JPG" class="internal" title="Enlarge"></a></div>Juvenile on <a href="/wiki/Lord_Howe_Island" title="Lord Howe Island">Lord Howe Island</a></div></div></div>
+<p>This is a large tern, similar in size to the <a href="/wiki/Sandwich_tern" title="Sandwich tern">Sandwich tern</a> (<i>Thalasseus sandvicensis</i>) at 33–36&#160;cm (13–14&#160;in) long with an 82–94&#160;cm (32.5–37&#160;in) wingspan. The wings and deeply forked tail are long, and it has dark black upperparts and white underparts. It has black legs and bill. The average life span is 32 years.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> Juvenile sooty terns are scaly grey above and below. The sooty tern is unlikely to be confused with any tern apart from the similarly dark-backed but smaller <a href="/wiki/Bridled_tern" title="Bridled tern">bridled tern</a> (<i>O. anaethetus</i>). It is darker-backed than that species, and has a broader white forehead and no pale neck collar.
+</p><p>The call is a loud piercing <i>ker-wack-a-wack</i> or <i>kvaark</i>.
+</p>
+<h2><span class="mw-headline" id="Ecology">Ecology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sooty_tern&amp;action=edit&amp;section=3" title="Edit section: Ecology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Sooty_tern_on_nest.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Sooty_tern_on_nest.jpg/220px-Sooty_tern_on_nest.jpg" decoding="async" width="220" height="224" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Sooty_tern_on_nest.jpg/330px-Sooty_tern_on_nest.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/93/Sooty_tern_on_nest.jpg/440px-Sooty_tern_on_nest.jpg 2x" data-file-width="1127" data-file-height="1147" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Sooty_tern_on_nest.jpg" class="internal" title="Enlarge"></a></div>Adult <i>O. f. nubilosus</i> with egg in "nest", <a href="/wiki/Seychelles" title="Seychelles">Seychelles</a></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Bird_flocks_Bird_Island_Seychelles.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Bird_flocks_Bird_Island_Seychelles.jpg/220px-Bird_flocks_Bird_Island_Seychelles.jpg" decoding="async" width="220" height="282" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Bird_flocks_Bird_Island_Seychelles.jpg/330px-Bird_flocks_Bird_Island_Seychelles.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Bird_flocks_Bird_Island_Seychelles.jpg/440px-Bird_flocks_Bird_Island_Seychelles.jpg 2x" data-file-width="2179" data-file-height="2792" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Bird_flocks_Bird_Island_Seychelles.jpg" class="internal" title="Enlarge"></a></div><i>O. f. nubilosus</i> at <a href="/wiki/Bird_Island,_Seychelles" title="Bird Island, Seychelles">Bird Island, Seychelles</a>, home to more than a million of sooty terns at its peak</div></div></div>
+<p>Sooty terns breed in colonies on rocky or <a href="/wiki/Coral" title="Coral">coral</a> islands.<sup id="cite_ref-streets1877_11-0" class="reference"><a href="#cite_note-streets1877-11">&#91;11&#93;</a></sup> It nests in a ground scrape or hole and lays one to three eggs. It feeds by picking <a href="/wiki/Fish" title="Fish">fish</a> from the surface in marine environments, often in large flocks, and rarely comes to land except to breed, and can stay out to sea for 3 to 10 years.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> Due to the lack oil in its feathers, it cannot float, and spends that entire time on the wing.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+</p><p>This bird is <a href="/wiki/Bird_migration" title="Bird migration">migratory</a> and <a href="/wiki/Biological_dispersal" title="Biological dispersal">dispersive</a>, wintering more widely through the tropical oceans. It has very marine habits compared to most terns; sooty terns are generally found inland only after severe <a href="/wiki/Storm" title="Storm">storms</a>. The <a href="/wiki/Field_Museum" class="mw-redirect" title="Field Museum">Field Museum</a>, for example, has a male specimen which was found exhausted on August 2, 1933 on the slopes of <a href="/wiki/Mount_Cameroon" title="Mount Cameroon">Mount Cameroon</a> above <a href="/wiki/Buea" title="Buea">Buea</a>, about 1,000&#160;m (3,300&#160;ft) <a href="/wiki/Above_mean_sea_level" class="mw-redirect" title="Above mean sea level">ASL</a>, after foul weather had hit the <a href="/wiki/Gulf_of_Guinea" title="Gulf of Guinea">Gulf of Guinea</a>.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup> This species is a rare vagrant to western Europe, although a bird was present at <a href="/wiki/Cemlyn_Bay_and_lagoon" title="Cemlyn Bay and lagoon">Cemlyn Bay</a>, <a href="/wiki/Wales" title="Wales">Wales</a> for 11 days in July 2005.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>
+</p><p>It is also not normally found on the <a href="/wiki/Pacific" class="mw-redirect" title="Pacific">Pacific</a> coasts of the <a href="/wiki/Americas" title="Americas">Americas</a> due to its <a href="/wiki/Pelagic" class="mw-redirect" title="Pelagic">pelagic</a> habits. At <a href="/wiki/Baja_California" title="Baja California">Baja California</a>, where several nesting locations are offshore, it can be seen more frequently, whereas for example only two individuals have ever been recorded on the coast of <a href="/wiki/El_Salvador" title="El Salvador">El Salvador</a> - one <a href="/wiki/Bird_ringing" title="Bird ringing">ring</a> recovered in 1972, and a bird photographed on October 10, 2001 at <a href="/wiki/Lake_Olomega" title="Lake Olomega">Lake Olomega</a><sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup> which was probably blown there by a storm&#160;.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup> <a href="/wiki/Hurricane" class="mw-redirect" title="Hurricane">Hurricanes</a> can also devastate small breeding colonies, as has been surmised for example for the sooty tern nesting sites on <a href="/wiki/Cay" title="Cay">cays</a> off the <a href="/wiki/San_Andr%C3%A9s_and_Providencia#Island_of_San_Andr.C3.A9s.2C_Colombia" class="mw-redirect" title="San Andrés and Providencia">San Andrés Islands</a> of <a href="/wiki/Colombia" title="Colombia">Colombia</a>.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup>
+</p><p>An exceptionally common bird, the sooty tern is not considered threatened by the <a href="/wiki/IUCN" class="mw-redirect" title="IUCN">IUCN</a>.<sup id="cite_ref-IUCN_1-1" class="reference"><a href="#cite_note-IUCN-1">&#91;1&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Role_in_Easter_Island_culture">Role in Easter Island culture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sooty_tern&amp;action=edit&amp;section=4" title="Edit section: Role in Easter Island culture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>On <a href="/wiki/Easter_Island" title="Easter Island">Easter Island</a>, this species and the <a href="/wiki/Spectacled_tern" title="Spectacled tern">spectacled tern</a> (<i>O. lunatus</i>) are collectively known as <i>manutara</i>. The <i>manutara</i> played an important role in the <i><a href="/wiki/Tangata_manu" title="Tangata manu">tangata manu</a></i> ("birdman") ritual: whichever <i>hopu</i> (champion) could retrieve the first <i>manutara</i> egg from <a href="/wiki/Motu_Nui" title="Motu Nui">Motu Nui</a> islet would become that year's <i>tangata manu</i>; his <a href="/wiki/Clan" title="Clan">clan</a> would receive prime access to resources, especially seabird eggs.
+</p>
+<h2><span class="mw-headline" id="Gallery">Gallery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sooty_tern&amp;action=edit&amp;section=5" title="Edit section: Gallery">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:35px auto;"><a href="/wiki/File:Sooty_tern_flying.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Sooty_tern_flying.JPG/120px-Sooty_tern_flying.JPG" decoding="async" width="120" height="80" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Sooty_tern_flying.JPG/180px-Sooty_tern_flying.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Sooty_tern_flying.JPG/240px-Sooty_tern_flying.JPG 2x" data-file-width="2108" data-file-height="1405" /></a></div></div>
+			<div class="gallerytext">
+<p>Sooty tern rookery on Tern Island (<a href="/wiki/French_Frigate_Shoals" title="French Frigate Shoals">French Frigate Shoals</a>)
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Sooty_Tern_chick.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sooty_Tern_chick.JPG/102px-Sooty_Tern_chick.JPG" decoding="async" width="102" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sooty_Tern_chick.JPG/153px-Sooty_Tern_chick.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sooty_Tern_chick.JPG/205px-Sooty_Tern_chick.JPG 2x" data-file-width="1374" data-file-height="1611" /></a></div></div>
+			<div class="gallerytext">
+<p>Chick on Tern Island, French Frigate Shoals
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:35px auto;"><a href="/wiki/File:BFAL_SOTE_shade.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/BFAL_SOTE_shade.JPG/120px-BFAL_SOTE_shade.JPG" decoding="async" width="120" height="80" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/BFAL_SOTE_shade.JPG/180px-BFAL_SOTE_shade.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5d/BFAL_SOTE_shade.JPG/240px-BFAL_SOTE_shade.JPG 2x" data-file-width="3456" data-file-height="2304" /></a></div></div>
+			<div class="gallerytext">
+<p>Sooty tern chicks seeking shade under the shadow of a young <a href="/wiki/Black-footed_albatross" title="Black-footed albatross">black-footed albatross</a>
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:35px auto;"><a href="/wiki/File:Frigate_sooty.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Frigate_sooty.JPG/120px-Frigate_sooty.JPG" decoding="async" width="120" height="80" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Frigate_sooty.JPG/180px-Frigate_sooty.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Frigate_sooty.JPG/240px-Frigate_sooty.JPG 2x" data-file-width="3456" data-file-height="2304" /></a></div></div>
+			<div class="gallerytext">
+<p>A chick is snatched by a predatory <a href="/wiki/Great_frigatebird" title="Great frigatebird">great frigatebird</a>
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:30px auto;"><a href="/wiki/File:Onychoprion_fuscatus_-Phillip_Island,_Norfolk_Island_group,_Australia_-egg-8.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Onychoprion_fuscatus_-Phillip_Island%2C_Norfolk_Island_group%2C_Australia_-egg-8.jpg/120px-Onychoprion_fuscatus_-Phillip_Island%2C_Norfolk_Island_group%2C_Australia_-egg-8.jpg" decoding="async" width="120" height="90" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Onychoprion_fuscatus_-Phillip_Island%2C_Norfolk_Island_group%2C_Australia_-egg-8.jpg/180px-Onychoprion_fuscatus_-Phillip_Island%2C_Norfolk_Island_group%2C_Australia_-egg-8.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Onychoprion_fuscatus_-Phillip_Island%2C_Norfolk_Island_group%2C_Australia_-egg-8.jpg/240px-Onychoprion_fuscatus_-Phillip_Island%2C_Norfolk_Island_group%2C_Australia_-egg-8.jpg 2x" data-file-width="1600" data-file-height="1200" /></a></div></div>
+			<div class="gallerytext">
+<p>Egg
+</p>
+			</div>
+		</div></li>
+</ul>
+<h2><span class="mw-headline" id="Footnotes">Footnotes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sooty_tern&amp;action=edit&amp;section=6" title="Edit section: Footnotes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-IUCN-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-IUCN_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-IUCN_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2017" class="citation journal cs1">BirdLife International (2017). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/species/22694740/110635097">"<i>Onychoprion fuscatus</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2017</b>: e.T22694740A110635097. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.2305%2FIUCN.UK.2017-1.RLTS.T22694740A110635097.en">10.2305/IUCN.UK.2017-1.RLTS.T22694740A110635097.en</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Onychoprion+fuscatus&amp;rft.volume=2017&amp;rft.pages=e.T22694740A110635097&amp;rft.date=2017&amp;rft_id=info%3Adoi%2F10.2305%2FIUCN.UK.2017-1.RLTS.T22694740A110635097.en&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fspecies%2F22694740%2F110635097&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Bridge et al. (2005)</span>
+</li>
+<li id="cite_note-job-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-job_3-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n167">167</a>, 282. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=167%2C+282&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">From <i>ʻewa</i>, "crooked, out of shape, imperfect" (Pukui et al. 1992: p.17)</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">The Polynesian word for terns (<i>tara</i>) is the same as the word for "pointed"; it is easy to see how these sharp-billed fork-tailed birds came to be called thus (Tregear, 1891)</span>
+</li>
+<li id="cite_note-BlondBrash2006-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-BlondBrash2006_6-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFBlondBrashRogers2006" class="citation book cs1">Blond, Becca; Brash, Celeste; Rogers, Hilary (2006). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=BI4-pi0eFq0C&amp;pg=PA217"><i>Tahiti &amp; French Polynesia. Ediz. Inglese</i></a>. Lonely Planet. p.&#160;217. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-74059-998-6" title="Special:BookSources/978-1-74059-998-6"><bdi>978-1-74059-998-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Tahiti+%26+French+Polynesia.+Ediz.+Inglese&amp;rft.pages=217&amp;rft.pub=Lonely+Planet&amp;rft.date=2006&amp;rft.isbn=978-1-74059-998-6&amp;rft.aulast=Blond&amp;rft.aufirst=Becca&amp;rft.au=Brash%2C+Celeste&amp;rft.au=Rogers%2C+Hilary&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DBI4-pi0eFq0C%26pg%3DPA217&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Or "Indian Ocean sooty tern" if more subspecies are accepted.</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite id="CITEREFFernández-Ordóñez2003" class="citation web cs1">Fernández-Ordóñez, Juan Carlos (June 2003). <a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=523168EA52D6CB02">"Sooty Tern (Crissal) Onychoprion fuscatus crissalis (Lawrence, 1872)"</a>. <i>Avibase - the world bird database</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Avibase+-+the+world+bird+database&amp;rft.atitle=Sooty+Tern+%28Crissal%29+Onychoprion+fuscatus+crissalis+%28Lawrence%2C+1872%29&amp;rft.date=2003-06&amp;rft.aulast=Fern%C3%A1ndez-Ord%C3%B3%C3%B1ez&amp;rft.aufirst=Juan+Carlos&amp;rft_id=https%3A%2F%2Favibase.bsc-eoc.org%2Fspecies.jsp%3Favibaseid%3D523168EA52D6CB02&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite id="CITEREFFernández-Ordóñez2003" class="citation web cs1">Fernández-Ordóñez, Juan Carlos (June 2003). <a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?lang=ES&amp;avibaseid=15FFAE6204F0510E">"Sooty Tern (kermadeci) Onychoprion fuscatus kermadeci Mathews, 1916"</a>. <i>Avibase - the world bird database</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Avibase+-+the+world+bird+database&amp;rft.atitle=Sooty+Tern+%28kermadeci%29+Onychoprion+fuscatus+kermadeci+Mathews%2C+1916&amp;rft.date=2003-06&amp;rft.aulast=Fern%C3%A1ndez-Ord%C3%B3%C3%B1ez&amp;rft.aufirst=Juan+Carlos&amp;rft_id=https%3A%2F%2Favibase.bsc-eoc.org%2Fspecies.jsp%3Flang%3DES%26avibaseid%3D15FFAE6204F0510E&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.fws.gov/midway/sote.html">FWS</a></span>
+</li>
+<li id="cite_note-streets1877-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-streets1877_11-0">^</a></b></span> <span class="reference-text">Streets (1877)</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.drytortugasinfo.com/sooty-tern.html">"The Sooty Tern"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Sooty+Tern&amp;rft_id=http%3A%2F%2Fwww.drytortugasinfo.com%2Fsooty-tern.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite id="CITEREFLoyerBedelde_RiberollesIrons_(Narrator)2014" class="citation episode cs1">Loyer, Bertrand; Bedel, Jacques; de Riberolles, François; Irons (Narrator), Jeremy (January 2014). "Pioneers Of The Deep". <i>Life On Fire</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Life+On+Fire&amp;rft.date=2014-01&amp;rft.aulast=Loyer&amp;rft.aufirst=Bertrand&amp;rft.au=Bedel%2C+Jacques&amp;rft.au=de+Riberolles%2C+Fran%C3%A7ois&amp;rft.au=Irons+%28Narrator%29%2C+Jeremy&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text">Boulton &amp; Rand (1952)</span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.michaelmckee.co.uk/bird_s.asp?ID=325&amp;Region=Rarities&amp;Year=2005">"Sooty Tern Cemlyn Bay, Anglesey, Wales"</a>. <i>michaelmckee.co.uk</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=michaelmckee.co.uk&amp;rft.atitle=Sooty+Tern+Cemlyn+Bay%2C+Anglesey%2C+Wales&amp;rft_id=http%3A%2F%2Fwww.michaelmckee.co.uk%2Fbird_s.asp%3FID%3D325%26Region%3DRarities%26Year%3D2005&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://sora.unm.edu/sites/default/files/journals/nab/v056n03/p00369-p00371.pdf">"Mexico - Central America"</a> <span class="cs1-format">(PDF)</span>. <i>The University of New Mexico</i>. 2002.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=The+University+of+New+Mexico&amp;rft.atitle=Mexico+-+Central+America&amp;rft.date=2002&amp;rft_id=https%3A%2F%2Fsora.unm.edu%2Fsites%2Fdefault%2Ffiles%2Fjournals%2Fnab%2Fv056n03%2Fp00369-p00371.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text">Herrera et al. (2006)</span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text">Estela et al. (2005)</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sooty_tern&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Rudyerd_Boulton" title="Rudyerd Boulton">Boulton, Rudyerd</a> &amp; Rand, A.L. (1952): A collection of birds from Mount Cameroon. <i><a href="/wiki/Fieldiana_Zoology" class="mw-redirect" title="Fieldiana Zoology">Fieldiana Zoology</a></i> <b>34</b> (5): 35–64. <a rel="nofollow" class="external text" href="https://archive.org/details/collectionofbird345boul">Fulltext</a> at the <a href="/wiki/Internet_Archive" title="Internet Archive">Internet Archive</a></li>
+<li><cite id="CITEREFBridgeJonesBaker2005" class="citation journal cs1">Bridge, E.S.; Jones, A.W.; Baker, A.J. (2005). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20060720204025/http://www2.hawaii.edu/~khayes/Journal_Club/summer2006/Bridge_et_al_2005_MPE.pdf">"A phylogenetic framework for the terns (Sternini) inferred from mtDNA sequences: implications for taxonomy and plumage evolution"</a> <span class="cs1-format">(PDF)</span>. <i>Molecular Phylogenetics and Evolution</i>. <b>35</b> (2): 459–469. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.ympev.2004.12.010">10.1016/j.ympev.2004.12.010</a>. Archived from <a rel="nofollow" class="external text" href="http://www2.hawaii.edu/~khayes/Journal_Club/summer2006/Bridge_et_al_2005_MPE.pdf">the original</a> <span class="cs1-format">(PDF)</span> on 2006-07-20.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Molecular+Phylogenetics+and+Evolution&amp;rft.atitle=A+phylogenetic+framework+for+the+terns+%28Sternini%29+inferred+from+mtDNA+sequences%3A+implications+for+taxonomy+and+plumage+evolution&amp;rft.volume=35&amp;rft.issue=2&amp;rft.pages=459-469&amp;rft.date=2005&amp;rft_id=info%3Adoi%2F10.1016%2Fj.ympev.2004.12.010&amp;rft.aulast=Bridge&amp;rft.aufirst=E.S.&amp;rft.au=Jones%2C+A.W.&amp;rft.au=Baker%2C+A.J.&amp;rft_id=http%3A%2F%2Fwww2.hawaii.edu%2F~khayes%2FJournal_Club%2Fsummer2006%2FBridge_et_al_2005_MPE.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><cite id="CITEREFCollinson2006" class="citation journal cs1">Collinson, M (2006). <a rel="nofollow" class="external text" href="http://www.britishbirds.co.uk/search?id=9283">"Splitting headaches? Recent taxonomic changes affecting the British and Western Palaearctic lists"</a>. <i><a href="/wiki/British_Birds_(magazine)" title="British Birds (magazine)">British Birds</a></i>. <b>99</b> (6): 306–323.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=British+Birds&amp;rft.atitle=Splitting+headaches%3F+Recent+taxonomic+changes+affecting+the+British+and+Western+Palaearctic+lists&amp;rft.volume=99&amp;rft.issue=6&amp;rft.pages=306-323&amp;rft.date=2006&amp;rft.aulast=Collinson&amp;rft.aufirst=M&amp;rft_id=http%3A%2F%2Fwww.britishbirds.co.uk%2Fsearch%3Fid%3D9283&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><cite id="CITEREFEstelaSilvaCastillo2005" class="citation journal cs1">Estela, Felipe A.; Silva, John Douglas; Castillo, Luis Fernando (2005). <a rel="nofollow" class="external text" href="http://www.scielo.org.co/pdf/cal/v27n2/v27n2a10.pdf">"El pelícano blanco americano (<i>Pelecanus erythrorhynchus</i>) en Colombia, con comentarios sobre los effectos de los huracanes en el Caribe &#91;The American White Pelican (<i>Pelecanus erythrorhynchus</i>) in Colombia, with comments on the effects of Caribbean hurricanes&#93;"</a> <span class="cs1-format">(PDF)</span>. <i>Caldasia</i> (in Spanish). <b>27</b> (2): 271–275.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Caldasia&amp;rft.atitle=El+pel%C3%ADcano+blanco+americano+%28Pelecanus+erythrorhynchus%29+en+Colombia%2C+con+comentarios+sobre+los+effectos+de+los+huracanes+en+el+Caribe+%5BThe+American+White+Pelican+%28Pelecanus+erythrorhynchus%29+in+Colombia%2C+with+comments+on+the+effects+of+Caribbean+hurricanes%5D&amp;rft.volume=27&amp;rft.issue=2&amp;rft.pages=271-275&amp;rft.date=2005&amp;rft.aulast=Estela&amp;rft.aufirst=Felipe+A.&amp;rft.au=Silva%2C+John+Douglas&amp;rft.au=Castillo%2C+Luis+Fernando&amp;rft_id=http%3A%2F%2Fwww.scielo.org.co%2Fpdf%2Fcal%2Fv27n2%2Fv27n2a10.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><cite id="CITEREFHerreraRiveraIbarra_PortilloRodríguez2006" class="citation journal cs1">Herrera, Néstor; Rivera, Roberto; Ibarra Portillo, Ricardo; Rodríguez, Wilfredo (2006). <a rel="nofollow" class="external text" href="http://www.sao.org.co/publicaciones/boletinsao/01-Herrera.etal.RecordsSalvador.pdf">"Nuevos registros para la avifauna de El Salvador. &#91;"New records for the avifauna of El Salvador"&#93;"</a> <span class="cs1-format">(PDF)</span>. <i>Boletín de la Sociedad Antioqueña de Ornitología</i> (in Spanish). <b>16</b> (2): 1–19.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Bolet%C3%ADn+de+la+Sociedad+Antioque%C3%B1a+de+Ornitolog%C3%ADa&amp;rft.atitle=Nuevos+registros+para+la+avifauna+de+El+Salvador.+%5B%22New+records+for+the+avifauna+of+El+Salvador%22%5D.&amp;rft.volume=16&amp;rft.issue=2&amp;rft.pages=1-19&amp;rft.date=2006&amp;rft.aulast=Herrera&amp;rft.aufirst=N%C3%A9stor&amp;rft.au=Rivera%2C+Roberto&amp;rft.au=Ibarra+Portillo%2C+Ricardo&amp;rft.au=Rodr%C3%ADguez%2C+Wilfredo&amp;rft_id=http%3A%2F%2Fwww.sao.org.co%2Fpublicaciones%2Fboletinsao%2F01-Herrera.etal.RecordsSalvador.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASooty+tern" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li>Olsen, Klaus Malling &amp; Larsson, Hans (1995): <i>Terns of Europe and North America</i>. <a href="/wiki/Helm_Identification_Guides" title="Helm Identification Guides">Christopher Helm</a>, London. <small><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-7136-4056-1" title="Special:BookSources/0-7136-4056-1">0-7136-4056-1</a></small></li>
+<li>Pukui, Mary Kawena; Elbert, Samuel Hoyt; Mookini, Esther T. &amp; Nishizawa, Yu Mapuana (1992): <i>New Pocket Hawaiian Dictionary with a Concise Grammars and Given Names in Hawaiian</i>. University of Hawaii Press, Honolulu. <small><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-8248-1392-8" title="Special:BookSources/0-8248-1392-8">0-8248-1392-8</a></small></li>
+<li>Streets, Thomas H. (1877): Some Account of the Natural History of the Fanning Group of Islands. <i><a href="/wiki/American_Naturalist" class="mw-redirect" title="American Naturalist">Am. Nat.</a></i> <b>11</b> (2): 65–72. <a rel="nofollow" class="external text" href="https://www.jstor.org/stable/2448050">First page image</a></li>
+<li><a href="/wiki/Edward_Tregear" title="Edward Tregear">Tregear, Edward</a> (1891): <i><a rel="nofollow" class="external text" href="http://www.nzetc.org/tm/scholarly/tei-TreMaor.html">Maori-Polynesian Comparative Dictionary</a></i>. Lyon and Blair, Wellington.</li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sooty_tern&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Onychoprion_fuscatus" class="extiw" title="commons:Onychoprion fuscatus">Onychoprion fuscatus</a></b></i>.</td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/34px-Wikispecies-logo.svg.png" decoding="async" width="34" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/51px-Wikispecies-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/68px-Wikispecies-logo.svg.png 2x" data-file-width="941" data-file-height="1103" /></td>
+<td class="mbox-text plainlist"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a> has information related to <i><b><a href="https://species.wikimedia.org/wiki/Onychoprion_fuscata" class="extiw" title="wikispecies:Onychoprion fuscata">Onychoprion fuscata</a></b></i></td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://www.birdnote.org/birdnote.cfm?id=1849">Sooty tern article at BirdNote.org</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.aos-uk.com/ascension.html">Sooty terns on Ascension Island South Atlantic</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Taxon_identifiers" style="font-size:114%;margin:0 4em"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%;text-align: left;"><i>Onychoprion fuscatus</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q28482" class="extiw" title="wikidata:Q28482">Q28482</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Onychoprion_fuscatus" class="extiw" title="wikispecies:Onychoprion fuscatus">Onychoprion fuscatus</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/American_Birding_Association" title="American Birding Association">ABA</a>: <span class="uid">sooter</span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=3E7F825D03C0DC3E">3E7F825D03C0DC3E</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22694740">22694740</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">SOOTE</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/sooter1">sooter1</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">6230</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=368006">368006</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/5789284">5789284</a></span></span></li>
+<li><span style="white-space:nowrap;">GNAB: <span class="uid"><a rel="nofollow" class="external text" href="https://www.audubon.org/field-guide/bird/sooty-tern">sooty-tern</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/144525">144525</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=11799942">11799942</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=824105">824105</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22694740">22694740</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0021053552">NHMSYS0021053552</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=425648">425648</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Neotropical_Birds_Online" class="mw-redirect" title="Neotropical Birds Online">Neotropical</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://neotropical.birds.cornell.edu/Species-Account/nb/species/sooter1">sooter1</a></span></span></li>
+<li><span style="white-space:nowrap;">NZOR: <span class="uid"><a rel="nofollow" class="external text" href="http://www.nzor.org.nz/names/c806598c-48ed-4ed8-b7b9-f47c16b292df">c806598c-48ed-4ed8-b7b9-f47c16b292df</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/SeaLifeBase" title="SeaLifeBase">SeaLifeBase</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.sealifebase.ca/Summary/SpeciesSummary.php?id=74529">74529</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=567827">567827</a></span></span></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;text-align: left;"><i>Sterna fuscata</i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q25665778" class="extiw" title="wikidata:Q25665778">Q25665778</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/sterna-fuscata/">sterna-fuscata</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/dcf93bae-1265-4f88-8db8-6ed5bd06c6f3">dcf93bae-1265-4f88-8db8-6ed5bd06c6f3</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=335270">335270</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/5229252">5229252</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10718988">10718988</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Invasive_Species_Compendium" title="Invasive Species Compendium">ISC</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.cabi.org/isc/datasheet/62978">62978</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=176894">176894</a></span></span></li>
+<li><span style="white-space:nowrap;">NZBO: <span class="uid"><a rel="nofollow" class="external text" href="http://nzbirdsonline.org.nz/species/sooty-tern">sooty-tern</a></span></span></li>
+<li><span style="white-space:nowrap;">NZOR: <span class="uid"><a rel="nofollow" class="external text" href="http://www.nzor.org.nz/names/9e78c62b-7869-4234-8b85-f96f0ce4144e">9e78c62b-7869-4234-8b85-f96f0ce4144e</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=137161">137161</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1370
+Cached time: 20201029231754
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 1.008 seconds
+Real time usage: 1.343 seconds
+Preprocessor visited node count: 6587/1000000
+Post‐expand include size: 59642/2097152 bytes
+Template argument size: 6398/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 27/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 47755/5000000 bytes
+Lua time usage: 0.719/10.000 seconds
+Lua memory usage: 10.15 MB/50 MB
+Number of Wikibase entities loaded: 25/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1242.568      1 -total
+ 33.61%  417.641      1 Template:Speciesbox
+ 32.77%  407.184      1 Template:Taxobox/core
+ 25.81%  320.729      1 Template:Taxonbar
+ 16.42%  204.074      1 Template:Reflist
+  9.80%  121.732      1 Template:Cite_iucn
+  5.41%   67.234      1 Template:Short_description
+  4.60%   57.111      1 Template:Commons
+  4.51%   56.041      2 Template:Sister_project
+  4.08%   50.639      2 Template:Side_box
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:391598-0!canonical and timestamp 20201029231753 and revision id 977150765
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Sooty_tern&amp;oldid=977150765">https://en.wikipedia.org/w/index.php?title=Sooty_tern&amp;oldid=977150765</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Onychoprion" title="Category:Onychoprion">Onychoprion</a></li><li><a href="/wiki/Category:Terns" title="Category:Terns">Terns</a></li><li><a href="/wiki/Category:Birds_of_Ascension_Island" title="Category:Birds of Ascension Island">Birds of Ascension Island</a></li><li><a href="/wiki/Category:Birds_of_Hawaii" title="Category:Birds of Hawaii">Birds of Hawaii</a></li><li><a href="/wiki/Category:Birds_of_the_Atlantic_Ocean" title="Category:Birds of the Atlantic Ocean">Birds of the Atlantic Ocean</a></li><li><a href="/wiki/Category:Birds_of_the_Dominican_Republic" title="Category:Birds of the Dominican Republic">Birds of the Dominican Republic</a></li><li><a href="/wiki/Category:Birds_of_the_Indian_Ocean" title="Category:Birds of the Indian Ocean">Birds of the Indian Ocean</a></li><li><a href="/wiki/Category:Birds_of_the_Pacific_Ocean" title="Category:Birds of the Pacific Ocean">Birds of the Pacific Ocean</a></li><li><a href="/wiki/Category:Pantropical_fauna" title="Category:Pantropical fauna">Pantropical fauna</a></li><li><a href="/wiki/Category:Least_concern_biota_of_Asia" title="Category:Least concern biota of Asia">Least concern biota of Asia</a></li><li><a href="/wiki/Category:Least_concern_biota_of_Oceania" title="Category:Least concern biota of Oceania">Least concern biota of Oceania</a></li><li><a href="/wiki/Category:Birds_of_Norfolk_Island" title="Category:Birds of Norfolk Island">Birds of Norfolk Island</a></li><li><a href="/wiki/Category:Birds_described_in_1766" title="Category:Birds described in 1766">Birds described in 1766</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:CS1_Spanish-language_sources_(es)" title="Category:CS1 Spanish-language sources (es)">CS1 Spanish-language sources (es)</a></li><li><a href="/wiki/Category:Commons_link_is_on_Wikidata" title="Category:Commons link is on Wikidata">Commons link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_automatically_added_original_combinations" title="Category:Taxonbars with automatically added original combinations">Taxonbars with automatically added original combinations</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Sooty+tern" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Sooty+tern" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Sooty_tern" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Sooty_tern" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Sooty_tern">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Sooty_tern&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Sooty_tern&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Sooty_tern" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Sooty_tern" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Sooty_tern&amp;oldid=977150765" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Sooty_tern&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Sooty_tern&amp;id=977150765&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q28482" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Sooty_tern&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Sooty_tern&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Onychoprion_fuscatus" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Onychoprion_fuscatus" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Roetsterretjie" title="Roetsterretjie – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AE%D8%B1%D8%B4%D9%86%D8%A9_%D8%BA%D8%A8%D8%B3%D8%A7%D8%A1" title="خرشنة غبساء – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/T%C3%BCnd_sus%C3%BCp%C3%BCr%C9%99n" title="Tünd susüpürən – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B6%D0%B4%D0%B5%D0%BD%D0%B0_%D1%80%D0%B8%D0%B1%D0%B0%D1%80%D0%BA%D0%B0" title="Саждена рибарка – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Skrav_kein_du" title="Skrav kein du – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Xatrac_fosc" title="Xatrac fosc – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Onychoprion_fuscatus" title="Onychoprion fuscatus – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Ryb%C3%A1k_%C4%8Dernoh%C5%99bet%C3%BD" title="Rybák černohřbetý – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/M%C3%B4r-wennol_fraith" title="Môr-wennol fraith – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Sodfarvet_terne" title="Sodfarvet terne – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Ru%C3%9Fseeschwalbe" title="Rußseeschwalbe – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/T%C3%B3nteel_t%C3%A1shchozhii_%C5%82izhin_d%C3%B3%C3%B3_%C5%82igaa%C3%ADg%C3%AD%C3%AD" title="Tónteel táshchozhii łizhin dóó łigaaígíí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Onychoprion_fuscatus" title="Onychoprion fuscatus – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Fulga_%C5%9Dterno" title="Fulga ŝterno – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Txenada_ilun" title="Txenada ilun – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D8%B3%D8%AA%D9%88%DB%8C_%D8%AF%D8%B1%DB%8C%D8%A7%DB%8C%DB%8C_%D9%BE%D8%B4%D8%AA%E2%80%8C%D8%B3%DB%8C%D8%A7%D9%87" title="پرستوی دریایی پشت‌سیاه – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Sterne_fuligineuse" title="Sterne fuligineuse – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Carr%C3%A1n_escuro" title="Carrán escuro – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Onychoprion_fuscatus" title="Onychoprion fuscatus – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A9%D7%97%D7%A4%D7%99%D7%AA_%D7%9B%D7%94%D7%94" title="שחפית כהה – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/F%C3%BCst%C3%B6s_cs%C3%A9r" title="Füstös csér – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Burung_Camar_Angin" title="Burung Camar Angin – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Bonte_stern" title="Bonte stern – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%82%B0%E3%83%AD%E3%82%A2%E3%82%B8%E3%82%B5%E3%82%B7" title="セグロアジサシ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Sotterne" title="Sotterne – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pnb"><a href="https://pnb.wikipedia.org/wiki/%D8%B3%D9%88%D9%B9%DB%8C_%D9%B9%D9%B9%DB%8C%D8%B1%DB%8C" title="سوٹی ٹٹیری – Western Punjabi" lang="pnb" hreflang="pnb" class="interlanguage-link-target">پنجابی</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Sterna_fuscata" title="Sterna fuscata – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Rybitwa_czarnogrzbieta" title="Rybitwa czarnogrzbieta – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Onychoprion_fuscatus" title="Onychoprion fuscatus – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Chir%C4%83_cenu%C8%99ie" title="Chiră cenușie – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%91%D0%BC%D0%BD%D0%B0%D1%8F_%D0%BA%D1%80%D0%B0%D1%87%D0%BA%D0%B0" title="Тёмная крачка – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Nokitiira" title="Nokitiira – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Sott%C3%A4rna" title="Sottärna – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-to"><a href="https://to.wikipedia.org/wiki/Talat%C4%81" title="Talatā – Tongan" lang="to" hreflang="to" class="interlanguage-link-target">Lea faka-Tonga</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0%D1%82%D0%B8%D0%B9" title="Крячок строкатий – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Nh%C3%A0n_n%C3%A2u" title="Nhàn nâu – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Sterna_fuscata" title="Sterna fuscata – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E4%B9%8C%E7%87%95%E9%B8%A5" title="乌燕鸥 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q28482#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 7 September 2020, at 05:58<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Sooty_tern&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.008","walltime":"1.343","ppvisitednodes":{"value":6587,"limit":1000000},"postexpandincludesize":{"value":59642,"limit":2097152},"templateargumentsize":{"value":6398,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":27,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":47755,"limit":5000000},"entityaccesscount":{"value":25,"limit":400},"timingprofile":["100.00% 1242.568      1 -total"," 33.61%  417.641      1 Template:Speciesbox"," 32.77%  407.184      1 Template:Taxobox/core"," 25.81%  320.729      1 Template:Taxonbar"," 16.42%  204.074      1 Template:Reflist","  9.80%  121.732      1 Template:Cite_iucn","  5.41%   67.234      1 Template:Short_description","  4.60%   57.111      1 Template:Commons","  4.51%   56.041      2 Template:Sister_project","  4.08%   50.639      2 Template:Side_box"]},"scribunto":{"limitreport-timeusage":{"value":"0.719","limit":"10.000"},"limitreport-memusage":{"value":10647268,"limit":52428800}},"cachereport":{"origin":"mw1370","timestamp":"20201029231754","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Sooty tern","url":"https:\/\/en.wikipedia.org\/wiki\/Sooty_tern","sameAs":"http:\/\/www.wikidata.org\/entity\/Q28482","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q28482","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-12-07T08:06:27Z","dateModified":"2020-09-07T05:58:01Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/5\/59\/Sterna_fuscata.JPG","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":186,"wgHostname":"mw1271"});});</script>
+</body></html>

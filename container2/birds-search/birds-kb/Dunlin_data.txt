@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Dunlin - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"dac60557-b813-48f6-9936-b6926b726815","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Dunlin","wgTitle":"Dunlin","wgCurRevisionId":986270611,"wgRevisionId":986270611,"wgArticleId":287662,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","Articles with short description","Short description matches Wikidata","Articles with 'species' microformats","Commons category link is on Wikidata","ARKive links","Taxonbars with 30–34 taxon IDs","Articles containing video clips","IUCN Red List least concern species",
+"Calidris","Birds of the Arctic","Holarctic birds","Birds of North Africa","Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Dunlin","wgRelevantArticleId":287662,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q26650"};RLSTATE={"ext.globalCssJs.user.styles":"ready",
+"site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging",
+"ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Dunlin_%28Calidris_alpina%29_juvenile.jpg/1200px-Dunlin_%28Calidris_alpina%29_juvenile.jpg"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Dunlin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Dunlin&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Dunlin&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Dunlin"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dunlin rootpage-Dunlin skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Dunlin</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Species of bird</div>
+<div role="note" class="hatnote navigation-not-searchable">For other uses, see <a href="/wiki/Dunlin_(disambiguation)" class="mw-disambig" title="Dunlin (disambiguation)">Dunlin (disambiguation)</a>.</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Dunlin
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Dunlin_(Calidris_alpina)_juvenile.jpg" class="image"><img alt="Dunlin (Calidris alpina) juvenile.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Dunlin_%28Calidris_alpina%29_juvenile.jpg/220px-Dunlin_%28Calidris_alpina%29_juvenile.jpg" decoding="async" width="220" height="147" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Dunlin_%28Calidris_alpina%29_juvenile.jpg/330px-Dunlin_%28Calidris_alpina%29_juvenile.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Dunlin_%28Calidris_alpina%29_juvenile.jpg/440px-Dunlin_%28Calidris_alpina%29_juvenile.jpg 2x" data-file-width="2124" data-file-height="1416" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Juvenile, <a href="/wiki/Farmoor_Reservoir" title="Farmoor Reservoir">Farmoor Reservoir</a>, <a href="/wiki/Oxfordshire" title="Oxfordshire">Oxfordshire</a><br />
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:222px;"><div class="mediaContainer" style="width:220px"><audio id="mwe_player_0" controls="" preload="none" style="width:220px" class="kskin" data-durationhint="36.439909297052" data-startoffset="0" data-mwtitle="Dunlin_(Calidris_alpina)_(W_CALIDRIS_ALPINA_R1_C13).ogg" data-mwprovider="wikimediacommons"><source src="//upload.wikimedia.org/wikipedia/commons/7/77/Dunlin_%28Calidris_alpina%29_%28W_CALIDRIS_ALPINA_R1_C13%29.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Original Ogg file (129 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="128703" /><source src="//upload.wikimedia.org/wikipedia/commons/transcoded/7/77/Dunlin_%28Calidris_alpina%29_%28W_CALIDRIS_ALPINA_R1_C13%29.ogg/Dunlin_%28Calidris_alpina%29_%28W_CALIDRIS_ALPINA_R1_C13%29.ogg.mp3" type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0" data-height="0" data-bandwidth="148296" /></audio></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Dunlin_(Calidris_alpina)_(W_CALIDRIS_ALPINA_R1_C13).ogg" class="internal" title="Enlarge"></a></div>Display song recorded in <a href="/wiki/Cardiganshire" class="mw-redirect" title="Cardiganshire">Cardiganshire</a>, Wales</div></div></div></div>
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Calidris" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Charadriiformes" title="Charadriiformes">Charadriiformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Sandpiper" title="Sandpiper">Scolopacidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Calidris" title="Calidris"><i>Calidris</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>C.&#160;alpina</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Calidris alpina</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:CalidrisAlpinaIUCNver2018_2.png" class="image"><img alt="CalidrisAlpinaIUCNver2018 2.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/CalidrisAlpinaIUCNver2018_2.png/220px-CalidrisAlpinaIUCNver2018_2.png" decoding="async" width="220" height="156" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/CalidrisAlpinaIUCNver2018_2.png/330px-CalidrisAlpinaIUCNver2018_2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d7/CalidrisAlpinaIUCNver2018_2.png/440px-CalidrisAlpinaIUCNver2018_2.png 2x" data-file-width="3507" data-file-height="2480" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Range of <i>C. alpina</i><style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#00FF00; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Breeding</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#008000; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Resident</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#007FFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Non-breeding</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#00FFFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Passage</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#FF00FF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Vagrant (seasonality uncertain)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>Tringa alpina</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span></li>
+<li><i>Erolia alpina</i> <span style="font-size:85%;">(Linnaeus,&#160;1758)</span></li>
+<li><i>Pelidna alpina</i> <span style="font-size:85%;">(Linnaeus,&#160;1758)</span></li></ul>
+</td></tr>
+
+</tbody></table>
+<p>The <b>dunlin</b> (<i>Calidris alpina</i>) is a small <a href="/wiki/Wader" title="Wader">wader</a>, sometimes separated with the other "<a href="/wiki/Stint" title="Stint">stints</a>" in <i>Erolia</i>. The English name is a dialect form of "dunling", first recorded in 1531–2. It derives from <i>dun</i>, "dull brown", with the suffix <i>-ling</i>, meaning a person or thing with the given quality.<sup id="cite_ref-OED_2-0" class="reference"><a href="#cite_note-OED-2">&#91;2&#93;</a></sup> The genus name is from <a href="/wiki/Ancient_Greek" title="Ancient Greek">Ancient Greek</a> <i>kalidris</i> or <i>skalidris</i>, a term used by <a href="/wiki/Aristotle" title="Aristotle">Aristotle</a> for some grey-coloured waterside birds. The specific <i>alpina </i> is from <a href="/wiki/Latin" title="Latin">Latin</a> and means "of high mountains", in this case referring to the <a href="/wiki/Alps" title="Alps">Alps</a>.<sup id="cite_ref-job_3-0" class="reference"><a href="#cite_note-job-3">&#91;3&#93;</a></sup>
+</p><p>It is a circumpolar breeder in <a href="/wiki/Arctic" title="Arctic">Arctic</a> or subarctic regions. Birds that breed in <a href="/wiki/Northern_Europe" title="Northern Europe">northern Europe</a> and <a href="/wiki/Asia" title="Asia">Asia</a> are long-distance <a href="/wiki/Bird_migration" title="Bird migration">migrants</a>, wintering south to <a href="/wiki/Africa" title="Africa">Africa</a>, <a href="/wiki/Southeast_Asia" title="Southeast Asia">southeast Asia</a> and the Middle East. Birds that breed in <a href="/wiki/Alaska" title="Alaska">Alaska</a> and the <a href="/wiki/Canada" title="Canada">Canadian</a> Arctic migrate short distances to the <a href="/wiki/Pacific_Ocean" title="Pacific Ocean">Pacific</a> and <a href="/wiki/Atlantic_Ocean" title="Atlantic Ocean">Atlantic</a> coasts of <a href="/wiki/North_America" title="North America">North America</a>, although those nesting in northern Alaska overwinter in Asia. Many dunlins winter along the Iberian south coast.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Subspecies"><span class="tocnumber">1.1</span> <span class="toctext">Subspecies</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Nesting"><span class="tocnumber">2</span> <span class="toctext">Nesting</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Behaviour"><span class="tocnumber">3</span> <span class="toctext">Behaviour</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunlin&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Spinus-dunlin-2014-11-n011123-w.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Spinus-dunlin-2014-11-n011123-w.jpg/220px-Spinus-dunlin-2014-11-n011123-w.jpg" decoding="async" width="220" height="122" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Spinus-dunlin-2014-11-n011123-w.jpg/330px-Spinus-dunlin-2014-11-n011123-w.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Spinus-dunlin-2014-11-n011123-w.jpg/440px-Spinus-dunlin-2014-11-n011123-w.jpg 2x" data-file-width="1888" data-file-height="1048" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Spinus-dunlin-2014-11-n011123-w.jpg" class="internal" title="Enlarge"></a></div>Adult dunlin in winter plumage, Sandy Hook, New Jersey, USA.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Dunlin_easton_bavents.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Dunlin_easton_bavents.jpg/220px-Dunlin_easton_bavents.jpg" decoding="async" width="220" height="146" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Dunlin_easton_bavents.jpg/330px-Dunlin_easton_bavents.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Dunlin_easton_bavents.jpg/440px-Dunlin_easton_bavents.jpg 2x" data-file-width="2348" data-file-height="1563" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Dunlin_easton_bavents.jpg" class="internal" title="Enlarge"></a></div>Dunlin in late September at Easton Bavents, Suffolk, UK.</div></div></div>
+<p><b>Measurements</b>:<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p>
+<ul><li><b>Length</b>: 6.3-8.7 in (16-22 cm)</li>
+<li><b>Weight</b>: 1.7-2.7 oz (48.7-75.9 g)</li>
+<li><b>Wingspan</b>: 14.2-15.0 in (36-38 cm)</li></ul>
+<p>An adult dunlin in breeding plumage shows the distinctive black belly which no other similar-sized wader possesses. The winter dunlin is basically grey above and white below. Juveniles are brown above with two whitish "V" shapes on the back. They usually have black marks on the flanks or belly and show a strong white wingbar in flight.
+</p><p>The legs and slightly decurved bill are black. There are a number of <a href="/wiki/Subspecies" title="Subspecies">subspecies</a> differing mainly in the extent of rufous colouration in the breeding plumage and the bill length. Bill length varies between sexes, the females having longer bills than the males.
+</p><p>On the tip of the Dunlin's bill is a soft covering that fills with blood and with many nerve endings, forming a sensitive probe that is used to locate invertebrate prey in mud and sand. Although the bill can look sharp-pointed in dead specimens, in life it is blunt.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Subspecies">Subspecies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunlin&amp;action=edit&amp;section=2" title="Edit section: Subspecies">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><i>C. a. arctica</i>, <small>(Schiøler, 1922)</small>, breeds in northeast <a href="/wiki/Greenland" title="Greenland">Greenland</a>.</li>
+<li><i>C. a. schinzii</i>, <small>(<a href="/wiki/Christian_Ludwig_Brehm" title="Christian Ludwig Brehm">Brehm</a> &amp; Schilling, 1822)</small>, breeds in southeast <a href="/wiki/Greenland" title="Greenland">Greenland</a>, <a href="/wiki/Iceland" title="Iceland">Iceland</a>, the <a href="/wiki/British_Isles" title="British Isles">British Isles</a>, <a href="/wiki/Scandinavia" title="Scandinavia">Scandinavia</a> &amp; <a href="/wiki/Baltic_region" title="Baltic region">the Baltic</a>.</li>
+<li><i>C. a. alpina</i>, <small>(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, 1758)</small>, breeds in northern <a href="/wiki/Europe" title="Europe">Europe</a> and northwest <a href="/wiki/Siberia" title="Siberia">Siberia</a>.</li>
+<li><i>C. a. centralis</i>, <small>(<a href="/wiki/Sergei_Buturlin" title="Sergei Buturlin">Buturlin</a>, 1932)</small>, breeds in north-central and northeast <a href="/wiki/Siberia" title="Siberia">Siberia</a>.</li>
+<li><i>C. a. sakhalina</i>, <small>(<a href="/wiki/Louis_Jean_Pierre_Vieillot" title="Louis Jean Pierre Vieillot">Vieillot</a>, 1816)</small>, breeds in eastern <a href="/wiki/Russia" title="Russia">Russia</a> to the <a href="/wiki/Chukchi_Peninsula" title="Chukchi Peninsula">Chukchi Peninsula</a>.</li>
+<li><i>C. a. kistchinski</i>, <small>Tomkovich, 1986</small>, breeds around the <a href="/wiki/Sea_of_Okhotsk" title="Sea of Okhotsk">Sea of Okhotsk</a> to <a href="/wiki/Kuril_Islands" title="Kuril Islands">Kuril Islands</a> and <a href="/wiki/Kamchatka" class="mw-redirect" title="Kamchatka">Kamchatka</a>.</li>
+<li><i>C. a. actites</i>, <small>Nechaev &amp; Tomkovich, 1988</small>, breeds on <a href="/wiki/Sakhalin" title="Sakhalin">Sakhalin</a>.</li>
+<li><i>C. a. arcticola</i>, <small>(<a href="/wiki/W._E._Clyde_Todd" title="W. E. Clyde Todd">Todd</a>, 1953)</small>, breeds from northwest <a href="/wiki/Alaska" title="Alaska">Alaska</a> to northwest <a href="/wiki/Canada" title="Canada">Canada</a>.</li>
+<li><i>C. a. pacifica</i>, <small>(<a href="/wiki/Coues" class="mw-redirect" title="Coues">Coues</a>, 1861)</small>, breeds in western and southern <a href="/wiki/Alaska" title="Alaska">Alaska</a>.</li>
+<li><i>C. a. hudsonia</i>, <small>(<a href="/wiki/W._E._Clyde_Todd" title="W. E. Clyde Todd">Todd</a>, 1953)</small>, breeds in central <a href="/wiki/Canada" title="Canada">Canada</a>.</li></ul>
+<table>
+<tbody><tr>
+<td><div class="thumb tleft"><div class="thumbinner" style="width:752px;"><a href="/wiki/File:Calidris_alpina_migrations.png" class="image"><img alt="Distribution map" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/17/Calidris_alpina_migrations.png/750px-Calidris_alpina_migrations.png" decoding="async" width="750" height="281" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/17/Calidris_alpina_migrations.png/1125px-Calidris_alpina_migrations.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/17/Calidris_alpina_migrations.png/1500px-Calidris_alpina_migrations.png 2x" data-file-width="1920" data-file-height="720" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Calidris_alpina_migrations.png" class="internal" title="Enlarge"></a></div>Distribution of subspecies, migration routes, and major European wintering sites</div></div></div>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Nesting">Nesting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunlin&amp;action=edit&amp;section=3" title="Edit section: Nesting">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Calidris_alpina_MWNH_0158.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Calidris_alpina_MWNH_0158.JPG/220px-Calidris_alpina_MWNH_0158.JPG" decoding="async" width="220" height="154" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Calidris_alpina_MWNH_0158.JPG/330px-Calidris_alpina_MWNH_0158.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Calidris_alpina_MWNH_0158.JPG/440px-Calidris_alpina_MWNH_0158.JPG 2x" data-file-width="4064" data-file-height="2840" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Calidris_alpina_MWNH_0158.JPG" class="internal" title="Enlarge"></a></div>Eggs, Collection <a href="/wiki/Museum_Wiesbaden" title="Museum Wiesbaden">Museum Wiesbaden</a>, <a href="/wiki/Germany" title="Germany">Germany</a></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Calidris_alpina_schinzii_MHNT.ZOO.2010.11.119.20.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Calidris_alpina_schinzii_MHNT.ZOO.2010.11.119.20.jpg/220px-Calidris_alpina_schinzii_MHNT.ZOO.2010.11.119.20.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Calidris_alpina_schinzii_MHNT.ZOO.2010.11.119.20.jpg/330px-Calidris_alpina_schinzii_MHNT.ZOO.2010.11.119.20.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Calidris_alpina_schinzii_MHNT.ZOO.2010.11.119.20.jpg/440px-Calidris_alpina_schinzii_MHNT.ZOO.2010.11.119.20.jpg 2x" data-file-width="3780" data-file-height="2835" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Calidris_alpina_schinzii_MHNT.ZOO.2010.11.119.20.jpg" class="internal" title="Enlarge"></a></div><i>Calidris alpina schinzii</i> - <a href="/wiki/MHNT" class="mw-redirect" title="MHNT">MHNT</a></div></div></div>
+<p>The nest is a shallow scrape on the ground lined with vegetation, into which typically four eggs are laid and <a href="/wiki/Avian_incubation" class="mw-redirect" title="Avian incubation">incubated</a> by the male and female parents. Chicks are precocial, however are brooded during early development. They start to fly at approximately three weeks of age. The majority of brood care is provided by the male, as the female deserts the brood and often leaves the breeding area.
+</p><p>The call is a typical sandpiper "peep", and the display song a harsh trill.
+</p><p>The dunlin is one of the species to which the <i>Agreement on the Conservation of African-Eurasian Migratory Waterbirds</i> (<a href="/wiki/AEWA" class="mw-redirect" title="AEWA">AEWA</a>) applies.
+</p><p>Apparent <a href="/wiki/Hybrid_(biology)" title="Hybrid (biology)">hybrids</a> between this species and the <a href="/wiki/White-rumped_sandpiper" title="White-rumped sandpiper">white-rumped sandpiper</a> as well as with the <a href="/wiki/Purple_sandpiper" title="Purple sandpiper">purple sandpiper</a> have been reported from the Atlantic coasts of North America<sup id="cite_ref-McLaughlin2000_6-0" class="reference"><a href="#cite_note-McLaughlin2000-6">&#91;6&#93;</a></sup><sup id="cite_ref-Wilson_7-0" class="reference"><a href="#cite_note-Wilson-7">&#91;7&#93;</a></sup> and <a href="/wiki/Europe" title="Europe">Europe</a>,<sup id="cite_ref-Millington1994_8-0" class="reference"><a href="#cite_note-Millington1994-8">&#91;8&#93;</a></sup> respectively.
+</p>
+<h2><span class="mw-headline" id="Behaviour">Behaviour</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunlin&amp;action=edit&amp;section=4" title="Edit section: Behaviour">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The dunlin is highly gregarious in winter, sometimes forming large flocks on coastal mudflats or sandy beaches. Large numbers can often be seen swirling in synchronized flight on stop-overs during migration or on their winter habitat.
+</p><p>This bird is one of the most common waders throughout its breeding and wintering ranges, and it is the species with which other waders tend to be compared. At 17–21&#160;cm (6.7–8.3&#160;in) length and with a 32–36&#160;cm (13–14&#160;in) <a href="/wiki/Wingspan" title="Wingspan">wingspan</a>, it is similar in size to a <a href="/wiki/Common_starling" title="Common starling">common starling</a>, but stouter, with a thicker bill.
+</p><p>The dunlin moves along the coastal mudflat beaches it prefers with a characteristic "sewing machine" feeding action, methodically picking small food items. <a href="/wiki/Insect" title="Insect">Insects</a> form the main part of the dunlin's diet on the nesting grounds; it eats <a href="/wiki/Mollusca" title="Mollusca">molluscs</a>, <a href="/wiki/Worm" title="Worm">worms</a> and <a href="/wiki/Crustacean" title="Crustacean">crustaceans</a> in coastal areas. 
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Dunlin_800.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Dunlin_800.jpg/220px-Dunlin_800.jpg" decoding="async" width="220" height="146" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Dunlin_800.jpg/330px-Dunlin_800.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Dunlin_800.jpg/440px-Dunlin_800.jpg 2x" data-file-width="800" data-file-height="530" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Dunlin_800.jpg" class="internal" title="Enlarge"></a></div>On the East coast of England</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><div id="mwe_player_1" class="PopUpMediaTransform" style="width:220px;" videopayload="&lt;div class=&quot;mediaContainer&quot; style=&quot;width:640px&quot;&gt;&lt;video id=&quot;mwe_player_2&quot; poster=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/640px--Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.jpg&quot; controls=&quot;&quot; preload=&quot;none&quot; autoplay=&quot;&quot; style=&quot;width:640px;height:480px&quot; class=&quot;kskin&quot; data-durationhint=&quot;34.998&quot; data-startoffset=&quot;0&quot; data-mwtitle=&quot;Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv&quot; data-mwprovider=&quot;wikimediacommons&quot;&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.480p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;SD VP9 (480P)&quot; data-shorttitle=&quot;VP9 480P&quot; data-transcodekey=&quot;480p.vp9.webm&quot; data-width=&quot;640&quot; data-height=&quot;480&quot; data-bandwidth=&quot;531008&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.480p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;SD WebM (480P)&quot; data-shorttitle=&quot;WebM 480P&quot; data-transcodekey=&quot;480p.webm&quot; data-width=&quot;640&quot; data-height=&quot;480&quot; data-bandwidth=&quot;1006216&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv&quot; type=&quot;video/ogg; codecs=&amp;quot;theora, vorbis&amp;quot;&quot; data-title=&quot;Original Ogg file, 768 × 576 (1.87 Mbps)&quot; data-shorttitle=&quot;Ogg source&quot; data-width=&quot;768&quot; data-height=&quot;576&quot; data-bandwidth=&quot;1873999&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.120p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Lowest bandwidth VP9 (120P)&quot; data-shorttitle=&quot;VP9 120P&quot; data-transcodekey=&quot;120p.vp9.webm&quot; data-width=&quot;160&quot; data-height=&quot;120&quot; data-bandwidth=&quot;62584&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.160p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Low bandwidth WebM (160P)&quot; data-shorttitle=&quot;WebM 160P&quot; data-transcodekey=&quot;160p.webm&quot; data-width=&quot;214&quot; data-height=&quot;160&quot; data-bandwidth=&quot;130184&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.180p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Low bandwidth VP9 (180P)&quot; data-shorttitle=&quot;VP9 180P&quot; data-transcodekey=&quot;180p.vp9.webm&quot; data-width=&quot;240&quot; data-height=&quot;180&quot; data-bandwidth=&quot;117096&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.240p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Small VP9 (240P)&quot; data-shorttitle=&quot;VP9 240P&quot; data-transcodekey=&quot;240p.vp9.webm&quot; data-width=&quot;320&quot; data-height=&quot;240&quot; data-bandwidth=&quot;163432&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.240p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Small WebM (240P)&quot; data-shorttitle=&quot;WebM 240P&quot; data-transcodekey=&quot;240p.webm&quot; data-width=&quot;320&quot; data-height=&quot;240&quot; data-bandwidth=&quot;255240&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.360p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;VP9 (360P)&quot; data-shorttitle=&quot;VP9 360P&quot; data-transcodekey=&quot;360p.vp9.webm&quot; data-width=&quot;480&quot; data-height=&quot;360&quot; data-bandwidth=&quot;296200&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.360p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;WebM (360P)&quot; data-shorttitle=&quot;WebM 360P&quot; data-transcodekey=&quot;360p.webm&quot; data-width=&quot;480&quot; data-height=&quot;360&quot; data-bandwidth=&quot;505336&quot; data-framerate=&quot;25&quot;/&gt;&lt;/video&gt;&lt;/div&gt;"><img alt="File:Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv" style="width:220px;height:165px" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv/220px--Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv.jpg" /><a href="//upload.wikimedia.org/wikipedia/commons/d/d1/Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv" title="Play media" target="new"><span class="play-btn-large"><span class="mw-tmh-playtext">Play media</span></span></a></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Seasonal-Variations-in-the-Diet-and-Foraging-Behaviour-of-Dunlins-Calidris-alpina-in-a-South-pone.0081174.s001.ogv" class="internal" title="Enlarge"></a></div>Foraging</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:K%C3%A4rrsn%C3%A4ppa_-_(Calidris_alpina).jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/K%C3%A4rrsn%C3%A4ppa_-_%28Calidris_alpina%29.jpg/220px-K%C3%A4rrsn%C3%A4ppa_-_%28Calidris_alpina%29.jpg" decoding="async" width="220" height="141" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/K%C3%A4rrsn%C3%A4ppa_-_%28Calidris_alpina%29.jpg/330px-K%C3%A4rrsn%C3%A4ppa_-_%28Calidris_alpina%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c2/K%C3%A4rrsn%C3%A4ppa_-_%28Calidris_alpina%29.jpg/440px-K%C3%A4rrsn%C3%A4ppa_-_%28Calidris_alpina%29.jpg 2x" data-file-width="1275" data-file-height="817" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:K%C3%A4rrsn%C3%A4ppa_-_(Calidris_alpina).jpg" class="internal" title="Enlarge"></a></div>Calidris alpina. <a href="/wiki/Ystad" title="Ystad">Ystad</a>/<a href="/wiki/Sweden" title="Sweden">Sweden</a> 2015.</div></div></div>
+<p>Dunlin are small migratory waders, however they show strong philopatry with individuals of the Southern Dunlin (<i>Calidris alpina schinzii</i>) in Sweden and Finland returning to, or very close to, their natal patches.  Habitat fragmentation has reduced the availability of habitat patches to these birds through reducing patch size and increasing patch isolation.  This reduced connectivity between patches has reduced the movements of Dunlin leaving them more susceptible to inbreeding in these locations.  Future management for the conservation of Southern Dunlin should include increasing the connectivity between habitat patches.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunlin&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22693427/0">"<i>Calidris alpina</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Calidris+alpina&amp;rft.volume=2012&amp;rft.date=2012&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22693427%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-OED-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-OED_2-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFReference-OED-Dunlin" class="citation cs1"><a rel="nofollow" class="external text" href="http://oed.com/search?searchType=dictionary&amp;q=Dunlin">"Dunlin"</a>. <i><a href="/wiki/Oxford_English_Dictionary" title="Oxford English Dictionary">Oxford English Dictionary</a></i> (3rd ed.). Oxford University Press. September 2005.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Dunlin&amp;rft.btitle=Oxford+English+Dictionary&amp;rft.edition=3rd&amp;rft.pub=Oxford+University+Press&amp;rft.date=2005-09&amp;rft_id=http%3A%2F%2Foed.com%2Fsearch%3FsearchType%3Ddictionary%26q%3DDunlin&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/>&#160;<span style="font-size:0.95em; font-size:90%; color:#555">(Subscription or <a rel="nofollow" class="external text" href="https://www.oed.com/public/login/loggingin#withyourlibrary">UK public library membership</a> required.)</span></span>
+</li>
+<li id="cite_note-job-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-job_3-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n42">42</a>, 84. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=42%2C+84&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.allaboutbirds.org/guide/Dunlin/id">"Dunlin Identification, All About Birds, Cornell Lab of Ornithology"</a>. <i>www.allaboutbirds.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2020-09-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.allaboutbirds.org&amp;rft.atitle=Dunlin+Identification%2C+All+About+Birds%2C+Cornell+Lab+of+Ornithology&amp;rft_id=https%3A%2F%2Fwww.allaboutbirds.org%2Fguide%2FDunlin%2Fid&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite id="CITEREFKaiser2007" class="citation book cs1">Kaiser, Gary W. (2007). <i>The Inner Bird: Anatomy and Evolution</i>. UBC Press. p.&#160;24. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7748-1344-0" title="Special:BookSources/978-0-7748-1344-0"><bdi>978-0-7748-1344-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Inner+Bird%3A+Anatomy+and+Evolution&amp;rft.pages=24&amp;rft.pub=UBC+Press&amp;rft.date=2007&amp;rft.isbn=978-0-7748-1344-0&amp;rft.aulast=Kaiser&amp;rft.aufirst=Gary+W.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-McLaughlin2000-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-McLaughlin2000_6-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFMcLaughlinWormington2000" class="citation journal cs1">McLaughlin, K.A.; Wormington, A. (2000). <a rel="nofollow" class="external text" href="http://www.ofo.ca/site/download/id/113">"An apparent Dunlin × White-rumped Sandpiper hybrid"</a>. <i>Ontario Birds</i>. <b>18</b> (1): 8–12.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ontario+Birds&amp;rft.atitle=An+apparent+Dunlin+%C3%97+White-rumped+Sandpiper+hybrid&amp;rft.volume=18&amp;rft.issue=1&amp;rft.pages=8-12&amp;rft.date=2000&amp;rft.aulast=McLaughlin&amp;rft.aufirst=K.A.&amp;rft.au=Wormington%2C+A.&amp;rft_id=http%3A%2F%2Fwww.ofo.ca%2Fsite%2Fdownload%2Fid%2F113&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Wilson-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-Wilson_7-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFWilson" class="citation web cs1">Wilson, Angus. <a rel="nofollow" class="external text" href="http://www.oceanwanderers.com/WayneRichardson.Sandpiper.html">"A putative hybrid white-rumped sandpiper × dunlin from the east coast of the USA"</a>. <i>Ocean Wanderers</i><span class="reference-accessdate">. Retrieved <span class="nowrap">11 October</span> 2006</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Ocean+Wanderers&amp;rft.atitle=A+putative+hybrid+white-rumped+sandpiper+%C3%97+dunlin+from+the+east+coast+of+the+USA&amp;rft.aulast=Wilson&amp;rft.aufirst=Angus&amp;rft_id=http%3A%2F%2Fwww.oceanwanderers.com%2FWayneRichardson.Sandpiper.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Millington1994-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-Millington1994_8-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFMillington1994" class="citation journal cs1"><a href="/wiki/Richard_Millington" title="Richard Millington">Millington, Richard</a> (1994). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20040617170807/http://www.birdingworld.freeserve.co.uk/CleyCalidrisArticle.htm">"A mystery Calidris at Cley"</a>. <i><a href="/wiki/Birding_World" title="Birding World">Birding World</a></i>. <b>7</b> (2): 61–63. Archived from <a rel="nofollow" class="external text" href="http://www.birdingworld.freeserve.co.uk/CleyCalidrisArticle.htm">the original</a> on 17 June 2004.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Birding+World&amp;rft.atitle=A+mystery+Calidris+at+Cley&amp;rft.volume=7&amp;rft.issue=2&amp;rft.pages=61-63&amp;rft.date=1994&amp;rft.aulast=Millington&amp;rft.aufirst=Richard&amp;rft_id=http%3A%2F%2Fwww.birdingworld.freeserve.co.uk%2FCleyCalidrisArticle.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite id="CITEREFPakanen,_V.-M.Koivula,_K.Flodin,_L.-Å.Grissot,_A.2017" class="citation journal cs1">Pakanen, V.-M.; Koivula, K.; Flodin, L.-Å.; Grissot, A.; Hagstedt, R.; Larsson, M.; Pauliny, A.; Rönkä, N.; Blomqvist, D. (2017). <a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fibi.12463">"Between-patch natal dispersal declines with increasing natal patch size and distance to other patches in the endangered Southern Dunlin <i>Calidris alpina schinzii</i>"</a>. <i>Ibis</i>. <b>159</b> (3): 611–622. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fibi.12463">10.1111/ibi.12463</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ibis&amp;rft.atitle=Between-patch+natal+dispersal+declines+with+increasing+natal+patch+size+and+distance+to+other+patches+in+the+endangered+Southern+Dunlin+Calidris+alpina+schinzii&amp;rft.volume=159&amp;rft.issue=3&amp;rft.pages=611-622&amp;rft.date=2017&amp;rft_id=info%3Adoi%2F10.1111%2Fibi.12463&amp;rft.au=Pakanen%2C+V.-M.&amp;rft.au=Koivula%2C+K.&amp;rft.au=Flodin%2C+L.-%C3%85.&amp;rft.au=Grissot%2C+A.&amp;rft.au=Hagstedt%2C+R.&amp;rft.au=Larsson%2C+M.&amp;rft.au=Pauliny%2C+A.&amp;rft.au=R%C3%B6nk%C3%A4%2C+N.&amp;rft.au=Blomqvist%2C+D.&amp;rft_id=%2F%2Fdoi.org%2F10.1111%252Fibi.12463&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+</ol></div></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunlin&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Calidris_alpina" class="extiw" title="commons:Category:Calidris alpina"><span style="">Calidris alpina</span></a></b></i>.</td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/34px-Wikispecies-logo.svg.png" decoding="async" width="34" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/51px-Wikispecies-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/68px-Wikispecies-logo.svg.png 2x" data-file-width="941" data-file-height="1103" /></td>
+<td class="mbox-text plainlist"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a> has information related to <i><b><a href="https://species.wikimedia.org/wiki/Calidris_alpina" class="extiw" title="wikispecies:Calidris alpina">Calidris alpina</a></b></i></td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://www.birdlife.org/datazone/species/factsheet/22693427">BirdLife species factsheet for <i>Calidris alpina</i></a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?lang=EN&amp;avibaseid=15369E8EB4CBD064">"Calidris alpina"</a>. <i>Avibase</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Avibase&amp;rft.atitle=Calidris+alpina&amp;rft_id=https%3A%2F%2Favibase.bsc-eoc.org%2Fspecies.jsp%3Flang%3DEN%26avibaseid%3D15369E8EB4CBD064&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/> <a href="https://www.wikidata.org/wiki/Q26650#P2026" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.hbw.com/ibc/species/dunlin-calidris-alpina">"Dunlin media"</a>. <i><a href="/wiki/Internet_Bird_Collection" class="mw-redirect" title="Internet Bird Collection">Internet Bird Collection</a></i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Internet+Bird+Collection&amp;rft.atitle=Dunlin+media&amp;rft_id=http%3A%2F%2Fwww.hbw.com%2Fibc%2Fspecies%2Fdunlin-calidris-alpina&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunlin" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><a rel="nofollow" class="external text" href="http://www.birds.cornell.edu/AllAboutBirds/BirdGuide/Dunlin.html">Dunlin Species Account</a> - Cornell Lab of Ornithology</li>
+<li><a rel="nofollow" class="external text" href="http://www.mbr-pwrc.usgs.gov/id/framlst/i2430id.html">Dunlin - <i>Calidris alpina</i></a> - USGS Patuxent Bird Identification InfoCenter</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20141202062115/http://aulaenred.ibercaja.es/wp-content/uploads/188_DunlinCalpina.pdf">Ageing and sexing (PDF; 1.6 MB) by Javier Blasco-Zumeta &amp; Gerd-Michael Heinze</a></li>
+<li><a rel="nofollow" class="external text" href="http://vireo.acnatsci.org/search.html?Form=Search&amp;SEARCHBY=Common&amp;KEYWORDS=Dunlin&amp;showwhat=images&amp;AGE=All&amp;SEX=All&amp;ACT=All&amp;Search=Search&amp;VIEW=All&amp;ORIENTATION=All&amp;RESULTS=24">Dunlin photo gallery</a> at VIREO (Drexel University)</li>
+<li><a rel="nofollow" class="external text" href="http://maps.iucnredlist.org/map.html?id=22693427">Interactive range map of <i>Calidris alpina</i></a> at <a rel="nofollow" class="external text" href="http://maps.iucnredlist.org/index.html">IUCN Red List maps</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.xeno-canto.org/species/Calidris-alpina">Audio recordings of Dunlin</a> on <a href="/wiki/Xeno-canto" title="Xeno-canto">Xeno-canto</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://www.flickr.com/groups/birdguide/pool/tags/Calidris+alpina"><i>Calidris alpina</i></a> in <i><a rel="nofollow" class="external text" href="https://www.flickr.com/groups/birdguide">Field Guide: Birds of the World</a></i> on <a href="/wiki/Flickr" title="Flickr">Flickr</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/calidris-alpina">Dunlin</a> media from <a href="/wiki/ARKive" title="ARKive">ARKive</a> <a href="https://www.wikidata.org/wiki/Q26650#P2833" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Sandpipers_(family:_Scolopacidae)" style="padding:3px"><table class="nowraplinks hlist mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Scolopacidae" title="Template:Scolopacidae"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Scolopacidae" title="Template talk:Scolopacidae"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Scolopacidae&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Sandpipers_(family:_Scolopacidae)" style="font-size:114%;margin:0 4em"><a href="/wiki/Sandpiper" title="Sandpiper">Sandpipers</a> (<a href="/wiki/Family_(biology)" title="Family (biology)">family</a>: Scolopacidae)</div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*_Kingdom:_Animalia_*_Phylum:_Chordata_*_Class:_Aves_*_Order:_Charadriiformes">
+<ul><li>Kingdom: <a href="/wiki/Animal" title="Animal">Animalia</a></li>
+<li>Phylum: <a href="/wiki/Chordate" title="Chordate">Chordata</a></li>
+<li>Class: <a href="/wiki/Bird" title="Bird">Aves</a></li>
+<li>Order: <a href="/wiki/Charadriiformes" title="Charadriiformes">Charadriiformes</a></li></ul>
+</div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks mw-collapsible uncollapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Scolopacidae_(Numeniinae–Limosinae–Arenariinae)" style="font-size:114%;margin:0 4em">Scolopacidae <style data-mw-deduplicate="TemplateStyles:r886047488">.mw-parser-output .nobold{font-weight:normal}</style><span class="nobold">(Numeniinae–Limosinae–Arenariinae)</span></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em">Numeniinae</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em"><i>Bartramia</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Upland_sandpiper" title="Upland sandpiper">Upland sandpiper (<i>B. longicauda</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Curlew" title="Curlew">Numenius</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Curlews)</span></span></small></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Long-billed_curlew" title="Long-billed curlew">Long-billed curlew (<i>N. americanus</i>)</a></li>
+<li><a href="/wiki/Eurasian_curlew" title="Eurasian curlew">Eurasian curlew (<i>N. arquata</i>)</a></li>
+<li><a href="/wiki/Eskimo_curlew" title="Eskimo curlew">Eskimo curlew (<i>N. borealis</i>)</a></li>
+<li><a href="/wiki/Hudsonian_whimbrel" title="Hudsonian whimbrel">Hudsonian whimbrel (<i>N. hudsonicus</i>)</a></li>
+<li><a href="/wiki/Far_Eastern_curlew" title="Far Eastern curlew">Far Eastern curlew (<i>N. madagascariensis</i>)</a></li>
+<li><a href="/wiki/Little_curlew" title="Little curlew">Little curlew (<i>N. minutus</i>)</a></li>
+<li><a href="/wiki/Eurasian_whimbrel" title="Eurasian whimbrel">Eurasian whimbrel (<i>N. phaeopus</i>)</a></li>
+<li><a href="/wiki/Bristle-thighed_curlew" title="Bristle-thighed curlew">Bristle-thighed curlew (<i>N. tahitiensis</i>)</a></li>
+<li><a href="/wiki/Slender-billed_curlew" title="Slender-billed curlew">Slender-billed curlew (<i>N. tenuirostris</i>)</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em">Limosinae</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Limosa(Godwits)" scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Godwit" title="Godwit">Limosa</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Godwits)</span></span></small></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Marbled_godwit" title="Marbled godwit">Marbled godwit (<i>L. fedoa</i>)</a></li>
+<li><a href="/wiki/Hudsonian_godwit" title="Hudsonian godwit">Hudsonian godwit (<i>L. haemastica</i>)</a></li>
+<li><a href="/wiki/Bar-tailed_godwit" title="Bar-tailed godwit">Bar-tailed godwit (<i>L. lapponica</i>)</a></li>
+<li><a href="/wiki/Black-tailed_godwit" title="Black-tailed godwit">Black-tailed godwit (<i>L. limosa</i>)</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em">Arenariinae</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Turnstone" title="Turnstone">Arenaria</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Turnstones)</span></span></small></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ruddy_turnstone" title="Ruddy turnstone">Ruddy turnstone (<i>A. interpres</i>)</a></li>
+<li><a href="/wiki/Black_turnstone" title="Black turnstone">Black turnstone (<i>A. melanocephala</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Polynesian_sandpiper" title="Polynesian sandpiper">Prosobonia</a></i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Tuamotu_sandpiper" title="Tuamotu sandpiper">Tuamotu sandpiper (<i>P. parvirostris</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Calidris" title="Calidris">Calidris</a></i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Sharp-tailed_sandpiper" title="Sharp-tailed sandpiper">Sharp-tailed sandpiper (<i>C. acuminata</i>)</a></li>
+<li><a href="/wiki/Sanderling" title="Sanderling">Sanderling (<i>C. alba</i>)</a></li>
+<li><a class="mw-selflink selflink">Dunlin (<i>C. alpina</i>)</a></li>
+<li><a href="/wiki/Baird%27s_sandpiper" title="Baird&#39;s sandpiper">Baird's sandpiper (<i>C. bairdii</i>)</a></li>
+<li><a href="/wiki/Red_knot" title="Red knot">Red knot (<i>C. canutus</i>)</a></li>
+<li><a href="/wiki/Broad-billed_sandpiper" title="Broad-billed sandpiper">Broad-billed sandpiper (<i>C. falcinellus</i>)</a></li>
+<li><a href="/wiki/Curlew_sandpiper" title="Curlew sandpiper">Curlew sandpiper (<i>C. ferruginea</i>)</a></li>
+<li><a href="/wiki/White-rumped_sandpiper" title="White-rumped sandpiper">White-rumped sandpiper (<i>C. fuscicollis</i>)</a></li>
+<li><a href="/wiki/Stilt_sandpiper" title="Stilt sandpiper">Stilt sandpiper (<i>C. himantopus</i>)</a></li>
+<li><a href="/wiki/Purple_sandpiper" title="Purple sandpiper">Purple sandpiper (<i>C. maritima</i>)</a></li>
+<li><a href="/wiki/Western_sandpiper" title="Western sandpiper">Western sandpiper (<i>C. mauri</i>)</a></li>
+<li><a href="/wiki/Pectoral_sandpiper" title="Pectoral sandpiper">Pectoral sandpiper (<i>C. melanotos</i>)</a></li>
+<li><a href="/wiki/Little_stint" title="Little stint">Little stint (<i>C. minuta</i>)</a></li>
+<li><a href="/wiki/Least_sandpiper" title="Least sandpiper">Least sandpiper (<i>C. minutilla</i>)</a></li>
+<li><a href="/wiki/Rock_sandpiper" title="Rock sandpiper">Rock sandpiper (<i>C. ptilocnemis</i>)</a></li>
+<li><a href="/wiki/Ruff_(bird)" title="Ruff (bird)">Ruff (<i>C. pugnax</i>)</a></li>
+<li><a href="/wiki/Semipalmated_sandpiper" title="Semipalmated sandpiper">Semipalmated sandpiper (<i>C. pusilla</i>)</a></li>
+<li><a href="/wiki/Spoon-billed_sandpiper" title="Spoon-billed sandpiper">Spoon-billed sandpiper (<i>C. pygmaea</i>)</a></li>
+<li><a href="/wiki/Red-necked_stint" title="Red-necked stint">Red-necked stint (<i>C. ruficollis</i>)</a></li>
+<li><a href="/wiki/Long-toed_stint" title="Long-toed stint">Long-toed stint (<i>C. subminuta</i>)</a></li>
+<li><a href="/wiki/Buff-breasted_sandpiper" title="Buff-breasted sandpiper">Buff-breasted sandpiper (<i>C. subruficollis</i>)</a></li>
+<li><a href="/wiki/Temminck%27s_stint" title="Temminck&#39;s stint">Temminck's stint (<i>C. temminckii</i>)</a></li>
+<li><a href="/wiki/Great_knot" title="Great knot">Great knot (<i>C. tenuirostris</i>)</a></li>
+<li><a href="/wiki/Surfbird" title="Surfbird">Surfbird (<i>C. virgata</i>)</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Scolopacidae_(Tringinae–Scolopacinae)" style="font-size:114%;margin:0 4em">Scolopacidae <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Tringinae–Scolopacinae)</span></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em">Tringinae</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em"><i>Xenus</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Terek_sandpiper" title="Terek sandpiper">Terek sandpiper (<i>X. cinereus</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Phalarope" title="Phalarope">Phalaropus</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Phalaropes)</span></span></small></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Red_phalarope" title="Red phalarope">Red phalarope (<i>P. fulicarius</i>)</a></li>
+<li><a href="/wiki/Red-necked_phalarope" title="Red-necked phalarope">Red-necked phalarope (<i>P. lobatus</i>)</a></li>
+<li><a href="/wiki/Wilson%27s_phalarope" title="Wilson&#39;s phalarope">Wilson's phalarope (<i>P. tricolor</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Actitis" title="Actitis">Actitis</a></i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Common_sandpiper" title="Common sandpiper">Common sandpiper (<i>A. hypoleucos</i>)</a></li>
+<li><a href="/wiki/Spotted_sandpiper" title="Spotted sandpiper">Spotted sandpiper (<i>A. macularia</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Tringa" title="Tringa">Tringa</a></i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Grey-tailed_tattler" title="Grey-tailed tattler">Grey-tailed tattler (<i>T. brevipes</i>)</a></li>
+<li><a href="/wiki/Spotted_redshank" title="Spotted redshank">Spotted redshank (<i>T. erythropus</i>)</a></li>
+<li><a href="/wiki/Lesser_yellowlegs" title="Lesser yellowlegs">Lesser yellowlegs (<i>T. flavipes</i>)</a></li>
+<li><a href="/wiki/Wood_sandpiper" title="Wood sandpiper">Wood sandpiper (<i>T. glareola</i>)</a></li>
+<li><a href="/wiki/Nordmann%27s_greenshank" title="Nordmann&#39;s greenshank">Nordmann's greenshank (<i>T. guttifer</i>)</a></li>
+<li><a href="/wiki/Wandering_tattler" title="Wandering tattler">Wandering tattler (<i>T. incana</i>)</a></li>
+<li><a href="/wiki/Greater_yellowlegs" title="Greater yellowlegs">Greater yellowlegs (<i>T. melanoleuca</i>)</a></li>
+<li><a href="/wiki/Common_greenshank" title="Common greenshank">Common greenshank (<i>T. nebularia</i>)</a></li>
+<li><a href="/wiki/Green_sandpiper" title="Green sandpiper">Green sandpiper (<i>T. ochropus</i>)</a></li>
+<li><a href="/wiki/Willet" title="Willet">Willet (<i>T. semipalmata</i>)</a></li>
+<li><a href="/wiki/Solitary_sandpiper" title="Solitary sandpiper">Solitary sandpiper (<i>T. solitaria</i>)</a></li>
+<li><a href="/wiki/Marsh_sandpiper" title="Marsh sandpiper">Marsh sandpiper (<i>T. stagnatilis</i>)</a></li>
+<li><a href="/wiki/Common_redshank" title="Common redshank">Common redshank (<i>T. totanus</i>)</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em">Scolopacinae</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em"><i>Lymnocryptes</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Jack_snipe" title="Jack snipe">Jack snipe (<i>L. minimus</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Dowitcher" title="Dowitcher">Limnodromus</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Dowitchers)</span></span></small></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Short-billed_dowitcher" title="Short-billed dowitcher">Short-billed dowitcher (<i>L. griseus</i>)</a></li>
+<li><a href="/wiki/Long-billed_dowitcher" title="Long-billed dowitcher">Long-billed dowitcher (<i>L. scolopaceus</i>)</a></li>
+<li><a href="/wiki/Asian_dowitcher" title="Asian dowitcher">Asian dowitcher (<i>L. semipalmatus</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Woodcock" title="Woodcock">Scolopax</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Woodcocks)</span></span></small></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bukidnon_woodcock" title="Bukidnon woodcock">Bukidnon woodcock (<i>S. bukidnonensis</i>)</a></li>
+<li><a href="/wiki/Sulawesi_woodcock" title="Sulawesi woodcock">Sulawesi woodcock (<i>S. celebensis</i>)</a></li>
+<li><a href="/wiki/American_woodcock" title="American woodcock">American woodcock (<i>S. minor</i>)</a></li>
+<li><a href="/wiki/Amami_woodcock" title="Amami woodcock">Amami woodcock (<i>S. mira</i>)</a></li>
+<li><a href="/wiki/Moluccan_woodcock" title="Moluccan woodcock">Moluccan woodcock (<i>S. rochussenii</i>)</a></li>
+<li><a href="/wiki/New_Guinea_woodcock" title="New Guinea woodcock">New Guinea woodcock (<i>S. rosenbergii</i>)</a></li>
+<li><a href="/wiki/Eurasian_woodcock" title="Eurasian woodcock">Eurasian woodcock (<i>S. rusticola</i>)</a></li>
+<li><a href="/wiki/Javan_woodcock" title="Javan woodcock">Javan woodcock (<i>S. saturata</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Austral_snipe" title="Austral snipe">Coenocorypha</a></i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Subantarctic_snipe" title="Subantarctic snipe">Subantarctic snipe (<i>C. aucklandica</i>)</a></li>
+<li><a href="/wiki/Snares_snipe" title="Snares snipe">Snares snipe (<i>C. huegeli</i>)</a></li>
+<li><a href="/wiki/Chatham_snipe" title="Chatham snipe">Chatham snipe (<i>C. pusilla</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Gallinago" title="Gallinago">Gallinago</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Snipes)</span></span></small></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Puna_snipe" title="Puna snipe">Puna snipe (<i>G. andina</i>)</a></li>
+<li><a href="/wiki/Wilson%27s_snipe" title="Wilson&#39;s snipe">Wilson's snipe (<i>G. delicata</i>)</a></li>
+<li><a href="/wiki/Common_snipe" title="Common snipe">Common snipe (<i>G. gallinago</i>)</a></li>
+<li><a href="/wiki/Latham%27s_snipe" title="Latham&#39;s snipe">Latham's snipe (<i>G. hardwickii</i>)</a></li>
+<li><a href="/wiki/Imperial_snipe" title="Imperial snipe">Imperial snipe (<i>G. imperialis</i>)</a></li>
+<li><a href="/wiki/Jameson%27s_snipe" title="Jameson&#39;s snipe">Jameson's snipe (<i>G. jamesoni</i>)</a></li>
+<li><a href="/wiki/Madagascan_snipe" title="Madagascan snipe">Madagascan snipe (<i>G. macrodactyla</i>)</a></li>
+<li><a href="/wiki/Great_snipe" title="Great snipe">Great snipe (<i>G. media</i>)</a></li>
+<li><a href="/wiki/Swinhoe%27s_snipe" title="Swinhoe&#39;s snipe">Swinhoe's snipe (<i>G. megala</i>)</a></li>
+<li><a href="/wiki/Wood_snipe" title="Wood snipe">Wood snipe (<i>G. nemoricola</i>)</a></li>
+<li><a href="/wiki/African_snipe" title="African snipe">African snipe (<i>G. nigripennis</i>)</a></li>
+<li><a href="/wiki/Noble_snipe" title="Noble snipe">Noble snipe (<i>G. nobilis</i>)</a></li>
+<li><a href="/wiki/South_American_snipe" title="South American snipe">South American snipe (<i>G. paraguaiae</i>)</a></li>
+<li><a href="/wiki/Solitary_snipe" title="Solitary snipe">Solitary snipe (<i>G. solitaria</i>)</a></li>
+<li><a href="/wiki/Pin-tailed_snipe" title="Pin-tailed snipe">Pin-tailed snipe (<i>G. stenura</i>)</a></li>
+<li><a href="/wiki/Fuegian_snipe" title="Fuegian snipe">Fuegian snipe (<i>G. stricklandii</i>)</a></li>
+<li><a href="/wiki/Giant_snipe" title="Giant snipe">Giant snipe (<i>G. undulata</i>)</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li>Based on <a rel="nofollow" class="external text" href="http://jboyd.net/Taxo/List9a.html">Boyd (2019)</a>.</li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q26650" class="extiw" title="wikidata:Q26650">Q26650</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Calidris_alpina" class="extiw" title="wikispecies:Calidris alpina">Calidris alpina</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/American_Birding_Association" title="American Birding Association">ABA</a>: <span class="uid">dunlin</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Calidris_alpina/">Calidris_alpina</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/calidris-alpina/">calidris-alpina</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=15369E8EB4CBD064">15369E8EB4CBD064</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8643">8643</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22693427">22693427</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">DUNLI</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Convention_on_the_Conservation_of_Migratory_Species_of_Wild_Animals" title="Convention on the Conservation of Migratory Species of Wild Animals">CMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.cms.int/en/species/calidris-alpina">calidris-alpina</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/dunlin">dunlin</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EPPO_Code" title="EPPO Code">EPPO</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://gd.eppo.int/taxon/CLDRAL">CLDRAL</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">5120</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:96811">96811</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/b5b679ce-413e-4cd5-beaa-f7fe1dcaeb58">b5b679ce-413e-4cd5-beaa-f7fe1dcaeb58</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=369304">369304</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2481759">2481759</a></span></span></li>
+<li><span style="white-space:nowrap;">GNAB: <span class="uid"><a rel="nofollow" class="external text" href="https://www.audubon.org/field-guide/bird/dunlin">dunlin</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Handbook_of_the_Birds_of_the_World" title="Handbook of the Birds of the World">IBC</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.hbw.com/species/dunlin-calidris-alpina">dunlin-calidris-alpina</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/3857">3857</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10189348">10189348</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=176661">176661</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22693427">22693427</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NBNSYS0000000035">NBNSYS0000000035</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=8919">8919</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Neotropical_Birds_Online" class="mw-redirect" title="Neotropical Birds Online">Neotropical</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://neotropical.birds.cornell.edu/Species-Account/nb/species/dunlin">dunlin</a></span></span></li>
+<li><span style="white-space:nowrap;">NZBO: <span class="uid"><a rel="nofollow" class="external text" href="http://nzbirdsonline.org.nz/species/dunlin">dunlin</a></span></span></li>
+<li><span style="white-space:nowrap;">NZOR: <span class="uid"><a rel="nofollow" class="external text" href="http://www.nzor.org.nz/names/ad0ffa32-c2b2-40e4-8a1a-63899022df8b">ad0ffa32-c2b2-40e4-8a1a-63899022df8b</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/SeaLifeBase" title="SeaLifeBase">SeaLifeBase</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.sealifebase.ca/Summary/SpeciesSummary.php?id=155057">155057</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=3111">3111</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=159047">159047</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Xeno-canto" title="Xeno-canto">Xeno-canto</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.xeno-canto.org/species/Calidris-alpina">Calidris-alpina</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1317
+Cached time: 20201103001900
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 1.056 seconds
+Real time usage: 1.460 seconds
+Preprocessor visited node count: 6509/1000000
+Post‐expand include size: 153402/2097152 bytes
+Template argument size: 10700/2097152 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 30/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 37148/5000000 bytes
+Lua time usage: 0.710/10.000 seconds
+Lua memory usage: 10.72 MB/50 MB
+Number of Wikibase entities loaded: 31/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1316.831      1 -total
+ 33.90%  446.363      1 Template:Speciesbox
+ 33.26%  438.002      1 Template:Taxobox/core
+ 24.61%  324.067      1 Template:Taxonbar
+ 14.01%  184.500      1 Template:Reflist
+  7.25%   95.470      1 Template:Cite_iucn
+  6.42%   84.572      1 Template:Commons_category
+  6.29%   82.795      2 Template:Sister_project
+  6.24%   82.146      1 Template:Short_description
+  5.94%   78.225      2 Template:Side_box
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:287662-0!canonical and timestamp 20201103001858 and revision id 986270611
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Dunlin&amp;oldid=986270611">https://en.wikipedia.org/w/index.php?title=Dunlin&amp;oldid=986270611</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Calidris" title="Category:Calidris">Calidris</a></li><li><a href="/wiki/Category:Birds_of_the_Arctic" title="Category:Birds of the Arctic">Birds of the Arctic</a></li><li><a href="/wiki/Category:Holarctic_birds" title="Category:Holarctic birds">Holarctic birds</a></li><li><a href="/wiki/Category:Birds_of_North_Africa" title="Category:Birds of North Africa">Birds of North Africa</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:ARKive_links" title="Category:ARKive links">ARKive links</a></li><li><a href="/wiki/Category:Taxonbars_with_30%E2%80%9334_taxon_IDs" title="Category:Taxonbars with 30–34 taxon IDs">Taxonbars with 30–34 taxon IDs</a></li><li><a href="/wiki/Category:Articles_containing_video_clips" title="Category:Articles containing video clips">Articles containing video clips</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Dunlin" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Dunlin" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Dunlin" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Dunlin" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Dunlin">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Dunlin&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Dunlin&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Dunlin" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Dunlin" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Dunlin&amp;oldid=986270611" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Dunlin&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Dunlin&amp;id=986270611&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26650" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Dunlin&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Dunlin&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Calidris_alpina" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Calidris_alpina" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Bontstrandloper" title="Bontstrandloper – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AF%D8%B1%D9%8A%D8%AC%D8%A9_%D8%A3%D9%84%D8%A8%D9%8A%D8%A9" title="دريجة ألبية – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Calidris_alpina" title="Calidris alpina – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Qarad%C3%B6%C5%9F_qumluqca" title="Qaradöş qumluqca – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A2%D1%8A%D0%BC%D0%BD%D0%BE%D0%B3%D1%80%D1%8A%D0%B4_%D0%B1%D1%80%D0%B5%D0%B3%D0%BE%D0%B1%D0%B5%D0%B3%D0%B0%D1%87" title="Тъмногръд брегобегач – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Sourouc%27han_boutin" title="Sourouc&#039;han boutin – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Territ_variant" title="Territ variant – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Calidris_alpina" title="Calidris alpina – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Jesp%C3%A1k_obecn%C3%BD" title="Jespák obecný – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Pibydd_y_Mawn" title="Pibydd y Mawn – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Almindelig_ryle" title="Almindelig ryle – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Alpenstrandl%C3%A4ufer" title="Alpenstrandläufer – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/T%C3%A1b%C4%85%C4%85sd%C3%ADs%C3%ADst%C5%82%CA%BCinii_bit%C3%A9%C3%A9l_halzhin%C3%ADg%C3%AD%C3%AD" title="Tábąąsdísístłʼinii bitéél halzhinígíí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Soor%C3%BCdi" title="Soorüdi – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Calidris_alpina" title="Calidris alpina – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Bunta_kalidro" title="Bunta kalidro – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Txirri_arrunt" title="Txirri arrunt – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AA%D9%84%DB%8C%D9%84%D9%87_%D8%B4%DA%A9%D9%85%E2%80%8C%D8%B3%DB%8C%D8%A7%D9%87" title="تلیله شکم‌سیاه – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Fjallmurra" title="Fjallmurra – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/B%C3%A9casseau_variable" title="Bécasseau variable – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-fy"><a href="https://fy.wikipedia.org/wiki/B%C3%BBnte_gril" title="Bûnte gril – Western Frisian" lang="fy" hreflang="fy" class="interlanguage-link-target">Frysk</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Breac%C3%B3g" title="Breacóg – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Pilro_curlibico" title="Pilro curlibico – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/L%C3%B3u%C3%BEr%C3%A6ll" title="Lóuþræll – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Calidris_alpina" title="Calidris alpina – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%A4%D7%99%D7%AA_%D7%90%D7%9C%D7%A4%D7%99%D7%A0%D7%99%D7%AA" title="חופית אלפינית – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-csb"><a href="https://csb.wikipedia.org/wiki/Bieg%C3%B4cz" title="Biegôcz – Kashubian" lang="csb" hreflang="csb" class="interlanguage-link-target">Kaszëbsczi</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D2%9A%D0%B0%D1%80%D0%B0%D1%82%D3%A9%D1%81_%D2%9B%D2%B1%D0%BC%D0%B4%D0%B0%D1%83%D1%8B%D2%9B" title="Қаратөс құмдауық – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Juodkr%C5%ABtis_b%C4%97gikas" title="Juodkrūtis bėgikas – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Havasi_partfut%C3%B3" title="Havasi partfutó – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B8%D1%87%D0%B5%D0%BD_%D1%81%D0%B2%D0%B8%D1%80%D0%BA%D0%B0%D1%87" title="Обичен свиркач – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%A1%E0%B5%BB%E0%B4%B2%E0%B4%BF%E0%B5%BB" title="ഡൻലിൻ – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Burung_Kedidi_Dunlin" title="Burung Kedidi Dunlin – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Bonte_strandloper" title="Bonte strandloper – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ne"><a href="https://ne.wikipedia.org/wiki/%E0%A4%A0%E0%A5%82%E0%A4%B2%E0%A5%8B_%E0%A4%9C%E0%A4%B2%E0%A4%B0%E0%A4%99%E0%A5%8D%E0%A4%95" title="ठूलो जलरङ्क – Nepali" lang="ne" hreflang="ne" class="interlanguage-link-target">नेपाली</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%9E%E3%82%B7%E3%82%AE" title="ハマシギ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-frr"><a href="https://frr.wikipedia.org/wiki/St%C3%B6nerk" title="Stönerk – Northern Frisian" lang="frr" hreflang="frr" class="interlanguage-link-target">Nordfriisk</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Myrsnipe" title="Myrsnipe – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Myrsnipe" title="Myrsnipe – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pnb"><a href="https://pnb.wikipedia.org/wiki/%DA%88%D9%86%D9%84%D9%86" title="ڈنلن – Western Punjabi" lang="pnb" hreflang="pnb" class="interlanguage-link-target">پنجابی</a></li><li class="interlanguage-link interwiki-pcd"><a href="https://pcd.wikipedia.org/wiki/Aloeh%C3%A9te_%C3%A9d_m%C3%A9r" title="Aloehéte éd mér – Picard" lang="pcd" hreflang="pcd" class="interlanguage-link-target">Picard</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Calidris_alpina" title="Calidris alpina – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Biegus_zmienny" title="Biegus zmienny – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Pilrito-comum" title="Pilrito-comum – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Fugaci_de_%C8%9B%C4%83rm" title="Fugaci de țărm – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%90%D0%BB%D0%BF%D1%81%D0%BA%D1%8B%D0%B9_%D0%BF%D0%B8%D1%81%D0%BE%D1%87%D0%BD%D0%B8%D0%BA" title="Алпскый писочник – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B7%D0%BE%D0%B1%D0%B8%D0%BA" title="Чернозобик – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Calidris_alpina" title="Calidris alpina – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Pobre%C5%BEn%C3%ADk_%C4%8Diernozob%C3%BD" title="Pobrežník čiernozobý – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BD%D0%BE%D1%82%D1%80%D0%B1%D0%B0_%D1%81%D0%BF%D1%80%D1%83%D1%82%D0%BA%D0%B0" title="Црнотрба спрутка – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Suosirri" title="Suosirri – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/K%C3%A4rrsn%C3%A4ppa" title="Kärrsnäppa – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Kara_kar%C4%B1nl%C4%B1_kum_ku%C5%9Fu" title="Kara karınlı kum kuşu – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B8%D0%BA_%D1%87%D0%BE%D1%80%D0%BD%D0%BE%D0%B3%D1%80%D1%83%D0%B4%D0%B8%D0%B9" title="Побережник чорногрудий – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/D%E1%BA%BD_tr%C3%A1n_tr%E1%BA%AFng" title="Dẽ trán trắng – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Calidris_alpina" title="Calidris alpina – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-wuu"><a href="https://wuu.wikipedia.org/wiki/%E9%BB%91%E8%85%B9%E6%BB%A8%E9%B9%AC" title="黑腹滨鹬 – Wu Chinese" lang="wuu" hreflang="wuu" class="interlanguage-link-target">吴语</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E9%BB%91%E8%85%B9%E6%BB%A8%E9%B9%AC" title="黑腹滨鹬 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26650#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 30 October 2020, at 20:31<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Dunlin&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.056","walltime":"1.460","ppvisitednodes":{"value":6509,"limit":1000000},"postexpandincludesize":{"value":153402,"limit":2097152},"templateargumentsize":{"value":10700,"limit":2097152},"expansiondepth":{"value":21,"limit":40},"expensivefunctioncount":{"value":30,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":37148,"limit":5000000},"entityaccesscount":{"value":31,"limit":400},"timingprofile":["100.00% 1316.831      1 -total"," 33.90%  446.363      1 Template:Speciesbox"," 33.26%  438.002      1 Template:Taxobox/core"," 24.61%  324.067      1 Template:Taxonbar"," 14.01%  184.500      1 Template:Reflist","  7.25%   95.470      1 Template:Cite_iucn","  6.42%   84.572      1 Template:Commons_category","  6.29%   82.795      2 Template:Sister_project","  6.24%   82.146      1 Template:Short_description","  5.94%   78.225      2 Template:Side_box"]},"scribunto":{"limitreport-timeusage":{"value":"0.710","limit":"10.000"},"limitreport-memusage":{"value":11237473,"limit":52428800}},"cachereport":{"origin":"mw1317","timestamp":"20201103001900","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Dunlin","url":"https:\/\/en.wikipedia.org\/wiki\/Dunlin","sameAs":"http:\/\/www.wikidata.org\/entity\/Q26650","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q26650","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-08-04T05:56:56Z","dateModified":"2020-10-30T20:31:20Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/f\/fe\/Dunlin_%28Calidris_alpina%29_juvenile.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":164,"wgHostname":"mw1389"});});</script>
+</body></html>

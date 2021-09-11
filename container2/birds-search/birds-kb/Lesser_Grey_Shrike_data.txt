@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Lesser grey shrike - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"8ba3bf72-1236-4e32-bd50-8544ddd64d33","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Lesser_grey_shrike","wgTitle":"Lesser grey shrike","wgCurRevisionId":986075263,"wgRevisionId":986075263,"wgArticleId":203170,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","Articles with 'species' microformats","Commons category link is on Wikidata","Articles containing video clips","IUCN Red List least concern species","Lanius","Birds of Central Asia","Birds of Western Asia","Birds of Europe",
+"Birds of Southern Africa","Birds described in 1788","Taxa named by Johann Friedrich Gmelin"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Lesser_grey_shrike","wgRelevantArticleId":203170,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Lesser_Grey_Shrike","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Lesser_grey_shrike","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage",
+"wgWikibaseItemId":"Q239393"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups",
+"ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/0/0c/Lesser_Grey_Shrike_by_Daniel_Bastaja.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Lesser_grey_shrike"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Lesser_grey_shrike"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Lesser_grey_shrike rootpage-Lesser_grey_shrike skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Lesser grey shrike</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Lesser_Grey_Shrike&amp;redirect=no" class="mw-redirect" title="Lesser Grey Shrike">Lesser Grey Shrike</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Lesser grey shrike
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Lesser_Grey_Shrike_by_Daniel_Bastaja.jpg" class="image"><img alt="Lesser Grey Shrike by Daniel Bastaja.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Lesser_Grey_Shrike_by_Daniel_Bastaja.jpg/220px-Lesser_Grey_Shrike_by_Daniel_Bastaja.jpg" decoding="async" width="220" height="188" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Lesser_Grey_Shrike_by_Daniel_Bastaja.jpg/330px-Lesser_Grey_Shrike_by_Daniel_Bastaja.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Lesser_Grey_Shrike_by_Daniel_Bastaja.jpg/440px-Lesser_Grey_Shrike_by_Daniel_Bastaja.jpg 2x" data-file-width="648" data-file-height="555" /></a>
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-IUCN_1-0" class="reference"><a href="#cite_note-IUCN-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Lanius" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Passerine" title="Passerine">Passeriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Shrike" title="Shrike">Laniidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Lanius" title="Lanius"><i>Lanius</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>L.&#160;minor</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Lanius minor</i></span></b><br /><div style="font-size: 85%;"><a href="/wiki/Johann_Friedrich_Gmelin" title="Johann Friedrich Gmelin">Gmelin</a>, 1788</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Lanius_minor_distr.png" class="image"><img alt="Lanius minor distr.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lanius_minor_distr.png/220px-Lanius_minor_distr.png" decoding="async" width="220" height="247" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lanius_minor_distr.png/330px-Lanius_minor_distr.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Lanius_minor_distr.png/440px-Lanius_minor_distr.png 2x" data-file-width="1222" data-file-height="1370" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%"><br /><span style="margin:0px; font-size:90%;"><span style="border:solid 1px black; background-color:#FF8041; color:#FF8041;">&#160;&#160;&#160;&#160;</span>&#160;Summer</span>  <span style="margin:0px; font-size:90%;"><span style="border:solid 1px black; background-color:#0000FF; color:#0000FF;">&#160;&#160;&#160;&#160;</span>&#160;Winter</span>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+</tbody></table>
+<p>The <b>lesser grey shrike</b> (<i>Lanius minor</i>) is a member of the <a href="/wiki/Shrike" title="Shrike">shrike</a> family <i>Laniidae</i>. It breeds in South and Central Europe and <a href="/wiki/Western_Asia" title="Western Asia">western Asia</a> in the summer and <a href="/wiki/Bird_migration" title="Bird migration">migrates</a> to winter quarters in southern Africa in the early autumn, returning in spring. It is a scarce vagrant to western Europe, including <a href="/wiki/Great_Britain" title="Great Britain">Great Britain</a>, usually as a spring or autumn erratic.
+</p><p>It is similar in appearance to the <a href="/wiki/Great_grey_shrike" title="Great grey shrike">great grey shrike</a> <i>Lanius excubitor</i> and the <a href="/wiki/Iberian_grey_shrike" title="Iberian grey shrike">Iberian grey shrike</a> <i>Lanius meridionalis</i> being predominantly black, white and grey, with the males having pink-flushed underparts. It is slightly smaller than the great grey shrike, and has a black forehead and relatively longer wings. This species prefers dry open lowlands, and is often seen on telephone wires.
+</p><p>This medium-sized <a href="/wiki/Perching_bird" class="mw-redirect" title="Perching bird">passerine</a> eats large <a href="/wiki/Insect" title="Insect">insects</a>, especially <a href="/wiki/Beetle" title="Beetle">beetles</a>, butterflies, moths and grasshoppers. Like other shrikes it hunts from prominent perches and sometimes impales corpses on thorns or barbed wire as a "larder".
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Taxonomy"><span class="tocnumber">1</span> <span class="toctext">Taxonomy</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Distribution_and_habitat"><span class="tocnumber">3</span> <span class="toctext">Distribution and habitat</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Behaviour"><span class="tocnumber">4</span> <span class="toctext">Behaviour</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Breeding"><span class="tocnumber">5</span> <span class="toctext">Breeding</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Status"><span class="tocnumber">6</span> <span class="toctext">Status</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Taxonomy">Taxonomy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit&amp;section=1" title="Edit section: Taxonomy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The lesser grey shrike was first described by <a href="/wiki/Johann_Friedrich_Gmelin" title="Johann Friedrich Gmelin">Johann Friedrich Gmelin</a> in 1788. There are two <a href="/wiki/Subspecies" title="Subspecies">subspecies</a>, <i>Lanius minor minor</i> and <i>Lanius minor turanicus</i>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p><p>The genus name, <i><a href="/wiki/Lanius" title="Lanius">Lanius</a></i>, is derived from the <a href="/wiki/Latin" title="Latin">Latin</a> word for "<a href="/wiki/Butcher" title="Butcher">butcher</a>", and some shrikes are also known as "butcher birds" because of their feeding habits. The specific <i>minor</i> is <a href="/wiki/Latin" title="Latin">Latin</a> for "smaller".<sup id="cite_ref-job_3-0" class="reference"><a href="#cite_note-job-3">&#91;3&#93;</a></sup> The common English name "shrike" is from <a href="/wiki/Old_English" title="Old English">Old English</a> <i>scríc</i>, "shriek", referring to the shrill call.<sup id="cite_ref-OED_4-0" class="reference"><a href="#cite_note-OED-4">&#91;4&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit&amp;section=2" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The adult male lesser grey shrike has its nape, cheeks, ear and eye <a href="/wiki/Covert_feather" title="Covert feather">coverts</a> and front part of the crown black. The hind part of the crown and the back is a pale bluish-grey and the rump is a similar but rather paler colour. The underparts are white with the lower breast and belly suffused with pink. The axillaries are greyish-white and the underwing coverts are brownish-black. The two central tail feathers are black with a white tip and base. The other pairs have increasing areas of white and less black. The <a href="/wiki/Flight_feather" title="Flight feather">primaries</a> are black with a buff tip and white base. The <a href="/wiki/Flight_feather" title="Flight feather">secondaries</a> are black with broader, paler tips but no white bases. The wing coverts are black with the lesser coverts being fringed with grey. The female has similar plumage but the head is dark grey rather than black, the ear coverts brownish-black, the upperparts a brownish-grey and the underparts less pink than the male. The juvenile is similar to the adults but is altogether more brown. It lacks the grey back and rump which are instead pale brown and faintly barred, and the underparts are white and cream without any pink. All birds have a brownish-black beak with a paler base to the lower mandible, brown irises and black legs and feet.<sup id="cite_ref-Witherby_5-0" class="reference"><a href="#cite_note-Witherby-5">&#91;5&#93;</a></sup> Adult length is around 20&#160;cm (7.9&#160;in) with a wing length of 13&#160;cm (5.1&#160;in) and a <a href="/wiki/Tarsus_(skeleton)" title="Tarsus (skeleton)">tarsus</a> length of 2.5&#160;cm (1&#160;in).<sup id="cite_ref-Coward_6-0" class="reference"><a href="#cite_note-Coward-6">&#91;6&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Distribution_and_habitat">Distribution and habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit&amp;section=3" title="Edit section: Distribution and habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The lesser grey shrike spends the summer in South and Central Europe and western Asia. It breeds in southern France, Switzerland, Austria, Czech Republic, Italy, the former Yugoslavia, Albania, Greece, Romania, Bulgaria and southern Russia. In Asia it breeds in the Middle East, its range extending as far as eastern Turkey and Iran. It is a vagrant to more northerly parts of Europe, usually in spring or autumn. Countries where it has been seen include Sweden, Finland, Denmark, United Kingdom, Netherlands, Belgium and northern France. It is a <a href="/wiki/Bird_migration" title="Bird migration">migratory</a> species and winters in a broad belt across tropical southern Africa.<sup id="cite_ref-Coward_6-1" class="reference"><a href="#cite_note-Coward-6">&#91;6&#93;</a></sup>
+</p><p>During the summer the lesser grey shrike inhabits open countryside, the edges of cultivated areas, <a href="/wiki/Heathland" class="mw-redirect" title="Heathland">heathland</a> with scattered bushes and trees, gardens, coppices, woodland and roadside trees. In its winter quarters it is usually found in <a href="/wiki/Scrubland" class="mw-redirect" title="Scrubland">scrubland</a> and among <a href="/wiki/Acacia" title="Acacia">thorn trees</a>.<sup id="cite_ref-Witherby_5-1" class="reference"><a href="#cite_note-Witherby-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Behaviour">Behaviour</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit&amp;section=4" title="Edit section: Behaviour">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><div id="mwe_player_0" class="PopUpMediaTransform" style="width:220px;" videopayload="&lt;div class=&quot;mediaContainer&quot; style=&quot;width:384px&quot;&gt;&lt;video id=&quot;mwe_player_1&quot; poster=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Lesser_Grey_Shrike.ogv/384px--Lesser_Grey_Shrike.ogv.jpg&quot; controls=&quot;&quot; preload=&quot;none&quot; autoplay=&quot;&quot; style=&quot;width:384px;height:288px&quot; class=&quot;kskin&quot; data-durationhint=&quot;24.16&quot; data-startoffset=&quot;0&quot; data-mwtitle=&quot;Lesser_Grey_Shrike.ogv&quot; data-mwprovider=&quot;wikimediacommons&quot;&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/3/3a/Lesser_Grey_Shrike.ogv&quot; type=&quot;video/ogg; codecs=&amp;quot;theora, vorbis&amp;quot;&quot; data-title=&quot;Original Ogg file, 384 × 288 (447 kbps)&quot; data-shorttitle=&quot;Ogg source&quot; data-width=&quot;384&quot; data-height=&quot;288&quot; data-bandwidth=&quot;446544&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/3/3a/Lesser_Grey_Shrike.ogv/Lesser_Grey_Shrike.ogv.120p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Lowest bandwidth VP9 (120P)&quot; data-shorttitle=&quot;VP9 120P&quot; data-transcodekey=&quot;120p.vp9.webm&quot; data-width=&quot;160&quot; data-height=&quot;120&quot; data-bandwidth=&quot;118200&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/3/3a/Lesser_Grey_Shrike.ogv/Lesser_Grey_Shrike.ogv.160p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Low bandwidth WebM (160P)&quot; data-shorttitle=&quot;WebM 160P&quot; data-transcodekey=&quot;160p.webm&quot; data-width=&quot;214&quot; data-height=&quot;160&quot; data-bandwidth=&quot;217632&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/3/3a/Lesser_Grey_Shrike.ogv/Lesser_Grey_Shrike.ogv.180p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Low bandwidth VP9 (180P)&quot; data-shorttitle=&quot;VP9 180P&quot; data-transcodekey=&quot;180p.vp9.webm&quot; data-width=&quot;240&quot; data-height=&quot;180&quot; data-bandwidth=&quot;140280&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/3/3a/Lesser_Grey_Shrike.ogv/Lesser_Grey_Shrike.ogv.240p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Small VP9 (240P)&quot; data-shorttitle=&quot;VP9 240P&quot; data-transcodekey=&quot;240p.vp9.webm&quot; data-width=&quot;320&quot; data-height=&quot;240&quot; data-bandwidth=&quot;151240&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/3/3a/Lesser_Grey_Shrike.ogv/Lesser_Grey_Shrike.ogv.240p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Small WebM (240P)&quot; data-shorttitle=&quot;WebM 240P&quot; data-transcodekey=&quot;240p.webm&quot; data-width=&quot;320&quot; data-height=&quot;240&quot; data-bandwidth=&quot;329792&quot; data-framerate=&quot;25&quot;/&gt;&lt;/video&gt;&lt;/div&gt;"><img alt="File:Lesser Grey Shrike.ogv" style="width:220px;height:165px" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Lesser_Grey_Shrike.ogv/220px--Lesser_Grey_Shrike.ogv.jpg" /><a href="//upload.wikimedia.org/wikipedia/commons/3/3a/Lesser_Grey_Shrike.ogv" title="Play media" target="new"><span class="play-btn-large"><span class="mw-tmh-playtext">Play media</span></span></a></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Lesser_Grey_Shrike.ogv" class="internal" title="Enlarge"></a></div>Riyadh, KSA, Sept 1992</div></div></div>
+<p>The lesser grey shrike hunts from a strategic post, wire or branch and primarily feeds on insects which it catches in the air or on the ground. The diet includes beetles, moths and butterflies, large flies, grasshoppers, crickets and millipedes. Some fruits such as cherries and figs are eaten to a limited extent.<sup id="cite_ref-Witherby_5-2" class="reference"><a href="#cite_note-Witherby-5">&#91;5&#93;</a></sup> The bird occasionally impales freshly caught prey on thorns for use later, but this is done to a much lesser extent than by some other shrike species. It has been shown experimentally that this species only creates a larder when it is satiated and that prey items are seldom plentiful enough for this to be the case. The male has been observed to feed the female before starting to create a food store. Repeated experimental exposure of birds to a food surplus significantly increases the rate at which they impale freshly caught prey. Other causal factors in the failure of this species to hoard may be a shortage of suitable caching sites and the fact that the bird lacks practice in storing food and this constrains its learning ability.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>
+</p><p>The flight of the lesser grey shrike is low and somewhat undulating and it occasionally glides with extended wings. At the end of the flight it swoops upward to land on a new hunting perch. It then turns its head from side to side searching for prey. When on the ground it hops, but it normally only stays there for long enough to pick up an item of food. Like other shrikes, when excited it fans its tail and moves it up and down or from sided to side. It is pugnacious and will defend its nest with vigour and drive away larger birds.<sup id="cite_ref-Witherby_5-3" class="reference"><a href="#cite_note-Witherby-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Breeding">Breeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit&amp;section=5" title="Edit section: Breeding">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Lanius_minor_MHNT.ZOO.2010.11.214._Szigetesch_Hongrie_Balsac.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Lanius_minor_MHNT.ZOO.2010.11.214._Szigetesch_Hongrie_Balsac.jpg/220px-Lanius_minor_MHNT.ZOO.2010.11.214._Szigetesch_Hongrie_Balsac.jpg" decoding="async" width="220" height="191" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Lanius_minor_MHNT.ZOO.2010.11.214._Szigetesch_Hongrie_Balsac.jpg/330px-Lanius_minor_MHNT.ZOO.2010.11.214._Szigetesch_Hongrie_Balsac.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Lanius_minor_MHNT.ZOO.2010.11.214._Szigetesch_Hongrie_Balsac.jpg/440px-Lanius_minor_MHNT.ZOO.2010.11.214._Szigetesch_Hongrie_Balsac.jpg 2x" data-file-width="3536" data-file-height="3069" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Lanius_minor_MHNT.ZOO.2010.11.214._Szigetesch_Hongrie_Balsac.jpg" class="internal" title="Enlarge"></a></div><i>Lanius minor</i> - <a href="/wiki/Mus%C3%A9um_de_Toulouse" title="Muséum de Toulouse">Muséum de Toulouse</a></div></div></div>
+<p>The nest is often built in a roadside tree with good all-round visibility some 4 to 10 metres (13 to 33&#160;ft) off the ground. It is built by both birds out of the stems of various flowering plants such as cudweed  (<i><a href="/wiki/Gnaphalium" title="Gnaphalium">Gnaphalium</a></i>) and (<i><a href="/wiki/Filago_(plant)" title="Filago (plant)">Filago</a></i>), and thyme (<i><a href="/wiki/Thymus_(plant)" title="Thymus (plant)">Thymus</a></i>), and lined with whisps of wool, hairs, roots and feathers. There are five to seven eggs in the clutch, usually bluish green blotched with greenish-brown. Sometimes the background colour is cream or buff with pinkish-brown blotches. Their average size is 26.1 by 18.2 millimetres (1.03&#160;in ×&#160;0.72&#160;in). Incubation lasts about fifteen days and is chiefly done by the female though both parents take part. They both feed the young which are ready to leave the nest after about fourteen days. There is usually a single brood.<sup id="cite_ref-Witherby_5-4" class="reference"><a href="#cite_note-Witherby-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Status">Status</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit&amp;section=6" title="Edit section: Status">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The lesser grey shrike has a world population estimated as being between two and a half and nine million individuals. These are spread out over a wide range and the <a href="/wiki/IUCN" class="mw-redirect" title="IUCN">IUCN</a>, in its <a href="/wiki/Red_List_of_Threatened_Species" class="mw-redirect" title="Red List of Threatened Species">Red List of Threatened Species</a>, lists the bird as being of "<a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a>". Though the number of birds may be decreasing slightly, this is not thought to be sufficient to raise the species to the more threatened "<a href="/wiki/Vulnerable_species" title="Vulnerable species">Vulnerable</a>" category.<sup id="cite_ref-IUCN_1-1" class="reference"><a href="#cite_note-IUCN-1">&#91;1&#93;</a></sup>
+</p><p>In Europe the numbers of lesser grey shrikes has been dwindling and there are now thought to be three to five thousand breeding pairs. The diminution in numbers may be due to a series of wet summers leading to a dearth of insects. Another factor may be changes in agricultural practices with small enclosures with varying crops and patches of woodland being replaced by large fields. As a result, this bird has been listed as a threatened species in Annex I of the European Commission <a href="/wiki/Birds_Directive" title="Birds Directive">Birds Directive</a>.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-IUCN-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-IUCN_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-IUCN_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22705038/0">"<i>Lanius minor</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Lanius+minor&amp;rft.volume=2012&amp;rft.date=2012&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22705038%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALesser+grey+shrike" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://avibase.bsc-eoc.org/species.jsp?avibaseid=8852337B06E8A14E">"Lesser Grey Shrike (<i>Lanius minor</i>) Gmelin, 1788"</a>. Avibase<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-09-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Lesser+Grey+Shrike+%28Lanius+minor%29+Gmelin%2C+1788&amp;rft.pub=Avibase&amp;rft_id=http%3A%2F%2Favibase.bsc-eoc.org%2Fspecies.jsp%3Favibaseid%3D8852337B06E8A14E&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALesser+grey+shrike" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-job-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-job_3-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <i>The Helm Dictionary of Scientific Bird Names</i>. London: Christopher Helm. pp.&#160;219, 256. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=219%2C+256&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALesser+grey+shrike" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-OED-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-OED_4-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFReference-OED-Shrike" class="citation cs1"><a rel="nofollow" class="external text" href="http://oed.com/search?searchType=dictionary&amp;q=Shrike">"Shrike"</a>. <i><a href="/wiki/Oxford_English_Dictionary" title="Oxford English Dictionary">Oxford English Dictionary</a></i> (3rd ed.). Oxford University Press. September 2005.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Shrike&amp;rft.btitle=Oxford+English+Dictionary&amp;rft.edition=3rd&amp;rft.pub=Oxford+University+Press&amp;rft.date=2005-09&amp;rft_id=http%3A%2F%2Foed.com%2Fsearch%3FsearchType%3Ddictionary%26q%3DShrike&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALesser+grey+shrike" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/>&#160;<span style="font-size:0.95em; font-size:90%; color:#555">(Subscription or <a rel="nofollow" class="external text" href="https://www.oed.com/public/login/loggingin#withyourlibrary">UK public library membership</a> required.)</span></span>
+</li>
+<li id="cite_note-Witherby-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-Witherby_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Witherby_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Witherby_5-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Witherby_5-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Witherby_5-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFWitherby1943" class="citation book cs1">Witherby, H. F., ed. (1943). <i>Handbook of British Birds, Volume 1: Crows to Firecrest</i>. H. F. and G. Witherby Ltd. pp.&#160;278–280.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+British+Birds%2C+Volume+1%3A+Crows+to+Firecrest&amp;rft.pages=278-280&amp;rft.pub=H.+F.+and+G.+Witherby+Ltd.&amp;rft.date=1943&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALesser+grey+shrike" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Coward-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-Coward_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Coward_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFCoward1941" class="citation book cs1">Coward, T. A. (1941). <i>The Birds of the British Isles and their Eggs</i>. Frederick Warne &amp; Co. p.&#160;150.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Birds+of+the+British+Isles+and+their+Eggs&amp;rft.pages=150&amp;rft.pub=Frederick+Warne+%26+Co.&amp;rft.date=1941&amp;rft.aulast=Coward&amp;rft.aufirst=T.+A.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALesser+grey+shrike" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite id="CITEREFValera,_FranciscoKrištín,_AntonHoi,_Herbert2001" class="citation journal cs1">Valera, Francisco; Krištín, Anton; Hoi, Herbert (2001). "Why Does the Lesser Grey Shrike (<i>Lanius minor</i>) Seldom Store Food? Determinants of Impaling in an Uncommon Storing Species". <i>Behaviour</i>. <b>138</b> (11/12): 1421–1436. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1163%2F156853901317367672">10.1163/156853901317367672</a>. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/4535901">4535901</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Behaviour&amp;rft.atitle=Why+Does+the+Lesser+Grey+Shrike+%28Lanius+minor%29+Seldom+Store+Food%3F+Determinants+of+Impaling+in+an+Uncommon+Storing+Species&amp;rft.volume=138&amp;rft.issue=11%2F12&amp;rft.pages=1421-1436&amp;rft.date=2001&amp;rft_id=info%3Adoi%2F10.1163%2F156853901317367672&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F4535901&amp;rft.au=Valera%2C+Francisco&amp;rft.au=Kri%C5%A1t%C3%ADn%2C+Anton&amp;rft.au=Hoi%2C+Herbert&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALesser+grey+shrike" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://ec.europa.eu/environment/nature/conservation/wildbirds/threatened/l/lanius_minor_en.htm">"Lesser Grey Shrike (<i>Lanius minor</i>)"</a>. <i>Wild Birds: Threatened bird species in Annex I</i>. European Commission: Environment. 2013-07-05<span class="reference-accessdate">. Retrieved <span class="nowrap">2013-09-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Wild+Birds%3A+Threatened+bird+species+in+Annex+I&amp;rft.atitle=Lesser+Grey+Shrike+%28Lanius+minor%29&amp;rft.date=2013-07-05&amp;rft_id=http%3A%2F%2Fec.europa.eu%2Fenvironment%2Fnature%2Fconservation%2Fwildbirds%2Fthreatened%2Fl%2Flanius_minor_en.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALesser+grey+shrike" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Lanius_minor" class="extiw" title="commons:Category:Lanius minor"><span style="">Lanius minor</span></a></b></i>.</td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/34px-Wikispecies-logo.svg.png" decoding="async" width="34" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/51px-Wikispecies-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/68px-Wikispecies-logo.svg.png 2x" data-file-width="941" data-file-height="1103" /></td>
+<td class="mbox-text plainlist"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a> has information related to <i><b><a href="https://species.wikimedia.org/wiki/Lanius_minor" class="extiw" title="wikispecies:Lanius minor">Lanius minor</a></b></i></td></tr>
+</tbody></table>
+<ul><li>Lesser grey shrike - <a rel="nofollow" class="external text" href="http://sabap2.adu.org.za/docs/sabap1/731.pdf">Species text in The Atlas of Southern African Birds</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://www.flickr.com/groups/birdguide/pool/tags/Lanius+minor"><i>Lanius minor</i></a> in <i><a rel="nofollow" class="external text" href="https://www.flickr.com/groups/birdguide">Field Guide: Birds of the World</a></i> on <a href="/wiki/Flickr" title="Flickr">Flickr</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.oiseaux.net/birds/photos/lesser.grey.shrike.html">Oiseaux</a> Pictures</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20141202063617/http://aulaenred.ibercaja.es/wp-content/uploads/402_LesserGreyShrikeLminor.pdf">Ageing and sexing (PDF; 0.74 MB) by Javier Blasco-Zumeta &amp; Gerd-Michael Heinze</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Shrikes_(family:_Laniidae)" style="padding:3px"><table class="nowraplinks hlist mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Laniidae" title="Template:Laniidae"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Laniidae" title="Template talk:Laniidae"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Laniidae&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Shrikes_(family:_Laniidae)" style="font-size:114%;margin:0 4em"><a href="/wiki/Shrike" title="Shrike">Shrikes</a> (family: Laniidae)</div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*_Kingdom:_Animalia_*_Phylum:_Chordata_*_Class:_Aves_*_Order:_Passeriformes_*_Superfamily:_Corvoidea">
+<ul><li>Kingdom: <a href="/wiki/Animal" title="Animal">Animalia</a></li>
+<li>Phylum: <a href="/wiki/Chordate" title="Chordate">Chordata</a></li>
+<li>Class: <a href="/wiki/Bird" title="Bird">Aves</a></li>
+<li>Order: <a href="/wiki/Passerine" title="Passerine">Passeriformes</a></li>
+<li>Superfamily: <a href="/wiki/Corvoidea" title="Corvoidea">Corvoidea</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Lanius" title="Lanius">Lanius</a></i><br /><small><span style="color:#696969"><style data-mw-deduplicate="TemplateStyles:r886047488">.mw-parser-output .nobold{font-weight:normal}</style><span class="nobold">(Typical shrikes)</span></span></small></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Tiger_shrike" title="Tiger shrike">Tiger shrike (<i>L. tigrinus</i>)</a></li>
+<li><a href="/wiki/Souza%27s_shrike" title="Souza&#39;s shrike">Souza's shrike (<i>L. souzae</i>)</a></li>
+<li><a href="/wiki/Bull-headed_shrike" title="Bull-headed shrike">Bull-headed shrike (<i>L. bucephalus</i>)</a></li>
+<li><a href="/wiki/Brown_shrike" title="Brown shrike">Brown shrike (<i>L. cristatus</i>)</a></li>
+<li><a href="/wiki/Red-backed_shrike" title="Red-backed shrike">Red-backed shrike (<i>L. collurio</i>)</a></li>
+<li><a href="/wiki/Isabelline_shrike" title="Isabelline shrike">Isabelline shrike (<i>L. isabellinus</i>)</a></li>
+<li><a href="/wiki/Red-tailed_shrike" title="Red-tailed shrike">Red-tailed shrike (<i>L. phoenicuroides</i>)</a></li>
+<li><a href="/wiki/Burmese_shrike" title="Burmese shrike">Burmese shrike (<i>L. collurioides</i>)</a></li>
+<li><a href="/wiki/Emin%27s_shrike" title="Emin&#39;s shrike">Emin's shrike (<i>L. gubernator</i>)</a></li>
+<li><a href="/wiki/Bay-backed_shrike" title="Bay-backed shrike">Bay-backed shrike (<i>L. vittatus</i>)</a></li>
+<li><a href="/wiki/Long-tailed_shrike" title="Long-tailed shrike">Long-tailed shrike (<i>L. schach</i>)</a></li>
+<li><a href="/wiki/Grey-backed_shrike" title="Grey-backed shrike">Grey-backed shrike (<i>L. tephronotus</i>)</a></li>
+<li><a href="/wiki/Mountain_shrike" title="Mountain shrike">Mountain shrike (<i>L. validirostris</i>)</a></li>
+<li><a href="/wiki/Mackinnon%27s_shrike" title="Mackinnon&#39;s shrike">Mackinnon's shrike (<i>L. mackinnoni</i>)</a></li>
+<li><a class="mw-selflink selflink">Lesser grey shrike (<i>L. minor</i>)</a></li>
+<li><a href="/wiki/Loggerhead_shrike" title="Loggerhead shrike">Loggerhead shrike (<i>L. ludovicianus</i>)</a></li>
+<li><a href="/wiki/Northern_shrike" title="Northern shrike">Northern shrike (<i>L. borealis</i>)</a></li>
+<li><a href="/wiki/Great_grey_shrike" title="Great grey shrike">Great grey shrike (<i>L. excubitor</i>)</a></li>
+<li><a href="/wiki/Iberian_grey_shrike" title="Iberian grey shrike">Iberian grey shrike (<i>L. meridionalis</i>)</a></li>
+<li><a href="/wiki/Chinese_grey_shrike" title="Chinese grey shrike">Chinese grey shrike (<i>L. sphenocercus</i>)</a></li>
+<li><a href="/wiki/Grey-backed_fiscal" title="Grey-backed fiscal">Grey-backed fiscal (<i>L. excubitoroides</i>)</a></li>
+<li><a href="/wiki/Long-tailed_fiscal" title="Long-tailed fiscal">Long-tailed fiscal (<i>L. cabanisi</i>)</a></li>
+<li><a href="/wiki/Taita_fiscal" title="Taita fiscal">Taita fiscal (<i>L. dorsalis</i>)</a></li>
+<li><a href="/wiki/Somali_fiscal" title="Somali fiscal">Somali fiscal (<i>L. somalicus</i>)</a></li>
+<li><a href="/wiki/Northern_fiscal" title="Northern fiscal">Northern fiscal (<i>L. humeralis</i>)</a></li>
+<li><a href="/wiki/Southern_fiscal" title="Southern fiscal">Southern fiscal (<i>L. collaris</i>)</a></li>
+<li><a href="/wiki/S%C3%A3o_Tom%C3%A9_fiscal" title="São Tomé fiscal">São Tomé fiscal (<i>L. newtoni</i>)</a></li>
+<li><a href="/wiki/Woodchat_shrike" title="Woodchat shrike">Woodchat shrike (<i>L. senator</i>)</a></li>
+<li><a href="/wiki/Masked_shrike" title="Masked shrike">Masked shrike (<i>L. nubicus</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i>Corvinella</i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Yellow-billed_shrike" title="Yellow-billed shrike">Yellow-billed shrike (<i>C. corvina</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i>Urolestes</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Magpie_shrike" title="Magpie shrike">Magpie shrike (<i>U. melanoleucus</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Eurocephalus" title="Eurocephalus">Eurocephalus</a></i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Northern_white-crowned_shrike" title="Northern white-crowned shrike">Northern white-crowned shrike (<i>E. ruppelli</i>)</a></li>
+<li><a href="/wiki/Southern_white-crowned_shrike" title="Southern white-crowned shrike">Southern white-crowned shrike (<i>E. anguitimens</i>)</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q239393" class="extiw" title="wikidata:Q239393">Q239393</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Lanius_minor" class="extiw" title="wikispecies:Lanius minor">Lanius minor</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Lanius_minor/">Lanius_minor</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/lanius-minor/">lanius-minor</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=8852337B06E8A14E">8852337B06E8A14E</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8970">8970</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22705038">22705038</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Convention_on_the_Conservation_of_Migratory_Species_of_Wild_Animals" title="Convention on the Conservation of Migratory Species of Wild Animals">CMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.cms.int/en/species/lanius-minor">lanius-minor</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/legshr2">legshr2</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/1100">1100</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">15190</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:97118">97118</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/7b295366-70e2-4a52-a2e8-dc547162196d">7b295366-70e2-4a52-a2e8-dc547162196d</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2492854">2492854</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/12054">12054</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10215222">10215222</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=560728">560728</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22705038">22705038</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0000530428">NHMSYS0000530428</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=466048">466048</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=9014">9014</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1384
+Cached time: 20201030044842
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.840 seconds
+Real time usage: 1.102 seconds
+Preprocessor visited node count: 6479/1000000
+Post‐expand include size: 57479/2097152 bytes
+Template argument size: 5636/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 19/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 26498/5000000 bytes
+Lua time usage: 0.585/10.000 seconds
+Lua memory usage: 8.87 MB/50 MB
+Number of Wikibase entities loaded: 20/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1009.286      1 -total
+ 44.77%  451.839      1 Template:Speciesbox
+ 43.98%  443.859      1 Template:Taxobox/core
+ 23.24%  234.512      1 Template:Taxonbar
+ 19.19%  193.697      1 Template:Reflist
+ 10.15%  102.467      1 Template:Cite_iucn
+  5.95%   60.013     23 Template:Delink
+  4.07%   41.049      1 Template:Commons_category
+  3.84%   38.743      2 Template:Sister_project
+  3.74%   37.735      5 Template:Convert
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:203170-0!canonical and timestamp 20201030044841 and revision id 986075263
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Lesser_grey_shrike&amp;oldid=986075263">https://en.wikipedia.org/w/index.php?title=Lesser_grey_shrike&amp;oldid=986075263</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Lanius" title="Category:Lanius">Lanius</a></li><li><a href="/wiki/Category:Birds_of_Central_Asia" title="Category:Birds of Central Asia">Birds of Central Asia</a></li><li><a href="/wiki/Category:Birds_of_Western_Asia" title="Category:Birds of Western Asia">Birds of Western Asia</a></li><li><a href="/wiki/Category:Birds_of_Europe" title="Category:Birds of Europe">Birds of Europe</a></li><li><a href="/wiki/Category:Birds_of_Southern_Africa" title="Category:Birds of Southern Africa">Birds of Southern Africa</a></li><li><a href="/wiki/Category:Birds_described_in_1788" title="Category:Birds described in 1788">Birds described in 1788</a></li><li><a href="/wiki/Category:Taxa_named_by_Johann_Friedrich_Gmelin" title="Category:Taxa named by Johann Friedrich Gmelin">Taxa named by Johann Friedrich Gmelin</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Articles_containing_video_clips" title="Category:Articles containing video clips">Articles containing video clips</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Lesser+grey+shrike" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Lesser+grey+shrike" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Lesser_grey_shrike" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Lesser_grey_shrike" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Lesser_grey_shrike">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Lesser_grey_shrike" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Lesser_grey_shrike" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Lesser_grey_shrike&amp;oldid=986075263" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Lesser_grey_shrike&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Lesser_grey_shrike&amp;id=986075263&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q239393" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Lesser_grey_shrike&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Lesser_grey_shrike&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Lanius_minor" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Lanius_minor" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%9A%D1%8A%D0%B0%D0%B6%D1%8C%D1%8B%D0%BA%D1%8A%D0%BD%D0%B0%D1%82%D3%80%D0%B0%D0%BF%D1%86%D3%80%D1%8D" title="КъажьыкънатӀапцӀэ – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Gryslaksman" title="Gryslaksman – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AF%D9%82%D9%86%D8%A7%D8%B4_%D8%B5%D8%B1%D8%AF%D9%8A" title="دقناش صردي – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Lanius_minor" title="Lanius minor – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D0%90%D0%BB%D0%B0%D2%93%D0%B0%D0%BD%D0%B0%D1%82" title="Алағанат – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/%D0%A7%D0%B0%D1%80%D0%BD%D0%B0%D0%BB%D0%BE%D0%B1%D1%8B_%D0%B3%D1%80%D1%8B%D1%87%D1%83%D0%BD" title="Чарналобы грычун – Belarusian" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D1%87%D0%B5%D0%BB%D0%B0_%D1%81%D0%B2%D1%80%D0%B0%D1%87%D0%BA%D0%B0" title="Черночела сврачка – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Pig-spern_tal_du" title="Pig-spern tal du – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Trenca" title="Trenca – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cv"><a href="https://cv.wikipedia.org/wiki/%D0%9F%C4%95%D1%87%C4%95%D0%BA_%D1%88%C4%83%D0%BB%D0%B0%D0%BD_%D0%BA%D0%B0%D0%B9%C4%83%D0%BA%C4%95" title="Пĕчĕк шăлан кайăкĕ – Chuvash" lang="cv" hreflang="cv" class="interlanguage-link-target">Чӑвашла</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Lanius_minor" title="Lanius minor – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/%C5%A4uh%C3%BDk_men%C5%A1%C3%AD" title="Ťuhýk menší – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Cigydd_glas" title="Cigydd glas – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Rosenbrystet_tornskade" title="Rosenbrystet tornskade – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Schwarzstirnw%C3%BCrger" title="Schwarzstirnwürger – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/T%C3%B3_w%C3%B3naan%C3%ADd%C4%99%CC%81%C4%99%CC%81%CA%BC_zahal%C3%A1niitsoh_bitsil%C3%AD" title="Tó wónaanídę́ę́ʼ zahalániitsoh bitsilí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Mustlauk-%C3%B5gija" title="Mustlauk-õgija – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Lanius_minor" title="Lanius minor – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Nigrafrunta_lanio" title="Nigrafrunta lanio – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Antzandobi_txiki" title="Antzandobi txiki – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B3%D9%86%DA%AF%E2%80%8C%DA%86%D8%B4%D9%85_%D8%AE%D8%A7%DA%A9%D8%B3%D8%AA%D8%B1%DB%8C_%DA%A9%D9%88%DA%86%DA%A9" title="سنگ‌چشم خاکستری کوچک – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Ennissvartur_tyrningur" title="Ennissvartur tyrningur – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Pie-gri%C3%A8che_%C3%A0_poitrine_rose" title="Pie-grièche à poitrine rose – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Mionscr%C3%A9ach%C3%A1n_liath" title="Mionscréachán liath – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Picanzo_pequeno" title="Picanzo pequeno – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D5%8D%D6%87%D5%A1%D5%B3%D5%A1%D5%AF%D5%A1%D5%BF_%D5%B7%D5%A1%D5%B4%D6%83%D6%80%D5%B8%D6%82%D5%AF" title="Սևաճակատ շամփրուկ – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Lanius_minor" title="Lanius minor – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%97%D7%A0%D7%A7%D7%9F_%D7%A9%D7%97%D7%95%D7%A8-%D7%9E%D7%A6%D7%97" title="חנקן שחור-מצח – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%9A%D1%96%D1%88%D1%96_%D1%82%D0%B0%D2%93%D0%B0%D0%BD%D0%B0%D2%9B" title="Кіші тағанақ – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Melnpieres_%C4%8Dakste" title="Melnpieres čakste – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Juodakakt%C4%97_med%C5%A1ark%C4%97" title="Juodakaktė medšarkė – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Kis_%C5%91rg%C3%A9bics" title="Kis őrgébics – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%BE_%D1%81%D0%B2%D1%80%D0%B0%D1%87%D0%B5" title="Мало свраче – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Kleine_klapekster" title="Kleine klapekster – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Rosenvarsler" title="Rosenvarsler – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Rosenvarslar" title="Rosenvarslar – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pcd"><a href="https://pcd.wikipedia.org/wiki/Agache-%C3%A9creuh%C3%A8le_%C3%A0_pou%C3%A9trinne_rose" title="Agache-écreuhèle à pouétrinne rose – Picard" lang="pcd" hreflang="pcd" class="interlanguage-link-target">Picard</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Lanius_minor" title="Lanius minor – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Dzierzba_czarnoczelna" title="Dzierzba czarnoczelna – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%A7%D1%96%D0%B3%D0%B0%D1%87" title="Чігач – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%BB%D0%BE%D0%B1%D1%8B%D0%B9_%D1%81%D0%BE%D1%80%D0%BE%D0%BA%D0%BE%D0%BF%D1%83%D1%82" title="Чернолобый сорокопут – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Strako%C5%A1_koles%C3%A1r" title="Strakoš kolesár – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Mustaotsalepink%C3%A4inen" title="Mustaotsalepinkäinen – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Svartpannad_t%C3%B6rnskata" title="Svartpannad törnskata – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Kara_al%C4%B1nl%C4%B1_%C3%B6r%C3%BCmcek_ku%C5%9Fu" title="Kara alınlı örümcek kuşu – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D0%BE%D0%BA%D0%BE%D0%BF%D1%83%D0%B4_%D1%87%D0%BE%D1%80%D0%BD%D0%BE%D0%BB%D0%BE%D0%B1%D0%B8%D0%B9" title="Сорокопуд чорнолобий – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/B%C3%A1ch_thanh_x%C3%A1m_nh%E1%BB%8F" title="Bách thanh xám nhỏ – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Lanius_minor" title="Lanius minor – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E9%BB%91%E9%A2%9D%E4%BC%AF%E5%8A%B3" title="黑额伯劳 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q239393#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 29 October 2020, at 17:09<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Lesser_grey_shrike&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.840","walltime":"1.102","ppvisitednodes":{"value":6479,"limit":1000000},"postexpandincludesize":{"value":57479,"limit":2097152},"templateargumentsize":{"value":5636,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":19,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":26498,"limit":5000000},"entityaccesscount":{"value":20,"limit":400},"timingprofile":["100.00% 1009.286      1 -total"," 44.77%  451.839      1 Template:Speciesbox"," 43.98%  443.859      1 Template:Taxobox/core"," 23.24%  234.512      1 Template:Taxonbar"," 19.19%  193.697      1 Template:Reflist"," 10.15%  102.467      1 Template:Cite_iucn","  5.95%   60.013     23 Template:Delink","  4.07%   41.049      1 Template:Commons_category","  3.84%   38.743      2 Template:Sister_project","  3.74%   37.735      5 Template:Convert"]},"scribunto":{"limitreport-timeusage":{"value":"0.585","limit":"10.000"},"limitreport-memusage":{"value":9302990,"limit":52428800}},"cachereport":{"origin":"mw1384","timestamp":"20201030044842","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Lesser grey shrike","url":"https:\/\/en.wikipedia.org\/wiki\/Lesser_grey_shrike","sameAs":"http:\/\/www.wikidata.org\/entity\/Q239393","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q239393","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-03-29T17:22:23Z","dateModified":"2020-10-29T17:09:23Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/0\/0c\/Lesser_Grey_Shrike_by_Daniel_Bastaja.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":184,"wgHostname":"mw1397"});});</script>
+</body></html>

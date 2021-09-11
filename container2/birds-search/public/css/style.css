@@ -1,0 +1,24 @@
+body {
+  font-family: tahoma; }
+
+.main_href {
+  font-size: 15px;
+  color: #333333; }
+
+#results li articale {
+  font-size: 12px;
+  color: #666666; }
+#results li {
+  padding-bottom: 10px; }
+
+.resultpane {
+  height: 500px;
+  background-color: #E9EEF5;
+  border: 1px dashed; }
+
+#matched {
+  margin-left: 2px; }
+
+.arrow {
+  font-size: 10px;
+  line-height: 14px; }

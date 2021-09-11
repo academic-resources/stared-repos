@@ -1,0 +1,19 @@
+{
+  "name": "restaurant-web-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "mongodb": "^3.0.5",
+    "node-fetch": "^2.1.1",
+    "ramda": "^0.25.0",
+    "url-parse": "^1.4.3"
+  }
+}

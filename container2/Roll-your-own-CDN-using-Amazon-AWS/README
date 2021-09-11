@@ -1,0 +1,55 @@
+DESCIPTION OF OUR APPROACH
+============================
+We divided project into sub-tasks, handled them individually and then integrated the results together:
+DNS SERVER
+ - creating an UDP socket and binding it to the ip and a port
+ - receiving request and handling them in parallel
+ - finding the replica server nearest to the client based on the calculated latenicies
+ - constructing the response
+ 
+ 
+HTTP server
+ - Implemented a multi-threaded http server
+ - Created a db which acts as a cache
+ - Responds to get requests for files which could be either in the cache or in the origin server
+ - Creates an entry in the db if the file currently doesn't exist in the db.
+ - From next request onwards the server responds by sending files directly from the db.The hit count is taken as a measure of popularity , 
+ gets incremented on every subsequent call for the same file
+ - On every database insertion , the server makes sure that the total disk usage never exceeds 10mb
+
+Scripts for CDN
+ - Wrote scripts to automate the process of deployment,starting the servers and shutting down the servers.
+ - Each script follows the following input
+	./[deploy|run|stop]CDN -p <port> -o <origin> -n <name> -u <username> -i <keyfile>
+ - Each of the scrpts have a list of replica servers defined, which is assumed to be a constant
+
+ PERFORMACE ENHANCING TECHNIQUES & DECISIONS
+=============================================
+ - Used sqlite for faster retrieval of files instead of a python dictionary(non-persistent)
+ - Used threads to tackle simultaneous requests at the application level
+ - Used parallel calculation of latencies using threads, that improved the total time taken to calculate from 10s to 4s.
+
+ CHALLENGES FACED
+===================
+ - Contructing the DNS responses with precision was tricky since a good understanding of DNS reponse packet was necessary
+ - Keeping track of the disk usage and setting a limit on the same while inserting the page into cache was tricky
+ - Deciding on what persistent mechanism to use for the cache was a challenge in the beginning since we had to make sure that the db
+ file gets stored in the current directory.
+ - The private/public address of replica servers usage in socket creation was found to be difficult.
+ - ssh for remotely executing commands required a good understanding of how background processes are executed in linux
+
+ FURTHER ENHANCEMENTS POSSIBLE:
+===============================
+ - Related to cache management:
+        - Along with page count, frequency at which the pages are requested can be considered as the criteria for the most popular page.
+	- If two pages are of similar popularity, the page with higher size stays if there is an issue with the max memory
+	- If a page is requested, subsequently the hyperlinks present in the page could also be cached.
+	- Based on the location and the current affairs, the pages can be pre-loaded in the cache before the request comes in.
+
+ - Related to DNS redirection:
+	- the amount of load on a server could have been used to rank the best available server
+	- the TTL can be used judiciously to prevent client from sending frequent requests
+	- Usage of Database for storing precalulated best available servers for clients
+
+
+

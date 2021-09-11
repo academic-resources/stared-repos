@@ -1,0 +1,17 @@
+{
+  "name": "web-crawler-practice",
+  "version": "1.0.0",
+  "description": "Practice web crawler.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node app.js"
+  },
+  "author": "Megan Roberts",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3",
+    "puppeteer": "^1.9.0"
+  }
+}

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Willow warbler - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"b0c5103d-714e-4c14-a761-5661d15fba10","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Willow_warbler","wgTitle":"Willow warbler","wgCurRevisionId":977124685,"wgRevisionId":977124685,"wgArticleId":232935,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","CS1 Latin-language sources (la)","Articles with 'species' microformats","Commons category link is on Wikidata","Taxonbars with 20–24 taxon IDs","IUCN Red List least concern species","Phylloscopus","Birds of Europe","Birds of Russia","Birds of Africa",
+"Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Willow_warbler","wgRelevantArticleId":232935,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Willow_Warbler","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Willow_warbler","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q27239"};RLSTATE={
+"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging",
+"ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Willow_Warbler_Phylloscopus_trochilus.jpg/1200px-Willow_Warbler_Phylloscopus_trochilus.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Willow_warbler"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Willow_warbler&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Willow_warbler&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Willow_warbler"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Willow_warbler rootpage-Willow_warbler skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Willow warbler</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Willow_Warbler&amp;redirect=no" class="mw-redirect" title="Willow Warbler">Willow Warbler</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">"Willow wren" redirects here. For the aircraft, see <a href="/wiki/Manuel_Wren" title="Manuel Wren">Manuel Wren</a>.</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Willow warbler
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Willow_Warbler_Phylloscopus_trochilus.jpg" class="image"><img alt="Willow Warbler Phylloscopus trochilus.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Willow_Warbler_Phylloscopus_trochilus.jpg/220px-Willow_Warbler_Phylloscopus_trochilus.jpg" decoding="async" width="220" height="220" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Willow_Warbler_Phylloscopus_trochilus.jpg/330px-Willow_Warbler_Phylloscopus_trochilus.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Willow_Warbler_Phylloscopus_trochilus.jpg/440px-Willow_Warbler_Phylloscopus_trochilus.jpg 2x" data-file-width="2151" data-file-height="2151" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:222px;"><div class="mediaContainer" style="width:220px"><audio id="mwe_player_0" controls="" preload="none" style="width:220px" class="kskin" data-durationhint="5.2592970521542" data-startoffset="0" data-mwtitle="Phylloscopus_rochilus.ogg" data-mwprovider="wikimediacommons"><source src="//upload.wikimedia.org/wikipedia/commons/9/9b/Phylloscopus_rochilus.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Original Ogg file (105 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="105147" /><source src="//upload.wikimedia.org/wikipedia/commons/transcoded/9/9b/Phylloscopus_rochilus.ogg/Phylloscopus_rochilus.ogg.mp3" type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0" data-height="0" data-bandwidth="242088" /></audio></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Phylloscopus_rochilus.ogg" class="internal" title="Enlarge"></a></div>Song</div></div></div></div> <div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:222px;"><div class="mediaContainer" style="width:220px"><audio id="mwe_player_1" controls="" preload="none" style="width:220px" class="kskin" data-durationhint="8.714125" data-startoffset="1.12" data-mwtitle="OsloPhylloscopus.ogg" data-mwprovider="wikimediacommons"><source src="//upload.wikimedia.org/wikipedia/commons/5/51/OsloPhylloscopus.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Original Ogg file (35 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="35397" /><source src="//upload.wikimedia.org/wikipedia/commons/transcoded/5/51/OsloPhylloscopus.ogg/OsloPhylloscopus.ogg.mp3" type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0" data-height="0" data-bandwidth="67328" /></audio></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:OsloPhylloscopus.ogg" class="internal" title="Enlarge"></a></div>call</div></div></div></div><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:222px;"><div class="mediaContainer" style="width:220px"><audio id="mwe_player_2" controls="" preload="none" style="width:220px" class="kskin" data-durationhint="68.481065759637" data-startoffset="0" data-mwtitle="Willow_Warbler_(Phylloscopus_trochilus)_(W1CDR0001510_BD23).ogg" data-mwprovider="wikimediacommons"><source src="//upload.wikimedia.org/wikipedia/commons/transcoded/1/1b/Willow_Warbler_%28Phylloscopus_trochilus%29_%28W1CDR0001510_BD23%29.ogg/Willow_Warbler_%28Phylloscopus_trochilus%29_%28W1CDR0001510_BD23%29.ogg.mp3" type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0" data-height="0" data-bandwidth="132232" /><source src="//upload.wikimedia.org/wikipedia/commons/1/1b/Willow_Warbler_%28Phylloscopus_trochilus%29_%28W1CDR0001510_BD23%29.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Original Ogg file (212 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="212107" /></audio></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Willow_Warbler_(Phylloscopus_trochilus)_(W1CDR0001510_BD23).ogg" class="internal" title="Enlarge"></a></div>Song, Recorded Gloucestershire, England</div></div></div></div>
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Phylloscopus" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Passerine" title="Passerine">Passeriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Leaf_warbler" title="Leaf warbler">Phylloscopidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Leaf_warbler" title="Leaf warbler"><i>Phylloscopus</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>P.&#160;trochilus</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Phylloscopus trochilus</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Subspecies
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>P. t. trochilus</i> (<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</li>
+<li><i>P. t. acredula</i> (<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</li>
+<li><i>P. t. yakutensis</i> (Ticehurst, 1935)</li></ul>
+</td></tr>
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Phylloscopus_trochilus_Range_Map.png" class="image"><img alt="Phylloscopus trochilus Range Map.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Phylloscopus_trochilus_Range_Map.png/220px-Phylloscopus_trochilus_Range_Map.png" decoding="async" width="220" height="137" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Phylloscopus_trochilus_Range_Map.png/330px-Phylloscopus_trochilus_Range_Map.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Phylloscopus_trochilus_Range_Map.png/440px-Phylloscopus_trochilus_Range_Map.png 2x" data-file-width="3286" data-file-height="2046" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Yellow: Breeding (summer only) <br />Blue: Non-breeding winter visitor <br />Cross-hatched: migration.
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>Motacilla trochilus</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span></li></ul>
+</td></tr>
+
+</tbody></table>
+<p>The <b>willow warbler</b> (<i>Phylloscopus trochilus</i>) is a very common and widespread <a href="/wiki/Leaf_warbler" title="Leaf warbler">leaf warbler</a> which breeds throughout northern and temperate Europe and the <a href="/wiki/Palearctic" class="mw-redirect" title="Palearctic">Palearctic</a>, from <a href="/wiki/Ireland" title="Ireland">Ireland</a> east to the <a href="/wiki/Anadyr_River" class="mw-redirect" title="Anadyr River">Anadyr River</a> basin in eastern <a href="/wiki/Siberia" title="Siberia">Siberia</a>. It is strongly <a href="/wiki/Bird_migration" title="Bird migration">migratory</a>, with almost all of the population wintering in <a href="/wiki/Sub-Saharan_Africa" title="Sub-Saharan Africa">Sub-Saharan Africa</a>.<sup id="cite_ref-Hoyo_2-0" class="reference"><a href="#cite_note-Hoyo-2">&#91;2&#93;</a></sup><sup id="cite_ref-Baker_3-0" class="reference"><a href="#cite_note-Baker-3">&#91;3&#93;</a></sup>
+</p><p>It is a <a href="/wiki/Bird" title="Bird">bird</a> of open woodlands with trees and ground cover for nesting, including most importantly <a href="/wiki/Birch" title="Birch">birch</a>, <a href="/wiki/Alder" title="Alder">alder</a>, and <a href="/wiki/Willow" title="Willow">willow</a> habitats. The nest is usually built in close contact with the ground, often in low vegetation. Like most <a href="/wiki/Old_World_warblers" class="mw-redirect" title="Old World warblers">Old World warblers</a> (<a href="/wiki/Sylviidae" title="Sylviidae">Sylviidae</a>), this small <a href="/wiki/Passerine" title="Passerine">passerine</a> is <a href="/wiki/Insectivorous" class="mw-redirect" title="Insectivorous">insectivorous</a>.<sup id="cite_ref-Baker_3-1" class="reference"><a href="#cite_note-Baker-3">&#91;3&#93;</a></sup> In northern Europe, it is one of the first <a href="/wiki/Warbler" title="Warbler">warblers</a> to return in the spring though is later than the closely related <a href="/wiki/Common_chiffchaff" title="Common chiffchaff">chiffchaff</a>.<sup id="cite_ref-Baker_3-2" class="reference"><a href="#cite_note-Baker-3">&#91;3&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Subspecies"><span class="tocnumber">2</span> <span class="toctext">Subspecies</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Behaviour"><span class="tocnumber">3</span> <span class="toctext">Behaviour</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Status_and_conservation"><span class="tocnumber">4</span> <span class="toctext">Status and conservation</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#History"><span class="tocnumber">5</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Willow_warbler&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>It is a typical leaf warbler in appearance, 11–12.5&#160;cm long and 7–15 g weight. It is greenish brown above and off-white to yellowish below; the wings are plain greenish-brown with no wingbars. Juveniles are yellower below than adults. It is very similar to the chiffchaff, but non-singing birds can be distinguished from that species by their paler pinkish-yellow legs (dark brown to blackish in chiffchaff), longer paler bill, more elegant shape and longer primary projection (wingtip). Its song is a simple repetitive descending whistle, while the contact call is a disyllabic 'hoo-eet', distinct from the more monosyllabic 'hweet' of chiffchaffs.<sup id="cite_ref-Hoyo_2-1" class="reference"><a href="#cite_note-Hoyo-2">&#91;2&#93;</a></sup><sup id="cite_ref-Baker_3-3" class="reference"><a href="#cite_note-Baker-3">&#91;3&#93;</a></sup><sup id="cite_ref-Snow_4-0" class="reference"><a href="#cite_note-Snow-4">&#91;4&#93;</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Subspecies">Subspecies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Willow_warbler&amp;action=edit&amp;section=2" title="Edit section: Subspecies">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Three <a href="/wiki/Subspecies" title="Subspecies">subspecies</a> are accepted, with a partly <a href="/wiki/Cline_(biology)" title="Cline (biology)">clinal</a> reduction in green and yellow plumage tones from west to east, with central birds browner and easternmost birds predominantly greyish:<sup id="cite_ref-Hoyo_2-2" class="reference"><a href="#cite_note-Hoyo-2">&#91;2&#93;</a></sup>
+</p>
+<ul><li><i>Phylloscopus trochilus trochilus</i> (<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>). Breeds Europe (from the Pyrenees and Alps northward) except northern Scandinavia, winters west Africa.</li>
+<li><i>Phylloscopus trochilus acredula</i> (<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>). Breeds northern Scandinavia east to western Siberia, winters central Africa.</li>
+<li><i>Phylloscopus trochilus yakutensis</i> (Ticehurst, 1935). Breeds eastern Siberia, winters eastern and southern Africa.</li></ul>
+<h2><span class="mw-headline" id="Behaviour">Behaviour</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Willow_warbler&amp;action=edit&amp;section=3" title="Edit section: Behaviour">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>All populations are highly migratory, with the subspecies <i>P. t. yakutensis</i> migrating up to 12,000&#160;km from eastern Siberia to southern Africa along the <a href="/wiki/Asian_-_East_African_Flyway" class="mw-redirect" title="Asian - East African Flyway">Asian - East African Flyway</a>, one of the longest migrations of any for a bird of its size.<sup id="cite_ref-Hoyo_2-3" class="reference"><a href="#cite_note-Hoyo-2">&#91;2&#93;</a></sup><sup id="cite_ref-Snow_4-1" class="reference"><a href="#cite_note-Snow-4">&#91;4&#93;</a></sup> Approximate timings are:
+</p>
+<ul><li>October to March: wintering in sub Saharan Africa.</li>
+<li>Mid March to mid-May: migrates and arrives in the breeding range.</li>
+<li>Late April to August: breeding season, usually only one brood but rarely two.</li>
+<li>August to October: migrates back to Africa.</li></ul>
+<h2><span class="mw-headline" id="Status_and_conservation">Status and conservation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Willow_warbler&amp;action=edit&amp;section=4" title="Edit section: Status and conservation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:WillowWarbler.jpg" class="image"><img alt="WillowWarbler.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4f/WillowWarbler.jpg/220px-WillowWarbler.jpg" decoding="async" width="220" height="211" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4f/WillowWarbler.jpg/330px-WillowWarbler.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4f/WillowWarbler.jpg/440px-WillowWarbler.jpg 2x" data-file-width="1554" data-file-height="1487" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:WillowWarbler.jpg" class="internal" title="Enlarge"></a></div></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Phylloscopus_trochilus_MWNH_2279.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Phylloscopus_trochilus_MWNH_2279.JPG/220px-Phylloscopus_trochilus_MWNH_2279.JPG" decoding="async" width="220" height="195" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Phylloscopus_trochilus_MWNH_2279.JPG/330px-Phylloscopus_trochilus_MWNH_2279.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Phylloscopus_trochilus_MWNH_2279.JPG/440px-Phylloscopus_trochilus_MWNH_2279.JPG 2x" data-file-width="2856" data-file-height="2528" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Phylloscopus_trochilus_MWNH_2279.JPG" class="internal" title="Enlarge"></a></div>Egg, Collection <a href="/wiki/Museum_Wiesbaden,_Germany" class="mw-redirect" title="Museum Wiesbaden, Germany">Museum Wiesbaden, Germany</a></div></div></div>
+<p>Willow warblers prefer young, open, scrubby <a href="/wiki/Woodland" title="Woodland">woodland</a> with small trees, including human-altered habitats such as <a href="/wiki/Coppice" class="mw-redirect" title="Coppice">coppice</a> and young <a href="/wiki/Plantation" title="Plantation">plantations</a> up to 10–20 years old. High amounts of birch, alder and willow, with good <a href="/wiki/Lichen" title="Lichen">lichen</a> amounts, and water features (e.g. streams), fields with large amounts of <a href="/wiki/Bracken" title="Bracken">bracken</a> and <a href="/wiki/Mosses" class="mw-redirect" title="Mosses">mosses</a>, and patches of low <a href="/wiki/Bramble" title="Bramble">bramble</a> (for nest cover) are preferred, but it will use a wide range of other species, including young or open <a href="/wiki/Pinophyta" title="Pinophyta">coniferous</a> forests.<sup id="cite_ref-Snow_4-2" class="reference"><a href="#cite_note-Snow-4">&#91;4&#93;</a></sup><sup id="cite_ref-ReferenceA_6-0" class="reference"><a href="#cite_note-ReferenceA-6">&#91;6&#93;</a></sup> Incorporating woodland ride edge thickets is beneficial, as is 15 metre woodland edges of varying structure and height. They prefer damp woodland areas. Thicket forming shrubs like <a href="/wiki/Blackthorn" class="mw-redirect" title="Blackthorn">blackthorn</a> provide pockets of habitat. <a href="/wiki/Deer" title="Deer">Deer</a> browsing can degrade the required low cover.
+</p><p>The highest population densities are found in Scandinavia (where it is the commonest bird of any), with up to 1,100 pairs per square kilometre, and a total population in Sweden and Finland of 24 million pairs. Lower densities occur further east, with peak densities of 27 pairs per square kilometre in central Siberia. Even lower densities are found on the southern edge of the breeding range, with just 9 pairs per square kilometre in Switzerland, and a total of just 100 pairs in the whole of northern Spain.<sup id="cite_ref-Hoyo_2-4" class="reference"><a href="#cite_note-Hoyo-2">&#91;2&#93;</a></sup>
+</p><p>In England this species has on average decreased in population by 70% within the last 25 years, with the biggest declines in the southeast. In Scotland some increases have occurred. The <a href="/wiki/Forestry_Commission" title="Forestry Commission">Forestry Commission</a> offers grants under a scheme called England's Woodland Improvement Grant (EWIG); as does <a href="/wiki/Natural_England" title="Natural England">Natural Englands</a> <a href="/wiki/Environmental_Stewardship" class="mw-redirect" title="Environmental Stewardship">Environmental Stewardship</a> Scheme.<sup id="cite_ref-ReferenceA_6-1" class="reference"><a href="#cite_note-ReferenceA-6">&#91;6&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Willow_warbler&amp;action=edit&amp;section=5" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The willow warbler was first scientifically described by <a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Carl Linnaeus</a> in his landmark 1758 <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">10th edition of <i>Systema Naturae</i></a> under the genus <i><a href="/wiki/Motacilla" class="mw-redirect" title="Motacilla">Motacilla</a></i>.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> and then transferred to the genus <i>Phylloscopus</i> (of which it is the <a href="/wiki/Type_species" title="Type species">type species</a>) by <a href="/wiki/Friedrich_Boie" title="Friedrich Boie">Boie</a> in 1826.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> The scientific name is from <a href="/wiki/Ancient_Greek" title="Ancient Greek">Ancient Greek</a>. The genus name <i>Phylloscopus</i> is from <i>phullon</i>, "leaf", and <i>skopos</i>, "seeker" (from <i>skopeo</i>, "to watch"), and the specific <i>trochilus</i> is from <i>trokhilos</i>, "wren".<sup id="cite_ref-job_9-0" class="reference"><a href="#cite_note-job-9">&#91;9&#93;</a></sup>
+</p><p>Before the English name was standardised to willow warbler by <a href="/wiki/William_Yarrell" title="William Yarrell">William Yarrell</a> in 1843, it was sometimes called "willow wren".<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Willow_warbler&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2013" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2013). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22715240/0">"<i>Phylloscopus trochilus</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2013</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Phylloscopus+trochilus&amp;rft.volume=2013&amp;rft.date=2013&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22715240%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWillow+warbler" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-Hoyo-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Hoyo_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Hoyo_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Hoyo_2-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Hoyo_2-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Hoyo_2-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFHoyo2006" class="citation book cs1">Hoyo, J. del;  et al., eds. (2006). <a rel="nofollow" class="external text" href="https://archive.org/details/handbookofbirdso0001unse/page/649"><i>Handbook of the Birds of the World, vol. 11</i></a>. Barcelona: Lynx Edicions. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/handbookofbirdso0001unse/page/649">649</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/84-87334-22-9" title="Special:BookSources/84-87334-22-9"><bdi>84-87334-22-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+the+Birds+of+the+World%2C+vol.+11&amp;rft.place=Barcelona&amp;rft.pages=649&amp;rft.pub=Lynx+Edicions&amp;rft.date=2006&amp;rft.isbn=84-87334-22-9&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fhandbookofbirdso0001unse%2Fpage%2F649&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWillow+warbler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Baker-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-Baker_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Baker_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Baker_3-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Baker_3-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFBaker1997" class="citation book cs1">Baker, Kevin (1997). <i>Warblers of Europe, Asia and North Africa (Helm Identification Guides)</i>. pp.&#160;256–259. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-7136-3971-7" title="Special:BookSources/0-7136-3971-7"><bdi>0-7136-3971-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Warblers+of+Europe%2C+Asia+and+North+Africa+%28Helm+Identification+Guides%29&amp;rft.pages=256-259&amp;rft.date=1997&amp;rft.isbn=0-7136-3971-7&amp;rft.aulast=Baker&amp;rft.aufirst=Kevin&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWillow+warbler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Snow-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-Snow_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Snow_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Snow_4-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFSnowPerrins,_C._M.1998" class="citation book cs1">Snow, D. W.; Perrins, C. M. (1998). <i>The Birds of the Western Palearctic</i> (Concise ed.). Oxford: Oxford University Press. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-19-854099-X" title="Special:BookSources/0-19-854099-X"><bdi>0-19-854099-X</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Birds+of+the+Western+Palearctic&amp;rft.place=Oxford&amp;rft.edition=Concise&amp;rft.pub=Oxford+University+Press&amp;rft.date=1998&amp;rft.isbn=0-19-854099-X&amp;rft.aulast=Snow&amp;rft.aufirst=D.+W.&amp;rft.au=Perrins%2C+C.+M.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWillow+warbler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://aulaenred.ibercaja.es/wp-content/uploads/381_WillowWarblerPtrochilus.pdf">Ageing and sexing (PDF) by Javier Blasco-Zumeta</a></span>
+</li>
+<li id="cite_note-ReferenceA-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-ReferenceA_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ReferenceA_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">RSPB Woodland Management For Birds – Willow Warbler</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite id="CITEREFLinnaeus1758" class="citation book cs1"><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus, Carl</a> (1758). <i>Systema naturae per regna tria naturae, secundum classes, ordines, genera, species, cum characteribus, differentiis, synonymis, locis. Tomus I. Editio decima, reformata</i> (in Latin). Holmiae. (Laurentii Salvii). p.&#160;188.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Systema+naturae+per+regna+tria+naturae%2C+secundum+classes%2C+ordines%2C+genera%2C+species%2C+cum+characteribus%2C+differentiis%2C+synonymis%2C+locis.+Tomus+I.+Editio+decima%2C+reformata.&amp;rft.pages=188&amp;rft.pub=Holmiae.+%28Laurentii+Salvii%29.&amp;rft.date=1758&amp;rft.aulast=Linnaeus&amp;rft.aufirst=Carl&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWillow+warbler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Boie, F. <i>Isis</i> (von Oken) 19 (10): 972, 1826.</span>
+</li>
+<li id="cite_note-job-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-job_9-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n305">305</a>, 394. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=305%2C+394&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWillow+warbler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">Lockwood, W. B. (1984). <i>The Oxford Book of British Bird Names</i>. Oxford University Press <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-19-214155-4" title="Special:BookSources/0-19-214155-4">0-19-214155-4</a>.</span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Willow_warbler&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Phylloscopus_trochilus" class="extiw" title="commons:Category:Phylloscopus trochilus"><span style="">Phylloscopus trochilus</span></a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://ibc.lynxeds.com/family/old-world-warblers-sylviidae">Willow warbler videos, photos &amp; sounds</a> on the Internet Bird Collection</li>
+<li><a rel="nofollow" class="external text" href="http://www.ornithos.de/Ornithos/Feather_Collection/Phylloscopus_trochilus/Phylloscopus_trochilus.htm">Feathers of the willow warbler</a></li>
+<li>Willow warbler - <a rel="nofollow" class="external text" href="http://sabap2.adu.org.za/docs/sabap1/643.pdf">Species text in <i>The Atlas of Southern African Birds</i></a>.</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q27239" class="extiw" title="wikidata:Q27239">Q27239</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Phylloscopus_trochilus" class="extiw" title="wikispecies:Phylloscopus trochilus">Phylloscopus trochilus</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/American_Birding_Association" title="American Birding Association">ABA</a>: <span class="uid">willwa</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/phylloscopus-trochilus/">phylloscopus-trochilus</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=88F4B969622B8268">88F4B969622B8268</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8925">8925</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22715240">22715240</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">WILWA</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/wlwwar">wlwwar</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EPPO_Code" title="EPPO Code">EPPO</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://gd.eppo.int/taxon/PLOSTR">PLOSTR</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/1214">1214</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">13120</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:97375">97375</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/0f921a46-8281-4d73-816f-83ca808e97e0">0f921a46-8281-4d73-816f-83ca808e97e0</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2493052">2493052</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/117055">117055</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=11316237">11316237</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=179841">179841</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22715240">22715240</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0000530759">NHMSYS0000530759</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=9182">9182</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=13789">13789</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=558579">558579</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1286
+Cached time: 20201030055807
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.868 seconds
+Real time usage: 1.215 seconds
+Preprocessor visited node count: 6523/1000000
+Post‐expand include size: 42855/2097152 bytes
+Template argument size: 7341/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 22/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 24722/5000000 bytes
+Lua time usage: 0.579/10.000 seconds
+Lua memory usage: 6.59 MB/50 MB
+Number of Wikibase entities loaded: 22/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1072.944      1 -total
+ 43.79%  469.857      1 Template:Speciesbox
+ 42.88%  460.085      1 Template:Taxobox/core
+ 22.58%  242.292      1 Template:Taxonbar
+ 19.68%  211.140      1 Template:Reflist
+ 10.38%  111.411      1 Template:Cite_iucn
+  7.65%   82.050      1 Template:Commons_category
+  7.29%   78.195      1 Template:Sister_project
+  6.87%   73.699      1 Template:Side_box
+  5.10%   54.678      1 Template:Redirect
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:232935-0!canonical and timestamp 20201030055805 and revision id 977124685
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Willow_warbler&amp;oldid=977124685">https://en.wikipedia.org/w/index.php?title=Willow_warbler&amp;oldid=977124685</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Phylloscopus" title="Category:Phylloscopus">Phylloscopus</a></li><li><a href="/wiki/Category:Birds_of_Europe" title="Category:Birds of Europe">Birds of Europe</a></li><li><a href="/wiki/Category:Birds_of_Russia" title="Category:Birds of Russia">Birds of Russia</a></li><li><a href="/wiki/Category:Birds_of_Africa" title="Category:Birds of Africa">Birds of Africa</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:CS1_Latin-language_sources_(la)" title="Category:CS1 Latin-language sources (la)">CS1 Latin-language sources (la)</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_20%E2%80%9324_taxon_IDs" title="Category:Taxonbars with 20–24 taxon IDs">Taxonbars with 20–24 taxon IDs</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Willow+warbler" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Willow+warbler" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Willow_warbler" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Willow_warbler" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Willow_warbler">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Willow_warbler&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Willow_warbler&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Willow_warbler" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Willow_warbler" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Willow_warbler&amp;oldid=977124685" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Willow_warbler&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Willow_warbler&amp;id=977124685&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q27239" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Willow_warbler&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Willow_warbler&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Phylloscopus_trochilus" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Phylloscopus_trochilus" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%A6%D3%80%D1%83%D0%B6%D1%8C%D0%BE%D0%BC%D1%8D" title="ЦӀужьомэ – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Hofsanger" title="Hofsanger – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%86%D9%82%D8%B4%D8%A7%D8%B1%D8%A9" title="نقشارة – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Phylloscopus_trochilus" title="Phylloscopus trochilus – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D0%A2%D3%A9%D0%B9%D3%A9%D1%82" title="Төйөт – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%91%D1%80%D0%B5%D0%B7%D0%BE%D0%B2_%D0%BF%D0%B5%D0%B2%D0%B5%D1%86" title="Брезов певец – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Puig-haleg" title="Puig-haleg – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Mosquiter_de_passa" title="Mosquiter de passa – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cv"><a href="https://cv.wikipedia.org/wiki/%C3%87%D1%83%D1%80%D1%85%D0%B8_%D1%87%D0%B8%D0%B5_%D0%BA%D0%B0%D0%B9%C4%83%D0%BA%C4%95" title="Çурхи чие кайăкĕ – Chuvash" lang="cv" hreflang="cv" class="interlanguage-link-target">Чӑвашла</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Phylloscopus_trochilus" title="Phylloscopus trochilus – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Budn%C3%AD%C4%8Dek_v%C4%9Bt%C5%A1%C3%AD" title="Budníček větší – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Telor_yr_helyg" title="Telor yr helyg – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/L%C3%B8vsanger" title="Løvsanger – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-se"><a href="https://se.wikipedia.org/wiki/Rievssatciz%C3%A1%C5%A1" title="Rievssatcizáš – Northern Sami" lang="se" hreflang="se" class="interlanguage-link-target">Davvisámegiella</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Fitis" title="Fitis – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/K%CA%BCai%CA%BC_bit%CA%BC%C4%85%C4%85tah_ay%C3%A1%C3%A1sh" title="Kʼaiʼ bitʼąątah ayáásh – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Salu-lehelind" title="Salu-lehelind – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Phylloscopus_trochilus" title="Phylloscopus trochilus – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Fitiso" title="Fitiso – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Txio_hori" title="Txio hori – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B3%D8%B3%DA%A9_%D8%A8%DB%8C%D8%AF%DB%8C" title="سسک بیدی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Leyvlj%C3%B3mari" title="Leyvljómari – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Pouillot_fitis" title="Pouillot fitis – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Ceolaire_sail%C3%AD" title="Ceolaire sailí – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Picafollas_musical" title="Picafollas musical – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%B3%D5%A1%D6%80%D5%B6%D5%A1%D5%B6%D5%A1%D5%B5%D5%AB%D5%B6_%D5%A3%D5%A5%D5%B2%D5%A3%D5%A5%D5%B2%D5%AB%D5%AF" title="Գարնանային գեղգեղիկ – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Brezov_zvi%C5%BEdak" title="Brezov zviždak – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Phylloscopus_trochilus" title="Phylloscopus trochilus – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A2%D7%9C%D7%95%D7%95%D7%99%D7%AA_%D7%90%D7%A4%D7%95%D7%A8%D7%94" title="עלווית אפורה – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/V%C4%ABt%C4%ABtis" title="Vītītis – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Ankstyvoji_pe%C4%8Dialinda" title="Ankstyvoji pečialinda – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Fitiszf%C3%BCzike" title="Fitiszfüzike – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%91%D1%80%D0%B5%D0%B7%D0%BE%D0%B2_%D1%81%D0%B2%D0%B8%D1%80%D0%BA%D0%B0%D1%87" title="Брезов свиркач – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%B5%E0%B4%BF%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B5%8B_%E0%B4%B5%E0%B4%BE%E0%B5%BC%E0%B4%AC%E0%B5%8D%E0%B4%B3%E0%B5%BC" title="വില്ലോ വാർബ്ളർ – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B3%D0%BE%D0%BE%D0%BD_%D0%B4%D1%83%D1%83%D1%87%D1%88%D1%83%D0%B2%D1%83%D1%83" title="Ногоон дуучшувуу – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Fitis" title="Fitis – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-frr"><a href="https://frr.wikipedia.org/wiki/Letj_fleegenbitjer" title="Letj fleegenbitjer – Northern Frisian" lang="frr" hreflang="frr" class="interlanguage-link-target">Nordfriisk</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/L%C3%B8vsanger" title="Løvsanger – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Lauvsongar" title="Lauvsongar – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Phylloscopus_trochilus" title="Phylloscopus trochilus – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Piecuszek" title="Piecuszek – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Felosa-musical" title="Felosa-musical – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Pitulice_fluier%C4%83toare" title="Pitulice fluierătoare – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%9F%D0%B8%D0%BD%D0%BE%D1%87%D0%BA%D0%B0_%D0%B7%D0%B2%D1%8B%D1%87%D0%B0%D0%B9%D0%BD%D0%B0" title="Пиночка звычайна – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D0%BD%D0%BE%D1%87%D0%BA%D0%B0-%D0%B2%D0%B5%D1%81%D0%BD%D0%B8%D1%87%D0%BA%D0%B0" title="Пеночка-весничка – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Phylloscopus_trochilus" title="Phylloscopus trochilus – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Kolibiarik_spevav%C3%BD" title="Kolibiarik spevavý – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/Severni_kova%C4%8Dek" title="Severni kovaček – Slovenian" lang="sl" hreflang="sl" class="interlanguage-link-target">Slovenščina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%91%D1%80%D0%B5%D0%B7%D0%BE%D0%B2_%D0%B7%D0%B2%D0%B8%D0%B6%D0%B4%D0%B0%D0%BA" title="Брезов звиждак – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Pajulintu" title="Pajulintu – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv badge-Q17559452 badge-recommendedarticle" title="recommended article"><a href="https://sv.wikipedia.org/wiki/L%C3%B6vs%C3%A5ngare" title="Lövsångare – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/S%C3%B6%C4%9F%C3%BCtb%C3%BClb%C3%BCl%C3%BC" title="Söğütbülbülü – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%92%D1%96%D0%B2%D1%87%D0%B0%D1%80%D0%B8%D0%BA_%D0%B2%D0%B5%D1%81%D0%BD%D1%8F%D0%BD%D0%B8%D0%B9" title="Вівчарик весняний – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Ch%C3%ADch_li%E1%BB%85u" title="Chích liễu – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Phylloscopus_trochilus" title="Phylloscopus trochilus – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%AD%90%E6%9F%B3%E9%B6%AF" title="歐柳鶯 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q27239#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 7 September 2020, at 02:31<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Willow_warbler&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.868","walltime":"1.215","ppvisitednodes":{"value":6523,"limit":1000000},"postexpandincludesize":{"value":42855,"limit":2097152},"templateargumentsize":{"value":7341,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":22,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":24722,"limit":5000000},"entityaccesscount":{"value":22,"limit":400},"timingprofile":["100.00% 1072.944      1 -total"," 43.79%  469.857      1 Template:Speciesbox"," 42.88%  460.085      1 Template:Taxobox/core"," 22.58%  242.292      1 Template:Taxonbar"," 19.68%  211.140      1 Template:Reflist"," 10.38%  111.411      1 Template:Cite_iucn","  7.65%   82.050      1 Template:Commons_category","  7.29%   78.195      1 Template:Sister_project","  6.87%   73.699      1 Template:Side_box","  5.10%   54.678      1 Template:Redirect"]},"scribunto":{"limitreport-timeusage":{"value":"0.579","limit":"10.000"},"limitreport-memusage":{"value":6914307,"limit":52428800}},"cachereport":{"origin":"mw1286","timestamp":"20201030055807","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Willow warbler","url":"https:\/\/en.wikipedia.org\/wiki\/Willow_warbler","sameAs":"http:\/\/www.wikidata.org\/entity\/Q27239","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q27239","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-05-24T06:56:07Z","dateModified":"2020-09-07T02:31:24Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/5\/5b\/Willow_Warbler_Phylloscopus_trochilus.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":175,"wgHostname":"mw1407"});});</script>
+</body></html>

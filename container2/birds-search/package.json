@@ -1,0 +1,16 @@
+{
+  "name": "birds-search",
+  "description": "Solr + node.io + node js + angular.js knowledge base",
+  "version": "0.0.1",
+  "author": "Avner Cohen <israbirding@gmail.com>",
+  "dependencies": {
+    "async": "^3.2.0",
+    "cheerio": "~0.10.1",
+    "director": "~1.1.6",
+    "ecstatic": "~0.1.6",
+    "grunt-css": "~0.3.2",
+    "request": "^2.88.2",
+    "solr-client": "~0.2.3",
+    "union": "~0.3.4"
+  }
+}

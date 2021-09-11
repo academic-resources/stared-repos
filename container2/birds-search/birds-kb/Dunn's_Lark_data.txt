@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Dunn's lark - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"ec53d4d4-0ce3-48d5-a4c4-0940b298e815","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Dunn's_lark","wgTitle":"Dunn's lark","wgCurRevisionId":951710592,"wgRevisionId":951710592,"wgArticleId":11090430,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","Webarchive template wayback links","Articles with 'species' microformats","IUCN Red List least concern species","Alaudidae","Birds of the Sahel","Birds of the Middle East","Birds described in 1904","Taxa named by George Ernest Shelley"],"wgPageContentLanguage":
+"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Dunn's_lark","wgRelevantArticleId":11090430,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Dunn's_Lark","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Dunn%27s_lark","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q1092087"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready",
+"ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Dunn%27s_Lark.jpg/1200px-Dunn%27s_Lark.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Dunn%27s_lark"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Dunn%27s_lark&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Dunn%27s_lark&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Dunn%27s_lark"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dunn_s_lark rootpage-Dunn_s_lark skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Dunn's lark</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Dunn%27s_Lark&amp;redirect=no" class="mw-redirect" title="Dunn&#039;s Lark">Dunn&#039;s Lark</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Dunn&#39;s lark
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Dunn%27s_Lark.jpg" class="image"><img alt="Dunn&#39;s Lark.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Dunn%27s_Lark.jpg/220px-Dunn%27s_Lark.jpg" decoding="async" width="220" height="147" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/59/Dunn%27s_Lark.jpg/330px-Dunn%27s_Lark.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/59/Dunn%27s_Lark.jpg/440px-Dunn%27s_Lark.jpg 2x" data-file-width="1223" data-file-height="816" /></a>
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Eremalauda" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Passerine" title="Passerine">Passeriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Lark" title="Lark">Alaudidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a class="mw-selflink selflink"><i>Eremalauda</i></a><br /><small><a href="/wiki/William_Lutley_Sclater" title="William Lutley Sclater">WL Sclater</a>, 1926</small>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>E.&#160;dunni</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Eremalauda dunni</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/George_Ernest_Shelley" title="George Ernest Shelley">Shelley</a>, 1904)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>Ammomanes dunni</i></li>
+<li><i>Calendula dunni</i></li></ul>
+</td></tr>
+
+</tbody></table>
+<p><b>Dunn's lark</b> (<i>Eremalauda dunni</i>) is a small <a href="/wiki/Passerine" title="Passerine">passerine</a> <a href="/wiki/Bird" title="Bird">bird</a> of the <a href="/wiki/Lark" title="Lark">lark</a> family. It is a <a href="/wiki/Desert" title="Desert">desert</a> bird which is found across parts of the <a href="/wiki/Sahara" title="Sahara">Sahara</a> and <a href="/wiki/Arabia" class="mw-redirect" title="Arabia">Arabia</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Taxonomy_and_systematics"><span class="tocnumber">1</span> <span class="toctext">Taxonomy and systematics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Subspecies"><span class="tocnumber">1.1</span> <span class="toctext">Subspecies</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Distribution_and_habitat"><span class="tocnumber">3</span> <span class="toctext">Distribution and habitat</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Behaviour_and_ecology"><span class="tocnumber">4</span> <span class="toctext">Behaviour and ecology</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Breeding"><span class="tocnumber">4.1</span> <span class="toctext">Breeding</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Food_and_feeding"><span class="tocnumber">4.2</span> <span class="toctext">Food and feeding</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Taxonomy_and_systematics">Taxonomy and systematics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunn%27s_lark&amp;action=edit&amp;section=1" title="Edit section: Taxonomy and systematics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Dunn's lark was originally described as belonging to the genus <i><a href="/wiki/Galerida" title="Galerida">Calendula</a></i> and has also been classified by some authorities as belonging to the genus <i><a href="/wiki/Ammomanes" title="Ammomanes">Ammomanes</a></i>.
+</p><p><a href="/wiki/Stark%27s_lark" title="Stark&#39;s lark">Stark's lark</a> was formerly also classified in the genus <i>Eremalauda</i>; it has since been moved to <i><a href="/wiki/Spizocorys" title="Spizocorys">Spizocorys</a></i>, leaving Dunn's lark as the <a href="/wiki/Monotypic_taxon" title="Monotypic taxon">only species</a> in the genus <i>Eremalauda</i>.
+</p>
+<h3><span class="mw-headline" id="Subspecies">Subspecies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunn%27s_lark&amp;action=edit&amp;section=2" title="Edit section: Subspecies">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Two <a href="/wiki/Subspecies" title="Subspecies">subspecies</a> are recognized:<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p>
+<ul><li><b>Saharan Dunn's lark</b> (<i>E. d. dunni</i>) - <small>(<a href="/wiki/George_Ernest_Shelley" title="George Ernest Shelley">Shelley</a>, 1904)</small>: Found from Mauritania to central Sudan</li>
+<li><b>Arabian Dunn's lark</b> (<i>E. d. eremodites</i>) - <small>(<a href="/wiki/Richard_Meinertzhagen" title="Richard Meinertzhagen">Meinertzhagen, R</a>, 1923)</small>: Originally described as a separate species in the genus <i><a href="/wiki/Pyrrhulauda" class="mw-redirect" title="Pyrrhulauda">Pyrrhulauda</a></i>. Found from Syria to Jordan and through Saudi Arabia to Oman.</li></ul>
+<p>The latter taxon is recognised as a separate species, the <b>Arabian lark</b> (<i>E. eremodites</i>) in <a href="/wiki/Handbook_of_the_Birds_of_the_World" title="Handbook of the Birds of the World">Handbook of the Birds of the World Alive</a> and by <a href="/wiki/Birdlife_International" class="mw-redirect" title="Birdlife International">Birdlife International</a>.<sup id="cite_ref-delHoyo2017_3-0" class="reference"><a href="#cite_note-delHoyo2017-3">&#91;3&#93;</a></sup><sup id="cite_ref-BirdLifeChecklist2017_4-0" class="reference"><a href="#cite_note-BirdLifeChecklist2017-4">&#91;4&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunn%27s_lark&amp;action=edit&amp;section=3" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Dunn's lark is a stocky bird with a large head and broad wings. It is 14 to 15&#160;cm long with a wingspan of 25 to 30&#160;cm.<sup id="cite_ref-BWP_5-0" class="reference"><a href="#cite_note-BWP-5">&#91;5&#93;</a></sup> The upperparts are pale sandy-brown with darker streaks. The underparts are whitish with some dark streaks on the breast. There is a pale stripe over the eye and a pale ring around it. Birds have dark moustachial and <a href="/wiki/Cheek" title="Cheek">malar</a> stripes and a dark mark under the eye. The short, broad tail is black below while the upperside is black with rusty-brown central feathers and pale outer feathers. The <a href="/wiki/Beak" title="Beak">bill</a> is large, heavy and pale pinkish or yellowish in colour. After <a href="/wiki/Moult" class="mw-redirect" title="Moult">moulting</a>, the birds become gradually duller and the dark markings fainter as the <a href="/wiki/Plumage" title="Plumage">plumage</a> becomes more worn.<sup id="cite_ref-Harris_6-0" class="reference"><a href="#cite_note-Harris-6">&#91;6&#93;</a></sup>
+</p><p>The <a href="/wiki/Bird_song" class="mw-redirect" title="Bird song">song</a> is a scratchy warbling with short whistling phrases. Males sing either from the ground or in flight, hovering 30 metres or more above the ground.<sup id="cite_ref-BWP_5-1" class="reference"><a href="#cite_note-BWP-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Distribution_and_habitat">Distribution and habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunn%27s_lark&amp;action=edit&amp;section=4" title="Edit section: Distribution and habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In Africa, the species has a scattered range from Mauritania through Mali, Niger and Chad to Sudan.<sup id="cite_ref-Sinclair_7-0" class="reference"><a href="#cite_note-Sinclair-7">&#91;7&#93;</a></sup> In the Middle East, it breeds in Saudi Arabia and Oman. It has also bred occasionally in Jordan and Israel and may have bred in Yemen and the <a href="/wiki/Sinai_Peninsula" title="Sinai Peninsula">Sinai Peninsula</a> of Egypt.<sup id="cite_ref-BWP_5-2" class="reference"><a href="#cite_note-BWP-5">&#91;5&#93;</a></sup><sup id="cite_ref-Hollom_8-0" class="reference"><a href="#cite_note-Hollom-8">&#91;8&#93;</a></sup> <a href="/wiki/Vagrancy_in_birds" class="mw-redirect" title="Vagrancy in birds">Vagrants</a> have been recorded from Cyprus, Syria, Lebanon, Kuwait, Qatar and the United Arab Emirates.<sup id="cite_ref-BWP_5-3" class="reference"><a href="#cite_note-BWP-5">&#91;5&#93;</a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup><sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup><sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>
+</p><p>Dunn's larks are found in flat, arid areas with light vegetation such as grass and scattered bushes.<sup id="cite_ref-Harris_6-1" class="reference"><a href="#cite_note-Harris-6">&#91;6&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Behaviour_and_ecology">Behaviour and ecology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunn%27s_lark&amp;action=edit&amp;section=5" title="Edit section: Behaviour and ecology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Breeding">Breeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunn%27s_lark&amp;action=edit&amp;section=6" title="Edit section: Breeding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The nest is a <a href="/wiki/Scrape_nest" class="mw-redirect" title="Scrape nest">scrape</a> on the ground which is lined with vegetation. Two or three <a href="/wiki/Bird_egg" title="Bird egg">eggs</a> are laid and are incubated for 13 to 16 days. They are white with blackish and lavender spots.<sup id="cite_ref-BWP_5-4" class="reference"><a href="#cite_note-BWP-5">&#91;5&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Food_and_feeding">Food and feeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunn%27s_lark&amp;action=edit&amp;section=7" title="Edit section: Food and feeding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The diet mainly includes <a href="/wiki/Seed_predation" title="Seed predation">seeds</a> and insects. Birds feed on the ground and sometimes dig for food with their bills. They typically feed in flocks outside the breeding season, moving nomadically in response to rainfall.<sup id="cite_ref-BWP_5-5" class="reference"><a href="#cite_note-BWP-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunn%27s_lark&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22717376/0">"<i>Eremalauda dunni</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Eremalauda+dunni&amp;rft.volume=2012&amp;rft.date=2012&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22717376%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunn%27s+lark" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1"><a rel="nofollow" class="external text" href="http://www.worldbirdnames.org/ioc-lists/crossref">"IOC World Bird List 6.4"</a>. <i>IOC World Bird List Datasets</i>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.14344%2Fioc.ml.6.4">10.14344/ioc.ml.6.4</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IOC+World+Bird+List+Datasets&amp;rft.atitle=IOC+World+Bird+List+6.4&amp;rft_id=info%3Adoi%2F10.14344%2Fioc.ml.6.4&amp;rft_id=http%3A%2F%2Fwww.worldbirdnames.org%2Fioc-lists%2Fcrossref&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunn%27s+lark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-delHoyo2017-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-delHoyo2017_3-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFdel_HoyoCollar2017" class="citation web cs1">del Hoyo, J.; Collar, N. (2017). <a rel="nofollow" class="external text" href="http://www.hbw.com/node/1343871">"Arabian Lark (<i>Eremalauda eremodites</i>)"</a>. <i>Handbook of the Birds of the World Alive</i>. Barcelona: Lynx Edicions<span class="reference-accessdate">. Retrieved <span class="nowrap">19 August</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Handbook+of+the+Birds+of+the+World+Alive&amp;rft.atitle=Arabian+Lark+%28Eremalauda+eremodites%29&amp;rft.date=2017&amp;rft.aulast=del+Hoyo&amp;rft.aufirst=J.&amp;rft.au=Collar%2C+N.&amp;rft_id=http%3A%2F%2Fwww.hbw.com%2Fnode%2F1343871&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunn%27s+lark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-BirdLifeChecklist2017-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-BirdLifeChecklist2017_4-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2017" class="citation web cs1">BirdLife International (2017). <a rel="nofollow" class="external text" href="http://www.birdlife.org/datazone/userfiles/Checklist%20v3_June10.zip">"BirdLife International Checklist Version 9.1"</a> <span class="cs1-format">(xlsx)</span>. <i>www.birdlife.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">19 August</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.birdlife.org&amp;rft.atitle=BirdLife+International+Checklist+Version+9.1&amp;rft.date=2017&amp;rft.au=BirdLife+International&amp;rft_id=http%3A%2F%2Fwww.birdlife.org%2Fdatazone%2Fuserfiles%2FChecklist%2520v3_June10.zip&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunn%27s+lark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-BWP-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-BWP_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-BWP_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-BWP_5-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-BWP_5-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-BWP_5-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-BWP_5-5"><sup><i><b>f</b></i></sup></a></span> <span class="reference-text">Snow, D. W. &amp; Perrins, C. M. (1998) <i>Birds of the Western Palearctic: Concise Edition, Vol. 2</i>, Oxford University Press.</span>
+</li>
+<li id="cite_note-Harris-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-Harris_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Harris_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Harris, Alan, Shirihai, Hadoram &amp; Christie, David (1996) <i>The Macmillan Birder's Guide to European and Middle Eastern Birds</i>, Macmillan, London.</span>
+</li>
+<li id="cite_note-Sinclair-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-Sinclair_7-0">^</a></b></span> <span class="reference-text">Sinclair, Ian &amp; Ryan, Peter (2003) <i>Birds of Africa south of the Sahara</i>, Struik, Cape Town.</span>
+</li>
+<li id="cite_note-Hollom-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hollom_8-0">^</a></b></span> <span class="reference-text">Hollom, P. A. D., Porter, R. F., Christensen, S. &amp; Willis, Ian (1988) <i>Birds of the Middle East and North Africa</i>, T &amp; AD Poyser, Calton, England.</span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://go-south.org/wp-content/uploads/2014/08/gsb_7_121-126.pdf">"First record of African Dunn's Lark (Eremalauda dunni dunni) for the Tafilalt, Morocco"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">20 March</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=First+record+of+African+Dunn%E2%80%99s+Lark+%28Eremalauda+dunni+dunni%29+for+the+Tafilalt%2C+Morocco&amp;rft_id=http%3A%2F%2Fgo-south.org%2Fwp-content%2Fuploads%2F2014%2F08%2Fgsb_7_121-126.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunn%27s+lark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">Serra G. (2005) "Dunn's Lark <i>Eremalauda dunni</i> - a first record for Syria", <i>Sandgrouse</i>, 27:77.</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text">Nation, Bob; Nation, Helen &amp; Hooper, Helen (1997) <a rel="nofollow" class="external text" href="http://www.osme.org/sand191/qatarnew.html">Birds new to Qatar</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20080526063332/http://www.osme.org/sand191/qatarnew.html">Archived</a> 2008-05-26 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>, <i>Sandgrouse</i>, 19.</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text">Richardson, Colin &amp; Aspinall, Simon (1998) <i>The Shell Birdwatching Guide to the United Arab Emirates</i>, Hobby Publications.</span>
+</li>
+</ol></div></div>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q1092087" class="extiw" title="wikidata:Q1092087">Q1092087</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Eremalauda_dunni" class="extiw" title="wikispecies:Eremalauda dunni">Eremalauda dunni</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Eremalauda/">Eremalauda</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id175933">175933</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/103765809">103765809</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/dunlar2">dunlar2</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">9540</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2490663">2490663</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/7411">7411</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10764854">10764854</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=559937">559937</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/103765809">103765809</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=1364983">1364983</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1304
+Cached time: 20201029082438
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.688 seconds
+Real time usage: 0.887 seconds
+Preprocessor visited node count: 5987/1000000
+Post‐expand include size: 29716/2097152 bytes
+Template argument size: 4176/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 11/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 19834/5000000 bytes
+Lua time usage: 0.480/10.000 seconds
+Lua memory usage: 6.01 MB/50 MB
+Number of Wikibase entities loaded: 12/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  813.545      1 -total
+ 52.26%  425.153      1 Template:Speciesbox
+ 51.25%  416.913      1 Template:Taxobox/core
+ 22.85%  185.934      1 Template:Reflist
+ 21.17%  172.187      1 Template:Taxonbar
+ 14.90%  121.206      1 Template:Cite_iucn
+  5.15%   41.930     23 Template:Delink
+  2.76%   22.451      3 Template:Cite_web
+  2.50%   20.360      2 Template:Taxon_italics
+  2.36%   19.212      1 Template:Taxonomy
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:11090430-0!canonical and timestamp 20201029082438 and revision id 951710592
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Dunn%27s_lark&amp;oldid=951710592">https://en.wikipedia.org/w/index.php?title=Dunn%27s_lark&amp;oldid=951710592</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Alaudidae" title="Category:Alaudidae">Alaudidae</a></li><li><a href="/wiki/Category:Birds_of_the_Sahel" title="Category:Birds of the Sahel">Birds of the Sahel</a></li><li><a href="/wiki/Category:Birds_of_the_Middle_East" title="Category:Birds of the Middle East">Birds of the Middle East</a></li><li><a href="/wiki/Category:Birds_described_in_1904" title="Category:Birds described in 1904">Birds described in 1904</a></li><li><a href="/wiki/Category:Taxa_named_by_George_Ernest_Shelley" title="Category:Taxa named by George Ernest Shelley">Taxa named by George Ernest Shelley</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Dunn%27s+lark" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Dunn%27s+lark" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Dunn%27s_lark" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Dunn%27s_lark" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Dunn%27s_lark">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Dunn%27s_lark&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Dunn%27s_lark&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Dunn%27s_lark" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Dunn%27s_lark" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Dunn%27s_lark&amp;oldid=951710592" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Dunn%27s_lark&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Dunn%27s_lark&amp;id=951710592&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1092087" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Dunn%27s_lark&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Dunn%27s_lark&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Eremalauda" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Eremalauda_dunni" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%82%D9%86%D8%A8%D8%B1%D8%A9_%D8%AF%D9%86" title="قنبرة دن – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%90%D1%80%D0%B0%D0%B1%D1%81%D0%BA%D0%B0_%D1%87%D1%83%D1%87%D1%83%D0%BB%D0%B8%D0%B3%D0%B0" title="Арабска чучулига – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Eremalauda_dunni" title="Eremalauda dunni – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Alosa_de_Dunn" title="Alosa de Dunn – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Eremalauda_dunni" title="Eremalauda dunni – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Ehedydd_Dunn" title="Ehedydd Dunn – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Ein%C3%B6dlerche" title="Einödlerche – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/Dij%C3%A1d%C3%ADdl%C7%AB%CC%81%CA%BC%C3%AD_diniltsxoo%C3%ADg%C3%AD%C3%AD" title="Dijádídlǫ́ʼí diniltsxooígíí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Eremalauda_dunni" title="Eremalauda dunni – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Eremalauda_dunni" title="Eremalauda dunni – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%DA%86%DA%A9%D8%A7%D9%88%DA%A9%E2%80%8C%D9%87%D8%A7%DB%8C_%D8%B5%D8%AD%D8%B1%D8%A7" title="چکاوک‌های صحرا – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Alouette_de_Dunn" title="Alouette de Dunn – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-avk"><a href="https://avk.wikipedia.org/wiki/Wulpa_(Eremalauda)" title="Wulpa (Eremalauda) – Kotava" lang="avk" hreflang="avk" class="interlanguage-link-target">Kotava</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Nom%C3%A1d_pacsirta" title="Nomád pacsirta – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Dunns_leeuwerik" title="Dunns leeuwerik – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Nomadelerke" title="Nomadelerke – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D1%8B%D0%B9_%D0%B2%D1%8C%D1%8E%D1%80%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B6%D0%B0%D0%B2%D0%BE%D1%80%D0%BE%D0%BD%D0%BE%D0%BA" title="Малый вьюрковый жаворонок – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Arabianaavikkokiuru" title="Arabianaavikkokiuru – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Streckig_%C3%B6kenl%C3%A4rka" title="Streckig ökenlärka – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/S%C6%A1n_ca_Dunn" title="Sơn ca Dunn – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Eremalauda_dunni" title="Eremalauda dunni – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E6%B0%8F%E6%B2%99%E7%99%BE%E7%81%B5" title="图氏沙百灵 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1092087#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 18 April 2020, at 13:31<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Dunn%27s_lark&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.688","walltime":"0.887","ppvisitednodes":{"value":5987,"limit":1000000},"postexpandincludesize":{"value":29716,"limit":2097152},"templateargumentsize":{"value":4176,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":11,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":19834,"limit":5000000},"entityaccesscount":{"value":12,"limit":400},"timingprofile":["100.00%  813.545      1 -total"," 52.26%  425.153      1 Template:Speciesbox"," 51.25%  416.913      1 Template:Taxobox/core"," 22.85%  185.934      1 Template:Reflist"," 21.17%  172.187      1 Template:Taxonbar"," 14.90%  121.206      1 Template:Cite_iucn","  5.15%   41.930     23 Template:Delink","  2.76%   22.451      3 Template:Cite_web","  2.50%   20.360      2 Template:Taxon_italics","  2.36%   19.212      1 Template:Taxonomy"]},"scribunto":{"limitreport-timeusage":{"value":"0.480","limit":"10.000"},"limitreport-memusage":{"value":6301495,"limit":52428800}},"cachereport":{"origin":"mw1304","timestamp":"20201029082438","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Dunn's lark","url":"https:\/\/en.wikipedia.org\/wiki\/Dunn%27s_lark","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1092087","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1092087","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2007-05-06T21:10:30Z","dateModified":"2020-04-18T13:31:25Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/5\/59\/Dunn%27s_Lark.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":180,"wgHostname":"mw1332"});});</script>
+</body></html>

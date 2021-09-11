@@ -1,0 +1,22 @@
+include includes/header
+#header.container-fluid
+    h1 Scrape from IMDB
+#form.container-fluid
+    form(
+        method='POST'
+        action='scrape'
+    )
+        input(
+            type="text"
+            placeholder="Search"
+            name="searchText"
+            required
+        )
+        select(name="searchBy")
+            option(value="all") All
+            option(value="tt") Titles
+            option(value="ep") TV Episodes
+            option(value="nm") Names
+            option(value="co") Companies
+        button.btn(type="submit")
+            i.fas.fa-search

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Woodlark - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"edd42e13-9392-4aa6-b423-e67b16f021d0","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Woodlark","wgTitle":"Woodlark","wgCurRevisionId":977124693,"wgRevisionId":977124693,"wgArticleId":327018,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","CS1 Latin-language sources (la)","CS1: long volume value","CS1 German-language sources (de)","Articles with 'species' microformats","Taxonbars with 20–24 taxon IDs","IUCN Red List least concern species","Alaudidae","Birds of Europe","Birds described in 1758",
+"Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Woodlark","wgRelevantArticleId":327018,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q26969"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready",
+"user.options":"loading","ext.cite.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns",
+"ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Lullula_arborea_%28J%C3%A1n_Svetl%C3%ADk%29.jpg/1200px-Lullula_arborea_%28J%C3%A1n_Svetl%C3%ADk%29.jpg"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Woodlark"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Woodlark&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Woodlark&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Woodlark"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Woodlark rootpage-Woodlark skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Woodlark</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">For other uses, see <a href="/wiki/Woodlark_(disambiguation)" class="mw-disambig" title="Woodlark (disambiguation)">Woodlark (disambiguation)</a>.</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Woodlark
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Lullula_arborea_(J%C3%A1n_Svetl%C3%ADk).jpg" class="image"><img alt="Lullula arborea (Ján Svetlík).jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/96/Lullula_arborea_%28J%C3%A1n_Svetl%C3%ADk%29.jpg/220px-Lullula_arborea_%28J%C3%A1n_Svetl%C3%ADk%29.jpg" decoding="async" width="220" height="150" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/96/Lullula_arborea_%28J%C3%A1n_Svetl%C3%ADk%29.jpg/330px-Lullula_arborea_%28J%C3%A1n_Svetl%C3%ADk%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/96/Lullula_arborea_%28J%C3%A1n_Svetl%C3%ADk%29.jpg/440px-Lullula_arborea_%28J%C3%A1n_Svetl%C3%ADk%29.jpg 2x" data-file-width="1500" data-file-height="1021" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:222px;"><div class="mediaContainer" style="width:220px"><audio id="mwe_player_0" controls="" preload="none" style="width:220px" class="kskin" data-durationhint="66.182290249433" data-startoffset="0" data-mwtitle="Woodlark_(Lullula_arborea)_(W1CDR0001500_BD8).ogg" data-mwprovider="wikimediacommons"><source src="//upload.wikimedia.org/wikipedia/commons/transcoded/d/da/Woodlark_%28Lullula_arborea%29_%28W1CDR0001500_BD8%29.ogg/Woodlark_%28Lullula_arborea%29_%28W1CDR0001500_BD8%29.ogg.mp3" type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0" data-height="0" data-bandwidth="129248" /><source src="//upload.wikimedia.org/wikipedia/commons/d/da/Woodlark_%28Lullula_arborea%29_%28W1CDR0001500_BD8%29.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Original Ogg file (208 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="207991" /></audio></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Woodlark_(Lullula_arborea)_(W1CDR0001500_BD8).ogg" class="internal" title="Enlarge"></a></div>The song of the Woodlark, recorded at Camberley, Surrey, England</div></div></div></div>
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-IUCN_1-0" class="reference"><a href="#cite_note-IUCN-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Lullula" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Passerine" title="Passerine">Passeriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Lark" title="Lark">Alaudidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Lullula" title="Lullula"><i>Lullula</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>L.&#160;arborea</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Lullula arborea</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Subspecies
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<p>See text
+</p>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>Alauda arborea</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span></li></ul>
+</td></tr>
+
+</tbody></table>
+<p>The <b>woodlark</b> or <b>wood lark</b> (<i>Lullula arborea</i>) is the only extant species in the <a href="/wiki/Lark" title="Lark">lark</a> genus <i>Lullula</i>. It is found across most of Europe, the Middle East, western Asia and the mountains of north Africa. It is mainly resident (non-<a href="/wiki/Bird_migration" title="Bird migration">migratory</a>) in the west of its range, but eastern populations of this <a href="/wiki/Passerine" title="Passerine">passerine</a> bird are more migratory, moving further south in winter.
+</p><p>There are two subspecies of woodlark, <i>L. a. arborea</i> and <i>L. a. pallida</i>. The former is native to northern regions of Europe, while the latter can be found in the south of the woodlark's range. Their diet is mostly composed of seeds but also includes insects during the breeding period. A comparatively small bird, the woodlark is between 13.5 and 15 centimetres long and roughly 20% shorter than the <a href="/wiki/Skylark" class="mw-redirect" title="Skylark">skylark</a>. It is a brown bird with a pale underside and has a white-tipped tail.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Taxonomy_and_systematics"><span class="tocnumber">1</span> <span class="toctext">Taxonomy and systematics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Subspecies"><span class="tocnumber">1.1</span> <span class="toctext">Subspecies</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Distribution_and_habitat"><span class="tocnumber">3</span> <span class="toctext">Distribution and habitat</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Behaviour_and_ecology"><span class="tocnumber">4</span> <span class="toctext">Behaviour and ecology</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Breeding"><span class="tocnumber">4.1</span> <span class="toctext">Breeding</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Food_and_feeding"><span class="tocnumber">4.2</span> <span class="toctext">Food and feeding</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Threats"><span class="tocnumber">4.3</span> <span class="toctext">Threats</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#In_culture"><span class="tocnumber">5</span> <span class="toctext">In culture</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Status"><span class="tocnumber">6</span> <span class="toctext">Status</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Taxonomy_and_systematics">Taxonomy and systematics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=1" title="Edit section: Taxonomy and systematics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The woodlark was <a href="/wiki/Species_description" title="Species description">described</a> by the Swedish naturalist <a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Carl Linnaeus</a> in 1758 in the <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">tenth edition</a> of his <i><a href="/wiki/Systema_Naturae" title="Systema Naturae">Systema Naturae</a></i> and given the <a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">binomial name</a> <i>Alauda arborea</i>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> This binomial name is identical to the Latin name used in 1676 by English ornithologist <a href="/wiki/Francis_Willughby" title="Francis Willughby">Francis Willughby</a> in his <i>Ornithologiae libri tres</i>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> The woodlark is now placed in the genus <i><a href="/wiki/Lullula" title="Lullula">Lullula</a></i> that was introduced by the German naturalist <a href="/wiki/Johann_Jakob_Kaup" title="Johann Jakob Kaup">Johann Jakob Kaup</a> in 1829.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> The current genus name is <a href="/wiki/Onomatopoeia" title="Onomatopoeia">onomatopoeic</a> from French “Lulu”, the name given to the bird by <a href="/wiki/Georges-Louis_Leclerc,_Comte_de_Buffon" title="Georges-Louis Leclerc, Comte de Buffon">de Buffon</a>. The French name, <i>Alouette lulu</i>, and the <a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">scientific name</a>, <i>Lullula arborea</i>, are derived from the sound of its song.<sup id="cite_ref-Campbell_1999_5-0" class="reference"><a href="#cite_note-Campbell_1999-5">&#91;5&#93;</a></sup> The specific <i>arborea</i> is from <a href="/wiki/Latin" title="Latin">Latin</a> <i>arbor, arboris</i>, "tree".<sup id="cite_ref-job_6-0" class="reference"><a href="#cite_note-job-6">&#91;6&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Subspecies">Subspecies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=2" title="Edit section: Subspecies">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are two subspecies of woodlark:<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> 
+</p>
+<ul><li><b>Northern woodlark</b> (<i>L. a. arborea</i>) - <small>(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</small>: Found from northern, western and central Europe to western Russia and Ukraine</li>
+<li><b>Southern woodlark</b> (<i>L. a. pallida</i>) - <small><a href="/wiki/Nikolai_Zarudny" title="Nikolai Zarudny">Zarudny</a>, 1902</small>: Found from southern Europe and north-western Africa through the Middle East to Iran and Turkmenistan, Crimea and Caucasus.</li></ul>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=3" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Lullula_arborea.jpg" class="image"><img alt="Drawing of a woodlark" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Lullula_arborea.jpg/220px-Lullula_arborea.jpg" decoding="async" width="220" height="203" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Lullula_arborea.jpg/330px-Lullula_arborea.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Lullula_arborea.jpg/440px-Lullula_arborea.jpg 2x" data-file-width="802" data-file-height="740" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Lullula_arborea.jpg" class="internal" title="Enlarge"></a></div>Coloured lithograph by <a href="/wiki/Magnus_von_Wright" title="Magnus von Wright">Magnus von Wright</a></div></div></div>
+<p>This is a 13.5- to 15-cm-long bird, slightly smaller than the <a href="/wiki/Skylark" class="mw-redirect" title="Skylark">skylark</a><sup id="cite_ref-Cerny_1975_8-0" class="reference"><a href="#cite_note-Cerny_1975-8">&#91;8&#93;</a></sup> being roughly 20% shorter.<sup id="cite_ref-BWP_1998_9-0" class="reference"><a href="#cite_note-BWP_1998-9">&#91;9&#93;</a></sup>  The woodlark is mainly brown above and pale below, but with a distinctive white superciliar meeting on the nape.<sup id="cite_ref-RSPB_10-0" class="reference"><a href="#cite_note-RSPB-10">&#91;10&#93;</a></sup> It has a crest which is quite small and at most times inconspicuous.<sup id="cite_ref-Campbell_1999_5-1" class="reference"><a href="#cite_note-Campbell_1999-5">&#91;5&#93;</a></sup> In flight it shows a short tail and short broad wings. The tail is tipped with white, but unlike the skylark, the tail sides and the rear edge of the wings are not edged with white.
+</p><p>A <a href="/wiki/Songbird" title="Songbird">songbird</a>, the woodlark has a melodious, warbling song often described <a href="/wiki/Onomatopoeia" title="Onomatopoeia">onomatopoeically</a> as a <i>lu-lu-lu-</i><sup id="cite_ref-Harbard_1988_11-0" class="reference"><a href="#cite_note-Harbard_1988-11">&#91;11&#93;</a></sup> or, more precisely, as a "serial <i>lū-lū-lū-lū-lū-</i>", <i>toolooeet toolooeet toolooeet</i>.<sup id="cite_ref-Cerny_1975_8-1" class="reference"><a href="#cite_note-Cerny_1975-8">&#91;8&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Distribution_and_habitat">Distribution and habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=4" title="Edit section: Distribution and habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Found mainly in Europe, the mountains of northern Africa and western Asia, the woodlark is present across much of its range. In Europe, the bird seems most at home in the sandy heaths of Belgium, where its density was 7.5 pairs per square kilometre (km<sup>2</sup>) in 1988.<sup id="cite_ref-Simms_1992_12-0" class="reference"><a href="#cite_note-Simms_1992-12">&#91;12&#93;</a></sup> In the same year, densities in <a href="/wiki/East_Germany" title="East Germany">East Germany</a> ranged from 0.29 to 5.0 pairs per km<sup>2</sup> and between 0.1 and 0.25 pairs per km<sup>2</sup> in southern <a href="/wiki/England" title="England">England</a>, with more optimal habitats being more densely populated. However, populations fluctuated across Europe in the 1990s and 2000s and more up-to-date density figures are unavailable. The extent of the woodlark's range is England in the west, parts of northern Egypt to the south, Iran and Turkmenistan to the east and the <a href="/wiki/Scandinavian_Peninsula" title="Scandinavian Peninsula">Scandinavian Peninsula</a> in the north.<sup id="cite_ref-Cerny_1975_8-2" class="reference"><a href="#cite_note-Cerny_1975-8">&#91;8&#93;</a></sup><sup id="cite_ref-BWP_1998_9-1" class="reference"><a href="#cite_note-BWP_1998-9">&#91;9&#93;</a></sup><sup id="cite_ref-Harbard_1988_11-1" class="reference"><a href="#cite_note-Harbard_1988-11">&#91;11&#93;</a></sup> Declining populations have resulted in the woodlark's range contracting, for example in Britain it once bred in <a href="/wiki/Wales" title="Wales">Wales</a> and central England but is now found only in southern England. Within its range it is mainly resident in the west, with eastern populations migrating south in the winter.
+</p><p>The woodlark's natural habitat is heathland and open spaces sparsely populated with trees.<sup id="cite_ref-Burton_1979_13-0" class="reference"><a href="#cite_note-Burton_1979-13">&#91;13&#93;</a></sup> They prefer clearings in <a href="/wiki/Pine" title="Pine">pine</a> forests and heathland and like newly planted areas with pine saplings.<sup id="cite_ref-Campbell_1999_5-2" class="reference"><a href="#cite_note-Campbell_1999-5">&#91;5&#93;</a></sup> Experimental work showed that annual ground‐disturbance can increase Woodlark abundance within lowland grass‐heaths.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup> The bird can also be found more rarely in urban areas. For example, in 1950 a pair were recorded on a main road near <a href="/wiki/Wimbledon_Common#Putney_Heath" title="Wimbledon Common">Putney Heath</a>, <a href="/wiki/London" title="London">London</a>.<sup id="cite_ref-Campbell_1999_5-3" class="reference"><a href="#cite_note-Campbell_1999-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Behaviour_and_ecology">Behaviour and ecology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=5" title="Edit section: Behaviour and ecology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Heidelerche_(1).JPG" class="image"><img alt="Woodlark in flight" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Heidelerche_%281%29.JPG/220px-Heidelerche_%281%29.JPG" decoding="async" width="220" height="147" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Heidelerche_%281%29.JPG/330px-Heidelerche_%281%29.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/32/Heidelerche_%281%29.JPG/440px-Heidelerche_%281%29.JPG 2x" data-file-width="1174" data-file-height="782" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Heidelerche_(1).JPG" class="internal" title="Enlarge"></a></div>Bird in flight at <a href="/wiki/S%C3%BCdheide_Nature_Park" title="Südheide Nature Park">Südheide Nature Park</a></div></div></div>
+<p>The male woodlark has a song flight similar to that of the <a href="/wiki/Eurasian_skylark" title="Eurasian skylark">Eurasian skylark</a> but flutters more as he rises and spirals upwards, circling the ground as he sings at a fairly constant height. Both male and female birds will also sing from the ground or a perch.<sup id="cite_ref-Harbard_1988_11-2" class="reference"><a href="#cite_note-Harbard_1988-11">&#91;11&#93;</a></sup> Birds start singing early in the season, usually around February in Britain.
+</p>
+<h3><span class="mw-headline" id="Breeding">Breeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=6" title="Edit section: Breeding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Lullula_arborea_MHNT.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lullula_arborea_MHNT.jpg/220px-Lullula_arborea_MHNT.jpg" decoding="async" width="220" height="212" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lullula_arborea_MHNT.jpg/330px-Lullula_arborea_MHNT.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lullula_arborea_MHNT.jpg/440px-Lullula_arborea_MHNT.jpg 2x" data-file-width="3181" data-file-height="3071" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Lullula_arborea_MHNT.jpg" class="internal" title="Enlarge"></a></div>Four eggs, part of the collections at the <a href="/wiki/Mus%C3%A9um_de_Toulouse" title="Muséum de Toulouse">Muséum de Toulouse</a></div></div></div>
+<p>The nest is generally made from grass, bracken, roots and moss and constructed in a depression on the ground.<sup id="cite_ref-Harbard_1988_11-3" class="reference"><a href="#cite_note-Harbard_1988-11">&#91;11&#93;</a></sup> Nesting starts early, sometimes with the first eggs laid before end of March. Usually between three and five <a href="/wiki/Bird_egg" title="Bird egg">eggs</a> are laid. The female will incubate the eggs, which are whitish with brown speckles, for 13 to 15 days.<sup id="cite_ref-Cerny_1975_8-3" class="reference"><a href="#cite_note-Cerny_1975-8">&#91;8&#93;</a></sup> Both parents will then feed the young in the nest and the chicks leave the nest after a further 11 to 13 days.<sup id="cite_ref-Burton_1979_13-1" class="reference"><a href="#cite_note-Burton_1979-13">&#91;13&#93;</a></sup> Families stay together for the summer and into the autumn. Two, sometimes three broods will be raised each year.
+</p>
+<h3><span class="mw-headline" id="Food_and_feeding">Food and feeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=7" title="Edit section: Food and feeding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As with many of the birds in the <a href="/wiki/Lark" title="Lark">lark</a> family, the woodlark is primarily vegetarian as an adult but during the breeding season will also eat medium-sized insects.<sup id="cite_ref-BWP_1998_9-2" class="reference"><a href="#cite_note-BWP_1998-9">&#91;9&#93;</a></sup> The diet is mainly composed of seeds and such insects as beetles, flies and moths.<sup id="cite_ref-Cerny_1975_8-4" class="reference"><a href="#cite_note-Cerny_1975-8">&#91;8&#93;</a></sup><sup id="cite_ref-Harbard_1988_11-4" class="reference"><a href="#cite_note-Harbard_1988-11">&#91;11&#93;</a></sup> During the breeding season, the female incubates the eggs in spells of approximately 45 minutes and intervals of eight minutes feeding.<sup id="cite_ref-Burton_1979_13-2" class="reference"><a href="#cite_note-Burton_1979-13">&#91;13&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Threats">Threats</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=8" title="Edit section: Threats">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Populations of woodlark across Europe have been in decline and ranges have been contracting in recent years.<sup id="cite_ref-Harbard_1988_11-5" class="reference"><a href="#cite_note-Harbard_1988-11">&#91;11&#93;</a></sup> Habitat loss is thought to be a major contributor to this, with dry grassland, fallow land, lowland heathland and pasture being lost to agriculture, abandonment and development across Northern Europe.<sup id="cite_ref-JNCC_15-0" class="reference"><a href="#cite_note-JNCC-15">&#91;15&#93;</a></sup> Recent wildfires in England are also thought to have damaged the population, with some protected woodlark habitats having been destroyed.<sup id="cite_ref-BBC_2011_16-0" class="reference"><a href="#cite_note-BBC_2011-16">&#91;16&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="In_culture">In culture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=9" title="Edit section: In culture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="quotebox pullquote floatright" style="width:250px;&#32;; background-color: #FFFFF0;"><style data-mw-deduplicate="TemplateStyles:r887775652">.mw-parser-output .quotebox{background-color:#F9F9F9;border:1px solid #aaa;box-sizing:border-box;padding:10px;font-size:88%;max-width:100%}.mw-parser-output .quotebox.floatleft{margin:0.5em 1.4em 0.8em 0}.mw-parser-output .quotebox.floatright{margin:0.5em 0 0.8em 1.4em}.mw-parser-output .quotebox.centered{margin:0.5em auto 0.8em auto}.mw-parser-output .quotebox.floatleft p,.mw-parser-output .quotebox.floatright p{font-style:inherit}.mw-parser-output .quotebox-title{background-color:#F9F9F9;text-align:center;font-size:larger;font-weight:bold}.mw-parser-output .quotebox-quote.quoted:before{font-family:"Times New Roman",serif;font-weight:bold;font-size:large;color:gray;content:" “ ";vertical-align:-45%;line-height:0}.mw-parser-output .quotebox-quote.quoted:after{font-family:"Times New Roman",serif;font-weight:bold;font-size:large;color:gray;content:" ” ";line-height:0}.mw-parser-output .quotebox .left-aligned{text-align:left}.mw-parser-output .quotebox .right-aligned{text-align:right}.mw-parser-output .quotebox .center-aligned{text-align:center}.mw-parser-output .quotebox cite{display:block;font-style:normal}@media screen and (max-width:360px){.mw-parser-output .quotebox{min-width:100%;margin:0 0 0.8em!important;float:none!important}}</style>
+<div class="quotebox-quote left-aligned" style=""><div class="poem">
+<p><i>Teevo cheevo cheevio chee</i>:<br />
+O where, what can tháat be? <br />
+<i>Weedio-weedio</i>: there again! <br />
+So tiny a trickle of sóng-strain; <br />
+And all round not to be found<br />
+For brier, bough, furrow, or gréen ground <br />
+Before or behind or far or at hand <br />
+Either left either right <br />
+Anywhere in the súnlight. <br />
+Well, after all! Ah but hark—<br />
+‘I am the little wóodlark.
+</p>
+</div></div>
+<p><cite class="right-aligned" style="">"The Woodlark" by <a href="/wiki/Gerard_Manley_Hopkins" title="Gerard Manley Hopkins">Gerard Manley Hopkins</a></cite>
+</p>
+</div>
+<p>The woodlark is commemorated in the works of two major poets. "The Woodlark", written by <a href="/wiki/Gerard_Manley_Hopkins" title="Gerard Manley Hopkins">Gerard Manley Hopkins</a>, departs from the standard tradition of British nature poetry by trying to transliterate the bird's song into made-up words.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup>
+</p><p>The Scottish poet <a href="/wiki/Robert_Burns" title="Robert Burns">Robert Burns</a> wrote of the bird's "melting art" in his poem "To the Woodlark".<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup> As there are currently no woodlarks in Scotland, and Burns never travelled south of Carlisle, many have speculated that Burns never came in contact with the bird and was in fact writing about the <a href="/wiki/Tree_pipit" title="Tree pipit">tree pipit</a>, which was commonly referred to as the woodlark in Scotland.<sup id="cite_ref-Jobling_2010_19-0" class="reference"><a href="#cite_note-Jobling_2010-19">&#91;19&#93;</a></sup> The woodlark's song is also thought to be melodious<sup id="cite_ref-Harbard_1988_11-6" class="reference"><a href="#cite_note-Harbard_1988-11">&#91;11&#93;</a></sup> while Burns' poem has an "underlying sense of grief" which may be attributed to the languishing notes at the end of the tree pipit's song.<sup id="cite_ref-Jobling_2010_19-1" class="reference"><a href="#cite_note-Jobling_2010-19">&#91;19&#93;</a></sup><sup id="cite_ref-Hudson_1919_20-0" class="reference"><a href="#cite_note-Hudson_1919-20">&#91;20&#93;</a></sup> However, the woodlark has been spotted in Scotland on occasion<sup id="cite_ref-Yarrell_1874_21-0" class="reference"><a href="#cite_note-Yarrell_1874-21">&#91;21&#93;</a></sup> and it is possible that Burns was writing about this bird. This is backed up by the entry of a minister from Clinic, <a href="/wiki/Perthshire" title="Perthshire">Perthshire</a> in the <i><a href="/wiki/Old_Statistical_Account" class="mw-redirect" title="Old Statistical Account">Old Statistical Account</a></i>, which reads "The notes of the wood-lark are heard, delightful along the banks of the Lunan in spring and autumn; its nocturnal song has a dying cadence peculiarly melodious and has often been mistaken for the song of the Philomel [nightingale]."<sup id="cite_ref-Jobling_2010_19-2" class="reference"><a href="#cite_note-Jobling_2010-19">&#91;19&#93;</a></sup><sup id="cite_ref-Hull_2001_22-0" class="reference"><a href="#cite_note-Hull_2001-22">&#91;22&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Status">Status</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=10" title="Edit section: Status">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In Europe in 2004, the breeding population of woodlarks was estimated to number 1.3 million to 3.3 million breeding pairs. Europe accounts for 75-94% of the global population, meaning between 4.15 million and 13.2 million individuals in its world range.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;23&#93;</a></sup> Populations of woodlark have fluctuated across Europe, with specific figures available for Britain showing these fluctuations. An estimated 400 breeding pairs were present in England in 1981.<sup id="cite_ref-Campbell_1999_5-4" class="reference"><a href="#cite_note-Campbell_1999-5">&#91;5&#93;</a></sup> A series of systematic national surveys found 241 pairs in 1986, which increased to 1633 pairs in 1997 followed by an 88% increase to 3064 pairs in 2007.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup>  The woodlark has been categorised by the <a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a> as being of <a href="/wiki/Least_concern" class="mw-redirect" title="Least concern">least concern</a>, meaning that it is not currently threatened with extinction.<sup id="cite_ref-IUCN_1-1" class="reference"><a href="#cite_note-IUCN-1">&#91;1&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Woodlark&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-IUCN-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-IUCN_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-IUCN_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22717411/0">"<i>Lullula arborea</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Lullula+arborea&amp;rft.volume=2012&amp;rft.date=2012&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22717411%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite id="CITEREFLinnaeus1758" class="citation book cs1"><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus, Carl</a> (1758). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/727073"><i>Systema Naturae per regna tria naturae, secundum classes, ordines, genera, species, cum characteribus, differentiis, synonymis, locis</i></a> (in Latin). Volume 1 (10th ed.). Holmiae:Laurentii Salvii. p.&#160;166.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Systema+Naturae+per+regna+tria+naturae%2C+secundum+classes%2C+ordines%2C+genera%2C+species%2C+cum+characteribus%2C+differentiis%2C+synonymis%2C+locis&amp;rft.pages=166&amp;rft.edition=10th&amp;rft.pub=Holmiae%3ALaurentii+Salvii&amp;rft.date=1758&amp;rft.aulast=Linnaeus&amp;rft.aufirst=Carl&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F727073&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite id="CITEREFWillughby1676" class="citation book cs1"><a href="/wiki/Francis_Willughby" title="Francis Willughby">Willughby, Francis</a> (1676). <a rel="nofollow" class="external text" href="https://gdz.sub.uni-goettingen.de/id/PPN367579030?tify={%22pages%22:%5b162%5d}"><i>Ornithologiae libri tres</i></a> (in Latin). London: John Martyn. p.&#160;149.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Ornithologiae+libri+tres&amp;rft.place=London&amp;rft.pages=149&amp;rft.pub=John+Martyn&amp;rft.date=1676&amp;rft.aulast=Willughby&amp;rft.aufirst=Francis&amp;rft_id=https%3A%2F%2Fgdz.sub.uni-goettingen.de%2Fid%2FPPN367579030%3Ftify%3D%7B%2522pages%2522%3A%5B162%5D%7D&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite id="CITEREFKaup1829" class="citation book cs1"><a href="/wiki/Johann_Jakob_Kaup" title="Johann Jakob Kaup">Kaup, Johann Jakob</a> (1829). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/41576515"><i>Skizzirte Entwickelungs-Geschichte und natürliches System der europäischen Thierwelt</i></a> (in German). Darmstadt: Carl Wilhelm Leske. p.&#160;92.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Skizzirte+Entwickelungs-Geschichte+und+nat%C3%BCrliches+System+der+europ%C3%A4ischen+Thierwelt&amp;rft.place=Darmstadt&amp;rft.pages=92&amp;rft.pub=Carl+Wilhelm+Leske&amp;rft.date=1829&amp;rft.aulast=Kaup&amp;rft.aufirst=Johann+Jakob&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F41576515&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Campbell_1999-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-Campbell_1999_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Campbell_1999_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Campbell_1999_5-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Campbell_1999_5-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Campbell_1999_5-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFCampbell1999" class="citation book cs1">Campbell, Donald (1999). <i>The Encyclopedia of British Birds</i>. Bath: Paragon. p.&#160;165. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780752541594" title="Special:BookSources/9780752541594"><bdi>9780752541594</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Encyclopedia+of+British+Birds&amp;rft.place=Bath&amp;rft.pages=165&amp;rft.pub=Paragon&amp;rft.date=1999&amp;rft.isbn=9780752541594&amp;rft.aulast=Campbell&amp;rft.aufirst=Donald&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-job-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-job_6-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n53">53</a>, 232. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=53%2C+232&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1"><a rel="nofollow" class="external text" href="http://www.worldbirdnames.org/ioc-lists/crossref">"IOC World Bird List 6.4"</a>. <i>IOC World Bird List Datasets</i>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.14344%2Fioc.ml.6.4">10.14344/ioc.ml.6.4</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IOC+World+Bird+List+Datasets&amp;rft.atitle=IOC+World+Bird+List+6.4&amp;rft_id=info%3Adoi%2F10.14344%2Fioc.ml.6.4&amp;rft_id=http%3A%2F%2Fwww.worldbirdnames.org%2Fioc-lists%2Fcrossref&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Cerny_1975-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-Cerny_1975_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Cerny_1975_8-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Cerny_1975_8-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Cerny_1975_8-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Cerny_1975_8-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFČerný1975" class="citation book cs1">Černý, Walter (1975). <i>A Field Guide in Colour to Birds</i>. Translated by Margot Schierlová. Illustrated by Karel Drchal. London: Octopus Books Limited. pp.&#160;156–157. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/070640405X" title="Special:BookSources/070640405X"><bdi>070640405X</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+Field+Guide+in+Colour+to+Birds&amp;rft.place=London&amp;rft.pages=156-157&amp;rft.pub=Octopus+Books+Limited&amp;rft.date=1975&amp;rft.isbn=070640405X&amp;rft.aulast=%C4%8Cern%C3%BD&amp;rft.aufirst=Walter&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-BWP_1998-9"><span class="mw-cite-backlink">^ <a href="#cite_ref-BWP_1998_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-BWP_1998_9-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-BWP_1998_9-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFSnowPerrins1998" class="citation book cs1">Snow, David; Perrins, Christopher M., eds. (1998). <i>The Birds of the Western Palearctic concise edition</i>. <b>2</b>. Oxford: Oxford University Press. pp.&#160;1041–1043. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0198501889" title="Special:BookSources/0198501889"><bdi>0198501889</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Birds+of+the+Western+Palearctic+concise+edition&amp;rft.place=Oxford&amp;rft.pages=1041-1043&amp;rft.pub=Oxford+University+Press&amp;rft.date=1998&amp;rft.isbn=0198501889&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-RSPB-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-RSPB_10-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.rspb.org.uk/wildlife/birdguide/name/w/woodlark/index.aspx">"Woodlark"</a>. <i>Birds by name</i>. Royal Society for the Protection of Birds<span class="reference-accessdate">. Retrieved <span class="nowrap">29 July</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Birds+by+name&amp;rft.atitle=Woodlark&amp;rft_id=http%3A%2F%2Fwww.rspb.org.uk%2Fwildlife%2Fbirdguide%2Fname%2Fw%2Fwoodlark%2Findex.aspx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Harbard_1988-11"><span class="mw-cite-backlink">^ <a href="#cite_ref-Harbard_1988_11-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Harbard_1988_11-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Harbard_1988_11-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Harbard_1988_11-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Harbard_1988_11-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Harbard_1988_11-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-Harbard_1988_11-6"><sup><i><b>g</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFHarbard1988" class="citation book cs1">Harbard, Chris (1988). <i>Songbirds: How to attract them and identify their songs</i>. London: Quarto Publishing plc. p.&#160;53. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780862724597" title="Special:BookSources/9780862724597"><bdi>9780862724597</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Songbirds%3A+How+to+attract+them+and+identify+their+songs&amp;rft.place=London&amp;rft.pages=53&amp;rft.pub=Quarto+Publishing+plc.&amp;rft.date=1988&amp;rft.isbn=9780862724597&amp;rft.aulast=Harbard&amp;rft.aufirst=Chris&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Simms_1992-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-Simms_1992_12-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFSimms1992" class="citation book cs1">Simms, Eric (1992). <i>British Larks, Pipits and Wagtails</i> (1st ed.). HarperCollins. pp.&#160;66–67. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0002198703" title="Special:BookSources/0002198703"><bdi>0002198703</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=British+Larks%2C+Pipits+and+Wagtails&amp;rft.pages=66-67&amp;rft.edition=1st&amp;rft.pub=HarperCollins&amp;rft.date=1992&amp;rft.isbn=0002198703&amp;rft.aulast=Simms&amp;rft.aufirst=Eric&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Burton_1979-13"><span class="mw-cite-backlink">^ <a href="#cite_ref-Burton_1979_13-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Burton_1979_13-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Burton_1979_13-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFHaymanBurton1979" class="citation book cs1">Hayman, Peter; Burton, Philip (1979). <i>The Birdlife of Britain</i>. London: Mitchell Beazley Publishers Limited. p.&#160;78. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0855330872" title="Special:BookSources/0855330872"><bdi>0855330872</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Birdlife+of+Britain&amp;rft.place=London&amp;rft.pages=78&amp;rft.pub=Mitchell+Beazley+Publishers+Limited&amp;rft.date=1979&amp;rft.isbn=0855330872&amp;rft.aulast=Hayman&amp;rft.aufirst=Peter&amp;rft.au=Burton%2C+Philip&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite id="CITEREFHawkesSmartBrownJones2019" class="citation journal cs1">Hawkes, Robert W.; Smart, Jennifer; Brown, Andy; Jones, Helen; Dolman, Paul M. (2019). <a rel="nofollow" class="external text" href="https://ueaeprints.uea.ac.uk/id/eprint/68888/4/Hawkes_et_al_2018_Ibis.pdf">"Experimental evidence that ground-disturbance benefits Woodlark Lullula arborea"</a> <span class="cs1-format">(PDF)</span>. <i>Ibis</i>. <b>161</b> (2): 447–452. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fibi.12696">10.1111/ibi.12696</a>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/1474-919X">1474-919X</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ibis&amp;rft.atitle=Experimental+evidence+that+ground-disturbance+benefits+Woodlark+Lullula+arborea&amp;rft.volume=161&amp;rft.issue=2&amp;rft.pages=447-452&amp;rft.date=2019&amp;rft_id=info%3Adoi%2F10.1111%2Fibi.12696&amp;rft.issn=1474-919X&amp;rft.aulast=Hawkes&amp;rft.aufirst=Robert+W.&amp;rft.au=Smart%2C+Jennifer&amp;rft.au=Brown%2C+Andy&amp;rft.au=Jones%2C+Helen&amp;rft.au=Dolman%2C+Paul+M.&amp;rft_id=https%3A%2F%2Fueaeprints.uea.ac.uk%2Fid%2Feprint%2F68888%2F4%2FHawkes_et_al_2018_Ibis.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-JNCC-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-JNCC_15-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://jncc.defra.gov.uk/pdf/UKSPA/UKSPA-A6-98.pdf">"Woodlark <i>Lullula arborea</i>"</a> <span class="cs1-format">(PDF)</span>. Joint Nature Conservation Committee<span class="reference-accessdate">. Retrieved <span class="nowrap">29 July</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Woodlark+Lullula+arborea&amp;rft.pub=Joint+Nature+Conservation+Committee&amp;rft_id=http%3A%2F%2Fjncc.defra.gov.uk%2Fpdf%2FUKSPA%2FUKSPA-A6-98.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-BBC_2011-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-BBC_2011_16-0">^</a></b></span> <span class="reference-text"><cite class="citation news cs1"><a rel="nofollow" class="external text" href="https://www.bbc.co.uk/news/uk-england-13293676">"Fears about forest fire 'scale<span class="cs1-kern-right">'</span>"</a>. <i>BBC News</i>. 5 May 2011<span class="reference-accessdate">. Retrieved <span class="nowrap">29 July</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=BBC+News&amp;rft.atitle=Fears+about+forest+fire+%27scale%27&amp;rft.date=2011-05-05&amp;rft_id=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fuk-england-13293676&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite id="CITEREFPhillips2001" class="citation book cs1">Phillips, Catherine (2001) [First published 1996]. "The Woodlark". <i>Gerard Manley Hopkins: The Major Works</i>. Oxford: Oxford University Press. p.&#160;122. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780199538850" title="Special:BookSources/9780199538850"><bdi>9780199538850</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=The+Woodlark&amp;rft.btitle=Gerard+Manley+Hopkins%3A+The+Major+Works&amp;rft.place=Oxford&amp;rft.pages=122&amp;rft.pub=Oxford+University+Press&amp;rft.date=2001&amp;rft.isbn=9780199538850&amp;rft.aulast=Phillips&amp;rft.aufirst=Catherine&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite id="CITEREFBurke2008" class="citation book cs1">Burke, Tim (2008). "To the Woodlark". <i>The Collected Poems of Robert Burns</i>. Hertfordshire: Wordsworth Editions Limited. p.&#160;392. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781853264153" title="Special:BookSources/9781853264153"><bdi>9781853264153</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=To+the+Woodlark&amp;rft.btitle=The+Collected+Poems+of+Robert+Burns&amp;rft.place=Hertfordshire&amp;rft.pages=392&amp;rft.pub=Wordsworth+Editions+Limited&amp;rft.date=2008&amp;rft.isbn=9781853264153&amp;rft.aulast=Burke&amp;rft.aufirst=Tim&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Jobling_2010-19"><span class="mw-cite-backlink">^ <a href="#cite_ref-Jobling_2010_19-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Jobling_2010_19-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Jobling_2010_19-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A. (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n308">308</a>–309. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781408125014" title="Special:BookSources/9781408125014"><bdi>9781408125014</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=308-309&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=9781408125014&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Hudson_1919-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hudson_1919_20-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFHudson1919" class="citation book cs1">Hudson, William Henry (1919). <i>Birds in Town &amp; Village</i> (1st ed.). J M Dent &amp; Sons. p.&#160;46.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Birds+in+Town+%26+Village&amp;rft.pages=46&amp;rft.edition=1st&amp;rft.pub=J+M+Dent+%26+Sons&amp;rft.date=1919&amp;rft.aulast=Hudson&amp;rft.aufirst=William+Henry&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Yarrell_1874-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-Yarrell_1874_21-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFYarrell1871–1874" class="citation book cs1">Yarrell, William (1871–1874). "Woodlark". <i>A History of British Birds</i>. <b>I</b> (2nd ed.). London: John Van Voorst, Paternoster Row. pp.&#160;625–631.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Woodlark&amp;rft.btitle=A+History+of+British+Birds&amp;rft.place=London&amp;rft.pages=625-631&amp;rft.edition=2nd&amp;rft.pub=John+Van+Voorst%2C+Paternoster+Row&amp;rft.date=1871%2F1874&amp;rft.aulast=Yarrell&amp;rft.aufirst=William&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Hull_2001-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hull_2001_22-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFHull2001" class="citation book cs1">Hull, Robin (2001). <i>Scottish Birds: Culture and Tradition</i> (1st ed.). Mercat Press. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781841830254" title="Special:BookSources/9781841830254"><bdi>9781841830254</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Scottish+Birds%3A+Culture+and+Tradition&amp;rft.edition=1st&amp;rft.pub=Mercat+Press&amp;rft.date=2001&amp;rft.isbn=9781841830254&amp;rft.aulast=Hull&amp;rft.aufirst=Robin&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWoodlark" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text">BirdLife International. 2004. Birds in Europe: population estimates, trends and conservation status. BirdLife International, Cambridge, U.K.</span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text">Conway G et al. (2009) The status of breeding woodarks Lullula arborea in Britain 2006. Bird Study 56.3 pp310-325</span>
+</li>
+</ol></div>
+<div role="navigation" class="navbox" aria-labelledby="Larks_(Family:_Alaudidae)" style="padding:3px"><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Larks" title="Template:Larks"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Larks" title="Template talk:Larks"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Larks&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Larks_(Family:_Alaudidae)" style="font-size:114%;margin:0 4em"><a href="/wiki/Lark" title="Lark">Larks</a> (<a href="/wiki/Family_(biology)" title="Family (biology)">Family</a>: Alaudidae)</div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Genus" title="Genus">Genus</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;background:lavender"><div style="padding:0em 0.25em"><b><a href="/wiki/Species" title="Species">Species</a></b></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Alaemon" title="Alaemon">Alaemon</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Greater_hoopoe-lark" title="Greater hoopoe-lark">Greater hoopoe-lark</a></li>
+<li><a href="/wiki/Lesser_hoopoe-lark" title="Lesser hoopoe-lark">Lesser hoopoe-lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Chersomanes" title="Chersomanes">Chersomanes</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Beesley%27s_lark" title="Beesley&#39;s lark">Beesley's lark</a></li>
+<li><a href="/wiki/Spike-heeled_lark" title="Spike-heeled lark">Spike-heeled lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Ammomanopsis" class="mw-redirect" title="Ammomanopsis">Ammomanopsis</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Gray%27s_lark" title="Gray&#39;s lark">Gray's lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Certhilauda" title="Certhilauda">Certhilauda</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Short-clawed_lark" title="Short-clawed lark">Short-clawed lark</a></li>
+<li><a href="/wiki/Karoo_long-billed_lark" title="Karoo long-billed lark">Karoo long-billed lark</a></li>
+<li><a href="/wiki/Benguela_long-billed_lark" title="Benguela long-billed lark">Benguela long-billed lark</a></li>
+<li><a href="/wiki/Eastern_long-billed_lark" title="Eastern long-billed lark">Eastern long-billed lark</a></li>
+<li><a href="/wiki/Cape_long-billed_lark" title="Cape long-billed lark">Cape long-billed lark</a></li>
+<li><a href="/wiki/Agulhas_long-billed_lark" title="Agulhas long-billed lark">Agulhas long-billed lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Pinarocorys" title="Pinarocorys">Pinarocorys</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Dusky_lark" title="Dusky lark">Dusky lark</a></li>
+<li><a href="/wiki/Rufous-rumped_lark" title="Rufous-rumped lark">Rufous-rumped lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Ramphocoris" class="mw-redirect" title="Ramphocoris">Ramphocoris</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Thick-billed_lark" title="Thick-billed lark">Thick-billed lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Ammomanes" title="Ammomanes">Ammomanes</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Desert_lark" title="Desert lark">Desert lark</a></li>
+<li><a href="/wiki/Bar-tailed_lark" title="Bar-tailed lark">Bar-tailed lark</a></li>
+<li><a href="/wiki/Rufous-tailed_lark" title="Rufous-tailed lark">Rufous-tailed lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Eremopterix" title="Eremopterix">Eremopterix</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Black-eared_sparrow-lark" title="Black-eared sparrow-lark">Black-eared sparrow-lark</a></li>
+<li><a href="/wiki/Madagascan_lark" title="Madagascan lark">Madagascan lark</a></li>
+<li><a href="/wiki/Black-crowned_sparrow-lark" title="Black-crowned sparrow-lark">Black-crowned sparrow-lark</a></li>
+<li><a href="/wiki/Chestnut-backed_sparrow-lark" title="Chestnut-backed sparrow-lark">Chestnut-backed sparrow-lark</a></li>
+<li><a href="/wiki/Ashy-crowned_sparrow-lark" title="Ashy-crowned sparrow-lark">Ashy-crowned sparrow-lark</a></li>
+<li><a href="/wiki/Chestnut-headed_sparrow-lark" title="Chestnut-headed sparrow-lark">Chestnut-headed sparrow-lark</a></li>
+<li><a href="/wiki/Grey-backed_sparrow-lark" title="Grey-backed sparrow-lark">Grey-backed sparrow-lark</a></li>
+<li><a href="/wiki/Fischer%27s_sparrow-lark" title="Fischer&#39;s sparrow-lark">Fischer's sparrow-lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Calendulauda" title="Calendulauda">Calendulauda</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Sabota_lark" title="Sabota lark">Sabota lark</a></li>
+<li><a href="/wiki/Pink-breasted_lark" title="Pink-breasted lark">Pink-breasted lark</a></li>
+<li><a href="/wiki/Foxy_lark" title="Foxy lark">Foxy lark</a></li>
+<li><a href="/wiki/Fawn-coloured_lark" title="Fawn-coloured lark">Fawn-coloured lark</a></li>
+<li><a href="/wiki/Karoo_lark" title="Karoo lark">Karoo lark</a></li>
+<li><a href="/wiki/Red_lark" title="Red lark">Red lark</a></li>
+<li><a href="/wiki/Dune_lark" title="Dune lark">Dune lark</a></li>
+<li><a href="/wiki/Barlow%27s_lark" title="Barlow&#39;s lark">Barlow's lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Heteromirafra" title="Heteromirafra">Heteromirafra</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Rudd%27s_lark" title="Rudd&#39;s lark">Rudd's lark</a></li>
+<li><a href="/wiki/Archer%27s_lark" title="Archer&#39;s lark">Archer's lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Mirafra" title="Mirafra">Mirafra</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Eastern_clapper_lark" title="Eastern clapper lark">Eastern clapper lark</a></li>
+<li><a href="/wiki/Cape_clapper_lark" title="Cape clapper lark">Cape clapper lark</a></li>
+<li><a href="/wiki/Red-winged_lark" title="Red-winged lark">Red-winged lark</a></li>
+<li><a href="/wiki/Rufous-naped_lark" title="Rufous-naped lark">Rufous-naped lark</a></li>
+<li><a href="/wiki/Flappet_lark" title="Flappet lark">Flappet lark</a></li>
+<li><a href="/wiki/Angolan_lark" title="Angolan lark">Angolan lark</a></li>
+<li><a href="/wiki/Williams%27s_lark" title="Williams&#39;s lark">Williams's lark</a></li>
+<li><a href="/wiki/Monotonous_lark" title="Monotonous lark">Monotonous lark</a></li>
+<li><a href="/wiki/Melodious_lark" title="Melodious lark">Melodious lark</a></li>
+<li><a href="/wiki/Horsfield%27s_bush_lark" title="Horsfield&#39;s bush lark">Horsfield's bush lark</a></li>
+<li><a href="/wiki/Singing_bush_lark" title="Singing bush lark">Singing bush lark</a></li>
+<li><a href="/wiki/Burmese_bush_lark" title="Burmese bush lark">Burmese bush lark</a></li>
+<li><a href="/wiki/Bengal_bush_lark" title="Bengal bush lark">Bengal bush lark</a></li>
+<li><a href="/wiki/Indochinese_bush_lark" title="Indochinese bush lark">Indochinese bush lark</a></li>
+<li><a href="/wiki/Indian_bush_lark" title="Indian bush lark">Indian bush lark</a></li>
+<li><a href="/wiki/Jerdon%27s_bush_lark" title="Jerdon&#39;s bush lark">Jerdon's bush lark</a></li>
+<li><a href="/wiki/Gillett%27s_lark" title="Gillett&#39;s lark">Gillett's lark</a> (<a href="/wiki/Degodi_lark" title="Degodi lark">Degodi lark</a>)</li>
+<li><a href="/wiki/Rusty_bush_lark" title="Rusty bush lark">Rusty bush lark</a></li>
+<li><a href="/wiki/Collared_lark" title="Collared lark">Collared lark</a></li>
+<li><a href="/wiki/Ash%27s_lark" title="Ash&#39;s lark">Ash's lark</a></li>
+<li><a href="/wiki/Somali_lark" title="Somali lark">Somali lark</a></li>
+<li><a href="/wiki/Friedmann%27s_lark" title="Friedmann&#39;s lark">Friedmann's lark</a></li>
+<li><a href="/wiki/Kordofan_lark" title="Kordofan lark">Kordofan lark</a></li>
+<li><a href="/wiki/White-tailed_lark" title="White-tailed lark">White-tailed lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Lullula" title="Lullula">Lullula</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">Woodlark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Spizocorys" title="Spizocorys">Spizocorys</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Obbia_lark" title="Obbia lark">Obbia lark</a></li>
+<li><a href="/wiki/Sclater%27s_lark" title="Sclater&#39;s lark">Sclater's lark</a></li>
+<li><a href="/wiki/Stark%27s_lark" title="Stark&#39;s lark">Stark's lark</a></li>
+<li><a href="/wiki/Short-tailed_lark" title="Short-tailed lark">Short-tailed lark</a></li>
+<li><a href="/wiki/Masked_lark" title="Masked lark">Masked lark</a></li>
+<li><a href="/wiki/Botha%27s_lark" title="Botha&#39;s lark">Botha's lark</a></li>
+<li><a href="/wiki/Pink-billed_lark" title="Pink-billed lark">Pink-billed lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Alauda" title="Alauda">Alauda</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/White-winged_lark" title="White-winged lark">White-winged lark</a></li>
+<li><a href="/wiki/Raso_lark" title="Raso lark">Raso lark</a></li>
+<li><a href="/wiki/Oriental_skylark" title="Oriental skylark">Oriental skylark</a></li>
+<li><a href="/wiki/Eurasian_skylark" title="Eurasian skylark">Eurasian skylark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Galerida" title="Galerida">Galerida</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Sykes%27s_lark" title="Sykes&#39;s lark">Sykes's lark</a></li>
+<li><a href="/wiki/Sun_lark" title="Sun lark">Sun lark</a></li>
+<li><a href="/wiki/Large-billed_lark" title="Large-billed lark">Large-billed lark</a></li>
+<li><a href="/wiki/Thekla%27s_lark" title="Thekla&#39;s lark">Thekla's lark</a></li>
+<li><a href="/wiki/Crested_lark" title="Crested lark">Crested lark</a></li>
+<li><a href="/wiki/Malabar_lark" title="Malabar lark">Malabar lark</a></li>
+<li><a href="/wiki/Maghreb_lark" title="Maghreb lark">Maghreb lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Eremophila_(bird)" title="Eremophila (bird)">Eremophila</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Horned_lark" title="Horned lark">Horned lark</a></li>
+<li><a href="/wiki/Temminck%27s_lark" title="Temminck&#39;s lark">Temminck's lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Calandrella" title="Calandrella">Calandrella</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Hume%27s_short-toed_lark" title="Hume&#39;s short-toed lark">Hume's short-toed lark</a></li>
+<li><a href="/wiki/Mongolian_short-toed_lark" title="Mongolian short-toed lark">Mongolian short-toed lark</a></li>
+<li><a href="/wiki/Erlanger%27s_lark" title="Erlanger&#39;s lark">Erlanger's lark</a></li>
+<li><a href="/wiki/Blanford%27s_lark" title="Blanford&#39;s lark">Blanford's lark</a></li>
+<li><a href="/wiki/Red-capped_lark" title="Red-capped lark">Red-capped lark</a></li>
+<li><a href="/wiki/Greater_short-toed_lark" title="Greater short-toed lark">Greater short-toed lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Melanocorypha" title="Melanocorypha">Melanocorypha</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bimaculated_lark" title="Bimaculated lark">Bimaculated lark</a></li>
+<li><a href="/wiki/Calandra_lark" title="Calandra lark">Calandra lark</a></li>
+<li><a href="/wiki/Black_lark" title="Black lark">Black lark</a></li>
+<li><a href="/wiki/Mongolian_lark" title="Mongolian lark">Mongolian lark</a></li>
+<li><a href="/wiki/Tibetan_lark" title="Tibetan lark">Tibetan lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Chersophilus" class="mw-redirect" title="Chersophilus">Chersophilus</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Dupont%27s_lark" title="Dupont&#39;s lark">Dupont's lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Eremalauda" class="mw-redirect" title="Eremalauda">Eremalauda</a></i></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Dunn%27s_lark" title="Dunn&#39;s lark">Dunn's lark</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><i><a href="/wiki/Alaudala" title="Alaudala">Alaudala</a></i></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Athi_short-toed_lark" title="Athi short-toed lark">Athi short-toed lark</a></li>
+<li><a href="/wiki/Asian_short-toed_lark" title="Asian short-toed lark">Asian short-toed lark</a></li>
+<li><a href="/wiki/Somali_short-toed_lark" title="Somali short-toed lark">Somali short-toed lark</a></li>
+<li><a href="/wiki/Lesser_short-toed_lark" title="Lesser short-toed lark">Lesser short-toed lark</a></li>
+<li><a href="/wiki/Sand_lark" title="Sand lark">Sand lark</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q26969" class="extiw" title="wikidata:Q26969">Q26969</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Lullula_arborea" class="extiw" title="wikispecies:Lullula arborea">Lullula arborea</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Lullula_arborea/">Lullula_arborea</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/lullula-arborea/">lullula-arborea</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=742EC2F1CA97F56C">742EC2F1CA97F56C</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8822">8822</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22717411">22717411</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">WOODL</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/woolar1">woolar1</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/1126">1126</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">9740</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:97403">97403</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/09d8eb57-3094-45db-9a20-41403cf1f380">09d8eb57-3094-45db-9a20-41403cf1f380</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=368995">368995</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2490604">2490604</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/7363">7363</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10211835">10211835</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=560894">560894</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22717411">22717411</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0000530459">NHMSYS0000530459</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=215315">215315</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=9697">9697</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1369
+Cached time: 20201103013412
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 1.000 second
+Real time usage: 1.307 seconds
+Preprocessor visited node count: 7133/1000000
+Post‐expand include size: 88194/2097152 bytes
+Template argument size: 5040/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 20/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 76253/5000000 bytes
+Lua time usage: 0.672/10.000 seconds
+Lua memory usage: 7.53 MB/50 MB
+Number of Wikibase entities loaded: 21/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1168.626      1 -total
+ 42.49%  496.492      1 Template:Speciesbox
+ 41.64%  486.574      1 Template:Taxobox/core
+ 25.45%  297.431      1 Template:Taxonbar
+ 22.03%  257.429      1 Template:Reflist
+  9.15%  106.938      1 Template:Cite_iucn
+  7.69%   89.845     16 Template:Cite_book
+  3.41%   39.799     23 Template:Delink
+  3.33%   38.887      1 Template:Other_uses
+  2.86%   33.479      1 Template:Quote_box
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:327018-0!canonical and timestamp 20201103013411 and revision id 977124693
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Woodlark&amp;oldid=977124693">https://en.wikipedia.org/w/index.php?title=Woodlark&amp;oldid=977124693</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Alaudidae" title="Category:Alaudidae">Alaudidae</a></li><li><a href="/wiki/Category:Birds_of_Europe" title="Category:Birds of Europe">Birds of Europe</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:CS1_Latin-language_sources_(la)" title="Category:CS1 Latin-language sources (la)">CS1 Latin-language sources (la)</a></li><li><a href="/wiki/Category:CS1:_long_volume_value" title="Category:CS1: long volume value">CS1: long volume value</a></li><li><a href="/wiki/Category:CS1_German-language_sources_(de)" title="Category:CS1 German-language sources (de)">CS1 German-language sources (de)</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Taxonbars_with_20%E2%80%9324_taxon_IDs" title="Category:Taxonbars with 20–24 taxon IDs">Taxonbars with 20–24 taxon IDs</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Woodlark" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Woodlark" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Woodlark" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Woodlark" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Woodlark">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Woodlark&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Woodlark&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Woodlark" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Woodlark" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Woodlark&amp;oldid=977124693" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Woodlark&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Woodlark&amp;id=977124693&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26969" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Woodlark&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Woodlark&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Lullula_arborea" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Lullula_arborea" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%9C%D1%8D%D0%B7%D1%85%D1%83%D1%8D%D1%83%D1%81%D1%8D" title="Мэзхуэусэ – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%82%D9%86%D8%A8%D8%B1%D8%A9_%D8%A7%D9%84%D8%BA%D9%8A%D8%A7%D8%B6" title="قنبرة الغياض – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Lullula_arborea" title="Lullula arborea – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D0%99%D2%AF%D1%80%D0%B5%D0%BB%D0%B5%D0%BA" title="Йүрелек – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%81%D0%BA%D0%B0_%D1%87%D1%83%D1%87%D1%83%D0%BB%D0%B8%D0%B3%D0%B0" title="Горска чучулига – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Alc%27hweder-gwez" title="Alc&#039;hweder-gwez – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Cotoliu" title="Cotoliu – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cv"><a href="https://cv.wikipedia.org/wiki/%D0%92%C4%83%D1%80%D0%BC%D0%B0%D0%BD_%D1%82%C4%83%D1%80%D0%B8" title="Вăрман тăри – Chuvash" lang="cv" hreflang="cv" class="interlanguage-link-target">Чӑвашла</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Lullula_arborea" title="Lullula arborea – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Sk%C5%99ivan_lesn%C3%AD" title="Skřivan lesní – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Ehedydd_coed" title="Ehedydd coed – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Hedel%C3%A6rke" title="Hedelærke – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Heidelerche" title="Heidelerche – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/Haltsoo%C3%ADtah_dij%C3%A1d%C3%ADdl%C7%AB%CC%81%CA%BC%C3%AD" title="Haltsooítah dijádídlǫ́ʼí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/N%C3%B5mmel%C3%B5oke" title="Nõmmelõoke – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%94%CE%B5%CE%BD%CE%B4%CF%81%CE%BF%CF%83%CF%84%CE%B1%CF%81%CE%AE%CE%B8%CF%81%CE%B1" title="Δενδροσταρήθρα – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-myv"><a href="https://myv.wikipedia.org/wiki/%D0%92%D0%B8%D1%80%D0%B5%D0%BD%D1%8C_%D0%BD%D0%BE%D1%80%D0%BE%D0%B2%D0%B6%D0%BE%D1%80%D1%87" title="Вирень норовжорч – Erzya" lang="myv" hreflang="myv" class="interlanguage-link-target">Эрзянь</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Lullula_arborea" title="Lullula arborea – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Arbala%C5%ADdo" title="Arbalaŭdo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Pirripio" title="Pirripio – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%DA%86%DA%A9%D8%A7%D9%88%DA%A9_%D8%AF%D8%B1%D8%AE%D8%AA%DB%8C" title="چکاوک درختی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Tr%C3%A6lerkur" title="Trælerkur – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Alouette_lulu" title="Alouette lulu – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Fuiseog_choille" title="Fuiseog choille – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Cotov%C3%ADa_pequena" title="Cotovía pequena – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-inh"><a href="https://inh.wikipedia.org/wiki/%D0%9B%D0%BE%D0%B0%D0%BB%D0%B8" title="Лоали – Ingush" lang="inh" hreflang="inh" class="interlanguage-link-target">ГӀалгӀай</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%B1%D5%B6%D5%BF%D5%A1%D5%BC%D5%A1%D5%B5%D5%AB%D5%B6_%D5%A1%D6%80%D5%BF%D5%B8%D6%82%D5%B5%D5%BF" title="Անտառային արտույտ – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Lullula_arborea" title="Lullula arborea – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%92%D7%AA_%D7%A2%D7%A6%D7%99%D7%9D" title="חוגת עצים – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-ka"><a href="https://ka.wikipedia.org/wiki/%E1%83%A2%E1%83%A7%E1%83%98%E1%83%A1_%E1%83%A2%E1%83%9D%E1%83%A0%E1%83%9D%E1%83%9A%E1%83%90" title="ტყის ტოროლა – Georgian" lang="ka" hreflang="ka" class="interlanguage-link-target">ქართული</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%9E%D1%80%D0%BC%D0%B0%D0%BD_%D0%B1%D0%BE%D0%B7%D1%82%D0%BE%D1%80%D2%93%D0%B0%D0%B9%D1%8B" title="Орман бозторғайы – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-avk"><a href="https://avk.wikipedia.org/wiki/Wulpa_(Lullula)" title="Wulpa (Lullula) – Kotava" lang="avk" hreflang="avk" class="interlanguage-link-target">Kotava</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Sila_c%C4%ABrulis" title="Sila cīrulis – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Lygut%C4%97" title="Lygutė – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Erdei_pacsirta" title="Erdei pacsirta – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%A8%D1%83%D0%BC%D1%81%D0%BA%D0%B0_%D1%87%D1%83%D1%87%D1%83%D1%80%D0%BB%D0%B8%D0%B3%D0%B0" title="Шумска чучурлига – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Boomleeuwerik" title="Boomleeuwerik – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%A2%E3%83%AA%E3%83%92%E3%83%90%E3%83%AA" title="モリヒバリ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-frr"><a href="https://frr.wikipedia.org/wiki/Hiaslaask" title="Hiaslaask – Northern Frisian" lang="frr" hreflang="frr" class="interlanguage-link-target">Nordfriisk</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Trelerke" title="Trelerke – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Trelerke" title="Trelerke – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pcd"><a href="https://pcd.wikipedia.org/wiki/Piotaloue" title="Piotaloue – Picard" lang="pcd" hreflang="pcd" class="interlanguage-link-target">Picard</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Lullula_arborea" title="Lullula arborea – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Lerka" title="Lerka – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Cotovia-pequena" title="Cotovia-pequena – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%9B%D1%97%D1%81%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B6%D0%B0%D0%B9%D0%B2%D0%BE%D1%80%D0%BE%D0%BD%D0%BE%D0%BA" title="Лїсовый жайворонок – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B5%D1%81%D0%BD%D0%BE%D0%B9_%D0%B6%D0%B0%D0%B2%D0%BE%D1%80%D0%BE%D0%BD%D0%BE%D0%BA" title="Лесной жаворонок – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/%C5%A0kovr%C3%A1nik_stromov%C3%BD" title="Škovránik stromový – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Kangaskiuru" title="Kangaskiuru – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Tr%C3%A4dl%C3%A4rka" title="Trädlärka – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tt"><a href="https://tt.wikipedia.org/wiki/%D0%A3%D1%80%D0%BC%D0%B0%D0%BD_%D1%82%D1%83%D1%80%D0%B3%D0%B0%D0%B5" title="Урман тургае – Tatar" lang="tt" hreflang="tt" class="interlanguage-link-target">Татарча/tatarça</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Orman_toygar%C4%B1" title="Orman toygarı – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%96%D0%B0%D0%B9%D0%B2%D0%BE%D1%80%D0%BE%D0%BD%D0%BE%D0%BA_%D0%BB%D1%96%D1%81%D0%BE%D0%B2%D0%B8%D0%B9" title="Жайворонок лісовий – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/S%C6%A1n_ca_r%E1%BB%ABng" title="Sơn ca rừng – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Lullula_arborea" title="Lullula arborea – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%9E%97%E7%99%BE%E7%81%B5" title="林百灵 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26969#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 7 September 2020, at 02:31<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Woodlark&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.000","walltime":"1.307","ppvisitednodes":{"value":7133,"limit":1000000},"postexpandincludesize":{"value":88194,"limit":2097152},"templateargumentsize":{"value":5040,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":20,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":76253,"limit":5000000},"entityaccesscount":{"value":21,"limit":400},"timingprofile":["100.00% 1168.626      1 -total"," 42.49%  496.492      1 Template:Speciesbox"," 41.64%  486.574      1 Template:Taxobox/core"," 25.45%  297.431      1 Template:Taxonbar"," 22.03%  257.429      1 Template:Reflist","  9.15%  106.938      1 Template:Cite_iucn","  7.69%   89.845     16 Template:Cite_book","  3.41%   39.799     23 Template:Delink","  3.33%   38.887      1 Template:Other_uses","  2.86%   33.479      1 Template:Quote_box"]},"scribunto":{"limitreport-timeusage":{"value":"0.672","limit":"10.000"},"limitreport-memusage":{"value":7893469,"limit":52428800}},"cachereport":{"origin":"mw1369","timestamp":"20201103013412","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Woodlark","url":"https:\/\/en.wikipedia.org\/wiki\/Woodlark","sameAs":"http:\/\/www.wikidata.org\/entity\/Q26969","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q26969","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-09-25T18:14:49Z","dateModified":"2020-09-07T02:31:24Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/9\/96\/Lullula_arborea_%28J%C3%A1n_Svetl%C3%ADk%29.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":161,"wgHostname":"mw1372"});});</script>
+</body></html>

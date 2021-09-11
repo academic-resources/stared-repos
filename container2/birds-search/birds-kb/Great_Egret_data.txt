@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Great egret - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"0b2eab4a-0ec0-404c-9bb9-153ac353dfa1","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Great_egret","wgTitle":"Great egret","wgCurRevisionId":971497720,"wgRevisionId":971497720,"wgArticleId":238430,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 Finnish-language sources (fi)","Articles with 'species' microformats","All articles with unsourced statements","Articles with unsourced statements from July 2016","Articles needing additional references from July 2017","All articles needing additional references",
+"Commons category link is on Wikidata","Taxonbars with 20–24 taxon IDs","IUCN Red List least concern species","Ardea (genus)","Herons","Birds of Africa","Birds of the Americas","Birds of the Dominican Republic","Birds of Eurasia","Birds of Japan","Fauna of the San Francisco Bay Area","Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Great_egret","wgRelevantArticleId":238430,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Great_Egret","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,
+"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Great_egret","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q130730"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","mediawiki.page.gallery.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","mediawiki.page.gallery","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js",
+"ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.page.gallery.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Great_egret_%28Ardea_alba%29_Tobago.jpg/1200px-Great_egret_%28Ardea_alba%29_Tobago.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Great_egret"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Great_egret&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Great_egret&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Great_egret"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Great_egret rootpage-Great_egret skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Great egret</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Great_Egret&amp;redirect=no" class="mw-redirect" title="Great Egret">Great Egret</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">For the short story by Sarah Orne Jewett, see <a href="/wiki/A_White_Heron" title="A White Heron">A White Heron</a>.</div>
+<div role="note" class="hatnote navigation-not-searchable">Not to be confused with the all-white population of the <a href="/wiki/Great_blue_heron" title="Great blue heron">great blue heron</a>.</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Great egret
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Great_egret_(Ardea_alba)_Tobago.jpg" class="image"><img alt="Great egret (Ardea alba) Tobago.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Great_egret_%28Ardea_alba%29_Tobago.jpg/220px-Great_egret_%28Ardea_alba%29_Tobago.jpg" decoding="async" width="220" height="147" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Great_egret_%28Ardea_alba%29_Tobago.jpg/330px-Great_egret_%28Ardea_alba%29_Tobago.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Great_egret_%28Ardea_alba%29_Tobago.jpg/440px-Great_egret_%28Ardea_alba%29_Tobago.jpg 2x" data-file-width="4501" data-file-height="3001" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Adult in <a href="/wiki/Tobago" title="Tobago">Tobago</a>
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-iucn_1-0" class="reference"><a href="#cite_note-iucn-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Ardea" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Pelecaniformes" title="Pelecaniformes">Pelecaniformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Heron" title="Heron">Ardeidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Ardea_(genus)" title="Ardea (genus)"><i>Ardea</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>A.&#160;alba</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Ardea alba</i></span></b><br /><div style="font-size: 85%;"><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a></div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Ardea_alba_map.svg" class="image"><img alt="Ardea alba map.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Ardea_alba_map.svg/220px-Ardea_alba_map.svg.png" decoding="async" width="220" height="112" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Ardea_alba_map.svg/330px-Ardea_alba_map.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Ardea_alba_map.svg/440px-Ardea_alba_map.svg.png 2x" data-file-width="940" data-file-height="477" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Range of <i>A. alba</i> (excluding <i>A. a. modesta</i>) <style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#FFFF00; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Breeding range</div><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#008000; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Year-round range</div><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#0000FF; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Wintering range</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>Casmerodius albus</i> <small>(Linnaeus, 1758)</small></li>
+<li><i><a href="/wiki/Egretta" title="Egretta">Egretta</a> alba</i> <small>(Cramp and Simmons, 1977)</small></li></ul>
+</td></tr>
+
+</tbody></table>
+<p>The <b>great egret </b>(<i>Ardea alba</i>), also known as the <b>common egret</b>, <b>large egret</b>, or (in the <a href="/wiki/Old_World" title="Old World">Old World</a>) <b>great white egret</b><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> or <b>great white heron</b><sup id="cite_ref-Bewick1809_3-0" class="reference"><a href="#cite_note-Bewick1809-3">&#91;3&#93;</a></sup><sup id="cite_ref-Bruun1970_4-0" class="reference"><a href="#cite_note-Bruun1970-4">&#91;4&#93;</a></sup><sup id="cite_ref-Ali1993_5-0" class="reference"><a href="#cite_note-Ali1993-5">&#91;5&#93;</a></sup> is a large, widely distributed <a href="/wiki/Egret" title="Egret">egret</a>, with four subspecies found in Asia, Africa, the Americas, and southern Europe. Distributed across most of the <a href="/wiki/Tropics" title="Tropics">tropical</a> and warmer <a href="/wiki/Temperate" class="mw-redirect" title="Temperate">temperate</a> regions of the world, it builds tree nests in colonies close to water.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Systematics_and_taxonomy"><span class="tocnumber">1</span> <span class="toctext">Systematics and taxonomy</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Subspecies"><span class="tocnumber">1.1</span> <span class="toctext">Subspecies</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Distribution_and_conservation"><span class="tocnumber">3</span> <span class="toctext">Distribution and conservation</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Ecology"><span class="tocnumber">4</span> <span class="toctext">Ecology</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Diet"><span class="tocnumber">4.1</span> <span class="toctext">Diet</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Parasites"><span class="tocnumber">4.2</span> <span class="toctext">Parasites</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#In_culture"><span class="tocnumber">5</span> <span class="toctext">In culture</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Gallery"><span class="tocnumber">6</span> <span class="toctext">Gallery</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Systematics_and_taxonomy">Systematics and taxonomy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=1" title="Edit section: Systematics and taxonomy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Like all egrets, it is a member of the heron <a href="/wiki/Family_(biology)" title="Family (biology)">family</a>, <a href="/wiki/Ardeidae" class="mw-redirect" title="Ardeidae">Ardeidae</a>. Traditionally classified with the <a href="/wiki/Stork" title="Stork">storks</a> in the <a href="/wiki/Ciconiiformes" class="mw-redirect" title="Ciconiiformes">Ciconiiformes</a>, the Ardeidae are closer relatives of <a href="/wiki/Pelican" title="Pelican">pelicans</a> and belong in the <a href="/wiki/Pelecaniformes" title="Pelecaniformes">Pelecaniformes</a>, instead. The great egret—unlike the typical egrets—does not belong to the <a href="/wiki/Genus" title="Genus">genus</a> <i><a href="/wiki/Egretta" title="Egretta">Egretta</a></i>, but together with the great herons is today placed in <i><a href="/wiki/Ardea_(genus)" title="Ardea (genus)">Ardea</a></i>. In the past, however, it was sometimes placed in <i>Egretta</i> or separated in a <a href="/wiki/Monotypic" class="mw-redirect" title="Monotypic">monotypic</a> genus <i>Casmerodius</i>.
+</p><p>The Old World population is often referred to as the "great white egret". This species is sometimes confused with the great white heron of the <a href="/wiki/Caribbean" title="Caribbean">Caribbean</a>, which is a white <a href="/wiki/Polymorphism_(biology)" title="Polymorphism (biology)">morph</a> of the closely related <a href="/wiki/Great_blue_heron" title="Great blue heron">great blue heron</a>.
+</p><p>The scientific name comes from <a href="/wiki/Latin" title="Latin">Latin</a> <i>ardea</i>, "heron", and <i>alba</i>, "white".<sup id="cite_ref-job_6-0" class="reference"><a href="#cite_note-job-6">&#91;6&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Subspecies">Subspecies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=2" title="Edit section: Subspecies">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Four <a href="/wiki/Subspecies" title="Subspecies">subspecies</a> are found in various parts of the world, which differ but little.<sup id="cite_ref-IOC_7-0" class="reference"><a href="#cite_note-IOC-7">&#91;7&#93;</a></sup> Differences are bare-part coloration in the breeding season and size; the smallest <i>A. a. modesta</i> from Asia and <a href="/wiki/Australasia" title="Australasia">Australasia</a> some taxonomists consider a full species, the <a href="/wiki/Eastern_great_egret" title="Eastern great egret">eastern great egret</a> (<i>Ardea modesta</i>), but most scientists treat it as a subspecies.
+</p>
+<ul><li><i>A. a. alba</i> <small><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, 1758</small> – <a href="/wiki/Nominate_subspecies#Nominotypical_subspecies_and_subspecies_autonyms" class="mw-redirect" title="Nominate subspecies">nominate</a>, found in <a href="/wiki/Europe" title="Europe">Europe</a> and across the <a href="/wiki/Palearctic" class="mw-redirect" title="Palearctic">Palearctic</a>.</li>
+<li><i>A. a. egretta</i> <small><a href="/wiki/Johann_Friedrich_Gmelin" title="Johann Friedrich Gmelin">Gmelin, JF</a>, 1789</small> – found in <a href="/wiki/Americas" title="Americas">Americas</a></li>
+<li><i>A. a. melanorhynchos</i> <small>Wagler, 1827</small> – found in <a href="/wiki/Africa" title="Africa">Africa</a></li>
+<li><i><a href="/wiki/Ardea_alba_modesta" class="mw-redirect" title="Ardea alba modesta">A. a. modesta</a></i> <small>Gray, JE, 1831</small> – eastern great egret,  found in <a href="/wiki/India" title="India">India</a>, <a href="/wiki/Southeast_Asia" title="Southeast Asia">Southeast Asia</a>, and <a href="/wiki/Oceania" title="Oceania">Oceania</a></li></ul>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=3" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Ardea_alba_-San_Francisco_Bay,_California,_USA_-flying-8-1c.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ardea_alba_-San_Francisco_Bay%2C_California%2C_USA_-flying-8-1c.jpg/220px-Ardea_alba_-San_Francisco_Bay%2C_California%2C_USA_-flying-8-1c.jpg" decoding="async" width="220" height="184" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ardea_alba_-San_Francisco_Bay%2C_California%2C_USA_-flying-8-1c.jpg/330px-Ardea_alba_-San_Francisco_Bay%2C_California%2C_USA_-flying-8-1c.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ardea_alba_-San_Francisco_Bay%2C_California%2C_USA_-flying-8-1c.jpg/440px-Ardea_alba_-San_Francisco_Bay%2C_California%2C_USA_-flying-8-1c.jpg 2x" data-file-width="1623" data-file-height="1357" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Ardea_alba_-San_Francisco_Bay,_California,_USA_-flying-8-1c.jpg" class="internal" title="Enlarge"></a></div>In flight</div></div></div>
+<p>The great egret is a large heron with all-white <a href="/wiki/Plumage" title="Plumage">plumage</a>. Standing up to 1&#160;m (3.3&#160;ft) tall, this species can measure 80 to 104&#160;cm (31 to 41&#160;in) in length and have a <a href="/wiki/Wingspan" title="Wingspan">wingspan</a> of 131 to 170&#160;cm (52 to 67&#160;in).<sup id="cite_ref-AAB_8-0" class="reference"><a href="#cite_note-AAB-8">&#91;8&#93;</a></sup><sup id="cite_ref-seaworld_9-0" class="reference"><a href="#cite_note-seaworld-9">&#91;9&#93;</a></sup> Body mass can range from 700 to 1,500&#160;g (1.5 to 3.3&#160;lb), with an average around 1,000&#160;g (2.2&#160;lb).<sup id="cite_ref-CRC_10-0" class="reference"><a href="#cite_note-CRC-10">&#91;10&#93;</a></sup> It is thus only slightly smaller than the <a href="/wiki/Great_blue_heron" title="Great blue heron">great blue</a> or <a href="/wiki/Grey_heron" title="Grey heron">grey heron</a> (<i>A. cinerea</i>). Apart from size, the great egret can be distinguished from other white egrets by its yellow <a href="/wiki/Beak" title="Beak">bill</a> and black legs and feet, though the bill may become darker and the lower legs lighter in the breeding season. In breeding plumage, delicate ornamental feathers are borne on the back. Males and females are identical in appearance; juveniles look like nonbreeding adults. Differentiated from the <a href="/wiki/Intermediate_egret" title="Intermediate egret">intermediate egret</a> (<i>Mesophoyx intermedius</i>) by the <a href="/wiki/Gape" class="mw-redirect" title="Gape">gape</a>, which extends well beyond the back of the eye in case of the great egret, but ends just behind the eye in case of the intermediate egret.
+</p><p>It has a slow flight, with its neck retracted. This is characteristic of herons and <a href="/wiki/Bittern" title="Bittern">bitterns</a>, and distinguishes them from <a href="/wiki/Stork" title="Stork">storks</a>, <a href="/wiki/Crane_(bird)" title="Crane (bird)">cranes</a>, <a href="/wiki/Ibis" title="Ibis">ibises</a>, and <a href="/wiki/Spoonbill" title="Spoonbill">spoonbills</a>, which extend their necks in flight. The great egret walks with its neck extended and wings held close. The great egret is not normally a vocal bird; it gives a low, hoarse croak when disturbed, and at breeding colonies, it often gives a loud croaking <i>cuk cuk cuk</i> and higher-pitched squawks.<sup id="cite_ref-audubon3_11-0" class="reference"><a href="#cite_note-audubon3-11">&#91;11&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Distribution_and_conservation">Distribution and conservation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=4" title="Edit section: Distribution and conservation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The great egret is generally a very successful species with a large and expanding range, occurring worldwide in temperate and tropical habitats. It is ubiquitous across the <a href="/wiki/Sun_Belt" title="Sun Belt">Sun Belt</a> of the United States and in the <a href="/wiki/Neotropics" class="mw-redirect" title="Neotropics">Neotropics</a>.<sup id="cite_ref-iucn_1-1" class="reference"><a href="#cite_note-iucn-1">&#91;1&#93;</a></sup> In <a href="/wiki/North_America" title="North America">North America</a>, large numbers of great egrets were killed around the end of the 19th century so that their plumes could be used to decorate hats. Numbers have since recovered as a result of conservation measures. Its range has expanded as far north as southern <a href="/wiki/Canada" title="Canada">Canada</a>. However, in some parts of the <a href="/wiki/Southern_United_States" title="Southern United States">southern United States</a>, its numbers have declined due to habitat loss, particularly wetland degradation through drainage, grazing, clearing, burning, increased salinity, groundwater extraction and invasion by exotic plants. Nevertheless, the species adapts well to human habitation and can be readily seen near wetlands and bodies of water in urban and suburban areas.<sup id="cite_ref-iucn_1-2" class="reference"><a href="#cite_note-iucn-1">&#91;1&#93;</a></sup>
+</p><p>The great egret is partially <a href="/wiki/Bird_migration" title="Bird migration">migratory</a>, with <a href="/wiki/Northern_hemisphere" class="mw-redirect" title="Northern hemisphere">northern hemisphere</a> birds moving south from areas with colder winters. It is one of the species to which the <a href="/wiki/Agreement_on_the_Conservation_of_African-Eurasian_Migratory_Waterbirds" title="Agreement on the Conservation of African-Eurasian Migratory Waterbirds">Agreement on the Conservation of African-Eurasian Migratory Waterbirds</a> (AEWA) applies.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2016)">citation needed</span></a></i>&#93;</sup>
+</p><p>In 1953, the great egret in flight was chosen as the symbol of the <a href="/wiki/National_Audubon_Society" title="National Audubon Society">National Audubon Society</a>, which was formed in part to prevent the killing of birds for their feathers.<sup id="cite_ref-audubon_12-0" class="reference"><a href="#cite_note-audubon-12">&#91;12&#93;</a></sup><sup id="cite_ref-audubon2_13-0" class="reference"><a href="#cite_note-audubon2-13">&#91;13&#93;</a></sup>
+</p><p>On 22 May 2012,  a pair of great egrets was announced to be nesting in the UK for the first time at the <a href="/wiki/Shapwick_Heath" title="Shapwick Heath">Shapwick Heath</a> nature reserve in <a href="/wiki/Somerset" title="Somerset">Somerset</a>.<sup id="cite_ref-Aviss_14-0" class="reference"><a href="#cite_note-Aviss-14">&#91;14&#93;</a></sup> The species is a rare visitor to the UK and Ben Aviss of the <a href="/wiki/BBC" title="BBC">BBC</a> stated that the news could mean the UK's first great egret colony is established.<sup id="cite_ref-Aviss_14-1" class="reference"><a href="#cite_note-Aviss-14">&#91;14&#93;</a></sup><sup id="cite_ref-Aviss2_15-0" class="reference"><a href="#cite_note-Aviss2-15">&#91;15&#93;</a></sup> The following week, Kevin Anderson of <a href="/wiki/Natural_England" title="Natural England">Natural England</a> confirmed a great egret chick had hatched, making it a new breeding bird record for the UK.<sup id="cite_ref-Hallett_16-0" class="reference"><a href="#cite_note-Hallett-16">&#91;16&#93;</a></sup> In 2017, seven nests in Somerset fledged 17 young,<sup id="cite_ref-BB2017_17-0" class="reference"><a href="#cite_note-BB2017-17">&#91;17&#93;</a></sup> and a second breeding site was announced at <a href="/wiki/Holkham_National_Nature_Reserve" title="Holkham National Nature Reserve">Holkham National Nature Reserve</a> in <a href="/wiki/Norfolk" title="Norfolk">Norfolk</a> where a pair fledged three young.<sup id="cite_ref-RBA_18-0" class="reference"><a href="#cite_note-RBA-18">&#91;18&#93;</a></sup>
+</p><p>In 2018, a pair of great egrets nested in Finland for the first time, raising four young in a grey heron colony in Porvoo.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Ecology">Ecology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=5" title="Edit section: Ecology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The species breeds in <a href="/wiki/Bird_colony" title="Bird colony">colonies</a> in trees close to large lakes with <a href="/wiki/Reed_bed" title="Reed bed">reed beds</a> or other extensive <a href="/wiki/Wetland" title="Wetland">wetlands</a>, preferably at height of 10–40 feet (3.0–12.2&#160;m).<sup id="cite_ref-audubon3_11-1" class="reference"><a href="#cite_note-audubon3-11">&#91;11&#93;</a></sup> It begins to breed at 2–3 years of age by forming monogamous pairs each season. If the pairing carries over to the next season is not known. The male selects the nest area, starts a nest, and then attracts a female. The nest, made of sticks and lined with plant material, could be up to 3 feet across. Up to six bluish green eggs are laid at one time. Both sexes incubate the eggs and the incubation period is 23–26 days. The young are fed by regurgitation by both parents and they are able to fly within 6–7 weeks.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Diet">Diet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=6" title="Edit section: Diet">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Great_Egret_strikes_for_a_Fish_-_crop.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/76/Great_Egret_strikes_for_a_Fish_-_crop.JPG/220px-Great_Egret_strikes_for_a_Fish_-_crop.JPG" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/76/Great_Egret_strikes_for_a_Fish_-_crop.JPG/330px-Great_Egret_strikes_for_a_Fish_-_crop.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/76/Great_Egret_strikes_for_a_Fish_-_crop.JPG/440px-Great_Egret_strikes_for_a_Fish_-_crop.JPG 2x" data-file-width="2000" data-file-height="1500" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Great_Egret_strikes_for_a_Fish_-_crop.JPG" class="internal" title="Enlarge"></a></div>Spearing a fish</div></div></div>
+<p>The great egret feeds in shallow water or drier habitats, feeding mainly on <a href="/wiki/Fish" title="Fish">fish</a>, <a href="/wiki/Frog" title="Frog">frogs</a>, small <a href="/wiki/Mammal" title="Mammal">mammals</a>, and occasionally small <a href="/wiki/Reptile" title="Reptile">reptiles</a> and <a href="/wiki/Insect" title="Insect">insects</a>, spearing them with its long, sharp bill most of the time by standing still and allowing the prey to come within its striking distance of its bill, which it uses as a spear. It often waits motionless for prey, or slowly stalks its victim.
+</p>
+<h3><span class="mw-headline" id="Parasites">Parasites</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=7" title="Edit section: Parasites">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A long-running field study (1962–2013) suggested that the central European great egrets host 17 different <a href="/wiki/Helminth" class="mw-redirect" title="Helminth">helminth</a> species. Juvenile great egrets were shown to host fewer species, but the intensity of infection was higher in the juveniles than in the adults. Of the digeneans found in central European great egrets, numerous species likely infected their definitive hosts outside of central Europe itself.<sup id="cite_ref-Sitko_&amp;_Heneberg_2015_21-0" class="reference"><a href="#cite_note-Sitko_&amp;_Heneberg_2015-21">&#91;21&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="In_culture">In culture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=8" title="Edit section: In culture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-More_citations_needed plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>needs additional citations for <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Great_egret&amp;action=edit">improve this article</a> by <a href="/wiki/Help:Referencing_for_beginners" title="Help:Referencing for beginners">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.<br /><small><span class="plainlinks"><i>Find sources:</i>&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?as_eq=wikipedia&amp;q=%22Great+egret%22">"Great egret"</a>&#160;–&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?tbm=nws&amp;q=%22Great+egret%22+-wikipedia">news</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?&amp;q=%22Great+egret%22+site:news.google.com/newspapers&amp;source=newspapers">newspapers</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?tbs=bks:1&amp;q=%22Great+egret%22+-wikipedia">books</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//scholar.google.com/scholar?q=%22Great+egret%22">scholar</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22Great+egret%22&amp;acc=on&amp;wc=on">JSTOR</a></span></small></span>  <small class="date-container"><i>(<span class="date">July 2017</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>The great egret is depicted on the <a href="/wiki/Obverse_and_reverse" title="Obverse and reverse">reverse</a> side of a 5-<a href="/wiki/Brazilian_real" title="Brazilian real">Brazilian reais</a> banknote.
+</p><p>The great egret is the symbol of the <a href="/wiki/National_Audubon_Society" title="National Audubon Society">National Audubon Society</a>.<sup id="cite_ref-nationalgeographic_22-0" class="reference"><a href="#cite_note-nationalgeographic-22">&#91;22&#93;</a></sup>
+</p><p>An airbrushed photograph of a Great Egret in breeding plumage by Werner Krutein is featured in the cover art of the 1992 Faith No More album <i>Angel Dust</i>.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;23&#93;</a></sup><sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup>
+</p><p>In <a href="/wiki/Belarus" title="Belarus">Belarus</a>, a commemorative coin has the image of a great egret.
+</p><p>The great egret also features on the New Zealand $2 coin and on the Hungarian 5-forint coin.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;25&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Gallery">Gallery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=9" title="Edit section: Gallery">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul class="gallery mw-gallery-packed">
+		<li class="gallerybox" style="width: 114px"><div style="width: 114px">
+			<div class="thumb" style="width: 112px;"><div style="margin:0px auto;"><a href="/wiki/File:Egretta_alba_MWNH_0917.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Egretta_alba_MWNH_0917.JPG/168px-Egretta_alba_MWNH_0917.JPG" decoding="async" width="112" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Egretta_alba_MWNH_0917.JPG/252px-Egretta_alba_MWNH_0917.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Egretta_alba_MWNH_0917.JPG/336px-Egretta_alba_MWNH_0917.JPG 2x" data-file-width="2354" data-file-height="2519" /></a></div></div>
+			<div class="gallerytext">
+<p>Egg, Collection <a href="/wiki/Museum_Wiesbaden" title="Museum Wiesbaden">Museum Wiesbaden</a>
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 154.66666666667px"><div style="width: 154.66666666667px">
+			<div class="thumb" style="width: 152.66666666667px;"><div style="margin:0px auto;"><a href="/wiki/File:Great_Egret_Fish.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Great_Egret_Fish.jpg/229px-Great_Egret_Fish.jpg" decoding="async" width="153" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Great_Egret_Fish.jpg/343px-Great_Egret_Fish.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Great_Egret_Fish.jpg/458px-Great_Egret_Fish.jpg 2x" data-file-width="1024" data-file-height="806" /></a></div></div>
+			<div class="gallerytext">
+<p>Adult in nonbreeding plumage
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 215.33333333333px"><div style="width: 215.33333333333px">
+			<div class="thumb" style="width: 213.33333333333px;"><div style="margin:0px auto;"><div id="mwe_player_0" class="PopUpMediaTransform" style="width:214px;" videopayload="&lt;div class=&quot;mediaContainer&quot; style=&quot;width:854px&quot;&gt;&lt;video id=&quot;mwe_player_1&quot; poster=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ardea_alba-ibaraki-2016624.webm/854px--Ardea_alba-ibaraki-2016624.webm.jpg&quot; controls=&quot;&quot; preload=&quot;none&quot; autoplay=&quot;&quot; style=&quot;width:854px;height:480px&quot; class=&quot;kskin&quot; data-durationhint=&quot;18.018&quot; data-startoffset=&quot;0&quot; data-mwtitle=&quot;Ardea_alba-ibaraki-2016624.webm&quot; data-mwprovider=&quot;wikimediacommons&quot;&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.480p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;SD VP9 (480P)&quot; data-shorttitle=&quot;VP9 480P&quot; data-transcodekey=&quot;480p.vp9.webm&quot; data-width=&quot;854&quot; data-height=&quot;480&quot; data-bandwidth=&quot;563832&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.480p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;SD WebM (480P)&quot; data-shorttitle=&quot;WebM 480P&quot; data-transcodekey=&quot;480p.webm&quot; data-width=&quot;854&quot; data-height=&quot;480&quot; data-bandwidth=&quot;1014736&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.720p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;HD VP9 (720P)&quot; data-shorttitle=&quot;VP9 720P&quot; data-transcodekey=&quot;720p.vp9.webm&quot; data-width=&quot;1280&quot; data-height=&quot;720&quot; data-bandwidth=&quot;1231368&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.720p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;HD WebM (720P)&quot; data-shorttitle=&quot;WebM 720P&quot; data-transcodekey=&quot;720p.webm&quot; data-width=&quot;1280&quot; data-height=&quot;720&quot; data-bandwidth=&quot;2042576&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/e/e8/Ardea_alba-ibaraki-2016624.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8&amp;quot;&quot; data-title=&quot;Original WebM file, 1,280 × 720 (2.06 Mbps)&quot; data-shorttitle=&quot;WebM source&quot; data-width=&quot;1280&quot; data-height=&quot;720&quot; data-bandwidth=&quot;2058671&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.120p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Lowest bandwidth VP9 (120P)&quot; data-shorttitle=&quot;VP9 120P&quot; data-transcodekey=&quot;120p.vp9.webm&quot; data-width=&quot;214&quot; data-height=&quot;120&quot; data-bandwidth=&quot;60328&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.160p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Low bandwidth WebM (160P)&quot; data-shorttitle=&quot;WebM 160P&quot; data-transcodekey=&quot;160p.webm&quot; data-width=&quot;284&quot; data-height=&quot;160&quot; data-bandwidth=&quot;121224&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.180p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Low bandwidth VP9 (180P)&quot; data-shorttitle=&quot;VP9 180P&quot; data-transcodekey=&quot;180p.vp9.webm&quot; data-width=&quot;320&quot; data-height=&quot;180&quot; data-bandwidth=&quot;107048&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.240p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Small VP9 (240P)&quot; data-shorttitle=&quot;VP9 240P&quot; data-transcodekey=&quot;240p.vp9.webm&quot; data-width=&quot;426&quot; data-height=&quot;240&quot; data-bandwidth=&quot;147072&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.240p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Small WebM (240P)&quot; data-shorttitle=&quot;WebM 240P&quot; data-transcodekey=&quot;240p.webm&quot; data-width=&quot;426&quot; data-height=&quot;240&quot; data-bandwidth=&quot;254456&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.360p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;VP9 (360P)&quot; data-shorttitle=&quot;VP9 360P&quot; data-transcodekey=&quot;360p.vp9.webm&quot; data-width=&quot;640&quot; data-height=&quot;360&quot; data-bandwidth=&quot;271128&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Ardea_alba-ibaraki-2016624.webm/Ardea_alba-ibaraki-2016624.webm.360p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;WebM (360P)&quot; data-shorttitle=&quot;WebM 360P&quot; data-transcodekey=&quot;360p.webm&quot; data-width=&quot;640&quot; data-height=&quot;360&quot; data-bandwidth=&quot;507840&quot; data-framerate=&quot;29.97&quot;/&gt;&lt;/video&gt;&lt;/div&gt;"><img alt="File:Ardea alba-ibaraki-2016624.webm" style="width:214px;height:120px" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ardea_alba-ibaraki-2016624.webm/320px--Ardea_alba-ibaraki-2016624.webm.jpg" /><a href="//upload.wikimedia.org/wikipedia/commons/e/e8/Ardea_alba-ibaraki-2016624.webm" title="Play media" target="new"><span class="play-btn-large"><span class="mw-tmh-playtext">Play media</span></span></a></div></div></div>
+			<div class="gallerytext">
+<p>(video) Suddenly flying off in <a href="/wiki/Ibaraki_Prefecture" title="Ibaraki Prefecture">Ibaraki</a>, <a href="/wiki/Japan" title="Japan">Japan</a>
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 162px"><div style="width: 162px">
+			<div class="thumb" style="width: 160px;"><div style="margin:0px auto;"><a href="/wiki/File:Ardea_alba-head.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Ardea_alba-head.jpg/240px-Ardea_alba-head.jpg" decoding="async" width="160" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Ardea_alba-head.jpg/360px-Ardea_alba-head.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Ardea_alba-head.jpg/480px-Ardea_alba-head.jpg 2x" data-file-width="1200" data-file-height="900" /></a></div></div>
+			<div class="gallerytext">
+<p>Bright green facial skin during breeding season
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 182px"><div style="width: 182px">
+			<div class="thumb" style="width: 180px;"><div style="margin:0px auto;"><a href="/wiki/File:Ardea_alba_-chicks_and_nest_-Morro_Bay_Heron_Rookery_-8.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ardea_alba_-chicks_and_nest_-Morro_Bay_Heron_Rookery_-8.jpg/270px-Ardea_alba_-chicks_and_nest_-Morro_Bay_Heron_Rookery_-8.jpg" decoding="async" width="180" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ardea_alba_-chicks_and_nest_-Morro_Bay_Heron_Rookery_-8.jpg/405px-Ardea_alba_-chicks_and_nest_-Morro_Bay_Heron_Rookery_-8.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ardea_alba_-chicks_and_nest_-Morro_Bay_Heron_Rookery_-8.jpg/540px-Ardea_alba_-chicks_and_nest_-Morro_Bay_Heron_Rookery_-8.jpg 2x" data-file-width="3888" data-file-height="2592" /></a></div></div>
+			<div class="gallerytext">
+<p>Parent on nest with chicks
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 182px"><div style="width: 182px">
+			<div class="thumb" style="width: 180px;"><div style="margin:0px auto;"><a href="/wiki/File:Great_Egret_-_Centennial_Lakes_Park,_Edina,_Minnesota.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Great_Egret_-_Centennial_Lakes_Park%2C_Edina%2C_Minnesota.jpg/270px-Great_Egret_-_Centennial_Lakes_Park%2C_Edina%2C_Minnesota.jpg" decoding="async" width="180" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/23/Great_Egret_-_Centennial_Lakes_Park%2C_Edina%2C_Minnesota.jpg/405px-Great_Egret_-_Centennial_Lakes_Park%2C_Edina%2C_Minnesota.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/23/Great_Egret_-_Centennial_Lakes_Park%2C_Edina%2C_Minnesota.jpg/540px-Great_Egret_-_Centennial_Lakes_Park%2C_Edina%2C_Minnesota.jpg 2x" data-file-width="5895" data-file-height="3930" /></a></div></div>
+			<div class="gallerytext">
+<p>Great egret at Centennial Lakes Park in Edina, <a href="/wiki/Minnesota" title="Minnesota">Minnesota</a>
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 165.33333333333px"><div style="width: 165.33333333333px">
+			<div class="thumb" style="width: 163.33333333333px;"><div style="margin:0px auto;"><a href="/wiki/File:Guide_leaflet_(1901)_(14579611617).jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Guide_leaflet_%281901%29_%2814579611617%29.jpg/245px-Guide_leaflet_%281901%29_%2814579611617%29.jpg" decoding="async" width="164" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Guide_leaflet_%281901%29_%2814579611617%29.jpg/368px-Guide_leaflet_%281901%29_%2814579611617%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Guide_leaflet_%281901%29_%2814579611617%29.jpg/490px-Guide_leaflet_%281901%29_%2814579611617%29.jpg 2x" data-file-width="3440" data-file-height="2528" /></a></div></div>
+			<div class="gallerytext">
+<p>Stuffed specimens at the <a href="/wiki/American_Museum_of_Natural_History" title="American Museum of Natural History">American Museum of Natural History</a>
+</p>
+			</div>
+		</div></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=10" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 32em; -webkit-column-width: 32em; column-width: 32em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-iucn-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-iucn_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-iucn_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-iucn_1-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2016" class="citation journal cs1">BirdLife International (2016). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/species/22697043/86468751">"<i>Ardea alba</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2016</b>: e.T22697043A86468751. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.2305%2FIUCN.UK.2016-3.RLTS.T22697043A86468751.en">10.2305/IUCN.UK.2016-3.RLTS.T22697043A86468751.en</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Ardea+alba&amp;rft.volume=2016&amp;rft.pages=e.T22697043A86468751&amp;rft.date=2016&amp;rft_id=info%3Adoi%2F10.2305%2FIUCN.UK.2016-3.RLTS.T22697043A86468751.en&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fspecies%2F22697043%2F86468751&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.rspb.org.uk/birds-and-wildlife/bird-and-wildlife-guides/bird-a-z/g/greatwhiteegret/">Royal Society for the Protection of Birds: Great white egret</a></span>
+</li>
+<li id="cite_note-Bewick1809-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-Bewick1809_3-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFBewick1809" class="citation book cs1"><a href="/wiki/Thomas_Bewick" title="Thomas Bewick">Bewick, Thomas</a> (1809). "The Great White Heron (<i>Ardea alba</i>, Lin. – Le Heron blanc, Buff.)". <a rel="nofollow" class="external text" href="https://www.biodiversitylibrary.org/item/82314#page/386/mode/1up"><i>Part II, Containing the History and Description of Water Birds</i></a>. A <a href="/wiki/History_of_British_Birds" class="mw-redirect" title="History of British Birds">History of British Birds</a>. Newcastle: Edward Walker. p.&#160;52.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=The+Great+White+Heron+%28Ardea+alba%2C+Lin.+%E2%80%93+Le+Heron+blanc%2C+Buff.%29&amp;rft.btitle=Part+II%2C+Containing+the+History+and+Description+of+Water+Birds&amp;rft.place=Newcastle&amp;rft.series=A+History+of+British+Birds&amp;rft.pages=52&amp;rft.pub=Edward+Walker&amp;rft.date=1809&amp;rft.aulast=Bewick&amp;rft.aufirst=Thomas&amp;rft_id=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fitem%2F82314%23page%2F386%2Fmode%2F1up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Bruun1970-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-Bruun1970_4-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFBruunDelinSvenson1970" class="citation book cs1">Bruun, B.; Delin, H.; Svenson, L. (1970). <i>The Hamlyn Guide to Birds to Britain and Europe</i>. London. p.&#160;36. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0753709562" title="Special:BookSources/0753709562"><bdi>0753709562</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Hamlyn+Guide+to+Birds+to+Britain+and+Europe&amp;rft.place=London&amp;rft.pages=36&amp;rft.date=1970&amp;rft.isbn=0753709562&amp;rft.aulast=Bruun&amp;rft.aufirst=B.&amp;rft.au=Delin%2C+H.&amp;rft.au=Svenson%2C+L.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Ali1993-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Ali1993_5-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFAli1993" class="citation book cs1">Ali, S. (1993). <a rel="nofollow" class="external text" href="https://archive.org/details/BookOfIndianBirds"><i>The Book of Indian Birds</i></a>. Bombay: Bombay Natural History Society. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0195637313" title="Special:BookSources/0195637313"><bdi>0195637313</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Book+of+Indian+Birds&amp;rft.place=Bombay&amp;rft.pub=Bombay+Natural+History+Society&amp;rft.date=1993&amp;rft.isbn=0195637313&amp;rft.aulast=Ali&amp;rft.aufirst=S.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FBookOfIndianBirds&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-job-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-job_6-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. pp.&#160;37, 54. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=37%2C+54&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-IOC-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-IOC_7-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFGillDonsker2014" class="citation web cs1">Gill, F.; Donsker, D., eds. (2014). <a rel="nofollow" class="external text" href="http://www.worldbirdnames.org/DOI-4/master_ioc_list_v4.4.xls">"IOC World Bird List (v 4.4)"</a>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.14344%2FIOC.ML.4.4">10.14344/IOC.ML.4.4</a><span class="reference-accessdate">. Retrieved <span class="nowrap">28 December</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=IOC+World+Bird+List+%28v+4.4%29&amp;rft.date=2014&amp;rft_id=info%3Adoi%2F10.14344%2FIOC.ML.4.4&amp;rft_id=http%3A%2F%2Fwww.worldbirdnames.org%2FDOI-4%2Fmaster_ioc_list_v4.4.xls&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-AAB-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-AAB_8-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.allaboutbirds.org/guide/Great_Egret/id">"Great Egret"</a>. <i>All About Birds</i>. <a href="/wiki/Cornell_Lab_of_Ornithology" title="Cornell Lab of Ornithology">Cornell Lab of Ornithology</a><span class="reference-accessdate">. Retrieved <span class="nowrap">25 September</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=All+About+Birds&amp;rft.atitle=Great+Egret&amp;rft_id=http%3A%2F%2Fwww.allaboutbirds.org%2Fguide%2FGreat_Egret%2Fid&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-seaworld-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-seaworld_9-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20130621105117/http://www.seaworld.org/animal-info/animal-bytes/animalia/eumetazoa/coelomates/deuterostomes/chordata/craniata/aves/ciconiiformes/egrets.htm">"Animal Bytes – Egrets"</a>. <i>Seaworld</i>. Archived from <a rel="nofollow" class="external text" href="http://www.seaworld.org/animal-info/animal-bytes/animalia/eumetazoa/coelomates/deuterostomes/chordata/craniata/aves/ciconiiformes/egrets.htm">the original</a> on 21 June 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">25 September</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Seaworld&amp;rft.atitle=Animal+Bytes+%E2%80%93+Egrets&amp;rft_id=http%3A%2F%2Fwww.seaworld.org%2Fanimal-info%2Fanimal-bytes%2Fanimalia%2Feumetazoa%2Fcoelomates%2Fdeuterostomes%2Fchordata%2Fcraniata%2Faves%2Fciconiiformes%2Fegrets.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-CRC-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-CRC_10-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFDunning_Jr.1992" class="citation book cs1">Dunning Jr., John B., ed. (1992). <i>CRC Handbook of Avian Body Masses</i>. CRC Press. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-8493-4258-5" title="Special:BookSources/978-0-8493-4258-5"><bdi>978-0-8493-4258-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CRC+Handbook+of+Avian+Body+Masses&amp;rft.pub=CRC+Press&amp;rft.date=1992&amp;rft.isbn=978-0-8493-4258-5&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-audubon3-11"><span class="mw-cite-backlink">^ <a href="#cite_ref-audubon3_11-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-audubon3_11-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.audubon.org/field-guide/bird/great-egret">"Great Egret"</a>. <i>Audubon Guide to North American Birds</i>. July 10, 2016.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Audubon+Guide+to+North+American+Birds&amp;rft.atitle=Great+Egret&amp;rft.date=2016-07-10&amp;rft_id=http%3A%2F%2Fwww.audubon.org%2Ffield-guide%2Fbird%2Fgreat-egret&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-audubon-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-audubon_12-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20130102004912/http://www.audubon.org/timeline-accomplishments">"Timeline of Accomplishments"</a>. <a href="/wiki/National_Audubon_Society" title="National Audubon Society">National Audubon Society</a>. Archived from <a rel="nofollow" class="external text" href="http://www.audubon.org/timeline-accomplishments">the original</a> on 2 January 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Timeline+of+Accomplishments&amp;rft.pub=National+Audubon+Society&amp;rft_id=http%3A%2F%2Fwww.audubon.org%2Ftimeline-accomplishments&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-audubon2-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-audubon2_13-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20090330082257/http://audubon.org/centennial/species.php">"Historical Highlights: Signature Species"</a>. <a href="/wiki/National_Audubon_Society" title="National Audubon Society">National Audubon Society</a>. Archived from <a rel="nofollow" class="external text" href="http://www.audubon.org/centennial/species.php">the original</a> on 30 March 2009<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Historical+Highlights%3A+Signature+Species&amp;rft.pub=National+Audubon+Society&amp;rft_id=http%3A%2F%2Fwww.audubon.org%2Fcentennial%2Fspecies.php&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Aviss-14"><span class="mw-cite-backlink">^ <a href="#cite_ref-Aviss_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Aviss_14-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFAviss2012" class="citation news cs1">Aviss, Ben (22 May 2012). <a rel="nofollow" class="external text" href="https://www.bbc.co.uk/nature/18118985">"Great white egrets nest in UK for first time"</a>. <i>BBC Nature</i>. BBC<span class="reference-accessdate">. Retrieved <span class="nowrap">31 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=BBC+Nature&amp;rft.atitle=Great+white+egrets+nest+in+UK+for+first+time&amp;rft.date=2012-05-22&amp;rft.aulast=Aviss&amp;rft.aufirst=Ben&amp;rft_id=https%3A%2F%2Fwww.bbc.co.uk%2Fnature%2F18118985&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Aviss2-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-Aviss2_15-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFAviss2012" class="citation news cs1">Aviss, Ben (31 May 2012). <a rel="nofollow" class="external text" href="https://www.bbc.co.uk/nature/18280491">"Great white egrets breed in UK for first time"</a>. <i>BBC Nature</i>. BBC<span class="reference-accessdate">. Retrieved <span class="nowrap">31 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=BBC+Nature&amp;rft.atitle=Great+white+egrets+breed+in+UK+for+first+time&amp;rft.date=2012-05-31&amp;rft.aulast=Aviss&amp;rft.aufirst=Ben&amp;rft_id=https%3A%2F%2Fwww.bbc.co.uk%2Fnature%2F18280491&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Hallett-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hallett_16-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFHallett2012" class="citation news cs1">Hallett, Emma (31 May 2012). <a rel="nofollow" class="external text" href="https://www.independent.co.uk/environment/nature/rare-great-white-egret-chick-hatches-in-uk-for-first-time-7807682.html">"Rare great white egret chick hatches in UK for first time"</a>. <i><a href="/wiki/The_Independent" title="The Independent">The Independent</a></i>. Independent Print Limited<span class="reference-accessdate">. Retrieved <span class="nowrap">31 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+Independent&amp;rft.atitle=Rare+great+white+egret+chick+hatches+in+UK+for+first+time&amp;rft.date=2012-05-31&amp;rft.aulast=Hallett&amp;rft.aufirst=Emma&amp;rft_id=https%3A%2F%2Fwww.independent.co.uk%2Fenvironment%2Fnature%2Frare-great-white-egret-chick-hatches-in-uk-for-first-time-7807682.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-BB2017-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-BB2017_17-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFAdrian_Pitches2017" class="citation journal cs1">Adrian Pitches (2017). "England's Mediterranean Breeding Season". <i>British Birds</i>. <b>110</b> (9): 430.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=British+Birds&amp;rft.atitle=England%27s+Mediterranean+Breeding+Season&amp;rft.volume=110&amp;rft.issue=9&amp;rft.pages=430&amp;rft.date=2017&amp;rft.au=Adrian+Pitches&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-RBA-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-RBA_18-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.rarebirdalert.co.uk/v2/content/Great-White-Egret-breeds-successfully-in-Norfolk-for-the-first-time.aspx?s_id=448502668">"Great White Egret breeds successfully in Norfolk for the first time"</a>. Rare Bird Alert<span class="reference-accessdate">. Retrieved <span class="nowrap">15 September</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Great+White+Egret+breeds+successfully+in+Norfolk+for+the+first+time&amp;rft.pub=Rare+Bird+Alert&amp;rft_id=http%3A%2F%2Fwww.rarebirdalert.co.uk%2Fv2%2Fcontent%2FGreat-White-Egret-breeds-successfully-in-Norfolk-for-the-first-time.aspx%3Fs_id%3D448502668&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://yle.fi/uutiset/3-10340697">"Jalohaikara pesi ensimmäistä kertaa Suomessa – Porvoossa haudotut poikaset lennähtivät maailmalle"</a>. <i>Yle Uutiset</i> (in Finnish)<span class="reference-accessdate">. Retrieved <span class="nowrap">2018-08-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Yle+Uutiset&amp;rft.atitle=Jalohaikara+pesi+ensimm%C3%A4ist%C3%A4+kertaa+Suomessa+%E2%80%93+Porvoossa+haudotut+poikaset+lenn%C3%A4htiv%C3%A4t+maailmalle&amp;rft_id=https%3A%2F%2Fyle.fi%2Fuutiset%2F3-10340697&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.allaboutbirds.org/guide/great_egret/lifehistory">"Great Egret"</a>. <i>All about birds, Cornell Lab of Ornithology</i>. Cornell Lab of Ornithology<span class="reference-accessdate">. Retrieved <span class="nowrap">July 10,</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=All+about+birds%2C+Cornell+Lab+of+Ornithology&amp;rft.atitle=Great+Egret&amp;rft_id=https%3A%2F%2Fwww.allaboutbirds.org%2Fguide%2Fgreat_egret%2Flifehistory&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Sitko_&amp;_Heneberg_2015-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-Sitko_&amp;_Heneberg_2015_21-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFSitkoHeneberg2015" class="citation journal cs1">Sitko, J.; Heneberg, P. (2015). "Composition, structure and pattern of helminth assemblages associated with central European herons (Ardeidae)". <i>Parasitology International</i>. <b>64</b>: 100–112. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.parint.2014.10.009">10.1016/j.parint.2014.10.009</a>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/25449288">25449288</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Parasitology+International&amp;rft.atitle=Composition%2C+structure+and+pattern+of+helminth+assemblages+associated+with+central+European+herons+%28Ardeidae%29&amp;rft.volume=64&amp;rft.pages=100-112&amp;rft.date=2015&amp;rft_id=info%3Adoi%2F10.1016%2Fj.parint.2014.10.009&amp;rft_id=info%3Apmid%2F25449288&amp;rft.aulast=Sitko&amp;rft.aufirst=J.&amp;rft.au=Heneberg%2C+P.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-nationalgeographic-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-nationalgeographic_22-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://animals.nationalgeographic.com/animals/birds/great-egret/">"Great Egret (Ardea alba)"</a>. <a href="/wiki/National_Geographic_Society" title="National Geographic Society">National Geographic Society</a><span class="reference-accessdate">. Retrieved <span class="nowrap">31 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Great+Egret+%28Ardea+alba%29&amp;rft.pub=National+Geographic+Society&amp;rft_id=http%3A%2F%2Fanimals.nationalgeographic.com%2Fanimals%2Fbirds%2Fgreat-egret%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite id="CITEREFMoses1992" class="citation magazine cs1">Moses, Peter (December 1992). "Interview with Mike Bordin". <i>Metal Maniacs</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Metal+Maniacs&amp;rft.atitle=Interview+with+Mike+Bordin&amp;rft.date=1992-12&amp;rft.aulast=Moses&amp;rft.aufirst=Peter&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite id="CITEREFPutterford1992" class="citation magazine cs1">Putterford, Mark (December 1992). "Faith No More - Dusted". <i>Rip</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Rip&amp;rft.atitle=Faith+No+More+-+Dusted&amp;rft.date=1992-12&amp;rft.aulast=Putterford&amp;rft.aufirst=Mark&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://en.numista.com/catalogue/pieces28729.html">"5 Forint"</a>. Numista<span class="reference-accessdate">. Retrieved <span class="nowrap">17 May</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=5+Forint&amp;rft.pub=Numista&amp;rft_id=https%3A%2F%2Fen.numista.com%2Fcatalogue%2Fpieces28729.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Great_egret&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Ardea_alba" class="extiw" title="commons:Category:Ardea alba"><span style="">Ardea alba</span></a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/144455">Citizen science observations for Great egret</a> at <a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20141202060534/http://aulaenred.ibercaja.es/wp-content/uploads/42_GreatEgretEalba.pdf">Ageing and sexing (PDF) by Javier Blasco-Zumeta &amp; Gerd-Michael Heinze</a></li>
+<li><a rel="nofollow" class="external text" href="http://sabap2.adu.org.za/docs/sabap1/066.pdf">Great White Heron</a> – <i><a href="/wiki/Southern_African_Bird_Atlas_Project" title="Southern African Bird Atlas Project">The Atlas of Southern African Birds</a></i></li>
+<li><a rel="nofollow" class="external text" href="http://www.ebepe.com/html/great_egret.html">Great White Egret</a> – National Park Neusiedlersee Seewinkel in Austria</li>
+<li><a rel="nofollow" class="external text" href="http://www.birds.cornell.edu/AllAboutBirds/BirdGuide/Great_Egret.html">Great Egret</a> – Cornell Lab of Ornithology</li>
+<li><a rel="nofollow" class="external text" href="http://www.mbr-pwrc.usgs.gov/id/framlst/i1960id.html">Great egret <i>Ardea alba</i></a> – USGS Patuxent Bird Identification InfoCenter</li>
+<li><a rel="nofollow" class="external text" href="https://www.flickr.com/groups/birdguide/pool/tags/Ardea+alba"><i>Ardea alba</i></a> in <i><a rel="nofollow" class="external text" href="https://www.flickr.com/groups/birdguide">Field Guide: Birds of the World</a></i> on <a href="/wiki/Flickr" title="Flickr">Flickr</a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?lang=EN&amp;avibaseid=49D9148A171E7F2E">"Ardea alba"</a>. <i>Avibase</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Avibase&amp;rft.atitle=Ardea+alba&amp;rft_id=https%3A%2F%2Favibase.bsc-eoc.org%2Fspecies.jsp%3Flang%3DEN%26avibaseid%3D49D9148A171E7F2E&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/> <a href="https://www.wikidata.org/wiki/Q130730#P2026" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.hbw.com/ibc/species/great-white-egret-egretta-alba">"Great White Egret media"</a>. <i><a href="/wiki/Internet_Bird_Collection" class="mw-redirect" title="Internet Bird Collection">Internet Bird Collection</a></i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Internet+Bird+Collection&amp;rft.atitle=Great+White+Egret+media&amp;rft_id=http%3A%2F%2Fwww.hbw.com%2Fibc%2Fspecies%2Fgreat-white-egret-egretta-alba&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGreat+egret" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><a rel="nofollow" class="external text" href="http://vireo.acnatsci.org/search.html?Form=Search&amp;SEARCHBY=Common&amp;KEYWORDS=great+egret&amp;showwhat=images&amp;AGE=All&amp;SEX=All&amp;ACT=All&amp;Search=Search&amp;VIEW=All&amp;ORIENTATION=All&amp;RESULTS=24">Great Egret photo gallery</a> at VIREO (Drexel University)</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q130730" class="extiw" title="wikidata:Q130730">Q130730</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Ardea_alba" class="extiw" title="wikispecies:Ardea alba">Ardea alba</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/American_Birding_Association" title="American Birding Association">ABA</a>: <span class="uid">greegr</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Ardea_alba/">Ardea_alba</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=49D9148A171E7F2E">49D9148A171E7F2E</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22697043">22697043</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">GRWEG</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/greegr">greegr</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EPPO_Code" title="EPPO Code">EPPO</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://gd.eppo.int/taxon/ARDEAL">ARDEAL</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=368278">368278</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2480943">2480943</a></span></span></li>
+<li><span style="white-space:nowrap;">GNAB: <span class="uid"><a rel="nofollow" class="external text" href="https://www.audubon.org/field-guide/bird/great-egret">great-egret</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Handbook_of_the_Birds_of_the_World" title="Handbook of the Birds of the World">IBC</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.hbw.com/species/great-white-egret-egretta-alba">great-white-egret-egretta-alba</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/144455">144455</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10208292">10208292</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=554135">554135</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22697043">22697043</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0000530172">NHMSYS0000530172</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=110620">110620</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Neotropical_Birds_Online" class="mw-redirect" title="Neotropical Birds Online">Neotropical</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://neotropical.birds.cornell.edu/Species-Account/nb/species/greegr">greegr</a></span></span></li>
+<li><span style="white-space:nowrap;">NZOR: <span class="uid"><a rel="nofollow" class="external text" href="http://www.nzor.org.nz/names/0e38e962-d37c-465d-8772-56e8acfcd389">0e38e962-d37c-465d-8772-56e8acfcd389</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/CITES" title="CITES">Species+</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://speciesplus.net/#/taxon_concepts/5220/legal">5220</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=159381">159381</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1395
+Cached time: 20201102223605
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.976 seconds
+Real time usage: 1.396 seconds
+Preprocessor visited node count: 6813/1000000
+Post‐expand include size: 82779/2097152 bytes
+Template argument size: 8123/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 23/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 93956/5000000 bytes
+Lua time usage: 0.658/10.000 seconds
+Lua memory usage: 11.51 MB/50 MB
+Number of Wikibase entities loaded: 22/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1301.695      1 -total
+ 30.52%  397.238      1 Template:Speciesbox
+ 29.84%  388.374      1 Template:Taxobox/core
+ 20.47%  266.396      1 Template:Reflist
+ 15.11%  196.622      1 Template:Taxonbar
+  8.47%  110.221      1 Template:Cite_iucn
+  6.59%   85.789      1 Template:Citation_needed
+  5.72%   74.492      1 Template:Fix
+  5.65%   73.563      1 Template:Commons_category
+  5.35%   69.651      1 Template:Sister_project
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:238430-0!canonical and timestamp 20201102223604 and revision id 971497720
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Great_egret&amp;oldid=971497720">https://en.wikipedia.org/w/index.php?title=Great_egret&amp;oldid=971497720</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Ardea_(genus)" title="Category:Ardea (genus)">Ardea (genus)</a></li><li><a href="/wiki/Category:Herons" title="Category:Herons">Herons</a></li><li><a href="/wiki/Category:Birds_of_Africa" title="Category:Birds of Africa">Birds of Africa</a></li><li><a href="/wiki/Category:Birds_of_the_Americas" title="Category:Birds of the Americas">Birds of the Americas</a></li><li><a href="/wiki/Category:Birds_of_the_Dominican_Republic" title="Category:Birds of the Dominican Republic">Birds of the Dominican Republic</a></li><li><a href="/wiki/Category:Birds_of_Eurasia" title="Category:Birds of Eurasia">Birds of Eurasia</a></li><li><a href="/wiki/Category:Birds_of_Japan" title="Category:Birds of Japan">Birds of Japan</a></li><li><a href="/wiki/Category:Fauna_of_the_San_Francisco_Bay_Area" title="Category:Fauna of the San Francisco Bay Area">Fauna of the San Francisco Bay Area</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_Finnish-language_sources_(fi)" title="Category:CS1 Finnish-language sources (fi)">CS1 Finnish-language sources (fi)</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_July_2016" title="Category:Articles with unsourced statements from July 2016">Articles with unsourced statements from July 2016</a></li><li><a href="/wiki/Category:Articles_needing_additional_references_from_July_2017" title="Category:Articles needing additional references from July 2017">Articles needing additional references from July 2017</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_20%E2%80%9324_taxon_IDs" title="Category:Taxonbars with 20–24 taxon IDs">Taxonbars with 20–24 taxon IDs</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Great+egret" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Great+egret" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Great_egret" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Great_egret" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Great_egret">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Great_egret&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Great_egret&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Great_egret" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Great_egret" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Great_egret&amp;oldid=971497720" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Great_egret&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Great_egret&amp;id=971497720&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q130730" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Great_egret&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Great_egret&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Ardea_alba" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Ardea_alba" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%9F%D1%81%D1%8B%D1%85%D1%8D%D1%83%D1%8D%D1%85%D1%83%D0%B6%D1%8C" title="Псыхэуэхужь – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Grootwitreier" title="Grootwitreier – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%A8%D9%84%D8%B4%D9%88%D9%86_%D8%A3%D8%A8%D9%8A%D8%B6_%D9%83%D8%A8%D9%8A%D8%B1" title="بلشون أبيض كبير – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-as"><a href="https://as.wikipedia.org/wiki/%E0%A6%AC%E0%A7%B0_%E0%A6%AC%E0%A6%97" title="বৰ বগ – Assamese" lang="as" hreflang="as" class="interlanguage-link-target">অসমীয়া</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Ardea_alba" title="Ardea alba – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/%C4%B0ri_a%C4%9F_va%C4%9F" title="İri ağ vağ – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D2%98%D1%83%D1%80_%D0%B0%D2%A1_%D1%81%D0%B5%D0%BB%D3%99%D0%BD" title="Ҙур аҡ селән – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/%D0%A7%D0%B0%D0%BF%D0%BB%D1%8F_%D0%B1%D0%B5%D0%BB%D0%B0%D1%8F_%D0%B2%D1%8F%D0%BB%D1%96%D0%BA%D0%B0%D1%8F" title="Чапля белая вялікая – Belarusian" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-be-x-old"><a href="https://be-tarask.wikipedia.org/wiki/%D0%A7%D0%B0%D0%BF%D0%BB%D1%8F_%D0%B2%D1%8F%D0%BB%D1%96%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B5%D0%BB%D0%B0%D1%8F" title="Чапля вялікая белая – Belarusian (Taraškievica orthography)" lang="be-tarask" hreflang="be-tarask" class="interlanguage-link-target">Беларуская (тарашкевіца)‎</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%93%D0%BE%D0%BB%D1%8F%D0%BC%D0%B0_%D0%B1%D1%8F%D0%BB%D0%B0_%D1%87%D0%B0%D0%BF%D0%BB%D0%B0" title="Голяма бяла чапла – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Herlegon_bras" title="Herlegon bras – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Agr%C3%B3_blanc" title="Agró blanc – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Ardea_alba" title="Ardea alba – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Volavka_b%C3%ADl%C3%A1" title="Volavka bílá – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Cr%C3%AByr_mawr_gwyn" title="Crëyr mawr gwyn – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/S%C3%B8lvhejre" title="Sølvhejre – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Silberreiher" title="Silberreiher – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/Toohj%C4%AF%CA%BC_ndiigaiitsoh" title="Toohjįʼ ndiigaiitsoh – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-dsb"><a href="https://dsb.wikipedia.org/wiki/Slobrowita_%C5%A1ytawa" title="Slobrowita šytawa – Lower Sorbian" lang="dsb" hreflang="dsb" class="interlanguage-link-target">Dolnoserbski</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/H%C3%B5behaigur" title="Hõbehaigur – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%91%CF%81%CE%B3%CF%85%CF%81%CE%BF%CF%84%CF%83%CE%B9%CE%BA%CE%BD%CE%B9%CE%AC%CF%82" title="Αργυροτσικνιάς – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Ardea_alba" title="Ardea alba – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Granda_egretardeo" title="Granda egretardeo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Koartzatxo_handi" title="Koartzatxo handi – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AD%D9%88%D8%A7%D8%B5%DB%8C%D9%84_%D8%B3%D9%81%DB%8C%D8%AF_%D8%A8%D8%B2%D8%B1%DA%AF" title="حواصیل سفید بزرگ – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Silvurhegri" title="Silvurhegri – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Grande_Aigrette" title="Grande Aigrette – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-fy"><a href="https://fy.wikipedia.org/wiki/Grutte_wite_reager" title="Grutte wite reager – Western Frisian" lang="fy" hreflang="fy" class="interlanguage-link-target">Frysk</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/%C3%89igrit_mh%C3%B3r" title="Éigrit mhór – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gd"><a href="https://gd.wikipedia.org/wiki/Corra-bh%C3%A0n" title="Corra-bhàn – Scottish Gaelic" lang="gd" hreflang="gd" class="interlanguage-link-target">Gàidhlig</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Garza_branca" title="Garza branca – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EB%8C%80%EB%B0%B1%EB%A1%9C" title="대백로 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ha"><a href="https://ha.wikipedia.org/wiki/Farin_zalbe" title="Farin zalbe – Hausa" lang="ha" hreflang="ha" class="interlanguage-link-target">Hausa</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D5%8D%D5%BA%D5%AB%D5%BF%D5%A1%D5%AF_%D5%B4%D5%A5%D5%AE_%D5%BF%D5%A1%D5%BC%D5%A5%D5%B2" title="Սպիտակ մեծ տառեղ – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-hsb"><a href="https://hsb.wikipedia.org/wiki/B%C4%9B%C5%82a_%C4%8Dapla" title="Běła čapla – Upper Sorbian" lang="hsb" hreflang="hsb" class="interlanguage-link-target">Hornjoserbsce</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Velika_bijela_%C4%8Daplja" title="Velika bijela čaplja – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Kuntul_besar" title="Kuntul besar – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-ia"><a href="https://ia.wikipedia.org/wiki/Ardea_alba" title="Ardea alba – Interlingua" lang="ia" hreflang="ia" class="interlanguage-link-target">Interlingua</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Ardea_alba" title="Ardea alba – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%9C%D7%91%D7%A0%D7%99%D7%AA_%D7%92%D7%93%D7%95%D7%9C%D7%94" title="לבנית גדולה – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-pam"><a href="https://pam.wikipedia.org/wiki/Tagak" title="Tagak – Pampanga" lang="pam" hreflang="pam" class="interlanguage-link-target">Kapampangan</a></li><li class="interlanguage-link interwiki-ka badge-Q17437796 badge-featuredarticle" title="featured article badge"><a href="https://ka.wikipedia.org/wiki/%E1%83%93%E1%83%98%E1%83%93%E1%83%98_%E1%83%9D%E1%83%A7%E1%83%90%E1%83%A0%E1%83%98" title="დიდი ოყარი – Georgian" lang="ka" hreflang="ka" class="interlanguage-link-target">ქართული</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D2%AE%D0%BB%D0%BA%D0%B5%D0%BD_%D0%B0%D2%9B%D2%9B%D2%B1%D1%82%D0%B0%D0%BD" title="Үлкен аққұтан – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-ku"><a href="https://ku.wikipedia.org/wiki/%C5%9Eaqaviy%C3%AA_sp%C3%AE_y%C3%AA_mezin" title="Şaqaviyê spî yê mezin – Kurdish" lang="ku" hreflang="ku" class="interlanguage-link-target">Kurdî</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Lielais_baltais_g%C4%81rnis" title="Lielais baltais gārnis – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Didysis_baltasis_garnys" title="Didysis baltasis garnys – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-olo"><a href="https://olo.wikipedia.org/wiki/Jalohaigari" title="Jalohaigari – Livvi-Karelian" lang="olo" hreflang="olo" class="interlanguage-link-target">Livvinkarjala</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Nagy_k%C3%B3csag" title="Nagy kócsag – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%93%D0%BE%D0%BB%D0%B5%D0%BC%D0%B0_%D0%B1%D0%B5%D0%BB%D0%B0_%D1%87%D0%B0%D0%BF%D1%98%D0%B0" title="Голема бела чапја – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B5%86%E0%B4%B0%E0%B5%81%E0%B4%AE%E0%B5%81%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B4%BF" title="പെരുമുണ്ടി – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-mi"><a href="https://mi.wikipedia.org/wiki/K%C5%8Dtuku" title="Kōtuku – Maori" lang="mi" hreflang="mi" class="interlanguage-link-target">Māori</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Burung_Bangau_Besar" title="Burung Bangau Besar – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Grote_zilverreiger" title="Grote zilverreiger – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ne"><a href="https://ne.wikipedia.org/wiki/%E0%A4%A0%E0%A5%82%E0%A4%B2%E0%A5%8B_%E0%A4%B8%E0%A5%87%E0%A4%A4%E0%A5%8B%E0%A4%AC%E0%A4%95%E0%A5%81%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A4%BE" title="ठूलो सेतोबकुल्ला – Nepali" lang="ne" hreflang="ne" class="interlanguage-link-target">नेपाली</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%82%B5%E3%82%AE" title="ダイサギ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Egretthegre" title="Egretthegre – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Egretthegre" title="Egretthegre – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Egretta_alba" title="Egretta alba – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Czapla_bia%C5%82a" title="Czapla biała – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Gar%C3%A7a-branca-grande" title="Garça-branca-grande – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-qu"><a href="https://qu.wikipedia.org/wiki/Hatun_waqar" title="Hatun waqar – Quechua" lang="qu" hreflang="qu" class="interlanguage-link-target">Runa Simi</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%91%D1%96%D0%BB%D0%B0_%D1%87%D0%B0%D0%BF%D0%BB%D1%8F" title="Біла чапля – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F_%D0%B1%D0%B5%D0%BB%D0%B0%D1%8F_%D1%86%D0%B0%D0%BF%D0%BB%D1%8F" title="Большая белая цапля – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Great_egret" title="Great egret – Simple English" lang="en-simple" hreflang="en-simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Belu%C5%A1a_ve%C4%BEk%C3%A1" title="Beluša veľká – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/Velika_bela_%C4%8Daplja" title="Velika bela čaplja – Slovenian" lang="sl" hreflang="sl" class="interlanguage-link-target">Slovenščina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0_%D0%B1%D0%B5%D0%BB%D0%B0_%D1%87%D0%B0%D0%BF%D1%99%D0%B0" title="Велика бела чапља – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/Velika_bijela_%C4%8Daplja" title="Velika bijela čaplja – Serbo-Croatian" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Jalohaikara" title="Jalohaikara – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/%C3%84gretth%C3%A4ger" title="Ägretthäger – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%AA%E0%AF%86%E0%AE%B0%E0%AE%BF%E0%AE%AF_%E0%AE%95%E0%AF%8A%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81" title="பெரிய கொக்கு – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-tt"><a href="https://tt.wikipedia.org/wiki/%D0%97%D1%83%D1%80_%D0%B0%D0%BA_%D1%87%D0%B5%D0%BB%D3%99%D0%BD" title="Зур ак челән – Tatar" lang="tt" hreflang="tt" class="interlanguage-link-target">Татарча/tatarça</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%99%E0%B8%81%E0%B8%A2%E0%B8%B2%E0%B8%87%E0%B9%82%E0%B8%97%E0%B8%99%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88" title="นกยางโทนใหญ่ – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/B%C3%BCy%C3%BCk_ak_bal%C4%B1k%C3%A7%C4%B1l" title="Büyük ak balıkçıl – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A7%D0%B5%D0%BF%D1%83%D1%80%D0%B0_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0" title="Чепура велика – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Di%E1%BB%87c_l%E1%BB%9Bn" title="Diệc lớn – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Ardea_alba" title="Ardea alba – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-wuu"><a href="https://wuu.wikipedia.org/wiki/%E5%A4%A7%E7%99%BD%E9%B9%AD" title="大白鹭 – Wu Chinese" lang="wuu" hreflang="wuu" class="interlanguage-link-target">吴语</a></li><li class="interlanguage-link interwiki-zh-yue"><a href="https://zh-yue.wikipedia.org/wiki/%E5%A4%A7%E7%99%BD%E9%B7%BA" title="大白鷺 – Cantonese" lang="yue" hreflang="yue" class="interlanguage-link-target">粵語</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%A4%A7%E7%99%BD%E9%B9%AD" title="大白鹭 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q130730#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 6 August 2020, at 14:19<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Great_egret&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.976","walltime":"1.396","ppvisitednodes":{"value":6813,"limit":1000000},"postexpandincludesize":{"value":82779,"limit":2097152},"templateargumentsize":{"value":8123,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":23,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":93956,"limit":5000000},"entityaccesscount":{"value":22,"limit":400},"timingprofile":["100.00% 1301.695      1 -total"," 30.52%  397.238      1 Template:Speciesbox"," 29.84%  388.374      1 Template:Taxobox/core"," 20.47%  266.396      1 Template:Reflist"," 15.11%  196.622      1 Template:Taxonbar","  8.47%  110.221      1 Template:Cite_iucn","  6.59%   85.789      1 Template:Citation_needed","  5.72%   74.492      1 Template:Fix","  5.65%   73.563      1 Template:Commons_category","  5.35%   69.651      1 Template:Sister_project"]},"scribunto":{"limitreport-timeusage":{"value":"0.658","limit":"10.000"},"limitreport-memusage":{"value":12067894,"limit":52428800}},"cachereport":{"origin":"mw1395","timestamp":"20201102223605","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Great egret","url":"https:\/\/en.wikipedia.org\/wiki\/Great_egret","sameAs":"http:\/\/www.wikidata.org\/entity\/Q130730","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q130730","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-06-01T16:27:34Z","dateModified":"2020-08-06T14:19:32Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/7\/7b\/Great_egret_%28Ardea_alba%29_Tobago.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":212,"wgHostname":"mw1330"});});</script>
+</body></html>

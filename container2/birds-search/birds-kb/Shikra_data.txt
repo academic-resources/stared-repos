@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Shikra - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"2c9a34c0-364f-43b6-9056-84a5beedec36","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Shikra","wgTitle":"Shikra","wgCurRevisionId":986080202,"wgRevisionId":986080202,"wgArticleId":461827,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","CS1: long volume value","CS1 errors: missing periodical","Articles with 'species' microformats","Commons category link is on Wikidata","IUCN Red List least concern species","Accipiter","True hawks","Birds of Central Asia","Birds of South Asia","Birds of Southeast Asia",
+"Birds of Western Asia","Birds of prey of Sub-Saharan Africa","Birds described in 1788","Taxa named by Johann Friedrich Gmelin"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Shikra","wgRelevantArticleId":461827,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q715710"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":
+"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","mediawiki.page.gallery.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming",
+"ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.page.gallery.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shikra1.jpg/1200px-Shikra1.jpg"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Shikra"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Shikra&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Shikra&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Shikra"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Shikra rootpage-Shikra skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Shikra</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">For a village in Kutch district, Gujarat, India, see <a href="/wiki/Sikra" title="Sikra">Sikra</a>.</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Shikra
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Shikra1.jpg" class="image"><img alt="Shikra1.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shikra1.jpg/220px-Shikra1.jpg" decoding="async" width="220" height="265" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shikra1.jpg/330px-Shikra1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Shikra1.jpg/440px-Shikra1.jpg 2x" data-file-width="1452" data-file-height="1751" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Adult female (<i>dussumieri</i>)<br /><div class="thumb tright"><div class="thumbinner" style="width:222px;"><div class="mediaContainer" style="width:220px"><audio id="mwe_player_0" controls="" preload="none" style="width:220px" class="kskin" data-durationhint="8.076" data-startoffset="0" data-mwtitle="Shikra_calls.ogg" data-mwprovider="wikimediacommons"><source src="//upload.wikimedia.org/wikipedia/commons/e/ed/Shikra_calls.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Original Ogg file (65 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="65416" /><source src="//upload.wikimedia.org/wikipedia/commons/transcoded/e/ed/Shikra_calls.ogg/Shikra_calls.ogg.mp3" type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0" data-height="0" data-bandwidth="87944" /></audio></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Shikra_calls.ogg" class="internal" title="Enlarge"></a></div>Calls</div></div></div>
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Accipiter" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Accipitriformes" title="Accipitriformes">Accipitriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Accipitridae" title="Accipitridae">Accipitridae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Accipiter" title="Accipiter"><i>Accipiter</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>A.&#160;badius</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Accipiter badius</i></span></b><br /><div style="font-size: 85%;"><a href="/wiki/Johann_Friedrich_Gmelin" title="Johann Friedrich Gmelin">Gmelin</a>, 1788</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Subspecies
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>cenchroides (<a href="/wiki/Nikolai_Severtzov" title="Nikolai Severtzov">Severtzov</a>, 1873)</i></li>
+<li><i>dussumieri</i> (Temminck, 1824)</li>
+<li><i>badius</i> (Gmelin, 1788)</li>
+<li><i>poliopsis</i> (<a href="/wiki/Allan_Octavian_Hume" title="Allan Octavian Hume">Hume</a>, 1874)</li>
+<li><i>sphenurus</i> (Rüppell, 1836)</li>
+<li><i>polyzonoides</i> A. Smith, 1838</li></ul>
+</td></tr>
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:AccipiterBadiusIUCNver2018_2.png" class="image"><img alt="AccipiterBadiusIUCNver2018 2.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/54/AccipiterBadiusIUCNver2018_2.png/220px-AccipiterBadiusIUCNver2018_2.png" decoding="async" width="220" height="156" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/54/AccipiterBadiusIUCNver2018_2.png/330px-AccipiterBadiusIUCNver2018_2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/54/AccipiterBadiusIUCNver2018_2.png/440px-AccipiterBadiusIUCNver2018_2.png 2x" data-file-width="3507" data-file-height="2480" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Range of <i>A. badius</i><style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#00FF00; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Breeding</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#008000; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Resident</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#007FFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Non-breeding</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<p><i>Astur badius</i><br /><i>Scelospizias badius</i><br /><i>Micronisus badius</i>
+</p>
+</td></tr>
+
+</tbody></table>
+<p>The <b>shikra</b> (<i>Accipiter badius</i>) is a small <a href="/wiki/Bird_of_prey" title="Bird of prey">bird of prey</a> in the family <a href="/wiki/Accipitridae" title="Accipitridae">Accipitridae</a> found widely distributed in Asia and Africa where it is also called the <b>little banded goshawk</b>. The African forms may represent a separate species but have usually been considered as subspecies of the shikra. The shikra is very similar in appearance to other sparrowhawk species including the <a href="/wiki/Chinese_goshawk" class="mw-redirect" title="Chinese goshawk">Chinese goshawk</a> and <a href="/wiki/Eurasian_sparrowhawk" title="Eurasian sparrowhawk">Eurasian sparrowhawk</a>. They have a sharp two note call and have the typical flap and glide flight. Their calls are imitated by <a href="/wiki/Drongo" title="Drongo">drongos</a> and the <a href="/wiki/Common_hawk-cuckoo" title="Common hawk-cuckoo">common hawk-cuckoo</a> resembles it in plumage.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Identification"><span class="tocnumber">1</span> <span class="toctext">Identification</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Taxonomy_and_systematics"><span class="tocnumber">2</span> <span class="toctext">Taxonomy and systematics</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Ecology"><span class="tocnumber">3</span> <span class="toctext">Ecology</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#In_culture"><span class="tocnumber">4</span> <span class="toctext">In culture</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Gallery"><span class="tocnumber">5</span> <span class="toctext">Gallery</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Identification">Identification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shikra&amp;action=edit&amp;section=1" title="Edit section: Identification">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Shikra_(Female)_at_Hodal-_I2-Haryana_IMG_7970.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/55/Shikra_%28Female%29_at_Hodal-_I2-Haryana_IMG_7970.jpg/220px-Shikra_%28Female%29_at_Hodal-_I2-Haryana_IMG_7970.jpg" decoding="async" width="220" height="217" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/55/Shikra_%28Female%29_at_Hodal-_I2-Haryana_IMG_7970.jpg/330px-Shikra_%28Female%29_at_Hodal-_I2-Haryana_IMG_7970.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/55/Shikra_%28Female%29_at_Hodal-_I2-Haryana_IMG_7970.jpg/440px-Shikra_%28Female%29_at_Hodal-_I2-Haryana_IMG_7970.jpg 2x" data-file-width="659" data-file-height="650" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Shikra_(Female)_at_Hodal-_I2-Haryana_IMG_7970.jpg" class="internal" title="Enlarge"></a></div>Female (<a href="/wiki/Hodal" title="Hodal">Hodal</a>, <a href="/wiki/India" title="India">India</a>)</div></div></div>
+<p>The shikra is a small raptor (26–30&#160;cm long) and like most other <i>Accipiter</i> hawks, this species has short rounded wings and a narrow and somewhat long tail. Adults are whitish on the underside with fine rufous bars while the upperparts are grey. The lower belly is less barred and the thighs are whitish. Males have a red iris while the females have a less red (yellowish orange) iris and brownish upperparts apart from heavier barring on the underparts. The females are slightly larger. The mesial stripe on the throat is dark but narrow. In flight the male seen from below shows a light wing lining (underwing coverts) and has blackish wing tips. When seen from above the tail bands are faintly marked on the lateral tail feathers and not as strongly marked as in the <a href="/wiki/Eurasian_sparrowhawk" title="Eurasian sparrowhawk">Eurasian sparrowhawk</a>. The central tail feathers are unbanded and only have a dark terminal band.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> Juveniles have dark streaks and spots on the upper breast and the wing is narrowly barred while the tail has dark but narrow bands. A post juvenile transitional plumage is found with very strong barring on the contour feathers of the underside.<sup id="cite_ref-molt_3-0" class="reference"><a href="#cite_note-molt-3">&#91;3&#93;</a></sup> The call is <i>pee-wee</i>, the first note being higher and the second being longer. In flight the calls are shorter and sharper <i>kik-ki ... kik-ki</i>.  The <a href="/wiki/Chinese_sparrowhawk" title="Chinese sparrowhawk">Chinese sparrowhawk</a> is somewhat similar in appearance but has swollen bright orange ceres and yellow legs with the wing tips entirely black.<sup id="cite_ref-pcr_4-0" class="reference"><a href="#cite_note-pcr-4">&#91;4&#93;</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Taxonomy_and_systematics">Taxonomy and systematics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shikra&amp;action=edit&amp;section=2" title="Edit section: Taxonomy and systematics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Several subspecies are recognized across its range and some of them may be treated as full species. It has been suggested, based on differences in morphology and calls, that the African forms do not belong to this species.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> Subspecies <i>cenchroides</i> is larger and paler and found in Turkestan, Afghanistan and eastern Iran. The Indian population <i>dussumieri</i> is resident on the plains and lower hills (up to 1400 m in the Himalayas). The nominate form is found in Sri Lanka and has somewhat darker grey upperparts. The Burmese shikra <i>A. b. poliopsis</i> may represent a distinct species. The population on Car Nicobar Island, earlier treated as a subspecies <i>butleri</i><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> and that on Katchall Island, <i>obsoletus</i> are now treated as a sub-species within a full species, the Nicobar sparrowhawk (<i>Accipiter butleri</i>).<sup id="cite_ref-pcr_4-1" class="reference"><a href="#cite_note-pcr-4">&#91;4&#93;</a></sup><sup id="cite_ref-hbk_8-0" class="reference"><a href="#cite_note-hbk-8">&#91;8&#93;</a></sup> The west African population <i>A. b. sphenurus</i> is migratory while the southern African <i>A. b. polyzonoides</i> is more nomadic in its movements. In Asia only <i>A. b. cenchroides</i> is migratory.<sup id="cite_ref-molt_3-1" class="reference"><a href="#cite_note-molt-3">&#91;3&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Ecology">Ecology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shikra&amp;action=edit&amp;section=3" title="Edit section: Ecology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Shikra_(Accipiter_badius)_with_a_Garden_Lizard_W2_IMG_8979.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Shikra_%28Accipiter_badius%29_with_a_Garden_Lizard_W2_IMG_8979.jpg/220px-Shikra_%28Accipiter_badius%29_with_a_Garden_Lizard_W2_IMG_8979.jpg" decoding="async" width="220" height="215" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Shikra_%28Accipiter_badius%29_with_a_Garden_Lizard_W2_IMG_8979.jpg/330px-Shikra_%28Accipiter_badius%29_with_a_Garden_Lizard_W2_IMG_8979.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Shikra_%28Accipiter_badius%29_with_a_Garden_Lizard_W2_IMG_8979.jpg/440px-Shikra_%28Accipiter_badius%29_with_a_Garden_Lizard_W2_IMG_8979.jpg 2x" data-file-width="614" data-file-height="600" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Shikra_(Accipiter_badius)_with_a_Garden_Lizard_W2_IMG_8979.jpg" class="internal" title="Enlarge"></a></div>Immature feeding on <i><a href="/wiki/Calotes_versicolor" class="mw-redirect" title="Calotes versicolor">Calotes versicolor</a></i></div></div></div>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Accipiter_badius_MHNT.ZOO.2010.11.94.1.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Accipiter_badius_MHNT.ZOO.2010.11.94.1.jpg/220px-Accipiter_badius_MHNT.ZOO.2010.11.94.1.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Accipiter_badius_MHNT.ZOO.2010.11.94.1.jpg/330px-Accipiter_badius_MHNT.ZOO.2010.11.94.1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/94/Accipiter_badius_MHNT.ZOO.2010.11.94.1.jpg/440px-Accipiter_badius_MHNT.ZOO.2010.11.94.1.jpg 2x" data-file-width="3780" data-file-height="2835" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Accipiter_badius_MHNT.ZOO.2010.11.94.1.jpg" class="internal" title="Enlarge"></a></div><i>Accipiter badius</i> - <a href="/wiki/MHNT" class="mw-redirect" title="MHNT">MHNT</a></div></div></div>
+<p>The shikra is found in a range of habitats including forests, farmland and urban areas. They are usually seen singly or in pairs. The flight is typical with flaps and glides. During the breeding season pairs will soar on thermals and stoop at each other. Their flight usually draws alarms among smaller birds and squirrels. They feed on rodents (including <i><a href="/wiki/Meriones_hurrianae" class="mw-redirect" title="Meriones hurrianae">Meriones hurrianae</a></i><sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>), squirrels, small birds, small reptiles (mainly lizards but sometimes small snakes<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>) and insects.<sup id="cite_ref-hbk_8-1" class="reference"><a href="#cite_note-hbk-8">&#91;8&#93;</a></sup> Small birds usually dive through foliage to avoid a shikra and a Small Blue Kingfisher has been observed diving into water to escape. Babblers have been observed to rally together to drive away a shikra.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> They will descend to the ground to feast on emerging winged termites,<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> hunt at dusk for small bats<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup> (such as <i>Cynopterus sphinx</i><sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup><sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>) and in rare instances they may even resort to feed on carrion.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup> In one instance a male was found feeding on a dead chick at the nest.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup> Their calls are mimicked by <a href="/wiki/Drongo" title="Drongo">drongos</a> and this behaviour is thought to aid in stealing food by alarming other birds that the drongos associate with.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup><sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup>
+</p><p>The breeding season in India is in summer from March to June. The nest is a platform similar to that of crows lined with grass. Both sexes help build the nest, twigs being carried in their feet.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> Like crows, they may also make use of metal wires.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup> The usual clutch is 3 to 4 eggs (when eggs are removed they lay replacements and one observer noted that they could lay as many as 7 in a season<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup>) which are pale bluish grey stippled on the broad end in black. The incubation period is 18 to 21 days.<sup id="cite_ref-hbk_8-2" class="reference"><a href="#cite_note-hbk-8">&#91;8&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="In_culture">In culture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shikra&amp;action=edit&amp;section=4" title="Edit section: In culture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The shikra was a favourite among <a href="/wiki/Falconry" title="Falconry">falconers</a> in India and Pakistan due to the ease with which it could be trained and was frequently used to procure food for the more prized falcons. They were noted for their pluck and ability to take much larger birds including partrigdes, crows and even young peafowl.<sup id="cite_ref-hbk_8-3" class="reference"><a href="#cite_note-hbk-8">&#91;8&#93;</a></sup><sup id="cite_ref-whistler_23-0" class="reference"><a href="#cite_note-whistler-23">&#91;23&#93;</a></sup><sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup> The word <i>shikra</i> or <i>shikara</i> means hunter in the Hindi language (the male was called <i>chipak</i> or <i>chipka</i> based on call<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;25&#93;</a></sup>) 
+The word Shikra is borrowed from the Urdu word (شِـكْـره) which is derived from the word shikari (شِكارى) meaning hunter. Hunting in Persian is referred to as shikar (شِـكار), and in Arabic the hunt master in the Mameluke era was known as Ameer Shikar (أمير شِـكار). The word Shikari may also be used in English in the sense of "hunter".<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;26&#93;</a></sup>
+</p><p>The word is also used in the French name <i>Le Chicquera</i> which was however given to the <a href="/wiki/Red-necked_falcon" title="Red-necked falcon">red-necked falcon</a> by Levaillant in 1799.<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;27&#93;</a></sup><sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;28&#93;</a></sup><sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;29&#93;</a></sup>
+</p><p>An <a href="/wiki/Indian_Navy" title="Indian Navy">Indian Navy</a> <a href="/wiki/Helicopter" title="Helicopter">helicopter</a> base was named <a href="/wiki/INS_Shikra" title="INS Shikra">INS Shikra</a> in 2009.
+</p><p>The shikra is also the mascot for the <a href="/wiki/149_Squadron,_Republic_of_Singapore_Air_Force" title="149 Squadron, Republic of Singapore Air Force">149 Squadron</a> of the <a href="/wiki/Republic_of_Singapore_Air_Force" title="Republic of Singapore Air Force">Republic of Singapore Air Force</a>, which operates the <a href="/wiki/Northrop_F-5#Upgrades" title="Northrop F-5">F5S/T Tiger IIs</a> fighter jets.
+</p><p>Famous Punjabi poet <a href="/wiki/Shiv_Kumar_Batalvi" title="Shiv Kumar Batalvi">Shiv Kumar Batalvi</a> wrote a poem called "Main Ik Shikra Yaar Banaya" about a lost love wherein he compares her to a shikra.<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">&#91;30&#93;</a></sup><sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;31&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Gallery">Gallery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shikra&amp;action=edit&amp;section=5" title="Edit section: Gallery">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Shikra_bird,_Pune.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Shikra_bird%2C_Pune.jpg/90px-Shikra_bird%2C_Pune.jpg" decoding="async" width="90" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Shikra_bird%2C_Pune.jpg/135px-Shikra_bird%2C_Pune.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Shikra_bird%2C_Pune.jpg/180px-Shikra_bird%2C_Pune.jpg 2x" data-file-width="1547" data-file-height="2063" /></a></div></div>
+			<div class="gallerytext">
+<p>Shikra bird, Pune
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:ShikraPune.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cd/ShikraPune.jpg/76px-ShikraPune.jpg" decoding="async" width="76" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cd/ShikraPune.jpg/114px-ShikraPune.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cd/ShikraPune.jpg/152px-ShikraPune.jpg 2x" data-file-width="1332" data-file-height="2097" /></a></div></div>
+			<div class="gallerytext">
+<p>Male at Pune (Maharashtra), India
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Shikra_-_Male.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Shikra_-_Male.jpg/95px-Shikra_-_Male.jpg" decoding="async" width="95" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Shikra_-_Male.jpg/142px-Shikra_-_Male.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Shikra_-_Male.jpg/190px-Shikra_-_Male.jpg 2x" data-file-width="872" data-file-height="1103" /></a></div></div>
+			<div class="gallerytext">
+<p>Male at <a href="/wiki/Chandigarh" title="Chandigarh">Chandigarh</a>, India
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:15px auto;"><a href="/wiki/File:Shikra_-_juvenile.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shikra_-_juvenile.jpg/65px-Shikra_-_juvenile.jpg" decoding="async" width="65" height="120" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shikra_-_juvenile.jpg/98px-Shikra_-_juvenile.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shikra_-_juvenile.jpg/131px-Shikra_-_juvenile.jpg 2x" data-file-width="824" data-file-height="1507" /></a></div></div>
+			<div class="gallerytext">
+<p>Juvenile at <a href="/wiki/Chandigarh" title="Chandigarh">Chandigarh</a>, India
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:28px auto;"><a href="/wiki/File:Shikra_3.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Shikra_3.jpg/120px-Shikra_3.jpg" decoding="async" width="120" height="94" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Shikra_3.jpg/180px-Shikra_3.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/64/Shikra_3.jpg/240px-Shikra_3.jpg 2x" data-file-width="2234" data-file-height="1755" /></a></div></div>
+			<div class="gallerytext">
+<p>Female with a kill
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:35px auto;"><a href="/wiki/File:Shikra_flight.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Shikra_flight.jpg/120px-Shikra_flight.jpg" decoding="async" width="120" height="80" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Shikra_flight.jpg/180px-Shikra_flight.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Shikra_flight.jpg/240px-Shikra_flight.jpg 2x" data-file-width="2286" data-file-height="1518" /></a></div></div>
+			<div class="gallerytext">
+<p>Shikra in flight
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:36.5px auto;"><a href="/wiki/File:Shikra_Bangalore.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Shikra_Bangalore.jpg/120px-Shikra_Bangalore.jpg" decoding="async" width="120" height="77" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Shikra_Bangalore.jpg/180px-Shikra_Bangalore.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Shikra_Bangalore.jpg/240px-Shikra_Bangalore.jpg 2x" data-file-width="987" data-file-height="633" /></a></div></div>
+			<div class="gallerytext">
+<p>At Bangalore, India
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:28.5px auto;"><a href="/wiki/File:Accipiter_badius_cenchroides_MHNT.ZOO.2010.11.94.3.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Accipiter_badius_cenchroides_MHNT.ZOO.2010.11.94.3.jpg/120px-Accipiter_badius_cenchroides_MHNT.ZOO.2010.11.94.3.jpg" decoding="async" width="120" height="93" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Accipiter_badius_cenchroides_MHNT.ZOO.2010.11.94.3.jpg/180px-Accipiter_badius_cenchroides_MHNT.ZOO.2010.11.94.3.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Accipiter_badius_cenchroides_MHNT.ZOO.2010.11.94.3.jpg/240px-Accipiter_badius_cenchroides_MHNT.ZOO.2010.11.94.3.jpg 2x" data-file-width="4252" data-file-height="3307" /></a></div></div>
+			<div class="gallerytext">
+<p><i>Accipiter badius cenchroides</i> - <a href="/wiki/MHNT" class="mw-redirect" title="MHNT">MHNT</a>
+</p>
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:35px auto;"><a href="/wiki/File:Shikra_from_our_balcony_01.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Shikra_from_our_balcony_01.jpg/120px-Shikra_from_our_balcony_01.jpg" decoding="async" width="120" height="80" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Shikra_from_our_balcony_01.jpg/180px-Shikra_from_our_balcony_01.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Shikra_from_our_balcony_01.jpg/240px-Shikra_from_our_balcony_01.jpg 2x" data-file-width="2500" data-file-height="1667" /></a></div></div>
+			<div class="gallerytext">
+<p>Bangalore, India
+</p>
+			</div>
+		</div></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shikra&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 35em; -webkit-column-width: 35em; column-width: 35em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22695490/0">"<i>Accipiter badius</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Accipiter+badius&amp;rft.volume=2012&amp;rft.date=2012&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22695490%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite id="CITEREFMees,_GF1981" class="citation journal cs1">Mees, GF (1981). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/44708303">"The Sparrow-Hawks (<i>Accipiter</i>) of the Andaman Islands"</a>. <i>J. Bombay Nat. Hist. Soc</i>. <b>77</b> (3): 371–412.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Bombay+Nat.+Hist.+Soc.&amp;rft.atitle=The+Sparrow-Hawks+%28Accipiter%29+of+the+Andaman+Islands.&amp;rft.volume=77&amp;rft.issue=3&amp;rft.pages=371-412&amp;rft.date=1981&amp;rft.au=Mees%2C+GF&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F44708303&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-molt-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-molt_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-molt_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFHerremans_MLouette,_M2000" class="citation journal cs1">Herremans M &amp; Louette, M (2000). <a rel="nofollow" class="external text" href="http://sora.unm.edu/sites/default/files/journals/jrr/v034n04/p00249-p00261.pdf">"A partial post-juvenile molt and transitional plumage in the shikra (<i>Accipiter badius</i>) and Grey Frog Hawk (<i>Accipiter soloensis</i>)"</a> <span class="cs1-format">(PDF)</span>. <i>Journal of Raptor Research</i>. <b>34</b> (4): 249–261.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Raptor+Research&amp;rft.atitle=A+partial+post-juvenile+molt+and+transitional+plumage+in+the+shikra+%28Accipiter+badius%29+and+Grey+Frog+Hawk+%28Accipiter+soloensis%29&amp;rft.volume=34&amp;rft.issue=4&amp;rft.pages=249-261&amp;rft.date=2000&amp;rft.au=Herremans+M&amp;rft.au=Louette%2C+M&amp;rft_id=http%3A%2F%2Fsora.unm.edu%2Fsites%2Fdefault%2Ffiles%2Fjournals%2Fjrr%2Fv034n04%2Fp00249-p00261.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-pcr-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-pcr_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-pcr_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFRasmussen_PCAnderton,_JC2005" class="citation book cs1">Rasmussen PC &amp; Anderton, JC (2005). <i>Birds of South Asia. The Ripley Guide. Volume 2</i>. Smithsonian Institution and Lynx Edicions. p.&#160;97. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/8487334660" title="Special:BookSources/8487334660"><bdi>8487334660</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Birds+of+South+Asia.+The+Ripley+Guide.+Volume+2&amp;rft.pages=97&amp;rft.pub=Smithsonian+Institution+and+Lynx+Edicions&amp;rft.date=2005&amp;rft.isbn=8487334660&amp;rft.au=Rasmussen+PC&amp;rft.au=Anderton%2C+JC&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite id="CITEREFBlanford_WT1895" class="citation book cs1">Blanford WT (1895). <a rel="nofollow" class="external text" href="https://archive.org/stream/birdsindia03oaterich#page/397/mode/1up"><i>The Fauna of British India, Including Ceylon and Burma. Birds. Volume 3</i></a>. London: Taylor and Francis. pp.&#160;398–400.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Fauna+of+British+India%2C+Including+Ceylon+and+Burma.+Birds.+Volume+3&amp;rft.place=London&amp;rft.pages=398-400&amp;rft.pub=Taylor+and+Francis&amp;rft.date=1895&amp;rft.au=Blanford+WT&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2Fbirdsindia03oaterich%23page%2F397%2Fmode%2F1up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite id="CITEREFGurney_JH" class="citation journal cs1">Gurney JH. <a rel="nofollow" class="external text" href="https://archive.org/stream/ibis53brit#page/359/mode/1up">"Notes on a 'Catalogue of the Accipitres in the British Museum,' by R. Bowdler Sharpe (1874)"</a>. <i>Ibis</i>: 353–370. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fj.1474-919X.1875.tb05981.x">10.1111/j.1474-919X.1875.tb05981.x</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ibis&amp;rft.atitle=Notes+on+a+%27Catalogue+of+the+Accipitres+in+the+British+Museum%2C%27+by+R.+Bowdler+Sharpe+%281874%29&amp;rft.pages=353-370&amp;rft_id=info%3Adoi%2F10.1111%2Fj.1474-919X.1875.tb05981.x&amp;rft.au=Gurney+JH&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2Fibis53brit%23page%2F359%2Fmode%2F1up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite id="CITEREFGurney_JH" class="citation journal cs1">Gurney JH. <a rel="nofollow" class="external text" href="https://archive.org/stream/ibis47brit#page/290/mode/2up">"Bulletin of the British Ornithologists Club. No 50 (January 30th, 1898)"</a>. <i>Ibis</i>. 4 (seventh series): 290–291. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fj.1474-919X.1898.tb05529.x">10.1111/j.1474-919X.1898.tb05529.x</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ibis&amp;rft.atitle=Bulletin+of+the+British+Ornithologists+Club.+No+50+%28January+30th%2C+1898%29&amp;rft.volume=4+%28seventh+series%29&amp;rft.pages=290-291&amp;rft_id=info%3Adoi%2F10.1111%2Fj.1474-919X.1898.tb05529.x&amp;rft.au=Gurney+JH&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2Fibis47brit%23page%2F290%2Fmode%2F2up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-hbk-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-hbk_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-hbk_8-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-hbk_8-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-hbk_8-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFAli_SRipleyS_D1978" class="citation book cs1">Ali S; Ripley &amp; S D (1978). <i>Handbook of the Birds of India and Pakistan. Volume 1</i> (2nd ed.). New Delhi: Oxford University Press. pp.&#160;234–239. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-19-565506-0" title="Special:BookSources/0-19-565506-0"><bdi>0-19-565506-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+the+Birds+of+India+and+Pakistan.+Volume+1&amp;rft.place=New+Delhi&amp;rft.pages=234-239&amp;rft.edition=2nd&amp;rft.pub=Oxford+University+Press&amp;rft.date=1978&amp;rft.isbn=0-19-565506-0&amp;rft.au=Ali+S&amp;rft.au=Ripley&amp;rft.au=S+D&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite id="CITEREFKankane,_PL1996" class="citation journal cs1">Kankane, PL (1996). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/48582811">"Strange death of a shikra"</a>. <i>J. Bombay Nat. Hist. Soc</i>. <b>96</b>: 140–141.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Bombay+Nat.+Hist.+Soc.&amp;rft.atitle=Strange+death+of+a+shikra&amp;rft.volume=96&amp;rft.pages=140-141&amp;rft.date=1996&amp;rft.au=Kankane%2C+PL&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F48582811&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite id="CITEREFJha,_Samiran2002" class="citation journal cs1">Jha, Samiran (2002). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/48604196">"Attempted feeding by a shikra <i>Accipiter badius</i> family Accipitridae, on buffstriped keelback <i>Amphiesma stolata</i>, family Colubridae"</a>. <i>J. Bombay Nat. Hist. Soc</i>. <b>99</b> (2): 298.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Bombay+Nat.+Hist.+Soc.&amp;rft.atitle=Attempted+feeding+by+a+shikra+Accipiter+badius+family+Accipitridae%2C+on+buffstriped+keelback+Amphiesma+stolata%2C+family+Colubridae&amp;rft.volume=99&amp;rft.issue=2&amp;rft.pages=298&amp;rft.date=2002&amp;rft.au=Jha%2C+Samiran&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F48604196&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite id="CITEREFOsmaston,_BB1923" class="citation journal cs1">Osmaston, BB (1923). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/47865097">"The Shikra <i>Astur badius</i>"</a>. <i>J. Bombay Nat. Hist. Soc</i>. <b>29</b> (2): 560–561.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Bombay+Nat.+Hist.+Soc.&amp;rft.atitle=The+Shikra+Astur+badius&amp;rft.volume=29&amp;rft.issue=2&amp;rft.pages=560-561&amp;rft.date=1923&amp;rft.au=Osmaston%2C+BB&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F47865097&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite id="CITEREFHimmatsinhji_MK1986" class="citation journal cs1"><a href="/wiki/Himmatsinhji_M._K." title="Himmatsinhji M. K.">Himmatsinhji MK</a> (1986). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/48772391">"Peculiar feeding behaviour of the Shikra <i>Accipiter badius</i> (Gmelin) and the Honey Buzzard <i>Pernis ptilorhyncus</i> (Temminck)"</a>. <i>J. Bombay Nat. Hist. Soc</i>. <b>83</b> (4): 201–202.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Bombay+Nat.+Hist.+Soc.&amp;rft.atitle=Peculiar+feeding+behaviour+of+the+Shikra+Accipiter+badius+%28Gmelin%29+and+the+Honey+Buzzard+Pernis+ptilorhyncus+%28Temminck%29&amp;rft.volume=83&amp;rft.issue=4&amp;rft.pages=201-202&amp;rft.date=1986&amp;rft.au=Himmatsinhji+MK&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F48772391&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite id="CITEREFMikulaMorelliLučanJones2016" class="citation journal cs1">Mikula, P.; Morelli, F.; Lučan, R. K.; Jones, D. N.; Tryjanowski, P. (2016). "Bats as prey of diurnal birds: a global perspective". <i>Mammal Review</i>. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fmam.12060">10.1111/mam.12060</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Mammal+Review&amp;rft.atitle=Bats+as+prey+of+diurnal+birds%3A+a+global+perspective&amp;rft.date=2016&amp;rft_id=info%3Adoi%2F10.1111%2Fmam.12060&amp;rft.aulast=Mikula&amp;rft.aufirst=P.&amp;rft.au=Morelli%2C+F.&amp;rft.au=Lu%C4%8Dan%2C+R.+K.&amp;rft.au=Jones%2C+D.+N.&amp;rft.au=Tryjanowski%2C+P.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite id="CITEREFMuni,_ManojHegde,_Vithoba1998" class="citation journal cs1">Muni, Manoj; Hegde, Vithoba (1998). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/48604880">"Indian Shikra preying on Short-nosed Fruit Bats"</a>. <i>J. Bombay Nat. Hist. Soc</i>. <b>95</b> (2): 338–339.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Bombay+Nat.+Hist.+Soc.&amp;rft.atitle=Indian+Shikra+preying+on+Short-nosed+Fruit+Bats&amp;rft.volume=95&amp;rft.issue=2&amp;rft.pages=338-339&amp;rft.date=1998&amp;rft.au=Muni%2C+Manoj&amp;rft.au=Hegde%2C+Vithoba&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F48604880&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite id="CITEREFZarri,_AA2001" class="citation journal cs1">Zarri, AA (2001). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/48583315">"More information on shikra <i>Accipiter badius</i> (Gmelin) feeding on shortnosed fruit bats <i>Cynopterus sphinx</i> Vahl"</a>. <i>J. Bombay Nat. Hist. Soc</i>. <b>98</b> (1): 106–107.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Bombay+Nat.+Hist.+Soc.&amp;rft.atitle=More+information+on+shikra+Accipiter+badius+%28Gmelin%29+feeding+on+shortnosed+fruit+bats+Cynopterus+sphinx+Vahl.&amp;rft.volume=98&amp;rft.issue=1&amp;rft.pages=106-107&amp;rft.date=2001&amp;rft.au=Zarri%2C+AA&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F48583315&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite id="CITEREFNaoroji,_Rishad1991" class="citation journal cs1">Naoroji, Rishad (1991). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/48673883">"Shikra <i>Accipiter badius</i> taking carrion"</a>. <i>J. Bombay Nat. Hist. Soc</i>. <b>88</b> (3): 447–448.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Bombay+Nat.+Hist.+Soc.&amp;rft.atitle=Shikra+Accipiter+badius+taking+carrion&amp;rft.volume=88&amp;rft.issue=3&amp;rft.pages=447-448&amp;rft.date=1991&amp;rft.au=Naoroji%2C+Rishad&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F48673883&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite id="CITEREFKittur,_SGopi_Sundar,_K_S2010" class="citation journal cs1">Kittur, S &amp; Gopi Sundar, K S (2010). "Cronism by the Shikra <i>Accipiter badius</i>". <i>Forktail</i>. <b>26</b>: 140–141.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Forktail&amp;rft.atitle=Cronism+by+the+Shikra+Accipiter+badius&amp;rft.volume=26&amp;rft.pages=140-141&amp;rft.date=2010&amp;rft.au=Kittur%2C+S&amp;rft.au=Gopi+Sundar%2C+K+S&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite id="CITEREFSerrao_JS1975" class="citation journal cs1">Serrao JS (1975). <a rel="nofollow" class="external text" href="https://archive.org/stream/NLBW15#page/n27/mode/1up">"Behaviour-pattern mimicry by a Goldfronted Chloropsis, and some thoughts on it"</a>. <i><a href="/wiki/Newsletter_for_Birdwatchers" title="Newsletter for Birdwatchers">Newsletter for Birdwatchers</a></i>. <b>15</b> (3): 4–5.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Newsletter+for+Birdwatchers&amp;rft.atitle=Behaviour-pattern+mimicry+by+a+Goldfronted+Chloropsis%2C+and+some+thoughts+on+it&amp;rft.volume=15&amp;rft.issue=3&amp;rft.pages=4-5&amp;rft.date=1975&amp;rft.au=Serrao+JS&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2FNLBW15%23page%2Fn27%2Fmode%2F1up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite id="CITEREFFlower,_Tom2010" class="citation journal cs1">Flower, Tom (2010). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3081750">"Fork-tailed drongos use deceptive mimicked alarm calls to steal food"</a>. <i>Proc. R. Soc. B</i>. <b>278</b> (1711): 1548–1555. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1098%2Frspb.2010.1932">10.1098/rspb.2010.1932</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3081750">3081750</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/21047861">21047861</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Proc.+R.+Soc.+B&amp;rft.atitle=Fork-tailed+drongos+use+deceptive+mimicked+alarm+calls+to+steal+food&amp;rft.volume=278&amp;rft.issue=1711&amp;rft.pages=1548-1555&amp;rft.date=2010&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3081750&amp;rft_id=info%3Apmid%2F21047861&amp;rft_id=info%3Adoi%2F10.1098%2Frspb.2010.1932&amp;rft.au=Flower%2C+Tom&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3081750&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite id="CITEREFPhillips,_WWA1933" class="citation journal cs1">Phillips, WWA (1933). "Some observations on the nesting of a pair of Ceylon Shikra Hawks (<i>Astur badius badius</i> Gmelin)". <i>J. Bombay Nat. Hist. Soc</i>. <b>36</b> (2): 509–511.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Bombay+Nat.+Hist.+Soc.&amp;rft.atitle=Some+observations+on+the+nesting+of+a+pair+of+Ceylon+Shikra+Hawks+%28Astur+badius+badius+Gmelin%29&amp;rft.volume=36&amp;rft.issue=2&amp;rft.pages=509-511&amp;rft.date=1933&amp;rft.au=Phillips%2C+WWA&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite id="CITEREFLowther,_EHN1944" class="citation journal cs1">Lowther, EHN (1944). "J. Bombay Nat. Hist. Soc". <b>45</b> (1): 5–16.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=J.+Bombay+Nat.+Hist.+Soc&amp;rft.volume=45&amp;rft.issue=1&amp;rft.pages=5-16&amp;rft.date=1944&amp;rft.au=Lowther%2C+EHN&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span> <span class="cs1-hidden-error error citation-comment">Cite journal requires <code class="cs1-code">&#124;journal=</code> (<a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">help</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite id="CITEREFBiddulph,_CH1937" class="citation journal cs1">Biddulph, CH (1937). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/47602154">"Number of eggs laid by the Indian Shikra &#91;<i>Astur badius dussumieri</i> (Temm. &amp; Lang.)&#93;"</a>. <i>J. Bombay Nat. Hist. Soc</i>. <b>39</b> (2): 406.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=J.+Bombay+Nat.+Hist.+Soc.&amp;rft.atitle=Number+of+eggs+laid+by+the+Indian+Shikra+%5BAstur+badius+dussumieri+%28Temm.+%26+Lang.%29%5D&amp;rft.volume=39&amp;rft.issue=2&amp;rft.pages=406&amp;rft.date=1937&amp;rft.au=Biddulph%2C+CH&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F47602154&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-whistler-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-whistler_23-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFWhistler,_Hugh1949" class="citation book cs1">Whistler, Hugh (1949). <a rel="nofollow" class="external text" href="https://archive.org/stream/popularhandbooko033226mbp#page/n315/mode/1up/"><i>Popular Handbook of Indian Birds</i></a> (4th ed.). Gurney &amp; Jackson. pp.&#160;380–382.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Popular+Handbook+of+Indian+Birds&amp;rft.pages=380-382&amp;rft.edition=4th&amp;rft.pub=Gurney+%26+Jackson&amp;rft.date=1949&amp;rft.au=Whistler%2C+Hugh&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2Fpopularhandbooko033226mbp%23page%2Fn315%2Fmode%2F1up%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite id="CITEREFJerdon,_TC1862" class="citation journal cs1">Jerdon, TC (1862). <a rel="nofollow" class="external text" href="https://archive.org/stream/birdsofindiabein01jerd#page/48/mode/1up">"The birds of India. Volume 1"</a>. Calcutta: Military Orphan Press: 48–50.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=The+birds+of+India.+Volume+1&amp;rft.pages=48-50&amp;rft.date=1862&amp;rft.au=Jerdon%2C+TC&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2Fbirdsofindiabein01jerd%23page%2F48%2Fmode%2F1up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span> <span class="cs1-hidden-error error citation-comment">Cite journal requires <code class="cs1-code">&#124;journal=</code> (<a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">help</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite id="CITEREFBlyth,_Edward1849" class="citation book cs1">Blyth, Edward (1849). <a rel="nofollow" class="external text" href="https://archive.org/stream/catalogueofbirds00asia#page/22/mode/1up"><i>Catalogue of the Birds in the Museum Asiatic Society</i></a>. Asiatic Society, Calcutta. p.&#160;23.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Catalogue+of+the+Birds+in+the+Museum+Asiatic+Society&amp;rft.pages=23&amp;rft.pub=Asiatic+Society%2C+Calcutta&amp;rft.date=1849&amp;rft.au=Blyth%2C+Edward&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2Fcatalogueofbirds00asia%23page%2F22%2Fmode%2F1up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text">Al-Haj Ibrahim, Hassan, Birds of prey (Manuscript in Arabic</span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><cite id="CITEREFRadcliffe,_E_Delme1871" class="citation book cs1">Radcliffe, E Delme (1871). <a rel="nofollow" class="external text" href="http://www.e-corpus.org/notices/101063/gallery/694613"><i>Notes on the falconidae used in India in falconry</i></a>. Mills and Son, Southsea. pp.&#160;29–30.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Notes+on+the+falconidae+used+in+India+in+falconry&amp;rft.pages=29-30&amp;rft.pub=Mills+and+Son%2C+Southsea&amp;rft.date=1871&amp;rft.au=Radcliffe%2C+E+Delme&amp;rft_id=http%3A%2F%2Fwww.e-corpus.org%2Fnotices%2F101063%2Fgallery%2F694613&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite id="CITEREFBalfour,_EG" class="citation book cs1">Balfour, EG. <a rel="nofollow" class="external text" href="https://archive.org/stream/cyclopaediaofind02balfuoft#page/26/mode/1up/"><i>The Cyclopaedia of India</i></a>. <b>2</b> (3rd ed.). London: Bernard Quaritch. p.&#160;26.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Cyclopaedia+of+India&amp;rft.place=London&amp;rft.pages=26&amp;rft.edition=3rd&amp;rft.pub=Bernard+Quaritch&amp;rft.au=Balfour%2C+EG&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2Fcyclopaediaofind02balfuoft%23page%2F26%2Fmode%2F1up%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling,_James2010" class="citation book cs1">Jobling, James (2010). <a rel="nofollow" class="external text" href="http://nature.baikal.ru/files/605/1408125013.pdf"><i>The Helm Dictionary of scientific bird names</i></a> <span class="cs1-format">(PDF)</span>. London: Christopher Helm. p.&#160;100. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1408125013" title="Special:BookSources/1408125013"><bdi>1408125013</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+scientific+bird+names&amp;rft.place=London&amp;rft.pages=100&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=1408125013&amp;rft.au=Jobling%2C+James&amp;rft_id=http%3A%2F%2Fnature.baikal.ru%2Ffiles%2F605%2F1408125013.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShikra" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.amarujala.com/kavya/irshaad/shiv-kumar-batalvi-main-ik-shikra-yaar-banaya">https://www.amarujala.com/kavya/irshaad/shiv-kumar-batalvi-main-ik-shikra-yaar-banaya</a></span>
+</li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.electrostani.com/2010/08/how-to-gender-hawk-shikkra-look-at-shiv.html">http://www.electrostani.com/2010/08/how-to-gender-hawk-shikkra-look-at-shiv.html</a></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shikra&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Accipiter_badius" class="extiw" title="commons:Category:Accipiter badius"><span style="">Accipiter badius</span></a></b></i>.</td></tr>
+</tbody></table>
+<ul><li>(Shikra = ) Little banded goshawk – <a rel="nofollow" class="external text" href="http://sabap2.adu.org.za/docs/sabap1/159.pdf">Species text in The Atlas of Southern African Birds</a></li>
+<li><a rel="nofollow" class="external text" href="http://ibc.lynxeds.com/species/shikra-accipiter-badius">photographs and videos</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q715710" class="extiw" title="wikidata:Q715710">Q715710</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Accipiter_badius" class="extiw" title="wikispecies:Accipiter badius">Accipiter badius</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Accipiter_badius/">Accipiter_badius</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/accipiter-badius/">accipiter-badius</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=1A0ECB6EDF6DB4B2">1A0ECB6EDF6DB4B2</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22695490">22695490</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Convention_on_the_Conservation_of_Migratory_Species_of_Wild_Animals" title="Convention on the Conservation of Migratory Species of Wild Animals">CMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.cms.int/en/species/accipiter-badius">accipiter-badius</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/shikra1">shikra1</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">2720</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:96719">96719</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/f7af997f-bc71-4b3d-9011-c5840af0492a">f7af997f-bc71-4b3d-9011-c5840af0492a</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2480610">2480610</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/5143">5143</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10217068">10217068</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=558390">558390</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22695490">22695490</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=387787">387787</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/CITES" title="CITES">Species+</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://speciesplus.net/#/taxon_concepts/7653/legal">7653</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1324
+Cached time: 20201102230932
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.904 seconds
+Real time usage: 1.214 seconds
+Preprocessor visited node count: 6690/1000000
+Post‐expand include size: 75644/2097152 bytes
+Template argument size: 7768/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 16/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 98502/5000000 bytes
+Lua time usage: 0.618/10.000 seconds
+Lua memory usage: 7.27 MB/50 MB
+Number of Wikibase entities loaded: 17/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1122.031      1 -total
+ 37.53%  421.052      1 Template:Speciesbox
+ 36.79%  412.797      1 Template:Taxobox/core
+ 24.28%  272.457      1 Template:Reflist
+ 19.00%  213.195      1 Template:Taxonbar
+  8.58%   96.247      1 Template:Cite_iucn
+  8.33%   93.458     19 Template:Cite_journal
+  6.84%   76.767      1 Template:Commons_category
+  6.56%   73.642      1 Template:Sister_project
+  6.22%   69.808      1 Template:Side_box
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:461827-0!canonical and timestamp 20201102230930 and revision id 986080202
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Shikra&amp;oldid=986080202">https://en.wikipedia.org/w/index.php?title=Shikra&amp;oldid=986080202</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Accipiter" title="Category:Accipiter">Accipiter</a></li><li><a href="/wiki/Category:True_hawks" title="Category:True hawks">True hawks</a></li><li><a href="/wiki/Category:Birds_of_Central_Asia" title="Category:Birds of Central Asia">Birds of Central Asia</a></li><li><a href="/wiki/Category:Birds_of_South_Asia" title="Category:Birds of South Asia">Birds of South Asia</a></li><li><a href="/wiki/Category:Birds_of_Southeast_Asia" title="Category:Birds of Southeast Asia">Birds of Southeast Asia</a></li><li><a href="/wiki/Category:Birds_of_Western_Asia" title="Category:Birds of Western Asia">Birds of Western Asia</a></li><li><a href="/wiki/Category:Birds_of_prey_of_Sub-Saharan_Africa" title="Category:Birds of prey of Sub-Saharan Africa">Birds of prey of Sub-Saharan Africa</a></li><li><a href="/wiki/Category:Birds_described_in_1788" title="Category:Birds described in 1788">Birds described in 1788</a></li><li><a href="/wiki/Category:Taxa_named_by_Johann_Friedrich_Gmelin" title="Category:Taxa named by Johann Friedrich Gmelin">Taxa named by Johann Friedrich Gmelin</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:CS1:_long_volume_value" title="Category:CS1: long volume value">CS1: long volume value</a></li><li><a href="/wiki/Category:CS1_errors:_missing_periodical" title="Category:CS1 errors: missing periodical">CS1 errors: missing periodical</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Shikra" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Shikra" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Shikra" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Shikra" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Shikra">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Shikra&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Shikra&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Shikra" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Shikra" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Shikra&amp;oldid=986080202" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Shikra&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Shikra&amp;id=986080202&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q715710" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Shikra&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Shikra&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Accipiter_badius" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Accipiter_badius" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%9A%D1%8A%D0%B0%D1%88%D1%8B%D1%80%D0%B3%D1%8A%D0%B0%D1%89%D1%85%D1%8A%D1%83%D1%8D%D0%B6%D1%8C%D0%B5%D0%B9" title="Къашыргъащхъуэжьей – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Gebande_sperwer" title="Gebande sperwer – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%A8%D8%A7%D8%B4%D9%82_%D8%A7%D9%84%D8%B4%D9%83%D8%B1%D8%A7" title="باشق الشكرا – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-as"><a href="https://as.wikipedia.org/wiki/%E0%A6%AC%E0%A7%B0%E0%A7%80%E0%A6%B6%E0%A7%87%E0%A6%A8" title="বৰীশেন – Assamese" lang="as" hreflang="as" class="interlanguage-link-target">অসমীয়া</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Accipiter_badius" title="Accipiter badius – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/T%C3%BCvik" title="Tüvik – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D0%92%D0%B0%D2%A1_%D2%A1%D0%B0%D1%80%D1%81%D1%8B%D2%93%D0%B0" title="Ваҡ ҡарсыға – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Accipiter_badius" title="Accipiter badius – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Esparver_xikra" title="Esparver xikra – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Accipiter_badius" title="Accipiter badius – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Krahujec_%C5%A1ikra" title="Krahujec šikra – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Gwalch_shikra" title="Gwalch shikra – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Schikrasperber" title="Schikrasperber – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/Tsiik%CA%BCi_D%C3%A9%C3%ADbaal%C3%AD_Bik%C3%A9yahd%C4%99%CC%81%C4%99%CC%81%CA%BC_ts%C4%AFyaalzhah%C3%AD" title="Tsiikʼi Déíbaalí Bikéyahdę́ę́ʼ tsįyaalzhahí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Accipiter_badius" title="Accipiter badius – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/%C5%9Cikro" title="Ŝikro – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Shrikra_gabirai" title="Shrikra gabirai – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%BE%DB%8C%D8%BA%D9%88%DB%8C_%DA%A9%D9%88%DA%86%DA%A9" title="پیغوی کوچک – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/%C3%89pervier_shikra" title="Épervier shikra – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Seabhac_donnrua" title="Seabhac donnrua – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-hi"><a href="https://hi.wikipedia.org/wiki/%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%B0%E0%A4%BE" title="शिकरा – Hindi" lang="hi" hreflang="hi" class="interlanguage-link-target">हिन्दी</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Kratkonogi_kobac" title="Kratkonogi kobac – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Accipiter_badius" title="Accipiter badius – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A0%D7%A5_%D7%94%D7%99%D7%9D_%D7%94%D7%9B%D7%A1%D7%A4%D7%99" title="נץ הים הכספי – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kn"><a href="https://kn.wikipedia.org/wiki/%E0%B2%A1%E0%B3%87%E0%B2%97%E0%B3%86" title="ಡೇಗೆ – Kannada" lang="kn" hreflang="kn" class="interlanguage-link-target">ಕನ್ನಡ</a></li><li class="interlanguage-link interwiki-ks"><a href="https://ks.wikipedia.org/wiki/%D9%88%D8%A7%D8%B1%DB%8C%D9%8F%D9%9B%D9%84" title="واریُٛل – Kashmiri" lang="ks" hreflang="ks" class="interlanguage-link-target">कॉशुर / کٲشُر</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%9C%D1%8B%D2%9B%D0%B8" title="Мықи – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-ky"><a href="https://ky.wikipedia.org/wiki/%D0%9A%D2%AF%D1%80%D3%A9%D2%A3_%D0%BA%D3%A9%D0%BA%D2%AF%D1%80%D3%A9%D0%BA%D1%82%D2%AF%D2%AF_%D0%BA%D1%8B%D1%80%D0%B3%D1%8B%D0%B9" title="Күрөң көкүрөктүү кыргый – Kyrgyz" lang="ky" hreflang="ky" class="interlanguage-link-target">Кыргызча</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Sikra" title="Sikra – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%BF%E0%B4%9F%E0%B4%BF%E0%B4%AF%E0%B5%BB" title="പ്രാപ്പിടിയൻ – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-mr"><a href="https://mr.wikipedia.org/wiki/%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A4%B0%E0%A4%BE" title="शिकरा – Marathi" lang="mr" hreflang="mr" class="interlanguage-link-target">मराठी</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Burung_Lang" title="Burung Lang – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/%D2%AE%D2%AF%D1%80%D1%81%D1%8D%D1%8D_%D1%85%D0%B0%D1%80%D1%86%D0%B0%D0%B3%D0%B0" title="Үүрсээ харцага – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-my"><a href="https://my.wikipedia.org/wiki/%E1%80%81%E1%80%BB%E1%80%AD%E1%80%AF%E1%80%B8%E1%80%9E%E1%80%AD%E1%80%99%E1%80%BA%E1%80%B8" title="ချိုးသိမ်း – Burmese" lang="my" hreflang="my" class="interlanguage-link-target">မြန်မာဘာသာ</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Shikra" title="Shikra – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ne"><a href="https://ne.wikipedia.org/wiki/%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BE" title="शिक्रा – Nepali" lang="ne" hreflang="ne" class="interlanguage-link-target">नेपाली</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%BF%E3%82%AB%E3%82%B5%E3%82%B4%E3%83%80%E3%82%AB" title="タカサゴダカ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Shikrahauk" title="Shikrahauk – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pa"><a href="https://pa.wikipedia.org/wiki/%E0%A8%B8%E0%A8%BC%E0%A8%BF%E0%A8%95%E0%A8%B0%E0%A8%BE" title="ਸ਼ਿਕਰਾ – Punjabi" lang="pa" hreflang="pa" class="interlanguage-link-target">ਪੰਜਾਬੀ</a></li><li class="interlanguage-link interwiki-pnb"><a href="https://pnb.wikipedia.org/wiki/%D8%B4%DA%A9%D8%B1%D8%A7" title="شکرا – Western Punjabi" lang="pnb" hreflang="pnb" class="interlanguage-link-target">پنجابی</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Krogulec_ma%C5%82y" title="Krogulec mały – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%83%D1%80%D0%BA%D0%B5%D1%81%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D1%8E%D0%B2%D0%B8%D0%BA" title="Туркестанский тювик – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Shikra" title="Shikra – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Jastrab_%C5%A1ikra" title="Jastrab šikra – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Arovarpushaukka" title="Arovarpushaukka – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Shikra" title="Shikra – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%B5%E0%AF%88%E0%AE%B0%E0%AE%BF" title="வைரி – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%AB%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%8A%E0%B8%B4%E0%B8%84%E0%B8%A3%E0%B8%B2" title="เหยี่ยวนกเขาชิครา – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/%C5%9Eeritli_k%C3%BC%C3%A7%C3%BCk_%C3%A7ak%C4%B1r_ku%C5%9Fu" title="Şeritli küçük çakır kuşu – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%AF%D1%81%D1%82%D1%80%D1%83%D0%B1_%D1%82%D1%83%D1%80%D0%BA%D0%B5%D1%81%D1%82%D0%B0%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9" title="Яструб туркестанський – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/%C6%AFng_x%C3%A1m" title="Ưng xám – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Accipiter_badius" title="Accipiter badius – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E8%A4%90%E8%80%B3%E9%B9%B0" title="褐耳鹰 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q715710#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 29 October 2020, at 17:42<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Shikra&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.904","walltime":"1.214","ppvisitednodes":{"value":6690,"limit":1000000},"postexpandincludesize":{"value":75644,"limit":2097152},"templateargumentsize":{"value":7768,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":16,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":98502,"limit":5000000},"entityaccesscount":{"value":17,"limit":400},"timingprofile":["100.00% 1122.031      1 -total"," 37.53%  421.052      1 Template:Speciesbox"," 36.79%  412.797      1 Template:Taxobox/core"," 24.28%  272.457      1 Template:Reflist"," 19.00%  213.195      1 Template:Taxonbar","  8.58%   96.247      1 Template:Cite_iucn","  8.33%   93.458     19 Template:Cite_journal","  6.84%   76.767      1 Template:Commons_category","  6.56%   73.642      1 Template:Sister_project","  6.22%   69.808      1 Template:Side_box"]},"scribunto":{"limitreport-timeusage":{"value":"0.618","limit":"10.000"},"limitreport-memusage":{"value":7618252,"limit":52428800}},"cachereport":{"origin":"mw1324","timestamp":"20201102230932","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Shikra","url":"https:\/\/en.wikipedia.org\/wiki\/Shikra","sameAs":"http:\/\/www.wikidata.org\/entity\/Q715710","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q715710","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-02-09T07:15:59Z","dateModified":"2020-10-29T17:42:16Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/f\/fe\/Shikra1.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":178,"wgHostname":"mw1403"});});</script>
+</body></html>

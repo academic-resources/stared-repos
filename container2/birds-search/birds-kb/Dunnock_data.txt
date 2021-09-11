@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Dunnock - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"6235a818-a98c-4265-bd60-7559f0fe9b14","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Dunnock","wgTitle":"Dunnock","wgCurRevisionId":977045526,"wgRevisionId":977045526,"wgArticleId":333105,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","CS1 Latin-language sources (la)","CS1: long volume value","CS1 French-language sources (fr)","Use dmy dates from April 2017","Articles with 'species' microformats","Commons link is on Wikidata","Taxonbars with automatically added original combinations",
+"Taxonbars with 20–24 taxon IDs","IUCN Red List least concern species","Prunellidae","Birds of Europe","Birds of New Zealand","Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Dunnock","wgRelevantArticleId":333105,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q26698"};
+RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents",
+"ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Dunnock_crop2.jpg/1200px-Dunnock_crop2.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Dunnock"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Dunnock&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Dunnock&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Dunnock"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dunnock rootpage-Dunnock skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Dunnock</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p class="mw-empty-elt">
+
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Dunnock
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Dunnock_crop2.jpg" class="image"><img alt="Dunnock crop2.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Dunnock_crop2.jpg/220px-Dunnock_crop2.jpg" decoding="async" width="220" height="168" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Dunnock_crop2.jpg/330px-Dunnock_crop2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/72/Dunnock_crop2.jpg/440px-Dunnock_crop2.jpg 2x" data-file-width="1505" data-file-height="1149" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center"><div class="mediaContainer" style="width:220px"><audio id="mwe_player_0" controls="" preload="none" style="width:220px" class="kskin" data-durationhint="86.035351473923" data-startoffset="0" data-mwtitle="Dunnock_(Prunella_modularis)_(W1CDR0001422_BD6).ogg" data-mwprovider="wikimediacommons"><source src="//upload.wikimedia.org/wikipedia/commons/transcoded/3/38/Dunnock_%28Prunella_modularis%29_%28W1CDR0001422_BD6%29.ogg/Dunnock_%28Prunella_modularis%29_%28W1CDR0001422_BD6%29.ogg.mp3" type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0" data-height="0" data-bandwidth="137192" /><source src="//upload.wikimedia.org/wikipedia/commons/3/38/Dunnock_%28Prunella_modularis%29_%28W1CDR0001422_BD6%29.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Original Ogg file (210 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="210305" /></audio></div>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Song recorded on <a href="/wiki/Dartmoor" title="Dartmoor">Dartmoor</a> in <a href="/wiki/Devon" title="Devon">Devon</a>, England
+</td></tr>
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Prunella" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Passerine" title="Passerine">Passeriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Accentor" title="Accentor">Prunellidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Prunella_(bird)" class="mw-redirect" title="Prunella (bird)"><i>Prunella</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>P.&#160;modularis</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Prunella modularis</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Dunnock_Range.png" class="image"><img alt="Dunnock Range.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Dunnock_Range.png/220px-Dunnock_Range.png" decoding="async" width="220" height="111" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Dunnock_Range.png/330px-Dunnock_Range.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/72/Dunnock_Range.png/440px-Dunnock_Range.png 2x" data-file-width="3756" data-file-height="1899" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Global range<style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#007F00; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Year-Round Range</div><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#E0CF01; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Summer Range</div><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#0080FF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Winter Range</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>Motacilla modularis</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span></li>
+<li><i>Accentor modularis</i> <span style="font-size:85%;">(Linnaeus,&#160;1758)</span></li></ul>
+</td></tr>
+
+</tbody></table>
+<p>The <b>dunnock</b> (<i>Prunella modularis</i>) is a small <a href="/wiki/Passerine" title="Passerine">passerine</a>, or perching <a href="/wiki/Bird" title="Bird">bird</a>, found throughout temperate Europe and into Asian Russia. Dunnocks have also been successfully introduced into New Zealand. It is by far the most widespread member of the <a href="/wiki/Accentor" title="Accentor">accentor</a> family, which otherwise consists of mountain species. Other common names of the dunnock include the <b>hedge accentor</b>, <b>hedge sparrow</b>, or <b>hedge warbler</b>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Taxonomy"><span class="tocnumber">1</span> <span class="toctext">Taxonomy</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Distribution_and_habitat"><span class="tocnumber">3</span> <span class="toctext">Distribution and habitat</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Territoriality"><span class="tocnumber">4</span> <span class="toctext">Territoriality</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Breeding"><span class="tocnumber">5</span> <span class="toctext">Breeding</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Mating_systems"><span class="tocnumber">5.1</span> <span class="toctext">Mating systems</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Nest"><span class="tocnumber">5.2</span> <span class="toctext">Nest</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Parental_care_and_provisioning"><span class="tocnumber">5.3</span> <span class="toctext">Parental care and provisioning</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Taxonomy">Taxonomy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunnock&amp;action=edit&amp;section=1" title="Edit section: Taxonomy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The dunnock was <a href="/wiki/Species_description" title="Species description">described</a> by the Swedish naturalist <a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Carl Linnaeus</a> in 1758 in the <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">tenth edition</a> of his <i><a href="/wiki/Systema_Naturae" title="Systema Naturae">Systema Naturae</a></i>. He coined the <a href="/wiki/Binomial_name" class="mw-redirect" title="Binomial name">binomial name</a> of <i>Motacilla modularis</i>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> The <a href="/wiki/Specific_epithet" class="mw-redirect" title="Specific epithet">specific epithet</a> is from the Latin <i>modularis</i> "modulating" or "singing".<sup id="cite_ref-hbwkey_3-0" class="reference"><a href="#cite_note-hbwkey-3">&#91;3&#93;</a></sup> This species is now placed in the <a href="/wiki/Genus" title="Genus">genus</a> <i><a href="/wiki/Prunella_(bird)" class="mw-redirect" title="Prunella (bird)">Prunella</a></i> that was introduced by the French ornithologist <a href="/wiki/Louis_Jean_Pierre_Vieillot" title="Louis Jean Pierre Vieillot">Louis Vieillot</a> in 1816.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p><p>The name "dunnock" comes from the English <i>dun</i> (dingy brown, dark-coloured) and the diminutive <i>ock</i>,<sup id="cite_ref-OED1_5-0" class="reference"><a href="#cite_note-OED1-5">&#91;5&#93;</a></sup> and "accentor" is from post-classical <a href="/wiki/Latin" title="Latin">Latin</a> and means a person who sings with another.<sup id="cite_ref-OED_6-0" class="reference"><a href="#cite_note-OED-6">&#91;6&#93;</a></sup> The genus name <i>Prunella</i> is from the German <i>Braunelle</i>, "dunnock", a diminutive of <i>braun</i>, "brown".<sup id="cite_ref-job_7-0" class="reference"><a href="#cite_note-job-7">&#91;7&#93;</a></sup>
+</p><p>Eight <a href="/wiki/Subspecies" title="Subspecies">subspecies</a> are recognised:<sup id="cite_ref-ioc_8-0" class="reference"><a href="#cite_note-ioc-8">&#91;8&#93;</a></sup>
+</p>
+<ul><li><i>P. m. hebridium</i> <a href="/wiki/Richard_Meinertzhagen" title="Richard Meinertzhagen">Meinertzhagen</a>, R, 1934 – Ireland and the Hebrides  (west of Scotland)</li>
+<li><i>P. m. occidentalis</i> (<a href="/wiki/Ernst_Hartert" title="Ernst Hartert">Hartert</a>, 1910) – Scotland (except the Hebrides), England and west France</li>
+<li><i>P. m. modularis</i> (<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, 1758) – north and central Europe</li>
+<li><i>P. m. mabbotti</i> <a href="/wiki/Francis_Harper_(biologist)" title="Francis Harper (biologist)">Harper</a>, 1919 – Iberian Peninsula, southcentral France and Italy</li>
+<li><i>P. m. meinertzhageni</i> <a href="/wiki/James_M._Harrison" title="James M. Harrison">Harrison, JM</a> &amp; Pateff, 1937 – Balkans</li>
+<li><i>P. m. fuscata</i> Mauersberger, 1971 – south Crimean Peninsula (north coast of the Black Sea)</li>
+<li><i>P. m. euxina</i> Watson, 1961 – northwest and north Turkey</li>
+<li><i>P. m. obscura</i> (<a href="/wiki/Carl_Ludwig_Hablitz" title="Carl Ludwig Hablitz">Hablizl</a>, 1783) – northeast Turkey, Caucasus and north Iran</li></ul>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunnock&amp;action=edit&amp;section=2" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A <a href="/wiki/European_robin" title="European robin">European robin</a>-sized bird, the dunnock typically measures 13.5–14&#160;cm (5.3–5.5&#160;in) in length. It possesses a streaked back, somewhat resembling a small <a href="/wiki/House_sparrow" title="House sparrow">house sparrow</a>. Like that species, the dunnock has a drab appearance which may have evolved to avoid predation. It is brownish underneath, and has a fine pointed bill. Adults have a grey head, and both sexes are similarly coloured.<sup id="cite_ref-field_guide_9-0" class="reference"><a href="#cite_note-field_guide-9">&#91;9&#93;</a></sup>
+Unlike any similar sized small brown bird, dunnocks exhibit frequent wing flicking, especially when engaged in territorial disputes or when competing for mating rights.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p><p>The main call of the dunnock is a shrill, persistent <i>tseep</i> along with a high trilling note, which betrays the bird's otherwise inconspicuous presence. The song is rapid, thin and tinkling, a sweet warble which can be confused with that of the <a href="/wiki/Eurasian_wren" title="Eurasian wren">Eurasian wren</a>, but is shorter and weaker.<sup id="cite_ref-Peterson_11-0" class="reference"><a href="#cite_note-Peterson-11">&#91;11&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Distribution_and_habitat">Distribution and habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunnock&amp;action=edit&amp;section=3" title="Edit section: Distribution and habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Dunnocks are native to large areas of Eurasia, inhabiting much of Europe including Lebanon, northern Iran, and the <a href="/wiki/Caucasus" title="Caucasus">Caucasus</a>. They are the only commonly found accentor in lowland areas; all the others inhabit upland areas.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> Dunnocks were successfully introduced into New Zealand during the 19th century, and are now widely distributed around the country and some offshore islands.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup><sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup> Favoured habitats include <a href="/wiki/Woodland" title="Woodland">woodlands</a>, shrubs, <a href="/wiki/Garden" title="Garden">gardens</a>, and <a href="/wiki/Hedgerow" class="mw-redirect" title="Hedgerow">hedgerows</a> where they typically feed on the ground, often seeking out <a href="/wiki/Detritivore" title="Detritivore">detritivores</a> as food.<sup id="cite_ref-brittannica_15-0" class="reference"><a href="#cite_note-brittannica-15">&#91;15&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Territoriality">Territoriality</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunnock&amp;action=edit&amp;section=4" title="Edit section: Territoriality">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Dunnock_singing_steve_childs.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Dunnock_singing_steve_childs.jpg/220px-Dunnock_singing_steve_childs.jpg" decoding="async" width="220" height="158" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Dunnock_singing_steve_childs.jpg/330px-Dunnock_singing_steve_childs.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Dunnock_singing_steve_childs.jpg/440px-Dunnock_singing_steve_childs.jpg 2x" data-file-width="1109" data-file-height="797" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Dunnock_singing_steve_childs.jpg" class="internal" title="Enlarge"></a></div>Dunnock singing from high perch</div></div></div>
+<p>Dunnocks are territorial and may engage in conflict with other birds that encroach upon their nests.<sup id="cite_ref-brittannica_15-1" class="reference"><a href="#cite_note-brittannica-15">&#91;15&#93;</a></sup> Males sometimes share a territory and exhibit a strict dominance hierarchy. Nevertheless, this social dominance is not translated into benefits to the alpha male in terms of reproduction, since paternity is usually equally shared between males of the group.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup><sup id="cite_ref-:0_17-0" class="reference"><a href="#cite_note-:0-17">&#91;17&#93;</a></sup> Furthermore, members of a group are rarely related, and so competition can result.<sup id="cite_ref-food_patchiness_18-0" class="reference"><a href="#cite_note-food_patchiness-18">&#91;18&#93;</a></sup>
+</p><p>Female territorial ranges are almost always exclusive. However, sometimes, multiple males will co-operate to defend a single territory containing multiple females. Males exhibit a strong <a href="/wiki/Dominance_hierarchy" title="Dominance hierarchy">dominance hierarchy</a> within groups: older birds tend to be the dominant males and first-year birds are usually sub-dominant. Studies have found that close male relatives almost never share a territory.<sup id="cite_ref-food_patchiness_18-1" class="reference"><a href="#cite_note-food_patchiness-18">&#91;18&#93;</a></sup>
+</p><p>The male's ability to access females generally depends on female range size, which is affected by the distribution of food. When resources are distributed in dense patches, female ranges tend to be small and easy for males to monopolise. Subsequent mating systems, as discussed below, reflect high reproductive success for males and relatively lower success for females. In times of scarcity, female territories expand to accommodate the lack of resources, causing males to have a more difficult time monopolising females. Hence, females gain a reproductive advantage over males in this case.<sup id="cite_ref-food_patchiness_18-2" class="reference"><a href="#cite_note-food_patchiness-18">&#91;18&#93;</a></sup><sup id="cite_ref-success_19-0" class="reference"><a href="#cite_note-success-19">&#91;19&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Breeding">Breeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunnock&amp;action=edit&amp;section=5" title="Edit section: Breeding">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Mating_systems">Mating systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunnock&amp;action=edit&amp;section=6" title="Edit section: Mating systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Dunnocks_cloaca_pecking.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dunnocks_cloaca_pecking.jpg/220px-Dunnocks_cloaca_pecking.jpg" decoding="async" width="220" height="150" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dunnocks_cloaca_pecking.jpg/330px-Dunnocks_cloaca_pecking.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/94/Dunnocks_cloaca_pecking.jpg/440px-Dunnocks_cloaca_pecking.jpg 2x" data-file-width="840" data-file-height="574" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Dunnocks_cloaca_pecking.jpg" class="internal" title="Enlarge"></a></div>Male dunnock pecking cloaca of female before mating</div></div></div><p>The dunnock possesses variable mating systems. Females are often <a href="/wiki/Polyandry" title="Polyandry">polyandrous</a>, breeding with two or more males at once,<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup><sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup> which is quite rare among birds. This multiple mating system leads to the development of <a href="/wiki/Sperm_competition" title="Sperm competition">sperm competition</a> amongst the male suitors. <a href="/wiki/DNA_fingerprinting" class="mw-redirect" title="DNA fingerprinting">DNA fingerprinting</a> has shown that chicks within a brood often have different fathers, depending on the success of the males at monopolising the female.<sup id="cite_ref-:0_17-1" class="reference"><a href="#cite_note-:0-17">&#91;17&#93;</a></sup>  Males try to ensure their paternity by pecking at the <a href="/wiki/Cloaca" title="Cloaca">cloaca</a><sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup> of the female to stimulate ejection of rival males' sperm.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;23&#93;</a></sup> Dunnocks take just one-tenth of a second to copulate and can mate more than 100 times a day.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup> Males provide parental care in proportion to their mating success, so two males and a female can commonly be seen provisioning nestlings at one nest.
+</p><p>Other mating systems also exist within dunnock populations, depending on the ratio of male to females and the overlap of territories. When only one female and one male territory overlap, <a href="/wiki/Monogamy" title="Monogamy">monogamy</a> is preferred. Sometimes, two or three adjacent female territories overlap one male territory, and so <a href="/wiki/Polygyny_in_animals" title="Polygyny in animals">polygyny</a> is favored, with the male monopolising several females.  <a href="/wiki/Polygynandry" title="Polygynandry">Polygynandry</a> also exists, in which two males jointly defend a territory containing several females.  Polyandry, though, is the most common mating system of dunnocks found in nature.  Depending on the population, males generally have the best reproductive success in polygynous populations, while females have the advantage during polyandry.<sup id="cite_ref-food_patchiness_18-3" class="reference"><a href="#cite_note-food_patchiness-18">&#91;18&#93;</a></sup><sup id="cite_ref-success_19-1" class="reference"><a href="#cite_note-success-19">&#91;19&#93;</a></sup>
+</p><p>Studies have illustrated the fluidity of dunnock mating systems. When given food in abundance, female territory size is reduced drastically. Consequently, males can more easily monopolise the females. Thus, the mating system can be shifted from one that favours female success (polyandry), to one that promotes male success (monogamy, polygynandry, or polygyny).<sup id="cite_ref-food_distribution_25-0" class="reference"><a href="#cite_note-food_distribution-25">&#91;25&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Nest">Nest</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunnock&amp;action=edit&amp;section=7" title="Edit section: Nest">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Dunnock_(Hedge_Sparrow)_Nest_11.04.11.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Dunnock_%28Hedge_Sparrow%29_Nest_11.04.11.jpg/220px-Dunnock_%28Hedge_Sparrow%29_Nest_11.04.11.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Dunnock_%28Hedge_Sparrow%29_Nest_11.04.11.jpg/330px-Dunnock_%28Hedge_Sparrow%29_Nest_11.04.11.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Dunnock_%28Hedge_Sparrow%29_Nest_11.04.11.jpg/440px-Dunnock_%28Hedge_Sparrow%29_Nest_11.04.11.jpg 2x" data-file-width="3648" data-file-height="2736" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Dunnock_(Hedge_Sparrow)_Nest_11.04.11.jpg" class="internal" title="Enlarge"></a></div>Dunnock nest and eggs</div></div></div><p>The dunnock builds a nest (predominantly from twigs and moss and lined with soft materials such as wool or feathers), low in a bush or <a href="/wiki/Conifer" class="mw-redirect" title="Conifer">conifer</a>, where adults typically lay three to five unspotted blue <a href="/wiki/Bird_egg" title="Bird egg">eggs</a>.<sup id="cite_ref-brittannica_15-2" class="reference"><a href="#cite_note-brittannica-15">&#91;15&#93;</a></sup>
+</p><h3><span class="mw-headline" id="Parental_care_and_provisioning">Parental care and provisioning</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunnock&amp;action=edit&amp;section=8" title="Edit section: Parental care and provisioning">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Broods, depending on the population, can be raised by a lone female, multiple females with the part-time help of a male, multiple females with full-time help by a male, or by multiple females and multiple males. In pairs, the male and the female invest parental care at similar rates. However, in trios, the female and alpha male invest more care in chicks than does the beta male. In territories in which females are able to escape from males, both the alpha and beta males share provisioning equally. This last system represents the best case scenario for females, as it helps to ensure maximal care and the success of the young.
+</p><p>A study has found that males tend to not discriminate between their own young and those of another male in polyandrous or polygynandrous systems. However, they do vary their feeding depending on the certainty of paternity. If a male has greater access to a female, and therefore a higher chance of a successful fertilisation, during a specific mating period, it would provide more care towards the young.<sup id="cite_ref-food_distribution_25-1" class="reference"><a href="#cite_note-food_distribution-25">&#91;25&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunnock&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22718651/0">"<i>Prunella modularis</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Prunella+modularis&amp;rft.volume=2012&amp;rft.date=2012&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22718651%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite id="CITEREFLinnaeus1758" class="citation book cs1"><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus, Carl</a> (1758). <a rel="nofollow" class="external text" href="https://biodiversitylibrary.org/page/727091"><i>Systema Naturae per regna tria naturae, secundum classes, ordines, genera, species, cum characteribus, differentiis, synonymis, locis</i></a> (in Latin). Volume 1 (10th ed.). Holmiae:Laurentii Salvii. p.&#160;184.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Systema+Naturae+per+regna+tria+naturae%2C+secundum+classes%2C+ordines%2C+genera%2C+species%2C+cum+characteribus%2C+differentiis%2C+synonymis%2C+locis&amp;rft.pages=184&amp;rft.edition=10th&amp;rft.pub=Holmiae%3ALaurentii+Salvii&amp;rft.date=1758&amp;rft.aulast=Linnaeus&amp;rft.aufirst=Carl&amp;rft_id=https%3A%2F%2Fbiodiversitylibrary.org%2Fpage%2F727091&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-hbwkey-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-hbwkey_3-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2019" class="citation web cs1">Jobling, J.A. (2019).  del Hoyo, J.; Elliott, A.; Sargatal, J.; Christie, D.A.; de Juana, E. (eds.). <a rel="nofollow" class="external text" href="https://www.hbw.com/dictionary/definition/modularis">"Key to Scientific Names in Ornithology"</a>. <i>Handbook of the Birds of the World Alive</i>. Lynx Edicions<span class="reference-accessdate">. Retrieved <span class="nowrap">10 March</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Handbook+of+the+Birds+of+the+World+Alive&amp;rft.atitle=Key+to+Scientific+Names+in+Ornithology&amp;rft.date=2019&amp;rft.aulast=Jobling&amp;rft.aufirst=J.A.&amp;rft_id=https%3A%2F%2Fwww.hbw.com%2Fdictionary%2Fdefinition%2Fmodularis&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite id="CITEREFVieillot1816" class="citation book cs1"><a href="/wiki/Louis_Jean_Pierre_Vieillot" title="Louis Jean Pierre Vieillot">Vieillot, Louis Jean Pierre</a> (1816). <a rel="nofollow" class="external text" href="https://gallica.bnf.fr/ark:/12148/bpt6k9745205x/f49.image"><i>Analyse d'une Nouvelle Ornithologie Elementaire</i></a> (in French). Paris: Deterville/self. p.&#160;43.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Analyse+d%27une+Nouvelle+Ornithologie+Elementaire&amp;rft.place=Paris&amp;rft.pages=43&amp;rft.pub=Deterville%2Fself&amp;rft.date=1816&amp;rft.aulast=Vieillot&amp;rft.aufirst=Louis+Jean+Pierre&amp;rft_id=https%3A%2F%2Fgallica.bnf.fr%2Fark%3A%2F12148%2Fbpt6k9745205x%2Ff49.image&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-OED1-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-OED1_5-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFReference-OED-Dunnock" class="citation cs1"><a rel="nofollow" class="external text" href="http://oed.com/search?searchType=dictionary&amp;q=Dunnock">"Dunnock"</a>. <i><a href="/wiki/Oxford_English_Dictionary" title="Oxford English Dictionary">Oxford English Dictionary</a></i> (3rd ed.). Oxford University Press. September 2005.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Dunnock&amp;rft.btitle=Oxford+English+Dictionary&amp;rft.edition=3rd&amp;rft.pub=Oxford+University+Press&amp;rft.date=2005-09&amp;rft_id=http%3A%2F%2Foed.com%2Fsearch%3FsearchType%3Ddictionary%26q%3DDunnock&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/>&#160;<span style="font-size:0.95em; font-size:90%; color:#555">(Subscription or <a rel="nofollow" class="external text" href="https://www.oed.com/public/login/loggingin#withyourlibrary">UK public library membership</a> required.)</span></span>
+</li>
+<li id="cite_note-OED-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-OED_6-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFReference-OED-Accentor" class="citation cs1"><a rel="nofollow" class="external text" href="http://oed.com/search?searchType=dictionary&amp;q=Accentor">"Accentor"</a>. <i><a href="/wiki/Oxford_English_Dictionary" title="Oxford English Dictionary">Oxford English Dictionary</a></i> (3rd ed.). Oxford University Press. September 2005.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Accentor&amp;rft.btitle=Oxford+English+Dictionary&amp;rft.edition=3rd&amp;rft.pub=Oxford+University+Press&amp;rft.date=2005-09&amp;rft_id=http%3A%2F%2Foed.com%2Fsearch%3FsearchType%3Ddictionary%26q%3DAccentor&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/>&#160;<span style="font-size:0.95em; font-size:90%; color:#555">(Subscription or <a rel="nofollow" class="external text" href="https://www.oed.com/public/login/loggingin#withyourlibrary">UK public library membership</a> required.)</span></span>
+</li>
+<li id="cite_note-job-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-job_7-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A. (2010). <i>The Helm Dictionary of Scientific Bird Names</i>. London, United Kingdom: Christopher Helm. p.&#160;318. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London%2C+United+Kingdom&amp;rft.pages=318&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-ioc-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-ioc_8-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFGillDonsker2019" class="citation web cs1"><a href="/wiki/Frank_Gill_(ornithologist)" title="Frank Gill (ornithologist)">Gill, Frank</a>; Donsker, David, eds. (2019). <a rel="nofollow" class="external text" href="https://www.worldbirdnames.org/bow/waxbills/">"Waxbills, parrotfinches, munias, whydahs, Olive Warbler, accentors, pipits"</a>. <i>World Bird List Version 9.1</i>. International Ornithologists' Union<span class="reference-accessdate">. Retrieved <span class="nowrap">11 March</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=World+Bird+List+Version+9.1&amp;rft.atitle=Waxbills%2C+parrotfinches%2C+munias%2C+whydahs%2C+Olive+Warbler%2C+accentors%2C+pipits&amp;rft.date=2019&amp;rft_id=https%3A%2F%2Fwww.worldbirdnames.org%2Fbow%2Fwaxbills%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-field_guide-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-field_guide_9-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFHeatherRogertson2005" class="citation book cs1">Heather, Barrie; Rogertson, Hugh (2005). <i>The Field Guide to the Birds of New Zealand</i> (Revised ed.). Viking Press.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Field+Guide+to+the+Birds+of+New+Zealand&amp;rft.edition=Revised&amp;rft.pub=Viking+Press&amp;rft.date=2005&amp;rft.aulast=Heather&amp;rft.aufirst=Barrie&amp;rft.au=Rogertson%2C+Hugh&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://www.rspb.org.uk/birds-and-wildlife/bird-and-wildlife-guides/bird-a-z/d/dunnock/">"Dunnock"</a>. RSPB<span class="reference-accessdate">. Retrieved <span class="nowrap">6 May</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Dunnock&amp;rft.pub=RSPB&amp;rft_id=https%3A%2F%2Fwww.rspb.org.uk%2Fbirds-and-wildlife%2Fbird-and-wildlife-guides%2Fbird-a-z%2Fd%2Fdunnock%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Peterson-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-Peterson_11-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFPetersonMountfortHollom1954" class="citation book cs1"><a href="/wiki/Roger_Tory_Peterson" title="Roger Tory Peterson">Peterson, Roger</a>; <a href="/wiki/Guy_Mountfort" title="Guy Mountfort">Mountfort, Guy</a>; <a href="/wiki/Philip_Hollom" title="Philip Hollom">Hollom, P.A.D.</a> (1954). <i>A Field Guide to the Birds of Britain and Europe</i>. London: <a href="/wiki/HarperCollins" title="HarperCollins">Collins</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+Field+Guide+to+the+Birds+of+Britain+and+Europe&amp;rft.place=London&amp;rft.pub=Collins&amp;rft.date=1954&amp;rft.aulast=Peterson&amp;rft.aufirst=Roger&amp;rft.au=Mountfort%2C+Guy&amp;rft.au=Hollom%2C+P.A.D.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.garden-birds.co.uk/birds/dunnock.htm">"Dunnock"</a>. British Garden Birds<span class="reference-accessdate">. Retrieved <span class="nowrap">6 May</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Dunnock&amp;rft.pub=British+Garden+Birds&amp;rft_id=http%3A%2F%2Fwww.garden-birds.co.uk%2Fbirds%2Fdunnock.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.nzbirdsonline.org.nz/species/dunnock">"Dunnock | New Zealand Birds Online"</a>. <i>www.nzbirdsonline.org.nz</i><span class="reference-accessdate">. Retrieved <span class="nowrap">4 October</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.nzbirdsonline.org.nz&amp;rft.atitle=Dunnock+%7C+New+Zealand+Birds+Online&amp;rft_id=http%3A%2F%2Fwww.nzbirdsonline.org.nz%2Fspecies%2Fdunnock&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite id="CITEREFSantos2012" class="citation journal cs1">Santos, Eduardo (2012). <a rel="nofollow" class="external text" href="http://notornis.osnz.org.nz/system/files/Santos%202012.pdf">"Discovery of previously unknown historical records on the introduction of dunnocks (<i>Prunella modularis</i>) into Otago, New Zealand during the 19th century"</a> <span class="cs1-format">(PDF)</span>. <i>Notornis</i>. <b>59</b> (1): 79–81.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Notornis&amp;rft.atitle=Discovery+of+previously+unknown+historical+records+on+the+introduction+of+dunnocks+%28Prunella+modularis%29+into+Otago%2C+New+Zealand+during+the+19th+century&amp;rft.volume=59&amp;rft.issue=1&amp;rft.pages=79-81&amp;rft.date=2012&amp;rft.aulast=Santos&amp;rft.aufirst=Eduardo&amp;rft_id=http%3A%2F%2Fnotornis.osnz.org.nz%2Fsystem%2Ffiles%2FSantos%25202012.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-brittannica-15"><span class="mw-cite-backlink">^ <a href="#cite_ref-brittannica_15-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-brittannica_15-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-brittannica_15-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFMontgomery" class="citation web cs1">Montgomery, Sy. <a rel="nofollow" class="external text" href="http://www.britannica.com/EBchecked/topic/173831/dunnock">"Dunnock"</a>. Encyclopædia Britannica<span class="reference-accessdate">. Retrieved <span class="nowrap">23 September</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Dunnock&amp;rft.pub=Encyclop%C3%A6dia+Britannica&amp;rft.aulast=Montgomery&amp;rft.aufirst=Sy&amp;rft_id=http%3A%2F%2Fwww.britannica.com%2FEBchecked%2Ftopic%2F173831%2Fdunnock&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite id="CITEREFBurkeDaviesBrufordHatchwell1989" class="citation journal cs1">Burke, T.; Davies, N.B.; Bruford, M.W.; Hatchwell, B.J. (1989). "Parental care and mating behaviour of polyandrous dunnocks <i>Prunella modularis</i> related to paternity by DNA fingerprinting". <i>Nature</i>. <b>338</b> (6212): 249–251. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1038%2F338249a0">10.1038/338249a0</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Nature&amp;rft.atitle=Parental+care+and+mating+behaviour+of+polyandrous+dunnocks+Prunella+modularis+related+to+paternity+by+DNA+fingerprinting&amp;rft.volume=338&amp;rft.issue=6212&amp;rft.pages=249-251&amp;rft.date=1989&amp;rft_id=info%3Adoi%2F10.1038%2F338249a0&amp;rft.aulast=Burke&amp;rft.aufirst=T.&amp;rft.au=Davies%2C+N.B.&amp;rft.au=Bruford%2C+M.W.&amp;rft.au=Hatchwell%2C+B.J.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-:0-17"><span class="mw-cite-backlink">^ <a href="#cite_ref-:0_17-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_17-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFSantosSantosLagiszNakagawa2015" class="citation journal cs1">Santos, Eduardo S. A.; Santos, Luana L. S.; Lagisz, Malgorzata; Nakagawa, Shinichi (2015). <a rel="nofollow" class="external text" href="https://doi.org/10.1111%2F1365-2656.12432">"Conflict and co-operation over sex: the consequences of social and genetic polyandry for reproductive success in dunnocks"</a>. <i>Journal of Animal Ecology</i>. <b>84</b> (6): 1509–1519. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.1111%2F1365-2656.12432">10.1111/1365-2656.12432</a></span>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/1365-2656">1365-2656</a>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/26257043">26257043</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Animal+Ecology&amp;rft.atitle=Conflict+and+co-operation+over+sex%3A+the+consequences+of+social+and+genetic+polyandry+for+reproductive+success+in+dunnocks&amp;rft.volume=84&amp;rft.issue=6&amp;rft.pages=1509-1519&amp;rft.date=2015&amp;rft.issn=1365-2656&amp;rft_id=info%3Apmid%2F26257043&amp;rft_id=info%3Adoi%2F10.1111%2F1365-2656.12432&amp;rft.aulast=Santos&amp;rft.aufirst=Eduardo+S.+A.&amp;rft.au=Santos%2C+Luana+L.+S.&amp;rft.au=Lagisz%2C+Malgorzata&amp;rft.au=Nakagawa%2C+Shinichi&amp;rft_id=%2F%2Fdoi.org%2F10.1111%252F1365-2656.12432&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-food_patchiness-18"><span class="mw-cite-backlink">^ <a href="#cite_ref-food_patchiness_18-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-food_patchiness_18-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-food_patchiness_18-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-food_patchiness_18-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFDaviesHartley1996" class="citation journal cs1">Davies, N. B.; Hartley, I.R. (1996). "Food patchiness, territory overlap and social systems: an experiment with dunnocks <i>Prunella modularis</i>". <i>Journal of Animal Ecology</i>. <b>65</b> (6): 837–846. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2307%2F5681">10.2307/5681</a>. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/5681">5681</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Animal+Ecology&amp;rft.atitle=Food+patchiness%2C+territory+overlap+and+social+systems%3A+an+experiment+with+dunnocks+Prunella+modularis&amp;rft.volume=65&amp;rft.issue=6&amp;rft.pages=837-846&amp;rft.date=1996&amp;rft_id=info%3Adoi%2F10.2307%2F5681&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F5681&amp;rft.aulast=Davies&amp;rft.aufirst=N.+B.&amp;rft.au=Hartley%2C+I.R.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-success-19"><span class="mw-cite-backlink">^ <a href="#cite_ref-success_19-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-success_19-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFDaviesHouston1986" class="citation journal cs1">Davies, N.B.; Houston, A.I. (1986). "Reproductive success of dunnocks, <i>Prunella modularis</i>, in a variable mating system". <i>Journal of Animal Ecology</i>. <b>55</b> (1): 123–138. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/4697">4697</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Animal+Ecology&amp;rft.atitle=Reproductive+success+of+dunnocks%2C+Prunella+modularis%2C+in+a+variable+mating+system&amp;rft.volume=55&amp;rft.issue=1&amp;rft.pages=123-138&amp;rft.date=1986&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F4697&amp;rft.aulast=Davies&amp;rft.aufirst=N.B.&amp;rft.au=Houston%2C+A.I.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/> </span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite id="CITEREFDavies1992" class="citation book cs1">Davies, Nicholas (1992). <i>Dunnock behaviour and social evolution</i>. Oxford: Oxford University Press. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0198546740" title="Special:BookSources/978-0198546740"><bdi>978-0198546740</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Dunnock+behaviour+and+social+evolution&amp;rft.place=Oxford&amp;rft.pub=Oxford+University+Press&amp;rft.date=1992&amp;rft.isbn=978-0198546740&amp;rft.aulast=Davies&amp;rft.aufirst=Nicholas&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite id="CITEREFSantosNakagawa2013" class="citation journal cs1">Santos, Eduardo S. A.; Nakagawa, Shinichi (9 July 2013). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3706400">"Breeding Biology and Variable Mating System of a Population of Introduced Dunnocks (<i>Prunella modularis</i>) in New Zealand"</a>. <i>PLoS ONE</i>. <b>8</b> (7): e69329. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1371%2Fjournal.pone.0069329">10.1371/journal.pone.0069329</a>. <a href="/wiki/PMC_(identifier)" class="mw-redirect" title="PMC (identifier)">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3706400">3706400</a></span>. <a href="/wiki/PMID_(identifier)" class="mw-redirect" title="PMID (identifier)">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/23874945">23874945</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=PLoS+ONE&amp;rft.atitle=Breeding+Biology+and+Variable+Mating+System+of+a+Population+of+Introduced+Dunnocks+%28Prunella+modularis%29+in+New+Zealand&amp;rft.volume=8&amp;rft.issue=7&amp;rft.pages=e69329&amp;rft.date=2013-07-09&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3706400&amp;rft_id=info%3Apmid%2F23874945&amp;rft_id=info%3Adoi%2F10.1371%2Fjournal.pone.0069329&amp;rft.aulast=Santos&amp;rft.aufirst=Eduardo+S.+A.&amp;rft.au=Nakagawa%2C+Shinichi&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC3706400&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text">Attenborough, D. 1998. p.215. <i>The Life of Birds</i> BBC  <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0563-38792-0" title="Special:BookSources/0563-38792-0">0563-38792-0</a></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite id="CITEREFDavies1983" class="citation journal cs1">Davies, N. B. (1983). "Polyandry, cloaca-pecking and sperm competition in dunnocks". <i>Nature</i>. <b>302</b> (5906): 334–336. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1038%2F302334a0">10.1038/302334a0</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Nature&amp;rft.atitle=Polyandry%2C+cloaca-pecking+and+sperm+competition+in+dunnocks&amp;rft.volume=302&amp;rft.issue=5906&amp;rft.pages=334-336&amp;rft.date=1983&amp;rft_id=info%3Adoi%2F10.1038%2F302334a0&amp;rft.aulast=Davies&amp;rft.aufirst=N.+B.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirkhead2012" class="citation book cs1">Birkhead, Tim (2012). <i>Bird Sense</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Bird+Sense&amp;rft.date=2012&amp;rft.aulast=Birkhead&amp;rft.aufirst=Tim&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-food_distribution-25"><span class="mw-cite-backlink">^ <a href="#cite_ref-food_distribution_25-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-food_distribution_25-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFDaviesLundberg1984" class="citation journal cs1">Davies, N.B.; Lundberg, A. (1984). <a rel="nofollow" class="external text" href="http://www.webpages.uidaho.edu/wlf314/Homeworks/Davies_Lundberg_1984.pdf">"Food distribution and a variable mating system in the dunnock, <i>Prunella modularis</i>"</a> <span class="cs1-format">(PDF)</span>. <i>Journal of Animal Ecology</i>. <b>53</b> (3): 895–912. <a href="/wiki/JSTOR_(identifier)" class="mw-redirect" title="JSTOR (identifier)">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/4666">4666</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Animal+Ecology&amp;rft.atitle=Food+distribution+and+a+variable+mating+system+in+the+dunnock%2C+Prunella+modularis&amp;rft.volume=53&amp;rft.issue=3&amp;rft.pages=895-912&amp;rft.date=1984&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F4666&amp;rft.aulast=Davies&amp;rft.aufirst=N.B.&amp;rft.au=Lundberg%2C+A.&amp;rft_id=http%3A%2F%2Fwww.webpages.uidaho.edu%2Fwlf314%2FHomeworks%2FDavies_Lundberg_1984.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADunnock" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dunnock&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Prunella_modularis" class="extiw" title="commons:Prunella modularis">Prunella modularis</a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="https://www.xeno-canto.org/species/Prunella-modularis">Xeno-canto: audio recordings of the dunnock</a></li>
+<li><a rel="nofollow" class="external text" href="http://ibc.lynxeds.com/species/dunnock-prunella-modularis">Dunnock videos, photos &amp; sounds</a> on the Internet Bird Collection</li>
+<li><a rel="nofollow" class="external text" href="http://blascozumeta.com/wp-content/uploads/aragon-birds/passeriformes/324.dunnock-pmodularis.pdf">Ageing and sexing (PDF; 2.0 MB) by Javier Blasco-Zumeta &amp; Gerd-Michael Heinze</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ornithos.de/Ornithos/Feather_Collection/Prunella_modularis/Prunella_modularis.htm">Feathers of dunnock (Prunella modularis)</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Taxon_identifiers" style="font-size:114%;margin:0 4em"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%;text-align: left;"><i>Prunella modularis</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q26698" class="extiw" title="wikidata:Q26698">Q26698</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Prunella_modularis" class="extiw" title="wikispecies:Prunella modularis">Prunella modularis</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Prunella_modularis/">Prunella_modularis</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/prunella-modularis/">prunella-modularis</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=26530C865C4A655C">26530C865C4A655C</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8859">8859</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22718651">22718651</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Barcode_of_Life_Data_System" title="Barcode of Life Data System">BOLD</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.boldsystems.org/index.php/TaxBrowser_TaxonPage?taxid=70334">70334</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">DUNNO</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/dunnoc1">dunnoc1</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EPPO_Code" title="EPPO Code">EPPO</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://gd.eppo.int/taxon/PRUNMO">PRUNMO</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/1235">1235</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">10840</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:97429">97429</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/1b0cc453-46fc-4f75-8840-586a8b866e4b">1b0cc453-46fc-4f75-8840-586a8b866e4b</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=368991">368991</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/5231763">5231763</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/13988">13988</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10596931">10596931</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=562489">562489</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22718651">22718651</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0000530790">NHMSYS0000530790</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=181117">181117</a></span></span></li>
+<li><span style="white-space:nowrap;">NZBO: <span class="uid"><a rel="nofollow" class="external text" href="http://nzbirdsonline.org.nz/species/dunnock">dunnock</a></span></span></li>
+<li><span style="white-space:nowrap;">NZOR: <span class="uid"><a rel="nofollow" class="external text" href="http://www.nzor.org.nz/names/da97438f-98c1-4db4-8764-aaaab32e32eb">da97438f-98c1-4db4-8764-aaaab32e32eb</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=14671">14671</a></span></span></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;text-align: left;"><i>Motacilla modularis</i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q47010357" class="extiw" title="wikidata:Q47010357">Q47010357</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/7516395">7516395</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1354
+Cached time: 20201029220112
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.988 seconds
+Real time usage: 1.429 seconds
+Preprocessor visited node count: 7648/1000000
+Post‐expand include size: 79296/2097152 bytes
+Template argument size: 9062/2097152 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 27/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 82609/5000000 bytes
+Lua time usage: 0.673/10.000 seconds
+Lua memory usage: 10.36 MB/50 MB
+Number of Wikibase entities loaded: 26/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1324.182      1 -total
+ 40.38%  534.718      1 Template:Speciesbox
+ 39.85%  527.715      1 Template:Taxobox/core
+ 24.76%  327.872      1 Template:Taxonbar
+ 22.60%  299.282      1 Template:Reflist
+  6.31%   83.606      1 Template:Cite_iucn
+  5.37%   71.103      1 Template:Commons
+  5.15%   68.244      1 Template:Sister_project
+  4.78%   63.295      1 Template:Side_box
+  4.52%   59.881      1 Template:ISBN
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:333105-0!canonical and timestamp 20201029220110 and revision id 977045526
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Dunnock&amp;oldid=977045526">https://en.wikipedia.org/w/index.php?title=Dunnock&amp;oldid=977045526</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Prunellidae" title="Category:Prunellidae">Prunellidae</a></li><li><a href="/wiki/Category:Birds_of_Europe" title="Category:Birds of Europe">Birds of Europe</a></li><li><a href="/wiki/Category:Birds_of_New_Zealand" title="Category:Birds of New Zealand">Birds of New Zealand</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:CS1_Latin-language_sources_(la)" title="Category:CS1 Latin-language sources (la)">CS1 Latin-language sources (la)</a></li><li><a href="/wiki/Category:CS1:_long_volume_value" title="Category:CS1: long volume value">CS1: long volume value</a></li><li><a href="/wiki/Category:CS1_French-language_sources_(fr)" title="Category:CS1 French-language sources (fr)">CS1 French-language sources (fr)</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_April_2017" title="Category:Use dmy dates from April 2017">Use dmy dates from April 2017</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_link_is_on_Wikidata" title="Category:Commons link is on Wikidata">Commons link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_automatically_added_original_combinations" title="Category:Taxonbars with automatically added original combinations">Taxonbars with automatically added original combinations</a></li><li><a href="/wiki/Category:Taxonbars_with_20%E2%80%9324_taxon_IDs" title="Category:Taxonbars with 20–24 taxon IDs">Taxonbars with 20–24 taxon IDs</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Dunnock" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Dunnock" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Dunnock" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Dunnock" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Dunnock">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Dunnock&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Dunnock&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Dunnock" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Dunnock" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Dunnock&amp;oldid=977045526" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Dunnock&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Dunnock&amp;id=977045526&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26698" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Dunnock&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Dunnock&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Prunella_modularis" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Prunella_modularis" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%9A%D3%80%D1%8B%D0%BA%D1%8A%D1%8B%D1%80" title="КӀыкъыр – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%B9%D8%B5%D9%81%D9%88%D8%B1_%D8%A7%D9%84%D8%B4%D9%88%D9%83" title="عصفور الشوك – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Prunella_modularis" title="Prunella modularis – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D0%A1%D3%A9%D1%80%D3%99%D0%BA%D3%99_%D1%82%D1%83%D1%80%D2%93%D0%B0%D0%B9" title="Сөрәкә турғай – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/%D0%9B%D1%8F%D1%81%D0%BD%D0%B0%D1%8F_%D0%B7%D0%B0%D0%B2%D1%96%D1%80%D1%83%D1%88%D0%BA%D0%B0" title="Лясная завірушка – Belarusian" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A1%D0%B8%D0%B2%D0%BE%D0%B3%D1%83%D1%88%D0%B0_%D0%B7%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%88%D0%BA%D0%B0" title="Сивогуша завирушка – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Gwrac%27hig-an-drez" title="Gwrac&#039;hig-an-drez – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Pardal_de_bardissa" title="Pardal de bardissa – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Prunella_modularis" title="Prunella modularis – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/P%C4%9Bvu%C5%A1ka_modr%C3%A1" title="Pěvuška modrá – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Llwyd_gwrych_yr_Alban" title="Llwyd gwrych yr Alban – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Jernspurv" title="Jernspurv – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Heckenbraunelle" title="Heckenbraunelle – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/T%C3%B3_W%C3%B3naan%C3%ADd%C4%99%CC%81%C4%99%CC%81%CA%BC_Bilag%C3%A1ana_Bik%C3%A9yahd%C4%99%CC%81%C4%99%CC%81%CA%BC_ts%C3%ADdiisht%C5%82izh%C3%AD" title="Tó Wónaanídę́ę́ʼ Bilagáana Bikéyahdę́ę́ʼ tsídiishtłizhí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/V%C3%B5saraat" title="Võsaraat – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Prunella_modularis" title="Prunella modularis – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Pronelo" title="Pronelo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Tuntun_arrunt" title="Tuntun arrunt – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B5%D8%B9%D9%88%D9%87_%D8%AC%D9%86%DA%AF%D9%84%DB%8C" title="صعوه جنگلی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Jarnt%C3%ADtlingur" title="Jarntítlingur – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Accenteur_mouchet" title="Accenteur mouchet – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Donn%C3%B3g" title="Donnóg – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Azulenta_com%C3%BAn" title="Azulenta común – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%B1%D5%B6%D5%BF%D5%A1%D5%BC%D5%A1%D5%B5%D5%AB%D5%B6_%D5%B6%D6%80%D5%A2%D5%A1%D5%A3%D5%A5%D5%B2%D5%AB%D5%AF" title="Անտառային նրբագեղիկ – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Prunella_modularis" title="Prunella modularis – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%9E%D1%80%D0%BC%D0%B0%D0%BD_%D1%81%D0%BE%D0%B4%D1%8B%D1%80%D2%93%D1%8B%D1%81%D1%8B" title="Орман содырғысы – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Pe%C4%BCk%C4%81j%C4%ABte" title="Peļkājīte – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lb"><a href="https://lb.wikipedia.org/wiki/Heckeschl%C3%ABffer" title="Heckeschlëffer – Luxembourgish" lang="lb" hreflang="lb" class="interlanguage-link-target">Lëtzebuergesch</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Er%C5%A1k%C4%97t%C5%BEvirblis" title="Erškėtžvirblis – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Erdei_sz%C3%BCrkebegy" title="Erdei szürkebegy – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B8%D1%87%D0%BD%D0%BE_%D0%BF%D0%BE%D0%BF%D1%87%D0%B5" title="Обично попче – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/%D0%9E%D0%B9%D0%BD_%D0%B1%D0%BE%D1%80_%D1%85%D0%B0%D1%80%D0%B0%D0%B3%D1%87%D0%B8%D0%BD" title="Ойн бор харагчин – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Heggenmus" title="Heggenmus – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-nds-nl"><a href="https://nds-nl.wikipedia.org/wiki/Hegemors" title="Hegemors – Low Saxon" lang="nds-NL" hreflang="nds-NL" class="interlanguage-link-target">Nedersaksies</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%82%AB%E3%83%A4%E3%82%AF%E3%82%B0%E3%83%AA" title="ヨーロッパカヤクグリ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-frr"><a href="https://frr.wikipedia.org/wiki/Kurnfink" title="Kurnfink – Northern Frisian" lang="frr" hreflang="frr" class="interlanguage-link-target">Nordfriisk</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Jernspurv" title="Jernspurv – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Jernsporv" title="Jernsporv – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-oc"><a href="https://oc.wikipedia.org/wiki/Chic_d%27avaus" title="Chic d&#039;avaus – Occitan" lang="oc" hreflang="oc" class="interlanguage-link-target">Occitan</a></li><li class="interlanguage-link interwiki-pcd"><a href="https://pcd.wikipedia.org/wiki/Gris-mou%C3%A9neu" title="Gris-mouéneu – Picard" lang="pcd" hreflang="pcd" class="interlanguage-link-target">Picard</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Prunella_modularis" title="Prunella modularis – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/P%C5%82ochacz_pokrzywnica" title="Płochacz pokrzywnica – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Ferreirinha-comum" title="Ferreirinha-comum – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%97%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%88%D0%BA%D0%B0_%D0%BB%D1%97%D1%81%D0%BE%D0%B2%D0%B0" title="Завирушка лїсова – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B5%D1%81%D0%BD%D0%B0%D1%8F_%D0%B7%D0%B0%D0%B2%D0%B8%D1%80%D1%83%D1%88%D0%BA%D0%B0" title="Лесная завирушка – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Prunella_modularis" title="Prunella modularis – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Vrch%C3%A1rka_modr%C3%A1" title="Vrchárka modrá – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B8%D1%87%D0%BD%D0%B8_%D0%BF%D0%BE%D0%BF%D0%B8%D1%9B" title="Обични попић – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Rautiainen" title="Rautiainen – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv badge-Q17559452 badge-recommendedarticle" title="recommended article"><a href="https://sv.wikipedia.org/wiki/J%C3%A4rnsparv" title="Järnsparv – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tt"><a href="https://tt.wikipedia.org/wiki/%D0%A3%D1%80%D0%BC%D0%B0%D0%BD_%D1%87%D1%8B%D0%BF%D1%87%D1%8B%D0%B3%D1%8B" title="Урман чыпчыгы – Tatar" lang="tt" hreflang="tt" class="interlanguage-link-target">Татарча/tatarça</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Baya%C4%9F%C4%B1_da%C4%9F_b%C3%BClb%C3%BCl%C3%BC" title="Bayağı dağ bülbülü – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BD%D1%96%D0%B2%D0%BA%D0%B0_%D0%BB%D1%96%D1%81%D0%BE%D0%B2%D0%B0" title="Тинівка лісова – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Prunella_modularis" title="Prunella modularis – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-wa"><a href="https://wa.wikipedia.org/wiki/Morete_(oujhea,_Prunella)" title="Morete (oujhea, Prunella) – Walloon" lang="wa" hreflang="wa" class="interlanguage-link-target">Walon</a></li><li class="interlanguage-link interwiki-vls"><a href="https://vls.wikipedia.org/wiki/Hoagemussche" title="Hoagemussche – West Flemish" lang="vls" hreflang="vls" class="interlanguage-link-target">West-Vlams</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Prunella_modularis" title="Prunella modularis – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-wuu"><a href="https://wuu.wikipedia.org/wiki/%E6%9E%97%E5%B2%A9%E9%B9%A8" title="林岩鹨 – Wu Chinese" lang="wuu" hreflang="wuu" class="interlanguage-link-target">吴语</a></li><li class="interlanguage-link interwiki-zh-yue"><a href="https://zh-yue.wikipedia.org/wiki/%E6%9E%97%E5%B2%A9%E9%B7%9A" title="林岩鷚 – Cantonese" lang="yue" hreflang="yue" class="interlanguage-link-target">粵語</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%9E%97%E5%B2%A9%E9%B9%A8" title="林岩鹨 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26698#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 6 September 2020, at 16:17<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Dunnock&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.988","walltime":"1.429","ppvisitednodes":{"value":7648,"limit":1000000},"postexpandincludesize":{"value":79296,"limit":2097152},"templateargumentsize":{"value":9062,"limit":2097152},"expansiondepth":{"value":21,"limit":40},"expensivefunctioncount":{"value":27,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":82609,"limit":5000000},"entityaccesscount":{"value":26,"limit":400},"timingprofile":["100.00% 1324.182      1 -total"," 40.38%  534.718      1 Template:Speciesbox"," 39.85%  527.715      1 Template:Taxobox/core"," 24.76%  327.872      1 Template:Taxonbar"," 22.60%  299.282      1 Template:Reflist","  6.31%   83.606      1 Template:Cite_iucn","  5.37%   71.103      1 Template:Commons","  5.15%   68.244      1 Template:Sister_project","  4.78%   63.295      1 Template:Side_box","  4.52%   59.881      1 Template:ISBN"]},"scribunto":{"limitreport-timeusage":{"value":"0.673","limit":"10.000"},"limitreport-memusage":{"value":10865324,"limit":52428800}},"cachereport":{"origin":"mw1354","timestamp":"20201029220112","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Dunnock","url":"https:\/\/en.wikipedia.org\/wiki\/Dunnock","sameAs":"http:\/\/www.wikidata.org\/entity\/Q26698","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q26698","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-10-02T05:58:24Z","dateModified":"2020-09-06T16:17:58Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/7\/72\/Dunnock_crop2.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":176,"wgHostname":"mw1411"});});</script>
+</body></html>

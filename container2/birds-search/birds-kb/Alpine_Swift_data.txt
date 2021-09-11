@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Alpine swift - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"4a2179fb-6447-43df-aaaa-6fe826fdc9af","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Alpine_swift","wgTitle":"Alpine swift","wgCurRevisionId":932562766,"wgRevisionId":932562766,"wgArticleId":376402,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","Articles with short description","Short description matches Wikidata","Articles with 'species' microformats","Articles with hAudio microformats","Commons link is on Wikidata","Taxonbars with automatically added original combinations",
+"IUCN Red List least concern species","Swifts","Apus (genus)","Birds of Africa","Birds of Europe","Birds of Madagascar","Birds of South Asia","Birds of Western Asia","Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Alpine_swift","wgRelevantArticleId":376402,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Alpine_Swift","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Alpine_swift",
+"wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q321267"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head",
+"mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/%CE%92%CE%BF%CF%85%CE%BD%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1_Alpine_Swift_Tachymarptis_melba.jpg/1200px-%CE%92%CE%BF%CF%85%CE%BD%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1_Alpine_Swift_Tachymarptis_melba.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Alpine_swift"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Alpine_swift&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Alpine_swift&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Alpine_swift"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Alpine_swift rootpage-Alpine_swift skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Alpine swift</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Alpine_Swift&amp;redirect=no" class="mw-redirect" title="Alpine Swift">Alpine Swift</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Species of bird</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Alpine swift
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:%CE%92%CE%BF%CF%85%CE%BD%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1_Alpine_Swift_Tachymarptis_melba.jpg" class="image"><img alt="Βουνοσταχτάρα Alpine Swift Tachymarptis melba.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/%CE%92%CE%BF%CF%85%CE%BD%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1_Alpine_Swift_Tachymarptis_melba.jpg/220px-%CE%92%CE%BF%CF%85%CE%BD%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1_Alpine_Swift_Tachymarptis_melba.jpg" decoding="async" width="220" height="180" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/%CE%92%CE%BF%CF%85%CE%BD%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1_Alpine_Swift_Tachymarptis_melba.jpg/330px-%CE%92%CE%BF%CF%85%CE%BD%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1_Alpine_Swift_Tachymarptis_melba.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4d/%CE%92%CE%BF%CF%85%CE%BD%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1_Alpine_Swift_Tachymarptis_melba.jpg/440px-%CE%92%CE%BF%CF%85%CE%BD%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1_Alpine_Swift_Tachymarptis_melba.jpg 2x" data-file-width="1348" data-file-height="1104" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Flying in Attica
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Tachymarptis" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Apodiformes" title="Apodiformes">Apodiformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Swift" title="Swift">Apodidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Tachymarptis" title="Tachymarptis"><i>Tachymarptis</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>T.&#160;melba</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Tachymarptis melba</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:TachymarptisMelbaIUCNver2018_2.png" class="image"><img alt="TachymarptisMelbaIUCNver2018 2.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/TachymarptisMelbaIUCNver2018_2.png/220px-TachymarptisMelbaIUCNver2018_2.png" decoding="async" width="220" height="156" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/TachymarptisMelbaIUCNver2018_2.png/330px-TachymarptisMelbaIUCNver2018_2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e4/TachymarptisMelbaIUCNver2018_2.png/440px-TachymarptisMelbaIUCNver2018_2.png 2x" data-file-width="3507" data-file-height="2480" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Range of <i>T. melba</i><style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#00FF00; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Breeding</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#008000; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Resident</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#007FFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Non-breeding</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#FF00FF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Vagrant (seasonality uncertain)</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#AAFFFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Possibly Extant (passage)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>Hirundo melba</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span></li>
+<li><i>Apus melba</i> <span style="font-size:85%;">(Linnaeus,&#160;1758)</span></li></ul>
+</td></tr>
+
+</tbody></table>
+<p>The <b>Alpine swift</b> (<i>Tachymarptis melba</i>) formerly <i>Apus melba</i>, is a species of <a href="/wiki/Swift" title="Swift">swift</a>. The genus name is from the <a href="/wiki/Ancient_Greek" title="Ancient Greek">Ancient Greek</a> <i>takhus</i>, "fast", and <i>marptis</i>, "seizer". The specific name <i>melba</i> comes from ‘melano-alba’ or ‘mel-alba’; Eigenhuis &amp; Swaab (1992) posited that ‘melba’ might be a short form for ‘melano-alba’ or ‘mel-alba’ (Gr. melas, melanos = black; L. albus = white). Linnaeus certainly referred to these two colors in his diagnosis.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> 
+</p><p>Alpine swifts breed in mountains from southern <a href="/wiki/Europe" title="Europe">Europe</a> to the <a href="/wiki/Himalaya" class="mw-redirect" title="Himalaya">Himalaya</a>. Like <a href="/wiki/Common_swift" title="Common swift">common swifts</a>, they are strongly <a href="/wiki/Bird_migration" title="Bird migration">migratory</a>, and winter much further south in southern <a href="/wiki/Africa" title="Africa">Africa</a>.
+</p><p>Swifts have very short legs which are used for clinging to vertical surfaces. They never settle voluntarily on the ground, spending most of their lives in the air living on the insects they catch in their beaks. Alpine swift are able to stay aloft in the air for up to seven months at a time, even drinking water "on the wing".
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description_and_biology"><span class="tocnumber">1</span> <span class="toctext">Description and biology</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Life_on_the_wing"><span class="tocnumber">2</span> <span class="toctext">Life on the wing</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#References"><span class="tocnumber">3</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#External_links"><span class="tocnumber">4</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description_and_biology">Description and biology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alpine_swift&amp;action=edit&amp;section=1" title="Edit section: Description and biology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The bird is superficially similar to a large <a href="/wiki/Barn_swallow" title="Barn swallow">barn swallow</a> or <a href="/wiki/Common_house_martin" title="Common house martin">house martin</a>. It is, however, completely unrelated to those <a href="/wiki/Passerine" title="Passerine">passerine</a> species, since swifts are in the order <a href="/wiki/Apodiformes" title="Apodiformes">Apodiformes</a>. The resemblances between the groups are due to <a href="/wiki/Convergent_evolution" title="Convergent evolution">convergent evolution</a>, reflecting similar life styles.
+</p><p>Swifts have very short legs which they use only for clinging to vertical surfaces. The scientific name Apodidae comes from the <a href="/wiki/Ancient_Greek" title="Ancient Greek">Ancient Greek</a> <i>απους, apous</i>, meaning "without feet". They never settle voluntarily on the ground.
+</p><p>Alpine swifts breed in mountains from southern <a href="/wiki/Europe" title="Europe">Europe</a> to the <a href="/wiki/Himalaya" class="mw-redirect" title="Himalaya">Himalaya</a>. Like <a href="/wiki/Common_swift" title="Common swift">common swifts</a>, they are strongly <a href="/wiki/Bird_migration" title="Bird migration">migratory</a>, and winter much further south in southern <a href="/wiki/Africa" title="Africa">Africa</a>. They wander widely on migration, and are regularly seen in much of southern Europe, Salford and <a href="/wiki/Asia" title="Asia">Asia</a>. The species seems to have been much more widespread during the <a href="/wiki/Last_glacial_period" class="mw-redirect" title="Last glacial period">last ice age</a>, with a large colony breeding, for example in the Late <a href="/wiki/Pleistocene" title="Pleistocene">Pleistocene</a> Cave No 16, <a href="/wiki/Bulgaria" title="Bulgaria">Bulgaria</a>, around 18,000–40,000 years ago.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> The same situation has been found for Komarowa Cave near <a href="/wiki/Cz%C4%99stochowa" title="Częstochowa">Częstochowa</a>, <a href="/wiki/Poland" title="Poland">Poland</a> during a period about 20,000–40,000 years ago.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Tachymarptis_melba_MHNT_ZOO_2010_11_159_RdN_Mekn%C3%A8s.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tachymarptis_melba_MHNT_ZOO_2010_11_159_RdN_Mekn%C3%A8s.jpg/220px-Tachymarptis_melba_MHNT_ZOO_2010_11_159_RdN_Mekn%C3%A8s.jpg" decoding="async" width="220" height="214" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tachymarptis_melba_MHNT_ZOO_2010_11_159_RdN_Mekn%C3%A8s.jpg/330px-Tachymarptis_melba_MHNT_ZOO_2010_11_159_RdN_Mekn%C3%A8s.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tachymarptis_melba_MHNT_ZOO_2010_11_159_RdN_Mekn%C3%A8s.jpg/440px-Tachymarptis_melba_MHNT_ZOO_2010_11_159_RdN_Mekn%C3%A8s.jpg 2x" data-file-width="3443" data-file-height="3356" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Tachymarptis_melba_MHNT_ZOO_2010_11_159_RdN_Mekn%C3%A8s.jpg" class="internal" title="Enlarge"></a></div>Eggs of <i> Tachymarptis melba </i></div></div></div>
+<table role="presentation" class="mbox-small noprint" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000;">
+<tbody><tr>
+<td class="mbox-image"><div class="center"><div class="floatnone"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/50px-Gnome-mime-sound-openclipart.svg.png" decoding="async" width="50" height="50" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/75px-Gnome-mime-sound-openclipart.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gnome-mime-sound-openclipart.svg/100px-Gnome-mime-sound-openclipart.svg.png 2x" data-file-width="160" data-file-height="160" /></div></div></td>
+<td class="mbox-text plainlist" style="line-height:1.1em"><div class="haudio">
+<div style="padding:4px 0"><a href="/wiki/File:3260.ogg" title="File:3260.ogg"><center><b>Alpine swift call</b></center></a></div>
+<div><div class="mediaContainer" style="width:220px"><audio id="mwe_player_0" controls="" preload="none" style="width:220px" class="kskin" data-durationhint="2.9238548752834" data-startoffset="0" data-mwtitle="3260.ogg" data-mwprovider="wikimediacommons"><source src="//upload.wikimedia.org/wikipedia/commons/f/f1/3260.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Original Ogg file (84 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="83657" /><source src="//upload.wikimedia.org/wikipedia/commons/transcoded/f/f1/3260.ogg/3260.ogg.mp3" type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0" data-height="0" data-bandwidth="118392" /></audio></div></div>
+<div class="description" style="padding:2px 0 0 0"><center>The call is a drawn-out twittering.</center></div></div></td></tr>
+<tr><td colspan="2" class="mbox-text" style="line-height:1.1em"><hr /><i class="selfreference">Problems playing this file? See <a href="/wiki/Help:Media" title="Help:Media">media help</a>.</i></td></tr>
+</tbody></table>
+<p>These apodiformes build their nests in colonies in a suitable cliff hole or cave, laying two or three eggs. Swifts will return to the same sites year after year, rebuilding their nests when necessary, and pairing for life. Young swifts in the nest can drop their body temperature and become torpid if bad weather prevents their parents from catching insects nearby. They have adapted well to urban conditions, frequently nesting in old buildings in towns around the Mediterranean, where large, low-flying flocks are a familiar feature in summer. Alpine swifts have a short forked tail and very long swept-back wings that resemble a crescent or a <a href="/wiki/Boomerang" title="Boomerang">boomerang</a> but may (as in the image) be held stretched straight out. Their flight is slower and more powerful than that of their smaller relatives, with a call that is a drawn-out twittering (listen at right).
+</p><p>Alpine swifts are readily distinguished from the common swifts by their larger size and their white belly and throat. They are around twice as big as most other swifts in their range, about 20 to 23&#160;cm (7.9 to 9.1&#160;in) in length, with a wingspan of 57&#160;cm (22&#160;in) and a weight of around 100&#160;g (3.5&#160;oz).<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> By comparison, the <a href="/wiki/Common_swift" title="Common swift">common swift</a> has a wingspan of around 42&#160;cm (17&#160;in). They're largely dark brown in colour with a dark neck band that separates the white throat from the white belly.
+Juveniles are similar to adults, but their feathers are pale edged.<sup id="cite_ref-Stevenson_6-0" class="reference"><a href="#cite_note-Stevenson-6">&#91;6&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Life_on_the_wing">Life on the wing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alpine_swift&amp;action=edit&amp;section=2" title="Edit section: Life on the wing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Alpine swifts spend most of their lives in the air, living on the insects they catch in their beaks. They drink on the wing, but roost on vertical cliffs or walls. A study published in 2013 showed Alpine swifts can spend over six months flying without having to land.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> All vital physiological processes, including sleep, can be performed while in air.
+</p><p>In 2011, Felix Liechti and his colleagues at the <a href="/wiki/Sempach_Bird_Observatory" class="mw-redirect" title="Sempach Bird Observatory">Swiss Ornithological Institute</a> attached electronic tags that log movement to six alpine swifts and it was discovered that the birds could stay aloft in the air for more than 200 days straight.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alpine_swift&amp;action=edit&amp;section=3" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22686774/0">"<i>Tachymarptis melba</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b><span class="reference-accessdate">. Retrieved <span class="nowrap">26 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Tachymarptis+melba&amp;rft.volume=2012&amp;rft.date=2012&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22686774%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlpine+swift" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.695.7104&amp;rep=rep1&amp;type=pdf">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.695.7104&amp;rep=rep1&amp;type=pdf</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Boev, Z. 1998. A range fluctuation of Alpine swift (<i>Apus melba</i> (L., 1758)) (Apodidae - Aves) in Northern Balkan Peninsula in the Riss-Wurm interglacial. - Biogeographia, Nuova Serie, Siena, Vol. 19, 1997: pp. 213–218.</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">Tomek, Teresa &amp; Bocheński, Zygmunt (2005): "<a rel="nofollow" class="external text" href="http://www.ingentaconnect.com/search/download?pub=infobike%3a%2f%2fisez%2fazc%2f2005%2f00000048%2fF0020001%2fart00005&amp;mimetype=application%2fpd">Weichselian and Holocene bird remains from Komarowa Cave, Central Poland</a>". <i>Acta zoologica cracoviensia</i>, Vol. 48A, (1-2): pp. 43–65.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://blx1.bto.org/birdfacts/results/bob7980.htm">BTO Birdfacts - Alpine swift</a>, <a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">British Trust for Ornithology</a>, BTO.org website.</span>
+</li>
+<li id="cite_note-Stevenson-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-Stevenson_6-0">^</a></b></span> <span class="reference-text">Stevenson &amp; Fanshawe. <i>Field Guide to the Birds of East Africa: Kenya, Tanzania, Uganda, Rwanda, Burundi</i>, <a href="/wiki/Elsevier_Science" class="mw-redirect" title="Elsevier Science">Elsevier Science</a>, 2001, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0856610790" title="Special:BookSources/978-0856610790">978-0856610790</a>.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Felix Liechti; Willem Witvliet; Roger Weber; Erich Bächler. <a rel="nofollow" class="external text" href="http://www.nature.com/ncomms/2013/131008/ncomms3554/full/ncomms3554.html">"First evidence of a 200-day non-stop flight in a bird"</a>, <i><a href="/wiki/Nature_(journal)" title="Nature (journal)">Nature</a></i> website, <i>Nature Communications</i>, article number: 2554, received 11 January 2013, published: 8 October 2013, <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1038%2Fncomms3554">10.1038/ncomms3554</a> (subscription).</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Stromberg, Joseph. <a rel="nofollow" class="external text" href="http://blogs.smithsonianmag.com/science/2013/10/this-bird-can-stay-in-flight-for-six-months-straight/">This Bird Can Stay in Flight for Six Months Straight: A lightweight sensor attached to alpine swifts reveals that the small migratory birds can remain aloft for more than 200 days without touching down</a>, <a href="/wiki/Smithsonian_(magazine)" title="Smithsonian (magazine)"><i>Smithsonian Magazine</i></a> website, 8 October 2013.</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alpine_swift&amp;action=edit&amp;section=4" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Tachymarptis_melba" class="extiw" title="commons:Tachymarptis melba">Tachymarptis melba</a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20141202070356/http://aulaenred.ibercaja.es/wp-content/uploads/279_AlpineSwiftAmelba.pdf">Ageing and sexing (PDF; 2.3 MB) by Javier Blasco-Zumeta &amp; Gerd-Michael Heinze</a></li>
+<li>Alpine swift - <a rel="nofollow" class="external text" href="http://sabap2.adu.org.za/docs/sabap1/418.pdf">Species text in The Atlas of Southern African Birds</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Taxon_identifiers" style="font-size:114%;margin:0 4em"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%;text-align: left;"><i>Tachymarptis melba</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q321267" class="extiw" title="wikidata:Q321267">Q321267</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Tachymarptis_melba" class="extiw" title="wikispecies:Tachymarptis melba">Tachymarptis melba</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Tachymarptis_melba/">Tachymarptis_melba</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/tachymarptis-melba/">tachymarptis-melba</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=FA1CAD2906F7C845">FA1CAD2906F7C845</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22686774">22686774</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Barcode_of_Life_Data_System" title="Barcode of Life Data System">BOLD</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.boldsystems.org/index.php/TaxBrowser_TaxonPage?taxid=102766">102766</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/1308">1308</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:97067">97067</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/1d626f63-5eae-4386-98a3-367db9d84c13">1d626f63-5eae-4386-98a3-367db9d84c13</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2477411">2477411</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=693134">693134</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22686774">22686774</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=670359">670359</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=17281">17281</a></span></span></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;text-align: left;"><i>Hirundo melba</i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q60982734" class="extiw" title="wikidata:Q60982734">Q60982734</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/8113197">8113197</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<p>.
+</p>
+<!-- 
+NewPP limit report
+Parsed by mw1411
+Cached time: 20201029222106
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.744 seconds
+Real time usage: 1.089 seconds
+Preprocessor visited node count: 6302/1000000
+Post‐expand include size: 40496/2097152 bytes
+Template argument size: 10085/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 15/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 11355/5000000 bytes
+Lua time usage: 0.503/10.000 seconds
+Lua memory usage: 7.65 MB/50 MB
+Number of Wikibase entities loaded: 15/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  997.808      1 -total
+ 48.71%  486.017      1 Template:Speciesbox
+ 47.34%  472.403      1 Template:Taxobox/core
+ 16.54%  165.032      1 Template:Reflist
+ 15.04%  150.115      1 Template:Taxonbar
+  9.43%   94.046      1 Template:Cite_iucn
+  7.31%   72.985      1 Template:Short_description
+  5.14%   51.280      1 Template:Commons
+  4.84%   48.335      1 Template:Sister_project
+  4.52%   45.111      1 Template:ISBN
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:376402-0!canonical and timestamp 20201029222105 and revision id 932562766
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Alpine_swift&amp;oldid=932562766">https://en.wikipedia.org/w/index.php?title=Alpine_swift&amp;oldid=932562766</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Swifts" title="Category:Swifts">Swifts</a></li><li><a href="/wiki/Category:Apus_(genus)" title="Category:Apus (genus)">Apus (genus)</a></li><li><a href="/wiki/Category:Birds_of_Africa" title="Category:Birds of Africa">Birds of Africa</a></li><li><a href="/wiki/Category:Birds_of_Europe" title="Category:Birds of Europe">Birds of Europe</a></li><li><a href="/wiki/Category:Birds_of_Madagascar" title="Category:Birds of Madagascar">Birds of Madagascar</a></li><li><a href="/wiki/Category:Birds_of_South_Asia" title="Category:Birds of South Asia">Birds of South Asia</a></li><li><a href="/wiki/Category:Birds_of_Western_Asia" title="Category:Birds of Western Asia">Birds of Western Asia</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Articles_with_hAudio_microformats" title="Category:Articles with hAudio microformats">Articles with hAudio microformats</a></li><li><a href="/wiki/Category:Commons_link_is_on_Wikidata" title="Category:Commons link is on Wikidata">Commons link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_automatically_added_original_combinations" title="Category:Taxonbars with automatically added original combinations">Taxonbars with automatically added original combinations</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Alpine+swift" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Alpine+swift" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Alpine_swift" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Alpine_swift" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Alpine_swift">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Alpine_swift&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Alpine_swift&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Alpine_swift" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Alpine_swift" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Alpine_swift&amp;oldid=932562766" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Alpine_swift&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Alpine_swift&amp;id=932562766&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q321267" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Alpine_swift&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Alpine_swift&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Tachymarptis_melba" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Tachymarptis_melba" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%A5%D1%8C%D1%8D%D0%BF%D1%86%D3%80%D0%B0%D1%89%D1%85%D1%8A%D1%83%D1%8D%D0%BD%D1%8B%D0%B1%D1%8D%D1%85%D1%83" title="ХьэпцӀащхъуэныбэху – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Witpenswindswael" title="Witpenswindswael – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%B3%D9%85%D8%A7%D9%85%D8%A9_%D8%A7%D9%84%D8%B5%D8%B1%D9%88%D8%AF" title="سمامة الصرود – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Tachymarptis_melba" title="Tachymarptis melba – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/A%C4%9Fqar%C4%B1n_uzunqanad" title="Ağqarın uzunqanad – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B0%D0%B1%D1%80%D1%83%D1%85%D1%96_%D1%81%D0%B2%D1%96%D1%80%D0%B3%D1%83%D0%BB%D1%8C" title="Белабрухі свіргуль – Belarusian" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%90%D0%BB%D0%BF%D0%B8%D0%B9%D1%81%D0%BA%D0%B8_%D0%B1%D1%8A%D1%80%D0%B7%D0%BE%D0%BB%D0%B5%D1%82" title="Алпийски бързолет – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Glaouer_kof_gwenn" title="Glaouer kof gwenn – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Ballester_com%C3%BA" title="Ballester comú – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Apus_melba" title="Apus melba – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Ror%C3%BDs_velk%C3%BD" title="Rorýs velký – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-co"><a href="https://co.wikipedia.org/wiki/Rundonu_pettibiancu" title="Rundonu pettibiancu – Corsican" lang="co" hreflang="co" class="interlanguage-link-target">Corsu</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Gwennol_ddu%27r_Alpau" title="Gwennol ddu&#039;r Alpau – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Alpensegler" title="Alpensegler – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/Tsx%C4%AF%CC%81%C4%AF%CC%81%C5%82naalk%CA%BC%C4%AFhii_bit%C3%A9%C3%A9l_%C5%82igaa%C3%ADg%C3%AD%C3%AD" title="Tsxį́į́łnaalkʼįhii bitéél łigaaígíí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Suurpiiritaja" title="Suurpiiritaja – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Tachymarptis_melba" title="Tachymarptis melba – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Alpa_apuso" title="Alpa apuso – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Malkar-sorbeltz" title="Malkar-sorbeltz – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%D8%AF%D8%AE%D9%88%D8%B1%DA%A9_%DA%A9%D9%88%D9%87%DB%8C" title="بادخورک کوهی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Alpusveimari" title="Alpusveimari – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Martinet_%C3%A0_ventre_blanc" title="Martinet à ventre blanc – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Gabhl%C3%A1n_Alpach" title="Gabhlán Alpach – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gd"><a href="https://gd.wikipedia.org/wiki/G%C3%B2bhlan-monaidh" title="Gòbhlan-monaidh – Scottish Gaelic" lang="gd" hreflang="gd" class="interlanguage-link-target">Gàidhlig</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Andori%C3%B1%C3%B3n_real" title="Andoriñón real – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D5%8D%D5%BA%D5%AB%D5%BF%D5%A1%D5%AF%D5%A1%D6%83%D5%B8%D6%80_%D5%B4%D5%A1%D5%B6%D5%A3%D5%A1%D5%B2%D5%A1%D5%A9%D6%87" title="Սպիտակափոր մանգաղաթև – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Tachymarptis_melba" title="Tachymarptis melba – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A1%D7%99%D7%A1_%D7%94%D7%A8%D7%99%D7%9D" title="סיס הרים – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kn"><a href="https://kn.wikipedia.org/wiki/%E0%B2%AA%E0%B2%B0%E0%B3%8D%E0%B2%B5%E0%B2%A4_%E0%B2%AC%E0%B2%BE%E0%B2%A8%E0%B2%BE%E0%B2%A1%E0%B2%BF" title="ಪರ್ವತ ಬಾನಾಡಿ – Kannada" lang="kn" hreflang="kn" class="interlanguage-link-target">ಕನ್ನಡ</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%90%D2%9B%D0%B1%D0%B0%D1%83%D1%8B%D1%80_%D1%81%D2%B1%D1%80%D2%9B%D0%B0%D1%80%D0%BB%D1%8B%D2%93%D0%B0%D1%88" title="Ақбауыр сұрқарлығаш – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-avk"><a href="https://avk.wikipedia.org/wiki/Arzentiok_(Tachymarptis)" title="Arzentiok (Tachymarptis) – Kotava" lang="avk" hreflang="avk" class="interlanguage-link-target">Kotava</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Baltagurklis_%C4%8Diurlys" title="Baltagurklis čiurlys – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-lij"><a href="https://lij.wikipedia.org/wiki/Rundun" title="Rundun – Ligurian" lang="lij" hreflang="lij" class="interlanguage-link-target">Ligure</a></li><li class="interlanguage-link interwiki-olo"><a href="https://olo.wikipedia.org/wiki/Al%27pupiirr%C3%A4tt%C3%A4i" title="Al&#039;pupiirrättäi – Livvi-Karelian" lang="olo" hreflang="olo" class="interlanguage-link-target">Livvinkarjala</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Havasi_sarl%C3%B3sfecske" title="Havasi sarlósfecske – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%93%D0%BE%D0%BB%D0%B5%D0%BC%D0%B0_%D0%BF%D0%B8%D1%88%D1%82%D0%B0%D1%80%D0%BA%D0%B0" title="Голема пиштарка – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%B5%E0%B5%86%E0%B4%B3%E0%B5%8D%E0%B4%B3%E0%B4%B5%E0%B4%AF%E0%B4%B1%E0%B5%BB_%E0%B4%B6%E0%B4%B0%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B4%95%E0%B5%8D%E0%B4%B7%E0%B4%BF" title="വെള്ളവയറൻ ശരപ്പക്ഷി – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Alpengierzwaluw" title="Alpengierzwaluw – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ne"><a href="https://ne.wikipedia.org/wiki/%E0%A4%AC%E0%A4%A4%E0%A4%BE%E0%A4%B8%E0%A5%80_%E0%A4%97%E0%A5%8C%E0%A4%82%E0%A4%A5%E0%A4%B2%E0%A5%80" title="बतासी गौंथली – Nepali" lang="ne" hreflang="ne" class="interlanguage-link-target">नेपाली</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Alpeseiler" title="Alpeseiler – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pa"><a href="https://pa.wikipedia.org/wiki/%E0%A8%AA%E0%A8%B9%E0%A8%BE%E0%A9%9C%E0%A9%80_%E0%A8%85%E0%A8%9F%E0%A9%87%E0%A8%B0%E0%A8%A8" title="ਪਹਾੜੀ ਅਟੇਰਨ – Punjabi" lang="pa" hreflang="pa" class="interlanguage-link-target">ਪੰਜਾਬੀ</a></li><li class="interlanguage-link interwiki-pnb"><a href="https://pnb.wikipedia.org/wiki/%D9%BE%DB%81%D8%A7%DA%91%DB%8C_%D9%B9%D9%B9%DB%8C%D8%B1%DB%8C" title="پہاڑی ٹٹیری – Western Punjabi" lang="pnb" hreflang="pnb" class="interlanguage-link-target">پنجابی</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Apus_melba" title="Apus melba – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Jerzyk_alpejski" title="Jerzyk alpejski – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Andorinh%C3%A3o-real" title="Andorinhão-real – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%BE%D0%B1%D1%80%D1%8E%D1%85%D0%B8%D0%B9_%D1%81%D1%82%D1%80%D0%B8%D0%B6" title="Белобрюхий стриж – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/D%C3%A1%C5%BE%C4%8Fovn%C3%ADk_skaln%C3%BD" title="Dážďovník skalný – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B0_%D1%87%D0%B8%D0%BE%D0%BF%D0%B0" title="Бела чиопа – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Alppikiit%C3%A4j%C3%A4" title="Alppikiitäjä – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Alpseglare" title="Alpseglare – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%AE%E0%AE%B2%E0%AF%88_%E0%AE%89%E0%AE%B4%E0%AE%B5%E0%AE%BE%E0%AE%B0%E0%AE%A9%E0%AF%8D" title="மலை உழவாரன் – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Ak_kar%C4%B1nl%C4%B1_ebabil" title="Ak karınlı ebabil – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A1%D0%B5%D1%80%D0%BF%D0%BE%D0%BA%D1%80%D0%B8%D0%BB%D0%B5%D1%86%D1%8C_%D0%B1%D1%96%D0%BB%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B2%D0%B8%D0%B9" title="Серпокрилець білочеревий – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Apus_melba" title="Apus melba – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Apus_melba" title="Apus melba – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E5%B1%B1%E9%9B%A8%E7%87%95" title="高山雨燕 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q321267#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 26 December 2019, at 20:52<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Alpine_swift&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.744","walltime":"1.089","ppvisitednodes":{"value":6302,"limit":1000000},"postexpandincludesize":{"value":40496,"limit":2097152},"templateargumentsize":{"value":10085,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":15,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":11355,"limit":5000000},"entityaccesscount":{"value":15,"limit":400},"timingprofile":["100.00%  997.808      1 -total"," 48.71%  486.017      1 Template:Speciesbox"," 47.34%  472.403      1 Template:Taxobox/core"," 16.54%  165.032      1 Template:Reflist"," 15.04%  150.115      1 Template:Taxonbar","  9.43%   94.046      1 Template:Cite_iucn","  7.31%   72.985      1 Template:Short_description","  5.14%   51.280      1 Template:Commons","  4.84%   48.335      1 Template:Sister_project","  4.52%   45.111      1 Template:ISBN"]},"scribunto":{"limitreport-timeusage":{"value":"0.503","limit":"10.000"},"limitreport-memusage":{"value":8018180,"limit":52428800}},"cachereport":{"origin":"mw1411","timestamp":"20201029222106","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Alpine swift","url":"https:\/\/en.wikipedia.org\/wiki\/Alpine_swift","sameAs":"http:\/\/www.wikidata.org\/entity\/Q321267","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q321267","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-11-23T07:59:03Z","dateModified":"2019-12-26T20:52:09Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/4\/4d\/%CE%92%CE%BF%CF%85%CE%BD%CE%BF%CF%83%CF%84%CE%B1%CF%87%CF%84%CE%AC%CF%81%CE%B1_Alpine_Swift_Tachymarptis_melba.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":160,"wgHostname":"mw1395"});});</script>
+</body></html>

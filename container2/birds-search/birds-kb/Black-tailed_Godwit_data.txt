@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Black-tailed godwit - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"be93266d-88ca-4fae-a7ea-7553cfd9c1b6","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Black-tailed_godwit","wgTitle":"Black-tailed godwit","wgCurRevisionId":969124273,"wgRevisionId":969124273,"wgArticleId":318875,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: uses authors parameter","CS1: long volume value","Cite iucn maint","Articles with short description","Short description matches Wikidata","Use dmy dates from July 2013","Articles with 'species' microformats","CS1 Dutch-language sources (nl)",
+"Commons category link is on Wikidata","ARKive links","Taxonbars with 25–29 taxon IDs","Articles containing video clips","IUCN Red List near threatened species","Limosa","Birds of Eurasia","Endangered species of the British Isles","Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Black-tailed_godwit","wgRelevantArticleId":318875,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Black-tailed_Godwit","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English",
+"wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Black-tailed_godwit","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q18841"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips",
+"ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Black-tailed_Godwit_Uferschnepfe.jpg/1200px-Black-tailed_Godwit_Uferschnepfe.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Black-tailed_godwit"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Black-tailed_godwit&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Black-tailed_godwit&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Black-tailed_godwit"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Black-tailed_godwit rootpage-Black-tailed_godwit skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Black-tailed godwit</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Black-tailed_Godwit&amp;redirect=no" class="mw-redirect" title="Black-tailed Godwit">Black-tailed Godwit</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Species of bird</div>
+<p class="mw-empty-elt">
+
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Black-tailed godwit
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Black-tailed_Godwit_Uferschnepfe.jpg" class="image"><img alt="Black-tailed Godwit Uferschnepfe.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Black-tailed_Godwit_Uferschnepfe.jpg/220px-Black-tailed_Godwit_Uferschnepfe.jpg" decoding="async" width="220" height="220" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Black-tailed_Godwit_Uferschnepfe.jpg/330px-Black-tailed_Godwit_Uferschnepfe.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Black-tailed_Godwit_Uferschnepfe.jpg/440px-Black-tailed_Godwit_Uferschnepfe.jpg 2x" data-file-width="3080" data-file-height="3080" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Breeding plumage
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Status_iucn3.1_NT.svg/220px-Status_iucn3.1_NT.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Status_iucn3.1_NT.svg/330px-Status_iucn3.1_NT.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Status_iucn3.1_NT.svg/440px-Status_iucn3.1_NT.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Near_Threatened" class="mw-redirect" title="Near Threatened">Near Threatened</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-IUCN_1-0" class="reference"><a href="#cite_note-IUCN-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Limosa" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Charadriiformes" title="Charadriiformes">Charadriiformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Sandpiper" title="Sandpiper">Scolopacidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Godwit" title="Godwit"><i>Limosa</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>L.&#160;limosa</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Limosa limosa</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Subspecies
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>L. l. limosa</i> <small><a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a></small></li>
+<li><i>L. l. islandica</i> <small><a href="/wiki/Christian_Ludwig_Brehm" title="Christian Ludwig Brehm">Brehm</a>, 1831</small></li>
+<li><i>L. l. melanuroides</i> <small><a href="/wiki/John_Gould" title="John Gould">Gould</a>, 1846</small></li></ul>
+</td></tr>
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:LimosalimosaWorldDistribution.jpg" class="image"><img alt="LimosalimosaWorldDistribution.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/LimosalimosaWorldDistribution.jpg/220px-LimosalimosaWorldDistribution.jpg" decoding="async" width="220" height="163" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/LimosalimosaWorldDistribution.jpg/330px-LimosalimosaWorldDistribution.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8c/LimosalimosaWorldDistribution.jpg/440px-LimosalimosaWorldDistribution.jpg 2x" data-file-width="2862" data-file-height="2126" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Range of <i>L. limosa</i> <style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#FFFF64; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Breeding range</div><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#69AF5E; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Resident range</div><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#695AFF; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Wintering range</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>Scolopax aegocephala</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span></li>
+<li><i>Scolopax limosa</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span></li></ul>
+</td></tr>
+
+</tbody></table>
+<p>The <b>black-tailed godwit</b> (<i>Limosa limosa</i>) is a large, long-legged, long-billed <a href="/wiki/Shorebird" class="mw-redirect" title="Shorebird">shorebird</a> first described by <a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Carl Linnaeus</a> in 1758. It is a member of the <a href="/wiki/Godwit" title="Godwit">godwit</a> genus, <i><a href="/wiki/Limosa" class="mw-redirect" title="Limosa">Limosa</a></i>. There are three subspecies, all with orange head, neck and chest in breeding <a href="/wiki/Plumage" title="Plumage">plumage</a> and dull grey-brown winter coloration, and distinctive black and white wingbar at all times.
+</p><p>Its breeding range stretches from <a href="/wiki/Iceland" title="Iceland">Iceland</a> through <a href="/wiki/Europe" title="Europe">Europe</a> and areas of central <a href="/wiki/Palearctic" class="mw-redirect" title="Palearctic">Asia</a>. Black-tailed godwits spend (the northern hemisphere) winter in areas as diverse as the <a href="/wiki/Indian_Subcontinent" class="mw-redirect" title="Indian Subcontinent">Indian Subcontinent</a>, Australia, New Zealand, western <a href="/wiki/Europe" title="Europe">Europe</a> and west <a href="/wiki/Africa" title="Africa">Africa</a>. The species breeds in <a href="/wiki/Fen" title="Fen">fens</a>, lake edges, damp meadows, moorlands and bogs and uses <a href="/wiki/Estuary" title="Estuary">estuaries</a>, swamps and floods in (the northern hemisphere) winter; it is more likely to be found inland and on freshwater than the similar <a href="/wiki/Bar-tailed_godwit" title="Bar-tailed godwit">bar-tailed godwit</a>. The world population is estimated to be 634,000 to 805,000 birds and is classified as <a href="/wiki/Near_Threatened" class="mw-redirect" title="Near Threatened">Near Threatened</a>. The black-tailed godwit is the <a href="/wiki/List_of_national_birds" title="List of national birds">national bird</a> of the <a href="/wiki/Netherlands" title="Netherlands">Netherlands</a>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Taxonomy"><span class="tocnumber">1</span> <span class="toctext">Taxonomy</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Distribution_and_habitat"><span class="tocnumber">3</span> <span class="toctext">Distribution and habitat</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Behaviour"><span class="tocnumber">4</span> <span class="toctext">Behaviour</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Breeding"><span class="tocnumber">4.1</span> <span class="toctext">Breeding</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Food_and_feeding"><span class="tocnumber">4.2</span> <span class="toctext">Food and feeding</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Relationship_to_humans"><span class="tocnumber">5</span> <span class="toctext">Relationship to humans</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Further_reading"><span class="tocnumber">7</span> <span class="toctext">Further reading</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Identification"><span class="tocnumber">7.1</span> <span class="toctext">Identification</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Separation_of_limosa_and_islandica"><span class="tocnumber">7.1.1</span> <span class="toctext">Separation of limosa and islandica</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Taxonomy">Taxonomy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=1" title="Edit section: Taxonomy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This species was first described, as <i>Scolopax limosa</i>,<sup id="cite_ref-bwpi_2-0" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup> by <a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Carl Linnaeus</a> in 1758. Its <a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">scientific name</a> is derived from <a href="/wiki/Latin" title="Latin">Latin</a> and means "muddy", from <i>limus</i>, "mud".<sup id="cite_ref-job_3-0" class="reference"><a href="#cite_note-job-3">&#91;3&#93;</a></sup> The English name was first recorded in about 1416–17 and is believed to imitate the bird's call.<sup id="cite_ref-OED_4-0" class="reference"><a href="#cite_note-OED-4">&#91;4&#93;</a></sup>
+</p><p>The black-tailed godwit is a member of the <a href="/wiki/Genus" title="Genus">genus</a> <i><a href="/wiki/Godwit" title="Godwit">Limosa</a></i> (godwits), family <a href="/wiki/Scolopacidae" class="mw-redirect" title="Scolopacidae">Scolopacidae</a> (sandpipers) and order <a href="/wiki/Charadriiformes" title="Charadriiformes">Charadriiformes</a>, the waders.<sup id="cite_ref-bto_5-0" class="reference"><a href="#cite_note-bto-5">&#91;5&#93;</a></sup> There are three <a href="/wiki/Subspecies" title="Subspecies">subspecies</a>:<sup id="cite_ref-birdlife_6-0" class="reference"><a href="#cite_note-birdlife-6">&#91;6&#93;</a></sup><sup id="cite_ref-Clements2007_7-0" class="reference"><a href="#cite_note-Clements2007-7">&#91;7&#93;</a></sup>
+</p>
+<ul><li><i>L. l. limosa</i> – <small>(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</small>: the European black-tailed godwit, which breeds from western and central <a href="/wiki/Europe" title="Europe">Europe</a> to central <a href="/wiki/Asia" title="Asia">Asia</a> and Asiatic <a href="/wiki/Russia" title="Russia">Russia</a>, as far east as the <a href="/wiki/Yenisei_River" class="mw-redirect" title="Yenisei River">Yenisei River</a>.<sup id="cite_ref-birdlife_6-1" class="reference"><a href="#cite_note-birdlife-6">&#91;6&#93;</a></sup> Its head, neck and chest are pale orange.<sup id="cite_ref-bwpi_2-1" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup></li>
+<li><i>L. l. islandica</i> – <small>Brehm, 1831</small>: the Icelandic black-tailed godwit, which breeds mostly in <a href="/wiki/Iceland" title="Iceland">Iceland</a>, but also on the <a href="/wiki/Faeroe_Islands" class="mw-redirect" title="Faeroe Islands">Faeroe Islands</a>, <a href="/wiki/Shetland" title="Shetland">Shetland</a> and the <a href="/wiki/Lofoten_Islands" class="mw-redirect" title="Lofoten Islands">Lofoten Islands</a>. It has a shorter bill, shorter legs and more rufous coloration extending onto the belly, compared to <i>limosa</i>.<sup id="cite_ref-bwpi_2-2" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup></li>
+<li><i>L. l. melanuroides</i> – <small>Gould, 1846</small>: the Asian black-tailed godwit, which breeds in <a href="/wiki/Mongolia" title="Mongolia">Mongolia</a>, northern China, <a href="/wiki/Siberia" title="Siberia">Siberia</a> and <a href="/wiki/Russian_Far_East" title="Russian Far East">far eastern Russia</a>.<sup id="cite_ref-birdlife_6-2" class="reference"><a href="#cite_note-birdlife-6">&#91;6&#93;</a></sup> Its plumage is similar to <i>islandica</i>, but the bird is distinctly smaller.<sup id="cite_ref-bwpi_2-3" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup></li></ul>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=2" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Black-tailed_godwit_(limosa_limosa).jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Black-tailed_godwit_%28limosa_limosa%29.jpg/220px-Black-tailed_godwit_%28limosa_limosa%29.jpg" decoding="async" width="220" height="147" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Black-tailed_godwit_%28limosa_limosa%29.jpg/330px-Black-tailed_godwit_%28limosa_limosa%29.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/36/Black-tailed_godwit_%28limosa_limosa%29.jpg/440px-Black-tailed_godwit_%28limosa_limosa%29.jpg 2x" data-file-width="2354" data-file-height="1569" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Black-tailed_godwit_(limosa_limosa).jpg" class="internal" title="Enlarge"></a></div>Non-breeding plumage (with pink bill)</div></div></div>
+<p>The black-tailed godwit is a large <a href="/wiki/Wader" title="Wader">wader</a> with long bill (7.5 to 12&#160;cm (3.0 to 4.7&#160;in) long), neck and legs. During the breeding season, the bill has a yellowish or orange-pink base and dark tip; the base is pink in winter. The legs are dark grey, brown or black. The sexes are similar,<sup id="cite_ref-bwpi_2-4" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup> but in breeding plumage, they can be separated by the male's brighter, more extensive orange breast, neck and head. In winter, adult black-tailed godwits have a uniform brown-grey breast and upperparts (in contrast to the <a href="/wiki/Bar-tailed_godwit" title="Bar-tailed godwit">bar-tailed godwit</a>'s streaked back). Juveniles have a pale orange wash to the neck and breast.<sup id="cite_ref-collins_8-0" class="reference"><a href="#cite_note-collins-8">&#91;8&#93;</a></sup>
+</p><p>In flight, its bold black and white wings and white rump can be seen readily. When on the ground it can be difficult to separate from the similar Bar-tailed Godwit, but the black-tailed godwit's longer, straighter bill and longer legs are diagnostic.<sup id="cite_ref-collins_8-1" class="reference"><a href="#cite_note-collins-8">&#91;8&#93;</a></sup><sup id="cite_ref-birdlife_6-3" class="reference"><a href="#cite_note-birdlife-6">&#91;6&#93;</a></sup> Black-tailed godwits are similar in body size and shape to bar-taileds, but stand taller.<sup id="cite_ref-bwpi_2-5" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup>
+</p><p>It measures 42&#160;cm (17&#160;in) from bill to tail with a wingspan of 70–82&#160;cm (28–32&#160;in).<sup id="cite_ref-bwpi_2-6" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup> Males weigh around 280&#160;g (9.9&#160;oz) and females 340&#160;g (12&#160;oz).<sup id="cite_ref-bto_5-1" class="reference"><a href="#cite_note-bto-5">&#91;5&#93;</a></sup> The female is around 5% larger than the male,<sup id="cite_ref-bwpi_2-7" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup> with a bill 12–15% longer.<sup id="cite_ref-birdwatch_9-0" class="reference"><a href="#cite_note-birdwatch-9">&#91;9&#93;</a></sup>
+</p><p>The most common call is a strident <i>weeka weeka weeka</i>.
+</p><p>A study of black-tailed godwits in the <a href="/wiki/Netherlands" title="Netherlands">Netherlands</a> found a mortality rate of 37.6% in the first year of life, 32% in the second year, and 36.9% thereafter.<sup id="cite_ref-bwpi_2-8" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Distribution_and_habitat">Distribution and habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=3" title="Edit section: Distribution and habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Black-tailed_Goodwit_(Limosa_limosa)_near_Hodal_W_IMG_6621.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Black-tailed_Goodwit_%28Limosa_limosa%29_near_Hodal_W_IMG_6621.jpg/220px-Black-tailed_Goodwit_%28Limosa_limosa%29_near_Hodal_W_IMG_6621.jpg" decoding="async" width="220" height="192" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Black-tailed_Goodwit_%28Limosa_limosa%29_near_Hodal_W_IMG_6621.jpg/330px-Black-tailed_Goodwit_%28Limosa_limosa%29_near_Hodal_W_IMG_6621.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/01/Black-tailed_Goodwit_%28Limosa_limosa%29_near_Hodal_W_IMG_6621.jpg/440px-Black-tailed_Goodwit_%28Limosa_limosa%29_near_Hodal_W_IMG_6621.jpg 2x" data-file-width="689" data-file-height="600" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Black-tailed_Goodwit_(Limosa_limosa)_near_Hodal_W_IMG_6621.jpg" class="internal" title="Enlarge"></a></div>Winter-plumaged black-tailed godwit, India</div></div></div>
+<p>Black-tailed godwits have a discontinuous breeding range stretching from <a href="/wiki/Iceland" title="Iceland">Iceland</a> to the far east of <a href="/wiki/Russia" title="Russia">Russia</a>.<sup id="cite_ref-birdlife_6-4" class="reference"><a href="#cite_note-birdlife-6">&#91;6&#93;</a></sup> Their breeding habitat is river valley <a href="/wiki/Fen" title="Fen">fens</a>, floods at the edges of large lakes, damp <a href="/wiki/Steppe" title="Steppe">steppes</a>, <a href="/wiki/Raised_bog" title="Raised bog">raised bogs</a> and <a href="/wiki/Moorland" title="Moorland">moorlands</a>. An important proportion of the European population now uses secondary habitats: lowland wet grasslands, coastal <a href="/wiki/Grazing_marsh" title="Grazing marsh">grazing marshes</a>, <a href="/wiki/Pasture" title="Pasture">pastures</a>, wet areas near fishponds or <a href="/wiki/Sewage_treatment" title="Sewage treatment">sewage works</a>, and saline lagoons. Breeding can also take place in <a href="/wiki/Sugar_beet" title="Sugar beet">sugar beet</a>, <a href="/wiki/Potato" title="Potato">potato</a> and <a href="/wiki/Rye" title="Rye">rye</a> fields in the <a href="/wiki/Netherlands" title="Netherlands">Netherlands</a> and Germany.<sup id="cite_ref-bin_10-0" class="reference"><a href="#cite_note-bin-10">&#91;10&#93;</a></sup>
+</p><p>In spring, black-tailed godwits feed largely in grasslands, moving to muddy <a href="/wiki/Estuary" title="Estuary">estuaries</a> after breeding and for winter.<sup id="cite_ref-bin_10-1" class="reference"><a href="#cite_note-bin-10">&#91;10&#93;</a></sup> On African wintering grounds, swamps, floods and irrigated <a href="/wiki/Paddy_field" title="Paddy field">paddy fields</a> can attract flocks of birds. In India, inland pools, lakes and marshes are used, and occasionally brackish lakes, tidal creeks and estuaries.<sup id="cite_ref-bwpi_2-9" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup>
+</p><p>Godwits from the Icelandic population winter mainly in the United Kingdom, <a href="/wiki/Ireland" title="Ireland">Ireland</a>, France and the Netherlands, though some fly on to Spain, <a href="/wiki/Portugal" title="Portugal">Portugal</a> and perhaps <a href="/wiki/Morocco" title="Morocco">Morocco</a>.<sup id="cite_ref-ibtg_11-0" class="reference"><a href="#cite_note-ibtg-11">&#91;11&#93;</a></sup> Birds of the <i>limosa</i> subspecies from western Europe fly south to Morocco and then on to <a href="/wiki/Senegal" title="Senegal">Senegal</a> and <a href="/wiki/Guinea-Bissau" title="Guinea-Bissau">Guinea-Bissau</a>. Birds from the eastern European populations migrate to <a href="/wiki/Tunisia" title="Tunisia">Tunisia</a> and <a href="/wiki/Algeria" title="Algeria">Algeria</a>, then on to <a href="/wiki/Mali" title="Mali">Mali</a> or <a href="/wiki/Chad" title="Chad">Chad</a>.<sup id="cite_ref-birdguides_12-0" class="reference"><a href="#cite_note-birdguides-12">&#91;12&#93;</a></sup> Young birds from the European populations stay on in <a href="/wiki/Africa" title="Africa">Africa</a> after their first winter and return to Europe at the age of two years.<sup id="cite_ref-bin_10-2" class="reference"><a href="#cite_note-bin-10">&#91;10&#93;</a></sup> Asian black-tailed godwits winter in Australia, <a href="/wiki/Taiwan" title="Taiwan">Taiwan</a>, the <a href="/wiki/Philippines" title="Philippines">Philippines</a>, <a href="/wiki/Indonesia" title="Indonesia">Indonesia</a>, and <a href="/wiki/Papua_New_Guinea" title="Papua New Guinea">Papua New Guinea</a>.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Limosa_limosa_(flying)-2.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Limosa_limosa_%28flying%29-2.jpg/220px-Limosa_limosa_%28flying%29-2.jpg" decoding="async" width="220" height="142" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Limosa_limosa_%28flying%29-2.jpg/330px-Limosa_limosa_%28flying%29-2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/38/Limosa_limosa_%28flying%29-2.jpg/440px-Limosa_limosa_%28flying%29-2.jpg 2x" data-file-width="1533" data-file-height="990" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Limosa_limosa_(flying)-2.jpg" class="internal" title="Enlarge"></a></div>In flight</div></div></div>
+<p>Black-tailed godwits are much more likely to be found on inland wetlands than the more coastal <a href="/wiki/Bar-tailed_godwit" title="Bar-tailed godwit">bar-tailed godwit</a>. They <a href="/wiki/Bird_migration" title="Bird migration">migrate</a> in flocks to western Europe, Africa, south Asia and Australia. Although this species occurs in <a href="/wiki/Ireland" title="Ireland">Ireland</a> and Great Britain all year-round, they are not the same birds. The breeding birds depart in autumn, but are replaced in winter by the larger <a href="/wiki/Iceland" title="Iceland">Icelandic</a> race. These birds occasionally appear in the <a href="/wiki/Aleutian_Islands" title="Aleutian Islands">Aleutian Islands</a> and, rarely, on the <a href="/wiki/Atlantic_(ocean)" class="mw-redirect" title="Atlantic (ocean)">Atlantic</a> coast of <a href="/wiki/North_America" title="North America">North America</a>.
+</p><p>There is an estimated global population of between 634,000 and 805,000 birds and estimated range of 7,180,000 square kilometres (2,770,000&#160;sq&#160;mi).<sup id="cite_ref-birdlife_6-5" class="reference"><a href="#cite_note-birdlife-6">&#91;6&#93;</a></sup> In 2006 <a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> classified this species as Near Threatened due to a decline in numbers of around 25% in the previous 15 years.<sup id="cite_ref-IUCN_1-1" class="reference"><a href="#cite_note-IUCN-1">&#91;1&#93;</a></sup> It is also among the species to which the <i>Agreement on the Conservation of African-Eurasian Migratory Waterbirds</i> (<a href="/wiki/AEWA" class="mw-redirect" title="AEWA">AEWA</a>) applies.<sup id="cite_ref-aewa_13-0" class="reference"><a href="#cite_note-aewa-13">&#91;13&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Behaviour">Behaviour</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=4" title="Edit section: Behaviour">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Breeding">Breeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=5" title="Edit section: Breeding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Grutto.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grutto.jpg/220px-Grutto.jpg" decoding="async" width="220" height="147" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grutto.jpg/330px-Grutto.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grutto.jpg/440px-Grutto.jpg 2x" data-file-width="1000" data-file-height="667" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Grutto.jpg" class="internal" title="Enlarge"></a></div>Displaying black-tailed godwit</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Limosa_limosa_MHNT.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Limosa_limosa_MHNT.jpg/220px-Limosa_limosa_MHNT.jpg" decoding="async" width="220" height="195" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Limosa_limosa_MHNT.jpg/330px-Limosa_limosa_MHNT.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Limosa_limosa_MHNT.jpg/440px-Limosa_limosa_MHNT.jpg 2x" data-file-width="3878" data-file-height="3433" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Limosa_limosa_MHNT.jpg" class="internal" title="Enlarge"></a></div><i> Limosa limosa</i> - <a href="/wiki/MHNT" class="mw-redirect" title="MHNT">MHNT</a></div></div></div>
+<p>Black-tailed godwits are mostly <a href="/wiki/Monogamy" title="Monogamy">monogamous</a>; although it was not recorded in a four-year study of 50–60 pairs, <a href="/wiki/Bigamy" title="Bigamy">bigamy</a> was considered "probably frequent".<sup id="cite_ref-bwpi_2-10" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup> A study of the Icelandic population showed that despite spending winter apart, pairs are reunited on their breeding grounds within an average of three days of each other. If one partner does not arrive on time, 'divorce' occurs.<sup id="cite_ref-bbc_14-0" class="reference"><a href="#cite_note-bbc-14">&#91;14&#93;</a></sup> They nest in loose colonies. Unpaired males defend a temporary territory and perform display flights to attract a mate. Several nest scrapes are made away from the courtship territory, and are defended from other godwits. Once eggs are laid, an area of 30–50&#160;m (98–164&#160;ft) around the nest is defended.<sup id="cite_ref-bwpi_2-11" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup> The nest is a shallow scrape on the ground, usually in short vegetation.<sup id="cite_ref-cbb_15-0" class="reference"><a href="#cite_note-cbb-15">&#91;15&#93;</a></sup> The eggs may be hidden with vegetation by the incubating parent.<sup id="cite_ref-bwpi_2-12" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup>
+</p><p>The single brood of three to six eggs, coloured olive-green to dark brown,<sup id="cite_ref-bwpi_2-13" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup> measure 55&#160;mm ×&#160;37&#160;mm (2.2&#160;in ×&#160;1.5&#160;in) and weigh 39&#160;g (1.4&#160;oz) each (of which 6% is shell).<sup id="cite_ref-bto_5-2" class="reference"><a href="#cite_note-bto-5">&#91;5&#93;</a></sup> Incubation lasts 22–24 days and is performed by both parents. The young are downy and <a href="/wiki/Precocial" class="mw-redirect" title="Precocial">precocial</a> and are brooded while they are small and at night during colder weather. After hatching, they are led away from the nest and may move to habitats such as sewage farms, lake edges, marshes and mudflats.<sup id="cite_ref-bwpi_2-14" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup> The chicks fledge after 25–30 days.<sup id="cite_ref-bto_5-3" class="reference"><a href="#cite_note-bto-5">&#91;5&#93;</a></sup>
+</p><p>Black-tailed godwit productivity varies, positively, with spring temperatures.  However, during extreme events, such as a volcanic eruption, complete breeding failures can occur.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Food_and_feeding">Food and feeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=6" title="Edit section: Food and feeding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tleft"><div class="thumbinner" style="width:252px;"><div id="mwe_player_0" class="PopUpMediaTransform" style="width:250px;" videopayload="&lt;div class=&quot;mediaContainer&quot; style=&quot;width:384px&quot;&gt;&lt;video id=&quot;mwe_player_1&quot; poster=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Black-tailed_Godwit.ogv/384px--Black-tailed_Godwit.ogv.jpg&quot; controls=&quot;&quot; preload=&quot;none&quot; autoplay=&quot;&quot; style=&quot;width:384px;height:288px&quot; class=&quot;kskin&quot; data-durationhint=&quot;30.68&quot; data-startoffset=&quot;0&quot; data-mwtitle=&quot;Black-tailed_Godwit.ogv&quot; data-mwprovider=&quot;wikimediacommons&quot;&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/9/9c/Black-tailed_Godwit.ogv&quot; type=&quot;video/ogg; codecs=&amp;quot;theora, vorbis&amp;quot;&quot; data-title=&quot;Original Ogg file, 384 × 288 (507 kbps)&quot; data-shorttitle=&quot;Ogg source&quot; data-width=&quot;384&quot; data-height=&quot;288&quot; data-bandwidth=&quot;506970&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/9/9c/Black-tailed_Godwit.ogv/Black-tailed_Godwit.ogv.120p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Lowest bandwidth VP9 (120P)&quot; data-shorttitle=&quot;VP9 120P&quot; data-transcodekey=&quot;120p.vp9.webm&quot; data-width=&quot;160&quot; data-height=&quot;120&quot; data-bandwidth=&quot;170000&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/9/9c/Black-tailed_Godwit.ogv/Black-tailed_Godwit.ogv.160p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Low bandwidth WebM (160P)&quot; data-shorttitle=&quot;WebM 160P&quot; data-transcodekey=&quot;160p.webm&quot; data-width=&quot;214&quot; data-height=&quot;160&quot; data-bandwidth=&quot;215224&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/9/9c/Black-tailed_Godwit.ogv/Black-tailed_Godwit.ogv.180p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Low bandwidth VP9 (180P)&quot; data-shorttitle=&quot;VP9 180P&quot; data-transcodekey=&quot;180p.vp9.webm&quot; data-width=&quot;240&quot; data-height=&quot;180&quot; data-bandwidth=&quot;215856&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/9/9c/Black-tailed_Godwit.ogv/Black-tailed_Godwit.ogv.240p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Small VP9 (240P)&quot; data-shorttitle=&quot;VP9 240P&quot; data-transcodekey=&quot;240p.vp9.webm&quot; data-width=&quot;320&quot; data-height=&quot;240&quot; data-bandwidth=&quot;250520&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/9/9c/Black-tailed_Godwit.ogv/Black-tailed_Godwit.ogv.240p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Small WebM (240P)&quot; data-shorttitle=&quot;WebM 240P&quot; data-transcodekey=&quot;240p.webm&quot; data-width=&quot;320&quot; data-height=&quot;240&quot; data-bandwidth=&quot;324968&quot; data-framerate=&quot;25&quot;/&gt;&lt;/video&gt;&lt;/div&gt;"><img alt="File:Black-tailed Godwit.ogv" style="width:250px;height:188px" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Black-tailed_Godwit.ogv/250px--Black-tailed_Godwit.ogv.jpg" /><a href="//upload.wikimedia.org/wikipedia/commons/9/9c/Black-tailed_Godwit.ogv" title="Play media" target="new"><span class="play-btn-large"><span class="mw-tmh-playtext">Play media</span></span></a></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Black-tailed_Godwit.ogv" class="internal" title="Enlarge"></a></div>Manly Marina, SE Queensland, Australia</div></div></div>
+<p>They mainly eat <a href="/wiki/Invertebrate" title="Invertebrate">invertebrates</a>, but also aquatic plants in winter and on migration. In the breeding season, prey includes <a href="/wiki/Beetle" title="Beetle">beetles</a>, flies, <a href="/wiki/Grasshopper" title="Grasshopper">grasshoppers</a>, <a href="/wiki/Dragonfly" title="Dragonfly">dragonflies</a>, <a href="/wiki/Mayfly" title="Mayfly">mayflies</a>, <a href="/wiki/Caterpillar" title="Caterpillar">caterpillars</a>, <a href="/wiki/Annelid" title="Annelid">annelid</a> worms and <a href="/wiki/Mollusc" class="mw-redirect" title="Mollusc">molluscs</a>. Occasionally, fish eggs, <a href="/wiki/Frogspawn" class="mw-redirect" title="Frogspawn">frogspawn</a> and <a href="/wiki/Tadpole" title="Tadpole">tadpoles</a> are eaten. In water, the most common feeding method is to probe vigorously, up to 36 times per minute, and often with the head completely submerged. On land, black-tailed godwits probe into soft ground and also pick prey items from the surface.<sup id="cite_ref-bwpi_2-15" class="reference"><a href="#cite_note-bwpi-2">&#91;2&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Relationship_to_humans">Relationship to humans</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=7" title="Edit section: Relationship to humans">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In Europe, black-tailed godwits are only hunted in France, with the annual total killed estimated at 6,000 to 8,000 birds. This puts additional pressure on the western European population, and the <a href="/wiki/European_Commission" title="European Commission">European Commission</a> has a management plan in place for the species in its member states.<sup id="cite_ref-eu_17-0" class="reference"><a href="#cite_note-eu-17">&#91;17&#93;</a></sup> In England, black-tailed godwits were formerly much prized for the table.<sup id="cite_ref-brit_18-0" class="reference"><a href="#cite_note-brit-18">&#91;18&#93;</a></sup> <a href="/wiki/Thomas_Browne" title="Thomas Browne">Sir Thomas Browne</a> (1605–1682) said: <i>"[Godwits] were accounted the daintiest dish in England and I think, for the bignesse, of the biggest price."</i> Old names included Blackwit,<sup id="cite_ref-brit_18-1" class="reference"><a href="#cite_note-brit-18">&#91;18&#93;</a></sup> Whelp, Yarwhelp, Shrieker, Barker and Jadreka Snipe.<sup id="cite_ref-air_19-0" class="reference"><a href="#cite_note-air-19">&#91;19&#93;</a></sup> The <a href="/wiki/Icelandic_language" title="Icelandic language">Icelandic</a> name for the species is Jaðrakan.<sup id="cite_ref-bto_5-4" class="reference"><a href="#cite_note-bto-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-IUCN-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-IUCN_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-IUCN_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2017). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/species/22693150/111611637">"<i>Limosa limosa</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. 2017 (amended version of 2016 assessment): e.T22693150A111611637. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.2305%2FIUCN.UK.2017-1.RLTS.T22693150A111611637.en">10.2305/IUCN.UK.2017-1.RLTS.T22693150A111611637.en</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Limosa+limosa&amp;rft.volume=2017+%28amended+version+of+2016+assessment%29&amp;rft.pages=e.T22693150A111611637&amp;rft.date=2017&amp;rft_id=info%3Adoi%2F10.2305%2FIUCN.UK.2017-1.RLTS.T22693150A111611637.en&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fspecies%2F22693150%2F111611637&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: uses authors parameter (<a href="/wiki/Category:CS1_maint:_uses_authors_parameter" title="Category:CS1 maint: uses authors parameter">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">|volume= / |doi= mismatch</span></span>
+</li>
+<li id="cite_note-bwpi-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-bwpi_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-bwpi_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-bwpi_2-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-bwpi_2-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-bwpi_2-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-bwpi_2-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-bwpi_2-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-bwpi_2-7"><sup><i><b>h</b></i></sup></a> <a href="#cite_ref-bwpi_2-8"><sup><i><b>i</b></i></sup></a> <a href="#cite_ref-bwpi_2-9"><sup><i><b>j</b></i></sup></a> <a href="#cite_ref-bwpi_2-10"><sup><i><b>k</b></i></sup></a> <a href="#cite_ref-bwpi_2-11"><sup><i><b>l</b></i></sup></a> <a href="#cite_ref-bwpi_2-12"><sup><i><b>m</b></i></sup></a> <a href="#cite_ref-bwpi_2-13"><sup><i><b>n</b></i></sup></a> <a href="#cite_ref-bwpi_2-14"><sup><i><b>o</b></i></sup></a> <a href="#cite_ref-bwpi_2-15"><sup><i><b>p</b></i></sup></a></span> <span class="reference-text"><cite class="citation book cs1"><i>BWPi: The Birds of the Western Palearctic on interactive DVD-ROM</i>. London: BirdGuides Ltd. and Oxford University Press. 2004. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-898110-39-2" title="Special:BookSources/978-1-898110-39-2"><bdi>978-1-898110-39-2</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=BWPi%3A+The+Birds+of+the+Western+Palearctic+on+interactive+DVD-ROM&amp;rft.place=London&amp;rft.pub=BirdGuides+Ltd.+and+Oxford+University+Press&amp;rft.date=2004&amp;rft.isbn=978-1-898110-39-2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-job-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-job_3-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London: Christopher Helm. p.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n227">227</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London&amp;rft.pages=227&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-OED-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-OED_4-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFReference-OED-Godwit" class="citation cs1"><a rel="nofollow" class="external text" href="http://oed.com/search?searchType=dictionary&amp;q=Godwit">"Godwit"</a>. <i><a href="/wiki/Oxford_English_Dictionary" title="Oxford English Dictionary">Oxford English Dictionary</a></i> (3rd ed.). Oxford University Press. September 2005.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Godwit&amp;rft.btitle=Oxford+English+Dictionary&amp;rft.edition=3rd&amp;rft.pub=Oxford+University+Press&amp;rft.date=2005-09&amp;rft_id=http%3A%2F%2Foed.com%2Fsearch%3FsearchType%3Ddictionary%26q%3DGodwit&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/>&#160;<span style="font-size:0.95em; font-size:90%; color:#555">(Subscription or <a rel="nofollow" class="external text" href="https://www.oed.com/public/login/loggingin#withyourlibrary">UK public library membership</a> required.)</span></span>
+</li>
+<li id="cite_note-bto-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-bto_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-bto_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-bto_5-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-bto_5-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-bto_5-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFRobinson" class="citation web cs1">Robinson, R.A. <a rel="nofollow" class="external text" href="http://blx1.bto.org/birdfacts/results/bob5320.htm">"Black-tailed Godwit <i>Limosa limosa</i>"</a>. <i>BirdFacts</i>. <a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">British Trust for Ornithology</a><span class="reference-accessdate">. Retrieved <span class="nowrap">27 April</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=BirdFacts&amp;rft.atitle=Black-tailed+Godwit+Limosa+limosa&amp;rft.aulast=Robinson&amp;rft.aufirst=R.A.&amp;rft_id=http%3A%2F%2Fblx1.bto.org%2Fbirdfacts%2Fresults%2Fbob5320.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-birdlife-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-birdlife_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-birdlife_6-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-birdlife_6-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-birdlife_6-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-birdlife_6-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-birdlife_6-5"><sup><i><b>f</b></i></sup></a></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.birdlife.org/datazone/species/factsheet/22693150">"Species factsheet: Limosa limosa"</a>. <a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a><span class="reference-accessdate">. Retrieved <span class="nowrap">13 February</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Species+factsheet%3A+Limosa+limosa&amp;rft.pub=BirdLife+International&amp;rft_id=http%3A%2F%2Fwww.birdlife.org%2Fdatazone%2Fspecies%2Ffactsheet%2F22693150&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Clements2007-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-Clements2007_7-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFClements2007" class="citation book cs1"><a href="/wiki/James_Clements" title="James Clements">Clements, James F.</a> (2007). <a href="/wiki/The_Clements_Checklist_of_Birds_of_the_World" title="The Clements Checklist of Birds of the World"><i>The Clements Checklist of Birds of the World</i></a>. Cornell University Press. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-8014-4501-9" title="Special:BookSources/978-0-8014-4501-9"><bdi>978-0-8014-4501-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Clements+Checklist+of+Birds+of+the+World&amp;rft.pub=Cornell+University+Press&amp;rft.date=2007&amp;rft.isbn=978-0-8014-4501-9&amp;rft.aulast=Clements&amp;rft.aufirst=James+F.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-collins-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-collins_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-collins_8-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFMullarneySvenssonZetterstromGrant1999" class="citation book cs1">Mullarney, Killian; Svensson, Lars; Zetterstrom, Dan; Grant, Peter (1999). <i>Collins Bird Guide</i>. London: HarperCollins. p.&#160;148. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-00-219728-1" title="Special:BookSources/978-0-00-219728-1"><bdi>978-0-00-219728-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Collins+Bird+Guide&amp;rft.place=London&amp;rft.pages=148&amp;rft.pub=HarperCollins&amp;rft.date=1999&amp;rft.isbn=978-0-00-219728-1&amp;rft.aulast=Mullarney&amp;rft.aufirst=Killian&amp;rft.au=Svensson%2C+Lars&amp;rft.au=Zetterstrom%2C+Dan&amp;rft.au=Grant%2C+Peter&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-birdwatch-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-birdwatch_9-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFVinicombe" class="citation web cs1">Vinicombe, Keith. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20161130065323/http://www.birdwatch.co.uk/categories/articleitem.asp?cate=23&amp;topic=117&amp;item=441">"Black-tailed and Bar-tailed Godwits"</a>. <i>Articles</i>. Birdwatch magazine. Archived from <a rel="nofollow" class="external text" href="http://www.birdwatch.co.uk/categories/articleitem.asp?cate=23&amp;topic=117&amp;item=441">the original</a> on 30 November 2016<span class="reference-accessdate">. Retrieved <span class="nowrap">3 January</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Articles&amp;rft.atitle=Black-tailed+and+Bar-tailed+Godwits&amp;rft.aulast=Vinicombe&amp;rft.aufirst=Keith&amp;rft_id=http%3A%2F%2Fwww.birdwatch.co.uk%2Fcategories%2Farticleitem.asp%3Fcate%3D23%26topic%3D117%26item%3D441&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-bin-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-bin_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-bin_10-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-bin_10-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFTuckerHeath1995" class="citation book cs1">Tucker, Graham M.; Heath, Melanie F. (1995). <i>Birds in Europe: Their Conservation Status</i>. BirdLife Conservation Series. <b>3</b>. Cambridge: <a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a>. pp.&#160;272–273. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-946888-29-0" title="Special:BookSources/978-0-946888-29-0"><bdi>978-0-946888-29-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Birds+in+Europe%3A+Their+Conservation+Status&amp;rft.place=Cambridge&amp;rft.series=BirdLife+Conservation+Series&amp;rft.pages=272-273&amp;rft.pub=BirdLife+International&amp;rft.date=1995&amp;rft.isbn=978-0-946888-29-0&amp;rft.aulast=Tucker&amp;rft.aufirst=Graham+M.&amp;rft.au=Heath%2C+Melanie+F.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-ibtg-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-ibtg_11-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.uea.ac.uk/~b026515/species.html">"About the species"</a>. <i>Icelandic Godwits</i>. Project Jaðrakan<span class="reference-accessdate">. Retrieved <span class="nowrap">3 January</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Icelandic+Godwits&amp;rft.atitle=About+the+species&amp;rft_id=http%3A%2F%2Fwww.uea.ac.uk%2F~b026515%2Fspecies.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-birdguides-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-birdguides_12-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20160822101043/https://www.birdguides.com/species/species.asp?sp=057001">"Black-tailed Godwit (Limosa limosa)"</a>. BirdGuides.com. Archived from <a rel="nofollow" class="external text" href="http://www.birdguides.com/species/species.asp?sp=057001">the original</a> on 22 August 2016<span class="reference-accessdate">. Retrieved <span class="nowrap">27 April</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Black-tailed+Godwit+%28Limosa+limosa%29&amp;rft.pub=BirdGuides.com&amp;rft_id=http%3A%2F%2Fwww.birdguides.com%2Fspecies%2Fspecies.asp%3Fsp%3D057001&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-aewa-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-aewa_13-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20071109233923/http://www.unep-aewa.org/birds/index.cfm?species=11986">"Limosa limosa: Black-tailed Godwit"</a>. <i>AEWA birds</i>. AEWA. Archived from <a rel="nofollow" class="external text" href="http://www.unep-aewa.org/birds/index.cfm?species=11986">the original</a> on 9 November 2007<span class="reference-accessdate">. Retrieved <span class="nowrap">3 January</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=AEWA+birds&amp;rft.atitle=Limosa+limosa%3A+Black-tailed+Godwit&amp;rft_id=http%3A%2F%2Fwww.unep-aewa.org%2Fbirds%2Findex.cfm%3Fspecies%3D11986&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-bbc-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-bbc_14-0">^</a></b></span> <span class="reference-text"><cite class="citation news cs1"><a rel="nofollow" class="external text" href="http://news.bbc.co.uk/1/hi/sci/tech/3737646.stm">"Icelandic birds rely on perfect timing"</a>. <i>BBC News website</i>. <a href="/wiki/BBC" title="BBC">BBC</a>. 3 November 2004<span class="reference-accessdate">. Retrieved <span class="nowrap">27 April</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=BBC+News+website&amp;rft.atitle=Icelandic+birds+rely+on+perfect+timing&amp;rft.date=2004-11-03&amp;rft_id=http%3A%2F%2Fnews.bbc.co.uk%2F1%2Fhi%2Fsci%2Ftech%2F3737646.stm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-cbb-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-cbb_15-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFGooders1982" class="citation book cs1"><a href="/wiki/John_Gooders" title="John Gooders">Gooders, John</a> (1982). <i>Collins British Birds</i>. London: William Collins Sons &amp; Co Ltd. p.&#160;182. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-00-219121-0" title="Special:BookSources/978-0-00-219121-0"><bdi>978-0-00-219121-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Collins+British+Birds&amp;rft.place=London&amp;rft.pages=182&amp;rft.pub=William+Collins+Sons+%26+Co+Ltd.&amp;rft.date=1982&amp;rft.isbn=978-0-00-219121-0&amp;rft.aulast=Gooders&amp;rft.aufirst=John&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite id="CITEREFGunnarsson,_T._G.Jóhannesdóttir,_L.Alves,_J._A.Þórisson,_B.2017" class="citation journal cs1">Gunnarsson, T. G.; Jóhannesdóttir, L.; Alves, J. A.; Þórisson, B.; Gill, J. A. (2017). <a rel="nofollow" class="external text" href="https://ueaeprints.uea.ac.uk/61787/1/Accepted_manuscript.pdf">"Effects of spring temperature and volcanic eruptions on wader productivity"</a> <span class="cs1-format">(PDF)</span>. <i>Ibis</i>. <b>159</b> (2): 467–471. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fibi.12449">10.1111/ibi.12449</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ibis&amp;rft.atitle=Effects+of+spring+temperature+and+volcanic+eruptions+on+wader+productivity&amp;rft.volume=159&amp;rft.issue=2&amp;rft.pages=467-471&amp;rft.date=2017&amp;rft_id=info%3Adoi%2F10.1111%2Fibi.12449&amp;rft.au=Gunnarsson%2C+T.+G.&amp;rft.au=J%C3%B3hannesd%C3%B3ttir%2C+L.&amp;rft.au=Alves%2C+J.+A.&amp;rft.au=%C3%9E%C3%B3risson%2C+B.&amp;rft.au=Gill%2C+J.+A.&amp;rft_id=https%3A%2F%2Fueaeprints.uea.ac.uk%2F61787%2F1%2FAccepted_manuscript.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-eu-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-eu_17-0">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://ec.europa.eu/environment/nature/conservation/wildbirds/hunting/docs/black_tailed_godwit.pdf">"Management Plan for Black-tailed Godwit (Limosa limosa)"</a> <span class="cs1-format">(PDF)</span>. <a href="/wiki/European_Commission" title="European Commission">European Commission</a><span class="reference-accessdate">. Retrieved <span class="nowrap">27 April</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Management+Plan+for+Black-tailed+Godwit+%28Limosa+limosa%29&amp;rft.pub=European+Commission&amp;rft_id=http%3A%2F%2Fec.europa.eu%2Fenvironment%2Fnature%2Fconservation%2Fwildbirds%2Fhunting%2Fdocs%2Fblack_tailed_godwit.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-brit-18"><span class="mw-cite-backlink">^ <a href="#cite_ref-brit_18-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-brit_18-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFCockerMabey2005" class="citation book cs1">Cocker, Mark; Mabey, Richard (2005). <i>Birds Britannica</i>. London: Chatto &amp; Windus. pp.&#160;113–114. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7011-6907-7" title="Special:BookSources/978-0-7011-6907-7"><bdi>978-0-7011-6907-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Birds+Britannica&amp;rft.place=London&amp;rft.pages=113-114&amp;rft.pub=Chatto+%26+Windus&amp;rft.date=2005&amp;rft.isbn=978-0-7011-6907-7&amp;rft.aulast=Cocker&amp;rft.aufirst=Mark&amp;rft.au=Mabey%2C+Richard&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-air-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-air_19-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFGreenoak1979" class="citation book cs1">Greenoak, Francesca (1979). <i>All The Birds Of The Air</i>. Book Club Association.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=All+The+Birds+Of+The+Air&amp;rft.pub=Book+Club+Association&amp;rft.date=1979&amp;rft.aulast=Greenoak&amp;rft.aufirst=Francesca&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=9" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Identification">Identification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=10" title="Edit section: Identification">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><cite id="CITEREFVinicombe2010" class="citation journal cs1"><a href="/wiki/Keith_Vinicombe" title="Keith Vinicombe">Vinicombe, Keith</a> (1 January 2010). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20161130065323/http://www.birdwatch.co.uk/categories/articleitem.asp?cate=23&amp;topic=117&amp;item=441">"Black-tailed and Bar-tailed Godwits"</a>. <i><a href="/wiki/Birdwatch_(magazine)" title="Birdwatch (magazine)">Birdwatch</a></i>. Archived from <a rel="nofollow" class="external text" href="http://www.birdwatch.co.uk/categories/articleitem.asp?cate=23&amp;topic=117&amp;item=441">the original</a> on 30 November 2016<span class="reference-accessdate">. Retrieved <span class="nowrap">3 January</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Birdwatch&amp;rft.atitle=Black-tailed+and+Bar-tailed+Godwits&amp;rft.date=2010-01-01&amp;rft.aulast=Vinicombe&amp;rft.aufirst=Keith&amp;rft_id=http%3A%2F%2Fwww.birdwatch.co.uk%2Fcategories%2Farticleitem.asp%3Fcate%3D23%26topic%3D117%26item%3D441&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li></ul>
+<h4><span class="mw-headline" id="Separation_of_limosa_and_islandica">Separation of limosa and islandica</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=11" title="Edit section: Separation of limosa and islandica">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><cite id="CITEREFRoselaarGerritsen1991" class="citation journal cs1">Roselaar, C.S.; Gerritsen, Gerrit J. (1991). <a rel="nofollow" class="external text" href="http://www.dutchbirding.nl/content/journal/pdf/1991-4.pdf">"Recognition of Icelandic Black-tailed Godwit and its occurrence in the Netherlands"</a> <span class="cs1-format">(PDF)</span>. <i><a href="/wiki/Dutch_Birding" title="Dutch Birding">Dutch Birding</a></i>. <b>13</b> (4): 128–135.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Dutch+Birding&amp;rft.atitle=Recognition+of+Icelandic+Black-tailed+Godwit+and+its+occurrence+in+the+Netherlands&amp;rft.volume=13&amp;rft.issue=4&amp;rft.pages=128-135&amp;rft.date=1991&amp;rft.aulast=Roselaar&amp;rft.aufirst=C.S.&amp;rft.au=Gerritsen%2C+Gerrit+J.&amp;rft_id=http%3A%2F%2Fwww.dutchbirding.nl%2Fcontent%2Fjournal%2Fpdf%2F1991-4.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><cite id="CITEREFvan_ScheepenOreel1995" class="citation journal cs1">van Scheepen, Peter; Oreel, Gerald J. (1995). <a rel="nofollow" class="external text" href="http://www.dutchbirding.nl/content/journal/pdf/1995-2.pdf">"Herkenning en voorkomen van Ijslandse Grutto in Nederland"</a> &#91;Identification and occurrence of Icelandic Black-tailed Godwit in the Netherlands&#93; <span class="cs1-format">(PDF)</span>. <i><a href="/wiki/Dutch_Birding" title="Dutch Birding">Dutch Birding</a></i> (in Dutch). <b>17</b> (2): 54–62.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Dutch+Birding&amp;rft.atitle=Herkenning+en+voorkomen+van+Ijslandse+Grutto+in+Nederland&amp;rft.volume=17&amp;rft.issue=2&amp;rft.pages=54-62&amp;rft.date=1995&amp;rft.aulast=van+Scheepen&amp;rft.aufirst=Peter&amp;rft.au=Oreel%2C+Gerald+J.&amp;rft_id=http%3A%2F%2Fwww.dutchbirding.nl%2Fcontent%2Fjournal%2Fpdf%2F1995-2.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><cite id="CITEREFEvans2004" class="citation journal cs1"><a href="/wiki/Lee_G._R._Evans" title="Lee G. R. Evans">Evans, L.G.R.</a> (July 2004). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20110619063908/http://bucksbirdclub.co.uk/GodwitIdentification.pdf">"Continental Black-tailed Godwit at College Lake – the first confirmed record for Buckinghamshire"</a> <span class="cs1-format">(PDF)</span>. <i>Rare Birds Weekly</i>. Archived from <a rel="nofollow" class="external text" href="http://www.bucksbirdclub.co.uk/GodwitIdentification.pdf">the original</a> <span class="cs1-format">(PDF)</span> on 19 June 2011<span class="reference-accessdate">. Retrieved <span class="nowrap">23 April</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Rare+Birds+Weekly&amp;rft.atitle=Continental+Black-tailed+Godwit+at+College+Lake+%E2%80%93+the+first+confirmed+record+for+Buckinghamshire&amp;rft.date=2004-07&amp;rft.aulast=Evans&amp;rft.aufirst=L.G.R.&amp;rft_id=http%3A%2F%2Fwww.bucksbirdclub.co.uk%2FGodwitIdentification.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><a href="/wiki/Vinicombe,_Keith" class="mw-redirect" title="Vinicombe, Keith">Vinicombe, Keith</a> (2005) A tale of two godwits <i><a href="/wiki/Birdwatch_(magazine)" title="Birdwatch (magazine)">Birdwatch</a></i> 154:18-20</li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit&amp;section=12" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Limosa_limosa" class="extiw" title="commons:Category:Limosa limosa"><span style="">Limosa limosa</span></a></b></i>.</td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/34px-Wikispecies-logo.svg.png" decoding="async" width="34" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/51px-Wikispecies-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/68px-Wikispecies-logo.svg.png 2x" data-file-width="941" data-file-height="1103" /></td>
+<td class="mbox-text plainlist"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a> has information related to <i><b><a href="https://species.wikimedia.org/wiki/Limosa_limosa" class="extiw" title="wikispecies:Limosa limosa">Limosa limosa</a></b></i></td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://sabap2.adu.org.za/docs/sabap1/287.pdf">Black-tailed godwit species text in The Atlas of Southern African Birds</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20161108184443/http://aulaenred.ibercaja.es/wp-content/uploads/198_BlacktailedGodwitLlimosa.pdf">Ageing and sexing (PDF; 0.94 MB) by Javier Blasco-Zumeta &amp; Gerd-Michael Heinze</a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?lang=EN&amp;avibaseid=454B5CD5F5285B77">"Limosa limosa"</a>. <i>Avibase</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Avibase&amp;rft.atitle=Limosa+limosa&amp;rft_id=https%3A%2F%2Favibase.bsc-eoc.org%2Fspecies.jsp%3Flang%3DEN%26avibaseid%3D454B5CD5F5285B77&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/> <a href="https://www.wikidata.org/wiki/Q18841#P2026" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></li>
+<li><cite class="citation web cs1"><a rel="nofollow" class="external text" href="http://www.hbw.com/ibc/species/black-tailed-godwit-limosa-limosa">"Black-tailed godwit media"</a>. <i><a href="/wiki/Internet_Bird_Collection" class="mw-redirect" title="Internet Bird Collection">Internet Bird Collection</a></i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Internet+Bird+Collection&amp;rft.atitle=Black-tailed+godwit+media&amp;rft_id=http%3A%2F%2Fwww.hbw.com%2Fibc%2Fspecies%2Fblack-tailed-godwit-limosa-limosa&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABlack-tailed+godwit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></li>
+<li><a rel="nofollow" class="external text" href="http://vireo.acnatsci.org/search.html?Form=Search&amp;SEARCHBY=Common&amp;KEYWORDS=Black-tailed+godwit&amp;showwhat=images&amp;AGE=All&amp;SEX=All&amp;ACT=All&amp;Search=Search&amp;VIEW=All&amp;ORIENTATION=All&amp;RESULTS=24">Black-tailed godwit photo gallery</a> at VIREO (Drexel University)</li>
+<li><a rel="nofollow" class="external text" href="http://maps.iucnredlist.org/map.html?id=22693150">Interactive range map of <i>Limosa limosa</i></a> at <a rel="nofollow" class="external text" href="http://maps.iucnredlist.org/index.html">IUCN Red List maps</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.xeno-canto.org/species/Limosa-limosa">Audio recordings of Black-tailed godwit</a> on <a href="/wiki/Xeno-canto" title="Xeno-canto">Xeno-canto</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://www.flickr.com/groups/birdguide/pool/tags/Limosa+limosa"><i>Limosa limosa</i></a> in <i><a rel="nofollow" class="external text" href="https://www.flickr.com/groups/birdguide">Field Guide: Birds of the World</a></i> on <a href="/wiki/Flickr" title="Flickr">Flickr</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/limosa-limosa">Black-tailed godwit</a> media from <a href="/wiki/ARKive" title="ARKive">ARKive</a> <a href="https://www.wikidata.org/wiki/Q18841#P2833" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Sandpipers_(family:_Scolopacidae)" style="padding:3px"><table class="nowraplinks hlist mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Scolopacidae" title="Template:Scolopacidae"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Scolopacidae" title="Template talk:Scolopacidae"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Scolopacidae&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Sandpipers_(family:_Scolopacidae)" style="font-size:114%;margin:0 4em"><a href="/wiki/Sandpiper" title="Sandpiper">Sandpipers</a> (<a href="/wiki/Family_(biology)" title="Family (biology)">family</a>: Scolopacidae)</div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*_Kingdom:_Animalia_*_Phylum:_Chordata_*_Class:_Aves_*_Order:_Charadriiformes">
+<ul><li>Kingdom: <a href="/wiki/Animal" title="Animal">Animalia</a></li>
+<li>Phylum: <a href="/wiki/Chordate" title="Chordate">Chordata</a></li>
+<li>Class: <a href="/wiki/Bird" title="Bird">Aves</a></li>
+<li>Order: <a href="/wiki/Charadriiformes" title="Charadriiformes">Charadriiformes</a></li></ul>
+</div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks mw-collapsible uncollapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Scolopacidae_(Numeniinae–Limosinae–Arenariinae)" style="font-size:114%;margin:0 4em">Scolopacidae <style data-mw-deduplicate="TemplateStyles:r886047488">.mw-parser-output .nobold{font-weight:normal}</style><span class="nobold">(Numeniinae–Limosinae–Arenariinae)</span></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em">Numeniinae</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em"><i>Bartramia</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Upland_sandpiper" title="Upland sandpiper">Upland sandpiper (<i>B. longicauda</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Curlew" title="Curlew">Numenius</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Curlews)</span></span></small></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Long-billed_curlew" title="Long-billed curlew">Long-billed curlew (<i>N. americanus</i>)</a></li>
+<li><a href="/wiki/Eurasian_curlew" title="Eurasian curlew">Eurasian curlew (<i>N. arquata</i>)</a></li>
+<li><a href="/wiki/Eskimo_curlew" title="Eskimo curlew">Eskimo curlew (<i>N. borealis</i>)</a></li>
+<li><a href="/wiki/Hudsonian_whimbrel" title="Hudsonian whimbrel">Hudsonian whimbrel (<i>N. hudsonicus</i>)</a></li>
+<li><a href="/wiki/Far_Eastern_curlew" title="Far Eastern curlew">Far Eastern curlew (<i>N. madagascariensis</i>)</a></li>
+<li><a href="/wiki/Little_curlew" title="Little curlew">Little curlew (<i>N. minutus</i>)</a></li>
+<li><a href="/wiki/Eurasian_whimbrel" title="Eurasian whimbrel">Eurasian whimbrel (<i>N. phaeopus</i>)</a></li>
+<li><a href="/wiki/Bristle-thighed_curlew" title="Bristle-thighed curlew">Bristle-thighed curlew (<i>N. tahitiensis</i>)</a></li>
+<li><a href="/wiki/Slender-billed_curlew" title="Slender-billed curlew">Slender-billed curlew (<i>N. tenuirostris</i>)</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em">Limosinae</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Limosa(Godwits)" scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Godwit" title="Godwit">Limosa</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Godwits)</span></span></small></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Marbled_godwit" title="Marbled godwit">Marbled godwit (<i>L. fedoa</i>)</a></li>
+<li><a href="/wiki/Hudsonian_godwit" title="Hudsonian godwit">Hudsonian godwit (<i>L. haemastica</i>)</a></li>
+<li><a href="/wiki/Bar-tailed_godwit" title="Bar-tailed godwit">Bar-tailed godwit (<i>L. lapponica</i>)</a></li>
+<li><a class="mw-selflink selflink">Black-tailed godwit (<i>L. limosa</i>)</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em">Arenariinae</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Turnstone" title="Turnstone">Arenaria</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Turnstones)</span></span></small></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ruddy_turnstone" title="Ruddy turnstone">Ruddy turnstone (<i>A. interpres</i>)</a></li>
+<li><a href="/wiki/Black_turnstone" title="Black turnstone">Black turnstone (<i>A. melanocephala</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Polynesian_sandpiper" title="Polynesian sandpiper">Prosobonia</a></i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Tuamotu_sandpiper" title="Tuamotu sandpiper">Tuamotu sandpiper (<i>P. parvirostris</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Calidris" title="Calidris">Calidris</a></i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Sharp-tailed_sandpiper" title="Sharp-tailed sandpiper">Sharp-tailed sandpiper (<i>C. acuminata</i>)</a></li>
+<li><a href="/wiki/Sanderling" title="Sanderling">Sanderling (<i>C. alba</i>)</a></li>
+<li><a href="/wiki/Dunlin" title="Dunlin">Dunlin (<i>C. alpina</i>)</a></li>
+<li><a href="/wiki/Baird%27s_sandpiper" title="Baird&#39;s sandpiper">Baird's sandpiper (<i>C. bairdii</i>)</a></li>
+<li><a href="/wiki/Red_knot" title="Red knot">Red knot (<i>C. canutus</i>)</a></li>
+<li><a href="/wiki/Broad-billed_sandpiper" title="Broad-billed sandpiper">Broad-billed sandpiper (<i>C. falcinellus</i>)</a></li>
+<li><a href="/wiki/Curlew_sandpiper" title="Curlew sandpiper">Curlew sandpiper (<i>C. ferruginea</i>)</a></li>
+<li><a href="/wiki/White-rumped_sandpiper" title="White-rumped sandpiper">White-rumped sandpiper (<i>C. fuscicollis</i>)</a></li>
+<li><a href="/wiki/Stilt_sandpiper" title="Stilt sandpiper">Stilt sandpiper (<i>C. himantopus</i>)</a></li>
+<li><a href="/wiki/Purple_sandpiper" title="Purple sandpiper">Purple sandpiper (<i>C. maritima</i>)</a></li>
+<li><a href="/wiki/Western_sandpiper" title="Western sandpiper">Western sandpiper (<i>C. mauri</i>)</a></li>
+<li><a href="/wiki/Pectoral_sandpiper" title="Pectoral sandpiper">Pectoral sandpiper (<i>C. melanotos</i>)</a></li>
+<li><a href="/wiki/Little_stint" title="Little stint">Little stint (<i>C. minuta</i>)</a></li>
+<li><a href="/wiki/Least_sandpiper" title="Least sandpiper">Least sandpiper (<i>C. minutilla</i>)</a></li>
+<li><a href="/wiki/Rock_sandpiper" title="Rock sandpiper">Rock sandpiper (<i>C. ptilocnemis</i>)</a></li>
+<li><a href="/wiki/Ruff_(bird)" title="Ruff (bird)">Ruff (<i>C. pugnax</i>)</a></li>
+<li><a href="/wiki/Semipalmated_sandpiper" title="Semipalmated sandpiper">Semipalmated sandpiper (<i>C. pusilla</i>)</a></li>
+<li><a href="/wiki/Spoon-billed_sandpiper" title="Spoon-billed sandpiper">Spoon-billed sandpiper (<i>C. pygmaea</i>)</a></li>
+<li><a href="/wiki/Red-necked_stint" title="Red-necked stint">Red-necked stint (<i>C. ruficollis</i>)</a></li>
+<li><a href="/wiki/Long-toed_stint" title="Long-toed stint">Long-toed stint (<i>C. subminuta</i>)</a></li>
+<li><a href="/wiki/Buff-breasted_sandpiper" title="Buff-breasted sandpiper">Buff-breasted sandpiper (<i>C. subruficollis</i>)</a></li>
+<li><a href="/wiki/Temminck%27s_stint" title="Temminck&#39;s stint">Temminck's stint (<i>C. temminckii</i>)</a></li>
+<li><a href="/wiki/Great_knot" title="Great knot">Great knot (<i>C. tenuirostris</i>)</a></li>
+<li><a href="/wiki/Surfbird" title="Surfbird">Surfbird (<i>C. virgata</i>)</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks mw-collapsible mw-collapsed navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div id="Scolopacidae_(Tringinae–Scolopacinae)" style="font-size:114%;margin:0 4em">Scolopacidae <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Tringinae–Scolopacinae)</span></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em">Tringinae</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em"><i>Xenus</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Terek_sandpiper" title="Terek sandpiper">Terek sandpiper (<i>X. cinereus</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Phalarope" title="Phalarope">Phalaropus</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Phalaropes)</span></span></small></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Red_phalarope" title="Red phalarope">Red phalarope (<i>P. fulicarius</i>)</a></li>
+<li><a href="/wiki/Red-necked_phalarope" title="Red-necked phalarope">Red-necked phalarope (<i>P. lobatus</i>)</a></li>
+<li><a href="/wiki/Wilson%27s_phalarope" title="Wilson&#39;s phalarope">Wilson's phalarope (<i>P. tricolor</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Actitis" title="Actitis">Actitis</a></i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Common_sandpiper" title="Common sandpiper">Common sandpiper (<i>A. hypoleucos</i>)</a></li>
+<li><a href="/wiki/Spotted_sandpiper" title="Spotted sandpiper">Spotted sandpiper (<i>A. macularia</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Tringa" title="Tringa">Tringa</a></i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Grey-tailed_tattler" title="Grey-tailed tattler">Grey-tailed tattler (<i>T. brevipes</i>)</a></li>
+<li><a href="/wiki/Spotted_redshank" title="Spotted redshank">Spotted redshank (<i>T. erythropus</i>)</a></li>
+<li><a href="/wiki/Lesser_yellowlegs" title="Lesser yellowlegs">Lesser yellowlegs (<i>T. flavipes</i>)</a></li>
+<li><a href="/wiki/Wood_sandpiper" title="Wood sandpiper">Wood sandpiper (<i>T. glareola</i>)</a></li>
+<li><a href="/wiki/Nordmann%27s_greenshank" title="Nordmann&#39;s greenshank">Nordmann's greenshank (<i>T. guttifer</i>)</a></li>
+<li><a href="/wiki/Wandering_tattler" title="Wandering tattler">Wandering tattler (<i>T. incana</i>)</a></li>
+<li><a href="/wiki/Greater_yellowlegs" title="Greater yellowlegs">Greater yellowlegs (<i>T. melanoleuca</i>)</a></li>
+<li><a href="/wiki/Common_greenshank" title="Common greenshank">Common greenshank (<i>T. nebularia</i>)</a></li>
+<li><a href="/wiki/Green_sandpiper" title="Green sandpiper">Green sandpiper (<i>T. ochropus</i>)</a></li>
+<li><a href="/wiki/Willet" title="Willet">Willet (<i>T. semipalmata</i>)</a></li>
+<li><a href="/wiki/Solitary_sandpiper" title="Solitary sandpiper">Solitary sandpiper (<i>T. solitaria</i>)</a></li>
+<li><a href="/wiki/Marsh_sandpiper" title="Marsh sandpiper">Marsh sandpiper (<i>T. stagnatilis</i>)</a></li>
+<li><a href="/wiki/Common_redshank" title="Common redshank">Common redshank (<i>T. totanus</i>)</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em">Scolopacinae</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:7em"><i>Lymnocryptes</i></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Jack_snipe" title="Jack snipe">Jack snipe (<i>L. minimus</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Dowitcher" title="Dowitcher">Limnodromus</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Dowitchers)</span></span></small></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Short-billed_dowitcher" title="Short-billed dowitcher">Short-billed dowitcher (<i>L. griseus</i>)</a></li>
+<li><a href="/wiki/Long-billed_dowitcher" title="Long-billed dowitcher">Long-billed dowitcher (<i>L. scolopaceus</i>)</a></li>
+<li><a href="/wiki/Asian_dowitcher" title="Asian dowitcher">Asian dowitcher (<i>L. semipalmatus</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Woodcock" title="Woodcock">Scolopax</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Woodcocks)</span></span></small></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bukidnon_woodcock" title="Bukidnon woodcock">Bukidnon woodcock (<i>S. bukidnonensis</i>)</a></li>
+<li><a href="/wiki/Sulawesi_woodcock" title="Sulawesi woodcock">Sulawesi woodcock (<i>S. celebensis</i>)</a></li>
+<li><a href="/wiki/American_woodcock" title="American woodcock">American woodcock (<i>S. minor</i>)</a></li>
+<li><a href="/wiki/Amami_woodcock" title="Amami woodcock">Amami woodcock (<i>S. mira</i>)</a></li>
+<li><a href="/wiki/Moluccan_woodcock" title="Moluccan woodcock">Moluccan woodcock (<i>S. rochussenii</i>)</a></li>
+<li><a href="/wiki/New_Guinea_woodcock" title="New Guinea woodcock">New Guinea woodcock (<i>S. rosenbergii</i>)</a></li>
+<li><a href="/wiki/Eurasian_woodcock" title="Eurasian woodcock">Eurasian woodcock (<i>S. rusticola</i>)</a></li>
+<li><a href="/wiki/Javan_woodcock" title="Javan woodcock">Javan woodcock (<i>S. saturata</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Austral_snipe" title="Austral snipe">Coenocorypha</a></i></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Subantarctic_snipe" title="Subantarctic snipe">Subantarctic snipe (<i>C. aucklandica</i>)</a></li>
+<li><a href="/wiki/Snares_snipe" title="Snares snipe">Snares snipe (<i>C. huegeli</i>)</a></li>
+<li><a href="/wiki/Chatham_snipe" title="Chatham snipe">Chatham snipe (<i>C. pusilla</i>)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:7em"><i><a href="/wiki/Gallinago" title="Gallinago">Gallinago</a></i><br /><small><span style="color:#696969"><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047488"/><span class="nobold">(Snipes)</span></span></small></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Puna_snipe" title="Puna snipe">Puna snipe (<i>G. andina</i>)</a></li>
+<li><a href="/wiki/Wilson%27s_snipe" title="Wilson&#39;s snipe">Wilson's snipe (<i>G. delicata</i>)</a></li>
+<li><a href="/wiki/Common_snipe" title="Common snipe">Common snipe (<i>G. gallinago</i>)</a></li>
+<li><a href="/wiki/Latham%27s_snipe" title="Latham&#39;s snipe">Latham's snipe (<i>G. hardwickii</i>)</a></li>
+<li><a href="/wiki/Imperial_snipe" title="Imperial snipe">Imperial snipe (<i>G. imperialis</i>)</a></li>
+<li><a href="/wiki/Jameson%27s_snipe" title="Jameson&#39;s snipe">Jameson's snipe (<i>G. jamesoni</i>)</a></li>
+<li><a href="/wiki/Madagascan_snipe" title="Madagascan snipe">Madagascan snipe (<i>G. macrodactyla</i>)</a></li>
+<li><a href="/wiki/Great_snipe" title="Great snipe">Great snipe (<i>G. media</i>)</a></li>
+<li><a href="/wiki/Swinhoe%27s_snipe" title="Swinhoe&#39;s snipe">Swinhoe's snipe (<i>G. megala</i>)</a></li>
+<li><a href="/wiki/Wood_snipe" title="Wood snipe">Wood snipe (<i>G. nemoricola</i>)</a></li>
+<li><a href="/wiki/African_snipe" title="African snipe">African snipe (<i>G. nigripennis</i>)</a></li>
+<li><a href="/wiki/Noble_snipe" title="Noble snipe">Noble snipe (<i>G. nobilis</i>)</a></li>
+<li><a href="/wiki/South_American_snipe" title="South American snipe">South American snipe (<i>G. paraguaiae</i>)</a></li>
+<li><a href="/wiki/Solitary_snipe" title="Solitary snipe">Solitary snipe (<i>G. solitaria</i>)</a></li>
+<li><a href="/wiki/Pin-tailed_snipe" title="Pin-tailed snipe">Pin-tailed snipe (<i>G. stenura</i>)</a></li>
+<li><a href="/wiki/Fuegian_snipe" title="Fuegian snipe">Fuegian snipe (<i>G. stricklandii</i>)</a></li>
+<li><a href="/wiki/Giant_snipe" title="Giant snipe">Giant snipe (<i>G. undulata</i>)</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li>Based on <a rel="nofollow" class="external text" href="http://jboyd.net/Taxo/List9a.html">Boyd (2019)</a>.</li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q18841" class="extiw" title="wikidata:Q18841">Q18841</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Limosa_limosa" class="extiw" title="wikispecies:Limosa limosa">Limosa limosa</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/American_Birding_Association" title="American Birding Association">ABA</a>: <span class="uid">bltago</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Limosa_limosa/">Limosa_limosa</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/ARKive" title="ARKive">ARKive</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://web.archive.org/web/*/www.arkive.org/wd/limosa-limosa/">limosa-limosa</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=454B5CD5F5285B77">454B5CD5F5285B77</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8651">8651</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22693150">22693150</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">BLTGO</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Convention_on_the_Conservation_of_Migratory_Species_of_Wild_Animals" title="Convention on the Conservation of Migratory Species of Wild Animals">CMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.cms.int/en/species/limosa-limosa">limosa-limosa</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/bktgod">bktgod</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/1119">1119</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">5320</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:96832">96832</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/9a7a6328-05ec-4e0c-95b1-b4472c3a6396">9a7a6328-05ec-4e0c-95b1-b4472c3a6396</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=368996">368996</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2481685">2481685</a></span></span></li>
+<li><span style="white-space:nowrap;">GNAB: <span class="uid"><a rel="nofollow" class="external text" href="https://www.audubon.org/field-guide/bird/black-tailed-godwit">black-tailed-godwit</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Handbook_of_the_Birds_of_the_World" title="Handbook of the Birds of the World">IBC</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.hbw.com/species/black-tailed-godwit-limosa-limosa">black-tailed-godwit-limosa-limosa</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/3947">3947</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10583440">10583440</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=176691">176691</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22693150">22693150</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NBNSYS0000000145">NBNSYS0000000145</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=161680">161680</a></span></span></li>
+<li><span style="white-space:nowrap;">NZBO: <span class="uid"><a rel="nofollow" class="external text" href="http://nzbirdsonline.org.nz/species/black-tailed-godwit">black-tailed-godwit</a></span></span></li>
+<li><span style="white-space:nowrap;">NZOR: <span class="uid"><a rel="nofollow" class="external text" href="http://www.nzor.org.nz/names/edc49e8c-6de5-4cb1-ba82-bcfa79e8cac3">edc49e8c-6de5-4cb1-ba82-bcfa79e8cac3</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=9418">9418</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=159035">159035</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Xeno-canto" title="Xeno-canto">Xeno-canto</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.xeno-canto.org/species/Limosa-limosa">Limosa-limosa</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1370
+Cached time: 20201030052732
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 1.232 seconds
+Real time usage: 1.594 seconds
+Preprocessor visited node count: 7569/1000000
+Post‐expand include size: 174514/2097152 bytes
+Template argument size: 9715/2097152 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 29/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 80454/5000000 bytes
+Lua time usage: 0.790/10.000 seconds
+Lua memory usage: 11.08 MB/50 MB
+Number of Wikibase entities loaded: 29/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1438.394      1 -total
+ 32.63%  469.362      1 Template:Speciesbox
+ 31.93%  459.299      1 Template:Taxobox/core
+ 19.43%  279.441      1 Template:Reflist
+ 18.28%  262.981      1 Template:Taxonbar
+  8.17%  117.529      1 Template:Cite_iucn
+  6.08%   87.446      1 Template:Commons_category
+  6.04%   86.949      2 Template:Sister_project
+  5.78%   83.165      2 Template:Side_box
+  5.15%   74.127      1 Template:Short_description
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:318875-0!canonical and timestamp 20201030052730 and revision id 969124273
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Black-tailed_godwit&amp;oldid=969124273">https://en.wikipedia.org/w/index.php?title=Black-tailed_godwit&amp;oldid=969124273</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_near_threatened_species" title="Category:IUCN Red List near threatened species">IUCN Red List near threatened species</a></li><li><a href="/wiki/Category:Limosa" title="Category:Limosa">Limosa</a></li><li><a href="/wiki/Category:Birds_of_Eurasia" title="Category:Birds of Eurasia">Birds of Eurasia</a></li><li><a href="/wiki/Category:Endangered_species_of_the_British_Isles" title="Category:Endangered species of the British Isles">Endangered species of the British Isles</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_uses_authors_parameter" title="Category:CS1 maint: uses authors parameter">CS1 maint: uses authors parameter</a></li><li><a href="/wiki/Category:CS1:_long_volume_value" title="Category:CS1: long volume value">CS1: long volume value</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_July_2013" title="Category:Use dmy dates from July 2013">Use dmy dates from July 2013</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:CS1_Dutch-language_sources_(nl)" title="Category:CS1 Dutch-language sources (nl)">CS1 Dutch-language sources (nl)</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:ARKive_links" title="Category:ARKive links">ARKive links</a></li><li><a href="/wiki/Category:Taxonbars_with_25%E2%80%9329_taxon_IDs" title="Category:Taxonbars with 25–29 taxon IDs">Taxonbars with 25–29 taxon IDs</a></li><li><a href="/wiki/Category:Articles_containing_video_clips" title="Category:Articles containing video clips">Articles containing video clips</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Black-tailed+godwit" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Black-tailed+godwit" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Black-tailed_godwit" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Black-tailed_godwit" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Black-tailed_godwit">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Black-tailed_godwit&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Black-tailed_godwit&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Black-tailed_godwit" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Black-tailed_godwit" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Black-tailed_godwit&amp;oldid=969124273" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Black-tailed_godwit&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Black-tailed_godwit&amp;id=969124273&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q18841" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Black-tailed_godwit&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Black-tailed_godwit&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Limosa_limosa" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Limosa_limosa" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Swartstertgriet" title="Swartstertgriet – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%A8%D9%82%D9%88%D9%8A%D9%82%D8%A9_%D8%B3%D9%84%D8%B7%D8%A7%D9%86%D9%8A%D8%A9_%D8%B3%D9%88%D8%AF%D8%A7%D8%A1_%D8%A7%D9%84%D8%B0%D9%8A%D9%84" title="بقويقة سلطانية سوداء الذيل – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Limosa_limosa" title="Limosa limosa – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/B%C3%B6y%C3%BCk_oxc%C3%BCll%C3%BCt" title="Böyük oxcüllüt – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D2%A0%D1%8B%D2%99%D2%93%D0%B0%D1%82%D0%B0%D1%83" title="Ҡыҙғатау – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/%D0%93%D1%80%D1%8B%D1%86%D1%83%D0%BA_%D0%B2%D1%8F%D0%BB%D1%96%D0%BA%D1%96" title="Грыцук вялікі – Belarusian" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-be-x-old"><a href="https://be-tarask.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D0%B0%D1%86%D0%B5%D0%BD%D1%8C%D0%BD%D1%96%D0%BA_%D0%B2%D1%8F%D0%BB%D1%96%D0%BA%D1%96" title="Вераценьнік вялікі – Belarusian (Taraškievica orthography)" lang="be-tarask" hreflang="be-tarask" class="interlanguage-link-target">Беларуская (тарашкевіца)‎</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%BE%D0%BF%D0%B0%D1%88%D0%B0%D1%82_%D0%BA%D1%80%D0%B0%D0%B9%D0%B1%D1%80%D0%B5%D0%B6%D0%B5%D0%BD_%D0%B1%D0%B5%D0%BA%D0%B0%D1%81" title="Черноопашат крайбрежен бекас – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Marc%27heg_lost_du" title="Marc&#039;heg lost du – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/T%C3%A8tol_cuanegre" title="Tètol cuanegre – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Limosa_limosa" title="Limosa limosa – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/B%C5%99ehou%C5%A1_%C4%8Dernoocas%C3%BD" title="Břehouš černoocasý – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Rhostog_gynffonddu" title="Rhostog gynffonddu – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Stor_kobbersneppe" title="Stor kobbersneppe – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de badge-Q17437798 badge-goodarticle" title="good article badge"><a href="https://de.wikipedia.org/wiki/Uferschnepfe" title="Uferschnepfe – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-dv"><a href="https://dv.wikipedia.org/wiki/%DE%87%DE%AC%DE%81%DE%AA%DE%82%DE%B0%DE%8E%DE%A6_%DE%87%DE%A8%DE%8D%DE%AE%DE%85%DE%A8" title="އެށުންގަ އިލޮޅި – Divehi" lang="dv" hreflang="dv" class="interlanguage-link-target">ދިވެހިބަސް</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/T%C3%A1b%C4%85%C4%85sd%C3%ADs%C3%AD_j%C3%A1%C3%A1dn%C3%A9z%C3%AD_bitsee%CA%BC_%C5%82izhin%C3%ADg%C3%AD%C3%AD" title="Tábąąsdísí jáádnézí bitseeʼ łizhinígíí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Mustsaba-vigle" title="Mustsaba-vigle – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%9B%CE%B9%CE%BC%CF%8C%CE%B6%CE%B1" title="Λιμόζα – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Limosa_limosa" title="Limosa limosa – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Nigravosta_limozo" title="Nigravosta limozo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Kuliska_buztanbeltz" title="Kuliska buztanbeltz – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%DA%AF%DB%8C%D9%84%D8%A7%D9%86%E2%80%8C%D8%B4%D8%A7%D9%87_%D8%A8%D8%A7%D9%84%E2%80%8C%D8%B3%D9%81%DB%8C%D8%AF" title="گیلان‌شاه بال‌سفید – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Rey%C3%B0sp%C3%B3gvi" title="Reyðspógvi – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Barge_%C3%A0_queue_noire" title="Barge à queue noire – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-fy"><a href="https://fy.wikipedia.org/wiki/Skries" title="Skries – Western Frisian" lang="fy" hreflang="fy" class="interlanguage-link-target">Frysk</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Guilbneach_earrdhubh" title="Guilbneach earrdhubh – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Mazarico_rabinegro" title="Mazarico rabinegro – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%ED%9D%91%EA%BC%AC%EB%A6%AC%EB%8F%84%EC%9A%94" title="흑꼬리도요 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D5%84%D5%A5%D5%AE_%D5%AB%D5%AC%D5%AB%D5%AF%D5%A1%D5%AF%D5%BF%D6%81%D5%A1%D6%80" title="Մեծ իլիկակտցար – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Biru-laut_ekor-hitam" title="Biru-laut ekor-hitam – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Ja%C3%B0rakan" title="Jaðrakan – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Limosa_limosa" title="Limosa limosa – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%9C%D7%99%D7%9E%D7%95%D7%96%D7%94_%D7%9E%D7%A6%D7%95%D7%99%D7%94" title="לימוזה מצויה – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D2%AE%D0%BB%D0%BA%D0%B5%D0%BD_%D1%88%D1%8B%D1%80%D2%93%D0%B0%D0%BB%D0%B0%D2%9B" title="Үлкен шырғалақ – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Meln%C4%81_puskuitala" title="Melnā puskuitala – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Griciukas" title="Griciukas – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Nagy_goda" title="Nagy goda – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%A6%D1%80%D0%BD%D0%BE%D0%BE%D0%BF%D0%B0%D1%88%D0%BD%D0%B0_%D0%B1%D0%BB%D0%B0%D1%82%D0%B0%D1%80%D0%BA%D0%B0" title="Црноопашна блатарка – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%B5%E0%B4%BE%E0%B4%B2%E0%B5%BB_%E0%B4%B8%E0%B5%8D%E0%B4%A8%E0%B4%BE%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8D" title="പട്ടവാലൻ സ്നാപ്പ് – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Burung_Kedidi_Ekor_Hitam" title="Burung Kedidi Ekor Hitam – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D0%B8%D0%BD_%D1%86%D1%83%D1%83%D1%86%D0%B0%D0%BB" title="Морин цууцал – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-my"><a href="https://my.wikipedia.org/wiki/%E1%80%94%E1%80%BE%E1%80%AF%E1%80%90%E1%80%BA%E1%80%9E%E1%80%AE%E1%80%B8%E1%80%9B%E1%80%BE%E1%80%8A%E1%80%BA%E1%80%99%E1%80%BC%E1%80%AE%E1%80%B8%E1%80%99%E1%80%B2" title="နှုတ်သီးရှည်မြီးမဲ – Burmese" lang="my" hreflang="my" class="interlanguage-link-target">မြန်မာဘာသာ</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Grutto" title="Grutto – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-nds-nl"><a href="https://nds-nl.wikipedia.org/wiki/Gruto" title="Gruto – Low Saxon" lang="nds-NL" hreflang="nds-NL" class="interlanguage-link-target">Nedersaksies</a></li><li class="interlanguage-link interwiki-ne"><a href="https://ne.wikipedia.org/wiki/%E0%A4%AE%E0%A4%B2%E0%A4%97%E0%A5%81%E0%A4%9D%E0%A4%BE" title="मलगुझा – Nepali" lang="ne" hreflang="ne" class="interlanguage-link-target">नेपाली</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%82%B0%E3%83%AD%E3%82%B7%E3%82%AE" title="オグロシギ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-frr"><a href="https://frr.wikipedia.org/wiki/R%C3%BCtjer" title="Rütjer – Northern Frisian" lang="frr" hreflang="frr" class="interlanguage-link-target">Nordfriisk</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Svarthalespove" title="Svarthalespove – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Svarthalespove" title="Svarthalespove – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pnb"><a href="https://pnb.wikipedia.org/wiki/%DA%A9%D8%A7%D9%84%DB%8C_%D9%BE%DA%86%DA%BE_%D8%A2%D9%84%D8%A7_%DA%AF%D8%A7%DA%88%D9%88%D9%B9" title="کالی پچھ آلا گاڈوٹ – Western Punjabi" lang="pnb" hreflang="pnb" class="interlanguage-link-target">پنجابی</a></li><li class="interlanguage-link interwiki-pcd"><a href="https://pcd.wikipedia.org/wiki/Boufeum%C3%A8i" title="Boufeumèi – Picard" lang="pcd" hreflang="pcd" class="interlanguage-link-target">Picard</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Limosa_limosa" title="Limosa limosa – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Rycyk" title="Rycyk – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Ma%C3%A7arico-de-bico-direito" title="Maçarico-de-bico-direito – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%A1%D1%83%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C" title="Сукалень – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9_%D0%B2%D0%B5%D1%80%D0%B5%D1%82%D0%B5%D0%BD%D0%BD%D0%B8%D0%BA" title="Большой веретенник – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sah"><a href="https://sah.wikipedia.org/wiki/%D0%9A%D1%83%D1%80%D0%B0%D2%95%D0%B0%D1%87%D1%87%D1%8B" title="Кураҕаччы – Sakha" lang="sah" hreflang="sah" class="interlanguage-link-target">Саха тыла</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Breh%C3%A1r_%C4%8Diernochvost%C3%BD" title="Brehár čiernochvostý – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Mustapyrst%C3%B6kuiri" title="Mustapyrstökuiri – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv badge-Q17559452 badge-recommendedarticle" title="recommended article"><a href="https://sv.wikipedia.org/wiki/R%C3%B6dspov" title="Rödspov – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%95%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AE%BE%E0%AE%B2%E0%AF%8D_%E0%AE%AE%E0%AF%82%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%A9%E0%AF%8D" title="கருவால் மூக்கன் – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/%C3%87amur_%C3%A7ullu%C4%9Fu" title="Çamur çulluğu – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B8%D1%86%D0%B8%D0%BA_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D0%B9" title="Грицик великий – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Cho%E1%BA%AFt_m%E1%BB%8F_nh%C3%A1c" title="Choắt mỏ nhác – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Limosa_limosa" title="Limosa limosa – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-wuu"><a href="https://wuu.wikipedia.org/wiki/%E9%BB%91%E5%B0%BE%E5%A1%8D%E9%B9%AC" title="黑尾塍鹬 – Wu Chinese" lang="wuu" hreflang="wuu" class="interlanguage-link-target">吴语</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E9%BB%91%E5%B0%BE%E5%A1%8D%E9%B9%AC" title="黑尾塍鹬 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q18841#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 23 July 2020, at 14:57<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Black-tailed_godwit&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.232","walltime":"1.594","ppvisitednodes":{"value":7569,"limit":1000000},"postexpandincludesize":{"value":174514,"limit":2097152},"templateargumentsize":{"value":9715,"limit":2097152},"expansiondepth":{"value":21,"limit":40},"expensivefunctioncount":{"value":29,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":80454,"limit":5000000},"entityaccesscount":{"value":29,"limit":400},"timingprofile":["100.00% 1438.394      1 -total"," 32.63%  469.362      1 Template:Speciesbox"," 31.93%  459.299      1 Template:Taxobox/core"," 19.43%  279.441      1 Template:Reflist"," 18.28%  262.981      1 Template:Taxonbar","  8.17%  117.529      1 Template:Cite_iucn","  6.08%   87.446      1 Template:Commons_category","  6.04%   86.949      2 Template:Sister_project","  5.78%   83.165      2 Template:Side_box","  5.15%   74.127      1 Template:Short_description"]},"scribunto":{"limitreport-timeusage":{"value":"0.790","limit":"10.000"},"limitreport-memusage":{"value":11617764,"limit":52428800}},"cachereport":{"origin":"mw1370","timestamp":"20201030052732","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Black-tailed godwit","url":"https:\/\/en.wikipedia.org\/wiki\/Black-tailed_godwit","sameAs":"http:\/\/www.wikidata.org\/entity\/Q18841","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q18841","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-09-15T06:43:04Z","dateModified":"2020-07-23T14:57:50Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/4\/40\/Black-tailed_Godwit_Uferschnepfe.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":222,"wgHostname":"mw1273"});});</script>
+</body></html>

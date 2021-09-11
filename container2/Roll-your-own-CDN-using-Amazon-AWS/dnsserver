@@ -1,0 +1,195 @@
+#! /usr/bin/python
+
+##################################################################################################################
+#  DNS SERVER
+#################################################################################################################
+
+# IMPORTED MODULES
+
+import socket
+import sys
+import time
+import thread
+import struct
+import re
+import subprocess
+import time
+import httplib
+
+#-------------------------------------------------------------------------------------------------------------------
+
+# CONSTANTS 
+          
+PORT_NO = 0              
+CDN_NAME = ""
+REPLICA_SERVER = ("54.174.6.90", "54.149.9.25", "54.67.86.61", "54.72.167.104", "54.93.182.67", "54.169.146.226", "54.65.104.220", "54.66.212.131", "54.94.156.232",)
+latency_cache = {}
+
+#-------------------------------------------------------------------------------------------------------------------
+
+# FUNCTIONS
+
+def parse_arg():
+
+	global PORT_NO,CDN_NAME
+	if (len(sys.argv) == 5 and sys.argv[1] == '-p' and sys.argv[3] == '-n'):
+		PORT_NO = int(sys.argv[2])						# parsing port no and name from the arguments
+		CDN_NAME = sys.argv[4]
+	else:
+		print "Arguments are not given in correct format\n ./dnsserver -p <port> -n <name>"
+		sys.exit()
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def new_server_socket():
+
+	global PORT_NO
+	HOST_ADDR = get_IPADDR_of_source()					
+	server_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)			# creating an UDP server socket
+	try:
+    		server_sock.bind((HOST_ADDR, PORT_NO))					# upon successful creation,bind it to a port and IP
+	except socket.error as msg:
+    		print 'Couldnt bind to the given host and port. Error Code : ' + str(msg[0]) + ' Message ' + msg[1]
+    		sys.exit()
+	return server_sock	
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def get_IPADDR_of_source():
+
+        # creating dummy socket and connecting to a server, to extract the source IP addr from the socket
+        # object        
+        dummy_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM,0)			# connect to a website and extract ip from 
+        dummy_sock.connect(("david.choffnes.com",80))					# sock obj
+        source_ip_add = dummy_sock.getsockname()[0]
+        return source_ip_add
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def serve_forever(server_sock):
+	
+        while True:
+                data = server_sock.recvfrom(1024)				# keep listening to incoming requests
+		thread.start_new_thread(take_action,(data,server_sock,))
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def take_action(data,server_sock):
+	
+	global  probe_id_dict,probe_id  
+        recv_from = data[1][0]
+        content = data[0]
+        if not latency_cache.has_key(recv_from):
+        	best_server_for_ip = check_latency(server_sock,recv_from,)		# find the best available server in terms of latency
+        else:
+                best_server_for_ip = latency_cache[recv_from].split(',')[0]		# if the client ip is in cache, fetch it
+        new_thread_for_client(server_sock,data,best_server_for_ip)
+	thread.exit()
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def check_latency(ssock,recv_ip):
+	
+	global latency_cache,REPLICA_SERVER
+	server = 0
+	while(server < 9):								# create threads that probe for latency
+		thread.start_new_thread(get_rtt,(REPLICA_SERVER[server],recv_ip,))
+		server = server + 1
+		time.sleep(0.2)
+	time.sleep(6)
+	if latency_cache.has_key(recv_ip):
+		return latency_cache[recv_ip].split(',')[0]
+	else:
+		return REPLICA_SERVER[2]
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def get_rtt(server,recv_ip):
+
+	global latency_cache,PORT_NO
+	conn = httplib.HTTPConnection(server+":"+str(PORT_NO))                      
+	command_path = '/' + recv_ip
+	print command_path,server,PORT_NO 
+        conn.request("GET",command_path)
+        rtt=conn.getresponse().read()
+	if not latency_cache.has_key(recv_ip):
+		latency_cache[recv_ip] = server + "," + rtt
+	else:
+		if (float(rtt) < float(latency_cache[recv_ip].split(',')[1])):		# if new rtt is shorter than the old rtt, replace it
+			latency_cache[recv_ip] = server + "," + rtt
+	thread.exit()
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def start_dns_server():
+	
+	global user
+	parse_arg()									# create a list which consists of locations of all
+											# replica servers
+	user = subprocess.check_output("whoami",shell=True)
+        user = user.split('\n')[0]
+        serve_forever(new_server_socket())						# go into listening mode	
+
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def new_thread_for_client (sock,recv_data,resolved_addr):
+	
+	recv_from = recv_data[1]
+	query_packet = recv_data[0]
+        #print "started worker thread :",recv_from
+	answer = construct_response(query_packet,recv_from[0],resolved_addr)				# construct a response using IP of client
+        sock.sendto(answer,recv_from)
+	thread.exit()
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def construct_response(query,addr,resolved_addr):
+
+	dns_query_headers = struct.unpack('!HHHHHH',query[0:12])		
+	transaction_ID = dns_query_headers[0]
+	flags = dns_query_headers[1]
+	no_of_questions = dns_query_headers[2] 
+	no_of_que_answered = 1
+	start = 12
+	answers = ""
+	headers = ""	
+	domain_name,end,qtype,qclass = parse_question(query[start:])			# parse the question to get the domain name
+	if (CDN_NAME != domain_name):							# if domain name does not match with given name in
+		thread.exit()								# arg, dont respond
+	answers = bring_into_format(resolved_addr,query[start:start+end],qtype,qclass)  # pack the parameters found till now in a format
+	header = query[0:2] + "\x81\x80" + struct.pack('!HHHH', no_of_questions, no_of_que_answered, 0, 0)
+	return header + answers
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def parse_question(field): 
+
+	domain_name = ""
+	length_field = struct.unpack('!B',field[0])	
+	start = 1
+	while(length_field[0] != 0):
+		end = start + length_field[0]
+		unpack_arg = str(length_field[0]) + 's'
+		if not domain_name:
+			domain_name = struct.unpack(unpack_arg,field[start:end])[0]		# find part of domain name based on length
+		else:
+			domain_name = domain_name + '.' + struct.unpack(unpack_arg,field[start:end])[0]
+		start = end+1
+		length_field = struct.unpack('!B',field[end])
+	return domain_name,end+5,struct.unpack('!H',field[end+1:end+3])[0],struct.unpack('!H',field[end+3:end+5])[0]
+
+#-------------------------------------------------------------------------------------------------------------------
+
+def bring_into_format(ip_addr,query,qtype,qclass):
+
+	answer_field = query 
+	ptr_field = "\xc0\x0c"
+	ttl = 2
+	length = 4
+	octets = ip_addr.split('.')						# cut ip address into octets
+	pack_arg = '!HHLHBBBB'
+	return query + ptr_field + struct.pack(pack_arg, qtype, qclass, ttl, length,int(octets[0]),int(octets[1]),int(octets[2]),int(octets[3])) 
+#-------------------------------------------------------------------------------------------------------------------
+
+start_dns_server()

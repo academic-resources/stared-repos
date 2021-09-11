@@ -1,29 +1,5 @@
- 1. https://github.com/waldyrious/cheat.sh
-git clone ttps://github.com/waldyrious/crocks
-git clone ttps://github.com/waldyrious/learnGitBranching
-git clone ttps://github.com/waldyrious/docsify
-git clone ttps://github.com/dandavison/calc-II
-git clone ttps://github.com/dandavison/pocket
-git clone ttps://github.com/dandavison/bin
-git clone ttps://github.com/gf3/dotfiles
-git clone ttps://github.com/paulmillr/dotfiles
-git clone https://github.com/mathiasbynens/dotfiles
-git clone https://github.com/fireship-io/3.1-firebase-basics
-git clone https://github.com/cwilso/WebMIDIAPIShim
-git clone https://github.com/Hey-Programmers/learn-javascript
-git clone https://github.com/Hey-Programmers/react-file-tree-project
-git clone https://github.com/Hey-Programmers/coding-challenges
-git clone https://github.com/vinayrp1/Roll-your-own-CDN-using-Amazon-AWS
-git clone https://github.com/MissMeg/web-crawler-practice
-git clone https://github.com/paultitcomb/simple-web-crawler
-git clone https://github.com/jackson-lenhart/restaurant-web-crawler
-git clone https://github.com/marvinborner/JsonSearchEngine
-git clone https://github.com/mayankamencherla/web-scraper
-git clone https://github.com/AvnerCohen/birds-search
-git clone https://github.com/algolia/docsearch
-git clone https://github.com/3b1b/site_demo
-git clone https://github.com/3b1b/perseus
-git clone https://github.com/mnielsen/neural-networks-and-deep-learning
+
+
 git clone https://github.com/gautamkrishnar/blog-post-workflow
 git clone https://github.com/lelouch77/docusaurus-lunr-search
 git clone https://github.com/bgoonz/bgoonz

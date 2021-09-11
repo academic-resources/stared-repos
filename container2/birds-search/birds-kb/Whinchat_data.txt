@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Whinchat - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"d7dd6ead-b285-47ce-838e-2f8772f87028","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Whinchat","wgTitle":"Whinchat","wgCurRevisionId":984935859,"wgRevisionId":984935859,"wgArticleId":193900,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description matches Wikidata","Good articles","Articles with 'species' microformats","Commons link is on Wikidata","Taxonbars with 20–24 taxon IDs","Wikipedia articles with GND identifiers","Wikipedia articles with LCCN identifiers","Articles containing video clips",
+"IUCN Red List least concern species","Saxicola","Chats (birds)","Birds of Europe","Birds of Africa","Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Whinchat","wgRelevantArticleId":193900,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q155869"};RLSTATE={
+"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents",
+"ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Saxicola_rubetra_-Belgium_-male-8.jpg/1200px-Saxicola_rubetra_-Belgium_-male-8.jpg"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Whinchat"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Whinchat&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Whinchat&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Whinchat"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Whinchat rootpage-Whinchat skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	<div id="mw-indicator-good-star" class="mw-indicator"><a href="/wiki/Wikipedia:Good_articles" title="This is a good article. Click here for more information."><img alt="This is a good article. Click here for more information." src="//upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/19px-Symbol_support_vote.svg.png" decoding="async" width="19" height="20" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/29px-Symbol_support_vote.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/94/Symbol_support_vote.svg/39px-Symbol_support_vote.svg.png 2x" data-file-width="180" data-file-height="185" /></a></div>
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Whinchat</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Species of bird</div>
+<p class="mw-empty-elt">
+
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Whinchat
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Saxicola_rubetra_-Belgium_-male-8.jpg" class="image"><img alt="Saxicola rubetra -Belgium -male-8.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Saxicola_rubetra_-Belgium_-male-8.jpg/220px-Saxicola_rubetra_-Belgium_-male-8.jpg" decoding="async" width="220" height="165" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Saxicola_rubetra_-Belgium_-male-8.jpg/330px-Saxicola_rubetra_-Belgium_-male-8.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Saxicola_rubetra_-Belgium_-male-8.jpg/440px-Saxicola_rubetra_-Belgium_-male-8.jpg 2x" data-file-width="2356" data-file-height="1767" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Adult male in breeding plumage in Belgium
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/220px-Status_iucn3.1_LC.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/330px-Status_iucn3.1_LC.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Status_iucn3.1_LC.svg/440px-Status_iucn3.1_LC.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Least_Concern" class="mw-redirect" title="Least Concern">Least Concern</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-IUCN_1-0" class="reference"><a href="#cite_note-IUCN-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Saxicola" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Passerine" title="Passerine">Passeriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Old_World_flycatcher" title="Old World flycatcher">Muscicapidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Saxicola" title="Saxicola"><i>Saxicola</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>S.&#160;rubetra</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Saxicola rubetra</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Saxicola_rubetra,_IUCN.png" class="image"><img alt="Saxicola rubetra, IUCN.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Saxicola_rubetra%2C_IUCN.png/220px-Saxicola_rubetra%2C_IUCN.png" decoding="async" width="220" height="156" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Saxicola_rubetra%2C_IUCN.png/330px-Saxicola_rubetra%2C_IUCN.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Saxicola_rubetra%2C_IUCN.png/440px-Saxicola_rubetra%2C_IUCN.png 2x" data-file-width="3507" data-file-height="2480" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Range of <i>S. rubetra</i> (Compiled by: BirdLife International and Handbook of the Birds of the World (2016) 2016.)<style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#00FF00; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Breeding</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#007FFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Non-breeding</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<ul><li><i>Motacilla rubetra</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span></li>
+<li><i>Pratincola rubetra</i> <span style="font-size:85%;">(Linnaeus)</span><sup id="cite_ref-pratincola_2-0" class="reference"><a href="#cite_note-pratincola-2">&#91;2&#93;</a></sup></li></ul>
+</td></tr>
+
+</tbody></table>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Saxicola_rubetra_LC0029.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Saxicola_rubetra_LC0029.jpg/220px-Saxicola_rubetra_LC0029.jpg" decoding="async" width="220" height="197" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Saxicola_rubetra_LC0029.jpg/330px-Saxicola_rubetra_LC0029.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Saxicola_rubetra_LC0029.jpg/440px-Saxicola_rubetra_LC0029.jpg 2x" data-file-width="1356" data-file-height="1212" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Saxicola_rubetra_LC0029.jpg" class="internal" title="Enlarge"></a></div>Adult female <a href="/wiki/Chemnitz" title="Chemnitz">Chemnitz</a>, Germany</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Whinchat_(Saxicola_rubetra)_Uganda.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/02/Whinchat_%28Saxicola_rubetra%29_Uganda.jpg/220px-Whinchat_%28Saxicola_rubetra%29_Uganda.jpg" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/02/Whinchat_%28Saxicola_rubetra%29_Uganda.jpg/330px-Whinchat_%28Saxicola_rubetra%29_Uganda.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/02/Whinchat_%28Saxicola_rubetra%29_Uganda.jpg/440px-Whinchat_%28Saxicola_rubetra%29_Uganda.jpg 2x" data-file-width="1524" data-file-height="1524" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Whinchat_(Saxicola_rubetra)_Uganda.jpg" class="internal" title="Enlarge"></a></div>adult female, <a href="/wiki/Uganda" title="Uganda">Uganda</a></div></div></div>
+<p>The <b>whinchat</b> (<i>Saxicola rubetra</i>) is a small <a href="/wiki/Bird_migration" title="Bird migration">migratory</a> <a href="/wiki/Passerine" title="Passerine">passerine</a> <a href="/wiki/Bird" title="Bird">bird</a> breeding in <a href="/wiki/Europe" title="Europe">Europe</a> and <a href="/wiki/Palearctic" class="mw-redirect" title="Palearctic">western Asia</a> and wintering in central <a href="/wiki/Africa" title="Africa">Africa</a>. At one time considered to be in the thrush family, <a href="/wiki/Turdidae" class="mw-redirect" title="Turdidae">Turdidae</a>, it is now placed in the Old World flycatcher family, <a href="/wiki/Muscicapidae" class="mw-redirect" title="Muscicapidae">Muscicapidae</a>. Both sexes have a strong <a href="/wiki/Supercilium" title="Supercilium">supercilium</a>, brownish upper parts mottled darker, a pale throat and breast, a pale buff to whitish belly, and a blackish tail with white bases to the outer tail feathers, but in the breeding season, the male has an orange-buff throat and breast.
+</p><p>The whinchat is a solitary species, favouring open grassy country with rough vegetation and scattered small shrubs. It perches in elevated locations ready to pounce on the insects and other small invertebrates that form its diet. The nest is built by the female on the ground in coarse vegetation, with a clutch of four to seven eggs being laid. The hen incubates the eggs for about thirteen days and then both parents feed the nestlings. Fledging takes place about eighteen days after hatching and the parents continue to feed the young for another fortnight. Moulting takes place in late summer before the migration southwards, and again on the wintering grounds in Africa before the migration northwards in spring. The whinchat is a common species with a wide range and the <a href="/wiki/International_Union_for_Conservation_of_Nature" title="International Union for Conservation of Nature">International Union for Conservation of Nature</a> has classified it as being of "<a href="/wiki/Least-concern_species" title="Least-concern species">least concern</a>".
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Taxonomy_and_systematics"><span class="tocnumber">1</span> <span class="toctext">Taxonomy and systematics</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Description"><span class="tocnumber">2</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Distribution_and_habitat"><span class="tocnumber">3</span> <span class="toctext">Distribution and habitat</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Behaviour_and_ecology"><span class="tocnumber">4</span> <span class="toctext">Behaviour and ecology</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Status_and_conservation"><span class="tocnumber">5</span> <span class="toctext">Status and conservation</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Taxonomy_and_systematics">Taxonomy and systematics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Whinchat&amp;action=edit&amp;section=1" title="Edit section: Taxonomy and systematics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This species represents a fairly <a href="/wiki/Basal_(phylogenetics)" title="Basal (phylogenetics)">basal</a> divergence of the genus <i><a href="/wiki/Saxicola" title="Saxicola">Saxicola</a></i>. It retains the <a href="/wiki/Supercilium" title="Supercilium">supercilium</a> found in many <a href="/wiki/Muscicapidae" class="mw-redirect" title="Muscicapidae">Muscicapidae</a> but lost in the more derived <i>Saxicola</i> species such as the <a href="/wiki/European_stonechat" title="European stonechat">European stonechat</a> or <a href="/wiki/African_stonechat" title="African stonechat">African stonechat</a> (<i>S. torquatus</i>).<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p><p>As with other species of <i>Saxicola</i>, it was formerly considered a member of the <a href="/wiki/Thrush_(bird)" title="Thrush (bird)">thrush</a> family (Turdidae), but is now placed in the <a href="/wiki/Old_World_flycatcher" title="Old World flycatcher">Old World flycatcher</a> family Muscicapidae.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> It, and similar thrush-like Muscicapidae <a href="/wiki/Species" title="Species">species</a>, are often called <a href="/wiki/Chat_(bird)" title="Chat (bird)">chats</a>.
+</p><p>The English name is derived from <i>whin</i>, the <a href="/wiki/Ulex_europaeus" title="Ulex europaeus">common gorse</a> and <i>chat</i> referring to the nature of its calls.<sup id="cite_ref-OED_5-0" class="reference"><a href="#cite_note-OED-5">&#91;5&#93;</a></sup><sup id="cite_ref-OED2_6-0" class="reference"><a href="#cite_note-OED2-6">&#91;6&#93;</a></sup> Its <a href="/wiki/Scientific_name" class="mw-redirect" title="Scientific name">scientific name</a> means "small rock-dweller", in reference to its <a href="/wiki/Habitat" title="Habitat">habitat</a>. <i>Saxicola</i> derives from <a href="/wiki/Latin" title="Latin">Latin</a> <i>saxum</i> ("rock") + <i>incola</i> ("dwelling"); <i>rubetra</i> is a Latin term for a small bird.<sup id="cite_ref-Urquhart_7-0" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup><sup id="cite_ref-BTO_8-0" class="reference"><a href="#cite_note-BTO-8">&#91;8&#93;</a></sup> No subspecies are recognised.<sup id="cite_ref-Hoyo_9-0" class="reference"><a href="#cite_note-Hoyo-9">&#91;9&#93;</a></sup>
+</p><p>Very rarely, <a href="/wiki/Hybrid_(biology)" title="Hybrid (biology)">hybridisation</a> occurs between the whinchat and the <a href="/wiki/Siberian_stonechat" title="Siberian stonechat">Siberian stonechat</a> (<i>Saxicola maurus</i>), with a case being reported in Finland in 1997.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> It has also been reported to hybridise with the European stonechat in western and southern Europe.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Whinchat&amp;action=edit&amp;section=2" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The whinchat is a short-tailed bird, moving on the ground with small, rapid hops and frequently bobbing and flicking its wings and tail.<sup id="cite_ref-Witherby_12-0" class="reference"><a href="#cite_note-Witherby-12">&#91;12&#93;</a></sup> It is similar in size to its relative the <a href="/wiki/European_robin" title="European robin">European robin</a> (<i>Erithacus rubecula</i>), being 12 to 14&#160;cm (4.7 to 5.5&#160;in) long and weighing 13 to 26&#160;g (0.46 to 0.92&#160;oz). Both sexes have brownish upperparts mottled darker, a buff throat and breast, a pale buff to whitish belly, and a blackish tail with white bases to the outer tail feathers.<sup id="cite_ref-Urquhart_7-1" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup><sup id="cite_ref-Hoyo_9-1" class="reference"><a href="#cite_note-Hoyo-9">&#91;9&#93;</a></sup>
+</p><p>The male in breeding plumage has a blackish face mask almost encircled by a strong white <a href="/wiki/Supercilium" title="Supercilium">supercilium</a> and <a href="/wiki/Cheek" title="Cheek">malar</a> stripe, a bright orange-buff throat and breast, and small white wing patches on the greater coverts and inner median coverts. The female is duller overall, in particular having browner face mask, pale buffy-brown breast, and a buff supercilium and malar stripe, and smaller or no white wing patches. Males in immature and winter plumage are similar to females, except that adult males retain the white wing patches all year round.<sup id="cite_ref-Urquhart_7-2" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+</p><p>Though fairly similar to females and immatures of the <a href="/wiki/European_stonechat" title="European stonechat">European stonechat</a> (<i>S. rubicola</i>), the whinchat can readily be distinguished by its conspicuous supercilium and whiter belly, and also in western Europe, by being paler overall than the western European stonechat subspecies <i>S. rubicola hibernans</i>. It also differs structurally in being slightly slimmer and less 'dumpy', and having longer wingtips (an adaptation to its long-distance <a href="/wiki/Bird_migration" title="Bird migration">migration</a>). It is more easily confused with female or immature <a href="/wiki/Siberian_stonechat" title="Siberian stonechat">Siberian stonechat</a> (<i>S. maura</i>), which (also being a long-distance migrant) shares the longer wingtips; however, Siberian stonechat can be distinguished by its conspicuous unmarked pale orange-buff rump (in whinchat, the rump is the same mottled brown colour as the back).<sup id="cite_ref-Urquhart_7-3" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup>
+</p><p>Its main call is described as a <i>hue-tac-tac</i>, the 'tac' softer and less grating than that of the European stonechat; the call is used both for contact between birds and predator alarms. The male has a whistling, crackly but soft song used during the breeding season, consisting of a mixture of soft whistles, tacs and more grating sounds; it is often <a href="/wiki/Mimetic" class="mw-redirect" title="Mimetic">mimetic</a>, including phrases from the songs of at least 12 other assorted bird species.<sup id="cite_ref-Urquhart_7-4" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup> It sings from a fence, bush, tree or wire, or occasionally from the ground or in flight, between about April and July.<sup id="cite_ref-Witherby_12-1" class="reference"><a href="#cite_note-Witherby-12">&#91;12&#93;</a></sup> On the wintering grounds, it often gives alarm calls but only occasionally sings, being most likely to do so at the end of winter, when starting spring migration.<sup id="cite_ref-Urquhart_7-5" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Distribution_and_habitat">Distribution and habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Whinchat&amp;action=edit&amp;section=3" title="Edit section: Distribution and habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Whinchat_Saxicola_rubetra_Young.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Whinchat_Saxicola_rubetra_Young.jpg/220px-Whinchat_Saxicola_rubetra_Young.jpg" decoding="async" width="220" height="176" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Whinchat_Saxicola_rubetra_Young.jpg/330px-Whinchat_Saxicola_rubetra_Young.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Whinchat_Saxicola_rubetra_Young.jpg/440px-Whinchat_Saxicola_rubetra_Young.jpg 2x" data-file-width="1315" data-file-height="1052" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Whinchat_Saxicola_rubetra_Young.jpg" class="internal" title="Enlarge"></a></div>Juvenile. Dubna, Russia</div></div></div>
+<p>The whinchat is a migratory species breeding in Europe and western Asia from <a href="/wiki/Ireland" title="Ireland">Ireland</a> and northern <a href="/wiki/Portugal" title="Portugal">Portugal</a> east to the <a href="/wiki/Ob_River" class="mw-redirect" title="Ob River">Ob River</a> basin near <a href="/wiki/Novosibirsk" title="Novosibirsk">Novosibirsk</a>, and from northern <a href="/wiki/Norway" title="Norway">Norway</a> south to central <a href="/wiki/Spain" title="Spain">Spain</a>, central <a href="/wiki/Italy" title="Italy">Italy</a>, northern <a href="/wiki/Greece" title="Greece">Greece</a>, and the <a href="/wiki/Caucasus_Mountains" title="Caucasus Mountains">Caucasus Mountains</a>.<sup id="cite_ref-Urquhart_7-6" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup>
+</p><p>Birds arrive on the breeding grounds between the end of April and mid May, and depart between mid August and mid September (odd birds lingering to October). They winter primarily in tropical <a href="/wiki/Sub-Saharan_Africa" title="Sub-Saharan Africa">sub-Saharan Africa</a> from <a href="/wiki/Senegal" title="Senegal">Senegal</a> east to <a href="/wiki/Kenya" title="Kenya">Kenya</a> and south to <a href="/wiki/Zambia" title="Zambia">Zambia</a>, arriving in western Africa at the start of the <a href="/wiki/Dry_season" title="Dry season">dry season</a> in late September to November, and leaving between February and March. Small numbers also winter in northwestern Africa in <a href="/wiki/Morocco" title="Morocco">Morocco</a>, northern <a href="/wiki/Algeria" title="Algeria">Algeria</a> and <a href="/wiki/Tunisia" title="Tunisia">Tunisia</a>.<sup id="cite_ref-Urquhart_7-7" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup> Available stopover sites are important for the successful migration of whinchat  between Africa and Europe, where they face the barriers of the Sahara and Mediterranean Sea.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup> Vagrants have reached northwest of the breeding range to <a href="/wiki/Iceland" title="Iceland">Iceland</a>, west on migration to the <a href="/wiki/Canary_Islands" title="Canary Islands">Canary Islands</a> and <a href="/wiki/Cape_Verde" title="Cape Verde">Cape Verde</a>, and south of the wintering range to northern <a href="/wiki/South_Africa" title="South Africa">South Africa</a>.<sup id="cite_ref-Urquhart_7-8" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup>
+</p><p>During the breeding season in the UK, at the landscape-scale, whinchats favour habitats with high plant species richness and steeper slopes.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>  However, at the territory scale, low-elevation areas with a heterogeneous vegetation structure and high density of perches and tussocks are preferred.<sup id="cite_ref-Border_16-0" class="reference"><a href="#cite_note-Border-16">&#91;16&#93;</a></sup>
+</p><p>Whinchats wintering in Nigeria have a large breeding range that spreads across continental Europe indicating low connectivity, arising from wide migratory dispersal, with high mixing of breeding populations during the non-breeding season.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup> A lone vagrant was sighted for the first time in India by birder R. Mohammed Saleem during their Great Indian Bird Expedition SEEK2019 at Chambal National Park.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Behaviour_and_ecology">Behaviour and ecology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Whinchat&amp;action=edit&amp;section=4" title="Edit section: Behaviour and ecology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Saxicola_rubetra_MWNH_1810.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Saxicola_rubetra_MWNH_1810.JPG/220px-Saxicola_rubetra_MWNH_1810.JPG" decoding="async" width="220" height="132" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Saxicola_rubetra_MWNH_1810.JPG/330px-Saxicola_rubetra_MWNH_1810.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/32/Saxicola_rubetra_MWNH_1810.JPG/440px-Saxicola_rubetra_MWNH_1810.JPG 2x" data-file-width="4036" data-file-height="2420" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Saxicola_rubetra_MWNH_1810.JPG" class="internal" title="Enlarge"></a></div>Eggs, Collection <a href="/wiki/Museum_Wiesbaden" title="Museum Wiesbaden">Museum Wiesbaden</a></div></div></div>
+<p>The whinchat is a largely solitary bird though it may form small family groups in autumn.<sup id="cite_ref-Witherby_12-2" class="reference"><a href="#cite_note-Witherby-12">&#91;12&#93;</a></sup> It favours rough low vegetation habitats such as open rough pasture or similar minimally cultivated <a href="/wiki/Grassland" title="Grassland">grassland</a> with scattered small shrubs such as <a href="/wiki/Crataegus_monogyna" title="Crataegus monogyna">hawthorn</a> (<i>Crataegus monogyna</i>), and <a href="/wiki/Bracken" title="Bracken">bracken</a> (<i>Pteridium aquilinum</i>) or <a href="/wiki/Calluna" title="Calluna">heather</a> (<i>Calluna vulgaris</i>) stands on rock-strewn ground. It also commonly inhabits new and clear-felled conifer <a href="/wiki/Plantation" title="Plantation">plantations</a> until the new tree crop is about five to six years old and a metre or two tall. It always needs at least a few perching points (shrubs, tall weeds, or fence posts) to scan from for food and for use as song posts.<sup id="cite_ref-Urquhart_7-9" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup>
+</p><p>Breeding takes place in late April and May. The nest is built solely by the female, and is made of dried grasses and moss, and lined with hairs and fine <a href="/wiki/Agrostis" title="Agrostis">bents</a>. It is built on the ground, hidden in dense low vegetation, often at the foot of a bush.<sup id="cite_ref-Witherby_12-3" class="reference"><a href="#cite_note-Witherby-12">&#91;12&#93;</a></sup> The female lays and <a href="/wiki/Egg_incubation" title="Egg incubation">incubates</a> a clutch of four to seven eggs which hatch after eleven to fourteen days. Both parents bring food to the young which leave the nest ten to fourteen days later, while still too young to fly. The chicks <a href="/wiki/Fledge" title="Fledge">fledge</a> at seventeen to nineteen days after hatching and remain largely dependent on the parents for a further two weeks.<sup id="cite_ref-Urquhart_7-10" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup> Whinchats are short-lived, typically only surviving two years, to a maximum recorded of just over five years in the wild; breeding starts when birds are a year old.<sup id="cite_ref-BTO_8-1" class="reference"><a href="#cite_note-BTO-8">&#91;8&#93;</a></sup> Predators include <a href="/wiki/Least_weasel" title="Least weasel">weasels</a>, <a href="/wiki/Stoat" title="Stoat">stoats</a>, and small <a href="/wiki/Bird_of_prey" title="Bird of prey">raptors</a> such as the <a href="/wiki/Merlin_(bird)" title="Merlin (bird)">merlin</a> and nest predators such as <a href="/wiki/Corvidae" title="Corvidae">crows and magpies</a>. Nests are also lost due to agricultural operations such as <a href="/wiki/Silage" title="Silage">silage</a> cutting (the main factor in the species' decline in western Europe)<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup> or trampling by livestock, and are sometimes parasitised by the <a href="/wiki/Common_cuckoo" title="Common cuckoo">common cuckoo</a>.<sup id="cite_ref-Urquhart_7-11" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup>
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><div id="mwe_player_0" class="PopUpMediaTransform" style="width:220px;" videopayload="&lt;div class=&quot;mediaContainer&quot; style=&quot;width:852px&quot;&gt;&lt;video id=&quot;mwe_player_1&quot; poster=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Volwassen_paapje_in_struiken-4961788.webm/852px--Volwassen_paapje_in_struiken-4961788.webm.jpg&quot; controls=&quot;&quot; preload=&quot;none&quot; autoplay=&quot;&quot; style=&quot;width:852px;height:480px&quot; class=&quot;kskin&quot; data-durationhint=&quot;159.817&quot; data-startoffset=&quot;0&quot; data-mwtitle=&quot;Volwassen_paapje_in_struiken-4961788.webm&quot; data-mwprovider=&quot;wikimediacommons&quot;&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/ef/Volwassen_paapje_in_struiken-4961788.webm/Volwassen_paapje_in_struiken-4961788.webm.480p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;SD VP9 (480P)&quot; data-shorttitle=&quot;VP9 480P&quot; data-transcodekey=&quot;480p.vp9.webm&quot; data-width=&quot;852&quot; data-height=&quot;480&quot; data-bandwidth=&quot;805048&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/e/ef/Volwassen_paapje_in_struiken-4961788.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Original WebM file, 1,023 × 576 (1.09 Mbps)&quot; data-shorttitle=&quot;WebM source&quot; data-width=&quot;1023&quot; data-height=&quot;576&quot; data-bandwidth=&quot;1086266&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/ef/Volwassen_paapje_in_struiken-4961788.webm/Volwassen_paapje_in_struiken-4961788.webm.480p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;SD WebM (480P)&quot; data-shorttitle=&quot;WebM 480P&quot; data-transcodekey=&quot;480p.webm&quot; data-width=&quot;852&quot; data-height=&quot;480&quot; data-bandwidth=&quot;1094696&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/ef/Volwassen_paapje_in_struiken-4961788.webm/Volwassen_paapje_in_struiken-4961788.webm.120p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Lowest bandwidth VP9 (120P)&quot; data-shorttitle=&quot;VP9 120P&quot; data-transcodekey=&quot;120p.vp9.webm&quot; data-width=&quot;214&quot; data-height=&quot;120&quot; data-bandwidth=&quot;177352&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/ef/Volwassen_paapje_in_struiken-4961788.webm/Volwassen_paapje_in_struiken-4961788.webm.160p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Low bandwidth WebM (160P)&quot; data-shorttitle=&quot;WebM 160P&quot; data-transcodekey=&quot;160p.webm&quot; data-width=&quot;284&quot; data-height=&quot;160&quot; data-bandwidth=&quot;218088&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/ef/Volwassen_paapje_in_struiken-4961788.webm/Volwassen_paapje_in_struiken-4961788.webm.180p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Low bandwidth VP9 (180P)&quot; data-shorttitle=&quot;VP9 180P&quot; data-transcodekey=&quot;180p.vp9.webm&quot; data-width=&quot;320&quot; data-height=&quot;180&quot; data-bandwidth=&quot;231272&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/ef/Volwassen_paapje_in_struiken-4961788.webm/Volwassen_paapje_in_struiken-4961788.webm.240p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;Small VP9 (240P)&quot; data-shorttitle=&quot;VP9 240P&quot; data-transcodekey=&quot;240p.vp9.webm&quot; data-width=&quot;426&quot; data-height=&quot;240&quot; data-bandwidth=&quot;312096&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/ef/Volwassen_paapje_in_struiken-4961788.webm/Volwassen_paapje_in_struiken-4961788.webm.240p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;Small WebM (240P)&quot; data-shorttitle=&quot;WebM 240P&quot; data-transcodekey=&quot;240p.webm&quot; data-width=&quot;426&quot; data-height=&quot;240&quot; data-bandwidth=&quot;316856&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/ef/Volwassen_paapje_in_struiken-4961788.webm/Volwassen_paapje_in_struiken-4961788.webm.360p.vp9.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp9, opus&amp;quot;&quot; data-title=&quot;VP9 (360P)&quot; data-shorttitle=&quot;VP9 360P&quot; data-transcodekey=&quot;360p.vp9.webm&quot; data-width=&quot;640&quot; data-height=&quot;360&quot; data-bandwidth=&quot;475320&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/e/ef/Volwassen_paapje_in_struiken-4961788.webm/Volwassen_paapje_in_struiken-4961788.webm.360p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; data-title=&quot;WebM (360P)&quot; data-shorttitle=&quot;WebM 360P&quot; data-transcodekey=&quot;360p.webm&quot; data-width=&quot;640&quot; data-height=&quot;360&quot; data-bandwidth=&quot;574144&quot; data-framerate=&quot;25&quot;/&gt;&lt;/video&gt;&lt;/div&gt;"><img alt="File:Volwassen paapje in struiken-4961788.webm" style="width:220px;height:124px" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Volwassen_paapje_in_struiken-4961788.webm/220px--Volwassen_paapje_in_struiken-4961788.webm.jpg" /><a href="//upload.wikimedia.org/wikipedia/commons/e/ef/Volwassen_paapje_in_struiken-4961788.webm" title="Play media" target="new"><span class="play-btn-large"><span class="mw-tmh-playtext">Play media</span></span></a></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Volwassen_paapje_in_struiken-4961788.webm" class="internal" title="Enlarge"></a></div>Typical behaviour</div></div></div>
+<p>Whinchats are <a href="/wiki/Insectivore" title="Insectivore">insectivorous</a>, feeding largely (about 80–90%) on <a href="/wiki/Insect" title="Insect">insects</a>, but also consume a wide range of other <a href="/wiki/Invertebrate" title="Invertebrate">invertebrates</a> including <a href="/wiki/Spider" title="Spider">spiders</a>, small <a href="/wiki/Snail" title="Snail">snails</a> and <a href="/wiki/Worm" title="Worm">worms</a>. They also eat small amounts of <a href="/wiki/Fruit" title="Fruit">fruit</a> such as <a href="/wiki/Blackberry" title="Blackberry">blackberries</a>, primarily in autumn. The birds like to perch on elevated spots such as shrubs, from where they make sallies to catch insects, mostly taken off the ground, but also flying insects. While so perched, males in particular frequently flick their tail and sometimes their wings to show the white tail and wing flashes, for display or territorial communication signals to other whinchats.<sup id="cite_ref-Urquhart_7-12" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup>
+</p><p>Adult whinchats have a single complex complete <a href="/wiki/Moulting" title="Moulting">moult</a> in late summer (late July onward) after breeding and mainly completed before southbound migration. Juveniles have a partial moult at the same time, growing new body feathering but retaining the flight feathers. All ages also have a partial moult in early spring on the wintering grounds before northbound migration.<sup id="cite_ref-Urquhart_7-13" class="reference"><a href="#cite_note-Urquhart-7">&#91;7&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Status_and_conservation">Status and conservation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Whinchat&amp;action=edit&amp;section=5" title="Edit section: Status and conservation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Fairly common across its wide range, the whinchat is classified as a species of "<a href="/wiki/Least-concern_species" title="Least-concern species">least concern</a>" by the <a href="/wiki/International_Union_for_Conservation_of_Nature" title="International Union for Conservation of Nature">International Union for Conservation of Nature</a>.<sup id="cite_ref-IUCN_1-1" class="reference"><a href="#cite_note-IUCN-1">&#91;1&#93;</a></sup> Some populations are however in serious decline, particularly in the west of its range in <a href="/wiki/Great_Britain" title="Great Britain">Britain</a>, <a href="/wiki/Ireland" title="Ireland">Ireland</a>, <a href="/wiki/France" title="France">France</a>, <a href="/wiki/Belgium" title="Belgium">Belgium</a>, the <a href="/wiki/Netherlands" title="Netherlands">Netherlands</a>, <a href="/wiki/Denmark" title="Denmark">Denmark</a>, and <a href="/wiki/Germany" title="Germany">Germany</a>, primarily due to <a href="/wiki/Intensive_farming" title="Intensive farming">agricultural intensification</a>. In Britain it is amber-listed with an unfavourable conservation status; it had all but disappeared from former lowland breeding areas in the south and east between surveys in 1968–72 and 1988–91, remaining common only in upland areas of the north and west where low-intensity <a href="/wiki/Livestock" title="Livestock">livestock</a> rearing is the main land use.<sup id="cite_ref-BTO_8-2" class="reference"><a href="#cite_note-BTO-8">&#91;8&#93;</a></sup><sup id="cite_ref-Hoyo_9-2" class="reference"><a href="#cite_note-Hoyo-9">&#91;9&#93;</a></sup><sup id="cite_ref-Gibbons_20-0" class="reference"><a href="#cite_note-Gibbons-20">&#91;20&#93;</a></sup> There has been a similar decline in <a href="/wiki/Ireland" title="Ireland">Ireland</a>, where it is now classified as "rare".<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Whinchat&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-IUCN-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-IUCN_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-IUCN_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2012" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2012). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/species/22710156/39778607">"<i>Saxicola rubetra</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2012</b>: e.T22710156A39778607. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.2305%2FIUCN.UK.2012-1.RLTS.T22710156A39778607.en">10.2305/IUCN.UK.2012-1.RLTS.T22710156A39778607.en</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Saxicola+rubetra&amp;rft.volume=2012&amp;rft.pages=e.T22710156A39778607&amp;rft.date=2012&amp;rft_id=info%3Adoi%2F10.2305%2FIUCN.UK.2012-1.RLTS.T22710156A39778607.en&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fspecies%2F22710156%2F39778607&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-pratincola-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-pratincola_2-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFBonhote1907" class="citation book cs1"><a href="/wiki/J._Lewis_Bonhote" title="J. Lewis Bonhote">Bonhote, J. Lewis</a> (1907). <a rel="nofollow" class="external text" href="https://archive.org/stream/birdsofbritain00bonh/birdsofbritain00bonh#page/27"><i>Birds of Britain</i></a>. illustrated by <a href="/wiki/Henry_Eeles_Dresser" title="Henry Eeles Dresser">H.E. Dresser</a>. London: Adam and Charles Black. pp.&#160;27/29. <a href="/wiki/OCLC_(identifier)" class="mw-redirect" title="OCLC (identifier)">OCLC</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/oclc/1451688">1451688</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Birds+of+Britain&amp;rft.place=London&amp;rft.pages=27%2F29&amp;rft.pub=Adam+and+Charles+Black&amp;rft.date=1907&amp;rft_id=info%3Aoclcnum%2F1451688&amp;rft.aulast=Bonhote&amp;rft.aufirst=J.+Lewis&amp;rft_id=https%3A%2F%2Farchive.org%2Fstream%2Fbirdsofbritain00bonh%2Fbirdsofbritain00bonh%23page%2F27&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Wink, M.; Sauer-Gürth, H. &amp; Gwinner, E. (2002): Evolutionary relationships of stonechats and related species inferred from mitochondrial-DNA sequences and genomic fingerprinting. <i><a href="/wiki/British_Birds_(magazine)" title="British Birds (magazine)">British Birds</a></i> 95: 349–355. <a rel="nofollow" class="external text" href="http://www.uni-heidelberg.de/institute/fak14/ipmb/phazb/pubwink/2002/28.2002.pdf">PDF fulltext</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">Pan, Q.-W., Lei, F.-M., Yang, S.-J., Yin, Z.-H., Huang, Y., Tai, F.-D., &amp; Kristin, A. (2006). <a rel="nofollow" class="external text" href="http://www.actazool.org/temp/%7B52634248-F750-4043-938B-CE9375266E61%7D.pdf">PDF Phylogenetic analysis of some Turdinae birds based on mitochondrial cytochrome b gene sequences.</a> <i>Acta Zoologica Sinica</i> 52 (1): 87 – 98.</span>
+</li>
+<li id="cite_note-OED-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-OED_5-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFReference-OED-Whinchat" class="citation cs1"><a rel="nofollow" class="external text" href="http://oed.com/search?searchType=dictionary&amp;q=Whinchat">"Whinchat"</a>. <i><a href="/wiki/Oxford_English_Dictionary" title="Oxford English Dictionary">Oxford English Dictionary</a></i> (3rd ed.). Oxford University Press. September 2005.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Whinchat&amp;rft.btitle=Oxford+English+Dictionary&amp;rft.edition=3rd&amp;rft.pub=Oxford+University+Press&amp;rft.date=2005-09&amp;rft_id=http%3A%2F%2Foed.com%2Fsearch%3FsearchType%3Ddictionary%26q%3DWhinchat&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/>&#160;<span style="font-size:0.95em; font-size:90%; color:#555">(Subscription or <a rel="nofollow" class="external text" href="https://www.oed.com/public/login/loggingin#withyourlibrary">UK public library membership</a> required.)</span></span>
+</li>
+<li id="cite_note-OED2-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-OED2_6-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFReference-OED-Chat" class="citation cs1"><a rel="nofollow" class="external text" href="http://oed.com/search?searchType=dictionary&amp;q=Chat">"Chat"</a>. <i><a href="/wiki/Oxford_English_Dictionary" title="Oxford English Dictionary">Oxford English Dictionary</a></i> (3rd ed.). Oxford University Press. September 2005.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Chat&amp;rft.btitle=Oxford+English+Dictionary&amp;rft.edition=3rd&amp;rft.pub=Oxford+University+Press&amp;rft.date=2005-09&amp;rft_id=http%3A%2F%2Foed.com%2Fsearch%3FsearchType%3Ddictionary%26q%3DChat&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/>&#160;<span style="font-size:0.95em; font-size:90%; color:#555">(Subscription or <a rel="nofollow" class="external text" href="https://www.oed.com/public/login/loggingin#withyourlibrary">UK public library membership</a> required.)</span></span>
+</li>
+<li id="cite_note-Urquhart-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-Urquhart_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Urquhart_7-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Urquhart_7-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Urquhart_7-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Urquhart_7-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Urquhart_7-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-Urquhart_7-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-Urquhart_7-7"><sup><i><b>h</b></i></sup></a> <a href="#cite_ref-Urquhart_7-8"><sup><i><b>i</b></i></sup></a> <a href="#cite_ref-Urquhart_7-9"><sup><i><b>j</b></i></sup></a> <a href="#cite_ref-Urquhart_7-10"><sup><i><b>k</b></i></sup></a> <a href="#cite_ref-Urquhart_7-11"><sup><i><b>l</b></i></sup></a> <a href="#cite_ref-Urquhart_7-12"><sup><i><b>m</b></i></sup></a> <a href="#cite_ref-Urquhart_7-13"><sup><i><b>n</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFUrquhartBowley,_A.2002" class="citation book cs1">Urquhart, E. &amp; Bowley, A. (2002). <i>Stonechats. A Guide to the Genus Saxicola</i>. London: Helm Identification Guides. pp.&#160;61–89, Plate 1. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7136-6024-1" title="Special:BookSources/978-0-7136-6024-1"><bdi>978-0-7136-6024-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Stonechats.+A+Guide+to+the+Genus+Saxicola&amp;rft.place=London&amp;rft.pages=61-89%2C+Plate+1&amp;rft.pub=Helm+Identification+Guides&amp;rft.date=2002&amp;rft.isbn=978-0-7136-6024-1&amp;rft.aulast=Urquhart&amp;rft.aufirst=E.&amp;rft.au=Bowley%2C+A.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-BTO-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-BTO_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-BTO_8-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-BTO_8-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text">BTO BirdFacts <a rel="nofollow" class="external text" href="http://blx1.bto.org/birdfacts/results/bob11370.htm">Whinchat</a></span>
+</li>
+<li id="cite_note-Hoyo-9"><span class="mw-cite-backlink">^ <a href="#cite_ref-Hoyo_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Hoyo_9-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Hoyo_9-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFHoyo2005" class="citation book cs1">Hoyo, J. del;  et al., eds. (2005). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/handbookofbirdso0001unse"><i>Handbook of the Birds of the World, vol. 10</i></a></span>. Barcelona: Lynx Edicions. p.&#160;777. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-84-87334-72-6" title="Special:BookSources/978-84-87334-72-6"><bdi>978-84-87334-72-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+the+Birds+of+the+World%2C+vol.+10&amp;rft.place=Barcelona&amp;rft.pages=777&amp;rft.pub=Lynx+Edicions&amp;rft.date=2005&amp;rft.isbn=978-84-87334-72-6&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fhandbookofbirdso0001unse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">Lindroos, T., in Anon., ed. (1999). European News. <i>British Birds</i> 92: 77.</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite id="CITEREFDepartment_of_Genetics_University_of_GeorgiaMcCarthy,_Eugene_M.2006" class="citation book cs1">Department of Genetics University of Georgia; McCarthy, Eugene M. (2006). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=MwInO7z_Y3oC&amp;pg=PA238"><i>Handbook of Avian Hybrids of the World</i></a>. Oxford University Press, USA. pp.&#160;238–. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-19-804041-5" title="Special:BookSources/978-0-19-804041-5"><bdi>978-0-19-804041-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+Avian+Hybrids+of+the+World&amp;rft.pages=238-&amp;rft.pub=Oxford+University+Press%2C+USA&amp;rft.date=2006&amp;rft.isbn=978-0-19-804041-5&amp;rft.au=Department+of+Genetics+University+of+Georgia&amp;rft.au=McCarthy%2C+Eugene+M.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DMwInO7z_Y3oC%26pg%3DPA238&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Witherby-12"><span class="mw-cite-backlink">^ <a href="#cite_ref-Witherby_12-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Witherby_12-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Witherby_12-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Witherby_12-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFWitherby1943" class="citation book cs1">Witherby, H. F., ed. (1943). <i>Handbook of British Birds, Volume 2: Warblers to Owls</i>. H. F. and G. Witherby Ltd. pp.&#160;169–173.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+British+Birds%2C+Volume+2%3A+Warblers+to+Owls&amp;rft.pages=169-173&amp;rft.pub=H.+F.+and+G.+Witherby+Ltd.&amp;rft.date=1943&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text">Blasco-Zumeta, J. (undated). Laboratorio Virtual Ibercaja <a rel="nofollow" class="external text" href="http://aulaenred.ibercaja.es/wp-content/uploads/333_WhinchatSrubetra.pdf">333 Whinchat</a></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite id="CITEREFBlackburn,_E.Burgess,_M.Freeman,_B.Risely,_A.2019" class="citation journal cs1">Blackburn, E.; Burgess, M.; Freeman, B.; Risely, A.; Izang, A.; Ivande, S.; Hewson, C.; Cresswell, W. (2019). <a rel="nofollow" class="external text" href="https://research-repository.st-andrews.ac.uk/bitstream/10023/17625/1/Blackburn_2018_Spring_migration_Ibis_AAM.pdf">"Spring migration strategies of Whinchat <i>Saxicola rubetra</i> when successfully crossing potential barriers of the Sahara and the Mediterranean Sea"</a> <span class="cs1-format">(PDF)</span>. <i>Ibis</i>. <b>161</b> (2): 131–146. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fibi.12610">10.1111/ibi.12610</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ibis&amp;rft.atitle=Spring+migration+strategies+of+Whinchat+Saxicola+rubetra+when+successfully+crossing+potential+barriers+of+the+Sahara+and+the+Mediterranean+Sea&amp;rft.volume=161&amp;rft.issue=2&amp;rft.pages=131-146&amp;rft.date=2019&amp;rft_id=info%3Adoi%2F10.1111%2Fibi.12610&amp;rft.au=Blackburn%2C+E.&amp;rft.au=Burgess%2C+M.&amp;rft.au=Freeman%2C+B.&amp;rft.au=Risely%2C+A.&amp;rft.au=Izang%2C+A.&amp;rft.au=Ivande%2C+S.&amp;rft.au=Hewson%2C+C.&amp;rft.au=Cresswell%2C+W.&amp;rft_id=https%3A%2F%2Fresearch-repository.st-andrews.ac.uk%2Fbitstream%2F10023%2F17625%2F1%2FBlackburn_2018_Spring_migration_Ibis_AAM.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite id="CITEREFBorder,_J._A.Henderson,_I._G.Redhead,_J._W.Hartley,_I._R.2017" class="citation journal cs1">Border, J. A.; Henderson, I. G.; Redhead, J. W.; Hartley, I. R. (2017). <a rel="nofollow" class="external text" href="http://nora.nerc.ac.uk/id/eprint/515262/1/N515262PP.pdf">"Habitat selection by breeding Whinchats <i>Saxicola rubetra</i> at territory and landscape scalesbirds"</a> <span class="cs1-format">(PDF)</span>. <i>Ibis</i>. <b>159</b> (1): 139–151. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fibi.12433">10.1111/ibi.12433</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ibis&amp;rft.atitle=Habitat+selection+by+breeding+Whinchats+Saxicola+rubetra+at+territory+and+landscape+scalesbirds&amp;rft.volume=159&amp;rft.issue=1&amp;rft.pages=139-151&amp;rft.date=2017&amp;rft_id=info%3Adoi%2F10.1111%2Fibi.12433&amp;rft.au=Border%2C+J.+A.&amp;rft.au=Henderson%2C+I.+G.&amp;rft.au=Redhead%2C+J.+W.&amp;rft.au=Hartley%2C+I.+R.&amp;rft_id=http%3A%2F%2Fnora.nerc.ac.uk%2Fid%2Feprint%2F515262%2F1%2FN515262PP.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Border-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-Border_16-0">^</a></b></span> <span class="reference-text">Border, J. A., Henderson, I. G., Redhead, J. W. and Hartley, I. R. (2017). <a rel="nofollow" class="external text" href="http://onlinelibrary.wiley.com/doi/10.1111/ibi.12433/full">Habitat selection by breeding Whinchats <i>Saxicola rubetra</i> at territory and landscape scales</a>. <i>Ibis</i>, 159: 139–151. <a rel="nofollow" class="external text" href="http://onlinelibrary.wiley.com/doi/10.1111/ibi.12433/abstract">doi:10.1111/ibi.12433</a></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite id="CITEREFBlackburn,_E.Burgess,_M.Freeman,_B.Risely,_A.2017" class="citation journal cs1">Blackburn, E.; Burgess, M.; Freeman, B.; Risely, A.; Izang, A.; Ivande, S.; Hewson, C.; Cresswell, W. (2017). "Low and annually variable migratory connectivity in a long-distance migrant: Whinchats <i>Saxicola rubetra</i> may show a bet-hedging strategy". <i>Ibis</i>. <b>159</b> (4): 902–918. <a href="/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1111%2Fibi.12509">10.1111/ibi.12509</a>. <a href="/wiki/Hdl_(identifier)" class="mw-redirect" title="Hdl (identifier)">hdl</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//hdl.handle.net/10023%2F15514">10023/15514</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Ibis&amp;rft.atitle=Low+and+annually+variable+migratory+connectivity+in+a+long-distance+migrant%3A+Whinchats+Saxicola+rubetra+may+show+a+bet-hedging+strategy&amp;rft.volume=159&amp;rft.issue=4&amp;rft.pages=902-918&amp;rft.date=2017&amp;rft_id=info%3Ahdl%2F10023%2F15514&amp;rft_id=info%3Adoi%2F10.1111%2Fibi.12509&amp;rft.au=Blackburn%2C+E.&amp;rft.au=Burgess%2C+M.&amp;rft.au=Freeman%2C+B.&amp;rft.au=Risely%2C+A.&amp;rft.au=Izang%2C+A.&amp;rft.au=Ivande%2C+S.&amp;rft.au=Hewson%2C+C.&amp;rft.au=Cresswell%2C+W.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhinchat" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.thehindu.com/news/cities/Coimbatore/expedition-team-sights-rare-winged-visitor/article26763930.ece">https://www.thehindu.com/news/cities/Coimbatore/expedition-team-sights-rare-winged-visitor/article26763930.ece</a></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text">Bastian, A.; Bastian, H.-V. (1996). <i>Das Braunkehlchen: Opfer der ausgeräumten Kulturlandschaft</i>. Wiesbaden: Aula Verlag [cited in Urquhart &amp; Bowley 2002]</span>
+</li>
+<li id="cite_note-Gibbons-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-Gibbons_20-0">^</a></b></span> <span class="reference-text">Gibbons, D. W., Reid, J. B., &amp; Chapman, R. A., eds. (1993). <i>The New Atlas of Breeding Birds in Britain and Ireland: 1988–1991</i>. T &amp; A D Poyser <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-85661-075-5" title="Special:BookSources/0-85661-075-5">0-85661-075-5</a>.</span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><i>Irish Birds</i> Vol. 9 p. 543</span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Whinchat&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Saxicola_rubetra" class="extiw" title="commons:Saxicola rubetra">Saxicola rubetra</a></b></i>.</td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/34px-Wikispecies-logo.svg.png" decoding="async" width="34" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/51px-Wikispecies-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/68px-Wikispecies-logo.svg.png 2x" data-file-width="941" data-file-height="1103" /></td>
+<td class="mbox-text plainlist"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a> has information related to <i><b><a href="https://species.wikimedia.org/wiki/Saxicola_rubetra" class="extiw" title="wikispecies:Saxicola rubetra">Saxicola rubetra</a></b></i></td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://aulaenred.ibercaja.es/wp-content/uploads/333_WhinchatSrubetra.pdf">Ageing and sexing (PDF; 4.5 MB) by Javier Blasco-Zumeta &amp; Gerd-Michael Heinze</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ornithos.de/Ornithos/Feather_Collection/Saxicola_rubetra/Saxicola_rubetra.htm">Feathers of Whinchat (Saxicola rubetra)</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.xeno-canto.org/species/Saxicola-rubetra">Xeno-canto: audio recordings of the whinchat</a></li></ul>
+<div class="noprint metadata navbox" role="navigation" aria-label="Portals" style="font-weight:bold;padding:0.4em 2em"><ul style="margin:0.1em 0 0"><li style="display:inline"><span style="display:inline-block;white-space:nowrap"><span style="margin:0 0.5em"><a href="/wiki/File:Eagle_01.svg" class="image"><img alt="Eagle 01.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Eagle_01.svg/17px-Eagle_01.svg.png" decoding="async" width="17" height="21" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Eagle_01.svg/27px-Eagle_01.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Eagle_01.svg/35px-Eagle_01.svg.png 2x" data-file-width="317" data-file-height="381" /></a></span><a href="/wiki/Portal:Birds" title="Portal:Birds">Birds portal</a></span></li><li style="display:inline"><span style="display:inline-block;white-space:nowrap"><span style="margin:0 0.5em"><a href="/wiki/File:Caribou_from_Wagon_Trails.jpg" class="image"><img alt="Caribou from Wagon Trails.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Caribou_from_Wagon_Trails.jpg/24px-Caribou_from_Wagon_Trails.jpg" decoding="async" width="24" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Caribou_from_Wagon_Trails.jpg/36px-Caribou_from_Wagon_Trails.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Caribou_from_Wagon_Trails.jpg/48px-Caribou_from_Wagon_Trails.jpg 2x" data-file-width="2064" data-file-height="1413" /></a></span><a href="/wiki/Portal:Animals" title="Portal:Animals">Animals portal</a></span></li></ul></div>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q155869" class="extiw" title="wikidata:Q155869">Q155869</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Saxicola_rubetra" class="extiw" title="wikispecies:Saxicola rubetra">Saxicola rubetra</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Saxicola_rubetra/">Saxicola_rubetra</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=A0EDAEA2E89A9A96">A0EDAEA2E89A9A96</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8873">8873</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22710156">22710156</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">WHINC</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/whinch1">whinch1</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/1263">1263</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">11370</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:97189">97189</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/3a14ba99-ee8d-4114-8c83-ca1c3393d298">3a14ba99-ee8d-4114-8c83-ca1c3393d298</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=373320">373320</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2492521">2492521</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/12908">12908</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10920960">10920960</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=562837">562837</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22710156">22710156</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0000530590">NHMSYS0000530590</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=69510">69510</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=16031">16031</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=558585">558585</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox authority-control" aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q155869#identifiers&amp;#124;Edit_this_at_Wikidata" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q155869#identifiers&amp;#124;Edit_this_at_Wikidata" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q155869#identifiers" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/GND_(identifier)" class="mw-redirect" title="GND (identifier)">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://d-nb.info/gnd/4223891-2">4223891-2</a></span></span></li>
+<li><span class="nowrap"><a href="/wiki/LCCN_(identifier)" class="mw-redirect" title="LCCN (identifier)">LCCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://id.loc.gov/authorities/subjects/sh85146430">sh85146430</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1269
+Cached time: 20201101061302
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 1.100 seconds
+Real time usage: 1.494 seconds
+Preprocessor visited node count: 7388/1000000
+Post‐expand include size: 63322/2097152 bytes
+Template argument size: 8532/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 24/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 48316/5000000 bytes
+Lua time usage: 0.756/10.000 seconds
+Lua memory usage: 10.83 MB/50 MB
+Number of Wikibase entities loaded: 21/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1359.966      1 -total
+ 35.19%  478.628      1 Template:Speciesbox
+ 34.48%  468.909      1 Template:Taxobox/core
+ 22.08%  300.218      1 Template:Taxonbar
+ 20.74%  282.096      1 Template:Reflist
+  8.16%  110.931      1 Template:Cite_iucn
+  4.96%   67.491      1 Template:Short_description
+  4.13%   56.135      1 Template:Commons
+  4.13%   56.123      2 Template:Sister_project
+  3.99%   54.205      1 Template:Authority_control
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:193900-0!canonical and timestamp 20201101061301 and revision id 984935859
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Whinchat&amp;oldid=984935859">https://en.wikipedia.org/w/index.php?title=Whinchat&amp;oldid=984935859</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_least_concern_species" title="Category:IUCN Red List least concern species">IUCN Red List least concern species</a></li><li><a href="/wiki/Category:Saxicola" title="Category:Saxicola">Saxicola</a></li><li><a href="/wiki/Category:Chats_(birds)" title="Category:Chats (birds)">Chats (birds)</a></li><li><a href="/wiki/Category:Birds_of_Europe" title="Category:Birds of Europe">Birds of Europe</a></li><li><a href="/wiki/Category:Birds_of_Africa" title="Category:Birds of Africa">Birds of Africa</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li><li><a href="/wiki/Category:Good_articles" title="Category:Good articles">Good articles</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:Commons_link_is_on_Wikidata" title="Category:Commons link is on Wikidata">Commons link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_20%E2%80%9324_taxon_IDs" title="Category:Taxonbars with 20–24 taxon IDs">Taxonbars with 20–24 taxon IDs</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_LCCN_identifiers" title="Category:Wikipedia articles with LCCN identifiers">Wikipedia articles with LCCN identifiers</a></li><li><a href="/wiki/Category:Articles_containing_video_clips" title="Category:Articles containing video clips">Articles containing video clips</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Whinchat" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Whinchat" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Whinchat" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Whinchat" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Whinchat">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Whinchat&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Whinchat&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Whinchat" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Whinchat" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Whinchat&amp;oldid=984935859" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Whinchat&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Whinchat&amp;id=984935859&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q155869" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Whinchat&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Whinchat&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Saxicola_rubetra" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Saxicola_rubetra" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%9A%D1%8A%D0%B8%D0%BA%D3%80%D1%8B%D1%85%D1%8D%D0%BA%D3%80" title="КъикӀыхэкӀ – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%82%D9%84%D9%8A%D8%B9%D9%8A_%D8%A3%D8%AD%D9%85%D8%B1" title="قليعي أحمر – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Saxicola_rubetra" title="Saxicola rubetra – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/%C3%87%C9%99m%C9%99nlik_%C3%A7%C9%99k%C3%A7%C9%99kisi" title="Çəmənlik çəkçəkisi – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D0%A8%D0%B0%D2%A1%D1%8B%D0%BB%D0%B4%D0%B0%D2%A1" title="Шаҡылдаҡ – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A0%D1%8A%D0%B6%D0%B4%D0%B8%D0%B2%D0%BE%D0%B3%D1%83%D1%88%D0%BE_%D0%BB%D0%B8%D0%B2%D0%B0%D0%B4%D0%B0%D1%80%D1%87%D0%B5" title="Ръждивогушо ливадарче – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Strakig_rous" title="Strakig rous – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Bitxac_rogenc" title="Bitxac rogenc – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Saxicola_rubetra" title="Saxicola rubetra – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Bramborn%C3%AD%C4%8Dek_hn%C4%9Bd%C3%BD" title="Bramborníček hnědý – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Crec_yr_Eithin" title="Crec yr Eithin – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Bynkefugl" title="Bynkefugl – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Braunkehlchen" title="Braunkehlchen – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/Haltsoo%C3%ADtah_d%C7%AB%CC%81%CA%BCiiyiyiitsah%C3%AD_bit%C3%A9%C3%A9l_diniltsxoo%C3%ADg%C3%AD%C3%AD" title="Haltsooítah dǫ́ʼiiyiyiitsahí bitéél diniltsxooígíí – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Kadakat%C3%A4ks" title="Kadakatäks – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Saxicola_rubetra" title="Saxicola rubetra – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Brungor%C4%9Dulo" title="Brungorĝulo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Pitxartxar_nabar" title="Pitxartxar nabar – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%DA%86%DA%A9_%D8%A8%D9%88%D8%AA%D9%87%E2%80%8C%D8%A7%DB%8C" title="چک بوته‌ای – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/Rey%C3%B0st%C3%B3lpa" title="Reyðstólpa – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Tarier_des_pr%C3%A9s" title="Tarier des prés – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-fy"><a href="https://fy.wikipedia.org/wiki/Paapke" title="Paapke – Western Frisian" lang="fy" hreflang="fy" class="interlanguage-link-target">Frysk</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Caisl%C3%ADn_aitinn" title="Caislín aitinn – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Chasco_rabipinto" title="Chasco rabipinto – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B0%80%EC%8B%9C%EA%B2%80%EC%9D%80%EB%94%B1%EC%83%88" title="가시검은딱새 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D5%84%D5%A1%D6%80%D5%A3%D5%A1%D5%A3%D5%A5%D5%BF%D5%B6%D5%A1%D5%B5%D5%AB%D5%B6_%D5%B9%D6%84%D5%B9%D5%A1%D5%B6" title="Մարգագետնային չքչան – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Saxicola_rubetra" title="Saxicola rubetra – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%93%D7%95%D7%97%D7%9C_%D7%97%D7%95%D7%9D-%D7%92%D7%A8%D7%95%D7%9F" title="דוחל חום-גרון – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%96%D0%B0%D2%93%D0%B0%D0%BB_%D1%88%D0%B0%D2%9B%D1%88%D0%B0%D2%9B" title="Жағал шақшақ – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Lukstu_%C4%8Dakst%C4%ABte" title="Lukstu čakstīte – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Kiauliuk%C4%97" title="Kiauliukė – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Rozsd%C3%A1s_csuk" title="Rozsdás csuk – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B8%D1%87%D0%BD%D0%BE_%D0%BB%D0%B8%D0%B2%D0%B0%D0%B4%D0%B0%D1%80%D1%87%D0%B5" title="Обично ливадарче – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Paapje" title="Paapje – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%9F%E3%82%B8%E3%83%AD%E3%83%8E%E3%83%93%E3%82%BF%E3%82%AD" title="マミジロノビタキ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Buskskvett" title="Buskskvett – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Buskskvett" title="Buskskvett – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Saxicola_rubetra" title="Saxicola rubetra – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Pokl%C4%85skwa" title="Pokląskwa – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Cartaxo-nortenho" title="Cartaxo-nortenho – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/M%C4%83r%C4%83cinar" title="Mărăcinar – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%A7%D0%B5%D0%BA%D0%BA%D0%B0%D0%BD%D1%87%D1%96%D0%BA_%D0%BB%D1%83%D0%B3%D0%BE%D0%B2%D1%8B%D0%B9" title="Чекканчік луговый – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9B%D1%83%D0%B3%D0%BE%D0%B2%D0%BE%D0%B9_%D1%87%D0%B5%D0%BA%D0%B0%D0%BD" title="Луговой чекан – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Saxicola_rubetra" title="Saxicola rubetra – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/P%C5%95h%C4%BEaviar_%C4%8Dervenkast%C3%BD" title="Pŕhľaviar červenkastý – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/Repalj%C5%A1%C4%8Dica" title="Repaljščica – Slovenian" lang="sl" hreflang="sl" class="interlanguage-link-target">Slovenščina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B8%D1%87%D0%BD%D0%B0_%D1%82%D1%80%D0%B0%D0%B2%D0%B0%D1%80%D0%BA%D0%B0" title="Обична траварка – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Pensastasku" title="Pensastasku – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Buskskv%C3%A4tta" title="Buskskvätta – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/%C3%87ay%C4%B1r_ta%C5%9F%C3%A7alan%C4%B1" title="Çayır taşçalanı – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A2%D1%80%D0%B0%D0%B2%27%D1%8F%D0%BD%D0%BA%D0%B0_%D0%BB%D1%83%D1%87%D0%BD%D0%B0" title="Трав&#039;янка лучна – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Saxicola_rubetra" title="Saxicola rubetra – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Saxicola_rubetra" title="Saxicola rubetra – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E8%8D%89%E5%8E%9F%E7%9F%B3%E4%B3%AD" title="草原石䳭 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q155869#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 23 October 2020, at 00:01<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Whinchat&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.100","walltime":"1.494","ppvisitednodes":{"value":7388,"limit":1000000},"postexpandincludesize":{"value":63322,"limit":2097152},"templateargumentsize":{"value":8532,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":24,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":48316,"limit":5000000},"entityaccesscount":{"value":21,"limit":400},"timingprofile":["100.00% 1359.966      1 -total"," 35.19%  478.628      1 Template:Speciesbox"," 34.48%  468.909      1 Template:Taxobox/core"," 22.08%  300.218      1 Template:Taxonbar"," 20.74%  282.096      1 Template:Reflist","  8.16%  110.931      1 Template:Cite_iucn","  4.96%   67.491      1 Template:Short_description","  4.13%   56.135      1 Template:Commons","  4.13%   56.123      2 Template:Sister_project","  3.99%   54.205      1 Template:Authority_control"]},"scribunto":{"limitreport-timeusage":{"value":"0.756","limit":"10.000"},"limitreport-memusage":{"value":11357750,"limit":52428800}},"cachereport":{"origin":"mw1269","timestamp":"20201101061302","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Whinchat","url":"https:\/\/en.wikipedia.org\/wiki\/Whinchat","sameAs":"http:\/\/www.wikidata.org\/entity\/Q155869","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q155869","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-03-09T08:10:44Z","dateModified":"2020-10-23T00:01:29Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/5\/5c\/Saxicola_rubetra_-Belgium_-male-8.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":205,"wgHostname":"mw1275"});});</script>
+</body></html>

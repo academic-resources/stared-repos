@@ -1,0 +1,78 @@
+.categorizer-container {
+    margin-top: 20px;
+
+    div.paragraph {
+        margin: 10px 0px;
+    }
+
+    .category {
+        text-align: center;
+    }
+
+    th.category {
+        vertical-align: bottom;
+    }
+
+    label {
+        .above-scratchpad;
+    }
+
+    td.category {
+        padding: 0;
+        color: #ccc;
+        vertical-align: bottom;
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"] + span:before {
+            display: inline-block;
+            position: relative;
+            font-family: 'FontAwesome';
+            font-size: 30px;
+            width: 30px;
+            padding-right: 3px;
+            bottom: 9px;
+            content: "\f1db";  // fa-circle-thin
+        }
+
+        label span:hover {
+            color: #999;
+        }
+
+        input[type="radio"]:checked + span:before {
+            content: "\f111";  // fa-circle
+            color: #333;
+
+            // .static-mode is applied by the Categorizer when the rendered
+            // widget is static; in this case we gray out the choices to show
+            // the user that the widget can't be interacted with.
+            // TODO(sam): Use inline styles for this
+            .static-mode& {
+                color: #888;
+            }
+        }
+    }
+}
+
+
+
+// Styles specifically for mobile
+body.mobile {
+    .categorizer-container {
+        td.category {
+            input[type="radio"] {
+                &:checked + span:before {
+                    color: @blue;
+                }
+
+                & + span:active:before {
+                    color: #666;
+                    content: "\f111";  // fa-circle
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Meadow pipit - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"42ac02cb-42c1-4636-8108-a0e46dcf922c","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Meadow_pipit","wgTitle":"Meadow pipit","wgCurRevisionId":971283030,"wgRevisionId":971283030,"wgArticleId":339243,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: ref=harv","Cite iucn maint","Articles with 'species' microformats","All articles with unsourced statements","Articles with unsourced statements from April 2018","Commons category link is on Wikidata","Taxonbars with 20–24 taxon IDs","IUCN Red List near threatened species","Anthus",
+"Birds of Europe","Birds of North Africa","Birds described in 1758","Taxa named by Carl Linnaeus"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Meadow_pipit","wgRelevantArticleId":339243,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Meadow_Pipit","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Meadow_pipit","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q26956"};
+RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.tmh.thumbnail.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging",
+"ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.36.0-wmf.14"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wiesenpieper_Meadow_pipit.jpg/1200px-Wiesenpieper_Meadow_pipit.jpg"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikipedia.org/wiki/Meadow_pipit"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Meadow_pipit&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Meadow_pipit&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Meadow_pipit"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Meadow_pipit rootpage-Meadow_pipit skin-vector action-view skin-vector-legacy"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+	</div>
+	<h1 id="firstHeading" class="firstHeading" lang="en">Meadow pipit</h1>
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Meadow_Pipit&amp;redirect=no" class="mw-redirect" title="Meadow Pipit">Meadow Pipit</a>)</span></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p class="mw-empty-elt">
+</p>
+<table class="infobox biota" style="text-align: left; width: 200px; font-size: 100%">
+
+<tbody><tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)">Meadow pipit
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:Wiesenpieper_Meadow_pipit.jpg" class="image"><img alt="Wiesenpieper Meadow pipit.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wiesenpieper_Meadow_pipit.jpg/220px-Wiesenpieper_Meadow_pipit.jpg" decoding="async" width="220" height="147" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wiesenpieper_Meadow_pipit.jpg/330px-Wiesenpieper_Meadow_pipit.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wiesenpieper_Meadow_pipit.jpg/440px-Wiesenpieper_Meadow_pipit.jpg 2x" data-file-width="4347" data-file-height="2898" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%"><div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:222px;"><div class="mediaContainer" style="width:220px"><audio id="mwe_player_0" controls="" preload="none" style="width:220px" class="kskin" data-durationhint="92.827188208617" data-startoffset="0" data-mwtitle="Meadow_Pipit_(Anthus_pratensis)_(W1CDR0001526_BD4).ogg" data-mwprovider="wikimediacommons"><source src="//upload.wikimedia.org/wikipedia/commons/transcoded/5/54/Meadow_Pipit_%28Anthus_pratensis%29_%28W1CDR0001526_BD4%29.ogg/Meadow_Pipit_%28Anthus_pratensis%29_%28W1CDR0001526_BD4%29.ogg.mp3" type="audio/mpeg" data-title="MP3" data-shorttitle="MP3" data-transcodekey="mp3" data-width="0" data-height="0" data-bandwidth="126392" /><source src="//upload.wikimedia.org/wikipedia/commons/5/54/Meadow_Pipit_%28Anthus_pratensis%29_%28W1CDR0001526_BD4%29.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Original Ogg file (206 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="206489" /></audio></div>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Meadow_Pipit_(Anthus_pratensis)_(W1CDR0001526_BD4).ogg" class="internal" title="Enlarge"></a></div>Bird recorded in Surrey, England</div></div></div></div>
+</td></tr>
+
+
+<tr style="text-align: center; background-color: rgb(235,235,210)">
+<th colspan="2"><div style="text-align: center"><a href="/wiki/Conservation_status" title="Conservation status">Conservation status</a></div>
+</th></tr>
+<tr>
+<td colspan="2"><div style="text-align: center"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Status_iucn3.1_NT.svg/220px-Status_iucn3.1_NT.svg.png" decoding="async" width="220" height="59" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Status_iucn3.1_NT.svg/330px-Status_iucn3.1_NT.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Status_iucn3.1_NT.svg/440px-Status_iucn3.1_NT.svg.png 2x" data-file-width="240" data-file-height="64" /><br /><a href="/wiki/Near_Threatened" class="mw-redirect" title="Near Threatened">Near Threatened</a><small>&#160;(<a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN 3.1</a>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></small></div>
+</td></tr>
+
+<tr>
+<th colspan="2" style="min-width:15em; text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Taxonomy_(biology)" title="Taxonomy (biology)">Scientific classification</a> <span class="plainlinks" style="font-size:smaller; float:right; padding-right:0.4em; margin-left:-3em;"><a href="/wiki/Template:Taxonomy/Anthus" title="edit"><img alt="edit" src="//upload.wikimedia.org/wikipedia/commons/7/74/Red_Pencil_Icon.png" decoding="async" width="16" height="16" data-file-width="16" data-file-height="16" /></a></span>
+</th></tr>
+<tr>
+<td>Domain:
+</td>
+<td><a href="/wiki/Eukaryote" title="Eukaryote">Eukaryota</a>
+</td></tr>
+<tr>
+<td>Kingdom:
+</td>
+<td><a href="/wiki/Animal" title="Animal">Animalia</a>
+</td></tr>
+<tr>
+<td>Phylum:
+</td>
+<td><a href="/wiki/Chordate" title="Chordate">Chordata</a>
+</td></tr>
+<tr>
+<td>Class:
+</td>
+<td><a href="/wiki/Bird" title="Bird">Aves</a>
+</td></tr>
+<tr>
+<td>Order:
+</td>
+<td><a href="/wiki/Passerine" title="Passerine">Passeriformes</a>
+</td></tr>
+<tr>
+<td>Family:
+</td>
+<td><a href="/wiki/Motacillidae" title="Motacillidae">Motacillidae</a>
+</td></tr>
+<tr>
+<td>Genus:
+</td>
+<td><a href="/wiki/Pipit" title="Pipit"><i>Anthus</i></a>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>Species:
+</td>
+<td><div style="display:inline" class="species"><i><b>A.&#160;pratensis</b></i></div>
+</td></tr>
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Binomial_nomenclature" title="Binomial nomenclature">Binomial name</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: center"><b><span class="binomial"><span style="font-weight:normal;"></span><i>Anthus pratensis</i></span></b><br /><div style="font-size: 85%;">(<a href="/wiki/Carl_Linnaeus" title="Carl Linnaeus">Linnaeus</a>, <a href="/wiki/10th_edition_of_Systema_Naturae" title="10th edition of Systema Naturae">1758</a>)</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" style="text-align: center"><a href="/wiki/File:AnthusPratensisIUCNver2019_1.png" class="image"><img alt="AnthusPratensisIUCNver2019 1.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/AnthusPratensisIUCNver2019_1.png/220px-AnthusPratensisIUCNver2019_1.png" decoding="async" width="220" height="152" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3e/AnthusPratensisIUCNver2019_1.png/330px-AnthusPratensisIUCNver2019_1.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/AnthusPratensisIUCNver2019_1.png/440px-AnthusPratensisIUCNver2019_1.png 2x" data-file-width="3328" data-file-height="2298" /></a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align: center; font-size: 88%">Range of <i>A. pratensis</i><style data-mw-deduplicate="TemplateStyles:r981673959">.mw-parser-output .legend{page-break-inside:avoid;break-inside:avoid-column}.mw-parser-output .legend-color{display:inline-block;min-width:1.25em;height:1.25em;line-height:1.25;margin:1px 0;text-align:center;border:1px solid black;background-color:transparent;color:black}.mw-parser-output .legend-text{}</style><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#00FF00; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Breeding</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#008000; color:white; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Resident</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#00FFFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Passage</div> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r981673959"/><div class="legend" style="text-align:left;"><span class="legend-color" style="border: 1px solid gray; background-color:#007FFF; color:black; -webkit-column-break-inside: avoid;">&#160;</span>&#160;Non-breeding</div>
+</td></tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th colspan="2" style="text-align: center; background-color: rgb(235,235,210)"><a href="/wiki/Synonym_(taxonomy)" title="Synonym (taxonomy)">Synonyms</a>
+</th></tr>
+<tr>
+<td colspan="2" style="text-align: left">
+<p><i>Alauda pratensis</i> <span style="font-size:85%;">Linnaeus,&#160;1758</span>
+</p>
+</td></tr>
+
+</tbody></table>
+<p>The <b>meadow pipit</b> (<i>Anthus pratensis</i>) is a small <a href="/wiki/Passerine" title="Passerine">passerine</a> <a href="/wiki/Bird" title="Bird">bird</a> which breeds in much of the <a href="/wiki/Palearctic" class="mw-redirect" title="Palearctic">Palearctic</a>, from southeastern Greenland and Iceland east to just east of the <a href="/wiki/Ural_Mountains" title="Ural Mountains">Ural Mountains</a> in Russia, and south to central France and Romania; there is also an isolated population in the <a href="/wiki/Caucasus_Mountains" title="Caucasus Mountains">Caucasus Mountains</a>. It is <a href="/wiki/Bird_migration" title="Bird migration">migratory</a> over most of its range, wintering in southern Europe, North Africa and south-western Asia, but is resident year-round in western Europe. However, even here, many birds move to the coast or lowlands in winter.<sup id="cite_ref-Snow_2-0" class="reference"><a href="#cite_note-Snow-2">&#91;2&#93;</a></sup><sup id="cite_ref-Hoyo_3-0" class="reference"><a href="#cite_note-Hoyo-3">&#91;3&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Distribution_and_habitat"><span class="tocnumber">2</span> <span class="toctext">Distribution and habitat</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Diet"><span class="tocnumber">3</span> <span class="toctext">Diet</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Breeding"><span class="tocnumber">4</span> <span class="toctext">Breeding</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Etymology"><span class="tocnumber">5</span> <span class="toctext">Etymology</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Meadow_pipit&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Anthus_pratensis.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/34/Anthus_pratensis.jpg/220px-Anthus_pratensis.jpg" decoding="async" width="220" height="147" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/34/Anthus_pratensis.jpg/330px-Anthus_pratensis.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/34/Anthus_pratensis.jpg/440px-Anthus_pratensis.jpg 2x" data-file-width="3872" data-file-height="2592" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Anthus_pratensis.jpg" class="internal" title="Enlarge"></a></div>A meadow pipit perched on a fishing net</div></div></div>
+<p>This is a widespread and often abundant small <a href="/wiki/Pipit" title="Pipit">pipit</a>, 14.5–15&#160;cm long and 15–22 g weight. It is an undistinguished looking species on the ground, mainly brown above and buff below, with darker streaking on most of its plumage; the tail is brown, with narrow white side edges. It has a thin bill and pale pinkish-yellow legs; the hind claw is notably long, longer than the rest of the hind toe. The call is a weak <i>tsi-tsi</i>. The simple repetitive song is given in a short song flight.<sup id="cite_ref-Snow_2-1" class="reference"><a href="#cite_note-Snow-2">&#91;2&#93;</a></sup><sup id="cite_ref-Hoyo_3-1" class="reference"><a href="#cite_note-Hoyo-3">&#91;3&#93;</a></sup> Birds breeding in <a href="/wiki/Ireland" title="Ireland">Ireland</a> and western <a href="/wiki/Scotland" title="Scotland">Scotland</a> are slightly darker coloured than those in other areas, and are often distinguished as the <a href="/wiki/Subspecies" title="Subspecies">subspecies</a> <i>Anthus pratensis whistleri</i>, though it intergrades clinally with nominate <i>Anthus pratensis pratensis</i> found in the rest of the species' range.<sup id="cite_ref-Snow_2-2" class="reference"><a href="#cite_note-Snow-2">&#91;2&#93;</a></sup><sup id="cite_ref-Hoyo_3-2" class="reference"><a href="#cite_note-Hoyo-3">&#91;3&#93;</a></sup>
+</p><p>It is similar to the <a href="/wiki/Red-throated_pipit" title="Red-throated pipit">red-throated pipit</a> <i>Anthus cervinus</i>, which is more heavily streaked and (in summer only) has an orange-red throat, and to the <a href="/wiki/Tree_pipit" title="Tree pipit">tree pipit</a> <i>Anthus trivialis</i>, which is slightly larger, less heavily streaked, and has stronger facial markings and a shorter hind claw. The song of the meadow pipit accelerates towards the end while that of the tree pipit slows down.<sup id="cite_ref-Snow_2-3" class="reference"><a href="#cite_note-Snow-2">&#91;2&#93;</a></sup><sup id="cite_ref-Hoyo_3-3" class="reference"><a href="#cite_note-Hoyo-3">&#91;3&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Distribution_and_habitat">Distribution and habitat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Meadow_pipit&amp;action=edit&amp;section=2" title="Edit section: Distribution and habitat">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Anthus_pratensis_nest_2.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Anthus_pratensis_nest_2.jpg/220px-Anthus_pratensis_nest_2.jpg" decoding="async" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Anthus_pratensis_nest_2.jpg/330px-Anthus_pratensis_nest_2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Anthus_pratensis_nest_2.jpg/440px-Anthus_pratensis_nest_2.jpg 2x" data-file-width="4000" data-file-height="3000" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Anthus_pratensis_nest_2.jpg" class="internal" title="Enlarge"></a></div>Nest with eggs</div></div></div>
+<p>It is primarily a species of open habitats, either uncultivated or low-intensity agriculture, such as pasture, bogs, and moorland, but also occurs in low numbers in arable croplands. In winter, it also uses saltmarshes and sometimes open woodlands. It is a fairly terrestrial pipit, always feeding on the ground, but will use elevated perches such as shrubs, fence lines or electricity wires as vantage points to watch for predators.<sup id="cite_ref-Snow_2-4" class="reference"><a href="#cite_note-Snow-2">&#91;2&#93;</a></sup><sup id="cite_ref-Hoyo_3-4" class="reference"><a href="#cite_note-Hoyo-3">&#91;3&#93;</a></sup><sup id="cite_ref-ebcc_4-0" class="reference"><a href="#cite_note-ebcc-4">&#91;4&#93;</a></sup>
+</p><p>The estimated total population is 12 million pairs. It is an abundant species in the north of its range, and generally the commonest breeding bird in most of upland Britain, but less common further south. Breeding densities range from 80 pairs per square kilometre in northern Scandinavia, to 5–20 pairs per square kilometre in grassland in the south of the breeding range, and just one pair per square kilometre in arable farmland.<sup id="cite_ref-Hoyo_3-5" class="reference"><a href="#cite_note-Hoyo-3">&#91;3&#93;</a></sup><sup id="cite_ref-ebcc_4-1" class="reference"><a href="#cite_note-ebcc-4">&#91;4&#93;</a></sup> There are a small number of isolated breeding records from south of the main range, in the mountains of <a href="/wiki/Spain" title="Spain">Spain</a>, <a href="/wiki/Italy" title="Italy">Italy</a>, and the northern <a href="/wiki/Balkans" title="Balkans">Balkans</a>.<sup id="cite_ref-Snow_2-5" class="reference"><a href="#cite_note-Snow-2">&#91;2&#93;</a></sup>
+</p><p>There has been a general decline in the population over the past 17 years, most notable in French farmland, with a 68% drop.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Diet">Diet</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Meadow_pipit&amp;action=edit&amp;section=3" title="Edit section: Diet">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Anthus_pratensis_MWNH_1590.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Anthus_pratensis_MWNH_1590.JPG/220px-Anthus_pratensis_MWNH_1590.JPG" decoding="async" width="220" height="138" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Anthus_pratensis_MWNH_1590.JPG/330px-Anthus_pratensis_MWNH_1590.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Anthus_pratensis_MWNH_1590.JPG/440px-Anthus_pratensis_MWNH_1590.JPG 2x" data-file-width="3528" data-file-height="2208" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Anthus_pratensis_MWNH_1590.JPG" class="internal" title="Enlarge"></a></div>Eggs, Collection <a href="/wiki/Museum_Wiesbaden" title="Museum Wiesbaden">Museum Wiesbaden</a></div></div></div>
+<p>Its food is primarily <a href="/wiki/Insect" title="Insect">insects</a> and other <a href="/wiki/Invertebrate" title="Invertebrate">invertebrates</a>, mostly small items less than 5&#160;mm long. It also eats the seeds of <a href="/wiki/Poaceae" title="Poaceae">grasses</a>, <a href="/wiki/Cyperaceae" title="Cyperaceae">sedges</a>, <a href="/wiki/Juncaceae" title="Juncaceae">rushes</a> and <a href="/wiki/Calluna" title="Calluna">heather</a>, and <a href="/wiki/Empetrum" title="Empetrum">crowberry</a> berries, mainly in winter.<sup id="cite_ref-Snow_2-6" class="reference"><a href="#cite_note-Snow-2">&#91;2&#93;</a></sup><sup id="cite_ref-Hoyo_3-6" class="reference"><a href="#cite_note-Hoyo-3">&#91;3&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Breeding">Breeding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Meadow_pipit&amp;action=edit&amp;section=4" title="Edit section: Breeding">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The nest is on the ground hidden in dense vegetation, with 2–7 (most often 3–5) eggs; the eggs hatch after 11–15 days, with the chicks fledging 10–14 days after hatching. Two broods are commonly raised each year. This species is one of the most important nest hosts of the <a href="/wiki/Common_cuckoo" title="Common cuckoo">cuckoo</a>, and it is also an important prey species for <a href="/wiki/Merlin_(bird)" title="Merlin (bird)">merlins</a> and <a href="/wiki/Hen_harrier" title="Hen harrier">hen harriers</a>.<sup id="cite_ref-Snow_2-7" class="reference"><a href="#cite_note-Snow-2">&#91;2&#93;</a></sup><sup id="cite_ref-Hoyo_3-7" class="reference"><a href="#cite_note-Hoyo-3">&#91;3&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Etymology">Etymology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Meadow_pipit&amp;action=edit&amp;section=5" title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The generic name 'pipit', first documented by <a href="/wiki/Thomas_Pennant" title="Thomas Pennant">Thomas Pennant</a> in 1768, is <a href="/wiki/Onomatopoeia" title="Onomatopoeia">onomatopoeic</a>, from the call note of this species.<sup id="cite_ref-Lockwood_6-0" class="reference"><a href="#cite_note-Lockwood-6">&#91;6&#93;</a></sup> In colloquial use by <a href="/wiki/Birdwatching" title="Birdwatching">birders</a> in the UK the name meadow pipit is often abbreviated to "mippit".<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="Old citation no longer available and needs updating (April 2018)">citation needed</span></a></i>&#93;</sup> Old folk names, no longer used, include "chit lark", "peet lark", "tit lark" and "titling"; these refer to its small size and superficial similarity to a <a href="/wiki/Lark" title="Lark">lark</a>.<sup id="cite_ref-Lockwood_6-1" class="reference"><a href="#cite_note-Lockwood-6">&#91;6&#93;</a></sup> The scientific name is from <a href="/wiki/Latin" title="Latin">Latin</a>. <i>Anthus</i> is the name for a small bird of grasslands, and the specific <i>pratensis</i> means "of a meadow ", from <i>pratum</i>,  "meadow".<sup id="cite_ref-job_7-0" class="reference"><a href="#cite_note-job-7">&#91;7&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Meadow_pipit&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Anthus_pratensis" class="extiw" title="commons:Category:Anthus pratensis"><span style="">Anthus pratensis</span></a></b></i>.</td></tr>
+</tbody></table>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFBirdLife_International2015" class="citation journal cs1"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife International</a> (2015). <a rel="nofollow" class="external text" href="https://www.iucnredlist.org/details/22718556/0">"<i>Anthus pratensis</i>"</a>. <i><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN Red List of Threatened Species</a></i>. <b>2015</b><span class="reference-accessdate">. Retrieved <span class="nowrap">24 January</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IUCN+Red+List+of+Threatened+Species&amp;rft.atitle=Anthus+pratensis&amp;rft.volume=2015&amp;rft.date=2015&amp;rft.au=BirdLife+International&amp;rft_id=https%3A%2F%2Fwww.iucnredlist.org%2Fdetails%2F22718556%2F0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMeadow+pipit" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: ref=harv (<a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r982806391">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation-comment" style="display: none; color: #33aa33; margin-left: 0.3em;">old-form url</span></span>
+</li>
+<li id="cite_note-Snow-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Snow_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Snow_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Snow_2-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Snow_2-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Snow_2-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Snow_2-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-Snow_2-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-Snow_2-7"><sup><i><b>h</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFSnowPerrins,_C._M.1998" class="citation book cs1">Snow, D. W.; Perrins, C. M. (1998). <i>The Birds of the Western Palearctic</i> (Concise ed.). Oxford: Oxford University Press. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-19-854099-X" title="Special:BookSources/0-19-854099-X"><bdi>0-19-854099-X</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Birds+of+the+Western+Palearctic&amp;rft.place=Oxford&amp;rft.edition=Concise&amp;rft.pub=Oxford+University+Press&amp;rft.date=1998&amp;rft.isbn=0-19-854099-X&amp;rft.aulast=Snow&amp;rft.aufirst=D.+W.&amp;rft.au=Perrins%2C+C.+M.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMeadow+pipit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Hoyo-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-Hoyo_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Hoyo_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Hoyo_3-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Hoyo_3-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Hoyo_3-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Hoyo_3-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-Hoyo_3-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-Hoyo_3-7"><sup><i><b>h</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFHoyo2004" class="citation book cs1">Hoyo, J. del;  et al., eds. (2004). <i><a href="/wiki/Handbook_of_the_Birds_of_the_World" title="Handbook of the Birds of the World">Handbook of the Birds of the World</a>, vol. 9</i>. Barcelona: Lynx Edicions. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/handbookofbirdso0001unse/page/763">763</a>. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/84-87334-69-5" title="Special:BookSources/84-87334-69-5"><bdi>84-87334-69-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+the+Birds+of+the+World%2C+vol.+9&amp;rft.place=Barcelona&amp;rft.pages=763&amp;rft.pub=Lynx+Edicions&amp;rft.date=2004&amp;rft.isbn=84-87334-69-5&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMeadow+pipit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-ebcc-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-ebcc_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ebcc_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Hagemeijer, W. J. M., &amp; Blair, M. J., eds. (1997). <i><a href="/wiki/The_EBCC_Atlas_of_European_Breeding_Birds" title="The EBCC Atlas of European Breeding Birds">The EBCC Atlas of European Breeding Birds</a></i>. Poyser, London <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-85661-091-7" title="Special:BookSources/0-85661-091-7">0-85661-091-7</a>.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite id="CITEREFGorman2018" class="citation news cs1">Gorman, James (2018-04-11). <a rel="nofollow" class="external text" href="https://www.nytimes.com/2018/04/11/science/farmland-birds-decline.html">"Farmland Birds in France Are in Steep Decline"</a>. <i>The New York Times</i>. <a href="/wiki/ISSN_(identifier)" class="mw-redirect" title="ISSN (identifier)">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0362-4331">0362-4331</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2018-04-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+New+York+Times&amp;rft.atitle=Farmland+Birds+in+France+Are+in+Steep+Decline&amp;rft.date=2018-04-11&amp;rft.issn=0362-4331&amp;rft.aulast=Gorman&amp;rft.aufirst=James&amp;rft_id=https%3A%2F%2Fwww.nytimes.com%2F2018%2F04%2F11%2Fscience%2Ffarmland-birds-decline.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMeadow+pipit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+<li id="cite_note-Lockwood-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-Lockwood_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Lockwood_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Lockwood, W. B. (1984). <i>The Oxford Book of British Bird Names</i>. Oxford University Press <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/><a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-19-214155-4" title="Special:BookSources/0-19-214155-4">0-19-214155-4</a>.</span>
+</li>
+<li id="cite_note-job-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-job_7-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFJobling2010" class="citation book cs1">Jobling, James A. (2010). <a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling"><i>The Helm Dictionary of Scientific Bird Names</i></a>. London, United Kingdom: Christopher Helm. pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/Helm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling/page/n49">49</a>, 315. <a href="/wiki/ISBN_(identifier)" class="mw-redirect" title="ISBN (identifier)">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4081-2501-4" title="Special:BookSources/978-1-4081-2501-4"><bdi>978-1-4081-2501-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Helm+Dictionary+of+Scientific+Bird+Names&amp;rft.place=London%2C+United+Kingdom&amp;rft.pages=49%2C+315&amp;rft.pub=Christopher+Helm&amp;rft.date=2010&amp;rft.isbn=978-1-4081-2501-4&amp;rft.aulast=Jobling&amp;rft.aufirst=James+A.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FHelm_Dictionary_of_Scientific_Bird_Names_by_James_A._Jobling&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMeadow+pipit" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r982806391"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Meadow_pipit&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://ibc.lynxeds.com/species/meadow-pipit-anthus-pratensis">Meadow pipit videos, photos &amp; sounds</a> on the Internet Bird Collection</li>
+<li><a rel="nofollow" class="external text" href="http://aulaenred.ibercaja.es/wp-content/uploads/313_MeadowPipitApratensis.pdf">Ageing and sexing (PDF; 1.8 MB) by Javier Blasco-Zumeta &amp; Gerd-Michael Heinze</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Taxon_identifiers" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Taxon_identifiers" scope="row" class="navbox-group" style="width:1%;text-align: left;"><a href="/wiki/Help:Taxon_identifiers" title="Help:Taxon identifiers">Taxon identifiers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span style="white-space:nowrap;"><a href="/wiki/Wikidata" title="Wikidata">Wikidata</a>: <span class="uid"><span class="external"><a href="https://www.wikidata.org/wiki/Q26956" class="extiw" title="wikidata:Q26956">Q26956</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Wikispecies" title="Wikispecies">Wikispecies</a>: <span class="uid"><span class="external"><a href="https://species.wikimedia.org/wiki/Anthus_pratensis" class="extiw" title="wikispecies:Anthus pratensis">Anthus pratensis</a></span></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Animal_Diversity_Web" title="Animal Diversity Web">ADW</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://animaldiversity.org/accounts/Anthus_pratensis/">Anthus_pratensis</a></span></span></li>
+<li><span style="white-space:nowrap;">Avibase: <span class="uid"><a rel="nofollow" class="external text" href="https://avibase.bsc-eoc.org/species.jsp?avibaseid=14873249B607CEB1">14873249B607CEB1</a></span></span></li>
+<li><span style="white-space:nowrap;">BioLib: <span class="uid"><a rel="nofollow" class="external text" href="https://www.biolib.cz/cz/taxon/id8842">8842</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/BirdLife_International" title="BirdLife International">BirdLife</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://datazone.birdlife.org/species/factsheet/22718556">22718556</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/British_Trust_for_Ornithology" title="British Trust for Ornithology">BTO</a>: <span class="uid">MEAPI</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EBird" title="EBird">eBird</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://ebird.org/species/meapip1">meapip1</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/EPPO_Code" title="EPPO Code">EPPO</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://gd.eppo.int/taxon/ATHUPR">ATHUPR</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/European_Nature_Information_System" title="European Nature Information System">EUNIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://eunis.eea.europa.eu/species/884">884</a></span></span></li>
+<li><span style="white-space:nowrap;">Euring: <span class="uid">10110</span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.eu-nomen.eu/portal/taxon.php?GUID=urn:lsid:faunaeur.org:taxname:97419">97419</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fauna_Europaea" title="Fauna Europaea">Fauna Europaea (new)</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://fauna-eu.org/cdm_dataportal/taxon/19162bcc-becd-47fb-b8bf-ceb7347f5921">19162bcc-becd-47fb-b8bf-ceb7347f5921</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Fossilworks" title="Fossilworks">Fossilworks</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://fossilworks.org/bridge.pl?a=taxonInfo&amp;taxon_no=368921">368921</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Global_Biodiversity_Information_Facility" title="Global Biodiversity Information Facility">GBIF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.gbif.org/species/2490266">2490266</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/INaturalist" title="INaturalist">iNaturalist</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.inaturalist.org/taxa/13729">13729</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Interim_Register_of_Marine_and_Nonmarine_Genera" title="Interim Register of Marine and Nonmarine Genera">IRMNG</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.irmng.org/aphia.php?p=taxdetails&amp;id=10856789">10856789</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/Integrated_Taxonomic_Information_System" title="Integrated Taxonomic Information System">ITIS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&amp;search_value=178497">178497</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/IUCN_Red_List" title="IUCN Red List">IUCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://apiv3.iucnredlist.org/api/v3/taxonredirect/22718556">22718556</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Biodiversity_Network" title="National Biodiversity Network">NBN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://data.nbn.org.uk/Taxa/NHMSYS0000530159">NHMSYS0000530159</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/National_Center_for_Biotechnology_Information" title="National Center for Biotechnology Information">NCBI</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=45803">45803</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="https://de.wikipedia.org/wiki/Tierstimmenarchiv" class="extiw" title="de:Tierstimmenarchiv">TSA</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://www.tierstimmen.org/en/database?field_spec_species_target_id_selective=1917">1917</a></span></span></li>
+<li><span style="white-space:nowrap;">uBio: <span class="uid"><a rel="nofollow" class="external text" href="http://www.ubio.org/browser/details.php?namebankID=2328337">2328337</a></span></span></li>
+<li><span style="white-space:nowrap;"><a href="/wiki/World_Register_of_Marine_Species" title="World Register of Marine Species">WoRMS</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.marinespecies.org/aphia.php?p=taxdetails&amp;id=426233">426233</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1331
+Cached time: 20201030045254
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.940 seconds
+Real time usage: 1.280 seconds
+Preprocessor visited node count: 7054/1000000
+Post‐expand include size: 47653/2097152 bytes
+Template argument size: 10357/2097152 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 23/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 25798/5000000 bytes
+Lua time usage: 0.663/10.000 seconds
+Lua memory usage: 7.79 MB/50 MB
+Number of Wikibase entities loaded: 23/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1171.333      1 -total
+ 44.88%  525.740      1 Template:Speciesbox
+ 44.14%  517.046      1 Template:Taxobox/core
+ 23.01%  269.504      1 Template:Taxonbar
+ 18.66%  218.536      1 Template:Reflist
+  9.06%  106.147      1 Template:Cite_iucn
+  7.26%   84.988      1 Template:Commons_category
+  6.95%   81.417      1 Template:Sister_project
+  6.52%   76.365      1 Template:Side_box
+  5.21%   61.011     24 Template:Delink
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:339243-0!canonical and timestamp 20201030045253 and revision id 971283030
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Meadow_pipit&amp;oldid=971283030">https://en.wikipedia.org/w/index.php?title=Meadow_pipit&amp;oldid=971283030</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IUCN_Red_List_near_threatened_species" title="Category:IUCN Red List near threatened species">IUCN Red List near threatened species</a></li><li><a href="/wiki/Category:Anthus" title="Category:Anthus">Anthus</a></li><li><a href="/wiki/Category:Birds_of_Europe" title="Category:Birds of Europe">Birds of Europe</a></li><li><a href="/wiki/Category:Birds_of_North_Africa" title="Category:Birds of North Africa">Birds of North Africa</a></li><li><a href="/wiki/Category:Birds_described_in_1758" title="Category:Birds described in 1758">Birds described in 1758</a></li><li><a href="/wiki/Category:Taxa_named_by_Carl_Linnaeus" title="Category:Taxa named by Carl Linnaeus">Taxa named by Carl Linnaeus</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_ref%3Dharv" title="Category:CS1 maint: ref=harv">CS1 maint: ref=harv</a></li><li><a href="/wiki/Category:Cite_iucn_maint" title="Category:Cite iucn maint">Cite iucn maint</a></li><li><a href="/wiki/Category:Articles_with_%27species%27_microformats" title="Category:Articles with &#039;species&#039; microformats">Articles with 'species' microformats</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_April_2018" title="Category:Articles with unsourced statements from April 2018">Articles with unsourced statements from April 2018</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Taxonbars_with_20%E2%80%9324_taxon_IDs" title="Category:Taxonbars with 20–24 taxon IDs">Taxonbars with 20–24 taxon IDs</a></li></ul></div></div>
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-menu" aria-labelledby="p-personal-label" role="navigation" 
+	 >
+	<h3 id="p-personal-label">
+		<span>Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Meadow+pipit" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Meadow+pipit" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<h3 id="p-namespaces-label">
+		<span>Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="/wiki/Meadow_pipit" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Meadow_pipit" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<h3 id="p-views-label">
+		<span>Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected"><a href="/wiki/Meadow_pipit">Read</a></li><li id="ca-edit"><a href="/w/index.php?title=Meadow_pipit&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history"><a href="/w/index.php?title=Meadow_pipit&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li></ul>
+		
+	</div>
+</nav>
+
+			<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation" 
+	 >
+	<input type="checkbox" class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch" data-search-loc="header-navigation">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" name="title" value="Special:Search">
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal portal-first" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<h3 id="p-navigation-label">
+		<span>Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-interaction" class="mw-portlet mw-portlet-interaction vector-menu vector-menu-portal portal" aria-labelledby="p-interaction-label" role="navigation" 
+	 >
+	<h3 id="p-interaction-label">
+		<span>Contribute</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<h3 id="p-tb-label">
+		<span>Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Meadow_pipit" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Meadow_pipit" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Meadow_pipit&amp;oldid=971283030" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Meadow_pipit&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Meadow_pipit&amp;id=971283030&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26956" title="Structured data on this page hosted by Wikidata [g]" accesskey="g">Wikidata item</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation" 
+	 >
+	<h3 id="p-coll-print_export-label">
+		<span>Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Meadow_pipit&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Meadow_pipit&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+		
+	</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu vector-menu-portal portal" aria-labelledby="p-wikibase-otherprojects-label" role="navigation" 
+	 >
+	<h3 id="p-wikibase-otherprojects-label">
+		<span>In other projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Anthus_pratensis" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-species"><a href="https://species.wikimedia.org/wiki/Anthus_pratensis" hreflang="en">Wikispecies</a></li></ul>
+		
+	</div>
+</nav>
+
+	<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation" 
+	 >
+	<h3 id="p-lang-label">
+		<span>Languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-kbd"><a href="https://kbd.wikipedia.org/wiki/%D0%9C%D1%8D%D0%BA%D1%8A%D1%83%D0%BF%D3%80%D1%8D%D0%B1%D0%B7%D1%83" title="МэкъупӀэбзу – Kabardian" lang="kbd" hreflang="kbd" class="interlanguage-link-target">Адыгэбзэ</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AC%D8%B4%D9%86%D8%A9_%D8%A7%D9%84%D8%AD%D9%82%D9%88%D9%84" title="جشنة الحقول – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ast"><a href="https://ast.wikipedia.org/wiki/Anthus_pratensis" title="Anthus pratensis – Asturian" lang="ast" hreflang="ast" class="interlanguage-link-target">Asturianu</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D2%BA%D0%B0%D2%99_%D0%B4%D0%B5%D2%AF%D0%B5%D1%82%D0%B5" title="Һаҙ деүете – Bashkir" lang="ba" hreflang="ba" class="interlanguage-link-target">Башҡортса</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%9B%D0%B8%D0%B2%D0%B0%D0%B4%D0%BD%D0%B0_%D0%B1%D1%8A%D0%B1%D1%80%D0%B8%D1%86%D0%B0" title="Ливадна бъбрица – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-br"><a href="https://br.wikipedia.org/wiki/Sidan-prad" title="Sidan-prad – Breton" lang="br" hreflang="br" class="interlanguage-link-target">Brezhoneg</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Titella_(ocell)" title="Titella (ocell) – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ceb"><a href="https://ceb.wikipedia.org/wiki/Anthus_pratensis" title="Anthus pratensis – Cebuano" lang="ceb" hreflang="ceb" class="interlanguage-link-target">Cebuano</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Lindu%C5%A1ka_lu%C4%8Dn%C3%AD" title="Linduška luční – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Corhedydd_y_waun" title="Corhedydd y waun – Welsh" lang="cy" hreflang="cy" class="interlanguage-link-target">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Engpiber" title="Engpiber – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Wiesenpieper" title="Wiesenpieper – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-nv"><a href="https://nv.wikipedia.org/wiki/Bi%CA%BC%C3%A9%C3%A9%CA%BC_%C5%81ich%C3%AD%C3%AD%CA%BC%C3%AD_Bik%C3%A9yahd%C4%99%CC%81%C4%99%CC%81%CA%BC_t%C5%82%CA%BCohtah_biibii" title="Biʼééʼ Łichííʼí Bikéyahdę́ę́ʼ tłʼohtah biibii – Navajo" lang="nv" hreflang="nv" class="interlanguage-link-target">Diné bizaad</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Sookiur" title="Sookiur – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Anthus_pratensis" title="Anthus pratensis – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Herbejpipio" title="Herbejpipio – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Negu-txirta" title="Negu-txirta – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%BE%DB%8C%E2%80%8C%D9%BE%D8%AA_%D8%B5%D8%AD%D8%B1%D8%A7%DB%8C%DB%8C" title="پی‌پت صحرایی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fo"><a href="https://fo.wikipedia.org/wiki/T%C3%ADtlingur" title="Títlingur – Faroese" lang="fo" hreflang="fo" class="interlanguage-link-target">Føroyskt</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Pipit_farlouse" title="Pipit farlouse – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Riabh%C3%B3g_mh%C3%B3na" title="Riabhóg mhóna – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Pica_dos_prados" title="Pica dos prados – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D5%84%D5%A1%D6%80%D5%A3%D5%A1%D5%A3%D5%A5%D5%BF%D5%B6%D5%A1%D5%B5%D5%AB%D5%B6_%D5%B1%D5%AB%D5%A1%D5%A9%D5%BC%D5%B9%D5%B6%D5%A1%D5%AF" title="Մարգագետնային ձիաթռչնակ – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/%C3%9E%C3%BAfutittlingur" title="Þúfutittlingur – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Anthus_pratensis" title="Anthus pratensis – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-csb"><a href="https://csb.wikipedia.org/wiki/%C5%81%C4%85k%C3%B2wi_piek%C3%B9t" title="Łąkòwi piekùt – Kashubian" lang="csb" hreflang="csb" class="interlanguage-link-target">Kaszëbsczi</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%A8%D0%B8%D0%B0%D1%8F%D2%9B_%D0%B6%D0%B0%D0%B4%D1%8B%D1%80%D0%B0%D2%9B" title="Шиаяқ жадырақ – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/P%C4%BCavas_%C4%8Dipste" title="Pļavas čipste – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Pievinis_kalviukas" title="Pievinis kalviukas – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/R%C3%A9ti_pityer" title="Réti pityer – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%9B%D0%B8%D0%B2%D0%B0%D0%B4%D1%81%D0%BA%D0%B0_%D1%82%D1%80%D0%B5%D0%BF%D0%B5%D1%80%D0%BA%D0%B0" title="Ливадска треперка – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Graspieper" title="Graspieper – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%AD%E3%83%90%E3%82%BF%E3%83%92%E3%83%90%E3%83%AA" title="マキバタヒバリ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-frr"><a href="https://frr.wikipedia.org/wiki/Skootfink" title="Skootfink – Northern Frisian" lang="frr" hreflang="frr" class="interlanguage-link-target">Nordfriisk</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Heipiplerke" title="Heipiplerke – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="https://nn.wikipedia.org/wiki/Heipiplerke" title="Heipiplerke – Norwegian Nynorsk" lang="nn" hreflang="nn" class="interlanguage-link-target">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-pcd"><a href="https://pcd.wikipedia.org/wiki/Pipette" title="Pipette – Picard" lang="pcd" hreflang="pcd" class="interlanguage-link-target">Picard</a></li><li class="interlanguage-link interwiki-pms"><a href="https://pms.wikipedia.org/wiki/Anthus_pratensis" title="Anthus pratensis – Piedmontese" lang="pms" hreflang="pms" class="interlanguage-link-target">Piemontèis</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/%C5%9Awiergotek_%C5%82%C4%85kowy" title="Świergotek łąkowy – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Petinha-dos-prados" title="Petinha-dos-prados – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-rue"><a href="https://rue.wikipedia.org/wiki/%D0%9B%D1%83%D0%B3%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D0%B8%D0%BA" title="Луговый коник – Rusyn" lang="rue" hreflang="rue" class="interlanguage-link-target">Русиньскый</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9B%D1%83%D0%B3%D0%BE%D0%B2%D0%BE%D0%B9_%D0%BA%D0%BE%D0%BD%D1%91%D0%BA" title="Луговой конёк – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sco"><a href="https://sco.wikipedia.org/wiki/Titlin" title="Titlin – Scots" lang="sco" hreflang="sco" class="interlanguage-link-target">Scots</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/%C4%BDabtu%C5%A1ka_l%C3%BA%C4%8Dna" title="Ľabtuška lúčna – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Niittykirvinen" title="Niittykirvinen – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/%C3%84ngspipl%C3%A4rka" title="Ängspiplärka – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/%C3%87ay%C4%B1r_incir_ku%C5%9Fu" title="Çayır incir kuşu – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A9%D0%B5%D0%B2%D1%80%D0%B8%D0%BA_%D0%BB%D1%83%D1%87%D0%BD%D0%B8%D0%B9" title="Щеврик лучний – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vec"><a href="https://vec.wikipedia.org/wiki/Fista" title="Fista – Venetian" lang="vec" hreflang="vec" class="interlanguage-link-target">Vèneto</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Anthus_pratensis" title="Anthus pratensis – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Anthus_pratensis" title="Anthus pratensis – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E8%8D%89%E5%9C%B0%E9%B9%A8" title="草地鹨 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q26956#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info" >
+	<li id="footer-info-lastmod"> This page was last edited on 5 August 2020, at 04:38<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+	<ul id="footer-places" >
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Meadow_pipit&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+	<div style="clear: both;"></div>
+</footer>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.940","walltime":"1.280","ppvisitednodes":{"value":7054,"limit":1000000},"postexpandincludesize":{"value":47653,"limit":2097152},"templateargumentsize":{"value":10357,"limit":2097152},"expansiondepth":{"value":21,"limit":40},"expensivefunctioncount":{"value":23,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":25798,"limit":5000000},"entityaccesscount":{"value":23,"limit":400},"timingprofile":["100.00% 1171.333      1 -total"," 44.88%  525.740      1 Template:Speciesbox"," 44.14%  517.046      1 Template:Taxobox/core"," 23.01%  269.504      1 Template:Taxonbar"," 18.66%  218.536      1 Template:Reflist","  9.06%  106.147      1 Template:Cite_iucn","  7.26%   84.988      1 Template:Commons_category","  6.95%   81.417      1 Template:Sister_project","  6.52%   76.365      1 Template:Side_box","  5.21%   61.011     24 Template:Delink"]},"scribunto":{"limitreport-timeusage":{"value":"0.663","limit":"10.000"},"limitreport-memusage":{"value":8168453,"limit":52428800}},"cachereport":{"origin":"mw1331","timestamp":"20201030045254","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Meadow pipit","url":"https:\/\/en.wikipedia.org\/wiki\/Meadow_pipit","sameAs":"http:\/\/www.wikidata.org\/entity\/Q26956","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q26956","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-10-12T06:25:48Z","dateModified":"2020-08-05T04:38:51Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/b\/b7\/Wiesenpieper_Meadow_pipit.jpg","headline":"species of bird"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":203,"wgHostname":"mw1368"});});</script>
+</body></html>
