@@ -1,3 +1,0 @@
-import useOnFormFieldAnnotationAddedOrSelected from './useOnFormFieldAnnotationAddedOrSelected';
-
-export default useOnFormFieldAnnotationAddedOrSelected;

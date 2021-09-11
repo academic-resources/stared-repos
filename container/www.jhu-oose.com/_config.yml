@@ -1,6 +1,0 @@
-plugins:
-  - jekyll-optional-front-matter
-  - jekyll-default-layout
-  - jekyll-titles-from-headings
-# ‘course’ is something like ‘2019’ or ‘2020-spring’, and it must match the ‘course’ environment variable in Roboose
-course: 2019

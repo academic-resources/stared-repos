@@ -1,2 +1,0 @@
-class SearchableException(Exception):
-    pass

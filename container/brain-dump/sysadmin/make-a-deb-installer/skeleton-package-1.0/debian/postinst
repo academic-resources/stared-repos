@@ -1,5 +1,0 @@
-#!/bin/bash
-set -e
-
-# run some script after installation
-echo "Post-install script has ran."

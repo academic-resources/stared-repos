@@ -1,4 +1,0 @@
-pip install time
-pip install os
-pip install praw
-pip install config

@@ -1,3 +1,0 @@
-import NoteUnpostedCommentIndicator from './NoteUnpostedCommentIndicatorContainer';
-
-export default NoteUnpostedCommentIndicator;

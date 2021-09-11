@@ -1,1 +1,0 @@
-# images for css effects

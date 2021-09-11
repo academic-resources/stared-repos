@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        block head
+            meta(property="og:title" content="Survey Donkey")
+            meta(property="og:image" content="https://64.media.tumblr.com/0f138e35c544286ec0877af3d2ac69f5/1a2382fe025de4ed-b1/s1280x1920/08804d5954559a6d8209b8913ea46149376196c2.png")
+            meta(property="og:description:" content="SurveyDoneky is an interactive survey creation and participation site inspired by SurveyMonkey. Designed using PUG templates for HTML and Bulma for CSS on the front end, with express and sequelize to handle the back end.")
+            meta(charset="UTF-8")
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css")
+            link(rel="stylesheet" type="text/css" href="/styles/navbar.css")
+            title #{title}
+    body(class="has-navbar-fixed-top")
+        if !locals.authenticated
+            nav(class='splash-nav__container navbar is-fixed-top')
+                div(class='surveyDonkey_logo_container')
+                    img(class='donkeyLogo' src='/icons/donkey-xxl.png')
+                    a(class='surveyDonkey_logo' href='/') SurveyDonkey
+                div(class="signUpAndLogIn_container")
+                    if !signUp && !login
+                        div(class='surveyDonkey_login_container')
+                            a(class='surveyDonkey_login' href='/login') LOG IN
+                        div(class='surveyDonkey_signup_container')
+                            a(class='surveyDonkey_signup' href='/sign-up') SIGN UP
+                    if signUp
+                        div(class='surveyDonkey_login_container')
+                            a(class='surveyDonkey_login' href='/login' id='squareLogin') LOG IN
+                    if login
+                        div(class='surveyDonkey_signup_container')
+                            a(class='surveyDonkey_signup' href='/sign-up' id='squareSignup') SIGN UP
+        if locals.authenticated
+            nav(class='splash-nav__container navbar is-fixed-top' id='greenNavBar')
+                div(class='dashContainer')
+                    div(class='surveyDonkey_logo_container')
+                        a(href='/')
+                            img(class='donkeyLogo' src='/icons/donkey-2-xxlwhite.png')
+                    div(class='dashboardLinksContainer' id='dashLinks')
+                        a(class='dashDash' href='/dashboard') Dashboard
+                        a(class="dashMySurveys" href='/feed/upvotes') Survey Feed
+                if !mySurveys
+                    div(class='ifMySurveys')
+                        div(class='mySurveys')
+                            a(class='createSurvey' href='/surveys/create') CREATE SURVEY
+                        div(class='meLogout')
+                            form(action='/logout' method="post")
+                                button(class='logout' type="submit") Log Out
+                if mySurveys
+                    div(class='ifMySurveys')
+                        div(class='mySurveys')
+                            a(class='createSurvey' href='surveys/create') CREATE SURVEY
+                    div(class='meLogout')
+                        form(action='/logout' method="post")
+                            button(class='logout' type="submit") Log Out
+        block content
+    

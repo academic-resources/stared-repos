@@ -1,4 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-pretty-quick --config config/prettier/config.json --staged && grunt lint

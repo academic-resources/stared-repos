@@ -1,4 +1,0 @@
-Used tkinter
-import random  
-import time 
-import pyglet (for splash screen)

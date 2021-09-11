@@ -1,5 +1,0 @@
-flake8
-iso8601==0.1.10
-pbr
-tox
-wheel

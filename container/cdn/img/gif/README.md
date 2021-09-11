@@ -1,2 +1,0 @@
-# gif border bug
-

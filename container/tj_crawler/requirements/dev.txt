@@ -1,9 +1,0 @@
--r base.txt
-asynctest
-flake8
-isort
-pre-commit
-pytest
-pytest-cov
-pytest-asyncio
-requests

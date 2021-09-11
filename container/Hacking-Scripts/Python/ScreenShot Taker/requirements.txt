@@ -1,2 +1,0 @@
-tkinter
-PyAutoGUI==0.9.48

@@ -1,5 +1,0 @@
-# ts_json extension
-comment = 'functions to full text search with json[b]'
-default_version = '1.0'
-module_pathname = '$libdir/ts_json'
-relocatable = true

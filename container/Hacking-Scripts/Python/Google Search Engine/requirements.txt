@@ -1,4 +1,0 @@
-libraries used : tkinter
-		 PIL
-		 webbrowser
-		 googlesearch

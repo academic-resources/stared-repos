@@ -1,3 +1,0 @@
-class PolyTreeNode
-
-end

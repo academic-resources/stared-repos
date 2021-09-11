@@ -1,4 +1,0 @@
-libraries used : tkinter
-		 messagebox
-		 re
-		 intertools

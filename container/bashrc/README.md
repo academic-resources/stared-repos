@@ -1,3 +1,0 @@
-# bashrc
-
-**Bash customization**

@@ -1,3 +1,0 @@
-FROM web-search-engine
-
-CMD [ "python", "run_worker.py" ]

@@ -1,5 +1,0 @@
-# PHPUnit alias
-alias pu='phpunit'
-
-# PHPUnit app alias
-alias paa='phpunit -c app'

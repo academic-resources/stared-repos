@@ -1,0 +1,56 @@
+extends layout.pug
+
+block append head
+    script(src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js")
+    script(src="/scripts/results.js" type="application/javascript")
+    link(rel="stylesheet" type="text/css" href="/styles/dashboard.css")
+block content
+    div(class="has-background-light")
+        section(class="box")
+            div(class="hero-body")
+                div(class="container")
+                    h1(class="title is-size-1 has-text-centered specialGreen")= survey.name
+        input(class="survey_id" type="hidden" value=survey.id)
+        input(class="users_arr" type="hidden" value=userResponses)
+        input(id="_csrfToken" name="_csrf" type="hidden" value=token)
+        each question in survey.Questions
+            div(class="columns")
+                div(class="column is-one-fifth")
+                div(class="column is-three-fifths")
+                    section(class="box question_container container py-4 is-fluid")
+                        div(class="box")
+                            div(class="content is-large")
+                                h1(class="title has-text-centered")= question.questionText
+                        if question.questionType === 'free-response'
+                            div(class="columns shortans py-6")
+                                div(class="column is-one-fifth")
+                                div(class="column is-three-fifths")
+                                    div(class="container py-6 my-6")
+                                        div(class="columns  is-vcentered")
+                                            textarea(class="column textarea is-four-fifths input is-primary" type="text" placeholder="Type your response here!")
+                                            div(class="column has-text-centered")
+                                            a(class="button is-success") submit
+                                            input(type="hidden" value=question.id)
+                                div(class="column is-one-fifth")
+                        else
+                            div(class="columns is-vcentered")
+                                div(class="options column is-three-fifths has-text-centered py-4")
+                                    div(class="box option")= question.opOne
+                                        input(type="hidden" value=question.opOne)
+                                    if question.opTwo != null
+                                        div(class="box option")= question.opTwo
+                                            input(type="hidden" value=question.opTwo)
+                                    if question.opThree != null
+                                        div(class="box option")= question.opThree
+                                            input(type="hidden" value=question.opThree)
+                                    if question.opFour != null
+                                        div(class="box option")= question.opFour
+                                            input(type="hidden" value=question.opFour)
+                                    if question.opFive != null
+                                        div(class="box option")= question.opFive
+                                            input(type="hidden" value=question.opFive)
+                                    input(class="question_id" type="hidden" value=question.id)
+                                div(class="column is-two-fifths py-4")
+                                    canvas(class="media-content" width="100%" height="100%")
+                div(class="column" is-one-fifth)
+    include footer.pug

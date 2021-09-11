@@ -1,4 +1,0 @@
-#!/bin/bash
-cd /path/to/music/folder
-file=$1$".mp3"
-rhythmbox "$(find . -type f -name "$file" -print -quit)"

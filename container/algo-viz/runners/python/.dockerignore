@@ -1,9 +1,0 @@
-.gitignore
-create_default
-Dockerfile
-test_transpile.py
-executed.json
-/__pycache__
-todo.txt
-transpiled.py
-test_runner.py

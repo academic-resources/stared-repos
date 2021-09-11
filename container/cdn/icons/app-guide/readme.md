@@ -1,2 +1,0 @@
-# app guide page icons
-

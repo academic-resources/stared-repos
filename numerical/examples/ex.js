@@ -1,0 +1,17 @@
+num = require('numbers')
+num = require('./numbers')
+num(Number)
+ten = 9.9999999
+ten.round()
+ten.floor()
+ten.ceil()
+ten.add(1,2,3,4,5,6,7,8,9)
+ten.add(1,2,3,4,5,6,7,8,9).round()
+ten.multi(1,2,3,4,5,6,7,8,9)
+ten.bang()
+ten.subzero()
+ten.floor() == 9
+ten.sine()
+ten.div(1.1)
+ten.div(1.1111111)
+ten.dinto(18)

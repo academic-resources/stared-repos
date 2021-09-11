@@ -1,3 +1,0 @@
-import CustomPageManipulationOperations from './CustomPageManipulationOperations';
-
-export default CustomPageManipulationOperations;

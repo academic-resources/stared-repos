@@ -1,1 +1,0 @@
-libraries used : tkinter, os, filedialog from tkinter

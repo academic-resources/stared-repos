@@ -1,5 +1,0 @@
-libraries used : tkinter
-		 messagebox
-		 pandas
-		 re
-		 PIL
