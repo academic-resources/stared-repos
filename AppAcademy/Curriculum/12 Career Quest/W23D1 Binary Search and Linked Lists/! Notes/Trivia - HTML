@@ -1,0 +1,31 @@
+HTML Trivia Questions:
+
+- How could we highlight text using only HTHML
+  - use the <mark>TEXT</mark>
+
+- How could we reverse some text on a page using only HTML
+  - <bdo dir="rtl">
+    This text will go Right-To-Left
+    </bdo>
+
+- What is semantic HTML tag?
+  - tags that describe what they are (e.g. "header", "marguee")
+  - use semantic tags over <div> tags
+
+- What is an optional closing tag?
+  - Some tags are self closing and don't necessarily need a closing tag (e.g. <br>, <a> )
+
+- Why do you need doctype at the beginning of your HTML document?
+  - The HTML syntax of HTML5 requires a DocType to be specified to ensure that the browser renders the page in "standards" mode instead of "quirks" mode.  It has no other purpose and is optional with XML and docs with XML media type are always handled in "standards" mode. The doctype delcaration case insensitive and Doctypes from earlier versions were longer because the HTML language was SGML based and therefore required a reference to a doctype.  With HTML5, this is no longer the case.
+
+- When you zoom in on your browser and the page gets bigger, what exactly is happening?
+  - Zooming as implemented in modern browsers consists of nothing more than stretching up pixels.  The width of the element is not changed from less pixels to more pixels, but the pixel size actually changes.  Thus the pixel count stays the same of the element.  In other words, zooming in 200% makes 1 css pixel grow to 4 times th size of 1 device pixel (4 times because 2 * width + 2 * height)
+
+- What does the <details> tag do?
+  <details>
+    <summary> Copyright 1999-2014.</summary>
+    <p> - by Refsnes Data. All rights reserved.</p>
+    <p>All content and graphics on this web site are the property of ... </>
+  </details>
+  - It create a dropdown that you can hide/unhide about metadata of your site which is nice discreet box that takes little room on the webpage
+

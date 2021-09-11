@@ -1,0 +1,1161 @@
+  [1m[35m (1050.9ms)[0m  [1m[35mCREATE DATABASE "todos_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (778.1ms)[0m  [1m[35mCREATE DATABASE "todos_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (343.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (39.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1315305207055571865)[0m
+  ↳ bin/rails:9
+  [1m[35m (29.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTodos (20190509193901)
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (83.7ms)[0m  [1m[35mCREATE TABLE "todos" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "done" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190509193901_create_todos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (7.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190509193901"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (4.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (18.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (3.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-09 19:39:56.089604"], ["updated_at", "2019-05-09 19:39:56.089604"]]
+  ↳ bin/rails:9
+  [1m[35m (44.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1315305207055571865)[0m
+  ↳ bin/rails:9
+  [1m[35m (44.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/oliver_almalel/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (7.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (12.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "first todo"], ["body", "testing this thing out"], ["done", false], ["created_at", "2019-05-09 19:46:33.361799"], ["updated_at", "2019-05-09 19:46:33.361799"]]
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2019-05-09 13:11:36 -0700
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/oliver_almalel/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/fc770fe48423330e/variables" for ::1 at 2019-05-09 13:11:37 -0700
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:11:49 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/1d9774a8fa6d83f9/variables" for 127.0.0.1 at 2019-05-09 13:11:49 -0700
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:18:31 -0700
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/oliver_almalel/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+Completed 406 Not Acceptable in 273ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#root is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/bd7ca7d5ebfe889a/variables" for 127.0.0.1 at 2019-05-09 13:18:32 -0700
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:19:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 2346ms (Views: 2336.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:19:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 62ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 13:20:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 127ms (Views: 121.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (22.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTodo Create (3.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Walk the Dog"], ["body", "use the new leash"], ["done", false], ["created_at", "2019-05-09 20:21:29.361179"], ["updated_at", "2019-05-09 20:21:29.361179"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Feed the Cat"], ["body", "but new kibble soon"], ["done", false], ["created_at", "2019-05-09 20:21:29.368040"], ["updated_at", "2019-05-09 20:21:29.368040"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Feed the Mouse"], ["body", "give medicine too"], ["done", true], ["created_at", "2019-05-09 20:21:29.371613"], ["updated_at", "2019-05-09 20:21:29.371613"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Load (2.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Started GET "/api/todos" for ::1 at 2019-05-09 13:23:12 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/oliver_almalel/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/api/todos_controller.rb:41:in `'
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 13:24:29 -0700
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/api/todos_controller.rb:41:in `'
+
+Started GET "/" for ::1 at 2019-05-09 13:26:29 -0700
+Processing by StaticPagesController#root as HTML
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:26:29 -0700
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 1000ms (Views: 988.6ms | ActiveRecord: 0.0ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 240ms (Views: 186.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 13:26:36 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/oliver_almalel/Desktop/Ruby Projects/W13D4/todos_rails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/" for ::1 at 2019-05-09 13:26:53 -0700
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:26:53 -0700
+  [1m[35m (28.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/oliver_almalel/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (29.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/oliver_almalel/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1178ms (Views: 1172.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1187ms (Views: 1174.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 13:26:56 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/oliver_almalel/Desktop/Ruby Projects/W13D4/todos_rails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/api/todos" for ::1 at 2019-05-09 13:26:59 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/oliver_almalel/Desktop/Ruby Projects/W13D4/todos_rails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:28:25 -0700
+  [1m[35m (23.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/oliver_almalel/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 538ms (Views: 469.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 13:28:29 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (22.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 147ms (Views: 29.1ms | ActiveRecord: 111.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 13:28:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 84ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 13:28:33 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/todos" for 127.0.0.1 at 2019-05-09 13:30:09 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"title"=>"apple", "body"=>"make sauce", "done"=>"false"}
+Completed 400 Bad Request in 102ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: todo:
+  app/controllers/api/todos_controller.rb:40:in `todo_params'
+  app/controllers/api/todos_controller.rb:15:in `create'
+
+Started GET "/" for ::1 at 2019-05-09 13:35:23 -0700
+  [1m[35m (26.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/oliver_almalel/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 336ms (Views: 330.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 13:48:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 1712ms (Views: 1698.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:48:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 115ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:49:25 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/oliver_almalel/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 4531ms (Views: 4520.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 13:49:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 89ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:51:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 94ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 13:51:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 120ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:51:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 310ms (Views: 300.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 13:57:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 190ms (Views: 181.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 13:58:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1028ms (Views: 1023.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 13:58:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 165ms (Views: 160.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 13:59:07 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (10.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 98ms (Views: 28.0ms | ActiveRecord: 60.4ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 13:59:15 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:14:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 715ms (Views: 667.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:14:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1067ms (Views: 1058.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 14:14:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 14:26:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 859ms (Views: 852.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 14:27:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 699ms (Views: 694.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 14:27:34 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (5.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:32:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 741ms (Views: 731.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 14:32:39 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (12.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 26ms (Views: 12.4ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 14:33:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 330ms (Views: 325.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 14:33:57 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:34:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 73ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 14:34:38 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 14:34:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 108ms (Views: 101.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 14:35:20 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:36:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 895ms (Views: 887.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 14:36:36 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:39:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Started GET "/" for 127.0.0.1 at 2019-05-09 14:39:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1632ms (Views: 1620.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 94ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 14:39:50 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 14:39:51 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:42:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1886ms (Views: 1878.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 14:42:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 235ms (Views: 222.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 14:42:10 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 14:42:11 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:42:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 89ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 14:42:19 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:43:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1798ms (Views: 1793.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:43:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 105ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 14:43:39 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 14:43:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 132ms (Views: 127.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 14:43:57 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (7.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 12ms (Views: 4.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 14:44:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 14:44:03 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 14:44:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 92ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 14:44:43 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (3.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 15:03:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 954ms (Views: 939.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 15:03:28 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (23.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 33ms (Views: 8.5ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 15:03:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 15:04:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 812ms (Views: 807.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 15:04:18 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 15:04:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 114ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 15:04:24 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 15:05:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 737ms (Views: 732.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 15:05:52 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (38.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 42ms (Views: 3.8ms | ActiveRecord: 38.3ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 15:18:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 500ms (Views: 491.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 15:18:51 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"asdf", "body"=>"asdf", "id"=>"1557440331822"}}
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (13.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 13.9ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 2):
+  app/controllers/api/todos_controller.rb:19:in `create'
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 15:18:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 15:20:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 561ms (Views: 555.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 15:20:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 75ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 15:20:53 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"asdf", "body"=>"asdf", "id"=>"1557440453308"}}
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 2):
+  app/controllers/api/todos_controller.rb:19:in `create'
+
+Started GET "/" for ::1 at 2019-05-09 15:24:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 654ms (Views: 649.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 15:24:06 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"asdf", "body"=>"asdf"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.6ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 2):
+  app/controllers/api/todos_controller.rb:19:in `create'
+
+Started GET "/" for ::1 at 2019-05-09 15:24:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 265ms (Views: 258.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 15:25:01 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"", "id"=>"1557440701319"}}
+Unpermitted parameter: :id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (22.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+No template found for Api::TodosController#create, rendering head :no_content
+Completed 204 No Content in 445ms (ActiveRecord: 143.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 15:26:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 71ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 15:26:11 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"asdf", "body"=>"asdf", "id"=>"1557440771945"}}
+  [1m[35m (113.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 161.3ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 2):
+  app/controllers/api/todos_controller.rb:19:in `create'
+
+Started GET "/" for ::1 at 2019-05-09 15:26:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 127ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 15:26:50 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"asdf", "body"=>"sdf", "id"=>"1557440810036"}}
+Unpermitted parameter: :id
+Unpermitted parameter: :id
+Unpermitted parameter: :id
+  [1m[35m (9.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ (byebug):1
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (byebug):1
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:17
+Started GET "/" for ::1 at 2019-05-09 15:29:47 -0700
+  [1m[35m (16.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:17
+Completed 500 Internal Server Error in 177237ms (ActiveRecord: 57.7ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 2):
+  app/controllers/api/todos_controller.rb:20:in `create'
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 702ms (Views: 694.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 15:30:02 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"asdf", "body"=>"sadf", "done"=>"false", "id"=>"1557441002482"}}
+Unpermitted parameters: :done, :id
+Unpermitted parameters: :done, :id
+Started GET "/" for ::1 at 2019-05-09 15:30:38 -0700
+  [1m[35m (25.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:17
+Processing by StaticPagesController#root as HTML
+  [1m[35m (6.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:17
+Completed 500 Internal Server Error in 35915ms (ActiveRecord: 31.4ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 2):
+  app/controllers/api/todos_controller.rb:20:in `create'
+
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 199ms (Views: 193.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 15:30:42 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"asdf", "body"=>"asdf", "done"=>"false", "id"=>"1557441042332"}}
+Unpermitted parameter: :id
+Unpermitted parameter: :id
+  [1m[35m (25.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:17
+  [1m[36mTodo Create (4.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "asdf"], ["body", "asdf"], ["done", false], ["created_at", "2019-05-09 22:30:55.754542"], ["updated_at", "2019-05-09 22:30:55.754542"]]
+  ↳ app/controllers/api/todos_controller.rb:17
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:17
+Completed 200 OK in 13385ms (Views: 1.5ms | ActiveRecord: 97.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 15:31:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 15:31:18 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/todos" for 127.0.0.1 at 2019-05-09 15:31:31 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"sleep", "body"=>"now", "done"=>"false", "id"=>"1557441090931"}}
+Unpermitted parameter: :id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "sleep"], ["body", "now"], ["done", false], ["created_at", "2019-05-09 22:31:31.124081"], ["updated_at", "2019-05-09 22:31:31.124081"]]
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 200 OK in 29ms (Views: 0.6ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 15:31:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 15:31:38 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 15:31:56 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 15:32:08 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (23.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 27ms (Views: 3.1ms | ActiveRecord: 23.5ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 15:34:22 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"finish Redux", "body"=>"this stuff is hard", "done"=>"false", "id"=>"1557441262310"}}
+Unpermitted parameter: :id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[36mTodo Create (0.7ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "finish Redux"], ["body", "this stuff is hard"], ["done", false], ["created_at", "2019-05-09 22:34:22.372902"], ["updated_at", "2019-05-09 22:34:22.372902"]]
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 200 OK in 49ms (Views: 1.1ms | ActiveRecord: 30.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 15:34:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1132ms (Views: 1126.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-05-09 15:34:35 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (22.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 37ms (Views: 13.7ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2019-05-09 15:40:43 -0700
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:11
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 15:40:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 592ms (Views: 586.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 16:02:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 1615ms (Views: 1603.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:02:12 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"asdf", "done"=>"false"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.2ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 2):
+  app/controllers/api/todos_controller.rb:19:in `create'
+
+Started GET "/" for ::1 at 2019-05-09 16:03:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1284ms (Views: 1278.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:03:09 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"asdf", "done"=>"false"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.6ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 2):
+  app/controllers/api/todos_controller.rb:19:in `create'
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 16:03:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 126ms (Views: 122.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for 127.0.0.1 at 2019-05-09 16:03:26 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"a", "body"=>"", "done"=>"false"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 2):
+  app/controllers/api/todos_controller.rb:19:in `create'
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:03:43 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"New Todo", "body"=>"Maybe a task", "done"=>"false"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[36mTodo Create (2.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "New Todo"], ["body", "Maybe a task"], ["done", false], ["created_at", "2019-05-09 23:03:43.265511"], ["updated_at", "2019-05-09 23:03:43.265511"]]
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 200 OK in 11ms (Views: 2.3ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:04:10 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"asdf", "done"=>"false"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (23.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 23.5ms)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 2):
+  app/controllers/api/todos_controller.rb:19:in `create'
+
+Started GET "/" for ::1 at 2019-05-09 16:08:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (79.3ms)
+Completed 200 OK in 707ms (Views: 686.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 16:08:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:08:25 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"asdf", "done"=>"false"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (22.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 422 Unprocessable Entity in 121ms (Views: 0.6ms | ActiveRecord: 80.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 16:09:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 627ms (Views: 621.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 16:11:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 754ms (Views: 747.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:11:48 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"sadf", "done"=>"false"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 16:12:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1226ms (Views: 1220.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:12:08 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"asdf", "done"=>"false"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 422 Unprocessable Entity in 14ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 16:13:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 428ms (Views: 424.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for 127.0.0.1 at 2019-05-09 16:13:05 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"s", "done"=>"false"}}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 422 Unprocessable Entity in 8ms (Views: 0.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 16:13:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 64ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:13:10 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"asdf", "done"=>"false"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 422 Unprocessable Entity in 10ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/api/todos" for 127.0.0.1 at 2019-05-09 16:23:54 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"s", "done"=>"false"}}
+  [1m[35m (19.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (25.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 422 Unprocessable Entity in 156ms (Views: 2.6ms | ActiveRecord: 44.9ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:30:15 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"asdf", "done"=>"false"}}
+  [1m[35m (6.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 422 Unprocessable Entity in 43ms (Views: 4.2ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:30:17 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"asdf", "done"=>"false"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 422 Unprocessable Entity in 17ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-05-09 16:30:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 1878ms (Views: 1865.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for ::1 at 2019-05-09 16:30:25 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"asdf", "done"=>"false"}}
+  [1m[35m (23.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 422 Unprocessable Entity in 39ms (Views: 1.2ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-09 16:30:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 122ms (Views: 117.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todos" for 127.0.0.1 at 2019-05-09 16:30:46 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"", "body"=>"s", "done"=>"false"}}
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 422 Unprocessable Entity in 21ms (Views: 0.5ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/api/todos" for 127.0.0.1 at 2019-05-09 16:30:51 -0700
+Processing by Api::TodosController#create as JSON
+  Parameters: {"todo"=>{"title"=>"s", "body"=>"s", "done"=>"false"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[36mTodo Create (28.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "s"], ["body", "s"], ["done", false], ["created_at", "2019-05-09 23:30:51.530244"], ["updated_at", "2019-05-09 23:30:51.530244"]]
+  ↳ app/controllers/api/todos_controller.rb:16
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/todos_controller.rb:16
+Completed 200 OK in 71ms (Views: 6.1ms | ActiveRecord: 34.4ms)
+
+

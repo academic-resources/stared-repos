@@ -1,0 +1,341 @@
+{
+  "wizards": [
+    {
+      "id": 1,
+      "name": "Harry Potter",
+      "houseId": 1,
+      "patronusId": 3
+    },
+    {
+      "id": 2,
+      "name": "Albus Dumbledore",
+      "houseId": 1,
+      "patronusId": 1
+    },
+    {
+      "id": 3,
+      "name": "Ron Weasley",
+      "houseId": 1,
+      "patronusId": 7
+    },
+    {
+      "id": 4,
+      "name": "Hermione Granger",
+      "houseId": 1,
+      "patronusId": 2
+    },
+    {
+      "id": 5,
+      "name": "Bellatrix Lestrange",
+      "houseId": 2,
+      "patronusId": 9
+    },
+    {
+      "id": 6,
+      "name": "Cedric Diggory",
+      "houseId": 3,
+      "patronusId": 9
+    },
+    {
+      "id": 7,
+      "name": "Draco Malfoy",
+      "houseId": 2,
+      "patronusId": 9
+    },
+    {
+      "id": 8,
+      "name": "Dolores Umbridge",
+      "houseId": 2,
+      "patronusId": 5
+    },
+    {
+      "id": 9,
+      "name": "Minerva McGonagall",
+      "houseId": 1,
+      "patronusId": 5
+    },
+    {
+      "id": 10,
+      "name": "Neville Longbottom",
+      "houseId": 1,
+      "patronusId": 9
+    },
+    {
+      "id": 11,
+      "name": "Sybill Trelawney",
+      "houseId": 4,
+      "patronusId": 9
+    },
+    {
+      "id": 12,
+      "name": "Luna Lovegood",
+      "houseId": 4,
+      "patronusId": 4
+    },
+    {
+      "id": 13,
+      "name": "Newton Scamander",
+      "houseId": 3,
+      "patronusId": 9
+    },
+    {
+      "id": 14,
+      "name": "James Potter",
+      "houseId": 1,
+      "patronusId": 3
+    },
+    {
+      "id": 15,
+      "name": "Lily Potter",
+      "houseId": 1,
+      "patronusId": 6
+    },
+    {
+      "id": 16,
+      "name": "Voldemort",
+      "houseId": 2,
+      "patronusId": 9
+    },
+    {
+      "id": 17,
+      "name": "Ginny Weasley",
+      "houseId": 1,
+      "patronusId": 8
+    },
+    {
+      "id": 18,
+      "name": "Severus Snape",
+      "houseId": 2,
+      "patronusId": 6
+    },
+    {
+      "name": "Tom Riddle",
+      "houseId": 2,
+      "patronusId": 9,
+      "id": 19
+    },
+    {
+      "name": "Oliver Allmail",
+      "houseId": 1,
+      "patronusId": 2,
+      "id": 22
+    }
+  ],
+  "houses": [
+    {
+      "id": 1,
+      "name": "Gryffindor",
+      "founder": "Godric Gryffindor",
+      "ghost": "Nearly-Headless Nick",
+      "animal": "lion"
+    },
+    {
+      "id": 2,
+      "name": "Slytherin",
+      "founder": "Salazar Slytherin",
+      "ghost": "Bloody Baron",
+      "animal": "serpent"
+    },
+    {
+      "id": 3,
+      "name": "Hufflepuff",
+      "founder": "Helga Hufflepuff",
+      "ghost": "Fat Friar",
+      "animal": "Badger"
+    },
+    {
+      "id": 4,
+      "name": "Ravenclaw",
+      "founder": "Rowena Ravenclaw",
+      "ghost": "Grey Lady",
+      "animal": "Eagle"
+    }
+  ],
+  "wands": [
+    {
+      "id": 1,
+      "wizardId": 2,
+      "wood": "Elder",
+      "length": "15 in.",
+      "core": "Thestral tail hair"
+    },
+    {
+      "id": 2,
+      "wizardId": 5,
+      "wood": "Walnut",
+      "length": "12.75 in.",
+      "core": "Dragon heartstring"
+    },
+    {
+      "id": 3,
+      "wizardId": 6,
+      "wood": "Ash",
+      "length": "12.25 in.",
+      "core": "Unicorn hair"
+    },
+    {
+      "id": 4,
+      "wizardId": 8,
+      "wood": "Birch",
+      "length": "8 in.",
+      "core": "Dragon heartstring"
+    },
+    {
+      "id": 5,
+      "wizardId": 7,
+      "wood": "Hawthorn",
+      "length": "10 in.",
+      "core": "Unicorn hair"
+    },
+    {
+      "id": 6,
+      "wizardId": 1,
+      "wood": "Holly",
+      "length": "11 in.",
+      "core": "Phoenix feather"
+    },
+    {
+      "id": 7,
+      "wizardId": 1,
+      "wood": "Blackthorn",
+      "length": "10 in.",
+      "core": "Unknown"
+    },
+    {
+      "id": 8,
+      "wizardId": 4,
+      "wood": "Vine",
+      "length": "10.75 in.",
+      "core": "Dragon heartstring"
+    },
+    {
+      "id": 9,
+      "wizardId": 9,
+      "wood": "Fir",
+      "length": "9.5 in.",
+      "core": "Dragon heartstring"
+    },
+    {
+      "id": 10,
+      "wizardId": 3,
+      "wood": "Ash",
+      "length": "12 in.",
+      "core": "Unicorn hair"
+    },
+    {
+      "id": 11,
+      "wizardId": 3,
+      "wood": "Willow",
+      "length": "14 in.",
+      "core": "Unicorn hair"
+    },
+    {
+      "id": 12,
+      "wizardId": 3,
+      "wood": "Chestnut",
+      "length": "9.75 in.",
+      "core": "Dragon heartstring"
+    },
+    {
+      "id": 13,
+      "wizardId": 11,
+      "wood": "Hazel",
+      "length": "9.5 in.",
+      "core": "Unicorn hair"
+    },
+    {
+      "id": 14,
+      "wizardId": 10,
+      "wood": "Cherry",
+      "length": "Unknown",
+      "core": "Unicorn hair"
+    },
+    {
+      "id": 15,
+      "wizardId": 12,
+      "wood": "Unknown",
+      "length": "Unknown",
+      "core": "Unknown"
+    },
+    {
+      "id": 16,
+      "wizardId": 13,
+      "wood": "Unknown",
+      "length": "Unknown",
+      "core": "Unknown"
+    },
+    {
+      "id": 17,
+      "wizardId": 14,
+      "wood": "Mahogany",
+      "length": "11 in.",
+      "core": "Unknown"
+    },
+    {
+      "id": 17,
+      "wizardId": 15,
+      "wood": "Willow",
+      "length": "10.25 in.",
+      "core": "Unknown"
+    },
+    {
+      "id": 18,
+      "wizardId": 16,
+      "wood": "Yew",
+      "length": "13.5 in.",
+      "core": "Phoenix feather"
+    },
+    {
+      "id": 19,
+      "wizardId": 17,
+      "wood": "Yew",
+      "length": "Unknown",
+      "core": "Unknown"
+    },
+    {
+      "id": 20,
+      "wizardId": 18,
+      "wood": "Unknown",
+      "length": "Unknown",
+      "core": "Unknown"
+    }
+  ],
+  "patronuses": [
+    {
+      "id": 1,
+      "form": "Phoenix"
+    },
+    {
+      "id": 2,
+      "form": "Otter"
+    },
+    {
+      "id": 3,
+      "form": "Stag"
+    },
+    {
+      "id": 4,
+      "form": "Hare"
+    },
+    {
+      "id": 5,
+      "form": "Cat"
+    },
+    {
+      "id": 6,
+      "form": "Doe"
+    },
+    {
+      "id": 7,
+      "form": "Jack Russel Terrier"
+    },
+    {
+      "id": 8,
+      "form": "Horse"
+    },
+    {
+      "id": 9,
+      "form": "Unknown"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<h3>New Comment</h3>
+
+<%= render 'shared/errors' %>
+
+<form action="<%= comments_url %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="comment[commentable_id]" value="<%= commentable_id %>">
+  <input type="hidden" name="comment[commentable_type]" value="<%= commentable_type %>">
+  <label>Comment
+    <textarea name="comment[body]"></textarea>
+  </label>
+  <input type="submit" value="Save Comment">
+</form>

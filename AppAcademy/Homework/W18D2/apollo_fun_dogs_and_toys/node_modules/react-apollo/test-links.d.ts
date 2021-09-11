@@ -1,0 +1,40 @@
+import { Operation, GraphQLRequest, ApolloLink, FetchResult, Observable } from 'apollo-link';
+declare type ResultFunction<T> = () => T;
+export interface MockedResponse {
+    request: GraphQLRequest;
+    result?: FetchResult | ResultFunction<FetchResult>;
+    error?: Error;
+    delay?: number;
+    newData?: ResultFunction<FetchResult>;
+}
+export interface MockedSubscriptionResult {
+    result?: FetchResult;
+    error?: Error;
+    delay?: number;
+}
+export interface MockedSubscription {
+    request: GraphQLRequest;
+}
+export declare class MockLink extends ApolloLink {
+    addTypename: Boolean;
+    private mockedResponsesByKey;
+    constructor(mockedResponses: ReadonlyArray<MockedResponse>, addTypename?: Boolean);
+    addMockedResponse(mockedResponse: MockedResponse): void;
+    request(operation: Operation): Observable<{}>;
+    private normalizeMockedResponse;
+}
+export declare class MockSubscriptionLink extends ApolloLink {
+    unsubscribers: any[];
+    setups: any[];
+    private observer;
+    constructor();
+    request(_req: any): Observable<FetchResult<{
+        [key: string]: any;
+    }, Record<string, any>, Record<string, any>>>;
+    simulateResult(result: MockedSubscriptionResult, complete?: boolean): void;
+    onSetup(listener: any): void;
+    onUnsubscribe(listener: any): void;
+}
+export declare function mockSingleLink(...mockedResponses: Array<any>): ApolloLink;
+export declare function mockObservableLink(): MockSubscriptionLink;
+export {};

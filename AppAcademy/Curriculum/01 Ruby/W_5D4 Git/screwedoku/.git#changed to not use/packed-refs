@@ -1,0 +1,15 @@
+# pack-refs with: peeled fully-peeled 
+84020d4c7e30103df563b4c94ef37cd4abda54bd refs/remotes/origin/final-level
+e6082f5b3d61e4b282dc8bc4408be07b04d95ecc refs/remotes/origin/level-1
+7c4b8cfb437929d5b6d2216a8c1ebfbcb11cb77f refs/remotes/origin/level-10
+bf9c983634482a1998dce9f6eb3710c81fe2f660 refs/remotes/origin/level-11
+29e92989cd66a3af34bb988861713c0d7c8f502f refs/remotes/origin/level-2
+2f814c09eb7a3d414bbdc8f23e7b4af555fb6f03 refs/remotes/origin/level-3
+801a4761035315115f99d04f4c7f4acca0521334 refs/remotes/origin/level-4
+8d7d72e38197b2f52c812abd4faccfb5a410e85e refs/remotes/origin/level-5
+0b24705b7d28327cd811ee0735398a6d9ccbc60f refs/remotes/origin/level-6
+afa650afaf5b84936587919d2feac295501530a1 refs/remotes/origin/level-7
+a347c20b00635de6671988efcab12bd89e570f33 refs/remotes/origin/level-8
+c1fd313c3967e5bd99dfe269135c771dce1f0e3c refs/remotes/origin/level-9
+0d96d7b6ed3eba389bb6a557d02b5a63569b04a8 refs/remotes/origin/master
+df27fe5a353197392dc4a25918f6f04c9d8974a8 refs/remotes/origin/super-evil-level

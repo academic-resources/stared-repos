@@ -1,0 +1,57 @@
+Synchronous runs in order, one line after the next
+
+Asynchronous runs out of order
+
+Example:
+console.log("first line");
+setTimeout(() => {
+  console.log("second line");
+}, 1000);
+console.log("third line");
+
+Asynchronicity in JS:
+  - callbacks
+    - a function pased into another function as an argument which is then invoked inside the second functino complete some kind of routine or action
+  - promises, setTimeouts, eventHandlers, etc.
+
+Synchronous example 1:
+  function myLog(number) {
+    console.log(number)
+  }
+
+  functioncallAsap(callback, arg) {
+    callback(arg)
+  }
+
+  callAsap(myLog, "Yay callbacks")
+
+  console.log("after loop")
+
+Synchronous example 2:
+  function myLog(number) {
+    console.log(number)
+  }
+
+  function myCallbackLoop(callback, arg, numLoops) {
+    for (let i = 0; i < numLoops; numLoops) {
+      callback(arg);
+    }
+  }
+
+  myCallbackLoop(myLog, "yay callbacks", 100);
+
+  console.log("after loop")
+
+Asynchronous example:
+  function myLog(msg) {
+    console.log(msg)
+  }
+
+  function myTimeout(callback, arg, waitTime) {
+    setTimeout(
+      () => callback(arg),
+      waitTime
+    )
+  }
+
+  myTimeout(myLog, "After waiting 1000ms", 1000)

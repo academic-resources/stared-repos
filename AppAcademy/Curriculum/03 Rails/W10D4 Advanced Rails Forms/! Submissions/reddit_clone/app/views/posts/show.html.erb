@@ -1,0 +1,41 @@
+<section>
+  <h1>
+    (<%=  %>) <a href="<%= post_url(@post) %>"><%= @post.title %></a>
+    by <%= @post.author.username %>
+  </h1>
+  
+  <div>
+    <label>Content:
+      <%= @post.content %>
+    </label>
+  </div>
+
+  <form action="<%=  %>" method="POST">
+    <input type="button" value="Upvote">
+    <input type="button" value="Downvote">
+  </form>
+
+  Subs
+  <ul>
+    <% @post.subs.each do |sub| %>
+    <li><a href="<%= sub_url(sub) %>"><%= sub.title %></a></li>
+    <% end %>
+  </ul>
+
+  <h2>Comments</h2>
+
+  <a href="<%= new_post_comment_url(@post) %>">Comment on this post!</a>
+
+  <ul>
+    <% Comment.all.each do |comment| %>
+      <li><a href="<%= comment_url(comment) %>"><%= comment.content %></a></li>
+    <% end %>
+  </ul>
+
+  <% if @post.author == current_user %>
+    <a href="<%= edit_post_url(@post) %>">Edit</a>
+  <% end %>
+  
+
+
+</section>

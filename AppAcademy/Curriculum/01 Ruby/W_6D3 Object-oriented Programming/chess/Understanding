@@ -1,0 +1,17 @@
+Use contants that show relative direction from an origin:
+LINEAR_DIRS [[1,0], [-1,0], [0, 1], [0,-1]]
+DIAGONAL_DIRS [[-1,1],[-1,-1],[1,-1],[1,1]]
+
+
+move_dirs
+  - will call grow_unblocked_moves_in_dir to loop through arrays
+
+#moves
+- will return an array of all possible moves
+- will call move_dirs to create the arrays
+
+grow_unblocked_moves_in_dir(dx, dy)
+- will return an array from origin and in the direction given
+- will take a direction via (x,y) #such as 1,1
+- it will "grow" an array based off @pos and stop growing
+   when it finds a NullPiece, whereupon it will return the array

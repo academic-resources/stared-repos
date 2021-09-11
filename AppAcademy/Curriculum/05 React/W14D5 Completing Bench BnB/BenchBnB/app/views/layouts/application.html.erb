@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BenchBnB</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <% api_key = '' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{api_key}" %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

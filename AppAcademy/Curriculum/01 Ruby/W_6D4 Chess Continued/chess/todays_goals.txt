@@ -1,0 +1,13 @@
+PHASE III
+
+
+  Phase IV
+- Board in Check?
+    find pos of own king
+    see if opp pieces any move to king
+
+- checkmate?
+    in check && none (my pieces valid moves)
+
+
+

@@ -1,0 +1,29 @@
+
+
+Started GET "/cats" for 127.0.0.1 at 2019-04-09 08:57:46 -0700
+
+Gem::LoadError - can't activate pg (~> 0.11), already activated pg-1.1.4. Make sure all dependencies are added to Gemfile.:
+
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 08:58:20 -0700
+
+Gem::LoadError - can't activate pg (~> 0.11), already activated pg-1.1.4. Make sure all dependencies are added to Gemfile.:
+
+
+
+Started POST "/__better_errors/2f479c800bf5c383/variables" for 127.0.0.1 at 2019-04-09 08:58:20 -0700
+
+
+Started GET "/cats" for 127.0.0.1 at 2019-04-09 09:00:53 -0700
+
+PG::ConnectionBad - FATAL:  database "intro_rails_video_demo" does not exist
+:
+
+
+
+Started GET "/cats" for 127.0.0.1 at 2019-04-09 09:01:49 -0700
+
+PGError - FATAL:  database "intro_rails_video_demo" does not exist
+:
+

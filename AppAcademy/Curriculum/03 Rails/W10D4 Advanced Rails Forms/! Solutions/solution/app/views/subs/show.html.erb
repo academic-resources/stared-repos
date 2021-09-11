@@ -1,0 +1,18 @@
+<div class="border">
+  <h1>
+    <%= @sub.name %>
+  </h1>
+
+
+  <b>Description</b>
+  <p><%= @sub.description %></p>
+
+  <a href="<%= new_post_url %>">Make New Post!</a>
+
+  <ul>
+    <% @sub.posts.each do |post| %>
+      <li>(<%= post.votes %>) <a href="<%= post_url(post) %>"><%= post.title %></a></li>
+    <% end %>
+  </ul>
+  <a href="<%= edit_sub_url(@sub) if @sub.moderator == current_user %>">Edit</a>
+</div>

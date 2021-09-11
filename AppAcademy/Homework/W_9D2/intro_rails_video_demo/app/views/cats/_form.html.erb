@@ -1,0 +1,74 @@
+<% action_url = cat.persisted? ? cat_url(cat) : cats_url %>
+<% form_method = cat.persisted? ? "PATCH" : "POST" %>
+<% submit_text = cat.persisted? ? "Update Cat!" : "Create Cat!" %>
+
+<% if !cat.errors.full_messages.empty? %>
+  <ul>
+    <% cat.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="<%= action_url %>" method="POST">
+  <input type="hidden" name="_method" value="<%= form_method %>">
+
+  <label for="cat_name">Name</label>
+  <input type="text"
+         name="cat[name]"
+         id="cat_name"
+         value="<%= @cat.name %>">
+  <br>
+
+  <label for="cat_skill">Skill</label>
+  <input type="text"
+         name="cat[skill]"
+         id="cat_skill"
+         value="<%= @cat.skill %>">
+  <br>
+
+  <!--
+  <label for="cat_coat_color">Coat Color</label>
+  <select name="cat[coat_color]" id="cat_coat_color">
+    <% Cat::COAT_COLORS.each do |coat_color| %>
+      <option value="<%= coat_color %>"
+              <%= "selected" if cat.coat_color == coat_color %>>
+        <%= coat_color.upcase %>
+      </option>
+    <% end %>
+  </select>
+  <br>
+  -->
+
+  <% Cat::COAT_COLORS.each do |coat_color| %>
+    <label>
+      <input type="radio"
+             name="cat[coat_color]"
+             value="<%= coat_color %>"
+             <%= "checked" if cat.coat_color == coat_color %>>
+      <%= coat_color.upcase %>
+    </label>
+  <% end %>
+  <br>
+
+  <label for="cat_description">Description</label>
+  <textarea name="cat[description]" id="cat_description"><%= cat.description %></textarea>
+  <br>
+
+  <b>Tags</b>
+  <br>
+  <input type="hidden" name="cat[tag_ids][]" value="">
+  <% Tag.all.each do |tag| %>
+    <label>
+      <input
+        type="checkbox"
+        name="cat[tag_ids][]"
+        value="<%= tag.id %>"
+        <%= "checked" if @cat.tag_ids.include?(tag.id) %>>
+      <%= tag.name %>
+    </label>
+    <br>
+  <% end %>
+
+  <input type="submit" value="<%= submit_text %>">
+</form>

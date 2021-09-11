@@ -1,0 +1,25 @@
+<!--
+<%# colors = %w(calico white brown persian-blue orange black) %>
+<form action="<%#= cats_url %>" method = "POST">
+    <h1>New Cat</h1>
+    <label>Name</label>
+    <input type="text" name="cat[name]"><br>
+    <label>Birth Date</label>
+    <input type="date" name="cat[birth_date]"><br>
+    <label>Color</label>
+    <select name="cat[color]" id="">
+      <option value="" disabled selected></option>
+      <%# colors.each do |color| %>
+        <option value="<%#= color %>"><%#= color %></option>
+      <%# end %>
+    </select><br>
+    <input type="radio" name="cat[sex]" value = "M"> Male
+    <input type="radio" name="cat[sex]" value = "F"> Female<br>
+    <label>Description</label><br>
+    <textarea name="cat[description]" id="" cols="30" rows="10"></textarea><br>
+
+    <input type="submit" value="Create Cat!">
+</form>
+-->
+
+<%= render 'form', edit: false, cat: @cat %>

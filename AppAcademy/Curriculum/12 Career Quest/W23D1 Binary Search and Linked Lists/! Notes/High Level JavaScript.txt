@@ -1,0 +1,99 @@
+JavaScript
+
+- Dynamic
+  - can execute many common behaviors at run time as opposed to having to be compiled
+- Weakly Typed
+  - It's types are not very strong; it will easily allow you to coerce one type to another (i.e. 1 + '1' will return '11')
+  - It will try to turn one type into another
+- Protoype Based
+  - That is its method of inheritance.  Basically everything will inheirt from an object prototype as opposed to a class which is more like a blue print which tells the compiler how it should make an instance of a class
+- Multi-Paradigmed
+  - It supports programming in multiple paradigms (funcitonal, OOP, etc.)
+- Single-Threaded
+  - can only do one thing at a time
+- Concurrent
+  -...
+- NeverBlocking
+  - Doesn't not wait for code block to execute, always moving along
+
+Concurrency vs Parallelism
+  - A parallel language will execute two things simultaneouslyz
+  - JavaScript is single-threaded so if it wants to do 2 things at the same time it has to jump back and forth
+  - In order to be concurrent, JavaScript uses the Event Loop (Memory Heap, Call Stack, Event Queue)
+    - Call Stack
+      - if there is a function in the call stack, it will execute the function right away and run all the code line-by-line.
+      - if it calls another function, the other function will be put on top of the call stack and be removed once it is finished
+      - let's say we'd want another function to happen at a later time, then we would have to call some web API which would put it into the Event Queue (e.g. setTimeout(() => {function}, 1000)
+      - will wait 1000ms and then throw the function into the Event Queue
+      - continue running all the code in the call stack until the callstack was empty
+      - then that function would be put onto the event queue
+      - since call stack will be empty, the function from the event queue will go into the call stack and be invoked immediately
+
+Promises
+  - An object that represents the eventual completion (or failure) of an asynchronous operation
+  - example:
+    const promise = $.ajax(myApiParams)
+    promise.then(
+      apiResponse => {
+        console.log(apiResponse)
+      }
+    )
+  - Custom Promise:
+    let myPromise = new Promise (
+      (resolve, reject) => {
+        console.log("inside promise constructor")
+        resolve("resoution argument")
+      }
+    )
+    myPromise.then(arg => {
+      console.log(".then invoked. Argument: " + arg)z
+    })
+  - custom 1 second promise:
+    let slowPromise = new Promise((resolve, reject)> {
+      setTimeout(
+        () => resolve("resolution argument"),
+        1000
+      )
+    })
+
+    slowPromise.then(arg => {
+      console.log(".then invoked. Argument: " + arg)
+    })
+
+    console.log("After .then")
+  - Goal: Make an api call that uses the result from previous api calls
+    function makeSlowPromise(resArg) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(resArg), 1000)
+      })
+    }
+
+    let fakeAPI = makeSlowPromise
+
+    fakeAPI("res - 1").then(res1 => {
+      console.log(res1)
+      fakeAPI(res1 + " - 2").then(res2 => {
+        console.log(res2)
+        fakeAPI(res2 + " - 3").then(res3 => {
+          console.log(res3)
+        })
+      })
+    })
+  - With promise chaining:
+    function makeSlowPromise(resArg) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(resArg), 1000)
+      })
+    }
+
+    let fakeAPI = makeSlowPromise
+
+    fakeAPI("res - 1").then(res 1=> {
+      console.log(res1)
+      return fakeAPI(res1+ " - 2")
+    }).then(res2 => {
+      console.log(res2)
+      return fakeAPI(res2 + " - 3")
+    }).then(res3 => {
+      console.log(res3)
+    })
