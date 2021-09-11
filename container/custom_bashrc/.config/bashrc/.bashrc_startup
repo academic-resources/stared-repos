@@ -1,0 +1,38 @@
+#~/.config/bashrc/.bashrc_startup
+
+# Makesure forturne,cowsay, and neofetch installed
+if [ -x "$(command -v fortune)" ] && [ -x "$(command -v cowsay)" ] && [ -x "$(command -v neofetch)" ]; then
+	# cow saying your fortune (how awesome is that?)
+	# you mean turtle right? Oh wait, lets throw it into neofetch for funzies
+	# and let's color it
+
+	# Make some room
+	echo ""
+
+	# Start a tmp file for neofetch
+	# Make text bold Cyan
+	echo "\033[1;36m" > /tmp/tmp.say
+	
+	# Get some small fortune
+	# Throw it at turtle
+	# Save it to file
+	fortune -s | cowsay -f turtle >> /tmp/tmp.say
+
+	# Force Cyan color from Arch
+	# Make sure there's a gap
+	# Give it our ascii art
+	neofetch --ascii_distro arch --gap 10 --ascii /tmp/tmp.say
+
+	# Clean up
+	rm -f /tmp/tmp.say
+fi
+
+# $i is declared in .bashrc; holds the filename of this script
+dirn=$(dirname $i)
+# Make sure LS_COLORS is in place.
+if [ -f "$dirn/LS_COLORS" ]; then
+	# Get those nice ls colors
+	eval $( dircolors -b "$dirn/LS_COLORS" )
+fi
+unset dirn
+
