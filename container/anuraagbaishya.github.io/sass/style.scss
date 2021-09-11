@@ -1,0 +1,135 @@
+@import "compass/reset";
+@import "compass/css3";
+
+//Basic Page Styles
+* {
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
+}
+body {
+    text-align: center;
+    font: 1em/1.5 Georgia, serif;
+    color: #333;
+    height: 100%
+}
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  height: 100%;
+}
+ 
+a {
+    text-decoration: none;
+}
+ 
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.5em;
+    padding: 0 1em;
+}
+
+// Header
+.header {
+  height: 100%;
+  background-position: center;
+  background: linear-gradient(
+            rgba(20,20,20, .75), 
+            rgba(20,20,20, .75)),
+            url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 6em 0 2em;
+  .header-content{
+      padding: 1em;
+  	  color: #fff;
+ 	}
+ 	h1{
+ 		  font-size: 2em;
+ 		  font-style: bold;
+ 	}
+  h2{
+    font-size: 1.5em;
+    font-style: bold;
+  }
+  .about-text{
+    padding: 3em 1em 1em 1em;
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.5em;
+    text-align: justify;
+    width: 75%;
+    margin: auto;
+    color: #fff;
+  }
+ 
+}
+.about{
+	padding: 1em;
+	font-family: 'Slabo 27px', serif;
+	font-size: 1.5em;
+	text-align: justify;
+	.about-text{
+        width: 75%;
+		    margin: auto;
+        color: #fff;
+	}
+}
+.avatar {
+	@include box-shadow(0 0 0 px #fff, 0 0 0 4px #ccc, 0 4px 6px #333);
+	@include border-radius(50px);
+	width: 100px;
+	height:100px;
+}
+.charts{
+
+  height: 90%;
+  #chart-container-1{
+    padding: 0.45em;
+    width: 50%;
+    height: 50%;
+    float: left;
+  }
+  #chart-container-2{
+    padding: 0.45em;
+    width: 50%;
+    height: 50%;
+    float: right;
+  }
+  #chart-container-3{
+    padding: 0.45em;
+    width: 50%;
+    height: 50%;
+    float: left;
+  }
+  #chart-container-4{
+    padding: 0.45em;
+    width: 50%;
+    height: 50%;
+    float: right;
+  }
+  h1{
+    margin: 1em;
+    font-size: 2em;
+    font-style: bold;
+    font-family: 'Slabo 27px', serif;
+  }
+
+}
+@media screen and (max-width: 540px) {
+
+	.header{
+		  background-position: center;
+		  background-repeat: no-repeat;
+	    .about-text{
+		  width: 85%;
+	   }
+  }
+}
