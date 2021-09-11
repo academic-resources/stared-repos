@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../../stylesheets/log-in.css")
+        link(href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet")
+        title Account Login
+    body
+        div(class="log-in_container")
+            div(class='form-container')
+                a(href='/')
+                    img(src="/images/infinity-large.jpg" width="60" alt="")
+                h1 Welcome
+                if (errors)
+                    each error in errors
+                        li(class="errors")= error
+                form(class="log-in_form" method="post")
+                    input(type="hidden" name="_csrf" value=token)
+                    input(class="log-in_input" type="text" placeholder="Username or Email" name="usernameOrEmail" required)
+                    input(class="log-in_input" type="password" placeholder="Password" name="password" required)
+                    button.rainbow-button(type="submit") Log in
+                div(class="log-in_button")
+                    p Don't have an Account yet?
+                        a(href="/users/register")  Sign Up

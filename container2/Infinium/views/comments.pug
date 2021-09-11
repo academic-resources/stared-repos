@@ -1,0 +1,38 @@
+block content
+    link(rel='stylesheet', href='/stylesheets/comments.css')
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap")
+    script(src="/javascripts/comments.js" type="module")
+    div.comments-container.unreveal.hide
+        div.comments-container__heading-div
+            h2.comments-container__heading-div-h2 Responses (#[span.response-count #{comments.length}])
+            button.comments-container__heading-div-container
+                img(src='/images/x-men.png').comments-container__heading-div-button-img
+        if (locals.authenticated)
+            form.comments-container__new-comment(method='post')
+                textarea.comments-container__new-comment-text-box(name="comment", cols="30", rows="10", placeholder='What are your thoughts?')
+                div.comments-container__new-comment-button-div
+                    button(type="reset") Cancel
+                    button.comments-container__new-comment-button-respond(type="submit") Respond
+        div.comments-container__comments
+            if comments
+            each comment in comments
+                div(id=comment.id class='comments-container__comment')
+                    div.comments-container__comment-nav
+                        div.comments-container__comment-nav-user= comment.User.username
+                        if comment.authCompare
+                            div(class="comments-container__comment-nav-menu" data-commentId=comment.id)
+                                img(src='/images/3-dot-icon.jpg').comments-container__comment-nav-menu-image
+                                div.comments-container__comment-nav-menu-dropdown.comments-container__comment-nav-menu-dropdown--hidden
+                                    button.edit Edit this response
+                                    button.delete Delete
+                    div.comments-container__comment-text-box= comment.comment
+                    div.delete-container.delete-container--hidden
+                        div.delete-container__inner
+                            h2.delete-container__inner-heading Delete
+                            div.delete-container__inner-textbox Deleted responses are gone forever. Are you sure?
+                            div.delete-container__inner-button-container
+                                button.delete-container__inner-button-cancel Cancel
+                                button.delete-container__inner-button-confirm Confirm
+            else
+                div.no-comments
+                    h3= `No comments yet! ${(!locals.authenticated) ? 'Log-in or register and be the first!' : 'Be the first!'}`

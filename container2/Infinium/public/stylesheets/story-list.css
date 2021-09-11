@@ -1,0 +1,146 @@
+.stories-container{
+  font-family: 'Noto Sans JP', sans-serif;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  margin: 15px 200px;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 200px;
+}
+
+.page-title {
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  font-size: 3rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.tab-controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #bbb;
+}
+
+.tab {
+  padding: 5px 10px;
+  margin-bottom: -1px;
+  font-weight: 200;
+  border-bottom: 1px solid transparent;
+  color: #bbb;
+}
+
+.tab:not(.active):hover {
+  color: #555;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-bottom-color: #555;
+  color: black;
+  cursor: default;
+  pointer-events: none;
+}
+
+.story-tab {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.story {
+  list-style-type: none;
+  border-bottom: 1px solid #bbb;
+  padding: 10px 0;
+}
+
+.story-list-title {
+  text-decoration: none;
+  cursor: pointer;
+}
+.story-list-title > h3 {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.story-list-title > h3:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.story-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.story-date,
+.story-author {
+  font-size: .9rem;
+}
+
+.story-date {
+  padding-right: 3px;
+}
+
+.story-options-wrapper {
+  position: relative;
+}
+
+.story-options-dropdown {
+  position: relative;
+  font-size: 1.5rem;
+  padding: 2px 5px;
+  transform: rotate(90deg) scale(2, 1);
+  color: #555;
+  transition: transform .5s;
+  will-change: transform;
+}
+
+.story-options-dropdown:hover,
+.story-options-dropdown.active {
+  cursor: pointer;
+  color: black;
+  transform: rotate(180deg) scale(2, 1);
+}
+
+.story-options {
+  position: absolute;
+  top: 100%;
+  margin-top: -3px;
+  opacity: 1;
+  transition: opacity .5s;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  z-index: 2;
+  background-color: #F8F8F8;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, .2);
+}
+
+.story-options.hide {
+  display: none;
+  opacity: 0;
+}
+
+.story-options > a {
+  text-decoration: none;
+  color: #555;
+  padding: 5px 7px;
+}
+
+.story-options > a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.story-author > a {
+  text-decoration: none;
+}
+.story-author > a:hover {
+  text-decoration: underline;
+}

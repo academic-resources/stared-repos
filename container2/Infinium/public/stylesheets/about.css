@@ -1,0 +1,66 @@
+.aboutpage-container{
+  display: block;
+  margin: 0 auto;
+  min-width: 300px;
+  padding: 10px 200px;
+  font-size: 1.5em;
+}
+
+.page-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.offerings-list {
+  list-style-position: inside;
+  padding-left: 10px;
+  font-size:  inherit;
+}
+
+.offerings-list > li {
+  padding: 3px 0;
+  font-size:  inherit;
+}
+
+
+.join {
+  font-size:  inherit;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  color: #1658c4;
+}
+
+.lightsaber {
+  display: none;
+}
+
+.join:hover {
+  color: #bbfefe;
+  text-shadow: 0 0 3px #1405da ;
+}
+
+.join:hover .lightsaber {
+  height: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  padding-left: 4em;
+  overflow: visible;
+}
+
+.disclaimer {
+  font-size: .8rem;
+}
+
+.clone-model-link {
+  font-size: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.clone-model-link:hover {
+  text-decoration: underline;
+}

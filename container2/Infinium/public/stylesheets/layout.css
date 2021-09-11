@@ -1,0 +1,152 @@
+@import "global.css";
+
+.header{
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header-inside-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 30px 50px;
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icons{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 28px;
+  padding: 7px 0 0 0;
+}
+
+.title_name{
+  padding: 0 15px 0 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+}
+
+.title_greeting,
+.title_greeting-link {
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-left-style: solid;
+  border-left-width: .5px;
+  border-color: lightgrey;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-decoration: none;
+  position: relative;
+  margin-top: 7px;
+}
+
+.title_greeting-link:hover::after {
+  content: 'Beam me to the about page!';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top:100%;
+  color: #1658c4;
+  text-align: center;
+  font-size: .7em;
+}
+
+.infinity_image{
+  padding: 7px 0 0 0;
+  width: 40px;
+  height: 25px;
+}
+
+.icons_image{
+  align-self: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.dropdown{
+  text-align: center;
+}
+
+.dropdown_content{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  display: none;
+  position: absolute;
+  background-color: #F8F8F8;
+  min-width: 150px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, .2);
+  z-index: 10;
+}
+
+.dropdown_content a{
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.header_mini{
+  padding: 0 5px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: .5px solid lightgrey ;
+}
+
+.naming_info{
+  margin: 0 0 10px 10px;
+}
+
+.naming_info_list1{
+  padding-top: 10px;
+}
+
+.naming_info_list2{
+  padding-bottom: 10px;
+}
+
+.dropdown-content a:hover{
+  background-color: #ddd;
+}
+
+.show{
+  display:block;
+}
+
+.alert-danger {
+  padding: 5px 25px 10px;
+  color: red;
+  background-color: rgb(255, 221, 221);
+}
+
+.alert-danger ul {
+  padding-left: 20px;
+}
+
+@media only screen and (max-width: 728px) {
+  .title_greeting-link{
+    display: none;
+  }
+
+  .icons{
+    margin-right: 0;
+  }
+
+  .header-inside-container{
+    margin: 30px 20px;
+  }
+
+}
