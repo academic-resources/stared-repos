@@ -1,0 +1,11 @@
+# Cordova build aliases
+alias coba='cordova build android'
+alias cobi='cordova build ios'
+
+# Cordova emulate aliases
+alias coea='cordova emulate android'
+alias coei='cordova emulate ios'
+
+# Cordova run aliases
+alias cora='cordova run android --device'
+alias cori='cordova run ios --device'

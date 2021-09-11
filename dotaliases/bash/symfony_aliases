@@ -1,0 +1,47 @@
+# Symfony console aliases
+alias sf='php app/console'
+alias sfp='php app/console --env=prod'
+alias sfd='php app/console --env=dev'
+alias sft='php app/console --env=test'
+
+# Symfony cache aliases
+alias sfcc='php app/console cache:clear'
+alias sfcw='php app/console cache:warmup'
+
+# Symfony container aliases
+alias sfcd='php app/console container:debug'
+alias sfcdg='php app/console container:debug | grep'
+
+# Symfony router aliases
+alias sfrd='php app/console router:debug'
+alias sfrdg='php app/console router:debug | grep'
+
+# Symfony twig aliases
+alias sftd='php app/console twig:debug'
+alias sftdg='php app/console twig:debug | grep'
+
+# Symfony assetic aliases
+alias sfad='php app/console assetic:dump'
+alias sfaw='php app/console assetic:watch'
+
+# Symfony assets alias
+alias sfai='php app/console assets:install web --symlink'
+
+# Symfony server aliases
+alias sfsr='php app/console server:run'
+alias sfss='php app/console server:status'
+alias sfsq='php app/console server:stop'
+
+# Doctrine aliases
+alias sfdbcreate='php app/console doctrine:database:create'
+alias sfdbdrop='php app/console doctrine:database:drop'
+alias sffixload='php app/console doctrine:fixtures:load'
+alias sfgen='php app/console doctrine:generate:entities'
+alias sfmigd='php app/console doctrine:migrations:diff'
+alias sfmigx='php app/console doctrine:migrations:execute'
+alias sfmigm='php app/console doctrine:migrations:migrate'
+alias sfmigs='php app/console doctrine:migrations:status'
+alias sfschc='php app/console doctrine:schema:create'
+alias sfschd='php app/console doctrine:schema:drop'
+alias sfschu='php app/console doctrine:schema:update'
+alias sfschv='php app/console doctrine:schema:validate'

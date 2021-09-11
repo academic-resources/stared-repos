@@ -1,0 +1,6 @@
+# Composer alias
+alias co='composer'
+
+# Composer install and update aliases
+alias coi='composer install'
+alias cou='composer update'
