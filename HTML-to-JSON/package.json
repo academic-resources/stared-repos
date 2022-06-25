@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "jsdom": "^16.2.2",
+    "jsdom": "^16.5.0",
     "query-selector": "^2.0.0"
   }
 }
