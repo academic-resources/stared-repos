@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/gautamkrishnar/blog-post-workflow#readme",
   "dependencies": {
-    "@actions/core": "^1.2.6",
+    "@actions/core": "^1.9.1",
     "dateformat": "^3.0.3",
     "process": "latest",
     "promise-retry": "^2.0.1",
