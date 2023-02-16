@@ -15,7 +15,7 @@ Flask_WTF == 0.14.3
 WTForms == 2.3.1
 
 # archivy/data.py: 10
-Werkzeug == 1.0.1
+Werkzeug == 2.2.3
 
 # archivy/config.py: 2
 appdirs == 1.4.4
